@@ -1,0 +1,9 @@
+PREFIX legal: <http://example.org/legal/ontology/>
+SELECT ?mentioner ?pasal37orChild
+WHERE{
+  ?mentioner legal:references ?pasal37orChild .
+  ?pasal37orChild legal:partOf+ ?pasal37 .
+  ?pasal37 a legal:Pasal .
+  ?pasal37 legal:hasKey 37 
+}
+ORDER BY ?mentioner ?pasal37orChild

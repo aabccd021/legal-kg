@@ -1,0 +1,6 @@
+PREFIX legal: <http://example.org/legal/ontology/>
+SELECT ?s
+WHERE{
+  ?s legal:tahun 2020
+}
+LIMIT 10

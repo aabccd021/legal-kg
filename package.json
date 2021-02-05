@@ -1,0 +1,95 @@
+{
+  "name": "legal-kg",
+  "version": "1.0.0",
+  "license": "MIT",
+  "scripts": {
+    "build": "tsc",
+    "lint": "eslint '**/*.ts'",
+    "lint:fix": "eslint --fix '**/*.ts'",
+    "run:clearData": "rimraf maintained_legals/json maintained_legals/text maintained_legals/md",
+    "run:pdf2text": "ts-node src/maintain/pdf2text/index.ts",
+    "run:text2json": "ts-node src/maintain/text2json/index.ts",
+    "run:json2md": "ts-node src/maintain/json2md/index.ts",
+    "run:json2ttl": "ts-node src/maintain/json2ttl/index.ts",
+    "test:types": "tsc --noEmit"
+  },
+  "engines": {
+    "node": "15.6.0"
+  },
+  "engineStrict": true,
+  "eslintConfig": {
+    "env": {
+      "es2021": true,
+      "node": true
+    },
+    "parser": "@typescript-eslint/parser",
+    "parserOptions": {
+      "sourceType": "module"
+    },
+    "plugins": [
+      "@typescript-eslint",
+      "unused-imports"
+    ],
+    "extends": [
+      "eslint:recommended",
+      "plugin:@typescript-eslint/eslint-recommended",
+      "plugin:@typescript-eslint/recommended",
+      "plugin:prettier/recommended",
+      "prettier/@typescript-eslint"
+    ],
+    "rules": {
+      "max-len": [
+        "error",
+        {
+          "code": 100,
+          "comments": 100
+        }
+      ],
+      "prettier/prettier": [
+        "warn",
+        {
+          "singleQuote": true,
+          "printWidth": 100
+        }
+      ],
+      "@typescript-eslint/no-unused-vars": "off",
+      "unused-imports/no-unused-imports-ts": "warn",
+      "unused-imports/no-unused-vars-ts": [
+        "warn",
+        {
+          "vars": "all",
+          "varsIgnorePattern": "^_",
+          "args": "after-used",
+          "argsIgnorePattern": "^_"
+        }
+      ]
+    }
+  },
+  "devDependencies": {
+    "@comunica/actor-init-sparql-file": "^1.19.0",
+    "@types/json-stable-stringify": "^1.0.32",
+    "@types/lodash": "^4.14.167",
+    "@types/n3": "^1.4.4",
+    "@types/node": "^14.14.21",
+    "@types/node-fetch": "^2.5.8",
+    "@types/roman-numerals": "^0.3.0",
+    "@typescript-eslint/eslint-plugin": "^4.13.0",
+    "@typescript-eslint/parser": "^4.13.0",
+    "assert-never": "^1.2.1",
+    "eslint": "^7.18.0",
+    "eslint-config-prettier": "^7.1.0",
+    "eslint-plugin-lodash": "^7.1.0",
+    "eslint-plugin-prettier": "^3.3.1",
+    "eslint-plugin-unused-imports": "^1.0.1",
+    "json-stable-stringify": "^1.0.1",
+    "lodash": "^4.17.20",
+    "n3": "^1.8.0",
+    "node-fetch": "^2.6.1",
+    "pdf.js-extract": "^0.1.5",
+    "prettier": "^2.2.1",
+    "rimraf": "^3.0.2",
+    "roman-numerals": "^0.3.2",
+    "ts-node": "^9.1.1",
+    "typescript": "^4.1.3"
+  }
+}

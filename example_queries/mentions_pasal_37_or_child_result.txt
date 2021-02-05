@@ -1,0 +1,11 @@
+?mentioner: http://example.org/legal/document/UU13-2003/pasal/38/ayat/1
+?pasal37orChild: http://example.org/legal/document/UU13-2003/pasal/37/ayat/1
+
+?mentioner: http://example.org/legal/document/UU13-2003/pasal/38/ayat/2
+?pasal37orChild: http://example.org/legal/document/UU13-2003/pasal/37/ayat/1
+
+?mentioner: http://example.org/legal/document/UU13-2003/pasal/187/ayat/1
+?pasal37orChild: http://example.org/legal/document/UU13-2003/pasal/37/ayat/2
+
+?mentioner: http://example.org/legal/document/UU13-2003/pasal/37/ayat/2
+?pasal37orChild: http://example.org/legal/document/UU13-2003/pasal/37/ayat/1/point/b

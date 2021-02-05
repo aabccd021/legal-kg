@@ -1,0 +1,44 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "type": "pwa-node",
+      "request": "launch",
+      "name": "Launch Program",
+      "runtimeVersion": "15.6.0",
+      "runtimeArgs": [
+        "-r",
+        "ts-node/register"
+      ],
+      "args": [
+        "${workspaceFolder}/src/index.ts"
+      ],
+    },
+    {
+      "type": "pwa-node",
+      "request": "launch",
+      "name": "Scrape",
+      "runtimeVersion": "15.6.0",
+      "runtimeArgs": [
+        "-r",
+        "ts-node/register"
+      ],
+      "args": [
+        "${workspaceFolder}/script/scrape-peraturan.ts"
+      ],
+    },
+    {
+      "type": "pwa-node",
+      "request": "launch",
+      "name": "Run",
+      "runtimeVersion": "15.6.0",
+      "runtimeArgs": [
+        "-r",
+        "ts-node/register"
+      ],
+      "args": [
+        "${workspaceFolder}/src/maintain/json2md/index.ts"
+      ],
+    }
+  ]
+}
