@@ -16,43 +16,40 @@ import {
   Reference,
 } from '../../type';
 import {
-  SpecialDocTrace,
+  MetadataTrace,
   BabTrace,
   PasalTrace,
-  PointParent,
+  PointsTrace,
   PointTrace,
-  AyatTrace,
   BagianTrace,
   ParagrafTrace,
   isSpecialDocTrace,
   isAyatTrace,
   isPasalTrace,
   isPointTrace,
-  getAyatUri,
-  getPointUri,
-  getPasalUri,
-} from '../../uri/document-content';
-import { LegalTrace, getLegalUri } from '../../uri/legal-type';
+  AyatTrace,
+} from '../../uri/document-structure';
+import { DocumentTrace } from '../../uri/document-type';
 
-export function rawJson2json(legal: LegalDocument, trace: LegalTrace): LegalDocument {
+export function rawJson2json(legal: LegalDocument, trace: DocumentTrace): LegalDocument {
   const { babs, mengingat, menimbang } = legal;
 
   return {
     ...legal,
-    mengingat: mengimbang2detectedMengimbang(mengingat, 'mengingat', trace),
-    menimbang: mengimbang2detectedMengimbang(menimbang, 'menimbang', trace),
+    mengingat: mengimbang2detectedMengimbang(mengingat, 'documentMengingat', trace),
+    menimbang: mengimbang2detectedMengimbang(menimbang, 'documentMenimbang', trace),
     babs: babs?.map((bab) => bab2detectedBab(bab, trace)),
   };
 }
 
 function mengimbang2detectedMengimbang(
   mengimbang: Mengimbang | undefined,
-  attrType: 'menimbang' | 'mengingat',
-  parentTrace: LegalTrace
+  metadataType: 'documentMenimbang' | 'documentMengingat',
+  parentTrace: DocumentTrace
 ): Mengimbang | undefined {
   if (isNil(mengimbang)) return undefined;
   const { points, text } = mengimbang;
-  const trace: SpecialDocTrace = { ...parentTrace, attrType, _specialTraceType: true };
+  const trace: MetadataTrace = { ...parentTrace, metadataType, _metadataTrace: true };
   const detectedText = isNil(points)
     ? { ...text, references: detectDocTrace(text.text, trace) }
     : text;
@@ -61,7 +58,7 @@ function mengimbang2detectedMengimbang(
   return { ...mengimbang, points: detectedIsi, text: detectedText };
 }
 
-function bab2detectedBab(bab: Bab, parentTrace: LegalTrace): Bab {
+function bab2detectedBab(bab: Bab, parentTrace: DocumentTrace): Bab {
   const { isi, _key } = bab;
   const trace: BabTrace = { ...parentTrace, bab: _key };
   const detectedIsi = isPasals(isi)
@@ -71,7 +68,7 @@ function bab2detectedBab(bab: Bab, parentTrace: LegalTrace): Bab {
   return { ...bab, isi: detectedIsi };
 }
 
-function pasal2detectedPasal(pasal: Pasal, legalTrace: LegalTrace): Pasal {
+function pasal2detectedPasal(pasal: Pasal, legalTrace: DocumentTrace): Pasal {
   const { isi, text, _key } = pasal;
   const trace: PasalTrace = { ...legalTrace, pasal: _key, _pasalTraceType: true };
   const detectedText = isNil(isi)
@@ -88,7 +85,7 @@ function _pasal2detectedPasal(isi: Ayat[] | Points, trace: PasalTrace): Ayat[] |
   return points2detectedPoints(isi, trace);
 }
 
-function points2detectedPoints(points: Points, parentTrace: PointParent): Points {
+function points2detectedPoints(points: Points, parentTrace: PointsTrace): Points {
   const { isi, _description } = points;
   const detectedIsi = isi.map((p) => point2detectedPoint(p, parentTrace));
   const descriptionReferences = detectPointParentTrace(_description.text, parentTrace);
@@ -100,7 +97,7 @@ function points2detectedPoints(points: Points, parentTrace: PointParent): Points
   };
 }
 
-function point2detectedPoint(point: Point, parent: PointParent): Point {
+function point2detectedPoint(point: Point, parent: PointsTrace): Point {
   const { _key, isi, text } = point;
   const trace: PointTrace = { _pointTraceType: true, point: _key, parent };
   const detectedText = isNil(isi)
@@ -147,7 +144,7 @@ function detectPointTrace(text: string, trace: PointTrace): Reference[] {
   return _resolveConflictingReferences(allReferences);
 }
 
-function detectPointParentTrace(text: string, trace: PointParent): Reference[] {
+function detectPointParentTrace(text: string, trace: PointsTrace): Reference[] {
   if (isSpecialDocTrace(trace)) return detectDocTrace(text, trace);
   if (isAyatTrace(trace)) return detectAyatTrace(text, trace);
   if (isPasalTrace(trace)) return detectPasalTrace(text, trace);
@@ -168,7 +165,7 @@ function detectPasalTrace(text: string, trace: PasalTrace): Reference[] {
   return _resolveConflictingReferences(allReferences);
 }
 
-function detectDocTrace(text: string, trace: LegalTrace): Reference[] {
+function detectDocTrace(text: string, trace: DocumentTrace): Reference[] {
   const detectors = [detectPasalX, detectPasalXAyatX];
 
   const detectedReferences = detectors.flatMap((detector) => detector(text, trace));
@@ -183,11 +180,11 @@ function detectRootTrace(text: string): Reference[] {
 }
 
 function detectHardCoded(text: string): Reference[] {
-  const map: [string, string][] = [
-    ['Undang Undang Dasar Negara Republik Indonesia Tahun 1945', getLegalUri({ type: 'uud' })],
+  const map: [string, DocumentTrace][] = [
+    ['Undang Undang Dasar Negara Republik Indonesia Tahun 1945', { type: 'uud' }],
   ];
 
-  const references = _(map).flatMap(([key, uri]) => {
+  const references = map.flatMap(([key, trace]) => {
     const regexp = new RegExp(key, 'g');
     const matches = [...text.matchAll(regexp)];
 
@@ -195,14 +192,14 @@ function detectHardCoded(text: string): Reference[] {
       const start = match.index ?? neverNum();
       const end = (match.index ?? neverNum()) + (match[0]?.length ?? neverNum());
 
-      return { start, end, uri };
+      return { start, end, trace };
     });
   });
 
-  return references.value();
+  return references;
 }
 
-function detectPasalXAyatX(text: string, legalTrace: LegalTrace): Reference[] {
+function detectPasalXAyatX(text: string, legalTrace: DocumentTrace): Reference[] {
   const regexp = /Pasal [0-9]+ ayat \([0-9]+\)/g;
   const matches = [...text.matchAll(regexp)];
 
@@ -211,15 +208,15 @@ function detectPasalXAyatX(text: string, legalTrace: LegalTrace): Reference[] {
     const [, pasal, , ayat] = keyStrs.map((x) => parseInt(x));
     const start = match.index ?? neverNum();
     const end = (match.index ?? neverNum()) + (match[0]?.length ?? neverNum());
-    const uri = getAyatUri({
+    const trace: AyatTrace = {
       ...legalTrace,
       pasal: pasal ?? neverNum(),
       ayat: ayat ?? neverNum(),
       _ayatTraceType: true,
       _pasalTraceType: true,
-    });
+    };
 
-    return { start, end, uri };
+    return { start, end, trace };
   });
 }
 
@@ -238,8 +235,8 @@ function detectHurufXYZ(text: string, trace: PointTrace): Reference[] {
 
     return arr.map((h, idx) => {
       const [hStart, hEnd] = getPosByLenAndIndex(arr.length, idx, start);
-      const hUri = getPointUri({ parent: trace.parent, point: h, _pointTraceType: true });
-      const reference: Reference = { start: hStart, end: hEnd, uri: hUri };
+      const hTrace: PointsTrace = { parent: trace.parent, point: h, _pointTraceType: true };
+      const reference: Reference = { start: hStart, end: hEnd, trace: hTrace };
 
       return reference;
     });
@@ -273,7 +270,7 @@ function detectAyatNHurufXYZ(text: string, parent: PasalTrace): Reference[] {
   });
 }
 
-function detectAyatX(text: string, trace: PasalTrace): Reference[] {
+function detectAyatX(text: string, parentPasalTrace: PasalTrace): Reference[] {
   const regexp = /ayat \([0-9]+\)/g;
   const matches = [...text.matchAll(regexp)];
 
@@ -281,33 +278,31 @@ function detectAyatX(text: string, trace: PasalTrace): Reference[] {
     const ayatKey = parseInt(match[0]?.slice('ayat ('.length, -1) ?? neverString());
     const start = match.index ?? neverNum();
     const end = start + (match[0]?.length ?? neverNum());
-    const uri = getAyatUri({ ...trace, ayat: ayatKey, _ayatTraceType: true });
+    const trace: AyatTrace = { ...parentPasalTrace, ayat: ayatKey, _ayatTraceType: true };
 
-    return { start, end, uri };
+    return { start, end, trace };
   });
 }
 
+// TODO: shorten
 function getPosByLenAndIndex(arrLen: number, index: number, start: number): [number, number] {
   if (index === 0) return [start, start + 'huruf a'.length];
 
   if (arrLen === 2 && index === 1) {
     const _start = start + 'huruf a dan '.length;
-
     return [_start, _start + 1];
   }
 
   if (arrLen - 1 === index) {
     const _start = start + 'huruf '.length + 'a, '.length * index + ' dan'.length;
-
     return [_start, _start + 1];
   }
 
   const _start = start + 'huruf '.length + 'a, '.length * index;
-
   return [_start, _start + 1];
 }
 
-function detectPasalX(text: string, legalTrace: LegalTrace): Reference[] {
+function detectPasalX(text: string, parentDocTrace: DocumentTrace): Reference[] {
   const regexp = /Pasal [0-9]+/g;
   const matches = [...text.matchAll(regexp)];
 
@@ -315,9 +310,9 @@ function detectPasalX(text: string, legalTrace: LegalTrace): Reference[] {
     const pasalKey = parseInt(match[0]?.slice('Pasal '.length) ?? neverString());
     const start = match.index ?? neverNum();
     const end = start + (match[0]?.length ?? neverNum());
-    const uri = getPasalUri({ ...legalTrace, pasal: pasalKey, _pasalTraceType: true });
+    const trace: PasalTrace = { ...parentDocTrace, pasal: pasalKey, _pasalTraceType: true };
 
-    return { start, end, uri };
+    return { start, end, trace };
   });
 }
 

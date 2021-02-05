@@ -1,4 +1,5 @@
-import { LegalTrace } from './uri/legal-type';
+import { LegalTrace } from './uri';
+import { DocumentTrace } from './uri/document-type';
 
 export type ReferenceText = {
   _type: 'referenceText';
@@ -9,7 +10,7 @@ export type ReferenceText = {
 export type Reference = {
   start: number;
   end: number;
-  uri: string;
+  trace: LegalTrace;
 };
 
 export type Point = {
@@ -65,7 +66,7 @@ export type Bab = {
 };
 
 export type LegalDocument = {
-  _legalTrace: LegalTrace;
+  _trace: DocumentTrace;
   penjelasan?: string[];
   pengesahanText?: string;
   opText?: string;

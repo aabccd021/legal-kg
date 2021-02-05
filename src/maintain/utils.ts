@@ -3,14 +3,14 @@ import path from 'path';
 import * as fs from 'fs';
 import { parseInt } from 'lodash';
 import {
-  LEGAL_TYPES,
-  LegalType,
+  DOCUMENT_TYPES,
+  DocumentType,
   DAERAHS,
-  LegalTrace,
+  DocumentTrace,
   PerdaTrace,
   UuTrace,
   getLegalPath,
-} from '../uri/legal-type';
+} from '../uri/document-type';
 
 export type DataType = 'pdf' | 'text' | 'json' | 'md' | 'ttl';
 export type DataDir = { legalDir: string; dataType: DataType };
@@ -27,7 +27,7 @@ function _getDataTypeExtension(dataType: DataType): string {
   assertNever(dataType);
 }
 
-export function getDocFilePath(trace: LegalTrace, dataDir: DataDir): string {
+export function getDocFilePath(trace: DocumentTrace, dataDir: DataDir): string {
   const { legalDir, dataType } = dataDir;
   const extension = getDataTypeExtension(dataType);
   const docPath = getLegalPath(trace);
@@ -37,12 +37,16 @@ export function getDocFilePath(trace: LegalTrace, dataDir: DataDir): string {
   return filePath;
 }
 
-export function getLegalData(dataDir: DataDir): LegalTrace[] {
+export function getLegalData(dataDir: DataDir): DocumentTrace[] {
   const { legalDir, dataType } = dataDir;
-  return LEGAL_TYPES.flatMap((legalType) => toLegalID(legalType, legalDir, dataType));
+  return DOCUMENT_TYPES.flatMap((legalType) => toLegalID(legalType, legalDir, dataType));
 }
 
-function toLegalID(legalType: LegalType, legalDir: string, dataType: DataType): LegalTrace[] {
+function toLegalID(
+  legalType: DocumentType,
+  legalDir: string,
+  dataType: DataType
+): DocumentTrace[] {
   const legalTypeDir = path.join(legalDir, dataType, legalType);
   if (!fs.existsSync(legalTypeDir)) return [];
   if (legalType === 'perda') return findFilePerdaTrace(legalTypeDir, dataType);

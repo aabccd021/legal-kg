@@ -1,17 +1,17 @@
 import { assertNever } from 'assert-never';
 import { baseUri } from '../kg/utils';
 
+export type DocumentTrace = UuTrace | PerdaTrace | UudTrace;
 /**
  * Legal
  */
-export type LegalType = typeof LEGAL_TYPES[number];
-export const LEGAL_TYPES = ['uu', 'perda', 'uud'] as const;
-export type LegalTrace = UuTrace | PerdaTrace | UudTrace;
+export type DocumentType = typeof DOCUMENT_TYPES[number];
+export const DOCUMENT_TYPES = ['uu', 'perda', 'uud'] as const;
 
 /**
  * Legal Uri
  */
-export function getLegalUri(trace: LegalTrace): string {
+export function getLegalUri(trace: DocumentTrace): string {
   const path = getLegalPath(trace);
   return `${baseUri}document/${path}`;
 }
@@ -19,12 +19,12 @@ export function getLegalUri(trace: LegalTrace): string {
 /**
  * Legal Path
  */
-export function getLegalPath(trace: LegalTrace): string {
+export function getLegalPath(trace: DocumentTrace): string {
   const { type } = trace;
   const path = _getLegalPath(trace);
   return `${type}/${path}`;
 }
-function _getLegalPath(trace: LegalTrace): string {
+function _getLegalPath(trace: DocumentTrace): string {
   if (trace.type === 'uu') return getUuPath(trace);
   if (trace.type === 'perda') return getPerdaPath(trace);
   if (trace.type === 'uud') return 'UUD';
@@ -34,7 +34,7 @@ function _getLegalPath(trace: LegalTrace): string {
 /**
  * Legal Name
  */
-export function getLegalName(trace: LegalTrace): string {
+export function getLegalName(trace: DocumentTrace): string {
   if (trace.type === 'uu') return getUuName(trace);
   if (trace.type === 'perda') return getPerdaName(trace);
   if (trace.type === 'uud') return 'UNDANG-UNDANG DASAR NEGARA REPUBLIK INDONESIA TAHUN 1945';

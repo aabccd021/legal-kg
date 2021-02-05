@@ -1,4 +1,4 @@
-import { LegalTrace } from '../../uri/legal-type';
+import { DocumentTrace } from '../../uri/document-type';
 import { compact, flatMap, isEmpty, isNil, mapValues } from 'lodash';
 import { toArabic } from 'roman-numerals';
 import {
@@ -17,7 +17,7 @@ const padaTaggalRegexp = /^pada tanggal/;
 const mengingatRegex = /^Mengingat\s*:/;
 const menimbangRegex = /^Menimbang\s*:/;
 
-export function text2rawJson(text: string, legalTrace: LegalTrace): LegalDocument {
+export function text2rawJson(text: string, legalTrace: DocumentTrace): LegalDocument {
   const lines = text.split('\n');
   const extractors: Extractor<keyof LegalDocument>[] = [
     ['_salinan', /^SALINAN/, 'optional'],
@@ -52,7 +52,7 @@ export function text2rawJson(text: string, legalTrace: LegalTrace): LegalDocumen
     .map((x) => parseInt(x));
   const doc: LegalDocument = {
     ...mapValues(extract_result, (x) => x?.join(' ').trim()),
-    _legalTrace: legalTrace,
+    _trace: legalTrace,
     babs: getBabs(extract_result.babs),
     _pemutus: extract_result._pemutus?.join(' ').slice(0, -1).trim(),
     _sekretaris: extract_result._sekretaris?.filter((x) => x !== 'ttd').join(' '),

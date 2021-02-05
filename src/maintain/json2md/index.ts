@@ -17,8 +17,8 @@ import {
   ReferenceText,
 } from '../../type';
 import {
-  SpecialDocTrace,
-  getSpecialDocUri,
+  MetadataTrace,
+  getMetadataUri,
   getBabUri,
   BabTrace,
   BagianTrace,
@@ -31,8 +31,8 @@ import {
   getAyatUri,
   PointTrace,
   getPointUri,
-} from '../../uri/document-content';
-import { getLegalName, getLegalUri, LegalTrace } from '../../uri/legal-type';
+} from '../../uri/document-structure';
+import { getLegalName, getLegalUri, DocumentTrace } from '../../uri/document-type';
 import { DataDir, getLegalData, getDocFilePath } from '../utils';
 import * as fs from 'fs';
 
@@ -78,7 +78,7 @@ function _json2md(doc: LegalDocument): string {
     _dokumen,
     mengingat,
     menimbang,
-    _legalTrace: _docTrace,
+    _trace: _docTrace,
     babs,
   } = doc;
   const uri = getLegalUri(_docTrace);
@@ -117,18 +117,18 @@ function mengimbang2md(
   title: string,
   isi: Mengimbang | undefined,
   type: 'menimbang' | 'mengingat',
-  parentTrace: LegalTrace
+  parentTrace: DocumentTrace
 ): string {
   if (isNil(isi)) return '';
   const { points, text } = isi;
-  const trace: SpecialDocTrace = { ...parentTrace, attrType: type, _specialTraceType: true };
+  const trace: MetadataTrace = { ...parentTrace, metadataType: type, _metadataTrace: true };
   const isiStr = !isNil(points) ? points2md(points, trace) : reference2md(text);
-  const uri = getSpecialDocUri(trace);
+  const uri = getMetadataUri(trace);
 
   return `\n# [${title}](${uri})\n${isiStr}`;
 }
 
-function bab2md(bab: Bab, parenttrace: LegalTrace): string {
+function bab2md(bab: Bab, parenttrace: DocumentTrace): string {
   const { _key, _judul, isi, text } = bab;
   const trace = { ...parenttrace, bab: _key };
   const isiStr: string = !isNil(isi) ? isiBab2md(isi, trace) : text;
@@ -164,7 +164,7 @@ function paragraf2md(paragraf: Paragraf, parentTrace: BagianTrace): string {
   return `\n## [Paragraf ${_key}](${uri})\n${isiStr}\n`;
 }
 
-function pasal2md(pasal: Pasal, parentTrace: LegalTrace): string {
+function pasal2md(pasal: Pasal, parentTrace: DocumentTrace): string {
   const { _key, isi, text } = pasal;
   const trace: PasalTrace = { ...parentTrace, pasal: _key, _pasalTraceType: true };
   const isiStr: string = !isNil(isi) ? pasalContent2md(isi, trace) : reference2md(text);
@@ -190,7 +190,7 @@ function ayat2md(ayat: Ayat, parentTrace: PasalTrace): string {
 
 function points2md(
   points: Points,
-  parent: PointTrace | AyatTrace | PasalTrace | SpecialDocTrace,
+  parent: PointTrace | AyatTrace | PasalTrace | MetadataTrace,
   depth = 0
 ): string {
   const { _description, isi } = points;
@@ -202,7 +202,7 @@ function points2md(
 
 function point2md(
   point: Point,
-  parent: PointTrace | AyatTrace | PasalTrace | SpecialDocTrace,
+  parent: PointTrace | AyatTrace | PasalTrace | MetadataTrace,
   depth: number
 ): string {
   const { isi, _key, text } = point;
@@ -228,7 +228,7 @@ function reference2md(ref: ReferenceText): string {
   const { references, text } = ref;
   const sortedReferences = references.sort((a, b) => a.start - b.start);
   const indices = sortedReferences.flatMap(({ start, end }) => [start, end]);
-  const uris = sortedReferences.map(({ uri }) => uri);
+  const uris = sortedReferences.map(({ trace: uri }) => uri);
   const splitted = splitAt(text, indices);
 
   return splitted.map((text, index) => `${getPrefixByIndex(index, uris)}${text}`).join('');
