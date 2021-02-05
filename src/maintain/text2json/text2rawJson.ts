@@ -1,4 +1,4 @@
-import { LegalTrace } from './../../uri/legal-type-uri';
+import { LegalTrace } from '../../uri/legal-type';
 import { compact, flatMap, isEmpty, isNil, mapValues } from 'lodash';
 import { toArabic } from 'roman-numerals';
 import {

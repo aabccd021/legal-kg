@@ -1,5 +1,5 @@
 import { assertNever } from 'assert-never';
-import { LegalTrace, getLegalUri } from './legal-type-uri';
+import { LegalTrace, getLegalUri } from './legal-type';
 
 export type PointTrace = {
   _pointTraceType: true;

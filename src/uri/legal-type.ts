@@ -1,17 +1,24 @@
 import { assertNever } from 'assert-never';
-import { baseUri } from './core';
+import { baseUri } from '../kg/utils';
 
 /**
  * Legal
  */
-export type LegalType = typeof legalTypes[number];
-export const legalTypes = ['uu', 'perda', 'uud'] as const;
+export type LegalType = typeof LEGAL_TYPES[number];
+export const LEGAL_TYPES = ['uu', 'perda', 'uud'] as const;
 export type LegalTrace = UuTrace | PerdaTrace | UudTrace;
+
+/**
+ * Legal Uri
+ */
 export function getLegalUri(trace: LegalTrace): string {
   const path = getLegalPath(trace);
   return `${baseUri}document/${path}`;
 }
 
+/**
+ * Legal Path
+ */
 export function getLegalPath(trace: LegalTrace): string {
   const { type } = trace;
   const path = _getLegalPath(trace);
@@ -24,6 +31,9 @@ function _getLegalPath(trace: LegalTrace): string {
   assertNever(trace);
 }
 
+/**
+ * Legal Name
+ */
 export function getLegalName(trace: LegalTrace): string {
   if (trace.type === 'uu') return getUuName(trace);
   if (trace.type === 'perda') return getPerdaName(trace);
@@ -58,8 +68,8 @@ function getUuName(trace: UuTrace): string {
 /**
  * perda
  */
-export type Daerah = typeof daerahs[number];
-export const daerahs = ['provinsi_dki_jakarta'] as const;
+export type Daerah = typeof DAERAHS[number];
+export const DAERAHS = ['provinsi_dki_jakarta'] as const;
 export type PerdaTrace = {
   type: 'perda';
   daerah: Daerah;

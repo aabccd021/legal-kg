@@ -31,8 +31,8 @@ import {
   getAyatUri,
   PointTrace,
   getPointUri,
-} from '../../uri/document-content-uri';
-import { getLegalName, getLegalUri, LegalTrace } from '../../uri/legal-type-uri';
+} from '../../uri/document-content';
+import { getLegalName, getLegalUri, LegalTrace } from '../../uri/legal-type';
 import { DataDir, getLegalData, getDocFilePath } from '../utils';
 import * as fs from 'fs';
 

@@ -3,14 +3,14 @@ import path from 'path';
 import * as fs from 'fs';
 import { parseInt } from 'lodash';
 import {
-  legalTypes,
+  LEGAL_TYPES,
   LegalType,
-  daerahs,
+  DAERAHS,
   LegalTrace,
   PerdaTrace,
   UuTrace,
   getLegalPath,
-} from '../uri/legal-type-uri';
+} from '../uri/legal-type';
 
 export type DataType = 'pdf' | 'text' | 'json' | 'md' | 'ttl';
 export type DataDir = { legalDir: string; dataType: DataType };
@@ -39,7 +39,7 @@ export function getDocFilePath(trace: LegalTrace, dataDir: DataDir): string {
 
 export function getLegalData(dataDir: DataDir): LegalTrace[] {
   const { legalDir, dataType } = dataDir;
-  return legalTypes.flatMap((legalType) => toLegalID(legalType, legalDir, dataType));
+  return LEGAL_TYPES.flatMap((legalType) => toLegalID(legalType, legalDir, dataType));
 }
 
 function toLegalID(legalType: LegalType, legalDir: string, dataType: DataType): LegalTrace[] {
@@ -67,7 +67,7 @@ function findFileUuTraces(uuDir: string, dataType: DataType): UuTrace[] {
 
 function findFilePerdaTrace(dir: string, dataType: DataType): PerdaTrace[] {
   const extension = getDataTypeExtension(dataType);
-  return daerahs.flatMap((daerah) => {
+  return DAERAHS.flatMap((daerah) => {
     const daerahDir = path.join(dir, daerah);
     if (!fs.existsSync(daerahDir)) return [];
     return fs.readdirSync(daerahDir).flatMap((year) =>

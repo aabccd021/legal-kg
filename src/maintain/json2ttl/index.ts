@@ -1,7 +1,5 @@
-import { LegalTrace } from './../../uri/legal-type-uri';
-import _, { flatten, chain, isNil, isArray, isString, toPairs } from 'lodash';
-import { Quad, NamedNode, DataFactory, Writer } from 'n3';
-import { rdf, XSD } from '../../rdfType';
+import { LegalTrace } from '../../uri/legal-type';
+import _, { flatten, isNil, isArray, isString, compact } from 'lodash';
 import {
   LegalDocument,
   Mengimbang,
@@ -17,7 +15,6 @@ import {
   Point,
   Reference,
 } from '../../type';
-import { Tuple, onto, tupleToQuad } from '../../uri/core';
 import {
   SpecialDocTrace,
   getSpecialDocUri,
@@ -33,10 +30,13 @@ import {
   PointParent,
   PointTrace,
   getPointUri,
-} from '../../uri/document-content-uri';
-import { getLegalUri } from '../../uri/legal-type-uri';
+} from '../../uri/document-content';
+import { getLegalUri } from '../../uri/legal-type';
 import * as fs from 'fs';
 import { DataDir, getLegalData, getDocFilePath } from '../utils';
+import { onto, Triple, triples2Ttl } from '../../kg/utils';
+import { rdf } from '../../kg/vocab/external';
+import { DataFactory, NamedNode } from 'n3';
 const { namedNode } = DataFactory;
 
 function json2ttl(): void {
@@ -51,8 +51,8 @@ function json2ttl(): void {
 
     const jsonString = fs.readFileSync(jsonPath).toString();
     const json = JSON.parse(jsonString) as LegalDocument;
-    const quads = _json2quads(json);
-    const ttl = quads2Ttl(quads);
+    const triples = json2triples(json);
+    const ttl = triples2Ttl(triples);
 
     fs.writeFileSync(ttlPath, ttl);
 
@@ -60,22 +60,7 @@ function json2ttl(): void {
   });
 }
 
-function quads2Ttl(quads: Quad[]): string {
-  const ontoBase = onto('');
-  const prefixes = { legal: ontoBase.value, xsd: XSD };
-  const ttlStr = new Writer({ prefixes }).quadsToString(quads);
-  const processedTtlStr = ttlStr.replaceAll(
-    '<http://www.w3.org/1999/02/22-rdf-syntax-ns#type>',
-    'a'
-  );
-  const prefixStr = toPairs(prefixes)
-    .map(([x, y]) => `@prefix ${x}: <${y}> .`)
-    .join('\n');
-
-  return `${prefixStr}\n\n${processedTtlStr}`;
-}
-
-function _json2quads({
+function json2triples({
   _name,
   _nomor,
   _tahun,
@@ -99,12 +84,12 @@ function _json2quads({
   mengingat,
   menimbang,
   babs,
-}: LegalDocument): Quad[] {
+}: LegalDocument): Triple[] {
   const docUri = getLegalUri(_docTrace);
   const docNode = namedNode(docUri);
-  const denganPersetujuanTuple: Tuple[] =
+  const denganPersetujuanTriple: Triple[] =
     _denganPersetujuan?.map((x) => [docNode, 'denganPersetujuan', x]) ?? [];
-  const tuples: (Tuple | undefined)[] = [
+  const triples: (Triple | undefined)[] = [
     ...mengimbang2Triple(_docTrace, 'menimbang', menimbang),
     ...mengimbang2Triple(_docTrace, 'mengingat', mengingat),
     ...flatten(babs?.map((b) => babsToTriple(b, _docTrace))),
@@ -127,31 +112,31 @@ function _json2quads({
     [docNode, 'tanggalDiundangkan', _tanggalDiundangkan],
     [docNode, 'sekretaris', _sekretaris],
     [docNode, 'dokumen', _dokumen],
-    ...denganPersetujuanTuple,
+    ...denganPersetujuanTriple,
   ];
 
-  return chain(tuples).compact().map(tupleToQuad).compact().value();
+  return compact(triples);
 }
 
 function mengimbang2Triple(
   parentTrace: LegalTrace,
   attrType: 'menimbang' | 'mengingat',
   mengimbang?: Mengimbang
-): Tuple[] {
+): Triple[] {
   if (isNil(mengimbang)) return [];
   const trace: SpecialDocTrace = { ...parentTrace, attrType, _specialTraceType: true };
   const uri = getSpecialDocUri(trace);
   const docNode = namedNode(getLegalUri(parentTrace));
   const node = namedNode(uri);
   const { points, text } = mengimbang;
-  const isiTriples: Tuple[] = isNil(points)
+  const isiTriples: Triple[] = isNil(points)
     ? [[node, attrType, text.text]]
     : points2Triple(node, points, trace);
 
   return [...isiTriples, [docNode, attrType, node], [node, rdf.type, onto(`${attrType}Document`)]];
 }
 
-function babsToTriple(bab: Bab, legalTrace: LegalTrace): Tuple[] {
+function babsToTriple(bab: Bab, legalTrace: LegalTrace): Triple[] {
   const { _key, _judul, text, isi } = bab;
   const trace = { ...legalTrace, bab: _key };
   const docNode = namedNode(getLegalUri(trace));
@@ -171,7 +156,7 @@ function babsToTriple(bab: Bab, legalTrace: LegalTrace): Tuple[] {
   ];
 }
 
-function bagianToTriple(bagian: Bagian, parent: NamedNode, babTrace: BabTrace): Tuple[] {
+function bagianToTriple(bagian: Bagian, parent: NamedNode, babTrace: BabTrace): Triple[] {
   const { _key, isi, text } = bagian;
   const trace = { ...babTrace, bagian: _key };
   const bagianNode = namedNode(getBagianUri(trace));
@@ -193,7 +178,7 @@ function paragrafToTriple(
   paragraf: Paragraf,
   parent: NamedNode,
   bagianTrace: BagianTrace
-): Tuple[] {
+): Triple[] {
   const { _key, isi, text } = paragraf;
   const trace = { ...bagianTrace, paragraf: _key };
   const paragrafNode = namedNode(getParagrafUri(trace));
@@ -208,7 +193,7 @@ function paragrafToTriple(
   ];
 }
 
-function pasalToTriple(pasal: Pasal, parent: NamedNode, legalTrace: LegalTrace): Tuple[] {
+function pasalToTriple(pasal: Pasal, parent: NamedNode, legalTrace: LegalTrace): Triple[] {
   const { _key, isi, text } = pasal;
   const trace: PasalTrace = { ...legalTrace, pasal: _key, _pasalTraceType: true };
   const pasalNode = namedNode(getPasalUri(trace));
@@ -228,7 +213,7 @@ function pasalContentToTriple(
   pasalNode: NamedNode,
   content: string | Points | Ayat[] | undefined,
   trace: PasalTrace
-): Tuple[] {
+): Triple[] {
   if (isNil(content)) return [];
 
   if (isArray(content) && isAyats(content)) {
@@ -239,7 +224,7 @@ function pasalContentToTriple(
   return points2Triple(pasalNode, content, trace);
 }
 
-function ayatToTriple(parent: NamedNode, ayat: Ayat, pasalTrace: PasalTrace): Tuple[] {
+function ayatToTriple(parent: NamedNode, ayat: Ayat, pasalTrace: PasalTrace): Triple[] {
   const { _key, text, isi } = ayat;
   const trace: AyatTrace = { ...pasalTrace, ayat: _key, _ayatTraceType: true };
   const ayatNode = namedNode(getAyatUri(trace));
@@ -255,7 +240,11 @@ function ayatToTriple(parent: NamedNode, ayat: Ayat, pasalTrace: PasalTrace): Tu
   ];
 }
 
-function points2Triple(parent: NamedNode, points: Points | undefined, trace: PointParent): Tuple[] {
+function points2Triple(
+  parent: NamedNode,
+  points: Points | undefined,
+  trace: PointParent
+): Triple[] {
   if (isNil(points)) return [];
   const { _description, text, isi } = points;
 
@@ -270,11 +259,11 @@ function points2Triple(parent: NamedNode, points: Points | undefined, trace: Poi
   ];
 }
 
-function pointToTriple(parent: NamedNode, point: Point, parentTrace: PointParent): Tuple[] {
+function pointToTriple(parent: NamedNode, point: Point, parentTrace: PointParent): Triple[] {
   const { _key, isi, text } = point;
   const trace: PointTrace = { _pointTraceType: true, point: _key, parent: parentTrace };
   const pointNode = namedNode(getPointUri(trace));
-  const isiTriples: Tuple[] = isNil(isi)
+  const isiTriples: Triple[] = isNil(isi)
     ? [[pointNode, 'hasText', text.text]]
     : points2Triple(pointNode, isi, trace);
 
@@ -288,7 +277,7 @@ function pointToTriple(parent: NamedNode, point: Point, parentTrace: PointParent
   ];
 }
 
-function referencesToTriple(parent: NamedNode, references: Reference[]): Tuple[] {
+function referencesToTriple(parent: NamedNode, references: Reference[]): Triple[] {
   return references.map(({ uri }) => [parent, 'references', namedNode(uri)]);
 }
 

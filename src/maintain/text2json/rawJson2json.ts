@@ -31,8 +31,8 @@ import {
   getAyatUri,
   getPointUri,
   getPasalUri,
-} from '../../uri/document-content-uri';
-import { LegalTrace, getLegalUri } from '../../uri/legal-type-uri';
+} from '../../uri/document-content';
+import { LegalTrace, getLegalUri } from '../../uri/legal-type';
 
 export function rawJson2json(legal: LegalDocument, trace: LegalTrace): LegalDocument {
   const { babs, mengingat, menimbang } = legal;
