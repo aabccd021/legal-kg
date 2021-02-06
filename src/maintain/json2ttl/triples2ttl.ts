@@ -3,8 +3,8 @@ import { isNil, isNumber, isString, toPairs, compact } from 'lodash';
 import * as n3 from 'n3';
 import { Triple } from './triple';
 import _ from 'lodash';
-import { LegalTrace, getLegalUri } from '../../uri';
-import { isDocumentTrace } from '../../uri/document-type';
+import { LegalNode, getLegalUri } from '../../uri';
+import { isDocumentNode } from '../../uri/document-type';
 
 const { triple, namedNode, literal } = n3.DataFactory;
 
@@ -19,8 +19,8 @@ const ontoBase = `${baseUri}ontology/`;
 /**
  * Node
  */
-function node(trace: LegalTrace): n3.NamedNode<string> {
-  const uri = getLegalUri(trace);
+function node(node: LegalNode): n3.NamedNode<string> {
+  const uri = getLegalUri(node);
   return namedNode(uri);
 }
 function onto(predicate: string): n3.NamedNode<string> {
@@ -75,16 +75,16 @@ type LegalClass =
   | 'Paragraf'
   | 'Bagian'
   | 'Bab';
-function getLegalClass(trace: LegalTrace): LegalClass {
-  if (isDocumentTrace(trace)) return 'Document';
-  if (trace._structureType === 'point') return 'Point';
-  if (trace._structureType === 'ayat') return 'Ayat';
-  if (trace._structureType === 'pasal') return 'Pasal';
-  if (trace._structureType === 'metadata') return 'Metadata';
-  if (trace._structureType === 'paragraf') return 'Paragraf';
-  if (trace._structureType === 'bagian') return 'Bagian';
-  if (trace._structureType === 'bab') return 'Bab';
-  assertNever(trace);
+function getLegalClass(node: LegalNode): LegalClass {
+  if (isDocumentNode(node)) return 'Document';
+  if (node._structureType === 'point') return 'Point';
+  if (node._structureType === 'ayat') return 'Ayat';
+  if (node._structureType === 'pasal') return 'Pasal';
+  if (node._structureType === 'metadata') return 'Metadata';
+  if (node._structureType === 'paragraf') return 'Paragraf';
+  if (node._structureType === 'bagian') return 'Bagian';
+  if (node._structureType === 'bab') return 'Bab';
+  assertNever(node);
 }
 
 /**

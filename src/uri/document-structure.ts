@@ -1,22 +1,22 @@
 import { assertNever } from 'assert-never';
-import { DocumentTrace, getDocumentUri } from './document-type';
+import { DocumentNode, getDocumentUri } from './document-type';
 
-export type DocumentStructureTrace =
-  | BabTrace
-  | BagianTrace
-  | ParagrafTrace
-  | PointTrace
-  | AyatTrace
-  | PasalTrace
-  | MetadataTrace;
+export type StructureNode =
+  | BabNode
+  | BagianNode
+  | ParagrafNode
+  | PointNode
+  | AyatNode
+  | PasalNode
+  | MetadataNode;
 
-export type PointTrace = {
+export type PointNode = {
   _structureType: 'point';
   _key: string | number;
-  parentPoints: PointsTrace;
+  parentPoints: PointsNode;
 };
-export function getPointUri(trace: PointTrace): string {
-  const { _key, parentPoints } = trace;
+export function getPointUri(node: PointNode): string {
+  const { _key, parentPoints } = node;
   const parentUri = _getPointParentUri(parentPoints);
 
   return `${parentUri}/point/${_key}`;
@@ -25,25 +25,25 @@ export function getPointUri(trace: PointTrace): string {
 /**
  * Points
  */
-export type PointsTrace = PointTrace | AyatTrace | PasalTrace | MetadataTrace;
-function _getPointParentUri(trace: PointsTrace): string {
-  if (trace._structureType === 'metadata') return getMetadataUri(trace);
-  if (trace._structureType === 'point') return getPointUri(trace);
-  if (trace._structureType === 'ayat') return getAyatUri(trace);
-  if (trace._structureType === 'pasal') return getPasalUri(trace);
-  assertNever(trace);
+export type PointsNode = PointNode | AyatNode | PasalNode | MetadataNode;
+function _getPointParentUri(node: PointsNode): string {
+  if (node._structureType === 'metadata') return getMetadataUri(node);
+  if (node._structureType === 'point') return getPointUri(node);
+  if (node._structureType === 'ayat') return getAyatUri(node);
+  if (node._structureType === 'pasal') return getPasalUri(node);
+  assertNever(node);
 }
 
 /**
  * Pasal
  */
-export type PasalTrace = {
+export type PasalNode = {
   _structureType: 'pasal';
-  parentDocument: DocumentTrace;
+  parentDocument: DocumentNode;
   _key: number;
 };
-export function getPasalUri(trace: PasalTrace): string {
-  const { _key, parentDocument } = trace;
+export function getPasalUri(node: PasalNode): string {
+  const { _key, parentDocument } = node;
   const docUri = getDocumentUri(parentDocument);
   return `${docUri}/pasal/${_key}`;
 }
@@ -51,8 +51,8 @@ export function getPasalUri(trace: PasalTrace): string {
 /**
  * Pasal Parent
  */
-export type PasalParentTrace = BagianTrace | BabTrace | ParagrafTrace;
-export function getPasalParentDocument(parent: PasalParentTrace): DocumentTrace {
+export type PasalParentNode = BagianNode | BabNode | ParagrafNode;
+export function getPasalParentDocument(parent: PasalParentNode): DocumentNode {
   if (parent._structureType === 'paragraf') return getPasalParentDocument(parent.parentBagian);
   if (parent._structureType === 'bagian') return getPasalParentDocument(parent.parentBab);
   if (parent._structureType === 'bab') return parent.parentDocument;
@@ -62,13 +62,13 @@ export function getPasalParentDocument(parent: PasalParentTrace): DocumentTrace 
 /**
  * Ayat
  */
-export type AyatTrace = {
+export type AyatNode = {
   _structureType: 'ayat';
-  parentPasal: PasalTrace;
+  parentPasal: PasalNode;
   _key: number;
 };
-export function getAyatUri(trace: AyatTrace): string {
-  const { _key, parentPasal } = trace;
+export function getAyatUri(node: AyatNode): string {
+  const { _key, parentPasal } = node;
   const pasalUri = getPasalUri(parentPasal);
   return `${pasalUri}/ayat/${_key}`;
 }
@@ -76,13 +76,13 @@ export function getAyatUri(trace: AyatTrace): string {
 /**
  * Paragraf
  */
-export type ParagrafTrace = {
+export type ParagrafNode = {
   _structureType: 'paragraf';
-  parentBagian: BagianTrace;
+  parentBagian: BagianNode;
   _key: number;
 };
-export function getParagrafUri(trace: ParagrafTrace): string {
-  const { _key, parentBagian } = trace;
+export function getParagrafUri(node: ParagrafNode): string {
+  const { _key, parentBagian } = node;
   const bagianUri = getBagianUri(parentBagian);
   return `${bagianUri}/paragraf/${_key}`;
 }
@@ -90,13 +90,13 @@ export function getParagrafUri(trace: ParagrafTrace): string {
 /**
  * Bagian
  */
-export type BagianTrace = {
+export type BagianNode = {
   _structureType: 'bagian';
-  parentBab: BabTrace;
+  parentBab: BabNode;
   _key: number;
 };
-export function getBagianUri(trace: BagianTrace): string {
-  const { _key, parentBab } = trace;
+export function getBagianUri(node: BagianNode): string {
+  const { _key, parentBab } = node;
   const babUri = getBabUri(parentBab);
   return `${babUri}/bagian/${_key}`;
 }
@@ -104,13 +104,13 @@ export function getBagianUri(trace: BagianTrace): string {
 /**
  * Bab
  */
-export type BabTrace = {
+export type BabNode = {
   _structureType: 'bab';
-  parentDocument: DocumentTrace;
+  parentDocument: DocumentNode;
   _key: number;
 };
-export function getBabUri(trace: BabTrace): string {
-  const { _key, parentDocument } = trace;
+export function getBabUri(node: BabNode): string {
+  const { _key, parentDocument } = node;
   const docUri = getDocumentUri(parentDocument);
   return `${docUri}/bab/${_key}`;
 }
@@ -120,13 +120,13 @@ export function getBabUri(trace: BabTrace): string {
  */
 
 /** Special */
-export type MetadataTrace = {
+export type MetadataNode = {
   _structureType: 'metadata';
-  parentDocument: DocumentTrace;
+  parentDocument: DocumentNode;
   metadataType: 'documentMengingat' | 'documentMenimbang';
 };
-export function getMetadataUri(trace: MetadataTrace): string {
-  const { metadataType, parentDocument } = trace;
+export function getMetadataUri(node: MetadataNode): string {
+  const { metadataType, parentDocument } = node;
   const docUri = getDocumentUri(parentDocument);
 
   return `${docUri}/${metadataType}`;

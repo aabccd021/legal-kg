@@ -6,7 +6,7 @@
     "build": "tsc",
     "lint": "eslint '**/*.ts'",
     "lint:fix": "eslint --fix '**/*.ts'",
-    "run:clearData": "rimraf maintained_legals/json maintained_legals/text maintained_legals/md",
+    "run:clearData": "rimraf maintained_documents/json maintained_documents/text maintained_documents/md",
     "run:pdf2text": "ts-node src/maintain/pdf2text/index.ts",
     "run:text2json": "ts-node src/maintain/text2json/index.ts",
     "run:json2md": "ts-node src/maintain/json2md/index.ts",

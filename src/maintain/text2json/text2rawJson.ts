@@ -1,8 +1,8 @@
-import { DocumentTrace } from '../../uri/document-type';
+import { DocumentNode } from '../../uri/document-type';
 import { compact, flatMap, isEmpty, isNil, mapValues } from 'lodash';
 import { toArabic } from 'roman-numerals';
 import {
-  LegalDocument,
+  Document,
   Mengimbang,
   Bab,
   Bagian,
@@ -17,9 +17,9 @@ const padaTaggalRegexp = /^pada tanggal/;
 const mengingatRegex = /^Mengingat\s*:/;
 const menimbangRegex = /^Menimbang\s*:/;
 
-export function text2rawJson(text: string, legalTrace: DocumentTrace): LegalDocument {
+export function text2rawJson(text: string, documentNode: DocumentNode): Document {
   const lines = text.split('\n');
-  const extractors: Extractor<keyof LegalDocument>[] = [
+  const extractors: Extractor<keyof Document>[] = [
     ['_salinan', /^SALINAN/, 'optional'],
     ['_name', /^(UNDANG-UNDANG REPUBLIK INDONESIA|PERATURAN GUBERNUR)/, 'required'],
     ['_nomor', /^NOMOR/, 'required'],
@@ -50,9 +50,9 @@ export function text2rawJson(text: string, legalTrace: DocumentTrace): LegalDocu
     .split(' ')
     .filter((x) => x !== '')
     .map((x) => parseInt(x));
-  const doc: LegalDocument = {
+  const doc: Document = {
     ...mapValues(extract_result, (x) => x?.join(' ').trim()),
-    _trace: legalTrace,
+    _node: documentNode,
     babs: getBabs(extract_result.babs),
     _pemutus: extract_result._pemutus?.join(' ').slice(0, -1).trim(),
     _sekretaris: extract_result._sekretaris?.filter((x) => x !== 'ttd').join(' '),

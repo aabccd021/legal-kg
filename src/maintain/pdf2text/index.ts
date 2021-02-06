@@ -1,14 +1,14 @@
 import { isEmpty } from 'lodash';
-import { getLegalData, DataDir, getDocFilePath } from '../utils';
+import { getDocumentData, DataDir, getDocFilePath } from '../utils';
 import { execSync } from 'child_process';
 import * as fs from 'fs';
 
 async function pdf2txt() {
-  const legalDir = 'maintained_legals';
-  const pdfDir: DataDir = { legalDir, dataType: 'pdf' };
-  const textDir: DataDir = { legalDir, dataType: 'text' };
+  const legalDir = 'maintained_documents';
+  const pdfDir: DataDir = { dir: legalDir, dataType: 'pdf' };
+  const textDir: DataDir = { dir: legalDir, dataType: 'text' };
 
-  const legals = getLegalData(pdfDir);
+  const legals = getDocumentData(pdfDir);
   legals.forEach((legal) => {
     const pdfPath = getDocFilePath(legal, pdfDir);
     const textPath = getDocFilePath(legal, textDir);

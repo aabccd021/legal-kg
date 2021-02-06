@@ -6,14 +6,14 @@ import {
   DOCUMENT_TYPES,
   DocumentType,
   DAERAHS,
-  DocumentTrace,
-  PerdaTrace,
-  UuTrace,
-  getLegalPath,
+  DocumentNode,
+  PerdaNode,
+  UuNode,
+  getDocumentPath,
 } from '../uri/document-type';
 
 export type DataType = 'pdf' | 'text' | 'json' | 'md' | 'ttl';
-export type DataDir = { legalDir: string; dataType: DataType };
+export type DataDir = { dir: string; dataType: DataType };
 function getDataTypeExtension(dataType: DataType): string {
   const extension = _getDataTypeExtension(dataType);
   return `.${extension}`;
@@ -27,45 +27,49 @@ function _getDataTypeExtension(dataType: DataType): string {
   assertNever(dataType);
 }
 
-export function getDocFilePath(trace: DocumentTrace, dataDir: DataDir): string {
-  const { legalDir, dataType } = dataDir;
+export function getDocFilePath(node: DocumentNode, dataDir: DataDir): string {
+  const { dir, dataType } = dataDir;
   const extension = getDataTypeExtension(dataType);
-  const docPath = getLegalPath(trace);
-  const filePath = `${legalDir}/${dataType}/${docPath}${extension}`;
+  const docPath = getDocumentPath(node);
+  const filePath = `${dir}/${dataType}/${docPath}${extension}`;
   const fileDir = path.dirname(filePath);
   fs.mkdirSync(fileDir, { recursive: true });
   return filePath;
 }
 
-export function getLegalData(dataDir: DataDir): DocumentTrace[] {
-  const { legalDir, dataType } = dataDir;
-  return DOCUMENT_TYPES.flatMap((legalType) => toLegalID(legalType, legalDir, dataType));
+export function getDocumentData(dataDir: DataDir): DocumentNode[] {
+  const { dir, dataType } = dataDir;
+  return DOCUMENT_TYPES.flatMap((docType) => toDocumentNode(docType, dir, dataType));
 }
 
-function toLegalID(legalType: DocumentType, legalDir: string, dataType: DataType): DocumentTrace[] {
-  const legalTypeDir = path.join(legalDir, dataType, legalType);
-  if (!fs.existsSync(legalTypeDir)) return [];
-  if (legalType === 'perda') return findFilePerdaTrace(legalTypeDir, dataType);
-  if (legalType === 'uu') return findFileUuTraces(legalTypeDir, dataType);
-  if (legalType === 'uud') throw Error('UUD not supported');
-  assertNever(legalType);
+function toDocumentNode(
+  documentType: DocumentType,
+  dir: string,
+  dataType: DataType
+): DocumentNode[] {
+  const documentTypeDir = path.join(dir, dataType, documentType);
+  if (!fs.existsSync(documentTypeDir)) return [];
+  if (documentType === 'perda') return findFilePerdaNode(documentTypeDir, dataType);
+  if (documentType === 'uu') return findFileUuNode(documentTypeDir, dataType);
+  if (documentType === 'uud') throw Error('UUD not supported');
+  assertNever(documentType);
 }
 
-function findFileUuTraces(uuDir: string, dataType: DataType): UuTrace[] {
+function findFileUuNode(uuDir: string, dataType: DataType): UuNode[] {
   const extension = getDataTypeExtension(dataType);
   return fs.readdirSync(uuDir).flatMap((year) =>
     fs
       .readdirSync(path.join(uuDir, year))
       .map((pdfName) => path.basename(pdfName, `${extension}`))
       .map((number) => ({
-        legalType: 'uu',
+        documentType: 'uu',
         tahun: parseInt(year),
         nomor: parseInt(number),
       }))
   );
 }
 
-function findFilePerdaTrace(dir: string, dataType: DataType): PerdaTrace[] {
+function findFilePerdaNode(dir: string, dataType: DataType): PerdaNode[] {
   const extension = getDataTypeExtension(dataType);
   return DAERAHS.flatMap((daerah) => {
     const daerahDir = path.join(dir, daerah);
@@ -75,7 +79,7 @@ function findFilePerdaTrace(dir: string, dataType: DataType): PerdaTrace[] {
         .readdirSync(path.join(daerahDir, year))
         .map((pdfName) => path.basename(pdfName, `${extension}`))
         .map((number) => ({
-          legalType: 'perda',
+          documentType: 'perda',
           daerah,
           tahun: parseInt(year),
           nomor: parseInt(number),

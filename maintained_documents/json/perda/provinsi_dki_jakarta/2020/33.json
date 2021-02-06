@@ -4,6 +4,12 @@
   "_memutuskan": "PERATURAN GUBERNUR TENTANG PELAKSANAAN PEMBATASAN SOSIAL BERSKALA BESAR DALAM PENANGANAN CORONA VIRUS DISEASE 2019 (COVID-19) DI PROVINSI DAERAH KHUSUS IBUKOTA JAKARTA.",
   "_namaPengesah": "ANIES BASWEDAN",
   "_name": "PERATURAN GUBERNUR DAERAH KHUSUS IBUKOTA JAKARTA",
+  "_node": {
+    "daerah": "provinsi_dki_jakarta",
+    "documentType": "perda",
+    "nomor": 33,
+    "tahun": 2020
+  },
   "_nomor": 33,
   "_pemutus": "GUBERNUR DAERAH KHUSUS IBUKOTA JAKARTA",
   "_salinan": "SALINAN GUBERNUR PROVINSI DAERAH KHUSUS IBUKOTA JAKARTA",
@@ -14,12 +20,6 @@
   "_tempatDitetapkan": "Jakarta",
   "_tempatDiundangkan": "Jakarta",
   "_tentang": "PELAKSANAAN PEMBATASAN SOSIAL BERSKALA BESAR DALAM PENANGANAN CORONA VIRUS DISEASE 2019 (COVID-19) DI PROVINSI DAERAH KHUSUS IBUKOTA JAKARTA",
-  "_trace": {
-    "daerah": "provinsi_dki_jakarta",
-    "legalType": "perda",
-    "nomor": 33,
-    "tahun": 2020
-  },
   "babs": [
     {
       "_judul": "KETENTUAN UMUM",
@@ -363,8 +363,7 @@
                     "references": [
                       {
                         "end": 39,
-                        "start": 31,
-                        "trace": {
+                        "node": {
                           "_key": 1,
                           "_structureType": "ayat",
                           "parentPasal": {
@@ -372,12 +371,13 @@
                             "_structureType": "pasal",
                             "parentDocument": {
                               "daerah": "provinsi_dki_jakarta",
-                              "legalType": "perda",
+                              "documentType": "perda",
                               "nomor": 33,
                               "tahun": 2020
                             }
                           }
-                        }
+                        },
+                        "start": 31
                       }
                     ],
                     "text": "PSBB sebagaimana dimaksud pada ayat (1) dilakukan dalam bentuk pembatasan aktivitas luar rumah yang dilakukan oleh setiap orang yang berdomisili dan/ atau berkegiatan di Provinsi DKI Jakarta."
@@ -434,8 +434,7 @@
                       "references": [
                         {
                           "end": 89,
-                          "start": 81,
-                          "trace": {
+                          "node": {
                             "_key": 2,
                             "_structureType": "ayat",
                             "parentPasal": {
@@ -443,12 +442,13 @@
                               "_structureType": "pasal",
                               "parentDocument": {
                                 "daerah": "provinsi_dki_jakarta",
-                                "legalType": "perda",
+                                "documentType": "perda",
                                 "nomor": 33,
                                 "tahun": 2020
                               }
                             }
-                          }
+                          },
+                          "start": 81
                         }
                       ],
                       "text": "Pembatasan aktivitas luar rumah dalam pelaksanaan PSBB sebagaimana dimaksud pada ayat (2) meliputi:"
@@ -533,8 +533,7 @@
                     "references": [
                       {
                         "end": 102,
-                        "start": 94,
-                        "trace": {
+                        "node": {
                           "_key": 1,
                           "_structureType": "ayat",
                           "parentPasal": {
@@ -542,12 +541,13 @@
                             "_structureType": "pasal",
                             "parentDocument": {
                               "daerah": "provinsi_dki_jakarta",
-                              "legalType": "perda",
+                              "documentType": "perda",
                               "nomor": 33,
                               "tahun": 2020
                             }
                           }
-                        }
+                        },
+                        "start": 94
                       }
                     ],
                     "text": "Koordinasi, pengerahan sumber daya dan operasional pelaksanaan PSBB sebagaimana dimaksud pada ayat (1) dilakukan oleh Gugus Tugas Percepatan Penanganan COVID- 19 tingkat Provinsi."
@@ -561,8 +561,7 @@
                     "references": [
                       {
                         "end": 65,
-                        "start": 57,
-                        "trace": {
+                        "node": {
                           "_key": 1,
                           "_structureType": "ayat",
                           "parentPasal": {
@@ -570,12 +569,13 @@
                             "_structureType": "pasal",
                             "parentDocument": {
                               "daerah": "provinsi_dki_jakarta",
-                              "legalType": "perda",
+                              "documentType": "perda",
                               "nomor": 33,
                               "tahun": 2020
                             }
                           }
-                        }
+                        },
+                        "start": 57
                       }
                     ],
                     "text": "Jangka waktu pemberlakuan PSBB sebagaimana dimaksud pada ayat (1) ditetapkan dengan Keputusan Gubernur."
@@ -619,8 +619,7 @@
                     "references": [
                       {
                         "end": 94,
-                        "start": 86,
-                        "trace": {
+                        "node": {
                           "_key": 1,
                           "_structureType": "ayat",
                           "parentPasal": {
@@ -628,12 +627,13 @@
                             "_structureType": "pasal",
                             "parentDocument": {
                               "daerah": "provinsi_dki_jakarta",
-                              "legalType": "perda",
+                              "documentType": "perda",
                               "nomor": 33,
                               "tahun": 2020
                             }
                           }
-                        }
+                        },
+                        "start": 86
                       }
                     ],
                     "text": "Dalam pelaksanaan penghentian sementara kegiatan di sekolah sebagaimana dimaksud pada ayat (1), semua aktivitas pembelajaran diubah pelaksanaannya dengan melakukan pembelajaran di rumah/tempat tinggal masing-masing melalui metode pembelajaran jarak jauh."
@@ -680,8 +680,7 @@
                       "references": [
                         {
                           "end": 134,
-                          "start": 118,
-                          "trace": {
+                          "node": {
                             "_key": 1,
                             "_structureType": "ayat",
                             "parentPasal": {
@@ -689,12 +688,13 @@
                               "_structureType": "pasal",
                               "parentDocument": {
                                 "daerah": "provinsi_dki_jakarta",
-                                "legalType": "perda",
+                                "documentType": "perda",
                                 "nomor": 33,
                                 "tahun": 2020
                               }
                             }
-                          }
+                          },
+                          "start": 118
                         }
                       ],
                       "text": "Institusi pendidikan lainnya yang dilakukan penghentian sementara selama pemberlakuan PSBB sebagaimana dimaksud dalam Pasal 6 ayat (1), meliputi:"
@@ -769,8 +769,7 @@
                     "references": [
                       {
                         "end": 97,
-                        "start": 89,
-                        "trace": {
+                        "node": {
                           "_key": 1,
                           "_structureType": "ayat",
                           "parentPasal": {
@@ -778,12 +777,13 @@
                             "_structureType": "pasal",
                             "parentDocument": {
                               "daerah": "provinsi_dki_jakarta",
-                              "legalType": "perda",
+                              "documentType": "perda",
                               "nomor": 33,
                               "tahun": 2020
                             }
                           }
-                        }
+                        },
+                        "start": 89
                       }
                     ],
                     "text": "Penghentian sementara kegiatan di institusi pendidikan lainnya sebagaimana dimaksud pada ayat (1), dikecualikan bagi lembaga pendidikan, pelatihan, penelitian yang berkaitan dengan pelayanan kesehatan."
@@ -797,8 +797,7 @@
                     "references": [
                       {
                         "end": 115,
-                        "start": 107,
-                        "trace": {
+                        "node": {
                           "_key": 1,
                           "_structureType": "ayat",
                           "parentPasal": {
@@ -806,12 +805,13 @@
                             "_structureType": "pasal",
                             "parentDocument": {
                               "daerah": "provinsi_dki_jakarta",
-                              "legalType": "perda",
+                              "documentType": "perda",
                               "nomor": 33,
                               "tahun": 2020
                             }
                           }
-                        }
+                        },
+                        "start": 107
                       }
                     ],
                     "text": "Dalam pelaksanaan penghentian sementara kegiatan di institusi pendidikan lainnya sebagaimana dimaksud pada ayat (1), kegiatan, aktivitas pembelajaran, dan pelayanan administrasi dilaksanakan secara daring dari rumah sesuai ketentuan teknis dari instansi terkait."
@@ -890,8 +890,7 @@
                       "references": [
                         {
                           "end": 174,
-                          "start": 158,
-                          "trace": {
+                          "node": {
                             "_key": "b",
                             "_structureType": "point",
                             "parentPoints": {
@@ -902,13 +901,14 @@
                                 "_structureType": "pasal",
                                 "parentDocument": {
                                   "daerah": "provinsi_dki_jakarta",
-                                  "legalType": "perda",
+                                  "documentType": "perda",
                                   "nomor": 33,
                                   "tahun": 2020
                                 }
                               }
                             }
-                          }
+                          },
+                          "start": 158
                         }
                       ],
                       "text": "Upaya pencegahan penyebaran Corona Virus Disease (COVID- 19) di lokasi dan lingkungan sekolah dan/atau institusi pendidikan lainnya sebagaimana dimaksud pada ayat (1) huruf b dilakukan secara berkala dengan cara:"
@@ -983,8 +983,7 @@
                     "references": [
                       {
                         "end": 104,
-                        "start": 96,
-                        "trace": {
+                        "node": {
                           "_key": 1,
                           "_structureType": "ayat",
                           "parentPasal": {
@@ -992,12 +991,13 @@
                             "_structureType": "pasal",
                             "parentDocument": {
                               "daerah": "provinsi_dki_jakarta",
-                              "legalType": "perda",
+                              "documentType": "perda",
                               "nomor": 33,
                               "tahun": 2020
                             }
                           }
-                        }
+                        },
+                        "start": 96
                       }
                     ],
                     "text": "Selama penghentian sementara aktivitas bekerja di tempat kerja/kantor sebagaimana dimaksud pada ayat (1), wajib mengganti aktivitas bekerja di tempat kerja dengan aktivitas bekerja di rumah/tempat tinggal."
@@ -1012,8 +1012,7 @@
                       "references": [
                         {
                           "end": 127,
-                          "start": 119,
-                          "trace": {
+                          "node": {
                             "_key": 2,
                             "_structureType": "ayat",
                             "parentPasal": {
@@ -1021,12 +1020,13 @@
                               "_structureType": "pasal",
                               "parentDocument": {
                                 "daerah": "provinsi_dki_jakarta",
-                                "legalType": "perda",
+                                "documentType": "perda",
                                 "nomor": 33,
                                 "tahun": 2020
                               }
                             }
-                          }
+                          },
+                          "start": 119
                         }
                       ],
                       "text": "Pimpinan tempat kerja yang melakukan penghentian sementara aktivitas bekerja di tempat kerja sebagaimana dimaksud pada ayat (2) wajib:"
@@ -1102,8 +1102,7 @@
                       "references": [
                         {
                           "end": 133,
-                          "start": 125,
-                          "trace": {
+                          "node": {
                             "_key": 3,
                             "_structureType": "ayat",
                             "parentPasal": {
@@ -1111,12 +1110,13 @@
                               "_structureType": "pasal",
                               "parentDocument": {
                                 "daerah": "provinsi_dki_jakarta",
-                                "legalType": "perda",
+                                "documentType": "perda",
                                 "nomor": 33,
                                 "tahun": 2020
                               }
                             }
-                          }
+                          },
+                          "start": 125
                         }
                       ],
                       "text": "Upaya pencegahan penyebaran Corona Virus Disease (COVID- 19) di lokasi dan lingkungan tempat kerja sebagaimana dimaksud pada ayat (3) huruf c, dilakukan secara berkala dengan cara:"
@@ -1184,8 +1184,7 @@
                       "references": [
                         {
                           "end": 124,
-                          "start": 108,
-                          "trace": {
+                          "node": {
                             "_key": 1,
                             "_structureType": "ayat",
                             "parentPasal": {
@@ -1193,12 +1192,13 @@
                               "_structureType": "pasal",
                               "parentDocument": {
                                 "daerah": "provinsi_dki_jakarta",
-                                "legalType": "perda",
+                                "documentType": "perda",
                                 "nomor": 33,
                                 "tahun": 2020
                               }
                             }
-                          }
+                          },
+                          "start": 108
                         }
                       ],
                       "text": "Dikecualikan dari penghentian sementara aktivitas bekerja di tempat kerja/kantor sebagaimana dimaksud dalam Pasal 9 ayat (1), bagi tempat kerja/kantor dengan kategori:"
@@ -1396,8 +1396,7 @@
                       "references": [
                         {
                           "end": 139,
-                          "start": 131,
-                          "trace": {
+                          "node": {
                             "_key": 1,
                             "_structureType": "ayat",
                             "parentPasal": {
@@ -1405,12 +1404,13 @@
                               "_structureType": "pasal",
                               "parentDocument": {
                                 "daerah": "provinsi_dki_jakarta",
-                                "legalType": "perda",
+                                "documentType": "perda",
                                 "nomor": 33,
                                 "tahun": 2020
                               }
                             }
-                          }
+                          },
+                          "start": 131
                         }
                       ],
                       "text": "Dalam hal melakukan pengecualian terhadap penghentian sementara aktivitas bekerja di tempat kerja/kantor sebagaimana dimaksud pada ayat (1), pimpinan tempat kerja wajib melakukan:"
@@ -1999,8 +1999,7 @@
                     "references": [
                       {
                         "end": 127,
-                        "start": 119,
-                        "trace": {
+                        "node": {
                           "_key": 1,
                           "_structureType": "ayat",
                           "parentPasal": {
@@ -2008,12 +2007,13 @@
                             "_structureType": "pasal",
                             "parentDocument": {
                               "daerah": "provinsi_dki_jakarta",
-                              "legalType": "perda",
+                              "documentType": "perda",
                               "nomor": 33,
                               "tahun": 2020
                             }
                           }
-                        }
+                        },
+                        "start": 119
                       }
                     ],
                     "text": "Selama penghentian sementara kegiatan keagamaan di rumah ibadah dan/ atau di tempat tertentu sebagaimana dimaksud pada ayat (1), kegiatan keagamaan dilakukan di rumah masing-masing."
@@ -2027,8 +2027,7 @@
                     "references": [
                       {
                         "end": 126,
-                        "start": 118,
-                        "trace": {
+                        "node": {
                           "_key": 1,
                           "_structureType": "ayat",
                           "parentPasal": {
@@ -2036,12 +2035,13 @@
                             "_structureType": "pasal",
                             "parentDocument": {
                               "daerah": "provinsi_dki_jakarta",
-                              "legalType": "perda",
+                              "documentType": "perda",
                               "nomor": 33,
                               "tahun": 2020
                             }
                           }
-                        }
+                        },
+                        "start": 118
                       }
                     ],
                     "text": "Selama penghentian sementara kegiatan keagamaan di rumah ibadah dan/atau di tempat tertentu sebagaimana dimaksud pada ayat (1), kegiatan penanda waktu ibadah seperti adzan, lonceng, dan/atau penanda waktu lainnya dilaksanakan seperti biasa."
@@ -2120,8 +2120,7 @@
                       "references": [
                         {
                           "end": 119,
-                          "start": 103,
-                          "trace": {
+                          "node": {
                             "_key": "b",
                             "_structureType": "point",
                             "parentPoints": {
@@ -2132,13 +2131,14 @@
                                 "_structureType": "pasal",
                                 "parentDocument": {
                                   "daerah": "provinsi_dki_jakarta",
-                                  "legalType": "perda",
+                                  "documentType": "perda",
                                   "nomor": 33,
                                   "tahun": 2020
                                 }
                               }
                             }
-                          }
+                          },
+                          "start": 103
                         }
                       ],
                       "text": "Upaya pencegahan penyebaran Corona Virus Disease (COVID- 19) di rumah ibadah sebagaimana dimaksud pada ayat (1) huruf b dilakukan secara berkala dengan cara:"
@@ -2224,8 +2224,7 @@
                       "references": [
                         {
                           "end": 238,
-                          "start": 230,
-                          "trace": {
+                          "node": {
                             "_key": 1,
                             "_structureType": "ayat",
                             "parentPasal": {
@@ -2233,12 +2232,13 @@
                               "_structureType": "pasal",
                               "parentDocument": {
                                 "daerah": "provinsi_dki_jakarta",
-                                "legalType": "perda",
+                                "documentType": "perda",
                                 "nomor": 33,
                                 "tahun": 2020
                               }
                             }
-                          }
+                          },
+                          "start": 230
                         }
                       ],
                       "text": "Pengelola tempat atau fasilitas umum wajib menutup sementara tempat atau fasilitas umum untuk kegiatan penduduk selama pemberlakuan PSBB. Dikecualikan dari larangan kegiatan di tempat atau fasilitas umum sebagaimana dimaksud pada ayat (1), kegiatan penduduk untuk:"
@@ -2263,8 +2263,7 @@
                           "references": [
                             {
                               "end": 264,
-                              "start": 256,
-                              "trace": {
+                              "node": {
                                 "_key": 3,
                                 "_structureType": "ayat",
                                 "parentPasal": {
@@ -2272,12 +2271,13 @@
                                   "_structureType": "pasal",
                                   "parentDocument": {
                                     "daerah": "provinsi_dki_jakarta",
-                                    "legalType": "perda",
+                                    "documentType": "perda",
                                     "nomor": 33,
                                     "tahun": 2020
                                   }
                                 }
-                              }
+                              },
+                              "start": 256
                             }
                           ],
                           "text": "melakukan kegiatan olahraga secara mandiri. (4) Ketua Gugus Tugas Percepatan Penanganan COVID-19 tingkat Provinsi dapat menambahkan kategori kegiatan penduduk yang dikecualikan dari larangan kegiatan di tempat atau fasilitas umum sebagaimana dimaksud pada ayat (3)."
@@ -2314,8 +2314,7 @@
                       "references": [
                         {
                           "end": 70,
-                          "start": 53,
-                          "trace": {
+                          "node": {
                             "_key": 3,
                             "_structureType": "ayat",
                             "parentPasal": {
@@ -2323,12 +2322,13 @@
                               "_structureType": "pasal",
                               "parentDocument": {
                                 "daerah": "provinsi_dki_jakarta",
-                                "legalType": "perda",
+                                "documentType": "perda",
                                 "nomor": 33,
                                 "tahun": 2020
                               }
                             }
-                          }
+                          },
+                          "start": 53
                         }
                       ],
                       "text": "Pemenuhan kebutuhan pokok sebagaimana dimaksud dalam Pasal 13 ayat (3) huruf a, meliputi kegiatan penyediaan, pengolahan, penyaluran dan/atau pengiriman:"
@@ -2404,8 +2404,7 @@
                       "references": [
                         {
                           "end": 76,
-                          "start": 59,
-                          "trace": {
+                          "node": {
                             "_key": 3,
                             "_structureType": "ayat",
                             "parentPasal": {
@@ -2413,12 +2412,13 @@
                               "_structureType": "pasal",
                               "parentDocument": {
                                 "daerah": "provinsi_dki_jakarta",
-                                "legalType": "perda",
+                                "documentType": "perda",
                                 "nomor": 33,
                                 "tahun": 2020
                               }
                             }
-                          }
+                          },
+                          "start": 59
                         }
                       ],
                       "text": "Pemenuhan kebutuhan sehari-hari sebagaimana dimaksud dalam Pasal 13 ayat (3) huruf a, meliputi:"
@@ -2506,8 +2506,7 @@
                       "references": [
                         {
                           "end": 116,
-                          "start": 108,
-                          "trace": {
+                          "node": {
                             "_key": 2,
                             "_structureType": "ayat",
                             "parentPasal": {
@@ -2515,17 +2514,17 @@
                               "_structureType": "pasal",
                               "parentDocument": {
                                 "daerah": "provinsi_dki_jakarta",
-                                "legalType": "perda",
+                                "documentType": "perda",
                                 "nomor": 33,
                                 "tahun": 2020
                               }
                             }
-                          }
+                          },
+                          "start": 108
                         },
                         {
                           "end": 103,
-                          "start": 95,
-                          "trace": {
+                          "node": {
                             "_key": 1,
                             "_structureType": "ayat",
                             "parentPasal": {
@@ -2533,12 +2532,13 @@
                               "_structureType": "pasal",
                               "parentDocument": {
                                 "daerah": "provinsi_dki_jakarta",
-                                "legalType": "perda",
+                                "documentType": "perda",
                                 "nomor": 33,
                                 "tahun": 2020
                               }
                             }
-                          }
+                          },
+                          "start": 95
                         }
                       ],
                       "text": "Dalam melayani pemenuhan kebutuhan penduduk selama pemberlakuan PSBB sebagaimana dimaksud pada ayat (1) dan ayat (2), pelaku usaha wajib mengikuti ketentuan pembatasan kegiatan sebagai berikut:"
@@ -2635,8 +2635,7 @@
                     "references": [
                       {
                         "end": 77,
-                        "start": 60,
-                        "trace": {
+                        "node": {
                           "_key": 3,
                           "_structureType": "ayat",
                           "parentPasal": {
@@ -2644,12 +2643,13 @@
                             "_structureType": "pasal",
                             "parentDocument": {
                               "daerah": "provinsi_dki_jakarta",
-                              "legalType": "perda",
+                              "documentType": "perda",
                               "nomor": 33,
                               "tahun": 2020
                             }
                           }
-                        }
+                        },
+                        "start": 60
                       }
                     ],
                     "text": "Kegiatan olahraga secara mandiri sebagaimana dimaksud dalam Pasal 13 ayat (3) huruf b, dapat dilakukan secara terbatas oleh penduduk di luar rumah selama pemberlakuan PSBB."
@@ -2664,8 +2664,7 @@
                       "references": [
                         {
                           "end": 67,
-                          "start": 59,
-                          "trace": {
+                          "node": {
                             "_key": 1,
                             "_structureType": "ayat",
                             "parentPasal": {
@@ -2673,12 +2672,13 @@
                               "_structureType": "pasal",
                               "parentDocument": {
                                 "daerah": "provinsi_dki_jakarta",
-                                "legalType": "perda",
+                                "documentType": "perda",
                                 "nomor": 33,
                                 "tahun": 2020
                               }
                             }
-                          }
+                          },
+                          "start": 59
                         }
                       ],
                       "text": "Kegiatan olahraga secara mandiri sebagaimana dimaksud pada ayat (1), dilaksanakan dengan ketentuan:"
@@ -2754,8 +2754,7 @@
                       "references": [
                         {
                           "end": 61,
-                          "start": 53,
-                          "trace": {
+                          "node": {
                             "_key": 1,
                             "_structureType": "ayat",
                             "parentPasal": {
@@ -2763,12 +2762,13 @@
                               "_structureType": "pasal",
                               "parentDocument": {
                                 "daerah": "provinsi_dki_jakarta",
-                                "legalType": "perda",
+                                "documentType": "perda",
                                 "nomor": 33,
                                 "tahun": 2020
                               }
                             }
-                          }
+                          },
+                          "start": 53
                         }
                       ],
                       "text": "Kegiatan sosial dan budaya sebagaimana dimaksud pada ayat (1) termasuk pula kegiatan yang berkaitan perkumpulan atau pertemuan:"
@@ -2856,8 +2856,7 @@
                       "references": [
                         {
                           "end": 106,
-                          "start": 89,
-                          "trace": {
+                          "node": {
                             "_key": 1,
                             "_structureType": "ayat",
                             "parentPasal": {
@@ -2865,12 +2864,13 @@
                               "_structureType": "pasal",
                               "parentDocument": {
                                 "daerah": "provinsi_dki_jakarta",
-                                "legalType": "perda",
+                                "documentType": "perda",
                                 "nomor": 33,
                                 "tahun": 2020
                               }
                             }
-                          }
+                          },
+                          "start": 89
                         }
                       ],
                       "text": "Dikecualikan dari penghentian atas kegiatan sosial dan budaya sebagaimana dimaksud dalam Pasal 16 ayat (1), untuk kegiatan:"
@@ -2926,8 +2926,7 @@
                       "references": [
                         {
                           "end": 62,
-                          "start": 54,
-                          "trace": {
+                          "node": {
                             "_key": 1,
                             "_structureType": "ayat",
                             "parentPasal": {
@@ -2935,12 +2934,13 @@
                               "_structureType": "pasal",
                               "parentDocument": {
                                 "daerah": "provinsi_dki_jakarta",
-                                "legalType": "perda",
+                                "documentType": "perda",
                                 "nomor": 33,
                                 "tahun": 2020
                               }
                             }
-                          }
+                          },
+                          "start": 54
                         }
                       ],
                       "text": "Pelaksanaan kegiatan khitan sebagaimana dimaksud pada ayat (1) huruf a, dilaksanakan dengan ketentuan:"
@@ -3006,8 +3006,7 @@
                       "references": [
                         {
                           "end": 66,
-                          "start": 58,
-                          "trace": {
+                          "node": {
                             "_key": 1,
                             "_structureType": "ayat",
                             "parentPasal": {
@@ -3015,12 +3014,13 @@
                               "_structureType": "pasal",
                               "parentDocument": {
                                 "daerah": "provinsi_dki_jakarta",
-                                "legalType": "perda",
+                                "documentType": "perda",
                                 "nomor": 33,
                                 "tahun": 2020
                               }
                             }
-                          }
+                          },
+                          "start": 58
                         }
                       ],
                       "text": "Pelaksanaan kegiatan pernikahan sebagaimana dimaksud pada ayat (1) huruf b, dilaksanakan dengan ketentuan:"
@@ -3086,8 +3086,7 @@
                       "references": [
                         {
                           "end": 142,
-                          "start": 134,
-                          "trace": {
+                          "node": {
                             "_key": 1,
                             "_structureType": "ayat",
                             "parentPasal": {
@@ -3095,12 +3094,13 @@
                               "_structureType": "pasal",
                               "parentDocument": {
                                 "daerah": "provinsi_dki_jakarta",
-                                "legalType": "perda",
+                                "documentType": "perda",
                                 "nomor": 33,
                                 "tahun": 2020
                               }
                             }
-                          }
+                          },
+                          "start": 134
                         }
                       ],
                       "text": "Pelaksanaan kegiatan pemakaman dan/atau takziah kematian yang bukan karena Corona Virus Disease (COVID- 19) sebagaimana dimaksud pada ayat (1) huruf c, dilaksanakan dengan ketentuan:"
@@ -3155,8 +3155,7 @@
                     "references": [
                       {
                         "end": 212,
-                        "start": 204,
-                        "trace": {
+                        "node": {
                           "_key": 1,
                           "_structureType": "ayat",
                           "parentPasal": {
@@ -3164,12 +3163,13 @@
                             "_structureType": "pasal",
                             "parentDocument": {
                               "daerah": "provinsi_dki_jakarta",
-                              "legalType": "perda",
+                              "documentType": "perda",
                               "nomor": 33,
                               "tahun": 2020
                             }
                           }
-                        }
+                        },
+                        "start": 204
                       }
                     ],
                     "text": "Ketua Gugus Tugas Percepatan Penanganan COVID-19 tingkat Provinsi dapat menambahkan kategori kegiatan penduduk yang dikecualikan dari penghentian atas kegiatan sosial dan budaya sebagaimana dimaksud pada ayat (1)."
@@ -3246,8 +3246,7 @@
                       "references": [
                         {
                           "end": 101,
-                          "start": 93,
-                          "trace": {
+                          "node": {
                             "_key": 1,
                             "_structureType": "ayat",
                             "parentPasal": {
@@ -3255,12 +3254,13 @@
                               "_structureType": "pasal",
                               "parentDocument": {
                                 "daerah": "provinsi_dki_jakarta",
-                                "legalType": "perda",
+                                "documentType": "perda",
                                 "nomor": 33,
                                 "tahun": 2020
                               }
                             }
-                          }
+                          },
+                          "start": 93
                         }
                       ],
                       "text": "Dikecualikan dari penghentian \tsementara kegiatan pergerakan orang sebagaimana dimaksud pada ayat (1), untuk jenis moda transportasi:"
@@ -3315,8 +3315,7 @@
                     "references": [
                       {
                         "end": 102,
-                        "start": 94,
-                        "trace": {
+                        "node": {
                           "_key": 1,
                           "_structureType": "ayat",
                           "parentPasal": {
@@ -3324,12 +3323,13 @@
                             "_structureType": "pasal",
                             "parentDocument": {
                               "daerah": "provinsi_dki_jakarta",
-                              "legalType": "perda",
+                              "documentType": "perda",
                               "nomor": 33,
                               "tahun": 2020
                             }
                           }
-                        }
+                        },
+                        "start": 94
                       }
                     ],
                     "text": "Dikecualikan dari penghentian \tsementara kegiatan pergerakan barang sebagaimana dimaksud pada ayat (1), untuk semua jenis moda transportasi."
@@ -3569,8 +3569,7 @@
                     "references": [
                       {
                         "end": 269,
-                        "start": 261,
-                        "trace": {
+                        "node": {
                           "_key": 3,
                           "_structureType": "ayat",
                           "parentPasal": {
@@ -3578,17 +3577,17 @@
                             "_structureType": "pasal",
                             "parentDocument": {
                               "daerah": "provinsi_dki_jakarta",
-                              "legalType": "perda",
+                              "documentType": "perda",
                               "nomor": 33,
                               "tahun": 2020
                             }
                           }
-                        }
+                        },
+                        "start": 261
                       },
                       {
                         "end": 256,
-                        "start": 248,
-                        "trace": {
+                        "node": {
                           "_key": 2,
                           "_structureType": "ayat",
                           "parentPasal": {
@@ -3596,12 +3595,13 @@
                             "_structureType": "pasal",
                             "parentDocument": {
                               "daerah": "provinsi_dki_jakarta",
-                              "legalType": "perda",
+                              "documentType": "perda",
                               "nomor": 33,
                               "tahun": 2020
                             }
                           }
-                        }
+                        },
+                        "start": 248
                       }
                     ],
                     "text": "Ketua Gugus Tugas Percepatan Penanganan COVID-19 tingkat Provinsi dapat menambahkan menambahkan jenis moda transportasi yang dikecualikan dari penghentian sementara moda transportasi untuk pergerakan orang dan/atau barang sebagaimana dimaksud pada ayat (2) dan ayat (3). 16"
@@ -3715,8 +3715,7 @@
                     "references": [
                       {
                         "end": 60,
-                        "start": 52,
-                        "trace": {
+                        "node": {
                           "_key": 1,
                           "_structureType": "ayat",
                           "parentPasal": {
@@ -3724,12 +3723,13 @@
                             "_structureType": "pasal",
                             "parentDocument": {
                               "daerah": "provinsi_dki_jakarta",
-                              "legalType": "perda",
+                              "documentType": "perda",
                               "nomor": 33,
                               "tahun": 2020
                             }
                           }
-                        }
+                        },
+                        "start": 52
                       }
                     ],
                     "text": "Pelaksanaan pemenuhan hak sebagaimana dimaksud pada ayat (1) mengikuti petunjuk teknis yang ditetapkan oleh Ketua Gugus Tugas Percepatan Penanganan COVID-19 tingkat Provinsi."
@@ -3859,8 +3859,7 @@
                     "references": [
                       {
                         "end": 56,
-                        "start": 48,
-                        "trace": {
+                        "node": {
                           "_key": 2,
                           "_structureType": "ayat",
                           "parentPasal": {
@@ -3868,12 +3867,13 @@
                             "_structureType": "pasal",
                             "parentDocument": {
                               "daerah": "provinsi_dki_jakarta",
-                              "legalType": "perda",
+                              "documentType": "perda",
                               "nomor": 33,
                               "tahun": 2020
                             }
                           }
-                        }
+                        },
+                        "start": 48
                       }
                     ],
                     "text": "Pelaksanaan kewajiban sebagaimana dimaksud pada ayat (2) harus mengikuti petunjuk teknis yang ditetapkan oleh Ketua Gugus Tugas Percepatan Penanganan COVID-19 tingkat Provinsi."
@@ -3917,8 +3917,7 @@
                     "references": [
                       {
                         "end": 49,
-                        "start": 41,
-                        "trace": {
+                        "node": {
                           "_key": 1,
                           "_structureType": "ayat",
                           "parentPasal": {
@@ -3926,12 +3925,13 @@
                             "_structureType": "pasal",
                             "parentDocument": {
                               "daerah": "provinsi_dki_jakarta",
-                              "legalType": "perda",
+                              "documentType": "perda",
                               "nomor": 33,
                               "tahun": 2020
                             }
                           }
-                        }
+                        },
+                        "start": 41
                       }
                     ],
                     "text": "Bantuan sosial sebagaimana dimaksud pada ayat (1) diberikan dalam bentuk bahan pokok dan/ atau bantuan langsung lainnya yang mekanisme penyalurannya sesuai dengan ketentuan peraturan perundang-undangan."
@@ -3945,8 +3945,7 @@
                     "references": [
                       {
                         "end": 68,
-                        "start": 60,
-                        "trace": {
+                        "node": {
                           "_key": 2,
                           "_structureType": "ayat",
                           "parentPasal": {
@@ -3954,12 +3953,13 @@
                             "_structureType": "pasal",
                             "parentDocument": {
                               "daerah": "provinsi_dki_jakarta",
-                              "legalType": "perda",
+                              "documentType": "perda",
                               "nomor": 33,
                               "tahun": 2020
                             }
                           }
-                        }
+                        },
+                        "start": 60
                       }
                     ],
                     "text": "Penetapan penerima bantuan sosial sebagaimana dimaksud pada ayat (2) ditetapkan dengan Keputusan Gubernur."
@@ -3996,8 +3996,7 @@
                       "references": [
                         {
                           "end": 43,
-                          "start": 35,
-                          "trace": {
+                          "node": {
                             "_key": 1,
                             "_structureType": "ayat",
                             "parentPasal": {
@@ -4005,12 +4004,13 @@
                               "_structureType": "pasal",
                               "parentDocument": {
                                 "daerah": "provinsi_dki_jakarta",
-                                "legalType": "perda",
+                                "documentType": "perda",
                                 "nomor": 33,
                                 "tahun": 2020
                               }
                             }
-                          }
+                          },
+                          "start": 35
                         }
                       ],
                       "text": "Insentif sebagaimana dimaksud pada ayat (1) diberikan dalam bentuk:"
@@ -4098,8 +4098,7 @@
                 "references": [
                   {
                     "end": 126,
-                    "start": 118,
-                    "trace": {
+                    "node": {
                       "_key": 1,
                       "_structureType": "ayat",
                       "parentPasal": {
@@ -4107,12 +4106,13 @@
                         "_structureType": "pasal",
                         "parentDocument": {
                           "daerah": "provinsi_dki_jakarta",
-                          "legalType": "perda",
+                          "documentType": "perda",
                           "nomor": 33,
                           "tahun": 2020
                         }
                       }
-                    }
+                    },
+                    "start": 118
                   }
                 ],
                 "text": "Prosedur dan penggunaan sistem informasi dalam rangka penyediaan dan penyaluran sumber daya sebagaimana dimaksud pada ayat (1) ditetapkan oleh Ketua Gugus Tugas Percepatan Penanganan COVID-19 tingkat Provinsi. 18"
@@ -4149,8 +4149,7 @@
                   "references": [
                     {
                       "end": 57,
-                      "start": 49,
-                      "trace": {
+                      "node": {
                         "_key": 1,
                         "_structureType": "ayat",
                         "parentPasal": {
@@ -4158,12 +4157,13 @@
                           "_structureType": "pasal",
                           "parentDocument": {
                             "daerah": "provinsi_dki_jakarta",
-                            "legalType": "perda",
+                            "documentType": "perda",
                             "nomor": 33,
                             "tahun": 2020
                           }
                         }
-                      }
+                      },
+                      "start": 49
                     }
                   ],
                   "text": "Kolaborasi kelembagaan sebagaimana dimaksud pada ayat (1) dilakukan dalam bentuk:"
@@ -4258,8 +4258,7 @@
                 "references": [
                   {
                     "end": 58,
-                    "start": 50,
-                    "trace": {
+                    "node": {
                       "_key": 1,
                       "_structureType": "ayat",
                       "parentPasal": {
@@ -4267,12 +4266,13 @@
                         "_structureType": "pasal",
                         "parentDocument": {
                           "daerah": "provinsi_dki_jakarta",
-                          "legalType": "perda",
+                          "documentType": "perda",
                           "nomor": 33,
                           "tahun": 2020
                         }
                       }
-                    }
+                    },
+                    "start": 50
                   }
                 ],
                 "text": "Pemantauan dan evaluasi sebagaimana dimaksud pada ayat (1) dilakukan oleh Gugus Tugas COVID-19 sesuai tingkatan wilayah melalui pemantauan atau pemeriksaan ke lapangan sesuai dengan wewenang dan tanggung jawab."
@@ -4287,8 +4287,7 @@
                   "references": [
                     {
                       "end": 74,
-                      "start": 66,
-                      "trace": {
+                      "node": {
                         "_key": 1,
                         "_structureType": "ayat",
                         "parentPasal": {
@@ -4296,12 +4295,13 @@
                           "_structureType": "pasal",
                           "parentDocument": {
                             "daerah": "provinsi_dki_jakarta",
-                            "legalType": "perda",
+                            "documentType": "perda",
                             "nomor": 33,
                             "tahun": 2020
                           }
                         }
-                      }
+                      },
+                      "start": 66
                     }
                   ],
                   "text": "Penilaian keberhasilan pelaksanaan PSBB sebagaimana dimaksud pada ayat (1) didasarkan pada kriteria:"
@@ -4378,8 +4378,7 @@
                 "references": [
                   {
                     "end": 62,
-                    "start": 54,
-                    "trace": {
+                    "node": {
                       "_key": 1,
                       "_structureType": "ayat",
                       "parentPasal": {
@@ -4387,12 +4386,13 @@
                         "_structureType": "pasal",
                         "parentDocument": {
                           "daerah": "provinsi_dki_jakarta",
-                          "legalType": "perda",
+                          "documentType": "perda",
                           "nomor": 33,
                           "tahun": 2020
                         }
                       }
-                    }
+                    },
+                    "start": 54
                   }
                 ],
                 "text": "Pemantauan pelaksanaan PSBB sebagaimana dimaksud pada ayat (1) dilaporkan melalui kanal penanganan pengaduan masyarakat yang dimiliki oleh Pemerintah Provinsi DKI Jakarta."
@@ -4406,8 +4406,7 @@
                 "references": [
                   {
                     "end": 66,
-                    "start": 58,
-                    "trace": {
+                    "node": {
                       "_key": 2,
                       "_structureType": "ayat",
                       "parentPasal": {
@@ -4415,12 +4414,13 @@
                         "_structureType": "pasal",
                         "parentDocument": {
                           "daerah": "provinsi_dki_jakarta",
-                          "legalType": "perda",
+                          "documentType": "perda",
                           "nomor": 33,
                           "tahun": 2020
                         }
                       }
-                    }
+                    },
+                    "start": 58
                   }
                 ],
                 "text": "Hasil pelaporan oleh masyarakat sebagaimana dimaksud pada ayat (2) ditindaklanjuti oleh Gugus Tugas COVID-19 tingkatan wilayah sesuai dengan kewenangan dan tanggung jawab. 19 BAB VII SANKSI"
@@ -4574,8 +4574,7 @@
             "references": [
               {
                 "end": 65,
-                "start": 58,
-                "trace": {
+                "node": {
                   "_key": "a",
                   "_structureType": "point",
                   "parentPoints": {
@@ -4583,12 +4582,13 @@
                     "metadataType": "documentMenimbang",
                     "parentDocument": {
                       "daerah": "provinsi_dki_jakarta",
-                      "legalType": "perda",
+                      "documentType": "perda",
                       "nomor": 33,
                       "tahun": 2020
                     }
                   }
-                }
+                },
+                "start": 58
               }
             ],
             "text": "bahwa berdasarkan pertimbangan sebagaimana dimaksud dalam huruf a, perlu menetapkan Peraturan Gubernur tentang Pelaksanaan Pembatasan Sosial Berskala Besar Dalam Penanganan Corona Virus Disease 2019 (COVID-19) di Provinsi Daerah Khusus Ibukota Jakarta;"

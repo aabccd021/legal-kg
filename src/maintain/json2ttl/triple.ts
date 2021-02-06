@@ -1,16 +1,16 @@
-import { LegalTrace } from '../../uri/index';
+import { LegalNode } from '../../uri/index';
 import {
-  PasalTrace,
-  AyatTrace,
-  BabTrace,
-  BagianTrace,
-  MetadataTrace,
-  ParagrafTrace,
-  PointsTrace,
-  PointTrace,
-  PasalParentTrace,
+  PasalNode,
+  AyatNode,
+  BabNode,
+  BagianNode,
+  MetadataNode,
+  ParagrafNode,
+  PointsNode,
+  PointNode,
+  PasalParentNode,
 } from '../../uri/document-structure';
-import { DocumentTrace } from '../../uri/document-type';
+import { DocumentNode } from '../../uri/document-type';
 
 export type Triple = (
   | AyatTriple
@@ -25,25 +25,25 @@ export type Triple = (
 ) &
   AllowedTriple;
 
-type AllowedTriple = [LegalTrace, unknown, unknown];
+type AllowedTriple = [LegalNode, unknown, unknown];
 
 type AyatTriple =
-  | [PasalTrace, 'hasAyat', AyatTrace]
-  | [AyatTrace, 'hasKey', number]
-  | [AyatTrace, 'hasText', string];
+  | [PasalNode, 'hasAyat', AyatNode]
+  | [AyatNode, 'hasKey', number]
+  | [AyatNode, 'hasText', string];
 
-type BabTriple = [BabTrace, 'hasKey', number] | [BabTrace, 'hasText' | 'hasJudul', string];
+type BabTriple = [BabNode, 'hasKey', number] | [BabNode, 'hasText' | 'hasJudul', string];
 
 type BagianTriple =
-  | [BabTrace, 'hasBagian', BagianTrace]
-  | [BagianTrace, 'hasKey', number]
-  | [BagianTrace, 'hasText', string];
+  | [BabNode, 'hasBagian', BagianNode]
+  | [BagianNode, 'hasKey', number]
+  | [BagianNode, 'hasText', string];
 
 type DocumentTriple =
-  | [DocumentTrace, 'hasBab', BabTrace]
-  | [DocumentTrace, 'hasJudul', string]
-  | [DocumentTrace, StringMetadataVocab, string | undefined]
-  | [DocumentTrace, NumberMetadataVocab, number | undefined];
+  | [DocumentNode, 'hasBab', BabNode]
+  | [DocumentNode, 'hasJudul', string]
+  | [DocumentNode, StringMetadataVocab, string | undefined]
+  | [DocumentNode, NumberMetadataVocab, number | undefined];
 
 type StringMetadataVocab =
   | 'denganPersetujuan'
@@ -69,24 +69,24 @@ type StringMetadataVocab =
 type NumberMetadataVocab = 'tahun' | 'nomor';
 
 type MetadataTriple =
-  | [DocumentTrace, 'hasMetadata', MetadataTrace]
-  | [MetadataTrace, 'hasText', string];
+  | [DocumentNode, 'hasMetadata', MetadataNode]
+  | [MetadataNode, 'hasText', string];
 
 type ParagrafTriple =
-  | [BagianTrace, 'hasParagraf', ParagrafTrace]
-  | [ParagrafTrace, 'hasKey', number]
-  | [ParagrafTrace, 'hasText', string];
+  | [BagianNode, 'hasParagraf', ParagrafNode]
+  | [ParagrafNode, 'hasKey', number]
+  | [ParagrafNode, 'hasText', string];
 
 type PasalTriple =
-  | [PasalParentTrace, 'hasPasal', PasalTrace]
-  | [PasalTrace, 'hasKey', number]
-  | [PasalTrace, 'hasText', string];
+  | [PasalParentNode, 'hasPasal', PasalNode]
+  | [PasalNode, 'hasKey', number]
+  | [PasalNode, 'hasText', string];
 
 type PointTriple =
-  | [PointsTrace, 'hasPoint', PointTrace]
-  | [PointTrace, 'hasKey', number | string]
-  | [PointTrace, 'hasText' | 'hasJudul', string];
+  | [PointsNode, 'hasPoint', PointNode]
+  | [PointNode, 'hasKey', number | string]
+  | [PointNode, 'hasText' | 'hasJudul', string];
 
 type PointsTriple =
-  | [PointsTrace, 'hasDescription' | 'hasText', string]
-  | [PointsTrace, 'references', LegalTrace];
+  | [PointsNode, 'hasDescription' | 'hasText', string]
+  | [PointsNode, 'references', LegalNode];

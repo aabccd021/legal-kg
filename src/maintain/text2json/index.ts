@@ -1,15 +1,15 @@
-import { DataDir, getDocFilePath, getLegalData } from '../utils';
+import { DataDir, getDocFilePath, getDocumentData } from '../utils';
 import { text2rawJson } from './text2rawJson';
 import * as fs from 'fs';
 import { rawJson2json } from './rawJson2json';
 import stringify from 'json-stable-stringify';
 
 function text2json(): void {
-  const legalDir = 'maintained_legals';
-  const textDir: DataDir = { legalDir, dataType: 'text' };
-  const jsonDir: DataDir = { legalDir, dataType: 'json' };
+  const legalDir = 'maintained_documents';
+  const textDir: DataDir = { dir: legalDir, dataType: 'text' };
+  const jsonDir: DataDir = { dir: legalDir, dataType: 'json' };
 
-  const legals = getLegalData(textDir);
+  const legals = getDocumentData(textDir);
   legals.forEach((legal) => {
     const textPath = getDocFilePath(legal, textDir);
     const jsonPath = getDocFilePath(legal, jsonDir);

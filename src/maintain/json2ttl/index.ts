@@ -1,22 +1,22 @@
-import { LegalDocument } from '../../type';
+import { Document } from '../../type';
 
-import { DataDir, getLegalData, getDocFilePath } from '../utils';
+import { DataDir, getDocumentData, getDocFilePath } from '../utils';
 import * as fs from 'fs';
 import { json2triples } from './json2triples';
 import { triples2Ttl } from './triples2ttl';
 
 function json2ttl(): void {
-  const legalDir = 'maintained_legals';
-  const jsonDir: DataDir = { legalDir, dataType: 'json' };
-  const ttlDir: DataDir = { legalDir, dataType: 'ttl' };
+  const dir = 'maintained_documents';
+  const jsonDir: DataDir = { dir, dataType: 'json' };
+  const ttlDir: DataDir = { dir, dataType: 'ttl' };
 
-  const legals = getLegalData(jsonDir);
-  legals.forEach((legal) => {
-    const jsonPath = getDocFilePath(legal, jsonDir);
-    const ttlPath = getDocFilePath(legal, ttlDir);
+  const datas = getDocumentData(jsonDir);
+  datas.forEach((data) => {
+    const jsonPath = getDocFilePath(data, jsonDir);
+    const ttlPath = getDocFilePath(data, ttlDir);
 
     const jsonString = fs.readFileSync(jsonPath).toString();
-    const json = JSON.parse(jsonString) as LegalDocument;
+    const json = JSON.parse(jsonString) as Document;
     const triples = json2triples(json);
     const ttl = triples2Ttl(triples);
 
