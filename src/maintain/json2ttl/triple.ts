@@ -1,4 +1,4 @@
-import { LegalTrace } from './../uri/index';
+import { LegalTrace } from '../../uri/index';
 import {
   PasalTrace,
   AyatTrace,
@@ -9,10 +9,9 @@ import {
   PointsTrace,
   PointTrace,
   PasalParentTrace,
-} from '../uri/document-structure';
-import { DocumentTrace } from '../uri/document-type';
+} from '../../uri/document-structure';
+import { DocumentTrace } from '../../uri/document-type';
 
-export type TripleCompact = [Triple[0], Triple[1], Exclude<Triple[2], undefined>];
 export type Triple = (
   | AyatTriple
   | BabTriple
@@ -43,9 +42,10 @@ type BagianTriple =
 type DocumentTriple =
   | [DocumentTrace, 'hasBab', BabTrace]
   | [DocumentTrace, 'hasJudul', string]
-  | [DocumentTrace, MetadataVocab, string | number | undefined];
+  | [DocumentTrace, StringMetadataVocab, string | undefined]
+  | [DocumentTrace, NumberMetadataVocab, number | undefined];
 
-type MetadataVocab =
+type StringMetadataVocab =
   | 'denganPersetujuan'
   | 'dokumen'
   | 'jabatanPengesah'
@@ -54,12 +54,10 @@ type MetadataVocab =
   | 'mengingat'
   | 'namaPengesah'
   | 'name'
-  | 'nomor'
   | 'pemutus'
   | 'penjelasan'
   | 'salinan'
   | 'sekretaris'
-  | 'tahun'
   | 'tanggalDisahkan'
   | 'tanggalDitetapkan'
   | 'tanggalDiundangkan'
@@ -67,6 +65,8 @@ type MetadataVocab =
   | 'tempatDitetapkan'
   | 'tempatDiundangkan'
   | 'tentang';
+
+type NumberMetadataVocab = 'tahun' | 'nomor';
 
 type MetadataTriple =
   | [DocumentTrace, 'hasMetadata', MetadataTrace]

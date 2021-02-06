@@ -27,5 +27,5 @@
   "include": [
     "src/**/*",
     "src/.unused"
-  ]
+, "src/.unused/external.ts"  ]
 }

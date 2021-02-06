@@ -1,11 +1,11 @@
 import { assertNever } from 'assert-never';
 import { LegalTrace } from '.';
-import { baseUri } from '../kg/utils';
+import { baseUri } from '../maintain/json2ttl/triples2ttl';
 
 /**
  * Document Trace
  */
-export type DocumentTrace = UuTrace | PerdaTrace | UudTrace;
+export type DocumentTrace = (UuTrace | PerdaTrace | UudTrace) & { legalType: DocumentType };
 export function isDocumentTrace(x: LegalTrace): x is DocumentTrace {
   return DOCUMENT_TYPES.includes((x as DocumentTrace).legalType);
 }
