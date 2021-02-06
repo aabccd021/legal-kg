@@ -1,7 +1,14 @@
 import { assertNever } from 'assert-never';
+import { LegalTrace } from '.';
 import { baseUri } from '../kg/utils';
 
+/**
+ * Document Trace
+ */
 export type DocumentTrace = UuTrace | PerdaTrace | UudTrace;
+export function isDocumentTrace(x: LegalTrace): x is DocumentTrace {
+  return DOCUMENT_TYPES.includes((x as DocumentTrace).legalType);
+}
 /**
  * Legal
  */
@@ -11,7 +18,7 @@ export const DOCUMENT_TYPES = ['uu', 'perda', 'uud'] as const;
 /**
  * Legal Uri
  */
-export function getLegalUri(trace: DocumentTrace): string {
+export function getDocumentUri(trace: DocumentTrace): string {
   const path = getLegalPath(trace);
   return `${baseUri}document/${path}`;
 }
@@ -20,14 +27,14 @@ export function getLegalUri(trace: DocumentTrace): string {
  * Legal Path
  */
 export function getLegalPath(trace: DocumentTrace): string {
-  const { type } = trace;
+  const { legalType } = trace;
   const path = _getLegalPath(trace);
-  return `${type}/${path}`;
+  return `${legalType}/${path}`;
 }
 function _getLegalPath(trace: DocumentTrace): string {
-  if (trace.type === 'uu') return getUuPath(trace);
-  if (trace.type === 'perda') return getPerdaPath(trace);
-  if (trace.type === 'uud') return 'UUD';
+  if (trace.legalType === 'uu') return getUuPath(trace);
+  if (trace.legalType === 'perda') return getPerdaPath(trace);
+  if (trace.legalType === 'uud') return 'UUD';
   assertNever(trace);
 }
 
@@ -35,9 +42,9 @@ function _getLegalPath(trace: DocumentTrace): string {
  * Legal Name
  */
 export function getLegalName(trace: DocumentTrace): string {
-  if (trace.type === 'uu') return getUuName(trace);
-  if (trace.type === 'perda') return getPerdaName(trace);
-  if (trace.type === 'uud') return 'UNDANG-UNDANG DASAR NEGARA REPUBLIK INDONESIA TAHUN 1945';
+  if (trace.legalType === 'uu') return getUuName(trace);
+  if (trace.legalType === 'perda') return getPerdaName(trace);
+  if (trace.legalType === 'uud') return 'UNDANG-UNDANG DASAR NEGARA REPUBLIK INDONESIA TAHUN 1945';
   assertNever(trace);
 }
 
@@ -45,14 +52,14 @@ export function getLegalName(trace: DocumentTrace): string {
  * uud
  */
 export type UudTrace = {
-  type: 'uud';
+  legalType: 'uud';
 };
 
 /**
  * uu
  */
 export type UuTrace = {
-  type: 'uu';
+  legalType: 'uu';
   tahun: number;
   nomor: number;
 };
@@ -71,7 +78,7 @@ function getUuName(trace: UuTrace): string {
 export type Daerah = typeof DAERAHS[number];
 export const DAERAHS = ['provinsi_dki_jakarta'] as const;
 export type PerdaTrace = {
-  type: 'perda';
+  legalType: 'perda';
   daerah: Daerah;
   tahun: number;
   nomor: number;

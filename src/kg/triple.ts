@@ -1,4 +1,4 @@
-import { LegalTrace } from '../uri';
+import { LegalTrace } from './../uri/index';
 import {
   PasalTrace,
   AyatTrace,
@@ -8,10 +8,12 @@ import {
   ParagrafTrace,
   PointsTrace,
   PointTrace,
+  PasalParentTrace,
 } from '../uri/document-structure';
 import { DocumentTrace } from '../uri/document-type';
 
-export type Triple =
+export type TripleCompact = [Triple[0], Triple[1], Exclude<Triple[2], undefined>];
+export type Triple = (
   | AyatTriple
   | BabTriple
   | BagianTriple
@@ -20,7 +22,11 @@ export type Triple =
   | ParagrafTriple
   | PasalTriple
   | PointTriple
-  | PointsTriple;
+  | PointsTriple
+) &
+  AllowedTriple;
+
+type AllowedTriple = [LegalTrace, unknown, unknown];
 
 type AyatTriple =
   | [PasalTrace, 'hasAyat', AyatTrace]
@@ -83,4 +89,4 @@ type PointTriple =
 
 type PointsTriple =
   | [PointsTrace, 'hasDescription' | 'hasText', string]
-  | [PointsTrace, 'references' | LegalTrace];
+  | [PointsTrace, 'references', LegalTrace];

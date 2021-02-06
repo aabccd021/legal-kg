@@ -1,3 +1,4 @@
+import { getPasalParentDocument, PasalParentTrace } from './../../uri/document-structure';
 import { assertNever } from 'assert-never';
 import { map, flatten, compact, isNil, repeat, isArray } from 'lodash';
 import { toRoman } from 'roman-numerals';
@@ -32,9 +33,10 @@ import {
   PointTrace,
   getPointUri,
 } from '../../uri/document-structure';
-import { getLegalName, getLegalUri, DocumentTrace } from '../../uri/document-type';
+import { getLegalName, getDocumentUri, DocumentTrace } from '../../uri/document-type';
 import { DataDir, getLegalData, getDocFilePath } from '../utils';
 import * as fs from 'fs';
+import { getLegalUri } from '../../uri';
 
 function json2md(): void {
   const legalDir = 'maintained_legals';
@@ -81,7 +83,7 @@ function _json2md(doc: LegalDocument): string {
     _trace: _docTrace,
     babs,
   } = doc;
-  const uri = getLegalUri(_docTrace);
+  const uri = getDocumentUri(_docTrace);
   const name = getLegalName(_docTrace);
   const lines: (string | undefined)[] = [
     `# [${name}](${uri})`,
@@ -105,8 +107,8 @@ function _json2md(doc: LegalDocument): string {
     metadata('Sekretaris', _sekretaris),
     metadata('Dokumen', _dokumen),
     ...map(_denganPersetujuan, (d) => metadata('Dengan Persetujuan', d)),
-    mengimbang2md('Menimbang', menimbang, 'menimbang', _docTrace),
-    mengimbang2md('Mengingat', mengingat, 'mengingat', _docTrace),
+    mengimbang2md('Menimbang', menimbang, 'documentMenimbang', _docTrace),
+    mengimbang2md('Mengingat', mengingat, 'documentMengingat', _docTrace),
     ...flatten(babs?.map((b) => bab2md(b, _docTrace))),
   ];
 
@@ -116,21 +118,21 @@ function _json2md(doc: LegalDocument): string {
 function mengimbang2md(
   title: string,
   isi: Mengimbang | undefined,
-  type: 'menimbang' | 'mengingat',
-  parentTrace: DocumentTrace
+  metadataType: 'documentMengingat' | 'documentMenimbang',
+  parentDocument: DocumentTrace
 ): string {
   if (isNil(isi)) return '';
   const { points, text } = isi;
-  const trace: MetadataTrace = { ...parentTrace, metadataType: type, _metadataTrace: true };
+  const trace: MetadataTrace = { metadataType, parentDocument, _structureType: 'metadata' };
   const isiStr = !isNil(points) ? points2md(points, trace) : reference2md(text);
   const uri = getMetadataUri(trace);
 
   return `\n# [${title}](${uri})\n${isiStr}`;
 }
 
-function bab2md(bab: Bab, parenttrace: DocumentTrace): string {
+function bab2md(bab: Bab, parentDocument: DocumentTrace): string {
   const { _key, _judul, isi, text } = bab;
-  const trace = { ...parenttrace, bab: _key };
+  const trace: BabTrace = { _key, parentDocument, _structureType: 'bab' };
   const isiStr: string = !isNil(isi) ? isiBab2md(isi, trace) : text;
   const romanKey = toRoman(_key);
   const babUri = getBabUri(trace);
@@ -144,29 +146,30 @@ function isiBab2md(isi: Bagian[] | Pasal[], trace: BabTrace): string {
   assertNever(isi);
 }
 
-function bagian2md(bagian: Bagian, parentTrace: BabTrace): string {
+function bagian2md(bagian: Bagian, parentBab: BabTrace): string {
   const { _key, isi } = bagian;
-  const trace: BagianTrace = { ...parentTrace, bagian: _key };
+  const trace: BagianTrace = { _key, parentBab, _structureType: 'bagian' };
   const isiStr = isPasals(isi)
-    ? isi.map((p) => pasal2md(p, trace))
+    ? isi.map((p) => pasal2md(p, parentBab))
     : isi.map((p) => paragraf2md(p, trace));
   const uri = getBagianUri(trace);
 
   return `\n## [Bagian ${_key}](${uri})\n${isiStr}\n`;
 }
 
-function paragraf2md(paragraf: Paragraf, parentTrace: BagianTrace): string {
+function paragraf2md(paragraf: Paragraf, parentBagian: BagianTrace): string {
   const { _key, isi } = paragraf;
-  const trace: ParagrafTrace = { ...parentTrace, paragraf: _key };
-  const isiStr = isi.map((p) => pasal2md(p, trace));
+  const trace: ParagrafTrace = { _key, parentBagian, _structureType: 'paragraf' };
+  const isiStr = isi.map((p) => pasal2md(p, parentBagian));
   const uri = getParagrafUri(trace);
 
   return `\n## [Paragraf ${_key}](${uri})\n${isiStr}\n`;
 }
 
-function pasal2md(pasal: Pasal, parentTrace: DocumentTrace): string {
+function pasal2md(pasal: Pasal, pasalParent: PasalParentTrace): string {
   const { _key, isi, text } = pasal;
-  const trace: PasalTrace = { ...parentTrace, pasal: _key, _pasalTraceType: true };
+  const parentDocument = getPasalParentDocument(pasalParent);
+  const trace: PasalTrace = { _key, parentDocument, _structureType: 'pasal' };
   const isiStr: string = !isNil(isi) ? pasalContent2md(isi, trace) : reference2md(text);
   const uri = getPasalUri(trace);
 
@@ -179,9 +182,9 @@ function pasalContent2md(isi: Points | Ayat[], trace: PasalTrace): string {
   return points2md(isi, trace);
 }
 
-function ayat2md(ayat: Ayat, parentTrace: PasalTrace): string {
+function ayat2md(ayat: Ayat, parentPasal: PasalTrace): string {
   const { _key, isi, text } = ayat;
-  const trace: AyatTrace = { ...parentTrace, ayat: _key, _ayatTraceType: true };
+  const trace: AyatTrace = { _key, parentPasal, _structureType: 'ayat' };
   const isiStr = !isNil(isi) ? points2md(isi, trace) : reference2md(text);
   const uri = getAyatUri(trace);
 
@@ -206,7 +209,7 @@ function point2md(
   depth: number
 ): string {
   const { isi, _key, text } = point;
-  const trace: PointTrace = { point: _key, _pointTraceType: true, parent };
+  const trace: PointTrace = { _key, parentPoints: parent, _structureType: 'point' };
   const isiStr = !isNil(isi) ? points2md(isi, trace, depth + 1) : reference2md(text);
   const indent = repeat(' ', depth * 4);
   const uri = getPointUri(trace);
@@ -228,7 +231,7 @@ function reference2md(ref: ReferenceText): string {
   const { references, text } = ref;
   const sortedReferences = references.sort((a, b) => a.start - b.start);
   const indices = sortedReferences.flatMap(({ start, end }) => [start, end]);
-  const uris = sortedReferences.map(({ trace: uri }) => uri);
+  const uris = sortedReferences.map(({ trace }) => getLegalUri(trace));
   const splitted = splitAt(text, indices);
 
   return splitted.map((text, index) => `${getPrefixByIndex(index, uris)}${text}`).join('');

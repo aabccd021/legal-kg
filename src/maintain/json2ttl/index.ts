@@ -1,3 +1,4 @@
+import { getPasalParentDocument, ParagrafTrace } from './../../uri/document-structure';
 import { flatten, compact, isNil, isArray, isString } from 'lodash';
 import { triples2Ttl } from '../../kg/utils';
 import {
@@ -23,6 +24,7 @@ import {
   AyatTrace,
   PointTrace,
   PointsTrace,
+  PasalParentTrace,
 } from '../../uri/document-structure';
 import { DocumentTrace } from '../../uri/document-type';
 import { DataDir, getLegalData, getDocFilePath } from '../utils';
@@ -106,29 +108,29 @@ function json2triples({
 }
 
 function metadata2triple(
-  parentDoc: DocumentTrace,
+  parentDocument: DocumentTrace,
   metadataType: 'documentMengingat' | 'documentMenimbang',
   mengimbang?: Mengimbang
 ): Triple[] {
   if (isNil(mengimbang)) return [];
-  const metadata: MetadataTrace = { ...parentDoc, metadataType, _metadataTrace: true };
+  const metadata: MetadataTrace = { metadataType, parentDocument, _structureType: 'metadata' };
   const { points, text } = mengimbang;
   const isiTriples: Triple[] = isNil(points)
     ? [[metadata, 'hasText', text.text]]
-    : points2Triple(metadata, points, metadata);
+    : points2Triple(metadata, points);
 
-  return [...isiTriples, [parentDoc, 'hasMetadata', metadata]];
+  return [...isiTriples, [parentDocument, 'hasMetadata', metadata]];
 }
 
-function babsToTriple(bab: Bab, parentDoc: DocumentTrace): Triple[] {
+function babsToTriple(bab: Bab, parentDocument: DocumentTrace): Triple[] {
   const { _key, _judul, text, isi } = bab;
-  const trace = { ...parentDoc, bab: _key };
+  const babTrace: BabTrace = { _key, parentDocument, _structureType: 'bab' };
   const isiTraces = isBagians(isi)
-    ? isi.flatMap((b) => bagianToTriple(b, trace))
-    : isi.flatMap((p) => pasalToTriple(p, babTrace, trace));
+    ? isi.flatMap((b) => bagianToTriple(b, babTrace))
+    : isi.flatMap((p) => pasalToTriple(p, babTrace));
 
   return [
-    [parentTrace, 'hasBab', babTrace],
+    [parentDocument, 'hasBab', babTrace],
     [babTrace, 'hasKey', _key],
     [babTrace, 'hasJudul', _judul],
     [babTrace, 'hasText', text],
@@ -136,89 +138,74 @@ function babsToTriple(bab: Bab, parentDoc: DocumentTrace): Triple[] {
   ];
 }
 
-function bagianToTriple(bagian: Bagian, babTrace: BabTrace): Triple[] {
+function bagianToTriple(bagian: Bagian, parentBab: BabTrace): Triple[] {
   const { _key, isi, text } = bagian;
-  const trace = { ...babTrace, bagian: _key };
-  const bagianTrace: BagianTrace = { TraceType: 'bagian', trace };
-  const parentBabTrace: BabTrace = { TraceType: 'bab', trace };
+  const bagianTrace: BagianTrace = { _key, parentBab, _structureType: 'bagian' };
   const isiTraces = isParagrafs(isi)
-    ? isi.flatMap((p) => paragrafToTriple(p, trace))
-    : isi.flatMap((p) => pasalToTriple(p, bagianTrace, trace));
+    ? isi.flatMap((p) => paragrafToTriple(p, bagianTrace))
+    : isi.flatMap((p) => pasalToTriple(p, parentBab));
 
   return [
-    [parentBabTrace, 'hasBagian', bagianTrace],
+    [parentBab, 'hasBagian', bagianTrace],
     [bagianTrace, 'hasKey', _key],
     [bagianTrace, 'hasText', text],
     ...isiTraces,
   ];
 }
 
-function paragrafToTriple(paragraf: Paragraf, bagianTrace: BagianTrace): Triple[] {
+function paragrafToTriple(paragraf: Paragraf, parentBagian: BagianTrace): Triple[] {
   const { _key, isi, text } = paragraf;
-  const trace = { ...bagianTrace, paragraf: _key };
-  const parent: BagianTrace = { TraceType: 'bagian', trace };
-  const paragrafTrace: ParagrafTrace = { TraceType: 'paragraf', trace };
+  const paragrafTrace: ParagrafTrace = { _key, parentBagian, _structureType: 'paragraf' };
 
   return [
-    [parent, 'hasParagraf', paragrafTrace],
+    [parentBagian, 'hasParagraf', paragrafTrace],
     [paragrafTrace, 'hasKey', _key],
     [paragrafTrace, 'hasText', text],
-    ...isi.flatMap((p) => pasalToTriple(p, paragrafTrace, trace)),
+    ...isi.flatMap((p) => pasalToTriple(p, paragrafTrace)),
   ];
 }
 
-function pasalToTriple(
-  pasal: Pasal,
-  parent: PasalParentTrace,
-  legalTrace: DocumentTrace
-): Triple[] {
+function pasalToTriple(pasal: Pasal, parent: PasalParentTrace): Triple[] {
   const { _key, isi, text } = pasal;
-  const trace: PasalTrace = { ...legalTrace, pasal: _key, _pasalTraceType: true };
-  const pasalTrace: PasalTrace = { TraceType: 'pasal', trace };
+  const parentDocument = getPasalParentDocument(parent);
+  const pasalTrace: PasalTrace = { _key, parentDocument, _structureType: 'pasal' };
 
   return [
     [parent, 'hasPasal', pasalTrace],
     [pasalTrace, 'hasKey', _key],
     [pasalTrace, 'hasText', text.text],
     ...referencesToTriple(pasalTrace, text.references),
-    ...pasalContentToTriple(pasalTrace, isi, trace),
+    ...pasalContentToTriple(pasalTrace, isi),
   ];
 }
 
 function pasalContentToTriple(
   pasalTrace: PasalTrace,
-  content: string | Points | Ayat[] | undefined,
-  trace: PasalTrace
+  content: string | Points | Ayat[] | undefined
 ): Triple[] {
   if (isNil(content)) return [];
 
   if (isArray(content) && isAyats(content)) {
-    return content.flatMap((a) => ayatToTriple(a, trace));
+    return content.flatMap((a) => ayatToTriple(a, pasalTrace));
   }
   if (isString(content)) return [];
 
-  return points2Triple(pasalTrace, content, trace);
+  return points2Triple(pasalTrace, content);
 }
 
-function ayatToTriple(ayat: Ayat, pasalTrace: PasalTrace): Triple[] {
+function ayatToTriple(ayat: Ayat, parentPasal: PasalTrace): Triple[] {
   const { _key, text, isi } = ayat;
-  const trace: AyatTrace = { ...pasalTrace, ayat: _key, _ayatTraceType: true };
-  const ayatTrace: AyatTrace = { TraceType: 'ayat', trace };
-  const parentPasalTrace: PasalTrace = { TraceType: 'pasal', trace };
+  const ayatTrace: AyatTrace = { _key, parentPasal, _structureType: 'ayat' };
 
   return [
-    [parentPasalTrace, 'hasAyat', ayatTrace],
+    [parentPasal, 'hasAyat', ayatTrace],
     [ayatTrace, 'hasKey', _key],
     [ayatTrace, 'hasText', text.text],
     ...referencesToTriple(ayatTrace, text.references),
-    ...points2Triple(ayatTrace, isi, trace),
+    ...points2Triple(ayatTrace, isi),
   ];
 }
-function points2Triple(
-  pointsTrace: PointsTrace,
-  points: Points | undefined,
-  trace: PointsTrace
-): Triple[] {
+function points2Triple(pointsTrace: PointsTrace, points: Points | undefined): Triple[] {
   if (isNil(points)) return [];
   const { _description, text, isi } = points;
 
@@ -226,17 +213,16 @@ function points2Triple(
     [pointsTrace, 'hasDescription', _description.text],
     [pointsTrace, 'hasText', text],
     ...referencesToTriple(pointsTrace, _description.references),
-    ...isi.flatMap((i) => pointToTriple(pointsTrace, i, trace)),
+    ...isi.flatMap((i) => pointToTriple(pointsTrace, i)),
   ];
 }
 
-function pointToTriple(pointsTrace: PointsTrace, point: Point, parentTrace: PointsTrace): Triple[] {
+function pointToTriple(pointsTrace: PointsTrace, point: Point): Triple[] {
   const { _key, isi, text } = point;
-  const trace: PointTrace = { _pointTraceType: true, point: _key, parent: parentTrace };
-  const pointTrace: PointTrace = { TraceType: 'point', trace };
+  const pointTrace: PointTrace = { _key, parentPoints: pointsTrace, _structureType: 'point' };
   const isiTriples: Triple[] = isNil(isi)
     ? [[pointTrace, 'hasText', text.text]]
-    : points2Triple(pointTrace, isi, trace);
+    : points2Triple(pointTrace, isi);
 
   return [
     [pointsTrace, 'hasPoint', pointTrace],

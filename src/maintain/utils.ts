@@ -42,11 +42,7 @@ export function getLegalData(dataDir: DataDir): DocumentTrace[] {
   return DOCUMENT_TYPES.flatMap((legalType) => toLegalID(legalType, legalDir, dataType));
 }
 
-function toLegalID(
-  legalType: DocumentType,
-  legalDir: string,
-  dataType: DataType
-): DocumentTrace[] {
+function toLegalID(legalType: DocumentType, legalDir: string, dataType: DataType): DocumentTrace[] {
   const legalTypeDir = path.join(legalDir, dataType, legalType);
   if (!fs.existsSync(legalTypeDir)) return [];
   if (legalType === 'perda') return findFilePerdaTrace(legalTypeDir, dataType);
@@ -62,7 +58,7 @@ function findFileUuTraces(uuDir: string, dataType: DataType): UuTrace[] {
       .readdirSync(path.join(uuDir, year))
       .map((pdfName) => path.basename(pdfName, `${extension}`))
       .map((number) => ({
-        type: 'uu',
+        legalType: 'uu',
         tahun: parseInt(year),
         nomor: parseInt(number),
       }))
@@ -79,7 +75,7 @@ function findFilePerdaTrace(dir: string, dataType: DataType): PerdaTrace[] {
         .readdirSync(path.join(daerahDir, year))
         .map((pdfName) => path.basename(pdfName, `${extension}`))
         .map((number) => ({
-          type: 'perda',
+          legalType: 'perda',
           daerah,
           tahun: parseInt(year),
           nomor: parseInt(number),

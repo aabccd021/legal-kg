@@ -1,8 +1,9 @@
 import { assertNever } from 'assert-never';
-import { DocumentTrace, getLegalUri } from './document-type';
+import { DocumentTrace, getDocumentUri } from './document-type';
 
 export type DocumentStructureTrace =
   | BabTrace
+  | BagianTrace
   | ParagrafTrace
   | PointTrace
   | AyatTrace
@@ -10,97 +11,108 @@ export type DocumentStructureTrace =
   | MetadataTrace;
 
 export type PointTrace = {
-  _pointTraceType: true;
-  point: string | number;
-  parent: PointsTrace;
+  _structureType: 'point';
+  _key: string | number;
+  parentPoints: PointsTrace;
 };
-export function isPointTrace(trace: PointsTrace): trace is PointTrace {
-  return (trace as PointTrace)._pointTraceType;
-}
 export function getPointUri(trace: PointTrace): string {
-  const { point, parent } = trace;
-  const parentUri = _getPointParentUri(parent);
+  const { _key, parentPoints } = trace;
+  const parentUri = _getPointParentUri(parentPoints);
 
-  return `${parentUri}/point/${point}`;
+  return `${parentUri}/point/${_key}`;
 }
 
 /**
  * Points
  */
 export type PointsTrace = PointTrace | AyatTrace | PasalTrace | MetadataTrace;
-function _getPointParentUri(trace: PointTrace | AyatTrace | PasalTrace | MetadataTrace): string {
-  if (isSpecialDocTrace(trace)) return getMetadataUri(trace);
-  if (isPointTrace(trace)) return getPointUri(trace);
-  if (isAyatTrace(trace)) return getAyatUri(trace);
-  if (isPasalTrace(trace)) return getPasalUri(trace);
+function _getPointParentUri(trace: PointsTrace): string {
+  if (trace._structureType === 'metadata') return getMetadataUri(trace);
+  if (trace._structureType === 'point') return getPointUri(trace);
+  if (trace._structureType === 'ayat') return getAyatUri(trace);
+  if (trace._structureType === 'pasal') return getPasalUri(trace);
   assertNever(trace);
 }
 
 /**
  * Pasal
  */
-export type PasalTrace = DocumentTrace & {
-  pasal: number;
-  _pasalTraceType: true;
+export type PasalTrace = {
+  _structureType: 'pasal';
+  parentDocument: DocumentTrace;
+  _key: number;
 };
-export function isPasalTrace(trace: PointsTrace): trace is PasalTrace {
-  return (trace as PasalTrace)._pasalTraceType;
+export function getPasalUri(trace: PasalTrace): string {
+  const { _key, parentDocument } = trace;
+  const docUri = getDocumentUri(parentDocument);
+  return `${docUri}/pasal/${_key}`;
 }
 
-export function getPasalUri(trace: PasalTrace): string {
-  const { pasal } = trace;
-  const docUri = getLegalUri(trace);
-  return `${docUri}/pasal/${pasal}`;
+/**
+ * Pasal Parent
+ */
+export type PasalParentTrace = BagianTrace | BabTrace | ParagrafTrace;
+export function getPasalParentDocument(parent: PasalParentTrace): DocumentTrace {
+  if (parent._structureType === 'paragraf') return getPasalParentDocument(parent.parentBagian);
+  if (parent._structureType === 'bagian') return getPasalParentDocument(parent.parentBab);
+  if (parent._structureType === 'bab') return parent.parentDocument;
+  assertNever(parent);
 }
 
 /**
  * Ayat
  */
-export type AyatTrace = PasalTrace & {
-  ayat: number;
-  _ayatTraceType: true;
+export type AyatTrace = {
+  _structureType: 'ayat';
+  parentPasal: PasalTrace;
+  _key: number;
 };
-export function isAyatTrace(trace: PointsTrace): trace is AyatTrace {
-  return (trace as AyatTrace)._ayatTraceType;
-}
 export function getAyatUri(trace: AyatTrace): string {
-  const { ayat } = trace;
-  const pasalUri = getPasalUri({ ...trace });
-  return `${pasalUri}/ayat/${ayat}`;
+  const { _key, parentPasal } = trace;
+  const pasalUri = getPasalUri(parentPasal);
+  return `${pasalUri}/ayat/${_key}`;
 }
 
 /**
  * Paragraf
  */
-export type ParagrafTrace = BagianTrace & {
-  paragraf: number;
+export type ParagrafTrace = {
+  _structureType: 'paragraf';
+  parentBagian: BagianTrace;
+  _key: number;
 };
 export function getParagrafUri(trace: ParagrafTrace): string {
-  const { paragraf } = trace;
-  const bagianUri = getBagianUri(trace);
-  return `${bagianUri}/paragraf/${paragraf}`;
+  const { _key, parentBagian } = trace;
+  const bagianUri = getBagianUri(parentBagian);
+  return `${bagianUri}/paragraf/${_key}`;
 }
 
 /**
  * Bagian
  */
-export type BagianTrace = BabTrace & { bagian: number };
+export type BagianTrace = {
+  _structureType: 'bagian';
+  parentBab: BabTrace;
+  _key: number;
+};
 export function getBagianUri(trace: BagianTrace): string {
-  const { bagian } = trace;
-  const babUri = getBabUri(trace);
-  return `${babUri}/bagian/${bagian}`;
+  const { _key, parentBab } = trace;
+  const babUri = getBabUri(parentBab);
+  return `${babUri}/bagian/${_key}`;
 }
 
 /**
  * Bab
  */
-export type BabTrace = DocumentTrace & {
-  bab: number;
+export type BabTrace = {
+  _structureType: 'bab';
+  parentDocument: DocumentTrace;
+  _key: number;
 };
 export function getBabUri(trace: BabTrace): string {
-  const { bab } = trace;
-  const docUri = getLegalUri(trace);
-  return `${docUri}/bab/${bab}`;
+  const { _key, parentDocument } = trace;
+  const docUri = getDocumentUri(parentDocument);
+  return `${docUri}/bab/${_key}`;
 }
 
 /**
@@ -108,16 +120,14 @@ export function getBabUri(trace: BabTrace): string {
  */
 
 /** Special */
-export type MetadataTrace = DocumentTrace & {
+export type MetadataTrace = {
+  _structureType: 'metadata';
+  parentDocument: DocumentTrace;
   metadataType: 'documentMengingat' | 'documentMenimbang';
-  _metadataTrace: true;
 };
-export function isSpecialDocTrace(trace: PointsTrace): trace is MetadataTrace {
-  return (trace as MetadataTrace)._metadataTrace;
-}
 export function getMetadataUri(trace: MetadataTrace): string {
-  const { metadataType } = trace;
-  const docUri = getLegalUri(trace);
+  const { metadataType, parentDocument } = trace;
+  const docUri = getDocumentUri(parentDocument);
 
   return `${docUri}/${metadataType}`;
 }
