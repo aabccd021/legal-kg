@@ -1,4 +1,5 @@
 {
-  "dataDir": "maintained_documents",
-  "uriBase": "http://example.org/legal"
+  "dataDir": "legal_data",
+  "uriBase": "http://example.org/legal",
+  "legalDataDir": "legal_data"
 }

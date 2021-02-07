@@ -6,11 +6,13 @@
     "build": "tsc",
     "lint": "eslint '**/*.ts'",
     "lint:fix": "eslint --fix '**/*.ts'",
-    "run:clearData": "rimraf maintained_documents/json maintained_documents/text maintained_documents/md",
-    "run:pdf2text": "ts-node src/maintain/pdf2text/index.ts",
-    "run:text2json": "ts-node src/maintain/text2json/index.ts",
-    "run:json2md": "ts-node src/maintain/json2md/index.ts",
-    "run:json2ttl": "ts-node src/maintain/json2ttl/index.ts",
+    "maintain:clearData": "rimraf maintained_documents/json maintained_documents/text maintained_documents/md",
+    "maintain:pdf2text": "ts-node src/maintain/pdf-to-text/index.ts",
+    "maintain:text2json": "ts-node src/maintain/text-to-json/index.ts",
+    "maintain:json2md": "ts-node src/maintain/json-to-md/index.ts",
+    "maintain:json2ttl": "ts-node src/maintain/json-to-ttl/index.ts",
+    "scrape:download": "ts-node src/scrape/download-pdf.ts",
+    "scrape:index:uu": "ts-node src/scrape/update-uu-index.ts",
     "test:types": "tsc --noEmit"
   },
   "engines": {
@@ -73,6 +75,7 @@
     "@types/node": "^14.14.21",
     "@types/node-fetch": "^2.5.8",
     "@types/roman-numerals": "^0.3.0",
+    "@types/striptags": "^3.1.1",
     "@typescript-eslint/eslint-plugin": "^4.13.0",
     "@typescript-eslint/parser": "^4.13.0",
     "assert-never": "^1.2.1",
@@ -91,5 +94,9 @@
     "roman-numerals": "^0.3.2",
     "ts-node": "^9.1.1",
     "typescript": "^4.1.3"
+  },
+  "dependencies": {
+    "striptags": "^3.1.1",
+    "tabletojson": "^2.0.4"
   }
 }

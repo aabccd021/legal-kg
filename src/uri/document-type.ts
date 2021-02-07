@@ -69,6 +69,11 @@ function getUuName(node: UuNode): string {
   const { tahun, nomor } = node;
   return `UNDANG-UNDANG TAHUN ${tahun} NOMOR ${nomor}`;
 }
+export function compareUuNode(a: UuNode, b: UuNode): number {
+  const tahunDiff = a.tahun - b.tahun;
+  if (tahunDiff !== 0) return tahunDiff;
+  return a.nomor - b.nomor;
+}
 
 /**
  * perda

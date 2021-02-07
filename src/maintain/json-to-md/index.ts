@@ -1,4 +1,4 @@
-import { getPasalParentDocument, PasalParentNode } from './../../uri/document-structure';
+import { getPasalParentDocument, PasalParentNode } from '../../uri/document-structure';
 import { assertNever } from 'assert-never';
 import { map, flatten, compact, isNil, repeat, isArray } from 'lodash';
 import { toRoman } from 'roman-numerals';
@@ -49,13 +49,17 @@ function json2md(): void {
     const jsonPath = getDocFilePath(data, jsonDir);
     const mdPath = getDocFilePath(data, mdDir);
 
-    const jsonString = fs.readFileSync(jsonPath).toString();
-    const json = JSON.parse(jsonString) as Document;
-    const md = _json2md(json);
+    try {
+      const jsonString = fs.readFileSync(jsonPath).toString();
+      const json = JSON.parse(jsonString) as Document;
+      const md = _json2md(json);
 
-    fs.writeFileSync(mdPath, md);
+      fs.writeFileSync(mdPath, md);
 
-    console.log(`Finished json2md ${mdPath}`);
+      console.log(`Finished json2md ${mdPath}`);
+    } catch {
+      console.log(`Error pdf2text ${mdPath}`);
+    }
   });
 }
 

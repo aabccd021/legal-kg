@@ -14,13 +14,17 @@ async function pdf2txt() {
     const pdfPath = getDocFilePath(legal, pdfDir);
     const textPath = getDocFilePath(legal, textDir);
 
-    PyMuPDF(pdfPath, textPath);
+    try {
+      PyMuPDF(pdfPath, textPath);
 
-    const rawText = fs.readFileSync(textPath).toString();
-    const processedText = postProcess(rawText);
-    fs.writeFileSync(textPath, processedText);
+      const rawText = fs.readFileSync(textPath).toString();
+      const processedText = postProcess(rawText);
+      fs.writeFileSync(textPath, processedText);
 
-    console.log(`Finished pdf2text ${textPath}`);
+      console.log(`Finished pdf2text ${textPath}`);
+    } catch {
+      console.log(`Error pdf2text ${textPath}`);
+    }
   });
 }
 

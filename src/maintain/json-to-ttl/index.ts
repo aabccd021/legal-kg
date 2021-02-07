@@ -2,8 +2,8 @@ import { Document } from '../../type';
 
 import { DataDir, getDocumentData, getDocFilePath } from '../utils';
 import * as fs from 'fs';
-import { json2triples } from './json2triples';
-import { triples2Ttl } from './triples2ttl';
+import { json2triples } from './json-to-triples';
+import { triples2Ttl } from './triples-to-ttl';
 import { getConfig } from '../../utils';
 
 function json2ttl(): void {
@@ -16,14 +16,18 @@ function json2ttl(): void {
     const jsonPath = getDocFilePath(data, jsonDir);
     const ttlPath = getDocFilePath(data, ttlDir);
 
-    const jsonString = fs.readFileSync(jsonPath).toString();
-    const json = JSON.parse(jsonString) as Document;
-    const triples = json2triples(json);
-    const ttl = triples2Ttl(triples);
+    try {
+      const jsonString = fs.readFileSync(jsonPath).toString();
+      const json = JSON.parse(jsonString) as Document;
+      const triples = json2triples(json);
+      const ttl = triples2Ttl(triples);
 
-    fs.writeFileSync(ttlPath, ttl);
+      fs.writeFileSync(ttlPath, ttl);
 
-    console.log(`Finished json2ttl ${ttlPath}`);
+      console.log(`Finished json2ttl ${ttlPath}`);
+    } catch {
+      console.log(`Error pdf2text ${ttlPath}`);
+    }
   });
 }
 
