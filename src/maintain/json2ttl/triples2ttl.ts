@@ -3,18 +3,15 @@ import { isNil, isNumber, isString, toPairs, compact } from 'lodash';
 import * as n3 from 'n3';
 import { Triple } from './triple';
 import _ from 'lodash';
-import { LegalNode, getLegalUri } from '../../uri';
+import { LegalNode, getLegalUri, getOntologyBaseUri } from '../../uri';
 import { isDocumentNode } from '../../uri/document-type';
 
 const { triple, namedNode, literal } = n3.DataFactory;
 
-export const baseUri = 'http://example.org/legal/';
-
 /**
  * Vocab
  */
-const rdfType = 'http://www.w3.org/1999/02/22-rdf-syntax-ns#type' as const;
-const ontoBase = `${baseUri}ontology/`;
+const rdfType = 'http://www.w3.org/1999/02/22-rdf-syntax-ns#type';
 
 /**
  * Node
@@ -24,14 +21,16 @@ function node(node: LegalNode): n3.NamedNode<string> {
   return namedNode(uri);
 }
 function onto(predicate: string): n3.NamedNode<string> {
-  return namedNode(`${ontoBase}${predicate}`);
+  const ontologyBaseUri = getOntologyBaseUri();
+  return namedNode(`${ontologyBaseUri}/${predicate}`);
 }
 
 /**
  * triples2ttl
  */
 export function triples2Ttl(triples: Triple[]): string {
-  const prefixes = { legal: ontoBase };
+  const ontologyBaseUri = getOntologyBaseUri();
+  const prefixes = { legal: `${ontologyBaseUri}/` };
 
   const coreQuads = triples.map(tripleToQuad);
   const classTypeQuads = getClassTypeQuads(triples);

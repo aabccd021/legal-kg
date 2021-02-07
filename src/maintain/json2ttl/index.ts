@@ -4,11 +4,12 @@ import { DataDir, getDocumentData, getDocFilePath } from '../utils';
 import * as fs from 'fs';
 import { json2triples } from './json2triples';
 import { triples2Ttl } from './triples2ttl';
+import { getConfig } from '../../utils';
 
 function json2ttl(): void {
-  const dir = 'maintained_documents';
-  const jsonDir: DataDir = { dir, dataType: 'json' };
-  const ttlDir: DataDir = { dir, dataType: 'ttl' };
+  const { dataDir } = getConfig();
+  const jsonDir: DataDir = { dir: dataDir, dataType: 'json' };
+  const ttlDir: DataDir = { dir: dataDir, dataType: 'ttl' };
 
   const datas = getDocumentData(jsonDir);
   datas.forEach((data) => {

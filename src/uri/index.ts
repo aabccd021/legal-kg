@@ -1,4 +1,5 @@
 import { assertNever } from 'assert-never';
+import { getConfig } from '../utils';
 import {
   StructureNode,
   getAyatUri,
@@ -23,4 +24,13 @@ export function getLegalUri(node: LegalNode): string {
   if (node._structureType === 'bagian') return getBagianUri(node);
   if (node._structureType === 'bab') return getBabUri(node);
   assertNever(node);
+}
+
+export function getOntologyBaseUri(): string {
+  const { uriBase } = getConfig();
+  return `${uriBase}/ontology`;
+}
+export function getDocumentBaseUri(): string {
+  const { uriBase } = getConfig();
+  return `${uriBase}/document`;
 }

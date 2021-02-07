@@ -37,9 +37,10 @@ import { getDocumentName, getDocumentUri, DocumentNode } from '../../uri/documen
 import { DataDir, getDocumentData, getDocFilePath } from '../utils';
 import * as fs from 'fs';
 import { getLegalUri } from '../../uri';
+import { getConfig } from '../../utils';
 
 function json2md(): void {
-  const dataDir = 'maintained_documents';
+  const { dataDir } = getConfig();
   const jsonDir: DataDir = { dir: dataDir, dataType: 'json' };
   const mdDir: DataDir = { dir: dataDir, dataType: 'md' };
 

@@ -15,8 +15,8 @@ export type PointNode = {
   _key: string | number;
   parentPoints: PointsNode;
 };
-export function getPointUri(node: PointNode): string {
-  const { _key, parentPoints } = node;
+export function getPointUri(pointNode: PointNode): string {
+  const { _key, parentPoints } = pointNode;
   const parentUri = _getPointParentUri(parentPoints);
 
   return `${parentUri}/point/${_key}`;
@@ -26,12 +26,12 @@ export function getPointUri(node: PointNode): string {
  * Points
  */
 export type PointsNode = PointNode | AyatNode | PasalNode | MetadataNode;
-function _getPointParentUri(node: PointsNode): string {
-  if (node._structureType === 'metadata') return getMetadataUri(node);
-  if (node._structureType === 'point') return getPointUri(node);
-  if (node._structureType === 'ayat') return getAyatUri(node);
-  if (node._structureType === 'pasal') return getPasalUri(node);
-  assertNever(node);
+function _getPointParentUri(pointsNode: PointsNode): string {
+  if (pointsNode._structureType === 'metadata') return getMetadataUri(pointsNode);
+  if (pointsNode._structureType === 'point') return getPointUri(pointsNode);
+  if (pointsNode._structureType === 'ayat') return getAyatUri(pointsNode);
+  if (pointsNode._structureType === 'pasal') return getPasalUri(pointsNode);
+  assertNever(pointsNode);
 }
 
 /**

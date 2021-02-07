@@ -3,11 +3,12 @@ import { text2rawJson } from './text2rawJson';
 import * as fs from 'fs';
 import { rawJson2json } from './rawJson2json';
 import stringify from 'json-stable-stringify';
+import { getConfig } from '../../utils';
 
 function text2json(): void {
-  const legalDir = 'maintained_documents';
-  const textDir: DataDir = { dir: legalDir, dataType: 'text' };
-  const jsonDir: DataDir = { dir: legalDir, dataType: 'json' };
+  const { dataDir } = getConfig();
+  const textDir: DataDir = { dir: dataDir, dataType: 'text' };
+  const jsonDir: DataDir = { dir: dataDir, dataType: 'json' };
 
   const legals = getDocumentData(textDir);
   legals.forEach((legal) => {

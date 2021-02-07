@@ -1,10 +1,6 @@
 import { assertNever } from 'assert-never';
-import { LegalNode } from '.';
-import { baseUri } from '../maintain/json2ttl/triples2ttl';
+import { getDocumentBaseUri, LegalNode } from '.';
 
-/**
- * Document Node
- */
 export type DocumentNode = (UuNode | PerdaNode | UudNode) & { documentType: DocumentType };
 export function isDocumentNode(x: LegalNode): x is DocumentNode {
   return DOCUMENT_TYPES.includes((x as DocumentNode).documentType);
@@ -20,7 +16,8 @@ export const DOCUMENT_TYPES = ['uu', 'perda', 'uud'] as const;
  */
 export function getDocumentUri(documentNode: DocumentNode): string {
   const path = getDocumentPath(documentNode);
-  return `${baseUri}document/${path}`;
+  const uriBase = getDocumentBaseUri();
+  return `${uriBase}/${path}`;
 }
 
 /**
