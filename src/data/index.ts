@@ -7,9 +7,9 @@ import {
   getConvertableDocumentFiles,
   CONVERTABLE_DOCUMENT_CATEGORY,
 } from '../legal/document';
+import { getConfig } from '../config';
 
 export type DataType = 'pdf' | 'text' | 'json' | 'md' | 'ttl';
-export type DataDir = { dir: string; dataType: DataType };
 export function getDataTypeExtension(dataType: DataType): string {
   const extension = getDataTypeExtensionStr(dataType);
   return `.${extension}`;
@@ -23,19 +23,19 @@ function getDataTypeExtensionStr(dataType: DataType): string {
   assertNever(dataType);
 }
 
-export function getDocFilePath(node: DocumentNode, dataDir: DataDir): string {
-  const { dir, dataType } = dataDir;
+export function getDocumentFilePath(node: DocumentNode, dataType: DataType): string {
+  const { dataDir } = getConfig();
   const extension = getDataTypeExtension(dataType);
   const docPath = getDocumentPath(node);
-  const filePath = `${dir}/${dataType}/${docPath}${extension}`;
+  const filePath = `${dataDir}/${dataType}/${docPath}${extension}`;
   const fileDir = path.dirname(filePath);
   fs.mkdirSync(fileDir, { recursive: true });
   return filePath;
 }
 
-export function getDocumentData(dataDir: DataDir): DocumentNode[] {
-  const { dir, dataType } = dataDir;
+export function getDocumentData(dataType: DataType): DocumentNode[] {
+  const { dataDir } = getConfig();
   return CONVERTABLE_DOCUMENT_CATEGORY.flatMap((docType) =>
-    getConvertableDocumentFiles(docType, dir, dataType)
+    getConvertableDocumentFiles(docType, dataDir, dataType)
   );
 }

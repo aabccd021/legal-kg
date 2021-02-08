@@ -2,23 +2,18 @@ import { text2rawJson } from './text-to-raw-json';
 import * as fs from 'fs';
 import { rawJson2json } from './raw-json-to-json';
 import stringify from 'json-stable-stringify';
-import { DataDir, getDocumentData, getDocFilePath } from '../../../data';
-import { getConfig } from '../../../config';
+import { getDocumentData, getDocumentFilePath } from '../../../data';
 
 export function text2json(): void {
-  const { dataDir } = getConfig();
-  const textDir: DataDir = { dir: dataDir, dataType: 'text' };
-  const jsonDir: DataDir = { dir: dataDir, dataType: 'json' };
-
-  const legals = getDocumentData(textDir);
-  legals.forEach((legal) => {
-    const textPath = getDocFilePath(legal, textDir);
-    const jsonPath = getDocFilePath(legal, jsonDir);
+  const nodes = getDocumentData('text');
+  nodes.forEach((node) => {
+    const textPath = getDocumentFilePath(node, 'text');
+    const jsonPath = getDocumentFilePath(node, 'json');
 
     try {
       const text = fs.readFileSync(textPath).toString();
-      const rawJson = text2rawJson(text, legal);
-      const json = rawJson2json(rawJson, legal);
+      const rawJson = text2rawJson(text, node);
+      const json = rawJson2json(rawJson, node);
 
       fs.writeFileSync(jsonPath, stringify(json, { space: 2 }));
 

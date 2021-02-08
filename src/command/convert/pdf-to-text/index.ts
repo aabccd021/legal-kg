@@ -1,18 +1,13 @@
 import { isEmpty } from 'lodash';
 import { execSync } from 'child_process';
 import * as fs from 'fs';
-import { DataDir, getDocumentData, getDocFilePath } from '../../../data';
-import { getConfig } from '../../../config';
+import { getDocumentData, getDocumentFilePath } from '../../../data';
 
 export function pdf2txt(): void {
-  const { dataDir } = getConfig();
-  const pdfDir: DataDir = { dir: dataDir, dataType: 'pdf' };
-  const textDir: DataDir = { dir: dataDir, dataType: 'text' };
-
-  const legals = getDocumentData(pdfDir);
+  const legals = getDocumentData('pdf');
   legals.forEach((legal) => {
-    const pdfPath = getDocFilePath(legal, pdfDir);
-    const textPath = getDocFilePath(legal, textDir);
+    const pdfPath = getDocumentFilePath(legal, 'pdf');
+    const textPath = getDocumentFilePath(legal, 'text');
 
     try {
       PyMuPDF(pdfPath, textPath);

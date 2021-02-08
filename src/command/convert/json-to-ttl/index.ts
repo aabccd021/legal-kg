@@ -2,18 +2,13 @@ import * as fs from 'fs';
 import { json2triples } from './json-to-triples';
 import { triples2Ttl } from './triples-to-ttl';
 import { Document } from '../../../legal/document/index';
-import { DataDir, getDocumentData, getDocFilePath } from '../../../data';
-import { getConfig } from '../../../config';
+import { getDocumentData, getDocumentFilePath } from '../../../data';
 
 export function json2ttl(): void {
-  const { dataDir } = getConfig();
-  const jsonDir: DataDir = { dir: dataDir, dataType: 'json' };
-  const ttlDir: DataDir = { dir: dataDir, dataType: 'ttl' };
-
-  const datas = getDocumentData(jsonDir);
-  datas.forEach((data) => {
-    const jsonPath = getDocFilePath(data, jsonDir);
-    const ttlPath = getDocFilePath(data, ttlDir);
+  const nodes = getDocumentData('json');
+  nodes.forEach((node) => {
+    const jsonPath = getDocumentFilePath(node, 'json');
+    const ttlPath = getDocumentFilePath(node, 'ttl');
 
     try {
       const jsonString = fs.readFileSync(jsonPath).toString();

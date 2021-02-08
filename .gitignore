@@ -3,8 +3,4 @@ yarn.lock
 yarn-error.log
 lib
 *.tsbuildinfo
-legal_data/pdf
-legal_data/text
-legal_data/json
-legal_data/md
-legal_data/ttl
+legal_data_temp

@@ -1,7 +1,11 @@
 import * as fs from 'fs';
 import stringify from 'json-stable-stringify';
-import _ from 'lodash';
-import { compareConvertableDocument, ConvertableDocumentNode } from './legal/document';
+import _, { isEqual } from 'lodash';
+import {
+  compareConvertableDocument,
+  ConvertableDocumentNode,
+  DocumentNode,
+} from './legal/document';
 
 export type DocumentLog = UpdateIndexSuccessDocumentLog | UpdateIndexErrorDocumentLog;
 
@@ -55,14 +59,7 @@ export function writeLogs(newLogs: DocumentLog[]): void {
   const newNodes = successLogs.map(({ _node }) => _node);
 
   const oldLogs = errorLogs.length >= 1 ? getOldLogsWithoutUpdateIndexError() : readLogs();
-  const oldLogsWithoutDuplicate = _(oldLogs)
-    .map((log) => {
-      if (log.status === 'update-index-error') return log;
-      if (newNodes.includes(log._node)) return undefined;
-      return log;
-    })
-    .compact()
-    .value();
+  const oldLogsWithoutDuplicate = oldLogs.filter(duplicateNode(newNodes));
 
   const mergedLogs = [...oldLogsWithoutDuplicate, ...errorLogs, ...successLogs];
   const sortedLogs = mergedLogs.sort((a, b) => {
@@ -72,6 +69,14 @@ export function writeLogs(newLogs: DocumentLog[]): void {
     return a.status === 'update-index-error' ? 1 : -1;
   });
   fs.writeFileSync(filePath, stringify(sortedLogs, { space: 2 }));
+}
+
+export function duplicateNode(nodes: DocumentNode[]): (log: DocumentLog) => boolean {
+  return (log) => {
+    if (log.status === 'update-index-error') return true;
+    if (nodes.some((node) => isEqual(node, log._node))) return false;
+    return true;
+  };
 }
 
 function getOldLogsWithoutUpdateIndexError(): DocumentLog[] {

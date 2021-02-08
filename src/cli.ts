@@ -1,7 +1,8 @@
-import yargs, { Options } from 'yargs';
+import yargs from 'yargs';
+import { downloadPdf } from './command/download-pdf';
 import { updateIndex } from './command/update-index';
 
-type CommandOption = { overwrite: Options };
+type CommandOption = { overwrite: boolean };
 
 yargs
   .command({
@@ -19,12 +20,7 @@ yargs
         describe: 'Overwrite existing pdf file',
       },
     },
-    handler: (argv) => {
-      console.log(argv);
-      console.log(argv.overwrite);
-      console.log(typeof argv.overwrite);
-      // downloadPdf({ overwrite: false });
-    },
+    handler: downloadPdf,
   })
   .command<CommandOption>({
     command: 'convert:pdf-to-text',

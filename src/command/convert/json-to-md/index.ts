@@ -19,18 +19,13 @@ import {
 import { Point, PointNode, Points } from '../../../legal/structure/point';
 import { ReferenceText } from '../../../legal/reference';
 import { Document } from '../../../legal/document/index';
-import { DataDir, getDocumentData, getDocFilePath } from '../../../data';
-import { getConfig } from '../../../config';
+import { getDocumentData, getDocumentFilePath } from '../../../data';
 
 export function json2md(): void {
-  const { dataDir } = getConfig();
-  const jsonDir: DataDir = { dir: dataDir, dataType: 'json' };
-  const mdDir: DataDir = { dir: dataDir, dataType: 'md' };
-
-  const datas = getDocumentData(jsonDir);
-  datas.forEach((data) => {
-    const jsonPath = getDocFilePath(data, jsonDir);
-    const mdPath = getDocFilePath(data, mdDir);
+  const nodes = getDocumentData('json');
+  nodes.forEach((node) => {
+    const jsonPath = getDocumentFilePath(node, 'json');
+    const mdPath = getDocumentFilePath(node, 'md');
 
     try {
       const jsonString = fs.readFileSync(jsonPath).toString();

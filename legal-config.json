@@ -1,5 +1,5 @@
 {
-  "dataDir": "legal_data",
+  "dataDir": "legal_data_temp",
   "uriBase": "http://example.org/legal",
   "indexFile": "legal_index.json"
 }
