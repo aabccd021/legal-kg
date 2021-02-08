@@ -68,14 +68,7 @@ function rowToData(scrapedRow: ScrapedRow, category: ScrapableDocumentCategory):
 
     const pdfUrl = scrapableDocumentHtmlToPdfUrl(downloadHtml, category);
 
-    return {
-      status: 'success',
-      lastMethod: 'update-index',
-      _node,
-      detailUrl,
-      pdfUrl,
-      tentang: tentangHtml,
-    };
+    return { status: 'convert', _node, detailUrl, pdfUrl, tentang: tentangHtml };
   } catch (error) {
     const { Tentang: tentangHtml, 3: downloadHtml, Peraturan: peraturanHtml } = scrapedRow;
     const html = { tentangHtml, downloadHtml, peraturanHtml };

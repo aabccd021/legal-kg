@@ -7,34 +7,24 @@ import {
   DocumentNode,
 } from './legal/document';
 
-export type DocumentLog = UpdateIndexSuccessDocumentLog | UpdateIndexErrorDocumentLog;
+export type DocumentLog = ConvertDocumentLog | ErrorDocumentLog;
 
-type LogDetail = {
+export type ConvertDocumentLog = {
+  status: 'convert';
   _node: ConvertableDocumentNode;
   detailUrl: string;
   pdfUrl: string;
   tentang: string;
-};
-
-type SuccessDocumentLog = {
-  status: 'success';
-  lastMethod: DocumentMethods | 'update-index';
+  downloadPdfError?: unknown;
+  textToJsonError?: unknown;
+  jsonToTtlError?: unknown;
+  jsonToMdError?: unknown;
 };
 
 type ErrorDocumentLog = {
-  status: 'error';
-  lastError: DocumentMethods;
-  message?: unknown;
-};
-
-type UpdateIndexSuccessDocumentLog = LogDetail & (SuccessDocumentLog | ErrorDocumentLog);
-
-type UpdateIndexErrorDocumentLog = {
   status: 'update-index-error';
   message?: unknown;
 };
-
-type DocumentMethods = 'download-pdf' | 'text-to-json' | 'json-to-ttl' | 'json-to-md';
 
 const filePath = 'legal-log.json';
 
@@ -51,32 +41,33 @@ export function writeLogs(newLogs: DocumentLog[]): void {
     .map((log) => (log.status === 'update-index-error' ? log : undefined))
     .compact()
     .value();
-  const successLogs = _(newLogs)
-    .map((log) => (log.status === 'update-index-error' ? undefined : log))
-    .compact()
-    .value();
+  const convertLogs = _(newLogs).map(toConvertDocumentLog).compact().value();
 
-  const newNodes = successLogs.map(({ _node }) => _node);
+  const newNodes = convertLogs.map(({ _node }) => _node);
 
   const oldLogs = errorLogs.length >= 1 ? getOldLogsWithoutUpdateIndexError() : readLogs();
-  const oldLogsWithoutDuplicate = oldLogs.filter(duplicateNode(newNodes));
+  const oldLogsWithoutDuplicate = oldLogs.filter((log) => !includeLog(newNodes, log));
 
-  const mergedLogs = [...oldLogsWithoutDuplicate, ...errorLogs, ...successLogs];
-  const sortedLogs = mergedLogs.sort((a, b) => {
-    if (a.status !== 'update-index-error' && b.status !== 'update-index-error') {
-      return compareConvertableDocument(a._node, b._node);
-    }
-    return a.status === 'update-index-error' ? 1 : -1;
-  });
+  const mergedLogs = [...oldLogsWithoutDuplicate, ...errorLogs, ...convertLogs];
+  const sortedLogs = mergedLogs.sort(compareDocumentLog);
   fs.writeFileSync(filePath, stringify(sortedLogs, { space: 2 }));
 }
 
-export function duplicateNode(nodes: DocumentNode[]): (log: DocumentLog) => boolean {
-  return (log) => {
-    if (log.status === 'update-index-error') return true;
-    if (nodes.some((node) => isEqual(node, log._node))) return false;
-    return true;
-  };
+export function toConvertDocumentLog(log: DocumentLog): ConvertDocumentLog | undefined {
+  return log.status === 'update-index-error' ? undefined : log;
+}
+
+function compareDocumentLog(a: DocumentLog, b: DocumentLog): number {
+  if (a.status !== 'update-index-error' && b.status !== 'update-index-error') {
+    return compareConvertableDocument(a._node, b._node);
+  }
+  return a.status === 'update-index-error' ? 1 : -1;
+}
+
+export function includeLog(nodes: DocumentNode[], log: DocumentLog): boolean {
+  if (log.status === 'update-index-error') return false;
+  if (nodes.some((node) => isEqual(node, log._node))) return true;
+  return false;
 }
 
 function getOldLogsWithoutUpdateIndexError(): DocumentLog[] {
