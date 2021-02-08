@@ -24,7 +24,7 @@ export type ScrapableDocumentNode = UuNode & {
 export type ConvertableDocumentCategory = typeof CONVERTABLE_DOCUMENT_CATEGORY[number];
 export const CONVERTABLE_DOCUMENT_CATEGORY = [...SCRAPABLE_DOCUMENT_CATEGORY, 'perda'] as const;
 export type ConvertableDocumentNode = (ScrapableDocumentNode | PerdaNode) & {
-  _documentType: DocumentCategory;
+  _documentType: ConvertableDocumentCategory;
 };
 
 /**
@@ -61,29 +61,60 @@ function _getDocumentPath(node: DocumentNode): string {
 }
 
 /**
- * Get Document File
+ * Get Convertable Document File
  */
 export function getConvertableDocumentFiles(
-  documentType: ConvertableDocumentCategory,
+  category: ConvertableDocumentCategory,
   dir: string,
   dataType: DataType
 ): ConvertableDocumentNode[] {
-  const documentTypeDir = path.join(dir, dataType, documentType);
+  const documentTypeDir = path.join(dir, dataType, category);
   if (!fs.existsSync(documentTypeDir)) return [];
-  if (documentType === 'uu') return _uu.getFiles(documentTypeDir, dataType);
-  if (documentType === 'perda') return _perda.getFiles(documentTypeDir, dataType);
-  assertNever(documentType);
+  if (category === 'uu') return _uu.getFiles(documentTypeDir, dataType);
+  if (category === 'perda') return _perda.getFiles(documentTypeDir, dataType);
+  assertNever(category);
 }
 
 /**
- * Compare Document
+ * Scrapable Document Name to Node
  */
-export function compareScrapableDocument(
-  a: ScrapableDocumentNode,
-  b: ScrapableDocumentNode
+export function getNodeOfScrappableDocumentName(
+  name: string,
+  category: ScrapableDocumentCategory
+): ScrapableDocumentNode {
+  if (category === 'uu') return _uu.nameToNode(name);
+  assertNever(category);
+}
+
+/**
+ * Compare Convertable Document
+ */
+export function compareConvertableDocument(
+  a: ConvertableDocumentNode,
+  b: ConvertableDocumentNode
 ): number {
   if (a._documentType === 'uu' && b._documentType === 'uu') return _uu.compare(a, b);
+  if (a._documentType === 'perda' && b._documentType === 'perda') return _perda.compare(a, b);
   return a._documentType.localeCompare(b._documentType);
+}
+
+/**
+ * Scrapable Document PDF Url from HTML
+ */
+export function scrapableDocumentHtmlToPdfUrl(
+  downloadEl: string,
+  category: ScrapableDocumentCategory
+): string {
+  if (category === 'uu') return _uu.htmlToPdfUrl(downloadEl);
+  assertNever(category);
+}
+
+/**
+ * Scrapable Document last page
+ */
+export function getScrapableDocumentLastPage(category: ScrapableDocumentCategory): number {
+  if (category === 'uu') return _uu.lastPage;
+  assertNever(category);
 }
 
 /**

@@ -1,6 +1,6 @@
 import { assertNever } from 'assert-never';
 import { upperFirst } from 'lodash';
-import { getConfig } from '../utils';
+import { getConfig } from '../config';
 import { DocumentNode, _getDocumentUri, DOCUMENT_CATEGORY } from './document';
 import { _getStructureUri, StructureNode, STRUCTURE_CATEGORY } from './structure';
 

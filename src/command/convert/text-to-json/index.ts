@@ -3,7 +3,7 @@ import * as fs from 'fs';
 import { rawJson2json } from './raw-json-to-json';
 import stringify from 'json-stable-stringify';
 import { DataDir, getDocumentData, getDocFilePath } from '../../../data';
-import { getConfig } from '../../../utils';
+import { getConfig } from '../../../config';
 
 export function text2json(): void {
   const { dataDir } = getConfig();

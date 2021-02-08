@@ -1,52 +1,40 @@
 import {
-  compareScrapableDocument,
+  getNodeOfScrappableDocumentName,
+  scrapableDocumentHtmlToPdfUrl,
   ScrapableDocumentCategory,
-  ScrapableDocumentNode,
   SCRAPABLE_DOCUMENT_CATEGORY,
+  getScrapableDocumentLastPage,
 } from '../../legal/document';
-import assertNever from 'assert-never';
 import { isNil, range } from 'lodash';
 import { Tabletojson } from 'tabletojson';
-import { getUuPdfUrl, nameToUuNode } from './uu';
 import striptags from 'striptags';
-
-export type IndexDocument =
-  | {
-      status: 'success';
-      _node: ScrapableDocumentNode;
-      detailUrl: string;
-      pdfUrl: string;
-      tentang: string;
-    }
-  | {
-      status: 'error';
-      message: string;
-      scrapedRow: ScrapedRow;
-      category: ScrapableDocumentCategory;
-    };
+import { DocumentLog, writeLogs } from '../../log';
 
 export async function updateIndex(): Promise<void> {
   console.log('Start update index');
 
-  await Promise.allSettled(SCRAPABLE_DOCUMENT_CATEGORY.map(updateLegalCategoryIndex));
+  const results = await Promise.allSettled(
+    SCRAPABLE_DOCUMENT_CATEGORY.map(updateLegalCategoryIndex)
+  );
 
-  // console.log(`\nSuccess : ${successCount}`);
-  // console.log(`\nError : ${totalCount - successCount}`);
-  // console.log(`\nTotal : ${totalCount}`);
+  const documentIndices = results.flatMap((result) =>
+    result.status === 'fulfilled' ? result.value : []
+  );
+  writeLogs(documentIndices);
 }
 
 async function updateLegalCategoryIndex(
   category: ScrapableDocumentCategory
-): Promise<IndexDocument[]> {
-  const lastPage = getLastPage(category);
+): Promise<DocumentLog[]> {
+  const lastPage = getScrapableDocumentLastPage(category);
   const pages = range(1, lastPage + 1);
 
   const results = await Promise.allSettled(
     pages.map((page) => pageToLegalCategoryData(page, category))
   );
-  const indexDocuments = results
-    .flatMap((result) => (result.status === 'fulfilled' ? result.value : []))
-    .sort(compareLegalCategoryData);
+  const indexDocuments = results.flatMap((result) =>
+    result.status === 'fulfilled' ? result.value : []
+  );
 
   return indexDocuments;
 }
@@ -54,76 +42,60 @@ async function updateLegalCategoryIndex(
 async function pageToLegalCategoryData(
   page: number,
   category: ScrapableDocumentCategory
-): Promise<IndexDocument[]> {
+): Promise<DocumentLog[]> {
   const url = `https://peraturan.go.id/${category}.html?page=${page}`;
   const convertOption = { stripHtmlFromCells: false };
 
-  const result: [Partial<ScrapedRow>[]] = await Tabletojson.convertUrl(url, convertOption);
+  const result: [ScrapedRow[]] = await Tabletojson.convertUrl(url, convertOption);
 
   const rows = result[0];
   const datas = rows.map((row) => rowToData(row, category));
-  console.log(`Done Scraping Page ${page}`);
+  console.log(`Done Scraping ${category} Page ${page}`);
 
   return datas;
 }
 
-function rowToData(scrapedRow: ScrapedRow, category: ScrapableDocumentCategory): IndexDocument {
+function rowToData(scrapedRow: ScrapedRow, category: ScrapableDocumentCategory): DocumentLog {
   try {
     const normalizedRow = scrapedRowToNormalized(scrapedRow);
-    const { tentang, peraturanEl, downloadEl } = normalizedRow;
+    const { tentangHtml, peraturanHtml, downloadHtml } = normalizedRow;
 
-    const name = striptags(peraturanEl);
-    const _node = nameToDocumentNode(name, category);
+    const name = striptags(peraturanHtml);
+    const _node = getNodeOfScrappableDocumentName(name, category);
 
-    const detailEndpoint = peraturanEl.match(/".*"/)?.[0]?.replaceAll('"', '');
+    const detailEndpoint = peraturanHtml.match(/".*"/)?.[0]?.replaceAll('"', '');
     const detailUrl = `https://peraturan.go.id${detailEndpoint}`;
 
-    const pdfUrl = getPdfUrl(downloadEl, category);
+    const pdfUrl = scrapableDocumentHtmlToPdfUrl(downloadHtml, category);
 
-    return { status: 'success', _node, tentang, detailUrl, pdfUrl };
-  } catch (message) {
-    return { status: 'error', message, scrapedRow, category };
+    return {
+      status: 'success',
+      lastMethod: 'update-index',
+      _node,
+      detailUrl,
+      pdfUrl,
+      tentang: tentangHtml,
+    };
+  } catch (error) {
+    const { Tentang: tentangHtml, 3: downloadHtml, Peraturan: peraturanHtml } = scrapedRow;
+    const html = { tentangHtml, downloadHtml, peraturanHtml };
+    if (error instanceof Error) {
+      const stack = error.stack?.split('\n');
+      return { status: 'update-index-error', message: { stack, html } };
+    }
+    return { status: 'update-index-error' };
   }
-}
-
-/**
- * Category Handler
- */
-function getLastPage(category: ScrapableDocumentCategory): number {
-  if (category === 'uu') return 85;
-  assertNever(category);
-}
-function nameToDocumentNode(
-  name: string,
-  category: ScrapableDocumentCategory
-): ScrapableDocumentNode {
-  if (category === 'uu') return nameToUuNode(name);
-  assertNever(category);
-}
-function getPdfUrl(downloadEl: string, category: ScrapableDocumentCategory): string {
-  if (category === 'uu') return getUuPdfUrl(downloadEl);
-  assertNever(category);
-}
-
-function compareLegalCategoryData(a: IndexDocument, b: IndexDocument): number {
-  if (a.status === 'success' && b.status === 'success') {
-    return compareScrapableDocument(a._node, b._node);
-  }
-  if (a.status === 'error' && b.status === 'error') {
-    return a.message.length - b.message.length;
-  }
-  return a.status === 'error' ? 1 : -1;
 }
 
 /**
  * Scraped Row
  */
 type ScrapedRow = { Peraturan?: string; Tentang?: string; 3?: string };
-type NormalizedScrapedRow = { peraturanEl: string; tentang: string; downloadEl: string };
+type NormalizedScrapedRow = { tentangHtml: string; downloadHtml: string; peraturanHtml: string };
 function scrapedRowToNormalized(partialRow: ScrapedRow): NormalizedScrapedRow {
-  const { Tentang: tentang, Peraturan: peraturanEl, 3: downloadEl } = partialRow;
-  if (isNil(tentang)) throw Error('tentang not found');
-  if (isNil(peraturanEl)) throw Error('tentang not found');
-  if (isNil(downloadEl)) throw Error('tentang not found');
-  return { tentang, peraturanEl, downloadEl };
+  const { Tentang: tentangHtml, 3: downloadHtml, Peraturan: peraturanHtml } = partialRow;
+  if (isNil(peraturanHtml)) throw Error('peraturanHtml not found');
+  if (isNil(tentangHtml)) throw Error('"tentang" not found');
+  if (isNil(downloadHtml)) throw Error('downloadHtml not found');
+  return { tentangHtml, downloadHtml, peraturanHtml };
 }

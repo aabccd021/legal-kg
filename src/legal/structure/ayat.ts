@@ -1,5 +1,5 @@
 import { _getStructureUri } from '.';
-import { ReferenceText } from '../utils';
+import { ReferenceText } from '../reference';
 import { PasalNode } from './pasal';
 import { Points } from './point';
 

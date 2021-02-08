@@ -8,14 +8,14 @@ export type _DocumentHandler<T extends DocumentNode> = {
 };
 
 export type _ConvertableDocumentHandler<T extends ConvertableDocumentNode> = _DocumentHandler<T> & {
+  compare: (a: T, b: T) => number;
   getFiles: (dir: string, dataType: DataType) => T[];
 };
 
 export type _ScrapableDocumentHandler<
   T extends ScrapableDocumentNode
 > = _ConvertableDocumentHandler<T> & {
-  compare: (a: T, b: T) => number;
   lastPage: number;
-  getPdfUrl: (downloadEl: string) => string;
+  htmlToPdfUrl: (downloadEl: string) => string;
   nameToNode: (name: string) => T;
 };

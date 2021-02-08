@@ -18,7 +18,7 @@ export type PerdaNode = {
 export const _perda: _ConvertableDocumentHandler<PerdaNode> = {
   getPath,
   getName,
-  // compare,
+  compare,
   getFiles,
 };
 
@@ -46,15 +46,15 @@ function getPerdaDaerahName(daerah: Daerah): string {
 /**
  * Compare
  */
-// function compare(a: PerdaNode, b: PerdaNode): number {
-//   const daerahDiff = a.daerah.localeCompare(b.daerah);
-//   if (daerahDiff !== 0) return daerahDiff;
+function compare(a: PerdaNode, b: PerdaNode): number {
+  const daerahDiff = a.daerah.localeCompare(b.daerah);
+  if (daerahDiff !== 0) return daerahDiff;
 
-//   const tahunDiff = a.tahun - b.tahun;
-//   if (tahunDiff !== 0) return tahunDiff;
+  const tahunDiff = a.tahun - b.tahun;
+  if (tahunDiff !== 0) return tahunDiff;
 
-//   return a.nomor - b.nomor;
-// }
+  return a.nomor - b.nomor;
+}
 
 /**
  * Get Files

@@ -16,7 +16,7 @@ import {
 } from '../../../legal/structure/pasal';
 import { PointsNode, PointNode, Point, Points } from '../../../legal/structure/point';
 import { Document } from '../../../legal/document/index';
-import { Reference } from '../../../legal/utils';
+import { Reference } from '../../../legal/reference';
 
 export function rawJson2json(document: Document, documentNode: DocumentNode): Document {
   const { babs, mengingat, menimbang } = document;

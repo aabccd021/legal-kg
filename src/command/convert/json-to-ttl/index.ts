@@ -3,7 +3,7 @@ import { json2triples } from './json-to-triples';
 import { triples2Ttl } from './triples-to-ttl';
 import { Document } from '../../../legal/document/index';
 import { DataDir, getDocumentData, getDocFilePath } from '../../../data';
-import { getConfig } from '../../../utils';
+import { getConfig } from '../../../config';
 
 export function json2ttl(): void {
   const { dataDir } = getConfig();

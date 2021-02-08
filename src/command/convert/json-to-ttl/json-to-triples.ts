@@ -7,7 +7,7 @@ import { isBagians, Bagian, BagianNode } from '../../../legal/structure/bagian';
 import { Metadata, MetadataNode } from '../../../legal/structure/metadata';
 import { isParagrafs, Paragraf, ParagrafNode } from '../../../legal/structure/paragraf';
 import { Points, PointsNode, Point, PointNode } from '../../../legal/structure/point';
-import { Reference } from '../../../legal/utils';
+import { Reference } from '../../../legal/reference';
 import {
   Pasal,
   PasalParentNode,

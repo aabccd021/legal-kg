@@ -2,7 +2,7 @@ import { isEmpty } from 'lodash';
 import { execSync } from 'child_process';
 import * as fs from 'fs';
 import { DataDir, getDocumentData, getDocFilePath } from '../../../data';
-import { getConfig } from '../../../utils';
+import { getConfig } from '../../../config';
 
 export function pdf2txt(): void {
   const { dataDir } = getConfig();

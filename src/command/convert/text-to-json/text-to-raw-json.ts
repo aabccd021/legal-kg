@@ -9,7 +9,7 @@ import { Metadata } from '../../../legal/structure/metadata';
 import { Paragraf } from '../../../legal/structure/paragraf';
 import { Pasal } from '../../../legal/structure/pasal';
 import { Points, Point } from '../../../legal/structure/point';
-import { ReferenceText } from '../../../legal/utils';
+import { ReferenceText } from '../../../legal/reference';
 const padaTaggalRegexp = /^pada tanggal/;
 const mengingatRegex = /^Mengingat\s*:/;
 const menimbangRegex = /^Menimbang\s*:/;

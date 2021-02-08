@@ -1,5 +1,5 @@
 import * as fs from 'fs';
-import { chain, isNil } from 'lodash';
+import { chain, isNil, parseInt } from 'lodash';
 import path from 'path';
 import { DataType, getDataTypeExtension } from '../../data';
 import { _ScrapableDocumentHandler } from './_utils';
@@ -15,7 +15,7 @@ export const _uu: _ScrapableDocumentHandler<UuNode> = {
   getName,
   compare,
   getFiles,
-  getPdfUrl,
+  htmlToPdfUrl: getPdfUrl,
   nameToNode,
   lastPage: 85,
 };
@@ -72,12 +72,16 @@ function getPdfUrl(downloadEl: string): string {
 }
 
 function nameToNode(name: string): UuNode {
-  const [, nomor, tahun] = name
+  const [, _nomor, _tahun] = name
     .toLowerCase()
     .replace('uu no. ', ' ')
     .replace(' tahun ', ' ')
     .split(' ');
-  if (isNil(nomor)) throw Error(`can't extract nomor: ${name}`);
-  if (isNil(tahun)) throw Error(`can't extract tahun: ${name}`);
-  return { _documentType: 'uu', nomor: parseInt(nomor), tahun: parseInt(tahun) };
+  if (isNil(_nomor)) throw Error(`can't extract nomor: ${name}`);
+  if (isNil(_tahun)) throw Error(`can't extract tahun: ${name}`);
+  const nomor = parseInt(_nomor);
+  const tahun = parseInt(_tahun);
+  if (isNil(nomor) || isNaN(nomor)) throw Error(`can't extract nomor: ${name}`);
+  if (isNil(tahun) || isNaN(tahun)) throw Error(`can't extract tahun: ${name}`);
+  return { _documentType: 'uu', nomor, tahun };
 }

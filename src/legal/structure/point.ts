@@ -1,5 +1,5 @@
 import { _getStructureUri } from '.';
-import { ReferenceText } from '../utils';
+import { ReferenceText } from '../reference';
 import { AyatNode } from './ayat';
 import { MetadataNode } from './metadata';
 import { PasalNode } from './pasal';

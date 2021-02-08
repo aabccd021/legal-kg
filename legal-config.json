@@ -1,0 +1,5 @@
+{
+  "dataDir": "legal_data",
+  "uriBase": "http://example.org/legal",
+  "indexFile": "legal_index.json"
+}

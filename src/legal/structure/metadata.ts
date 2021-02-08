@@ -1,5 +1,5 @@
 import { DocumentNode, _getDocumentUri } from '../document';
-import { ReferenceText } from '../utils';
+import { ReferenceText } from '../reference';
 import { Points } from './point';
 
 export type MetadataNode = {

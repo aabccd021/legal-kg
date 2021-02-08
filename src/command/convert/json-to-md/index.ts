@@ -17,10 +17,10 @@ import {
   Pasal,
 } from '../../../legal/structure/pasal';
 import { Point, PointNode, Points } from '../../../legal/structure/point';
-import { ReferenceText } from '../../../legal/utils';
+import { ReferenceText } from '../../../legal/reference';
 import { Document } from '../../../legal/document/index';
 import { DataDir, getDocumentData, getDocFilePath } from '../../../data';
-import { getConfig } from '../../../utils';
+import { getConfig } from '../../../config';
 
 export function json2md(): void {
   const { dataDir } = getConfig();

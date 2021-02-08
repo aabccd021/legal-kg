@@ -1,6 +1,6 @@
 import assertNever from 'assert-never';
 import { DocumentNode, _getDocumentUri } from '../document';
-import { ReferenceText } from '../utils';
+import { ReferenceText } from '../reference';
 import { Ayat } from './ayat';
 import { BabNode } from './bab';
 import { Bagian, BagianNode } from './bagian';
