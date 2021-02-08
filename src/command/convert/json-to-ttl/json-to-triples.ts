@@ -1,33 +1,19 @@
 import { flatten, compact, isNil, isArray, isString } from 'lodash';
 import { Triple } from './triple';
+import { Document, DocumentNode } from '../../../legal/document/index';
+import { Ayat, isAyats, AyatNode } from '../../../legal/structure/ayat';
+import { Bab, BabNode } from '../../../legal/structure/bab';
+import { isBagians, Bagian, BagianNode } from '../../../legal/structure/bagian';
+import { Metadata, MetadataNode } from '../../../legal/structure/metadata';
+import { isParagrafs, Paragraf, ParagrafNode } from '../../../legal/structure/paragraf';
+import { Points, PointsNode, Point, PointNode } from '../../../legal/structure/point';
+import { Reference } from '../../../legal/utils';
 import {
-  Document,
-  Mengimbang,
-  Bab,
-  isBagians,
-  Bagian,
-  isParagrafs,
-  Paragraf,
   Pasal,
-  Points,
-  Ayat,
-  isAyats,
-  Point,
-  Reference,
-} from '../../type';
-import {
-  MetadataNode,
-  BabNode,
-  BagianNode,
-  ParagrafNode,
   PasalParentNode,
   getPasalParentDocument,
   PasalNode,
-  AyatNode,
-  PointsNode,
-  PointNode,
-} from '../../uri/document-structure';
-import { DocumentNode } from '../../uri/document-type';
+} from '../../../legal/structure/pasal';
 
 export function json2triples({
   _name,
@@ -87,7 +73,7 @@ export function json2triples({
 function metadata2triple(
   parentDocument: DocumentNode,
   metadataType: 'documentMengingat' | 'documentMenimbang',
-  mengimbang?: Mengimbang
+  mengimbang?: Metadata
 ): Triple[] {
   if (isNil(mengimbang)) return [];
   const metadata: MetadataNode = { metadataType, parentDocument, _structureType: 'metadata' };

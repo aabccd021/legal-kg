@@ -1,18 +1,15 @@
-import { DocumentNode } from '../../uri/document-type';
 import { compact, flatMap, isEmpty, isNil, mapValues } from 'lodash';
 import { toArabic } from 'roman-numerals';
-import {
-  Document,
-  Mengimbang,
-  Bab,
-  Bagian,
-  Paragraf,
-  Pasal,
-  Ayat,
-  Points,
-  Point,
-  ReferenceText,
-} from '../../type';
+import { DocumentNode } from '../../../legal/document';
+import { Document } from '../../../legal/document/index';
+import { Ayat } from '../../../legal/structure/ayat';
+import { Bab } from '../../../legal/structure/bab';
+import { Bagian } from '../../../legal/structure/bagian';
+import { Metadata } from '../../../legal/structure/metadata';
+import { Paragraf } from '../../../legal/structure/paragraf';
+import { Pasal } from '../../../legal/structure/pasal';
+import { Points, Point } from '../../../legal/structure/point';
+import { ReferenceText } from '../../../legal/utils';
 const padaTaggalRegexp = /^pada tanggal/;
 const mengingatRegex = /^Mengingat\s*:/;
 const menimbangRegex = /^Menimbang\s*:/;
@@ -71,7 +68,7 @@ export function text2rawJson(text: string, documentNode: DocumentNode): Document
   return doc;
 }
 
-function toMengimbang(lines: string[] | undefined, regex: RegExp): Mengimbang | undefined {
+function toMengimbang(lines: string[] | undefined, regex: RegExp): Metadata | undefined {
   if (isNil(lines)) return undefined;
   const points = getPoints(removeKeyFromLines(lines, regex));
   const text = string2EmptyReference(lines.join(' '));

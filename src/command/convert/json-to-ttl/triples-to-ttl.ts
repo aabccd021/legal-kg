@@ -1,10 +1,8 @@
-import { assertNever } from 'assert-never';
 import { isNil, isNumber, isString, toPairs, compact } from 'lodash';
 import * as n3 from 'n3';
 import { Triple } from './triple';
 import _ from 'lodash';
-import { LegalNode, getLegalUri, getOntologyBaseUri } from '../../uri';
-import { isDocumentNode } from '../../uri/document-type';
+import { LegalNode, getLegalUri, getOntologyBaseUri, getLegalClass } from '../../../legal';
 
 const { triple, namedNode, literal } = n3.DataFactory;
 
@@ -64,26 +62,6 @@ function getClassTypeQuads(triples: Triple[]): n3.Quad[] {
     .uniq()
     .map((x) => triple(node(x), namedNode(rdfType), onto(getLegalClass(x))))
     .value();
-}
-type LegalClass =
-  | 'Document'
-  | 'Point'
-  | 'Ayat'
-  | 'Pasal'
-  | 'Metadata'
-  | 'Paragraf'
-  | 'Bagian'
-  | 'Bab';
-function getLegalClass(node: LegalNode): LegalClass {
-  if (isDocumentNode(node)) return 'Document';
-  if (node._structureType === 'point') return 'Point';
-  if (node._structureType === 'ayat') return 'Ayat';
-  if (node._structureType === 'pasal') return 'Pasal';
-  if (node._structureType === 'metadata') return 'Metadata';
-  if (node._structureType === 'paragraf') return 'Paragraf';
-  if (node._structureType === 'bagian') return 'Bagian';
-  if (node._structureType === 'bab') return 'Bab';
-  assertNever(node);
 }
 
 /**

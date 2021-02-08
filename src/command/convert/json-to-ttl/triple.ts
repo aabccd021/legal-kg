@@ -1,16 +1,12 @@
-import { LegalNode } from '../../uri/index';
-import {
-  PasalNode,
-  AyatNode,
-  BabNode,
-  BagianNode,
-  MetadataNode,
-  ParagrafNode,
-  PointsNode,
-  PointNode,
-  PasalParentNode,
-} from '../../uri/document-structure';
-import { DocumentNode } from '../../uri/document-type';
+import { LegalNode } from '../../../legal';
+import { DocumentNode } from '../../../legal/document';
+import { AyatNode } from '../../../legal/structure/ayat';
+import { BabNode } from '../../../legal/structure/bab';
+import { BagianNode } from '../../../legal/structure/bagian';
+import { MetadataNode } from '../../../legal/structure/metadata';
+import { ParagrafNode } from '../../../legal/structure/paragraf';
+import { PasalNode, PasalParentNode } from '../../../legal/structure/pasal';
+import { PointsNode, PointNode } from '../../../legal/structure/point';
 
 export type Triple = (
   | AyatTriple

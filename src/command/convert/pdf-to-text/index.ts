@@ -1,10 +1,10 @@
 import { isEmpty } from 'lodash';
-import { getDocumentData, DataDir, getDocFilePath } from '../utils';
 import { execSync } from 'child_process';
 import * as fs from 'fs';
-import { getConfig } from '../../utils';
+import { DataDir, getDocumentData, getDocFilePath } from '../../../data';
+import { getConfig } from '../../../utils';
 
-async function pdf2txt() {
+export function pdf2txt(): void {
   const { dataDir } = getConfig();
   const pdfDir: DataDir = { dir: dataDir, dataType: 'pdf' };
   const textDir: DataDir = { dir: dataDir, dataType: 'text' };
@@ -39,5 +39,3 @@ function postProcess(raw: string): string {
 function PyMuPDF(pdfPath: string, textPath: string): void {
   execSync(`/usr/bin/python3 script/pdf2text/PyMuPDF/index.py ${pdfPath} ${textPath}`);
 }
-
-pdf2txt();

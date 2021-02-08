@@ -1,45 +1,28 @@
-import { getPasalParentDocument, PasalParentNode } from '../../uri/document-structure';
 import { assertNever } from 'assert-never';
 import { map, flatten, compact, isNil, repeat, isArray } from 'lodash';
 import { toRoman } from 'roman-numerals';
-import {
-  Document,
-  Mengimbang,
-  Bab,
-  Bagian,
-  Pasal,
-  isPasals,
-  isBagians,
-  Paragraf,
-  Points,
-  Ayat,
-  isAyats,
-  Point,
-  ReferenceText,
-} from '../../type';
-import {
-  MetadataNode,
-  getMetadataUri,
-  getBabUri,
-  BabNode,
-  BagianNode,
-  getBagianUri,
-  ParagrafNode,
-  getParagrafUri,
-  PasalNode,
-  getPasalUri,
-  AyatNode,
-  getAyatUri,
-  PointNode,
-  getPointUri,
-} from '../../uri/document-structure';
-import { getDocumentName, getDocumentUri, DocumentNode } from '../../uri/document-type';
-import { DataDir, getDocumentData, getDocFilePath } from '../utils';
+import { getDocumentName, _getDocumentUri, DocumentNode } from '../../../legal/document';
 import * as fs from 'fs';
-import { getLegalUri } from '../../uri';
-import { getConfig } from '../../utils';
+import { getLegalUri } from '../../../legal';
+import { Ayat, AyatNode, isAyats } from '../../../legal/structure/ayat';
+import { Bab, BabNode } from '../../../legal/structure/bab';
+import { Bagian, BagianNode, isBagians } from '../../../legal/structure/bagian';
+import { Metadata, MetadataNode } from '../../../legal/structure/metadata';
+import { Paragraf, ParagrafNode } from '../../../legal/structure/paragraf';
+import {
+  PasalParentNode,
+  PasalNode,
+  getPasalParentDocument,
+  isPasals,
+  Pasal,
+} from '../../../legal/structure/pasal';
+import { Point, PointNode, Points } from '../../../legal/structure/point';
+import { ReferenceText } from '../../../legal/utils';
+import { Document } from '../../../legal/document/index';
+import { DataDir, getDocumentData, getDocFilePath } from '../../../data';
+import { getConfig } from '../../../utils';
 
-function json2md(): void {
+export function json2md(): void {
   const { dataDir } = getConfig();
   const jsonDir: DataDir = { dir: dataDir, dataType: 'json' };
   const mdDir: DataDir = { dir: dataDir, dataType: 'md' };
@@ -88,7 +71,7 @@ function _json2md(doc: Document): string {
     _node,
     babs,
   } = doc;
-  const uri = getDocumentUri(_node);
+  const uri = _getDocumentUri(_node);
   const name = getDocumentName(_node);
   const lines: (string | undefined)[] = [
     `# [${name}](${uri})`,
@@ -122,7 +105,7 @@ function _json2md(doc: Document): string {
 
 function mengimbang2md(
   title: string,
-  isi: Mengimbang | undefined,
+  isi: Metadata | undefined,
   metadataType: 'documentMengingat' | 'documentMenimbang',
   parentDocument: DocumentNode
 ): string {
@@ -130,7 +113,7 @@ function mengimbang2md(
   const { points, text } = isi;
   const metadataNode: MetadataNode = { metadataType, parentDocument, _structureType: 'metadata' };
   const isiStr = !isNil(points) ? points2md(points, metadataNode) : reference2md(text);
-  const uri = getMetadataUri(metadataNode);
+  const uri = getLegalUri(metadataNode);
 
   return `\n# [${title}](${uri})\n${isiStr}`;
 }
@@ -140,7 +123,7 @@ function bab2md(bab: Bab, parentDocument: DocumentNode): string {
   const babNode: BabNode = { _key, parentDocument, _structureType: 'bab' };
   const isiStr: string = !isNil(isi) ? isiBab2md(isi, babNode) : text;
   const romanKey = toRoman(_key);
-  const babUri = getBabUri(babNode);
+  const babUri = getLegalUri(babNode);
 
   return `\n# [BAB ${romanKey}: ${_judul}](${babUri})\n${isiStr} \n`;
 }
@@ -157,7 +140,7 @@ function bagian2md(bagian: Bagian, parentBab: BabNode): string {
   const isiStr = isPasals(isi)
     ? isi.map((p) => pasal2md(p, parentBab))
     : isi.map((p) => paragraf2md(p, bagianNode));
-  const uri = getBagianUri(bagianNode);
+  const uri = getLegalUri(bagianNode);
 
   return `\n## [Bagian ${_key}](${uri})\n${isiStr}\n`;
 }
@@ -166,7 +149,7 @@ function paragraf2md(paragraf: Paragraf, parentBagian: BagianNode): string {
   const { _key, isi } = paragraf;
   const paragrafNode: ParagrafNode = { _key, parentBagian, _structureType: 'paragraf' };
   const isiStr = isi.map((p) => pasal2md(p, parentBagian));
-  const uri = getParagrafUri(paragrafNode);
+  const uri = getLegalUri(paragrafNode);
 
   return `\n## [Paragraf ${_key}](${uri})\n${isiStr}\n`;
 }
@@ -176,7 +159,7 @@ function pasal2md(pasal: Pasal, pasalParent: PasalParentNode): string {
   const parentDocument = getPasalParentDocument(pasalParent);
   const pasalNode: PasalNode = { _key, parentDocument, _structureType: 'pasal' };
   const isiStr: string = !isNil(isi) ? pasalContent2md(isi, pasalNode) : reference2md(text);
-  const uri = getPasalUri(pasalNode);
+  const uri = getLegalUri(pasalNode);
 
   return `\n### [Pasal ${_key}](${uri})\n${isiStr}\n`;
 }
@@ -191,7 +174,7 @@ function ayat2md(ayat: Ayat, parentPasal: PasalNode): string {
   const { _key, isi, text } = ayat;
   const ayatNode: AyatNode = { _key, parentPasal, _structureType: 'ayat' };
   const isiStr = !isNil(isi) ? points2md(isi, ayatNode) : reference2md(text);
-  const uri = getAyatUri(ayatNode);
+  const uri = getLegalUri(ayatNode);
 
   return `\n#### [Ayat (${_key})](${uri})\n${isiStr}`;
 }
@@ -217,7 +200,7 @@ function point2md(
   const pointNode: PointNode = { _key, parentPoints: parent, _structureType: 'point' };
   const isiStr = !isNil(isi) ? points2md(isi, pointNode, depth + 1) : reference2md(text);
   const indent = repeat(' ', depth * 4);
-  const uri = getPointUri(pointNode);
+  const uri = getLegalUri(pointNode);
 
   return `${indent}* [${_key}.](${uri}) ${isiStr}`;
 }
@@ -250,5 +233,3 @@ function getPrefixByIndex(index: number, uris: string[]): string {
 
   return `](${uri})`;
 }
-
-json2md();

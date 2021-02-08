@@ -1,12 +1,12 @@
-import { UuData } from './update-uu-index';
 import * as fs from 'fs';
 import fetch from 'node-fetch';
 import path from 'path';
 import { pipeline } from 'stream';
 import * as util from 'util';
-import { getConfig } from '../utils';
-import { DocumentNode, getDocumentName, getDocumentPath } from '../uri/document-type';
+import { getConfig } from '../../utils';
+import { DocumentNode, getDocumentName, getDocumentPath } from '../../legal/document';
 import { compact } from 'lodash';
+import { IndexDocument } from '../update-index';
 
 const streamPipeline = util.promisify(pipeline);
 
@@ -19,15 +19,15 @@ async function fileExists(file: string) {
 
 async function getDocFilePath(node: DocumentNode): Promise<string> {
   const docPath = getDocumentPath(node);
-  const { legalDataDir } = getConfig();
-  const filePath = `${legalDataDir}/pdf/${docPath}.pdf`;
+  const { dataDir } = getConfig();
+  const filePath = `${dataDir}/pdf/${docPath}.pdf`;
   const fileDir = path.dirname(filePath);
   await fs.promises.mkdir(fileDir, { recursive: true });
   return filePath;
 }
 
 async function downloadFile(
-  uuData: UuData,
+  uuData: IndexDocument,
   { overwrite }: { overwrite: boolean }
 ): Promise<string | undefined> {
   if (uuData.status === 'error') return;
@@ -56,14 +56,14 @@ async function downloadFile(
   return;
 }
 
-async function download() {
+export async function downloadPdf({ overwrite }: { overwrite: boolean }): Promise<void> {
   console.log('Start Downloading');
+  console.log(overwrite);
 
-  const { legalDataDir } = getConfig();
-  const uuIndexPath = path.join(legalDataDir, 'indexes', 'uu.json');
+  const { indexFilePath } = getConfig();
 
-  const uuIndexFile = await fs.promises.readFile(uuIndexPath);
-  const uuDatas: UuData[] = JSON.parse(uuIndexFile.toString());
+  const uuIndexFile = await fs.promises.readFile(indexFilePath);
+  const uuDatas: IndexDocument[] = JSON.parse(uuIndexFile.toString());
 
   const result = await Promise.allSettled(
     uuDatas.map((uuData) => downloadFile(uuData, { overwrite: false }))
@@ -71,5 +71,3 @@ async function download() {
   const errors = compact(result.map((r) => (r.status === 'fulfilled' ? r.value : r.reason)));
   await fs.promises.writeFile('download-error.json', JSON.stringify(errors, null, 2));
 }
-
-download();

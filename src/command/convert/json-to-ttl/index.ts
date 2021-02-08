@@ -1,12 +1,11 @@
-import { Document } from '../../type';
-
-import { DataDir, getDocumentData, getDocFilePath } from '../utils';
 import * as fs from 'fs';
 import { json2triples } from './json-to-triples';
 import { triples2Ttl } from './triples-to-ttl';
-import { getConfig } from '../../utils';
+import { Document } from '../../../legal/document/index';
+import { DataDir, getDocumentData, getDocFilePath } from '../../../data';
+import { getConfig } from '../../../utils';
 
-function json2ttl(): void {
+export function json2ttl(): void {
   const { dataDir } = getConfig();
   const jsonDir: DataDir = { dir: dataDir, dataType: 'json' };
   const ttlDir: DataDir = { dir: dataDir, dataType: 'ttl' };
@@ -30,5 +29,3 @@ function json2ttl(): void {
     }
   });
 }
-
-json2ttl();

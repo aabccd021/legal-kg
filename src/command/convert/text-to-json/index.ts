@@ -1,11 +1,11 @@
-import { DataDir, getDocFilePath, getDocumentData } from '../utils';
 import { text2rawJson } from './text-to-raw-json';
 import * as fs from 'fs';
 import { rawJson2json } from './raw-json-to-json';
 import stringify from 'json-stable-stringify';
-import { getConfig } from '../../utils';
+import { DataDir, getDocumentData, getDocFilePath } from '../../../data';
+import { getConfig } from '../../../utils';
 
-function text2json(): void {
+export function text2json(): void {
   const { dataDir } = getConfig();
   const textDir: DataDir = { dir: dataDir, dataType: 'text' };
   const jsonDir: DataDir = { dir: dataDir, dataType: 'json' };
@@ -28,5 +28,3 @@ function text2json(): void {
     }
   });
 }
-
-text2json();

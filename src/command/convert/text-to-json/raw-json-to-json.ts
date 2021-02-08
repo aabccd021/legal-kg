@@ -1,33 +1,22 @@
 import assertNever from 'assert-never';
 import _ from 'lodash';
 import { isNil, isArray, compact } from 'lodash';
+import { DocumentNode } from '../../../legal/document';
+import { Ayat, AyatNode, isAyats } from '../../../legal/structure/ayat';
+import { Bab, BabNode } from '../../../legal/structure/bab';
+import { Bagian, BagianNode } from '../../../legal/structure/bagian';
+import { Metadata, MetadataNode } from '../../../legal/structure/metadata';
+import { Paragraf, ParagrafNode } from '../../../legal/structure/paragraf';
 import {
-  Document,
-  Mengimbang,
-  Bab,
-  isPasals,
-  Pasal,
-  Ayat,
-  Points,
-  isAyats,
-  Point,
-  Bagian,
-  Paragraf,
-  Reference,
-} from '../../type';
-import {
-  MetadataNode,
-  BabNode,
-  PasalNode,
-  PointsNode,
-  PointNode,
-  BagianNode,
-  ParagrafNode,
-  AyatNode,
   PasalParentNode,
   getPasalParentDocument,
-} from '../../uri/document-structure';
-import { DocumentNode } from '../../uri/document-type';
+  PasalNode,
+  isPasals,
+  Pasal,
+} from '../../../legal/structure/pasal';
+import { PointsNode, PointNode, Point, Points } from '../../../legal/structure/point';
+import { Document } from '../../../legal/document/index';
+import { Reference } from '../../../legal/utils';
 
 export function rawJson2json(document: Document, documentNode: DocumentNode): Document {
   const { babs, mengingat, menimbang } = document;
@@ -41,10 +30,10 @@ export function rawJson2json(document: Document, documentNode: DocumentNode): Do
 }
 
 function mengimbang2detectedMengimbang(
-  mengimbang: Mengimbang | undefined,
+  mengimbang: Metadata | undefined,
   metadataType: 'documentMenimbang' | 'documentMengingat',
   parentDocument: DocumentNode
-): Mengimbang | undefined {
+): Metadata | undefined {
   if (isNil(mengimbang)) return undefined;
   const { points, text } = mengimbang;
   const metadataNode: MetadataNode = { metadataType, parentDocument, _structureType: 'metadata' };
@@ -186,7 +175,7 @@ function detectRootNode(text: string): Reference[] {
 
 function detectHardCoded(text: string): Reference[] {
   const map: [string, DocumentNode][] = [
-    ['Undang Undang Dasar Negara Republik Indonesia Tahun 1945', { documentType: 'uud' }],
+    ['Undang Undang Dasar Negara Republik Indonesia Tahun 1945', { _documentType: 'uud' }],
   ];
 
   const references = map.flatMap(([key, node]) => {
