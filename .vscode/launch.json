@@ -37,7 +37,22 @@
         "ts-node/register"
       ],
       "args": [
-        "${workspaceFolder}/src/scrape/update-uu-index.ts"
+        "${workspaceFolder}/src/cli.ts",
+        "update-index"
+      ],
+    },
+    {
+      "type": "pwa-node",
+      "request": "launch",
+      "name": "JSON to Markdown",
+      "runtimeVersion": "15.6.0",
+      "runtimeArgs": [
+        "-r",
+        "ts-node/register"
+      ],
+      "args": [
+        "${workspaceFolder}/src/cli.ts",
+        "convert:json-to-md"
       ],
     },
     {

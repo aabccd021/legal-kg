@@ -7,11 +7,15 @@ import { DocumentNode } from '../../../legal/document';
 import pTimeout from 'p-timeout';
 
 type Option = { overwrite: boolean };
-export function textToJson(option: Option): void {
+export async function textToJson(option: Option): Promise<void> {
   const texts = getDocumentData('text');
-  texts.forEach((text) => {
-    pTimeout(handleText(text, option), 1000);
-  });
+  for (const text of texts) {
+    try {
+      await pTimeout(handleText(text, option), 1000);
+    } catch {
+      console.warn('timed out');
+    }
+  }
 }
 
 async function handleText(textNode: DocumentNode, option: Option): Promise<void> {
