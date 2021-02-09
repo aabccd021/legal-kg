@@ -1,26 +1,38 @@
 import * as fs from 'fs';
-import { json2triples } from './json-to-triples';
-import { triples2Ttl } from './triples-to-ttl';
-import { Document } from '../../../legal/document/index';
+import { jsonToTriples } from './json-to-triples';
+import { triplesToTtl } from './triples-to-ttl';
+import { Document, DocumentNode } from '../../../legal/document/index';
 import { getDocumentData, getDocumentFilePath } from '../../../data';
+import pTimeout from 'p-timeout';
 
-export function json2ttl(): void {
-  const nodes = getDocumentData('json');
-  nodes.forEach((node) => {
-    const jsonPath = getDocumentFilePath(node, 'json');
-    const ttlPath = getDocumentFilePath(node, 'ttl');
-
-    try {
-      const jsonString = fs.readFileSync(jsonPath).toString();
-      const json = JSON.parse(jsonString) as Document;
-      const triples = json2triples(json);
-      const ttl = triples2Ttl(triples);
-
-      fs.writeFileSync(ttlPath, ttl);
-
-      console.log(`Finished json2ttl ${ttlPath}`);
-    } catch {
-      console.log(`Error pdf2text ${ttlPath}`);
-    }
+type Option = { overwrite: boolean };
+export function jsonToTtl(option: Option): void {
+  const jsonNodes = getDocumentData('json');
+  jsonNodes.forEach((jsonNode) => {
+    pTimeout(handleJson(jsonNode, option), 1000);
   });
+}
+
+async function handleJson(jsonNode: DocumentNode, option: Option): Promise<void> {
+  const { overwrite } = option;
+  const jsonFile = getDocumentFilePath(jsonNode, 'json');
+  const { path: ttlPath, exists: ttlExists } = getDocumentFilePath(jsonNode, 'ttl');
+
+  try {
+    if (!overwrite && ttlExists) {
+      console.log(`Skipped json-to-ttl ${ttlPath}`);
+      return;
+    }
+
+    const jsonFileContent = await fs.promises.readFile(jsonFile.path);
+    const json = JSON.parse(jsonFileContent.toString()) as Document;
+    const triples = jsonToTriples(json);
+    const ttl = triplesToTtl(triples);
+
+    fs.writeFileSync(ttlPath, ttl);
+
+    console.log(`Finished json-to-ttl ${ttlPath}`);
+  } catch {
+    console.log(`Error json-to-ttl ${ttlPath}`);
+  }
 }

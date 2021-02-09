@@ -26,7 +26,7 @@ function onto(predicate: string): n3.NamedNode<string> {
 /**
  * triples2ttl
  */
-export function triples2Ttl(triples: Triple[]): string {
+export function triplesToTtl(triples: Triple[]): string {
   const ontologyBaseUri = getOntologyBaseUri();
   const prefixes = { legal: `${ontologyBaseUri}/` };
 

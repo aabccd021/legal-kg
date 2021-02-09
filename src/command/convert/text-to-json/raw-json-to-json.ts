@@ -18,18 +18,18 @@ import { PointsNode, PointNode, Point, Points } from '../../../legal/structure/p
 import { Document } from '../../../legal/document/index';
 import { Reference } from '../../../legal/reference';
 
-export function rawJson2json(document: Document, documentNode: DocumentNode): Document {
+export function rawJsonToJson(document: Document, documentNode: DocumentNode): Document {
   const { babs, mengingat, menimbang } = document;
 
   return {
     ...document,
-    mengingat: mengimbang2detectedMengimbang(mengingat, 'documentMengingat', documentNode),
-    menimbang: mengimbang2detectedMengimbang(menimbang, 'documentMenimbang', documentNode),
-    babs: babs?.map((bab) => bab2detectedBab(bab, documentNode)),
+    mengingat: mengimbangToDetectedMengimbang(mengingat, 'documentMengingat', documentNode),
+    menimbang: mengimbangToDetectedMengimbang(menimbang, 'documentMenimbang', documentNode),
+    babs: babs?.map((bab) => babToDetectedBab(bab, documentNode)),
   };
 }
 
-function mengimbang2detectedMengimbang(
+function mengimbangToDetectedMengimbang(
   mengimbang: Metadata | undefined,
   metadataType: 'documentMenimbang' | 'documentMengingat',
   parentDocument: DocumentNode
@@ -40,42 +40,42 @@ function mengimbang2detectedMengimbang(
   const detectedText = isNil(points)
     ? { ...text, references: detectDocNode(text.text, parentDocument) }
     : text;
-  const detectedIsi = !isNil(points) ? points2detectedPoints(points, metadataNode) : points;
+  const detectedIsi = !isNil(points) ? pointsToDetectedPoints(points, metadataNode) : points;
 
   return { ...mengimbang, points: detectedIsi, text: detectedText };
 }
 
-function bab2detectedBab(bab: Bab, parentDocument: DocumentNode): Bab {
+function babToDetectedBab(bab: Bab, parentDocument: DocumentNode): Bab {
   const { isi, _key } = bab;
   const babNode: BabNode = { _key, parentDocument, _structureType: 'bab' };
   const detectedIsi = isPasals(isi)
-    ? isi.map((pasal) => pasal2detectedPasal(pasal, babNode))
-    : isi.map((bagian) => bagian2detectedBagian(bagian, babNode));
+    ? isi.map((pasal) => pasalToDetectedPasal(pasal, babNode))
+    : isi.map((bagian) => bagianToDetectedBagian(bagian, babNode));
 
   return { ...bab, isi: detectedIsi };
 }
 
-function pasal2detectedPasal(pasal: Pasal, parent: PasalParentNode): Pasal {
+function pasalToDetectedPasal(pasal: Pasal, parent: PasalParentNode): Pasal {
   const { isi, text, _key } = pasal;
   const parentDocument = getPasalParentDocument(parent);
   const pasalNode: PasalNode = { _key, parentDocument, _structureType: 'pasal' };
   const detectedText = isNil(isi)
     ? { ...text, references: detectPasalNode(text.text, pasalNode) }
     : text;
-  const detectedIsi = !isNil(isi) ? _pasal2detectedPasal(isi, pasalNode) : isi;
+  const detectedIsi = !isNil(isi) ? _pasalToetectedPasal(isi, pasalNode) : isi;
 
   return { ...pasal, text: detectedText, isi: detectedIsi };
 }
 
-function _pasal2detectedPasal(isi: Ayat[] | Points, pasalNode: PasalNode): Ayat[] | Points {
-  if (isArray(isi) && isAyats(isi)) return isi.map((ayat) => ayat2detectedAyat(ayat, pasalNode));
+function _pasalToetectedPasal(isi: Ayat[] | Points, pasalNode: PasalNode): Ayat[] | Points {
+  if (isArray(isi) && isAyats(isi)) return isi.map((ayat) => ayatToDetectedAyat(ayat, pasalNode));
 
-  return points2detectedPoints(isi, pasalNode);
+  return pointsToDetectedPoints(isi, pasalNode);
 }
 
-function points2detectedPoints(points: Points, pointsNode: PointsNode): Points {
+function pointsToDetectedPoints(points: Points, pointsNode: PointsNode): Points {
   const { isi, _description } = points;
-  const detectedIsi = isi.map((p) => point2detectedPoint(p, pointsNode));
+  const detectedIsi = isi.map((p) => pointToDetectedPoint(p, pointsNode));
   const descriptionReferences = detectPointParentNode(_description.text, pointsNode);
 
   return {
@@ -85,42 +85,42 @@ function points2detectedPoints(points: Points, pointsNode: PointsNode): Points {
   };
 }
 
-function point2detectedPoint(point: Point, parentPoints: PointsNode): Point {
+function pointToDetectedPoint(point: Point, parentPoints: PointsNode): Point {
   const { _key, isi, text } = point;
   const pointNode: PointNode = { _key, parentPoints, _structureType: 'point' };
   const detectedText = isNil(isi)
     ? { ...text, references: detectPointNode(text.text, pointNode) }
     : text;
-  const detectedIsi = !isNil(isi) ? points2detectedPoints(isi, pointNode) : isi;
+  const detectedIsi = !isNil(isi) ? pointsToDetectedPoints(isi, pointNode) : isi;
 
   return { ...point, text: detectedText, isi: detectedIsi };
 }
 
-function ayat2detectedAyat(pasal: Ayat, parentPasal: PasalNode): Ayat {
+function ayatToDetectedAyat(pasal: Ayat, parentPasal: PasalNode): Ayat {
   const { isi, text, _key } = pasal;
   const ayatNode: AyatNode = { _key, parentPasal, _structureType: 'ayat' };
   const detectedText = isNil(isi)
     ? { ...text, references: detectAyatNode(text.text, ayatNode) }
     : text;
-  const detectedIsi = !isNil(isi) ? points2detectedPoints(isi, ayatNode) : isi;
+  const detectedIsi = !isNil(isi) ? pointsToDetectedPoints(isi, ayatNode) : isi;
 
   return { ...pasal, text: detectedText, isi: detectedIsi };
 }
 
-function bagian2detectedBagian(bagian: Bagian, parentBab: BabNode): Bagian {
+function bagianToDetectedBagian(bagian: Bagian, parentBab: BabNode): Bagian {
   const { _key, isi } = bagian;
   const bagianNode: BagianNode = { _key, parentBab, _structureType: 'bagian' };
   const detectedIsi = isPasals(isi)
-    ? isi.map((pasal) => pasal2detectedPasal(pasal, bagianNode))
-    : isi.map((paragraf) => paragraf2detectedParagraf(paragraf, bagianNode));
+    ? isi.map((pasal) => pasalToDetectedPasal(pasal, bagianNode))
+    : isi.map((paragraf) => paragrafToDetectedParagraf(paragraf, bagianNode));
 
   return { ...bagian, isi: detectedIsi };
 }
 
-function paragraf2detectedParagraf(paragraf: Paragraf, parentBagian: BagianNode): Paragraf {
+function paragrafToDetectedParagraf(paragraf: Paragraf, parentBagian: BagianNode): Paragraf {
   const { _key, isi } = paragraf;
   const paragrafNode: ParagrafNode = { _key, parentBagian, _structureType: 'paragraf' };
-  const detectedIsi = isi.map((pasal) => pasal2detectedPasal(pasal, paragrafNode));
+  const detectedIsi = isi.map((pasal) => pasalToDetectedPasal(pasal, paragrafNode));
 
   return { ...paragraf, isi: detectedIsi };
 }

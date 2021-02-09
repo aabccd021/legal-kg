@@ -1,25 +1,40 @@
-import { text2rawJson } from './text-to-raw-json';
+import { textToRawJson } from './text-to-raw-json';
 import * as fs from 'fs';
-import { rawJson2json } from './raw-json-to-json';
+import { rawJsonToJson } from './raw-json-to-json';
 import stringify from 'json-stable-stringify';
 import { getDocumentData, getDocumentFilePath } from '../../../data';
+import { DocumentNode } from '../../../legal/document';
+import pTimeout from 'p-timeout';
 
-export function text2json(): void {
-  const nodes = getDocumentData('text');
-  nodes.forEach((node) => {
-    const textPath = getDocumentFilePath(node, 'text');
-    const jsonPath = getDocumentFilePath(node, 'json');
-
-    try {
-      const text = fs.readFileSync(textPath).toString();
-      const rawJson = text2rawJson(text, node);
-      const json = rawJson2json(rawJson, node);
-
-      fs.writeFileSync(jsonPath, stringify(json, { space: 2 }));
-
-      console.log(`Finished text2json ${jsonPath}`);
-    } catch {
-      console.log(`Error pdf2text ${jsonPath}`);
-    }
+type Option = { overwrite: boolean };
+export function textToJson(option: Option): void {
+  const texts = getDocumentData('text');
+  texts.forEach((text) => {
+    pTimeout(handleText(text, option), 1000);
   });
+}
+
+async function handleText(textNode: DocumentNode, option: Option): Promise<void> {
+  const { overwrite } = option;
+  const textFile = getDocumentFilePath(textNode, 'text');
+  const { path: jsonPath, exists: jsonExists } = getDocumentFilePath(textNode, 'json');
+
+  try {
+    if (!overwrite && jsonExists) {
+      console.log(`Skipped text-to-json ${jsonPath}`);
+      return;
+    }
+    const file = await fs.promises.readFile(textFile.path);
+    const text = file.toString();
+
+    const rawJson = textToRawJson(text, textNode);
+    const json = rawJsonToJson(rawJson, textNode);
+
+    await fs.promises.writeFile(jsonPath, stringify(json, { space: 2 }));
+
+    console.log(`Finished text-to-json ${jsonPath}`);
+  } catch (message) {
+    console.log(`Error text-to-json ${jsonPath}`);
+    console.error(message);
+  }
 }

@@ -21,27 +21,36 @@ import { ReferenceText } from '../../../legal/reference';
 import { Document } from '../../../legal/document/index';
 import { getDocumentData, getDocumentFilePath } from '../../../data';
 
-export function json2md(): void {
-  const nodes = getDocumentData('json');
-  nodes.forEach((node) => {
-    const jsonPath = getDocumentFilePath(node, 'json');
-    const mdPath = getDocumentFilePath(node, 'md');
-
-    try {
-      const jsonString = fs.readFileSync(jsonPath).toString();
-      const json = JSON.parse(jsonString) as Document;
-      const md = _json2md(json);
-
-      fs.writeFileSync(mdPath, md);
-
-      console.log(`Finished json2md ${mdPath}`);
-    } catch {
-      console.log(`Error pdf2text ${mdPath}`);
-    }
-  });
+type Option = { overwrite: boolean };
+export function jsonToMd(option: Option): void {
+  const jsonNodes = getDocumentData('json');
+  jsonNodes.forEach((jsonNode) => handleJson(jsonNode, option));
 }
 
-function _json2md(doc: Document): string {
+function handleJson(jsonNode: DocumentNode, option: Option): void {
+  const { overwrite } = option;
+  const jsonFile = getDocumentFilePath(jsonNode, 'json');
+  const { path: mdPath, exists: mdExists } = getDocumentFilePath(jsonNode, 'md');
+
+  try {
+    if (!overwrite && mdExists) {
+      console.log(`Skipped json-to-md ${mdPath}`);
+      return;
+    }
+
+    const jsonString = fs.readFileSync(jsonFile.path).toString();
+    const json = JSON.parse(jsonString) as Document;
+    const md = _jsonToMd(json);
+
+    fs.writeFileSync(mdPath, md);
+
+    console.log(`Finished json-to-md ${mdPath}`);
+  } catch {
+    console.log(`Error json-to-md ${mdPath}`);
+  }
+}
+
+function _jsonToMd(doc: Document): string {
   const {
     _name,
     _nomor,
@@ -90,15 +99,15 @@ function _json2md(doc: Document): string {
     metadata('Sekretaris', _sekretaris),
     metadata('Dokumen', _dokumen),
     ...map(_denganPersetujuan, (d) => metadata('Dengan Persetujuan', d)),
-    mengimbang2md('Menimbang', menimbang, 'documentMenimbang', _node),
-    mengimbang2md('Mengingat', mengingat, 'documentMengingat', _node),
-    ...flatten(babs?.map((b) => bab2md(b, _node))),
+    mengimbangToMd('Menimbang', menimbang, 'documentMenimbang', _node),
+    mengimbangToMd('Mengingat', mengingat, 'documentMengingat', _node),
+    ...flatten(babs?.map((b) => babToMd(b, _node))),
   ];
 
   return compact(lines).join('\n');
 }
 
-function mengimbang2md(
+function mengimbangToMd(
   title: string,
   isi: Metadata | undefined,
   metadataType: 'documentMengingat' | 'documentMenimbang',
@@ -107,93 +116,93 @@ function mengimbang2md(
   if (isNil(isi)) return '';
   const { points, text } = isi;
   const metadataNode: MetadataNode = { metadataType, parentDocument, _structureType: 'metadata' };
-  const isiStr = !isNil(points) ? points2md(points, metadataNode) : reference2md(text);
+  const isiStr = !isNil(points) ? pointsToMd(points, metadataNode) : referenceToMd(text);
   const uri = getLegalUri(metadataNode);
 
   return `\n# [${title}](${uri})\n${isiStr}`;
 }
 
-function bab2md(bab: Bab, parentDocument: DocumentNode): string {
+function babToMd(bab: Bab, parentDocument: DocumentNode): string {
   const { _key, _judul, isi, text } = bab;
   const babNode: BabNode = { _key, parentDocument, _structureType: 'bab' };
-  const isiStr: string = !isNil(isi) ? isiBab2md(isi, babNode) : text;
+  const isiStr: string = !isNil(isi) ? isiBabToMd(isi, babNode) : text;
   const romanKey = toRoman(_key);
   const babUri = getLegalUri(babNode);
 
   return `\n# [BAB ${romanKey}: ${_judul}](${babUri})\n${isiStr} \n`;
 }
 
-function isiBab2md(isi: Bagian[] | Pasal[], babNode: BabNode): string {
-  if (isPasals(isi)) return isi.map((p) => pasal2md(p, babNode)).join('\n');
-  if (isBagians(isi)) return isi.map((b) => bagian2md(b, babNode)).join('\n');
+function isiBabToMd(isi: Bagian[] | Pasal[], babNode: BabNode): string {
+  if (isPasals(isi)) return isi.map((p) => pasalToMd(p, babNode)).join('\n');
+  if (isBagians(isi)) return isi.map((b) => bagianToMd(b, babNode)).join('\n');
   assertNever(isi);
 }
 
-function bagian2md(bagian: Bagian, parentBab: BabNode): string {
+function bagianToMd(bagian: Bagian, parentBab: BabNode): string {
   const { _key, isi } = bagian;
   const bagianNode: BagianNode = { _key, parentBab, _structureType: 'bagian' };
   const isiStr = isPasals(isi)
-    ? isi.map((p) => pasal2md(p, parentBab))
-    : isi.map((p) => paragraf2md(p, bagianNode));
+    ? isi.map((p) => pasalToMd(p, parentBab))
+    : isi.map((p) => paragrafToMd(p, bagianNode));
   const uri = getLegalUri(bagianNode);
 
   return `\n## [Bagian ${_key}](${uri})\n${isiStr}\n`;
 }
 
-function paragraf2md(paragraf: Paragraf, parentBagian: BagianNode): string {
+function paragrafToMd(paragraf: Paragraf, parentBagian: BagianNode): string {
   const { _key, isi } = paragraf;
   const paragrafNode: ParagrafNode = { _key, parentBagian, _structureType: 'paragraf' };
-  const isiStr = isi.map((p) => pasal2md(p, parentBagian));
+  const isiStr = isi.map((p) => pasalToMd(p, parentBagian));
   const uri = getLegalUri(paragrafNode);
 
   return `\n## [Paragraf ${_key}](${uri})\n${isiStr}\n`;
 }
 
-function pasal2md(pasal: Pasal, pasalParent: PasalParentNode): string {
+function pasalToMd(pasal: Pasal, pasalParent: PasalParentNode): string {
   const { _key, isi, text } = pasal;
   const parentDocument = getPasalParentDocument(pasalParent);
   const pasalNode: PasalNode = { _key, parentDocument, _structureType: 'pasal' };
-  const isiStr: string = !isNil(isi) ? pasalContent2md(isi, pasalNode) : reference2md(text);
+  const isiStr: string = !isNil(isi) ? pasalContentToMd(isi, pasalNode) : referenceToMd(text);
   const uri = getLegalUri(pasalNode);
 
   return `\n### [Pasal ${_key}](${uri})\n${isiStr}\n`;
 }
 
-function pasalContent2md(isi: Points | Ayat[], pasalNode: PasalNode): string {
-  if (isArray(isi) && isAyats(isi)) return isi.map((a) => ayat2md(a, pasalNode)).join('\n');
+function pasalContentToMd(isi: Points | Ayat[], pasalNode: PasalNode): string {
+  if (isArray(isi) && isAyats(isi)) return isi.map((a) => ayatToMd(a, pasalNode)).join('\n');
 
-  return points2md(isi, pasalNode);
+  return pointsToMd(isi, pasalNode);
 }
 
-function ayat2md(ayat: Ayat, parentPasal: PasalNode): string {
+function ayatToMd(ayat: Ayat, parentPasal: PasalNode): string {
   const { _key, isi, text } = ayat;
   const ayatNode: AyatNode = { _key, parentPasal, _structureType: 'ayat' };
-  const isiStr = !isNil(isi) ? points2md(isi, ayatNode) : reference2md(text);
+  const isiStr = !isNil(isi) ? pointsToMd(isi, ayatNode) : referenceToMd(text);
   const uri = getLegalUri(ayatNode);
 
   return `\n#### [Ayat (${_key})](${uri})\n${isiStr}`;
 }
 
-function points2md(
+function pointsToMd(
   points: Points,
   parent: PointNode | AyatNode | PasalNode | MetadataNode,
   depth = 0
 ): string {
   const { _description, isi } = points;
-  const isiStr = isi.map((x) => point2md(x, parent, depth)).join('\n');
-  const description = reference2md(_description);
+  const isiStr = isi.map((x) => pointToMd(x, parent, depth)).join('\n');
+  const description = referenceToMd(_description);
 
   return `${description}\n${isiStr}`;
 }
 
-function point2md(
+function pointToMd(
   point: Point,
   parent: PointNode | AyatNode | PasalNode | MetadataNode,
   depth: number
 ): string {
   const { isi, _key, text } = point;
   const pointNode: PointNode = { _key, parentPoints: parent, _structureType: 'point' };
-  const isiStr = !isNil(isi) ? points2md(isi, pointNode, depth + 1) : reference2md(text);
+  const isiStr = !isNil(isi) ? pointsToMd(isi, pointNode, depth + 1) : referenceToMd(text);
   const indent = repeat(' ', depth * 4);
   const uri = getLegalUri(pointNode);
 
@@ -210,7 +219,7 @@ function splitAt(slicable: string, indices: number[]): string[] {
   return [0, ...indices].map((n, i, m) => slicable.slice(n, m[i + 1]));
 }
 
-function reference2md(ref: ReferenceText): string {
+function referenceToMd(ref: ReferenceText): string {
   const { references, text } = ref;
   const sortedReferences = references.sort((a, b) => a.start - b.start);
   const indices = sortedReferences.flatMap(({ start, end }) => [start, end]);

@@ -46,8 +46,8 @@ async function downloadFile(
     const { pdfUrl, _node } = log;
 
     const response = await fetch(pdfUrl);
-    const filePath = getDocumentFilePath(_node, 'pdf');
-    await streamPipeline(response.body, fs.createWriteStream(filePath));
+    const pdfFile = getDocumentFilePath(_node, 'pdf');
+    await streamPipeline(response.body, fs.createWriteStream(pdfFile.path));
 
     const legalName = getDocumentName(_node);
     console.log(`Done download ${legalName}`);

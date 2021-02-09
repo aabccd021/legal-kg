@@ -19138,7 +19138,6 @@
         "    at /home/aabccd021/Documents/legal-kg/src/command/update-index/index.ts:52:35",
         "    at Array.map (<anonymous>)",
         "    at pageToLegalCategoryData (/home/aabccd021/Documents/legal-kg/src/command/update-index/index.ts:52:22)",
-        "    at runMicrotasks (<anonymous>)",
         "    at processTicksAndRejections (node:internal/process/task_queues:94:5)"
       ]
     },
@@ -19159,7 +19158,6 @@
         "    at /home/aabccd021/Documents/legal-kg/src/command/update-index/index.ts:52:35",
         "    at Array.map (<anonymous>)",
         "    at pageToLegalCategoryData (/home/aabccd021/Documents/legal-kg/src/command/update-index/index.ts:52:22)",
-        "    at runMicrotasks (<anonymous>)",
         "    at processTicksAndRejections (node:internal/process/task_queues:94:5)"
       ]
     },
@@ -19200,7 +19198,6 @@
         "    at /home/aabccd021/Documents/legal-kg/src/command/update-index/index.ts:52:35",
         "    at Array.map (<anonymous>)",
         "    at pageToLegalCategoryData (/home/aabccd021/Documents/legal-kg/src/command/update-index/index.ts:52:22)",
-        "    at runMicrotasks (<anonymous>)",
         "    at processTicksAndRejections (node:internal/process/task_queues:94:5)"
       ]
     },
@@ -19321,6 +19318,7 @@
         "    at /home/aabccd021/Documents/legal-kg/src/command/update-index/index.ts:52:35",
         "    at Array.map (<anonymous>)",
         "    at pageToLegalCategoryData (/home/aabccd021/Documents/legal-kg/src/command/update-index/index.ts:52:22)",
+        "    at runMicrotasks (<anonymous>)",
         "    at processTicksAndRejections (node:internal/process/task_queues:94:5)"
       ]
     },
@@ -19341,7 +19339,6 @@
         "    at /home/aabccd021/Documents/legal-kg/src/command/update-index/index.ts:52:35",
         "    at Array.map (<anonymous>)",
         "    at pageToLegalCategoryData (/home/aabccd021/Documents/legal-kg/src/command/update-index/index.ts:52:22)",
-        "    at runMicrotasks (<anonymous>)",
         "    at processTicksAndRejections (node:internal/process/task_queues:94:5)"
       ]
     },

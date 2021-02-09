@@ -1,5 +1,4 @@
 import assertNever from 'assert-never';
-import path from 'path';
 import * as fs from 'fs';
 import {
   DocumentNode,
@@ -8,6 +7,7 @@ import {
   CONVERTABLE_DOCUMENT_CATEGORY,
 } from '../legal/document';
 import { getConfig } from '../config';
+import path from 'path';
 
 export type DataType = 'pdf' | 'text' | 'json' | 'md' | 'ttl';
 export function getDataTypeExtension(dataType: DataType): string {
@@ -23,14 +23,21 @@ function getDataTypeExtensionStr(dataType: DataType): string {
   assertNever(dataType);
 }
 
-export function getDocumentFilePath(node: DocumentNode, dataType: DataType): string {
+export function getDocumentFilePath(
+  node: DocumentNode,
+  dataType: DataType
+): { path: string; exists: boolean } {
   const { dataDir } = getConfig();
   const extension = getDataTypeExtension(dataType);
   const docPath = getDocumentPath(node);
   const filePath = `${dataDir}/${dataType}/${docPath}${extension}`;
+
   const fileDir = path.dirname(filePath);
   fs.mkdirSync(fileDir, { recursive: true });
-  return filePath;
+
+  const exists = fs.existsSync(filePath);
+
+  return { path: filePath, exists };
 }
 
 export function getDocumentData(dataType: DataType): DocumentNode[] {

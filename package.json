@@ -10,11 +10,15 @@
     "cli": "ts-node src/cli.ts",
     "run:update-index": "yarn cli update-index",
     "run:download-pdf": "yarn cli download-pdf",
+    "run:convert:pdf-to-text": "yarn cli convert:pdf-to-text",
+    "run:convert:text-to-json": "yarn cli convert:text-to-json",
+    "run:convert:json-to-md": "yarn cli convert:json-to-md",
+    "run:convert:json-to-ttl": "yarn cli convert:json-to-ttl",
     "run:download-pdf:overwrite": "yarn cli download-pdf --overwrite",
-    "run:convert:pdf2text": "ts-node src/maintain/pdf-to-text/index.ts",
-    "run:convert:text2json": "ts-node src/maintain/text-to-json/index.ts",
-    "run:convert:json2md": "ts-node src/maintain/json-to-md/index.ts",
-    "run:convert:json2ttl": "ts-node src/maintain/json-to-ttl/index.ts",
+    "run:convert:pdf-to-text:overwrite": "yarn cli convert:pdf-to-text --overwrite",
+    "run:convert:text-to-json:overwrite": "yarn cli convert:text-to-json --overwrite",
+    "run:convert:json-to-md:overwrite": "yarn cli convert:json-to-md --overwrite",
+    "run:convert:json-to-ttl:overwrite": "yarn cli convert:json-to-ttl --overwrite",
     "test:types": "tsc --noEmit"
   },
   "engines": {
@@ -98,7 +102,9 @@
     "typescript": "^4.1.3"
   },
   "dependencies": {
+    "@types/p-timeout": "^1.2.2",
     "@types/yargs": "^16.0.0",
+    "p-timeout": "^4.1.0",
     "striptags": "^3.1.1",
     "tabletojson": "^2.0.4",
     "yargs": "^16.2.0"

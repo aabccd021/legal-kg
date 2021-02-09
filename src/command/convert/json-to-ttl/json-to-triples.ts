@@ -15,7 +15,7 @@ import {
   PasalNode,
 } from '../../../legal/structure/pasal';
 
-export function json2triples({
+export function jsonToTriples({
   _name,
   _nomor,
   _tahun,
@@ -43,8 +43,8 @@ export function json2triples({
   const denganPersetujuanTriple: Triple[] =
     _denganPersetujuan?.map((x) => [_node, 'denganPersetujuan', x]) ?? [];
   const triples: (Triple | undefined)[] = [
-    ...metadata2triple(_node, 'documentMenimbang', menimbang),
-    ...metadata2triple(_node, 'documentMengingat', mengingat),
+    ...metadataToTriple(_node, 'documentMenimbang', menimbang),
+    ...metadataToTriple(_node, 'documentMengingat', mengingat),
     ...flatten(babs?.map((b) => babsToTriple(b, _node))),
     [_node, 'penjelasan', penjelasan?.join('\n')],
     [_node, 'name', _name],
@@ -70,7 +70,7 @@ export function json2triples({
   return compact(triples);
 }
 
-function metadata2triple(
+function metadataToTriple(
   parentDocument: DocumentNode,
   metadataType: 'documentMengingat' | 'documentMenimbang',
   mengimbang?: Metadata
@@ -80,7 +80,7 @@ function metadata2triple(
   const { points, text } = mengimbang;
   const isiTriples: Triple[] = isNil(points)
     ? [[metadata, 'hasText', text.text]]
-    : points2Triple(metadata, points);
+    : pointsToTriple(metadata, points);
 
   return [...isiTriples, [parentDocument, 'hasMetadata', metadata]];
 }
@@ -151,7 +151,7 @@ function pasalContentToTriple(
   if (isArray(content) && isAyats(content)) {
     return content.flatMap((a) => ayatToTriple(a, pasal_key));
   }
-  return points2Triple(pasal_key, content);
+  return pointsToTriple(pasal_key, content);
 }
 
 function ayatToTriple(ayat: Ayat, parentPasal: PasalNode): Triple[] {
@@ -163,10 +163,10 @@ function ayatToTriple(ayat: Ayat, parentPasal: PasalNode): Triple[] {
     [ayat_key, 'hasKey', _key],
     [ayat_key, 'hasText', text.text],
     ...referencesToTriple(ayat_key, text.references),
-    ...points2Triple(ayat_key, isi),
+    ...pointsToTriple(ayat_key, isi),
   ];
 }
-function points2Triple(points_key: PointsNode, points: Points | undefined): Triple[] {
+function pointsToTriple(points_key: PointsNode, points: Points | undefined): Triple[] {
   if (isNil(points)) return [];
   const { _description, text, isi } = points;
 
@@ -183,7 +183,7 @@ function pointToTriple(points_key: PointsNode, point: Point): Triple[] {
   const point_key: PointNode = { _key, parentPoints: points_key, _structureType: 'point' };
   const isiTriples: Triple[] = isNil(isi)
     ? [[point_key, 'hasText', text.text]]
-    : points2Triple(point_key, isi);
+    : pointsToTriple(point_key, isi);
 
   return [
     [points_key, 'hasPoint', point_key],

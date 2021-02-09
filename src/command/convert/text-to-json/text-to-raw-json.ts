@@ -14,7 +14,7 @@ const padaTaggalRegexp = /^pada tanggal/;
 const mengingatRegex = /^Mengingat\s*:/;
 const menimbangRegex = /^Menimbang\s*:/;
 
-export function text2rawJson(text: string, documentNode: DocumentNode): Document {
+export function textToRawJson(text: string, documentNode: DocumentNode): Document {
   const lines = text.split('\n');
   const extractors: Extractor<keyof Document>[] = [
     ['_salinan', /^SALINAN/, 'optional'],
@@ -71,7 +71,7 @@ export function text2rawJson(text: string, documentNode: DocumentNode): Document
 function toMengimbang(lines: string[] | undefined, regex: RegExp): Metadata | undefined {
   if (isNil(lines)) return undefined;
   const points = getPoints(removeKeyFromLines(lines, regex));
-  const text = string2EmptyReference(lines.join(' '));
+  const text = stringToEmptyReference(lines.join(' '));
 
   return { text, points };
 }
@@ -222,7 +222,7 @@ function getPasals(lines: string[]): Pasal[] {
 function _linesToPasal({ _key, lines }: IncLines): Pasal {
   const isiLines = lines.slice(1);
   const isi = getAyats(isiLines) ?? getPoints(isiLines);
-  const text = string2EmptyReference(isiLines.join(' '));
+  const text = stringToEmptyReference(isiLines.join(' '));
 
   return { _type: 'pasal', _key, isi, text };
 }
@@ -251,7 +251,7 @@ function getAyats(lines: string[]): Ayat[] | undefined {
 function _linesToAyat({ _key, lines }: IncLines): Ayat {
   const linesWithoutKey = removeKeyFromLines(lines, ayatRegexp);
   const isi = getPoints(linesWithoutKey);
-  const text = string2EmptyReference(linesWithoutKey.join(' '));
+  const text = stringToEmptyReference(linesWithoutKey.join(' '));
 
   return { _type: 'ayat', _key, isi, text };
 }
@@ -315,14 +315,14 @@ function _getPoints(
     const __key = getKey(_key);
     const linesWithoutKey = removeKeyFromLines(lines, regexp);
     const isi = getPoints(linesWithoutKey);
-    const text = string2EmptyReference(linesWithoutKey.join(' '));
+    const text = stringToEmptyReference(linesWithoutKey.join(' '));
     const point: Point = { _type, _key: __key, isi, text };
 
     return point;
   });
   const textLines = [__description, ...isiLines];
   const text = textLines.filter((x) => !isEmpty(x)).join(' ');
-  const _description = string2EmptyReference(__description);
+  const _description = stringToEmptyReference(__description);
 
   return { _type: 'points', _description, text, isi };
 }
@@ -415,6 +415,6 @@ function isNotEmpty(string: string): boolean {
   return !isEmpty(string);
 }
 
-function string2EmptyReference(text: string): ReferenceText {
+function stringToEmptyReference(text: string): ReferenceText {
   return { _type: 'referenceText', references: [], text };
 }

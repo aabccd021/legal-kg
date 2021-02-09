@@ -1,4 +1,8 @@
 import yargs from 'yargs';
+import { jsonToMd } from './command/convert/json-to-md';
+import { jsonToTtl } from './command/convert/json-to-ttl';
+import { pdfToTxt } from './command/convert/pdf-to-text';
+import { textToJson } from './command/convert/text-to-json';
 import { downloadPdf } from './command/download-pdf';
 import { updateIndex } from './command/update-index';
 
@@ -32,7 +36,7 @@ yargs
         describe: 'Overwrite existing pdf',
       },
     },
-    handler: (args) => console.log(args.overwrite),
+    handler: pdfToTxt,
   })
   .command<CommandOption>({
     command: 'convert:text-to-json',
@@ -44,7 +48,7 @@ yargs
         describe: 'Overwrite existing json',
       },
     },
-    handler: (args) => console.log(args.overwrite),
+    handler: textToJson,
   })
   .command<CommandOption>({
     command: 'convert:json-to-md',
@@ -56,7 +60,7 @@ yargs
         describe: 'Overwrite existing markdown',
       },
     },
-    handler: (args) => console.log(args.overwrite),
+    handler: jsonToMd,
   })
   .command<CommandOption>({
     command: 'convert:json-to-ttl',
@@ -68,7 +72,7 @@ yargs
         describe: 'Overwrite existing turtle file',
       },
     },
-    handler: (args) => console.log(args.overwrite),
+    handler: jsonToTtl,
   })
 
   .demandCommand().argv;
