@@ -73,7 +73,8 @@ type Acc = {
 
 function isNoise(str: string): boolean {
   return (
-    /^-?\s?[a-zA-Z]?[0-9]+[a-zA-Z]?\s?-/.test(str) || /^-\s?[a-zA-Z]?[0-9]+[a-zA-Z]?\s?-?/.test(str)
+    /^-?\s?[a-zA-Z]{0,2}[0-9]+[a-zA-Z]?\s?-/.test(str) ||
+    /^-\s?[a-zA-Z]?[0-9]+[a-zA-Z]?\s?-?/.test(str)
   );
 }
 

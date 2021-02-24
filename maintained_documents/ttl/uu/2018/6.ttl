@@ -339,7 +339,7 @@
 <http://example.org/legal/document/uu/2018/6/pasal/22/ayat/2> legal:references <http://example.org/legal/document/uu/2018/6/pasal/22/ayat/1> .
 <http://example.org/legal/document/uu/2018/6/bab/6/bagian/1/paragraf/1> legal:hasPasal <http://example.org/legal/document/uu/2018/6/pasal/23> .
 <http://example.org/legal/document/uu/2018/6/pasal/23> legal:hasKey 23 .
-<http://example.org/legal/document/uu/2018/6/pasal/23> legal:hasText "(1) Kapal yang tidak mematuhi peraturan Kekarantinaan Kesehatan tidak diberikan Persetujuan Karantina Kesehatan. (2) Kapal sebagaimana dimaksud pada ayat (1) diperintahkan supaya berangkat lagi atas tanggungan sendiri dan tidak diberikan izin memasuki Pelabuhan lain di wilayah Indonesia. (3) Kapal sebagaimana dimaksud pada ayat (1) diberikan izin untuk mengambil bahan bakar, arr, dan bahan makanan di bawah pengawasan Pejabat Karantina Kesehatan. Pasal24 Kekarantinaan Kesehatan terhadap kapal perang, kapal negara, dan kapal tamu negara diatur dengan Peraturan Menteri berkoordinasi dengan menteri atau lembaga terkait." .
+<http://example.org/legal/document/uu/2018/6/pasal/23> legal:hasText "(1) Kapal yang tidak mematuhi peraturan Kekarantinaan Kesehatan tidak diberikan Persetujuan Karantina Kesehatan. (2) Kapal sebagaimana dimaksud pada ayat (1) diperintahkan supaya berangkat lagi atas tanggungan sendiri dan tidak diberikan izin memasuki Pelabuhan lain di wilayah Indonesia. (3) Kapal sebagaimana dimaksud pada ayat (1) diberikan izin untuk mengambil bahan bakar, arr, dan bahan makanan di bawah pengawasan Pejabat Karantina Kesehatan." .
 <http://example.org/legal/document/uu/2018/6/pasal/23> legal:hasAyat <http://example.org/legal/document/uu/2018/6/pasal/23/ayat/1> .
 <http://example.org/legal/document/uu/2018/6/pasal/23/ayat/1> legal:hasKey 1 .
 <http://example.org/legal/document/uu/2018/6/pasal/23/ayat/1> legal:hasText "Kapal yang tidak mematuhi peraturan Kekarantinaan Kesehatan tidak diberikan Persetujuan Karantina Kesehatan." .
@@ -349,8 +349,11 @@
 <http://example.org/legal/document/uu/2018/6/pasal/23/ayat/2> legal:references <http://example.org/legal/document/uu/2018/6/pasal/23/ayat/1> .
 <http://example.org/legal/document/uu/2018/6/pasal/23> legal:hasAyat <http://example.org/legal/document/uu/2018/6/pasal/23/ayat/3> .
 <http://example.org/legal/document/uu/2018/6/pasal/23/ayat/3> legal:hasKey 3 .
-<http://example.org/legal/document/uu/2018/6/pasal/23/ayat/3> legal:hasText "Kapal sebagaimana dimaksud pada ayat (1) diberikan izin untuk mengambil bahan bakar, arr, dan bahan makanan di bawah pengawasan Pejabat Karantina Kesehatan. Pasal24 Kekarantinaan Kesehatan terhadap kapal perang, kapal negara, dan kapal tamu negara diatur dengan Peraturan Menteri berkoordinasi dengan menteri atau lembaga terkait." .
+<http://example.org/legal/document/uu/2018/6/pasal/23/ayat/3> legal:hasText "Kapal sebagaimana dimaksud pada ayat (1) diberikan izin untuk mengambil bahan bakar, arr, dan bahan makanan di bawah pengawasan Pejabat Karantina Kesehatan." .
 <http://example.org/legal/document/uu/2018/6/pasal/23/ayat/3> legal:references <http://example.org/legal/document/uu/2018/6/pasal/23/ayat/1> .
+<http://example.org/legal/document/uu/2018/6/bab/6/bagian/1/paragraf/1> legal:hasPasal <http://example.org/legal/document/uu/2018/6/pasal/24> .
+<http://example.org/legal/document/uu/2018/6/pasal/24> legal:hasKey 24 .
+<http://example.org/legal/document/uu/2018/6/pasal/24> legal:hasText "Kekarantinaan Kesehatan terhadap kapal perang, kapal negara, dan kapal tamu negara diatur dengan Peraturan Menteri berkoordinasi dengan menteri atau lembaga terkait." .
 <http://example.org/legal/document/uu/2018/6/bab/6/bagian/1> legal:hasParagraf <http://example.org/legal/document/uu/2018/6/bab/6/bagian/1/paragraf/2> .
 <http://example.org/legal/document/uu/2018/6/bab/6/bagian/1/paragraf/2> legal:hasKey 2 .
 <http://example.org/legal/document/uu/2018/6/bab/6/bagian/1/paragraf/2> legal:hasText "Paragraf 2 Keberangkatan Kapal Pasal 25 (1) Sebelum keberangkatan Kapal, Nakhoda wajib melengkapi Dokumen Karantina Kesehatan yang masih berlaku. (2) Setelah Dokumen Karantina Kesehatan sebagaimana dimaksud pada ayat (1) dinyatakan lengkap dan pada pemeriksaan oleh Pejabat Karantina Kesehatan tidak ditemukan indikasi Faktor Risiko Kesehatan Masyarakat maka kepada Nakhoda dapat diberikan Surat Persetujuan Berlayar Karantina Kesehatan (port H e alth Quarantine Cle arancel . (3) Dalam hal Kapal yang akan berangkat tidak dilengkapi dengan Surat Persetujuan Berlayar Karantina Kesehatan (Port Health euarantine Clearancel sebagaimana dimaksud pada ayat (21, syahbandar dilarang menerbitkan surat persetujuan berlayar. Pasal 26 (1) Apabila pada saat keberangkatan Kapal ditemukan adanya Faktor Risiko Kesehatan Masyarakat maka terhadap Kapal tersebut dilakukan tindakan Kekarantinaan Kesehatan sebagaimana dimaksud dalam Pasal 15 ayat (2). (2) Untuk Pelabuhan yang tidak memungkinkan dilakukan tindakan Kekarantinaan Kesehatan maka harus dilakukan di Pelabuhan tujuan berikutnya." .
@@ -1503,6 +1506,7 @@
 <http://example.org/legal/document/uu/2018/6/pasal/23/ayat/1> a legal:Ayat .
 <http://example.org/legal/document/uu/2018/6/pasal/23/ayat/2> a legal:Ayat .
 <http://example.org/legal/document/uu/2018/6/pasal/23/ayat/3> a legal:Ayat .
+<http://example.org/legal/document/uu/2018/6/pasal/24> a legal:Pasal .
 <http://example.org/legal/document/uu/2018/6/bab/6/bagian/1/paragraf/2> a legal:Paragraf .
 <http://example.org/legal/document/uu/2018/6/pasal/25> a legal:Pasal .
 <http://example.org/legal/document/uu/2018/6/pasal/25/ayat/1> a legal:Ayat .
@@ -1903,6 +1907,7 @@
 <http://example.org/legal/document/uu/2018/6/pasal/23/ayat/1> legal:partOf <http://example.org/legal/document/uu/2018/6/pasal/23> .
 <http://example.org/legal/document/uu/2018/6/pasal/23/ayat/2> legal:partOf <http://example.org/legal/document/uu/2018/6/pasal/23> .
 <http://example.org/legal/document/uu/2018/6/pasal/23/ayat/3> legal:partOf <http://example.org/legal/document/uu/2018/6/pasal/23> .
+<http://example.org/legal/document/uu/2018/6/pasal/24> legal:partOf <http://example.org/legal/document/uu/2018/6/bab/6/bagian/1/paragraf/1> .
 <http://example.org/legal/document/uu/2018/6/bab/6/bagian/1/paragraf/2> legal:partOf <http://example.org/legal/document/uu/2018/6/bab/6/bagian/1> .
 <http://example.org/legal/document/uu/2018/6/pasal/25> legal:partOf <http://example.org/legal/document/uu/2018/6/bab/6/bagian/1/paragraf/2> .
 <http://example.org/legal/document/uu/2018/6/pasal/25/ayat/1> legal:partOf <http://example.org/legal/document/uu/2018/6/pasal/25> .

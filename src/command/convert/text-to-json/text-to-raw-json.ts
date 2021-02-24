@@ -207,7 +207,7 @@ function _linesToParagraf(incLines: IncLines): Paragraf {
  * Pasal
  */
 // dirty
-const pasalRegex = /^Pasa(l|i) /;
+const pasalRegex = /^Pasa(l|i)\s?/;
 
 function getPasalKey(line?: string): number | undefined {
   return !line || pasalRegex.test(line) ? safeParseInt(line?.replace(pasalRegex, '')) : undefined;

@@ -1465,7 +1465,7 @@
                             "start": 32
                           }
                         ],
-                        "text": "Kapal sebagaimana dimaksud pada ayat (1) diberikan izin untuk mengambil bahan bakar, arr, dan bahan makanan di bawah pengawasan Pejabat Karantina Kesehatan. Pasal24 Kekarantinaan Kesehatan terhadap kapal perang, kapal negara, dan kapal tamu negara diatur dengan Peraturan Menteri berkoordinasi dengan menteri atau lembaga terkait."
+                        "text": "Kapal sebagaimana dimaksud pada ayat (1) diberikan izin untuk mengambil bahan bakar, arr, dan bahan makanan di bawah pengawasan Pejabat Karantina Kesehatan."
                       }
                     }
                   ],
@@ -1473,7 +1473,17 @@
                     "_type": "referenceText",
                     "references": [
                     ],
-                    "text": "(1) Kapal yang tidak mematuhi peraturan Kekarantinaan Kesehatan tidak diberikan Persetujuan Karantina Kesehatan. (2) Kapal sebagaimana dimaksud pada ayat (1) diperintahkan supaya berangkat lagi atas tanggungan sendiri dan tidak diberikan izin memasuki Pelabuhan lain di wilayah Indonesia. (3) Kapal sebagaimana dimaksud pada ayat (1) diberikan izin untuk mengambil bahan bakar, arr, dan bahan makanan di bawah pengawasan Pejabat Karantina Kesehatan. Pasal24 Kekarantinaan Kesehatan terhadap kapal perang, kapal negara, dan kapal tamu negara diatur dengan Peraturan Menteri berkoordinasi dengan menteri atau lembaga terkait."
+                    "text": "(1) Kapal yang tidak mematuhi peraturan Kekarantinaan Kesehatan tidak diberikan Persetujuan Karantina Kesehatan. (2) Kapal sebagaimana dimaksud pada ayat (1) diperintahkan supaya berangkat lagi atas tanggungan sendiri dan tidak diberikan izin memasuki Pelabuhan lain di wilayah Indonesia. (3) Kapal sebagaimana dimaksud pada ayat (1) diberikan izin untuk mengambil bahan bakar, arr, dan bahan makanan di bawah pengawasan Pejabat Karantina Kesehatan."
+                  }
+                },
+                {
+                  "_key": 24,
+                  "_type": "pasal",
+                  "text": {
+                    "_type": "referenceText",
+                    "references": [
+                    ],
+                    "text": "Kekarantinaan Kesehatan terhadap kapal perang, kapal negara, dan kapal tamu negara diatur dengan Peraturan Menteri berkoordinasi dengan menteri atau lembaga terkait."
                   }
                 }
               ],
