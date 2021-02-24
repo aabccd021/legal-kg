@@ -33,24 +33,17 @@ function handlePdf(pdf: DocumentNode, option: Option): void {
 }
 
 function postProcess(lines: string[]): string[] {
+  console.log('aab');
   return chain(lines)
     .map((line) => line.trim())
     .filter((line) => !isEmpty(line))
-    .reduce(removePageNoise, { removeCount: 0, lines: [] })
-    .thru(({ lines }) => lines)
+    .reduce(removePageNoise, [])
     .value();
 }
 
-function removePageNoise(acc: RemovePageAccumulator, line: string): RemovePageAccumulator {
-  const { lines } = acc;
-  const newLines = [...lines, line];
-  return { ...acc, lines: newLines };
+function removePageNoise(lines: string[], line: string): string[] {
+  return /^-\s?[0-9]*\s?-/.test(line) ? lines.slice(0, -3) : [...lines, line];
 }
-
-type RemovePageAccumulator = {
-  removeCount: number;
-  lines: string[];
-};
 
 function PyMuPDF(pdfPath: string, textPath: string): void {
   execSync(`/usr/bin/python3 script/pdf-to-text/PyMuPDF/index.py ${pdfPath} ${textPath}`);

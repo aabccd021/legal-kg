@@ -44,6 +44,20 @@
     {
       "type": "pwa-node",
       "request": "launch",
+      "name": "Convert : PDF to Text Overwrite",
+      "runtimeVersion": "15.6.0",
+      "runtimeArgs": [
+        "-r",
+        "ts-node/register"
+      ],
+      "args": [
+        "${workspaceFolder}/src/cli.ts",
+        "convert:pdf-to-text --overwrite"
+      ],
+    },
+    {
+      "type": "pwa-node",
+      "request": "launch",
       "name": "Convert : Text to JSON",
       "runtimeVersion": "15.6.0",
       "runtimeArgs": [
