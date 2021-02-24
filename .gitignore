@@ -4,3 +4,4 @@ yarn-error.log
 lib
 *.tsbuildinfo
 legal_data_temp
+maintained_documents/temp/

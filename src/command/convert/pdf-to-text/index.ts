@@ -71,13 +71,17 @@ type Acc = {
   isAfterNoise: boolean;
 };
 
+function isNoise(str: string): boolean {
+  return (
+    /^-?\s?[a-zA-Z]?[0-9]+[a-zA-Z]?\s?-/.test(str) || /^-\s?[a-zA-Z]?[0-9]+[a-zA-Z]?\s?-?/.test(str)
+  );
+}
+
 function removePageNoise(acc: Acc, block: Block): Acc {
   const { blocks, isAfterNoise } = acc;
 
   const blockText = block.lines?.[0]?.spans?.map((span) => span.text).join('');
   if (isUndefined(blockText)) return acc;
-
-  const noiseRegexp = /^-?\s?[a-zA-Z]?[0-9]+[a-zA-Z]?\s?-/;
 
   if (isAfterNoise) {
     const latestBlock = blocks?.slice(-1)[0];
@@ -91,7 +95,7 @@ function removePageNoise(acc: Acc, block: Block): Acc {
             /^SK No/.test(lineText) ||
             lineText.endsWith('. . .') ||
             lineText.endsWith('...') ||
-            noiseRegexp.test(lineText)
+            isNoise(lineText)
           ) {
             const newLines: Line[] = latestBlockLines.slice(0, -1);
             const newLatestBlock: Block = { ...latestBlock, lines: newLines };
@@ -114,13 +118,13 @@ function removePageNoise(acc: Acc, block: Block): Acc {
     return { blocks: [...blocks, block], isAfterNoise: false };
   }
 
-  const blockTextIsNoise = noiseRegexp.test(blockText);
+  const blockTextIsNoise = isNoise(blockText);
   if (blockTextIsNoise) {
     return { blocks: blocks.slice(0, -2), isAfterNoise: true };
   }
 
   const hasNoiseText = block.lines?.some((line) =>
-    line.spans?.some(({ text }) => noiseRegexp.test(text ?? ''))
+    line.spans?.some(({ text }) => isNoise(text ?? ''))
   );
   if (hasNoiseText) {
     return { blocks, isAfterNoise: true };
