@@ -4,96 +4,26 @@
     {
       "type": "pwa-node",
       "request": "launch",
-      "name": "Launch Program",
-      "runtimeVersion": "15.6.0",
-      "runtimeArgs": [
-        "-r",
-        "ts-node/register"
-      ],
-      "args": [
-        "${workspaceFolder}/src/index.ts"
-      ],
-    },
-    {
-      "type": "pwa-node",
-      "request": "launch",
-      "name": "Run",
-      "runtimeVersion": "15.6.0",
-      "runtimeArgs": [
-        "-r",
-        "ts-node/register"
-      ],
-      "args": [
-        "${workspaceFolder}/src/maintain/text2json/index.ts"
-      ],
-    },
-    {
-      "type": "pwa-node",
-      "request": "launch",
-      "name": "Update UU Index",
-      "runtimeVersion": "15.6.0",
+      "name": "Run Migration",
       "runtimeArgs": [
         "-r",
         "ts-node/register"
       ],
       "args": [
         "${workspaceFolder}/src/cli.ts",
-        "update-index"
+        "migrate"
       ],
     },
     {
       "type": "pwa-node",
       "request": "launch",
-      "name": "Convert : PDF to Text Overwrite",
-      "runtimeVersion": "15.6.0",
+      "name": "Run CLI",
       "runtimeArgs": [
         "-r",
         "ts-node/register"
       ],
       "args": [
-        "${workspaceFolder}/src/cli.ts",
-        "convert:pdf-to-text --overwrite"
-      ],
-    },
-    {
-      "type": "pwa-node",
-      "request": "launch",
-      "name": "Convert : Text to JSON",
-      "runtimeVersion": "15.6.0",
-      "runtimeArgs": [
-        "-r",
-        "ts-node/register"
-      ],
-      "args": [
-        "${workspaceFolder}/src/cli.ts",
-        "convert:text-to-json"
-      ],
-    },
-    {
-      "type": "pwa-node",
-      "request": "launch",
-      "name": "Convert : JSON to Markdown",
-      "runtimeVersion": "15.6.0",
-      "runtimeArgs": [
-        "-r",
-        "ts-node/register"
-      ],
-      "args": [
-        "${workspaceFolder}/src/cli.ts",
-        "convert:json-to-md"
-      ],
-    },
-    {
-      "type": "pwa-node",
-      "request": "launch",
-      "name": "Download PDF",
-      "runtimeVersion": "15.6.0",
-      "runtimeArgs": [
-        "-r",
-        "ts-node/register"
-      ],
-      "args": [
-        "${workspaceFolder}/src/scrape/download-pdf.ts"
+        "${workspaceFolder}/src/cli.ts"
       ],
     }
   ]

@@ -18,26 +18,26 @@ export function textToRawJson(text: string, documentNode: DocumentNode): Documen
   const lines = text.split('\n');
   const extractors: Extractor<keyof Document>[] = [
     ['_salinan', /^SALINAN/, 'optional'],
-    ['_name', /^(UNDANG-UNDANG REPUBLIK INDONESIA|PERATURAN GUBERNUR)/, 'required'],
-    ['_nomor', /^NOMOR/, 'required'],
-    ['_tentang', /^TENTANG$/, 'required', 'trim'],
-    ['_pemutus', /^DENGAN RAHMAT TUHAN YANG MAHA ESA$/, 'required', 'trim'],
-    ['menimbang', menimbangRegex, 'required'],
-    ['mengingat', mengingatRegex, 'required'],
+    ['_name', /^(UNDANG-UNDANG REPUBLIK INDONESIA|PERATURAN GUBERNUR)/, 'optional'],
+    ['_nomor', /^NOMOR/, 'optional'],
+    ['_tentang', /^TENTANG$/, 'optional', 'trim'],
+    ['_pemutus', /^DENGAN RAHMAT TUHAN YANG MAHA ESA$/, 'optional', 'trim'],
+    ['menimbang', menimbangRegex, 'optional'],
+    ['mengingat', mengingatRegex, 'optional'],
     ['_denganPersetujuan', /^Dengan persetujuan bersama antara$/, 'optional'],
-    ['_memutuskan', /^MEMUTUSKAN\s*:\s*/, 'required', 'trim'],
+    ['_memutuskan', /^MEMUTUSKAN\s*:\s*/, 'optional', 'trim'],
     ['babs', babStartRegexp, 'required'],
     ['_tempatDitetapkan', /^Ditetapkan di /, 'optional', 'trim'],
     ['_tanggalDitetapkan', padaTaggalRegexp, 'optional', 'trim'],
     ['_tempatDisahkan', /^Disahkan di /, 'optional', 'trim'],
     ['_tanggalDisahkan', padaTaggalRegexp, 'optional', 'trim'],
-    ['_jabatanPengesah', /^(GUBERNUR|PRESIDEN)/, 'required'],
-    ['_namaPengesah', /^ttd$/, 'required', 'trim'],
-    ['_tempatDiundangkan', /^Diundangkan di/, 'required', 'trim'],
-    ['_sekretaris', /^SEKRETARIS/, 'required'],
-    ['_dokumen', /^(LEMBARAN NEGARA|BERITA DAERAH)/, 'required'],
+    ['_jabatanPengesah', /^(GUBERNUR|PRESIDEN)/, 'optional'],
+    ['_namaPengesah', /^ttd$/, 'optional', 'trim'],
+    ['_tempatDiundangkan', /^Diundangkan di/, 'optional', 'trim'],
+    ['_sekretaris', /^SEKRETARIS/, 'optional'],
+    ['_dokumen', /^(LEMBARAN NEGARA|BERITA DAERAH)/, 'optional'],
     ['salinanSesuaiDenganAslinya', /^Salinan/, 'optional'],
-    ['penjelasan', /^P E N J E L A S A N/, 'required'],
+    ['penjelasan', /^P E N J E L A S A N/, 'optional'],
   ];
   const extract_result = extractLines(lines, extractors);
   const nomor_tahun = extract_result._nomor?.[0]
@@ -213,7 +213,7 @@ function getPasalKey(line?: string): number | undefined {
 function getPasals(lines: string[]): Pasal[] {
   const [firstLine] = lines;
   const firstKey = getPasalKey(firstLine);
-  if (isNil(firstKey)) throw Error();
+  if (isNil(firstKey)) throw Error(firstLine);
   const pasalsLines = extractIncLines(lines, getPasalKey);
 
   return pasalsLines.map(_linesToPasal);

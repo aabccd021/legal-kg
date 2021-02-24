@@ -14,6 +14,7 @@
     "noUnusedLocals": true,
     "noUnusedParameters": true,
     "outDir": "./lib",
+    "resolveJsonModule": true,
     "rootDir": "./src",
     "skipLibCheck": true,
     "sourceMap": true,
@@ -21,11 +22,10 @@
     "target": "ESNext"
   },
   "exclude": [
-    "node_modules",
-    "**/*.spec.ts"
+    "./node_modules",
+    "./**/*.spec.ts"
   ],
   "include": [
-    "src/**/*",
-    "src/.unused"
-, "src/.unused/external.ts"  ]
+    "./src/**/*"
+  ]
 }
