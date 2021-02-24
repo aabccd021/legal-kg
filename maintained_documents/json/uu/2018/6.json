@@ -506,109 +506,6 @@
                 "_type": "referenceText",
                 "references": [
                   {
-                    "end": 158,
-                    "node": {
-                      "_key": 1,
-                      "_structureType": "pasal",
-                      "parentDocument": {
-                        "_documentType": "uu",
-                        "nomor": 6,
-                        "tahun": 2018
-                      }
-                    },
-                    "start": 151
-                  },
-                  {
-                    "end": 743,
-                    "node": {
-                      "_key": 12,
-                      "_structureType": "pasal",
-                      "parentDocument": {
-                        "_documentType": "uu",
-                        "nomor": 6,
-                        "tahun": 2018
-                      }
-                    },
-                    "start": 735
-                  },
-                  {
-                    "end": 941,
-                    "node": {
-                      "_key": 13,
-                      "_structureType": "pasal",
-                      "parentDocument": {
-                        "_documentType": "uu",
-                        "nomor": 6,
-                        "tahun": 2018
-                      }
-                    },
-                    "start": 933
-                  },
-                  {
-                    "end": 1375,
-                    "node": {
-                      "_key": 14,
-                      "_structureType": "pasal",
-                      "parentDocument": {
-                        "_documentType": "uu",
-                        "nomor": 6,
-                        "tahun": 2018
-                      }
-                    },
-                    "start": 1367
-                  },
-                  {
-                    "end": 1643,
-                    "node": {
-                      "_key": 1,
-                      "_structureType": "ayat",
-                      "parentPasal": {
-                        "_key": 10,
-                        "_structureType": "pasal",
-                        "parentDocument": {
-                          "_documentType": "uu",
-                          "nomor": 6,
-                          "tahun": 2018
-                        }
-                      }
-                    },
-                    "start": 1635
-                  },
-                  {
-                    "end": 1213,
-                    "node": {
-                      "_key": 1,
-                      "_structureType": "ayat",
-                      "parentPasal": {
-                        "_key": 10,
-                        "_structureType": "pasal",
-                        "parentDocument": {
-                          "_documentType": "uu",
-                          "nomor": 6,
-                          "tahun": 2018
-                        }
-                      }
-                    },
-                    "start": 1205
-                  },
-                  {
-                    "end": 549,
-                    "node": {
-                      "_key": 1,
-                      "_structureType": "ayat",
-                      "parentPasal": {
-                        "_key": 10,
-                        "_structureType": "pasal",
-                        "parentDocument": {
-                          "_documentType": "uu",
-                          "nomor": 6,
-                          "tahun": 2018
-                        }
-                      }
-                    },
-                    "start": 541
-                  },
-                  {
                     "end": 114,
                     "node": {
                       "_key": 2,
@@ -643,7 +540,7 @@
                     "start": 93
                   }
                 ],
-                "text": "Ketentuan lebih lanjut mengenai tata cara penetapan dan pencabutan sebagaimana dimaksud pada ayat (1) dan ayat (2) diatur dengan Peraturan pemerintah. Pasal 1 1 (1) Penyelenggaraan Kekarantinaan Kesehatan pada Kedaruratan Kesehatan Masyarakat dilaksanakan oleh Pemerintah Pusat secara cepat dan tepat berdasarkan besarnya ancaman, efektivitas, dukungan sumber daya, dan teknik operasional dengan mempertimbangkan kedaulatan negara, keamanan, ekonomi, sosial, dan budaya. (2) Penyelenggaraan Kekarantinaan Kesehatan sebagaimana dimaksud pada ayat (1) dapat berkoordinasi dan bekerja sama dengan dunia internasional. (3) Ketentuan lebih lanjut mengenai penanggulangan Kedaruratan Kesehatan Masyarakat diatur dengan Peraturan Pemerintah. Pasal 12 Dalam hal Kedaruratan Kesehatan Masyarakat merupakan kejadian yang meresahkan dunia, Pemerintah Pusat memberitahukan kepada pihak internasional sesuai dengan ketentuan hukum internasional. Pasal 13 (1) Pada kejadian Kedaruratan Kesehatan Masyarakat yang meresahkan dunia, Pemerintah pusat melakukan komunikasi, koordinasi, dan kerja sama dengan negara lain dan/atau organisasi internasional. (2) Komunikasi, koordinasi, dan kerja sama sebagaimana dimaksud pada ayat (1) dilakukan untuk mengidentifikasi penyebab, gejala dan tanda, faktor yang mempengaruhi, dan dampak yang ditimbulkan, serta tindakan yang harus dilakukan. Pasal 14 (1) Dalam keadaan Kedaruratan Kesehatan Masyarakat yang meresahkan dunia, pemerintah pusat dapat menetapkan Karantina Wilayah di pintu Masuk. (2) Ketentuan lebih lanjut mengenai tata cara pelaksanaan Karantina Wilayah di pintu Masuk sebagaimana dimaksud pada ayat (1) diatur dengan Peraturan Pemerintah."
+                "text": "Ketentuan lebih lanjut mengenai tata cara penetapan dan pencabutan sebagaimana dimaksud pada ayat (1) dan ayat (2) diatur dengan Peraturan pemerintah."
               }
             }
           ],
@@ -651,7 +548,174 @@
             "_type": "referenceText",
             "references": [
             ],
-            "text": "(1) Pemerintah Pusat menetapkan dan mencabut Kedaruratan Kesehatan Masyarakat. (2) Pemerintah Pusat menetapkan dan mencabut penetapan Pintu Masuk dan/atau wilayah di dalam negeri yang Terjangkit Kedaruratan Kesehatan Masyarakat. (3) Sebelum menetapkan Kedaruratan Kesehatan Masyarakat, Pemerintah Pusat terlebih dahulu menetapkan jenis penyakit dan faktor risiko yang dapat menimbulkan Kedaruratan Kesehatan Masyarakat. (4) Ketentuan lebih lanjut mengenai tata cara penetapan dan pencabutan sebagaimana dimaksud pada ayat (1) dan ayat (2) diatur dengan Peraturan pemerintah. Pasal 1 1 (1) Penyelenggaraan Kekarantinaan Kesehatan pada Kedaruratan Kesehatan Masyarakat dilaksanakan oleh Pemerintah Pusat secara cepat dan tepat berdasarkan besarnya ancaman, efektivitas, dukungan sumber daya, dan teknik operasional dengan mempertimbangkan kedaulatan negara, keamanan, ekonomi, sosial, dan budaya. (2) Penyelenggaraan Kekarantinaan Kesehatan sebagaimana dimaksud pada ayat (1) dapat berkoordinasi dan bekerja sama dengan dunia internasional. (3) Ketentuan lebih lanjut mengenai penanggulangan Kedaruratan Kesehatan Masyarakat diatur dengan Peraturan Pemerintah. Pasal 12 Dalam hal Kedaruratan Kesehatan Masyarakat merupakan kejadian yang meresahkan dunia, Pemerintah Pusat memberitahukan kepada pihak internasional sesuai dengan ketentuan hukum internasional. Pasal 13 (1) Pada kejadian Kedaruratan Kesehatan Masyarakat yang meresahkan dunia, Pemerintah pusat melakukan komunikasi, koordinasi, dan kerja sama dengan negara lain dan/atau organisasi internasional. (2) Komunikasi, koordinasi, dan kerja sama sebagaimana dimaksud pada ayat (1) dilakukan untuk mengidentifikasi penyebab, gejala dan tanda, faktor yang mempengaruhi, dan dampak yang ditimbulkan, serta tindakan yang harus dilakukan. Pasal 14 (1) Dalam keadaan Kedaruratan Kesehatan Masyarakat yang meresahkan dunia, pemerintah pusat dapat menetapkan Karantina Wilayah di pintu Masuk. (2) Ketentuan lebih lanjut mengenai tata cara pelaksanaan Karantina Wilayah di pintu Masuk sebagaimana dimaksud pada ayat (1) diatur dengan Peraturan Pemerintah."
+            "text": "(1) Pemerintah Pusat menetapkan dan mencabut Kedaruratan Kesehatan Masyarakat. (2) Pemerintah Pusat menetapkan dan mencabut penetapan Pintu Masuk dan/atau wilayah di dalam negeri yang Terjangkit Kedaruratan Kesehatan Masyarakat. (3) Sebelum menetapkan Kedaruratan Kesehatan Masyarakat, Pemerintah Pusat terlebih dahulu menetapkan jenis penyakit dan faktor risiko yang dapat menimbulkan Kedaruratan Kesehatan Masyarakat. (4) Ketentuan lebih lanjut mengenai tata cara penetapan dan pencabutan sebagaimana dimaksud pada ayat (1) dan ayat (2) diatur dengan Peraturan pemerintah."
+          }
+        },
+        {
+          "_key": 11,
+          "_type": "pasal",
+          "isi": [
+            {
+              "_key": 1,
+              "_type": "ayat",
+              "text": {
+                "_type": "referenceText",
+                "references": [
+                ],
+                "text": "Penyelenggaraan Kekarantinaan Kesehatan pada Kedaruratan Kesehatan Masyarakat dilaksanakan oleh Pemerintah Pusat secara cepat dan tepat berdasarkan besarnya ancaman, efektivitas, dukungan sumber daya, dan teknik operasional dengan mempertimbangkan kedaulatan negara, keamanan, ekonomi, sosial, dan budaya."
+              }
+            },
+            {
+              "_key": 2,
+              "_type": "ayat",
+              "text": {
+                "_type": "referenceText",
+                "references": [
+                  {
+                    "end": 74,
+                    "node": {
+                      "_key": 1,
+                      "_structureType": "ayat",
+                      "parentPasal": {
+                        "_key": 11,
+                        "_structureType": "pasal",
+                        "parentDocument": {
+                          "_documentType": "uu",
+                          "nomor": 6,
+                          "tahun": 2018
+                        }
+                      }
+                    },
+                    "start": 66
+                  }
+                ],
+                "text": "Penyelenggaraan Kekarantinaan Kesehatan sebagaimana dimaksud pada ayat (1) dapat berkoordinasi dan bekerja sama dengan dunia internasional."
+              }
+            },
+            {
+              "_key": 3,
+              "_type": "ayat",
+              "text": {
+                "_type": "referenceText",
+                "references": [
+                ],
+                "text": "Ketentuan lebih lanjut mengenai penanggulangan Kedaruratan Kesehatan Masyarakat diatur dengan Peraturan Pemerintah."
+              }
+            }
+          ],
+          "text": {
+            "_type": "referenceText",
+            "references": [
+            ],
+            "text": "(1) Penyelenggaraan Kekarantinaan Kesehatan pada Kedaruratan Kesehatan Masyarakat dilaksanakan oleh Pemerintah Pusat secara cepat dan tepat berdasarkan besarnya ancaman, efektivitas, dukungan sumber daya, dan teknik operasional dengan mempertimbangkan kedaulatan negara, keamanan, ekonomi, sosial, dan budaya. (2) Penyelenggaraan Kekarantinaan Kesehatan sebagaimana dimaksud pada ayat (1) dapat berkoordinasi dan bekerja sama dengan dunia internasional. (3) Ketentuan lebih lanjut mengenai penanggulangan Kedaruratan Kesehatan Masyarakat diatur dengan Peraturan Pemerintah."
+          }
+        },
+        {
+          "_key": 12,
+          "_type": "pasal",
+          "text": {
+            "_type": "referenceText",
+            "references": [
+            ],
+            "text": "Dalam hal Kedaruratan Kesehatan Masyarakat merupakan kejadian yang meresahkan dunia, Pemerintah Pusat memberitahukan kepada pihak internasional sesuai dengan ketentuan hukum internasional."
+          }
+        },
+        {
+          "_key": 13,
+          "_type": "pasal",
+          "isi": [
+            {
+              "_key": 1,
+              "_type": "ayat",
+              "text": {
+                "_type": "referenceText",
+                "references": [
+                ],
+                "text": "Pada kejadian Kedaruratan Kesehatan Masyarakat yang meresahkan dunia, Pemerintah pusat melakukan komunikasi, koordinasi, dan kerja sama dengan negara lain dan/atau organisasi internasional."
+              }
+            },
+            {
+              "_key": 2,
+              "_type": "ayat",
+              "text": {
+                "_type": "referenceText",
+                "references": [
+                  {
+                    "end": 73,
+                    "node": {
+                      "_key": 1,
+                      "_structureType": "ayat",
+                      "parentPasal": {
+                        "_key": 13,
+                        "_structureType": "pasal",
+                        "parentDocument": {
+                          "_documentType": "uu",
+                          "nomor": 6,
+                          "tahun": 2018
+                        }
+                      }
+                    },
+                    "start": 65
+                  }
+                ],
+                "text": "Komunikasi, koordinasi, dan kerja sama sebagaimana dimaksud pada ayat (1) dilakukan untuk mengidentifikasi penyebab, gejala dan tanda, faktor yang mempengaruhi, dan dampak yang ditimbulkan, serta tindakan yang harus dilakukan."
+              }
+            }
+          ],
+          "text": {
+            "_type": "referenceText",
+            "references": [
+            ],
+            "text": "(1) Pada kejadian Kedaruratan Kesehatan Masyarakat yang meresahkan dunia, Pemerintah pusat melakukan komunikasi, koordinasi, dan kerja sama dengan negara lain dan/atau organisasi internasional. (2) Komunikasi, koordinasi, dan kerja sama sebagaimana dimaksud pada ayat (1) dilakukan untuk mengidentifikasi penyebab, gejala dan tanda, faktor yang mempengaruhi, dan dampak yang ditimbulkan, serta tindakan yang harus dilakukan."
+          }
+        },
+        {
+          "_key": 14,
+          "_type": "pasal",
+          "isi": [
+            {
+              "_key": 1,
+              "_type": "ayat",
+              "text": {
+                "_type": "referenceText",
+                "references": [
+                ],
+                "text": "Dalam keadaan Kedaruratan Kesehatan Masyarakat yang meresahkan dunia, pemerintah pusat dapat menetapkan Karantina Wilayah di pintu Masuk."
+              }
+            },
+            {
+              "_key": 2,
+              "_type": "ayat",
+              "text": {
+                "_type": "referenceText",
+                "references": [
+                  {
+                    "end": 121,
+                    "node": {
+                      "_key": 1,
+                      "_structureType": "ayat",
+                      "parentPasal": {
+                        "_key": 14,
+                        "_structureType": "pasal",
+                        "parentDocument": {
+                          "_documentType": "uu",
+                          "nomor": 6,
+                          "tahun": 2018
+                        }
+                      }
+                    },
+                    "start": 113
+                  }
+                ],
+                "text": "Ketentuan lebih lanjut mengenai tata cara pelaksanaan Karantina Wilayah di pintu Masuk sebagaimana dimaksud pada ayat (1) diatur dengan Peraturan Pemerintah."
+              }
+            }
+          ],
+          "text": {
+            "_type": "referenceText",
+            "references": [
+            ],
+            "text": "(1) Dalam keadaan Kedaruratan Kesehatan Masyarakat yang meresahkan dunia, pemerintah pusat dapat menetapkan Karantina Wilayah di pintu Masuk. (2) Ketentuan lebih lanjut mengenai tata cara pelaksanaan Karantina Wilayah di pintu Masuk sebagaimana dimaksud pada ayat (1) diatur dengan Peraturan Pemerintah."
           }
         }
       ],

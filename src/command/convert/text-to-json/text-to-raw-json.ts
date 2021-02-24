@@ -210,7 +210,22 @@ function _linesToParagraf(incLines: IncLines): Paragraf {
 const pasalRegex = /^Pasa(l|i)\s?/;
 
 function getPasalKey(line?: string): number | undefined {
-  return !line || pasalRegex.test(line) ? safeParseInt(line?.replace(pasalRegex, '')) : undefined;
+  if (isUndefined(line)) return undefined;
+  if (pasalRegex.test(line)) {
+    // dirty
+    const keyStr = line.replaceAll(' ', '').replaceAll('I', '1').replace(pasalRegex, '');
+    const goodResult = safeParseInt(keyStr);
+    if (keyStr.startsWith('4')) {
+      console.log(keyStr);
+      console.log(goodResult);
+      console.log();
+    }
+    if (!isUndefined(goodResult)) return goodResult;
+    console.log(keyStr);
+    const cleanedResult = safeParseInt(keyStr.replaceAll(' ', '').replaceAll('I', '1'));
+    if (!isUndefined(cleanedResult)) return cleanedResult;
+  }
+  return undefined;
 }
 
 function getPasals(lines: string[]): Pasal[] {
@@ -405,7 +420,7 @@ function extractIncLines(
   return elements.filter(({ lines, _key }) => !isEmpty(lines) && _key !== -1);
 }
 
-function safeParseInt(string?: string): number | undefined {
+function safeParseInt(string: string | undefined): number | undefined {
   if (isNil(string)) return undefined;
 
   try {

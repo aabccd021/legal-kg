@@ -158,7 +158,7 @@
 <http://example.org/legal/document/uu/2018/6/bab/4> legal:hasText "BAB IV KEDARURATAN KESEHATAN MASYARAKAT Pasal 10 (1) Pemerintah Pusat menetapkan dan mencabut Kedaruratan Kesehatan Masyarakat. (2) Pemerintah Pusat menetapkan dan mencabut penetapan Pintu Masuk dan/atau wilayah di dalam negeri yang Terjangkit Kedaruratan Kesehatan Masyarakat. (3) Sebelum menetapkan Kedaruratan Kesehatan Masyarakat, Pemerintah Pusat terlebih dahulu menetapkan jenis penyakit dan faktor risiko yang dapat menimbulkan Kedaruratan Kesehatan Masyarakat. (4) Ketentuan lebih lanjut mengenai tata cara penetapan dan pencabutan sebagaimana dimaksud pada ayat (1) dan ayat (2) diatur dengan Peraturan pemerintah. Pasal 1 1 (1) Penyelenggaraan Kekarantinaan Kesehatan pada Kedaruratan Kesehatan Masyarakat dilaksanakan oleh Pemerintah Pusat secara cepat dan tepat berdasarkan besarnya ancaman, efektivitas, dukungan sumber daya, dan teknik operasional dengan mempertimbangkan kedaulatan negara, keamanan, ekonomi, sosial, dan budaya. (2) Penyelenggaraan Kekarantinaan Kesehatan sebagaimana dimaksud pada ayat (1) dapat berkoordinasi dan bekerja sama dengan dunia internasional. (3) Ketentuan lebih lanjut mengenai penanggulangan Kedaruratan Kesehatan Masyarakat diatur dengan Peraturan Pemerintah. Pasal 12 Dalam hal Kedaruratan Kesehatan Masyarakat merupakan kejadian yang meresahkan dunia, Pemerintah Pusat memberitahukan kepada pihak internasional sesuai dengan ketentuan hukum internasional. Pasal 13 (1) Pada kejadian Kedaruratan Kesehatan Masyarakat yang meresahkan dunia, Pemerintah pusat melakukan komunikasi, koordinasi, dan kerja sama dengan negara lain dan/atau organisasi internasional. (2) Komunikasi, koordinasi, dan kerja sama sebagaimana dimaksud pada ayat (1) dilakukan untuk mengidentifikasi penyebab, gejala dan tanda, faktor yang mempengaruhi, dan dampak yang ditimbulkan, serta tindakan yang harus dilakukan. Pasal 14 (1) Dalam keadaan Kedaruratan Kesehatan Masyarakat yang meresahkan dunia, pemerintah pusat dapat menetapkan Karantina Wilayah di pintu Masuk. (2) Ketentuan lebih lanjut mengenai tata cara pelaksanaan Karantina Wilayah di pintu Masuk sebagaimana dimaksud pada ayat (1) diatur dengan Peraturan Pemerintah." .
 <http://example.org/legal/document/uu/2018/6/bab/4> legal:hasPasal <http://example.org/legal/document/uu/2018/6/pasal/10> .
 <http://example.org/legal/document/uu/2018/6/pasal/10> legal:hasKey 10 .
-<http://example.org/legal/document/uu/2018/6/pasal/10> legal:hasText "(1) Pemerintah Pusat menetapkan dan mencabut Kedaruratan Kesehatan Masyarakat. (2) Pemerintah Pusat menetapkan dan mencabut penetapan Pintu Masuk dan/atau wilayah di dalam negeri yang Terjangkit Kedaruratan Kesehatan Masyarakat. (3) Sebelum menetapkan Kedaruratan Kesehatan Masyarakat, Pemerintah Pusat terlebih dahulu menetapkan jenis penyakit dan faktor risiko yang dapat menimbulkan Kedaruratan Kesehatan Masyarakat. (4) Ketentuan lebih lanjut mengenai tata cara penetapan dan pencabutan sebagaimana dimaksud pada ayat (1) dan ayat (2) diatur dengan Peraturan pemerintah. Pasal 1 1 (1) Penyelenggaraan Kekarantinaan Kesehatan pada Kedaruratan Kesehatan Masyarakat dilaksanakan oleh Pemerintah Pusat secara cepat dan tepat berdasarkan besarnya ancaman, efektivitas, dukungan sumber daya, dan teknik operasional dengan mempertimbangkan kedaulatan negara, keamanan, ekonomi, sosial, dan budaya. (2) Penyelenggaraan Kekarantinaan Kesehatan sebagaimana dimaksud pada ayat (1) dapat berkoordinasi dan bekerja sama dengan dunia internasional. (3) Ketentuan lebih lanjut mengenai penanggulangan Kedaruratan Kesehatan Masyarakat diatur dengan Peraturan Pemerintah. Pasal 12 Dalam hal Kedaruratan Kesehatan Masyarakat merupakan kejadian yang meresahkan dunia, Pemerintah Pusat memberitahukan kepada pihak internasional sesuai dengan ketentuan hukum internasional. Pasal 13 (1) Pada kejadian Kedaruratan Kesehatan Masyarakat yang meresahkan dunia, Pemerintah pusat melakukan komunikasi, koordinasi, dan kerja sama dengan negara lain dan/atau organisasi internasional. (2) Komunikasi, koordinasi, dan kerja sama sebagaimana dimaksud pada ayat (1) dilakukan untuk mengidentifikasi penyebab, gejala dan tanda, faktor yang mempengaruhi, dan dampak yang ditimbulkan, serta tindakan yang harus dilakukan. Pasal 14 (1) Dalam keadaan Kedaruratan Kesehatan Masyarakat yang meresahkan dunia, pemerintah pusat dapat menetapkan Karantina Wilayah di pintu Masuk. (2) Ketentuan lebih lanjut mengenai tata cara pelaksanaan Karantina Wilayah di pintu Masuk sebagaimana dimaksud pada ayat (1) diatur dengan Peraturan Pemerintah." .
+<http://example.org/legal/document/uu/2018/6/pasal/10> legal:hasText "(1) Pemerintah Pusat menetapkan dan mencabut Kedaruratan Kesehatan Masyarakat. (2) Pemerintah Pusat menetapkan dan mencabut penetapan Pintu Masuk dan/atau wilayah di dalam negeri yang Terjangkit Kedaruratan Kesehatan Masyarakat. (3) Sebelum menetapkan Kedaruratan Kesehatan Masyarakat, Pemerintah Pusat terlebih dahulu menetapkan jenis penyakit dan faktor risiko yang dapat menimbulkan Kedaruratan Kesehatan Masyarakat. (4) Ketentuan lebih lanjut mengenai tata cara penetapan dan pencabutan sebagaimana dimaksud pada ayat (1) dan ayat (2) diatur dengan Peraturan pemerintah." .
 <http://example.org/legal/document/uu/2018/6/pasal/10> legal:hasAyat <http://example.org/legal/document/uu/2018/6/pasal/10/ayat/1> .
 <http://example.org/legal/document/uu/2018/6/pasal/10/ayat/1> legal:hasKey 1 .
 <http://example.org/legal/document/uu/2018/6/pasal/10/ayat/1> legal:hasText "Pemerintah Pusat menetapkan dan mencabut Kedaruratan Kesehatan Masyarakat." .
@@ -170,16 +170,45 @@
 <http://example.org/legal/document/uu/2018/6/pasal/10/ayat/3> legal:hasText "Sebelum menetapkan Kedaruratan Kesehatan Masyarakat, Pemerintah Pusat terlebih dahulu menetapkan jenis penyakit dan faktor risiko yang dapat menimbulkan Kedaruratan Kesehatan Masyarakat." .
 <http://example.org/legal/document/uu/2018/6/pasal/10> legal:hasAyat <http://example.org/legal/document/uu/2018/6/pasal/10/ayat/4> .
 <http://example.org/legal/document/uu/2018/6/pasal/10/ayat/4> legal:hasKey 4 .
-<http://example.org/legal/document/uu/2018/6/pasal/10/ayat/4> legal:hasText "Ketentuan lebih lanjut mengenai tata cara penetapan dan pencabutan sebagaimana dimaksud pada ayat (1) dan ayat (2) diatur dengan Peraturan pemerintah. Pasal 1 1 (1) Penyelenggaraan Kekarantinaan Kesehatan pada Kedaruratan Kesehatan Masyarakat dilaksanakan oleh Pemerintah Pusat secara cepat dan tepat berdasarkan besarnya ancaman, efektivitas, dukungan sumber daya, dan teknik operasional dengan mempertimbangkan kedaulatan negara, keamanan, ekonomi, sosial, dan budaya. (2) Penyelenggaraan Kekarantinaan Kesehatan sebagaimana dimaksud pada ayat (1) dapat berkoordinasi dan bekerja sama dengan dunia internasional. (3) Ketentuan lebih lanjut mengenai penanggulangan Kedaruratan Kesehatan Masyarakat diatur dengan Peraturan Pemerintah. Pasal 12 Dalam hal Kedaruratan Kesehatan Masyarakat merupakan kejadian yang meresahkan dunia, Pemerintah Pusat memberitahukan kepada pihak internasional sesuai dengan ketentuan hukum internasional. Pasal 13 (1) Pada kejadian Kedaruratan Kesehatan Masyarakat yang meresahkan dunia, Pemerintah pusat melakukan komunikasi, koordinasi, dan kerja sama dengan negara lain dan/atau organisasi internasional. (2) Komunikasi, koordinasi, dan kerja sama sebagaimana dimaksud pada ayat (1) dilakukan untuk mengidentifikasi penyebab, gejala dan tanda, faktor yang mempengaruhi, dan dampak yang ditimbulkan, serta tindakan yang harus dilakukan. Pasal 14 (1) Dalam keadaan Kedaruratan Kesehatan Masyarakat yang meresahkan dunia, pemerintah pusat dapat menetapkan Karantina Wilayah di pintu Masuk. (2) Ketentuan lebih lanjut mengenai tata cara pelaksanaan Karantina Wilayah di pintu Masuk sebagaimana dimaksud pada ayat (1) diatur dengan Peraturan Pemerintah." .
-<http://example.org/legal/document/uu/2018/6/pasal/10/ayat/4> legal:references <http://example.org/legal/document/uu/2018/6/pasal/1> .
-<http://example.org/legal/document/uu/2018/6/pasal/10/ayat/4> legal:references <http://example.org/legal/document/uu/2018/6/pasal/12> .
-<http://example.org/legal/document/uu/2018/6/pasal/10/ayat/4> legal:references <http://example.org/legal/document/uu/2018/6/pasal/13> .
-<http://example.org/legal/document/uu/2018/6/pasal/10/ayat/4> legal:references <http://example.org/legal/document/uu/2018/6/pasal/14> .
-<http://example.org/legal/document/uu/2018/6/pasal/10/ayat/4> legal:references <http://example.org/legal/document/uu/2018/6/pasal/10/ayat/1> .
-<http://example.org/legal/document/uu/2018/6/pasal/10/ayat/4> legal:references <http://example.org/legal/document/uu/2018/6/pasal/10/ayat/1> .
-<http://example.org/legal/document/uu/2018/6/pasal/10/ayat/4> legal:references <http://example.org/legal/document/uu/2018/6/pasal/10/ayat/1> .
+<http://example.org/legal/document/uu/2018/6/pasal/10/ayat/4> legal:hasText "Ketentuan lebih lanjut mengenai tata cara penetapan dan pencabutan sebagaimana dimaksud pada ayat (1) dan ayat (2) diatur dengan Peraturan pemerintah." .
 <http://example.org/legal/document/uu/2018/6/pasal/10/ayat/4> legal:references <http://example.org/legal/document/uu/2018/6/pasal/10/ayat/2> .
 <http://example.org/legal/document/uu/2018/6/pasal/10/ayat/4> legal:references <http://example.org/legal/document/uu/2018/6/pasal/10/ayat/1> .
+<http://example.org/legal/document/uu/2018/6/bab/4> legal:hasPasal <http://example.org/legal/document/uu/2018/6/pasal/11> .
+<http://example.org/legal/document/uu/2018/6/pasal/11> legal:hasKey 11 .
+<http://example.org/legal/document/uu/2018/6/pasal/11> legal:hasText "(1) Penyelenggaraan Kekarantinaan Kesehatan pada Kedaruratan Kesehatan Masyarakat dilaksanakan oleh Pemerintah Pusat secara cepat dan tepat berdasarkan besarnya ancaman, efektivitas, dukungan sumber daya, dan teknik operasional dengan mempertimbangkan kedaulatan negara, keamanan, ekonomi, sosial, dan budaya. (2) Penyelenggaraan Kekarantinaan Kesehatan sebagaimana dimaksud pada ayat (1) dapat berkoordinasi dan bekerja sama dengan dunia internasional. (3) Ketentuan lebih lanjut mengenai penanggulangan Kedaruratan Kesehatan Masyarakat diatur dengan Peraturan Pemerintah." .
+<http://example.org/legal/document/uu/2018/6/pasal/11> legal:hasAyat <http://example.org/legal/document/uu/2018/6/pasal/11/ayat/1> .
+<http://example.org/legal/document/uu/2018/6/pasal/11/ayat/1> legal:hasKey 1 .
+<http://example.org/legal/document/uu/2018/6/pasal/11/ayat/1> legal:hasText "Penyelenggaraan Kekarantinaan Kesehatan pada Kedaruratan Kesehatan Masyarakat dilaksanakan oleh Pemerintah Pusat secara cepat dan tepat berdasarkan besarnya ancaman, efektivitas, dukungan sumber daya, dan teknik operasional dengan mempertimbangkan kedaulatan negara, keamanan, ekonomi, sosial, dan budaya." .
+<http://example.org/legal/document/uu/2018/6/pasal/11> legal:hasAyat <http://example.org/legal/document/uu/2018/6/pasal/11/ayat/2> .
+<http://example.org/legal/document/uu/2018/6/pasal/11/ayat/2> legal:hasKey 2 .
+<http://example.org/legal/document/uu/2018/6/pasal/11/ayat/2> legal:hasText "Penyelenggaraan Kekarantinaan Kesehatan sebagaimana dimaksud pada ayat (1) dapat berkoordinasi dan bekerja sama dengan dunia internasional." .
+<http://example.org/legal/document/uu/2018/6/pasal/11/ayat/2> legal:references <http://example.org/legal/document/uu/2018/6/pasal/11/ayat/1> .
+<http://example.org/legal/document/uu/2018/6/pasal/11> legal:hasAyat <http://example.org/legal/document/uu/2018/6/pasal/11/ayat/3> .
+<http://example.org/legal/document/uu/2018/6/pasal/11/ayat/3> legal:hasKey 3 .
+<http://example.org/legal/document/uu/2018/6/pasal/11/ayat/3> legal:hasText "Ketentuan lebih lanjut mengenai penanggulangan Kedaruratan Kesehatan Masyarakat diatur dengan Peraturan Pemerintah." .
+<http://example.org/legal/document/uu/2018/6/bab/4> legal:hasPasal <http://example.org/legal/document/uu/2018/6/pasal/12> .
+<http://example.org/legal/document/uu/2018/6/pasal/12> legal:hasKey 12 .
+<http://example.org/legal/document/uu/2018/6/pasal/12> legal:hasText "Dalam hal Kedaruratan Kesehatan Masyarakat merupakan kejadian yang meresahkan dunia, Pemerintah Pusat memberitahukan kepada pihak internasional sesuai dengan ketentuan hukum internasional." .
+<http://example.org/legal/document/uu/2018/6/bab/4> legal:hasPasal <http://example.org/legal/document/uu/2018/6/pasal/13> .
+<http://example.org/legal/document/uu/2018/6/pasal/13> legal:hasKey 13 .
+<http://example.org/legal/document/uu/2018/6/pasal/13> legal:hasText "(1) Pada kejadian Kedaruratan Kesehatan Masyarakat yang meresahkan dunia, Pemerintah pusat melakukan komunikasi, koordinasi, dan kerja sama dengan negara lain dan/atau organisasi internasional. (2) Komunikasi, koordinasi, dan kerja sama sebagaimana dimaksud pada ayat (1) dilakukan untuk mengidentifikasi penyebab, gejala dan tanda, faktor yang mempengaruhi, dan dampak yang ditimbulkan, serta tindakan yang harus dilakukan." .
+<http://example.org/legal/document/uu/2018/6/pasal/13> legal:hasAyat <http://example.org/legal/document/uu/2018/6/pasal/13/ayat/1> .
+<http://example.org/legal/document/uu/2018/6/pasal/13/ayat/1> legal:hasKey 1 .
+<http://example.org/legal/document/uu/2018/6/pasal/13/ayat/1> legal:hasText "Pada kejadian Kedaruratan Kesehatan Masyarakat yang meresahkan dunia, Pemerintah pusat melakukan komunikasi, koordinasi, dan kerja sama dengan negara lain dan/atau organisasi internasional." .
+<http://example.org/legal/document/uu/2018/6/pasal/13> legal:hasAyat <http://example.org/legal/document/uu/2018/6/pasal/13/ayat/2> .
+<http://example.org/legal/document/uu/2018/6/pasal/13/ayat/2> legal:hasKey 2 .
+<http://example.org/legal/document/uu/2018/6/pasal/13/ayat/2> legal:hasText "Komunikasi, koordinasi, dan kerja sama sebagaimana dimaksud pada ayat (1) dilakukan untuk mengidentifikasi penyebab, gejala dan tanda, faktor yang mempengaruhi, dan dampak yang ditimbulkan, serta tindakan yang harus dilakukan." .
+<http://example.org/legal/document/uu/2018/6/pasal/13/ayat/2> legal:references <http://example.org/legal/document/uu/2018/6/pasal/13/ayat/1> .
+<http://example.org/legal/document/uu/2018/6/bab/4> legal:hasPasal <http://example.org/legal/document/uu/2018/6/pasal/14> .
+<http://example.org/legal/document/uu/2018/6/pasal/14> legal:hasKey 14 .
+<http://example.org/legal/document/uu/2018/6/pasal/14> legal:hasText "(1) Dalam keadaan Kedaruratan Kesehatan Masyarakat yang meresahkan dunia, pemerintah pusat dapat menetapkan Karantina Wilayah di pintu Masuk. (2) Ketentuan lebih lanjut mengenai tata cara pelaksanaan Karantina Wilayah di pintu Masuk sebagaimana dimaksud pada ayat (1) diatur dengan Peraturan Pemerintah." .
+<http://example.org/legal/document/uu/2018/6/pasal/14> legal:hasAyat <http://example.org/legal/document/uu/2018/6/pasal/14/ayat/1> .
+<http://example.org/legal/document/uu/2018/6/pasal/14/ayat/1> legal:hasKey 1 .
+<http://example.org/legal/document/uu/2018/6/pasal/14/ayat/1> legal:hasText "Dalam keadaan Kedaruratan Kesehatan Masyarakat yang meresahkan dunia, pemerintah pusat dapat menetapkan Karantina Wilayah di pintu Masuk." .
+<http://example.org/legal/document/uu/2018/6/pasal/14> legal:hasAyat <http://example.org/legal/document/uu/2018/6/pasal/14/ayat/2> .
+<http://example.org/legal/document/uu/2018/6/pasal/14/ayat/2> legal:hasKey 2 .
+<http://example.org/legal/document/uu/2018/6/pasal/14/ayat/2> legal:hasText "Ketentuan lebih lanjut mengenai tata cara pelaksanaan Karantina Wilayah di pintu Masuk sebagaimana dimaksud pada ayat (1) diatur dengan Peraturan Pemerintah." .
+<http://example.org/legal/document/uu/2018/6/pasal/14/ayat/2> legal:references <http://example.org/legal/document/uu/2018/6/pasal/14/ayat/1> .
 <http://example.org/legal/document/uu/2018/6> legal:hasBab <http://example.org/legal/document/uu/2018/6/bab/5> .
 <http://example.org/legal/document/uu/2018/6/bab/5> legal:hasKey 5 .
 <http://example.org/legal/document/uu/2018/6/bab/5> legal:hasJudul "KEKARANTINAAN KESEHATAN DI PINTU MASUK DAN DI WILAYAH" .
@@ -1458,6 +1487,17 @@
 <http://example.org/legal/document/uu/2018/6/pasal/10/ayat/2> a legal:Ayat .
 <http://example.org/legal/document/uu/2018/6/pasal/10/ayat/3> a legal:Ayat .
 <http://example.org/legal/document/uu/2018/6/pasal/10/ayat/4> a legal:Ayat .
+<http://example.org/legal/document/uu/2018/6/pasal/11> a legal:Pasal .
+<http://example.org/legal/document/uu/2018/6/pasal/11/ayat/1> a legal:Ayat .
+<http://example.org/legal/document/uu/2018/6/pasal/11/ayat/2> a legal:Ayat .
+<http://example.org/legal/document/uu/2018/6/pasal/11/ayat/3> a legal:Ayat .
+<http://example.org/legal/document/uu/2018/6/pasal/12> a legal:Pasal .
+<http://example.org/legal/document/uu/2018/6/pasal/13> a legal:Pasal .
+<http://example.org/legal/document/uu/2018/6/pasal/13/ayat/1> a legal:Ayat .
+<http://example.org/legal/document/uu/2018/6/pasal/13/ayat/2> a legal:Ayat .
+<http://example.org/legal/document/uu/2018/6/pasal/14> a legal:Pasal .
+<http://example.org/legal/document/uu/2018/6/pasal/14/ayat/1> a legal:Ayat .
+<http://example.org/legal/document/uu/2018/6/pasal/14/ayat/2> a legal:Ayat .
 <http://example.org/legal/document/uu/2018/6/bab/5> a legal:Bab .
 <http://example.org/legal/document/uu/2018/6/pasal/15> a legal:Pasal .
 <http://example.org/legal/document/uu/2018/6/pasal/15/ayat/1> a legal:Ayat .
@@ -1859,6 +1899,17 @@
 <http://example.org/legal/document/uu/2018/6/pasal/10/ayat/2> legal:partOf <http://example.org/legal/document/uu/2018/6/pasal/10> .
 <http://example.org/legal/document/uu/2018/6/pasal/10/ayat/3> legal:partOf <http://example.org/legal/document/uu/2018/6/pasal/10> .
 <http://example.org/legal/document/uu/2018/6/pasal/10/ayat/4> legal:partOf <http://example.org/legal/document/uu/2018/6/pasal/10> .
+<http://example.org/legal/document/uu/2018/6/pasal/11> legal:partOf <http://example.org/legal/document/uu/2018/6/bab/4> .
+<http://example.org/legal/document/uu/2018/6/pasal/11/ayat/1> legal:partOf <http://example.org/legal/document/uu/2018/6/pasal/11> .
+<http://example.org/legal/document/uu/2018/6/pasal/11/ayat/2> legal:partOf <http://example.org/legal/document/uu/2018/6/pasal/11> .
+<http://example.org/legal/document/uu/2018/6/pasal/11/ayat/3> legal:partOf <http://example.org/legal/document/uu/2018/6/pasal/11> .
+<http://example.org/legal/document/uu/2018/6/pasal/12> legal:partOf <http://example.org/legal/document/uu/2018/6/bab/4> .
+<http://example.org/legal/document/uu/2018/6/pasal/13> legal:partOf <http://example.org/legal/document/uu/2018/6/bab/4> .
+<http://example.org/legal/document/uu/2018/6/pasal/13/ayat/1> legal:partOf <http://example.org/legal/document/uu/2018/6/pasal/13> .
+<http://example.org/legal/document/uu/2018/6/pasal/13/ayat/2> legal:partOf <http://example.org/legal/document/uu/2018/6/pasal/13> .
+<http://example.org/legal/document/uu/2018/6/pasal/14> legal:partOf <http://example.org/legal/document/uu/2018/6/bab/4> .
+<http://example.org/legal/document/uu/2018/6/pasal/14/ayat/1> legal:partOf <http://example.org/legal/document/uu/2018/6/pasal/14> .
+<http://example.org/legal/document/uu/2018/6/pasal/14/ayat/2> legal:partOf <http://example.org/legal/document/uu/2018/6/pasal/14> .
 <http://example.org/legal/document/uu/2018/6/bab/5> legal:partOf <http://example.org/legal/document/uu/2018/6> .
 <http://example.org/legal/document/uu/2018/6/pasal/15> legal:partOf <http://example.org/legal/document/uu/2018/6/bab/5> .
 <http://example.org/legal/document/uu/2018/6/pasal/15/ayat/1> legal:partOf <http://example.org/legal/document/uu/2018/6/pasal/15> .

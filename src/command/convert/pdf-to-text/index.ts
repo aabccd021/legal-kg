@@ -44,10 +44,6 @@ function postProcess(lines: string[]): string[] {
     .value();
 }
 
-// function x(lines: string[], line: string): string[] {
-//   return /^-\s?[0-9]*\s?-/.test(line) ? lines.slice(0, -3) : [...lines, line];
-// }
-
 function PyMuPDF(pdfPath: string, textPath: string, node: DocumentNode): void {
   const scannedJson = getTempFilePath(node, 'PyMuPDF', '.json');
   if (!scannedJson.exists) {
