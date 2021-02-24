@@ -1157,85 +1157,157 @@
                           {
                             "_key": "b",
                             "_type": "alphaPoint",
-                            "isi": {
-                              "_description": {
-                                "_type": "referenceText",
-                                "references": [
-                                ],
-                                "text": "kegiatan usaha berisiko menengah tinggi. (21 Perizinan Berusaha untuk kegiatan usaha berisiko menengah rendah sebagaimana dimaksud pada ayat (1) huruf a berupa pemberian:"
-                              },
-                              "_type": "points",
-                              "isi": [
-                                {
-                                  "_key": "a",
-                                  "_type": "alphaPoint",
-                                  "text": {
-                                    "_type": "referenceText",
-                                    "references": [
-                                    ],
-                                    "text": "nomor induk berusaha; dan"
-                                  }
-                                },
-                                {
-                                  "_key": "b",
-                                  "_type": "alphaPoint",
-                                  "isi": {
-                                    "_description": {
-                                      "_type": "referenceText",
-                                      "references": [
-                                      ],
-                                      "text": "sertifikat standar. (3) Pertzinan Berusaha untuk kegiatan usaha berisiko menengah tinggi sebagaimana dimaksud pada ayat (1) huruf b berupa pemberian:"
-                                    },
-                                    "_type": "points",
-                                    "isi": [
-                                      {
-                                        "_key": "a",
-                                        "_type": "alphaPoint",
-                                        "text": {
-                                          "_type": "referenceText",
-                                          "references": [
-                                          ],
-                                          "text": "nomor induk berusaha; dan"
-                                        }
-                                      },
-                                      {
-                                        "_key": "b",
-                                        "_type": "alphaPoint",
-                                        "text": {
-                                          "_type": "referenceText",
-                                          "references": [
-                                          ],
-                                          "text": "sertifikat standar. (4) Sertifikat... SK No 050508 A"
-                                        }
-                                      }
-                                    ],
-                                    "text": "sertifikat standar. (3) Pertzinan Berusaha untuk kegiatan usaha berisiko menengah tinggi sebagaimana dimaksud pada ayat (1) huruf b berupa pemberian: a. nomor induk berusaha; dan b. sertifikat standar. (4) Sertifikat... SK No 050508 A"
-                                  },
-                                  "text": {
-                                    "_type": "referenceText",
-                                    "references": [
-                                    ],
-                                    "text": "sertifikat standar. (3) Pertzinan Berusaha untuk kegiatan usaha berisiko menengah tinggi sebagaimana dimaksud pada ayat (1) huruf b berupa pemberian: a. nomor induk berusaha; dan b. sertifikat standar. (4) Sertifikat... SK No 050508 A"
-                                  }
-                                }
-                              ],
-                              "text": "kegiatan usaha berisiko menengah tinggi. (21 Perizinan Berusaha untuk kegiatan usaha berisiko menengah rendah sebagaimana dimaksud pada ayat (1) huruf a berupa pemberian: a. nomor induk berusaha; dan b. sertifikat standar. (3) Pertzinan Berusaha untuk kegiatan usaha berisiko menengah tinggi sebagaimana dimaksud pada ayat (1) huruf b berupa pemberian: a. nomor induk berusaha; dan b. sertifikat standar. (4) Sertifikat... SK No 050508 A"
-                            },
                             "text": {
                               "_type": "referenceText",
                               "references": [
                               ],
-                              "text": "kegiatan usaha berisiko menengah tinggi. (21 Perizinan Berusaha untuk kegiatan usaha berisiko menengah rendah sebagaimana dimaksud pada ayat (1) huruf a berupa pemberian: a. nomor induk berusaha; dan b. sertifikat standar. (3) Pertzinan Berusaha untuk kegiatan usaha berisiko menengah tinggi sebagaimana dimaksud pada ayat (1) huruf b berupa pemberian: a. nomor induk berusaha; dan b. sertifikat standar. (4) Sertifikat... SK No 050508 A"
+                              "text": "kegiatan usaha berisiko menengah tinggi."
                             }
                           }
                         ],
-                        "text": "Perizinan Berusaha untuk kegiatan usaha berisiko menengah sebagaimana dimaksud dalam Pasal 7 ayat (7) huruf b meliputi: a. kegiatan usaha berisiko menengah rendah; dan b. kegiatan usaha berisiko menengah tinggi. (21 Perizinan Berusaha untuk kegiatan usaha berisiko menengah rendah sebagaimana dimaksud pada ayat (1) huruf a berupa pemberian: a. nomor induk berusaha; dan b. sertifikat standar. (3) Pertzinan Berusaha untuk kegiatan usaha berisiko menengah tinggi sebagaimana dimaksud pada ayat (1) huruf b berupa pemberian: a. nomor induk berusaha; dan b. sertifikat standar. (4) Sertifikat... SK No 050508 A"
+                        "text": "Perizinan Berusaha untuk kegiatan usaha berisiko menengah sebagaimana dimaksud dalam Pasal 7 ayat (7) huruf b meliputi: a. kegiatan usaha berisiko menengah rendah; dan b. kegiatan usaha berisiko menengah tinggi."
                       },
                       "text": {
                         "_type": "referenceText",
                         "references": [
                         ],
-                        "text": "Perizinan Berusaha untuk kegiatan usaha berisiko menengah sebagaimana dimaksud dalam Pasal 7 ayat (7) huruf b meliputi: a. kegiatan usaha berisiko menengah rendah; dan b. kegiatan usaha berisiko menengah tinggi. (21 Perizinan Berusaha untuk kegiatan usaha berisiko menengah rendah sebagaimana dimaksud pada ayat (1) huruf a berupa pemberian: a. nomor induk berusaha; dan b. sertifikat standar. (3) Pertzinan Berusaha untuk kegiatan usaha berisiko menengah tinggi sebagaimana dimaksud pada ayat (1) huruf b berupa pemberian: a. nomor induk berusaha; dan b. sertifikat standar. (4) Sertifikat... SK No 050508 A"
+                        "text": "Perizinan Berusaha untuk kegiatan usaha berisiko menengah sebagaimana dimaksud dalam Pasal 7 ayat (7) huruf b meliputi: a. kegiatan usaha berisiko menengah rendah; dan b. kegiatan usaha berisiko menengah tinggi."
+                      }
+                    },
+                    {
+                      "_key": 2,
+                      "_type": "ayat",
+                      "isi": {
+                        "_description": {
+                          "_type": "referenceText",
+                          "references": [
+                            {
+                              "end": 111,
+                              "node": {
+                                "_key": "a",
+                                "_structureType": "point",
+                                "parentPoints": {
+                                  "_key": 1,
+                                  "_structureType": "ayat",
+                                  "parentPasal": {
+                                    "_key": 9,
+                                    "_structureType": "pasal",
+                                    "parentDocument": {
+                                      "_documentType": "uu",
+                                      "nomor": 11,
+                                      "tahun": 2020
+                                    }
+                                  }
+                                }
+                              },
+                              "start": 95
+                            }
+                          ],
+                          "text": "(21 Perizinan Berusaha untuk kegiatan usaha berisiko menengah rendah sebagaimana dimaksud pada ayat (1) huruf a berupa pemberian:"
+                        },
+                        "_type": "points",
+                        "isi": [
+                          {
+                            "_key": "a",
+                            "_type": "alphaPoint",
+                            "text": {
+                              "_type": "referenceText",
+                              "references": [
+                              ],
+                              "text": "nomor induk berusaha; dan"
+                            }
+                          },
+                          {
+                            "_key": "b",
+                            "_type": "alphaPoint",
+                            "text": {
+                              "_type": "referenceText",
+                              "references": [
+                              ],
+                              "text": "sertifikat standar."
+                            }
+                          }
+                        ],
+                        "text": "(21 Perizinan Berusaha untuk kegiatan usaha berisiko menengah rendah sebagaimana dimaksud pada ayat (1) huruf a berupa pemberian: a. nomor induk berusaha; dan b. sertifikat standar."
+                      },
+                      "text": {
+                        "_type": "referenceText",
+                        "references": [
+                        ],
+                        "text": "(21 Perizinan Berusaha untuk kegiatan usaha berisiko menengah rendah sebagaimana dimaksud pada ayat (1) huruf a berupa pemberian: a. nomor induk berusaha; dan b. sertifikat standar."
+                      }
+                    },
+                    {
+                      "_key": 3,
+                      "_type": "ayat",
+                      "isi": {
+                        "_description": {
+                          "_type": "referenceText",
+                          "references": [
+                            {
+                              "end": 107,
+                              "node": {
+                                "_key": "b",
+                                "_structureType": "point",
+                                "parentPoints": {
+                                  "_key": 1,
+                                  "_structureType": "ayat",
+                                  "parentPasal": {
+                                    "_key": 9,
+                                    "_structureType": "pasal",
+                                    "parentDocument": {
+                                      "_documentType": "uu",
+                                      "nomor": 11,
+                                      "tahun": 2020
+                                    }
+                                  }
+                                }
+                              },
+                              "start": 91
+                            }
+                          ],
+                          "text": "Pertzinan Berusaha untuk kegiatan usaha berisiko menengah tinggi sebagaimana dimaksud pada ayat (1) huruf b berupa pemberian:"
+                        },
+                        "_type": "points",
+                        "isi": [
+                          {
+                            "_key": "a",
+                            "_type": "alphaPoint",
+                            "text": {
+                              "_type": "referenceText",
+                              "references": [
+                              ],
+                              "text": "nomor induk berusaha; dan"
+                            }
+                          },
+                          {
+                            "_key": "b",
+                            "_type": "alphaPoint",
+                            "text": {
+                              "_type": "referenceText",
+                              "references": [
+                              ],
+                              "text": "sertifikat standar."
+                            }
+                          }
+                        ],
+                        "text": "Pertzinan Berusaha untuk kegiatan usaha berisiko menengah tinggi sebagaimana dimaksud pada ayat (1) huruf b berupa pemberian: a. nomor induk berusaha; dan b. sertifikat standar."
+                      },
+                      "text": {
+                        "_type": "referenceText",
+                        "references": [
+                        ],
+                        "text": "Pertzinan Berusaha untuk kegiatan usaha berisiko menengah tinggi sebagaimana dimaksud pada ayat (1) huruf b berupa pemberian: a. nomor induk berusaha; dan b. sertifikat standar."
+                      }
+                    },
+                    {
+                      "_key": 4,
+                      "_type": "ayat",
+                      "text": {
+                        "_type": "referenceText",
+                        "references": [
+                        ],
+                        "text": "Sertifikat... SK No 050508 A"
                       }
                     }
                   ],

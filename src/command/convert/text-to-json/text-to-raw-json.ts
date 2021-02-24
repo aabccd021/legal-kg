@@ -1,4 +1,4 @@
-import { compact, flatMap, isEmpty, isNil, mapValues } from 'lodash';
+import { compact, flatMap, isEmpty, isNil, isUndefined, mapValues } from 'lodash';
 import { toArabic } from 'roman-numerals';
 import { DocumentNode } from '../../../legal/document';
 import { Document } from '../../../legal/document/index';
@@ -206,6 +206,7 @@ function _linesToParagraf(incLines: IncLines): Paragraf {
 /**
  * Pasal
  */
+// dirty
 const pasalRegex = /^Pasa(l|i) /;
 
 function getPasalKey(line?: string): number | undefined {
@@ -234,12 +235,26 @@ function _linesToPasal({ _key, lines }: IncLines): Pasal {
  */
 const ayatRegexp = /^\([0-9]+\)/;
 
-function getAyatKey(line?: string): number | undefined {
-  const matches = line?.match(ayatRegexp);
-  const firstMatch = matches?.[0];
-  const keyStr = firstMatch?.slice(1, -1); // remove parenthesis
-
-  return safeParseInt(keyStr);
+// dirty
+function getAyatKey(line?: string, prevKey?: number): number | undefined {
+  if (isUndefined(line)) return undefined;
+  const firstMatch = line?.match(ayatRegexp)?.[0];
+  if (!isUndefined(firstMatch)) {
+    // `(42)` -> 42
+    return safeParseInt(firstMatch?.slice(1, -1));
+  }
+  if (!isUndefined(prevKey)) {
+    const dirtyAyatRegexp = /^\([0-9]+ /;
+    const firstDirtyMatches = line?.match(dirtyAyatRegexp)?.[0];
+    if (!isUndefined(firstDirtyMatches)) {
+      // `(21 ` -> 2
+      const cleanedKey = safeParseInt(line.split(' ')?.[0]?.slice(1, -1));
+      if (!isUndefined(cleanedKey) && cleanedKey === prevKey + 1) {
+        return cleanedKey;
+      }
+    }
+  }
+  return undefined;
 }
 
 function getAyats(lines: string[]): Ayat[] | undefined {
@@ -369,13 +384,13 @@ type IncLines = { _key: number; lines: string[] };
 
 function extractIncLines(
   lines: string[],
-  keyOf: (string: string) => number | undefined
+  keyOf: (string: string, prev?: number) => number | undefined
 ): IncLines[] {
   const elements: IncLines[] = [{ _key: -1, lines: [] }];
   let prevKey: number | undefined = undefined;
 
   for (const line of lines) {
-    const lineKey = keyOf(line);
+    const lineKey = keyOf(line, prevKey);
 
     if (!isNil(lineKey)) {
       if (!prevKey || lineKey === prevKey + 1) {
@@ -394,6 +409,7 @@ function safeParseInt(string?: string): number | undefined {
   if (isNil(string)) return undefined;
 
   try {
+    // dirty
     const parseResult = parseInt(string.replaceAll('T', '7'));
     if (isNaN(parseResult)) return undefined;
 
