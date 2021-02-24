@@ -37,7 +37,7 @@ export function textToRawJson(text: string, documentNode: DocumentNode): Documen
     ['_sekretaris', /^SEKRETARIS/, 'optional'],
     ['_dokumen', /^(LEMBARAN NEGARA|BERITA DAERAH)/, 'optional'],
     ['salinanSesuaiDenganAslinya', /^Salinan/, 'optional'],
-    ['penjelasan', /^P E N J E L A S A N/, 'optional'],
+    ['penjelasan', /^PENJELASAN/, 'optional'],
   ];
   const extract_result = extractLines(lines, extractors);
   const nomor_tahun = extract_result._nomor?.[0]

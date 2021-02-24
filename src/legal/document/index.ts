@@ -56,7 +56,7 @@ export function getDocumentPath(node: DocumentNode): string {
 function _getDocumentPath(node: DocumentNode): string {
   if (node._documentType === 'uu') return _uu.getPath(node);
   if (node._documentType === 'perda') return _perda.getPath(node);
-  if (node._documentType === 'uud') return _uud.getName(node);
+  if (node._documentType === 'uud') return '';
   assertNever(node);
 }
 
