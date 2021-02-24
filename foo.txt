@@ -1,0 +1,631 @@
+[1mdiff --git a/maintained_documents/text/uu/2020/11.txt b/maintained_documents/text/uu/2020/11.txt[m
+[1mindex 2c1f3b3..583073a 100644[m
+[1m--- a/maintained_documents/text/uu/2020/11.txt[m
+[1m+++ b/maintained_documents/text/uu/2020/11.txt[m
+[36m@@ -80,6 +80,7 @@[m [mPRESIDEN REPUBLIK INDONESIA[m
+ MEMUTUSI(AN:[m
+ Menetapkan[m
+ UNDANG-UNDANG TENTANG CIPTA KERJA.[m
+[32m+[m[32mSK No 050502 A[m
+ BAB I[m
+ KETENTUAN UMUM[m
+ Pasal 1[m
+[36m@@ -3571,6 +3572,15 @@[m [mmutu udara ambien, baku mutu air, baku mutu air[m
+ laut, atau kriteria baku kerusakan lingkungan hidup[m
+ yang tidak sesuai dengan Perizinan Berusaha yang[m
+ dimilikinya dikenai sanksi administratif.[m
+[32m+[m[32mPasal 82C[m
+[32m+[m[32m(1) Sanksi administratif sebagaimana dimaksud dalam[m
+[32m+[m[32mPasal 82A dan Pasal 82lr- ayat (1), ayat (21, dan ayat[m
+[32m+[m[32m(3) berupa:[m
+[32m+[m[32ma. teguran tertulis;[m
+[32m+[m[32mb. paksaan pemerintah;[m
+[32m+[m[32mc. denda administratif;[m
+[32m+[m[32md. pembekuan Perizinan Berusaha; dan latau[m
+[32m+[m[32me. pencabutan Perizinan Berusaha.[m
+ (2) Ketentuan lebih lanjut mengenai kriteria, jenis,[m
+ besaran denda, dan tata cara pengenaan sanksi[m
+ administratif sebagaimana dimaksud pada ayat (1)[m
+[36m@@ -3877,6 +3887,7 @@[m [mpengawasan.[m
+ (2) Pembangunan bangunan gedung dapat dilakukan,[m
+ baik di tanah milik sendiri maupun di tanah milik[m
+ pihak lain.[m
+[32m+[m[32mSK No 050604 A[m
+ (3) Pembangunan bangunan gedung di atas tanah milik[m
+ pihak lain sebagaimana dimaksud pada ayat (2)[m
+ dilakukan berdasarkan perjanjian tertulis antara[m
+[36m@@ -7772,6 +7783,20 @@[m [mdengan persetujuan dari Pemerintah Pusat.[m
+ Ketentuan Pasal 28 diubah sehingga berbunyi sebagai[m
+ berikut:[m
+ Pasal 28[m
+[32m+[m[32mSetiap pejabat dilarang:[m
+[32m+[m[32ma. menerbitkan Perizinan Berusaha terkait pemanfaatan[m
+[32m+[m[32mhasil hutan kayu dan/atau penggunaan kawasan[m
+[32m+[m[32mhutan di dalam kawasan hutan yang tidak sesuai[m
+[32m+[m[32mdengan kewenangannya;[m
+[32m+[m[32mb. menerbitkan Perizinan Berusaha di dalam kawasan[m
+[32m+[m[32mhutan danf atau Perizinan Berusaha terkait[m
+[32m+[m[32mpenggunaan kawasan hutan yang tidak sesuai dengan[m
+[32m+[m[32mketentuan peraturan perundang-undangan;[m
+[32m+[m[32mc. melindungi pelaku pembalakan liar dan/atau[m
+[32m+[m[32mpenggunaan kawasan hutan secara tidak sah;[m
+[32m+[m[32md. ikut serta atau membantu kegiatan pembalakan liar[m
+[32m+[m[32mdan/atau penggunaan kawasan hutan secara tidak[m
+[32m+[m[32msah;[m
+ e. melakukan permufakatan untuk[m
+ terjadinya[m
+ pembalakan liar dan f atau penggunaan kawasan[m
+[36m@@ -9119,6 +9144,8 @@[m [mmengakibatkan timbulnya korban/kerusakan terhadap[m
+ kesehatan, keselamatan, dan/atau lingkungan dipidana[m
+ dengan pidana denda paling banyak Rp50.000'000'000,00[m
+ (lima puluh miliar ruPiah).[m
+[32m+[m[32m33. Ketentuan Pasal 72 diubah sehingga berbunyi sebagai[m
+[32m+[m[32mberikut:[m
+ Pasal72[m
+ Badan Usaha pemilik Perizinan Berusaha di bidang Panas[m
+ Bumi yang dengan sengaja menggunakan Perizinan[m
+[36m@@ -9741,6 +9768,11 @@[m [mbidang pertanahan dengan[m
+ memperhatikan ketentuan hukum adat setempat.[m
+ 22. Ketentuan Pasal 32 diubah sehingga berbunyi sebagai[m
+ berikut:[m
+[32m+[m[32mPasal 32[m
+[32m+[m[32m(1) Penetapan dan tata cara pembayaran ganti rugi hak[m
+[32m+[m[32matas tanah atau kompensasi sebagaimana dimaksud[m
+[32m+[m[32mdalam Pasal 30 dilakukan sesuai dengan ketentuan[m
+[32m+[m[32mperaturan perundang-undangan.[m
+ (2) Ganti rugi hak atas tanah atau kompensasi[m
+ sebagaimana dimaksud dalam Pasal 30 dibebankan[m
+ kepada peme gan g P erizrnan Beru saha untuk ke giatan[m
+[36m@@ -9836,6 +9868,47 @@[m [mPemerintah.[m
+ 29.[m
+ Ketentuan Pasal 46 diubah sehingga berbunyi sebagai[m
+ berikut:[m
+[32m+[m[32mPasal 46[m
+[32m+[m[32m(1) Pemerintah Pusat atau Pemerintah Daerah[m
+[32m+[m[32mberdasarkan norma, standar, prosedur, dan kriteria[m
+[32m+[m[32myang ditetapkan oleh Pemerintah Pusat melakukan[m
+[32m+[m[32mpembinaan dan pengawasan terhadap usaha[m
+[32m+[m[32mpenyediaan tenaga listrik dalam hal:[m
+[32m+[m[32ma. penyediaan dan pemanfaatan sumber energi[m
+[32m+[m[32muntuk pembangkit tenaga listrik;[m
+[32m+[m[32mb. pemanfaatan jaringan tenaga listrik untuk[m
+[32m+[m[32mkepentingan telekomunikasi, multimedia, dan[m
+[32m+[m[32minformatika;[m
+[32m+[m[32mc. pemenuhan kecukupan pasokan tenaga listrik;[m
+[32m+[m[32md. pemenuhanpersyaratanketeknikan;[m
+[32m+[m[32me. pemenuhan aspek pelindungan lingkungan[m
+[32m+[m[32mhidup;[m
+[32m+[m[32mf.[m
+[32m+[m[32mpengutamaan pemanfaatan barang dan jasa[m
+[32m+[m[32mdalam negeri;[m
+[32m+[m[32mg. penggunaan tenaga kerja asing;[m
+[32m+[m[32mh. pemenuhan tingkat mutu dan keandalan[m
+[32m+[m[32mpenyediaan tenaga iistrik;[m
+[32m+[m[32mi.[m
+[32m+[m[32mpemenuhanpersyaratanperizinan;[m
+[32m+[m[32mj.[m
+[32m+[m[32mpenerapan tarif tenaga listrik; dan[m
+[32m+[m[32mk. pemenuhan mutu jasa yang diberikan oleh[m
+[32m+[m[32musaha penunjang tenaga listrik.[m
+[32m+[m[32m(2) Dalam melakukan pengawasan sebagaimana[m
+[32m+[m[32mdimaksud pada ayat (1), Pemerintah Pusat atau[m
+[32m+[m[32mPemerintah Daerah sesuai kewenangannya[m
+[32m+[m[32mberdasarkan norma, standar, prosedur, dan kriteria[m
+[32m+[m[32myang ditetapkan oleh Pemerintah Pusat dapat:[m
+[32m+[m[32ma. melakukan inspeksi pengawasan di lapangan;[m
+[32m+[m[32mb. meminta laporan pelaksanaan usaha di bidang[m
+[32m+[m[32mketenagalistrikan;[m
+[32m+[m[32mc. melakukan penelitian dan evaiuasi atas laporan[m
+[32m+[m[32mpelaksanaan usaha di bidang ketenagalistrikan;[m
+[32m+[m[32mdan[m
+[32m+[m[32mPRESIDEN[m
+[32m+[m[32mREPUELIK INDONESIA[m
+[32m+[m[32m-263 -[m
+ d. memberikan sanksi administratif terhadap[m
+ pelanggaran ketentuan Perizinan Berusaha.[m
+ (3) Dalam melaksanakan pengawasan keteknikan[m
+[36m@@ -10559,6 +10632,8 @@[m [mBarang kebutuhan pokok danf atau Barang penting.[m
+ dan/atau informasi mengenai persediaan Barang[m
+ kebutuhan pokok dan/atau Barang penting.[m
+ 8[m
+[32m+[m[32mKetentuan Pasal 33 diubah sehingga berbunyi sebagai[m
+[32m+[m[32mberikut:[m
+ Pasal 33[m
+ (1) Produsen atau Importir yang tidak memenuhi[m
+ ketentuan pendaftaran Barang sebagaimana[m
+[36m@@ -12140,6 +12215,17 @@[m [mdikenai sanksi administratif.[m
+ 19. Ketentuan Pasal[m
+ berikut:[m
+ 108 diubah sehingga berbunyi sebagai[m
+[32m+[m[32mPasal 1O8[m
+[32m+[m[32m(1) Sanksi administratif sebagaimana dimaksud dalam[m
+[32m+[m[32mPasal lO7 dapat berupa:[m
+[32m+[m[32ma.[m
+[32m+[m[32mperingatan tertulis;[m
+[32m+[m[32mb.[m
+[32m+[m[32mpembatasan kegiatan pembangunan danf atau[m
+[32m+[m[32mkegiatan usaha;[m
+[32m+[m[32mc.[m
+[32m+[m[32mpenghentian sementara pada pekerjaan[m
+[32m+[m[32mpelaksanaan pembangunan ;[m
+ d.[m
+ penghentian sementara atau penghentian tetap[m
+ pada pengelolaan rumah susun;[m
+[36m@@ -16810,6 +16896,47 @@[m [mstandar pelayanan Rumah Sakit;[m
+ c. memberikan pelayanan gawat darurat kepada[m
+ pasien sesuai dengan kemampuan pelayanannya;[m
+ d. berperan .[m
+[32m+[m[32md. berperan aktif dalam memberikan pelayanan[m
+[32m+[m[32mkesehatan pada bencana sesuai dengan[m
+[32m+[m[32mkemampuan pelayanannya;[m
+[32m+[m[32me. menyediakan sarana dan pelayanan bagi[m
+[32m+[m[32mmasyarakat tidak mampu atau miskin;[m
+[32m+[m[32mf.[m
+[32m+[m[32mmelaksanakan fungsi sosial antara lain dengan[m
+[32m+[m[32mmemberikan fasilitas pelayanan pasien tidak[m
+[32m+[m[32mmampu/miskin, pelayanan gawat darurat tanpa[m
+[32m+[m[32muang muka, ambulan gratis, pelayanan korban[m
+[32m+[m[32mbencana dan kejadian luar biasa, atau bakti sosial[m
+[32m+[m[32mbagi misi kemanusiaan;[m
+[32m+[m[32mg. membuat, melaksanakan, dan menjaga standar[m
+[32m+[m[32mmutu pelayanan kesehatan di Rumah Sakit sebagai[m
+[32m+[m[32macuan dalam melayani pasien;[m
+[32m+[m[32mh. menyelenggarakan rekam medis;[m
+[32m+[m[32mi.[m
+[32m+[m[32mmenyediakan sarana dan prasarana umum yang[m
+[32m+[m[32mlayak antara lain sarana ibadah, parkir, ruang[m
+[32m+[m[32mtunggu, sarana untuk orang cacat, wanita[m
+[32m+[m[32mmenJrusui, anak-anak, dan lanjut usia;[m
+[32m+[m[32mj.[m
+[32m+[m[32mmelaksanakan sistem rujukan;[m
+[32m+[m[32mk. menolak keinginan pasien yang bertentangan[m
+[32m+[m[32mdengan standar profesi dan etika serta ketentuan[m
+[32m+[m[32mperaturan perundang-undangan ;[m
+[32m+[m[32ml.[m
+[32m+[m[32mmemberikan informasi yang benar, jelas, dan jujur[m
+[32m+[m[32mmengenai hak dan kewajiban pasien;[m
+[32m+[m[32mm. menghormati dan melindungi hak pasien;[m
+[32m+[m[32mn. melaksanakan etika Rumah Sakit;[m
+[32m+[m[32mo. memiliki sistem pencegahan kecelakaan dan[m
+[32m+[m[32mpenanggulangan bencana;[m
+[32m+[m[32mp. melaksanakan program pemerintah di bidang[m
+[32m+[m[32mkesehatan, baik secara regional maupun nasional;[m
+[32m+[m[32mq. membuat daftar tenaga medis yang melakukan[m
+[32m+[m[32mpraktik kedokteran atau kedokteran gigi dan tenaga[m
+[32m+[m[32mkesehatan lainnya;[m
+[32m+[m[32mr.[m
+[32m+[m[32mmen5rusun dan melaksanakan peraturan internal[m
+[32m+[m[32mRumah Sakit;[m
+ s. melindungi dan memberikan bantuan hukum bagi[m
+ semua petugas Rumah Sakit dalam melaksanakan[m
+ tugas; dan[m
+[36m@@ -17290,6 +17417,49 @@[m [mtanpa bahan tambahan.[m
+ perseorangan maupun beserta keluarganya yang[m
+ melakukan usaha tani di bidang Pangan.[m
+ 21. Nelayan . .[m
+[32m+[m[32m21. Nelayan adalah warga negara Indonesia, baik[m
+[32m+[m[32mperseorangan maupun beserta keluarganya yang mata[m
+[32m+[m[32mpencahariannya melakukan penangkapan ikan.[m
+[32m+[m[32m22. Pembudi Daya Ikan adalah warga negara Indonesia,[m
+[32m+[m[32mbaik perseorangan maupun beserta keluarganya yang[m
+[32m+[m[32mmata pencahariannya membesarkan, membiakkan,[m
+[32m+[m[32mdanf atau memelihara ikan dan sumber hayati perairan[m
+[32m+[m[32mlainnya serta memanen hasilnya dalam lingkungan yang[m
+[32m+[m[32mterkontrol.[m
+[32m+[m[32m23. Perdagangan Pangan adalah setiap kegiatan atau[m
+[32m+[m[32mserangkaian kegiatan dalam rangka penjualan dan/atau[m
+[32m+[m[32mpembelian Pangan, termasuk penawaran untuk menjual[m
+[32m+[m[32mPangan dan kegiatan lain yang berkenaan dengan[m
+[32m+[m[32mpemindahtanganan Pangan dengan memperoleh[m
+[32m+[m[32mimbalan.[m
+[32m+[m[32m24. Ekspor Pangan adalah kegiatan mengeluarkan Pangan[m
+[32m+[m[32mdari daerah pabean negara Republik Indonesia yang[m
+[32m+[m[32mmeliputi wilayah darat, perairan, dan ruang udara di[m
+[32m+[m[32matasnya, tempat-tempat tertentu di Zona Ekonomi[m
+[32m+[m[32mEksklusif, dan landas kontinen.[m
+[32m+[m[32m25. Impor Pangan adalah kegiatan memasukkan Pangan ke[m
+[32m+[m[32mdalam daerah pabean negara Republik Indonesia yang[m
+[32m+[m[32mmeliputi wilayah darat, perairan, dan ruang udara di[m
+[32m+[m[32matasnya, tempat-tempat tertentu di Zona Ekonomi[m
+[32m+[m[32mEksklusif, dan landas kontinen.[m
+[32m+[m[32m26. Peredaran Pangan adalah setiap kegiatan atau[m
+[32m+[m[32mserangkaian kegiatan dalam rangka penyaluran Pangan[m
+[32m+[m[32mkepada masyarakat, baik diperdagangkan maupun[m
+[32m+[m[32mtidak.[m
+[32m+[m[32m27. Bantuan Pangan adalah Bantuan Pangan Pokok dan[m
+[32m+[m[32mPangan lainnya yang diberikan oleh Pemerintah,[m
+[32m+[m[32mPemerintah Daerah, dan/atau masyarakat dalam[m
+[32m+[m[32mmengatasi Masalah Pangan dan Krisis Pangan,[m
+[32m+[m[32mmeningkatkan akses Pangan bagi masyarakat miskin[m
+[32m+[m[32mdan/atau rawan Pangan dan Gizi, dan kerja sama[m
+[32m+[m[32minternasional.[m
+[32m+[m[32m28. Masalah Pangan adalah keadaan kekurangan,[m
+[32m+[m[32mkelebihan, dan/atau ketidakmampuan perseorangan[m
+[32m+[m[32matau rumah tangga dalam memenuhi kebutuhan[m
+[32m+[m[32mPangan dan Keamanan Pangan.[m
+[32m+[m[32mFRESIDEN[m
+[32m+[m[32mREPUtsUK INDONESIA[m
+[32m+[m[32m-474 -[m
+ 29. Krisis Pangan adalah kondisi kelangkaan Pangan yang[m
+ dialami sebagian besar masyarakat di suatu wilayah[m
+ yang disebabkan oleh, antara lain, kesulitan distribusi[m
+[36m@@ -17770,6 +17940,18 @@[m [mdiubah sebagai berikut:[m
+ 1[m
+ Ketentuan Pasal 14 diubah sehingga berbunyi sebagai[m
+ berikut:[m
+[32m+[m[32mPasal 14[m
+[32m+[m[32m(1) Usaha pariwisata meliputi:[m
+[32m+[m[32ma. daya tarik wisata;[m
+[32m+[m[32mb. kawasan pariwisata;[m
+[32m+[m[32mc. jasa transportasi wisata;[m
+[32m+[m[32md. jasa perjalanan wisata;[m
+[32m+[m[32me. jasa makanan dan minuman;[m
+[32m+[m[32mf. penyediaan akomodasi;[m
+[32m+[m[32mg. penyelenggaraan kegiatan hiburan dan rekreasi;[m
+[32m+[m[32mh. penyelenggaraan pertemuan, perjalanan[m
+[32m+[m[32minsentif, konferensi, dan pameran;[m
+[32m+[m[32mi. jasa informasi wisata;[m
+ j.[m
+ jasa konsultan pariwisata;[m
+ k. jasa pramuwisata;[m
+[36m@@ -19548,6 +19730,9 @@[m [mperundang-undangan.[m
+ 11[m
+ Ketentuan Pasal 49 diubah sehingga berbunyi sebagai[m
+ berikut:[m
+[32m+[m[32mPasal 49[m
+[32m+[m[32mKetentuan lebih lanjut mengenai penggunaan tenaga kerja[m
+[32m+[m[32masing diatur dalam Peraturan Pemerintah.[m
+ 12. Ketentuan Pasal 56 diubah sehingga berbunyi sebagai[m
+ berikut:[m
+ Pasal 56[m
+[36m@@ -20088,6 +20273,30 @@[m [mPasal 154A[m
+ hubungan kerja dapat terjadi karena[m
+ (1) Pemutusan[m
+ alasan:[m
+[32m+[m[32ma- perusahaan melakukan[m
+[32m+[m[32mpenggabungan,[m
+[32m+[m[32mpeleburan, pengambilalihan, atau pemisahan[m
+[32m+[m[32mperusahaan dan pekerja/buruh tidak bersedia[m
+[32m+[m[32mmelanjutkan hubungan kerja atau pengusaha[m
+[32m+[m[32mtidak bersedia menerima pekerja/buruh;[m
+[32m+[m[32mb. perusahaan melakukan efisiensi diikuti dengan[m
+[32m+[m[32mpenutupan perusahaan atau tidak diikuti dengan[m
+[32m+[m[32mpenutupan perusahaan yang disebabkan[m
+[32m+[m[32mperusahaan mengalami kerugian;[m
+[32m+[m[32mc. perusahaan tutup yang disebabkan karena[m
+[32m+[m[32mperusahaan mengalami kerugian secara terus[m
+[32m+[m[32mmenerus selama 2 (dua) tahun;[m
+[32m+[m[32md. perusahaan tutup yang disebabkan keadaan[m
+[32m+[m[32mmemaksa (force majeur) .[m
+[32m+[m[32me. perusahaan dalam keadaan penundaan kewajiban[m
+[32m+[m[32mpembayaran utang;[m
+[32m+[m[32mf.[m
+[32m+[m[32mperusahaan pailit;[m
+[32m+[m[32mg. adanya permohonan pemutusan hubungan kerja[m
+[32m+[m[32myang diajukan oleh pekerja/buruh dengan alasan[m
+[32m+[m[32mpengusaha melakukan perbuatan sebagai berikut:[m
+[32m+[m[32m1. menganiaya, menghina secara kasar atau[m
+[32m+[m[32mmengancam pekerja/ buruh;[m
+ 2. membujuk[m
+ dan/atau[m
+ menyuruh[m
+[36m@@ -21742,6 +21951,52 @@[m [mPeraturan Pemerintah.[m
+ Ketentuan Pasal 63 diubah[m
+ berikut:[m
+ sehingga berbunyi sebagai[m
+[32m+[m[32mPasal 63[m
+[32m+[m[32m(1) Orang Asing tertentu yang berada di Wilayah[m
+[32m+[m[32mIndonesia wajib memiliki Penjamin yang menjamin[m
+[32m+[m[32mkeberadaannya.[m
+[32m+[m[32m(21 Penjamin bertanggung jawab atas keberadaan dan[m
+[32m+[m[32mkegiatan Orang Asing yang dijamin selama tinggal di[m
+[32m+[m[32mWilayah Indonesia serta wajib melaporkan setiap[m
+[32m+[m[32mperubahan status sipil, status Keimigrasian, dan[m
+[32m+[m[32mperubahan alamat.[m
+[32m+[m[32m(3) Penjamin wajib membayar biaya yang timbul untuk[m
+[32m+[m[32mmemulangkan atau mengeluarkan Orang Asing yang[m
+[32m+[m[32mdijaminnya dari Wilayah Indonesia apabila Orang[m
+[32m+[m[32mAsing yang bersangkutan:[m
+[32m+[m[32ma.[m
+[32m+[m[32mtelah habis masa berlaku lzin Tinggalnya;[m
+[32m+[m[32mdan/atau[m
+[32m+[m[32mb.[m
+[32m+[m[32mdikenai Tindakan Administratif Keimigrasian[m
+[32m+[m[32mberupa Deportasi.[m
+[32m+[m[32m(41 Ketentuan mengenai penjaminan tidak berlaku bagi:[m
+[32m+[m[32ma.[m
+[32m+[m[32mOrang Asing yang kawin secara sah dengan[m
+[32m+[m[32mwarga negara Indonesia;[m
+[32m+[m[32mb.[m
+[32m+[m[32mPelaku Usaha dengan kewarganegaraan asing[m
+[32m+[m[32myang menanamkan modal sebagai investasinya[m
+[32m+[m[32mdi Indonesia sebagaimana dimaksud dalam[m
+[32m+[m[32mketentuan peraturan perundang-undangan[m
+[32m+[m[32mmengenai penanaman modal; dan[m
+[32m+[m[32mc.[m
+[32m+[m[32mWarga dari suatu negara yang secara resiprokal[m
+[32m+[m[32mmemberikan pembebasan penjaminan.[m
+[32m+[m[32m(5) Ketentuan sebagaimana dimaksud dalam Pasal 62[m
+[32m+[m[32mayat (21 huruf g tidak berlaku dalam hal pemegang[m
+[32m+[m[32mIzin Tinggal Tetap tersebut putus hubungan[m
+[32m+[m[32mperkawinannya dengan warga negara Indonesia[m
+[32m+[m[32mmemperoleh penjaminan yang[m
+[32m+[m[32mmenjamin[m
+[32m+[m[32mkeberadaannya sebagaimana dimaksud pada ayat (1).[m
+[32m+[m[32m(6) Orang Asing sebagaimana dimaksud pada ayat (4)[m
+[32m+[m[32mhuruf b menyetorkan jaminan keimigrasian sebagai[m
+[32m+[m[32mpengganti penjamin selama berada di Wilayah[m
+[32m+[m[32mIndonesia.[m
+[32m+[m[32m- PRESIDEN[m
+[32m+[m[32mREPUBUK INDONESIA[m
+[32m+[m[32m-601 -[m
+ (71 Ketentuan lebih lanjut mengenai tata cara jaminan[m
+ keimigrasian bagi Orang Asing diatur dalam[m
+ Peraturan Pemerintah.[m
+[36m@@ -22360,6 +22615,25 @@[m [mtentang Pajak Penghasilan (Lembaran Negara Republik Indonesia[m
+ Tahun 2OO8 Nomor 133, Tambahan Lembaran Negara Republik[m
+ lndonesia Nomor 4893) diubah sebagai berikut:[m
+ 1. Ketentuan Pasal 2 diubah sehingga berbunyi sebagai berikut:[m
+[32m+[m[32mPasal 2[m
+[32m+[m[32m(1) Yang menjadi subjek pajak adalah:[m
+[32m+[m[32ma. 1. orang pribadi; dan[m
+[32m+[m[32m2. warisan yang belum terbagi sebagai satu[m
+[32m+[m[32mkesatuan menggantikan yang berhak;[m
+[32m+[m[32mb. badan; dan[m
+[32m+[m[32mc. bentuk usaha tetap.[m
+[32m+[m[32m(1a) Bentuk usaha tetap merupakan subjek pajak yang[m
+[32m+[m[32mperlakuan perpajakannya dipersamakan dengan subjek[m
+[32m+[m[32mpajak badan.[m
+[32m+[m[32m(21 Subjek pajak dibedakan menjadi subjek pajak dalam[m
+[32m+[m[32mnegeri dan subjek pajak luar negeri.[m
+[32m+[m[32m(3) Subjek pajak dalam negeri adalah:[m
+[32m+[m[32ma. orang pribadi, baik yang merlrpakan Warga Negara[m
+[32m+[m[32mIndonesia maupun warga negara asing yang:[m
+[32m+[m[32m1. bertempat tinggal di Indonesia;[m
+[32m+[m[32m2. berada di Indonesia lebih dari 183 (seratus[m
+[32m+[m[32mdelapan puluh tiga) hari dalam jangka waktu[m
+[32m+[m[32m12 (dua belas) bulan; atau[m
+ 3. dalam suatu tahun pajak berada di Indonesia[m
+ dan mempunyai niat untuk bertempat tinggal[m
+ di Indonesia;[m
+[36m@@ -22396,6 +22670,9 @@[m [mserta memenuhi persyaratan:[m
+ yang ketentuan lebih lanjut mengenai persyaratan[m
+ tersebut diatur dalam Peraturan Menteri Keuangan;[m
+ dan[m
+[32m+[m[32m. PRESIDEN[m
+[32m+[m[32mREPUEUK INDONESIA[m
+[32m+[m[32m-619 -[m
+ d. badan yang tidak didirikan dan tidak bertempat[m
+ kedudukan di Indonesia[m
+ yang menjalankan usaha atau melakukan kegiatan[m
+[36m@@ -22700,6 +22977,48 @@[m [msetelah pajak yang diinvestasikan[m
+ sebagaimana dimaksud pada huruf a) serta[m
+ atas selisih sebagaimana dimaksud pada[m
+ huruf b), tidak dikenai Pajak Penghasilan;[m
+[32m+[m[32m5. dalam hal dividen sebagaimana dimaksud pada[m
+[32m+[m[32mangka 3 huruf b dan penghasilan setelah pajak[m
+[32m+[m[32mdari suatu bentuk usaha tetap di luar negeri[m
+[32m+[m[32msebagaimana dimaksud pada angka 2,[m
+[32m+[m[32mdiinvestasikan di wilayah Negara Kesatuan[m
+[32m+[m[32mRepublik Indonesia sebesar lebih dari 30% (tiga[m
+[32m+[m[32mpuluh persen) dari jumlah laba setelah pajak[m
+[32m+[m[32msebagaimana dimaksud pada angka 2 huruf a)[m
+[32m+[m[32mberlaku ketentuan:[m
+[32m+[m[32ma) atas dividen dan penghasilan setelah pajak[m
+[32m+[m[32myang diinvestasikan tersebut dikecualikan[m
+[32m+[m[32mdari pengenaan Pajak Penghasilan; dan[m
+[32m+[m[32mb) atas sisa laba setelah pajak dikurangi[m
+[32m+[m[32mdengan dividen danf atau penghasilan[m
+[32m+[m[32msetelah pajak yang diinvestasikan[m
+[32m+[m[32msebagaimana dimaksud pada huruf a),[m
+[32m+[m[32mtidak dikenai Pajak Penghasilan;[m
+[32m+[m[32m6. dalam hal dividen yang berasal dari badan[m
+[32m+[m[32musaha di luar negeri yang sahamnya tidak[m
+[32m+[m[32mdiperdagangkan di bursa efek diinvestasikan di[m
+[32m+[m[32mIndonesia setelah Direktur Jenderal Pajak[m
+[32m+[m[32mmenerbitkan surat ketetapan pajak atas dividen[m
+[32m+[m[32mtersebut sehubungan dengan penerapan Pasal[m
+[32m+[m[32m18 ayat (2) Undang-Undang ini, dividen[m
+[32m+[m[32mdimaksud tidak dikecualikan dari pengenaan[m
+[32m+[m[32mPajak Penghasilan sebagaimana dimaksud pada[m
+[32m+[m[32mangka 2;[m
+[32m+[m[32m7. pengenaan Pajak Penghasilan atas penghasilan[m
+[32m+[m[32mdari luar negeri tidak melalui bentuk usaha[m
+[32m+[m[32mtetap yang diterima atau diperoleh Wajib Pajak[m
+[32m+[m[32mbadan dalam negeri atau Wajib Pajak orang[m
+[32m+[m[32mpribadi dalam negeri dikecualikan dari[m
+[32m+[m[32mpengenaan Pajak Penghasilan dalam hal[m
+[32m+[m[32mpenghasilan tersebut diinvestasikan di wilayah[m
+[32m+[m[32mNegara Kesatuan Republik Indonesia dalam[m
+[32m+[m[32mjangka waktu tertentu dan memenuhi[m
+[32m+[m[32mpersyaratan berikut:[m
+[32m+[m[32ma) penghasilan berasal dari usaha aktif di[m
+[32m+[m[32mluar negeri; dan[m
+[32m+[m[32mPRESIDEN[m
+[32m+[m[32mREPUEUK INDONESIA[m
+[32m+[m[32m-628 -[m
+ b) bukan penghasilan dari perusahaan yarlg[m
+ dimiliki di luar negeri;[m
+ 8. pajak atas penghasilan yang telah dibayar atau[m
+[36m@@ -23314,6 +23633,7 @@[m [mUndang ini.[m
+ Dihapus.[m
+ (11)[m
+ Dihapus.[m
+[32m+[m[32m(12) Dihapus.[m
+ (13) Ketentuan lebih lanjut mengenai:[m
+ a. kriteria belum melakukan penyerahan[m
+ Barang Kena Pajak dan/atau Jasa Kena[m
+[36m@@ -23509,6 +23829,31 @@[m [mb. menyampaikan Surat Pemberitahuan yang[m
+ isinya tidak benar atau tidak lengkap, atau[m
+ melampirkan keterangan yang isinya tidak[m
+ benar[m
+[32m+[m[32msebagaimana dimaksud dalam Pasal 38 atau Pasal[m
+[32m+[m[32m39 ayat (1) huruf c dan huruf d sepanjang mulainya[m
+[32m+[m[32mpenyidikan belum diberitahukan kepada Penuntut[m
+[32m+[m[32mUmum melalui penyidik pejabat Polisi Negara[m
+[32m+[m[32mRepublik Indonesia.[m
+[32m+[m[32m(3a) Pengungkapan ketidakbenaran perbuatan[m
+[32m+[m[32msebagaimana dimaksud pada ayat (3) disertai[m
+[32m+[m[32mpelunasan kekurangan pembayaran jumlah pajak[m
+[32m+[m[32myang sebenarnya terutang beserta sanksi[m
+[32m+[m[32madministrasi berupa denda sebesar looo/o (seratus[m
+[32m+[m[32mpersen) dari jumlah pajak yang kurang dibayar.[m
+[32m+[m[32m(41 Walaupun Direktur Jenderal Pajak telah melakukan[m
+[32m+[m[32mpemeriksaan, dengan syarat Direktur Jenderal Pajak[m
+[32m+[m[32mbelum menerbitkan surat ketetapan pajak, Wajib[m
+[32m+[m[32mPajak dengan kesadaran sendiri dapat[m
+[32m+[m[32mmengungkapkan dalam laporan tersendiri tentang[m
+[32m+[m[32mketidakbenaran pengisian Surat Pemberitahuan[m
+[32m+[m[32myang telah disampaikan sesuai dengan keadaan yang[m
+[32m+[m[32msebenarnya, yang dapat mengakibatkan:[m
+[32m+[m[32ma. pajak-pajak yang masih harus dibayar menjadi[m
+[32m+[m[32mlebih besar atau lebih kecil;[m
+[32m+[m[32mb. rugi berdasarkan ketentuan perpajakan[m
+[32m+[m[32mmenjadi lebih kecil atau lebih besar;[m
+[32m+[m[32mc. jumlah harta menjadi lebih besar atau lebih[m
+[32m+[m[32mkecil; atau[m
+ d. jumlah modal menjadi lebih besar atau lebih[m
+ kecil[m
+ dan pemeriksaan tetap dilanjutkan.[m
+[36m@@ -25259,6 +25604,15 @@[m [mGanti Kerugian sebagaimana dimaksud pada ayat (1)[m
+ dan ayat (2).[m
+ 12. Ketentuan Pasal 46 diubah sehingga berbunyi sebagai[m
+ berikut:[m
+[32m+[m[32mPasal 46[m
+[32m+[m[32m(1) Pelepasan Objek Pengadaan Tanah sebagaimana[m
+[32m+[m[32mdimaksud dalam Pasal 45 ayat (1) dan ayat (2) tidak[m
+[32m+[m[32mdiberikan Ganti Kerugian, kecuali:[m
+[32m+[m[32ma. Objek Pengadaan Tanah yang dipergunakan[m
+[32m+[m[32msesuai dengan tugas dan fungsi pemerintahan;[m
+[32m+[m[32mb. Objek Pengadaan Tanah yang dimiliki/dikuasai[m
+[32m+[m[32moleh Badan Usaha Milik Negara/Badan Usaha[m
+[32m+[m[32mMilik Daerah; dan/atau[m
+ c. Objek Pengadaan Tanah kas desa;[m
+ (2) Ganti Kerugian atas Objek Pengadaan Tanah[m
+ sebagaimana dimaksud pada ayat (1) huruf a[m
+[36m@@ -26284,6 +26638,10 @@[m [mBagian Ketiga[m
+ Kawasan Perdagangan Bebas dan Pelabuhan Bebas[m
+ Paragraf 1[m
+ Umum[m
+[32m+[m[32mPasal 151[m
+[32m+[m[32m(1) Kawasan Perdagangan Bebas dan Pelabuhan Bebas[m
+[32m+[m[32msebagaimana dimaksud dalam Pasal 141 huruf b terdiri[m
+[32m+[m[32matas:[m
+ a. Kawasan Perdagangan Bebas dan Pelabuhan Bebas;[m
+ dan[m
+ b. Kawasan Perdagangan Bebas dan Pelabuhan Bebas[m
+[36m@@ -27627,6 +27985,11 @@[m [mkelengkapan DPR yang menangani bidang legislasi;[m
+ dan/atau[m
+ b. Pimpinan Dewan Perwakilan Daerah dan alat[m
+ kelengkapan DPD yang menangani bidang legislasi.[m
+[32m+[m[32mPasal 183[m
+[32m+[m[32mPemerintah Pusat harus melaporkan pelaksanaan Undang-[m
+[32m+[m[32mUndang ini kepada:[m
+[32m+[m[32ma. Dewan Perwakilan Ralryat melalui alat kelengkapan yang[m
+[32m+[m[32mmenangani bidang legislasi; dan/atau[m
+ b. Dewan Perwakilan Daerah melalui alat kelengkapan yang[m
+ menangani bidang legislasi[m
+ paling lama 1 (satu) tahun terhitung sejak Undang-Undang ini[m
+[36m@@ -28467,6 +28830,10 @@[m [mkebijakan dan strategi nasional yang mempengaruhi[m
+ pemanfaatan ruang wilayah provinsi dan/atau terjadi[m
+ dinamika internal provinsi yang mempengaruhi[m
+ pemanfaatan ruang provinsi secara mendasar; atau[m
+[32m+[m[32mb. tidak perlu dilakukan revisi karena tidak ada perubahan[m
+[32m+[m[32mkebijakan dan strategi nasional dan tidak terjadi dinamika[m
+[32m+[m[32minternal provinsi yang mempengaruhi pemanfaatan ruang[m
+[32m+[m[32mprovinsi secara mendasar.[m
+ Ayat (5)[m
+ Peninjauan kembali dan revisi dalam waktu kurang dari 5[m
+ (lima) tahun dilakukan apabila dinamika internal provinsi[m
+[36m@@ -28605,6 +28972,12 @@[m [mperkembangan lingkungan strategis dan dinamika internal[m
+ serta pelaksanaan pemanfaatan ruang. Hasil peninjauan[m
+ kembali rencana tata ruang wilayah kabupatenlkota berisi[m
+ rekomendasi tindak lanjut sebagai berikut:[m
+[32m+[m[32ma. perlu dilakukan revisi karena adanya perubahan kebijakan[m
+[32m+[m[32mdan strategi nasional dan/atau provinsi yang[m
+[32m+[m[32mmempengaruhi pemanfaatan rulang wilayah kabupaten[m
+[32m+[m[32mdan/atau terjadi dinamika internal kabupaten yang[m
+[32m+[m[32mmempengaruhi pemanfaatan rlrang kabupaten secara[m
+[32m+[m[32mmendasar; atau[m
+ b. tidak perlu dilakukan revisi karena tidak ada perubahan[m
+ kebijakan dan strategi nasional danlatau provinsi dan tidak[m
+ terjadi dinamika internal kabupaten yang mempengaruhi[m
+[36m@@ -29130,6 +29503,7 @@[m [mHuruf e[m
+ Yang dimaksud dengan "baku mutu emisi" adalah[m
+ ukuran batas atau kadar polutan yang ditenggang[m
+ untuk dimasukkan ke media udara.[m
+[32m+[m[32mSK No 052316 A[m
+ Huruf f[m
+ Yang dimaksud dengan "baku mutu gangguan" adalah[m
+ ukuran batas unsur pencemar yang ditenggang[m
+[36m@@ -30646,6 +31020,7 @@[m [mAyat (1)[m
+ Huruf a[m
+ Yang dimaksud dengan "mutrt genetik" adalah ekspresi[m
+ keunggulan sifat individu.[m
+[32m+[m[32mSK No 052369 A[m
+ Yang dimaksud dengan "keragaman genetik" adalah[m
+ ekspresi keunggulan variasi genetik antarindividu.[m
+ Huruf b[m
+[36m@@ -32427,6 +32802,20 @@[m [mHuruf c[m
+ Cukup jelas.[m
+ Angka 2[m
+ Pasal 17[m
+[32m+[m[32mAyat (1)[m
+[32m+[m[32mKarena penggunaan alat ukur takar, timbang, dan[m
+[32m+[m[32mperlengkapannya berada di bawah pengawasan instansi[m
+[32m+[m[32mPemerintah Pusat yang bertanggungjawab di bidang[m
+[32m+[m[32mmetrologi maka seharusnyalah pembuatan alat-alat[m
+[32m+[m[32mtersebut dengan Pertzinan Berusaha dari Pemerintah[m
+[32m+[m[32mPusat supaya mudah mengawasi dan membina,[m
+[32m+[m[32msehingga alat-alat itu dibuat oleh orang-orang yang[m
+[32m+[m[32mbenar-benar mempunyai keahlian. Demikian pula untuk[m
+[32m+[m[32mmemperbaiki alat ukur, takar, timbang dan[m
+[32m+[m[32mperlengkapannya misalnya memperbaiki timbangan[m
+[32m+[m[32mperlu mendapat Perizinan Berusaha dari Pemerintah[m
+[32m+[m[32mPusat, yaitu supaya mudah mengawasi dan[m
+[32m+[m[32mmembimbingnYa'[m
+ Dengan demikian diharapkan bahwa pekerjaan[m
+ memperbaiki timbangan dilakukan oleh orang-orang[m
+ yang benar-benar mempunyai keahlian dalam bidang[m
+[36m@@ -37975,6 +38364,12 @@[m [matau efektif manajemennya berada.[m
+ Ayat (1b)[m
+ Cukup jelas[m
+ Ayat (21[m
+[32m+[m[32mKetentuan ini mengatur tentang pemotongan pajak[m
+[32m+[m[32matas penghasilan yang diterima atau diperoleh Wajib[m
+[32m+[m[32mPajak luar negeri yang bersumber di Indonesia, selain[m
+[32m+[m[32mdari penghasilan sebagaimana dimaksud pada ayat (1),[m
+[32m+[m[32myaitu penghasilan dari penjualan atau pengalihan[m
+[32m+[m[32mharta, dan premi asuransi, termasuk premi reasuransi.[m
+ Atas penghasilan tersebut dipotong pajak sebesar 2O%o[m
+ (dua puluh persen) dari perkiraan penghasilan neto[m
+ dan bersifat final. Menteri Keuangan diberikan[m
+[36m@@ -39087,6 +39482,7 @@[m [mCukup jelas.[m
+ Ayat (3)[m
+ Cukup jelas.[m
+ Ayat (3a)[m
+[32m+[m[32mCukup jelas.[m
+ Ayat (a)[m
+ Cukup jelas[m
+ Angka 3[m
+[36m@@ -39664,6 +40060,7 @@[m [mAngka 1[m
+ Pasal 8[m
+ Ayat (1)[m
+ Cukup jelas[m
+[32m+[m[32mSK No 052651 A[m
+ Ayat (2)[m
+ Cukup jelas.[m
+ Ayat (3)[m
+[1mdiff --git a/src/command/convert/pdf-to-text/index.ts b/src/command/convert/pdf-to-text/index.ts[m
+[1mindex c7d0fd5..8c069e1 100644[m
+[1m--- a/src/command/convert/pdf-to-text/index.ts[m
+[1m+++ b/src/command/convert/pdf-to-text/index.ts[m
+[36m@@ -85,7 +85,7 @@[m [mfunction removePageNoise(acc: Acc, block: Block): Acc {[m
+         const latestLine = latestBlockLines.slice(-1)[0];[m
+         if (!isUndefined(latestLine)) {[m
+           const lineText = latestLine.spans?.map((span) => span.text).join('') ?? '';[m
+[31m-          if (/^SK No/.test(lineText) || lineText.endsWith('. . .')) {[m
+[32m+[m[32m          if (/^SK No/.test(lineText) || lineText.endsWith('. . .') || lineText.endsWith('...')) {[m
+             const newLines: Line[] = latestBlockLines.slice(0, -1);[m
+             const newLatestBlock: Block = { ...latestBlock, lines: newLines };[m
+             return {[m

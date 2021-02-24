@@ -85,7 +85,7 @@ function removePageNoise(acc: Acc, block: Block): Acc {
         const latestLine = latestBlockLines.slice(-1)[0];
         if (!isUndefined(latestLine)) {
           const lineText = latestLine.spans?.map((span) => span.text).join('') ?? '';
-          if (/^SK No/.test(lineText) || lineText.endsWith('. . .')) {
+          if (/^SK No/.test(lineText) || lineText.endsWith('. . .') || lineText.endsWith('...')) {
             const newLines: Line[] = latestBlockLines.slice(0, -1);
             const newLatestBlock: Block = { ...latestBlock, lines: newLines };
             return {
