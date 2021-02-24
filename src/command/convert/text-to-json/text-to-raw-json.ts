@@ -12,7 +12,7 @@ import { Points, Point } from '../../../legal/structure/point';
 import { ReferenceText } from '../../../legal/reference';
 const padaTaggalRegexp = /^pada tanggal/;
 const mengingatRegex = /^Mengingat\s*:/;
-const menimbangRegex = /^Menimbang\s*:/;
+const menimbangRegex = /(^Menimbang\s*:?)/;
 
 export function textToRawJson(text: string, documentNode: DocumentNode): Document {
   const lines = text.split('\n');

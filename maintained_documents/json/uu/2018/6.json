@@ -10,7 +10,7 @@
     "tahun": 2018
   },
   "_nomor": 6,
-  "_pemutus": "PRESIDEN REPUBLIK INDONESIA, Menimbang a. bahwa dalam rangka pelaksanaan pembangunan manusia Indonesia seutuhnya diperlukan adanya pelindungan kesehatan bagi seluruh masyarakat Indonesia yang tersebar di berbagai pulau besar maupun kecil yang terletak pada posisi yang sangat strategis dan berada pada jalur perdagangan internasional, yang berperan penting dalam lalu lintas orang dan barang; b. bahwa kemajuan teknologi transportasi dan era perdagangan bebas dapat berisiko menimbulkan gangguan kesehatan dan penyakit baru atau penyakit lama yang muncul kembali dengan penyebaran yang lebih cepat dan berpotensi menimbulkan kedaruratan kesehatan masyarakat, sehingga menuntut adanya upaya cegah tangkal penyakit dan faktor risiko kesehatan yang komprehensif dan terkoordinasi, serta membutuhkan sumber daya, peran serta masyarakat, dan kerja sama internasional; c. bahwa sebagai bagian dari masyarakat dunia, Indonesia berkomitmen melakukan upaya untuk mencegah terjadinya kedaruratan kesehatan masyarakat yang meresahkan dunia sebagaimana yang diamanatkan dalam regulasi internasional di bidang kesehatan, dan dalam melaksanakan amanat ini Indonesia harus menghormati sepenuhnya martabat, hak asasi manusia, dasar-dasar kebebasan seseorang, dan penerapannya secara universal; d. bahwa Undang-Undang Nomor 1 Tahun 1962 tentang Karantina Laut dan Undang-Undang Nomor 2 Tahun 1962 tentang Karantina Udara sudah tidak sesuai lagi dengan perkembangan, tuntutan, dan kebutuhan hukum dalam masyarakat, sehingga perlu dicabut dan diganti dengan undang-undang yang baru mengenai kekarantinaan kesehatan; e. bahwa berdasarkan pertimbangan sebagaimana dimaksud dalam huruf a, huruf b, huruf c, dan huruf d, perlu membentuk Undang-Undang tentang Kekarantinaan Kesehatan; Mengingat Pasal 5 ayat (1), Pasal 20, Pasal 28 H ayat (1), pasal 34 ayat (3) Undang-Undang Dasar Negara Republik Indonesia Tahun 1945; Dengan Persetujuan Bersama DEWAN PERWAKILAN RAKYAT INDONESIA dan PRESIDEN REPUBLIK INDONESI",
+  "_pemutus": "PRESIDEN REPUBLIK INDONESIA",
   "_salinan": "SALINAN PRES I DEN REPUBLIK INDONESIA",
   "_tahun": 2018,
   "_tanggalDisahkan": "7 Agustus 2018 I",
@@ -6078,6 +6078,187 @@
       "text": "BAB XIV KETENTUAN PENUTUP Pasal 95 Pada saat Undang-Undang ini mulai berlaku, semua peraturan pelaksanaan yang mengatur karantina udara dan karantina laut tetap berlaku sepanjang tidak bertentangan danlatau belum diganti dengan peraturan yang baru berdasarkan Undang-Undang ini. Pasal 96 (1) Peraturan pelaksanaan dari Undang-Undang ini harus telah ditetapkan paling lambat 3 (tiga) tahun terhitung sejak Undang-Undang ini diundangkan. (2) Pemerintah Pusat harus melaporkan pelaksanaan Undang-Undang ini kepada Dewan Perwakilan Ralryat paling lambat 3 (tiga) tahun sejak Undang-Undang ini berlaku. Pasal 97 Pada saat Undang-Undang ini mulai berlaku: 1. Undang-Undang Nomor 1 Tahun l9O2 tentang Karantina Laut (Lembaran Negara Republik Indonesia Tahun 1962 Nomor 2, Tambahan Lembaran Negara Republik Indonesia Nomor 23731; dan 2. Undang-Undang Nomor 2 Tahun Lg62 tentang Karantina Udara (Lembaran Negara Republik Indonesia Tahun 1962 Nomor 3, Tambahan Lembaran Negara Republik Indonesia Nomor 2gT4l, dicabut dan dinyatakan tidak berlaku. Pasal 98 Undang-Undang diundangkan. ini mulai berlaku pada tanggal Agar setiap orang mengetahuinya, memerintahkan pengundangan Undang-Undang ini dengan penempatannya dalam Lembaran Negara Republik Indonesia."
     }
   ],
+  "menimbang": {
+    "points": {
+      "_description": {
+        "_type": "referenceText",
+        "references": [
+        ],
+        "text": ""
+      },
+      "_type": "points",
+      "isi": [
+        {
+          "_key": "a",
+          "_type": "alphaPoint",
+          "text": {
+            "_type": "referenceText",
+            "references": [
+            ],
+            "text": "bahwa dalam rangka pelaksanaan pembangunan manusia Indonesia seutuhnya diperlukan adanya pelindungan kesehatan bagi seluruh masyarakat Indonesia yang tersebar di berbagai pulau besar maupun kecil yang terletak pada posisi yang sangat strategis dan berada pada jalur perdagangan internasional, yang berperan penting dalam lalu lintas orang dan barang;"
+          }
+        },
+        {
+          "_key": "b",
+          "_type": "alphaPoint",
+          "text": {
+            "_type": "referenceText",
+            "references": [
+            ],
+            "text": "bahwa kemajuan teknologi transportasi dan era perdagangan bebas dapat berisiko menimbulkan gangguan kesehatan dan penyakit baru atau penyakit lama yang muncul kembali dengan penyebaran yang lebih cepat dan berpotensi menimbulkan kedaruratan kesehatan masyarakat, sehingga menuntut adanya upaya cegah tangkal penyakit dan faktor risiko kesehatan yang komprehensif dan terkoordinasi, serta membutuhkan sumber daya, peran serta masyarakat, dan kerja sama internasional;"
+          }
+        },
+        {
+          "_key": "c",
+          "_type": "alphaPoint",
+          "text": {
+            "_type": "referenceText",
+            "references": [
+            ],
+            "text": "bahwa sebagai bagian dari masyarakat dunia, Indonesia berkomitmen melakukan upaya untuk mencegah terjadinya kedaruratan kesehatan masyarakat yang meresahkan dunia sebagaimana yang diamanatkan dalam regulasi internasional di bidang kesehatan, dan dalam melaksanakan amanat ini Indonesia harus menghormati sepenuhnya martabat, hak asasi manusia, dasar-dasar kebebasan seseorang, dan penerapannya secara universal;"
+          }
+        },
+        {
+          "_key": "d",
+          "_type": "alphaPoint",
+          "text": {
+            "_type": "referenceText",
+            "references": [
+            ],
+            "text": "bahwa Undang-Undang Nomor 1 Tahun 1962 tentang Karantina Laut dan Undang-Undang Nomor 2 Tahun 1962 tentang Karantina Udara sudah tidak sesuai lagi dengan perkembangan, tuntutan, dan kebutuhan hukum dalam masyarakat, sehingga perlu dicabut dan diganti dengan undang-undang yang baru mengenai kekarantinaan kesehatan;"
+          }
+        },
+        {
+          "_key": "e",
+          "_type": "alphaPoint",
+          "text": {
+            "_type": "referenceText",
+            "references": [
+              {
+                "end": 78,
+                "node": {
+                  "_key": "d",
+                  "_structureType": "point",
+                  "parentPoints": {
+                    "_structureType": "metadata",
+                    "metadataType": "documentMenimbang",
+                    "parentDocument": {
+                      "_documentType": "uu",
+                      "nomor": 6,
+                      "tahun": 2018
+                    }
+                  }
+                },
+                "start": 77
+              },
+              {
+                "end": 71,
+                "node": {
+                  "_key": "c",
+                  "_structureType": "point",
+                  "parentPoints": {
+                    "_structureType": "metadata",
+                    "metadataType": "documentMenimbang",
+                    "parentDocument": {
+                      "_documentType": "uu",
+                      "nomor": 6,
+                      "tahun": 2018
+                    }
+                  }
+                },
+                "start": 70
+              },
+              {
+                "end": 68,
+                "node": {
+                  "_key": "b",
+                  "_structureType": "point",
+                  "parentPoints": {
+                    "_structureType": "metadata",
+                    "metadataType": "documentMenimbang",
+                    "parentDocument": {
+                      "_documentType": "uu",
+                      "nomor": 6,
+                      "tahun": 2018
+                    }
+                  }
+                },
+                "start": 67
+              },
+              {
+                "end": 65,
+                "node": {
+                  "_key": "a",
+                  "_structureType": "point",
+                  "parentPoints": {
+                    "_structureType": "metadata",
+                    "metadataType": "documentMenimbang",
+                    "parentDocument": {
+                      "_documentType": "uu",
+                      "nomor": 6,
+                      "tahun": 2018
+                    }
+                  }
+                },
+                "start": 58
+              },
+              {
+                "end": 197,
+                "node": {
+                  "_key": 20,
+                  "_structureType": "pasal",
+                  "parentDocument": {
+                    "_documentType": "uu",
+                    "nomor": 6,
+                    "tahun": 2018
+                  }
+                },
+                "start": 189
+              },
+              {
+                "end": 207,
+                "node": {
+                  "_key": 28,
+                  "_structureType": "pasal",
+                  "parentDocument": {
+                    "_documentType": "uu",
+                    "nomor": 6,
+                    "tahun": 2018
+                  }
+                },
+                "start": 199
+              },
+              {
+                "end": 187,
+                "node": {
+                  "_key": 1,
+                  "_structureType": "ayat",
+                  "parentPasal": {
+                    "_key": 5,
+                    "_structureType": "pasal",
+                    "parentDocument": {
+                      "_documentType": "uu",
+                      "nomor": 6,
+                      "tahun": 2018
+                    }
+                  }
+                },
+                "start": 171
+              }
+            ],
+            "text": "bahwa berdasarkan pertimbangan sebagaimana dimaksud dalam huruf a, huruf b, huruf c, dan huruf d, perlu membentuk Undang-Undang tentang Kekarantinaan Kesehatan; Mengingat Pasal 5 ayat (1), Pasal 20, Pasal 28 H ayat (1), pasal 34 ayat (3) Undang-Undang Dasar Negara Republik Indonesia Tahun 1945; Dengan Persetujuan Bersama DEWAN PERWAKILAN RAKYAT INDONESIA dan PRESIDEN REPUBLIK INDONESIA"
+          }
+        }
+      ],
+      "text": "a. bahwa dalam rangka pelaksanaan pembangunan manusia Indonesia seutuhnya diperlukan adanya pelindungan kesehatan bagi seluruh masyarakat Indonesia yang tersebar di berbagai pulau besar maupun kecil yang terletak pada posisi yang sangat strategis dan berada pada jalur perdagangan internasional, yang berperan penting dalam lalu lintas orang dan barang; b. bahwa kemajuan teknologi transportasi dan era perdagangan bebas dapat berisiko menimbulkan gangguan kesehatan dan penyakit baru atau penyakit lama yang muncul kembali dengan penyebaran yang lebih cepat dan berpotensi menimbulkan kedaruratan kesehatan masyarakat, sehingga menuntut adanya upaya cegah tangkal penyakit dan faktor risiko kesehatan yang komprehensif dan terkoordinasi, serta membutuhkan sumber daya, peran serta masyarakat, dan kerja sama internasional; c. bahwa sebagai bagian dari masyarakat dunia, Indonesia berkomitmen melakukan upaya untuk mencegah terjadinya kedaruratan kesehatan masyarakat yang meresahkan dunia sebagaimana yang diamanatkan dalam regulasi internasional di bidang kesehatan, dan dalam melaksanakan amanat ini Indonesia harus menghormati sepenuhnya martabat, hak asasi manusia, dasar-dasar kebebasan seseorang, dan penerapannya secara universal; d. bahwa Undang-Undang Nomor 1 Tahun 1962 tentang Karantina Laut dan Undang-Undang Nomor 2 Tahun 1962 tentang Karantina Udara sudah tidak sesuai lagi dengan perkembangan, tuntutan, dan kebutuhan hukum dalam masyarakat, sehingga perlu dicabut dan diganti dengan undang-undang yang baru mengenai kekarantinaan kesehatan; e. bahwa berdasarkan pertimbangan sebagaimana dimaksud dalam huruf a, huruf b, huruf c, dan huruf d, perlu membentuk Undang-Undang tentang Kekarantinaan Kesehatan; Mengingat Pasal 5 ayat (1), Pasal 20, Pasal 28 H ayat (1), pasal 34 ayat (3) Undang-Undang Dasar Negara Republik Indonesia Tahun 1945; Dengan Persetujuan Bersama DEWAN PERWAKILAN RAKYAT INDONESIA dan PRESIDEN REPUBLIK INDONESIA"
+    },
+    "text": {
+      "_type": "referenceText",
+      "references": [
+      ],
+      "text": "Menimbang a. bahwa dalam rangka pelaksanaan pembangunan manusia Indonesia seutuhnya diperlukan adanya pelindungan kesehatan bagi seluruh masyarakat Indonesia yang tersebar di berbagai pulau besar maupun kecil yang terletak pada posisi yang sangat strategis dan berada pada jalur perdagangan internasional, yang berperan penting dalam lalu lintas orang dan barang; b. bahwa kemajuan teknologi transportasi dan era perdagangan bebas dapat berisiko menimbulkan gangguan kesehatan dan penyakit baru atau penyakit lama yang muncul kembali dengan penyebaran yang lebih cepat dan berpotensi menimbulkan kedaruratan kesehatan masyarakat, sehingga menuntut adanya upaya cegah tangkal penyakit dan faktor risiko kesehatan yang komprehensif dan terkoordinasi, serta membutuhkan sumber daya, peran serta masyarakat, dan kerja sama internasional; c. bahwa sebagai bagian dari masyarakat dunia, Indonesia berkomitmen melakukan upaya untuk mencegah terjadinya kedaruratan kesehatan masyarakat yang meresahkan dunia sebagaimana yang diamanatkan dalam regulasi internasional di bidang kesehatan, dan dalam melaksanakan amanat ini Indonesia harus menghormati sepenuhnya martabat, hak asasi manusia, dasar-dasar kebebasan seseorang, dan penerapannya secara universal; d. bahwa Undang-Undang Nomor 1 Tahun 1962 tentang Karantina Laut dan Undang-Undang Nomor 2 Tahun 1962 tentang Karantina Udara sudah tidak sesuai lagi dengan perkembangan, tuntutan, dan kebutuhan hukum dalam masyarakat, sehingga perlu dicabut dan diganti dengan undang-undang yang baru mengenai kekarantinaan kesehatan; e. bahwa berdasarkan pertimbangan sebagaimana dimaksud dalam huruf a, huruf b, huruf c, dan huruf d, perlu membentuk Undang-Undang tentang Kekarantinaan Kesehatan; Mengingat Pasal 5 ayat (1), Pasal 20, Pasal 28 H ayat (1), pasal 34 ayat (3) Undang-Undang Dasar Negara Republik Indonesia Tahun 1945; Dengan Persetujuan Bersama DEWAN PERWAKILAN RAKYAT INDONESIA dan PRESIDEN REPUBLIK INDONESIA"
+    }
+  },
   "penjelasan": [
     "PENJELASAN",
     "ATAS",
