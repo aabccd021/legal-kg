@@ -11,9 +11,9 @@ export async function textToJson(option: Option): Promise<void> {
   const texts = getDocumentData('text');
   for (const text of texts) {
     try {
-      await pTimeout(handleText(text, option), 1000);
+      await pTimeout(handleText(text, option), 10000);
     } catch {
-      console.warn('timed out');
+      console.warn(`timed out ${JSON.stringify(text)}`);
     }
   }
 }

@@ -13,11 +13,11 @@ export function pdfToTxt(option: Option): void {
 const handlePdf = curry(_handlePdf);
 
 function _handlePdf(option: Option, pdf: DocumentNode): void {
+  console.log(`Start processing ${JSON.stringify(pdf)}`);
   const { overwrite } = option;
   const pdfFile = getDocumentFilePath(pdf, 'pdf');
   const { path: textPath, exists: textExists } = getDocumentFilePath(pdf, 'text');
 
-  console.log(`Start processing ${textPath}`);
   try {
     if (!overwrite && textExists) {
       console.log(`Skipped pdf-to-text ${textPath}`);
