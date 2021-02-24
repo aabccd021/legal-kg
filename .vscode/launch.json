@@ -44,7 +44,21 @@
     {
       "type": "pwa-node",
       "request": "launch",
-      "name": "JSON to Markdown",
+      "name": "Convert : Text to JSON",
+      "runtimeVersion": "15.6.0",
+      "runtimeArgs": [
+        "-r",
+        "ts-node/register"
+      ],
+      "args": [
+        "${workspaceFolder}/src/cli.ts",
+        "convert:text-to-json"
+      ],
+    },
+    {
+      "type": "pwa-node",
+      "request": "launch",
+      "name": "Convert : JSON to Markdown",
       "runtimeVersion": "15.6.0",
       "runtimeArgs": [
         "-r",

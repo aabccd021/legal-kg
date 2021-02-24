@@ -4,7 +4,7 @@
 <http://example.org/legal/document/uu/2003/13/documentMenimbang> legal:hasText "a. bahwa pembangunan nasional dilaksanakan dalam rangka pembangunan manusia Indonesia seutuhnya dan pembangunan masyarakat Indonesia seluruhnya untuk mewujudkan masyarakat yang sejahtera, adil, makmur, yang merata, baik materiil maupun spiritual berdasarkan Pancasila dan Undang Undang Dasar Negara Republik Indonesia Tahun 1945; b. bahwa dalam pelaksanaan pembangunan nasional, tenaga kerja mempunyai peranan dan kedudukan yang sangat penting sebagai pelaku dan tujuan pembangunan; c. bahwa sesuai dengan peranan dan kedudukan tenaga kerja, diperlukan pembangunan ketenagakerjaan untuk meningkatkan kualitas tenaga kerja dan peransertanya dalam pembangunan serta peningkatan perlindungan tenaga kerja dan keluarganya sesuai dengan harkat dan martabat kemanusiaan; d. bahwa perlindungan terhadap tenaga kerja dimaksudkan untuk menjamin hak hak dasar pekerja/buruh dan menjamin kesamaan kesempatan serta perlakuan tanpa diskriminasi atas dasar apapun untuk mewujudkan kesejahteraan pekerja/buruh dan keluarganya dengan tetap memperhatikan perkembangan kemajuan dunia usaha; e. bahwa beberapa undang undang di bidang ketenagakerjaan dipandang sudah tidak sesuai lagi dengan kebutuhan dan tuntutan pembangunan ketenagakerjaan, oleh karena itu perlu dicabut dan/atau ditarik kembali; f. bahwa berdasarkan pertimbangan sebagaimana tersebut pada huruf a, b, c, d, dan e perlu membentuk Undang undang tentang Ketenagakerjaan;" .
 <http://example.org/legal/document/uu/2003/13/documentMenimbang> legal:hasPoint <http://example.org/legal/document/uu/2003/13/documentMenimbang/point/a> .
 <http://example.org/legal/document/uu/2003/13/documentMenimbang/point/a> legal:hasKey "a" .
-<http://example.org/legal/document/uu/2003/13/documentMenimbang/point/a> legal:references <http://example.org/legal/document/uud/UUD> .
+<http://example.org/legal/document/uu/2003/13/documentMenimbang/point/a> legal:references <http://example.org/legal/document/uud/UNDANG-UNDANG DASAR NEGARA REPUBLIK INDONESIA TAHUN 1945> .
 <http://example.org/legal/document/uu/2003/13/documentMenimbang/point/a> legal:hasText "bahwa pembangunan nasional dilaksanakan dalam rangka pembangunan manusia Indonesia seutuhnya dan pembangunan masyarakat Indonesia seluruhnya untuk mewujudkan masyarakat yang sejahtera, adil, makmur, yang merata, baik materiil maupun spiritual berdasarkan Pancasila dan Undang Undang Dasar Negara Republik Indonesia Tahun 1945;" .
 <http://example.org/legal/document/uu/2003/13/documentMenimbang> legal:hasPoint <http://example.org/legal/document/uu/2003/13/documentMenimbang/point/b> .
 <http://example.org/legal/document/uu/2003/13/documentMenimbang/point/b> legal:hasKey "b" .
@@ -104,7 +104,7 @@
 <http://example.org/legal/document/uu/2003/13/pasal/1/point/15> legal:hasText "Hubungan kerja adalah hubungan antara pengusaha dengan pekerja/buruh berdasarkan perjanjian kerja, yang mempunyai unsur pekerjaan, upah, dan perintah." .
 <http://example.org/legal/document/uu/2003/13/pasal/1> legal:hasPoint <http://example.org/legal/document/uu/2003/13/pasal/1/point/16> .
 <http://example.org/legal/document/uu/2003/13/pasal/1/point/16> legal:hasKey 16 .
-<http://example.org/legal/document/uu/2003/13/pasal/1/point/16> legal:references <http://example.org/legal/document/uud/UUD> .
+<http://example.org/legal/document/uu/2003/13/pasal/1/point/16> legal:references <http://example.org/legal/document/uud/UNDANG-UNDANG DASAR NEGARA REPUBLIK INDONESIA TAHUN 1945> .
 <http://example.org/legal/document/uu/2003/13/pasal/1/point/16> legal:hasText "Hubungan industrial adalah suatu sistem hubungan yang terbentuk antara para pelaku dalam proses produksi barang dan/atau jasa yang terdiri dari unsur pengusaha, pekerja/buruh, dan pemerintah yang didasarkan pada nilai nilai Pancasila dan Undang Undang Dasar Negara Republik Indonesia Tahun 1945." .
 <http://example.org/legal/document/uu/2003/13/pasal/1> legal:hasPoint <http://example.org/legal/document/uu/2003/13/pasal/1/point/17> .
 <http://example.org/legal/document/uu/2003/13/pasal/1/point/17> legal:hasKey 17 .
@@ -164,7 +164,7 @@
 <http://example.org/legal/document/uu/2003/13/bab/2> legal:hasPasal <http://example.org/legal/document/uu/2003/13/pasal/2> .
 <http://example.org/legal/document/uu/2003/13/pasal/2> legal:hasKey 2 .
 <http://example.org/legal/document/uu/2003/13/pasal/2> legal:hasText "Pembangunan ketenagakerjaan berlandaskan Pancasila dan Undang Undang Dasar Negara Republik Indonesia Tahun 1945." .
-<http://example.org/legal/document/uu/2003/13/pasal/2> legal:references <http://example.org/legal/document/uud/UUD> .
+<http://example.org/legal/document/uu/2003/13/pasal/2> legal:references <http://example.org/legal/document/uud/UNDANG-UNDANG DASAR NEGARA REPUBLIK INDONESIA TAHUN 1945> .
 <http://example.org/legal/document/uu/2003/13/bab/2> legal:hasPasal <http://example.org/legal/document/uu/2003/13/pasal/3> .
 <http://example.org/legal/document/uu/2003/13/pasal/3> legal:hasKey 3 .
 <http://example.org/legal/document/uu/2003/13/pasal/3> legal:hasText "Pembangunan ketenagakerjaan diselenggarakan atas asas keterpaduan dengan melalui koordinasi fungsional lintas sektoral pusat dan daerah." .

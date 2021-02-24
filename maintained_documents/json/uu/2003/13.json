@@ -9,7 +9,7 @@
   "_namaPengesah": "MEGAWATI SOEKARNOPUTRI",
   "_name": "UNDANG-UNDANG REPUBLIK INDONESIA",
   "_node": {
-    "documentType": "uu",
+    "_documentType": "uu",
     "nomor": 13,
     "tahun": 2003
   },
@@ -130,7 +130,7 @@
                                   "_key": 1,
                                   "_structureType": "pasal",
                                   "parentDocument": {
-                                    "documentType": "uu",
+                                    "_documentType": "uu",
                                     "nomor": 13,
                                     "tahun": 2003
                                   }
@@ -151,7 +151,7 @@
                                   "_key": 1,
                                   "_structureType": "pasal",
                                   "parentDocument": {
-                                    "documentType": "uu",
+                                    "_documentType": "uu",
                                     "nomor": 13,
                                     "tahun": 2003
                                   }
@@ -315,7 +315,7 @@
                     {
                       "end": 294,
                       "node": {
-                        "documentType": "uud"
+                        "_documentType": "uud"
                       },
                       "start": 238
                     }
@@ -520,7 +520,7 @@
               {
                 "end": 111,
                 "node": {
-                  "documentType": "uud"
+                  "_documentType": "uud"
                 },
                 "start": 55
               }
@@ -707,7 +707,7 @@
                         "_key": 7,
                         "_structureType": "pasal",
                         "parentDocument": {
-                          "documentType": "uu",
+                          "_documentType": "uu",
                           "nomor": 13,
                           "tahun": 2003
                         }
@@ -848,7 +848,7 @@
                         "_key": 8,
                         "_structureType": "pasal",
                         "parentDocument": {
-                          "documentType": "uu",
+                          "_documentType": "uu",
                           "nomor": 13,
                           "tahun": 2003
                         }
@@ -875,7 +875,7 @@
                         "_key": 8,
                         "_structureType": "pasal",
                         "parentDocument": {
-                          "documentType": "uu",
+                          "_documentType": "uu",
                           "nomor": 13,
                           "tahun": 2003
                         }
@@ -962,7 +962,7 @@
                         "_key": 10,
                         "_structureType": "pasal",
                         "parentDocument": {
-                          "documentType": "uu",
+                          "_documentType": "uu",
                           "nomor": 13,
                           "tahun": 2003
                         }
@@ -1021,7 +1021,7 @@
                         "_key": 12,
                         "_structureType": "pasal",
                         "parentDocument": {
-                          "documentType": "uu",
+                          "_documentType": "uu",
                           "nomor": 13,
                           "tahun": 2003
                         }
@@ -1090,7 +1090,7 @@
                         "_key": 13,
                         "_structureType": "pasal",
                         "parentDocument": {
-                          "documentType": "uu",
+                          "_documentType": "uu",
                           "nomor": 13,
                           "tahun": 2003
                         }
@@ -1139,7 +1139,7 @@
                         "_key": 14,
                         "_structureType": "pasal",
                         "parentDocument": {
-                          "documentType": "uu",
+                          "_documentType": "uu",
                           "nomor": 13,
                           "tahun": 2003
                         }
@@ -1176,7 +1176,7 @@
                         "_key": 14,
                         "_structureType": "pasal",
                         "parentDocument": {
-                          "documentType": "uu",
+                          "_documentType": "uu",
                           "nomor": 13,
                           "tahun": 2003
                         }
@@ -1193,7 +1193,7 @@
                         "_key": 14,
                         "_structureType": "pasal",
                         "parentDocument": {
-                          "documentType": "uu",
+                          "_documentType": "uu",
                           "nomor": 13,
                           "tahun": 2003
                         }
@@ -1304,7 +1304,7 @@
                         "_key": 16,
                         "_structureType": "pasal",
                         "parentDocument": {
-                          "documentType": "uu",
+                          "_documentType": "uu",
                           "nomor": 13,
                           "tahun": 2003
                         }
@@ -1331,7 +1331,7 @@
                         "_key": 16,
                         "_structureType": "pasal",
                         "parentDocument": {
-                          "documentType": "uu",
+                          "_documentType": "uu",
                           "nomor": 13,
                           "tahun": 2003
                         }
@@ -1379,7 +1379,7 @@
                             "_key": 9,
                             "_structureType": "pasal",
                             "parentDocument": {
-                              "documentType": "uu",
+                              "_documentType": "uu",
                               "nomor": 13,
                               "tahun": 2003
                             }
@@ -1402,7 +1402,7 @@
                             "_key": 15,
                             "_structureType": "pasal",
                             "parentDocument": {
-                              "documentType": "uu",
+                              "_documentType": "uu",
                               "nomor": 13,
                               "tahun": 2003
                             }
@@ -1438,7 +1438,7 @@
                         "_key": 17,
                         "_structureType": "pasal",
                         "parentDocument": {
-                          "documentType": "uu",
+                          "_documentType": "uu",
                           "nomor": 13,
                           "tahun": 2003
                         }
@@ -1462,7 +1462,7 @@
                       "_key": 9,
                       "_structureType": "pasal",
                       "parentDocument": {
-                        "documentType": "uu",
+                        "_documentType": "uu",
                         "nomor": 13,
                         "tahun": 2003
                       }
@@ -1475,7 +1475,7 @@
                       "_key": 15,
                       "_structureType": "pasal",
                       "parentDocument": {
-                        "documentType": "uu",
+                        "_documentType": "uu",
                         "nomor": 13,
                         "tahun": 2003
                       }
@@ -1501,7 +1501,7 @@
                         "_key": 17,
                         "_structureType": "pasal",
                         "parentDocument": {
-                          "documentType": "uu",
+                          "_documentType": "uu",
                           "nomor": 13,
                           "tahun": 2003
                         }
@@ -1528,7 +1528,7 @@
                         "_key": 17,
                         "_structureType": "pasal",
                         "parentDocument": {
-                          "documentType": "uu",
+                          "_documentType": "uu",
                           "nomor": 13,
                           "tahun": 2003
                         }
@@ -1587,7 +1587,7 @@
                         "_key": 18,
                         "_structureType": "pasal",
                         "parentDocument": {
-                          "documentType": "uu",
+                          "_documentType": "uu",
                           "nomor": 13,
                           "tahun": 2003
                         }
@@ -1614,7 +1614,7 @@
                         "_key": 18,
                         "_structureType": "pasal",
                         "parentDocument": {
-                          "documentType": "uu",
+                          "_documentType": "uu",
                           "nomor": 13,
                           "tahun": 2003
                         }
@@ -1651,7 +1651,7 @@
                         "_key": 18,
                         "_structureType": "pasal",
                         "parentDocument": {
-                          "documentType": "uu",
+                          "_documentType": "uu",
                           "nomor": 13,
                           "tahun": 2003
                         }
@@ -1710,7 +1710,7 @@
                         "_key": 20,
                         "_structureType": "pasal",
                         "parentDocument": {
-                          "documentType": "uu",
+                          "_documentType": "uu",
                           "nomor": 13,
                           "tahun": 2003
                         }
@@ -1769,7 +1769,7 @@
                         "_key": 22,
                         "_structureType": "pasal",
                         "parentDocument": {
-                          "documentType": "uu",
+                          "_documentType": "uu",
                           "nomor": 13,
                           "tahun": 2003
                         }
@@ -1796,7 +1796,7 @@
                         "_key": 22,
                         "_structureType": "pasal",
                         "parentDocument": {
-                          "documentType": "uu",
+                          "_documentType": "uu",
                           "nomor": 13,
                           "tahun": 2003
                         }
@@ -1865,7 +1865,7 @@
                         "_key": 25,
                         "_structureType": "pasal",
                         "parentDocument": {
-                          "documentType": "uu",
+                          "_documentType": "uu",
                           "nomor": 13,
                           "tahun": 2003
                         }
@@ -1892,7 +1892,7 @@
                         "_key": 25,
                         "_structureType": "pasal",
                         "parentDocument": {
-                          "documentType": "uu",
+                          "_documentType": "uu",
                           "nomor": 13,
                           "tahun": 2003
                         }
@@ -1909,7 +1909,7 @@
                         "_key": 25,
                         "_structureType": "pasal",
                         "parentDocument": {
-                          "documentType": "uu",
+                          "_documentType": "uu",
                           "nomor": 13,
                           "tahun": 2003
                         }
@@ -2000,7 +2000,7 @@
                         "_key": 26,
                         "_structureType": "pasal",
                         "parentDocument": {
-                          "documentType": "uu",
+                          "_documentType": "uu",
                           "nomor": 13,
                           "tahun": 2003
                         }
@@ -2049,7 +2049,7 @@
                         "_key": 27,
                         "_structureType": "pasal",
                         "parentDocument": {
-                          "documentType": "uu",
+                          "_documentType": "uu",
                           "nomor": 13,
                           "tahun": 2003
                         }
@@ -2098,7 +2098,7 @@
                         "_key": 28,
                         "_structureType": "pasal",
                         "parentDocument": {
-                          "documentType": "uu",
+                          "_documentType": "uu",
                           "nomor": 13,
                           "tahun": 2003
                         }
@@ -2157,7 +2157,7 @@
                         "_key": 29,
                         "_structureType": "pasal",
                         "parentDocument": {
-                          "documentType": "uu",
+                          "_documentType": "uu",
                           "nomor": 13,
                           "tahun": 2003
                         }
@@ -2196,7 +2196,7 @@
                         "_key": 29,
                         "_structureType": "pasal",
                         "parentDocument": {
-                          "documentType": "uu",
+                          "_documentType": "uu",
                           "nomor": 13,
                           "tahun": 2003
                         }
@@ -2223,7 +2223,7 @@
                         "_key": 30,
                         "_structureType": "pasal",
                         "parentDocument": {
-                          "documentType": "uu",
+                          "_documentType": "uu",
                           "nomor": 13,
                           "tahun": 2003
                         }
@@ -2250,7 +2250,7 @@
                         "_key": 30,
                         "_structureType": "pasal",
                         "parentDocument": {
-                          "documentType": "uu",
+                          "_documentType": "uu",
                           "nomor": 13,
                           "tahun": 2003
                         }
@@ -2384,7 +2384,7 @@
                   "_key": 33,
                   "_structureType": "pasal",
                   "parentDocument": {
-                    "documentType": "uu",
+                    "_documentType": "uu",
                     "nomor": 13,
                     "tahun": 2003
                   }
@@ -2424,7 +2424,7 @@
                         "_key": 35,
                         "_structureType": "pasal",
                         "parentDocument": {
-                          "documentType": "uu",
+                          "_documentType": "uu",
                           "nomor": 13,
                           "tahun": 2003
                         }
@@ -2451,7 +2451,7 @@
                         "_key": 35,
                         "_structureType": "pasal",
                         "parentDocument": {
-                          "documentType": "uu",
+                          "_documentType": "uu",
                           "nomor": 13,
                           "tahun": 2003
                         }
@@ -2490,7 +2490,7 @@
                         "_key": 35,
                         "_structureType": "pasal",
                         "parentDocument": {
-                          "documentType": "uu",
+                          "_documentType": "uu",
                           "nomor": 13,
                           "tahun": 2003
                         }
@@ -2518,7 +2518,7 @@
                           "_key": 36,
                           "_structureType": "pasal",
                           "parentDocument": {
-                            "documentType": "uu",
+                            "_documentType": "uu",
                             "nomor": 13,
                             "tahun": 2003
                           }
@@ -2606,7 +2606,7 @@
                         "_key": 36,
                         "_structureType": "pasal",
                         "parentDocument": {
-                          "documentType": "uu",
+                          "_documentType": "uu",
                           "nomor": 13,
                           "tahun": 2003
                         }
@@ -2646,7 +2646,7 @@
                           "_key": 35,
                           "_structureType": "pasal",
                           "parentDocument": {
-                            "documentType": "uu",
+                            "_documentType": "uu",
                             "nomor": 13,
                             "tahun": 2003
                           }
@@ -2707,7 +2707,7 @@
                           "_key": 37,
                           "_structureType": "pasal",
                           "parentDocument": {
-                            "documentType": "uu",
+                            "_documentType": "uu",
                             "nomor": 13,
                             "tahun": 2003
                           }
@@ -2747,7 +2747,7 @@
                         "_key": 37,
                         "_structureType": "pasal",
                         "parentDocument": {
-                          "documentType": "uu",
+                          "_documentType": "uu",
                           "nomor": 13,
                           "tahun": 2003
                         }
@@ -2774,7 +2774,7 @@
                         "_key": 37,
                         "_structureType": "pasal",
                         "parentDocument": {
-                          "documentType": "uu",
+                          "_documentType": "uu",
                           "nomor": 13,
                           "tahun": 2003
                         }
@@ -2801,7 +2801,7 @@
                         "_key": 38,
                         "_structureType": "pasal",
                         "parentDocument": {
-                          "documentType": "uu",
+                          "_documentType": "uu",
                           "nomor": 13,
                           "tahun": 2003
                         }
@@ -2910,7 +2910,7 @@
                         "_key": 40,
                         "_structureType": "pasal",
                         "parentDocument": {
-                          "documentType": "uu",
+                          "_documentType": "uu",
                           "nomor": 13,
                           "tahun": 2003
                         }
@@ -2959,7 +2959,7 @@
                         "_key": 41,
                         "_structureType": "pasal",
                         "parentDocument": {
-                          "documentType": "uu",
+                          "_documentType": "uu",
                           "nomor": 13,
                           "tahun": 2003
                         }
@@ -2986,7 +2986,7 @@
                         "_key": 41,
                         "_structureType": "pasal",
                         "parentDocument": {
-                          "documentType": "uu",
+                          "_documentType": "uu",
                           "nomor": 13,
                           "tahun": 2003
                         }
@@ -3010,7 +3010,7 @@
                       "_key": 39,
                       "_structureType": "pasal",
                       "parentDocument": {
-                        "documentType": "uu",
+                        "_documentType": "uu",
                         "nomor": 13,
                         "tahun": 2003
                       }
@@ -3023,7 +3023,7 @@
                       "_key": 40,
                       "_structureType": "pasal",
                       "parentDocument": {
-                        "documentType": "uu",
+                        "_documentType": "uu",
                         "nomor": 13,
                         "tahun": 2003
                       }
@@ -3039,7 +3039,7 @@
                         "_key": 41,
                         "_structureType": "pasal",
                         "parentDocument": {
-                          "documentType": "uu",
+                          "_documentType": "uu",
                           "nomor": 13,
                           "tahun": 2003
                         }
@@ -3106,7 +3106,7 @@
                         "_key": 42,
                         "_structureType": "pasal",
                         "parentDocument": {
-                          "documentType": "uu",
+                          "_documentType": "uu",
                           "nomor": 13,
                           "tahun": 2003
                         }
@@ -3143,7 +3143,7 @@
                         "_key": 42,
                         "_structureType": "pasal",
                         "parentDocument": {
-                          "documentType": "uu",
+                          "_documentType": "uu",
                           "nomor": 13,
                           "tahun": 2003
                         }
@@ -3170,7 +3170,7 @@
                         "_key": 42,
                         "_structureType": "pasal",
                         "parentDocument": {
-                          "documentType": "uu",
+                          "_documentType": "uu",
                           "nomor": 13,
                           "tahun": 2003
                         }
@@ -3220,7 +3220,7 @@
                           "_key": 43,
                           "_structureType": "pasal",
                           "parentDocument": {
-                            "documentType": "uu",
+                            "_documentType": "uu",
                             "nomor": 13,
                             "tahun": 2003
                           }
@@ -3298,7 +3298,7 @@
                         "_key": 43,
                         "_structureType": "pasal",
                         "parentDocument": {
-                          "documentType": "uu",
+                          "_documentType": "uu",
                           "nomor": 13,
                           "tahun": 2003
                         }
@@ -3357,7 +3357,7 @@
                         "_key": 44,
                         "_structureType": "pasal",
                         "parentDocument": {
-                          "documentType": "uu",
+                          "_documentType": "uu",
                           "nomor": 13,
                           "tahun": 2003
                         }
@@ -3421,7 +3421,7 @@
                                 "_key": 45,
                                 "_structureType": "pasal",
                                 "parentDocument": {
-                                  "documentType": "uu",
+                                  "_documentType": "uu",
                                   "nomor": 13,
                                   "tahun": 2003
                                 }
@@ -3459,7 +3459,7 @@
                         "_key": 45,
                         "_structureType": "pasal",
                         "parentDocument": {
-                          "documentType": "uu",
+                          "_documentType": "uu",
                           "nomor": 13,
                           "tahun": 2003
                         }
@@ -3508,7 +3508,7 @@
                         "_key": 46,
                         "_structureType": "pasal",
                         "parentDocument": {
-                          "documentType": "uu",
+                          "_documentType": "uu",
                           "nomor": 13,
                           "tahun": 2003
                         }
@@ -3557,7 +3557,7 @@
                         "_key": 47,
                         "_structureType": "pasal",
                         "parentDocument": {
-                          "documentType": "uu",
+                          "_documentType": "uu",
                           "nomor": 13,
                           "tahun": 2003
                         }
@@ -3584,7 +3584,7 @@
                         "_key": 47,
                         "_structureType": "pasal",
                         "parentDocument": {
-                          "documentType": "uu",
+                          "_documentType": "uu",
                           "nomor": 13,
                           "tahun": 2003
                         }
@@ -3768,7 +3768,7 @@
                           "_key": 52,
                           "_structureType": "pasal",
                           "parentDocument": {
-                            "documentType": "uu",
+                            "_documentType": "uu",
                             "nomor": 13,
                             "tahun": 2003
                           }
@@ -3789,7 +3789,7 @@
                           "_key": 52,
                           "_structureType": "pasal",
                           "parentDocument": {
-                            "documentType": "uu",
+                            "_documentType": "uu",
                             "nomor": 13,
                             "tahun": 2003
                           }
@@ -3820,7 +3820,7 @@
                           "_key": 52,
                           "_structureType": "pasal",
                           "parentDocument": {
-                            "documentType": "uu",
+                            "_documentType": "uu",
                             "nomor": 13,
                             "tahun": 2003
                           }
@@ -3841,7 +3841,7 @@
                           "_key": 52,
                           "_structureType": "pasal",
                           "parentDocument": {
-                            "documentType": "uu",
+                            "_documentType": "uu",
                             "nomor": 13,
                             "tahun": 2003
                           }
@@ -4006,7 +4006,7 @@
                           "_key": 54,
                           "_structureType": "pasal",
                           "parentDocument": {
-                            "documentType": "uu",
+                            "_documentType": "uu",
                             "nomor": 13,
                             "tahun": 2003
                           }
@@ -4034,7 +4034,7 @@
                         "_key": 54,
                         "_structureType": "pasal",
                         "parentDocument": {
-                          "documentType": "uu",
+                          "_documentType": "uu",
                           "nomor": 13,
                           "tahun": 2003
                         }
@@ -4094,7 +4094,7 @@
                           "_key": 56,
                           "_structureType": "pasal",
                           "parentDocument": {
-                            "documentType": "uu",
+                            "_documentType": "uu",
                             "nomor": 13,
                             "tahun": 2003
                           }
@@ -4174,7 +4174,7 @@
                         "_key": 57,
                         "_structureType": "pasal",
                         "parentDocument": {
-                          "documentType": "uu",
+                          "_documentType": "uu",
                           "nomor": 13,
                           "tahun": 2003
                         }
@@ -4233,7 +4233,7 @@
                         "_key": 58,
                         "_structureType": "pasal",
                         "parentDocument": {
-                          "documentType": "uu",
+                          "_documentType": "uu",
                           "nomor": 13,
                           "tahun": 2003
                         }
@@ -4384,7 +4384,7 @@
                         "_key": 59,
                         "_structureType": "pasal",
                         "parentDocument": {
-                          "documentType": "uu",
+                          "_documentType": "uu",
                           "nomor": 13,
                           "tahun": 2003
                         }
@@ -4401,7 +4401,7 @@
                         "_key": 59,
                         "_structureType": "pasal",
                         "parentDocument": {
-                          "documentType": "uu",
+                          "_documentType": "uu",
                           "nomor": 13,
                           "tahun": 2003
                         }
@@ -4418,7 +4418,7 @@
                         "_key": 59,
                         "_structureType": "pasal",
                         "parentDocument": {
-                          "documentType": "uu",
+                          "_documentType": "uu",
                           "nomor": 13,
                           "tahun": 2003
                         }
@@ -4435,7 +4435,7 @@
                         "_key": 59,
                         "_structureType": "pasal",
                         "parentDocument": {
-                          "documentType": "uu",
+                          "_documentType": "uu",
                           "nomor": 13,
                           "tahun": 2003
                         }
@@ -4452,7 +4452,7 @@
                         "_key": 59,
                         "_structureType": "pasal",
                         "parentDocument": {
-                          "documentType": "uu",
+                          "_documentType": "uu",
                           "nomor": 13,
                           "tahun": 2003
                         }
@@ -4511,7 +4511,7 @@
                         "_key": 60,
                         "_structureType": "pasal",
                         "parentDocument": {
-                          "documentType": "uu",
+                          "_documentType": "uu",
                           "nomor": 13,
                           "tahun": 2003
                         }
@@ -4660,7 +4660,7 @@
                     "_key": 61,
                     "_structureType": "pasal",
                     "parentDocument": {
-                      "documentType": "uu",
+                      "_documentType": "uu",
                       "nomor": 13,
                       "tahun": 2003
                     }
@@ -4702,7 +4702,7 @@
                           "_key": 63,
                           "_structureType": "pasal",
                           "parentDocument": {
-                            "documentType": "uu",
+                            "_documentType": "uu",
                             "nomor": 13,
                             "tahun": 2003
                           }
@@ -4813,7 +4813,7 @@
                           "_key": 65,
                           "_structureType": "pasal",
                           "parentDocument": {
-                            "documentType": "uu",
+                            "_documentType": "uu",
                             "nomor": 13,
                             "tahun": 2003
                           }
@@ -4891,7 +4891,7 @@
                         "_key": 65,
                         "_structureType": "pasal",
                         "parentDocument": {
-                          "documentType": "uu",
+                          "_documentType": "uu",
                           "nomor": 13,
                           "tahun": 2003
                         }
@@ -4918,7 +4918,7 @@
                         "_key": 65,
                         "_structureType": "pasal",
                         "parentDocument": {
-                          "documentType": "uu",
+                          "_documentType": "uu",
                           "nomor": 13,
                           "tahun": 2003
                         }
@@ -4945,7 +4945,7 @@
                         "_key": 65,
                         "_structureType": "pasal",
                         "parentDocument": {
-                          "documentType": "uu",
+                          "_documentType": "uu",
                           "nomor": 13,
                           "tahun": 2003
                         }
@@ -4972,7 +4972,7 @@
                         "_key": 65,
                         "_structureType": "pasal",
                         "parentDocument": {
-                          "documentType": "uu",
+                          "_documentType": "uu",
                           "nomor": 13,
                           "tahun": 2003
                         }
@@ -4996,7 +4996,7 @@
                       "_key": 59,
                       "_structureType": "pasal",
                       "parentDocument": {
-                        "documentType": "uu",
+                        "_documentType": "uu",
                         "nomor": 13,
                         "tahun": 2003
                       }
@@ -5012,7 +5012,7 @@
                         "_key": 65,
                         "_structureType": "pasal",
                         "parentDocument": {
-                          "documentType": "uu",
+                          "_documentType": "uu",
                           "nomor": 13,
                           "tahun": 2003
                         }
@@ -5039,7 +5039,7 @@
                         "_key": 65,
                         "_structureType": "pasal",
                         "parentDocument": {
-                          "documentType": "uu",
+                          "_documentType": "uu",
                           "nomor": 13,
                           "tahun": 2003
                         }
@@ -5056,7 +5056,7 @@
                         "_key": 65,
                         "_structureType": "pasal",
                         "parentDocument": {
-                          "documentType": "uu",
+                          "_documentType": "uu",
                           "nomor": 13,
                           "tahun": 2003
                         }
@@ -5083,7 +5083,7 @@
                         "_key": 65,
                         "_structureType": "pasal",
                         "parentDocument": {
-                          "documentType": "uu",
+                          "_documentType": "uu",
                           "nomor": 13,
                           "tahun": 2003
                         }
@@ -5100,7 +5100,7 @@
                         "_key": 65,
                         "_structureType": "pasal",
                         "parentDocument": {
-                          "documentType": "uu",
+                          "_documentType": "uu",
                           "nomor": 13,
                           "tahun": 2003
                         }
@@ -5174,7 +5174,7 @@
                                 "_key": 66,
                                 "_structureType": "pasal",
                                 "parentDocument": {
-                                  "documentType": "uu",
+                                  "_documentType": "uu",
                                   "nomor": 13,
                                   "tahun": 2003
                                 }
@@ -5189,7 +5189,7 @@
                             "_key": 59,
                             "_structureType": "pasal",
                             "parentDocument": {
-                              "documentType": "uu",
+                              "_documentType": "uu",
                               "nomor": 13,
                               "tahun": 2003
                             }
@@ -5258,7 +5258,7 @@
                           "_key": 66,
                           "_structureType": "pasal",
                           "parentDocument": {
-                            "documentType": "uu",
+                            "_documentType": "uu",
                             "nomor": 13,
                             "tahun": 2003
                           }
@@ -5279,7 +5279,7 @@
                           "_key": 66,
                           "_structureType": "pasal",
                           "parentDocument": {
-                            "documentType": "uu",
+                            "_documentType": "uu",
                             "nomor": 13,
                             "tahun": 2003
                           }
@@ -5300,7 +5300,7 @@
                           "_key": 66,
                           "_structureType": "pasal",
                           "parentDocument": {
-                            "documentType": "uu",
+                            "_documentType": "uu",
                             "nomor": 13,
                             "tahun": 2003
                           }
@@ -5318,7 +5318,7 @@
                         "_key": 66,
                         "_structureType": "pasal",
                         "parentDocument": {
-                          "documentType": "uu",
+                          "_documentType": "uu",
                           "nomor": 13,
                           "tahun": 2003
                         }
@@ -5335,7 +5335,7 @@
                         "_key": 66,
                         "_structureType": "pasal",
                         "parentDocument": {
-                          "documentType": "uu",
+                          "_documentType": "uu",
                           "nomor": 13,
                           "tahun": 2003
                         }
@@ -5402,7 +5402,7 @@
                                 "_key": 67,
                                 "_structureType": "pasal",
                                 "parentDocument": {
-                                  "documentType": "uu",
+                                  "_documentType": "uu",
                                   "nomor": 13,
                                   "tahun": 2003
                                 }
@@ -5456,7 +5456,7 @@
                               "_key": 68,
                               "_structureType": "pasal",
                               "parentDocument": {
-                                "documentType": "uu",
+                                "_documentType": "uu",
                                 "nomor": 13,
                                 "tahun": 2003
                               }
@@ -5483,7 +5483,7 @@
                                   "_key": 69,
                                   "_structureType": "pasal",
                                   "parentDocument": {
-                                    "documentType": "uu",
+                                    "_documentType": "uu",
                                     "nomor": 13,
                                     "tahun": 2003
                                   }
@@ -5594,7 +5594,7 @@
                                   "_key": 69,
                                   "_structureType": "pasal",
                                   "parentDocument": {
-                                    "documentType": "uu",
+                                    "_documentType": "uu",
                                     "nomor": 13,
                                     "tahun": 2003
                                   }
@@ -5615,7 +5615,7 @@
                                   "_key": 69,
                                   "_structureType": "pasal",
                                   "parentDocument": {
-                                    "documentType": "uu",
+                                    "_documentType": "uu",
                                     "nomor": 13,
                                     "tahun": 2003
                                   }
@@ -5636,7 +5636,7 @@
                                   "_key": 69,
                                   "_structureType": "pasal",
                                   "parentDocument": {
-                                    "documentType": "uu",
+                                    "_documentType": "uu",
                                     "nomor": 13,
                                     "tahun": 2003
                                   }
@@ -5657,7 +5657,7 @@
                                   "_key": 69,
                                   "_structureType": "pasal",
                                   "parentDocument": {
-                                    "documentType": "uu",
+                                    "_documentType": "uu",
                                     "nomor": 13,
                                     "tahun": 2003
                                   }
@@ -5707,7 +5707,7 @@
                                 "_key": 70,
                                 "_structureType": "pasal",
                                 "parentDocument": {
-                                  "documentType": "uu",
+                                  "_documentType": "uu",
                                   "nomor": 13,
                                   "tahun": 2003
                                 }
@@ -5735,7 +5735,7 @@
                                   "_key": 70,
                                   "_structureType": "pasal",
                                   "parentDocument": {
-                                    "documentType": "uu",
+                                    "_documentType": "uu",
                                     "nomor": 13,
                                     "tahun": 2003
                                   }
@@ -5816,7 +5816,7 @@
                                   "_key": 71,
                                   "_structureType": "pasal",
                                   "parentDocument": {
-                                    "documentType": "uu",
+                                    "_documentType": "uu",
                                     "nomor": 13,
                                     "tahun": 2003
                                   }
@@ -5884,7 +5884,7 @@
                                 "_key": 71,
                                 "_structureType": "pasal",
                                 "parentDocument": {
-                                  "documentType": "uu",
+                                  "_documentType": "uu",
                                   "nomor": 13,
                                   "tahun": 2003
                                 }
@@ -5901,7 +5901,7 @@
                                 "_key": 71,
                                 "_structureType": "pasal",
                                 "parentDocument": {
-                                  "documentType": "uu",
+                                  "_documentType": "uu",
                                   "nomor": 13,
                                   "tahun": 2003
                                 }
@@ -5971,7 +5971,7 @@
                                   "_key": 74,
                                   "_structureType": "pasal",
                                   "parentDocument": {
-                                    "documentType": "uu",
+                                    "_documentType": "uu",
                                     "nomor": 13,
                                     "tahun": 2003
                                   }
@@ -6052,7 +6052,7 @@
                                   "_key": 74,
                                   "_structureType": "pasal",
                                   "parentDocument": {
-                                    "documentType": "uu",
+                                    "_documentType": "uu",
                                     "nomor": 13,
                                     "tahun": 2003
                                   }
@@ -6102,7 +6102,7 @@
                                 "_key": 75,
                                 "_structureType": "pasal",
                                 "parentDocument": {
-                                  "documentType": "uu",
+                                  "_documentType": "uu",
                                   "nomor": 13,
                                   "tahun": 2003
                                 }
@@ -6221,7 +6221,7 @@
                                 "_key": 76,
                                 "_structureType": "pasal",
                                 "parentDocument": {
-                                  "documentType": "uu",
+                                  "_documentType": "uu",
                                   "nomor": 13,
                                   "tahun": 2003
                                 }
@@ -6238,7 +6238,7 @@
                                 "_key": 76,
                                 "_structureType": "pasal",
                                 "parentDocument": {
-                                  "documentType": "uu",
+                                  "_documentType": "uu",
                                   "nomor": 13,
                                   "tahun": 2003
                                 }
@@ -6296,7 +6296,7 @@
                                   "_key": 77,
                                   "_structureType": "pasal",
                                   "parentDocument": {
-                                    "documentType": "uu",
+                                    "_documentType": "uu",
                                     "nomor": 13,
                                     "tahun": 2003
                                   }
@@ -6354,7 +6354,7 @@
                                 "_key": 77,
                                 "_structureType": "pasal",
                                 "parentDocument": {
-                                  "documentType": "uu",
+                                  "_documentType": "uu",
                                   "nomor": 13,
                                   "tahun": 2003
                                 }
@@ -6381,7 +6381,7 @@
                                 "_key": 77,
                                 "_structureType": "pasal",
                                 "parentDocument": {
-                                  "documentType": "uu",
+                                  "_documentType": "uu",
                                   "nomor": 13,
                                   "tahun": 2003
                                 }
@@ -6421,7 +6421,7 @@
                                   "_key": 77,
                                   "_structureType": "pasal",
                                   "parentDocument": {
-                                    "documentType": "uu",
+                                    "_documentType": "uu",
                                     "nomor": 13,
                                     "tahun": 2003
                                   }
@@ -6479,7 +6479,7 @@
                                 "_key": 78,
                                 "_structureType": "pasal",
                                 "parentDocument": {
-                                  "documentType": "uu",
+                                  "_documentType": "uu",
                                   "nomor": 13,
                                   "tahun": 2003
                                 }
@@ -6509,7 +6509,7 @@
                                   "_key": 78,
                                   "_structureType": "pasal",
                                   "parentDocument": {
-                                    "documentType": "uu",
+                                    "_documentType": "uu",
                                     "nomor": 13,
                                     "tahun": 2003
                                   }
@@ -6537,7 +6537,7 @@
                                 "_key": 78,
                                 "_structureType": "pasal",
                                 "parentDocument": {
-                                  "documentType": "uu",
+                                  "_documentType": "uu",
                                   "nomor": 13,
                                   "tahun": 2003
                                 }
@@ -6554,7 +6554,7 @@
                                 "_key": 78,
                                 "_structureType": "pasal",
                                 "parentDocument": {
-                                  "documentType": "uu",
+                                  "_documentType": "uu",
                                   "nomor": 13,
                                   "tahun": 2003
                                 }
@@ -6604,7 +6604,7 @@
                                   "_key": 79,
                                   "_structureType": "pasal",
                                   "parentDocument": {
-                                    "documentType": "uu",
+                                    "_documentType": "uu",
                                     "nomor": 13,
                                     "tahun": 2003
                                   }
@@ -6685,7 +6685,7 @@
                                   "_key": 79,
                                   "_structureType": "pasal",
                                   "parentDocument": {
-                                    "documentType": "uu",
+                                    "_documentType": "uu",
                                     "nomor": 13,
                                     "tahun": 2003
                                   }
@@ -6716,7 +6716,7 @@
                                   "_key": 79,
                                   "_structureType": "pasal",
                                   "parentDocument": {
-                                    "documentType": "uu",
+                                    "_documentType": "uu",
                                     "nomor": 13,
                                     "tahun": 2003
                                   }
@@ -6744,7 +6744,7 @@
                                 "_key": 79,
                                 "_structureType": "pasal",
                                 "parentDocument": {
-                                  "documentType": "uu",
+                                  "_documentType": "uu",
                                   "nomor": 13,
                                   "tahun": 2003
                                 }
@@ -6803,7 +6803,7 @@
                                 "_key": 81,
                                 "_structureType": "pasal",
                                 "parentDocument": {
-                                  "documentType": "uu",
+                                  "_documentType": "uu",
                                   "nomor": 13,
                                   "tahun": 2003
                                 }
@@ -6877,7 +6877,7 @@
                           "_key": 79,
                           "_structureType": "pasal",
                           "parentDocument": {
-                            "documentType": "uu",
+                            "_documentType": "uu",
                             "nomor": 13,
                             "tahun": 2003
                           }
@@ -6890,7 +6890,7 @@
                           "_key": 82,
                           "_structureType": "pasal",
                           "parentDocument": {
-                            "documentType": "uu",
+                            "_documentType": "uu",
                             "nomor": 13,
                             "tahun": 2003
                           }
@@ -6909,7 +6909,7 @@
                               "_key": 84,
                               "_structureType": "pasal",
                               "parentDocument": {
-                                "documentType": "uu",
+                                "_documentType": "uu",
                                 "nomor": 13,
                                 "tahun": 2003
                               }
@@ -6930,7 +6930,7 @@
                               "_key": 84,
                               "_structureType": "pasal",
                               "parentDocument": {
-                                "documentType": "uu",
+                                "_documentType": "uu",
                                 "nomor": 13,
                                 "tahun": 2003
                               }
@@ -6982,7 +6982,7 @@
                                 "_key": 85,
                                 "_structureType": "pasal",
                                 "parentDocument": {
-                                  "documentType": "uu",
+                                  "_documentType": "uu",
                                   "nomor": 13,
                                   "tahun": 2003
                                 }
@@ -7009,7 +7009,7 @@
                                 "_key": 85,
                                 "_structureType": "pasal",
                                 "parentDocument": {
-                                  "documentType": "uu",
+                                  "_documentType": "uu",
                                   "nomor": 13,
                                   "tahun": 2003
                                 }
@@ -7118,7 +7118,7 @@
                                 "_key": 86,
                                 "_structureType": "pasal",
                                 "parentDocument": {
-                                  "documentType": "uu",
+                                  "_documentType": "uu",
                                   "nomor": 13,
                                   "tahun": 2003
                                 }
@@ -7135,7 +7135,7 @@
                                 "_key": 86,
                                 "_structureType": "pasal",
                                 "parentDocument": {
-                                  "documentType": "uu",
+                                  "_documentType": "uu",
                                   "nomor": 13,
                                   "tahun": 2003
                                 }
@@ -7184,7 +7184,7 @@
                                 "_key": 87,
                                 "_structureType": "pasal",
                                 "parentDocument": {
-                                  "documentType": "uu",
+                                  "_documentType": "uu",
                                   "nomor": 13,
                                   "tahun": 2003
                                 }
@@ -7244,7 +7244,7 @@
                             "_key": 88,
                             "_structureType": "pasal",
                             "parentDocument": {
-                              "documentType": "uu",
+                              "_documentType": "uu",
                               "nomor": 13,
                               "tahun": 2003
                             }
@@ -7272,7 +7272,7 @@
                               "_key": 88,
                               "_structureType": "pasal",
                               "parentDocument": {
-                                "documentType": "uu",
+                                "_documentType": "uu",
                                 "nomor": 13,
                                 "tahun": 2003
                               }
@@ -7420,7 +7420,7 @@
                             "_key": 88,
                             "_structureType": "pasal",
                             "parentDocument": {
-                              "documentType": "uu",
+                              "_documentType": "uu",
                               "nomor": 13,
                               "tahun": 2003
                             }
@@ -7460,7 +7460,7 @@
                               "_key": 89,
                               "_structureType": "pasal",
                               "parentDocument": {
-                                "documentType": "uu",
+                                "_documentType": "uu",
                                 "nomor": 13,
                                 "tahun": 2003
                               }
@@ -7518,7 +7518,7 @@
                             "_key": 89,
                             "_structureType": "pasal",
                             "parentDocument": {
-                              "documentType": "uu",
+                              "_documentType": "uu",
                               "nomor": 13,
                               "tahun": 2003
                             }
@@ -7545,7 +7545,7 @@
                             "_key": 89,
                             "_structureType": "pasal",
                             "parentDocument": {
-                              "documentType": "uu",
+                              "_documentType": "uu",
                               "nomor": 13,
                               "tahun": 2003
                             }
@@ -7572,7 +7572,7 @@
                             "_key": 89,
                             "_structureType": "pasal",
                             "parentDocument": {
-                              "documentType": "uu",
+                              "_documentType": "uu",
                               "nomor": 13,
                               "tahun": 2003
                             }
@@ -7608,7 +7608,7 @@
                           "_key": 89,
                           "_structureType": "pasal",
                           "parentDocument": {
-                            "documentType": "uu",
+                            "_documentType": "uu",
                             "nomor": 13,
                             "tahun": 2003
                           }
@@ -7631,7 +7631,7 @@
                           "_key": 89,
                           "_structureType": "pasal",
                           "parentDocument": {
-                            "documentType": "uu",
+                            "_documentType": "uu",
                             "nomor": 13,
                             "tahun": 2003
                           }
@@ -7657,7 +7657,7 @@
                             "_key": 90,
                             "_structureType": "pasal",
                             "parentDocument": {
-                              "documentType": "uu",
+                              "_documentType": "uu",
                               "nomor": 13,
                               "tahun": 2003
                             }
@@ -7706,7 +7706,7 @@
                             "_key": 91,
                             "_structureType": "pasal",
                             "parentDocument": {
-                              "documentType": "uu",
+                              "_documentType": "uu",
                               "nomor": 13,
                               "tahun": 2003
                             }
@@ -7765,7 +7765,7 @@
                             "_key": 92,
                             "_structureType": "pasal",
                             "parentDocument": {
-                              "documentType": "uu",
+                              "_documentType": "uu",
                               "nomor": 13,
                               "tahun": 2003
                             }
@@ -7815,7 +7815,7 @@
                               "_key": 93,
                               "_structureType": "pasal",
                               "parentDocument": {
-                                "documentType": "uu",
+                                "_documentType": "uu",
                                 "nomor": 13,
                                 "tahun": 2003
                               }
@@ -7947,7 +7947,7 @@
                                 "_key": 93,
                                 "_structureType": "pasal",
                                 "parentDocument": {
-                                  "documentType": "uu",
+                                  "_documentType": "uu",
                                   "nomor": 13,
                                   "tahun": 2003
                                 }
@@ -8030,7 +8030,7 @@
                                 "_key": 93,
                                 "_structureType": "pasal",
                                 "parentDocument": {
-                                  "documentType": "uu",
+                                  "_documentType": "uu",
                                   "nomor": 13,
                                   "tahun": 2003
                                 }
@@ -8139,7 +8139,7 @@
                             "_key": 93,
                             "_structureType": "pasal",
                             "parentDocument": {
-                              "documentType": "uu",
+                              "_documentType": "uu",
                               "nomor": 13,
                               "tahun": 2003
                             }
@@ -8243,7 +8243,7 @@
                       "_key": 88,
                       "_structureType": "pasal",
                       "parentDocument": {
-                        "documentType": "uu",
+                        "_documentType": "uu",
                         "nomor": 13,
                         "tahun": 2003
                       }
@@ -8256,7 +8256,7 @@
                       "_key": 89,
                       "_structureType": "pasal",
                       "parentDocument": {
-                        "documentType": "uu",
+                        "_documentType": "uu",
                         "nomor": 13,
                         "tahun": 2003
                       }
@@ -8272,7 +8272,7 @@
                         "_key": 95,
                         "_structureType": "pasal",
                         "parentDocument": {
-                          "documentType": "uu",
+                          "_documentType": "uu",
                           "nomor": 13,
                           "tahun": 2003
                         }
@@ -8289,7 +8289,7 @@
                         "_key": 97,
                         "_structureType": "pasal",
                         "parentDocument": {
-                          "documentType": "uu",
+                          "_documentType": "uu",
                           "nomor": 13,
                           "tahun": 2003
                         }
@@ -8306,7 +8306,7 @@
                         "_key": 97,
                         "_structureType": "pasal",
                         "parentDocument": {
-                          "documentType": "uu",
+                          "_documentType": "uu",
                           "nomor": 13,
                           "tahun": 2003
                         }
@@ -8347,7 +8347,7 @@
                             "_key": 98,
                             "_structureType": "pasal",
                             "parentDocument": {
-                              "documentType": "uu",
+                              "_documentType": "uu",
                               "nomor": 13,
                               "tahun": 2003
                             }
@@ -8384,7 +8384,7 @@
                             "_key": 98,
                             "_structureType": "pasal",
                             "parentDocument": {
-                              "documentType": "uu",
+                              "_documentType": "uu",
                               "nomor": 13,
                               "tahun": 2003
                             }
@@ -8401,7 +8401,7 @@
                             "_key": 98,
                             "_structureType": "pasal",
                             "parentDocument": {
-                              "documentType": "uu",
+                              "_documentType": "uu",
                               "nomor": 13,
                               "tahun": 2003
                             }
@@ -8458,7 +8458,7 @@
                             "_key": 99,
                             "_structureType": "pasal",
                             "parentDocument": {
-                              "documentType": "uu",
+                              "_documentType": "uu",
                               "nomor": 13,
                               "tahun": 2003
                             }
@@ -8507,7 +8507,7 @@
                             "_key": 100,
                             "_structureType": "pasal",
                             "parentDocument": {
-                              "documentType": "uu",
+                              "_documentType": "uu",
                               "nomor": 13,
                               "tahun": 2003
                             }
@@ -8534,7 +8534,7 @@
                             "_key": 100,
                             "_structureType": "pasal",
                             "parentDocument": {
-                              "documentType": "uu",
+                              "_documentType": "uu",
                               "nomor": 13,
                               "tahun": 2003
                             }
@@ -8551,7 +8551,7 @@
                             "_key": 100,
                             "_structureType": "pasal",
                             "parentDocument": {
-                              "documentType": "uu",
+                              "_documentType": "uu",
                               "nomor": 13,
                               "tahun": 2003
                             }
@@ -8600,7 +8600,7 @@
                             "_key": 101,
                             "_structureType": "pasal",
                             "parentDocument": {
-                              "documentType": "uu",
+                              "_documentType": "uu",
                               "nomor": 13,
                               "tahun": 2003
                             }
@@ -8627,7 +8627,7 @@
                             "_key": 101,
                             "_structureType": "pasal",
                             "parentDocument": {
-                              "documentType": "uu",
+                              "_documentType": "uu",
                               "nomor": 13,
                               "tahun": 2003
                             }
@@ -8654,7 +8654,7 @@
                             "_key": 101,
                             "_structureType": "pasal",
                             "parentDocument": {
-                              "documentType": "uu",
+                              "_documentType": "uu",
                               "nomor": 13,
                               "tahun": 2003
                             }
@@ -8868,7 +8868,7 @@
                           "_key": 102,
                           "_structureType": "pasal",
                           "parentDocument": {
-                            "documentType": "uu",
+                            "_documentType": "uu",
                             "nomor": 13,
                             "tahun": 2003
                           }
@@ -8894,7 +8894,7 @@
                             "_key": 104,
                             "_structureType": "pasal",
                             "parentDocument": {
-                              "documentType": "uu",
+                              "_documentType": "uu",
                               "nomor": 13,
                               "tahun": 2003
                             }
@@ -8991,7 +8991,7 @@
                             "_key": 106,
                             "_structureType": "pasal",
                             "parentDocument": {
-                              "documentType": "uu",
+                              "_documentType": "uu",
                               "nomor": 13,
                               "tahun": 2003
                             }
@@ -9018,7 +9018,7 @@
                             "_key": 106,
                             "_structureType": "pasal",
                             "parentDocument": {
-                              "documentType": "uu",
+                              "_documentType": "uu",
                               "nomor": 13,
                               "tahun": 2003
                             }
@@ -9045,7 +9045,7 @@
                             "_key": 106,
                             "_structureType": "pasal",
                             "parentDocument": {
-                              "documentType": "uu",
+                              "_documentType": "uu",
                               "nomor": 13,
                               "tahun": 2003
                             }
@@ -9062,7 +9062,7 @@
                             "_key": 106,
                             "_structureType": "pasal",
                             "parentDocument": {
-                              "documentType": "uu",
+                              "_documentType": "uu",
                               "nomor": 13,
                               "tahun": 2003
                             }
@@ -9120,7 +9120,7 @@
                               "_key": 107,
                               "_structureType": "pasal",
                               "parentDocument": {
-                                "documentType": "uu",
+                                "_documentType": "uu",
                                 "nomor": 13,
                                 "tahun": 2003
                               }
@@ -9188,7 +9188,7 @@
                             "_key": 107,
                             "_structureType": "pasal",
                             "parentDocument": {
-                              "documentType": "uu",
+                              "_documentType": "uu",
                               "nomor": 13,
                               "tahun": 2003
                             }
@@ -9245,7 +9245,7 @@
                             "_key": 108,
                             "_structureType": "pasal",
                             "parentDocument": {
-                              "documentType": "uu",
+                              "_documentType": "uu",
                               "nomor": 13,
                               "tahun": 2003
                             }
@@ -9304,7 +9304,7 @@
                             "_key": 110,
                             "_structureType": "pasal",
                             "parentDocument": {
-                              "documentType": "uu",
+                              "_documentType": "uu",
                               "nomor": 13,
                               "tahun": 2003
                             }
@@ -9331,7 +9331,7 @@
                             "_key": 110,
                             "_structureType": "pasal",
                             "parentDocument": {
-                              "documentType": "uu",
+                              "_documentType": "uu",
                               "nomor": 13,
                               "tahun": 2003
                             }
@@ -9472,7 +9472,7 @@
                             "_key": 111,
                             "_structureType": "pasal",
                             "parentDocument": {
-                              "documentType": "uu",
+                              "_documentType": "uu",
                               "nomor": 13,
                               "tahun": 2003
                             }
@@ -9511,7 +9511,7 @@
                             "_key": 108,
                             "_structureType": "pasal",
                             "parentDocument": {
-                              "documentType": "uu",
+                              "_documentType": "uu",
                               "nomor": 13,
                               "tahun": 2003
                             }
@@ -9538,7 +9538,7 @@
                             "_key": 111,
                             "_structureType": "pasal",
                             "parentDocument": {
-                              "documentType": "uu",
+                              "_documentType": "uu",
                               "nomor": 13,
                               "tahun": 2003
                             }
@@ -9555,7 +9555,7 @@
                             "_key": 112,
                             "_structureType": "pasal",
                             "parentDocument": {
-                              "documentType": "uu",
+                              "_documentType": "uu",
                               "nomor": 13,
                               "tahun": 2003
                             }
@@ -9572,7 +9572,7 @@
                             "_key": 112,
                             "_structureType": "pasal",
                             "parentDocument": {
-                              "documentType": "uu",
+                              "_documentType": "uu",
                               "nomor": 13,
                               "tahun": 2003
                             }
@@ -9599,7 +9599,7 @@
                             "_key": 111,
                             "_structureType": "pasal",
                             "parentDocument": {
-                              "documentType": "uu",
+                              "_documentType": "uu",
                               "nomor": 13,
                               "tahun": 2003
                             }
@@ -9616,7 +9616,7 @@
                             "_key": 112,
                             "_structureType": "pasal",
                             "parentDocument": {
-                              "documentType": "uu",
+                              "_documentType": "uu",
                               "nomor": 13,
                               "tahun": 2003
                             }
@@ -9643,7 +9643,7 @@
                             "_key": 112,
                             "_structureType": "pasal",
                             "parentDocument": {
-                              "documentType": "uu",
+                              "_documentType": "uu",
                               "nomor": 13,
                               "tahun": 2003
                             }
@@ -9692,7 +9692,7 @@
                             "_key": 113,
                             "_structureType": "pasal",
                             "parentDocument": {
-                              "documentType": "uu",
+                              "_documentType": "uu",
                               "nomor": 13,
                               "tahun": 2003
                             }
@@ -9769,7 +9769,7 @@
                             "_key": 116,
                             "_structureType": "pasal",
                             "parentDocument": {
-                              "documentType": "uu",
+                              "_documentType": "uu",
                               "nomor": 13,
                               "tahun": 2003
                             }
@@ -9796,7 +9796,7 @@
                             "_key": 116,
                             "_structureType": "pasal",
                             "parentDocument": {
-                              "documentType": "uu",
+                              "_documentType": "uu",
                               "nomor": 13,
                               "tahun": 2003
                             }
@@ -9823,7 +9823,7 @@
                             "_key": 116,
                             "_structureType": "pasal",
                             "parentDocument": {
-                              "documentType": "uu",
+                              "_documentType": "uu",
                               "nomor": 13,
                               "tahun": 2003
                             }
@@ -9858,7 +9858,7 @@
                         "_key": 116,
                         "_structureType": "pasal",
                         "parentDocument": {
-                          "documentType": "uu",
+                          "_documentType": "uu",
                           "nomor": 13,
                           "tahun": 2003
                         }
@@ -9909,7 +9909,7 @@
                             "_key": 119,
                             "_structureType": "pasal",
                             "parentDocument": {
-                              "documentType": "uu",
+                              "_documentType": "uu",
                               "nomor": 13,
                               "tahun": 2003
                             }
@@ -9936,7 +9936,7 @@
                             "_key": 119,
                             "_structureType": "pasal",
                             "parentDocument": {
-                              "documentType": "uu",
+                              "_documentType": "uu",
                               "nomor": 13,
                               "tahun": 2003
                             }
@@ -9953,7 +9953,7 @@
                             "_key": 119,
                             "_structureType": "pasal",
                             "parentDocument": {
-                              "documentType": "uu",
+                              "_documentType": "uu",
                               "nomor": 13,
                               "tahun": 2003
                             }
@@ -10002,7 +10002,7 @@
                             "_key": 120,
                             "_structureType": "pasal",
                             "parentDocument": {
-                              "documentType": "uu",
+                              "_documentType": "uu",
                               "nomor": 13,
                               "tahun": 2003
                             }
@@ -10029,7 +10029,7 @@
                             "_key": 120,
                             "_structureType": "pasal",
                             "parentDocument": {
-                              "documentType": "uu",
+                              "_documentType": "uu",
                               "nomor": 13,
                               "tahun": 2003
                             }
@@ -10046,7 +10046,7 @@
                             "_key": 120,
                             "_structureType": "pasal",
                             "parentDocument": {
-                              "documentType": "uu",
+                              "_documentType": "uu",
                               "nomor": 13,
                               "tahun": 2003
                             }
@@ -10078,7 +10078,7 @@
                       "_key": 119,
                       "_structureType": "pasal",
                       "parentDocument": {
-                        "documentType": "uu",
+                        "_documentType": "uu",
                         "nomor": 13,
                         "tahun": 2003
                       }
@@ -10091,7 +10091,7 @@
                       "_key": 120,
                       "_structureType": "pasal",
                       "parentDocument": {
-                        "documentType": "uu",
+                        "_documentType": "uu",
                         "nomor": 13,
                         "tahun": 2003
                       }
@@ -10117,7 +10117,7 @@
                         "_key": 119,
                         "_structureType": "pasal",
                         "parentDocument": {
-                          "documentType": "uu",
+                          "_documentType": "uu",
                           "nomor": 13,
                           "tahun": 2003
                         }
@@ -10158,7 +10158,7 @@
                             "_key": 123,
                             "_structureType": "pasal",
                             "parentDocument": {
-                              "documentType": "uu",
+                              "_documentType": "uu",
                               "nomor": 13,
                               "tahun": 2003
                             }
@@ -10195,7 +10195,7 @@
                             "_key": 123,
                             "_structureType": "pasal",
                             "parentDocument": {
-                              "documentType": "uu",
+                              "_documentType": "uu",
                               "nomor": 13,
                               "tahun": 2003
                             }
@@ -10306,7 +10306,7 @@
                             "_key": 124,
                             "_structureType": "pasal",
                             "parentDocument": {
-                              "documentType": "uu",
+                              "_documentType": "uu",
                               "nomor": 13,
                               "tahun": 2003
                             }
@@ -10407,7 +10407,7 @@
                             "_key": 127,
                             "_structureType": "pasal",
                             "parentDocument": {
-                              "documentType": "uu",
+                              "_documentType": "uu",
                               "nomor": 13,
                               "tahun": 2003
                             }
@@ -10485,7 +10485,7 @@
                           "_key": 119,
                           "_structureType": "pasal",
                           "parentDocument": {
-                            "documentType": "uu",
+                            "_documentType": "uu",
                             "nomor": 13,
                             "tahun": 2003
                           }
@@ -10511,7 +10511,7 @@
                             "_key": 120,
                             "_structureType": "pasal",
                             "parentDocument": {
-                              "documentType": "uu",
+                              "_documentType": "uu",
                               "nomor": 13,
                               "tahun": 2003
                             }
@@ -10538,7 +10538,7 @@
                             "_key": 120,
                             "_structureType": "pasal",
                             "parentDocument": {
-                              "documentType": "uu",
+                              "_documentType": "uu",
                               "nomor": 13,
                               "tahun": 2003
                             }
@@ -10555,7 +10555,7 @@
                             "_key": 120,
                             "_structureType": "pasal",
                             "parentDocument": {
-                              "documentType": "uu",
+                              "_documentType": "uu",
                               "nomor": 13,
                               "tahun": 2003
                             }
@@ -10572,7 +10572,7 @@
                             "_key": 130,
                             "_structureType": "pasal",
                             "parentDocument": {
-                              "documentType": "uu",
+                              "_documentType": "uu",
                               "nomor": 13,
                               "tahun": 2003
                             }
@@ -10738,7 +10738,7 @@
                                 "_key": 136,
                                 "_structureType": "pasal",
                                 "parentDocument": {
-                                  "documentType": "uu",
+                                  "_documentType": "uu",
                                   "nomor": 13,
                                   "tahun": 2003
                                 }
@@ -10805,7 +10805,7 @@
                                 "_key": 138,
                                 "_structureType": "pasal",
                                 "parentDocument": {
-                                  "documentType": "uu",
+                                  "_documentType": "uu",
                                   "nomor": 13,
                                   "tahun": 2003
                                 }
@@ -10865,7 +10865,7 @@
                                   "_key": 140,
                                   "_structureType": "pasal",
                                   "parentDocument": {
-                                    "documentType": "uu",
+                                    "_documentType": "uu",
                                     "nomor": 13,
                                     "tahun": 2003
                                   }
@@ -10943,7 +10943,7 @@
                                 "_key": 140,
                                 "_structureType": "pasal",
                                 "parentDocument": {
-                                  "documentType": "uu",
+                                  "_documentType": "uu",
                                   "nomor": 13,
                                   "tahun": 2003
                                 }
@@ -10971,7 +10971,7 @@
                                   "_key": 140,
                                   "_structureType": "pasal",
                                   "parentDocument": {
-                                    "documentType": "uu",
+                                    "_documentType": "uu",
                                     "nomor": 13,
                                     "tahun": 2003
                                   }
@@ -11038,7 +11038,7 @@
                               "_key": 140,
                               "_structureType": "pasal",
                               "parentDocument": {
-                                "documentType": "uu",
+                                "_documentType": "uu",
                                 "nomor": 13,
                                 "tahun": 2003
                               }
@@ -11074,7 +11074,7 @@
                                 "_key": 141,
                                 "_structureType": "pasal",
                                 "parentDocument": {
-                                  "documentType": "uu",
+                                  "_documentType": "uu",
                                   "nomor": 13,
                                   "tahun": 2003
                                 }
@@ -11101,7 +11101,7 @@
                                 "_key": 141,
                                 "_structureType": "pasal",
                                 "parentDocument": {
-                                  "documentType": "uu",
+                                  "_documentType": "uu",
                                   "nomor": 13,
                                   "tahun": 2003
                                 }
@@ -11128,7 +11128,7 @@
                                 "_key": 141,
                                 "_structureType": "pasal",
                                 "parentDocument": {
-                                  "documentType": "uu",
+                                  "_documentType": "uu",
                                   "nomor": 13,
                                   "tahun": 2003
                                 }
@@ -11164,7 +11164,7 @@
                               "_key": 139,
                               "_structureType": "pasal",
                               "parentDocument": {
-                                "documentType": "uu",
+                                "_documentType": "uu",
                                 "nomor": 13,
                                 "tahun": 2003
                               }
@@ -11190,7 +11190,7 @@
                                 "_key": 142,
                                 "_structureType": "pasal",
                                 "parentDocument": {
-                                  "documentType": "uu",
+                                  "_documentType": "uu",
                                   "nomor": 13,
                                   "tahun": 2003
                                 }
@@ -11255,7 +11255,7 @@
                             "_key": 140,
                             "_structureType": "pasal",
                             "parentDocument": {
-                              "documentType": "uu",
+                              "_documentType": "uu",
                               "nomor": 13,
                               "tahun": 2003
                             }
@@ -11397,7 +11397,7 @@
                                   "_key": 148,
                                   "_structureType": "pasal",
                                   "parentDocument": {
-                                    "documentType": "uu",
+                                    "_documentType": "uu",
                                     "nomor": 13,
                                     "tahun": 2003
                                   }
@@ -11455,7 +11455,7 @@
                                 "_key": 148,
                                 "_structureType": "pasal",
                                 "parentDocument": {
-                                  "documentType": "uu",
+                                  "_documentType": "uu",
                                   "nomor": 13,
                                   "tahun": 2003
                                 }
@@ -11491,7 +11491,7 @@
                               "_key": 148,
                               "_structureType": "pasal",
                               "parentDocument": {
-                                "documentType": "uu",
+                                "_documentType": "uu",
                                 "nomor": 13,
                                 "tahun": 2003
                               }
@@ -11527,7 +11527,7 @@
                                 "_key": 149,
                                 "_structureType": "pasal",
                                 "parentDocument": {
-                                  "documentType": "uu",
+                                  "_documentType": "uu",
                                   "nomor": 13,
                                   "tahun": 2003
                                 }
@@ -11554,7 +11554,7 @@
                                 "_key": 149,
                                 "_structureType": "pasal",
                                 "parentDocument": {
-                                  "documentType": "uu",
+                                  "_documentType": "uu",
                                   "nomor": 13,
                                   "tahun": 2003
                                 }
@@ -11581,7 +11581,7 @@
                                 "_key": 149,
                                 "_structureType": "pasal",
                                 "parentDocument": {
-                                  "documentType": "uu",
+                                  "_documentType": "uu",
                                   "nomor": 13,
                                   "tahun": 2003
                                 }
@@ -11609,7 +11609,7 @@
                                   "_key": 148,
                                   "_structureType": "pasal",
                                   "parentDocument": {
-                                    "documentType": "uu",
+                                    "_documentType": "uu",
                                     "nomor": 13,
                                     "tahun": 2003
                                   }
@@ -11626,7 +11626,7 @@
                                   "_key": 149,
                                   "_structureType": "pasal",
                                   "parentDocument": {
-                                    "documentType": "uu",
+                                    "_documentType": "uu",
                                     "nomor": 13,
                                     "tahun": 2003
                                   }
@@ -11651,7 +11651,7 @@
                                     "_key": 140,
                                     "_structureType": "pasal",
                                     "parentDocument": {
-                                      "documentType": "uu",
+                                      "_documentType": "uu",
                                       "nomor": 13,
                                       "tahun": 2003
                                     }
@@ -11753,7 +11753,7 @@
                         "_key": 151,
                         "_structureType": "pasal",
                         "parentDocument": {
-                          "documentType": "uu",
+                          "_documentType": "uu",
                           "nomor": 13,
                           "tahun": 2003
                         }
@@ -11802,7 +11802,7 @@
                         "_key": 151,
                         "_structureType": "pasal",
                         "parentDocument": {
-                          "documentType": "uu",
+                          "_documentType": "uu",
                           "nomor": 13,
                           "tahun": 2003
                         }
@@ -11819,7 +11819,7 @@
                         "_key": 152,
                         "_structureType": "pasal",
                         "parentDocument": {
-                          "documentType": "uu",
+                          "_documentType": "uu",
                           "nomor": 13,
                           "tahun": 2003
                         }
@@ -11990,7 +11990,7 @@
                         "_key": 153,
                         "_structureType": "pasal",
                         "parentDocument": {
-                          "documentType": "uu",
+                          "_documentType": "uu",
                           "nomor": 13,
                           "tahun": 2003
                         }
@@ -12026,7 +12026,7 @@
                       "_key": 151,
                       "_structureType": "pasal",
                       "parentDocument": {
-                        "documentType": "uu",
+                        "_documentType": "uu",
                         "nomor": 13,
                         "tahun": 2003
                       }
@@ -12108,7 +12108,7 @@
                         "_key": 151,
                         "_structureType": "pasal",
                         "parentDocument": {
-                          "documentType": "uu",
+                          "_documentType": "uu",
                           "nomor": 13,
                           "tahun": 2003
                         }
@@ -12145,7 +12145,7 @@
                         "_key": 155,
                         "_structureType": "pasal",
                         "parentDocument": {
-                          "documentType": "uu",
+                          "_documentType": "uu",
                           "nomor": 13,
                           "tahun": 2003
                         }
@@ -12195,7 +12195,7 @@
                           "_key": 156,
                           "_structureType": "pasal",
                           "parentDocument": {
-                            "documentType": "uu",
+                            "_documentType": "uu",
                             "nomor": 13,
                             "tahun": 2003
                           }
@@ -12324,7 +12324,7 @@
                           "_key": 156,
                           "_structureType": "pasal",
                           "parentDocument": {
-                            "documentType": "uu",
+                            "_documentType": "uu",
                             "nomor": 13,
                             "tahun": 2003
                           }
@@ -12443,7 +12443,7 @@
                           "_key": 156,
                           "_structureType": "pasal",
                           "parentDocument": {
-                            "documentType": "uu",
+                            "_documentType": "uu",
                             "nomor": 13,
                             "tahun": 2003
                           }
@@ -12521,7 +12521,7 @@
                         "_key": 156,
                         "_structureType": "pasal",
                         "parentDocument": {
-                          "documentType": "uu",
+                          "_documentType": "uu",
                           "nomor": 13,
                           "tahun": 2003
                         }
@@ -12538,7 +12538,7 @@
                         "_key": 156,
                         "_structureType": "pasal",
                         "parentDocument": {
-                          "documentType": "uu",
+                          "_documentType": "uu",
                           "nomor": 13,
                           "tahun": 2003
                         }
@@ -12555,7 +12555,7 @@
                         "_key": 156,
                         "_structureType": "pasal",
                         "parentDocument": {
-                          "documentType": "uu",
+                          "_documentType": "uu",
                           "nomor": 13,
                           "tahun": 2003
                         }
@@ -12801,7 +12801,7 @@
                           "_key": 158,
                           "_structureType": "pasal",
                           "parentDocument": {
-                            "documentType": "uu",
+                            "_documentType": "uu",
                             "nomor": 13,
                             "tahun": 2003
                           }
@@ -12869,7 +12869,7 @@
                         "_key": 156,
                         "_structureType": "pasal",
                         "parentDocument": {
-                          "documentType": "uu",
+                          "_documentType": "uu",
                           "nomor": 13,
                           "tahun": 2003
                         }
@@ -12886,7 +12886,7 @@
                         "_key": 158,
                         "_structureType": "pasal",
                         "parentDocument": {
-                          "documentType": "uu",
+                          "_documentType": "uu",
                           "nomor": 13,
                           "tahun": 2003
                         }
@@ -12913,7 +12913,7 @@
                         "_key": 156,
                         "_structureType": "pasal",
                         "parentDocument": {
-                          "documentType": "uu",
+                          "_documentType": "uu",
                           "nomor": 13,
                           "tahun": 2003
                         }
@@ -12930,7 +12930,7 @@
                         "_key": 158,
                         "_structureType": "pasal",
                         "parentDocument": {
-                          "documentType": "uu",
+                          "_documentType": "uu",
                           "nomor": 13,
                           "tahun": 2003
                         }
@@ -12965,7 +12965,7 @@
                     "_key": 158,
                     "_structureType": "pasal",
                     "parentDocument": {
-                      "documentType": "uu",
+                      "_documentType": "uu",
                       "nomor": 13,
                       "tahun": 2003
                     }
@@ -13058,7 +13058,7 @@
                         "_key": 160,
                         "_structureType": "pasal",
                         "parentDocument": {
-                          "documentType": "uu",
+                          "_documentType": "uu",
                           "nomor": 13,
                           "tahun": 2003
                         }
@@ -13085,7 +13085,7 @@
                         "_key": 160,
                         "_structureType": "pasal",
                         "parentDocument": {
-                          "documentType": "uu",
+                          "_documentType": "uu",
                           "nomor": 13,
                           "tahun": 2003
                         }
@@ -13112,7 +13112,7 @@
                         "_key": 160,
                         "_structureType": "pasal",
                         "parentDocument": {
-                          "documentType": "uu",
+                          "_documentType": "uu",
                           "nomor": 13,
                           "tahun": 2003
                         }
@@ -13149,7 +13149,7 @@
                         "_key": 160,
                         "_structureType": "pasal",
                         "parentDocument": {
-                          "documentType": "uu",
+                          "_documentType": "uu",
                           "nomor": 13,
                           "tahun": 2003
                         }
@@ -13166,7 +13166,7 @@
                         "_key": 160,
                         "_structureType": "pasal",
                         "parentDocument": {
-                          "documentType": "uu",
+                          "_documentType": "uu",
                           "nomor": 13,
                           "tahun": 2003
                         }
@@ -13193,7 +13193,7 @@
                         "_key": 156,
                         "_structureType": "pasal",
                         "parentDocument": {
-                          "documentType": "uu",
+                          "_documentType": "uu",
                           "nomor": 13,
                           "tahun": 2003
                         }
@@ -13210,7 +13210,7 @@
                         "_key": 156,
                         "_structureType": "pasal",
                         "parentDocument": {
-                          "documentType": "uu",
+                          "_documentType": "uu",
                           "nomor": 13,
                           "tahun": 2003
                         }
@@ -13227,7 +13227,7 @@
                         "_key": 160,
                         "_structureType": "pasal",
                         "parentDocument": {
-                          "documentType": "uu",
+                          "_documentType": "uu",
                           "nomor": 13,
                           "tahun": 2003
                         }
@@ -13244,7 +13244,7 @@
                         "_key": 160,
                         "_structureType": "pasal",
                         "parentDocument": {
-                          "documentType": "uu",
+                          "_documentType": "uu",
                           "nomor": 13,
                           "tahun": 2003
                         }
@@ -13293,7 +13293,7 @@
                         "_key": 161,
                         "_structureType": "pasal",
                         "parentDocument": {
-                          "documentType": "uu",
+                          "_documentType": "uu",
                           "nomor": 13,
                           "tahun": 2003
                         }
@@ -13320,7 +13320,7 @@
                         "_key": 156,
                         "_structureType": "pasal",
                         "parentDocument": {
-                          "documentType": "uu",
+                          "_documentType": "uu",
                           "nomor": 13,
                           "tahun": 2003
                         }
@@ -13337,7 +13337,7 @@
                         "_key": 156,
                         "_structureType": "pasal",
                         "parentDocument": {
-                          "documentType": "uu",
+                          "_documentType": "uu",
                           "nomor": 13,
                           "tahun": 2003
                         }
@@ -13354,7 +13354,7 @@
                         "_key": 156,
                         "_structureType": "pasal",
                         "parentDocument": {
-                          "documentType": "uu",
+                          "_documentType": "uu",
                           "nomor": 13,
                           "tahun": 2003
                         }
@@ -13371,7 +13371,7 @@
                         "_key": 161,
                         "_structureType": "pasal",
                         "parentDocument": {
-                          "documentType": "uu",
+                          "_documentType": "uu",
                           "nomor": 13,
                           "tahun": 2003
                         }
@@ -13410,7 +13410,7 @@
                         "_key": 156,
                         "_structureType": "pasal",
                         "parentDocument": {
-                          "documentType": "uu",
+                          "_documentType": "uu",
                           "nomor": 13,
                           "tahun": 2003
                         }
@@ -13437,7 +13437,7 @@
                         "_key": 156,
                         "_structureType": "pasal",
                         "parentDocument": {
-                          "documentType": "uu",
+                          "_documentType": "uu",
                           "nomor": 13,
                           "tahun": 2003
                         }
@@ -13465,7 +13465,7 @@
                           "_key": 162,
                           "_structureType": "pasal",
                           "parentDocument": {
-                            "documentType": "uu",
+                            "_documentType": "uu",
                             "nomor": 13,
                             "tahun": 2003
                           }
@@ -13555,7 +13555,7 @@
                         "_key": 156,
                         "_structureType": "pasal",
                         "parentDocument": {
-                          "documentType": "uu",
+                          "_documentType": "uu",
                           "nomor": 13,
                           "tahun": 2003
                         }
@@ -13572,7 +13572,7 @@
                         "_key": 156,
                         "_structureType": "pasal",
                         "parentDocument": {
-                          "documentType": "uu",
+                          "_documentType": "uu",
                           "nomor": 13,
                           "tahun": 2003
                         }
@@ -13589,7 +13589,7 @@
                         "_key": 156,
                         "_structureType": "pasal",
                         "parentDocument": {
-                          "documentType": "uu",
+                          "_documentType": "uu",
                           "nomor": 13,
                           "tahun": 2003
                         }
@@ -13616,7 +13616,7 @@
                         "_key": 156,
                         "_structureType": "pasal",
                         "parentDocument": {
-                          "documentType": "uu",
+                          "_documentType": "uu",
                           "nomor": 13,
                           "tahun": 2003
                         }
@@ -13633,7 +13633,7 @@
                         "_key": 156,
                         "_structureType": "pasal",
                         "parentDocument": {
-                          "documentType": "uu",
+                          "_documentType": "uu",
                           "nomor": 13,
                           "tahun": 2003
                         }
@@ -13650,7 +13650,7 @@
                         "_key": 156,
                         "_structureType": "pasal",
                         "parentDocument": {
-                          "documentType": "uu",
+                          "_documentType": "uu",
                           "nomor": 13,
                           "tahun": 2003
                         }
@@ -13689,7 +13689,7 @@
                         "_key": 156,
                         "_structureType": "pasal",
                         "parentDocument": {
-                          "documentType": "uu",
+                          "_documentType": "uu",
                           "nomor": 13,
                           "tahun": 2003
                         }
@@ -13706,7 +13706,7 @@
                         "_key": 156,
                         "_structureType": "pasal",
                         "parentDocument": {
-                          "documentType": "uu",
+                          "_documentType": "uu",
                           "nomor": 13,
                           "tahun": 2003
                         }
@@ -13723,7 +13723,7 @@
                         "_key": 156,
                         "_structureType": "pasal",
                         "parentDocument": {
-                          "documentType": "uu",
+                          "_documentType": "uu",
                           "nomor": 13,
                           "tahun": 2003
                         }
@@ -13750,7 +13750,7 @@
                         "_key": 164,
                         "_structureType": "pasal",
                         "parentDocument": {
-                          "documentType": "uu",
+                          "_documentType": "uu",
                           "nomor": 13,
                           "tahun": 2003
                         }
@@ -13777,7 +13777,7 @@
                         "_key": 156,
                         "_structureType": "pasal",
                         "parentDocument": {
-                          "documentType": "uu",
+                          "_documentType": "uu",
                           "nomor": 13,
                           "tahun": 2003
                         }
@@ -13794,7 +13794,7 @@
                         "_key": 156,
                         "_structureType": "pasal",
                         "parentDocument": {
-                          "documentType": "uu",
+                          "_documentType": "uu",
                           "nomor": 13,
                           "tahun": 2003
                         }
@@ -13811,7 +13811,7 @@
                         "_key": 156,
                         "_structureType": "pasal",
                         "parentDocument": {
-                          "documentType": "uu",
+                          "_documentType": "uu",
                           "nomor": 13,
                           "tahun": 2003
                         }
@@ -13846,7 +13846,7 @@
                     "_key": 156,
                     "_structureType": "pasal",
                     "parentDocument": {
-                      "documentType": "uu",
+                      "_documentType": "uu",
                       "nomor": 13,
                       "tahun": 2003
                     }
@@ -13863,7 +13863,7 @@
                     "_key": 156,
                     "_structureType": "pasal",
                     "parentDocument": {
-                      "documentType": "uu",
+                      "_documentType": "uu",
                       "nomor": 13,
                       "tahun": 2003
                     }
@@ -13880,7 +13880,7 @@
                     "_key": 156,
                     "_structureType": "pasal",
                     "parentDocument": {
-                      "documentType": "uu",
+                      "_documentType": "uu",
                       "nomor": 13,
                       "tahun": 2003
                     }
@@ -13907,7 +13907,7 @@
                     "_key": 156,
                     "_structureType": "pasal",
                     "parentDocument": {
-                      "documentType": "uu",
+                      "_documentType": "uu",
                       "nomor": 13,
                       "tahun": 2003
                     }
@@ -13924,7 +13924,7 @@
                     "_key": 156,
                     "_structureType": "pasal",
                     "parentDocument": {
-                      "documentType": "uu",
+                      "_documentType": "uu",
                       "nomor": 13,
                       "tahun": 2003
                     }
@@ -13941,7 +13941,7 @@
                     "_key": 156,
                     "_structureType": "pasal",
                     "parentDocument": {
-                      "documentType": "uu",
+                      "_documentType": "uu",
                       "nomor": 13,
                       "tahun": 2003
                     }
@@ -13972,7 +13972,7 @@
                         "_key": 156,
                         "_structureType": "pasal",
                         "parentDocument": {
-                          "documentType": "uu",
+                          "_documentType": "uu",
                           "nomor": 13,
                           "tahun": 2003
                         }
@@ -13989,7 +13989,7 @@
                         "_key": 156,
                         "_structureType": "pasal",
                         "parentDocument": {
-                          "documentType": "uu",
+                          "_documentType": "uu",
                           "nomor": 13,
                           "tahun": 2003
                         }
@@ -14006,7 +14006,7 @@
                         "_key": 156,
                         "_structureType": "pasal",
                         "parentDocument": {
-                          "documentType": "uu",
+                          "_documentType": "uu",
                           "nomor": 13,
                           "tahun": 2003
                         }
@@ -14033,7 +14033,7 @@
                         "_key": 156,
                         "_structureType": "pasal",
                         "parentDocument": {
-                          "documentType": "uu",
+                          "_documentType": "uu",
                           "nomor": 13,
                           "tahun": 2003
                         }
@@ -14050,7 +14050,7 @@
                         "_key": 156,
                         "_structureType": "pasal",
                         "parentDocument": {
-                          "documentType": "uu",
+                          "_documentType": "uu",
                           "nomor": 13,
                           "tahun": 2003
                         }
@@ -14067,7 +14067,7 @@
                         "_key": 156,
                         "_structureType": "pasal",
                         "parentDocument": {
-                          "documentType": "uu",
+                          "_documentType": "uu",
                           "nomor": 13,
                           "tahun": 2003
                         }
@@ -14084,7 +14084,7 @@
                         "_key": 167,
                         "_structureType": "pasal",
                         "parentDocument": {
-                          "documentType": "uu",
+                          "_documentType": "uu",
                           "nomor": 13,
                           "tahun": 2003
                         }
@@ -14121,7 +14121,7 @@
                         "_key": 167,
                         "_structureType": "pasal",
                         "parentDocument": {
-                          "documentType": "uu",
+                          "_documentType": "uu",
                           "nomor": 13,
                           "tahun": 2003
                         }
@@ -14138,7 +14138,7 @@
                         "_key": 167,
                         "_structureType": "pasal",
                         "parentDocument": {
-                          "documentType": "uu",
+                          "_documentType": "uu",
                           "nomor": 13,
                           "tahun": 2003
                         }
@@ -14155,7 +14155,7 @@
                         "_key": 167,
                         "_structureType": "pasal",
                         "parentDocument": {
-                          "documentType": "uu",
+                          "_documentType": "uu",
                           "nomor": 13,
                           "tahun": 2003
                         }
@@ -14182,7 +14182,7 @@
                         "_key": 156,
                         "_structureType": "pasal",
                         "parentDocument": {
-                          "documentType": "uu",
+                          "_documentType": "uu",
                           "nomor": 13,
                           "tahun": 2003
                         }
@@ -14199,7 +14199,7 @@
                         "_key": 156,
                         "_structureType": "pasal",
                         "parentDocument": {
-                          "documentType": "uu",
+                          "_documentType": "uu",
                           "nomor": 13,
                           "tahun": 2003
                         }
@@ -14216,7 +14216,7 @@
                         "_key": 156,
                         "_structureType": "pasal",
                         "parentDocument": {
-                          "documentType": "uu",
+                          "_documentType": "uu",
                           "nomor": 13,
                           "tahun": 2003
                         }
@@ -14243,7 +14243,7 @@
                         "_key": 167,
                         "_structureType": "pasal",
                         "parentDocument": {
-                          "documentType": "uu",
+                          "_documentType": "uu",
                           "nomor": 13,
                           "tahun": 2003
                         }
@@ -14260,7 +14260,7 @@
                         "_key": 167,
                         "_structureType": "pasal",
                         "parentDocument": {
-                          "documentType": "uu",
+                          "_documentType": "uu",
                           "nomor": 13,
                           "tahun": 2003
                         }
@@ -14277,7 +14277,7 @@
                         "_key": 167,
                         "_structureType": "pasal",
                         "parentDocument": {
-                          "documentType": "uu",
+                          "_documentType": "uu",
                           "nomor": 13,
                           "tahun": 2003
                         }
@@ -14294,7 +14294,7 @@
                         "_key": 167,
                         "_structureType": "pasal",
                         "parentDocument": {
-                          "documentType": "uu",
+                          "_documentType": "uu",
                           "nomor": 13,
                           "tahun": 2003
                         }
@@ -14343,7 +14343,7 @@
                         "_key": 168,
                         "_structureType": "pasal",
                         "parentDocument": {
-                          "documentType": "uu",
+                          "_documentType": "uu",
                           "nomor": 13,
                           "tahun": 2003
                         }
@@ -14370,7 +14370,7 @@
                         "_key": 156,
                         "_structureType": "pasal",
                         "parentDocument": {
-                          "documentType": "uu",
+                          "_documentType": "uu",
                           "nomor": 13,
                           "tahun": 2003
                         }
@@ -14387,7 +14387,7 @@
                         "_key": 168,
                         "_structureType": "pasal",
                         "parentDocument": {
-                          "documentType": "uu",
+                          "_documentType": "uu",
                           "nomor": 13,
                           "tahun": 2003
                         }
@@ -14508,7 +14508,7 @@
                         "_key": 156,
                         "_structureType": "pasal",
                         "parentDocument": {
-                          "documentType": "uu",
+                          "_documentType": "uu",
                           "nomor": 13,
                           "tahun": 2003
                         }
@@ -14525,7 +14525,7 @@
                         "_key": 156,
                         "_structureType": "pasal",
                         "parentDocument": {
-                          "documentType": "uu",
+                          "_documentType": "uu",
                           "nomor": 13,
                           "tahun": 2003
                         }
@@ -14542,7 +14542,7 @@
                         "_key": 156,
                         "_structureType": "pasal",
                         "parentDocument": {
-                          "documentType": "uu",
+                          "_documentType": "uu",
                           "nomor": 13,
                           "tahun": 2003
                         }
@@ -14559,7 +14559,7 @@
                         "_key": 169,
                         "_structureType": "pasal",
                         "parentDocument": {
-                          "documentType": "uu",
+                          "_documentType": "uu",
                           "nomor": 13,
                           "tahun": 2003
                         }
@@ -14586,7 +14586,7 @@
                         "_key": 156,
                         "_structureType": "pasal",
                         "parentDocument": {
-                          "documentType": "uu",
+                          "_documentType": "uu",
                           "nomor": 13,
                           "tahun": 2003
                         }
@@ -14603,7 +14603,7 @@
                         "_key": 156,
                         "_structureType": "pasal",
                         "parentDocument": {
-                          "documentType": "uu",
+                          "_documentType": "uu",
                           "nomor": 13,
                           "tahun": 2003
                         }
@@ -14620,7 +14620,7 @@
                         "_key": 169,
                         "_structureType": "pasal",
                         "parentDocument": {
-                          "documentType": "uu",
+                          "_documentType": "uu",
                           "nomor": 13,
                           "tahun": 2003
                         }
@@ -14652,7 +14652,7 @@
                   "_key": 168,
                   "_structureType": "pasal",
                   "parentDocument": {
-                    "documentType": "uu",
+                    "_documentType": "uu",
                     "nomor": 13,
                     "tahun": 2003
                   }
@@ -14665,7 +14665,7 @@
                   "_key": 162,
                   "_structureType": "pasal",
                   "parentDocument": {
-                    "documentType": "uu",
+                    "_documentType": "uu",
                     "nomor": 13,
                     "tahun": 2003
                   }
@@ -14678,7 +14678,7 @@
                   "_key": 169,
                   "_structureType": "pasal",
                   "parentDocument": {
-                    "documentType": "uu",
+                    "_documentType": "uu",
                     "nomor": 13,
                     "tahun": 2003
                   }
@@ -14694,7 +14694,7 @@
                     "_key": 151,
                     "_structureType": "pasal",
                     "parentDocument": {
-                      "documentType": "uu",
+                      "_documentType": "uu",
                       "nomor": 13,
                       "tahun": 2003
                     }
@@ -14711,7 +14711,7 @@
                     "_key": 158,
                     "_structureType": "pasal",
                     "parentDocument": {
-                      "documentType": "uu",
+                      "_documentType": "uu",
                       "nomor": 13,
                       "tahun": 2003
                     }
@@ -14728,7 +14728,7 @@
                     "_key": 160,
                     "_structureType": "pasal",
                     "parentDocument": {
-                      "documentType": "uu",
+                      "_documentType": "uu",
                       "nomor": 13,
                       "tahun": 2003
                     }
@@ -14752,7 +14752,7 @@
                   "_key": 162,
                   "_structureType": "pasal",
                   "parentDocument": {
-                    "documentType": "uu",
+                    "_documentType": "uu",
                     "nomor": 13,
                     "tahun": 2003
                   }
@@ -14768,7 +14768,7 @@
                     "_key": 158,
                     "_structureType": "pasal",
                     "parentDocument": {
-                      "documentType": "uu",
+                      "_documentType": "uu",
                       "nomor": 13,
                       "tahun": 2003
                     }
@@ -14785,7 +14785,7 @@
                     "_key": 160,
                     "_structureType": "pasal",
                     "parentDocument": {
-                      "documentType": "uu",
+                      "_documentType": "uu",
                       "nomor": 13,
                       "tahun": 2003
                     }
@@ -14812,7 +14812,7 @@
                     "_key": 156,
                     "_structureType": "pasal",
                     "parentDocument": {
-                      "documentType": "uu",
+                      "_documentType": "uu",
                       "nomor": 13,
                       "tahun": 2003
                     }
@@ -14829,7 +14829,7 @@
                     "_key": 156,
                     "_structureType": "pasal",
                     "parentDocument": {
-                      "documentType": "uu",
+                      "_documentType": "uu",
                       "nomor": 13,
                       "tahun": 2003
                     }
@@ -14846,7 +14846,7 @@
                     "_key": 156,
                     "_structureType": "pasal",
                     "parentDocument": {
-                      "documentType": "uu",
+                      "_documentType": "uu",
                       "nomor": 13,
                       "tahun": 2003
                     }
@@ -14895,7 +14895,7 @@
                         "_key": 173,
                         "_structureType": "pasal",
                         "parentDocument": {
-                          "documentType": "uu",
+                          "_documentType": "uu",
                           "nomor": 13,
                           "tahun": 2003
                         }
@@ -14922,7 +14922,7 @@
                         "_key": 173,
                         "_structureType": "pasal",
                         "parentDocument": {
-                          "documentType": "uu",
+                          "_documentType": "uu",
                           "nomor": 13,
                           "tahun": 2003
                         }
@@ -14939,7 +14939,7 @@
                         "_key": 173,
                         "_structureType": "pasal",
                         "parentDocument": {
-                          "documentType": "uu",
+                          "_documentType": "uu",
                           "nomor": 13,
                           "tahun": 2003
                         }
@@ -14998,7 +14998,7 @@
                         "_key": 175,
                         "_structureType": "pasal",
                         "parentDocument": {
-                          "documentType": "uu",
+                          "_documentType": "uu",
                           "nomor": 13,
                           "tahun": 2003
                         }
@@ -15048,7 +15048,7 @@
                   "_key": 176,
                   "_structureType": "pasal",
                   "parentDocument": {
-                    "documentType": "uu",
+                    "_documentType": "uu",
                     "nomor": 13,
                     "tahun": 2003
                   }
@@ -15088,7 +15088,7 @@
                         "_key": 178,
                         "_structureType": "pasal",
                         "parentDocument": {
-                          "documentType": "uu",
+                          "_documentType": "uu",
                           "nomor": 13,
                           "tahun": 2003
                         }
@@ -15124,7 +15124,7 @@
                       "_key": 178,
                       "_structureType": "pasal",
                       "parentDocument": {
-                        "documentType": "uu",
+                        "_documentType": "uu",
                         "nomor": 13,
                         "tahun": 2003
                       }
@@ -15150,7 +15150,7 @@
                         "_key": 179,
                         "_structureType": "pasal",
                         "parentDocument": {
-                          "documentType": "uu",
+                          "_documentType": "uu",
                           "nomor": 13,
                           "tahun": 2003
                         }
@@ -15182,7 +15182,7 @@
                   "_key": 176,
                   "_structureType": "pasal",
                   "parentDocument": {
-                    "documentType": "uu",
+                    "_documentType": "uu",
                     "nomor": 13,
                     "tahun": 2003
                   }
@@ -15206,7 +15206,7 @@
                     "_key": 176,
                     "_structureType": "pasal",
                     "parentDocument": {
-                      "documentType": "uu",
+                      "_documentType": "uu",
                       "nomor": 13,
                       "tahun": 2003
                     }
@@ -15286,7 +15286,7 @@
                           "_key": 182,
                           "_structureType": "pasal",
                           "parentDocument": {
-                            "documentType": "uu",
+                            "_documentType": "uu",
                             "nomor": 13,
                             "tahun": 2003
                           }
@@ -15394,7 +15394,7 @@
                         "_key": 182,
                         "_structureType": "pasal",
                         "parentDocument": {
-                          "documentType": "uu",
+                          "_documentType": "uu",
                           "nomor": 13,
                           "tahun": 2003
                         }
@@ -15443,7 +15443,7 @@
                           "_key": 74,
                           "_structureType": "pasal",
                           "parentDocument": {
-                            "documentType": "uu",
+                            "_documentType": "uu",
                             "nomor": 13,
                             "tahun": 2003
                           }
@@ -15469,7 +15469,7 @@
                             "_key": 183,
                             "_structureType": "pasal",
                             "parentDocument": {
-                              "documentType": "uu",
+                              "_documentType": "uu",
                               "nomor": 13,
                               "tahun": 2003
                             }
@@ -15508,7 +15508,7 @@
                             "_key": 167,
                             "_structureType": "pasal",
                             "parentDocument": {
-                              "documentType": "uu",
+                              "_documentType": "uu",
                               "nomor": 13,
                               "tahun": 2003
                             }
@@ -15535,7 +15535,7 @@
                             "_key": 184,
                             "_structureType": "pasal",
                             "parentDocument": {
-                              "documentType": "uu",
+                              "_documentType": "uu",
                               "nomor": 13,
                               "tahun": 2003
                             }
@@ -15571,7 +15571,7 @@
                           "_key": 68,
                           "_structureType": "pasal",
                           "parentDocument": {
-                            "documentType": "uu",
+                            "_documentType": "uu",
                             "nomor": 13,
                             "tahun": 2003
                           }
@@ -15584,7 +15584,7 @@
                           "_key": 80,
                           "_structureType": "pasal",
                           "parentDocument": {
-                            "documentType": "uu",
+                            "_documentType": "uu",
                             "nomor": 13,
                             "tahun": 2003
                           }
@@ -15597,7 +15597,7 @@
                           "_key": 82,
                           "_structureType": "pasal",
                           "parentDocument": {
-                            "documentType": "uu",
+                            "_documentType": "uu",
                             "nomor": 13,
                             "tahun": 2003
                           }
@@ -15610,7 +15610,7 @@
                           "_key": 143,
                           "_structureType": "pasal",
                           "parentDocument": {
-                            "documentType": "uu",
+                            "_documentType": "uu",
                             "nomor": 13,
                             "tahun": 2003
                           }
@@ -15626,7 +15626,7 @@
                             "_key": 42,
                             "_structureType": "pasal",
                             "parentDocument": {
-                              "documentType": "uu",
+                              "_documentType": "uu",
                               "nomor": 13,
                               "tahun": 2003
                             }
@@ -15643,7 +15643,7 @@
                             "_key": 69,
                             "_structureType": "pasal",
                             "parentDocument": {
-                              "documentType": "uu",
+                              "_documentType": "uu",
                               "nomor": 13,
                               "tahun": 2003
                             }
@@ -15660,7 +15660,7 @@
                             "_key": 90,
                             "_structureType": "pasal",
                             "parentDocument": {
-                              "documentType": "uu",
+                              "_documentType": "uu",
                               "nomor": 13,
                               "tahun": 2003
                             }
@@ -15677,7 +15677,7 @@
                             "_key": 160,
                             "_structureType": "pasal",
                             "parentDocument": {
-                              "documentType": "uu",
+                              "_documentType": "uu",
                               "nomor": 13,
                               "tahun": 2003
                             }
@@ -15694,7 +15694,7 @@
                             "_key": 185,
                             "_structureType": "pasal",
                             "parentDocument": {
-                              "documentType": "uu",
+                              "_documentType": "uu",
                               "nomor": 13,
                               "tahun": 2003
                             }
@@ -15711,7 +15711,7 @@
                             "_key": 185,
                             "_structureType": "pasal",
                             "parentDocument": {
-                              "documentType": "uu",
+                              "_documentType": "uu",
                               "nomor": 13,
                               "tahun": 2003
                             }
@@ -15738,7 +15738,7 @@
                             "_key": 185,
                             "_structureType": "pasal",
                             "parentDocument": {
-                              "documentType": "uu",
+                              "_documentType": "uu",
                               "nomor": 13,
                               "tahun": 2003
                             }
@@ -15774,7 +15774,7 @@
                           "_key": 137,
                           "_structureType": "pasal",
                           "parentDocument": {
-                            "documentType": "uu",
+                            "_documentType": "uu",
                             "nomor": 13,
                             "tahun": 2003
                           }
@@ -15790,7 +15790,7 @@
                             "_key": 35,
                             "_structureType": "pasal",
                             "parentDocument": {
-                              "documentType": "uu",
+                              "_documentType": "uu",
                               "nomor": 13,
                               "tahun": 2003
                             }
@@ -15807,7 +15807,7 @@
                             "_key": 93,
                             "_structureType": "pasal",
                             "parentDocument": {
-                              "documentType": "uu",
+                              "_documentType": "uu",
                               "nomor": 13,
                               "tahun": 2003
                             }
@@ -15824,7 +15824,7 @@
                             "_key": 138,
                             "_structureType": "pasal",
                             "parentDocument": {
-                              "documentType": "uu",
+                              "_documentType": "uu",
                               "nomor": 13,
                               "tahun": 2003
                             }
@@ -15841,7 +15841,7 @@
                             "_key": 186,
                             "_structureType": "pasal",
                             "parentDocument": {
-                              "documentType": "uu",
+                              "_documentType": "uu",
                               "nomor": 13,
                               "tahun": 2003
                             }
@@ -15868,7 +15868,7 @@
                             "_key": 186,
                             "_structureType": "pasal",
                             "parentDocument": {
-                              "documentType": "uu",
+                              "_documentType": "uu",
                               "nomor": 13,
                               "tahun": 2003
                             }
@@ -15904,7 +15904,7 @@
                           "_key": 76,
                           "_structureType": "pasal",
                           "parentDocument": {
-                            "documentType": "uu",
+                            "_documentType": "uu",
                             "nomor": 13,
                             "tahun": 2003
                           }
@@ -15917,7 +15917,7 @@
                           "_key": 144,
                           "_structureType": "pasal",
                           "parentDocument": {
-                            "documentType": "uu",
+                            "_documentType": "uu",
                             "nomor": 13,
                             "tahun": 2003
                           }
@@ -15933,7 +15933,7 @@
                             "_key": 37,
                             "_structureType": "pasal",
                             "parentDocument": {
-                              "documentType": "uu",
+                              "_documentType": "uu",
                               "nomor": 13,
                               "tahun": 2003
                             }
@@ -15950,7 +15950,7 @@
                             "_key": 44,
                             "_structureType": "pasal",
                             "parentDocument": {
-                              "documentType": "uu",
+                              "_documentType": "uu",
                               "nomor": 13,
                               "tahun": 2003
                             }
@@ -15967,7 +15967,7 @@
                             "_key": 45,
                             "_structureType": "pasal",
                             "parentDocument": {
-                              "documentType": "uu",
+                              "_documentType": "uu",
                               "nomor": 13,
                               "tahun": 2003
                             }
@@ -15984,7 +15984,7 @@
                             "_key": 67,
                             "_structureType": "pasal",
                             "parentDocument": {
-                              "documentType": "uu",
+                              "_documentType": "uu",
                               "nomor": 13,
                               "tahun": 2003
                             }
@@ -16001,7 +16001,7 @@
                             "_key": 71,
                             "_structureType": "pasal",
                             "parentDocument": {
-                              "documentType": "uu",
+                              "_documentType": "uu",
                               "nomor": 13,
                               "tahun": 2003
                             }
@@ -16018,7 +16018,7 @@
                             "_key": 78,
                             "_structureType": "pasal",
                             "parentDocument": {
-                              "documentType": "uu",
+                              "_documentType": "uu",
                               "nomor": 13,
                               "tahun": 2003
                             }
@@ -16035,7 +16035,7 @@
                             "_key": 79,
                             "_structureType": "pasal",
                             "parentDocument": {
-                              "documentType": "uu",
+                              "_documentType": "uu",
                               "nomor": 13,
                               "tahun": 2003
                             }
@@ -16052,7 +16052,7 @@
                             "_key": 85,
                             "_structureType": "pasal",
                             "parentDocument": {
-                              "documentType": "uu",
+                              "_documentType": "uu",
                               "nomor": 13,
                               "tahun": 2003
                             }
@@ -16069,7 +16069,7 @@
                             "_key": 187,
                             "_structureType": "pasal",
                             "parentDocument": {
-                              "documentType": "uu",
+                              "_documentType": "uu",
                               "nomor": 13,
                               "tahun": 2003
                             }
@@ -16096,7 +16096,7 @@
                             "_key": 187,
                             "_structureType": "pasal",
                             "parentDocument": {
-                              "documentType": "uu",
+                              "_documentType": "uu",
                               "nomor": 13,
                               "tahun": 2003
                             }
@@ -16132,7 +16132,7 @@
                           "_key": 114,
                           "_structureType": "pasal",
                           "parentDocument": {
-                            "documentType": "uu",
+                            "_documentType": "uu",
                             "nomor": 13,
                             "tahun": 2003
                           }
@@ -16145,7 +16145,7 @@
                           "_key": 148,
                           "_structureType": "pasal",
                           "parentDocument": {
-                            "documentType": "uu",
+                            "_documentType": "uu",
                             "nomor": 13,
                             "tahun": 2003
                           }
@@ -16161,7 +16161,7 @@
                             "_key": 14,
                             "_structureType": "pasal",
                             "parentDocument": {
-                              "documentType": "uu",
+                              "_documentType": "uu",
                               "nomor": 13,
                               "tahun": 2003
                             }
@@ -16178,7 +16178,7 @@
                             "_key": 38,
                             "_structureType": "pasal",
                             "parentDocument": {
-                              "documentType": "uu",
+                              "_documentType": "uu",
                               "nomor": 13,
                               "tahun": 2003
                             }
@@ -16195,7 +16195,7 @@
                             "_key": 63,
                             "_structureType": "pasal",
                             "parentDocument": {
-                              "documentType": "uu",
+                              "_documentType": "uu",
                               "nomor": 13,
                               "tahun": 2003
                             }
@@ -16212,7 +16212,7 @@
                             "_key": 78,
                             "_structureType": "pasal",
                             "parentDocument": {
-                              "documentType": "uu",
+                              "_documentType": "uu",
                               "nomor": 13,
                               "tahun": 2003
                             }
@@ -16229,7 +16229,7 @@
                             "_key": 108,
                             "_structureType": "pasal",
                             "parentDocument": {
-                              "documentType": "uu",
+                              "_documentType": "uu",
                               "nomor": 13,
                               "tahun": 2003
                             }
@@ -16246,7 +16246,7 @@
                             "_key": 111,
                             "_structureType": "pasal",
                             "parentDocument": {
-                              "documentType": "uu",
+                              "_documentType": "uu",
                               "nomor": 13,
                               "tahun": 2003
                             }
@@ -16273,7 +16273,7 @@
                             "_key": 188,
                             "_structureType": "pasal",
                             "parentDocument": {
-                              "documentType": "uu",
+                              "_documentType": "uu",
                               "nomor": 13,
                               "tahun": 2003
                             }
@@ -16327,7 +16327,7 @@
                           "_key": 5,
                           "_structureType": "pasal",
                           "parentDocument": {
-                            "documentType": "uu",
+                            "_documentType": "uu",
                             "nomor": 13,
                             "tahun": 2003
                           }
@@ -16340,7 +16340,7 @@
                           "_key": 6,
                           "_structureType": "pasal",
                           "parentDocument": {
-                            "documentType": "uu",
+                            "_documentType": "uu",
                             "nomor": 13,
                             "tahun": 2003
                           }
@@ -16353,7 +16353,7 @@
                           "_key": 15,
                           "_structureType": "pasal",
                           "parentDocument": {
-                            "documentType": "uu",
+                            "_documentType": "uu",
                             "nomor": 13,
                             "tahun": 2003
                           }
@@ -16366,7 +16366,7 @@
                           "_key": 25,
                           "_structureType": "pasal",
                           "parentDocument": {
-                            "documentType": "uu",
+                            "_documentType": "uu",
                             "nomor": 13,
                             "tahun": 2003
                           }
@@ -16379,7 +16379,7 @@
                           "_key": 48,
                           "_structureType": "pasal",
                           "parentDocument": {
-                            "documentType": "uu",
+                            "_documentType": "uu",
                             "nomor": 13,
                             "tahun": 2003
                           }
@@ -16392,7 +16392,7 @@
                           "_key": 87,
                           "_structureType": "pasal",
                           "parentDocument": {
-                            "documentType": "uu",
+                            "_documentType": "uu",
                             "nomor": 13,
                             "tahun": 2003
                           }
@@ -16405,7 +16405,7 @@
                           "_key": 106,
                           "_structureType": "pasal",
                           "parentDocument": {
-                            "documentType": "uu",
+                            "_documentType": "uu",
                             "nomor": 13,
                             "tahun": 2003
                           }
@@ -16421,7 +16421,7 @@
                             "_key": 38,
                             "_structureType": "pasal",
                             "parentDocument": {
-                              "documentType": "uu",
+                              "_documentType": "uu",
                               "nomor": 13,
                               "tahun": 2003
                             }
@@ -16438,7 +16438,7 @@
                             "_key": 45,
                             "_structureType": "pasal",
                             "parentDocument": {
-                              "documentType": "uu",
+                              "_documentType": "uu",
                               "nomor": 13,
                               "tahun": 2003
                             }
@@ -16455,7 +16455,7 @@
                             "_key": 47,
                             "_structureType": "pasal",
                             "parentDocument": {
-                              "documentType": "uu",
+                              "_documentType": "uu",
                               "nomor": 13,
                               "tahun": 2003
                             }
@@ -16472,7 +16472,7 @@
                             "_key": 126,
                             "_structureType": "pasal",
                             "parentDocument": {
-                              "documentType": "uu",
+                              "_documentType": "uu",
                               "nomor": 13,
                               "tahun": 2003
                             }
@@ -16489,7 +16489,7 @@
                             "_key": 160,
                             "_structureType": "pasal",
                             "parentDocument": {
-                              "documentType": "uu",
+                              "_documentType": "uu",
                               "nomor": 13,
                               "tahun": 2003
                             }
@@ -16506,7 +16506,7 @@
                             "_key": 190,
                             "_structureType": "pasal",
                             "parentDocument": {
-                              "documentType": "uu",
+                              "_documentType": "uu",
                               "nomor": 13,
                               "tahun": 2003
                             }
@@ -16534,7 +16534,7 @@
                               "_key": 190,
                               "_structureType": "pasal",
                               "parentDocument": {
-                                "documentType": "uu",
+                                "_documentType": "uu",
                                 "nomor": 13,
                                 "tahun": 2003
                               }
@@ -16652,7 +16652,7 @@
                             "_key": 190,
                             "_structureType": "pasal",
                             "parentDocument": {
-                              "documentType": "uu",
+                              "_documentType": "uu",
                               "nomor": 13,
                               "tahun": 2003
                             }
@@ -16669,7 +16669,7 @@
                             "_key": 190,
                             "_structureType": "pasal",
                             "parentDocument": {
-                              "documentType": "uu",
+                              "_documentType": "uu",
                               "nomor": 13,
                               "tahun": 2003
                             }
@@ -16911,7 +16911,7 @@
         {
           "end": 156,
           "node": {
-            "documentType": "uud"
+            "_documentType": "uud"
           },
           "start": 100
         },
@@ -16924,7 +16924,7 @@
               "_key": 33,
               "_structureType": "pasal",
               "parentDocument": {
-                "documentType": "uu",
+                "_documentType": "uu",
                 "nomor": 13,
                 "tahun": 2003
               }
@@ -16941,7 +16941,7 @@
               "_key": 27,
               "_structureType": "pasal",
               "parentDocument": {
-                "documentType": "uu",
+                "_documentType": "uu",
                 "nomor": 13,
                 "tahun": 2003
               }
@@ -16958,7 +16958,7 @@
               "_key": 20,
               "_structureType": "pasal",
               "parentDocument": {
-                "documentType": "uu",
+                "_documentType": "uu",
                 "nomor": 13,
                 "tahun": 2003
               }
@@ -16975,7 +16975,7 @@
               "_key": 5,
               "_structureType": "pasal",
               "parentDocument": {
-                "documentType": "uu",
+                "_documentType": "uu",
                 "nomor": 13,
                 "tahun": 2003
               }
@@ -16989,7 +16989,7 @@
             "_key": 28,
             "_structureType": "pasal",
             "parentDocument": {
-              "documentType": "uu",
+              "_documentType": "uu",
               "nomor": 13,
               "tahun": 2003
             }
@@ -17019,7 +17019,7 @@
               {
                 "end": 325,
                 "node": {
-                  "documentType": "uud"
+                  "_documentType": "uud"
                 },
                 "start": 269
               }
@@ -17082,7 +17082,7 @@
                     "_structureType": "metadata",
                     "metadataType": "documentMenimbang",
                     "parentDocument": {
-                      "documentType": "uu",
+                      "_documentType": "uu",
                       "nomor": 13,
                       "tahun": 2003
                     }
@@ -17099,7 +17099,7 @@
                     "_structureType": "metadata",
                     "metadataType": "documentMenimbang",
                     "parentDocument": {
-                      "documentType": "uu",
+                      "_documentType": "uu",
                       "nomor": 13,
                       "tahun": 2003
                     }
@@ -17116,7 +17116,7 @@
                     "_structureType": "metadata",
                     "metadataType": "documentMenimbang",
                     "parentDocument": {
-                      "documentType": "uu",
+                      "_documentType": "uu",
                       "nomor": 13,
                       "tahun": 2003
                     }
@@ -17133,7 +17133,7 @@
                     "_structureType": "metadata",
                     "metadataType": "documentMenimbang",
                     "parentDocument": {
-                      "documentType": "uu",
+                      "_documentType": "uu",
                       "nomor": 13,
                       "tahun": 2003
                     }
@@ -17150,7 +17150,7 @@
                     "_structureType": "metadata",
                     "metadataType": "documentMenimbang",
                     "parentDocument": {
-                      "documentType": "uu",
+                      "_documentType": "uu",
                       "nomor": 13,
                       "tahun": 2003
                     }

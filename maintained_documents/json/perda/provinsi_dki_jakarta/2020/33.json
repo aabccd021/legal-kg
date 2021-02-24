@@ -5,8 +5,8 @@
   "_namaPengesah": "ANIES BASWEDAN",
   "_name": "PERATURAN GUBERNUR DAERAH KHUSUS IBUKOTA JAKARTA",
   "_node": {
+    "_documentType": "perda",
     "daerah": "provinsi_dki_jakarta",
-    "documentType": "perda",
     "nomor": 33,
     "tahun": 2020
   },
@@ -370,8 +370,8 @@
                             "_key": 5,
                             "_structureType": "pasal",
                             "parentDocument": {
+                              "_documentType": "perda",
                               "daerah": "provinsi_dki_jakarta",
-                              "documentType": "perda",
                               "nomor": 33,
                               "tahun": 2020
                             }
@@ -441,8 +441,8 @@
                               "_key": 5,
                               "_structureType": "pasal",
                               "parentDocument": {
+                                "_documentType": "perda",
                                 "daerah": "provinsi_dki_jakarta",
-                                "documentType": "perda",
                                 "nomor": 33,
                                 "tahun": 2020
                               }
@@ -540,8 +540,8 @@
                             "_key": 5,
                             "_structureType": "pasal",
                             "parentDocument": {
+                              "_documentType": "perda",
                               "daerah": "provinsi_dki_jakarta",
-                              "documentType": "perda",
                               "nomor": 33,
                               "tahun": 2020
                             }
@@ -568,8 +568,8 @@
                             "_key": 5,
                             "_structureType": "pasal",
                             "parentDocument": {
+                              "_documentType": "perda",
                               "daerah": "provinsi_dki_jakarta",
-                              "documentType": "perda",
                               "nomor": 33,
                               "tahun": 2020
                             }
@@ -626,8 +626,8 @@
                             "_key": 6,
                             "_structureType": "pasal",
                             "parentDocument": {
+                              "_documentType": "perda",
                               "daerah": "provinsi_dki_jakarta",
-                              "documentType": "perda",
                               "nomor": 33,
                               "tahun": 2020
                             }
@@ -687,8 +687,8 @@
                               "_key": 6,
                               "_structureType": "pasal",
                               "parentDocument": {
+                                "_documentType": "perda",
                                 "daerah": "provinsi_dki_jakarta",
-                                "documentType": "perda",
                                 "nomor": 33,
                                 "tahun": 2020
                               }
@@ -776,8 +776,8 @@
                             "_key": 7,
                             "_structureType": "pasal",
                             "parentDocument": {
+                              "_documentType": "perda",
                               "daerah": "provinsi_dki_jakarta",
-                              "documentType": "perda",
                               "nomor": 33,
                               "tahun": 2020
                             }
@@ -804,8 +804,8 @@
                             "_key": 7,
                             "_structureType": "pasal",
                             "parentDocument": {
+                              "_documentType": "perda",
                               "daerah": "provinsi_dki_jakarta",
-                              "documentType": "perda",
                               "nomor": 33,
                               "tahun": 2020
                             }
@@ -900,8 +900,8 @@
                                 "_key": 8,
                                 "_structureType": "pasal",
                                 "parentDocument": {
+                                  "_documentType": "perda",
                                   "daerah": "provinsi_dki_jakarta",
-                                  "documentType": "perda",
                                   "nomor": 33,
                                   "tahun": 2020
                                 }
@@ -990,8 +990,8 @@
                             "_key": 9,
                             "_structureType": "pasal",
                             "parentDocument": {
+                              "_documentType": "perda",
                               "daerah": "provinsi_dki_jakarta",
-                              "documentType": "perda",
                               "nomor": 33,
                               "tahun": 2020
                             }
@@ -1019,8 +1019,8 @@
                               "_key": 9,
                               "_structureType": "pasal",
                               "parentDocument": {
+                                "_documentType": "perda",
                                 "daerah": "provinsi_dki_jakarta",
-                                "documentType": "perda",
                                 "nomor": 33,
                                 "tahun": 2020
                               }
@@ -1109,8 +1109,8 @@
                               "_key": 9,
                               "_structureType": "pasal",
                               "parentDocument": {
+                                "_documentType": "perda",
                                 "daerah": "provinsi_dki_jakarta",
-                                "documentType": "perda",
                                 "nomor": 33,
                                 "tahun": 2020
                               }
@@ -1191,8 +1191,8 @@
                               "_key": 9,
                               "_structureType": "pasal",
                               "parentDocument": {
+                                "_documentType": "perda",
                                 "daerah": "provinsi_dki_jakarta",
-                                "documentType": "perda",
                                 "nomor": 33,
                                 "tahun": 2020
                               }
@@ -1403,8 +1403,8 @@
                               "_key": 10,
                               "_structureType": "pasal",
                               "parentDocument": {
+                                "_documentType": "perda",
                                 "daerah": "provinsi_dki_jakarta",
-                                "documentType": "perda",
                                 "nomor": 33,
                                 "tahun": 2020
                               }
@@ -2006,8 +2006,8 @@
                             "_key": 11,
                             "_structureType": "pasal",
                             "parentDocument": {
+                              "_documentType": "perda",
                               "daerah": "provinsi_dki_jakarta",
-                              "documentType": "perda",
                               "nomor": 33,
                               "tahun": 2020
                             }
@@ -2034,8 +2034,8 @@
                             "_key": 11,
                             "_structureType": "pasal",
                             "parentDocument": {
+                              "_documentType": "perda",
                               "daerah": "provinsi_dki_jakarta",
-                              "documentType": "perda",
                               "nomor": 33,
                               "tahun": 2020
                             }
@@ -2130,8 +2130,8 @@
                                 "_key": 12,
                                 "_structureType": "pasal",
                                 "parentDocument": {
+                                  "_documentType": "perda",
                                   "daerah": "provinsi_dki_jakarta",
-                                  "documentType": "perda",
                                   "nomor": 33,
                                   "tahun": 2020
                                 }
@@ -2231,8 +2231,8 @@
                               "_key": 13,
                               "_structureType": "pasal",
                               "parentDocument": {
+                                "_documentType": "perda",
                                 "daerah": "provinsi_dki_jakarta",
-                                "documentType": "perda",
                                 "nomor": 33,
                                 "tahun": 2020
                               }
@@ -2270,8 +2270,8 @@
                                   "_key": 13,
                                   "_structureType": "pasal",
                                   "parentDocument": {
+                                    "_documentType": "perda",
                                     "daerah": "provinsi_dki_jakarta",
-                                    "documentType": "perda",
                                     "nomor": 33,
                                     "tahun": 2020
                                   }
@@ -2321,8 +2321,8 @@
                               "_key": 13,
                               "_structureType": "pasal",
                               "parentDocument": {
+                                "_documentType": "perda",
                                 "daerah": "provinsi_dki_jakarta",
-                                "documentType": "perda",
                                 "nomor": 33,
                                 "tahun": 2020
                               }
@@ -2411,8 +2411,8 @@
                               "_key": 13,
                               "_structureType": "pasal",
                               "parentDocument": {
+                                "_documentType": "perda",
                                 "daerah": "provinsi_dki_jakarta",
-                                "documentType": "perda",
                                 "nomor": 33,
                                 "tahun": 2020
                               }
@@ -2513,8 +2513,8 @@
                               "_key": 14,
                               "_structureType": "pasal",
                               "parentDocument": {
+                                "_documentType": "perda",
                                 "daerah": "provinsi_dki_jakarta",
-                                "documentType": "perda",
                                 "nomor": 33,
                                 "tahun": 2020
                               }
@@ -2531,8 +2531,8 @@
                               "_key": 14,
                               "_structureType": "pasal",
                               "parentDocument": {
+                                "_documentType": "perda",
                                 "daerah": "provinsi_dki_jakarta",
-                                "documentType": "perda",
                                 "nomor": 33,
                                 "tahun": 2020
                               }
@@ -2642,8 +2642,8 @@
                             "_key": 13,
                             "_structureType": "pasal",
                             "parentDocument": {
+                              "_documentType": "perda",
                               "daerah": "provinsi_dki_jakarta",
-                              "documentType": "perda",
                               "nomor": 33,
                               "tahun": 2020
                             }
@@ -2671,8 +2671,8 @@
                               "_key": 15,
                               "_structureType": "pasal",
                               "parentDocument": {
+                                "_documentType": "perda",
                                 "daerah": "provinsi_dki_jakarta",
-                                "documentType": "perda",
                                 "nomor": 33,
                                 "tahun": 2020
                               }
@@ -2761,8 +2761,8 @@
                               "_key": 16,
                               "_structureType": "pasal",
                               "parentDocument": {
+                                "_documentType": "perda",
                                 "daerah": "provinsi_dki_jakarta",
-                                "documentType": "perda",
                                 "nomor": 33,
                                 "tahun": 2020
                               }
@@ -2863,8 +2863,8 @@
                               "_key": 16,
                               "_structureType": "pasal",
                               "parentDocument": {
+                                "_documentType": "perda",
                                 "daerah": "provinsi_dki_jakarta",
-                                "documentType": "perda",
                                 "nomor": 33,
                                 "tahun": 2020
                               }
@@ -2933,8 +2933,8 @@
                               "_key": 17,
                               "_structureType": "pasal",
                               "parentDocument": {
+                                "_documentType": "perda",
                                 "daerah": "provinsi_dki_jakarta",
-                                "documentType": "perda",
                                 "nomor": 33,
                                 "tahun": 2020
                               }
@@ -3013,8 +3013,8 @@
                               "_key": 17,
                               "_structureType": "pasal",
                               "parentDocument": {
+                                "_documentType": "perda",
                                 "daerah": "provinsi_dki_jakarta",
-                                "documentType": "perda",
                                 "nomor": 33,
                                 "tahun": 2020
                               }
@@ -3093,8 +3093,8 @@
                               "_key": 17,
                               "_structureType": "pasal",
                               "parentDocument": {
+                                "_documentType": "perda",
                                 "daerah": "provinsi_dki_jakarta",
-                                "documentType": "perda",
                                 "nomor": 33,
                                 "tahun": 2020
                               }
@@ -3162,8 +3162,8 @@
                             "_key": 17,
                             "_structureType": "pasal",
                             "parentDocument": {
+                              "_documentType": "perda",
                               "daerah": "provinsi_dki_jakarta",
-                              "documentType": "perda",
                               "nomor": 33,
                               "tahun": 2020
                             }
@@ -3253,8 +3253,8 @@
                               "_key": 18,
                               "_structureType": "pasal",
                               "parentDocument": {
+                                "_documentType": "perda",
                                 "daerah": "provinsi_dki_jakarta",
-                                "documentType": "perda",
                                 "nomor": 33,
                                 "tahun": 2020
                               }
@@ -3322,8 +3322,8 @@
                             "_key": 18,
                             "_structureType": "pasal",
                             "parentDocument": {
+                              "_documentType": "perda",
                               "daerah": "provinsi_dki_jakarta",
-                              "documentType": "perda",
                               "nomor": 33,
                               "tahun": 2020
                             }
@@ -3576,8 +3576,8 @@
                             "_key": 18,
                             "_structureType": "pasal",
                             "parentDocument": {
+                              "_documentType": "perda",
                               "daerah": "provinsi_dki_jakarta",
-                              "documentType": "perda",
                               "nomor": 33,
                               "tahun": 2020
                             }
@@ -3594,8 +3594,8 @@
                             "_key": 18,
                             "_structureType": "pasal",
                             "parentDocument": {
+                              "_documentType": "perda",
                               "daerah": "provinsi_dki_jakarta",
-                              "documentType": "perda",
                               "nomor": 33,
                               "tahun": 2020
                             }
@@ -3722,8 +3722,8 @@
                             "_key": 19,
                             "_structureType": "pasal",
                             "parentDocument": {
+                              "_documentType": "perda",
                               "daerah": "provinsi_dki_jakarta",
-                              "documentType": "perda",
                               "nomor": 33,
                               "tahun": 2020
                             }
@@ -3866,8 +3866,8 @@
                             "_key": 20,
                             "_structureType": "pasal",
                             "parentDocument": {
+                              "_documentType": "perda",
                               "daerah": "provinsi_dki_jakarta",
-                              "documentType": "perda",
                               "nomor": 33,
                               "tahun": 2020
                             }
@@ -3924,8 +3924,8 @@
                             "_key": 21,
                             "_structureType": "pasal",
                             "parentDocument": {
+                              "_documentType": "perda",
                               "daerah": "provinsi_dki_jakarta",
-                              "documentType": "perda",
                               "nomor": 33,
                               "tahun": 2020
                             }
@@ -3952,8 +3952,8 @@
                             "_key": 21,
                             "_structureType": "pasal",
                             "parentDocument": {
+                              "_documentType": "perda",
                               "daerah": "provinsi_dki_jakarta",
-                              "documentType": "perda",
                               "nomor": 33,
                               "tahun": 2020
                             }
@@ -4003,8 +4003,8 @@
                               "_key": 22,
                               "_structureType": "pasal",
                               "parentDocument": {
+                                "_documentType": "perda",
                                 "daerah": "provinsi_dki_jakarta",
-                                "documentType": "perda",
                                 "nomor": 33,
                                 "tahun": 2020
                               }
@@ -4105,8 +4105,8 @@
                         "_key": 23,
                         "_structureType": "pasal",
                         "parentDocument": {
+                          "_documentType": "perda",
                           "daerah": "provinsi_dki_jakarta",
-                          "documentType": "perda",
                           "nomor": 33,
                           "tahun": 2020
                         }
@@ -4156,8 +4156,8 @@
                           "_key": 24,
                           "_structureType": "pasal",
                           "parentDocument": {
+                            "_documentType": "perda",
                             "daerah": "provinsi_dki_jakarta",
-                            "documentType": "perda",
                             "nomor": 33,
                             "tahun": 2020
                           }
@@ -4265,8 +4265,8 @@
                         "_key": 25,
                         "_structureType": "pasal",
                         "parentDocument": {
+                          "_documentType": "perda",
                           "daerah": "provinsi_dki_jakarta",
-                          "documentType": "perda",
                           "nomor": 33,
                           "tahun": 2020
                         }
@@ -4294,8 +4294,8 @@
                           "_key": 25,
                           "_structureType": "pasal",
                           "parentDocument": {
+                            "_documentType": "perda",
                             "daerah": "provinsi_dki_jakarta",
-                            "documentType": "perda",
                             "nomor": 33,
                             "tahun": 2020
                           }
@@ -4385,8 +4385,8 @@
                         "_key": 26,
                         "_structureType": "pasal",
                         "parentDocument": {
+                          "_documentType": "perda",
                           "daerah": "provinsi_dki_jakarta",
-                          "documentType": "perda",
                           "nomor": 33,
                           "tahun": 2020
                         }
@@ -4413,8 +4413,8 @@
                         "_key": 26,
                         "_structureType": "pasal",
                         "parentDocument": {
+                          "_documentType": "perda",
                           "daerah": "provinsi_dki_jakarta",
-                          "documentType": "perda",
                           "nomor": 33,
                           "tahun": 2020
                         }
@@ -4581,8 +4581,8 @@
                     "_structureType": "metadata",
                     "metadataType": "documentMenimbang",
                     "parentDocument": {
+                      "_documentType": "perda",
                       "daerah": "provinsi_dki_jakarta",
-                      "documentType": "perda",
                       "nomor": 33,
                       "tahun": 2020
                     }
