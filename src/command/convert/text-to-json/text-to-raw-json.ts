@@ -392,7 +392,7 @@ function safeParseInt(string?: string): number | undefined {
   if (isNil(string)) return undefined;
 
   try {
-    const parseResult = parseInt(string);
+    const parseResult = parseInt(string.replaceAll('T', '7'));
     if (isNaN(parseResult)) return undefined;
 
     return parseResult;

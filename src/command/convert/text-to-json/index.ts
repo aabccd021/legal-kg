@@ -19,6 +19,7 @@ export async function textToJson(option: Option): Promise<void> {
 }
 
 async function handleText(textNode: DocumentNode, option: Option): Promise<void> {
+  console.log(`Start processing ${JSON.stringify(textNode)}`);
   const { overwrite } = option;
   const textFile = getDocumentFilePath(textNode, 'text');
   const { path: jsonPath, exists: jsonExists } = getDocumentFilePath(textNode, 'json');

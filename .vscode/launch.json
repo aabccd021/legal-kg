@@ -37,5 +37,39 @@
         "<node_internals>/**"
       ]
     },
+    {
+      "type": "pwa-node",
+      "request": "launch",
+      "name": "Convert : Text to JSON",
+      "runtimeArgs": [
+        "-r",
+        "ts-node/register"
+      ],
+      "args": [
+        "${workspaceFolder}/src/cli.ts",
+        "convert:text-to-json",
+      ],
+      "skipFiles": [
+        "${workspaceFolder}/node_modules/**",
+        "<node_internals>/**"
+      ]
+    },
+    {
+      "type": "pwa-node",
+      "request": "launch",
+      "name": "Convert : JSON to Markdown",
+      "runtimeArgs": [
+        "-r",
+        "ts-node/register"
+      ],
+      "args": [
+        "${workspaceFolder}/src/cli.ts",
+        "convert:json-to-md",
+      ],
+      "skipFiles": [
+        "${workspaceFolder}/node_modules/**",
+        "<node_internals>/**"
+      ]
+    },
   ]
 }
