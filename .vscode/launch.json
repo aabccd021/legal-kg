@@ -4,6 +4,23 @@
     {
       "type": "pwa-node",
       "request": "launch",
+      "name": "Convert : PDF to Text",
+      "runtimeArgs": [
+        "-r",
+        "ts-node/register"
+      ],
+      "args": [
+        "${workspaceFolder}/src/cli.ts",
+        "convert:pdf-to-text",
+      ],
+      "skipFiles": [
+        "${workspaceFolder}/node_modules/**",
+        "<node_internals>/**"
+      ]
+    },
+    {
+      "type": "pwa-node",
+      "request": "launch",
       "name": "Convert : PDF to Text (Overwrite)",
       "runtimeArgs": [
         "-r",
@@ -22,7 +39,7 @@
     {
       "type": "pwa-node",
       "request": "launch",
-      "name": "Convert : Text to JSON (Overwrite)",
+      "name": "Convert : Text to JSON",
       "runtimeArgs": [
         "-r",
         "ts-node/register"
@@ -30,7 +47,6 @@
       "args": [
         "${workspaceFolder}/src/cli.ts",
         "convert:text-to-json",
-        "--overwrite",
       ],
       "skipFiles": [
         "${workspaceFolder}/node_modules/**",
@@ -40,7 +56,7 @@
     {
       "type": "pwa-node",
       "request": "launch",
-      "name": "Convert : Text to JSON",
+      "name": "Convert : Text to JSON (Overwrite)",
       "runtimeArgs": [
         "-r",
         "ts-node/register"
@@ -48,6 +64,7 @@
       "args": [
         "${workspaceFolder}/src/cli.ts",
         "convert:text-to-json",
+        "--overwrite",
       ],
       "skipFiles": [
         "${workspaceFolder}/node_modules/**",

@@ -40,6 +40,23 @@ export function getDocumentFilePath(
   return { path: filePath, exists };
 }
 
+export function getTempFilePath(
+  node: DocumentNode,
+  name: string,
+  extension: string
+): { path: string; exists: boolean } {
+  const { dataDir } = getConfig();
+  const docPath = getDocumentPath(node);
+  const filePath = `${dataDir}/temp/${name}/${docPath}${extension}`;
+
+  const fileDir = path.dirname(filePath);
+  fs.mkdirSync(fileDir, { recursive: true });
+
+  const exists = fs.existsSync(filePath);
+
+  return { path: filePath, exists };
+}
+
 export function getDocumentData(dataType: DataType): DocumentNode[] {
   const { dataDir } = getConfig();
   return CONVERTABLE_DOCUMENT_CATEGORY.flatMap((docType) =>
