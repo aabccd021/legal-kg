@@ -187,13 +187,15 @@ function getParagrafs(lines: string[]): Paragraf[] | undefined {
   return paragrafLines.map(_linesToParagraf);
 }
 
-function _linesToParagraf({ _key, lines }: IncLines): Paragraf {
+function _linesToParagraf(incLines: IncLines): Paragraf {
+  const { _key, lines } = incLines;
   const extractors: Extractor<'keyJudul' | 'pasalLines'>[] = [
     ['keyJudul', /.*/, 'required'],
     ['pasalLines', pasalRegex, 'optional'],
   ];
   const { keyJudul, pasalLines } = extractLines(lines.slice(1), extractors);
-  if (!keyJudul || !pasalLines) throw Error(`${lines}`);
+  if (!keyJudul) throw Error();
+  if (!pasalLines) throw Error();
   const _judul = removeKeyFromLines(keyJudul, paragrafRegex).join(' ');
   const isi = getPasals(pasalLines);
   const text = lines.join(' ');
@@ -204,7 +206,7 @@ function _linesToParagraf({ _key, lines }: IncLines): Paragraf {
 /**
  * Pasal
  */
-const pasalRegex = /^Pasal /;
+const pasalRegex = /^Pasa(l|i) /;
 
 function getPasalKey(line?: string): number | undefined {
   return !line || pasalRegex.test(line) ? safeParseInt(line?.replace(pasalRegex, '')) : undefined;
