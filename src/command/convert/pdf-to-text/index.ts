@@ -93,23 +93,18 @@ function removePageNoise(acc: Acc, block: Block): Acc {
               isAfterNoise: true,
             };
           }
+          const firstText = block.lines?.[0]?.spans?.[0]?.text;
+          if (!isUndefined(firstText) && lineText.startsWith(firstText)) {
+            return {
+              blocks: [...blocks.slice(0, -1), block],
+              isAfterNoise: true,
+            };
+          }
           const latestSpan = latestLine.spans?.slice(-1)[0];
           if (!isUndefined(latestSpan)) {
             const latestText = latestSpan.text;
             if (!isUndefined(latestText)) {
-              // if (/(...|. . .)$/.test(latestText)) {
-              if (latestText.endsWith('...') || latestText.endsWith('. . .')) {
-                // const newSpans = latestLine?.spans?.slice(0, -1);
-                // const newLatestLine: Line = { ...latestLine, spans: newSpans };
-                // const newLines: Line[] = [...latestBlockLines, newLatestLine];
-                // const newLatestBlock: Block = { ...latestBlock, lines: newLines };
-                return {
-                  blocks: [...blocks.slice(0, -1), block],
-                  isAfterNoise: false,
-                };
-              }
               const firstText = block.lines?.[0]?.spans?.[0]?.text;
-              // console.log(firstText, '\n', latestText, '\n\n');
               if (!isUndefined(firstText) && latestText.startsWith(firstText)) {
                 return {
                   blocks: [...blocks.slice(0, -1), block],
