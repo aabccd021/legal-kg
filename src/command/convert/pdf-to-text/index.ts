@@ -100,19 +100,6 @@ function removePageNoise(acc: Acc, block: Block): Acc {
               isAfterNoise: true,
             };
           }
-          const latestSpan = latestLine.spans?.slice(-1)[0];
-          if (!isUndefined(latestSpan)) {
-            const latestText = latestSpan.text;
-            if (!isUndefined(latestText)) {
-              const firstText = block.lines?.[0]?.spans?.[0]?.text;
-              if (!isUndefined(firstText) && latestText.startsWith(firstText)) {
-                return {
-                  blocks: [...blocks.slice(0, -1), block],
-                  isAfterNoise: true,
-                };
-              }
-            }
-          }
         }
       }
     }
