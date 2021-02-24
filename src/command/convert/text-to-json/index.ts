@@ -41,4 +41,5 @@ async function handleText(textNode: DocumentNode, option: Option): Promise<void>
     console.log(`Error text-to-json ${jsonPath}`);
     console.error(message);
   }
+  console.log();
 }

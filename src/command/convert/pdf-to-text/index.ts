@@ -33,7 +33,6 @@ function handlePdf(pdf: DocumentNode, option: Option): void {
 }
 
 function postProcess(lines: string[]): string[] {
-  console.log('aab');
   return chain(lines)
     .map((line) => line.trim())
     .filter((line) => !isEmpty(line))

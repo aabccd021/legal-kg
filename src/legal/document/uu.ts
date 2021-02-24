@@ -41,6 +41,7 @@ function getFiles(uuDir: string, dataType: DataType): UuNode[] {
     fs
       .readdirSync(path.join(uuDir, year))
       .map((pdfName) => path.basename(pdfName, getDataTypeExtension(dataType)))
+      .filter((number) => parseInt(number) >= 0)
       .map((number) => ({
         _documentType: 'uu',
         tahun: parseInt(year),

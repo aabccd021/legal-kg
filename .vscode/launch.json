@@ -4,27 +4,38 @@
     {
       "type": "pwa-node",
       "request": "launch",
-      "name": "Run Migration",
+      "name": "Convert : PDF to Text (Overwrite)",
       "runtimeArgs": [
         "-r",
         "ts-node/register"
       ],
       "args": [
         "${workspaceFolder}/src/cli.ts",
-        "migrate"
+        "convert:pdf-to-text",
+        "--overwrite",
       ],
+      "skipFiles": [
+        "${workspaceFolder}/node_modules/**",
+        "<node_internals>/**"
+      ]
     },
     {
       "type": "pwa-node",
       "request": "launch",
-      "name": "Run CLI",
+      "name": "Convert : Text to JSON (Overwrite)",
       "runtimeArgs": [
         "-r",
         "ts-node/register"
       ],
       "args": [
-        "${workspaceFolder}/src/cli.ts"
+        "${workspaceFolder}/src/cli.ts",
+        "convert:text-to-json",
+        "--overwrite",
       ],
-    }
+      "skipFiles": [
+        "${workspaceFolder}/node_modules/**",
+        "<node_internals>/**"
+      ]
+    },
   ]
 }
