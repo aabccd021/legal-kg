@@ -338,9 +338,10 @@ function _getPoints(
   regexp: RegExp,
   getKey: (int: number) => number | string = (number) => number
 ): Points {
-  const skip: [boolean, number] | undefined = /^Ketentuan (Pasal|judul BAB)/.test(isiLines[1] ?? '')
-    ? [true, 2]
-    : undefined;
+  // const skip
+  // : [boolean, number] | undefined = /^Ketentuan (Pasal|judul BAB)/.test(isiLines[1] ?? '')
+  // ? [true, 2]
+  const skip = undefined;
   console.log(skip);
   console.log(isiLines[1]);
   const pointsLines = extractIncLines(isiLines, getKeyInt, skip);
