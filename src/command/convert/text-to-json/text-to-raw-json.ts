@@ -1,4 +1,4 @@
-import { compact, flatMap, isEmpty, isNil, isUndefined, mapValues } from 'lodash';
+import { chain, compact, flatMap, isEmpty, isNil, isUndefined, mapValues } from 'lodash';
 import { toArabic } from 'roman-numerals';
 import { DocumentNode } from '../../../legal/document';
 import { Document } from '../../../legal/document/index';
@@ -213,15 +213,9 @@ function getPasalKey(line?: string): number | undefined {
   if (isUndefined(line)) return undefined;
   if (pasalRegex.test(line)) {
     // dirty
-    const keyStr = line.replaceAll(' ', '').replaceAll('I', '1').replace(pasalRegex, '');
+    const keyStr = line.replace(pasalRegex, '');
     const goodResult = safeParseInt(keyStr);
-    if (keyStr.startsWith('4')) {
-      console.log(keyStr);
-      console.log(goodResult);
-      console.log();
-    }
     if (!isUndefined(goodResult)) return goodResult;
-    console.log(keyStr);
     const cleanedResult = safeParseInt(keyStr.replaceAll(' ', '').replaceAll('I', '1'));
     if (!isUndefined(cleanedResult)) return cleanedResult;
   }
@@ -423,9 +417,17 @@ function extractIncLines(
 function safeParseInt(string: string | undefined): number | undefined {
   if (isNil(string)) return undefined;
 
+  const correctionMap = {
+    I: '1',
+    T: '7',
+  };
+
   try {
-    // dirty
-    const parseResult = parseInt(string.replaceAll('T', '7'));
+    const clearString = chain(correctionMap)
+      .toPairs()
+      .reduce((prev, [dirty, clean]) => prev.replaceAll(dirty, clean), string.replaceAll(' ', ''))
+      .value();
+    const parseResult = parseInt(clearString);
     if (isNaN(parseResult)) return undefined;
 
     return parseResult;
