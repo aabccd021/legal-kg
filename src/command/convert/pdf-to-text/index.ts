@@ -106,7 +106,7 @@ function removePageNoise(acc: Acc, block: Block): Acc {
             console.log('d');
             return {
               blocks: [...blocks.slice(0, -1), newLatestBlock, block],
-              isAfterNoise: false,
+              isAfterNoise: true,
             };
           }
           const firstText = block.lines?.[0]?.spans?.[0]?.text;
@@ -118,7 +118,7 @@ function removePageNoise(acc: Acc, block: Block): Acc {
             console.log('=== ===\n');
             return {
               blocks: [...blocks.slice(0, -1), block],
-              isAfterNoise: false,
+              isAfterNoise: true,
             };
           }
         }
@@ -128,7 +128,17 @@ function removePageNoise(acc: Acc, block: Block): Acc {
 
   const blockTextIsNoise = isNoise(blockFirstLineText);
   if (blockTextIsNoise) {
-    return { blocks: blocks.slice(0, -2), isAfterNoise: true };
+    const latestBlockSpans = blocks.slice(-1)[0]?.lines?.flatMap((l) => l.spans);
+    const candidateBlockSpans = blocks.slice(-2)[0]?.lines?.flatMap((l) => l.spans);
+    const candidateBlockSpanLen = candidateBlockSpans?.length ?? 0;
+    if (candidateBlockSpanLen < 9) {
+      console.log('zzz');
+      console.log(candidateBlockSpans?.map((s) => s?.text));
+      console.log(latestBlockSpans?.map((s) => s?.text));
+      console.log('===\n');
+      return { blocks: blocks.slice(0, -2), isAfterNoise: true };
+    }
+    return { blocks: blocks.slice(0, -1), isAfterNoise: true };
   }
 
   const blockTexts: string[] =
@@ -140,16 +150,20 @@ function removePageNoise(acc: Acc, block: Block): Acc {
           ?.value() ?? []
     ) ?? [];
   if (blockTexts.some(isNoise)) {
+    console.log('a');
     return { blocks, isAfterNoise: true };
   }
-  // if (blockFirstLineText.endsWith('. . .') || blockFirstLineText.endsWith('...')) {
-  //   console.log('b');
-  //   console.log(blockFirstLineText);
-  //   console.log('===\n');
-  //   console.log(blockTexts);
-  //   console.log('=== ===\n');
-  //   return { blocks, isAfterNoise: false };
-  // }
+  if (blockFirstLineText.endsWith('. . .') || blockFirstLineText.endsWith('...')) {
+    console.log('b');
+    console.log(blockFirstLineText);
+    if (blockFirstLineText.startsWith('Pasal 48')) {
+      console.log(blocks.length);
+    }
+    console.log('===\n');
+    console.log(blockTexts);
+    console.log('=== ===\n');
+    return { blocks, isAfterNoise: false };
+  }
 
   return { blocks: [...blocks, block], isAfterNoise: false };
 }
