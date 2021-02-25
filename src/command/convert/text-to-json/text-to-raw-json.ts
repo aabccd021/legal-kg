@@ -287,7 +287,7 @@ function _linesToAyat({ _key, lines }: IncLines): Ayat {
  * Point
  */
 // I to handle 1
-const numPointRegexp = /^[0-9I]+\s?[0-9]?[.)]/;
+const numPointRegexp = /^[0-9I]+\s?[0-9]?([.)]|$)/;
 
 function getNumPointKey(line?: string): number | undefined {
   const numberExtractRegexp = /^[0-9I]+\s?[0-9]?/;
@@ -338,6 +338,7 @@ function _getPoints(
   regexp: RegExp,
   getKey: (int: number) => number | string = (number) => number
 ): Points {
+  // const skipTimes = isiLines[1]?.startsWith('Ketentuan') ? 0 : 0;
   const pointsLines = extractIncLines(isiLines, getKeyInt);
   const isi = pointsLines.map(({ _key, lines }) => {
     const __key = getKey(_key);
@@ -402,7 +403,8 @@ type IncLines = { _key: number; lines: string[] };
 
 function extractIncLines(
   lines: string[],
-  keyOf: (string: string, prev?: number) => number | undefined
+  keyOf: (string: string, prev?: number) => number | undefined,
+  skipTimes = 0
 ): IncLines[] {
   const elements: IncLines[] = [{ _key: -1, lines: [] }];
   let prevKey: number | undefined = undefined;
@@ -412,9 +414,13 @@ function extractIncLines(
 
     if (!isNil(lineKey)) {
       if (!prevKey || lineKey === prevKey + 1) {
-        prevKey = lineKey;
-        const newElement = { _key: lineKey, lines: [] };
-        elements.push(newElement);
+        if (skipTimes <= 0) {
+          prevKey = lineKey;
+          const newElement = { _key: lineKey, lines: [] };
+          elements.push(newElement);
+        } else {
+          skipTimes--;
+        }
       }
     }
     elements[elements.length - 1]?.lines.push(line);
