@@ -1,0 +1,1 @@
+uu 2020 11 page 30, pasal 24 lost
