@@ -10,7 +10,8 @@ import { Paragraf } from '../../../legal/structure/paragraf';
 import { Pasal } from '../../../legal/structure/pasal';
 import { Points, Point } from '../../../legal/structure/point';
 import { ReferenceText } from '../../../legal/reference';
-const padaTaggalRegexp = /^pada tanggal/;
+const padaTaggalRegexp = /^pada tanggal [12]?[0-9]/;
+const padaTaggalExtractRegexp = /^pada tanggal/;
 const mengingatRegex = /^Mengingat\s*:/;
 const menimbangRegex = /(^Menimbang\s*:?)/;
 
@@ -28,9 +29,9 @@ export function textToRawJson(text: string, documentNode: DocumentNode): Documen
     ['_memutuskan', /^MEMUTUSKAN\s*:\s*/, 'optional', 'trim'],
     ['babs', babStartRegexp, 'required'],
     ['_tempatDitetapkan', /^Ditetapkan di /, 'optional', 'trim'],
-    ['_tanggalDitetapkan', padaTaggalRegexp, 'optional', 'trim'],
+    ['_tanggalDitetapkan', padaTaggalRegexp, 'optional', padaTaggalExtractRegexp],
     ['_tempatDisahkan', /^Disahkan di /, 'optional', 'trim'],
-    ['_tanggalDisahkan', padaTaggalRegexp, 'optional', 'trim'],
+    ['_tanggalDisahkan', padaTaggalRegexp, 'optional', padaTaggalExtractRegexp],
     ['_jabatanPengesah', /^(GUBERNUR|PRESIDEN)/, 'optional'],
     ['_namaPengesah', /^ttd$/, 'optional', 'trim'],
     ['_tempatDiundangkan', /^Diundangkan di/, 'optional', 'trim'],
@@ -56,7 +57,7 @@ export function textToRawJson(text: string, documentNode: DocumentNode): Documen
     _nomor: nomor_tahun?.[0],
     _tahun: nomor_tahun?.[1],
     _tanggalDiundangkan: extract_result._tempatDiundangkan?.[1]
-      ?.replace(padaTaggalRegexp, '')
+      ?.replace(padaTaggalExtractRegexp, '')
       .trim(),
     _tempatDiundangkan: extract_result._tempatDiundangkan?.[0]?.trim(),
     _denganPersetujuan: extract_result._denganPersetujuan?.filter((x) => x !== 'DAN').slice(1),
@@ -137,6 +138,7 @@ function getBagianKey(line?: string): number | undefined {
   if (bagianKeyStr === 'Kedelapan') return 8;
   if (bagianKeyStr === 'Kesembilan') return 9;
   if (bagianKeyStr === 'Kesepuluh') return 10;
+  if (bagianKeyStr === 'Kesebelas') return 11;
   throw Error(`Bagian key ${bagianKeyStr} is unknown on line: ${line}`);
 }
 
@@ -210,15 +212,24 @@ function _linesToParagraf(incLines: IncLines): Paragraf {
 // dirty
 const pasalRegex = /^Pasa(l|i)\s?/;
 
-function getPasalKey(line?: string): number | undefined {
+function getPasalKey(line?: string, prevKey?: number): number | undefined {
+  if (prevKey === 113) {
+    console.log('rrr', line);
+  }
+  if (prevKey === 114) {
+    console.log(line);
+  }
   if (isUndefined(line)) return undefined;
   if (pasalRegex.test(line)) {
     // dirty
     const keyStr = line.replace(pasalRegex, '');
     const goodResult = safeParseInt(keyStr);
+    if (goodResult === 114) {
+      console.log('xxx');
+      console.log(line);
+      console.log('===');
+    }
     if (!isUndefined(goodResult)) return goodResult;
-    const cleanedResult = safeParseInt(keyStr.replaceAll(' ', '').replaceAll('I', '1'));
-    if (!isUndefined(cleanedResult)) return cleanedResult;
   }
   return undefined;
 }
@@ -356,7 +367,8 @@ function _getPoints(
 
 type Extractor<T> =
   | [T, RegExp, 'optional' | 'required']
-  | [T, RegExp, 'optional' | 'required', 'trim'];
+  | [T, RegExp, 'optional' | 'required', 'trim']
+  | [T, RegExp, 'optional' | 'required', RegExp];
 
 function extractLines<T extends string>(
   lines: string[],
@@ -372,7 +384,13 @@ function extractLines<T extends string>(
 
       if (extractorRegexp.test(line)) {
         curExtractorIdx = candidateExtractorIdx;
-        if (trimOption === 'trim') line = line.replace(extractorRegexp, '');
+        if (!isUndefined(trimOption)) {
+          if (trimOption === 'trim') {
+            line = line.replace(extractorRegexp, '');
+          } else {
+            line = line.replace(trimOption, '');
+          }
+        }
       } else if (optionalOption !== 'optional') {
         break;
       }
@@ -424,9 +442,11 @@ function safeParseInt(string: string | undefined): number | undefined {
   };
 
   try {
+    const initialString = string.replaceAll(' ', '');
+    console.log(initialString);
     const clearString = chain(correctionMap)
       .toPairs()
-      .reduce((prev, [dirty, clean]) => prev.replaceAll(dirty, clean), string.replaceAll(' ', ''))
+      .reduce((prev, [dirty, clean]) => prev.replaceAll(dirty, clean), initialString)
       .value();
 
     const parseResult = parseInt(clearString);
