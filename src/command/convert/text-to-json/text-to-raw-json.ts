@@ -338,8 +338,12 @@ function _getPoints(
   regexp: RegExp,
   getKey: (int: number) => number | string = (number) => number
 ): Points {
-  // const skipTimes = isiLines[1]?.startsWith('Ketentuan') ? 0 : 0;
-  const pointsLines = extractIncLines(isiLines, getKeyInt);
+  const skip: [boolean, number] | undefined = /^Ketentuan (Pasal|judul BAB)/.test(isiLines[1] ?? '')
+    ? [true, 2]
+    : undefined;
+  console.log(skip);
+  console.log(isiLines[1]);
+  const pointsLines = extractIncLines(isiLines, getKeyInt, skip);
   const isi = pointsLines.map(({ _key, lines }) => {
     const __key = getKey(_key);
     const linesWithoutKey = removeKeyFromLines(lines, regexp);
@@ -404,8 +408,10 @@ type IncLines = { _key: number; lines: string[] };
 function extractIncLines(
   lines: string[],
   keyOf: (string: string, prev?: number) => number | undefined,
-  skipTimes = 0
+  skipOption: [boolean, number] = [false, -1]
 ): IncLines[] {
+  const doSkip = skipOption[0];
+  let skipKey = skipOption[1];
   const elements: IncLines[] = [{ _key: -1, lines: [] }];
   let prevKey: number | undefined = undefined;
 
@@ -414,12 +420,12 @@ function extractIncLines(
 
     if (!isNil(lineKey)) {
       if (!prevKey || lineKey === prevKey + 1) {
-        if (skipTimes <= 0) {
+        if (doSkip && lineKey === skipKey) {
+          skipKey++;
+        } else {
           prevKey = lineKey;
           const newElement = { _key: lineKey, lines: [] };
           elements.push(newElement);
-        } else {
-          skipTimes--;
         }
       }
     }
