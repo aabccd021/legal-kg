@@ -96,12 +96,14 @@ function removePageNoise(acc: Acc, block: Block): Acc {
           const newLines: Line[] = latestBlockLines.slice(0, -1);
           const newLatestBlock: Block = { ...latestBlock, lines: newLines };
           if (/^SK No/.test(lineText) || isNoise(lineText)) {
+            console.log('c');
             return {
               blocks: [...blocks.slice(0, -1), newLatestBlock, block],
               isAfterNoise: true,
             };
           }
           if (lineText.endsWith('. . .') || lineText.endsWith('...')) {
+            console.log('d');
             return {
               blocks: [...blocks.slice(0, -1), newLatestBlock, block],
               isAfterNoise: false,
@@ -109,9 +111,14 @@ function removePageNoise(acc: Acc, block: Block): Acc {
           }
           const firstText = block.lines?.[0]?.spans?.[0]?.text;
           if (!isUndefined(firstText) && lineText.startsWith(firstText)) {
+            console.log('e');
+            console.log(firstText);
+            console.log('===\n');
+            console.log(lineText);
+            console.log('=== ===\n');
             return {
               blocks: [...blocks.slice(0, -1), block],
-              isAfterNoise: true,
+              isAfterNoise: false,
             };
           }
         }
@@ -134,26 +141,17 @@ function removePageNoise(acc: Acc, block: Block): Acc {
           ?.compact()
           ?.value() ?? []
     ) ?? [];
-  const hasNoiseText = blockTexts.some(isNoise);
-  if (hasNoiseText || blockFirstLineText.endsWith('. . .') || blockFirstLineText.endsWith('...')) {
-    if (hasNoiseText) {
-      console.log('a');
-      console.log(blockTexts.join('\n'));
-      console.log('===\n');
-      console.log(blockTexts.filter(isNoise).join('\n'));
-      console.log('=== ===\n');
-      return { blocks, isAfterNoise: true };
-    }
-    // else {
-    //   console.log('b');
-    //   console.log(blockFirstLineText);
-    //   console.log();
-    //   if (blockFirstLineText === '(5) Setiap...') {
-    //     console.log(JSON.stringify(block, undefined, 2));
-    //   }
-    //   return { blocks, isAfterNoise: false };
-    // }
+  if (blockTexts.some(isNoise)) {
+    return { blocks, isAfterNoise: true };
   }
+  // if (blockFirstLineText.endsWith('. . .') || blockFirstLineText.endsWith('...')) {
+  //   console.log('b');
+  //   console.log(blockFirstLineText);
+  //   console.log('===\n');
+  //   console.log(blockTexts);
+  //   console.log('=== ===\n');
+  //   return { blocks, isAfterNoise: false };
+  // }
 
   return { blocks: [...blocks, block], isAfterNoise: false };
 }
