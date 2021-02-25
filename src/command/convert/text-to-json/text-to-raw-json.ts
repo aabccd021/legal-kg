@@ -286,10 +286,10 @@ function _linesToAyat({ _key, lines }: IncLines): Ayat {
 /**
  * Point
  */
-const numPointRegexp = /^[0-9]+\s?[.)]/;
+const numPointRegexp = /^[0-9]+\s?[0-9]?[.)]/;
 
 function getNumPointKey(line?: string): number | undefined {
-  const numberExtractRegexp = /^[0-9]+/;
+  const numberExtractRegexp = /^[0-9]+\s?[0-9]?/;
   const numberStr = line?.match(numPointRegexp)?.[0]?.match(numberExtractRegexp)?.[0];
 
   return safeParseInt(numberStr);
