@@ -124,8 +124,6 @@ function removePageNoise(acc: Acc, block: Block): Acc {
         }
       }
     }
-
-    return { blocks: [...blocks, block], isAfterNoise: false };
   }
 
   const blockTextIsNoise = isNoise(blockFirstLineText);
