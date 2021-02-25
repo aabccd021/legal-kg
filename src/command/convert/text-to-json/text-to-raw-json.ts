@@ -37,7 +37,7 @@ export function textToRawJson(text: string, documentNode: DocumentNode): Documen
     ['_tempatDiundangkan', /^Diundangkan di/, 'optional', 'trim'],
     ['_sekretaris', /^SEKRETARIS/, 'optional'],
     ['_dokumen', /^(LEMBARAN NEGARA|BERITA DAERAH)/, 'optional'],
-    ['salinanSesuaiDenganAslinya', /^Salinan/, 'optional'],
+    ['salinanSesuaiDenganAslinya', /^Salinan sesuai dengan aslinya/, 'optional'],
     ['penjelasan', /^PENJELASAN/, 'optional'],
   ];
   const extract_result = extractLines(lines, extractors);
@@ -212,23 +212,12 @@ function _linesToParagraf(incLines: IncLines): Paragraf {
 // dirty
 const pasalRegex = /^Pasa(l|i)\s?/;
 
-function getPasalKey(line?: string, prevKey?: number): number | undefined {
-  if (prevKey === 113) {
-    console.log('rrr', line);
-  }
-  if (prevKey === 114) {
-    console.log(line);
-  }
+function getPasalKey(line?: string): number | undefined {
   if (isUndefined(line)) return undefined;
   if (pasalRegex.test(line)) {
     // dirty
     const keyStr = line.replace(pasalRegex, '');
     const goodResult = safeParseInt(keyStr);
-    if (goodResult === 114) {
-      console.log('xxx');
-      console.log(line);
-      console.log('===');
-    }
     if (!isUndefined(goodResult)) return goodResult;
   }
   return undefined;
@@ -443,7 +432,6 @@ function safeParseInt(string: string | undefined): number | undefined {
 
   try {
     const initialString = string.replaceAll(' ', '');
-    console.log(initialString);
     const clearString = chain(correctionMap)
       .toPairs()
       .reduce((prev, [dirty, clean]) => prev.replaceAll(dirty, clean), initialString)
@@ -452,7 +440,6 @@ function safeParseInt(string: string | undefined): number | undefined {
     const parseResult = parseInt(clearString);
 
     if (!/^[0-9]+$/.test(clearString) && clearString.includes('15')) {
-      console.log(string);
       return undefined;
     }
 
