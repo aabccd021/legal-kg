@@ -136,6 +136,7 @@ function getBagianKey(line?: string): number | undefined {
   if (bagianKeyStr === 'Ketujuh') return 7;
   if (bagianKeyStr === 'Kedelapan') return 8;
   if (bagianKeyStr === 'Kesembilan') return 9;
+  if (bagianKeyStr === 'Kesepuluh') return 10;
   throw Error(`Bagian key ${bagianKeyStr} is unknown on line: ${line}`);
 }
 
@@ -288,10 +289,10 @@ function _linesToAyat({ _key, lines }: IncLines): Ayat {
 const numPointRegexp = /^[0-9]+\s?[.)]/;
 
 function getNumPointKey(line?: string): number | undefined {
-  const matches = line?.match(numPointRegexp);
-  const firstMatch = matches?.[0];
+  const numberExtractRegexp = /^[0-9]+/;
+  const numberStr = line?.match(numPointRegexp)?.[0]?.match(numberExtractRegexp)?.[0];
 
-  return safeParseInt(firstMatch);
+  return safeParseInt(numberStr);
 }
 
 const alphaPointRegexp = /^[a-z][.)]/;
@@ -427,7 +428,14 @@ function safeParseInt(string: string | undefined): number | undefined {
       .toPairs()
       .reduce((prev, [dirty, clean]) => prev.replaceAll(dirty, clean), string.replaceAll(' ', ''))
       .value();
+
     const parseResult = parseInt(clearString);
+
+    if (!/^[0-9]+$/.test(clearString) && clearString.includes('15')) {
+      console.log(string);
+      return undefined;
+    }
+
     if (isNaN(parseResult)) return undefined;
 
     return parseResult;

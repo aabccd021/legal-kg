@@ -11,7 +11,7 @@ export async function textToJson(option: Option): Promise<void> {
   const texts = getDocumentData('text');
   for (const text of texts) {
     try {
-      await pTimeout(handleText(text, option), 10000);
+      await pTimeout(handleText(text, option), 20000);
     } catch {
       console.warn(`timed out ${JSON.stringify(text)}`);
     }
@@ -29,13 +29,14 @@ async function handleText(textNode: DocumentNode, option: Option): Promise<void>
       console.log(`Skipped text-to-json ${jsonPath}`);
       return;
     }
-    const file = await fs.promises.readFile(textFile.path);
+    const file = fs.readFileSync(textFile.path);
     const text = file.toString();
 
     const rawJson = textToRawJson(text, textNode);
     const json = rawJsonToJson(rawJson, textNode);
 
-    await fs.promises.writeFile(jsonPath, stringify(json, { space: 2 }));
+    console.log(`Writing text-to-json ${jsonPath}`);
+    fs.writeFileSync(jsonPath, stringify(json, { space: 2 }));
 
     console.log(`Finished text-to-json ${jsonPath}`);
   } catch (message) {

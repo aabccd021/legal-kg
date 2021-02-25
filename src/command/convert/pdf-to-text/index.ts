@@ -68,6 +68,10 @@ type Acc = {
 };
 
 function isNoise(str: string): boolean {
+  // dirty
+  if (str.startsWith('Rp')) {
+    return false;
+  }
   return (
     /^-?\s?[a-zA-Z]{0,2}[0-9]+[a-zA-Z]?\s?-/.test(str) ||
     /^-\s?[a-zA-Z]?[0-9]+[a-zA-Z]?\s?-?/.test(str)
@@ -77,8 +81,9 @@ function isNoise(str: string): boolean {
 function removePageNoise(acc: Acc, block: Block): Acc {
   const { blocks, isAfterNoise } = acc;
 
-  const blockText = block.lines?.[0]?.spans?.map((span) => span.text).join('');
-  if (isUndefined(blockText)) return acc;
+  const blockFirstLine = block.lines?.[0];
+  const blockFirstLineText = blockFirstLine?.spans?.map((span) => span.text).join('');
+  if (isUndefined(blockFirstLineText)) return acc;
 
   if (isAfterNoise) {
     const latestBlock = blocks?.slice(-1)[0];
@@ -88,17 +93,18 @@ function removePageNoise(acc: Acc, block: Block): Acc {
         const latestLine = latestBlockLines.slice(-1)[0];
         if (!isUndefined(latestLine)) {
           const lineText = latestLine.spans?.map((span) => span.text).join('') ?? '';
-          if (
-            /^SK No/.test(lineText) ||
-            lineText.endsWith('. . .') ||
-            lineText.endsWith('...') ||
-            isNoise(lineText)
-          ) {
-            const newLines: Line[] = latestBlockLines.slice(0, -1);
-            const newLatestBlock: Block = { ...latestBlock, lines: newLines };
+          const newLines: Line[] = latestBlockLines.slice(0, -1);
+          const newLatestBlock: Block = { ...latestBlock, lines: newLines };
+          if (/^SK No/.test(lineText) || isNoise(lineText)) {
             return {
               blocks: [...blocks.slice(0, -1), newLatestBlock, block],
               isAfterNoise: true,
+            };
+          }
+          if (lineText.endsWith('. . .') || lineText.endsWith('...')) {
+            return {
+              blocks: [...blocks.slice(0, -1), newLatestBlock, block],
+              isAfterNoise: false,
             };
           }
           const firstText = block.lines?.[0]?.spans?.[0]?.text;
@@ -115,16 +121,38 @@ function removePageNoise(acc: Acc, block: Block): Acc {
     return { blocks: [...blocks, block], isAfterNoise: false };
   }
 
-  const blockTextIsNoise = isNoise(blockText);
+  const blockTextIsNoise = isNoise(blockFirstLineText);
   if (blockTextIsNoise) {
     return { blocks: blocks.slice(0, -2), isAfterNoise: true };
   }
 
-  const hasNoiseText = block.lines?.some((line) =>
-    line.spans?.some(({ text }) => isNoise(text ?? ''))
-  );
-  if (hasNoiseText) {
-    return { blocks, isAfterNoise: true };
+  const blockTexts: string[] =
+    block.lines?.flatMap(
+      (line) =>
+        chain(line.spans)
+          ?.flatMap(({ text }) => text)
+          ?.compact()
+          ?.value() ?? []
+    ) ?? [];
+  const hasNoiseText = blockTexts.some(isNoise);
+  if (hasNoiseText || blockFirstLineText.endsWith('. . .') || blockFirstLineText.endsWith('...')) {
+    if (hasNoiseText) {
+      console.log('a');
+      console.log(blockTexts.join('\n'));
+      console.log('===\n');
+      console.log(blockTexts.filter(isNoise).join('\n'));
+      console.log('=== ===\n');
+      return { blocks, isAfterNoise: true };
+    }
+    // else {
+    //   console.log('b');
+    //   console.log(blockFirstLineText);
+    //   console.log();
+    //   if (blockFirstLineText === '(5) Setiap...') {
+    //     console.log(JSON.stringify(block, undefined, 2));
+    //   }
+    //   return { blocks, isAfterNoise: false };
+    // }
   }
 
   return { blocks: [...blocks, block], isAfterNoise: false };
