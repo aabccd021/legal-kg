@@ -227,18 +227,12 @@ function getPasals(lines: string[]): Pasal[] {
   const [firstLine] = lines;
   if (isNil(getPasalKey(firstLine))) throw Error(firstLine);
 
-  return extractIncLines(
-    lines,
-    getPasalKey
-    //  isAmendLines
-  ).map(_linesToPasal);
+  return extractIncLines(lines, getPasalKey, isAmendLines).map(_linesToPasal);
 }
 
-// function isAmendLines(_lines: string[]): boolean {
-// const isAmend = amendPasalRegex.test(lines.slice(1).join(' '));
-// if (isAmend) console.log(lines.slice(1)[0]);
-// return isAmend;
-// }
+function isAmendLines(_lines: string[]): boolean {
+  return false;
+}
 
 const amendPasalRegex = /^Beberapa ketentuan dalam Undang-Undang/;
 
