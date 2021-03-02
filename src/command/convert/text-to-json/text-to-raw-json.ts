@@ -485,17 +485,12 @@ function extractIncLines(
 
     if (!isNil(lineKey)) {
       if (!prevKey || lineKey === prevKey + 1) {
-        if (isUndefined(shouldSkip) || lineKey !== skipKey) {
+        if (isUndefined(shouldSkip) || lineKey !== skipKey || !shouldSkip(lines.slice(_idx))) {
           prevKey = lineKey;
           const newElement = { _key: lineKey, lines: [] };
           elements.push(newElement);
         } else if (lineKey === skipKey) {
           skipKey++;
-          if (!shouldSkip(lines.slice(_idx))) {
-            prevKey = lineKey;
-            const newElement = { _key: lineKey, lines: [] };
-            elements.push(newElement);
-          }
         }
       }
     }
