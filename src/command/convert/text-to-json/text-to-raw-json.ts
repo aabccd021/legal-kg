@@ -257,7 +257,7 @@ function getAmendPoints(lines: string[]): Points | undefined {
       },
       { descLines: [], isiLines: [], isDone: false }
     )
-    .thru(({ descLines, isiLines }) => _getPoints('numPoint', isiLines, descLines.join(' '), true))
+    .thru(({ descLines, isiLines }) => _getPoints('numPoint', isiLines, descLines.join(' '), 2))
     .value();
 }
 
@@ -378,7 +378,7 @@ function _getPoints(
   _type: 'numPoint' | 'alphaPoint',
   isiLines: string[],
   __description: string,
-  doSkip = false
+  skipIdx?: number
 ): Points {
   // const toDetect = isiLines.slice(10).join(' ') ?? '';
   // const skip: [boolean, number] | undefined = amendRegex.test(toDetect) ? [true, 2] : undefined;
@@ -386,7 +386,7 @@ function _getPoints(
   //   console.log(toDetect);
   //   console.log('===');
   // }
-  const isi = getPointsContent(_type, isiLines, doSkip);
+  const isi = getPointsContent(_type, isiLines, skipIdx);
   const textLines = [__description, ...isiLines];
   const text = textLines.filter((x) => !isEmpty(x)).join(' ');
   const _description = stringToEmptyReference(__description);
@@ -397,10 +397,10 @@ function _getPoints(
 function getPointsContent(
   _type: 'numPoint' | 'alphaPoint',
   isiLines: string[],
-  doSkip: boolean
+  skipIdx?: number
 ): Point[] {
   const { getKeyInt } = getGetKeyInt(_type);
-  return extractIncLines(isiLines, getKeyInt, doSkip).map(getPointIsi(_type));
+  return extractIncLines(isiLines, getKeyInt, skipIdx).map(getPointIsi(_type));
 }
 
 const getPointIsi = curry(_getPointIsi);
@@ -464,9 +464,9 @@ type IncLines = { _key: number; lines: string[] };
 function extractIncLines(
   lines: string[],
   keyOf: (string: string, prev?: number) => number | undefined,
-  doSkip = false
+  skipKey?: number
 ): IncLines[] {
-  let skipKey = 2;
+  const doSkip = !isUndefined(skipKey);
   const elements: IncLines[] = [{ _key: -1, lines: [] }];
   let prevKey: number | undefined = undefined;
 
