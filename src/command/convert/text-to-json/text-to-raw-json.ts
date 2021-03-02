@@ -231,9 +231,10 @@ function getPasals(lines: string[]): Pasal[] {
 }
 
 function isAmendLines(_lines: string[]): boolean {
-  const x = amendPasalRegex.test(_lines.slice(1).join(' '));
-  if (x) console.log(_lines[1]);
-  return x;
+  // const x = amendPasalRegex.test(_lines.slice(1).join(' '));
+  // if (x) console.log(_lines[1]);
+  // return x;
+  return false;
 }
 
 const amendPasalRegex = /^Beberapa ketentuan dalam Undang-Undang/;
@@ -474,13 +475,16 @@ function extractIncLines(
 ): IncLines[] {
   const elements: IncLines[] = [{ _key: -1, lines: [] }];
   let prevKey: number | undefined = undefined;
-  let skipKey = 2;
+  let skipKey: number | undefined = undefined;
 
   lines.forEach((line, _idx) => {
     const lineKey = keyOf(line, prevKey);
 
     if (!isNil(lineKey)) {
       if (!prevKey || lineKey === prevKey + 1) {
+        if (!prevKey) {
+          skipKey = lineKey + 1;
+        }
         if (isUndefined(shouldSkip)) {
           prevKey = lineKey;
           const newElement = { _key: lineKey, lines: [] };
