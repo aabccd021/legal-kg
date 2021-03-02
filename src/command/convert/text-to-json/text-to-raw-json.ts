@@ -257,7 +257,9 @@ function getAmendPoints(lines: string[]): Points | undefined {
       },
       { descLines: [], isiLines: [], isDone: false }
     )
-    .thru(({ descLines, isiLines }) => _getPoints('numPoint', isiLines, descLines.join(' '), 2))
+    .thru(({ descLines, isiLines }) =>
+      _getPoints('numPoint', isiLines, descLines.join(' '), () => false)
+    )
     .value();
 }
 
@@ -378,7 +380,7 @@ function _getPoints(
   _type: 'numPoint' | 'alphaPoint',
   isiLines: string[],
   __description: string,
-  skipIdx?: number
+  shouldSkip?: (lines: string[]) => boolean
 ): Points {
   // const toDetect = isiLines.slice(10).join(' ') ?? '';
   // const skip: [boolean, number] | undefined = amendRegex.test(toDetect) ? [true, 2] : undefined;
@@ -386,7 +388,7 @@ function _getPoints(
   //   console.log(toDetect);
   //   console.log('===');
   // }
-  const isi = getPointsContent(_type, isiLines, skipIdx);
+  const isi = getPointsContent(_type, isiLines, shouldSkip);
   const textLines = [__description, ...isiLines];
   const text = textLines.filter((x) => !isEmpty(x)).join(' ');
   const _description = stringToEmptyReference(__description);
@@ -397,10 +399,10 @@ function _getPoints(
 function getPointsContent(
   _type: 'numPoint' | 'alphaPoint',
   isiLines: string[],
-  skipIdx?: number
+  shouldSkip?: (lines: string[]) => boolean
 ): Point[] {
   const { getKeyInt } = getGetKeyInt(_type);
-  return extractIncLines(isiLines, getKeyInt, skipIdx).map(getPointIsi(_type));
+  return extractIncLines(isiLines, getKeyInt, shouldSkip).map(getPointIsi(_type));
 }
 
 const getPointIsi = curry(_getPointIsi);
@@ -464,22 +466,20 @@ type IncLines = { _key: number; lines: string[] };
 function extractIncLines(
   lines: string[],
   keyOf: (string: string, prev?: number) => number | undefined,
-  skipKey?: number
+  shouldSkip?: (lines: string[]) => boolean
 ): IncLines[] {
-  const doSkip = !isUndefined(skipKey);
   const elements: IncLines[] = [{ _key: -1, lines: [] }];
   let prevKey: number | undefined = undefined;
+  let skipKey = 2;
 
-  for (const line of lines) {
+  lines.forEach((line, idx) => {
     const lineKey = keyOf(line, prevKey);
 
     if (!isNil(lineKey)) {
       if (!prevKey || lineKey === prevKey + 1) {
-        if (doSkip && lineKey === skipKey) {
-          // console.log('skip ', line);
-          // console.log();
+        if (!isUndefined(shouldSkip) && lineKey === skipKey) {
           skipKey++;
-        } else {
+        } else if (isUndefined(shouldSkip) || !shouldSkip(lines.slice(idx))) {
           prevKey = lineKey;
           const newElement = { _key: lineKey, lines: [] };
           elements.push(newElement);
@@ -487,7 +487,7 @@ function extractIncLines(
       }
     }
     elements[elements.length - 1]?.lines.push(line);
-  }
+  });
 
   return elements.filter(({ lines, _key }) => !isEmpty(lines) && _key !== -1);
 }
