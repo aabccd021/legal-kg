@@ -225,12 +225,20 @@ function getPasalKey(line?: string): number | undefined {
 
 function getPasals(lines: string[]): Pasal[] {
   const [firstLine] = lines;
-  const firstKey = getPasalKey(firstLine);
-  if (isNil(firstKey)) throw Error(firstLine);
-  const pasalsLines = extractIncLines(lines, getPasalKey);
+  if (isNil(getPasalKey(firstLine))) throw Error(firstLine);
 
-  return pasalsLines.map(_linesToPasal);
+  return extractIncLines(
+    lines,
+    getPasalKey
+    //  isAmendLines
+  ).map(_linesToPasal);
 }
+
+// function isAmendLines(_lines: string[]): boolean {
+// const isAmend = amendPasalRegex.test(lines.slice(1).join(' '));
+// if (isAmend) console.log(lines.slice(1)[0]);
+// return isAmend;
+// }
 
 const amendPasalRegex = /^Beberapa ketentuan dalam Undang-Undang/;
 
@@ -258,7 +266,7 @@ function getAmendPoints(lines: string[]): Points | undefined {
       { descLines: [], isiLines: [], isDone: false }
     )
     .thru(({ descLines, isiLines }) =>
-      _getPoints('numPoint', isiLines, descLines.join(' '), () => false)
+      _getPoints('numPoint', isiLines, descLines.join(' '), () => true)
     )
     .value();
 }
@@ -472,14 +480,25 @@ function extractIncLines(
   let prevKey: number | undefined = undefined;
   let skipKey = 2;
 
-  lines.forEach((line, idx) => {
+  lines.forEach((line, _idx) => {
     const lineKey = keyOf(line, prevKey);
 
     if (!isNil(lineKey)) {
       if (!prevKey || lineKey === prevKey + 1) {
-        if (!isUndefined(shouldSkip) && lineKey === skipKey) {
-          skipKey++;
-        } else if (isUndefined(shouldSkip) || !shouldSkip(lines.slice(idx))) {
+        if (!isUndefined(shouldSkip)) {
+          if (lineKey === skipKey) {
+            skipKey++;
+            if (!shouldSkip(lines.slice(_idx))) {
+              prevKey = lineKey;
+              const newElement = { _key: lineKey, lines: [] };
+              elements.push(newElement);
+            }
+          } else {
+            prevKey = lineKey;
+            const newElement = { _key: lineKey, lines: [] };
+            elements.push(newElement);
+          }
+        } else {
           prevKey = lineKey;
           const newElement = { _key: lineKey, lines: [] };
           elements.push(newElement);
