@@ -1,3 +1,4 @@
+import { UpdateAmend } from './../../../legal/structure/amend';
 import { assertNever } from 'assert-never';
 import { map, flatten, compact, isNil, repeat, isArray } from 'lodash';
 import { toRoman } from 'roman-numerals';
@@ -195,6 +196,10 @@ function pointsToMd(
   return `${description}\n${isiStr}`;
 }
 
+function updateAmendToMd(_: UpdateAmend, __: PointNode): string {
+  return '';
+}
+
 function pointToMd(
   point: Point,
   parent: PointNode | AyatNode | PasalNode | MetadataNode,
@@ -202,11 +207,16 @@ function pointToMd(
 ): string {
   const { isi, _key, text } = point;
   const pointNode: PointNode = { _key, parentPoints: parent, _structureType: 'point' };
-  const isiStr = !isNil(isi) ? pointsToMd(isi, pointNode, depth + 1) : referenceToMd(text);
+  const isiStr = !isNil(isi) ? pointContentToMd(isi, pointNode, depth + 1) : referenceToMd(text);
   const indent = repeat(' ', depth * 4);
   const uri = getLegalUri(pointNode);
 
   return `${indent}* [${_key}.](${uri}) ${isiStr}`;
+}
+
+function pointContentToMd(isi: Points | UpdateAmend, pointNode: PointNode, depth: number): string {
+  if (isi._type === 'updateAmend') return updateAmendToMd(isi, pointNode);
+  return pointsToMd(isi, pointNode, depth);
 }
 
 function metadata(key: string, value: string | number | undefined): string | undefined {

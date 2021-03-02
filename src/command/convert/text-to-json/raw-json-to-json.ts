@@ -1,3 +1,4 @@
+import { UpdateAmend } from './../../../legal/structure/amend';
 import assertNever from 'assert-never';
 import _ from 'lodash';
 import { isNil, isArray, compact } from 'lodash';
@@ -62,12 +63,15 @@ function pasalToDetectedPasal(pasal: Pasal, parent: PasalParentNode): Pasal {
   const detectedText = isNil(isi)
     ? { ...text, references: detectPasalNode(text.text, pasalNode) }
     : text;
-  const detectedIsi = !isNil(isi) ? _pasalToetectedPasal(isi, pasalNode) : isi;
+  const detectedIsi = !isNil(isi) ? pasalContentToDetectedPasalContent(isi, pasalNode) : isi;
 
   return { ...pasal, text: detectedText, isi: detectedIsi };
 }
 
-function _pasalToetectedPasal(isi: Ayat[] | Points, pasalNode: PasalNode): Ayat[] | Points {
+function pasalContentToDetectedPasalContent(
+  isi: Ayat[] | Points,
+  pasalNode: PasalNode
+): Ayat[] | Points {
   if (isArray(isi) && isAyats(isi)) return isi.map((ayat) => ayatToDetectedAyat(ayat, pasalNode));
 
   return pointsToDetectedPoints(isi, pasalNode);
@@ -91,9 +95,22 @@ function pointToDetectedPoint(point: Point, parentPoints: PointsNode): Point {
   const detectedText = isNil(isi)
     ? { ...text, references: detectPointNode(text.text, pointNode) }
     : text;
-  const detectedIsi = !isNil(isi) ? pointsToDetectedPoints(isi, pointNode) : isi;
+  const detectedIsi = !isNil(isi) ? pointContentToDetectedPointContent(isi, pointNode) : isi;
 
   return { ...point, text: detectedText, isi: detectedIsi };
+}
+
+function pointContentToDetectedPointContent(
+  isi: Points | UpdateAmend,
+  pointNode: PointNode
+): Points | UpdateAmend {
+  if (isi._type === 'points') return pointsToDetectedPoints(isi, pointNode);
+  if (isi._type === 'updateAmend') return updateAmendToDetectedUpdateAmend(isi, pointNode);
+  assertNever(isi);
+}
+
+function updateAmendToDetectedUpdateAmend(amend: UpdateAmend, _: PointNode): UpdateAmend {
+  return amend;
 }
 
 function ayatToDetectedAyat(pasal: Ayat, parentPasal: PasalNode): Ayat {

@@ -1,3 +1,4 @@
+import { UpdateAmend } from './../../../legal/structure/amend';
 import { flatten, compact, isNil, isArray, isString } from 'lodash';
 import { Triple } from './triple';
 import { Document, DocumentNode } from '../../../legal/document/index';
@@ -14,6 +15,7 @@ import {
   getPasalParentDocument,
   PasalNode,
 } from '../../../legal/structure/pasal';
+import assertNever from 'assert-never';
 
 export function jsonToTriples({
   _name,
@@ -183,7 +185,7 @@ function pointToTriple(points_key: PointsNode, point: Point): Triple[] {
   const point_key: PointNode = { _key, parentPoints: points_key, _structureType: 'point' };
   const isiTriples: Triple[] = isNil(isi)
     ? [[point_key, 'hasText', text.text]]
-    : pointsToTriple(point_key, isi);
+    : pointContentToTriple(point_key, isi);
 
   return [
     [points_key, 'hasPoint', point_key],
@@ -191,6 +193,16 @@ function pointToTriple(points_key: PointsNode, point: Point): Triple[] {
     ...referencesToTriple(point_key, text.references),
     ...isiTriples,
   ];
+}
+
+function pointContentToTriple(pointNode: PointNode, isi: Points | UpdateAmend): Triple[] {
+  if (isi._type === 'updateAmend') return updateAmendToTriple(pointNode, isi);
+  if (isi._type === 'points') return pointsToTriple(pointNode, isi);
+  assertNever(isi);
+}
+
+function updateAmendToTriple(_: PointNode, __: UpdateAmend): Triple[] {
+  return [];
 }
 
 function referencesToTriple(parent: PointsNode, references: Reference[]): Triple[] {
