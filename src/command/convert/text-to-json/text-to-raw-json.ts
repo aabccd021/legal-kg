@@ -476,6 +476,7 @@ function extractIncLines(
   const elements: IncLines[] = [{ _key: -1, lines: [] }];
   let prevKey: number | undefined = undefined;
   let skipKey: number | undefined = undefined;
+  let shouldBlockSkip: boolean | undefined = undefined;
 
   lines.forEach((line, _idx) => {
     const lineKey = keyOf(line, prevKey);
@@ -490,12 +491,14 @@ function extractIncLines(
           const newElement = { _key: lineKey, lines: [] };
           elements.push(newElement);
         } else {
-          if (!shouldSkip(lines.slice(_idx)) || lineKey !== skipKey) {
+          shouldBlockSkip ??= shouldSkip(lines.slice(_idx));
+          if (!shouldBlockSkip || lineKey !== skipKey) {
             prevKey = lineKey;
             const newElement = { _key: lineKey, lines: [] };
             elements.push(newElement);
           } else if (lineKey === skipKey) {
             skipKey++;
+            shouldBlockSkip = shouldSkip(lines.slice(_idx));
           }
         }
       }
