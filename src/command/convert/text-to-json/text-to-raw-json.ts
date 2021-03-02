@@ -1,4 +1,4 @@
-import { chain, compact, flatMap, isEmpty, isNil, isUndefined, mapValues } from 'lodash';
+import { chain, compact, flatMap, isEmpty, isNil, isUndefined, mapValues, curry } from 'lodash';
 import { toArabic } from 'roman-numerals';
 import { DocumentNode } from '../../../legal/document';
 import { Document } from '../../../legal/document/index';
@@ -232,13 +232,40 @@ function getPasals(lines: string[]): Pasal[] {
   return pasalsLines.map(_linesToPasal);
 }
 
-function _linesToPasal({ _key, lines }: IncLines): Pasal {
+const amendPasalRegex = /^Beberapa ketentuan dalam Undang-Undang/;
+
+function _linesToPasal(incLines: IncLines): Pasal {
+  const { _key, lines } = incLines;
   const isiLines = lines.slice(1);
-  const isi = getAyats(isiLines) ?? getPoints(isiLines);
   const text = stringToEmptyReference(isiLines.join(' '));
+  const isi = getAmendPoints(isiLines) ?? getAyats(isiLines) ?? getPoints(isiLines);
 
   return { _type: 'pasal', _key, isi, text };
 }
+
+function getAmendPoints(lines: string[]): Points | undefined {
+  if (!amendPasalRegex.test(lines.join(' '))) return undefined;
+  return chain(lines)
+    .reduce<AmendDescAcc>(
+      (prev, line) => {
+        const descLines = prev.isDone ? prev.descLines : [...prev.descLines, line];
+        const isiLines = prev.isDone ? [...prev.isiLines, line] : prev.isiLines;
+        const isDone = prev.isDone
+          ? true
+          : /sebagai berikut/.test(`${prev.descLines.slice(-1)[0]} ${line}`);
+        return { descLines, isiLines, isDone };
+      },
+      { descLines: [], isiLines: [], isDone: false }
+    )
+    .thru(({ descLines, isiLines }) => _getPoints('numPoint', isiLines, descLines.join(' '), true))
+    .value();
+}
+
+type AmendDescAcc = {
+  descLines: string[];
+  isiLines: string[];
+  isDone: boolean;
+};
 
 /**
  * Ayat
@@ -312,52 +339,81 @@ function getPoints(lines: string[]): Points | undefined {
     const description = descriptionLines.join(' ');
 
     if (getNumPointKey(line) === 1) {
-      return _getPoints('numPoint', isi, description, getNumPointKey, numPointRegexp);
+      return _getPoints('numPoint', isi, description);
     }
 
     if (getAlphaPointKey(line) === 'a'.charCodeAt(0)) {
-      return _getPoints(
-        'alphaPoint',
-        isi,
-        description,
-        getAlphaPointKey,
-        alphaPointRegexp,
-        String.fromCharCode
-      );
+      return _getPoints('alphaPoint', isi, description);
     }
   }
 
   return undefined;
 }
 
+// const amendRegex = /^Ketentuan Pasal.*diubah sehingga.*:/;
+
+function getGetKeyInt(
+  _type: 'numPoint' | 'alphaPoint'
+): {
+  regexp: RegExp;
+  getKeyInt: (string: string) => number | undefined;
+  getKey?: (int: number) => number | string;
+} {
+  switch (_type) {
+    case 'numPoint':
+      return {
+        regexp: numPointRegexp,
+        getKeyInt: getNumPointKey,
+      };
+    case 'alphaPoint':
+      return {
+        regexp: alphaPointRegexp,
+        getKeyInt: getAlphaPointKey,
+        getKey: String.fromCharCode,
+      };
+  }
+}
+
 function _getPoints(
   _type: 'numPoint' | 'alphaPoint',
   isiLines: string[],
   __description: string,
-  getKeyInt: (string: string) => number | undefined,
-  regexp: RegExp,
-  getKey: (int: number) => number | string = (number) => number
+  doSkip = false
 ): Points {
-  const skip: [boolean, number] | undefined = /^Ketentuan (Pasal|judul BAB)/.test(isiLines[1] ?? '')
-    ? [true, 2]
-    : undefined;
-  console.log(skip);
-  console.log(isiLines[1]);
-  const pointsLines = extractIncLines(isiLines, getKeyInt, skip);
-  const isi = pointsLines.map(({ _key, lines }) => {
-    const __key = getKey(_key);
-    const linesWithoutKey = removeKeyFromLines(lines, regexp);
-    const isi = getPoints(linesWithoutKey);
-    const text = stringToEmptyReference(linesWithoutKey.join(' '));
-    const point: Point = { _type, _key: __key, isi, text };
-
-    return point;
-  });
+  // const toDetect = isiLines.slice(10).join(' ') ?? '';
+  // const skip: [boolean, number] | undefined = amendRegex.test(toDetect) ? [true, 2] : undefined;
+  // if (!isUndefined(skip)) {
+  //   console.log(toDetect);
+  //   console.log('===');
+  // }
+  const isi = getPointsContent(_type, isiLines, doSkip);
   const textLines = [__description, ...isiLines];
   const text = textLines.filter((x) => !isEmpty(x)).join(' ');
   const _description = stringToEmptyReference(__description);
 
   return { _type: 'points', _description, text, isi };
+}
+
+function getPointsContent(
+  _type: 'numPoint' | 'alphaPoint',
+  isiLines: string[],
+  doSkip: boolean
+): Point[] {
+  const { getKeyInt } = getGetKeyInt(_type);
+  return extractIncLines(isiLines, getKeyInt, doSkip).map(getPointIsi(_type));
+}
+
+const getPointIsi = curry(_getPointIsi);
+
+function _getPointIsi(_type: 'numPoint' | 'alphaPoint', { _key, lines }: IncLines): Point {
+  const { getKey, regexp } = getGetKeyInt(_type);
+  const __key = isUndefined(getKey) ? _key : getKey(_key);
+  const linesWithoutKey = removeKeyFromLines(lines, regexp);
+  const isi = getPoints(linesWithoutKey);
+  const text = stringToEmptyReference(linesWithoutKey.join(' '));
+  const point: Point = { _type, _key: __key, isi, text };
+
+  return point;
 }
 
 type Extractor<T> =
@@ -408,10 +464,9 @@ type IncLines = { _key: number; lines: string[] };
 function extractIncLines(
   lines: string[],
   keyOf: (string: string, prev?: number) => number | undefined,
-  skipOption: [boolean, number] = [false, -1]
+  doSkip = false
 ): IncLines[] {
-  const doSkip = skipOption[0];
-  let skipKey = skipOption[1];
+  let skipKey = 2;
   const elements: IncLines[] = [{ _key: -1, lines: [] }];
   let prevKey: number | undefined = undefined;
 
@@ -421,8 +476,8 @@ function extractIncLines(
     if (!isNil(lineKey)) {
       if (!prevKey || lineKey === prevKey + 1) {
         if (doSkip && lineKey === skipKey) {
-          console.log('skip ', line);
-          console.log();
+          // console.log('skip ', line);
+          // console.log();
           skipKey++;
         } else {
           prevKey = lineKey;
