@@ -231,7 +231,9 @@ function getPasals(lines: string[]): Pasal[] {
 }
 
 function isAmendLines(_lines: string[]): boolean {
-  return false;
+  const x = amendPasalRegex.test(_lines.slice(1).join(' '));
+  if (x) console.log(_lines[1]);
+  return x;
 }
 
 const amendPasalRegex = /^Beberapa ketentuan dalam Undang-Undang/;
@@ -479,12 +481,18 @@ function extractIncLines(
 
     if (!isNil(lineKey)) {
       if (!prevKey || lineKey === prevKey + 1) {
-        if (isUndefined(shouldSkip) || lineKey !== skipKey || !shouldSkip(lines.slice(_idx))) {
+        if (isUndefined(shouldSkip)) {
           prevKey = lineKey;
           const newElement = { _key: lineKey, lines: [] };
           elements.push(newElement);
-        } else if (lineKey === skipKey) {
-          skipKey++;
+        } else {
+          if (!shouldSkip(lines.slice(_idx)) || lineKey !== skipKey) {
+            prevKey = lineKey;
+            const newElement = { _key: lineKey, lines: [] };
+            elements.push(newElement);
+          } else if (lineKey === skipKey) {
+            skipKey++;
+          }
         }
       }
     }
