@@ -1612,24 +1612,6 @@
         "width": 56.88089,
         "height": 11,
         "fontName": "g_d1_f1"
-      },
-      {
-        "x": 440.16,
-        "y": 882.0401999999999,
-        "str": "d. ",
-        "dir": "ltr",
-        "width": 9.84,
-        "height": 10,
-        "fontName": "g_d1_f1"
-      },
-      {
-        "x": 455.52,
-        "y": 882.0401999999999,
-        "str": "bahwa...",
-        "dir": "ltr",
-        "width": 59.519999999999996,
-        "height": 10,
-        "fontName": "g_d1_f1"
       }
     ]
   },
@@ -2597,15 +2579,6 @@
         "dir": "ltr",
         "width": 78.00012000000001,
         "height": 12,
-        "fontName": "g_d1_f1"
-      },
-      {
-        "x": 463.2,
-        "y": 874.3199,
-        "str": "BABI...",
-        "dir": "ltr",
-        "width": 54.96029,
-        "height": 11,
         "fontName": "g_d1_f1"
       }
     ]
@@ -3916,24 +3889,6 @@
         "dir": "ltr",
         "width": 44.88096,
         "height": 12,
-        "fontName": "g_d1_f1"
-      },
-      {
-        "x": 423.6,
-        "y": 887.7601999999999,
-        "str": "6. ",
-        "dir": "ltr",
-        "width": 9.6,
-        "height": 10,
-        "fontName": "g_d1_f1"
-      },
-      {
-        "x": 438.72,
-        "y": 887.7601999999999,
-        "str": "Karantina...",
-        "dir": "ltr",
-        "width": 79.68,
-        "height": 10,
         "fontName": "g_d1_f1"
       }
     ]
@@ -5676,24 +5631,6 @@
         "dir": "ltr",
         "width": 74.63976,
         "height": 12,
-        "fontName": "g_d1_f1"
-      },
-      {
-        "x": 439.44,
-        "y": 881.4398,
-        "str": "12. ",
-        "dir": "ltr",
-        "width": 15.6072,
-        "height": 10,
-        "fontName": "g_d1_f1"
-      },
-      {
-        "x": 460.8,
-        "y": 881.4398,
-        "str": "Status...",
-        "dir": "ltr",
-        "width": 58.799699999999994,
-        "height": 10,
         "fontName": "g_d1_f1"
       }
     ]
@@ -7481,24 +7418,6 @@
         "dir": "ltr",
         "width": 22.31964,
         "height": 12,
-        "fontName": "g_d1_f1"
-      },
-      {
-        "x": 414.24,
-        "y": 879.4798000000001,
-        "str": "19. ",
-        "dir": "ltr",
-        "width": 15.36,
-        "height": 10,
-        "fontName": "g_d1_f1"
-      },
-      {
-        "x": 435.36,
-        "y": 879.4798000000001,
-        "str": "Personel...",
-        "dir": "ltr",
-        "width": 70.56060000000001,
-        "height": 10,
         "fontName": "g_d1_f1"
       }
     ]
@@ -9305,24 +9224,6 @@
         "width": 45.36,
         "height": 12,
         "fontName": "g_d1_f1"
-      },
-      {
-        "x": 452.88,
-        "y": 893.0799999999999,
-        "str": "24. ",
-        "dir": "ltr",
-        "width": 16.5618,
-        "height": 9,
-        "fontName": "g_d1_f1"
-      },
-      {
-        "x": 475.2,
-        "y": 893.0799999999999,
-        "str": "Pos...",
-        "dir": "ltr",
-        "width": 41.27976,
-        "height": 9,
-        "fontName": "g_d1_f1"
       }
     ]
   },
@@ -10912,24 +10813,6 @@
         "width": 44.64075,
         "height": 11,
         "fontName": "g_d1_f1"
-      },
-      {
-        "x": 429.84,
-        "y": 894.6002000000001,
-        "str": "32. ",
-        "dir": "ltr",
-        "width": 16.799999999999997,
-        "height": 12,
-        "fontName": "g_d1_f1"
-      },
-      {
-        "x": 452.4,
-        "y": 894.6002000000001,
-        "str": "Penyidik...",
-        "dir": "ltr",
-        "width": 70.80084000000001,
-        "height": 12,
-        "fontName": "g_d1_f1"
       }
     ]
   },
@@ -12087,24 +11970,6 @@
         "width": 41.52096,
         "height": 12,
         "fontName": "g_d1_f1"
-      },
-      {
-        "x": 453.84,
-        "y": 892.6798,
-        "str": "Pasal ",
-        "dir": "ltr",
-        "width": 30.0012,
-        "height": 10,
-        "fontName": "g_d1_f1"
-      },
-      {
-        "x": 488.64,
-        "y": 892.6798,
-        "str": "3...",
-        "dir": "ltr",
-        "width": 28.32,
-        "height": 10,
-        "fontName": "g_d1_f1"
       }
     ]
   },
@@ -13163,24 +13028,6 @@
         "width": 48.00015,
         "height": 11,
         "fontName": "g_d1_f1"
-      },
-      {
-        "x": 435.84,
-        "y": 895.0400999999999,
-        "str": "(2) ",
-        "dir": "ltr",
-        "width": 12.96,
-        "height": 12,
-        "fontName": "g_d1_f1"
-      },
-      {
-        "x": 454.08,
-        "y": 895.0400999999999,
-        "str": "Dalam...",
-        "dir": "ltr",
-        "width": 59.520959999999995,
-        "height": 12,
-        "fontName": "g_d1_f1"
       }
     ]
   },
@@ -14067,24 +13914,6 @@
         "dir": "ltr",
         "width": 63.36044,
         "height": 11,
-        "fontName": "g_d1_f1"
-      },
-      {
-        "x": 444.48,
-        "y": 891.4400999999999,
-        "str": "Bab ",
-        "dir": "ltr",
-        "width": 22.080000000000002,
-        "height": 10,
-        "fontName": "g_d1_f1"
-      },
-      {
-        "x": 466.32,
-        "y": 891.4400999999999,
-        "str": "IV...",
-        "dir": "ltr",
-        "width": 39.1205,
-        "height": 10,
         "fontName": "g_d1_f1"
       }
     ]
@@ -15314,24 +15143,6 @@
         "dir": "ltr",
         "width": 79.4412,
         "height": 12,
-        "fontName": "g_d1_f1"
-      },
-      {
-        "x": 411.36,
-        "y": 892.5998999999999,
-        "str": "(3) ",
-        "dir": "ltr",
-        "width": 12.71996,
-        "height": 11,
-        "fontName": "g_d1_f1"
-      },
-      {
-        "x": 429.6,
-        "y": 892.5998999999999,
-        "str": "Ketentuan...",
-        "dir": "ltr",
-        "width": 82.32048,
-        "height": 11,
         "fontName": "g_d1_f1"
       }
     ]
@@ -16578,24 +16389,6 @@
         "str": "Pemerintah. ",
         "dir": "ltr",
         "width": 68.64,
-        "height": 11,
-        "fontName": "g_d1_f1"
-      },
-      {
-        "x": 449.04,
-        "y": 893.7999,
-        "str": "BAB ",
-        "dir": "ltr",
-        "width": 22.79992,
-        "height": 11,
-        "fontName": "g_d1_f1"
-      },
-      {
-        "x": 471.84,
-        "y": 893.7999,
-        "str": "V...",
-        "dir": "ltr",
-        "width": 36.48304,
         "height": 11,
         "fontName": "g_d1_f1"
       }
@@ -17872,24 +17665,6 @@
         "width": 46.80027,
         "height": 11,
         "fontName": "g_d1_f1"
-      },
-      {
-        "x": 456.48,
-        "y": 884.6398,
-        "str": "Pasal ",
-        "dir": "ltr",
-        "width": 30.240000000000002,
-        "height": 10,
-        "fontName": "g_d1_f1"
-      },
-      {
-        "x": 492.96,
-        "y": 884.6398,
-        "str": "16...",
-        "dir": "ltr",
-        "width": 34.08,
-        "height": 10,
-        "fontName": "g_d1_f1"
       }
     ]
   },
@@ -19108,33 +18883,6 @@
         "str": "Masyarakat. ",
         "dir": "ltr",
         "width": 70.08012,
-        "height": 11,
-        "fontName": "g_d1_f1"
-      },
-      {
-        "x": 419.04,
-        "y": 886.5998999999999,
-        "str": "(2) ",
-        "dir": "ltr",
-        "width": 12.71996,
-        "height": 11,
-        "fontName": "g_d1_f1"
-      },
-      {
-        "x": 437.28,
-        "y": 886.5998999999999,
-        "str": "Penentuan ",
-        "dir": "ltr",
-        "width": 61.92230000000001,
-        "height": 11,
-        "fontName": "g_d1_f1"
-      },
-      {
-        "x": 504.72,
-        "y": 886.5998999999999,
-        "str": "...",
-        "dir": "ltr",
-        "width": 16.56006,
         "height": 11,
         "fontName": "g_d1_f1"
       }
@@ -20456,33 +20204,6 @@
         "width": 62.88084,
         "height": 12,
         "fontName": "g_d1_f1"
-      },
-      {
-        "x": 401.28,
-        "y": 891.6401999999999,
-        "str": "(4) ",
-        "dir": "ltr",
-        "width": 12.48016,
-        "height": 11,
-        "fontName": "g_d1_f1"
-      },
-      {
-        "x": 419.28,
-        "y": 891.6401999999999,
-        "str": "Pengawasan ",
-        "dir": "ltr",
-        "width": 71.27989,
-        "height": 11,
-        "fontName": "g_d1_f1"
-      },
-      {
-        "x": 495.84,
-        "y": 891.6401999999999,
-        "str": "...",
-        "dir": "ltr",
-        "width": 16.80162,
-        "height": 11,
-        "fontName": "g_d1_f1"
       }
     ]
   },
@@ -21666,24 +21387,6 @@
         "dir": "ltr",
         "width": 63.12108,
         "height": 12,
-        "fontName": "g_d1_f1"
-      },
-      {
-        "x": 455.76,
-        "y": 893.1202,
-        "str": "Pasal ",
-        "dir": "ltr",
-        "width": 30.241200000000003,
-        "height": 10,
-        "fontName": "g_d1_f1"
-      },
-      {
-        "x": 490.56,
-        "y": 893.1202,
-        "str": "21...",
-        "dir": "ltr",
-        "width": 35.76,
-        "height": 10,
         "fontName": "g_d1_f1"
       }
     ]
@@ -23103,24 +22806,6 @@
         "width": 63.60002,
         "height": 11,
         "fontName": "g_d1_f1"
-      },
-      {
-        "x": 449.28,
-        "y": 880.5602,
-        "str": "Pasal ",
-        "dir": "ltr",
-        "width": 30,
-        "height": 10,
-        "fontName": "g_d1_f1"
-      },
-      {
-        "x": 484.08,
-        "y": 880.5602,
-        "str": "23...",
-        "dir": "ltr",
-        "width": 35.76,
-        "height": 10,
-        "fontName": "g_d1_f1"
       }
     ]
   },
@@ -24458,24 +24143,6 @@
         "width": 62.16012,
         "height": 11,
         "fontName": "g_d1_f1"
-      },
-      {
-        "x": 448.56,
-        "y": 893.5199,
-        "str": "(3) ",
-        "dir": "ltr",
-        "width": 12.71996,
-        "height": 11,
-        "fontName": "g_d1_f1"
-      },
-      {
-        "x": 466.56,
-        "y": 893.5199,
-        "str": "Dalam...",
-        "dir": "ltr",
-        "width": 59.04008,
-        "height": 11,
-        "fontName": "g_d1_f1"
       }
     ]
   },
@@ -25560,24 +25227,6 @@
         "dir": "ltr",
         "width": 61.91988,
         "height": 11,
-        "fontName": "g_d1_f1"
-      },
-      {
-        "x": 437.76,
-        "y": 883.0798,
-        "str": "b. ",
-        "dir": "ltr",
-        "width": 9.60012,
-        "height": 12,
-        "fontName": "g_d1_f1"
-      },
-      {
-        "x": 452.88,
-        "y": 883.0798,
-        "str": "terdapat...",
-        "dir": "ltr",
-        "width": 70.08012,
-        "height": 12,
         "fontName": "g_d1_f1"
       }
     ]
@@ -26996,33 +26645,6 @@
         "dir": "ltr",
         "width": 63.60024000000001,
         "height": 12,
-        "fontName": "g_d1_f1"
-      },
-      {
-        "x": 414.72,
-        "y": 889.2402,
-        "str": "(2) ",
-        "dir": "ltr",
-        "width": 12.71996,
-        "height": 11,
-        "fontName": "g_d1_f1"
-      },
-      {
-        "x": 432.72,
-        "y": 889.2402,
-        "str": "Pengawasan ",
-        "dir": "ltr",
-        "width": 71.51947,
-        "height": 11,
-        "fontName": "g_d1_f1"
-      },
-      {
-        "x": 509.52,
-        "y": 889.2402,
-        "str": "...",
-        "dir": "ltr",
-        "width": 16.56006,
-        "height": 11,
         "fontName": "g_d1_f1"
       }
     ]
@@ -28451,24 +28073,6 @@
         "width": 40.56048,
         "height": 12,
         "fontName": "g_d1_f1"
-      },
-      {
-        "x": 433.68,
-        "y": 885.3999,
-        "str": "Paragraf ",
-        "dir": "ltr",
-        "width": 49.200030000000005,
-        "height": 11,
-        "fontName": "g_d1_f1"
-      },
-      {
-        "x": 486.48,
-        "y": 885.3999,
-        "str": "2...",
-        "dir": "ltr",
-        "width": 28.32016,
-        "height": 11,
-        "fontName": "g_d1_f1"
       }
     ]
   },
@@ -29382,33 +28986,6 @@
         "dir": "ltr",
         "width": 60.2404,
         "height": 10,
-        "fontName": "g_d1_f1"
-      },
-      {
-        "x": 420.24,
-        "y": 881.0799999999999,
-        "str": "(2) ",
-        "dir": "ltr",
-        "width": 12.71996,
-        "height": 11,
-        "fontName": "g_d1_f1"
-      },
-      {
-        "x": 438.48,
-        "y": 881.0799999999999,
-        "str": "Kendaraan ",
-        "dir": "ltr",
-        "width": 63.1202,
-        "height": 11,
-        "fontName": "g_d1_f1"
-      },
-      {
-        "x": 506.88,
-        "y": 881.0799999999999,
-        "str": "...",
-        "dir": "ltr",
-        "width": 16.56006,
-        "height": 11,
         "fontName": "g_d1_f1"
       }
     ]
@@ -30801,24 +30378,6 @@
         "width": 63.60002,
         "height": 11,
         "fontName": "g_d1_f1"
-      },
-      {
-        "x": 437.52,
-        "y": 888.7601,
-        "str": "Paragraf ",
-        "dir": "ltr",
-        "width": 49.68018000000001,
-        "height": 11,
-        "fontName": "g_d1_f1"
-      },
-      {
-        "x": 490.56,
-        "y": 888.7601,
-        "str": "2...",
-        "dir": "ltr",
-        "width": 28.559959999999997,
-        "height": 11,
-        "fontName": "g_d1_f1"
       }
     ]
   },
@@ -31965,33 +31524,6 @@
         "str": "indikasi. ",
         "dir": "ltr",
         "width": 48.2405,
-        "height": 11,
-        "fontName": "g_d1_f1"
-      },
-      {
-        "x": 453.12,
-        "y": 889.2799,
-        "str": "(3) ",
-        "dir": "ltr",
-        "width": 12.48016,
-        "height": 11,
-        "fontName": "g_d1_f1"
-      },
-      {
-        "x": 470.4,
-        "y": 889.2799,
-        "str": "Awak ",
-        "dir": "ltr",
-        "width": 31.679999999999996,
-        "height": 11,
-        "fontName": "g_d1_f1"
-      },
-      {
-        "x": 507.36,
-        "y": 889.2799,
-        "str": "...",
-        "dir": "ltr",
-        "width": 16.320149999999998,
         "height": 11,
         "fontName": "g_d1_f1"
       }
@@ -33249,24 +32781,6 @@
         "dir": "ltr",
         "width": 39.3606,
         "height": 12,
-        "fontName": "g_d1_f1"
-      },
-      {
-        "x": 452.16,
-        "y": 887.3198,
-        "str": "Pasal ",
-        "dir": "ltr",
-        "width": 30,
-        "height": 10,
-        "fontName": "g_d1_f1"
-      },
-      {
-        "x": 486.72,
-        "y": 887.3198,
-        "str": "40...",
-        "dir": "ltr",
-        "width": 36,
-        "height": 10,
         "fontName": "g_d1_f1"
       }
     ]
@@ -34623,33 +34137,6 @@
         "width": 47.28024,
         "height": 12,
         "fontName": "g_d1_f1"
-      },
-      {
-        "x": 413.28,
-        "y": 871.5599000000001,
-        "str": "(S5) ",
-        "dir": "ltr",
-        "width": 12.719850000000001,
-        "height": 11,
-        "fontName": "g_d1_f1"
-      },
-      {
-        "x": 431.28,
-        "y": 871.5599000000001,
-        "str": "Ketentuan ",
-        "dir": "ltr",
-        "width": 60.2404,
-        "height": 11,
-        "fontName": "g_d1_f1"
-      },
-      {
-        "x": 496.8,
-        "y": 871.5599000000001,
-        "str": "..",
-        "dir": "ltr",
-        "width": 1.4399,
-        "height": 11,
-        "fontName": "g_d1_f1"
       }
     ]
   },
@@ -35951,24 +35438,6 @@
         "width": 62.87952,
         "height": 12,
         "fontName": "g_d1_f1"
-      },
-      {
-        "x": 450,
-        "y": 880.5998999999999,
-        "str": "Pasal ",
-        "dir": "ltr",
-        "width": 30.48,
-        "height": 10,
-        "fontName": "g_d1_f1"
-      },
-      {
-        "x": 484.8,
-        "y": 880.5998999999999,
-        "str": "43...",
-        "dir": "ltr",
-        "width": 36,
-        "height": 10,
-        "fontName": "g_d1_f1"
       }
     ]
   },
@@ -37232,33 +36701,6 @@
         "str": "berlaku: ",
         "dir": "ltr",
         "width": 47.519999999999996,
-        "height": 11,
-        "fontName": "g_d1_f1"
-      },
-      {
-        "x": 438.72,
-        "y": 888.9602,
-        "str": "b. ",
-        "dir": "ltr",
-        "width": 9.83994,
-        "height": 11,
-        "fontName": "g_d1_f1"
-      },
-      {
-        "x": 452.4,
-        "y": 888.9602,
-        "str": "jenazah ",
-        "dir": "ltr",
-        "width": 45.84096,
-        "height": 11,
-        "fontName": "g_d1_f1"
-      },
-      {
-        "x": 503.52,
-        "y": 888.9602,
-        "str": ".",
-        "dir": "ltr",
-        "width": 1.44001,
         "height": 11,
         "fontName": "g_d1_f1"
       }
@@ -38634,24 +38076,6 @@
         "width": 48.48012,
         "height": 12,
         "fontName": "g_d1_f1"
-      },
-      {
-        "x": 447.6,
-        "y": 880.3601,
-        "str": "Pasal ",
-        "dir": "ltr",
-        "width": 30.48,
-        "height": 10,
-        "fontName": "g_d1_f1"
-      },
-      {
-        "x": 482.4,
-        "y": 880.3601,
-        "str": "47...",
-        "dir": "ltr",
-        "width": 36,
-        "height": 10,
-        "fontName": "g_d1_f1"
       }
     ]
   },
@@ -39997,24 +39421,6 @@
         "dir": "ltr",
         "width": 77.2812,
         "height": 12,
-        "fontName": "g_d1_f1"
-      },
-      {
-        "x": 443.04,
-        "y": 882.56,
-        "str": "(5) ",
-        "dir": "ltr",
-        "width": 12.960199999999999,
-        "height": 11,
-        "fontName": "g_d1_f1"
-      },
-      {
-        "x": 461.52,
-        "y": 882.56,
-        "str": "Setiap...",
-        "dir": "ltr",
-        "width": 57.359609999999996,
-        "height": 11,
         "fontName": "g_d1_f1"
       }
     ]
@@ -41362,33 +40768,6 @@
         "width": 63.1202,
         "height": 11,
         "fontName": "g_d1_f1"
-      },
-      {
-        "x": 415.68,
-        "y": 889.5599000000001,
-        "str": "(3) ",
-        "dir": "ltr",
-        "width": 12.71996,
-        "height": 11,
-        "fontName": "g_d1_f1"
-      },
-      {
-        "x": 433.92,
-        "y": 889.5599000000001,
-        "str": "Karantina ",
-        "dir": "ltr",
-        "width": 58.080000000000005,
-        "height": 11,
-        "fontName": "g_d1_f1"
-      },
-      {
-        "x": 497.04,
-        "y": 889.5599000000001,
-        "str": "...",
-        "dir": "ltr",
-        "width": 16.56006,
-        "height": 11,
-        "fontName": "g_d1_f1"
       }
     ]
   },
@@ -42482,24 +41861,6 @@
         "dir": "ltr",
         "width": 63.60024000000001,
         "height": 12,
-        "fontName": "g_d1_f1"
-      },
-      {
-        "x": 450.96,
-        "y": 875.6399,
-        "str": "Pasal ",
-        "dir": "ltr",
-        "width": 30,
-        "height": 10,
-        "fontName": "g_d1_f1"
-      },
-      {
-        "x": 485.76,
-        "y": 875.6399,
-        "str": "52...",
-        "dir": "ltr",
-        "width": 35.52,
-        "height": 10,
         "fontName": "g_d1_f1"
       }
     ]
@@ -43810,33 +43171,6 @@
         "dir": "ltr",
         "width": 59.52012,
         "height": 12,
-        "fontName": "g_d1_f1"
-      },
-      {
-        "x": 429.84,
-        "y": 887.1202,
-        "str": "(3) ",
-        "dir": "ltr",
-        "width": 12.960199999999999,
-        "height": 11,
-        "fontName": "g_d1_f1"
-      },
-      {
-        "x": 447.6,
-        "y": 887.1202,
-        "str": "Anggota ",
-        "dir": "ltr",
-        "width": 47.0404,
-        "height": 11,
-        "fontName": "g_d1_f1"
-      },
-      {
-        "x": 499.68,
-        "y": 887.1202,
-        "str": "..",
-        "dir": "ltr",
-        "width": 9.120099999999999,
-        "height": 11,
         "fontName": "g_d1_f1"
       }
     ]
@@ -45310,24 +44644,6 @@
         "width": 38.88108,
         "height": 12,
         "fontName": "g_d1_f1"
-      },
-      {
-        "x": 442.32,
-        "y": 887.9199,
-        "str": "Pasal ",
-        "dir": "ltr",
-        "width": 30.0012,
-        "height": 10,
-        "fontName": "g_d1_f1"
-      },
-      {
-        "x": 477.36,
-        "y": 887.9199,
-        "str": "57...",
-        "dir": "ltr",
-        "width": 35.76,
-        "height": 10,
-        "fontName": "g_d1_f1"
       }
     ]
   },
@@ -46692,33 +46008,6 @@
         "width": 49.44,
         "height": 12,
         "fontName": "g_d1_f1"
-      },
-      {
-        "x": 410.16,
-        "y": 890.7202,
-        "str": "(3) ",
-        "dir": "ltr",
-        "width": 12.48016,
-        "height": 11,
-        "fontName": "g_d1_f1"
-      },
-      {
-        "x": 428.16,
-        "y": 890.7202,
-        "str": "Pembatasan ",
-        "dir": "ltr",
-        "width": 70.79952,
-        "height": 11,
-        "fontName": "g_d1_f1"
-      },
-      {
-        "x": 504.48,
-        "y": 890.7202,
-        "str": "...",
-        "dir": "ltr",
-        "width": 16.56006,
-        "height": 11,
-        "fontName": "g_d1_f1"
       }
     ]
   },
@@ -48056,33 +47345,6 @@
         "width": 70.5606,
         "height": 11,
         "fontName": "g_d1_f1"
-      },
-      {
-        "x": 413.28,
-        "y": 889.4398,
-        "str": "(3) ",
-        "dir": "ltr",
-        "width": 12.48,
-        "height": 12,
-        "fontName": "g_d1_f1"
-      },
-      {
-        "x": 431.28,
-        "y": 889.4398,
-        "str": "Dokumen ",
-        "dir": "ltr",
-        "width": 56.16,
-        "height": 12,
-        "fontName": "g_d1_f1"
-      },
-      {
-        "x": 492.96,
-        "y": 889.4398,
-        "str": "...",
-        "dir": "ltr",
-        "width": 16.560000000000002,
-        "height": 12,
-        "fontName": "g_d1_f1"
       }
     ]
   },
@@ -49266,24 +48528,6 @@
         "dir": "ltr",
         "width": 16.799999999999997,
         "height": 12,
-        "fontName": "g_d1_f1"
-      },
-      {
-        "x": 414.72,
-        "y": 869.4002,
-        "str": "(2) ",
-        "dir": "ltr",
-        "width": 12.71996,
-        "height": 11,
-        "fontName": "g_d1_f1"
-      },
-      {
-        "x": 432.72,
-        "y": 869.4002,
-        "str": "Deklarasi...",
-        "dir": "ltr",
-        "width": 77.04048,
-        "height": 11,
         "fontName": "g_d1_f1"
       }
     ]
@@ -50622,24 +49866,6 @@
         "width": 21.12,
         "height": 12,
         "fontName": "g_d1_f1"
-      },
-      {
-        "x": 426,
-        "y": 884.4,
-        "str": "b. ",
-        "dir": "ltr",
-        "width": 9.6,
-        "height": 10,
-        "fontName": "g_d1_f1"
-      },
-      {
-        "x": 441.36,
-        "y": 884.4,
-        "str": "sertifikat...",
-        "dir": "ltr",
-        "width": 72.9599,
-        "height": 10,
-        "fontName": "g_d1_f1"
       }
     ]
   },
@@ -51950,33 +51176,6 @@
         "width": 35.76048,
         "height": 12,
         "fontName": "g_d1_f1"
-      },
-      {
-        "x": 418.08,
-        "y": 885.4400999999999,
-        "str": "d. ",
-        "dir": "ltr",
-        "width": 9.60003,
-        "height": 11,
-        "fontName": "g_d1_f1"
-      },
-      {
-        "x": 433.2,
-        "y": 885.4400999999999,
-        "str": "keterangan ",
-        "dir": "ltr",
-        "width": 64.80034,
-        "height": 11,
-        "fontName": "g_d1_f1"
-      },
-      {
-        "x": 503.52,
-        "y": 885.4400999999999,
-        "str": "..",
-        "dir": "ltr",
-        "width": 9.120099999999999,
-        "height": 11,
-        "fontName": "g_d1_f1"
       }
     ]
   },
@@ -52907,15 +52106,6 @@
         "str": "cepat, ",
         "dir": "ltr",
         "width": 33.84073,
-        "height": 11,
-        "fontName": "g_d1_f1"
-      },
-      {
-        "x": 452.16,
-        "y": 891.6401999999999,
-        "str": "b.ruang...",
-        "dir": "ltr",
-        "width": 70.5617,
         "height": 11,
         "fontName": "g_d1_f1"
       }
@@ -53996,15 +53186,6 @@
         "fontName": "g_d1_f1"
       },
       {
-        "x": 467.52,
-        "y": 809.8,
-        "str": "Kesehatan ",
-        "dir": "ltr",
-        "width": 60.00059999999999,
-        "height": 11,
-        "fontName": "g_d1_f1"
-      },
-      {
         "x": 187.92,
         "y": 827.56,
         "str": "diselenggarakan ",
@@ -54092,24 +53273,6 @@
         "dir": "ltr",
         "width": 35.52087,
         "height": 11,
-        "fontName": "g_d1_f1"
-      },
-      {
-        "x": 445.44,
-        "y": 896.68,
-        "str": "Pasal ",
-        "dir": "ltr",
-        "width": 30.240000000000002,
-        "height": 10,
-        "fontName": "g_d1_f1"
-      },
-      {
-        "x": 480.24,
-        "y": 896.68,
-        "str": "75...",
-        "dir": "ltr",
-        "width": 36,
-        "height": 10,
         "fontName": "g_d1_f1"
       }
     ]
@@ -55477,38 +54640,11 @@
         "fontName": "g_d1_f1"
       },
       {
-        "x": 468.48,
-        "y": 821.4499999999999,
-        "str": "peraturan ",
-        "dir": "ltr",
-        "width": 57.3624,
-        "height": 12,
-        "fontName": "g_d1_f1"
-      },
-      {
         "x": 207.361,
         "y": 838.16,
         "str": "perundang-undangan. ",
         "dir": "ltr",
         "width": 129.6042,
-        "height": 11,
-        "fontName": "g_d1_f1"
-      },
-      {
-        "x": 449.52,
-        "y": 892.8798999999999,
-        "str": "(3) ",
-        "dir": "ltr",
-        "width": 12.71996,
-        "height": 11,
-        "fontName": "g_d1_f1"
-      },
-      {
-        "x": 467.76,
-        "y": 892.8798999999999,
-        "str": "Setiap...",
-        "dir": "ltr",
-        "width": 57.36159,
         "height": 11,
         "fontName": "g_d1_f1"
       }
@@ -56776,33 +55912,6 @@
         "width": 45.36048,
         "height": 11,
         "fontName": "g_d1_f1"
-      },
-      {
-        "x": 405.36,
-        "y": 893.0399,
-        "str": "(3) ",
-        "dir": "ltr",
-        "width": 12.48016,
-        "height": 11,
-        "fontName": "g_d1_f1"
-      },
-      {
-        "x": 423.36,
-        "y": 893.0399,
-        "str": "Pendanaan ",
-        "dir": "ltr",
-        "width": 63.840700000000005,
-        "height": 11,
-        "fontName": "g_d1_f1"
-      },
-      {
-        "x": 493.44,
-        "y": 893.0399,
-        "str": "0...",
-        "dir": "ltr",
-        "width": 8.88008,
-        "height": 11,
-        "fontName": "g_d1_f1"
       }
     ]
   },
@@ -58032,24 +57141,6 @@
         "width": 37.67984,
         "height": 11,
         "fontName": "g_d1_f1"
-      },
-      {
-        "x": 445.2,
-        "y": 895.0798,
-        "str": "BAB ",
-        "dir": "ltr",
-        "width": 23.9998,
-        "height": 11,
-        "fontName": "g_d1_f1"
-      },
-      {
-        "x": 470.16,
-        "y": 895.0798,
-        "str": "XI...",
-        "dir": "ltr",
-        "width": 31.19985,
-        "height": 11,
-        "fontName": "g_d1_f1"
       }
     ]
   },
@@ -59270,24 +58361,6 @@
         "width": 46.80072,
         "height": 12,
         "fontName": "g_d1_f1"
-      },
-      {
-        "x": 407.76,
-        "y": 883.9199,
-        "str": "Bagian ",
-        "dir": "ltr",
-        "width": 40.080600000000004,
-        "height": 12,
-        "fontName": "g_d1_f1"
-      },
-      {
-        "x": 452.64,
-        "y": 883.9199,
-        "str": "Kedua...",
-        "dir": "ltr",
-        "width": 43.2,
-        "height": 12,
-        "fontName": "g_d1_f1"
       }
     ]
   },
@@ -60318,24 +59391,6 @@
         "dir": "ltr",
         "width": 62.880069999999996,
         "height": 11,
-        "fontName": "g_d1_f1"
-      },
-      {
-        "x": 450.96,
-        "y": 879.6799,
-        "str": "Pasal ",
-        "dir": "ltr",
-        "width": 30,
-        "height": 10,
-        "fontName": "g_d1_f1"
-      },
-      {
-        "x": 485.52,
-        "y": 879.6799,
-        "str": "85.",
-        "dir": "ltr",
-        "width": 13.68,
-        "height": 10,
         "fontName": "g_d1_f1"
       }
     ]
@@ -61890,24 +60945,6 @@
         "width": 45.11969,
         "height": 11,
         "fontName": "g_d1_f1"
-      },
-      {
-        "x": 443.04,
-        "y": 895.2,
-        "str": "Pasal ",
-        "dir": "ltr",
-        "width": 30.241200000000003,
-        "height": 10,
-        "fontName": "g_d1_f1"
-      },
-      {
-        "x": 477.84,
-        "y": 895.2,
-        "str": "86...",
-        "dir": "ltr",
-        "width": 36.001,
-        "height": 10,
-        "fontName": "g_d1_f1"
       }
     ]
   },
@@ -63245,24 +62282,6 @@
         "width": 129.5998,
         "height": 11,
         "fontName": "g_d1_f1"
-      },
-      {
-        "x": 446.4,
-        "y": 886.6798,
-        "str": "BAB ",
-        "dir": "ltr",
-        "width": 24.72008,
-        "height": 11,
-        "fontName": "g_d1_f1"
-      },
-      {
-        "x": 475.44,
-        "y": 886.6798,
-        "str": "XII...",
-        "dir": "ltr",
-        "width": 42.48024,
-        "height": 11,
-        "fontName": "g_d1_f1"
       }
     ]
   },
@@ -64401,24 +63420,6 @@
         "dir": "ltr",
         "width": 44.64072,
         "height": 12,
-        "fontName": "g_d1_f1"
-      },
-      {
-        "x": 442.56,
-        "y": 886.5998999999999,
-        "str": "Pasal ",
-        "dir": "ltr",
-        "width": 30.240000000000002,
-        "height": 10,
-        "fontName": "g_d1_f1"
-      },
-      {
-        "x": 477.12,
-        "y": 886.5998999999999,
-        "str": "92...",
-        "dir": "ltr",
-        "width": 21.12,
-        "height": 10,
         "fontName": "g_d1_f1"
       }
     ]
@@ -65937,24 +64938,6 @@
         "width": 83.28166,
         "height": 11,
         "fontName": "g_d1_f1"
-      },
-      {
-        "x": 435.84,
-        "y": 891.6401999999999,
-        "str": "(3) ",
-        "dir": "ltr",
-        "width": 12.72,
-        "height": 12,
-        "fontName": "g_d1_f1"
-      },
-      {
-        "x": 454.08,
-        "y": 891.6401999999999,
-        "str": "Pidana...",
-        "dir": "ltr",
-        "width": 61.20036,
-        "height": 12,
-        "fontName": "g_d1_f1"
       }
     ]
   },
@@ -67274,24 +66257,6 @@
         "width": 17.759999999999998,
         "height": 12,
         "fontName": "g_d1_f1"
-      },
-      {
-        "x": 446.4,
-        "y": 891.2399,
-        "str": "Pasal ",
-        "dir": "ltr",
-        "width": 30.240000000000002,
-        "height": 10,
-        "fontName": "g_d1_f1"
-      },
-      {
-        "x": 481.2,
-        "y": 891.2399,
-        "str": "96...",
-        "dir": "ltr",
-        "width": 20.641499999999997,
-        "height": 10,
-        "fontName": "g_d1_f1"
       }
     ]
   },
@@ -68358,15 +67323,6 @@
         "dir": "ltr",
         "width": 80.1606,
         "height": 12,
-        "fontName": "g_d1_f1"
-      },
-      {
-        "x": 450.48,
-        "y": 882.3201999999999,
-        "str": "Agar...",
-        "dir": "ltr",
-        "width": 48.240500000000004,
-        "height": 10,
         "fontName": "g_d1_f1"
       }
     ]
@@ -71031,24 +69987,6 @@
         "str": "nuklir, ",
         "dir": "ltr",
         "width": 38.16032,
-        "height": 11,
-        "fontName": "g_d1_f1"
-      },
-      {
-        "x": 425.52,
-        "y": 894.56,
-        "str": "pencemaran ",
-        "dir": "ltr",
-        "width": 71.27989,
-        "height": 11,
-        "fontName": "g_d1_f1"
-      },
-      {
-        "x": 502.32,
-        "y": 894.56,
-        "str": "...",
-        "dir": "ltr",
-        "width": 16.56006,
         "height": 11,
         "fontName": "g_d1_f1"
       }
@@ -74634,24 +73572,6 @@
         "width": 70.80048,
         "height": 12,
         "fontName": "g_d1_f1"
-      },
-      {
-        "x": 452.88,
-        "y": 884.0399,
-        "str": "Huruf ",
-        "dir": "ltr",
-        "width": 45.12,
-        "height": 10,
-        "fontName": "g_d1_f1"
-      },
-      {
-        "x": 503.28,
-        "y": 884.0399,
-        "str": "d...",
-        "dir": "ltr",
-        "width": 16.56,
-        "height": 10,
-        "fontName": "g_d1_f1"
       }
     ]
   },
@@ -76043,15 +74963,6 @@
         "width": 35.76111,
         "height": 11,
         "fontName": "g_d1_f1"
-      },
-      {
-        "x": 462,
-        "y": 887.1598,
-        "str": "Pasal3...",
-        "dir": "ltr",
-        "width": 63.3609,
-        "height": 10,
-        "fontName": "g_d1_f1"
       }
     ]
   },
@@ -77056,24 +75967,6 @@
         "width": 18.001800000000003,
         "height": 12,
         "fontName": "g_d1_f1"
-      },
-      {
-        "x": 453.84,
-        "y": 893.3599999999999,
-        "str": "Pasal ",
-        "dir": "ltr",
-        "width": 30.241200000000003,
-        "height": 10,
-        "fontName": "g_d1_f1"
-      },
-      {
-        "x": 488.64,
-        "y": 893.3599999999999,
-        "str": "9...",
-        "dir": "ltr",
-        "width": 28.56,
-        "height": 10,
-        "fontName": "g_d1_f1"
       }
     ]
   },
@@ -78050,15 +76943,6 @@
         "dir": "ltr",
         "width": 40.56,
         "height": 12,
-        "fontName": "g_d1_f1"
-      },
-      {
-        "x": 471.6,
-        "y": 892.3601,
-        "str": "Yang...",
-        "dir": "ltr",
-        "width": 50.400349999999996,
-        "height": 11,
         "fontName": "g_d1_f1"
       }
     ]
@@ -79351,15 +78235,6 @@
         "dir": "ltr",
         "width": 33.60096,
         "height": 12,
-        "fontName": "g_d1_f1"
-      },
-      {
-        "x": 461.76,
-        "y": 889.48,
-        "str": "Yang...",
-        "dir": "ltr",
-        "width": 50.64213,
-        "height": 11,
         "fontName": "g_d1_f1"
       }
     ]
@@ -81085,15 +79960,6 @@
         "width": 88.32119999999999,
         "height": 11,
         "fontName": "g_d1_f1"
-      },
-      {
-        "x": 470.4,
-        "y": 890.52,
-        "str": "Yang...",
-        "dir": "ltr",
-        "width": 50.640589999999996,
-        "height": 11,
-        "fontName": "g_d1_f1"
       }
     ]
   },
@@ -82188,24 +81054,6 @@
         "width": 30.24084,
         "height": 12,
         "fontName": "g_d1_f1"
-      },
-      {
-        "x": 447.84,
-        "y": 890.6398,
-        "str": "Pasal ",
-        "dir": "ltr",
-        "width": 30.240000000000002,
-        "height": 10,
-        "fontName": "g_d1_f1"
-      },
-      {
-        "x": 484.08,
-        "y": 890.6398,
-        "str": "18...",
-        "dir": "ltr",
-        "width": 34.561,
-        "height": 10,
-        "fontName": "g_d1_f1"
       }
     ]
   },
@@ -82994,24 +81842,6 @@
         "width": 30.24021,
         "height": 11,
         "fontName": "g_d1_f1"
-      },
-      {
-        "x": 455.52,
-        "y": 893.8400999999999,
-        "str": "Pasal ",
-        "dir": "ltr",
-        "width": 30.4812,
-        "height": 10,
-        "fontName": "g_d1_f1"
-      },
-      {
-        "x": 490.56,
-        "y": 893.8400999999999,
-        "str": "25...",
-        "dir": "ltr",
-        "width": 35.760999999999996,
-        "height": 10,
-        "fontName": "g_d1_f1"
       }
     ]
   },
@@ -83457,24 +82287,6 @@
         "dir": "ltr",
         "width": 8.88,
         "height": 8,
-        "fontName": "g_d1_f1"
-      },
-      {
-        "x": 441.84,
-        "y": 887.8798,
-        "str": "Pasal ",
-        "dir": "ltr",
-        "width": 30.0012,
-        "height": 10,
-        "fontName": "g_d1_f1"
-      },
-      {
-        "x": 476.64,
-        "y": 887.8798,
-        "str": "36...",
-        "dir": "ltr",
-        "width": 36.001,
-        "height": 10,
         "fontName": "g_d1_f1"
       }
     ]
@@ -84624,24 +83436,6 @@
         "width": 34.32088,
         "height": 11,
         "fontName": "g_d1_f1"
-      },
-      {
-        "x": 455.28,
-        "y": 891.4802,
-        "str": "Huruf ",
-        "dir": "ltr",
-        "width": 45.12,
-        "height": 10,
-        "fontName": "g_d1_f1"
-      },
-      {
-        "x": 505.68,
-        "y": 891.4802,
-        "str": "b...",
-        "dir": "ltr",
-        "width": 16.56,
-        "height": 10,
-        "fontName": "g_d1_f1"
       }
     ]
   },
@@ -85601,24 +84395,6 @@
         "width": 41.519940000000005,
         "height": 11,
         "fontName": "g_d1_f1"
-      },
-      {
-        "x": 451.92,
-        "y": 896.4402,
-        "str": "Pasal ",
-        "dir": "ltr",
-        "width": 30.241200000000003,
-        "height": 10,
-        "fontName": "g_d1_f1"
-      },
-      {
-        "x": 486.72,
-        "y": 896.4402,
-        "str": "45...",
-        "dir": "ltr",
-        "width": 35.76,
-        "height": 10,
-        "fontName": "g_d1_f1"
       }
     ]
   },
@@ -86064,24 +84840,6 @@
         "dir": "ltr",
         "width": 4.800000000000001,
         "height": 12,
-        "fontName": "g_d1_f1"
-      },
-      {
-        "x": 439.92,
-        "y": 892.3601,
-        "str": "Pasal ",
-        "dir": "ltr",
-        "width": 30.243599999999997,
-        "height": 10,
-        "fontName": "g_d1_f1"
-      },
-      {
-        "x": 474.96,
-        "y": 892.3601,
-        "str": "56...",
-        "dir": "ltr",
-        "width": 36.001,
-        "height": 10,
         "fontName": "g_d1_f1"
       }
     ]
@@ -86529,24 +85287,6 @@
         "width": 7.199999999999999,
         "height": 12,
         "fontName": "g_d1_f1"
-      },
-      {
-        "x": 452.88,
-        "y": 891.6799,
-        "str": "Pasal ",
-        "dir": "ltr",
-        "width": 30.240000000000002,
-        "height": 10,
-        "fontName": "g_d1_f1"
-      },
-      {
-        "x": 487.68,
-        "y": 891.6799,
-        "str": "67...",
-        "dir": "ltr",
-        "width": 36.003,
-        "height": 10,
-        "fontName": "g_d1_f1"
       }
     ]
   },
@@ -86983,24 +85723,6 @@
         "dir": "ltr",
         "width": 6.959999999999999,
         "height": 12,
-        "fontName": "g_d1_f1"
-      },
-      {
-        "x": 451.68,
-        "y": 885.72,
-        "str": "Pasal ",
-        "dir": "ltr",
-        "width": 30.241200000000003,
-        "height": 10,
-        "fontName": "g_d1_f1"
-      },
-      {
-        "x": 486.72,
-        "y": 885.72,
-        "str": "78...",
-        "dir": "ltr",
-        "width": 35.522999999999996,
-        "height": 10,
         "fontName": "g_d1_f1"
       }
     ]
@@ -87753,24 +86475,6 @@
         "dir": "ltr",
         "width": 29.999760000000002,
         "height": 12,
-        "fontName": "g_d1_f1"
-      },
-      {
-        "x": 451.92,
-        "y": 887.1999999999999,
-        "str": "Pasal ",
-        "dir": "ltr",
-        "width": 30.241200000000003,
-        "height": 10,
-        "fontName": "g_d1_f1"
-      },
-      {
-        "x": 486.72,
-        "y": 887.1999999999999,
-        "str": "87...",
-        "dir": "ltr",
-        "width": 35.76,
-        "height": 10,
         "fontName": "g_d1_f1"
       }
     ]
@@ -88621,24 +87325,6 @@
         "str": "atasannya. ",
         "dir": "ltr",
         "width": 62.8804,
-        "height": 10,
-        "fontName": "g_d1_f1"
-      },
-      {
-        "x": 455.04,
-        "y": 888.7998,
-        "str": "Huruf ",
-        "dir": "ltr",
-        "width": 45.36,
-        "height": 10,
-        "fontName": "g_d1_f1"
-      },
-      {
-        "x": 505.68,
-        "y": 888.7998,
-        "str": "b...",
-        "dir": "ltr",
-        "width": 16.56,
         "height": 10,
         "fontName": "g_d1_f1"
       }

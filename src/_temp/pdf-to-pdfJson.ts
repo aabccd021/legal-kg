@@ -2,6 +2,7 @@ import { DocumentNode } from './../legal/document/index';
 import { writeFileSync } from 'fs';
 import { PDFExtract, PDFExtractPage, PDFExtractText } from 'pdf.js-extract';
 import { getDocumentData, getDocumentFilePath } from '../data';
+import { isEmpty } from 'lodash';
 
 const pdfExtract = new PDFExtract();
 
@@ -23,10 +24,10 @@ async function toPdfJson(pdfNode: DocumentNode): Promise<void> {
 function toPageWithoutNoise(page: PDFExtractPage, _pageIdx: number): PDFExtractPage {
   const { content } = page;
   const pageNum = _pageIdx + 1;
-  const newContent = content
-    .filter((text, _, texts) => !isHeader(pageNum, text, texts))
-    .filter((text, _, texts) => !isLeftFooter(pageNum, text, texts));
-  return { ...page, content: newContent };
+  const noHeader = content.filter((text, _, texts) => !isHeader(pageNum, text, texts));
+  const noLeftFooter = noHeader.filter((text, _, texts) => !isLeftFooter(pageNum, text, texts));
+  const noRightFooter = removeRightFooter(pageNum, noLeftFooter);
+  return { ...page, content: noRightFooter };
 }
 
 function isHeader(_pageNum: number, text: PDFExtractText, texts: PDFExtractText[]): boolean {
@@ -46,19 +47,36 @@ function isHeader(_pageNum: number, text: PDFExtractText, texts: PDFExtractText[
 }
 
 function isLeftFooter(_pageNum: number, text: PDFExtractText, _texts: PDFExtractText[]): boolean {
-  const { x, y, str } = text;
+  const { x, y } = text;
   if (y > 900 && x < 90) {
-    const trimmed = str.trim();
+    const trimmed = text.str.trim();
     if (
       !['sk', 'no'].includes(trimmed.toLowerCase()) &&
       !(/[0-9]+/.test(trimmed) && trimmed.length === 6)
     ) {
       console.log('\n===REMOVED LEFT FOOTER===PAGE', _pageNum);
-      console.log(str);
+      console.log(trimmed);
     }
     return true;
   }
   return false;
+}
+
+function removeRightFooter(_pageNum: number, texts: PDFExtractText[]): PDFExtractText[] {
+  const footer = texts.filter(isRightFooter);
+  if (!isEmpty(footer)) {
+    const footerText = footer.map(({ str }) => str).join(' ');
+    if (!footerText.includes('...')) {
+      console.log('\n===REMOVED RIGHT FOOTER===PAGE', _pageNum);
+      console.log(footerText);
+    }
+  }
+  return texts.filter((x, y, z) => !isRightFooter(x, y, z));
+}
+
+function isRightFooter(text: PDFExtractText, _: number, texts: PDFExtractText[]): boolean {
+  const { x, y } = text;
+  return y > 800 && x > 400 && texts.filter((text) => text.y === y).length < 4;
 }
 
 // function textOf(pages: PDFExtractPage[]): string {
