@@ -104,9 +104,11 @@
   "dependencies": {
     "@types/p-timeout": "^1.2.2",
     "@types/yargs": "^16.0.0",
+    "add": "^2.0.6",
     "p-timeout": "^4.1.0",
     "striptags": "^3.1.1",
     "tabletojson": "^2.0.4",
-    "yargs": "^16.2.0"
+    "yargs": "^16.2.0",
+    "yarn": "^1.22.10"
   }
 }

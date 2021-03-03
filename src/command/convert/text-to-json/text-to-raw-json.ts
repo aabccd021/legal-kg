@@ -231,10 +231,9 @@ function getPasals(lines: string[]): Pasal[] {
 }
 
 function isAmendLines(_lines: string[]): boolean {
-  // const x = amendPasalRegex.test(_lines.slice(1).join(' '));
-  // if (x) console.log(_lines[1]);
-  // return x;
-  return false;
+  const x = amendPasalRegex.test(_lines.slice(1).join(' '));
+  if (x) console.log(_lines[1]);
+  return x;
 }
 
 const amendPasalRegex = /^Beberapa ketentuan dalam Undang-Undang/;
