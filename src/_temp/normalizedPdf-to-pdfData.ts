@@ -1,8 +1,9 @@
-import { DocumentNode } from './../legal/document/index';
+import { DocumentNode } from '../legal/document/index';
 import { writeFileSync } from 'fs';
 import { PDFExtract, PDFExtractPage, PDFExtractText } from 'pdf.js-extract';
 import { getDocumentData, getDocumentFilePath } from '../data';
 import { isEmpty } from 'lodash';
+import { bothFilter } from '../util';
 
 const pdfExtract = new PDFExtract();
 
@@ -63,7 +64,7 @@ function isLeftFooter(_pageNum: number, text: PDFExtractText, _texts: PDFExtract
 }
 
 function removeRightFooter(_pageNum: number, texts: PDFExtractText[]): PDFExtractText[] {
-  const footer = texts.filter(isRightFooter);
+  const { left, right: footer } = bothFilter(texts, isRightFooter);
   if (!isEmpty(footer)) {
     const footerText = footer.map(({ str }) => str).join(' ');
     if (!footerText.includes('...')) {
@@ -71,10 +72,10 @@ function removeRightFooter(_pageNum: number, texts: PDFExtractText[]): PDFExtrac
       console.log(footerText);
     }
   }
-  return texts.filter((x, y, z) => !isRightFooter(x, y, z));
+  return left;
 }
 
-function isRightFooter(text: PDFExtractText, _: number, texts: PDFExtractText[]): boolean {
+function isRightFooter(text: PDFExtractText, texts: PDFExtractText[]): boolean {
   const { x, y } = text;
   return y > 800 && x > 400 && texts.filter((text) => text.y === y).length < 4;
 }
