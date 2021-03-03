@@ -1,14 +1,23 @@
-import { DocumentNode } from '../legal/document/index';
-import { getDocumentData } from '../data';
+// import { PDFExtractPage } from 'pdf.js-extract';
+// import { DocumentNode } from '../legal/document/index';
+// import { getDocumentData, getDocumentFilePath } from '../data';
+// import { readFileSync } from 'fs';
+// import { PDFText } from '../util';
 
-async function pdfDataToJson(): Promise<void> {
-  for (const pdf of getDocumentData('normalized-pdf')) {
-    await toPdfJson(pdf);
-  }
-}
+// function pdfDataToJson(): void {
+//   getDocumentData('pdf-data').forEach(writeToJson);
+// }
 
-async function toPdfJson(pdfNode: DocumentNode): Promise<void> {
-  console.log('start', pdfNode);
-}
+// function writeToJson(pdfNode: DocumentNode): void {
+//   // const dataFile = getDocumentFilePath(pdfNode, 'pdf-data');
+//   // const jsonFile = getDocumentFilePath(pdfNode, 'jsonv2');
+//   // const pages: PDFText[] = JSON.parse(readFileSync(dataFile.path).toString());
+//   // const sorted = pages.map(toSortedPage);
+// }
 
-pdfDataToJson();
+// function toSortedPage(page: PDFExtractPage): PDFExtractPage {
+//   const {content} = page;
+//   const new
+// }
+
+// pdfDataToJson();

@@ -20,3 +20,15 @@ type BothFilterResult<T> = {
   left: T[];
   right: T[];
 };
+
+export type Span = {
+  xL: number;
+  y: number;
+  xR: number;
+  pageNum: number;
+  str: string;
+};
+
+export function neverNum(): number {
+  throw Error();
+}
