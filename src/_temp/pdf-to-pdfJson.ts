@@ -22,25 +22,40 @@ async function toPdfJson(pdfNode: DocumentNode): Promise<void> {
 
 function toPageWithoutNoise(page: PDFExtractPage, _pageIdx: number): PDFExtractPage {
   const { content } = page;
-  console.log('\n===PAGE', _pageIdx + 1);
-  const newContent = content.filter(isNotPageNoise);
+  const pageNum = _pageIdx + 1;
+  const newContent = content
+    .filter((text, _, texts) => !isHeader(pageNum, text, texts))
+    .filter((text, _, texts) => !isLeftFooter(pageNum, text, texts));
   return { ...page, content: newContent };
 }
 
-function isNotPageNoise(text: PDFExtractText, _: number, texts: PDFExtractText[]): boolean {
-  return !isHeader(text, texts);
-}
-
-function isHeader(text: PDFExtractText, texts: PDFExtractText[]): boolean {
+function isHeader(_pageNum: number, text: PDFExtractText, texts: PDFExtractText[]): boolean {
   const { x, y, str } = text;
   const sameLineTexts = texts.filter((text) => text.y === y);
   const denyList = ['PENJELASAN'];
   if (y < 210 && x > 250 && x < 320 && sameLineTexts.length < 4 && !denyList.includes(str.trim())) {
-    // if (!['PRESIDEN', 'REPUBLIK', 'INDONESIA', '-'].includes(str.trim())) {
-    //   if (str.trim().length > 4) {
-    //     console.log(str);
-    //   }
-    // }
+    if (!['PRESIDEN', 'REPUBLIK', 'INDONESIA', '-'].includes(str.trim())) {
+      if (str.trim().length > 4) {
+        console.log('\n===REMOVED HEADER===PAGE', _pageNum);
+        console.log(str);
+      }
+    }
+    return true;
+  }
+  return false;
+}
+
+function isLeftFooter(_pageNum: number, text: PDFExtractText, _texts: PDFExtractText[]): boolean {
+  const { x, y, str } = text;
+  if (y > 900 && x < 90) {
+    const trimmed = str.trim();
+    if (
+      !['sk', 'no'].includes(trimmed.toLowerCase()) &&
+      !(/[0-9]+/.test(trimmed) && trimmed.length === 6)
+    ) {
+      console.log('\n===REMOVED LEFT FOOTER===PAGE', _pageNum);
+      console.log(str);
+    }
     return true;
   }
   return false;
