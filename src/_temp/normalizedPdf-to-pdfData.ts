@@ -1,7 +1,7 @@
 import { DocumentNode } from '../legal/document/index';
 import { writeFileSync } from 'fs';
 import { PDFExtract, PDFExtractPage, PDFExtractText } from 'pdf.js-extract';
-import { getDocumentData, getDocumentFilePath, getTempFilePath } from '../data';
+import { getDocumentData, getDocumentFilePath } from '../data';
 import { chain, curry, isEmpty } from 'lodash';
 import { bothFilter, neverNum, Span } from '../util';
 
@@ -9,29 +9,30 @@ const pdfExtract = new PDFExtract();
 
 async function normalizedPdfToPdfData(): Promise<void> {
   for (const pdf of getDocumentData('normalized-pdf')) {
-    await toPdfJson(pdf);
+    await toPdfJson(pdf, { useNormalized: true });
+    await toPdfJson(pdf, { useNormalized: false });
   }
+  console.log('===DONE');
 }
 
-async function toPdfJson(pdfNode: DocumentNode): Promise<void> {
-  console.log('start', pdfNode);
-  const pdfFile = getDocumentFilePath(pdfNode, 'pdf');
-  const tempJSONFile = getTempFilePath(pdfNode, 'normalized-pdf-temp', '.json');
-  const jsonFile = getDocumentFilePath(pdfNode, 'pdf-data');
+async function toPdfJson(
+  pdfNode: DocumentNode,
+  { useNormalized }: { useNormalized: boolean }
+): Promise<void> {
+  console.log(`start, useNormalized: ${useNormalized}`, pdfNode);
+  const pdfFile = getDocumentFilePath(pdfNode, useNormalized ? 'normalized-pdf' : 'pdf');
+  const jsonFile = getDocumentFilePath(pdfNode, useNormalized ? 'normalized-pdf-data' : 'pdf-data');
   const { pages } = await pdfExtract.extract(pdfFile.path);
-  writeFileSync(tempJSONFile.path, JSON.stringify(pages[0], undefined, 2));
   const cleanPages: Span[] = pages.flatMap(toPageWithoutNoise);
   writeFileSync(jsonFile.path, JSON.stringify(cleanPages, undefined, 2));
 }
 
 function toPageWithoutNoise(page: PDFExtractPage, _pageIdx: number): Span[] {
-  const { content } = page;
-  const pageNum = _pageIdx + 1;
-  const noHeader = content
-    .filter((text, _, texts) => !isHeader(pageNum, text, texts))
-    .filter((text, _, texts) => !isLeftFooter(pageNum, text, texts));
-  const noRightFooter = removeRightFooter(pageNum, noHeader);
-  return chain(noRightFooter).reduce<SpanMap>(toSpanMap, {}).thru(toSpansWith(pageNum)).value();
+  return chain(page.content)
+    .reduce<SpanMap>(toSpanMap, {})
+    .thru(toSpansWith(_pageIdx + 1))
+    .filter(isNotHeader)
+    .value();
 }
 type SpanMap = {
   [name: string]: {
@@ -72,26 +73,40 @@ function groupToSpan(pageNum: number, group: { y: number; texts: PDFExtractText[
   return { xL, xR, y, str, pageNum };
 }
 
-// function byPosition(a: PDFExtractText, b: PDFExtractText): number {
-//   const yDelta = a.y - b.y;
-//   if (yDelta !== 0) return yDelta;
-//   return a.x - b.x;
-// }
-
-function isHeader(_pageNum: number, text: PDFExtractText, texts: PDFExtractText[]): boolean {
-  const { x, y, str } = text;
-  const sameLineTexts = texts.filter((text) => text.y === y);
+function isNotHeader(span: Span): boolean {
+  const { xL, xR, y, str } = span;
   const denyList = ['PENJELASAN'];
-  if (y < 210 && x > 250 && x < 320 && sameLineTexts.length < 4 && !denyList.includes(str.trim())) {
-    if (!['PRESIDEN', 'REPUBLIK', 'INDONESIA', '-'].includes(str.trim())) {
-      if (str.trim().length > 4) {
-        console.log('\n===REMOVED HEADER===PAGE', _pageNum);
-        console.log(str);
-      }
+  if (y < 210 && xL > 250 && xR < 400 && !denyList.includes(str)) {
+    if (
+      ![
+        '',
+        'DEN',
+        'FRESIDEN',
+        'I',
+        'IDEN',
+        'INDONESIA',
+        'INDONESTA',
+        'INDOONESTA',
+        'TNDONESIA',
+        'PRES',
+        'PRESDEN',
+        'FRESTDEN',
+        'PRESI',
+        'PRESIDEN',
+        'REFUBLIK',
+        'REPUBLIK',
+        'REPUBLIKINDONESIA',
+        '.',
+        "'",
+      ].includes(str.replaceAll(/[ ,]/g, '')) &&
+      !/- [0-9]+ -/.test(str)
+    ) {
+      console.log(`\n===REMOVED_IRREGULAR_HEADER===PAGE_${span.pageNum}===`);
+      console.log(str);
     }
-    return true;
+    return false;
   }
-  return false;
+  return true;
 }
 
 function isLeftFooter(_pageNum: number, text: PDFExtractText, _texts: PDFExtractText[]): boolean {
