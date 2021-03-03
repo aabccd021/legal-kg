@@ -9,13 +9,15 @@ import {
 import { getConfig } from '../config';
 import path from 'path';
 
-export type DataType = 'pdf' | 'text' | 'json' | 'md' | 'ttl';
+export type DataType = 'pdf' | 'normalized-pdf' | 'pdf-data' | 'text' | 'json' | 'md' | 'ttl';
 export function getDataTypeExtension(dataType: DataType): string {
   const extension = getDataTypeExtensionStr(dataType);
   return `.${extension}`;
 }
 function getDataTypeExtensionStr(dataType: DataType): string {
   if (dataType === 'pdf') return 'pdf';
+  if (dataType === 'normalized-pdf') return 'pdf';
+  if (dataType === 'pdf-data') return 'json';
   if (dataType === 'text') return 'txt';
   if (dataType === 'json') return 'json';
   if (dataType === 'md') return 'md';
