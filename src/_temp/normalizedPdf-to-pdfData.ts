@@ -10,7 +10,7 @@ const pdfExtract = new PDFExtract();
 async function normalizedPdfToPdfData(): Promise<void> {
   for (const pdf of getDocumentData('normalized-pdf')) {
     await toPdfJson(pdf, { useNormalized: true });
-    await toPdfJson(pdf, { useNormalized: false });
+    // await toPdfJson(pdf, { useNormalized: false });
   }
   console.log('===DONE');
 }
