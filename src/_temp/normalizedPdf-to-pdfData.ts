@@ -2,7 +2,7 @@ import { DocumentNode } from '../legal/document/index';
 import { writeFileSync } from 'fs';
 import { PDFExtract, PDFExtractPage, PDFExtractText } from 'pdf.js-extract';
 import { getDocumentData, getDocumentFilePath } from '../data';
-import { chain, curry, isEmpty } from 'lodash';
+import { chain, curry, isUndefined } from 'lodash';
 import { bothFilter, neverNum, Span } from '../util';
 
 const pdfExtract = new PDFExtract();
@@ -32,7 +32,8 @@ function toPageWithoutNoise(page: PDFExtractPage, _pageIdx: number): Span[] {
     .reduce<SpanMap>(toSpanMap, {})
     .thru(toSpansWith(_pageIdx + 1))
     .filter(isNotHeader)
-    .filter(isNotLeftFooter)
+    .thru(withoutLeftFooter)
+    .thru(withoutRightFooter)
     .value();
 }
 type SpanMap = {
@@ -67,7 +68,10 @@ const groupToSpanWith = curry(groupToSpan);
 function groupToSpan(pageNum: number, group: { y: number; texts: PDFExtractText[] }): Span {
   const { texts, y } = group;
   const sortedTexts = texts.sort((a, b) => a.x - b.x);
-  const str = sortedTexts.map(({ str }) => str.trim().replace(/ {1,}/g, ' ')).join(' ');
+  const str = sortedTexts
+    .map(({ str }) => str.trim().replace(/ {1,}/g, ' '))
+    .join(' ')
+    .trim();
   const xL = sortedTexts[0]?.x ?? neverNum();
   const lastText = sortedTexts.slice(-1)[0];
   const xR = (lastText?.x ?? neverNum()) + (lastText?.width ?? neverNum());
@@ -91,33 +95,38 @@ function isNotHeader(span: Span): boolean {
   return true;
 }
 
-function isNotLeftFooter(span: Span): boolean {
-  const { xL, y } = span;
-  if (y > 900 && xL < 45) {
-    if (!span.str.startsWith('SK')) {
-      console.log(`\n===REMOVED_IRREGULAR_LEFT_FOOTER===PAGE_${span.pageNum}===`);
-      console.log(span.str);
-    }
-    return false;
+function withoutLeftFooter(spans: Span[]): Span[] {
+  const { left, right } = bothFilter(spans, isLeftFooter);
+  const footer = right.slice(-1)[0];
+  if (!isUndefined(footer) && !footer.str.startsWith('SK')) {
+    console.log(`\n===REMOVED_IRREGULAR_LEFT_FOOTER===PAGE_${footer.pageNum}===`);
+    console.log(JSON.stringify(right, undefined, 2));
   }
-  return true;
+  const nonFooters = [...left, ...right.slice(0, -1)].sort(byY);
+  return nonFooters;
 }
 
-function removeRightFooter(_pageNum: number, texts: PDFExtractText[]): PDFExtractText[] {
-  const { left, right: footer } = bothFilter(texts, isRightFooter);
-  if (!isEmpty(footer)) {
-    const footerText = footer.map(({ str }) => str).join(' ');
-    if (!footerText.includes('...')) {
-      console.log('\n===REMOVED RIGHT FOOTER===PAGE', _pageNum);
-      console.log(footerText);
-    }
+function withoutRightFooter(spans: Span[]): Span[] {
+  const { left, right } = bothFilter(spans, isRightFooter);
+  const footer = right.slice(-1)[0];
+  if (!isUndefined(footer) && !footer.str.endsWith('..')) {
+    console.log(`\n===REMOVED_IRREGULAR_RIGHT_FOOTER===PAGE_${footer.pageNum}===`);
+    console.log(JSON.stringify(right, undefined, 2));
   }
-  return left;
+  const nonFooters = [...left, ...right.slice(0, -1)].sort(byY);
+  return nonFooters;
 }
 
-function isRightFooter(text: PDFExtractText, texts: PDFExtractText[]): boolean {
-  const { x, y } = text;
-  return y > 800 && x > 400 && texts.filter((text) => text.y === y).length < 4;
+function byY(a: Span, b: Span): number {
+  return a.y - b.y;
+}
+
+function isLeftFooter(span: Span): boolean {
+  return span.y > 900 && span.xL < 45;
+}
+
+function isRightFooter(span: Span): boolean {
+  return span.y > 800 && span.xL > 350 && span.xR > 500;
 }
 
 // function textOf(pages: PDFExtractPage[]): string {
