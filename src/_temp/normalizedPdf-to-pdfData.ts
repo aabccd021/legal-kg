@@ -32,6 +32,7 @@ function toPageWithoutNoise(page: PDFExtractPage, _pageIdx: number): Span[] {
     .reduce<SpanMap>(toSpanMap, {})
     .thru(toSpansWith(_pageIdx + 1))
     .filter(isNotHeader)
+    .filter(isNotLeftFooter)
     .value();
 }
 type SpanMap = {
@@ -78,28 +79,9 @@ function isNotHeader(span: Span): boolean {
   const denyList = ['PENJELASAN'];
   if (y < 210 && xL > 250 && xR < 400 && !denyList.includes(str)) {
     if (
-      ![
-        '',
-        'DEN',
-        'FRESIDEN',
-        'I',
-        'IDEN',
-        'INDONESIA',
-        'INDONESTA',
-        'INDOONESTA',
-        'TNDONESIA',
-        'PRES',
-        'PRESDEN',
-        'FRESTDEN',
-        'PRESI',
-        'PRESIDEN',
-        'REFUBLIK',
-        'REPUBLIK',
-        'REPUBLIKINDONESIA',
-        '.',
-        "'",
-      ].includes(str.replaceAll(/[ ,]/g, '')) &&
-      !/- [0-9]+ -/.test(str)
+      str.length > 5 &&
+      !['PRESIDEN', 'REPUBLIK INDONESIA'].includes(str.replaceAll(',', '')) &&
+      !/-? ?[0-9A-Z]+ ?-?/.test(str)
     ) {
       console.log(`\n===REMOVED_IRREGULAR_HEADER===PAGE_${span.pageNum}===`);
       console.log(str);
@@ -109,20 +91,16 @@ function isNotHeader(span: Span): boolean {
   return true;
 }
 
-function isLeftFooter(_pageNum: number, text: PDFExtractText, _texts: PDFExtractText[]): boolean {
-  const { x, y } = text;
-  if (y > 900 && x < 90) {
-    const trimmed = text.str.trim();
-    if (
-      !['sk', 'no'].includes(trimmed.toLowerCase()) &&
-      !(/[0-9]+/.test(trimmed) && trimmed.length === 6)
-    ) {
-      console.log('\n===REMOVED LEFT FOOTER===PAGE', _pageNum);
-      console.log(trimmed);
+function isNotLeftFooter(span: Span): boolean {
+  const { xL, y } = span;
+  if (y > 900 && xL < 45) {
+    if (!span.str.startsWith('SK')) {
+      console.log(`\n===REMOVED_IRREGULAR_LEFT_FOOTER===PAGE_${span.pageNum}===`);
+      console.log(span.str);
     }
-    return true;
+    return false;
   }
-  return false;
+  return true;
 }
 
 function removeRightFooter(_pageNum: number, texts: PDFExtractText[]): PDFExtractText[] {
