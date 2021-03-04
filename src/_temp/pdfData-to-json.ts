@@ -1,8 +1,8 @@
-import { isUndefined } from 'lodash';
+import { isUndefined, max, min } from 'lodash';
 import { DocumentNode } from '../legal/document/index';
 import { getDocumentData, getDocumentFilePath } from '../data';
 import { readFileSync, writeFileSync } from 'fs';
-import { Accumulator, Span, toSpansWith } from '../util';
+import { Accumulator, neverNum, Span, toSpansWith } from '../util';
 import { toArabic } from 'roman-numerals';
 
 function pdfDataToJson(): void {
@@ -19,19 +19,40 @@ function writeToJson(pdfNode: DocumentNode): void {
     spans: {},
     flag: 'preBab',
   });
-  const output = rawJson.spans.babs?.reduce(toFoo, { bab: 0, bagian: 0, paragraf: 0, pasal: 0 });
+  const log = rawJson.spans.babs?.reduce(toFoo, {
+    bab: 0,
+    bagian: 0,
+    paragraf: 0,
+    pasal: 0,
+    xlsAfterPasal: [],
+  });
+  const output = {
+    bab: log?.bab,
+    bagian: log?.bagian,
+    paragraf: log?.paragraf,
+    pasal: log?.pasal,
+    xlrange: (max(log?.xlsAfterPasal) ?? neverNum()) - (min(log?.xlsAfterPasal) ?? neverNum()),
+    xlsAfterPasal: [],
+    preBab: rawJson.spans.preBab?.length,
+    babs: rawJson.spans.babs?.length,
+    penjelasan: rawJson.spans.penjelasan?.length,
+  };
   writeFileSync(jsonFile.path, JSON.stringify(output, undefined, 2));
 }
 
-type ExtractedKey = 'preBab' | 'babs';
+type ExtractedKey = 'preBab' | 'babs' | 'penjelasan';
 
 function reduceFlag(oldFlag: ExtractedKey, span: Span): ExtractedKey {
   if (oldFlag === 'preBab' && isBabSpansStart(span)) return 'babs';
+  if (oldFlag === 'babs' && isPenjelasanSpansStart(span)) return 'penjelasan';
   return oldFlag;
 }
 
 function isBabSpansStart(span: Span): boolean {
   return span.str.replaceAll(' ', '') === 'BABI';
+}
+function isPenjelasanSpansStart(span: Span): boolean {
+  return span.str.replaceAll('', '') === 'PENJELASAN';
 }
 
 type Acc = {
@@ -39,10 +60,11 @@ type Acc = {
   bagian: number;
   paragraf: number;
   pasal: number;
+  xlsAfterPasal: number[];
 };
 
-function toFoo(acc: Acc, span: Span): Acc {
-  const { bab, bagian, paragraf, pasal } = acc;
+function toFoo(acc: Acc, span: Span, idx: number, spans: Span[]): Acc {
+  const { bab, bagian, paragraf, pasal, xlsAfterPasal } = acc;
 
   const newBabKey = babKeyOfSpan(span);
   if (newBabKey === bab + 1) return { ...acc, bab: newBabKey };
@@ -55,9 +77,15 @@ function toFoo(acc: Acc, span: Span): Acc {
     return { ...acc, paragraf: newParagrafKey };
 
   const newPasalKey = pasalKeyOfSpan(span);
-  if (newPasalKey === pasal + 1) return { ...acc, pasal: newPasalKey };
+  const xlAfterPasal = spans.slice(idx)[0]?.xL;
+  const newXLAfterPasal: number[] =
+    isUndefined(newPasalKey) || isUndefined(xlAfterPasal)
+      ? xlsAfterPasal
+      : [...xlsAfterPasal, xlAfterPasal];
+  if (newPasalKey === pasal + 1)
+    return { ...acc, pasal: newPasalKey, xlsAfterPasal: newXLAfterPasal };
 
-  return acc;
+  return { ...acc, xlsAfterPasal: newXLAfterPasal };
 }
 
 function babKeyOfSpan(span: Span): number | undefined {
