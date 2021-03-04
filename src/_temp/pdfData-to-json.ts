@@ -1,13 +1,12 @@
+import { curry } from 'lodash';
 import { DocumentNode } from '../legal/document/index';
 import { getDocumentData, getDocumentFilePath } from '../data';
 import { readFileSync, writeFileSync } from 'fs';
 import { Span } from '../util';
-import assertNever from 'assert-never';
-import stringify from 'json-stable-stringify';
 
 function pdfDataToJson(): void {
   getDocumentData('pdf-data').forEach(writeToJson);
-  console.log('done');
+  console.log('\ndone');
 }
 
 function writeToJson(pdfNode: DocumentNode): void {
@@ -15,51 +14,39 @@ function writeToJson(pdfNode: DocumentNode): void {
   const dataFile = getDocumentFilePath(pdfNode, 'pdf-data');
   const jsonFile = getDocumentFilePath(pdfNode, 'jsonv2');
   const spans: Span[] = JSON.parse(readFileSync(dataFile.path).toString());
-  const initialAcc: Accumulator = {
-    document: {
-      preBab: [],
-      babs: [],
-    },
+  const rawJson = spans.reduce<Accumulator<ExtractedKey>>(toSpansWith(reduceFlag), {
+    spans: {},
     flag: 'preBab',
-  };
-  const rawJson = spans.reduce<Accumulator>(toRawJson, initialAcc);
-  console.log(`babSpans: ${rawJson.document.babs.length}`);
-  writeFileSync(jsonFile.path, stringify(rawJson, { space: 2 }));
+  });
+  console.log(`babSpans: ${rawJson.spans.babs?.length}`);
+  writeFileSync(jsonFile.path, JSON.stringify(rawJson, undefined, 2));
 }
 
-type Document = {
-  preBab: Span[];
-  babs: Span[];
-};
+type ExtractedKey = 'preBab' | 'babs';
 
-type Flag = keyof Document;
+type Accumulator<T extends string> = { spans: { [P in T]?: Span[] }; flag: T };
 
-type Accumulator = {
-  document: Document;
-  flag: Flag;
-};
+const toSpansWith = curry(toSpans);
 
-function toRawJson(acc: Accumulator, span: Span): Accumulator {
-  const { flag, document } = acc;
-  const newFlag = processFlag(flag, span);
-  if (newFlag === 'preBab') {
-    const newPreBab: Span[] = [...document.preBab, span];
-    const newDocument: Document = { ...document, preBab: newPreBab };
-    return { ...acc, document: newDocument };
-  }
-  if (newFlag === 'babs') {
-    const newBabs: Span[] = [...document.babs, span];
-    const newDocument: Document = { ...document, babs: newBabs };
-    return { ...acc, document: newDocument };
-  }
-  assertNever(newFlag);
+function toSpans<T extends string>(
+  reduceFlag: (oldFlag: T, span: Span) => T,
+  acc: Accumulator<T>,
+  span: Span
+): Accumulator<T> {
+  const { flag, spans } = acc;
+  const newFlag = reduceFlag(flag, span);
+  const newSpan = [...(spans[newFlag] ?? []), span];
+  const newSpans = { ...spans, [newFlag]: newSpan };
+  return { ...acc, flag: newFlag, spans: newSpans };
 }
 
-function processFlag(oldFlag: Flag, span: Span): Flag {
-  if (oldFlag === 'preBab' && span.str.replaceAll(' ', '') === 'BABI') {
-    return 'babs';
-  }
+function reduceFlag(oldFlag: ExtractedKey, span: Span): ExtractedKey {
+  if (oldFlag === 'preBab' && isBabSpansStart(span)) return 'babs';
   return oldFlag;
+}
+
+function isBabSpansStart(span: Span): boolean {
+  return span.str.replaceAll(' ', '') === 'BABI';
 }
 
 pdfDataToJson();
