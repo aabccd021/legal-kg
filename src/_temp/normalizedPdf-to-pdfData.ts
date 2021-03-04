@@ -2,7 +2,7 @@ import { DocumentNode } from '../legal/document/index';
 import { writeFileSync } from 'fs';
 import { PDFExtract, PDFExtractPage, PDFExtractText } from 'pdf.js-extract';
 import { getDocumentData, getDocumentFilePath } from '../data';
-import { chain, curry, isUndefined } from 'lodash';
+import { chain, curry, isUndefined, isEmpty } from 'lodash';
 import { bothFilter, neverNum, Span } from '../util';
 
 const pdfExtract = new PDFExtract();
@@ -60,6 +60,7 @@ function toSpans(pageNum: number, map: SpanMap): Span[] {
     .values()
     .sort((a, b) => a.y - b.y)
     .flatMap(groupToSpanWith(pageNum))
+    .filter((span) => !isEmpty(span.str))
     .value();
 }
 
