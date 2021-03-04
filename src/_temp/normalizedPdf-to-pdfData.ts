@@ -15,7 +15,7 @@ async function normalizedPdfToPdfData(): Promise<void> {
 }
 
 async function toPdfJson(pdfNode: DocumentNode): Promise<void> {
-  console.log('start', pdfNode);
+  console.log('jtart', pdfNode);
   const pdfFile = getDocumentFilePath(pdfNode, 'normalized-pdf');
   const jsonFile = getDocumentFilePath(pdfNode, 'pdf-data');
   const { pages } = await pdfExtract.extract(pdfFile.path);
