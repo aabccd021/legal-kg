@@ -23,6 +23,9 @@ async function toPdfJson(pdfNode: DocumentNode): Promise<void> {
   writeFileSync(jsonFile.path, JSON.stringify(cleanPages, undefined, 2));
 }
 
+/**
+ * Remove noise
+ */
 function toPageWithoutNoise(page: PDFExtractPage, _pageIdx: number): Span[] {
   return chain(page.content)
     .reduce<SpanMap>(toSpanMap, {})
@@ -32,12 +35,11 @@ function toPageWithoutNoise(page: PDFExtractPage, _pageIdx: number): Span[] {
     .thru(withoutRightFooter)
     .value();
 }
-type SpanMap = {
-  [name: string]: {
-    y: number;
-    texts: PDFExtractText[];
-  };
-};
+
+/**
+ * Group Spans
+ */
+type SpanMap = { [name: string]: { y: number; texts: PDFExtractText[] } };
 
 function toSpanMap(map: SpanMap, text: PDFExtractText): SpanMap {
   const key = `${text.y}`;
@@ -49,6 +51,9 @@ function toSpanMap(map: SpanMap, text: PDFExtractText): SpanMap {
   return { ...map, [key]: newGroup };
 }
 
+/**
+ * Group to span array
+ */
 const toSpansWith = curry(toSpans);
 
 function toSpans(pageNum: number, map: SpanMap): Span[] {
@@ -60,25 +65,39 @@ function toSpans(pageNum: number, map: SpanMap): Span[] {
     .value();
 }
 
+/**
+ * Group to span
+ */
 const groupToSpanWith = curry(groupToSpan);
 
 function groupToSpan(pageNum: number, group: { y: number; texts: PDFExtractText[] }): Span {
   const { texts, y } = group;
+
   const sortedTexts = texts.sort((a, b) => a.x - b.x);
+
   const str = sortedTexts
-    .map(({ str }) => str.trim().replace(/ {1,}/g, ' '))
+    .map(({ str }) => str.trim())
     .join(' ')
-    .trim();
+    .trim()
+    .replace(/ {1,}/g, ' ');
+
   const xL = sortedTexts[0]?.x ?? neverNum();
+
   const lastText = sortedTexts.slice(-1)[0];
   const xR = (lastText?.x ?? neverNum()) + (lastText?.width ?? neverNum());
+
   return { xL, xR, y, str, pageNum };
 }
 
+/**
+ * Filter Header
+ */
 function isNotHeader(span: Span): boolean {
   const { xL, xR, y, str } = span;
-  const denyList = ['PENJELASAN'];
-  if (y < 210 && xL > 250 && xR < 400 && !denyList.includes(str)) {
+
+  // is header
+  if (y < 210 && xL > 250 && xR < 400 && str !== 'PENJELASAN') {
+    // debug
     if (
       str.length > 5 &&
       !['PRESIDEN', 'REPUBLIK INDONESIA'].includes(str.replaceAll(',', '')) &&
@@ -92,38 +111,55 @@ function isNotHeader(span: Span): boolean {
   return true;
 }
 
+/**
+ * Left Footer
+ */
 function withoutLeftFooter(spans: Span[]): Span[] {
   const { left, right } = bothFilter(spans, isLeftFooter);
+
+  // only choose last candidate as footer
   const footer = right.slice(-1)[0];
+
+  // debug
   if (!isUndefined(footer) && !footer.str.startsWith('SK')) {
     console.log(`\n===REMOVED_IRREGULAR_LEFT_FOOTER===PAGE_${footer.pageNum}===`);
     console.log(JSON.stringify(right, undefined, 2));
   }
-  const nonFooters = [...left, ...right.slice(0, -1)].sort(byY);
-  return nonFooters;
-}
 
-function withoutRightFooter(spans: Span[]): Span[] {
-  const { left, right } = bothFilter(spans, isRightFooter);
-  const footer = right.slice(-1)[0];
-  if (!isUndefined(footer) && !footer.str.endsWith('..')) {
-    console.log(`\n===REMOVED_IRREGULAR_RIGHT_FOOTER===PAGE_${footer.pageNum}===`);
-    console.log(JSON.stringify(right, undefined, 2));
-  }
-  const nonFooters = [...left, ...right.slice(0, -1)].sort(byY);
-  return nonFooters;
-}
-
-function byY(a: Span, b: Span): number {
-  return a.y - b.y;
+  return [...left, ...right.slice(0, -1)].sort(byY);
 }
 
 function isLeftFooter(span: Span): boolean {
   return span.y > 900 && span.xL < 45;
 }
 
+/**
+ * Right Footer
+ */
+function withoutRightFooter(spans: Span[]): Span[] {
+  const { left, right } = bothFilter(spans, isRightFooter);
+
+  // only choose last candidate as footer
+  const footer = right.slice(-1)[0];
+
+  // debug
+  if (!isUndefined(footer) && !footer.str.endsWith('..')) {
+    console.log(`\n===REMOVED_IRREGULAR_RIGHT_FOOTER===PAGE_${footer.pageNum}===`);
+    console.log(JSON.stringify(right, undefined, 2));
+  }
+
+  return [...left, ...right.slice(0, -1)].sort(byY);
+}
+
 function isRightFooter(span: Span): boolean {
   return span.y > 800 && span.xL > 350 && span.xR > 500;
+}
+
+/**
+ * Util
+ */
+function byY(a: Span, b: Span): number {
+  return a.y - b.y;
 }
 
 normalizedPdfToPdfData();
