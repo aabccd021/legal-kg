@@ -80,7 +80,7 @@ function toMengimbang(lines: string[] | undefined, regex: RegExp): Metadata | un
 // Babs
 const babStartRegexp = /^BAB /;
 
-function getBabKey(line?: string): number | undefined {
+export function getBabKey(line?: string): number | undefined {
   if (isNil(line)) {
     return undefined;
   }

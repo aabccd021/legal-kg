@@ -1,4 +1,4 @@
-import { reduce } from 'lodash';
+import { curry, reduce } from 'lodash';
 
 export function bothFilter<T>(
   arr: T[],
@@ -31,4 +31,20 @@ export type Span = {
 
 export function neverNum(): number {
   throw Error();
+}
+
+export type Accumulator<T extends string> = { spans: { [P in T]?: Span[] }; flag: T };
+
+export const toSpansWith = curry(toSpans);
+
+function toSpans<T extends string>(
+  reduceFlag: (oldFlag: T, span: Span) => T,
+  acc: Accumulator<T>,
+  span: Span
+): Accumulator<T> {
+  const { flag, spans } = acc;
+  const newFlag = reduceFlag(flag, span);
+  const newSpan = [...(spans[newFlag] ?? []), span];
+  const newSpans = { ...spans, [newFlag]: newSpan };
+  return { ...acc, flag: newFlag, spans: newSpans };
 }
