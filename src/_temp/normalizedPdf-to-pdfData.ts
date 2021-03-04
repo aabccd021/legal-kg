@@ -9,19 +9,15 @@ const pdfExtract = new PDFExtract();
 
 async function normalizedPdfToPdfData(): Promise<void> {
   for (const pdf of getDocumentData('normalized-pdf')) {
-    await toPdfJson(pdf, { useNormalized: true });
-    // await toPdfJson(pdf, { useNormalized: false });
+    await toPdfJson(pdf);
   }
   console.log('===DONE');
 }
 
-async function toPdfJson(
-  pdfNode: DocumentNode,
-  { useNormalized }: { useNormalized: boolean }
-): Promise<void> {
-  console.log(`start, useNormalized: ${useNormalized}`, pdfNode);
-  const pdfFile = getDocumentFilePath(pdfNode, useNormalized ? 'normalized-pdf' : 'pdf');
-  const jsonFile = getDocumentFilePath(pdfNode, useNormalized ? 'normalized-pdf-data' : 'pdf-data');
+async function toPdfJson(pdfNode: DocumentNode): Promise<void> {
+  console.log('start', pdfNode);
+  const pdfFile = getDocumentFilePath(pdfNode, 'normalized-pdf');
+  const jsonFile = getDocumentFilePath(pdfNode, 'pdf-data');
   const { pages } = await pdfExtract.extract(pdfFile.path);
   const cleanPages: Span[] = pages.flatMap(toPageWithoutNoise);
   writeFileSync(jsonFile.path, JSON.stringify(cleanPages, undefined, 2));
@@ -130,10 +126,4 @@ function isRightFooter(span: Span): boolean {
   return span.y > 800 && span.xL > 350 && span.xR > 500;
 }
 
-// function textOf(pages: PDFExtractPage[]): string {
-//   return pages
-//     .flatMap(({ content }) => content)
-//     .flatMap(({ str }) => str)
-//     .join('\n');
-// }
 normalizedPdfToPdfData();
