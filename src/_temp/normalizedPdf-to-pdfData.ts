@@ -2,7 +2,7 @@ import { DocumentNode } from '../legal/document/index';
 import { writeFileSync } from 'fs';
 import { PDFExtract, PDFExtractPage, PDFExtractText } from 'pdf.js-extract';
 import { getDocumentData, getDocumentFilePath } from '../data';
-import { chain, curry, isUndefined, isEmpty } from 'lodash';
+import { chain, curry, isUndefined, isEmpty, filter } from 'lodash';
 import { bothFilter, neverNum, Span } from '../util';
 
 const pdfExtract = new PDFExtract();
@@ -39,16 +39,27 @@ function toPageWithoutNoise(page: PDFExtractPage, _pageIdx: number): Span[] {
 /**
  * Group Spans
  */
-type SpanMap = { [name: string]: { y: number; texts: PDFExtractText[] } };
+type SpanMap = { [name: string]: SpanGroup };
+type SpanGroup = { y: number; texts: PDFExtractText[] };
 
 function toSpanMap(map: SpanMap, text: PDFExtractText): SpanMap {
-  const key = `${text.y}`;
-  const group = map[key];
+  const groupY = getGroupY(map, text);
+  const groupKey = isUndefined(groupY) ? `${text.y}` : `${groupY}`;
+  const group = map[groupKey];
   const y = group?.y ?? text.y;
   const texts: PDFExtractText[] = [...(group?.texts ?? []), text];
   const newGroup = { y, texts };
 
-  return { ...map, [key]: newGroup };
+  return { ...map, [groupKey]: newGroup };
+}
+
+function getGroupY(map: SpanMap, text: PDFExtractText): number | undefined {
+  const group = filter(map, (group) => {
+    const firstTextInGroup = group.texts[0];
+    return !isUndefined(firstTextInGroup) && Math.abs(firstTextInGroup.y - text.y) < 3;
+  });
+  if (group.length > 1) console.log('WARN GROUP', group);
+  return group[0]?.y;
 }
 
 /**
