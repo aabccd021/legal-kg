@@ -1,5 +1,5 @@
-import { isUndefined, max, min } from 'lodash';
-import { neverNum, Span } from '../util';
+import { isUndefined } from 'lodash';
+import { Span } from '../util';
 import { pasalKeyOfSpan } from './parse_key_from_spans';
 
 export type BabsThresholds = { amendPasal?: number };
@@ -37,12 +37,43 @@ function toStatistics(
   return { afterPasalXls: newXLAfterPasal };
 }
 
-function amendPasalThresholdFromXls(xls: number[]): number | undefined {
-  const xlMax = max(xls) ?? neverNum();
-  const xlMin = min(xls) ?? neverNum();
-  const xlRange = xlMax - xlMin;
+// function amendPasalThresholdFromXls(xls: number[]): number | undefined {
+//   // if (getStandardDeviation(xls)<6) return undefined;
+//   return getMostSparseMidPoint(xls);
+// }
 
-  // if has no amend pasal
-  if (xlRange < 90) return undefined;
-  return (xlMax + xlMin) / 2;
+// function getStandardDeviation(array: number[]): number {
+//   const n = array.length;
+//   const mean = array.reduce((a, b) => a + b) / n;
+//   return Math.sqrt(array.map((x) => Math.pow(x - mean, 2)).reduce((a, b) => a + b) / n);
+// }
+
+function amendPasalThresholdFromXls(xls: number[]): number | undefined {
+  const { middle, maxDelta } = xls.reduce<Acc>(
+    (acc, cur) => {
+      const { prev, maxDelta, middle } = acc;
+      const newPrev = cur;
+      if (isUndefined(prev)) {
+        const newAcc: Acc = { ...acc, prev: newPrev };
+        return newAcc;
+      }
+      const delta = cur - prev;
+      const isLarger = delta > maxDelta;
+      const newMaxDistance = isLarger ? delta : maxDelta;
+      const newMiddle = isLarger ? (cur + prev) / 2 : middle;
+      const newAcc: Acc = { maxDelta: newMaxDistance, prev: newPrev, middle: newMiddle };
+      return newAcc;
+    },
+    { maxDelta: 0, middle: 0 }
+  );
+  console.log('maxdelta', maxDelta);
+  console.log('middle', middle);
+  if (maxDelta < 34) return undefined;
+  return middle;
 }
+
+type Acc = {
+  prev?: number;
+  maxDelta: number;
+  middle: number;
+};

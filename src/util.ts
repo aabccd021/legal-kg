@@ -21,12 +21,16 @@ type BothFilterResult<T> = {
   right: T[];
 };
 
-export type Span = {
+export type UnindexedSpan = {
   xL: number;
   y: number;
   xR: number;
   pageNum: number;
   str: string;
+};
+
+export type Span = UnindexedSpan & {
+  id: number;
 };
 
 export function neverNum(): number {

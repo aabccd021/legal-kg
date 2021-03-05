@@ -12,7 +12,7 @@ function pdfDataToJson(): void {
 }
 
 function writeToJson(pdfNode: DocumentNode): void {
-  console.log('start', pdfNode);
+  console.log('\nstart', pdfNode);
   const dataFile = getDocumentFilePath(pdfNode, 'pdf-data');
   const jsonFile = getDocumentFilePath(pdfNode, 'jsonv2');
   const spans: Span[] = JSON.parse(readFileSync(dataFile.path).toString());
@@ -27,10 +27,15 @@ function writeToJson(pdfNode: DocumentNode): void {
     babsSpans?.forEach((span, idx, spans) => {
       if (!isUndefined(pasalKeyOfSpan(span))) {
         const spanAfterPasal = spans.slice(idx + 1)[0];
-        if (!isUndefined(spanAfterPasal) && spanAfterPasal?.xL > amendPasalThreshold) {
+        if (!isUndefined(spanAfterPasal)) {
+          const isAmend = spanAfterPasal?.xL > amendPasalThreshold;
           console.log(spanAfterPasal.pageNum);
           console.log(span.str);
           console.log(spanAfterPasal.str);
+          console.log(spanAfterPasal.xL);
+          // console.log(amendPasalThreshold);
+          console.log(isAmend);
+          console.log('===');
           console.log();
         }
       }

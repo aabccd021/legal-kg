@@ -1,3 +1,4 @@
+import { UnindexedSpan } from './../util';
 import { DocumentNode } from '../legal/document/index';
 import { writeFileSync } from 'fs';
 import { PDFExtract, PDFExtractPage, PDFExtractText } from 'pdf.js-extract';
@@ -19,14 +20,16 @@ async function toPdfJson(pdfNode: DocumentNode): Promise<void> {
   const pdfFile = getDocumentFilePath(pdfNode, 'normalized-pdf');
   const jsonFile = getDocumentFilePath(pdfNode, 'pdf-data');
   const { pages } = await pdfExtract.extract(pdfFile.path);
-  const cleanPages: Span[] = pages.flatMap(toPageWithoutNoise);
+  const cleanPages: Span[] = pages
+    .flatMap(toPageWithoutNoise)
+    .map((span, index) => ({ ...span, id: index }));
   writeFileSync(jsonFile.path, JSON.stringify(cleanPages, undefined, 2));
 }
 
 /**
  * Remove noise
  */
-function toPageWithoutNoise(page: PDFExtractPage, _pageIdx: number): Span[] {
+function toPageWithoutNoise(page: PDFExtractPage, _pageIdx: number): UnindexedSpan[] {
   return chain(page.content)
     .reduce<SpanMap>(toSpanMap, {})
     .thru(toSpansWith(_pageIdx + 1))
@@ -56,9 +59,9 @@ function toSpanMap(map: SpanMap, text: PDFExtractText): SpanMap {
 function getGroupY(map: SpanMap, text: PDFExtractText): number | undefined {
   const group = filter(map, (group) => {
     const firstTextInGroup = group.texts[0];
-    return !isUndefined(firstTextInGroup) && Math.abs(firstTextInGroup.y - text.y) < 3;
+    return !isUndefined(firstTextInGroup) && Math.abs(firstTextInGroup.y - text.y) < 5;
   });
-  if (group.length > 1) console.log('WARN GROUP', group);
+  if (group.length > 1) throw Error(' too many group');
   return group[0]?.y;
 }
 
@@ -67,7 +70,7 @@ function getGroupY(map: SpanMap, text: PDFExtractText): number | undefined {
  */
 const toSpansWith = curry(toSpans);
 
-function toSpans(pageNum: number, map: SpanMap): Span[] {
+function toSpans(pageNum: number, map: SpanMap): UnindexedSpan[] {
   return chain(map)
     .values()
     .sort((a, b) => a.y - b.y)
@@ -81,7 +84,10 @@ function toSpans(pageNum: number, map: SpanMap): Span[] {
  */
 const groupToSpanWith = curry(groupToSpan);
 
-function groupToSpan(pageNum: number, group: { y: number; texts: PDFExtractText[] }): Span {
+function groupToSpan(
+  pageNum: number,
+  group: { y: number; texts: PDFExtractText[] }
+): UnindexedSpan {
   const { texts, y } = group;
 
   const sortedTexts = texts.sort((a, b) => a.x - b.x);
@@ -103,7 +109,7 @@ function groupToSpan(pageNum: number, group: { y: number; texts: PDFExtractText[
 /**
  * Filter Header
  */
-function isNotHeader(span: Span): boolean {
+function isNotHeader(span: UnindexedSpan): boolean {
   const { xL, xR, y, str } = span;
 
   // is header
@@ -125,7 +131,7 @@ function isNotHeader(span: Span): boolean {
 /**
  * Left Footer
  */
-function withoutLeftFooter(spans: Span[]): Span[] {
+function withoutLeftFooter(spans: UnindexedSpan[]): UnindexedSpan[] {
   const { left, right } = bothFilter(spans, isLeftFooter);
 
   // only choose last candidate as footer
@@ -140,14 +146,14 @@ function withoutLeftFooter(spans: Span[]): Span[] {
   return [...left, ...right.slice(0, -1)].sort(byY);
 }
 
-function isLeftFooter(span: Span): boolean {
+function isLeftFooter(span: UnindexedSpan): boolean {
   return span.y > 900 && span.xL < 45;
 }
 
 /**
  * Right Footer
  */
-function withoutRightFooter(spans: Span[]): Span[] {
+function withoutRightFooter(spans: UnindexedSpan[]): UnindexedSpan[] {
   const { left, right } = bothFilter(spans, isRightFooter);
 
   // only choose last candidate as footer
@@ -162,14 +168,14 @@ function withoutRightFooter(spans: Span[]): Span[] {
   return [...left, ...right.slice(0, -1)].sort(byY);
 }
 
-function isRightFooter(span: Span): boolean {
+function isRightFooter(span: UnindexedSpan): boolean {
   return span.y > 800 && span.xL > 350 && span.xR > 500;
 }
 
 /**
  * Util
  */
-function byY(a: Span, b: Span): number {
+function byY(a: UnindexedSpan, b: UnindexedSpan): number {
   return a.y - b.y;
 }
 
