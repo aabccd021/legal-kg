@@ -33,8 +33,8 @@ export type Span = UnindexedSpan & {
   id: number;
 };
 
-export function neverNum(): number {
-  throw Error();
+export function neverNum(x?: string): number {
+  throw Error(x);
 }
 
 export type Accumulator<T extends string> = { spans: { [P in T]?: Span[] }; flag: T };

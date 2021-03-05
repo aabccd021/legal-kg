@@ -4,7 +4,7 @@ import { Span } from '../util';
 
 export function pasalKeyOfSpan(span: Span): number | undefined {
   const { str } = span;
-  if (/^Pasal ?/.test(str)) return safeParseInt(str.replace(/^Pasal ?/, ''));
+  if (/^Pasal!? ?/.test(str)) return safeParseInt(str.replace(/^Pasal!? ?/, ''));
   return undefined;
 }
 
