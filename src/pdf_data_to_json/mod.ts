@@ -25,8 +25,9 @@ function writeToJson(pdfNode: DocumentNode): void {
     flag: 'preBab',
   });
   const babsSpans = rawJson.spans.babs ?? [];
-  const output = getKeys(babsSpans);
-  writeFileSync(jsonFile.path, JSON.stringify(output, undefined, 2));
+  const { bab, bagian, paragraf, pasal } = getKeys(babsSpans);
+
+  writeFileSync(jsonFile.path, JSON.stringify({ bab, bagian, paragraf, pasal }, undefined, 2));
 }
 
 type ExtractedKey = 'preBab' | 'babs' | 'penjelasan';
@@ -84,12 +85,22 @@ function toKeys(acc: Acc, span: Span, idx: number, spans: Span[]): Acc {
   const newPasalKey = pasalKeyOfSpan(span);
   if (isUndefined(pasal)) {
     if (newPasalKey === 1) {
-      return { ...acc, pasal: newPasalKey, afterNonPasal: false, pasalXls: [...pasalXls, span.xL] };
+      return {
+        ...acc,
+        pasal: newPasalKey,
+        afterNonPasal: false,
+        pasalXls: [...pasalXls, newAfterPasal.xL],
+      };
     }
   } else if (newPasalKey === pasal + 1) {
-    const delta = Math.abs(newAfterPasal.xL - 170);
-    if (delta < 10 || afterNonPasal || newAfterPasal.str.startsWith('Beberapa ketentuan')) {
-      return { ...acc, pasal: newPasalKey, afterNonPasal: false, pasalXls: [...pasalXls, span.xL] };
+    const delta = Math.abs(newAfterPasal.xL - mean(pasalXls));
+    if (delta < 13 || afterNonPasal || newAfterPasal.str.startsWith('Beberapa ketentuan')) {
+      return {
+        ...acc,
+        pasal: newPasalKey,
+        afterNonPasal: false,
+        pasalXls: [...pasalXls, newAfterPasal.xL],
+      };
     }
 
     const lastPasalXl = pasalXls.slice(-1)[0];
@@ -99,7 +110,12 @@ function toKeys(acc: Acc, span: Span, idx: number, spans: Span[]): Acc {
       console.log('afterPasal:', newAfterPasal);
       console.log('delta:', delta);
       console.log('===\n');
-      return { ...acc, pasal: newPasalKey, afterNonPasal: false, pasalXls: [...pasalXls, span.xL] };
+      return {
+        ...acc,
+        pasal: newPasalKey,
+        afterNonPasal: false,
+        pasalXls: [...pasalXls, newAfterPasal.xL],
+      };
     }
   }
   return acc;
