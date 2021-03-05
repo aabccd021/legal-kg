@@ -1,4 +1,4 @@
-import { isUndefined, mean } from 'lodash';
+import { chain, curry, isUndefined, mean } from 'lodash';
 import { DocumentNode } from '../legal/document/index';
 import { getDocumentData, getDocumentFilePath } from '../data';
 import { readFileSync, writeFileSync } from 'fs';
@@ -61,10 +61,13 @@ function getKeys(spans: Span[]): Acc {
     pasalXls: [],
     afterNonPasal: false,
   };
-  return spans.reduce(toKeys, initialAcc);
+  const hasAmendPasal = spansHasAmendPasal(spans);
+  return spans.reduce(toKeysWith(hasAmendPasal), initialAcc);
 }
 
-function toKeys(acc: Acc, span: Span, idx: number, spans: Span[]): Acc {
+const toKeysWith = curry(toKeys);
+
+function toKeys(hasAmendPasal: boolean, acc: Acc, span: Span, idx: number, spans: Span[]): Acc {
   const { bab, bagian, paragraf, pasal, afterNonPasal, pasalXls } = acc;
 
   const newBabKey = babKeyOfSpan(span);
@@ -79,10 +82,10 @@ function toKeys(acc: Acc, span: Span, idx: number, spans: Span[]): Acc {
     return { ...acc, paragraf: newParagrafKey, afterNonPasal: true };
   }
 
-  const newAfterPasal = spans.slice(idx + 1)[0];
+  const newAfterPasal = spans[idx + 1];
   if (isUndefined(newAfterPasal)) return acc;
-
   const newPasalKey = pasalKeyOfSpan(span);
+
   if (isUndefined(pasal)) {
     if (newPasalKey === 1) {
       return {
@@ -94,31 +97,51 @@ function toKeys(acc: Acc, span: Span, idx: number, spans: Span[]): Acc {
     }
   } else if (newPasalKey === pasal + 1) {
     const delta = Math.abs(newAfterPasal.xL - mean(pasalXls));
-    if (delta < 13 || afterNonPasal || newAfterPasal.str.startsWith('Beberapa ketentuan')) {
-      return {
-        ...acc,
-        pasal: newPasalKey,
-        afterNonPasal: false,
-        pasalXls: [...pasalXls, newAfterPasal.xL],
-      };
+    const newAcc: Acc = {
+      ...acc,
+      pasal: newPasalKey,
+      afterNonPasal: false,
+      pasalXls: [...pasalXls, newAfterPasal.xL],
+    };
+    if (
+      !hasAmendPasal ||
+      delta < 13 ||
+      afterNonPasal ||
+      newAfterPasal.str.startsWith('Beberapa ketentuan')
+    ) {
+      return newAcc;
     }
 
     const lastPasalXl = pasalXls.slice(-1)[0];
     if (!isUndefined(lastPasalXl) && Math.abs(newAfterPasal.xL - lastPasalXl) < 1) {
-      console.log('===PASAL', newPasalKey);
+      console.log(`===IRREGULAR_PASAL ${newPasalKey}===`);
       console.log('span:', span);
       console.log('afterPasal:', newAfterPasal);
       console.log('delta:', delta);
       console.log('===\n');
-      return {
-        ...acc,
-        pasal: newPasalKey,
-        afterNonPasal: false,
-        pasalXls: [...pasalXls, newAfterPasal.xL],
-      };
+      return newAcc;
     }
   }
   return acc;
+}
+
+function getStandardDeviation(array: number[]): number {
+  const n = array.length;
+  const mean = array.reduce((a, b) => a + b) / n;
+  return Math.sqrt(array.map((x) => Math.pow(x - mean, 2)).reduce((a, b) => a + b) / n);
+}
+
+function spansHasAmendPasal(spans: Span[]): boolean {
+  return chain(spans)
+    .reduce<number[]>((xls, span, idx, spans) => {
+      if (isUndefined(pasalKeyOfSpan(span))) return xls;
+      const afterPasal = spans[idx + 1];
+      if (isUndefined(afterPasal)) return xls;
+      return [...xls, afterPasal.xL];
+    }, [])
+    .thru(getStandardDeviation)
+    .thru((std) => std > 6)
+    .value();
 }
 
 pdfDataToJson();

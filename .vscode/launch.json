@@ -21,6 +21,22 @@
     {
       "type": "pwa-node",
       "request": "launch",
+      "name": "PDF Data to JSON",
+      "runtimeArgs": [
+        "-r",
+        "ts-node/register"
+      ],
+      "args": [
+        "${workspaceFolder}/src/pdf_data_to_json/mod.ts"
+      ],
+      "skipFiles": [
+        "${workspaceFolder}/node_modules/**",
+        "<node_internals>/**"
+      ]
+    },
+    {
+      "type": "pwa-node",
+      "request": "launch",
       "name": "Convert : PDF to Text (Overwrite)",
       "runtimeArgs": [
         "-r",
