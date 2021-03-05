@@ -96,22 +96,17 @@ function toKeys(hasAmendPasal: boolean, acc: Acc, span: Span, idx: number, spans
       };
     }
   } else if (newPasalKey === pasal + 1) {
-    const delta = Math.abs(newAfterPasal.xL - mean(pasalXls));
     const newAcc: Acc = {
       ...acc,
       pasal: newPasalKey,
       afterNonPasal: false,
       pasalXls: [...pasalXls, newAfterPasal.xL],
     };
-    if (
-      !hasAmendPasal ||
-      delta < 13 ||
-      afterNonPasal ||
-      newAfterPasal.str.startsWith('Beberapa ketentuan')
-    ) {
+    if (!hasAmendPasal || afterNonPasal || newAfterPasal.str.startsWith('Beberapa ketentuan')) {
       return newAcc;
     }
-
+    const delta = Math.abs(newAfterPasal.xL - mean(pasalXls));
+    if (delta < 13) return newAcc;
     const lastPasalXl = pasalXls.slice(-1)[0];
     if (!isUndefined(lastPasalXl) && Math.abs(newAfterPasal.xL - lastPasalXl) < 1) {
       console.log(`===IRREGULAR_PASAL ${newPasalKey}===`);
