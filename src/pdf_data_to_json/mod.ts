@@ -115,27 +115,27 @@ function toKeys(hasAmendPasal: boolean, acc: Acc, span: Span, idx: number, spans
     pasals: [...pasals, { key: newPasalKey, spanId: span.id, afterPasalXl: newAfterPasal.xL }],
   };
 
-  if (newPasalKey === 1 && isEmpty(pasals)) return newAcc;
   const lastPasal = lastOf(pasals);
-  if (newPasalKey - 1 === lastPasal?.key) {
-    if (
-      !hasAmendPasal ||
-      afterNonPasal ||
-      newAfterPasal.str.startsWith('Beberapa ketentuan') ||
-      Math.abs(newAfterPasal.xL - mean(pasals.map(({ afterPasalXl }) => afterPasalXl)))
-    ) {
-      return newAcc;
-    }
+  if (isUndefined(lastPasal)) {
+    if (newPasalKey === 1) return newAcc;
+  } else {
+    if (newPasalKey - 1 === lastPasal.key) {
+      if (
+        !hasAmendPasal ||
+        afterNonPasal ||
+        newAfterPasal.str.startsWith('Beberapa ketentuan') ||
+        Math.abs(newAfterPasal.xL - mean(pasals.map(({ afterPasalXl }) => afterPasalXl))) < 13
+      ) {
+        return newAcc;
+      }
 
-    if (
-      !isUndefined(lastPasal.afterPasalXl) &&
-      Math.abs(newAfterPasal.xL - lastPasal.afterPasalXl) < 1
-    ) {
-      console.log(`===IRREGULAR_PASAL ${newPasalKey}===`);
-      console.log('span:', span);
-      console.log('afterPasal:', newAfterPasal);
-      console.log('===\n');
-      return newAcc;
+      if (Math.abs(newAfterPasal.xL - lastPasal.afterPasalXl) < 1) {
+        console.log(`===IRREGULAR_PASAL ${newPasalKey}===`);
+        console.log('span:', span);
+        console.log('afterPasal:', newAfterPasal);
+        console.log('===\n');
+        return newAcc;
+      }
     }
   }
   return acc;
