@@ -37,7 +37,8 @@ export function neverNum(x?: string): number {
   throw Error(x);
 }
 
-export type Accumulator<T extends string> = { spans: { [P in T]?: Span[] }; flag: T };
+export type Accumulator<T extends string> = { spans: SpanOf<T>; flag: T };
+export type SpanOf<T extends string> = { [P in T]: Span[] };
 
 export const toSpansWith = curry(toSpans);
 
@@ -48,9 +49,9 @@ function toSpans<T extends string>(
 ): Accumulator<T> {
   const { flag, spans } = acc;
   const newFlag = reduceFlag(flag, span);
-  const newSpan = [...(spans[newFlag] ?? []), span];
-  const newSpans = { ...spans, [newFlag]: newSpan };
-  return { ...acc, flag: newFlag, spans: newSpans };
+  const newSpanArr = [...spans[newFlag], span];
+  const newSpanArrs = { ...spans, [newFlag]: newSpanArr };
+  return { ...acc, flag: newFlag, spans: newSpanArrs };
 }
 
 export function lastOf<T>(arr: T[]): T | undefined {

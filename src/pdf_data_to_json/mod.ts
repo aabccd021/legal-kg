@@ -1,3 +1,4 @@
+import { SpanOf } from './../util';
 import { chain, curry, isUndefined, mean, isEmpty } from 'lodash';
 import { DocumentNode } from '../legal/document/index';
 import { getDocumentData, getDocumentFilePath } from '../data';
@@ -19,18 +20,21 @@ function writeToJson(pdfNode: DocumentNode): void {
   console.log('\nstart', pdfNode);
   const dataFile = getDocumentFilePath(pdfNode, 'pdf-data');
   const jsonFile = getDocumentFilePath(pdfNode, 'jsonv2');
-  const spans: Span[] = JSON.parse(readFileSync(dataFile.path).toString());
-  const rawJson = spans.reduce<Accumulator<ExtractedKey>>(toSpansWith(reduceFlag), {
-    spans: {},
-    flag: 'preBab',
-  });
-  const babsSpans = rawJson.spans.babs ?? [];
-  const { babs: bab, bagians: bagian, paragrafs: paragraf, pasals: pasal } = getKeys(babsSpans);
-
-  writeFileSync(jsonFile.path, JSON.stringify({ bab, bagian, paragraf, pasal }, undefined, 2));
+  const pdfSpans: Span[] = JSON.parse(readFileSync(dataFile.path).toString());
+  const { babs } = rawJsonOf(pdfSpans);
+  const keys = getKeySpanids(babs);
+  writeFileSync(jsonFile.path, JSON.stringify(keys, undefined, 2));
 }
 
 type ExtractedKey = 'preBab' | 'babs' | 'penjelasan';
+
+function rawJsonOf(spans: Span[]): SpanOf<ExtractedKey> {
+  const initialExtraction: Accumulator<ExtractedKey> = {
+    spans: { babs: [], preBab: [], penjelasan: [] },
+    flag: 'preBab',
+  };
+  return spans.reduce<Accumulator<ExtractedKey>>(toSpansWith(reduceFlag), initialExtraction).spans;
+}
 
 function reduceFlag(oldFlag: ExtractedKey, span: Span): ExtractedKey {
   if (oldFlag === 'preBab' && isBabSpansStart(span)) return 'babs';
@@ -44,7 +48,8 @@ function isBabSpansStart(span: Span): boolean {
 function isPenjelasanSpansStart(span: Span): boolean {
   return span.str.replaceAll('', '') === 'PENJELASAN';
 }
-type Acc = {
+
+type DocumentKeySpanIds = {
   babs: SpanKeyIdx[];
   bagians: SpanKeyIdx[];
   paragrafs: SpanKeyIdx[];
@@ -52,8 +57,8 @@ type Acc = {
   afterNonPasal: boolean;
 };
 
-function getKeys(spans: Span[]): Acc {
-  const initialAcc: Acc = {
+function getKeySpanids(spans: Span[]): DocumentKeySpanIds {
+  const initialAcc: DocumentKeySpanIds = {
     babs: [],
     bagians: [],
     paragrafs: [],
@@ -69,7 +74,13 @@ type PasalSpanKeyIdx = SpanKeyIdx & { afterPasalXl: number };
 
 const toKeysWith = curry(toKeys);
 
-function toKeys(hasAmendPasal: boolean, acc: Acc, span: Span, idx: number, spans: Span[]): Acc {
+function toKeys(
+  hasAmendPasal: boolean,
+  acc: DocumentKeySpanIds,
+  span: Span,
+  idx: number,
+  spans: Span[]
+): DocumentKeySpanIds {
   const { babs, bagians, paragrafs, pasals, afterNonPasal } = acc;
 
   const newBabKey = babKeyOfSpan(span);
@@ -109,7 +120,7 @@ function toKeys(hasAmendPasal: boolean, acc: Acc, span: Span, idx: number, spans
   const newPasalKey = pasalKeyOfSpan(span);
   if (isUndefined(newAfterPasal) || isUndefined(newPasalKey)) return acc;
 
-  const newAcc: Acc = {
+  const newAcc: DocumentKeySpanIds = {
     ...acc,
     afterNonPasal: false,
     pasals: [...pasals, { key: newPasalKey, spanId: span.id, afterPasalXl: newAfterPasal.xL }],

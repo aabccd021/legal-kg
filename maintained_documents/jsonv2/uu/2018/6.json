@@ -1,5 +1,5 @@
 {
-  "bab": [
+  "babs": [
     {
       "key": 1,
       "spanId": 60
@@ -57,7 +57,7 @@
       "spanId": 1546
     }
   ],
-  "bagian": [
+  "bagians": [
     {
       "key": 1,
       "spanId": 450
@@ -131,7 +131,7 @@
       "spanId": 1374
     }
   ],
-  "paragraf": [
+  "paragrafs": [
     {
       "key": 1,
       "spanId": 452
@@ -157,7 +157,7 @@
       "spanId": 710
     }
   ],
-  "pasal": [
+  "pasals": [
     {
       "key": 1,
       "spanId": 62,
@@ -648,5 +648,6 @@
       "spanId": 1575,
       "afterPasalXl": 186.96
     }
-  ]
+  ],
+  "afterNonPasal": false
 }
