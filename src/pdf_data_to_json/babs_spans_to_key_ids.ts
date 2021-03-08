@@ -8,15 +8,15 @@ import {
 } from './parse_key_from_spans';
 
 export type BabKeySpanIds = {
-  babs: SpanKeyIdx[];
-  bagians: SpanKeyIdx[];
-  paragrafs: SpanKeyIdx[];
-  pasals: PasalSpanKeyIdx[];
+  babs: SpanKeyId[];
+  bagians: SpanKeyId[];
+  paragrafs: SpanKeyId[];
+  pasals: PasalSpanKeyId[];
   afterNonPasal: boolean;
 };
 
-type SpanKeyIdx = { key: number; spanId: number };
-type PasalSpanKeyIdx = SpanKeyIdx & { afterPasalXl: number };
+type SpanKeyId = { key: number; spanId: number };
+type PasalSpanKeyId = SpanKeyId & { afterPasalXl: number };
 
 export function babsSpansToKeyIds(spans: Span[]): BabKeySpanIds {
   const initialAcc: BabKeySpanIds = {
