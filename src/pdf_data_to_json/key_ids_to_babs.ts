@@ -25,14 +25,15 @@ function spansToBab(keySpanIds: BabKeySpanIds, keySpans: [string, Span[]]): Bab 
   const { bagianKeyOfId, pasalKeyOfId } = keySpanIds;
   const [key, spans] = keySpans;
   const spanIdKeyMap = spanIdKeyMapOf(bagianKeyOfId, pasalKeyOfId, spans);
-  const { preKeySpans, spansOfKey: _ } = spans.reduce(toSpansWith(spanIdKeyMap), initialSpans);
-  return {
-    _type: 'bab',
-    _key: parseInt(key),
-    _judul: preKeySpans.map(({ str }) => str).join(' '),
-    isi: [],
-    text: '',
-  };
+  const { preKeySpans, spansOfKey } = spans.reduce(toSpansWith(spanIdKeyMap), initialSpans);
+  const _judul = preKeySpans.map(({ str }) => str).join(' ');
+  const _key = parseInt(key);
+  const text = chain(spansOfKey)
+    .values()
+    .flatMap((span) => span.map(({ str }) => str))
+    .join('\n')
+    .value();
+  return { _type: 'bab', _key, _judul, isi: [], text };
 }
 
 function spanIdKeyMapOf(map1: SpanIdKeyMap, map2: SpanIdKeyMap, spans: Span[]): SpanIdKeyMap {
