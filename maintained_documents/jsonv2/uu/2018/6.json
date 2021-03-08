@@ -1,653 +1,251 @@
 {
-  "babs": [
-    {
-      "key": 1,
-      "spanId": 60
-    },
-    {
-      "key": 2,
-      "spanId": 277
-    },
-    {
-      "key": 3,
-      "spanId": 301
-    },
-    {
-      "key": 4,
-      "spanId": 319
-    },
-    {
-      "key": 5,
-      "spanId": 380
-    },
-    {
-      "key": 6,
-      "spanId": 447
-    },
-    {
-      "key": 7,
-      "spanId": 934
-    },
-    {
-      "key": 8,
-      "spanId": 1083
-    },
-    {
-      "key": 9,
-      "spanId": 1195
-    },
-    {
-      "key": 10,
-      "spanId": 1315
-    },
-    {
-      "key": 11,
-      "spanId": 1342
-    },
-    {
-      "key": 12,
-      "spanId": 1388
-    },
-    {
-      "key": 13,
-      "spanId": 1467
-    },
-    {
-      "key": 14,
-      "spanId": 1546
-    }
+  "babKeyOfid": {
+    "60": 1,
+    "277": 2,
+    "301": 3,
+    "319": 4,
+    "380": 5,
+    "447": 6,
+    "934": 7,
+    "1083": 8,
+    "1195": 9,
+    "1315": 10,
+    "1342": 11,
+    "1388": 12,
+    "1467": 13,
+    "1546": 14
+  },
+  "bagianKeyOfId": {
+    "450": 1,
+    "578": 2,
+    "664": 3,
+    "725": 4,
+    "839": 5,
+    "895": 6,
+    "936": 1,
+    "957": 2,
+    "988": 3,
+    "1025": 4,
+    "1057": 5,
+    "1197": 1,
+    "1206": 2,
+    "1230": 3,
+    "1284": 4,
+    "1297": 5,
+    "1344": 1,
+    "1374": 2
+  },
+  "paragrafKeyOfId": {
+    "452": 1,
+    "548": 2,
+    "580": 1,
+    "653": 2,
+    "666": 1,
+    "710": 2
+  },
+  "pasalKeyOfId": {
+    "62": 1,
+    "250": 2,
+    "264": 3,
+    "280": 4,
+    "287": 5,
+    "296": 6,
+    "303": 7,
+    "307": 8,
+    "312": 9,
+    "321": 10,
+    "336": 11,
+    "353": 12,
+    "359": 13,
+    "370": 14,
+    "383": 15,
+    "411": 16,
+    "429": 17,
+    "433": 18,
+    "454": 19,
+    "494": 20,
+    "502": 21,
+    "518": 22,
+    "531": 23,
+    "543": 24,
+    "550": 25,
+    "569": 26,
+    "582": 27,
+    "585": 28,
+    "601": 29,
+    "613": 30,
+    "640": 31,
+    "646": 32,
+    "655": 33,
+    "659": 34,
+    "668": 35,
+    "696": 36,
+    "712": 37,
+    "727": 38,
+    "749": 39,
+    "768": 40,
+    "774": 41,
+    "810": 42,
+    "830": 43,
+    "841": 44,
+    "848": 45,
+    "875": 46,
+    "890": 47,
+    "897": 48,
+    "938": 49,
+    "959": 50,
+    "970": 51,
+    "979": 52,
+    "990": 53,
+    "999": 54,
+    "1016": 55,
+    "1027": 56,
+    "1039": 57,
+    "1052": 58,
+    "1059": 59,
+    "1078": 60,
+    "1085": 61,
+    "1102": 62,
+    "1112": 63,
+    "1132": 64,
+    "1144": 65,
+    "1149": 66,
+    "1165": 67,
+    "1169": 68,
+    "1180": 69,
+    "1191": 70,
+    "1199": 71,
+    "1208": 72,
+    "1232": 73,
+    "1238": 74,
+    "1245": 75,
+    "1266": 76,
+    "1286": 77,
+    "1299": 78,
+    "1317": 79,
+    "1322": 80,
+    "1334": 81,
+    "1346": 82,
+    "1376": 83,
+    "1390": 84,
+    "1401": 85,
+    "1435": 86,
+    "1443": 87,
+    "1452": 88,
+    "1457": 89,
+    "1469": 90,
+    "1480": 91,
+    "1493": 92,
+    "1503": 93,
+    "1512": 94,
+    "1548": 95,
+    "1556": 96,
+    "1564": 97,
+    "1575": 98
+  },
+  "afterPasalXls": [
+    186.72,
+    184.8,
+    181.68,
+    183.36,
+    184.56,
+    183.84,
+    184.32,
+    184.32,
+    184.8,
+    183.84,
+    185.04,
+    183.6,
+    184.56,
+    184.8,
+    186,
+    184.08,
+    184.08,
+    184.32,
+    186.24,
+    185.52,
+    185.28,
+    187.44,
+    185.28,
+    186,
+    186.96,
+    185.52,
+    185.76,
+    185.76,
+    186.72,
+    187.2,
+    186.24,
+    186.72,
+    187.68,
+    187.44,
+    187.2,
+    188.64,
+    186.96,
+    188.4,
+    190.08,
+    185.52,
+    186.24,
+    186.48,
+    189.12,
+    187.44,
+    186.48,
+    187.92,
+    186.72,
+    186.72,
+    184.56,
+    184.32,
+    183.84,
+    186.48,
+    185.52,
+    184.8,
+    184.32,
+    185.04,
+    184.8,
+    184.08,
+    183.84,
+    178.8,
+    186.24,
+    185.04,
+    185.52,
+    186,
+    186.72,
+    187.2,
+    187.68,
+    188.4,
+    188.16,
+    188.16,
+    188.16,
+    187.44,
+    186.96,
+    186.48,
+    186.24,
+    186.96,
+    189.6,
+    189.6,
+    186.72,
+    187.44,
+    187.92,
+    186.96,
+    185.28,
+    187.68,
+    186.96,
+    186.24,
+    187.44,
+    187.68,
+    187.68,
+    187.44,
+    186.48,
+    186.48,
+    186.48,
+    185.76,
+    187.2,
+    187.44,
+    187.2,
+    186.96
   ],
-  "bagians": [
-    {
-      "key": 1,
-      "spanId": 450
-    },
-    {
-      "key": 2,
-      "spanId": 578
-    },
-    {
-      "key": 3,
-      "spanId": 664
-    },
-    {
-      "key": 4,
-      "spanId": 725
-    },
-    {
-      "key": 5,
-      "spanId": 839
-    },
-    {
-      "key": 6,
-      "spanId": 895
-    },
-    {
-      "key": 1,
-      "spanId": 936
-    },
-    {
-      "key": 2,
-      "spanId": 957
-    },
-    {
-      "key": 3,
-      "spanId": 988
-    },
-    {
-      "key": 4,
-      "spanId": 1025
-    },
-    {
-      "key": 5,
-      "spanId": 1057
-    },
-    {
-      "key": 1,
-      "spanId": 1197
-    },
-    {
-      "key": 2,
-      "spanId": 1206
-    },
-    {
-      "key": 3,
-      "spanId": 1230
-    },
-    {
-      "key": 4,
-      "spanId": 1284
-    },
-    {
-      "key": 5,
-      "spanId": 1297
-    },
-    {
-      "key": 1,
-      "spanId": 1344
-    },
-    {
-      "key": 2,
-      "spanId": 1374
-    }
-  ],
-  "paragrafs": [
-    {
-      "key": 1,
-      "spanId": 452
-    },
-    {
-      "key": 2,
-      "spanId": 548
-    },
-    {
-      "key": 1,
-      "spanId": 580
-    },
-    {
-      "key": 2,
-      "spanId": 653
-    },
-    {
-      "key": 1,
-      "spanId": 666
-    },
-    {
-      "key": 2,
-      "spanId": 710
-    }
-  ],
-  "pasals": [
-    {
-      "key": 1,
-      "spanId": 62,
-      "afterPasalXl": 186.72
-    },
-    {
-      "key": 2,
-      "spanId": 250,
-      "afterPasalXl": 184.8
-    },
-    {
-      "key": 3,
-      "spanId": 264,
-      "afterPasalXl": 181.68
-    },
-    {
-      "key": 4,
-      "spanId": 280,
-      "afterPasalXl": 183.36
-    },
-    {
-      "key": 5,
-      "spanId": 287,
-      "afterPasalXl": 184.56
-    },
-    {
-      "key": 6,
-      "spanId": 296,
-      "afterPasalXl": 183.84
-    },
-    {
-      "key": 7,
-      "spanId": 303,
-      "afterPasalXl": 184.32
-    },
-    {
-      "key": 8,
-      "spanId": 307,
-      "afterPasalXl": 184.32
-    },
-    {
-      "key": 9,
-      "spanId": 312,
-      "afterPasalXl": 184.8
-    },
-    {
-      "key": 10,
-      "spanId": 321,
-      "afterPasalXl": 183.84
-    },
-    {
-      "key": 11,
-      "spanId": 336,
-      "afterPasalXl": 185.04
-    },
-    {
-      "key": 12,
-      "spanId": 353,
-      "afterPasalXl": 183.6
-    },
-    {
-      "key": 13,
-      "spanId": 359,
-      "afterPasalXl": 184.56
-    },
-    {
-      "key": 14,
-      "spanId": 370,
-      "afterPasalXl": 184.8
-    },
-    {
-      "key": 15,
-      "spanId": 383,
-      "afterPasalXl": 186
-    },
-    {
-      "key": 16,
-      "spanId": 411,
-      "afterPasalXl": 184.08
-    },
-    {
-      "key": 17,
-      "spanId": 429,
-      "afterPasalXl": 184.08
-    },
-    {
-      "key": 18,
-      "spanId": 433,
-      "afterPasalXl": 184.32
-    },
-    {
-      "key": 19,
-      "spanId": 454,
-      "afterPasalXl": 186.24
-    },
-    {
-      "key": 20,
-      "spanId": 494,
-      "afterPasalXl": 185.52
-    },
-    {
-      "key": 21,
-      "spanId": 502,
-      "afterPasalXl": 185.28
-    },
-    {
-      "key": 22,
-      "spanId": 518,
-      "afterPasalXl": 187.44
-    },
-    {
-      "key": 23,
-      "spanId": 531,
-      "afterPasalXl": 185.28
-    },
-    {
-      "key": 24,
-      "spanId": 543,
-      "afterPasalXl": 186
-    },
-    {
-      "key": 25,
-      "spanId": 550,
-      "afterPasalXl": 186.96
-    },
-    {
-      "key": 26,
-      "spanId": 569,
-      "afterPasalXl": 185.52
-    },
-    {
-      "key": 27,
-      "spanId": 582,
-      "afterPasalXl": 185.76
-    },
-    {
-      "key": 28,
-      "spanId": 585,
-      "afterPasalXl": 185.76
-    },
-    {
-      "key": 29,
-      "spanId": 601,
-      "afterPasalXl": 186.72
-    },
-    {
-      "key": 30,
-      "spanId": 613,
-      "afterPasalXl": 187.2
-    },
-    {
-      "key": 31,
-      "spanId": 640,
-      "afterPasalXl": 186.24
-    },
-    {
-      "key": 32,
-      "spanId": 646,
-      "afterPasalXl": 186.72
-    },
-    {
-      "key": 33,
-      "spanId": 655,
-      "afterPasalXl": 187.68
-    },
-    {
-      "key": 34,
-      "spanId": 659,
-      "afterPasalXl": 187.44
-    },
-    {
-      "key": 35,
-      "spanId": 668,
-      "afterPasalXl": 187.2
-    },
-    {
-      "key": 36,
-      "spanId": 696,
-      "afterPasalXl": 188.64
-    },
-    {
-      "key": 37,
-      "spanId": 712,
-      "afterPasalXl": 186.96
-    },
-    {
-      "key": 38,
-      "spanId": 727,
-      "afterPasalXl": 188.4
-    },
-    {
-      "key": 39,
-      "spanId": 749,
-      "afterPasalXl": 190.08
-    },
-    {
-      "key": 40,
-      "spanId": 768,
-      "afterPasalXl": 185.52
-    },
-    {
-      "key": 41,
-      "spanId": 774,
-      "afterPasalXl": 186.24
-    },
-    {
-      "key": 42,
-      "spanId": 810,
-      "afterPasalXl": 186.48
-    },
-    {
-      "key": 43,
-      "spanId": 830,
-      "afterPasalXl": 189.12
-    },
-    {
-      "key": 44,
-      "spanId": 841,
-      "afterPasalXl": 187.44
-    },
-    {
-      "key": 45,
-      "spanId": 848,
-      "afterPasalXl": 186.48
-    },
-    {
-      "key": 46,
-      "spanId": 875,
-      "afterPasalXl": 187.92
-    },
-    {
-      "key": 47,
-      "spanId": 890,
-      "afterPasalXl": 186.72
-    },
-    {
-      "key": 48,
-      "spanId": 897,
-      "afterPasalXl": 186.72
-    },
-    {
-      "key": 49,
-      "spanId": 938,
-      "afterPasalXl": 184.56
-    },
-    {
-      "key": 50,
-      "spanId": 959,
-      "afterPasalXl": 184.32
-    },
-    {
-      "key": 51,
-      "spanId": 970,
-      "afterPasalXl": 183.84
-    },
-    {
-      "key": 52,
-      "spanId": 979,
-      "afterPasalXl": 186.48
-    },
-    {
-      "key": 53,
-      "spanId": 990,
-      "afterPasalXl": 185.52
-    },
-    {
-      "key": 54,
-      "spanId": 999,
-      "afterPasalXl": 184.8
-    },
-    {
-      "key": 55,
-      "spanId": 1016,
-      "afterPasalXl": 184.32
-    },
-    {
-      "key": 56,
-      "spanId": 1027,
-      "afterPasalXl": 185.04
-    },
-    {
-      "key": 57,
-      "spanId": 1039,
-      "afterPasalXl": 184.8
-    },
-    {
-      "key": 58,
-      "spanId": 1052,
-      "afterPasalXl": 184.08
-    },
-    {
-      "key": 59,
-      "spanId": 1059,
-      "afterPasalXl": 183.84
-    },
-    {
-      "key": 60,
-      "spanId": 1078,
-      "afterPasalXl": 178.8
-    },
-    {
-      "key": 61,
-      "spanId": 1085,
-      "afterPasalXl": 186.24
-    },
-    {
-      "key": 62,
-      "spanId": 1102,
-      "afterPasalXl": 185.04
-    },
-    {
-      "key": 63,
-      "spanId": 1112,
-      "afterPasalXl": 185.52
-    },
-    {
-      "key": 64,
-      "spanId": 1132,
-      "afterPasalXl": 186
-    },
-    {
-      "key": 65,
-      "spanId": 1144,
-      "afterPasalXl": 186.72
-    },
-    {
-      "key": 66,
-      "spanId": 1149,
-      "afterPasalXl": 187.2
-    },
-    {
-      "key": 67,
-      "spanId": 1165,
-      "afterPasalXl": 187.68
-    },
-    {
-      "key": 68,
-      "spanId": 1169,
-      "afterPasalXl": 188.4
-    },
-    {
-      "key": 69,
-      "spanId": 1180,
-      "afterPasalXl": 188.16
-    },
-    {
-      "key": 70,
-      "spanId": 1191,
-      "afterPasalXl": 188.16
-    },
-    {
-      "key": 71,
-      "spanId": 1199,
-      "afterPasalXl": 188.16
-    },
-    {
-      "key": 72,
-      "spanId": 1208,
-      "afterPasalXl": 187.44
-    },
-    {
-      "key": 73,
-      "spanId": 1232,
-      "afterPasalXl": 186.96
-    },
-    {
-      "key": 74,
-      "spanId": 1238,
-      "afterPasalXl": 186.48
-    },
-    {
-      "key": 75,
-      "spanId": 1245,
-      "afterPasalXl": 186.24
-    },
-    {
-      "key": 76,
-      "spanId": 1266,
-      "afterPasalXl": 186.96
-    },
-    {
-      "key": 77,
-      "spanId": 1286,
-      "afterPasalXl": 189.6
-    },
-    {
-      "key": 78,
-      "spanId": 1299,
-      "afterPasalXl": 189.6
-    },
-    {
-      "key": 79,
-      "spanId": 1317,
-      "afterPasalXl": 186.72
-    },
-    {
-      "key": 80,
-      "spanId": 1322,
-      "afterPasalXl": 187.44
-    },
-    {
-      "key": 81,
-      "spanId": 1334,
-      "afterPasalXl": 187.92
-    },
-    {
-      "key": 82,
-      "spanId": 1346,
-      "afterPasalXl": 186.96
-    },
-    {
-      "key": 83,
-      "spanId": 1376,
-      "afterPasalXl": 185.28
-    },
-    {
-      "key": 84,
-      "spanId": 1390,
-      "afterPasalXl": 187.68
-    },
-    {
-      "key": 85,
-      "spanId": 1401,
-      "afterPasalXl": 186.96
-    },
-    {
-      "key": 86,
-      "spanId": 1435,
-      "afterPasalXl": 186.24
-    },
-    {
-      "key": 87,
-      "spanId": 1443,
-      "afterPasalXl": 187.44
-    },
-    {
-      "key": 88,
-      "spanId": 1452,
-      "afterPasalXl": 187.68
-    },
-    {
-      "key": 89,
-      "spanId": 1457,
-      "afterPasalXl": 187.68
-    },
-    {
-      "key": 90,
-      "spanId": 1469,
-      "afterPasalXl": 187.44
-    },
-    {
-      "key": 91,
-      "spanId": 1480,
-      "afterPasalXl": 186.48
-    },
-    {
-      "key": 92,
-      "spanId": 1493,
-      "afterPasalXl": 186.48
-    },
-    {
-      "key": 93,
-      "spanId": 1503,
-      "afterPasalXl": 186.48
-    },
-    {
-      "key": 94,
-      "spanId": 1512,
-      "afterPasalXl": 185.76
-    },
-    {
-      "key": 95,
-      "spanId": 1548,
-      "afterPasalXl": 187.2
-    },
-    {
-      "key": 96,
-      "spanId": 1556,
-      "afterPasalXl": 187.44
-    },
-    {
-      "key": 97,
-      "spanId": 1564,
-      "afterPasalXl": 187.2
-    },
-    {
-      "key": 98,
-      "spanId": 1575,
-      "afterPasalXl": 186.96
-    }
-  ],
-  "afterNonPasal": false
+  "afterNonPasal": false,
+  "lastBabKey": 14,
+  "lastPasalKey": 98,
+  "lastBagianKey": 2,
+  "lastParagrafKey": 2
 }

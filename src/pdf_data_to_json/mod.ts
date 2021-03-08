@@ -3,7 +3,7 @@ import { DocumentNode } from '../legal/document/index';
 import { getDocumentData, getDocumentFilePath } from '../data';
 import { readFileSync, writeFileSync } from 'fs';
 import { Accumulator, Span, toSpansWith } from '../util';
-import { babsSpansToKeyIds } from './babs_spans_to_key_ids';
+import { babsSpansToKeyIds as keyIdsOfBabSpans } from './babs_spans_to_key_ids';
 
 function pdfDataToJson(): void {
   getDocumentData('pdf-data').forEach(writeToJson);
@@ -15,8 +15,9 @@ function writeToJson(pdfNode: DocumentNode): void {
   const dataFile = getDocumentFilePath(pdfNode, 'pdf-data');
   const jsonFile = getDocumentFilePath(pdfNode, 'jsonv2');
   const pdfSpans: Span[] = JSON.parse(readFileSync(dataFile.path).toString());
-  const spans = documentSpansOf(pdfSpans);
-  const babKeyIds = babsSpansToKeyIds(spans.babs);
+  const documentSpans = documentSpansOf(pdfSpans);
+  const babKeyIds = keyIdsOfBabSpans(documentSpans.babs);
+  // const babs = babsOfKeyIds(babKeyIds, documentSpans.babs);
   writeFileSync(jsonFile.path, JSON.stringify(babKeyIds, undefined, 2));
 }
 
