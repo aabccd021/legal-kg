@@ -52,3 +52,7 @@ function toSpans<T extends string>(
   const newSpans = { ...spans, [newFlag]: newSpan };
   return { ...acc, flag: newFlag, spans: newSpans };
 }
+
+export function lastOf<T>(arr: T[]): T | undefined {
+  return arr.slice(-1)[0];
+}

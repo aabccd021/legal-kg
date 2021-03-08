@@ -1,8 +1,8 @@
-import { chain, curry, isUndefined, mean } from 'lodash';
+import { chain, curry, isUndefined, mean, isEmpty } from 'lodash';
 import { DocumentNode } from '../legal/document/index';
 import { getDocumentData, getDocumentFilePath } from '../data';
 import { readFileSync, writeFileSync } from 'fs';
-import { Accumulator, Span, toSpansWith } from '../util';
+import { Accumulator, lastOf, Span, toSpansWith } from '../util';
 import {
   babKeyOfSpan,
   bagianKeyOfSpan,
@@ -25,7 +25,7 @@ function writeToJson(pdfNode: DocumentNode): void {
     flag: 'preBab',
   });
   const babsSpans = rawJson.spans.babs ?? [];
-  const { bab, bagian, paragraf, pasal } = getKeys(babsSpans);
+  const { babs: bab, bagians: bagian, paragrafs: paragraf, pasals: pasal } = getKeys(babsSpans);
 
   writeFileSync(jsonFile.path, JSON.stringify({ bab, bagian, paragraf, pasal }, undefined, 2));
 }
@@ -45,74 +45,95 @@ function isPenjelasanSpansStart(span: Span): boolean {
   return span.str.replaceAll('', '') === 'PENJELASAN';
 }
 type Acc = {
-  bab: number;
-  bagian: number;
-  paragraf: number;
-  pasal?: number;
-  pasalXls: number[];
+  babs: SpanKeyIdx[];
+  bagians: SpanKeyIdx[];
+  paragrafs: SpanKeyIdx[];
+  pasals: PasalSpanKeyIdx[];
   afterNonPasal: boolean;
 };
 
 function getKeys(spans: Span[]): Acc {
   const initialAcc: Acc = {
-    bab: 0,
-    bagian: 0,
-    paragraf: 0,
-    pasalXls: [],
+    babs: [],
+    bagians: [],
+    paragrafs: [],
+    pasals: [],
     afterNonPasal: false,
   };
   const hasAmendPasal = spansHasAmendPasal(spans);
   return spans.reduce(toKeysWith(hasAmendPasal), initialAcc);
 }
 
+type SpanKeyIdx = { key: number; spanId: number };
+type PasalSpanKeyIdx = SpanKeyIdx & { afterPasalXl: number };
+
 const toKeysWith = curry(toKeys);
 
 function toKeys(hasAmendPasal: boolean, acc: Acc, span: Span, idx: number, spans: Span[]): Acc {
-  const { bab, bagian, paragraf, pasal, afterNonPasal, pasalXls } = acc;
+  const { babs, bagians, paragrafs, pasals, afterNonPasal } = acc;
 
   const newBabKey = babKeyOfSpan(span);
-  if (newBabKey === bab + 1) return { ...acc, bab: newBabKey, afterNonPasal: true };
+  if (!isUndefined(newBabKey)) {
+    if ((newBabKey === 1 && isEmpty(babs)) || newBabKey - 1 === lastOf(babs)?.key) {
+      return {
+        ...acc,
+        afterNonPasal: true,
+        babs: [...babs, { key: newBabKey, spanId: span.id }],
+      };
+    }
+  }
 
   const newBagianKey = bagianKeyOfSpan(span);
-  if (newBagianKey === bagian + 1 || newBagianKey === 1)
-    return { ...acc, bagian: newBagianKey, afterNonPasal: true };
+  if (!isUndefined(newBagianKey)) {
+    if (newBagianKey === 1 || newBagianKey - 1 === lastOf(bagians)?.key) {
+      return {
+        ...acc,
+        afterNonPasal: true,
+        bagians: [...bagians, { key: newBagianKey, spanId: span.id }],
+      };
+    }
+  }
 
   const newParagrafKey = paragrafKeyOfSpan(span);
-  if (newParagrafKey === paragraf + 1 || newParagrafKey === 1) {
-    return { ...acc, paragraf: newParagrafKey, afterNonPasal: true };
+  if (!isUndefined(newParagrafKey)) {
+    if (newParagrafKey === 1 || newParagrafKey - 1 === lastOf(paragrafs)?.key) {
+      return {
+        ...acc,
+        paragrafs: [...paragrafs, { key: newParagrafKey, spanId: span.id }],
+        afterNonPasal: true,
+      };
+    }
   }
 
   const newAfterPasal = spans[idx + 1];
-  if (isUndefined(newAfterPasal)) return acc;
   const newPasalKey = pasalKeyOfSpan(span);
+  if (isUndefined(newAfterPasal) || isUndefined(newPasalKey)) return acc;
 
-  if (isUndefined(pasal)) {
-    if (newPasalKey === 1) {
-      return {
-        ...acc,
-        pasal: newPasalKey,
-        afterNonPasal: false,
-        pasalXls: [...pasalXls, newAfterPasal.xL],
-      };
-    }
-  } else if (newPasalKey === pasal + 1) {
-    const newAcc: Acc = {
-      ...acc,
-      pasal: newPasalKey,
-      afterNonPasal: false,
-      pasalXls: [...pasalXls, newAfterPasal.xL],
-    };
-    if (!hasAmendPasal || afterNonPasal || newAfterPasal.str.startsWith('Beberapa ketentuan')) {
+  const newAcc: Acc = {
+    ...acc,
+    afterNonPasal: false,
+    pasals: [...pasals, { key: newPasalKey, spanId: span.id, afterPasalXl: newAfterPasal.xL }],
+  };
+
+  if (newPasalKey === 1 && isEmpty(pasals)) return newAcc;
+  const lastPasal = lastOf(pasals);
+  if (newPasalKey - 1 === lastPasal?.key) {
+    if (
+      !hasAmendPasal ||
+      afterNonPasal ||
+      newAfterPasal.str.startsWith('Beberapa ketentuan') ||
+      Math.abs(newAfterPasal.xL - mean(pasals.map(({ afterPasalXl }) => afterPasalXl)))
+    ) {
       return newAcc;
     }
-    const delta = Math.abs(newAfterPasal.xL - mean(pasalXls));
-    if (delta < 13) return newAcc;
-    const lastPasalXl = pasalXls.slice(-1)[0];
-    if (!isUndefined(lastPasalXl) && Math.abs(newAfterPasal.xL - lastPasalXl) < 1) {
+
+    if (
+      !isUndefined(lastPasal.afterPasalXl) &&
+      Math.abs(newAfterPasal.xL - lastPasal.afterPasalXl) < 1
+    ) {
       console.log(`===IRREGULAR_PASAL ${newPasalKey}===`);
       console.log('span:', span);
       console.log('afterPasal:', newAfterPasal);
-      console.log('delta:', delta);
       console.log('===\n');
       return newAcc;
     }
