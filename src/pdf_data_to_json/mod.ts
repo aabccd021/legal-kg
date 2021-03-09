@@ -29,8 +29,7 @@ function documentSpansOf(spans: Span[]): SpanOf<DocumentExtractedKey> {
     spans: { babs: [], preBab: [], penjelasan: [] },
     flag: 'preBab',
   };
-  return spans.reduce<Accumulator<DocumentExtractedKey>>(toSpansWith(reduceFlag), initialExtraction)
-    .spans;
+  return spans.reduce(toSpansWith(reduceFlag), initialExtraction).spans;
 }
 
 function reduceFlag(oldFlag: DocumentExtractedKey, span: Span): DocumentExtractedKey {
