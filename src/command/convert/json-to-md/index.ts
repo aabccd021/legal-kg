@@ -160,19 +160,19 @@ function paragrafToMd(paragraf: Paragraf, parentBagian: BagianNode): string {
 }
 
 function pasalToMd(pasal: Pasal, pasalParent: PasalParentNode): string {
-  const { _key, isi, text } = pasal;
+  const { _key, isi } = pasal;
   const parentDocument = getPasalParentDocument(pasalParent);
   const pasalNode: PasalNode = { _key, parentDocument, _structureType: 'pasal' };
-  const isiStr: string = !isNil(isi) ? pasalContentToMd(isi, pasalNode) : referenceToMd(text);
+  const isiStr: string = pasalContentToMd(isi, pasalNode);
   const uri = getLegalUri(pasalNode);
 
   return `\n### [Pasal ${_key}](${uri})\n${isiStr}\n`;
 }
 
-function pasalContentToMd(isi: Points | Ayat[], pasalNode: PasalNode): string {
+function pasalContentToMd(isi: Points | Ayat[] | ReferenceText, pasalNode: PasalNode): string {
   if (isArray(isi) && isAyats(isi)) return isi.map((a) => ayatToMd(a, pasalNode)).join('\n');
-
-  return pointsToMd(isi, pasalNode);
+  if (isi._type === 'points') return pointsToMd(isi, pasalNode);
+  return referenceToMd(isi);
 }
 
 function ayatToMd(ayat: Ayat, parentPasal: PasalNode): string {

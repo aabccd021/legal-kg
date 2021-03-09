@@ -38,8 +38,7 @@ export function getPasalParentDocument(parent: PasalParentNode): DocumentNode {
 export type Pasal = {
   _type: 'pasal';
   _key: number;
-  isi?: Ayat[] | Points;
-  text: ReferenceText;
+  isi: Ayat[] | Points | ReferenceText;
 };
 export function isPasals(isi: Bagian[] | Pasal[] | Paragraf[]): isi is Pasal[] {
   return isi?.[0]?._type === 'pasal';

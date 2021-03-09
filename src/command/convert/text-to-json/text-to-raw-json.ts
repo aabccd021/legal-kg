@@ -241,37 +241,36 @@ const amendPasalRegex = /^Beberapa ketentuan dalam Undang-Undang/;
 function _linesToPasal(incLines: IncLines): Pasal {
   const { _key, lines } = incLines;
   const isiLines = lines.slice(1);
-  const text = stringToEmptyReference(isiLines.join(' '));
-  const isi = getAmendPoints(isiLines) ?? getAyats(isiLines) ?? getPoints(isiLines);
-
-  return { _type: 'pasal', _key, isi, text };
+  const isi =
+    getAyats(isiLines) ?? getPoints(isiLines) ?? stringToEmptyReference(isiLines.join(' '));
+  return { _type: 'pasal', _key, isi };
 }
 
-function getAmendPoints(lines: string[]): Points | undefined {
-  if (!amendPasalRegex.test(lines.join(' '))) return undefined;
-  return chain(lines)
-    .reduce<AmendDescAcc>(
-      (prev, line) => {
-        const descLines = prev.isDone ? prev.descLines : [...prev.descLines, line];
-        const isiLines = prev.isDone ? [...prev.isiLines, line] : prev.isiLines;
-        const isDone = prev.isDone
-          ? true
-          : /sebagai berikut/.test(`${prev.descLines.slice(-1)[0]} ${line}`);
-        return { descLines, isiLines, isDone };
-      },
-      { descLines: [], isiLines: [], isDone: false }
-    )
-    .thru(({ descLines, isiLines }) =>
-      _getPoints('numPoint', isiLines, descLines.join(' '), () => true)
-    )
-    .value();
-}
+// function getAmendPoints(lines: string[]): Points | undefined {
+//   if (!amendPasalRegex.test(lines.join(' '))) return undefined;
+//   return chain(lines)
+//     .reduce<AmendDescAcc>(
+//       (prev, line) => {
+//         const descLines = prev.isDone ? prev.descLines : [...prev.descLines, line];
+//         const isiLines = prev.isDone ? [...prev.isiLines, line] : prev.isiLines;
+//         const isDone = prev.isDone
+//           ? true
+//           : /sebagai berikut/.test(`${prev.descLines.slice(-1)[0]} ${line}`);
+//         return { descLines, isiLines, isDone };
+//       },
+//       { descLines: [], isiLines: [], isDone: false }
+//     )
+//     .thru(({ descLines, isiLines }) =>
+//       _getPoints('numPoint', isiLines, descLines.join(' '), () => true)
+//     )
+//     .value();
+// }
 
-type AmendDescAcc = {
-  descLines: string[];
-  isiLines: string[];
-  isDone: boolean;
-};
+// type AmendDescAcc = {
+//   descLines: string[];
+//   isiLines: string[];
+//   isDone: boolean;
+// };
 
 /**
  * Ayat

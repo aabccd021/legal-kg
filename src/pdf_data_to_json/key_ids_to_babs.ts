@@ -76,7 +76,7 @@ function spansToPasal(_: KeyIds, keySpans: [string, Span[]]): Pasal {
     .join(' ')
     .thru(stringToEmptyReference)
     .value();
-  return { _type: 'pasal', _key, isi: [], text };
+  return { _type: 'pasal', _key, isi: text };
 }
 
 function stringToEmptyReference(text: string): ReferenceText {
