@@ -3,6 +3,7 @@ import { lastOf, Span } from '../util';
 import {
   babKeyOfSpan,
   bagianKeyOfSpan,
+  nomorKeyOfSpan,
   paragrafKeyOfSpan,
   pasalKeyOfSpan,
 } from './parse_key_from_spans';
@@ -15,7 +16,10 @@ export type KeyIds = {
   paragrafKeyOfId: SpanIdKeyMap;
   lastParagrafKey?: number;
   pasalKeyOfId: SpanIdKeyMap;
+  amendPasalKeyOfId: SpanIdKeyMap;
   lastPasalKey?: number;
+  nomorKeyOfId: SpanIdKeyMap;
+  lastNomorKey?: number;
   afterPasalXls: number[];
   afterNonPasal: boolean;
 };
@@ -28,6 +32,8 @@ export function babsSpansToKeyIds(spans: Span[]): KeyIds {
     bagianKeyOfId: {},
     paragrafKeyOfId: {},
     pasalKeyOfId: {},
+    amendPasalKeyOfId: {},
+    nomorKeyOfId: {},
     afterPasalXls: [],
     afterNonPasal: false,
   };
@@ -49,12 +55,15 @@ function toKeys(
     bagianKeyOfId,
     paragrafKeyOfId,
     pasalKeyOfId,
+    amendPasalKeyOfId,
+    nomorKeyOfId,
     afterNonPasal,
     afterPasalXls,
     lastBabKey,
     lastBagianKey,
     lastParagrafKey,
     lastPasalKey,
+    lastNomorKey,
   } = acc;
 
   const newBabKey = babKeyOfSpan(span);
@@ -96,40 +105,60 @@ function toKeys(
 
   const newAfterPasal = spans[idx + 1];
   const newPasalKey = pasalKeyOfSpan(span);
-  if (isUndefined(newAfterPasal) || isUndefined(newPasalKey)) return acc;
+  if (!isUndefined(newAfterPasal) && !isUndefined(newPasalKey)) {
+    const newAcc: KeyIds = {
+      ...acc,
+      afterNonPasal: false,
+      pasalKeyOfId: { ...pasalKeyOfId, [span.id]: newPasalKey },
+      afterPasalXls: [...afterPasalXls, newAfterPasal.xL],
+      lastPasalKey: newPasalKey,
+    };
 
-  const newAcc: KeyIds = {
-    ...acc,
-    afterNonPasal: false,
-    pasalKeyOfId: { ...pasalKeyOfId, [span.id]: newPasalKey },
-    afterPasalXls: [...afterPasalXls, newAfterPasal.xL],
-    lastPasalKey: newPasalKey,
-  };
+    if (isUndefined(lastPasalKey)) {
+      if (newPasalKey === 1) return newAcc;
+      throw Error('Impossible');
+    } else {
+      if (newPasalKey === lastPasalKey + 1) {
+        if (
+          !hasAmendPasal ||
+          afterNonPasal ||
+          newAfterPasal.str.startsWith('Beberapa ketentuan') ||
+          Math.abs(newAfterPasal.xL - mean(afterPasalXls)) < 13
+        ) {
+          return newAcc;
+        }
 
-  if (isUndefined(lastPasalKey)) {
-    if (newPasalKey === 1) return newAcc;
-    throw Error('Impossible');
-  } else {
-    if (newPasalKey === lastPasalKey + 1) {
-      if (
-        !hasAmendPasal ||
-        afterNonPasal ||
-        newAfterPasal.str.startsWith('Beberapa ketentuan') ||
-        Math.abs(newAfterPasal.xL - mean(afterPasalXls)) < 13
-      ) {
-        return newAcc;
+        const lastAfterPasalXl = lastOf(afterPasalXls);
+        if (!isUndefined(lastAfterPasalXl) && Math.abs(newAfterPasal.xL - lastAfterPasalXl) < 1) {
+          console.log(`===IRREGULAR_PASAL ${newPasalKey}===`);
+          console.log('span:', span);
+          console.log('afterPasal:', newAfterPasal);
+          console.log('===\n');
+          return newAcc;
+        }
       }
-
-      const lastAfterPasalXl = lastOf(afterPasalXls);
-      if (!isUndefined(lastAfterPasalXl) && Math.abs(newAfterPasal.xL - lastAfterPasalXl) < 1) {
-        console.log(`===IRREGULAR_PASAL ${newPasalKey}===`);
-        console.log('span:', span);
-        console.log('afterPasal:', newAfterPasal);
-        console.log('===\n');
-        return newAcc;
-      }
+      return {
+        ...acc,
+        afterNonPasal: false,
+        amendPasalKeyOfId: { ...amendPasalKeyOfId, [span.id]: newPasalKey },
+      };
     }
   }
+
+  const newNomorKey = nomorKeyOfSpan(span);
+  if (
+    !isUndefined(newNomorKey) &&
+    (newNomorKey === 1 || newNomorKey - 1 === lastNomorKey) &&
+    Math.abs(span.xL - mean(afterPasalXls)) < 13
+  ) {
+    return {
+      ...acc,
+      afterNonPasal: true,
+      nomorKeyOfId: { ...nomorKeyOfId, [span.id]: newNomorKey },
+      lastNomorKey: newNomorKey,
+    };
+  }
+
   return acc;
 }
 

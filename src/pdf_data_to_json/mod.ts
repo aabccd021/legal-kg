@@ -4,7 +4,6 @@ import { getDocumentData, getDocumentFilePath } from '../data';
 import { readFileSync, writeFileSync } from 'fs';
 import { Accumulator, Span, toSpansWith } from '../util';
 import { babsSpansToKeyIds as keyIdsOfBabSpans } from './babs_spans_to_key_ids';
-import { babsOfKeyIds } from './key_ids_to_babs';
 
 function pdfDataToJson(): void {
   getDocumentData('pdf-data').forEach(writeToJson);
@@ -18,8 +17,9 @@ function writeToJson(pdfNode: DocumentNode): void {
   const pdfSpans: Span[] = JSON.parse(readFileSync(dataFile.path).toString());
   const documentSpans = documentSpansOf(pdfSpans);
   const babKeyIds = keyIdsOfBabSpans(documentSpans.babs);
-  const babs = babsOfKeyIds(babKeyIds, documentSpans.babs);
-  writeFileSync(jsonFile.path, JSON.stringify(babs, undefined, 2));
+  writeFileSync(jsonFile.path, JSON.stringify(babKeyIds, undefined, 2));
+  // const babs = babsOfKeyIds(babKeyIds, documentSpans.babs);
+  // writeFileSync(jsonFile.path, JSON.stringify(babs, undefined, 2));
 }
 
 type DocumentExtractedKey = 'preBab' | 'babs' | 'penjelasan';

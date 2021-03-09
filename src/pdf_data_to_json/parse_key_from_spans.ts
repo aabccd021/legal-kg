@@ -2,6 +2,12 @@ import { isUndefined } from 'lodash';
 import { toArabic } from 'roman-numerals';
 import { Span } from '../util';
 
+export function nomorKeyOfSpan(span: Span): number | undefined {
+  const { str } = span;
+  const numberStr = str?.match(/^[0-9]+./)?.[0]?.match(/^[0-9]+/)?.[0];
+  return safeParseInt(numberStr);
+}
+
 export function pasalKeyOfSpan(span: Span): number | undefined {
   const { str } = span;
   if (/^Pasal!? ?/.test(str)) return safeParseInt(str.replace(/^Pasal!? ?/, ''));
