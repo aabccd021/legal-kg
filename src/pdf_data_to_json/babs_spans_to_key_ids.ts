@@ -1,4 +1,4 @@
-import { curry, mean, chain, isUndefined } from 'lodash';
+import { curry, mean, isUndefined } from 'lodash';
 import { lastOf, Span } from '../util';
 import {
   babKeyOfSpan,
@@ -26,7 +26,7 @@ export type KeyIds = {
 
 export type SpanIdKeyMap = { [id: number]: number };
 
-export function babsSpansToKeyIds(spans: Span[]): KeyIds {
+export function babsSpansToKeyIds(hasAmendPasal: boolean, spans: Span[]): KeyIds {
   const initialAcc: KeyIds = {
     babKeyOfid: {},
     bagianKeyOfId: {},
@@ -37,7 +37,6 @@ export function babsSpansToKeyIds(spans: Span[]): KeyIds {
     afterPasalXls: [],
     afterNonPasal: false,
   };
-  const hasAmendPasal = spansHasAmendPasal(spans);
   return spans.reduce(toKeysWith(hasAmendPasal), initialAcc);
 }
 
@@ -160,23 +159,4 @@ function toKeys(
   }
 
   return acc;
-}
-
-function spansHasAmendPasal(spans: Span[]): boolean {
-  return chain(spans)
-    .reduce<number[]>((xls, span, idx, spans) => {
-      if (isUndefined(pasalKeyOfSpan(span))) return xls;
-      const afterPasal = spans[idx + 1];
-      if (isUndefined(afterPasal)) return xls;
-      return [...xls, afterPasal.xL];
-    }, [])
-    .thru(getStandardDeviation)
-    .thru((std) => std > 6)
-    .value();
-}
-
-function getStandardDeviation(array: number[]): number {
-  const n = array.length;
-  const mean = array.reduce((a, b) => a + b) / n;
-  return Math.sqrt(array.map((x) => Math.pow(x - mean, 2)).reduce((a, b) => a + b) / n);
 }

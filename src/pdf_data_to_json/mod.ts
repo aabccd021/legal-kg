@@ -4,6 +4,9 @@ import { getDocumentData, getDocumentFilePath } from '../data';
 import { readFileSync, writeFileSync } from 'fs';
 import { Accumulator, Span, toSpansWith } from '../util';
 import { babsSpansToKeyIds as keyIdsOfBabSpans } from './babs_spans_to_key_ids';
+import { babsOfKeyIds } from './key_ids_to_babs';
+import { chain, isUndefined } from 'lodash';
+import { pasalKeyOfSpan } from './parse_key_from_spans';
 
 function pdfDataToJson(): void {
   getDocumentData('pdf-data').forEach(writeToJson);
@@ -16,10 +19,10 @@ function writeToJson(pdfNode: DocumentNode): void {
   const jsonFile = getDocumentFilePath(pdfNode, 'jsonv2');
   const pdfSpans: Span[] = JSON.parse(readFileSync(dataFile.path).toString());
   const documentSpans = documentSpansOf(pdfSpans);
-  const babKeyIds = keyIdsOfBabSpans(documentSpans.babs);
-  writeFileSync(jsonFile.path, JSON.stringify(babKeyIds, undefined, 2));
-  // const babs = babsOfKeyIds(babKeyIds, documentSpans.babs);
-  // writeFileSync(jsonFile.path, JSON.stringify(babs, undefined, 2));
+  const hasAmendPasal = spansHasAmendPasal(documentSpans.babs);
+  const babKeyIds = keyIdsOfBabSpans(hasAmendPasal, documentSpans.babs);
+  const babs = babsOfKeyIds({ hasAmendPasal, keyIds: babKeyIds }, documentSpans.babs);
+  writeFileSync(jsonFile.path, JSON.stringify(babs, undefined, 2));
 }
 
 type DocumentExtractedKey = 'preBab' | 'babs' | 'penjelasan';
@@ -43,6 +46,25 @@ function isBabSpansStart(span: Span): boolean {
 }
 function isPenjelasanSpansStart(span: Span): boolean {
   return span.str.replaceAll('', '') === 'PENJELASAN';
+}
+
+function spansHasAmendPasal(spans: Span[]): boolean {
+  return chain(spans)
+    .reduce<number[]>((xls, span, idx, spans) => {
+      if (isUndefined(pasalKeyOfSpan(span))) return xls;
+      const afterPasal = spans[idx + 1];
+      if (isUndefined(afterPasal)) return xls;
+      return [...xls, afterPasal.xL];
+    }, [])
+    .thru(getStandardDeviation)
+    .thru((std) => std > 6)
+    .value();
+}
+
+function getStandardDeviation(array: number[]): number {
+  const n = array.length;
+  const mean = array.reduce((a, b) => a + b) / n;
+  return Math.sqrt(array.map((x) => Math.pow(x - mean, 2)).reduce((a, b) => a + b) / n);
 }
 
 pdfDataToJson();

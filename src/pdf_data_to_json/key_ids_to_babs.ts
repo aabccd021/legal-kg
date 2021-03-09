@@ -8,24 +8,29 @@ import { Span } from '../util';
 import { KeyIds } from './babs_spans_to_key_ids';
 import { spanIdKeyMapOf, toSpansWith } from './util';
 
-export function babsOfKeyIds(spanKeyIds: KeyIds, spans: Span[]): Bab[] {
+export type Context = {
+  hasAmendPasal: boolean;
+  keyIds: KeyIds;
+};
+
+export function babsOfKeyIds(context: Context, spans: Span[]): Bab[] {
   return chain(spans)
-    .thru(toSpansWith(spanKeyIds.babKeyOfid))
+    .thru(toSpansWith(context.keyIds.babKeyOfid))
     .thru(({ spansOfKey }) => spansOfKey)
     .toPairs()
-    .map(spansToBabWith(spanKeyIds))
+    .map(spansToBabWith(context))
     .value();
 }
 
 const spansToBabWith = curry(spansToBab);
-function spansToBab(keyIds: KeyIds, keySpans: [string, Span[]]): Bab {
-  const { bagianKeyOfId, pasalKeyOfId } = keyIds;
+function spansToBab(context: Context, keySpans: [string, Span[]]): Bab {
+  const { bagianKeyOfId, pasalKeyOfId } = context.keyIds;
   const [key, spans] = keySpans;
   const { spanIdKeyMap, toStructure } = spanIdKeyMapOf(
     [bagianKeyOfId, spansToBagian],
     [pasalKeyOfId, spansToPasal],
     spans,
-    keyIds
+    context
   );
   const { preKeySpans, spansOfKey } = toSpansWith(spanIdKeyMap, spans);
   const isi = chain(spansOfKey).toPairs().thru<Bagian[] | Pasal[]>(toStructure).value();
@@ -34,14 +39,14 @@ function spansToBab(keyIds: KeyIds, keySpans: [string, Span[]]): Bab {
   return { _type: 'bab', _key, _judul, isi };
 }
 
-function spansToBagian(keyIds: KeyIds, keySpans: [string, Span[]]): Bagian {
-  const { paragrafKeyOfId, pasalKeyOfId } = keyIds;
+function spansToBagian(context: Context, keySpans: [string, Span[]]): Bagian {
+  const { paragrafKeyOfId, pasalKeyOfId } = context.keyIds;
   const [key, spans] = keySpans;
   const { spanIdKeyMap, toStructure } = spanIdKeyMapOf(
     [paragrafKeyOfId, spansToParagraf],
     [pasalKeyOfId, spansToPasal],
     spans,
-    keyIds
+    context
   );
   const { preKeySpans, spansOfKey } = toSpansWith(spanIdKeyMap, spans);
   const isi = chain(spansOfKey).toPairs().thru<Paragraf[] | Pasal[]>(toStructure).value();
@@ -50,17 +55,17 @@ function spansToBagian(keyIds: KeyIds, keySpans: [string, Span[]]): Bagian {
   return { _type: 'bagian', _key, _judul, isi };
 }
 
-function spansToParagraf(keyIds: KeyIds, keySpans: [string, Span[]]): Paragraf {
-  const { pasalKeyOfId } = keyIds;
+function spansToParagraf(context: Context, keySpans: [string, Span[]]): Paragraf {
+  const { pasalKeyOfId } = context.keyIds;
   const [key, spans] = keySpans;
   const { preKeySpans, spansOfKey } = toSpansWith(pasalKeyOfId, spans);
-  const isi = chain(spansOfKey).toPairs().map<Pasal>(curry(spansToPasal)(keyIds)).value();
+  const isi = chain(spansOfKey).toPairs().map<Pasal>(curry(spansToPasal)(context)).value();
   const _judul = preKeySpans.map(({ str }) => str).join(' ');
   const _key = parseInt(key);
   return { _type: 'paragraf', _key, _judul, isi };
 }
 
-function spansToPasal(_: KeyIds, keySpans: [string, Span[]]): Pasal {
+function spansToPasal(_: Context, keySpans: [string, Span[]]): Pasal {
   // const { paragrafKeyOfId, pasalKeyOfId } = keyIds;
   const [key, spans] = keySpans;
   // const childStructure = spanIdKeyMapOf(
