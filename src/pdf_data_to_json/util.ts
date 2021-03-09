@@ -38,26 +38,22 @@ function transform<T extends Structure>(
 }
 
 function getMinInRange(map: SpanIdKeyMap, spans: Span[]): number | undefined {
-  const firstId = spans[0]?.id ?? neverNum();
-  const lastId = spans.slice(-1)[0]?.id ?? neverNum();
-  const res = chain(map)
+  return chain(map)
     .keys()
     .map((key) => parseInt(key))
-    .filter((id) => firstId <= id && id <= lastId)
+    .filter((id) => id >= (spans[0]?.id ?? neverNum()))
+    .filter((id) => id <= (spans.slice(-1)[0]?.id ?? neverNum()))
     .min()
     .value();
-  return res;
 }
 
 export const toSpansWith = curry(_toSpansWith);
 
 function _toSpansWith(keyOfId: SpanIdKeyMap, spans: Span[]): Acc {
-  const initialSpans: Acc = { spansOfKey: {}, preKeySpans: [] };
-  return spans.reduce(toSpans(keyOfId), initialSpans);
+  return spans.reduce(toSpans(keyOfId), { spansOfKey: {}, preKeySpans: [] });
 }
 
 const toSpans = curry(_toSpans);
-
 function _toSpans(keyOfId: SpanIdKeyMap, acc: Acc, span: Span): Acc {
   const { spansOfKey, currentKey, preKeySpans } = acc;
   const newKey = keyOfId[span.id];
