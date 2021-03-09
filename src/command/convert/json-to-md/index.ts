@@ -124,9 +124,9 @@ function mengimbangToMd(
 }
 
 function babToMd(bab: Bab, parentDocument: DocumentNode): string {
-  const { _key, _judul, isi, text } = bab;
+  const { _key, _judul, isi } = bab;
   const babNode: BabNode = { _key, parentDocument, _structureType: 'bab' };
-  const isiStr: string = !isNil(isi) ? isiBabToMd(isi, babNode) : text;
+  const isiStr: string = isiBabToMd(isi, babNode);
   const romanKey = toRoman(_key);
   const babUri = getLegalUri(babNode);
 

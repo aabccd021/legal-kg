@@ -18,7 +18,6 @@ export type Paragraf = {
   _key: number;
   _judul: string;
   isi: Pasal[];
-  text: string;
 };
 export function isParagrafs(isi: Bagian[] | Pasal[] | Paragraf[]): isi is Paragraf[] {
   return isi?.[0]?._type === 'paragraf';

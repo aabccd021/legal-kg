@@ -1,10 +1,10 @@
 import assertNever from 'assert-never';
-import { AyatNode, _getAyatUri } from './ayat';
-import { BabNode, _getBabUri } from './bab';
-import { BagianNode, _getBagianUri } from './bagian';
+import { Ayat, AyatNode, _getAyatUri } from './ayat';
+import { Bab, BabNode, _getBabUri } from './bab';
+import { Bagian, BagianNode, _getBagianUri } from './bagian';
 import { _getMetadataUri, MetadataNode } from './metadata';
-import { _getParagrafUri, ParagrafNode } from './paragraf';
-import { _getPasalUri, PasalNode } from './pasal';
+import { _getParagrafUri, ParagrafNode, Paragraf } from './paragraf';
+import { _getPasalUri, PasalNode, Pasal } from './pasal';
 import { _getPointUri, PointNode } from './point';
 
 /**
@@ -44,3 +44,5 @@ export function _getStructureUri(node: StructureNode): string {
   if (node._structureType === 'point') return _getPointUri(node);
   assertNever(node);
 }
+
+export type Structure = Bab | Bagian | Pasal | Paragraf | Ayat;

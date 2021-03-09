@@ -18,5 +18,4 @@ export type Bab = {
   _key: number;
   _judul: string;
   isi: Bagian[] | Pasal[];
-  text: string;
 };

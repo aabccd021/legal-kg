@@ -113,9 +113,9 @@ function toBabs({ _key, lines }: { _key: number; lines: string[] }): Bab {
   }
   const _judul = keyJudul.slice(1).join(' ');
   const isi = getBagians(isiLines) ?? getPasals(isiLines);
-  const text = lines.join(' ');
+  // const text = lines.join(' ');
 
-  return { _type: 'bab', _key, _judul, isi, text };
+  return { _type: 'bab', _key, _judul, isi };
 }
 
 /**
@@ -163,10 +163,10 @@ function _linesToBagian({ _key, lines }: IncLines): Bagian {
   }
   const isiLines = flatMap(compact([pasalStart, paragrafStart]));
   const isi = getParagrafs(isiLines) ?? getPasals(isiLines);
-  const text = lines.join(' ');
+  // const text = lines.join(' ');
   const _judul = removeKeyFromLines(keyJudul, bagianRegex).join(' ');
 
-  return { _type: 'bagian', _key, _judul, isi, text };
+  return { _type: 'bagian', _key, _judul, isi };
 }
 
 /**
@@ -201,9 +201,9 @@ function _linesToParagraf(incLines: IncLines): Paragraf {
   if (!pasalLines) throw Error();
   const _judul = removeKeyFromLines(keyJudul, paragrafRegex).join(' ');
   const isi = getPasals(pasalLines);
-  const text = lines.join(' ');
+  // const text = lines.join(' ');
 
-  return { _type: 'paragraf', _key, _judul, isi, text };
+  return { _type: 'paragraf', _key, _judul, isi };
 }
 
 /**

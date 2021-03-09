@@ -1,6 +1,7 @@
+import { Structure } from './../legal/structure/index';
 import { chain, curry, isUndefined } from 'lodash';
 import { Span, neverNum } from '../util';
-import { SpanIdKeyMap } from './babs_spans_to_key_ids';
+import { KeyIds, SpanIdKeyMap } from './babs_spans_to_key_ids';
 
 type Acc = {
   spansOfKey: SpansOfKey;
@@ -9,15 +10,31 @@ type Acc = {
 };
 
 type SpansOfKey = { [key: number]: Span[] };
+type ToStructureWith<T extends Structure> = (keyIds: KeyIds, keySpans: [string, Span[]]) => T;
+type StructureUtil<T extends Structure> = {
+  spanIdKeyMap: SpanIdKeyMap;
+  toStructure: (keySpans: [string, Span[]][]) => T[];
+};
 
-export function spanIdKeyMapOf<A extends string, B extends string>(
-  map1: [A, SpanIdKeyMap],
-  map2: [B, SpanIdKeyMap],
-  spans: Span[]
-): A | B {
-  return (getMinInRange(map1[1], spans) ?? Infinity) < (getMinInRange(map2[1], spans) ?? Infinity)
-    ? map1[0]
-    : map2[0];
+export function spanIdKeyMapOf<A extends Structure, B extends Structure>(
+  map1: [SpanIdKeyMap, ToStructureWith<A>],
+  map2: [SpanIdKeyMap, ToStructureWith<B>],
+  spans: Span[],
+  keyIds: KeyIds
+): StructureUtil<A> | StructureUtil<B> {
+  return (getMinInRange(map1[0], spans) ?? Infinity) < (getMinInRange(map2[0], spans) ?? Infinity)
+    ? transform(map1, keyIds)
+    : transform(map2, keyIds);
+}
+
+function transform<T extends Structure>(
+  map1: [SpanIdKeyMap, ToStructureWith<T>],
+  keyIds: KeyIds
+): StructureUtil<T> {
+  return {
+    spanIdKeyMap: map1[0],
+    toStructure: (keySpans: [string, Span[]][]) => keySpans.map(curry(map1[1])(keyIds)),
+  };
 }
 
 function getMinInRange(map: SpanIdKeyMap, spans: Span[]): number | undefined {

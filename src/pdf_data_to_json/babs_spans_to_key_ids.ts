@@ -7,7 +7,7 @@ import {
   pasalKeyOfSpan,
 } from './parse_key_from_spans';
 
-export type BabKeySpanIds = {
+export type KeyIds = {
   babKeyOfid: SpanIdKeyMap;
   lastBabKey?: number;
   bagianKeyOfId: SpanIdKeyMap;
@@ -22,8 +22,8 @@ export type BabKeySpanIds = {
 
 export type SpanIdKeyMap = { [id: number]: number };
 
-export function babsSpansToKeyIds(spans: Span[]): BabKeySpanIds {
-  const initialAcc: BabKeySpanIds = {
+export function babsSpansToKeyIds(spans: Span[]): KeyIds {
+  const initialAcc: KeyIds = {
     babKeyOfid: {},
     bagianKeyOfId: {},
     paragrafKeyOfId: {},
@@ -39,11 +39,11 @@ const toKeysWith = curry(toKeys);
 
 function toKeys(
   hasAmendPasal: boolean,
-  acc: BabKeySpanIds,
+  acc: KeyIds,
   span: Span,
   idx: number,
   spans: Span[]
-): BabKeySpanIds {
+): KeyIds {
   const {
     babKeyOfid,
     bagianKeyOfId,
@@ -98,7 +98,7 @@ function toKeys(
   const newPasalKey = pasalKeyOfSpan(span);
   if (isUndefined(newAfterPasal) || isUndefined(newPasalKey)) return acc;
 
-  const newAcc: BabKeySpanIds = {
+  const newAcc: KeyIds = {
     ...acc,
     afterNonPasal: false,
     pasalKeyOfId: { ...pasalKeyOfId, [span.id]: newPasalKey },

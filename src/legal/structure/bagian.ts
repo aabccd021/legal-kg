@@ -19,7 +19,6 @@ export type Bagian = {
   _key: number;
   _judul: string;
   isi: Paragraf[] | Pasal[];
-  text: string;
 };
 export function isBagians(isi: Bagian[] | Pasal[] | Paragraf[]): isi is Bagian[] {
   return isi?.[0]?._type === 'bagian';
