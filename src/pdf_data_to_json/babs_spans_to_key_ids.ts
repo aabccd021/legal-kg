@@ -268,8 +268,7 @@ function toKeys(
 
   // Amended Pasal
   // handle `Pasal DD2A` -> `Pasal 22A`
-  const amendedPasalRegexp = /^Pasal [D]{0,2}[0-9]+[A-Z]?$/;
-  if (amendedPasalRegexp.test(span.str)) {
+  if (/^Pasal [D]{0,2}[0-9]+[A-Z]?$/.test(span.str)) {
     if (
       !isUndefined(lastNomor) &&
       lastNomor.key !== 1 &&
@@ -283,6 +282,7 @@ function toKeys(
 
     return {
       ...acc,
+      afterAbovePasal: false,
       amendPasalKeyOfId: { ...amendPasalKeyOfId, [span.id]: span.str },
       amendNomorKeyOfId: newNomorKeyOfIdOf(amendNomorKeyOfId, lastNomor),
       lastAmendedNomor: lastNomor,
