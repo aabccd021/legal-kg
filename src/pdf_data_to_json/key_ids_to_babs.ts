@@ -119,7 +119,7 @@ function spansToAmendedPoint(context: Context, keySpans: [string, Span[]]): Amen
     .join('\n')
     .thru(stringToEmptyReference)
     .value();
-  return { _type: 'amendedPoint', _key, isi, pasalKey };
+  return { _type: 'amendedPoint', _key, pasalKey, isi };
 }
 
 function stringToEmptyReference(text: string): ReferenceText {
