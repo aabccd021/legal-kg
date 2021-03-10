@@ -11,7 +11,7 @@ export type AmendPoints = {
 export type AmendedPoint = {
   _type: 'amendedPoint';
   _key: number;
-  pasalKey?: string;
+  pasalKeys?: string[];
   isi:
     | Points
     | ReferenceText

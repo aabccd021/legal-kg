@@ -112,14 +112,14 @@ function spansToAmendedPoint(context: Context, keySpans: [string, Span[]]): Amen
   const { amendPasalKeyOfId } = keyIds;
   const [key, spans] = keySpans;
   const _key = parseInt(key);
-  const pasalKey = amendPasalKeyOfId[spans[0]?.id ?? neverNum()];
-  if (isUndefined(pasalKey)) console.log(spans[0]?.id, spans[0]?.pageNum, spans[0]?.str);
+  const pasalKeys = amendPasalKeyOfId[spans[0]?.id ?? neverNum()];
+  if (isUndefined(pasalKeys)) console.log(spans[0]?.id, spans[0]?.pageNum, spans[0]?.str);
   const isi = chain(spans)
     .map(({ str }) => str)
     .join('\n')
     .thru(stringToEmptyReference)
     .value();
-  return { _type: 'amendedPoint', _key, pasalKey, isi };
+  return { _type: 'amendedPoint', _key, pasalKeys, isi };
 }
 
 function stringToEmptyReference(text: string): ReferenceText {
