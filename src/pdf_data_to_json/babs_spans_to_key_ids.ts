@@ -283,7 +283,7 @@ function toKeys(
     return {
       ...acc,
       afterAbovePasal: false,
-      amendPasalKeyOfId: { ...amendPasalKeyOfId, [span.id]: span.str },
+      amendPasalKeyOfId: { ...amendPasalKeyOfId, [span.id]: 'zzz' },
       amendNomorKeyOfId: newNomorKeyOfIdOf(amendNomorKeyOfId, lastNomor),
       lastAmendedNomor: lastNomor,
       afterTruePasal: false,
