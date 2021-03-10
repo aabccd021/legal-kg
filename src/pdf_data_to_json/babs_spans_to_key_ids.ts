@@ -171,7 +171,7 @@ function toKeys(
     };
   }
 
-  if (/^[0-9]+\. Di antara Bab/.test(span.str)) {
+  if (/^[0-9]+\. Di antara (Pasal|Bab)/.test(span.str)) {
     const nomorStr = span.str.split(' ')[0]?.replaceAll('.', '');
     const amendNomor = safeParseInt(nomorStr) ?? neverNum(nomorStr);
     const newLastNomor = { id: span.id, key: amendNomor };
