@@ -112,17 +112,21 @@ function toKeys(
   }
 
   // Amended Hapus Pasal
-  if (/^[0-9]+. Pasal [0-9]+[A-Z]? dihapus.$/.test(span.str)) {
+  if (/^[0-9]+\. Pasal [0-9]+[A-Z]? dihapus.$/.test(span.str)) {
     const nomorStr = span.str.split(' ')[0]?.replaceAll('.', '');
     const amendNomor = safeParseInt(nomorStr) ?? neverNum(nomorStr);
     const amendedPasalKey = span.str.split(' ')[2] ?? neverString();
     const newLastNomor = { id: span.id, key: amendNomor };
 
-    if (newLastNomor.key !== 1 && newLastNomor.key - 1 !== lastAmendedNomor?.key)
+    if (newLastNomor.key !== 1 && newLastNomor.key - 1 !== lastAmendedNomor?.key){
       console.log(
-        'Strange PDF ',
-        JSON.stringify(span) + JSON.stringify(newLastNomor) + JSON.stringify(lastAmendedNomor)
+        'EXCEPTION 1',
+        `{PAGE ${span.pageNum}}`,
+        JSON.stringify(newLastNomor),
+        JSON.stringify(lastAmendedNomor),
+        span.str
       );
+    }
 
     return {
       ...acc,
@@ -135,7 +139,39 @@ function toKeys(
     };
   }
 
-  if (/^[0-9]+. Di antara Bab/.test(span.str)) {
+  // Amended Ubah Pasal
+  if (/^[0-9]+\. (Ketentuan|Penjelasan) Pasal [0-9]+ diubah/.test(span.str)) {
+    const nomorStr = span.str.split(' ')[0]?.replaceAll('.', '');
+    const amendNomor = safeParseInt(nomorStr) ?? neverNum(nomorStr);
+    const amendedPasalKey = span.str.split(' ')[3] ?? neverString();
+    const newLastNomor = { id: span.id, key: amendNomor };
+
+    if (
+      newLastNomor.key !== 1 &&
+      newLastNomor.key - 1 !== lastAmendedNomor?.key &&
+      newLastNomor.key !== lastAmendedNomor?.key
+    ) {
+      console.log(
+        'EXCEPTION 3',
+        `{PAGE ${span.pageNum}}`,
+        JSON.stringify(newLastNomor),
+        JSON.stringify(lastAmendedNomor),
+        span.str
+      );
+    }
+
+    return {
+      ...acc,
+      amendNomorKeyOfId: { ...amendNomorKeyOfId, [span.id]: amendNomor },
+      nomorKeyOfId: { ...nomorKeyOfId, [span.id]: amendNomor },
+      amendPasalKeyOfId: { ...amendPasalKeyOfId, [span.id]: amendedPasalKey },
+      lastNomor: newLastNomor,
+      lastAmendedNomor: newLastNomor,
+      afterTruePasal: false,
+    };
+  }
+
+  if (/^[0-9]+\. Di antara Bab/.test(span.str)) {
     const nomorStr = span.str.split(' ')[0]?.replaceAll('.', '');
     const amendNomor = safeParseInt(nomorStr) ?? neverNum(nomorStr);
     const newLastNomor = { id: span.id, key: amendNomor };
@@ -186,15 +222,20 @@ function toKeys(
         }
       }
 
-      // if (
-      //   !isUndefined(lastNomor) &&
-      //   lastNomor.key !== 1 &&
-      //   lastNomor.key - 1 !== lastAmendedNomor?.key &&
-      //   lastNomor.key !== lastAmendedNomor?.key
-      // )
-      //   throw Error(
-      //     JSON.stringify(span) + JSON.stringify(lastNomor) + JSON.stringify(lastAmendedNomor)
-      //   );
+      if (
+        !isUndefined(lastNomor) &&
+        lastNomor.key !== 1 &&
+        lastNomor.key - 1 !== lastAmendedNomor?.key &&
+        lastNomor.key !== lastAmendedNomor?.key
+      ) {
+        console.log(
+          'EXCEPTION 2',
+          `{PAGE ${span.pageNum}}`,
+          span.str,
+          JSON.stringify(lastNomor),
+          JSON.stringify(lastAmendedNomor)
+        );
+      }
       // Amended Pasal
       return {
         ...acc,

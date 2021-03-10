@@ -5,7 +5,7 @@ import { Span } from '../util';
 export function nomorKeyOfSpan(span: Span): number | undefined {
   const { str } = span;
   // Handle S5 -> 5
-  const numberStr = str?.match(/^(S|S?[0-9]+)\./)?.[0]?.match(/^(S|S?[0-9]+)/)?.[0];
+  const numberStr = str?.match(/^(l|S|S?[0-9]+)\./)?.[0]?.match(/^(l|S|S?[0-9]+)/)?.[0];
   return safeParseInt(numberStr);
 }
 
@@ -63,5 +63,6 @@ export function safeParseInt(str: string | undefined): number | undefined {
 function clean(str: string): string {
   if (str === 'S5') return '5';
   if (str === 'S') return '5';
+  if (str === 'l') return '1';
   return str;
 }
