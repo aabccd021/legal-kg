@@ -118,7 +118,7 @@ function toKeys(
     const amendedPasalKey = span.str.split(' ')[2] ?? neverString();
     const newLastNomor = { id: span.id, key: amendNomor };
 
-    if (newLastNomor.key !== 1 && newLastNomor.key - 1 !== lastAmendedNomor?.key){
+    if (newLastNomor.key !== 1 && newLastNomor.key - 1 !== lastAmendedNomor?.key) {
       console.log(
         'EXCEPTION 1',
         `{PAGE ${span.pageNum}}`,
@@ -140,8 +140,8 @@ function toKeys(
   }
 
   // Amended Ubah Pasal
-  if (/^[0-9]+\. (Ketentuan|Penjelasan) Pasal [0-9]+ diubah/.test(span.str)) {
-    const nomorStr = span.str.split(' ')[0]?.replaceAll('.', '');
+  if (/^[0-9]+(\.|,) (Ketentuan|Penjelasan) Pasal [0-9]+ diubah/.test(span.str)) {
+    const nomorStr = span.str.split(' ')[0]?.replaceAll('.', '')?.replaceAll(',', '');
     const amendNomor = safeParseInt(nomorStr) ?? neverNum(nomorStr);
     const amendedPasalKey = span.str.split(' ')[3] ?? neverString();
     const newLastNomor = { id: span.id, key: amendNomor };
