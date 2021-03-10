@@ -2,7 +2,7 @@
   {
     "_type": "bab",
     "_key": 1,
-    "_judul": "KETENTUAN UMUM",
+    "_judul": "BAB I KETENTUAN UMUM",
     "isi": [
       {
         "_type": "pasal",
@@ -18,7 +18,7 @@
   {
     "_type": "bab",
     "_key": 2,
-    "_judul": "LANDASAN, ASAS, DAN TUJUAN",
+    "_judul": "BAB II LANDASAN, ASAS, DAN TUJUAN",
     "isi": [
       {
         "_type": "pasal",
@@ -52,7 +52,7 @@
   {
     "_type": "bab",
     "_key": 3,
-    "_judul": "KESEMPATAN DAN PERLAKUAN YANG SAMA",
+    "_judul": "BAB III KESEMPATAN DAN PERLAKUAN YANG SAMA",
     "isi": [
       {
         "_type": "pasal",
@@ -77,7 +77,7 @@
   {
     "_type": "bab",
     "_key": 4,
-    "_judul": "PERENCANAAN TENAGA KERJA DAN INFORMASI KETENAGAKERJAAN",
+    "_judul": "BAB IV PERENCANAAN TENAGA KERJA DAN INFORMASI KETENAGAKERJAAN",
     "isi": [
       {
         "_type": "pasal",
@@ -102,7 +102,7 @@
   {
     "_type": "bab",
     "_key": 5,
-    "_judul": "PELATIHAN KERJA",
+    "_judul": "BAB V PELATIHAN KERJA",
     "isi": [
       {
         "_type": "pasal",
@@ -307,7 +307,7 @@
   {
     "_type": "bab",
     "_key": 6,
-    "_judul": "PENEMPATAN TENAGA KERJA",
+    "_judul": "BAB VI PENEMPATAN TENAGA KERJA",
     "isi": [
       {
         "_type": "pasal",
@@ -386,7 +386,7 @@
   {
     "_type": "bab",
     "_key": 7,
-    "_judul": "PERLUASAN KESEMPATAN KERJA",
+    "_judul": "BAB VII PERLUASAN KESEMPATAN KERJA",
     "isi": [
       {
         "_type": "pasal",
@@ -420,7 +420,7 @@
   {
     "_type": "bab",
     "_key": 8,
-    "_judul": "PENGGUNAAN TENAGA KERJA ASING",
+    "_judul": "BAB VIII PENGGUNAAN TENAGA KERJA ASING",
     "isi": [
       {
         "_type": "pasal",
@@ -499,7 +499,7 @@
   {
     "_type": "bab",
     "_key": 9,
-    "_judul": "HUBUNGAN KERJA",
+    "_judul": "BAB IX HUBUNGAN KERJA",
     "isi": [
       {
         "_type": "pasal",
@@ -659,17 +659,17 @@
   {
     "_type": "bab",
     "_key": 10,
-    "_judul": "PERLINDUNGAN, PENGUPAHAN, DAN KESEJAHTERAAN",
+    "_judul": "BAB X PERLINDUNGAN, PENGUPAHAN, DAN KESEJAHTERAAN",
     "isi": [
       {
         "_type": "bagian",
         "_key": 1,
-        "_judul": "Perlindungan",
+        "_judul": "Bagian Kesatu Perlindungan",
         "isi": [
           {
             "_type": "paragraf",
             "_key": 1,
-            "_judul": "Penyandang Cacat",
+            "_judul": "Paragraf 1 Penyandang Cacat",
             "isi": [
               {
                 "_type": "pasal",
@@ -685,7 +685,7 @@
           {
             "_type": "paragraf",
             "_key": 2,
-            "_judul": "Anak",
+            "_judul": "Paragraf 2 Anak",
             "isi": [
               {
                 "_type": "pasal",
@@ -764,7 +764,7 @@
           {
             "_type": "paragraf",
             "_key": 3,
-            "_judul": "Perempuan",
+            "_judul": "Paragraf 3 Perempuan",
             "isi": [
               {
                 "_type": "pasal",
@@ -780,7 +780,7 @@
           {
             "_type": "paragraf",
             "_key": 4,
-            "_judul": "Waktu Kerja",
+            "_judul": "Paragraf 4 Waktu Kerja",
             "isi": [
               {
                 "_type": "pasal",
@@ -868,7 +868,7 @@
           {
             "_type": "paragraf",
             "_key": 5,
-            "_judul": "Keselamatan dan Kesehatan Kerja",
+            "_judul": "Paragraf 5 Keselamatan dan Kesehatan Kerja",
             "isi": [
               {
                 "_type": "pasal",
@@ -895,7 +895,7 @@
       {
         "_type": "bagian",
         "_key": 2,
-        "_judul": "Pengupahan.",
+        "_judul": "Bagian Kedua Pengupahan.",
         "isi": [
           {
             "_type": "pasal",
@@ -1001,7 +1001,7 @@
       {
         "_type": "bagian",
         "_key": 3,
-        "_judul": "Kesejahteraan",
+        "_judul": "Bagian Ketiga Kesejahteraan",
         "isi": [
           {
             "_type": "pasal",
@@ -1037,12 +1037,12 @@
   {
     "_type": "bab",
     "_key": 11,
-    "_judul": "HUBUNGAN INDUSTRIAL",
+    "_judul": "BAB XI HUBUNGAN INDUSTRIAL",
     "isi": [
       {
         "_type": "bagian",
         "_key": 1,
-        "_judul": "Umum",
+        "_judul": "Bagian Kesatu Umum",
         "isi": [
           {
             "_type": "pasal",
@@ -1067,7 +1067,7 @@
       {
         "_type": "bagian",
         "_key": 2,
-        "_judul": "Serikat Pekerja/Serikat Buruh",
+        "_judul": "Bagian Kedua Serikat Pekerja/Serikat Buruh",
         "isi": [
           {
             "_type": "pasal",
@@ -1083,7 +1083,7 @@
       {
         "_type": "bagian",
         "_key": 3,
-        "_judul": "Organisasi Pengusaha",
+        "_judul": "Bagian Ketiga Organisasi Pengusaha",
         "isi": [
           {
             "_type": "pasal",
@@ -1099,7 +1099,7 @@
       {
         "_type": "bagian",
         "_key": 4,
-        "_judul": "Lembaga Kerja Sama Bipartit",
+        "_judul": "Bagian Keempat Lembaga Kerja Sama Bipartit",
         "isi": [
           {
             "_type": "pasal",
@@ -1115,7 +1115,7 @@
       {
         "_type": "bagian",
         "_key": 5,
-        "_judul": "Lembaga Kerja Sama Tripartit",
+        "_judul": "Bagian Kelima Lembaga Kerja Sama Tripartit",
         "isi": [
           {
             "_type": "pasal",
@@ -1131,7 +1131,7 @@
       {
         "_type": "bagian",
         "_key": 6,
-        "_judul": "Peraturan Perusahaan",
+        "_judul": "Bagian Keenam Peraturan Perusahaan",
         "isi": [
           {
             "_type": "pasal",
@@ -1210,7 +1210,7 @@
       {
         "_type": "bagian",
         "_key": 7,
-        "_judul": "Perjanjian Kerja Bersama",
+        "_judul": "Bagian Ketujuh Perjanjian Kerja Bersama",
         "isi": [
           {
             "_type": "pasal",
@@ -1397,12 +1397,12 @@
       {
         "_type": "bagian",
         "_key": 8,
-        "_judul": "Lembaga Penyelesaian Perselisihan Hubungan Industrial",
+        "_judul": "Bagian Kedelapan Lembaga Penyelesaian Perselisihan Hubungan Industrial",
         "isi": [
           {
             "_type": "paragraf",
             "_key": 1,
-            "_judul": "Perselisihan Hubungan Industrial",
+            "_judul": "Paragraf 1 Perselisihan Hubungan Industrial",
             "isi": [
               {
                 "_type": "pasal",
@@ -1418,7 +1418,7 @@
           {
             "_type": "paragraf",
             "_key": 2,
-            "_judul": "Mogok Kerja",
+            "_judul": "Paragraf 2 Mogok Kerja",
             "isi": [
               {
                 "_type": "pasal",
@@ -1506,7 +1506,7 @@
           {
             "_type": "paragraf",
             "_key": 3,
-            "_judul": "Penutupan Perusahaan (lock-out)",
+            "_judul": "Paragraf 3 Penutupan Perusahaan (lock-out)",
             "isi": [
               {
                 "_type": "pasal",
@@ -1553,7 +1553,7 @@
   {
     "_type": "bab",
     "_key": 12,
-    "_judul": "PEMUTUSAN HUBUNGAN KERJA",
+    "_judul": "BAB XII PEMUTUSAN HUBUNGAN KERJA",
     "isi": [
       {
         "_type": "pasal",
@@ -1767,7 +1767,7 @@
   {
     "_type": "bab",
     "_key": 13,
-    "_judul": "PEMBINAAN",
+    "_judul": "BAB XIII PEMBINAAN",
     "isi": [
       {
         "_type": "pasal",
@@ -1801,7 +1801,7 @@
   {
     "_type": "bab",
     "_key": 14,
-    "_judul": "PENGAWASAN",
+    "_judul": "BAB XIV PENGAWASAN",
     "isi": [
       {
         "_type": "pasal",
@@ -1862,7 +1862,7 @@
   {
     "_type": "bab",
     "_key": 15,
-    "_judul": "PENYIDIKAN",
+    "_judul": "BAB XV PENYIDIKAN",
     "isi": [
       {
         "_type": "pasal",
@@ -1878,12 +1878,12 @@
   {
     "_type": "bab",
     "_key": 16,
-    "_judul": "KETENTUAN PIDANA DAN SANKSI ADMINISTRATIF",
+    "_judul": "BAB XVI KETENTUAN PIDANA DAN SANKSI ADMINISTRATIF",
     "isi": [
       {
         "_type": "bagian",
         "_key": 1,
-        "_judul": "Ketentuan Pidana",
+        "_judul": "Bagian Pertama Ketentuan Pidana",
         "isi": [
           {
             "_type": "pasal",
@@ -1953,7 +1953,7 @@
       {
         "_type": "bagian",
         "_key": 2,
-        "_judul": "Sanksi Administratif",
+        "_judul": "Bagian Kedua Sanksi Administratif",
         "isi": [
           {
             "_type": "pasal",
@@ -1971,7 +1971,7 @@
   {
     "_type": "bab",
     "_key": 17,
-    "_judul": "KETENTUAN PERALIHAN",
+    "_judul": "BAB XVII KETENTUAN PERALIHAN",
     "isi": [
       {
         "_type": "pasal",
@@ -1987,7 +1987,7 @@
   {
     "_type": "bab",
     "_key": 18,
-    "_judul": "KETENTUAN PENUTUP",
+    "_judul": "BAB XVIII KETENTUAN PENUTUP",
     "isi": [
       {
         "_type": "pasal",

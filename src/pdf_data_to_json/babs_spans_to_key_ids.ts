@@ -9,22 +9,23 @@ import {
 } from './parse_key_from_spans';
 
 export type KeyIds = {
-  babKeyOfid: SpanIdKeyMap;
+  babKeyOfid: SpanIdKeyMap<number>;
   lastBabKey?: number;
-  bagianKeyOfId: SpanIdKeyMap;
+  bagianKeyOfId: SpanIdKeyMap<number>;
   lastBagianKey?: number;
-  paragrafKeyOfId: SpanIdKeyMap;
+  paragrafKeyOfId: SpanIdKeyMap<number>;
   lastParagrafKey?: number;
-  pasalKeyOfId: SpanIdKeyMap;
-  amendPasalKeyOfId: SpanIdKeyMap;
+  pasalKeyOfId: SpanIdKeyMap<number>;
+  amendPasalKeyOfId: SpanIdKeyMap<string>;
   lastPasalKey?: number;
-  nomorKeyOfId: SpanIdKeyMap;
-  lastNomorKey?: number;
+  nomorKeyOfId: SpanIdKeyMap<number>;
+  amendNomorKeyOfId: SpanIdKeyMap<number>;
+  lastNomorId?: number;
   afterPasalXls: number[];
   afterNonPasal: boolean;
 };
 
-export type SpanIdKeyMap = { [id: number]: number };
+export type SpanIdKeyMap<T> = { [id: number]: T };
 
 export function babsSpansToKeyIds(hasAmendPasal: boolean, spans: Span[]): KeyIds {
   const initialAcc: KeyIds = {
@@ -34,6 +35,7 @@ export function babsSpansToKeyIds(hasAmendPasal: boolean, spans: Span[]): KeyIds
     pasalKeyOfId: {},
     amendPasalKeyOfId: {},
     nomorKeyOfId: {},
+    amendNomorKeyOfId: {},
     afterPasalXls: [],
     afterNonPasal: false,
   };
@@ -56,13 +58,14 @@ function toKeys(
     pasalKeyOfId,
     amendPasalKeyOfId,
     nomorKeyOfId,
+    amendNomorKeyOfId,
+    lastNomorId,
     afterNonPasal,
     afterPasalXls,
     lastBabKey,
     lastBagianKey,
     lastParagrafKey,
     lastPasalKey,
-    lastNomorKey,
   } = acc;
 
   const newBabKey = babKeyOfSpan(span);
@@ -139,24 +142,41 @@ function toKeys(
       return {
         ...acc,
         afterNonPasal: false,
-        amendPasalKeyOfId: { ...amendPasalKeyOfId, [span.id]: newPasalKey },
+        amendPasalKeyOfId: { ...amendPasalKeyOfId, [span.id]: `${newPasalKey}` },
+        amendNomorKeyOfId: newAmendNomorKeyOfIdOf({ amendNomorKeyOfId, lastNomorId, nomorKeyOfId }),
       };
     }
   }
 
-  const newNomorKey = nomorKeyOfSpan(span);
-  if (
-    !isUndefined(newNomorKey) &&
-    (newNomorKey === 1 || newNomorKey - 1 === lastNomorKey) &&
-    Math.abs(span.xL - mean(afterPasalXls)) < 13
-  ) {
+  if (/^Pasal [0-9]+[A-Z]+$/.test(span.str)) {
     return {
       ...acc,
-      afterNonPasal: true,
+      afterNonPasal: false,
+      amendPasalKeyOfId: { ...amendPasalKeyOfId, [span.id]: span.str },
+      amendNomorKeyOfId: newAmendNomorKeyOfIdOf({ amendNomorKeyOfId, lastNomorId, nomorKeyOfId }),
+    };
+  }
+  const newNomorKey = nomorKeyOfSpan(span);
+  if (!isUndefined(newNomorKey)) {
+    return {
+      ...acc,
       nomorKeyOfId: { ...nomorKeyOfId, [span.id]: newNomorKey },
-      lastNomorKey: newNomorKey,
+      lastNomorId: span.id,
     };
   }
 
   return acc;
+}
+
+function newAmendNomorKeyOfIdOf(param: {
+  amendNomorKeyOfId: SpanIdKeyMap<number>;
+  lastNomorId: number | undefined;
+  nomorKeyOfId: SpanIdKeyMap<number>;
+}): SpanIdKeyMap<number> {
+  const { amendNomorKeyOfId, lastNomorId, nomorKeyOfId } = param;
+  if (isUndefined(lastNomorId)) return amendNomorKeyOfId;
+
+  const lastNomorKey = nomorKeyOfId[lastNomorId];
+  if (isUndefined(lastNomorKey)) return amendNomorKeyOfId;
+  return { ...amendNomorKeyOfId, [lastNomorId]: lastNomorKey };
 }

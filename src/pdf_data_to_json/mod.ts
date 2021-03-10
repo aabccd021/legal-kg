@@ -21,6 +21,7 @@ function writeToJson(pdfNode: DocumentNode): void {
   const documentSpans = documentSpansOf(pdfSpans);
   const hasAmendPasal = spansHasAmendPasal(documentSpans.babs);
   const babKeyIds = keyIdsOfBabSpans(hasAmendPasal, documentSpans.babs);
+  writeFileSync('temp.json', JSON.stringify(babKeyIds, undefined, 2));
   const babs = babsOfKeyIds({ hasAmendPasal, keyIds: babKeyIds }, documentSpans.babs);
   writeFileSync(jsonFile.path, JSON.stringify(babs, undefined, 2));
 }

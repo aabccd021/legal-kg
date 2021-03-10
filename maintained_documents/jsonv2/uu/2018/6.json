@@ -2,7 +2,7 @@
   {
     "_type": "bab",
     "_key": 1,
-    "_judul": "KETENTUAN UMUM",
+    "_judul": "BABI KETENTUAN UMUM",
     "isi": [
       {
         "_type": "pasal",
@@ -36,7 +36,7 @@
   {
     "_type": "bab",
     "_key": 2,
-    "_judul": "TANGGUNG JAWAB PEMERINTAH PUSAT DAN PEMERINTAH DAERAH",
+    "_judul": "BAB II TANGGUNG JAWAB PEMERINTAH PUSAT DAN PEMERINTAH DAERAH",
     "isi": [
       {
         "_type": "pasal",
@@ -70,7 +70,7 @@
   {
     "_type": "bab",
     "_key": 3,
-    "_judul": "HAK DAN KEWAJIBAN",
+    "_judul": "BAB III HAK DAN KEWAJIBAN",
     "isi": [
       {
         "_type": "pasal",
@@ -104,7 +104,7 @@
   {
     "_type": "bab",
     "_key": 4,
-    "_judul": "KEDARURATAN KESEHATAN MASYARAKAT",
+    "_judul": "BAB IV KEDARURATAN KESEHATAN MASYARAKAT",
     "isi": [
       {
         "_type": "pasal",
@@ -156,7 +156,7 @@
   {
     "_type": "bab",
     "_key": 5,
-    "_judul": "KEKARANTINAAN KESEHATAN DI PINTU MASUK DAN DI WILAYAH",
+    "_judul": "BAB V KEKARANTINAAN KESEHATAN DI PINTU MASUK DAN DI WILAYAH",
     "isi": [
       {
         "_type": "pasal",
@@ -199,17 +199,17 @@
   {
     "_type": "bab",
     "_key": 6,
-    "_judul": "PENYELENGGARAAN KEKARANTINAAN KESEHATAN DI PINTU MASUK",
+    "_judul": "BAB VI PENYELENGGARAAN KEKARANTINAAN KESEHATAN DI PINTU MASUK",
     "isi": [
       {
         "_type": "bagian",
         "_key": 1,
-        "_judul": "Pengawasan di Pelabuhan",
+        "_judul": "Bagian Kesatu Pengawasan di Pelabuhan",
         "isi": [
           {
             "_type": "paragraf",
             "_key": 1,
-            "_judul": "Kedatangan Kapal",
+            "_judul": "Paragraf 1 Kedatangan Kapal",
             "isi": [
               {
                 "_type": "pasal",
@@ -270,7 +270,7 @@
           {
             "_type": "paragraf",
             "_key": 2,
-            "_judul": "Keberangkatan Kapal",
+            "_judul": "Paragraf 2 Keberangkatan Kapal",
             "isi": [
               {
                 "_type": "pasal",
@@ -297,12 +297,12 @@
       {
         "_type": "bagian",
         "_key": 2,
-        "_judul": "Pengawasan di Bandar Udara",
+        "_judul": "Bagian Kedua Pengawasan di Bandar Udara",
         "isi": [
           {
             "_type": "paragraf",
             "_key": 1,
-            "_judul": "Kedatangan Pesawat Udara",
+            "_judul": "Paragraf 1 Kedatangan Pesawat Udara",
             "isi": [
               {
                 "_type": "pasal",
@@ -363,7 +363,7 @@
           {
             "_type": "paragraf",
             "_key": 2,
-            "_judul": "Keberangkatan Pesawat Udara",
+            "_judul": "Paragraf 2 Keberangkatan Pesawat Udara",
             "isi": [
               {
                 "_type": "pasal",
@@ -390,12 +390,12 @@
       {
         "_type": "bagian",
         "_key": 3,
-        "_judul": "Pengawasan di Pos Lintas Batas Darat Negara",
+        "_judul": "Bagian Ketiga Pengawasan di Pos Lintas Batas Darat Negara",
         "isi": [
           {
             "_type": "paragraf",
             "_key": 1,
-            "_judul": "Kedatangan Kendaraan Darat",
+            "_judul": "Paragraf 1 Kedatangan Kendaraan Darat",
             "isi": [
               {
                 "_type": "pasal",
@@ -420,7 +420,7 @@
           {
             "_type": "paragraf",
             "_key": 2,
-            "_judul": "Keberangkatan Kendaraan Darat",
+            "_judul": "Paragraf 2 Keberangkatan Kendaraan Darat",
             "isi": [
               {
                 "_type": "pasal",
@@ -438,7 +438,7 @@
       {
         "_type": "bagian",
         "_key": 4,
-        "_judul": "Pengawasan Awak, Personel, dan Penumpang",
+        "_judul": "Bagian Keempat Pengawasan Awak, Personel, dan Penumpang",
         "isi": [
           {
             "_type": "pasal",
@@ -499,7 +499,7 @@
       {
         "_type": "bagian",
         "_key": 5,
-        "_judul": "Pengawasan Barang",
+        "_judul": "Bagian Kelima Pengawasan Barang",
         "isi": [
           {
             "_type": "pasal",
@@ -542,7 +542,7 @@
       {
         "_type": "bagian",
         "_key": 6,
-        "_judul": "Sanksi Administratif",
+        "_judul": "Bagian Keenam Sanksi Administratif",
         "isi": [
           {
             "_type": "pasal",
@@ -560,12 +560,12 @@
   {
     "_type": "bab",
     "_key": 7,
-    "_judul": "PENYELENGGARAAN KEKARANTINAAN KESEHATAN DI WILAYAH",
+    "_judul": "BAB VII PENYELENGGARAAN KEKARANTINAAN KESEHATAN DI WILAYAH",
     "isi": [
       {
         "_type": "bagian",
         "_key": 1,
-        "_judul": "Umum",
+        "_judul": "Bagian Kesatu Umum",
         "isi": [
           {
             "_type": "pasal",
@@ -581,7 +581,7 @@
       {
         "_type": "bagian",
         "_key": 2,
-        "_judul": "Karantina Rumah",
+        "_judul": "Bagian Kedua Karantina Rumah",
         "isi": [
           {
             "_type": "pasal",
@@ -615,7 +615,7 @@
       {
         "_type": "bagian",
         "_key": 3,
-        "_judul": "Karantina Wilayah",
+        "_judul": "Bagian Ketiga Karantina Wilayah",
         "isi": [
           {
             "_type": "pasal",
@@ -649,7 +649,7 @@
       {
         "_type": "bagian",
         "_key": 4,
-        "_judul": "Karantina Rumah Sakit",
+        "_judul": "Bagian Keempat Karantina Rumah Sakit",
         "isi": [
           {
             "_type": "pasal",
@@ -683,7 +683,7 @@
       {
         "_type": "bagian",
         "_key": 5,
-        "_judul": "Pembatasan Sosial Berskala Besar",
+        "_judul": "Bagian Kelima Pembatasan Sosial Berskala Besar",
         "isi": [
           {
             "_type": "pasal",
@@ -710,7 +710,7 @@
   {
     "_type": "bab",
     "_key": 8,
-    "_judul": "DOKUMEN KARANTINA KESEHATAN",
+    "_judul": "BAB VIII DOKUMEN KARANTINA KESEHATAN",
     "isi": [
       {
         "_type": "pasal",
@@ -807,12 +807,12 @@
   {
     "_type": "bab",
     "_key": 9,
-    "_judul": "SUMBER DAYA KEKARANTINAAN KESEHATAN",
+    "_judul": "BAB IX SUMBER DAYA KEKARANTINAAN KESEHATAN",
     "isi": [
       {
         "_type": "bagian",
         "_key": 1,
-        "_judul": "Umum",
+        "_judul": "Bagian Kesatu Umum",
         "isi": [
           {
             "_type": "pasal",
@@ -828,7 +828,7 @@
       {
         "_type": "bagian",
         "_key": 2,
-        "_judul": "Fasilitas dan Perbekalan Kekarantinaan Kesehatan",
+        "_judul": "Bagian Kedua Fasilitas dan Perbekalan Kekarantinaan Kesehatan",
         "isi": [
           {
             "_type": "pasal",
@@ -844,7 +844,7 @@
       {
         "_type": "bagian",
         "_key": 3,
-        "_judul": "Pejabat Karantina Kesehatan",
+        "_judul": "Bagian Ketiga Pejabat Karantina Kesehatan",
         "isi": [
           {
             "_type": "pasal",
@@ -887,7 +887,7 @@
       {
         "_type": "bagian",
         "_key": 4,
-        "_judul": "Penelitian dan Pengembangan",
+        "_judul": "Bagian Keempat Penelitian dan Pengembangan",
         "isi": [
           {
             "_type": "pasal",
@@ -903,7 +903,7 @@
       {
         "_type": "bagian",
         "_key": 5,
-        "_judul": "Pendanaan",
+        "_judul": "Bagian Kelima Pendanaan",
         "isi": [
           {
             "_type": "pasal",
@@ -921,7 +921,7 @@
   {
     "_type": "bab",
     "_key": 10,
-    "_judul": "INFORMASI KEKARANTINAAN KESEHATAN",
+    "_judul": "BAB X INFORMASI KEKARANTINAAN KESEHATAN",
     "isi": [
       {
         "_type": "pasal",
@@ -955,12 +955,12 @@
   {
     "_type": "bab",
     "_key": 11,
-    "_judul": "PEMBINAAN DAN PENGAWASAN",
+    "_judul": "BAB XI PEMBINAAN DAN PENGAWASAN",
     "isi": [
       {
         "_type": "bagian",
         "_key": 1,
-        "_judul": "Pembinaan",
+        "_judul": "Bagian Kesatu Pembinaan",
         "isi": [
           {
             "_type": "pasal",
@@ -976,7 +976,7 @@
       {
         "_type": "bagian",
         "_key": 2,
-        "_judul": "Pengawasan",
+        "_judul": "Bagian Kedua Pengawasan",
         "isi": [
           {
             "_type": "pasal",
@@ -994,7 +994,7 @@
   {
     "_type": "bab",
     "_key": 12,
-    "_judul": "PENYIDIKAN",
+    "_judul": "BAB XII PENYIDIKAN",
     "isi": [
       {
         "_type": "pasal",
@@ -1055,7 +1055,7 @@
   {
     "_type": "bab",
     "_key": 13,
-    "_judul": "KETENTUAN PIDANA",
+    "_judul": "BAB XIII KETENTUAN PIDANA",
     "isi": [
       {
         "_type": "pasal",
@@ -1107,7 +1107,7 @@
   {
     "_type": "bab",
     "_key": 14,
-    "_judul": "KETENTUAN PENUTUP",
+    "_judul": "BAB XIV KETENTUAN PENUTUP",
     "isi": [
       {
         "_type": "pasal",

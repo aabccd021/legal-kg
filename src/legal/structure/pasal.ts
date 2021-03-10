@@ -1,6 +1,7 @@
 import assertNever from 'assert-never';
 import { DocumentNode, _getDocumentUri } from '../document';
 import { ReferenceText } from '../reference';
+import { AmendPoints } from './amend';
 import { Ayat } from './ayat';
 import { BabNode } from './bab';
 import { Bagian, BagianNode } from './bagian';
@@ -38,8 +39,17 @@ export function getPasalParentDocument(parent: PasalParentNode): DocumentNode {
 export type Pasal = {
   _type: 'pasal';
   _key: number;
-  isi: Ayat[] | Points | ReferenceText;
+  isi: IsiPasal;
 };
+
+export type IsiPasal =
+  | Points
+  | ReferenceText
+  | AmendPoints
+  | {
+      _type: 'ayats';
+      ayats: Ayat[];
+    };
 export function isPasals(isi: Bagian[] | Pasal[] | Paragraf[]): isi is Pasal[] {
   return isi?.[0]?._type === 'pasal';
 }

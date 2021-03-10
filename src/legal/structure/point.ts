@@ -1,4 +1,3 @@
-import { UpdateAmend } from './amend';
 import { _getStructureUri } from '.';
 import { ReferenceText } from '../reference';
 import { AyatNode } from './ayat';
@@ -22,7 +21,7 @@ export function _getPointUri(pointNode: PointNode): string {
 export type Point = {
   _type: 'numPoint' | 'alphaPoint';
   _key: string | number;
-  isi?: Points | UpdateAmend;
+  isi?: Points;
   text: ReferenceText;
 };
 

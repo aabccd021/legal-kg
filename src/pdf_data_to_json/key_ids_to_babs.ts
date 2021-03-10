@@ -1,12 +1,14 @@
+import { AmendedPoint } from './../legal/structure/amend';
 import { Paragraf } from './../legal/structure/paragraf';
-import { chain, curry } from 'lodash';
+import { chain, curry, isEmpty } from 'lodash';
 import { ReferenceText } from '../legal/reference';
 import { Bab } from '../legal/structure/bab';
 import { Bagian } from '../legal/structure/bagian';
-import { Pasal } from '../legal/structure/pasal';
+import { IsiPasal, Pasal } from '../legal/structure/pasal';
 import { Span } from '../util';
 import { KeyIds } from './babs_spans_to_key_ids';
-import { spanIdKeyMapOf, toSpansWith } from './util';
+import { getSpansInRange, spanIdKeyMapOf, toSpansWith } from './util';
+import { AmendPoints } from '../legal/structure/amend';
 
 export type Context = {
   hasAmendPasal: boolean;
@@ -59,14 +61,15 @@ function spansToParagraf(context: Context, keySpans: [string, Span[]]): Paragraf
   const { pasalKeyOfId } = context.keyIds;
   const [key, spans] = keySpans;
   const { preKeySpans, spansOfKey } = toSpansWith(pasalKeyOfId, spans);
-  const isi = chain(spansOfKey).toPairs().map<Pasal>(curry(spansToPasal)(context)).value();
+  const isi = chain(spansOfKey).toPairs().map(spansToPasalWith(context)).value();
   const _judul = preKeySpans.map(({ str }) => str).join(' ');
   const _key = parseInt(key);
   return { _type: 'paragraf', _key, _judul, isi };
 }
 
-function spansToPasal(_: Context, keySpans: [string, Span[]]): Pasal {
-  // const { paragrafKeyOfId, pasalKeyOfId } = keyIds;
+const spansToPasalWith = curry(spansToPasal);
+function spansToPasal(context: Context, keySpans: [string, Span[]]): Pasal {
+  // const { amendPasalKeyOfId } = context.keyIds;
   const [key, spans] = keySpans;
   // const childStructure = spanIdKeyMapOf(
   //   ['paragraf', paragrafKeyOfId],
@@ -75,13 +78,47 @@ function spansToPasal(_: Context, keySpans: [string, Span[]]): Pasal {
   // );
   // const spanIdKeyMap = childStructure === 'paragraf' ? paragrafKeyOfId : pasalKeyOfId;
   // const { spansOfKey } = toSpansWith(spanIdKeyMap, spans);
+  const isi = isiPasalOf(context, spans.slice(1));
   const _key = parseInt(key);
-  const text = chain(spans)
+
+  return { _type: 'pasal', _key, isi };
+}
+
+function isiPasalOf(context: Context, spans: Span[]): IsiPasal {
+  const { keyIds, hasAmendPasal } = context;
+  const { amendPasalKeyOfId } = keyIds;
+  if (hasAmendPasal && !isEmpty(getSpansInRange(amendPasalKeyOfId, spans))) {
+    return amendPointsOf(context, spans);
+  }
+  return chain(spans)
     .map(({ str }) => str)
     .join(' ')
     .thru(stringToEmptyReference)
     .value();
-  return { _type: 'pasal', _key, isi: text };
+}
+
+function amendPointsOf(context: Context, spans: Span[]): AmendPoints {
+  const { keyIds } = context;
+  const { amendNomorKeyOfId } = keyIds;
+  const { preKeySpans, spansOfKey } = toSpansWith(amendNomorKeyOfId, spans);
+  const isi = chain(spansOfKey).toPairs().map(spansToAmendedPointWith(context)).value();
+  const description = preKeySpans.map(({ str }) => str).join(' ');
+  if (!/^(Beberapa|Untuk|Ketentuan)/.test(description)) {
+    console.log('===IRREGULAR AMEND===\n', preKeySpans[0]?.id, preKeySpans[0]?.pageNum);
+  }
+  return { _type: 'amendPoints', description, isi };
+}
+
+const spansToAmendedPointWith = curry(spansToAmendedPoint);
+function spansToAmendedPoint(_context: Context, keySpans: [string, Span[]]): AmendedPoint {
+  const [key, spans] = keySpans;
+  const _key = parseInt(key);
+  const isi = chain(spans)
+    .map(({ str }) => str)
+    .join(' ')
+    .thru(stringToEmptyReference)
+    .value();
+  return { _type: 'amendedPoint', _key, isi };
 }
 
 function stringToEmptyReference(text: string): ReferenceText {

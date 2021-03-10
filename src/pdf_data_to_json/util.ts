@@ -1,6 +1,6 @@
 import { Structure } from './../legal/structure/index';
-import { chain, curry, isUndefined } from 'lodash';
-import { Span, neverNum } from '../util';
+import { chain, curry, isUndefined, min } from 'lodash';
+import { Span, neverNum, lastOf } from '../util';
 import { SpanIdKeyMap } from './babs_spans_to_key_ids';
 import { Context } from './key_ids_to_babs';
 
@@ -13,23 +13,24 @@ type Acc = {
 type SpansOfKey = { [key: number]: Span[] };
 type ToStructureWith<T extends Structure> = (context: Context, keySpans: [string, Span[]]) => T;
 type StructureUtil<T extends Structure> = {
-  spanIdKeyMap: SpanIdKeyMap;
+  spanIdKeyMap: SpanIdKeyMap<number>;
   toStructure: (keySpans: [string, Span[]][]) => T[];
 };
 
 export function spanIdKeyMapOf<A extends Structure, B extends Structure>(
-  map1: [SpanIdKeyMap, ToStructureWith<A>],
-  map2: [SpanIdKeyMap, ToStructureWith<B>],
+  map1: [SpanIdKeyMap<number>, ToStructureWith<A>],
+  map2: [SpanIdKeyMap<number>, ToStructureWith<B>],
   spans: Span[],
   context: Context
 ): StructureUtil<A> | StructureUtil<B> {
-  return (getMinInRange(map1[0], spans) ?? Infinity) < (getMinInRange(map2[0], spans) ?? Infinity)
+  return (min(getSpansInRange(map1[0], spans)) ?? Infinity) <
+    (min(getSpansInRange(map2[0], spans)) ?? Infinity)
     ? transform(map1, context)
     : transform(map2, context);
 }
 
 function transform<T extends Structure>(
-  map1: [SpanIdKeyMap, ToStructureWith<T>],
+  map1: [SpanIdKeyMap<number>, ToStructureWith<T>],
   context: Context
 ): StructureUtil<T> {
   return {
@@ -38,34 +39,33 @@ function transform<T extends Structure>(
   };
 }
 
-function getMinInRange(map: SpanIdKeyMap, spans: Span[]): number | undefined {
+export function getSpansInRange<T>(map: SpanIdKeyMap<T>, spans: Span[]): number[] {
   return chain(map)
     .keys()
     .map((key) => parseInt(key))
     .filter((id) => id >= (spans[0]?.id ?? neverNum()))
-    .filter((id) => id <= (spans.slice(-1)[0]?.id ?? neverNum()))
-    .min()
+    .filter((id) => id <= (lastOf(spans)?.id ?? neverNum()))
     .value();
 }
 
 export const toSpansWith = curry(_toSpansWith);
 
-function _toSpansWith(keyOfId: SpanIdKeyMap, spans: Span[]): Acc {
+function _toSpansWith(keyOfId: SpanIdKeyMap<number>, spans: Span[]): Acc {
   return spans.reduce(toSpans(keyOfId), { spansOfKey: {}, preKeySpans: [] });
 }
 
 const toSpans = curry(_toSpans);
-function _toSpans(keyOfId: SpanIdKeyMap, acc: Acc, span: Span): Acc {
+function _toSpans(keyOfId: SpanIdKeyMap<number>, acc: Acc, span: Span): Acc {
   const { spansOfKey, currentKey, preKeySpans } = acc;
   const newKey = keyOfId[span.id];
 
   if (isUndefined(currentKey)) {
     if (isUndefined(newKey)) return { ...acc, preKeySpans: [...preKeySpans, span] };
-    return { ...acc, currentKey: newKey, spansOfKey: { ...spansOfKey, [newKey]: [] } };
+    return { ...acc, currentKey: newKey, spansOfKey: { ...spansOfKey, [newKey]: [span] } };
   }
 
   if (!isUndefined(newKey)) {
-    return { ...acc, currentKey: newKey, spansOfKey: { ...spansOfKey, [newKey]: [] } };
+    return { ...acc, currentKey: newKey, spansOfKey: { ...spansOfKey, [newKey]: [span] } };
   }
 
   const currentSpans = spansOfKey[currentKey];
