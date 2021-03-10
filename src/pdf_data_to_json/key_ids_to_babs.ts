@@ -78,7 +78,7 @@ function spansToPasal(context: Context, keySpans: [string, Span[]]): Pasal {
   // );
   // const spanIdKeyMap = childStructure === 'paragraf' ? paragrafKeyOfId : pasalKeyOfId;
   // const { spansOfKey } = toSpansWith(spanIdKeyMap, spans);
-  const isi = isiPasalOf(context, spans.slice(1));
+  const isi = isiPasalOf(context, spans);
   const _key = parseInt(key);
 
   return { _type: 'pasal', _key, isi };
@@ -86,8 +86,8 @@ function spansToPasal(context: Context, keySpans: [string, Span[]]): Pasal {
 
 function isiPasalOf(context: Context, spans: Span[]): IsiPasal {
   const { keyIds, hasAmendPasal } = context;
-  const { amendPasalKeyOfId } = keyIds;
-  if (hasAmendPasal && !isEmpty(getSpansInRange(amendPasalKeyOfId, spans))) {
+  const { amendNomorKeyOfId } = keyIds;
+  if (hasAmendPasal && !isEmpty(getSpansInRange(amendNomorKeyOfId, spans))) {
     return amendPointsOf(context, spans);
   }
   return chain(spans)

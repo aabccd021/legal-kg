@@ -46,7 +46,7 @@ export function paragrafKeyOfSpan(span: Span): number | undefined {
   return safeParseInt(str?.replace(/^Paragraf /, ''));
 }
 
-function safeParseInt(str: string | undefined): number | undefined {
+export function safeParseInt(str: string | undefined): number | undefined {
   if (isUndefined(str)) return undefined;
   if (!/^[0-9]+$/.test(str)) return undefined;
   try {

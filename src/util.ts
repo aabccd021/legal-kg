@@ -36,6 +36,9 @@ export type Span = UnindexedSpan & {
 export function neverNum(x?: string): number {
   throw Error(x);
 }
+export function neverString(x?: string): string {
+  throw Error(x);
+}
 
 export type Accumulator<T extends string> = { spans: SpanOf<T>; flag: T };
 export type SpanOf<T extends string> = { [P in T]: Span[] };
