@@ -62,6 +62,7 @@ export function safeParseInt(str: string | undefined): number | undefined {
 
 function clean(str: string): string {
   if (str === 'S5') return '5';
+  if (str === 'S1') return '51';
   if (str === 'S') return '5';
   if (str === 'l') return '1';
   return str;

@@ -140,7 +140,7 @@ function toKeys(
   }
 
   // Amended Ubah Pasal
-  if (/^[0-9]+(\.|,) (Ketentuan|Penjelasan) Pasal [0-9]+ diubah/.test(span.str)) {
+  if (/^S?[0-9]+(\.|,) (Ketentuan|Penjelasan) Pasal [0-9]+ diubah/.test(span.str)) {
     const nomorStr = span.str.split(' ')[0]?.replaceAll('.', '')?.replaceAll(',', '');
     const amendNomor = safeParseInt(nomorStr) ?? neverNum(nomorStr);
     const amendedPasalKey = span.str.split(' ')[3] ?? neverString();
@@ -172,6 +172,20 @@ function toKeys(
   }
 
   if (/^[0-9]+\. Di antara (Pasal|Bab)/.test(span.str)) {
+    const nomorStr = span.str.split(' ')[0]?.replaceAll('.', '');
+    const amendNomor = safeParseInt(nomorStr) ?? neverNum(nomorStr);
+    const newLastNomor = { id: span.id, key: amendNomor };
+    return {
+      ...acc,
+      amendNomorKeyOfId: { ...amendNomorKeyOfId, [span.id]: amendNomor },
+      nomorKeyOfId: { ...nomorKeyOfId, [span.id]: amendNomor },
+      lastNomor: newLastNomor,
+      lastAmendedNomor: newLastNomor,
+      afterTruePasal: false,
+    };
+  }
+
+  if (/^[0-9]+\. Ketentuan judul BAB/.test(span.str)) {
     const nomorStr = span.str.split(' ')[0]?.replaceAll('.', '');
     const amendNomor = safeParseInt(nomorStr) ?? neverNum(nomorStr);
     const newLastNomor = { id: span.id, key: amendNomor };
@@ -274,6 +288,7 @@ function toKeys(
 
   const newNomorKey = nomorKeyOfSpan(span);
   if (!isUndefined(newNomorKey)) {
+    // console.log(span.str);
     return {
       ...acc,
       nomorKeyOfId: { ...nomorKeyOfId, [span.id]: newNomorKey },
