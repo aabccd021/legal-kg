@@ -23,8 +23,9 @@ export type KeyIds = {
   lastPasalKey?: number;
   nomorKeyOfId: SpanIdKeyMap<number>;
   amendNomorKeyOfId: SpanIdKeyMap<number>;
+  afterTruePasal: boolean;
   afterPasalXls: number[];
-  afterNonPasal: boolean;
+  afterAbovePasal: boolean;
 };
 
 export type SpanIdKeyMap<T> = { [id: number]: T };
@@ -39,7 +40,8 @@ export function babsSpansToKeyIds(hasAmendPasal: boolean, spans: Span[]): KeyIds
     nomorKeyOfId: {},
     amendNomorKeyOfId: {},
     afterPasalXls: [],
-    afterNonPasal: false,
+    afterAbovePasal: false,
+    afterTruePasal: false,
   };
   return spans.reduce(toKeysWith(hasAmendPasal), initialAcc);
 }
@@ -63,7 +65,8 @@ function toKeys(
     nomorKeyOfId,
     amendNomorKeyOfId,
     lastNomor,
-    afterNonPasal,
+    afterAbovePasal,
+    afterTruePasal,
     afterPasalXls,
     lastBabKey,
     lastBagianKey,
@@ -79,7 +82,7 @@ function toKeys(
   if (newBabKey === lastBabKey + 1) {
     return {
       ...acc,
-      afterNonPasal: true,
+      afterAbovePasal: true,
       babKeyOfid: { ...babKeyOfid, [span.id]: newBabKey },
       lastBabKey: newBabKey,
     };
@@ -89,7 +92,7 @@ function toKeys(
   if (!isUndefined(newBagianKey) && (newBagianKey === 1 || newBagianKey - 1 === lastBagianKey)) {
     return {
       ...acc,
-      afterNonPasal: true,
+      afterAbovePasal: true,
       bagianKeyOfId: { ...bagianKeyOfId, [span.id]: newBagianKey },
       lastBagianKey: newBagianKey,
     };
@@ -102,21 +105,61 @@ function toKeys(
   ) {
     return {
       ...acc,
-      afterNonPasal: true,
+      afterAbovePasal: true,
       paragrafKeyOfId: { ...paragrafKeyOfId, [span.id]: newParagrafKey },
       lastParagrafKey: newParagrafKey,
+    };
+  }
+
+  // Amended Hapus Pasal
+  if (/^[0-9]+. Pasal [0-9]+[A-Z]? dihapus.$/.test(span.str)) {
+    const nomorStr = span.str.split(' ')[0]?.replaceAll('.', '');
+    const amendNomor = safeParseInt(nomorStr) ?? neverNum(nomorStr);
+    const amendedPasalKey = span.str.split(' ')[2] ?? neverString();
+    const newLastNomor = { id: span.id, key: amendNomor };
+
+    if (newLastNomor.key !== 1 && newLastNomor.key - 1 !== lastAmendedNomor?.key)
+      console.log(
+        'Strange PDF ',
+        JSON.stringify(span) + JSON.stringify(newLastNomor) + JSON.stringify(lastAmendedNomor)
+      );
+
+    return {
+      ...acc,
+      amendNomorKeyOfId: { ...amendNomorKeyOfId, [span.id]: amendNomor },
+      nomorKeyOfId: { ...nomorKeyOfId, [span.id]: amendNomor },
+      amendPasalKeyOfId: { ...amendPasalKeyOfId, [span.id]: amendedPasalKey },
+      lastNomor: newLastNomor,
+      lastAmendedNomor: newLastNomor,
+      afterTruePasal: false,
+    };
+  }
+
+  if (/^[0-9]+. Di antara Bab/.test(span.str)) {
+    const nomorStr = span.str.split(' ')[0]?.replaceAll('.', '');
+    const amendNomor = safeParseInt(nomorStr) ?? neverNum(nomorStr);
+    const newLastNomor = { id: span.id, key: amendNomor };
+    return {
+      ...acc,
+      amendNomorKeyOfId: { ...amendNomorKeyOfId, [span.id]: amendNomor },
+      nomorKeyOfId: { ...nomorKeyOfId, [span.id]: amendNomor },
+      lastNomor: newLastNomor,
+      lastAmendedNomor: newLastNomor,
+      afterTruePasal: false,
     };
   }
 
   const newAfterPasal = spans[idx + 1];
   const newPasalKey = pasalKeyOfSpan(span);
   if (!isUndefined(newAfterPasal) && !isUndefined(newPasalKey)) {
+    // True Pasal
     const newAcc: KeyIds = {
       ...acc,
-      afterNonPasal: false,
+      afterAbovePasal: false,
       pasalKeyOfId: { ...pasalKeyOfId, [span.id]: newPasalKey },
       afterPasalXls: [...afterPasalXls, newAfterPasal.xL],
       lastPasalKey: newPasalKey,
+      afterTruePasal: true,
     };
 
     if (isUndefined(lastPasalKey)) {
@@ -126,7 +169,7 @@ function toKeys(
       if (newPasalKey === lastPasalKey + 1) {
         if (
           !hasAmendPasal ||
-          afterNonPasal ||
+          afterAbovePasal ||
           newAfterPasal.str.startsWith('Beberapa ketentuan') ||
           Math.abs(newAfterPasal.xL - mean(afterPasalXls)) < 13
         ) {
@@ -143,39 +186,51 @@ function toKeys(
         }
       }
 
+      // if (
+      //   !isUndefined(lastNomor) &&
+      //   lastNomor.key !== 1 &&
+      //   lastNomor.key - 1 !== lastAmendedNomor?.key &&
+      //   lastNomor.key !== lastAmendedNomor?.key
+      // )
+      //   throw Error(
+      //     JSON.stringify(span) + JSON.stringify(lastNomor) + JSON.stringify(lastAmendedNomor)
+      //   );
       // Amended Pasal
       return {
         ...acc,
-        afterNonPasal: false,
+        afterAbovePasal: false,
         amendPasalKeyOfId: { ...amendPasalKeyOfId, [span.id]: `${newPasalKey}` },
         amendNomorKeyOfId: newNomorKeyOfIdOf(amendNomorKeyOfId, lastNomor),
         lastAmendedNomor: lastNomor,
+        afterTruePasal: false,
       };
     }
   }
 
   // Amended Pasal
-  const amendedPasalRegexp = /^Pasal [0-9]+[A-Z]+$/;
+  // handle `Pasal DD2A` -> `Pasal 22A`
+  const amendedPasalRegexp = /^Pasal [D]{0,2}[0-9]+[A-Z]?$/;
   if (amendedPasalRegexp.test(span.str)) {
+    if (
+      !isUndefined(lastNomor) &&
+      lastNomor.key !== 1 &&
+      lastNomor.key - 1 !== lastAmendedNomor?.key &&
+      lastNomor.key !== lastAmendedNomor?.key &&
+      !afterTruePasal
+    )
+      throw Error(
+        JSON.stringify(span) + JSON.stringify(lastNomor) + JSON.stringify(lastAmendedNomor)
+      );
+
     return {
       ...acc,
       amendPasalKeyOfId: { ...amendPasalKeyOfId, [span.id]: span.str },
       amendNomorKeyOfId: newNomorKeyOfIdOf(amendNomorKeyOfId, lastNomor),
       lastAmendedNomor: lastNomor,
+      afterTruePasal: false,
     };
   }
-  if (/^[0-9]+. Pasal [0-9]+ dihapus.$/.test(span.str)) {
-    const x = span.str.split(' ')[0]?.replaceAll('.', '');
-    const amendNomor = safeParseInt(x) ?? neverNum(x);
-    const amendedPasalKey = span.str.split(' ')[2] ?? neverString();
-    return {
-      ...acc,
-      amendNomorKeyOfId: { ...amendNomorKeyOfId, [span.id]: amendNomor },
-      nomorKeyOfId: { ...nomorKeyOfId, [span.id]: amendNomor },
-      amendPasalKeyOfId: { ...amendPasalKeyOfId, [span.id]: amendedPasalKey },
-      lastNomor: { id: span.id, key: amendNomor },
-    };
-  }
+
   const newNomorKey = nomorKeyOfSpan(span);
   if (!isUndefined(newNomorKey)) {
     return {

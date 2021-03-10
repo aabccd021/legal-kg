@@ -4,7 +4,8 @@ import { Span } from '../util';
 
 export function nomorKeyOfSpan(span: Span): number | undefined {
   const { str } = span;
-  const numberStr = str?.match(/^[0-9]+./)?.[0]?.match(/^[0-9]+/)?.[0];
+  // Handle S5 -> 5
+  const numberStr = str?.match(/^(S|S?[0-9]+)\./)?.[0]?.match(/^(S|S?[0-9]+)/)?.[0];
   return safeParseInt(numberStr);
 }
 
@@ -48,12 +49,19 @@ export function paragrafKeyOfSpan(span: Span): number | undefined {
 
 export function safeParseInt(str: string | undefined): number | undefined {
   if (isUndefined(str)) return undefined;
-  if (!/^[0-9]+$/.test(str)) return undefined;
+  const cleanedStr = clean(str);
+  if (!/^[0-9]+$/.test(cleanedStr)) return undefined;
   try {
-    const parseResult = parseInt(str);
+    const parseResult = parseInt(cleanedStr);
     if (isNaN(parseResult)) return undefined;
     return parseResult;
   } catch {
     return undefined;
   }
+}
+
+function clean(str: string): string {
+  if (str === 'S5') return '5';
+  if (str === 'S') return '5';
+  return str;
 }

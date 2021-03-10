@@ -115,7 +115,7 @@ function spansToAmendedPoint(_context: Context, keySpans: [string, Span[]]): Ame
   const _key = parseInt(key);
   const isi = chain(spans)
     .map(({ str }) => str)
-    .join(' ')
+    .join('\n')
     .thru(stringToEmptyReference)
     .value();
   return { _type: 'amendedPoint', _key, isi };
