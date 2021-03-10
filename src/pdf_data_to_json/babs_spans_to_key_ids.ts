@@ -144,7 +144,7 @@ function toKeys(
   }
 
   // Amended Ubah Pasal
-  if (/^S?[0-9]+(\.|,) (Ketentuan|Penjelasan) Pasal [0-9]+ .*diubah/.test(span.str)) {
+  if (/^S?[0-9]+(\.|,) (Ketentuan|Penjelasan) Pasal [0-9]+[A-Z]? .*diubah/.test(span.str)) {
     const nomorStr = span.str.split(' ')[0]?.replaceAll('.', '')?.replaceAll(',', '');
     const amendNomor = safeParseInt(nomorStr) ?? neverNum(nomorStr);
     const amendedPasalKey = span.str.split(' ')[3] ?? neverString();
