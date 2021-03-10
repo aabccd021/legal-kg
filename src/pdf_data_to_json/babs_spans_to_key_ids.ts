@@ -132,12 +132,11 @@ function toKeys(
       );
     }
 
-    const newAmendedPasalKey = [...(amendPasalKeyOfId[span.id] ?? []), amendedPasalKey];
     return {
       ...acc,
       amendNomorKeyOfId: { ...amendNomorKeyOfId, [span.id]: amendNomor },
       nomorKeyOfId: { ...nomorKeyOfId, [span.id]: amendNomor },
-      amendPasalKeyOfId: { ...amendPasalKeyOfId, [span.id]: newAmendedPasalKey },
+      amendPasalKeyOfId: newAmendPasalKeyOfIdOf(amendPasalKeyOfId, span.id, amendedPasalKey),
       lastNomor: newLastNomor,
       lastAmendedNomor: newLastNomor,
       afterTruePasal: false,
@@ -268,7 +267,8 @@ function toKeys(
 
   // Amended Pasal
   // handle `Pasal DD2A` -> `Pasal 22A`
-  if (/^Pasal [D]{0,2}[0-9]+[A-Z]?$/.test(span.str)) {
+  // handle `Pasal S51A` -> `Pasal 51A`
+  if (/^Pasal (S|DD)?[0-9]+[A-Z]?$/.test(span.str)) {
     if (
       !isUndefined(lastNomor) &&
       lastNomor.key !== 1 &&

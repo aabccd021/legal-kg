@@ -5706,6 +5706,9 @@
                     {
                       "_type": "amendedPoint",
                       "_key": 33,
+                      "pasalKeys": [
+                        "Pasal S51A"
+                      ],
                       "isi": {
                         "_type": "referenceText",
                         "references": [],
@@ -8444,9 +8447,6 @@
                     {
                       "_type": "amendedPoint",
                       "_key": 2,
-                      "pasalKeys": [
-                        "Pasal D4A"
-                      ],
                       "isi": {
                         "_type": "referenceText",
                         "references": [],
@@ -13789,8 +13789,7 @@
                   "_type": "amendedPoint",
                   "_key": 3,
                   "pasalKeys": [
-                    "21",
-                    "Pasal D1"
+                    "21"
                   ],
                   "isi": {
                     "_type": "referenceText",
