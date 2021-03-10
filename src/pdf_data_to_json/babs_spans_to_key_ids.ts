@@ -257,11 +257,9 @@ function toKeys(
         );
       }
       // Amended Pasal
-      const newAmendedPasalKey = [...(amendPasalKeyOfId[span.id] ?? []), `${newPasalKey}`];
       return {
         ...acc,
         afterAbovePasal: false,
-        amendPasalKeyOfId: { ...amendPasalKeyOfId, [span.id]: newAmendedPasalKey },
         amendNomorKeyOfId: newNomorKeyOfIdOf(amendNomorKeyOfId, lastNomor),
         lastAmendedNomor: lastNomor,
         afterTruePasal: false,
