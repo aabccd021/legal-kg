@@ -13836,6 +13836,9 @@
                 {
                   "_type": "amendedPoint",
                   "_key": 7,
+                  "pasalKeys": [
+                    "Pasal 3DA"
+                  ],
                   "isi": {
                     "_type": "referenceText",
                     "references": [],

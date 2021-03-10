@@ -268,7 +268,8 @@ function toKeys(
   // Amended Pasal
   // handle `Pasal DD2A` -> `Pasal 22A`
   // handle `Pasal S51A` -> `Pasal 51A`
-  if (/^Pasal (S|DD)?[0-9]+[A-Z]?$/.test(span.str)) {
+  // handle `Pasal 3DA` -> `Pasal 32A`
+  if (/^Pasal (S|DD)?[0-9]+[A-Z]{0,2}$/.test(span.str)) {
     if (
       !isUndefined(lastNomor) &&
       lastNomor.key !== 1 &&
