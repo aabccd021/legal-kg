@@ -165,12 +165,11 @@ function toKeys(
       );
     }
 
-    const newAmendedPasalKey = [...(amendPasalKeyOfId[span.id] ?? []), amendedPasalKey];
     return {
       ...acc,
       amendNomorKeyOfId: { ...amendNomorKeyOfId, [span.id]: amendNomor },
+      amendPasalKeyOfId: newAmendPasalKeyOfIdOf(amendPasalKeyOfId, span.id, amendedPasalKey),
       nomorKeyOfId: { ...nomorKeyOfId, [span.id]: amendNomor },
-      amendPasalKeyOfId: { ...amendPasalKeyOfId, [span.id]: newAmendedPasalKey },
       lastNomor: newLastNomor,
       lastAmendedNomor: newLastNomor,
       afterTruePasal: false,
@@ -284,7 +283,7 @@ function toKeys(
     return {
       ...acc,
       afterAbovePasal: false,
-      amendPasalKeyOfId: newAmendKeyOfPasalIdOf(amendPasalKeyOfId, lastNomor, span.str),
+      amendPasalKeyOfId: newAmendPasalKeyOfIdOf(amendPasalKeyOfId, lastNomor?.id, span.str),
       amendNomorKeyOfId: newNomorKeyOfIdOf(amendNomorKeyOfId, lastNomor),
       lastAmendedNomor: lastNomor,
       afterTruePasal: false,
@@ -311,12 +310,12 @@ function newNomorKeyOfIdOf(
   if (isUndefined(lastNomor)) return oldKeyOfId;
   return { ...oldKeyOfId, [lastNomor.id]: lastNomor.key };
 }
-function newAmendKeyOfPasalIdOf(
+function newAmendPasalKeyOfIdOf(
   amendPasalKeyOfId: SpanIdKeyMap<string[]>,
-  lastNomor: { id: number; key: number } | undefined,
+  lastNomorId: number | undefined,
   newPasalKey: string
 ): SpanIdKeyMap<string[]> {
-  if (isUndefined(lastNomor)) return amendPasalKeyOfId;
-  const newAmendedPasalKey = [...(amendPasalKeyOfId[lastNomor.id] ?? []), newPasalKey];
-  return { ...amendPasalKeyOfId, [lastNomor.id]: newAmendedPasalKey };
+  if (isUndefined(lastNomorId)) return amendPasalKeyOfId;
+  const newAmendedPasalKey = [...(amendPasalKeyOfId[lastNomorId] ?? []), newPasalKey];
+  return { ...amendPasalKeyOfId, [lastNomorId]: newAmendedPasalKey };
 }
