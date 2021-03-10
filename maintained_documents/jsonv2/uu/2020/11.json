@@ -872,7 +872,8 @@
                       "_type": "amendedPoint",
                       "_key": 21,
                       "pasalKeys": [
-                        "22C"
+                        "22C",
+                        "220"
                       ],
                       "isi": {
                         "_type": "referenceText",
@@ -1678,7 +1679,8 @@
                       "_key": 32,
                       "pasalKeys": [
                         "Pasal 82A",
-                        "Pasal 82B"
+                        "Pasal 82B",
+                        "820"
                       ],
                       "isi": {
                         "_type": "referenceText",
@@ -3082,6 +3084,9 @@
                     {
                       "_type": "amendedPoint",
                       "_key": 5,
+                      "pasalKeys": [
+                        "18"
+                      ],
                       "isi": {
                         "_type": "referenceText",
                         "references": [],
@@ -3945,6 +3950,9 @@
                     {
                       "_type": "amendedPoint",
                       "_key": 1,
+                      "pasalKeys": [
+                        "6"
+                      ],
                       "isi": {
                         "_type": "referenceText",
                         "references": [],
@@ -8447,6 +8455,7 @@
                     {
                       "_type": "amendedPoint",
                       "_key": 2,
+                      "pasalKeys": [],
                       "isi": {
                         "_type": "referenceText",
                         "references": [],
@@ -12445,7 +12454,8 @@
                       "_type": "amendedPoint",
                       "_key": 15,
                       "pasalKeys": [
-                        "75"
+                        "75",
+                        "15"
                       ],
                       "isi": {
                         "_type": "referenceText",
@@ -12554,7 +12564,9 @@
                       "_type": "amendedPoint",
                       "_key": 5,
                       "pasalKeys": [
-                        "25"
+                        "25",
+                        "22",
+                        "9"
                       ],
                       "isi": {
                         "_type": "referenceText",
@@ -14415,6 +14427,7 @@
                     "Pasal 153F",
                     "Pasal 153G",
                     "Pasal 153H",
+                    "1531",
                     "Pasal 153J"
                   ],
                   "isi": {
@@ -14757,6 +14770,7 @@
                 {
                   "_type": "amendedPoint",
                   "_key": 3,
+                  "pasalKeys": [],
                   "isi": {
                     "_type": "referenceText",
                     "references": [],
@@ -14779,6 +14793,9 @@
                 {
                   "_type": "amendedPoint",
                   "_key": 5,
+                  "pasalKeys": [
+                    "157"
+                  ],
                   "isi": {
                     "_type": "referenceText",
                     "references": [],
@@ -14813,7 +14830,8 @@
                   "_type": "amendedPoint",
                   "_key": 8,
                   "pasalKeys": [
-                    "Pasal 159A"
+                    "Pasal 159A",
+                    "159"
                   ],
                   "isi": {
                     "_type": "referenceText",
@@ -15063,6 +15081,7 @@
             {
               "_type": "amendedPoint",
               "_key": 1,
+              "pasalKeys": [],
               "isi": {
                 "_type": "referenceText",
                 "references": [],
@@ -15073,7 +15092,8 @@
               "_type": "amendedPoint",
               "_key": 2,
               "pasalKeys": [
-                "66"
+                "66",
+                "48"
               ],
               "isi": {
                 "_type": "referenceText",
@@ -16130,7 +16150,8 @@
                       "_type": "amendedPoint",
                       "_key": 4,
                       "pasalKeys": [
-                        "11"
+                        "11",
+                        "9"
                       ],
                       "isi": {
                         "_type": "referenceText",
@@ -16414,6 +16435,9 @@
                 {
                   "_type": "amendedPoint",
                   "_key": 1,
+                  "pasalKeys": [
+                    "1"
+                  ],
                   "isi": {
                     "_type": "referenceText",
                     "references": [],
@@ -16447,6 +16471,9 @@
                 {
                   "_type": "amendedPoint",
                   "_key": 4,
+                  "pasalKeys": [
+                    "39"
+                  ],
                   "isi": {
                     "_type": "referenceText",
                     "references": [],
