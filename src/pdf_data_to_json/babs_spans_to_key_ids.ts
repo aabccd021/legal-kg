@@ -258,6 +258,11 @@ function toKeys(
       return {
         ...acc,
         afterAbovePasal: false,
+        amendPasalKeyOfId: newAmendPasalKeyOfIdOf(
+          amendPasalKeyOfId,
+          lastNomor?.id,
+          `${newPasalKey}`
+        ),
         amendNomorKeyOfId: newNomorKeyOfIdOf(amendNomorKeyOfId, lastNomor),
         lastAmendedNomor: lastNomor,
         afterTruePasal: false,
