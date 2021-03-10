@@ -74,6 +74,10 @@ function toKeys(
     lastPasalKey,
   } = acc;
 
+  if (span.id === 426) {
+    console.log();
+  }
+
   const newBabKey = babKeyOfSpan(span);
   if (isUndefined(lastBabKey)) {
     if (newBabKey !== 1) throw Error('impossible');
@@ -140,7 +144,7 @@ function toKeys(
   }
 
   // Amended Ubah Pasal
-  if (/^S?[0-9]+(\.|,) (Ketentuan|Penjelasan) Pasal [0-9]+ diubah/.test(span.str)) {
+  if (/^S?[0-9]+(\.|,) (Ketentuan|Penjelasan) Pasal [0-9]+ .*diubah/.test(span.str)) {
     const nomorStr = span.str.split(' ')[0]?.replaceAll('.', '')?.replaceAll(',', '');
     const amendNomor = safeParseInt(nomorStr) ?? neverNum(nomorStr);
     const amendedPasalKey = span.str.split(' ')[3] ?? neverString();

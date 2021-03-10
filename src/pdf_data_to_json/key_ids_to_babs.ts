@@ -1,6 +1,6 @@
 import { AmendedPoint } from './../legal/structure/amend';
 import { Paragraf } from './../legal/structure/paragraf';
-import { chain, curry, isEmpty } from 'lodash';
+import { chain, curry, isEmpty, isUndefined } from 'lodash';
 import { ReferenceText } from '../legal/reference';
 import { Bab } from '../legal/structure/bab';
 import { Bagian } from '../legal/structure/bagian';
@@ -113,6 +113,7 @@ function spansToAmendedPoint(context: Context, keySpans: [string, Span[]]): Amen
   const [key, spans] = keySpans;
   const _key = parseInt(key);
   const pasalKey = amendPasalKeyOfId[spans[0]?.id ?? neverNum()];
+  if (isUndefined(pasalKey)) console.log(spans[0]?.id, spans[0]?.pageNum, spans[0]?.str);
   const isi = chain(spans)
     .map(({ str }) => str)
     .join('\n')
