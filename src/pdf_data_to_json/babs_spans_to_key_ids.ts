@@ -74,10 +74,6 @@ function toKeys(
     lastPasalKey,
   } = acc;
 
-  if (span.id === 426) {
-    console.log();
-  }
-
   const newBabKey = babKeyOfSpan(span);
   if (isUndefined(lastBabKey)) {
     if (newBabKey !== 1) throw Error('impossible');
@@ -289,7 +285,11 @@ function toKeys(
     return {
       ...acc,
       afterAbovePasal: false,
-      amendPasalKeyOfId: newAmendPasalKeyOfIdOf(amendPasalKeyOfId, lastNomor?.id, span.str),
+      amendPasalKeyOfId: newAmendPasalKeyOfIdOf(
+        amendPasalKeyOfId,
+        lastNomor?.id,
+        span.str.slice('Pasal '.length)
+      ),
       amendNomorKeyOfId: newNomorKeyOfIdOf(amendNomorKeyOfId, lastNomor),
       lastAmendedNomor: lastNomor,
       afterTruePasal: false,
