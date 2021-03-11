@@ -333,7 +333,11 @@ function toKeys(
 
   const newAyatKey = ayatKeyOf(span);
   if (!isUndefined(newAyatKey) && (newAyatKey === 1 || newAyatKey - 1 === lastAyatKey)) {
-    return { ...acc, ayatKeyOfId: { ...ayatKeyOfId, [span.id]: newAyatKey } };
+    return {
+      ...acc,
+      ayatKeyOfId: { ...ayatKeyOfId, [span.id]: newAyatKey },
+      lastAyatKey: newAyatKey,
+    };
   }
   return acc;
 }

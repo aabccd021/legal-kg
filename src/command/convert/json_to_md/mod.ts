@@ -27,10 +27,11 @@ import {
   AmendPoints,
   AmendUpdatePasalPoint,
 } from '../../../legal/structure/amend';
+import * as yaml from 'js-yaml';
 
 type Option = { overwrite: boolean };
 export function jsonToMd(option: Option): void {
-  const jsonNodes = getDocumentData('json');
+  const jsonNodes = getDocumentData('yaml');
   jsonNodes.forEach((jsonNode) => handleJson(jsonNode, option));
 }
 
@@ -45,15 +46,15 @@ function handleJson(jsonNode: DocumentNode, option: Option): void {
       return;
     }
 
-    const jsonString = fs.readFileSync(jsonFile.path).toString();
-    const json = JSON.parse(jsonString) as Document;
+    const json = yaml.load(fs.readFileSync(jsonFile.path, 'utf8')) as Document;
     const md = _jsonToMd(json);
 
     fs.writeFileSync(mdPath, md);
 
     console.log(`Finished json-to-md ${mdPath}`);
-  } catch {
+  } catch (e) {
     console.log(`Error json-to-md ${mdPath}`);
+    console.log(e);
   }
 }
 
@@ -271,3 +272,5 @@ function getPrefixByIndex(index: number, uris: string[]): string {
 
   return `](${uri})`;
 }
+
+jsonToMd({ overwrite: true });

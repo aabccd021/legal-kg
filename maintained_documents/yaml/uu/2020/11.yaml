@@ -74,6 +74,12 @@ babs:
                     (1), penyelenggaraan Cipta Kerja dilaksanakan berdasarkan
                     asas lain sesuai dengan bidang hukum yang diatur dalam
                     undang-undang yang bersangkutan. REPUBLIK INDONESIA -5 -
+              - _type: ayat
+                _key: 2
+                isi:
+                  _type: referenceText
+                  references: []
+                  text: (2) Selain berdasarkan asas sebagaimana dimaksud pada ayat
         - _type: pasal
           _key: 3
           isi:
@@ -171,30 +177,70 @@ babs:
                                 sebagaimana dimaksud dalam Pasal 6 huruf a
                                 dilakukan berdasarkan penetapan tingkat risiko
                                 dan peringkat skala usaha kegiatan usaha.
-                                REPUBLIK INDONESIA -7 - (2) Penetapan tingkat
-                                risiko dan peringkat skala usaha sebagaimana
-                                dimaksud pada ayat (1) diperoleh berdasarkan
-                                penilaian tingkat bahaya dan potensi terjadinya
-                                bahaya. (3) Penilaian tingkat bahaya sebagaimana
+                                REPUBLIK INDONESIA -7 -
+                          - _type: ayat
+                            _key: 2
+                            isi:
+                              _type: referenceText
+                              references: []
+                              text: >-
+                                (2) Penetapan tingkat risiko dan peringkat skala
+                                usaha sebagaimana dimaksud pada ayat (1)
+                                diperoleh berdasarkan penilaian tingkat bahaya
+                                dan potensi terjadinya bahaya.
+                          - _type: ayat
+                            _key: 3
+                            isi:
+                              _type: referenceText
+                              references: []
+                              text: >-
+                                (3) Penilaian tingkat bahaya sebagaimana
                                 dimaksud pada ayat (2) dilakukan terhadap aspek:
                                 a. kesehatan, b. keselamatan, c. lingkungan,
                                 dan/atau d. pemanfaatan dan pengelolaan sumber
-                                daya. (4) Untuk kegiatan tertentu, penilaian
-                                tingkat bahaya sebagaimana dimaksud pada ayat
-                                (3) dapat mencakup aspek lainnya sesuai dengan
-                                sifat kegiatan usaha. (5) Penilaian tingkat
-                                bahaya sebagaimana dimaksud pada ayat (3) dan
-                                ayat (4) dilakukan dengan memperhitungkan: a.
-                                jenis kegiatan usaha, b. kriteria kegiatan
-                                usaha, c. lokasi kegiatan usaha, d. keterbatasan
-                                sumber daya, dan/atau e. risiko volatilitas. (6)
-                                Penilaian potensi terjadinya bahaya sebagaimana
-                                dimaksud pada ayat (2) meliputi: a. hampir tidak
-                                mungkin terjadi, b. kemungkinan kecil terjadi,
-                                Cc. kemungkinan terjadi, atau d. hampir pasti
-                                terjadi. (7) Berdasarkan penilaian tingkat
-                                bahaya sebagaimana dimaksud pada ayat (3), ayat
-                                (4), dan ayat (S5), serta penilaian potensi
+                                daya.
+                          - _type: ayat
+                            _key: 4
+                            isi:
+                              _type: referenceText
+                              references: []
+                              text: >-
+                                (4) Untuk kegiatan tertentu, penilaian tingkat
+                                bahaya sebagaimana dimaksud pada ayat (3) dapat
+                                mencakup aspek lainnya sesuai dengan sifat
+                                kegiatan usaha.
+                          - _type: ayat
+                            _key: 5
+                            isi:
+                              _type: referenceText
+                              references: []
+                              text: >-
+                                (5) Penilaian tingkat bahaya sebagaimana
+                                dimaksud pada ayat (3) dan ayat (4) dilakukan
+                                dengan memperhitungkan: a. jenis kegiatan usaha,
+                                b. kriteria kegiatan usaha, c. lokasi kegiatan
+                                usaha, d. keterbatasan sumber daya, dan/atau e.
+                                risiko volatilitas.
+                          - _type: ayat
+                            _key: 6
+                            isi:
+                              _type: referenceText
+                              references: []
+                              text: >-
+                                (6) Penilaian potensi terjadinya bahaya
+                                sebagaimana dimaksud pada ayat (2) meliputi: a.
+                                hampir tidak mungkin terjadi, b. kemungkinan
+                                kecil terjadi, Cc. kemungkinan terjadi, atau d.
+                                hampir pasti terjadi.
+                          - _type: ayat
+                            _key: 7
+                            isi:
+                              _type: referenceText
+                              references: []
+                              text: >-
+                                (7) Berdasarkan penilaian tingkat bahaya
+                                sebagaimana dimaksud pada ayat (3), ayat (4),
+                                dan ayat (S5), serta penilaian potensi
                                 terjadinya bahaya sebagaimana dimaksud pada ayat
                                 (6), tingkat risiko dan peringkat skala usaha
                                 kegiatan usaha ditetapkan menjadi: a. kegiatan
@@ -222,6 +268,14 @@ babs:
                                 Pelaku Usaha untuk melakukan kegiatan usaha dan
                                 sebagai identitas bagi Pelaku Usaha dalam
                                 pelaksanaan kegiatan usahanya.
+                          - _type: ayat
+                            _key: 2
+                            isi:
+                              _type: referenceText
+                              references: []
+                              text: >-
+                                (2) Nomor induk berusaha sebagaimana dimaksud
+                                pada ayat
               - _type: paragraf
                 _key: 3
                 _judul: Paragraf 3 Perizinan Berusaha Kegiatan Usaha Berisiko Menengah
@@ -243,15 +297,34 @@ babs:
                                 berisiko menengah sebagaimana dimaksud dalam
                                 Pasal 7 ayat (7) huruf b meliputi: a. kegiatan
                                 usaha berisiko menengah rendah, dan b. kegiatan
-                                usaha berisiko menengah tinggi. (2) Perizinan
-                                Berusaha untuk kegiatan usaha berisiko menengah
-                                rendah sebagaimana dimaksud pada ayat (1) huruf
-                                a berupa pemberian: a. nomor induk berusaha: dan
-                                b. sertifikat standar. (3) Perizinan Berusaha
-                                untuk kegiatan usaha berisiko menengah tinggi
-                                sebagaimana dimaksud pada ayat (1) huruf b
-                                berupa pemberian: a. nomor induk berusaha: dan
-                                b. sertifikat standar. REPUBLIK INDONESIA -9 -
+                                usaha berisiko menengah tinggi.
+                          - _type: ayat
+                            _key: 2
+                            isi:
+                              _type: referenceText
+                              references: []
+                              text: >-
+                                (2) Perizinan Berusaha untuk kegiatan usaha
+                                berisiko menengah rendah sebagaimana dimaksud
+                                pada ayat (1) huruf a berupa pemberian: a. nomor
+                                induk berusaha: dan b. sertifikat standar.
+                          - _type: ayat
+                            _key: 3
+                            isi:
+                              _type: referenceText
+                              references: []
+                              text: >-
+                                (3) Perizinan Berusaha untuk kegiatan usaha
+                                berisiko menengah tinggi sebagaimana dimaksud
+                                pada ayat (1) huruf b berupa pemberian: a. nomor
+                                induk berusaha: dan b. sertifikat standar.
+                                REPUBLIK INDONESIA -9 -
+                          - _type: ayat
+                            _key: 4
+                            isi:
+                              _type: referenceText
+                              references: []
+                              text: >-
                                 (4) Sertifikat standar sebagaimana dimaksud pada
                                 ayat (2) huruf b merupakan pernyataan Pelaku
                                 Usaha untuk memenuhi standar usaha dalam rangka
@@ -290,13 +363,25 @@ babs:
                                 (1) Perizinan Berusaha untuk kegiatan usaha
                                 berisiko tinggi sebagaimana dimaksud dalam Pasal
                                 7 ayat (7) huruf c berupa pemberian: a. nomor
-                                induk berusaha: dan b. izin. (2) Izin
-                                sebagaimana dimaksud pada ayat (1) huruf b
-                                merupakan persetujuan Pemerintah Pusat atau
-                                Pemerintah Daerah untuk pelaksanaan kegiatan
-                                usaha yang wajib dipenuhi oleh Pelaku Usaha
-                                sebelum melaksanakan kegiatan usahanya. (3)
-                                Dalam hal kegiatan usaha berisiko tinggi
+                                induk berusaha: dan b. izin.
+                          - _type: ayat
+                            _key: 2
+                            isi:
+                              _type: referenceText
+                              references: []
+                              text: >-
+                                (2) Izin sebagaimana dimaksud pada ayat (1)
+                                huruf b merupakan persetujuan Pemerintah Pusat
+                                atau Pemerintah Daerah untuk pelaksanaan
+                                kegiatan usaha yang wajib dipenuhi oleh Pelaku
+                                Usaha sebelum melaksanakan kegiatan usahanya.
+                          - _type: ayat
+                            _key: 3
+                            isi:
+                              _type: referenceText
+                              references: []
+                              text: >-
+                                (3) Dalam hal kegiatan usaha berisiko tinggi
                                 memerlukan pemenuhan standar usaha dan standar
                                 produk, Pemerintah Pusat atau Pemerintah Daerah
                                 menerbitkan sertifikat standar usaha dan
@@ -381,33 +466,46 @@ babs:
                                 (1) Kesesuaian kegiatan pemanfaatan ruang
                                 sebagaimana dimaksud dalam Pasal 13 huruf a
                                 merupakan kesesuaian rencana lokasi kegiatan
-                                dan/atau usahanya dengan RDTR. (2) Pemerintah
-                                Daerah wajib menyusun dan menyediakan RDTR dalam
-                                bentuk digital dan sesuai standar. (3)
-                                Penyediaan RDTR dalam bentuk digital sebagaimana
-                                dimaksud pada ayat (2) dilakukan sesuai dengan
-                                standar dan dapat diakses dengan mudah oleh
-                                masyarakat untuk mendapatkan informasi mengenai
-                                kesesuaian rencana lokasi kegiatan dan/atau
-                                usahanya dengan RDTR. (44 Pemerintah Pusat wajib
-                                mengintegrasikan RDTR dalam bentuk digital
-                                sebagaimana dimaksud pada ayat (2) ke dalam
-                                sistem Perizinan Berusaha secara elektronik. (5)
-                                Dalam hal Pelaku Usaha mendapatkan informasi
-                                rencana lokasi kegiatan usahanya sebagaimana
-                                dimaksud pada ayat (3) telah sesuai dengan RDTR,
-                                Pelaku Usaha mengajukan permohonan kesesuaian
-                                kegiatan pemanfaatan ruang untuk kegiatan
-                                usahanya melalui sistem Perizinan Berusaha
-                                secara elektronik sebagaimana dimaksud pada ayat
-                                (4) dengan mengisi koordinat lokasi yang
-                                diinginkan untuk memperoleh konfirmasi
-                                kesesuaian kegiatan pemanfaatan ruang. (6)
-                                Setelah memperoleh konfirmasi kesesuaian
-                                kegiatan pemanfaatan ruang sebagaimana dimaksud
-                                pada ayat (5), Pelaku Usaha mengajukan
-                                permohonan Perizinan Berusaha. REPUBLIK
-                                INDONESIA -12 -
+                                dan/atau usahanya dengan RDTR.
+                          - _type: ayat
+                            _key: 2
+                            isi:
+                              _type: referenceText
+                              references: []
+                              text: >-
+                                (2) Pemerintah Daerah wajib menyusun dan
+                                menyediakan RDTR dalam bentuk digital dan sesuai
+                                standar.
+                          - _type: ayat
+                            _key: 3
+                            isi:
+                              _type: referenceText
+                              references: []
+                              text: >-
+                                (3) Penyediaan RDTR dalam bentuk digital
+                                sebagaimana dimaksud pada ayat (2) dilakukan
+                                sesuai dengan standar dan dapat diakses dengan
+                                mudah oleh masyarakat untuk mendapatkan
+                                informasi mengenai kesesuaian rencana lokasi
+                                kegiatan dan/atau usahanya dengan RDTR. (44
+                                Pemerintah Pusat wajib mengintegrasikan RDTR
+                                dalam bentuk digital sebagaimana dimaksud pada
+                                ayat (2) ke dalam sistem Perizinan Berusaha
+                                secara elektronik. (5) Dalam hal Pelaku Usaha
+                                mendapatkan informasi rencana lokasi kegiatan
+                                usahanya sebagaimana dimaksud pada ayat (3)
+                                telah sesuai dengan RDTR, Pelaku Usaha
+                                mengajukan permohonan kesesuaian kegiatan
+                                pemanfaatan ruang untuk kegiatan usahanya
+                                melalui sistem Perizinan Berusaha secara
+                                elektronik sebagaimana dimaksud pada ayat (4)
+                                dengan mengisi koordinat lokasi yang diinginkan
+                                untuk memperoleh konfirmasi kesesuaian kegiatan
+                                pemanfaatan ruang. (6) Setelah memperoleh
+                                konfirmasi kesesuaian kegiatan pemanfaatan ruang
+                                sebagaimana dimaksud pada ayat (5), Pelaku Usaha
+                                mengajukan permohonan Perizinan Berusaha.
+                                REPUBLIK INDONESIA -12 -
                     - _type: pasal
                       _key: 15
                       isi:
@@ -426,17 +524,30 @@ babs:
                                 pemanfaatan ruang untuk kegiatan usahanya kepada
                                 Pemerintah Pusat melalui sistem Perizinan
                                 Berusaha secara elektronik sesuai dengan
-                                ketentuan peraturan perundang-undangan. (2)
-                                Pemerintah Pusat memberikan persetujuan
+                                ketentuan peraturan perundang-undangan.
+                          - _type: ayat
+                            _key: 2
+                            isi:
+                              _type: referenceText
+                              references: []
+                              text: >-
+                                (2) Pemerintah Pusat memberikan persetujuan
                                 kesesuaian kegiatan pemanfaatan ruang
                                 sebagaimana dimaksud pada ayat (1) sesuai dengan
-                                rencana tata ruang. (3) Rencana tata ruang
-                                sebagaimana dimaksud pada ayat (2) terdiri atas:
-                                a. rencana tata ruang wilayah nasional: b.
-                                rencana tata ruang pulau/kepulauanj, Cc. rencana
-                                tata ruang kawasan strategis nasional, d.
-                                rencana tata ruang wilayah provinsi, dan/atau e.
-                                rencana tata ruang wilayah kabupaten/kota.
+                                rencana tata ruang.
+                          - _type: ayat
+                            _key: 3
+                            isi:
+                              _type: referenceText
+                              references: []
+                              text: >-
+                                (3) Rencana tata ruang sebagaimana dimaksud pada
+                                ayat (2) terdiri atas: a. rencana tata ruang
+                                wilayah nasional: b. rencana tata ruang
+                                pulau/kepulauanj, Cc. rencana tata ruang kawasan
+                                strategis nasional, d. rencana tata ruang
+                                wilayah provinsi, dan/atau e. rencana tata ruang
+                                wilayah kabupaten/kota.
                     - _type: pasal
                       _key: 16
                       isi:
@@ -21638,6 +21749,12 @@ babs:
                                 (1) Pelaksanaan perizinan pada sektor pendidikan
                                 dapat dilakukan melalui Perizinan Berusaha
                                 sebagaimana dimaksud dalam Undang-Undang ini.
+                          - _type: ayat
+                            _key: 2
+                            isi:
+                              _type: referenceText
+                              references: []
+                              text: >-
                                 (2) Ketentuan lebih lanjut pelaksanaan perizinan
                                 pada sektor pendidikan sebagaimana dimaksud pada
                                 ayat (1) diatur dalam Peraturan Pemerintah.
@@ -23461,6 +23578,12 @@ babs:
                                 pengadilan, kegiatan instansi lain, serta
                                 kegiatan masyarakat, dan m. menerima dan
                                 menyimpan barang temuan untuk sementara waktu.
+                          - _type: ayat
+                            _key: 2
+                            isi:
+                              _type: referenceText
+                              references: []
+                              text: >-
                                 (2) Kepolisian Negara Republik Indonesia sesuai
                                 dengan ketentuan peraturan perundang-undangan
                                 berwenang: a. memberikan izin dan mengawasi
@@ -23488,11 +23611,17 @@ babs:
                                 Republik Indonesia dalam organisasi kepolisian
                                 internasional, dan k. melaksanakan kewenangan
                                 lain yang termasuk dalam lingkup tugas
-                                kepolisian. (3) Tata cara pelaksanaan ketentuan
-                                sebagaimana dimaksud pada ayat (2) huruf a dan
-                                huruf d diatur lebih lanjut dengan Peraturan
-                                Pemerintah. SK No 052027 A REPUBLIK INDONESIA -
-                                527 -
+                                kepolisian.
+                          - _type: ayat
+                            _key: 3
+                            isi:
+                              _type: referenceText
+                              references: []
+                              text: >-
+                                (3) Tata cara pelaksanaan ketentuan sebagaimana
+                                dimaksud pada ayat (2) huruf a dan huruf d
+                                diatur lebih lanjut dengan Peraturan Pemerintah.
+                                SK No 052027 A REPUBLIK INDONESIA - 527 -
         - _type: bagian
           _key: 5
           _judul: >-
@@ -23721,10 +23850,17 @@ babs:
                                 badan hukum Indonesia, atau Cc. warga negara
                                 Indonesia dan/atau badan hukum Indonesia dengan
                                 warga negara asing dan/atau badan hukum asing
-                                secara kemitraan. (2) Ketentuan lebih lanjut
-                                mengenai persyaratan pendirian yang wajib
-                                dipenuhi pihak-pihak sebagaimana dimaksud pada
-                                ayat (1) ditetapkan oleh Otoritas Jasa Keuangan.
+                                secara kemitraan.
+                          - _type: ayat
+                            _key: 2
+                            isi:
+                              _type: referenceText
+                              references: []
+                              text: >-
+                                (2) Ketentuan lebih lanjut mengenai persyaratan
+                                pendirian yang wajib dipenuhi pihak-pihak
+                                sebagaimana dimaksud pada ayat (1) ditetapkan
+                                oleh Otoritas Jasa Keuangan.
               - _type: paragraf
                 _key: 4
                 _judul: Paragraf 4 Perbankan Syariah
@@ -23748,17 +23884,30 @@ babs:
                                 pemerintah daerah, atau d. warga negara
                                 Indonesia dan/atau badan hukum Indonesia dengan
                                 warga negara asing dan/atau badan hukum asing
-                                secara kemitraan. (2) Bank Pembiayaan Rakyat
-                                Syariah hanya dapat didirikan dan/atau dimiliki
-                                oleh: a. warga negara Indonesia dan/atau badan
-                                hukum Indonesia yang seluruhnya dimiliki oleh
-                                warga negara Indonesia: b. pemerintah daerah:
-                                atau c. dua pihak atau lebih sebagaimana
-                                dimaksud dalam huruf a dan huruf b. REPUBLIK
-                                INDONESIA - 533 - (3) Maksimum kepemilikan Bank
-                                Umum Syariah oleh badan hukum asing ditentukan
-                                sesuai dengan ketentuan peraturan
-                                perundang-undangan di bidang penanaman modal.
+                                secara kemitraan.
+                          - _type: ayat
+                            _key: 2
+                            isi:
+                              _type: referenceText
+                              references: []
+                              text: >-
+                                (2) Bank Pembiayaan Rakyat Syariah hanya dapat
+                                didirikan dan/atau dimiliki oleh: a. warga
+                                negara Indonesia dan/atau badan hukum Indonesia
+                                yang seluruhnya dimiliki oleh warga negara
+                                Indonesia: b. pemerintah daerah: atau c. dua
+                                pihak atau lebih sebagaimana dimaksud dalam
+                                huruf a dan huruf b. REPUBLIK INDONESIA - 533 -
+                          - _type: ayat
+                            _key: 3
+                            isi:
+                              _type: referenceText
+                              references: []
+                              text: >-
+                                (3) Maksimum kepemilikan Bank Umum Syariah oleh
+                                badan hukum asing ditentukan sesuai dengan
+                                ketentuan peraturan perundang-undangan di bidang
+                                penanaman modal.
   - _type: bab
     _key: 4
     _judul: BAB IV KETENAGAKERJAAN
@@ -25823,21 +25972,58 @@ babs:
                         text: >-
                           (1) Pemerintah Pusat dan Pemerintah Daerah wajib
                           menyelenggarakan sistem informasi dan pendataan UMK-M
-                          yang terintegrasi. REPUBLIK INDONESIA - 580 - (2)
-                          Hasil pendataan sebagaimana dimaksud pada ayat (1)
-                          sebagai basis data tunggal UMK-M. (3) Basis data
-                          tunggal sebagaimana dimaksud pada ayat (2) wajib
-                          digunakan sebagai pertimbangan untuk menentukan
-                          kebijakan mengenai UMK-M. (4) Basis data tunggal
-                          sebagaimana dimaksud pada ayat (2) disajikan secara
-                          tepat waktu, akurat, dan tepat guna serta dapat
-                          diakses oleh masyarakat. (5) Pemerintah Pusat
-                          melakukan pembaharuan sistem informasi dan basis data
-                          tunggal paling sedikit 1 (satu) kali dalam 1 (satu)
-                          tahun. (6) Basis data tunggal sebagaimana dimaksud
-                          pada ayat (2) dibentuk dalam jangka waktu paling lama
-                          2 (dua) tahun sejak berlakunya Undang-Undang ini. (7)
-                          Ketentuan lebih lanjut mengenai basis data tunggal
+                          yang terintegrasi. REPUBLIK INDONESIA - 580 -
+                    - _type: ayat
+                      _key: 2
+                      isi:
+                        _type: referenceText
+                        references: []
+                        text: >-
+                          (2) Hasil pendataan sebagaimana dimaksud pada ayat (1)
+                          sebagai basis data tunggal UMK-M.
+                    - _type: ayat
+                      _key: 3
+                      isi:
+                        _type: referenceText
+                        references: []
+                        text: >-
+                          (3) Basis data tunggal sebagaimana dimaksud pada ayat
+                          (2) wajib digunakan sebagai pertimbangan untuk
+                          menentukan kebijakan mengenai UMK-M.
+                    - _type: ayat
+                      _key: 4
+                      isi:
+                        _type: referenceText
+                        references: []
+                        text: >-
+                          (4) Basis data tunggal sebagaimana dimaksud pada ayat
+                          (2) disajikan secara tepat waktu, akurat, dan tepat
+                          guna serta dapat diakses oleh masyarakat.
+                    - _type: ayat
+                      _key: 5
+                      isi:
+                        _type: referenceText
+                        references: []
+                        text: >-
+                          (5) Pemerintah Pusat melakukan pembaharuan sistem
+                          informasi dan basis data tunggal paling sedikit 1
+                          (satu) kali dalam 1 (satu) tahun.
+                    - _type: ayat
+                      _key: 6
+                      isi:
+                        _type: referenceText
+                        references: []
+                        text: >-
+                          (6) Basis data tunggal sebagaimana dimaksud pada ayat
+                          (2) dibentuk dalam jangka waktu paling lama 2 (dua)
+                          tahun sejak berlakunya Undang-Undang ini.
+                    - _type: ayat
+                      _key: 7
+                      isi:
+                        _type: referenceText
+                        references: []
+                        text: >-
+                          (7) Ketentuan lebih lanjut mengenai basis data tunggal
                           UMK-M diatur dalam Peraturan Pemerintah.
         - _type: bagian
           _key: 5
@@ -25860,42 +26046,94 @@ babs:
                           pengelolaan terpadu Usaha Mikro dan Kecil dalam
                           penataan klaster melalui sinergi Pemerintah Pusat,
                           Pemerintah Daerah, dan pemangku kepentingan terkait.
+                    - _type: ayat
+                      _key: 2
+                      isi:
+                        _type: referenceText
+                        references: []
+                        text: >-
                           (2) Pengelolaan terpadu Usaha Mikro dan Kecil
                           sebagaimana dimaksud pada ayat (1) merupakan kumpulan
                           kelompok Usaha Mikro dan Kecil yang terkait dalam: a.
                           suatu rantai produk umum, b. ketergantungan atas
                           keterampilan tenaga kerja yang serupa, atau C.
                           penggunaan teknologi yang serupa dan saling melengkapi
-                          secara terintegrasi. REPUBLIK INDONESIA - 581 - (3)
-                          Saling melengkapi secara terintegrasi sebagaimana
+                          secara terintegrasi. REPUBLIK INDONESIA - 581 -
+                    - _type: ayat
+                      _key: 3
+                      isi:
+                        _type: referenceText
+                        references: []
+                        text: >-
+                          (3) Saling melengkapi secara terintegrasi sebagaimana
                           dimaksud pada ayat (2) huruf c dilaksanakan di lokasi
                           klaster dengan tahap pendirian/legalisasi, pembiayaan,
                           penyediaan bahan baku, proses produksi, kurasi, dan
                           pemasaran produk Usaha Mikro dan Kecil melalui
-                          perdagangan elektronik/non elektronik. (4) Penentuan
-                          lokasi Klaster Usaha Mikro dan Kecil disusun dalam
-                          program Pemerintah Pusat dan Pemerintah Daerah dengan
-                          memperhatikan pemetaan potensi, keunggulan daerah, dan
-                          strategi penentuan lokasi usaha. (5) Pemerintah Pusat
-                          dan Pemerintah Daerah melaksanakan pendampingan
-                          sebagai upaya pengembangan Usaha Mikro dan Kecil untuk
-                          memberi dukungan manejemen, sumber daya manusia,
-                          anggaran, serta sarana dan prasarana. (6) Pemerintah
-                          Pusat dan Pemerintah Daerah dalam menyediakan dukungan
-                          sumber daya manusia, anggaran, serta sarana dan
-                          prasarana sebagaimana dimaksud pada ayat (5) wajib
-                          memberikan fasilitas yang meliputi: a. lahan lokasi
-                          klaster: b. aspek produksi, c. infrastruktur, d.
-                          rantai nilai, e. pendirian badan hukum, f. sertifikasi
-                          dan standardisasi: g. promosi, h. pemasaran, i.
-                          digitalisasi, dan j-. penelitian dan pengembangan. (7)
-                          Pemerintah Pusat mengoordinasikan pengelolaan terpadu
-                          Usaha Mikro dan Kecil dalam penataan klaster. SK No
-                          052084 A REPUBLIK INDONESIA - 582 - (8) Pemerintah
-                          Pusat melakukan evaluasi pengelolaan terpadu Usaha
-                          Mikro dan Kecil dalam penataan klaster. (9) Ketentuan
-                          lebih lanjut mengenai pengelolaan terpadu Usaha Mikro
-                          dan Kecil diatur dalam Peraturan Pemerintah.
+                          perdagangan elektronik/non elektronik.
+                    - _type: ayat
+                      _key: 4
+                      isi:
+                        _type: referenceText
+                        references: []
+                        text: >-
+                          (4) Penentuan lokasi Klaster Usaha Mikro dan Kecil
+                          disusun dalam program Pemerintah Pusat dan Pemerintah
+                          Daerah dengan memperhatikan pemetaan potensi,
+                          keunggulan daerah, dan strategi penentuan lokasi
+                          usaha.
+                    - _type: ayat
+                      _key: 5
+                      isi:
+                        _type: referenceText
+                        references: []
+                        text: >-
+                          (5) Pemerintah Pusat dan Pemerintah Daerah
+                          melaksanakan pendampingan sebagai upaya pengembangan
+                          Usaha Mikro dan Kecil untuk memberi dukungan
+                          manejemen, sumber daya manusia, anggaran, serta sarana
+                          dan prasarana.
+                    - _type: ayat
+                      _key: 6
+                      isi:
+                        _type: referenceText
+                        references: []
+                        text: >-
+                          (6) Pemerintah Pusat dan Pemerintah Daerah dalam
+                          menyediakan dukungan sumber daya manusia, anggaran,
+                          serta sarana dan prasarana sebagaimana dimaksud pada
+                          ayat (5) wajib memberikan fasilitas yang meliputi: a.
+                          lahan lokasi klaster: b. aspek produksi, c.
+                          infrastruktur, d. rantai nilai, e. pendirian badan
+                          hukum, f. sertifikasi dan standardisasi: g. promosi,
+                          h. pemasaran, i. digitalisasi, dan j-. penelitian dan
+                          pengembangan.
+                    - _type: ayat
+                      _key: 7
+                      isi:
+                        _type: referenceText
+                        references: []
+                        text: >-
+                          (7) Pemerintah Pusat mengoordinasikan pengelolaan
+                          terpadu Usaha Mikro dan Kecil dalam penataan klaster.
+                          SK No 052084 A REPUBLIK INDONESIA - 582 -
+                    - _type: ayat
+                      _key: 8
+                      isi:
+                        _type: referenceText
+                        references: []
+                        text: >-
+                          (8) Pemerintah Pusat melakukan evaluasi pengelolaan
+                          terpadu Usaha Mikro dan Kecil dalam penataan klaster.
+                    - _type: ayat
+                      _key: 9
+                      isi:
+                        _type: referenceText
+                        references: []
+                        text: >-
+                          (9) Ketentuan lebih lanjut mengenai pengelolaan
+                          terpadu Usaha Mikro dan Kecil diatur dalam Peraturan
+                          Pemerintah.
         - _type: bagian
           _key: 6
           _judul: Bagian Keenam Kemitraan
@@ -25918,26 +26156,60 @@ babs:
                           dan menstimulasi kegiatan kemitraan Usaha Menengah dan
                           Usaha Besar dengan Koperasi, Usaha Mikro, dan Usaha
                           Kecil yang bertujuan untuk meningkatkan kompetensi dan
-                          level usaha. (2) Kemitraan sebagaimana dimaksud pada
-                          ayat (1) mencakup proses alih keterampilan di bidang
-                          produksi dan pengolahan, pemasaran, permodalan, sumber
-                          daya manusia, dan teknologi. (3) — Pemerintah Pusat
-                          dan Pemerintah Daerah memberikan insentif dan
-                          kemudahan berusaha dalam rangka kemitraan sesuai
-                          dengan ketentuan peraturan perundang-undangan. (4)
-                          Pemerintah Pusat dan Pemerintah Daerah sesuai dengan
-                          kewenangannya melakukan pengawasan dan evaluasi
+                          level usaha.
+                    - _type: ayat
+                      _key: 2
+                      isi:
+                        _type: referenceText
+                        references: []
+                        text: >-
+                          (2) Kemitraan sebagaimana dimaksud pada ayat (1)
+                          mencakup proses alih keterampilan di bidang produksi
+                          dan pengolahan, pemasaran, permodalan, sumber daya
+                          manusia, dan teknologi.
+                    - _type: ayat
+                      _key: 3
+                      isi:
+                        _type: referenceText
+                        references: []
+                        text: >-
+                          (3) — Pemerintah Pusat dan Pemerintah Daerah
+                          memberikan insentif dan kemudahan berusaha dalam
+                          rangka kemitraan sesuai dengan ketentuan peraturan
+                          perundang-undangan.
+                    - _type: ayat
+                      _key: 4
+                      isi:
+                        _type: referenceText
+                        references: []
+                        text: >-
+                          (4) Pemerintah Pusat dan Pemerintah Daerah sesuai
+                          dengan kewenangannya melakukan pengawasan dan evaluasi
                           terhadap pelaksanaan kemitraan antara Usaha Menengah
                           dan Usaha Besar dengan Koperasi, Usaha Mikro, dan
-                          Usaha Kecil. (5) Pemerintah Pusat mengatur pemberian
-                          insentif kepada Usaha Menengah dan Usaha Besar yang
-                          melakukan kemitraan dengan Koperasi, Usaha Mikro, dan
-                          Usaha Kecil melalui inovasi dan pengembangan produk
+                          Usaha Kecil.
+                    - _type: ayat
+                      _key: 5
+                      isi:
+                        _type: referenceText
+                        references: []
+                        text: >-
+                          (5) Pemerintah Pusat mengatur pemberian insentif
+                          kepada Usaha Menengah dan Usaha Besar yang melakukan
+                          kemitraan dengan Koperasi, Usaha Mikro, dan Usaha
+                          Kecil melalui inovasi dan pengembangan produk
                           berorientasi ekspor, penyerapan tenaga kerja,
                           penggunaan teknologi tepat guna dan ramah lingkungan,
                           serta menyelenggarakan pendidikan dan pelatihan.
-                          REPUBLIK INDONESIA - 583 - (6) Ketentuan lebih lanjut
-                          mengenai kemitraan diatur dalam Peraturan Pemerintah.
+                          REPUBLIK INDONESIA - 583 -
+                    - _type: ayat
+                      _key: 6
+                      isi:
+                        _type: referenceText
+                        references: []
+                        text: >-
+                          (6) Ketentuan lebih lanjut mengenai kemitraan diatur
+                          dalam Peraturan Pemerintah.
         - _type: bagian
           _key: 7
           _judul: Bagian Ketujuh Kemudahan Perizinan Berusaha
@@ -25960,37 +26232,88 @@ babs:
                           kewenangannya wajib melakukan pembinaan . dan
                           pendaftaran bagi Usaha Mikro dan Kecil berdasarkan
                           norma, standar, prosedur, dan kriteria yang ditetapkan
-                          oleh Pemerintah Pusat. (2) — Pendaftaran sebagaimana
-                          dimaksud pada ayat (1) dapat dilakukan secara daring
-                          atau luring dengan melampirkan: a. Kartu Tanda
-                          Penduduk (KTP), dan b. Surat keterangan berusaha dari
-                          pemerintah setingkat rukun tetangga. (3) — Pendaftaran
-                          secara daring sebagaimana dimaksud pada ayat (2)
-                          diberi nomor induk berusaha melalui sistem Perizinan
-                          Berusaha secara elektronik. (4) Nomor induk berusaha
-                          sebagaimana dimaksud pada ayat (3) merupakan perizinan
-                          tunggal yang berlaku untuk semua kegiatan usaha. (5)
-                          Perizinan tunggal sebagaimana dimaksud pada ayat (4)
-                          meliputi Perizinan Berusaha, Standar Nasional
-                          Indonesia, dan sertifikasi jaminan produk halal. (6)
-                          Pemerintah Pusat dan Pemerintah Daerah sesuai dengan
-                          kewenangannya berdasarkan norma, standar, prosedur,
-                          dan kriteria yang ditetapkan oleh Pemerintah Pusat
-                          wajib melakukan pembinaan terhadap Perizinan Berusaha,
-                          pemenuhan standar, Standar Nasional Indonesia, dan
-                          sertifikasi jaminan produk halal. REPUBLIK INDONESIA -
-                          584 - (7) Dalam hal kegiatan usaha sebagaimana
-                          dimaksud pada ayat (4) memiliki risiko menengah atau
-                          tinggi terhadap kesehatan, keamanan, dan keselamatan
-                          serta lingkungan selain melakukan registrasi untuk
-                          mendapatkan nomor induk berusaha, Usaha Mikro dan
-                          Kecil wajib memiliki sertifikat sertifikasi standar
-                          dan/atau izin. (8) Pemerintah Pusat dan Pemerintah
-                          Daerah sesuai dengan kewenangannya berdasarkan norma,
-                          standar, prosedur, dan kriteria yang ditetapkan oleh
-                          Pemerintah Pusat memfasilitasi sertifikasi standar
-                          dan/atau izin sebagaimana dimaksud pada ayat (5). (9)
-                          Ketentuan lebih lanjut mengenai perizinan tunggal
+                          oleh Pemerintah Pusat.
+                    - _type: ayat
+                      _key: 2
+                      isi:
+                        _type: referenceText
+                        references: []
+                        text: >-
+                          (2) — Pendaftaran sebagaimana dimaksud pada ayat (1)
+                          dapat dilakukan secara daring atau luring dengan
+                          melampirkan: a. Kartu Tanda Penduduk (KTP), dan b.
+                          Surat keterangan berusaha dari pemerintah setingkat
+                          rukun tetangga.
+                    - _type: ayat
+                      _key: 3
+                      isi:
+                        _type: referenceText
+                        references: []
+                        text: >-
+                          (3) — Pendaftaran secara daring sebagaimana dimaksud
+                          pada ayat (2) diberi nomor induk berusaha melalui
+                          sistem Perizinan Berusaha secara elektronik.
+                    - _type: ayat
+                      _key: 4
+                      isi:
+                        _type: referenceText
+                        references: []
+                        text: >-
+                          (4) Nomor induk berusaha sebagaimana dimaksud pada
+                          ayat (3) merupakan perizinan tunggal yang berlaku
+                          untuk semua kegiatan usaha.
+                    - _type: ayat
+                      _key: 5
+                      isi:
+                        _type: referenceText
+                        references: []
+                        text: >-
+                          (5) Perizinan tunggal sebagaimana dimaksud pada ayat
+                          (4) meliputi Perizinan Berusaha, Standar Nasional
+                          Indonesia, dan sertifikasi jaminan produk halal.
+                    - _type: ayat
+                      _key: 6
+                      isi:
+                        _type: referenceText
+                        references: []
+                        text: >-
+                          (6) Pemerintah Pusat dan Pemerintah Daerah sesuai
+                          dengan kewenangannya berdasarkan norma, standar,
+                          prosedur, dan kriteria yang ditetapkan oleh Pemerintah
+                          Pusat wajib melakukan pembinaan terhadap Perizinan
+                          Berusaha, pemenuhan standar, Standar Nasional
+                          Indonesia, dan sertifikasi jaminan produk halal.
+                          REPUBLIK INDONESIA - 584 -
+                    - _type: ayat
+                      _key: 7
+                      isi:
+                        _type: referenceText
+                        references: []
+                        text: >-
+                          (7) Dalam hal kegiatan usaha sebagaimana dimaksud pada
+                          ayat (4) memiliki risiko menengah atau tinggi terhadap
+                          kesehatan, keamanan, dan keselamatan serta lingkungan
+                          selain melakukan registrasi untuk mendapatkan nomor
+                          induk berusaha, Usaha Mikro dan Kecil wajib memiliki
+                          sertifikat sertifikasi standar dan/atau izin.
+                    - _type: ayat
+                      _key: 8
+                      isi:
+                        _type: referenceText
+                        references: []
+                        text: >-
+                          (8) Pemerintah Pusat dan Pemerintah Daerah sesuai
+                          dengan kewenangannya berdasarkan norma, standar,
+                          prosedur, dan kriteria yang ditetapkan oleh Pemerintah
+                          Pusat memfasilitasi sertifikasi standar dan/atau izin
+                          sebagaimana dimaksud pada ayat (5).
+                    - _type: ayat
+                      _key: 9
+                      isi:
+                        _type: referenceText
+                        references: []
+                        text: >-
+                          (9) Ketentuan lebih lanjut mengenai perizinan tunggal
                           sebagaimana dimaksud pada ayat (5) dan fasilitasi
                           sertifikasi standar dan/atau izin sebagaimana dimaksud
                           pada ayat (8) diatur dalam Peraturan Pemerintah.
@@ -26015,15 +26338,35 @@ babs:
                           /penyederhanaan administrasi perpajakan dalam rangka
                           pengajuan fasilitas pembiayaan dari Pemerintah Pusat
                           sesuai dengan ketentuan peraturan perundang-undangan
-                          di bidang perpajakan. (2) Usaha Mikro dan Kecil yang
-                          mengajukan Perizinan Berusaha dapat diberi insentif
-                          berupa tidak dikenai biaya atau diberi keringanan
-                          biaya. (3) — Usaha Mikro dan Kecil yang berorientasi
-                          ekspor dapat diberi insentif kepabeanan sesuai dengan
+                          di bidang perpajakan.
+                    - _type: ayat
+                      _key: 2
+                      isi:
+                        _type: referenceText
+                        references: []
+                        text: >-
+                          (2) Usaha Mikro dan Kecil yang mengajukan Perizinan
+                          Berusaha dapat diberi insentif berupa tidak dikenai
+                          biaya atau diberi keringanan biaya.
+                    - _type: ayat
+                      _key: 3
+                      isi:
+                        _type: referenceText
+                        references: []
+                        text: >-
+                          (3) — Usaha Mikro dan Kecil yang berorientasi ekspor
+                          dapat diberi insentif kepabeanan sesuai dengan
                           ketentuan peraturan perundang-undangan di bidang
-                          kepabeanan. (4) Usaha Mikro dan Kecil tertentu dapat
-                          diberi insentif Pajak Penghasilan sesuai dengan
-                          ketentuan peraturan perundang-undangan di bidang Pajak
+                          kepabeanan.
+                    - _type: ayat
+                      _key: 4
+                      isi:
+                        _type: referenceText
+                        references: []
+                        text: >-
+                          (4) Usaha Mikro dan Kecil tertentu dapat diberi
+                          insentif Pajak Penghasilan sesuai dengan ketentuan
+                          peraturan perundang-undangan di bidang Pajak
                           Penghasilan. REPUBLIK INDONESIA - 585 -
               - _type: pasal
                 _key: 93
@@ -26050,13 +26393,20 @@ babs:
                           pendaftaran dan pembiayaan hak kekayaan intelektual,
                           kemudahan impor bahan baku dan bahan penolong industri
                           apabila tidak dapat dipenuhi dari dalam negeri,
-                          dan/atau fasilitasi ekspor. (2) Ketentuan lebih lanjut
-                          mengenai kemudahan dan penyederhanaan pendaftaran dan
-                          pembiayaan hak kekayaan intelektual, kemudahan impor
-                          bahan baku dan bahan penolong industri apabila tidak
-                          dapat dipenuhi dari dalam negeri, dan/atau fasilitasi
-                          ekspor sebagaimana dimaksud pada ayat (1) diatur dalam
-                          Peraturan Pemerintah.
+                          dan/atau fasilitasi ekspor.
+                    - _type: ayat
+                      _key: 2
+                      isi:
+                        _type: referenceText
+                        references: []
+                        text: >-
+                          (2) Ketentuan lebih lanjut mengenai kemudahan dan
+                          penyederhanaan pendaftaran dan pembiayaan hak kekayaan
+                          intelektual, kemudahan impor bahan baku dan bahan
+                          penolong industri apabila tidak dapat dipenuhi dari
+                          dalam negeri, dan/atau fasilitasi ekspor sebagaimana
+                          dimaksud pada ayat (1) diatur dalam Peraturan
+                          Pemerintah.
         - _type: bagian
           _key: 9
           _judul: >-
@@ -26081,10 +26431,17 @@ babs:
                           Khusus untuk mendukung pendanaan bagi Pemerintah
                           Daerah dalam rangka kegiatan pemberdayaan dan
                           pengembangan Usaha Mikro, Usaha Kecil, dan Usaha
-                          Menengah. (2) “ Pengalokasian Dana Alokasi Khusus
-                          sebagaimana dimaksud pada ayat (1) dilaksanakan sesuai
-                          dengan ketentuan peraturan perundang-undangan.
-                          REPUBLIK INDONESIA - 586 -
+                          Menengah.
+                    - _type: ayat
+                      _key: 2
+                      isi:
+                        _type: referenceText
+                        references: []
+                        text: >-
+                          (2) “ Pengalokasian Dana Alokasi Khusus sebagaimana
+                          dimaksud pada ayat (1) dilaksanakan sesuai dengan
+                          ketentuan peraturan perundang-undangan. REPUBLIK
+                          INDONESIA - 586 -
               - _type: pasal
                 _key: 96
                 isi:
@@ -26187,8 +26544,14 @@ babs:
                           (1) Jalan Tol antarkota harus dilengkapi dengan Tempat
                           Istirahat, Pelayanan untuk kepentingan pengguna Jalan
                           Tol, serta menyediakan tempat promosi dan pengembangan
-                          Usaha Mikro, Usaha Kecil, dan Usaha Menengah. (2)
-                          Pengusahaan tempat promosi dan pengembangan Usaha
+                          Usaha Mikro, Usaha Kecil, dan Usaha Menengah.
+                    - _type: ayat
+                      _key: 2
+                      isi:
+                        _type: referenceText
+                        references: []
+                        text: >-
+                          (2) Pengusahaan tempat promosi dan pengembangan Usaha
                           Mikro, Usaha Kecil, dan Usaha Menengah, Tempat
                           Istirahat dan Pelayanan sebagaimana dimaksud pada ayat
                           (1) dilakukan dengan mengalokasikan lahan pada Jalan
@@ -26196,15 +26559,27 @@ babs:
                           luas lahan area komersial untuk Usaha Mikro, Usaha
                           Kecil, dan Usaha Menengah, baik untuk Jalan Tol yang
                           telah beroperasi maupun untuk Jalan Tol yang masih
-                          dalam tahap perencanaan dan konstruksi. (3) —
-                          Penyediaan tempat promosi dan pengembangan Usaha
+                          dalam tahap perencanaan dan konstruksi.
+                    - _type: ayat
+                      _key: 3
+                      isi:
+                        _type: referenceText
+                        references: []
+                        text: >-
+                          (3) — Penyediaan tempat promosi dan pengembangan Usaha
                           Mikro, Usaha Kecil, dan Usaha Menengah sebagaimana
                           dimaksud pada ayat (2) dilakukan dengan partisipasi
-                          Usaha Mikro dan Kecil melalui pola kemitraan. (4)
-                          Penanaman dan pemeliharaan tanaman di Tempat Istirahat
-                          dan Pelayanan sebagaimana dimaksud pada ayat (1) dapat
-                          dilakukan oleh Usaha Mikro, Usaha Kecil, dan Usaha
-                          Menengah.
+                          Usaha Mikro dan Kecil melalui pola kemitraan.
+                    - _type: ayat
+                      _key: 4
+                      isi:
+                        _type: referenceText
+                        references: []
+                        text: >-
+                          (4) Penanaman dan pemeliharaan tanaman di Tempat
+                          Istirahat dan Pelayanan sebagaimana dimaksud pada ayat
+                          (1) dapat dilakukan oleh Usaha Mikro, Usaha Kecil, dan
+                          Usaha Menengah.
               - _type: pasal
                 _key: 104
                 isi:
@@ -26227,13 +26602,26 @@ babs:
                           istirahat dan pelayanan jalan tol, dan f. '
                           infrastruktur publik lainnya yang ditetapkan oleh
                           Pemerintah Pusat dan/atau Pemerintah Daerah sesuai
-                          dengan kewenangannya. (2) — Alokasi penyediaan tempat
-                          promosi dan pengembangan Usaha Mikro dan Kecil pada
-                          infrastruktur publik sebagaimana dimaksud pada ayat
-                          (1) paling sedikit 30Y6 (tiga puluh persen) dari luas
-                          tempat perbelanjaan dan/atau promosi yang strategis
-                          pada infrastruktur publik yang bersangkutan. (3) “
-                          Ketentuan mengenai penyediaan tempat promosi dan
+                          dengan kewenangannya.
+                    - _type: ayat
+                      _key: 2
+                      isi:
+                        _type: referenceText
+                        references: []
+                        text: >-
+                          (2) — Alokasi penyediaan tempat promosi dan
+                          pengembangan Usaha Mikro dan Kecil pada infrastruktur
+                          publik sebagaimana dimaksud pada ayat (1) paling
+                          sedikit 30Y6 (tiga puluh persen) dari luas tempat
+                          perbelanjaan dan/atau promosi yang strategis pada
+                          infrastruktur publik yang bersangkutan.
+                    - _type: ayat
+                      _key: 3
+                      isi:
+                        _type: referenceText
+                        references: []
+                        text: >-
+                          (3) “ Ketentuan mengenai penyediaan tempat promosi dan
                           pengembangan Usaha Mikro dan Kecil pada infrastruktur
                           publik pada ayat (1) dan besaran alokasi sebagaimana
                           dimaksud pada ayat (2) diatur dalam Peraturan
@@ -29677,13 +30065,25 @@ babs:
                   text: >-
                     (1) Untuk menjalankan Penelitian, Pengembangan, Pengkajian,
                     dan Penerapan, serta Invensi dan Inovasi yang terintegrasi
-                    dibentuk badan riset dan inovasi nasional. (2) Untuk
-                    menjalankan Penelitian, Pengembangan, Pengkajian, dan
-                    Penerapan, serta Invensi dan Inovasi yang terintegrasi di
-                    daerah, Pemerintah Daerah membentuk badan. (3) Ketentuan
-                    lebih lanjut mengenai badan riset dan inovasi nasional
-                    sebagaimana dimaksud pada ayat (1) diatur dalam Peraturan
-                    Presiden.
+                    dibentuk badan riset dan inovasi nasional.
+              - _type: ayat
+                _key: 2
+                isi:
+                  _type: referenceText
+                  references: []
+                  text: >-
+                    (2) Untuk menjalankan Penelitian, Pengembangan, Pengkajian,
+                    dan Penerapan, serta Invensi dan Inovasi yang terintegrasi
+                    di daerah, Pemerintah Daerah membentuk badan.
+              - _type: ayat
+                _key: 3
+                isi:
+                  _type: referenceText
+                  references: []
+                  text: >-
+                    (3) Ketentuan lebih lanjut mengenai badan riset dan inovasi
+                    nasional sebagaimana dimaksud pada ayat (1) diatur dalam
+                    Peraturan Presiden.
   - _type: bab
     _key: 8
     _judul: BAB VIII PENGADAAN TANAH
@@ -30182,6 +30582,14 @@ babs:
                                 berfungsi melaksanakan perencanaan, perolehan,
                                 pengadaan, pengelolaan, pemanfaatan, dan
                                 pendistribusian tanah.
+                          - _type: ayat
+                            _key: 2
+                            isi:
+                              _type: referenceText
+                              references: []
+                              text: >-
+                                (2) Badan bank tanah sebagaimana dimaksud pada
+                                ayat
                     - _type: pasal
                       _key: 126
                       isi:
@@ -30198,8 +30606,14 @@ babs:
                                 kepentingan umum, b. kepentingan sosial:
                                 REPUBLIK INDONESIA - 703 - c. kepentingan
                                 pembangunan nasional, d. pemerataan ekonomi, e.
-                                konsolidasi lahan: dan f. 'reforma agraria. (2)
-                                Ketersediaan tanah untuk reforma agraria
+                                konsolidasi lahan: dan f. 'reforma agraria.
+                          - _type: ayat
+                            _key: 2
+                            isi:
+                              _type: referenceText
+                              references: []
+                              text: >-
+                                (2) Ketersediaan tanah untuk reforma agraria
                                 sebagaimana dimaksud pada ayat (1) huruf f
                                 paling sedikit 30”6 (tiga puluh persen) dari
                                 tanah negara yang diperuntukkan bank tanah.
@@ -30235,23 +30649,49 @@ babs:
                               references: []
                               text: >-
                                 (1) Tanah yang dikelola badan bank tanah
-                                diberikan hak pengelolaan. (2) Hak atas tanah di
-                                atas hak pengelolaan sebagaimana dimaksud pada
-                                ayat (1) dapat diberi hak guna usaha, hak guna
-                                bangunan, dan hak pakai. (3) Jangka waktu hak
-                                guna bangunan di atas hak pengelolaan
-                                sebagaimana dimaksud pada ayat (2) dapat
-                                diberikan perpanjangan dan pembaharuan hak
+                                diberikan hak pengelolaan.
+                          - _type: ayat
+                            _key: 2
+                            isi:
+                              _type: referenceText
+                              references: []
+                              text: >-
+                                (2) Hak atas tanah di atas hak pengelolaan
+                                sebagaimana dimaksud pada ayat (1) dapat diberi
+                                hak guna usaha, hak guna bangunan, dan hak
+                                pakai.
+                          - _type: ayat
+                            _key: 3
+                            isi:
+                              _type: referenceText
+                              references: []
+                              text: >-
+                                (3) Jangka waktu hak guna bangunan di atas hak
+                                pengelolaan sebagaimana dimaksud pada ayat (2)
+                                dapat diberikan perpanjangan dan pembaharuan hak
                                 apabila sudah digunakan dan/atau dimanfaatkan
                                 sesuai dengan tujuan pemberian haknya. SK No
-                                052206 A REPUBLIK INDONESIA - 704 - (4) Dalam
-                                rangka mendukung investasi, pemegang hak
-                                pengelolaan badan bank tanah diberi kewenangan
-                                untuk: a. melakukan penyusunan rencana induk, b.
-                                membantu memberikan kemudahan Perizinan
-                                Berusaha/persetujuan, c. melakukan pengadaan
-                                tanah, dan d. menentukan tarif pelayanan. (5)
-                                Pemerintah Pusat melakukan pengawasan dan
+                                052206 A REPUBLIK INDONESIA - 704 -
+                          - _type: ayat
+                            _key: 4
+                            isi:
+                              _type: referenceText
+                              references: []
+                              text: >-
+                                (4) Dalam rangka mendukung investasi, pemegang
+                                hak pengelolaan badan bank tanah diberi
+                                kewenangan untuk: a. melakukan penyusunan
+                                rencana induk, b. membantu memberikan kemudahan
+                                Perizinan Berusaha/persetujuan, c. melakukan
+                                pengadaan tanah, dan d. menentukan tarif
+                                pelayanan.
+                          - _type: ayat
+                            _key: 5
+                            isi:
+                              _type: referenceText
+                              references: []
+                              text: >-
+                                (5) Pemerintah Pusat melakukan pengawasan dan
                                 pengendalian atas penggunaan dan/atau
                                 pemanfaatan tanah di atas hak pengelolaan
                                 sebagaimana dimaksud pada ayat (2) sesuai dengan
@@ -30280,11 +30720,17 @@ babs:
                                 huruf a diketuai oleh menteri yang
                                 menyelenggarakan urusan pemerintahan di bidang
                                 pertanahan dan beranggotakan para menteri dan
-                                kepala yang terkait. (2) Ketua dan anggota
-                                Komite ditetapkan dengan Keputusan Presiden
-                                berdasarkan usulan dari menteri yang
-                                menyelenggarakan urusan pemerintahan di bidang
-                                pertanahan.
+                                kepala yang terkait.
+                          - _type: ayat
+                            _key: 2
+                            isi:
+                              _type: referenceText
+                              references: []
+                              text: >-
+                                (2) Ketua dan anggota Komite ditetapkan dengan
+                                Keputusan Presiden berdasarkan usulan dari
+                                menteri yang menyelenggarakan urusan
+                                pemerintahan di bidang pertanahan.
                     - _type: pasal
                       _key: 132
                       isi:
@@ -30300,16 +30746,29 @@ babs:
                                 (tujuh) orang terdiri atas 4 (empat) orang unsur
                                 profesional dan 3 (tiga) orang yang dipilih oleh
                                 Pemerintah Pusat. SK No 052207 A REPUBLIK
-                                INDONESIA - 705 - (2) Terhadap calon unsur
-                                profesional sebagaimana dimaksud pada ayat (1)
-                                dilakukan proses seleksi oleh Pemerintah Pusat
-                                yang selanjutnya disampaikan ke Dewan Perwakilan
-                                Rakyat Republik Indonesia untuk dipilih dan
-                                disetujui. (3) Calon unsur profesional yang
-                                diajukan ke Dewan Perwakilan Rakyat Republik
-                                Indonesia sebagaimana dimaksud pada ayat (2),
-                                paling sedikit berjumlah 2 (dua) kali jumlah
-                                yang dibutuhkan.
+                                INDONESIA - 705 -
+                          - _type: ayat
+                            _key: 2
+                            isi:
+                              _type: referenceText
+                              references: []
+                              text: >-
+                                (2) Terhadap calon unsur profesional sebagaimana
+                                dimaksud pada ayat (1) dilakukan proses seleksi
+                                oleh Pemerintah Pusat yang selanjutnya
+                                disampaikan ke Dewan Perwakilan Rakyat Republik
+                                Indonesia untuk dipilih dan disetujui.
+                          - _type: ayat
+                            _key: 3
+                            isi:
+                              _type: referenceText
+                              references: []
+                              text: >-
+                                (3) Calon unsur profesional yang diajukan ke
+                                Dewan Perwakilan Rakyat Republik Indonesia
+                                sebagaimana dimaksud pada ayat (2), paling
+                                sedikit berjumlah 2 (dua) kali jumlah yang
+                                dibutuhkan.
                     - _type: pasal
                       _key: 133
                       isi:
@@ -30322,13 +30781,32 @@ babs:
                               references: []
                               text: >-
                                 (1) Badan Pelaksana terdiri atas Kepala dan
-                                Deputi. (2) Jumlah Deputi sebagaimana dimaksud
-                                pada ayat (1) ditetapkan oleh Ketua Komite. (3)
-                                Kepala dan Deputi diangkat dan diberhentikan
-                                oleh Ketua Komite. (4) Pengangkatan dan
-                                pemberhentian Kepala dan Deputi sebagaimana
-                                dimaksud pada ayat (3) dapat diusulkan oleh
-                                Dewan Pengawas.
+                                Deputi.
+                          - _type: ayat
+                            _key: 2
+                            isi:
+                              _type: referenceText
+                              references: []
+                              text: >-
+                                (2) Jumlah Deputi sebagaimana dimaksud pada ayat
+                                (1) ditetapkan oleh Ketua Komite.
+                          - _type: ayat
+                            _key: 3
+                            isi:
+                              _type: referenceText
+                              references: []
+                              text: >-
+                                (3) Kepala dan Deputi diangkat dan diberhentikan
+                                oleh Ketua Komite.
+                          - _type: ayat
+                            _key: 4
+                            isi:
+                              _type: referenceText
+                              references: []
+                              text: >-
+                                (4) Pengangkatan dan pemberhentian Kepala dan
+                                Deputi sebagaimana dimaksud pada ayat (3) dapat
+                                diusulkan oleh Dewan Pengawas.
                     - _type: pasal
                       _key: 134
                       isi:
@@ -30380,22 +30858,35 @@ babs:
                                 tanah: d. Badan Usaha Milik Negara/Badan Usaha
                                 Milik Daerah: e. Badan hukum milik negara/
                                 daerah, atau f. Badan hukum yang ditunjuk oleh
-                                Pemerintah Pusat. (2) Hak pengelolaan
-                                sebagaimana dimaksud pada ayat (1) memberikan
-                                kewenangan untuk: a. menyusun rencana
-                                peruntukan, penggunaan, dan pemanfaatan tanah
-                                sesuai dengan rencana tata ruang, b. menggunakan
-                                dan memanfaatkan seluruh atau sebagian tanah hak
-                                pengelolaan untuk digunakan sendiri atau
-                                dikerjasamakan dengan pihak ketiga, dan Cc.
-                                menentukan tarif dan menerima uang
-                                pemasukan/ganti rugi dan/atau uang wajib tahunan
-                                dari pihak ketiga sesuai dengan perjanjian. (3)
-                                Pemberian hak pengelolaan sebagaimana dimaksud
-                                pada ayat (1) diberikan atas tanah negara dengan
-                                keputusan pemberian hak di atas tanah negara.
-                                (My Hak pengelolaan dapat dilepaskan kepada
-                                pihak yang memenuhi syarat.
+                                Pemerintah Pusat.
+                          - _type: ayat
+                            _key: 2
+                            isi:
+                              _type: referenceText
+                              references: []
+                              text: >-
+                                (2) Hak pengelolaan sebagaimana dimaksud pada
+                                ayat (1) memberikan kewenangan untuk: a.
+                                menyusun rencana peruntukan, penggunaan, dan
+                                pemanfaatan tanah sesuai dengan rencana tata
+                                ruang, b. menggunakan dan memanfaatkan seluruh
+                                atau sebagian tanah hak pengelolaan untuk
+                                digunakan sendiri atau dikerjasamakan dengan
+                                pihak ketiga, dan Cc. menentukan tarif dan
+                                menerima uang pemasukan/ganti rugi dan/atau uang
+                                wajib tahunan dari pihak ketiga sesuai dengan
+                                perjanjian.
+                          - _type: ayat
+                            _key: 3
+                            isi:
+                              _type: referenceText
+                              references: []
+                              text: >-
+                                (3) Pemberian hak pengelolaan sebagaimana
+                                dimaksud pada ayat (1) diberikan atas tanah
+                                negara dengan keputusan pemberian hak di atas
+                                tanah negara. (My Hak pengelolaan dapat
+                                dilepaskan kepada pihak yang memenuhi syarat.
                     - _type: pasal
                       _key: 138
                       isi:
@@ -30411,24 +30902,49 @@ babs:
                                 pengelolaan kepada pihak ketiga sebagaimana
                                 dimaksud dalam Pasal 137 ayat (2) huruf b
                                 dilakukan dengan perjanjian pemanfaatan tanah.
-                                REPUBLIK INDONESIA - 707 - (2) Di atas tanah hak
-                                pengelolaan yang pemanfaatannya diserahkan
-                                kepada pihak ketiga baik sebagian atau
-                                seluruhnya, dapat diberikan hak guna usaha, hak
-                                guna bangunan, dan/atau hak pakai sesuai dengan
-                                ketentuan peraturan perundang-undangan. (3)
-                                Jangka waktu hak guna bangunan di atas hak
+                                REPUBLIK INDONESIA - 707 -
+                          - _type: ayat
+                            _key: 2
+                            isi:
+                              _type: referenceText
+                              references: []
+                              text: >-
+                                (2) Di atas tanah hak pengelolaan yang
+                                pemanfaatannya diserahkan kepada pihak ketiga
+                                baik sebagian atau seluruhnya, dapat diberikan
+                                hak guna usaha, hak guna bangunan, dan/atau hak
+                                pakai sesuai dengan ketentuan peraturan
+                                perundang-undangan.
+                          - _type: ayat
+                            _key: 3
+                            isi:
+                              _type: referenceText
+                              references: []
+                              text: >-
+                                (3) Jangka waktu hak guna bangunan di atas hak
                                 pengelolaan sebagaimana dimaksud pada ayat (2)
                                 dapat diberikan perpanjangan dan pembaharuan hak
                                 apabila sudah digunakan dan/atau dimanfaatkan
-                                sesuai dengan tujuan pemberian haknya. (4)
-                                Pemerintah Pusat melakukan pengawasan dan
+                                sesuai dengan tujuan pemberian haknya.
+                          - _type: ayat
+                            _key: 4
+                            isi:
+                              _type: referenceText
+                              references: []
+                              text: >-
+                                (4) Pemerintah Pusat melakukan pengawasan dan
                                 pengendalian atas penggunaan dan/atau
                                 pemanfaatan tanah di atas hak pengelolaan
                                 sebagaimana dimaksud pada ayat (3) sesuai dengan
-                                ketentuan peraturan perundang-undangan. (5)
-                                Dalam hal hak atas tanah yang berada di atas hak
-                                pengelolaan telah berakhir, tanahnya kembali
+                                ketentuan peraturan perundang-undangan.
+                          - _type: ayat
+                            _key: 5
+                            isi:
+                              _type: referenceText
+                              references: []
+                              text: >-
+                                (5) Dalam hal hak atas tanah yang berada di atas
+                                hak pengelolaan telah berakhir, tanahnya kembali
                                 menjadi tanah hak pengelolaan.
                     - _type: pasal
                       _key: 139
@@ -30443,10 +30959,16 @@ babs:
                               text: >-
                                 (1) Dalam keadaan tertentu, Pemerintah Pusat
                                 dapat membatalkan dan/atau mencabut hak
-                                pengelolaan sebagian atau seluruhnya. (2) Tata
-                                cara pembatalan hak pengelolaan dilaksanakan
-                                sesuai dengan ketentuan peraturan-perundang-
-                                undangan.
+                                pengelolaan sebagian atau seluruhnya.
+                          - _type: ayat
+                            _key: 2
+                            isi:
+                              _type: referenceText
+                              references: []
+                              text: >-
+                                (2) Tata cara pembatalan hak pengelolaan
+                                dilaksanakan sesuai dengan ketentuan
+                                peraturan-perundang- undangan.
                     - _type: pasal
                       _key: 140
                       isi:
@@ -30461,10 +30983,17 @@ babs:
                                 (1) Dalam hal bagian bidang tanah hak
                                 pengelolaan diberikan dengan hak milik, bagian
                                 bidang tanah hak pengelolaan tersebut hapus
-                                dengan sendirinya. (2) Hak milik sebagaimana
-                                dimaksud pada ayat (1) hanya diberikan untuk
-                                keperluan rumah umum dan keperluan transmigrasi.
-                                REPUBLIK INDONESIA - 708 -
+                                dengan sendirinya.
+                          - _type: ayat
+                            _key: 2
+                            isi:
+                              _type: referenceText
+                              references: []
+                              text: >-
+                                (2) Hak milik sebagaimana dimaksud pada ayat (1)
+                                hanya diberikan untuk keperluan rumah umum dan
+                                keperluan transmigrasi. REPUBLIK INDONESIA - 708
+                                -
                     - _type: pasal
                       _key: 141
                       isi:
@@ -30518,10 +31047,23 @@ babs:
                                 mempunyai perwakilan di Indonesia: atau e.
                                 perwakilan negara asing dan lembaga
                                 internasional yang berada atau mempunyai
-                                perwakilan di Indonesia. (2) Hak milik atas
-                                satuan rumah susun dapat beralih atau dialihkan
-                                dan dijaminkan. REPUBLIK INDONESIA - 709 - (3)
-                                Hak milik atas satuan rumah susun dapat
+                                perwakilan di Indonesia.
+                          - _type: ayat
+                            _key: 2
+                            isi:
+                              _type: referenceText
+                              references: []
+                              text: >-
+                                (2) Hak milik atas satuan rumah susun dapat
+                                beralih atau dialihkan dan dijaminkan. REPUBLIK
+                                INDONESIA - 709 -
+                          - _type: ayat
+                            _key: 3
+                            isi:
+                              _type: referenceText
+                              references: []
+                              text: >-
+                                (3) Hak milik atas satuan rumah susun dapat
                                 dijaminkan dengan dibebani hak tanggungan sesuai
                                 dengan ketentuan peraturan perundang-undangan.
                     - _type: pasal
@@ -30538,15 +31080,27 @@ babs:
                                 (1) Rumah susun dapat dibangun di atas Tanah: a.
                                 hak guna bangunan atau hak pakai di atas tanah
                                 negara, atau b. hak guna bangunan atau hak pakai
-                                di atas tanah hak pengelolaan. (2) Pemberian hak
-                                guna bangunan bagi rumah susun sebagaimana
-                                dimaksud pada ayat (1) huruf a dapat diberikan
-                                sekaligus dengan perpanjangan haknya setelah
-                                mendapat sertifikat laik fungsi. (3) Pemberian
-                                hak guna bangunan bagi rumah susun sebagaimana
-                                dimaksud pada ayat (1) huruf b dapat diberikan
-                                perpanjangan dan pembaharuan hak apabila sudah
-                                mendapat sertifikat laik fungsi.
+                                di atas tanah hak pengelolaan.
+                          - _type: ayat
+                            _key: 2
+                            isi:
+                              _type: referenceText
+                              references: []
+                              text: >-
+                                (2) Pemberian hak guna bangunan bagi rumah susun
+                                sebagaimana dimaksud pada ayat (1) huruf a dapat
+                                diberikan sekaligus dengan perpanjangan haknya
+                                setelah mendapat sertifikat laik fungsi.
+                          - _type: ayat
+                            _key: 3
+                            isi:
+                              _type: referenceText
+                              references: []
+                              text: >-
+                                (3) Pemberian hak guna bangunan bagi rumah susun
+                                sebagaimana dimaksud pada ayat (1) huruf b dapat
+                                diberikan perpanjangan dan pembaharuan hak
+                                apabila sudah mendapat sertifikat laik fungsi.
               - _type: paragraf
                 _key: 4
                 _judul: >-
@@ -30569,26 +31123,52 @@ babs:
                                 (1) Tanah atau ruang yang terbentuk pada ruang
                                 atas dan/atau bawah tanah dan digunakan untuk
                                 kegiatan tertentu dapat diberikan hak guna
-                                bangunan, hak pakai, atau hak pengelolaan. (2)
-                                Batas kepemilikan tanah pada ruang atas tanah
-                                oleh pemegang hak atas tanah diberikan sesuai
-                                dengan koefisien dasar bangunan, koefisien
-                                lantai bangunan, dan rencana tata ruang yang
-                                ditetapkan sesuai dengan ketentuan peraturan
-                                perundang-undangan. SK No 052212 A REPUBLIK
-                                INDONESIA -710 - (3) Batas kepemilikan tanah
-                                pada ruang bawah tanah oleh pemegang hak atas
-                                tanah diberikan sesuai dengan batas kedalaman
-                                pemanfaatan yang diatur sesuai dengan ketentuan
-                                peraturan perundang-undangan. (4) Penggunaan dan
-                                pemanfaatan tanah pada ruang atas dan/atau bawah
-                                tanah oleh pemegang hak yang berbeda dapat
-                                diberikan hak guna bangunan, hak pakai, atau hak
-                                pengelolaan. (5) Ketentuan lebih lanjut mengenai
-                                penggunaan tanah pada ruang atas tanah dan/atau
-                                ruang di bawah tanah sebagaimana dimaksud pada
-                                ayat (1), ayat (2), ayat (3), dan ayat (4)
-                                diatur dalam Peraturan Presiden.
+                                bangunan, hak pakai, atau hak pengelolaan.
+                          - _type: ayat
+                            _key: 2
+                            isi:
+                              _type: referenceText
+                              references: []
+                              text: >-
+                                (2) Batas kepemilikan tanah pada ruang atas
+                                tanah oleh pemegang hak atas tanah diberikan
+                                sesuai dengan koefisien dasar bangunan,
+                                koefisien lantai bangunan, dan rencana tata
+                                ruang yang ditetapkan sesuai dengan ketentuan
+                                peraturan perundang-undangan. SK No 052212 A
+                                REPUBLIK INDONESIA -710 -
+                          - _type: ayat
+                            _key: 3
+                            isi:
+                              _type: referenceText
+                              references: []
+                              text: >-
+                                (3) Batas kepemilikan tanah pada ruang bawah
+                                tanah oleh pemegang hak atas tanah diberikan
+                                sesuai dengan batas kedalaman pemanfaatan yang
+                                diatur sesuai dengan ketentuan peraturan
+                                perundang-undangan.
+                          - _type: ayat
+                            _key: 4
+                            isi:
+                              _type: referenceText
+                              references: []
+                              text: >-
+                                (4) Penggunaan dan pemanfaatan tanah pada ruang
+                                atas dan/atau bawah tanah oleh pemegang hak yang
+                                berbeda dapat diberikan hak guna bangunan, hak
+                                pakai, atau hak pengelolaan.
+                          - _type: ayat
+                            _key: 5
+                            isi:
+                              _type: referenceText
+                              references: []
+                              text: >-
+                                (5) Ketentuan lebih lanjut mengenai penggunaan
+                                tanah pada ruang atas tanah dan/atau ruang di
+                                bawah tanah sebagaimana dimaksud pada ayat (1),
+                                ayat (2), ayat (3), dan ayat (4) diatur dalam
+                                Peraturan Presiden.
                     - _type: pasal
                       _key: 147
                       isi:
@@ -31435,13 +32015,19 @@ babs:
                                 b terdiri atas: REPUBLIK INDONESIA - 730 - a.
                                 Kawasan Perdagangan Bebas dan Pelabuhan Bebas,
                                 dan b. Kawasan Perdagangan Bebas dan Pelabuhan
-                                Bebas Sabang. (2) Kawasan Perdagangan Bebas dan
-                                Pelabuhan Bebas sebagaimana dimaksud pada ayat
-                                (1) huruf a terdiri atas: a. Kawasan Perdagangan
-                                Bebas dan Pelabuhan Bebas Batam, b. Kawasan
-                                Perdagangan Bebas dan Pelabuhan Bebas Bintan:
-                                dan c. Kawasan Perdagangan Bebas dan Pelabuhan
-                                Bebas Karimun.
+                                Bebas Sabang.
+                          - _type: ayat
+                            _key: 2
+                            isi:
+                              _type: referenceText
+                              references: []
+                              text: >-
+                                (2) Kawasan Perdagangan Bebas dan Pelabuhan
+                                Bebas sebagaimana dimaksud pada ayat (1) huruf a
+                                terdiri atas: a. Kawasan Perdagangan Bebas dan
+                                Pelabuhan Bebas Batam, b. Kawasan Perdagangan
+                                Bebas dan Pelabuhan Bebas Bintan: dan c. Kawasan
+                                Perdagangan Bebas dan Pelabuhan Bebas Karimun.
               - _type: paragraf
                 _key: 2
                 _judul: Paragraf 2 Kawasan Perdagangan Bebas dan Pelabuhan Bebas
@@ -31594,28 +32180,64 @@ babs:
                               text: >-
                                 (1) Barang-barang yang terkena ketentuan
                                 larangan dilarang dimasukkan ke Kawasan Sabang.
+                          - _type: ayat
+                            _key: 2
+                            isi:
+                              _type: referenceText
+                              references: []
+                              text: >-
                                 (2) Pemasukan dan pengeluaran barang ke dan dari
                                 Kawasan Sabang hanya dapat dilakukan oleh
                                 pengusaha yang telah mendapat Perizinan Berusaha
-                                dari Badan Pengusahaan Kawasan Sabang. (3)
-                                Pengusaha sebagaimana dimaksud pada ayat (2)
+                                dari Badan Pengusahaan Kawasan Sabang.
+                          - _type: ayat
+                            _key: 3
+                            isi:
+                              _type: referenceText
+                              references: []
+                              text: >-
+                                (3) Pengusaha sebagaimana dimaksud pada ayat (2)
                                 hanya dapat memasukan barang ke Kawasan Sabang
-                                yang berhubungan dengan kegiatan usahanya. (4)
-                                Pemasukan dan pengeluaran barang ke dan dari
+                                yang berhubungan dengan kegiatan usahanya.
+                          - _type: ayat
+                            _key: 4
+                            isi:
+                              _type: referenceText
+                              references: []
+                              text: >-
+                                (4) Pemasukan dan pengeluaran barang ke dan dari
                                 Kawasan Sabang melalui pelabuhan dan bandar
                                 Udara yang ditunjuk dan berada di bawah
                                 pengawasan pabean diberi pembebasan bea masuk,
                                 pembebasan pajak pertambahan nilai, dan
                                 pembebasan pajak penjualan atas barang mewah.
-                                REPUBLIK INDONESIA - 734 - (5) Fasilitas
-                                sebagaimana dimaksud pada ayat (4) termasuk juga
-                                pembebasan cukai sesuai dengan ketentuan
-                                perundang-undangan di bidang cukai. (6)
-                                Pemasukan dan pengeluaran barang ke dan dari
+                                REPUBLIK INDONESIA - 734 -
+                          - _type: ayat
+                            _key: 5
+                            isi:
+                              _type: referenceText
+                              references: []
+                              text: >-
+                                (5) Fasilitas sebagaimana dimaksud pada ayat (4)
+                                termasuk juga pembebasan cukai sesuai dengan
+                                ketentuan perundang-undangan di bidang cukai.
+                          - _type: ayat
+                            _key: 6
+                            isi:
+                              _type: referenceText
+                              references: []
+                              text: >-
+                                (6) Pemasukan dan pengeluaran barang ke dan dari
                                 Kawasan Sabang ke Daerah Pabean diberlakukan
                                 tata laksana kepabeanan di bidang impor dan
-                                ekspor dan ketentuan di bidang cukai. (7)
-                                Pemasukan barang konsumsi dari luar Daerah
+                                ekspor dan ketentuan di bidang cukai.
+                          - _type: ayat
+                            _key: 7
+                            isi:
+                              _type: referenceText
+                              references: []
+                              text: >-
+                                (7) Pemasukan barang konsumsi dari luar Daerah
                                 Pabean untuk kebutuhan penduduk di Kawasan
                                 Sabang diberikan pembebasan bea masuk, pajak
                                 pertambahan nilai, dan pajak penjualan atas
@@ -31655,35 +32277,55 @@ babs:
                                 (1) Investasi Pemerintah Pusat dilakukan dalam
                                 rangka meningkatkan investasi dan penguatan
                                 perekonomian untuk mendukung kebijakan strategis
-                                penciptaan kerja. (2) Maksud dan tujuan
-                                investasi Pemerintah Pusat sebagaimana dimaksud
-                                pada ayat (1) meliputi: a. memperoleh manfaat
-                                ekonomi, manfaat sosial, dan/atau manfaat
-                                lainnya yang ditetapkan sebelumnya, REPUBLIK
-                                INDONESIA -735 - b. memberikan sumbangan bagi
-                                perkembangan perekonomian nasional pada umumnya
-                                dan penerimaan negara pada khususnya, Cc.
-                                memperoleh keuntungan, dan/atau d.
-                                menyelenggarakan kemanfaatan umum, tetapi tidak
-                                terbatas pada penciptaan lapangan kerja. (3)
-                                Investasi Pemerintah Pusat sebagaimana dimaksud
-                                pada ayat (1) dilaksanakan oleh: a. Menteri
-                                Keuangan selaku Bendahara Umum Negara sesuai
-                                dengan ketentuan peraturan perundang- undangan
-                                yang mengatur mengenai investasi Pemerintah
-                                Pusat, dan/atau b. lembaga yang diberikan
-                                kewenangan khusus (sui generis) dalam rangka
-                                pengelolaan investasi, yang selanjutnya disebut
-                                Lembaga. (4) Menteri Keuangan selaku Bendahara
-                                Umum Negara dan Lembaga dalam melaksanakan
-                                investasi sebagaimana dimaksud pada ayat (3)
-                                berwenang untuk: a. melakukan penempatan dana
-                                dalam bentuk instrumen keuangan, b. melakukan
-                                kegiatan pengelolaan aset, c. melakukan kerja
-                                sama dengan pihak lain termasuk entitas dana
-                                perwalian (trust fund), d. menentukan calon
-                                mitra investasi: e. memberikan dan menerima
-                                pinjaman, dan/atau f. ' menatausahakan aset yang
+                                penciptaan kerja.
+                          - _type: ayat
+                            _key: 2
+                            isi:
+                              _type: referenceText
+                              references: []
+                              text: >-
+                                (2) Maksud dan tujuan investasi Pemerintah Pusat
+                                sebagaimana dimaksud pada ayat (1) meliputi: a.
+                                memperoleh manfaat ekonomi, manfaat sosial,
+                                dan/atau manfaat lainnya yang ditetapkan
+                                sebelumnya, REPUBLIK INDONESIA -735 - b.
+                                memberikan sumbangan bagi perkembangan
+                                perekonomian nasional pada umumnya dan
+                                penerimaan negara pada khususnya, Cc. memperoleh
+                                keuntungan, dan/atau d. menyelenggarakan
+                                kemanfaatan umum, tetapi tidak terbatas pada
+                                penciptaan lapangan kerja.
+                          - _type: ayat
+                            _key: 3
+                            isi:
+                              _type: referenceText
+                              references: []
+                              text: >-
+                                (3) Investasi Pemerintah Pusat sebagaimana
+                                dimaksud pada ayat (1) dilaksanakan oleh: a.
+                                Menteri Keuangan selaku Bendahara Umum Negara
+                                sesuai dengan ketentuan peraturan perundang-
+                                undangan yang mengatur mengenai investasi
+                                Pemerintah Pusat, dan/atau b. lembaga yang
+                                diberikan kewenangan khusus (sui generis) dalam
+                                rangka pengelolaan investasi, yang selanjutnya
+                                disebut Lembaga.
+                          - _type: ayat
+                            _key: 4
+                            isi:
+                              _type: referenceText
+                              references: []
+                              text: >-
+                                (4) Menteri Keuangan selaku Bendahara Umum
+                                Negara dan Lembaga dalam melaksanakan investasi
+                                sebagaimana dimaksud pada ayat (3) berwenang
+                                untuk: a. melakukan penempatan dana dalam bentuk
+                                instrumen keuangan, b. melakukan kegiatan
+                                pengelolaan aset, c. melakukan kerja sama dengan
+                                pihak lain termasuk entitas dana perwalian
+                                (trust fund), d. menentukan calon mitra
+                                investasi: e. memberikan dan menerima pinjaman,
+                                dan/atau f. ' menatausahakan aset yang
                                 dimilikinya.
                     - _type: pasal
                       _key: 155
@@ -31701,17 +32343,36 @@ babs:
                                 Menteri Keuangan dapat menetapkan dan/atau
                                 menunjuk badan layanan umum, badan usaha milik
                                 negara, dan/atau badan hukum lainnya. REPUBLIK
-                                INDONESIA - 136 - (2) Menteri Keuangan membentuk
-                                Rekening Investasi Bendahara Umum Negara untuk
-                                menampung dana investasi Pemerintah Pusat. (3)
-                                Dana yang ditampung dalam Rekening Investasi
+                                INDONESIA - 136 -
+                          - _type: ayat
+                            _key: 2
+                            isi:
+                              _type: referenceText
+                              references: []
+                              text: >-
+                                (2) Menteri Keuangan membentuk Rekening
+                                Investasi Bendahara Umum Negara untuk menampung
+                                dana investasi Pemerintah Pusat.
+                          - _type: ayat
+                            _key: 3
+                            isi:
+                              _type: referenceText
+                              references: []
+                              text: >-
+                                (3) Dana yang ditampung dalam Rekening Investasi
                                 Bendahara Umum Negara sebagaimana dimaksud pada
                                 ayat (2) dapat digunakan kembali secara langsung
                                 untuk mendapatkan manfaat ekonomi, manfaat
-                                sosial, dan/atau manfaat lainnya. (4) Tata
-                                kelola investasi Pemerintah Pusat oleh Menteri
-                                Keuangan selaku Bendahara Umum Negara sepanjang
-                                tidak diatur secara khusus berdasarkan
+                                sosial, dan/atau manfaat lainnya.
+                          - _type: ayat
+                            _key: 4
+                            isi:
+                              _type: referenceText
+                              references: []
+                              text: >-
+                                (4) Tata kelola investasi Pemerintah Pusat oleh
+                                Menteri Keuangan selaku Bendahara Umum Negara
+                                sepanjang tidak diatur secara khusus berdasarkan
                                 Undang-Undang ini dilaksanakan sesuai dengan
                                 ketentuan peraturan perundang-undangan.
                     - _type: pasal
@@ -31727,12 +32388,24 @@ babs:
                               text: >-
                                 (1) Dalam melaksanakan investasi sebagaimana
                                 dimaksud dalam Pasal 154 ayat (3) huruf b,
-                                Pemerintah Pusat membentuk Lembaga. (2) Lembaga
-                                sebagaimana dimaksud pada ayat (1) merupakan
-                                badan hukum Indonesia yang sepenuhnya dimiliki
-                                oleh Pemerintah Indonesia. (3) Lembaga
-                                sebagaimana dimaksud pada ayat (1) bertanggung
-                                jawab kepada Presiden.
+                                Pemerintah Pusat membentuk Lembaga.
+                          - _type: ayat
+                            _key: 2
+                            isi:
+                              _type: referenceText
+                              references: []
+                              text: >-
+                                (2) Lembaga sebagaimana dimaksud pada ayat (1)
+                                merupakan badan hukum Indonesia yang sepenuhnya
+                                dimiliki oleh Pemerintah Indonesia.
+                          - _type: ayat
+                            _key: 3
+                            isi:
+                              _type: referenceText
+                              references: []
+                              text: >-
+                                (3) Lembaga sebagaimana dimaksud pada ayat (1)
+                                bertanggung jawab kepada Presiden.
                     - _type: pasal
                       _key: 157
                       isi:
@@ -31748,53 +32421,96 @@ babs:
                                 oleh Lembaga sebagaimana dimaksud dalam Pasal
                                 154 ayat (3) huruf b dapat bersumber dari aset
                                 negara, aset badan usaha milik negara, dan/atau
-                                sumber lain yang sah. (2) Aset negara dan aset
-                                badan usaha milik negara yang dijadikan
-                                investasi Pemerintah Pusat pada Lembaga
-                                sebagaimana dimaksud pada ayat (1)
+                                sumber lain yang sah.
+                          - _type: ayat
+                            _key: 2
+                            isi:
+                              _type: referenceText
+                              references: []
+                              text: >-
+                                (2) Aset negara dan aset badan usaha milik
+                                negara yang dijadikan investasi Pemerintah Pusat
+                                pada Lembaga sebagaimana dimaksud pada ayat (1)
                                 dipindahtangankan menjadi aset Lembaga yang
                                 selanjutnya menjadi milik dan tanggung jawab
-                                Lembaga. REPUBLIK INDONESIA - 737 - (3) Aset
-                                negara dan aset badan usaha milik negara yang
-                                dijadikan investasi Pemerintah Pusat pada
-                                Lembaga, dengan persetujuan Lembaga dapat
+                                Lembaga. REPUBLIK INDONESIA - 737 -
+                          - _type: ayat
+                            _key: 3
+                            isi:
+                              _type: referenceText
+                              references: []
+                              text: >-
+                                (3) Aset negara dan aset badan usaha milik
+                                negara yang dijadikan investasi Pemerintah Pusat
+                                pada Lembaga, dengan persetujuan Lembaga dapat
                                 dipindahtangankan secara langsung kepada
                                 perusahaan patungan yang dibentuk oleh Lembaga.
+                          - _type: ayat
+                            _key: 4
+                            isi:
+                              _type: referenceText
+                              references: []
+                              text: >-
                                 (4) Pemindahtanganan aset sebagaimana dimaksud
                                 pada ayat (2) dan ayat (3) dilakukan dengan cara
                                 jual beli, dijadikan penyertaan modal, atau cara
                                 lain sesuai dengan ketentuan peraturan
-                                perundang-undangan. (5) Aset negara yang
+                                perundang-undangan.
+                          - _type: ayat
+                            _key: 5
+                            isi:
+                              _type: referenceText
+                              references: []
+                              text: >-
+                                (5) Aset negara yang dipindahtangankan menjadi
+                                aset Lembaga sebagaimana dimaksud pada ayat (2)
+                                atau menjadi aset perusahaan patungan yang
+                                dibentuk oleh Lembaga sebagaimana dimaksud pada
+                                ayat (3) tidak dalam sengketa dan tidak terdapat
+                                kepemilikan atas hak istimewa pihak manapun.
+                          - _type: ayat
+                            _key: 6
+                            isi:
+                              _type: referenceText
+                              references: []
+                              text: >-
+                                (6) Aset badan usaha milik negara yang
                                 dipindahtangankan menjadi aset Lembaga
                                 sebagaimana dimaksud pada ayat (2) atau menjadi
                                 aset perusahaan patungan yang dibentuk oleh
                                 Lembaga sebagaimana dimaksud pada ayat (3) tidak
-                                dalam sengketa dan tidak terdapat kepemilikan
-                                atas hak istimewa pihak manapun. (6) Aset badan
-                                usaha milik negara yang dipindahtangankan
-                                menjadi aset Lembaga sebagaimana dimaksud pada
-                                ayat (2) atau menjadi aset perusahaan patungan
-                                yang dibentuk oleh Lembaga sebagaimana dimaksud
-                                pada ayat (3) tidak dalam sengketa, tidak sedang
-                                dilakukan sita pidana atau perdata, dan tidak
-                                terdapat kepemilikan atas hak istimewa pihak
-                                manapun kecuali disepakati oleh pemilik hak. (7)
-                                Ketentuan mengenai pemindahtanganan aset badan
-                                usaha milik negara kepada Lembaga sebagaimana
-                                dimaksud pada ayat (2) atau kepada perusahaan
-                                patungan yang dibentuk oleh Lembaga sebagaimana
-                                dimaksud pada ayat (3) ditetapkan dalam Rapat
-                                Umum Pemegang Saham (RUPS) untuk Perusahaan
-                                Perseroan (Persero) atau ditetapkan oleh menteri
-                                yang menyelenggarakan urusan pemerintahan di
-                                bidang badan usaha milik negara untuk Perusahaan
-                                Umum (Perum). (8) Ketentuan lebih lanjut
-                                mengenai pemindahtanganan aset negara kepada
-                                Lembaga sebagaimana dimaksud pada ayat (2) atau
-                                kepada perusahaan patungan yang dibentuk oleh
-                                Lembaga sebagaimana dimaksud pada ayat (3)
-                                diatur dalam Peraturan Pemerintah. REPUBLIK
-                                INDONESIA - 738 -
+                                dalam sengketa, tidak sedang dilakukan sita
+                                pidana atau perdata, dan tidak terdapat
+                                kepemilikan atas hak istimewa pihak manapun
+                                kecuali disepakati oleh pemilik hak.
+                          - _type: ayat
+                            _key: 7
+                            isi:
+                              _type: referenceText
+                              references: []
+                              text: >-
+                                (7) Ketentuan mengenai pemindahtanganan aset
+                                badan usaha milik negara kepada Lembaga
+                                sebagaimana dimaksud pada ayat (2) atau kepada
+                                perusahaan patungan yang dibentuk oleh Lembaga
+                                sebagaimana dimaksud pada ayat (3) ditetapkan
+                                dalam Rapat Umum Pemegang Saham (RUPS) untuk
+                                Perusahaan Perseroan (Persero) atau ditetapkan
+                                oleh menteri yang menyelenggarakan urusan
+                                pemerintahan di bidang badan usaha milik negara
+                                untuk Perusahaan Umum (Perum).
+                          - _type: ayat
+                            _key: 8
+                            isi:
+                              _type: referenceText
+                              references: []
+                              text: >-
+                                (8) Ketentuan lebih lanjut mengenai
+                                pemindahtanganan aset negara kepada Lembaga
+                                sebagaimana dimaksud pada ayat (2) atau kepada
+                                perusahaan patungan yang dibentuk oleh Lembaga
+                                sebagaimana dimaksud pada ayat (3) diatur dalam
+                                Peraturan Pemerintah. REPUBLIK INDONESIA - 738 -
                     - _type: pasal
                       _key: 158
                       isi:
@@ -31809,35 +32525,72 @@ babs:
                                 (1) Modal Lembaga sebagaimana dimaksud dalam
                                 Pasal 154 ayat (3) huruf b berasal dari
                                 penyertaan modal negara dan/atau sumber lainnya.
+                          - _type: ayat
+                            _key: 2
+                            isi:
+                              _type: referenceText
+                              references: []
+                              text: >-
                                 (2) Setiap perubahan penyertaan modal negara
                                 pada Lembaga, baik berupa pengurangan maupun
                                 penambahan modal yang berasal dari sumber
                                 sebagaimana dimaksud pada ayat (1) ditetapkan
-                                dengan Peraturan Pemerintah. (3) Lembaga dapat
-                                melaksanakan investasi, baik secara langsung
-                                maupun tidak langsung, melakukan kerja sama
-                                dengan pihak ketiga, atau melalui pembentukan
-                                entitas khusus yang berbentuk badan hukum
-                                Indonesia atau badan hukum asing. (4) Keuntungan
-                                atau kerugian yang dialami Lembaga dalam
-                                melaksanakan investasi sebagaimana dimaksud pada
-                                ayat (3) merupakan keuntungan atau kerugian
-                                Lembaga. (5) Dalam hal Lembaga mengalami
-                                keuntungan sebagaimana dimaksud pada ayat (4),
-                                sebagian keuntungan ditetapkan sebagai laba
-                                bagian Pemerintah Pusat untuk disetorkan ke kas
-                                negara, setelah dilakukan pencadangan untuk
-                                menutup/ menanggung risiko kerugian dalam
-                                berinvestasi dan/atau melakukan akumulasi modal.
+                                dengan Peraturan Pemerintah.
+                          - _type: ayat
+                            _key: 3
+                            isi:
+                              _type: referenceText
+                              references: []
+                              text: >-
+                                (3) Lembaga dapat melaksanakan investasi, baik
+                                secara langsung maupun tidak langsung, melakukan
+                                kerja sama dengan pihak ketiga, atau melalui
+                                pembentukan entitas khusus yang berbentuk badan
+                                hukum Indonesia atau badan hukum asing.
+                          - _type: ayat
+                            _key: 4
+                            isi:
+                              _type: referenceText
+                              references: []
+                              text: >-
+                                (4) Keuntungan atau kerugian yang dialami
+                                Lembaga dalam melaksanakan investasi sebagaimana
+                                dimaksud pada ayat (3) merupakan keuntungan atau
+                                kerugian Lembaga.
+                          - _type: ayat
+                            _key: 5
+                            isi:
+                              _type: referenceText
+                              references: []
+                              text: >-
+                                (5) Dalam hal Lembaga mengalami keuntungan
+                                sebagaimana dimaksud pada ayat (4), sebagian
+                                keuntungan ditetapkan sebagai laba bagian
+                                Pemerintah Pusat untuk disetorkan ke kas negara,
+                                setelah dilakukan pencadangan untuk menutup/
+                                menanggung risiko kerugian dalam berinvestasi
+                                dan/atau melakukan akumulasi modal.
+                          - _type: ayat
+                            _key: 6
+                            isi:
+                              _type: referenceText
+                              references: []
+                              text: >-
                                 (6) Penyertaan modal sebagaimana dimaksud pada
                                 ayat (1) dan ayat (2) yang menjadi kekayaan
                                 Lembaga dicatat dalam Laporan Keuangan
-                                Pemerintah Pusat. (7) Ketentuan lebih lanjut
-                                mengenai pencadangan untuk menutup/ menanggung
-                                risiko kerugian dalam berinvestasi dan/atau
-                                melakukan akumulasi modal sebagaimana dimaksud
-                                pada ayat (5) diatur dengan atau berdasarkan
-                                Peraturan Pemerintah.
+                                Pemerintah Pusat.
+                          - _type: ayat
+                            _key: 7
+                            isi:
+                              _type: referenceText
+                              references: []
+                              text: >-
+                                (7) Ketentuan lebih lanjut mengenai pencadangan
+                                untuk menutup/ menanggung risiko kerugian dalam
+                                berinvestasi dan/atau melakukan akumulasi modal
+                                sebagaimana dimaksud pada ayat (5) diatur dengan
+                                atau berdasarkan Peraturan Pemerintah.
                     - _type: pasal
                       _key: 159
                       isi:
@@ -31852,28 +32605,60 @@ babs:
                                 (1) Untuk meningkatkan nilai aset, Lembaga dapat
                                 melakukan pengelolaan aset melalui kerja sama
                                 dengan pihak ketiga. REPUBLIK INDONESIA - 739 -
+                          - _type: ayat
+                            _key: 2
+                            isi:
+                              _type: referenceText
+                              references: []
+                              text: >-
                                 (2) Kerja sama dengan pihak ketiga sebagaimana
                                 dimaksud pada ayat (1) dilaksanakan oleh Lembaga
                                 melalui: a. kuasa kelola: b. pembentukan
                                 perusahaan patungan, dan/atau c. bentuk kerja
-                                sama lainnya. (3) Dalam hal kerja sama dilakukan
-                                melalui pembentukan perusahaan patungan
-                                sebagaimana dimaksud pada ayat (2) huruf b, aset
-                                Lembaga dapat dipindahtangankan untuk dijadikan
-                                penyertaan modal dalam perusahaan patungan. (4)
-                                Penyertaan modal sebagaimana dimaksud pada ayat
-                                (3) dilakukan sesuai dengan ketentuan peraturan
-                                perundang-undangan. (5) Aset yang dijadikan
-                                penyertaan modal sebagaimana dimaksud pada ayat
-                                (3) tidak boleh berada dalam keadaan: a.
-                                sengketa, b. disita, baik sita pidana maupun
-                                sita perdata, Cc. terdapat kepemilikan atas hak
-                                istimewa pihak manapun, kecuali disepakati oleh
-                                pemilik hak, dan/atau d. sedang dalam pengikatan
-                                sebagai jaminan utang, kecuali disepakati oleh
-                                kreditur. (6) Ketentuan lebih lanjut mengenai
-                                tata cara pengelolaan aset Lembaga diatur dengan
-                                atau berdasarkan Peraturan Pemerintah.
+                                sama lainnya.
+                          - _type: ayat
+                            _key: 3
+                            isi:
+                              _type: referenceText
+                              references: []
+                              text: >-
+                                (3) Dalam hal kerja sama dilakukan melalui
+                                pembentukan perusahaan patungan sebagaimana
+                                dimaksud pada ayat (2) huruf b, aset Lembaga
+                                dapat dipindahtangankan untuk dijadikan
+                                penyertaan modal dalam perusahaan patungan.
+                          - _type: ayat
+                            _key: 4
+                            isi:
+                              _type: referenceText
+                              references: []
+                              text: >-
+                                (4) Penyertaan modal sebagaimana dimaksud pada
+                                ayat (3) dilakukan sesuai dengan ketentuan
+                                peraturan perundang-undangan.
+                          - _type: ayat
+                            _key: 5
+                            isi:
+                              _type: referenceText
+                              references: []
+                              text: >-
+                                (5) Aset yang dijadikan penyertaan modal
+                                sebagaimana dimaksud pada ayat (3) tidak boleh
+                                berada dalam keadaan: a. sengketa, b. disita,
+                                baik sita pidana maupun sita perdata, Cc.
+                                terdapat kepemilikan atas hak istimewa pihak
+                                manapun, kecuali disepakati oleh pemilik hak,
+                                dan/atau d. sedang dalam pengikatan sebagai
+                                jaminan utang, kecuali disepakati oleh kreditur.
+                          - _type: ayat
+                            _key: 6
+                            isi:
+                              _type: referenceText
+                              references: []
+                              text: >-
+                                (6) Ketentuan lebih lanjut mengenai tata cara
+                                pengelolaan aset Lembaga diatur dengan atau
+                                berdasarkan Peraturan Pemerintah.
                     - _type: pasal
                       _key: 160
                       isi:
@@ -31891,15 +32676,34 @@ babs:
                                 dan pengembangan aset Lembaga, C.
                                 pemindahtanganan aset negara atau aset badan
                                 usaha milik negara, REPUBLIK INDONESIA - 740 -
-                                d. hibah, dan/atau e. sumber lain yang sah. (2)
-                                Aset Lembaga dapat dijaminkan dalam rangka
-                                penarikan pinjaman. (3) Pihak manapun dilarang
-                                melakukan penyitaan aset Lembaga, kecuali atas
-                                aset yang telah dijaminkan dalam rangka
-                                pinjaman. (4) Pengelolaan aset Lembaga
-                                sepenuhnya dilakukan oleh organ Lembaga
-                                berdasarkan prinsip tata kelola yang baik,
-                                akuntabel, dan transparan.
+                                d. hibah, dan/atau e. sumber lain yang sah.
+                          - _type: ayat
+                            _key: 2
+                            isi:
+                              _type: referenceText
+                              references: []
+                              text: >-
+                                (2) Aset Lembaga dapat dijaminkan dalam rangka
+                                penarikan pinjaman.
+                          - _type: ayat
+                            _key: 3
+                            isi:
+                              _type: referenceText
+                              references: []
+                              text: >-
+                                (3) Pihak manapun dilarang melakukan penyitaan
+                                aset Lembaga, kecuali atas aset yang telah
+                                dijaminkan dalam rangka pinjaman.
+                          - _type: ayat
+                            _key: 4
+                            isi:
+                              _type: referenceText
+                              references: []
+                              text: >-
+                                (4) Pengelolaan aset Lembaga sepenuhnya
+                                dilakukan oleh organ Lembaga berdasarkan prinsip
+                                tata kelola yang baik, akuntabel, dan
+                                transparan.
                     - _type: pasal
                       _key: 161
                       isi:
@@ -31923,13 +32727,25 @@ babs:
                               text: >-
                                 (1) Organ dan pegawai Lembaga bukan merupakan
                                 penyelengara negara, kecuali yang berasal dari
-                                pejabat negara yang bersifat ex-officio. (2)
-                                Lembaga menetapkan sistem kepegawaian, sistem
-                                penggajian, penghargaan, program pensiun dan
-                                tunjangan hari tua, serta penghasilan lainnya
-                                bagi pegawai Lembaga. (3) Lembaga tidak dapat
-                                dipailitkan, kecuali dapat dibuktikan dalam
-                                kondisi insolven.
+                                pejabat negara yang bersifat ex-officio.
+                          - _type: ayat
+                            _key: 2
+                            isi:
+                              _type: referenceText
+                              references: []
+                              text: >-
+                                (2) Lembaga menetapkan sistem kepegawaian,
+                                sistem penggajian, penghargaan, program pensiun
+                                dan tunjangan hari tua, serta penghasilan
+                                lainnya bagi pegawai Lembaga.
+                          - _type: ayat
+                            _key: 3
+                            isi:
+                              _type: referenceText
+                              references: []
+                              text: >-
+                                (3) Lembaga tidak dapat dipailitkan, kecuali
+                                dapat dibuktikan dalam kondisi insolven.
                     - _type: pasal
                       _key: 163
                       isi:
@@ -31961,12 +32777,18 @@ babs:
                               text: >-
                                 (1) Ketentuan lebih lanjut mengenai tata kelola
                                 Lembaga diatur dengan atau berdasarkan Peraturan
-                                Pemerintah. (2) Sepanjang diatur dalam
-                                Undang-Undang ini, ketentuan peraturan
-                                perundang-undangan yang mengatur mengenai
-                                pengelolaan keuangan negara, kekayaan negara,
-                                dan/atau badan usaha milik negara tidak berlaku
-                                bagi Lembaga.
+                                Pemerintah.
+                          - _type: ayat
+                            _key: 2
+                            isi:
+                              _type: referenceText
+                              references: []
+                              text: >-
+                                (2) Sepanjang diatur dalam Undang-Undang ini,
+                                ketentuan peraturan perundang-undangan yang
+                                mengatur mengenai pengelolaan keuangan negara,
+                                kekayaan negara, dan/atau badan usaha milik
+                                negara tidak berlaku bagi Lembaga.
               - _type: paragraf
                 _key: 2
                 _judul: Paragraf 2 Lembaga Pengelola Investasi
@@ -31988,14 +32810,27 @@ babs:
                                 sebagaimana dimaksud dalam Pasal 154 ayat (3)
                                 huruf b, untuk pertama kali berdasarkan
                                 Undang-Undang ini dibentuk Lembaga Pengelola
-                                Investasi. (2) Pembentukan Lembaga Pengelola
-                                Investasi dimaksudkan untuk meningkatkan dan
+                                Investasi.
+                          - _type: ayat
+                            _key: 2
+                            isi:
+                              _type: referenceText
+                              references: []
+                              text: >-
+                                (2) Pembentukan Lembaga Pengelola Investasi
+                                dimaksudkan untuk meningkatkan dan
                                 mengoptimalisasi nilai aset secara jangka
                                 panjang dalam rangka mendukung pembangunan
-                                secara berkelanjutan. (3) Organ Lembaga
-                                Pengelola Investasi terdiri atas: a. Dewan
-                                Pengawas, dan b. Dewan Direktur. REPUBLIK
-                                INDONESIA - 742 -
+                                secara berkelanjutan.
+                          - _type: ayat
+                            _key: 3
+                            isi:
+                              _type: referenceText
+                              references: []
+                              text: >-
+                                (3) Organ Lembaga Pengelola Investasi terdiri
+                                atas: a. Dewan Pengawas, dan b. Dewan Direktur.
+                                REPUBLIK INDONESIA - 742 -
                     - _type: pasal
                       _key: 166
                       isi:
@@ -32015,13 +32850,32 @@ babs:
                                 menyelenggarakan urusan pemerintahan di bidang
                                 badan usaha milik negara sebagai anggota, dan c.
                                 3 (tiga) orang yang berasal dari unsur
-                                profesional sebagai anggota. (2) Anggota Dewan
-                                Pengawas sebagaimana dimaksud pada ayat (1)
-                                diangkat dan diberhentikan oleh Presiden. (3)
-                                Untuk memilih anggota Dewan Pengawas dari unsur
-                                profesional sebagaimana dimaksud pada ayat (1)
-                                huruf c, Presiden membentuk panitia seleksi. (4)
-                                Panitia seleksi melakukan: a. pengumuman
+                                profesional sebagai anggota.
+                          - _type: ayat
+                            _key: 2
+                            isi:
+                              _type: referenceText
+                              references: []
+                              text: >-
+                                (2) Anggota Dewan Pengawas sebagaimana dimaksud
+                                pada ayat (1) diangkat dan diberhentikan oleh
+                                Presiden.
+                          - _type: ayat
+                            _key: 3
+                            isi:
+                              _type: referenceText
+                              references: []
+                              text: >-
+                                (3) Untuk memilih anggota Dewan Pengawas dari
+                                unsur profesional sebagaimana dimaksud pada ayat
+                                (1) huruf c, Presiden membentuk panitia seleksi.
+                          - _type: ayat
+                            _key: 4
+                            isi:
+                              _type: referenceText
+                              references: []
+                              text: >-
+                                (4) Panitia seleksi melakukan: a. pengumuman
                                 penerimaan dan pendaftaran calon, b. proses
                                 seleksi, dan C. penyampaian nama calon kepada
                                 Presiden. (S5) Penyampaian nama calon kepada
@@ -32108,34 +32962,73 @@ babs:
                               text: >-
                                 (1) Dewan Direktur sebagaimana dimaksud dalam
                                 Pasal 165 ayat (3) huruf b berjumlah 5 (lima)
-                                orang dari unsur profesional. (2) Anggota Dewan
-                                Direktur sebagaimana dimaksud pada ayat (1)
-                                diangkat dan diberhentikan oleh Dewan Pengawas.
-                                REPUBLIK INDONESIA - 745 - (3) Sesama anggota
-                                Dewan Direktur dilarang saling memiliki hubungan
-                                keluarga sampai derajat kedua atau besan dengan
-                                sesama anggota Dewan Direktur dan/atau dengan
-                                anggota Dewan Pengawas. (4) Anggota Dewan
-                                Direktur diangkat untuk masa jabatan 5 (lima)
-                                tahun dan hanya dapat diangkat kembali untuk 1
-                                (satu) kali masa jabatan berikutnya. (5) Dalam
-                                rangka pengangkatan anggota Dewan Direktur untuk
-                                pertama kali, Dewan Pengawas menetapkan masa
-                                jabatan 5 (lima) anggota Dewan Direktur sebagai
-                                berikut: a. 2 (dua) anggota diangkat untuk masa
-                                jabatan 5 (lima) tahun, b. 2 (dua) anggota
-                                diangkat untuk masa jabatan 4 (empat) tahun, dan
-                                c. 1 (satu) anggota diangkat untuk masa jabatan
-                                3 (tiga) tahun. (6) Dewan Direktur sebagaimana
-                                dimaksud pada ayat (1) bertugas untuk
-                                menyelenggarakan pengurusan operasional Lembaga
-                                Pengelola Investasi. (7) Dalam menjalankan tugas
-                                sebagaimana dimaksud pada ayat (6), Dewan
-                                Direktur berwenang: a. merumuskan dan menetapkan
-                                kebijakan lembaga, b. melaksanakan kebijakan dan
-                                pengurusan operasional lembaga, c. menyusun dan
-                                mengusulkan remunerasi Dewan Pengawas dan Dewan
-                                Direktur kepada Dewan Pengawas, d. menyusun dan
+                                orang dari unsur profesional.
+                          - _type: ayat
+                            _key: 2
+                            isi:
+                              _type: referenceText
+                              references: []
+                              text: >-
+                                (2) Anggota Dewan Direktur sebagaimana dimaksud
+                                pada ayat (1) diangkat dan diberhentikan oleh
+                                Dewan Pengawas. REPUBLIK INDONESIA - 745 -
+                          - _type: ayat
+                            _key: 3
+                            isi:
+                              _type: referenceText
+                              references: []
+                              text: >-
+                                (3) Sesama anggota Dewan Direktur dilarang
+                                saling memiliki hubungan keluarga sampai derajat
+                                kedua atau besan dengan sesama anggota Dewan
+                                Direktur dan/atau dengan anggota Dewan Pengawas.
+                          - _type: ayat
+                            _key: 4
+                            isi:
+                              _type: referenceText
+                              references: []
+                              text: >-
+                                (4) Anggota Dewan Direktur diangkat untuk masa
+                                jabatan 5 (lima) tahun dan hanya dapat diangkat
+                                kembali untuk 1 (satu) kali masa jabatan
+                                berikutnya.
+                          - _type: ayat
+                            _key: 5
+                            isi:
+                              _type: referenceText
+                              references: []
+                              text: >-
+                                (5) Dalam rangka pengangkatan anggota Dewan
+                                Direktur untuk pertama kali, Dewan Pengawas
+                                menetapkan masa jabatan 5 (lima) anggota Dewan
+                                Direktur sebagai berikut: a. 2 (dua) anggota
+                                diangkat untuk masa jabatan 5 (lima) tahun, b. 2
+                                (dua) anggota diangkat untuk masa jabatan 4
+                                (empat) tahun, dan c. 1 (satu) anggota diangkat
+                                untuk masa jabatan 3 (tiga) tahun.
+                          - _type: ayat
+                            _key: 6
+                            isi:
+                              _type: referenceText
+                              references: []
+                              text: >-
+                                (6) Dewan Direktur sebagaimana dimaksud pada
+                                ayat (1) bertugas untuk menyelenggarakan
+                                pengurusan operasional Lembaga Pengelola
+                                Investasi.
+                          - _type: ayat
+                            _key: 7
+                            isi:
+                              _type: referenceText
+                              references: []
+                              text: >-
+                                (7) Dalam menjalankan tugas sebagaimana dimaksud
+                                pada ayat (6), Dewan Direktur berwenang: a.
+                                merumuskan dan menetapkan kebijakan lembaga, b.
+                                melaksanakan kebijakan dan pengurusan
+                                operasional lembaga, c. menyusun dan mengusulkan
+                                remunerasi Dewan Pengawas dan Dewan Direktur
+                                kepada Dewan Pengawas, d. menyusun dan
                                 mengusulkan rencana kerja dan anggaran tahunan
                                 beserta indikator kinerja utama (key performance
                                 indicator) kepada Dewan Pengawas, REPUBLIK
@@ -32147,14 +33040,26 @@ babs:
                                 tua, serta penghasilan lainnya bagi pegawai
                                 Lembaga Pengelola Investasi, dan f. mewakili
                                 Lembaga Pengelola Investasi di dalam dan di luar
-                                pengadilan. (8) Dewan Direktur dapat
-                                mendelegasikan tugas dan/atau wewenang
-                                pelaksanaan operasional Lembaga Pengelola
-                                Investasi kepada pegawai Lembaga Pengelola
-                                Investasi dan/atau pihak lain yang khusus
-                                ditunjuk untuk itu. (9) Pembidangan setiap
-                                anggota Dewan Direktur ditetapkan oleh Dewan
-                                Direktur.
+                                pengadilan.
+                          - _type: ayat
+                            _key: 8
+                            isi:
+                              _type: referenceText
+                              references: []
+                              text: >-
+                                (8) Dewan Direktur dapat mendelegasikan tugas
+                                dan/atau wewenang pelaksanaan operasional
+                                Lembaga Pengelola Investasi kepada pegawai
+                                Lembaga Pengelola Investasi dan/atau pihak lain
+                                yang khusus ditunjuk untuk itu.
+                          - _type: ayat
+                            _key: 9
+                            isi:
+                              _type: referenceText
+                              references: []
+                              text: >-
+                                (9) Pembidangan setiap anggota Dewan Direktur
+                                ditetapkan oleh Dewan Direktur.
                     - _type: pasal
                       _key: 168
                       isi:
@@ -32195,6 +33100,12 @@ babs:
                                 Investasi dapat membentuk Dewan Penasihat untuk
                                 memberikan saran dan bimbingan kepada Lembaga
                                 Pengelola Investasi dalam hal terkait investasi.
+                          - _type: ayat
+                            _key: 2
+                            isi:
+                              _type: referenceText
+                              references: []
+                              text: >-
                                 (2) Anggota Dewan Penasihat sebagaimana dimaksud
                                 pada ayat (1) diangkat dan diberhentikan oleh
                                 Dewan Pengawas.
@@ -32214,15 +33125,36 @@ babs:
                                 C. piutang negara pada badan usaha milik negara
                                 atau perseroan terbatas, dan/atau d. saham milik
                                 negara pada badan usaha milik negara atau
-                                perseroan terbatas. (2) Modal awal Lembaga
-                                Pengelola Investasi ditetapkan paling sedikit
+                                perseroan terbatas.
+                          - _type: ayat
+                            _key: 2
+                            isi:
+                              _type: referenceText
+                              references: []
+                              text: >-
+                                (2) Modal awal Lembaga Pengelola Investasi
+                                ditetapkan paling sedikit
                                 Rp15.000.000.000.000,00 (lima belas triliun
-                                rupiah) berupa dana tunai. (3) Dalam hal modal
-                                Lembaga Pengelola Investasi berkurang secara
-                                signifikan, Pemerintah dapat menambah kembali
-                                modal Lembaga Pengelola Investasi. (4)
-                                Penyertaan modal awal sebagaimana dimaksud pada
-                                ayat (2) ditetapkan dengan Peraturan Pemerintah.
+                                rupiah) berupa dana tunai.
+                          - _type: ayat
+                            _key: 3
+                            isi:
+                              _type: referenceText
+                              references: []
+                              text: >-
+                                (3) Dalam hal modal Lembaga Pengelola Investasi
+                                berkurang secara signifikan, Pemerintah dapat
+                                menambah kembali modal Lembaga Pengelola
+                                Investasi.
+                          - _type: ayat
+                            _key: 4
+                            isi:
+                              _type: referenceText
+                              references: []
+                              text: >-
+                                (4) Penyertaan modal awal sebagaimana dimaksud
+                                pada ayat (2) ditetapkan dengan Peraturan
+                                Pemerintah.
                     - _type: pasal
                       _key: 171
                       isi:
@@ -32237,9 +33169,21 @@ babs:
                                 (1) Lembaga Pengelola Investasi yang dibentuk
                                 dengan Undang-Undang ini hanya dapat dibubarkan
                                 dengan Undang-Undang. REPUBLIK INDONESIA -748 -
+                          - _type: ayat
+                            _key: 2
+                            isi:
+                              _type: referenceText
+                              references: []
+                              text: >-
                                 (2) Pembinaan Lembaga Pengelola Investasi
-                                dilaksanakan oleh Menteri Keuangan. (3)
-                                Ketentuan lebih lanjut mengenai Lembaga
+                                dilaksanakan oleh Menteri Keuangan.
+                          - _type: ayat
+                            _key: 3
+                            isi:
+                              _type: referenceText
+                              references: []
+                              text: >-
+                                (3) Ketentuan lebih lanjut mengenai Lembaga
                                 Pengelola Investasi diatur dalam Peraturan
                                 Pemerintah.
                     - _type: pasal
@@ -32255,12 +33199,18 @@ babs:
                               text: >-
                                 (1) Lembaga Pengelola Investasi dapat melakukan
                                 transaksi baik langsung maupun tidak langsung
-                                dengan entitas yang dimilikinya. (2) Perlakuan
-                                perpajakan atas transaksi yang melibatkan
-                                Lembaga Pengelola Investasi dan/atau entitas
-                                yang dimilikinya, termasuk transaksi sebagaimana
-                                dimaksud pada ayat (1), diatur dengan atau
-                                berdasarkan Peraturan Pemerintah.
+                                dengan entitas yang dimilikinya.
+                          - _type: ayat
+                            _key: 2
+                            isi:
+                              _type: referenceText
+                              references: []
+                              text: >-
+                                (2) Perlakuan perpajakan atas transaksi yang
+                                melibatkan Lembaga Pengelola Investasi dan/atau
+                                entitas yang dimilikinya, termasuk transaksi
+                                sebagaimana dimaksud pada ayat (1), diatur
+                                dengan atau berdasarkan Peraturan Pemerintah.
         - _type: bagian
           _key: 2
           _judul: Bagian Kedua Kemudahan Proyek Strategis Nasional
@@ -32284,24 +33234,50 @@ babs:
                           Pusat bertanggung jawab dalam menyediakan lahan dan
                           Perizinan Berusaha bagi proyek strategis nasional dari
                           Pemerintah Pusat, Pemerintah Daerah, Badan Usaha Milik
-                          Negara, atau Badan Usaha Milik Daerah. (2) Dalam hal
-                          pengadaan tanah belum dapat dilaksanakan oleh
-                          Pemerintah Pusat atau Pemerintah Daerah sesuai dengan
-                          kewenangannya berdasarkan norma, standar, prosedur,
-                          dan kriteria yang ditetapkan oleh Pemerintah Pusat,
-                          pengadaan tanah untuk proyek strategis nasional dapat
-                          dilakukan oleh badan usaha. REPUBLIK INDONESIA - 749 -
+                          Negara, atau Badan Usaha Milik Daerah.
+                    - _type: ayat
+                      _key: 2
+                      isi:
+                        _type: referenceText
+                        references: []
+                        text: >-
+                          (2) Dalam hal pengadaan tanah belum dapat dilaksanakan
+                          oleh Pemerintah Pusat atau Pemerintah Daerah sesuai
+                          dengan kewenangannya berdasarkan norma, standar,
+                          prosedur, dan kriteria yang ditetapkan oleh Pemerintah
+                          Pusat, pengadaan tanah untuk proyek strategis nasional
+                          dapat dilakukan oleh badan usaha. REPUBLIK INDONESIA -
+                          749 -
+                    - _type: ayat
+                      _key: 3
+                      isi:
+                        _type: referenceText
+                        references: []
+                        text: >-
                           (3) Pengadaan tanah untuk proyek strategis nasional
                           sebagaimana dimaksud pada ayat (1) dan ayat (2)
                           dilaksanakan dengan mempertimbangkan prinsip kemampuan
-                          keuangan negara dan kesinambungan fiskal. (4) Dalam
-                          hal pengadaan tanah sebagaimana dimaksud pada ayat (2)
-                          dilakukan oleh badan usaha, mekanisme pengadaan tanah
-                          dilaksanakan sesuai dengan ketentuan peraturan
-                          perundang-undangan mengenai pengadaan tanah untuk
-                          kepentingan umum. (5) Ketentuan lebih lanjut mengenai
-                          pengadaan tanah dan Perizinan Berusaha bagi proyek
-                          strategis nasional diatur dalam Peraturan Pemerintah.
+                          keuangan negara dan kesinambungan fiskal.
+                    - _type: ayat
+                      _key: 4
+                      isi:
+                        _type: referenceText
+                        references: []
+                        text: >-
+                          (4) Dalam hal pengadaan tanah sebagaimana dimaksud
+                          pada ayat (2) dilakukan oleh badan usaha, mekanisme
+                          pengadaan tanah dilaksanakan sesuai dengan ketentuan
+                          peraturan perundang-undangan mengenai pengadaan tanah
+                          untuk kepentingan umum.
+                    - _type: ayat
+                      _key: 5
+                      isi:
+                        _type: referenceText
+                        references: []
+                        text: >-
+                          (5) Ketentuan lebih lanjut mengenai pengadaan tanah
+                          dan Perizinan Berusaha bagi proyek strategis nasional
+                          diatur dalam Peraturan Pemerintah.
   - _type: bab
     _key: 11
     _judul: BAB XI PELAKSANAAN ADMINISTRASI PEMERINTAHAN UNTUK MENDUKUNG CIPTA KERJA
@@ -32853,34 +33829,73 @@ babs:
                   text: >-
                     (1) Pemerintah Pusat wajib melakukan pengawasan dan
                     pembinaan terhadap setiap pelaksanaan Perizinan Berusaha
-                    yang dilakukan oleh pemegang Perizinan Berusaha. (2)
-                    Pelaksanaan pengawasan dan pembinaan sebagaimana dimaksud
-                    pada ayat (1) dilakukan oleh Aparatur Sipil Negara sesuai
-                    dengan kewenangannya. (3) Aparatur Sipil Negara dalam
-                    melaksanakan tugas pengawasan dan pembinaan sebagaimana
-                    dimaksud pada ayat (2) dapat bekerja sama dengan profesi
-                    bersertifikat sesuai dengan bidang pengawasan dan pembinaan
-                    yang dilakukan. (4) Dalam hal Aparatur Sipil Negara dan
-                    profesi bersertifikat dalam melaksanakan tugasnya menemukan
+                    yang dilakukan oleh pemegang Perizinan Berusaha.
+              - _type: ayat
+                _key: 2
+                isi:
+                  _type: referenceText
+                  references: []
+                  text: >-
+                    (2) Pelaksanaan pengawasan dan pembinaan sebagaimana
+                    dimaksud pada ayat (1) dilakukan oleh Aparatur Sipil Negara
+                    sesuai dengan kewenangannya.
+              - _type: ayat
+                _key: 3
+                isi:
+                  _type: referenceText
+                  references: []
+                  text: >-
+                    (3) Aparatur Sipil Negara dalam melaksanakan tugas
+                    pengawasan dan pembinaan sebagaimana dimaksud pada ayat (2)
+                    dapat bekerja sama dengan profesi bersertifikat sesuai
+                    dengan bidang pengawasan dan pembinaan yang dilakukan.
+              - _type: ayat
+                _key: 4
+                isi:
+                  _type: referenceText
+                  references: []
+                  text: >-
+                    (4) Dalam hal Aparatur Sipil Negara dan profesi
+                    bersertifikat dalam melaksanakan tugasnya menemukan
                     pelanggaran terhadap ketentuan yang tertuang dalam setiap
                     Perizinan Berusaha yang dilakukan oleh pemegang Perizinan
                     Berusaha sebagaimana dimaksud pada ayat (1), Aparatur Sipil
                     Negara sesuai dengan kewenangannya dapat memberikan sanksi
                     administratif kepada pemegang Perizinan Berusaha. REPUBLIK
-                    INDONESIA - 765 - (5) Sanksi administratif sebagaimana
-                    dimaksud pada ayat (4) dapat berupa: a. peringatan, b.
-                    penghentian sementara kegiatan berusaha, Cc. pengenaan denda
-                    administratif, d. pengenaan daya paksa polisional, e.
-                    pencabutan Lisensi / Sertifikasi/ Persetujuan, dan/atau f.
-                    pencabutan Perizinan Berusaha. (6) Kewenangan Pemerintah
-                    Pusat dalam melaksanakan pengawasan. dan pembinaan
-                    sebagaimana dimaksud pada ayat (1) dan pengenaan sanksi
-                    administratif sebagaimana dimaksud pada ayat (4) dapat
-                    dilimpahkan kepada Pemerintah Daerah sesuai dengan ketentuan
-                    peraturan perundang-undangan. (7) Ketentuan lebih lanjut
-                    mengenai sanksi administratif lainnya dan tata cara
-                    pengenaan sanksi administratif sebagaimana dimaksud pada
-                    ayat (4) diatur dalam Peraturan Pemerintah.
+                    INDONESIA - 765 -
+              - _type: ayat
+                _key: 5
+                isi:
+                  _type: referenceText
+                  references: []
+                  text: >-
+                    (5) Sanksi administratif sebagaimana dimaksud pada ayat (4)
+                    dapat berupa: a. peringatan, b. penghentian sementara
+                    kegiatan berusaha, Cc. pengenaan denda administratif, d.
+                    pengenaan daya paksa polisional, e. pencabutan Lisensi /
+                    Sertifikasi/ Persetujuan, dan/atau f. pencabutan Perizinan
+                    Berusaha.
+              - _type: ayat
+                _key: 6
+                isi:
+                  _type: referenceText
+                  references: []
+                  text: >-
+                    (6) Kewenangan Pemerintah Pusat dalam melaksanakan
+                    pengawasan. dan pembinaan sebagaimana dimaksud pada ayat (1)
+                    dan pengenaan sanksi administratif sebagaimana dimaksud pada
+                    ayat (4) dapat dilimpahkan kepada Pemerintah Daerah sesuai
+                    dengan ketentuan peraturan perundang-undangan.
+              - _type: ayat
+                _key: 7
+                isi:
+                  _type: referenceText
+                  references: []
+                  text: >-
+                    (7) Ketentuan lebih lanjut mengenai sanksi administratif
+                    lainnya dan tata cara pengenaan sanksi administratif
+                    sebagaimana dimaksud pada ayat (4) diatur dalam Peraturan
+                    Pemerintah.
         - _type: pasal
           _key: 178
           isi:
@@ -32907,18 +33922,36 @@ babs:
                     (1) Pemerintah Pusat wajib melakukan pengawasan terhadap
                     Aparatur Sipil Negara dan/atau profesi bersertifikat yang
                     melaksanakan tugas dan tanggung jawab pengawasan dan
-                    pembinaan. REPUBLIK INDONESIA - 166 - (2) Aparatur Sipil
-                    Negara dan/atau profesi bersertifikat sebagaimana dimaksud
-                    pada ayat (1) yang tidak melaksanakan tugas dan fungsi
-                    pengawasan dan pembinaan terhadap pelaksanaan Perizinan
-                    Berusaha dikenai sanksi sesuai dengan ketentuan peraturan
-                    perundang-undangan. (3) Kewenangan pelaksanaan pengawasan
-                    sebagaimana dimaksud pada ayat (1) dapat dilimpahkan kepada
-                    Pemerintah Daerah sesuai dengan ketentuan peraturan
-                    perundang-undangan. (4) Ketentuan lebih lanjut mengenai tata
-                    cara pelaksanaan pengawasan oleh Pemerintah Pusat
-                    sebagaimana dimaksud pada ayat (1) diatur dalam Peraturan
-                    Pemerintah.
+                    pembinaan. REPUBLIK INDONESIA - 166 -
+              - _type: ayat
+                _key: 2
+                isi:
+                  _type: referenceText
+                  references: []
+                  text: >-
+                    (2) Aparatur Sipil Negara dan/atau profesi bersertifikat
+                    sebagaimana dimaksud pada ayat (1) yang tidak melaksanakan
+                    tugas dan fungsi pengawasan dan pembinaan terhadap
+                    pelaksanaan Perizinan Berusaha dikenai sanksi sesuai dengan
+                    ketentuan peraturan perundang-undangan.
+              - _type: ayat
+                _key: 3
+                isi:
+                  _type: referenceText
+                  references: []
+                  text: >-
+                    (3) Kewenangan pelaksanaan pengawasan sebagaimana dimaksud
+                    pada ayat (1) dapat dilimpahkan kepada Pemerintah Daerah
+                    sesuai dengan ketentuan peraturan perundang-undangan.
+              - _type: ayat
+                _key: 4
+                isi:
+                  _type: referenceText
+                  references: []
+                  text: >-
+                    (4) Ketentuan lebih lanjut mengenai tata cara pelaksanaan
+                    pengawasan oleh Pemerintah Pusat sebagaimana dimaksud pada
+                    ayat (1) diatur dalam Peraturan Pemerintah.
   - _type: bab
     _key: 13
     _judul: BAB XIII KETENTUAN LAIN-LAIN
@@ -32939,13 +33972,25 @@ babs:
                     (1) Hak, izin, atau konsesi atas tanah dan/atau kawasan yang
                     dengan sengaja tidak diusahakan atau ditelantarkan dalam
                     jangka waktu paling lama 2 (dua) tahun sejak diberikan
-                    dicabut dan dikembalikan kepada negara. (2) Dalam
-                    pelaksanaan pengembalian kepada negara sebagaimana dimaksud
-                    pada ayat (1), Pemerintah Pusat dapat menetapkan hak, izin,
-                    atau konsesi tersebut sebagai aset Bank Tanah. (3) Ketentuan
-                    lebih lanjut pencabutan hak, izin, atau konsesi dan
-                    penetapannya sebagai aset Bank Tanah diatur dalam Peraturan
-                    Pemerintah. REPUBLIK INDONESIA - 167 -
+                    dicabut dan dikembalikan kepada negara.
+              - _type: ayat
+                _key: 2
+                isi:
+                  _type: referenceText
+                  references: []
+                  text: >-
+                    (2) Dalam pelaksanaan pengembalian kepada negara sebagaimana
+                    dimaksud pada ayat (1), Pemerintah Pusat dapat menetapkan
+                    hak, izin, atau konsesi tersebut sebagai aset Bank Tanah.
+              - _type: ayat
+                _key: 3
+                isi:
+                  _type: referenceText
+                  references: []
+                  text: >-
+                    (3) Ketentuan lebih lanjut pencabutan hak, izin, atau
+                    konsesi dan penetapannya sebagai aset Bank Tanah diatur
+                    dalam Peraturan Pemerintah. REPUBLIK INDONESIA - 167 -
         - _type: pasal
           _key: 181
           isi:

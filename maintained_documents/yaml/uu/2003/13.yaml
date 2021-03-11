@@ -302,16 +302,36 @@ babs:
                   references: []
                   text: >-
                     (1) Lembaga pelatihan kerja swasta dapat berbentuk badan
-                    hukum Indonesia atau perorangan. (2) Lembaga pelatihan kerja
-                    swasta sebagaimana dimaksud dalam ayat (1) wajib memperoleh
-                    izin atau men daftar ke instansi yang bertanggung jawab di
-                    bidang ketenagakerjaan di kabupaten/kota. (3) Lembaga
-                    pelatihan kerja yang diselenggarakan oleh instansi
-                    pemerintah mendaftarkan kegiatannya kepada instansi yang
-                    bertanggung jawab di bidang ketenagakerjaan di
-                    kabupaten/kota. (4) Ketentuan mengenai tata cara perizinan
-                    dan pendaftaran lembaga pelatihan kerja sebagaimana dimaksud
-                    dalam ayat (2) dan ayat (3) diatur dengan Keputusan Menteri.
+                    hukum Indonesia atau perorangan.
+              - _type: ayat
+                _key: 2
+                isi:
+                  _type: referenceText
+                  references: []
+                  text: >-
+                    (2) Lembaga pelatihan kerja swasta sebagaimana dimaksud
+                    dalam ayat (1) wajib memperoleh izin atau men daftar ke
+                    instansi yang bertanggung jawab di bidang ketenagakerjaan di
+                    kabupaten/kota.
+              - _type: ayat
+                _key: 3
+                isi:
+                  _type: referenceText
+                  references: []
+                  text: >-
+                    (3) Lembaga pelatihan kerja yang diselenggarakan oleh
+                    instansi pemerintah mendaftarkan kegiatannya kepada instansi
+                    yang bertanggung jawab di bidang ketenagakerjaan di
+                    kabupaten/kota.
+              - _type: ayat
+                _key: 4
+                isi:
+                  _type: referenceText
+                  references: []
+                  text: >-
+                    (4) Ketentuan mengenai tata cara perizinan dan pendaftaran
+                    lembaga pelatihan kerja sebagaimana dimaksud dalam ayat (2)
+                    dan ayat (3) diatur dengan Keputusan Menteri.
         - _type: pasal
           _key: 15
           isi:
@@ -337,39 +357,59 @@ babs:
                     (1) Lembaga pelatihan kerja swasta yang telah memperoleh
                     izin dan lembaga pelatihan kerja pemerintah yang telah
                     terdaftar dapat memperoleh akreditasi dari lembaga
-                    akreditasi. (2) Lembaga akreditasi sebagaimana dimaksud
-                    dalam ayat (1) bersifat independen terdiri atas unsur masya
-                    rakat dan pemerintah ditetapkan dengan Keputusan Menteri.
+                    akreditasi.
+              - _type: ayat
+                _key: 2
+                isi:
+                  _type: referenceText
+                  references: []
+                  text: >-
+                    (2) Lembaga akreditasi sebagaimana dimaksud dalam ayat (1)
+                    bersifat independen terdiri atas unsur masya rakat dan
+                    pemerintah ditetapkan dengan Keputusan Menteri.
+              - _type: ayat
+                _key: 3
+                isi:
+                  _type: referenceText
+                  references: []
+                  text: >-
                     (3) Organisasi dan tata kerja lembaga akreditasi sebagaimana
                     dimaksud dalam ayat (2) diatur dengan Kepu tusan Menteri.
         - _type: pasal
           _key: 17
           isi:
-            _type: referenceText
-            references: []
-            text: >-
-              Pasal 17 (l) Instansi yang bertanggung jawab di bidang
-              ketenagakerjaan di kabupaten/kota dapat menghentikan sementara
-              pelaksanaan penyelenggaraan pelatihan kerja, apabila dalam
-              pelaksanaannya ternyata : a. tidak sesuai dengan arah pelatihan
-              kerja sebagaimana dimaksud dalam Pasal 9: dan/atau b. tidak
-              memenuhi persyaratan sebagaimana dimaksud dalam Pasal 15. (2)
-              Penghentian sementara pelaksanaan penyelenggaraan pelatihan kerja
-              sebagaimana dimaksud dalam ayat (1), disertai alasan dan saran
-              perbaikan dan berlaku paling lama 6 (enam) bulan. (3) Penghentian
-              sementara pelaksanaan penyelenggaraan pelatihan kerja hanya
-              dikenakan terhadap program pelatihan yang tidak memenuhi syarat
-              sebagaimana dimaksud dalam Pasal 9 dan Pasal 15. (4) Bagi
-              penyelenggara pelatihan kerja dalam waktu 6 (enam) bulan tidak
-              memenuhi dan melengkapi saran per baikan sebagaimana dimaksud
-              dalam ayat (2) dikenakan sanksi penghentian program pelatihan. (5)
-              Penyelenggara pelatihan kerja yang tidak menaati dan tetap
-              melaksanakan program pelatihan kerja yang telah dihentikan
-              sebagaimana dimaksud dalam ayat (4) dikenakan sanksi pencabutan
-              izin dan pembatalan pendaftaran penyelenggara pelatihan. (6)
-              Ketentuan mengenai tata cara penghentian sementara, penghentian,
-              pencabutan izin, dan pembatalan pen daftaran diatur dengan
-              Keputusan Menteri.
+            _type: ayats
+            ayats:
+              - _type: ayat
+                _key: 4
+                isi:
+                  _type: referenceText
+                  references: []
+                  text: >-
+                    (4) Bagi penyelenggara pelatihan kerja dalam waktu 6 (enam)
+                    bulan tidak memenuhi dan melengkapi saran per baikan
+                    sebagaimana dimaksud dalam ayat (2) dikenakan sanksi
+                    penghentian program pelatihan.
+              - _type: ayat
+                _key: 5
+                isi:
+                  _type: referenceText
+                  references: []
+                  text: >-
+                    (5) Penyelenggara pelatihan kerja yang tidak menaati dan
+                    tetap melaksanakan program pelatihan kerja yang telah
+                    dihentikan sebagaimana dimaksud dalam ayat (4) dikenakan
+                    sanksi pencabutan izin dan pembatalan pendaftaran
+                    penyelenggara pelatihan.
+              - _type: ayat
+                _key: 6
+                isi:
+                  _type: referenceText
+                  references: []
+                  text: >-
+                    (6) Ketentuan mengenai tata cara penghentian sementara,
+                    penghentian, pencabutan izin, dan pembatalan pen daftaran
+                    diatur dengan Keputusan Menteri.
         - _type: pasal
           _key: 18
           isi:
@@ -411,10 +451,16 @@ babs:
                     (1) Untuk mendukung peningkatan pelatihan kerja dalam rangka
                     pembangunan ketenagakerjaan, dikembang kan satu sistem
                     pelatihan kerja nasional yang merupakan acuan pelaksanaan
-                    pelatihan kerja di semua bidang dan/atau sektor. (2)
-                    Ketentuan mengenai bentuk, mekanisme, dan kelembagaan sistem
-                    pelatihan kerja nasional sebagaimana dimaksud dalam ayat (1)
-                    diatur dengan Peraturan Pemerintah.
+                    pelatihan kerja di semua bidang dan/atau sektor.
+              - _type: ayat
+                _key: 2
+                isi:
+                  _type: referenceText
+                  references: []
+                  text: >-
+                    (2) Ketentuan mengenai bentuk, mekanisme, dan kelembagaan
+                    sistem pelatihan kerja nasional sebagaimana dimaksud dalam
+                    ayat (1) diatur dengan Peraturan Pemerintah.
         - _type: pasal
           _key: 21
           isi:
@@ -426,18 +472,18 @@ babs:
         - _type: pasal
           _key: 22
           isi:
-            _type: referenceText
-            references: []
-            text: >-
-              Pasal 22 (l) Pemagangan dilaksanakan atas dasar perjanjian
-              pemagangan antara peserta dengan pengusaha yang di buat secara
-              tertulis. (2) Perjanjian pemagangan sebagaimana dimaksud dalam
-              ayat (1), sekurang- kurangnya memuat ketentuan hak dan kewajiban
-              peserta dan pengusaha serta jangka waktu pemagangan. (3)
-              Pemagangan yang diselenggarakan tidak melalui perjanjian
-              pemagangan sebagaimana dimaksud dalam ayat (1), dianggap tidak sah
-              dan status peserta berubah menjadi pekerja/buruh perusahaan yang
-              bersangkutan.
+            _type: ayats
+            ayats:
+              - _type: ayat
+                _key: 3
+                isi:
+                  _type: referenceText
+                  references: []
+                  text: >-
+                    (3) Pemagangan yang diselenggarakan tidak melalui perjanjian
+                    pemagangan sebagaimana dimaksud dalam ayat (1), dianggap
+                    tidak sah dan status peserta berubah menjadi pekerja/buruh
+                    perusahaan yang bersangkutan.
         - _type: pasal
           _key: 23
           isi:
@@ -469,13 +515,25 @@ babs:
                   text: >-
                     (1) Pemagangan yang dilakukan di luar wilayah Indonesia
                     wajib mendapat izin dari Menteri atau pejabat yang ditunjuk.
+              - _type: ayat
+                _key: 2
+                isi:
+                  _type: referenceText
+                  references: []
+                  text: >-
                     (2) Untuk memperoleh izin sebagaimana dimaksud dalam ayat
                     (1), penyelenggara pemagangan harus ber bentuk badan hukum
                     Indonesia sesuai dengan peraturan perundang-undangan yang
-                    berlaku. (3) Ketentuan mengenai tata cara perizinan
-                    pemagangan di luar wilayah Indonesia sebagaimana dimaksud
-                    dalam ayat (1) dan ayat (2), diatur dengan Keputusan
-                    Menteri.
+                    berlaku.
+              - _type: ayat
+                _key: 3
+                isi:
+                  _type: referenceText
+                  references: []
+                  text: >-
+                    (3) Ketentuan mengenai tata cara perizinan pemagangan di
+                    luar wilayah Indonesia sebagaimana dimaksud dalam ayat (1)
+                    dan ayat (2), diatur dengan Keputusan Menteri.
         - _type: pasal
           _key: 26
           isi:
@@ -502,10 +560,16 @@ babs:
                   references: []
                   text: >-
                     (1) Menteri dapat mewajibkan kepada perusahaan yang memenuhi
-                    persyaratan untuk melaksanakan program pemagangan. (2) Dalam
-                    menetapkan persyaratan sebagaimana dimaksud dalam ayat (1),
-                    Menteri harus memperhatikan ke pentingan perusahaan,
-                    masyarakat, dan negara.
+                    persyaratan untuk melaksanakan program pemagangan.
+              - _type: ayat
+                _key: 2
+                isi:
+                  _type: referenceText
+                  references: []
+                  text: >-
+                    (2) Dalam menetapkan persyaratan sebagaimana dimaksud dalam
+                    ayat (1), Menteri harus memperhatikan ke pentingan
+                    perusahaan, masyarakat, dan negara.
         - _type: pasal
           _key: 28
           isi:
@@ -521,17 +585,18 @@ babs:
         - _type: pasal
           _key: 29
           isi:
-            _type: referenceText
-            references: []
-            text: >-
-              Pasal 29 (l) Pemerintah Pusat dan/atau Pemerintah Daerah melakukan
-              pembinaan pelatihan kerja dan pemagangan. (2) Pembinaan pelatihan
-              kerja dan pemagangan ditujukan ke arah peningkatan relevansi,
-              kualitas, dan efisien si penyelenggaraan pelatihan kerja dan
-              produktivitas. (3) Peningkatan produktivitas sebagaimana dimaksud
-              dalam ayat (2), dilakukan melalui pengembangan buda ya produktif,
-              etos kerja, teknologi, dan efisiensi kegiatan ekonomi, menuju
-              terwujudnya produktivitas nasional.
+            _type: ayats
+            ayats:
+              - _type: ayat
+                _key: 3
+                isi:
+                  _type: referenceText
+                  references: []
+                  text: >-
+                    (3) Peningkatan produktivitas sebagaimana dimaksud dalam
+                    ayat (2), dilakukan melalui pengembangan buda ya produktif,
+                    etos kerja, teknologi, dan efisiensi kegiatan ekonomi,
+                    menuju terwujudnya produktivitas nasional.
         - _type: pasal
           _key: 30
           isi:
@@ -545,12 +610,25 @@ babs:
                   text: >-
                     (1) Untuk meningkatkan produktivitas sebagaimana dimaksud
                     dalam Pasal 29 ayat (2) dibentuk lembaga pro duktivitas yang
-                    bersifat nasional. (2) Lembaga produktivitas sebagaimana
-                    dimaksud dalam ayat (1) berbentuk jejaring kelembagaan
-                    pelayanan peningkatan produktivitas, yang bersifat lintas
-                    sektor maupun daerah. (3) Pembentukan, keanggotaan, dan tata
-                    kerja lembaga produktivitas nasional sebagaimana dimaksud
-                    dalam ayat (1), diatur dengan Keputusan Presiden.
+                    bersifat nasional.
+              - _type: ayat
+                _key: 2
+                isi:
+                  _type: referenceText
+                  references: []
+                  text: >-
+                    (2) Lembaga produktivitas sebagaimana dimaksud dalam ayat
+                    (1) berbentuk jejaring kelembagaan pelayanan peningkatan
+                    produktivitas, yang bersifat lintas sektor maupun daerah.
+              - _type: ayat
+                _key: 3
+                isi:
+                  _type: referenceText
+                  references: []
+                  text: >-
+                    (3) Pembentukan, keanggotaan, dan tata kerja lembaga
+                    produktivitas nasional sebagaimana dimaksud dalam ayat (1),
+                    diatur dengan Keputusan Presiden.
   - _type: bab
     _key: 6
     _judul: BAB VI PENEMPATAN TENAGA KERJA
@@ -678,15 +756,36 @@ babs:
                   text: >-
                     (1) Pemerintah bertanggung jawab mengupayakan perluasan
                     kesempatan kerja baik di dalam maupun di luar hubungan
-                    kerja. (2) Pemerintah dan masyarakat bersama-sama
-                    mengupayakan perluasan kesempatan kerja baik di dalam maupun
-                    di luar hubungan kerja. (3) Semua kebijakan pemerintah baik
-                    pusat maupun daerah di setiap sektor diarahkan untuk
-                    mewujudkan per luasan kesempatan kerja baik di dalam maupun
-                    di luar hubungan kerja. (4) Lembaga keuangan baik perbankan
-                    maupun non perbankan, dan dunia usaha perlu membantu dan mem
-                    berikan kemudahan bagi setiap kegiatan masyarakat yang dapat
-                    menciptakan atau mengembangkan perluasan kesempatan kerja.
+                    kerja.
+              - _type: ayat
+                _key: 2
+                isi:
+                  _type: referenceText
+                  references: []
+                  text: >-
+                    (2) Pemerintah dan masyarakat bersama-sama mengupayakan
+                    perluasan kesempatan kerja baik di dalam maupun di luar
+                    hubungan kerja.
+              - _type: ayat
+                _key: 3
+                isi:
+                  _type: referenceText
+                  references: []
+                  text: >-
+                    (3) Semua kebijakan pemerintah baik pusat maupun daerah di
+                    setiap sektor diarahkan untuk mewujudkan per luasan
+                    kesempatan kerja baik di dalam maupun di luar hubungan
+                    kerja.
+              - _type: ayat
+                _key: 4
+                isi:
+                  _type: referenceText
+                  references: []
+                  text: >-
+                    (4) Lembaga keuangan baik perbankan maupun non perbankan,
+                    dan dunia usaha perlu membantu dan mem berikan kemudahan
+                    bagi setiap kegiatan masyarakat yang dapat menciptakan atau
+                    mengembangkan perluasan kesempatan kerja.
         - _type: pasal
           _key: 40
           isi:
@@ -726,22 +825,26 @@ babs:
         - _type: pasal
           _key: 42
           isi:
-            _type: referenceText
-            references: []
-            text: >-
-              Pasal 42 (l) Setiap pemberi kerja yang mempekerjakan tenaga kerja
-              asing wajib memiliki izin tertulis dari Menteri atau pejabat yang
-              ditunjuk. (2) Pemberi kerja orang perseorangan dilarang
-              mempekerjakan tenaga kerja asing. (3) Kewajiban memiliki izin
-              sebagaimana dimaksud dalam ayat (1), tidak berlaku bagi perwakilan
-              negara asing yang mempergunakan tenaga kerja asing sebagai pegawai
-              diplomatik dan konsuler. (4) Tenaga kerja asing dapat dipekerjakan
-              di Indonesia hanya dalam hubungan kerja untuk jabatan tertentu dan
-              waktu tertentu. (5) Ketentuan mengenai jabatan tertentu dan waktu
-              tertentu sebagaimana dimaksud dalam ayat (4) ditetapkan dengan
-              Keputusan Menteri. (6) Tenaga kerja asing sebagaimana dimaksud
-              dalam ayat (4) yang masa kerjanya habis dan tidak dapat di
-              perpanjang dapat digantikan oleh tenaga kerja asing lainnya.
+            _type: ayats
+            ayats:
+              - _type: ayat
+                _key: 5
+                isi:
+                  _type: referenceText
+                  references: []
+                  text: >-
+                    (5) Ketentuan mengenai jabatan tertentu dan waktu tertentu
+                    sebagaimana dimaksud dalam ayat (4) ditetapkan dengan
+                    Keputusan Menteri.
+              - _type: ayat
+                _key: 6
+                isi:
+                  _type: referenceText
+                  references: []
+                  text: >-
+                    (6) Tenaga kerja asing sebagaimana dimaksud dalam ayat (4)
+                    yang masa kerjanya habis dan tidak dapat di perpanjang dapat
+                    digantikan oleh tenaga kerja asing lainnya.
         - _type: pasal
           _key: 43
           isi:
@@ -767,13 +870,17 @@ babs:
         - _type: pasal
           _key: 44
           isi:
-            _type: referenceText
-            references: []
-            text: >-
-              Pasal 44 (l) Pemberi kerja tenaga kerja asing wajib menaati
-              ketentuan mengenai jabatan dan standar kompetensi yang berlaku.
-              (2) Ketentuan mengenai jabatan dan standar kompetensi sebagaimana
-              dimaksud dalam ayat (1) diatur dengan Keputusan Menteri.
+            _type: ayats
+            ayats:
+              - _type: ayat
+                _key: 2
+                isi:
+                  _type: referenceText
+                  references: []
+                  text: >-
+                    (2) Ketentuan mengenai jabatan dan standar kompetensi
+                    sebagaimana dimaksud dalam ayat (1) diatur dengan Keputusan
+                    Menteri.
         - _type: pasal
           _key: 45
           isi:
@@ -792,9 +899,16 @@ babs:
                     melaksanakan pendidikan dan pelatihan kerja bagi tenaga
                     kerja Indonesia sebagaimana dimaksud pada huruf a yang
                     sesuai dengan kualifikasi jabatan yang diduduki oleh tenaga
-                    kerja asing. (2) Ketentuan sebagaimana dimaksud dalam ayat
-                    (1) tidak berlaku bagi tenaga kerja asing yang menduduki ja
-                    batan direksi dan/atau komisaris.
+                    kerja asing.
+              - _type: ayat
+                _key: 2
+                isi:
+                  _type: referenceText
+                  references: []
+                  text: >-
+                    (2) Ketentuan sebagaimana dimaksud dalam ayat (1) tidak
+                    berlaku bagi tenaga kerja asing yang menduduki ja batan
+                    direksi dan/atau komisaris.
         - _type: pasal
           _key: 46
           isi:
@@ -808,19 +922,25 @@ babs:
         - _type: pasal
           _key: 47
           isi:
-            _type: referenceText
-            references: []
-            text: >-
-              Pasal 47 (l) Pemberi kerja wajib membayar kompensasi atas setiap
-              tenaga kerja asing yang dipekerjakannya. (2) Kewajiban membayar
-              kompensasi sebagaimana dimaksud dalam ayat (1) tidak berlaku bagi
-              instansi pe merintah, perwakilan negara asing, badan- badan
-              internasional, lembaga sosial, lembaga keagamaan, dan jabatan-
-              jabatan tertentu di lembaga pendidikan. (3) Ketentuan mengenai
-              jabatan-jabatan tertentu di lembaga pendidikan sebagaimana
-              dimaksud dalam ayat (2) diatur dengan Keputusan Menteri. (4)
-              Ketentuan mengenai besarnya kompensasi dan penggunaannya diatur
-              dengan Peraturan Pemerintah.
+            _type: ayats
+            ayats:
+              - _type: ayat
+                _key: 3
+                isi:
+                  _type: referenceText
+                  references: []
+                  text: >-
+                    (3) Ketentuan mengenai jabatan-jabatan tertentu di lembaga
+                    pendidikan sebagaimana dimaksud dalam ayat (2) diatur dengan
+                    Keputusan Menteri.
+              - _type: ayat
+                _key: 4
+                isi:
+                  _type: referenceText
+                  references: []
+                  text: >-
+                    (4) Ketentuan mengenai besarnya kompensasi dan penggunaannya
+                    diatur dengan Peraturan Pemerintah.
         - _type: pasal
           _key: 48
           isi:
@@ -929,25 +1049,31 @@ babs:
                   references: []
                   text: >-
                     (1) Perjanjian kerja dibuat untuk waktu tertentu atau untuk
-                    waktu tidak tertentu. (2) Perjanjian kerja untuk waktu
-                    tertentu sebagaimana dimaksud dalam ayat (l) didasarkan atas
-                    : a. Jangka waktu, atau b. selesainya suatu pekerjaan
-                    tertentu.
+                    waktu tidak tertentu.
+              - _type: ayat
+                _key: 2
+                isi:
+                  _type: referenceText
+                  references: []
+                  text: >-
+                    (2) Perjanjian kerja untuk waktu tertentu sebagaimana
+                    dimaksud dalam ayat (l) didasarkan atas : a. Jangka waktu,
+                    atau b. selesainya suatu pekerjaan tertentu.
         - _type: pasal
           _key: 57
           isi:
-            _type: referenceText
-            references: []
-            text: >-
-              Pasal 57 (l) Perjanjian kerja untuk waktu tertentu dibuat secara
-              tertulis serta harus menggunakan bahasa Indonesia dan huruf latin.
-              (2) Perjanjian kerja untuk waktu tertentu yang dibuat tidak
-              tertulis bertentangan dengan ketentuan sebagai mana dimaksud dalam
-              ayat (1) dinyatakan sebagai perjanjian kerja untuk waktu tidak
-              tertentu. (3) Dalam hal perjanjian kerja dibuat dalam bahasa
-              Indonesia dan bahasa asing, apabila kemudian terdapat perbedaan
-              penafsiran antara keduanya, maka yang berlaku perjanjian kerja
-              yang dibuat dalam bahasa Indonesia.
+            _type: ayats
+            ayats:
+              - _type: ayat
+                _key: 3
+                isi:
+                  _type: referenceText
+                  references: []
+                  text: >-
+                    (3) Dalam hal perjanjian kerja dibuat dalam bahasa Indonesia
+                    dan bahasa asing, apabila kemudian terdapat perbedaan
+                    penafsiran antara keduanya, maka yang berlaku perjanjian
+                    kerja yang dibuat dalam bahasa Indonesia.
         - _type: pasal
           _key: 58
           isi:
@@ -960,10 +1086,16 @@ babs:
                   references: []
                   text: >-
                     (1) Perjanjian kerja untuk waktu tertentu tidak dapat
-                    mensyaratkan adanya masa percobaan kerja. (2) Dalam hal
-                    disyaratkan masa percobaan kerja dalam perjanjian kerja
-                    sebagaimana dimaksud dalam ayat (1), masa percobaan kerja
-                    yang disyaratkan batal demi hukum.
+                    mensyaratkan adanya masa percobaan kerja.
+              - _type: ayat
+                _key: 2
+                isi:
+                  _type: referenceText
+                  references: []
+                  text: >-
+                    (2) Dalam hal disyaratkan masa percobaan kerja dalam
+                    perjanjian kerja sebagaimana dimaksud dalam ayat (1), masa
+                    percobaan kerja yang disyaratkan batal demi hukum.
         - _type: pasal
           _key: 59
           isi:
@@ -984,29 +1116,73 @@ babs:
                     tahun, Cc. pekerjaan yang bersifat musiman, atau d.
                     pekerjaan yang berhubungan dengan produk baru, kegiatan
                     baru, atau produk tambahan yang masih dalam percobaan atau
-                    penjajakan. (2) Perjanjian kerja untuk waktu tertentu tidak
-                    dapat diadakan untuk pekerjaan yang bersifat tetap. (3)
-                    Perjanjian kerja untuk waktu tertentu dapat diperpanjang
-                    atau diperbaharui. (4) Perjanjian kerja waktu tertentu yang
-                    didasarkan atas jangka waktu tertentu dapat diadakan untuk
-                    paling lama 2 (dua) tahun dan hanya boleh diperpanjang 1
-                    (satu) kali untuk jangka waktu paling lama 1 (satu) tahun.
+                    penjajakan.
+              - _type: ayat
+                _key: 2
+                isi:
+                  _type: referenceText
+                  references: []
+                  text: >-
+                    (2) Perjanjian kerja untuk waktu tertentu tidak dapat
+                    diadakan untuk pekerjaan yang bersifat tetap.
+              - _type: ayat
+                _key: 3
+                isi:
+                  _type: referenceText
+                  references: []
+                  text: >-
+                    (3) Perjanjian kerja untuk waktu tertentu dapat diperpanjang
+                    atau diperbaharui.
+              - _type: ayat
+                _key: 4
+                isi:
+                  _type: referenceText
+                  references: []
+                  text: >-
+                    (4) Perjanjian kerja waktu tertentu yang didasarkan atas
+                    jangka waktu tertentu dapat diadakan untuk paling lama 2
+                    (dua) tahun dan hanya boleh diperpanjang 1 (satu) kali untuk
+                    jangka waktu paling lama 1 (satu) tahun.
+              - _type: ayat
+                _key: 5
+                isi:
+                  _type: referenceText
+                  references: []
+                  text: >-
                     (5) Pengusaha yang bermaksud memperpanjang perjanjian kerja
                     waktu tertentu tersebut, paling lama 7 (tujuh) hari sebelum
                     perjanjian kerja waktu tertentu berakhir telah
                     memberitahukan maksudnya secara tertulis kepada
-                    pekerja/buruh yang bersangkutan. (6) Pembaruan perjanjian
-                    kerja waktu tertentu hanya dapat diadakan setelah melebihi
-                    masa tenggang waktu 30 (tiga puluh) hari berakhirnya
-                    perjanjian kerja waktu tertentu yang lama, pembaruan
-                    perjanjian kerja waktu tertentu ini hanya boleh dilakukan 1
-                    (satu) kali dan paling lama 2 (dua) tahun. (7) Perjanjian
-                    kerja untuk waktu tertentu yang tidak memenuhi ketentuan
-                    sebagaimana dimaksud dalam ayat (1), ayat (2), ayat (4),
-                    ayat (5), dan ayat (6) maka demi hukum menjadi perjanjian
-                    kerja waktu tidak tertentu. (8) Hal-hal lain yang belum
-                    diatur dalam Pasal ini akan diatur lebih lanjut dengan
-                    Keputusan Menteri.
+                    pekerja/buruh yang bersangkutan.
+              - _type: ayat
+                _key: 6
+                isi:
+                  _type: referenceText
+                  references: []
+                  text: >-
+                    (6) Pembaruan perjanjian kerja waktu tertentu hanya dapat
+                    diadakan setelah melebihi masa tenggang waktu 30 (tiga
+                    puluh) hari berakhirnya perjanjian kerja waktu tertentu yang
+                    lama, pembaruan perjanjian kerja waktu tertentu ini hanya
+                    boleh dilakukan 1 (satu) kali dan paling lama 2 (dua) tahun.
+              - _type: ayat
+                _key: 7
+                isi:
+                  _type: referenceText
+                  references: []
+                  text: >-
+                    (7) Perjanjian kerja untuk waktu tertentu yang tidak
+                    memenuhi ketentuan sebagaimana dimaksud dalam ayat (1), ayat
+                    (2), ayat (4), ayat (5), dan ayat (6) maka demi hukum
+                    menjadi perjanjian kerja waktu tidak tertentu.
+              - _type: ayat
+                _key: 8
+                isi:
+                  _type: referenceText
+                  references: []
+                  text: >-
+                    (8) Hal-hal lain yang belum diatur dalam Pasal ini akan
+                    diatur lebih lanjut dengan Keputusan Menteri.
         - _type: pasal
           _key: 60
           isi:
@@ -1020,9 +1196,16 @@ babs:
                   text: >-
                     (1) Perjanjian kerja untuk waktu tidak tertentu dapat
                     mensyaratkan masa percobaan kerja paling lama 3 (tiga)
-                    bulan. (2) Dalam masa percobaan kerja sebagaimana dimaksud
-                    dalam ayat (1), pengusaha dilarang membayar upah di bawah
-                    upah minimum yang berlaku.
+                    bulan.
+              - _type: ayat
+                _key: 2
+                isi:
+                  _type: referenceText
+                  references: []
+                  text: >-
+                    (2) Dalam masa percobaan kerja sebagaimana dimaksud dalam
+                    ayat (1), pengusaha dilarang membayar upah di bawah upah
+                    minimum yang berlaku.
         - _type: pasal
           _key: 61
           isi:
@@ -1041,21 +1224,46 @@ babs:
                     telah mempunyai kekuatan hukum tetap, atau d. adanya keadaan
                     atau kejadian tertentu yang dicantumkan dalam perjanjian
                     kerja, peraturan perusahaan, atau perjanjian kerja bersama
-                    yang dapat menyebabkan berakhirnya hubungan kerja. (2)
-                    Perjanjian kerja tidak berakhir karena meninggalnya
+                    yang dapat menyebabkan berakhirnya hubungan kerja.
+              - _type: ayat
+                _key: 2
+                isi:
+                  _type: referenceText
+                  references: []
+                  text: >-
+                    (2) Perjanjian kerja tidak berakhir karena meninggalnya
                     pengusaha atau beralihnya hak atas perusahaan yang
-                    disebabkan penjualan, pewarisan, atau hibah. (3) Dalam hal
-                    terjadi pengalihan perusahaan maka hak-hak pekerja/buruh
-                    menjadi tanggung jawab pengusaha baru, kecuali ditentukan
-                    lain dalam perjanjian pengalihan yang tidak mengurangi
-                    hak-hak pekerja/buruh. (4) Dalam hal pengusaha, orang
-                    perseorangan, meninggal dunia, ahli waris pengusaha dapat
-                    mengakhiri per-janjian kerja setelah merundingkan dengan
-                    pekerja/buruh. (5) Dalam hal pekerja/buruh meninggal dunia,
-                    ahli waris pekerja/ buruh berhak mendapatkan hak haknya
-                    se-suai dengan peraturan perundang- undangan yang berlaku
-                    atau hak hak yang telah diatur dalam perjanjian kerja,
-                    peraturan perusahaan, atau perjanjian kerja bersama.
+                    disebabkan penjualan, pewarisan, atau hibah.
+              - _type: ayat
+                _key: 3
+                isi:
+                  _type: referenceText
+                  references: []
+                  text: >-
+                    (3) Dalam hal terjadi pengalihan perusahaan maka hak-hak
+                    pekerja/buruh menjadi tanggung jawab pengusaha baru, kecuali
+                    ditentukan lain dalam perjanjian pengalihan yang tidak
+                    mengurangi hak-hak pekerja/buruh.
+              - _type: ayat
+                _key: 4
+                isi:
+                  _type: referenceText
+                  references: []
+                  text: >-
+                    (4) Dalam hal pengusaha, orang perseorangan, meninggal
+                    dunia, ahli waris pengusaha dapat mengakhiri per-janjian
+                    kerja setelah merundingkan dengan pekerja/buruh.
+              - _type: ayat
+                _key: 5
+                isi:
+                  _type: referenceText
+                  references: []
+                  text: >-
+                    (5) Dalam hal pekerja/buruh meninggal dunia, ahli waris
+                    pekerja/ buruh berhak mendapatkan hak haknya se-suai dengan
+                    peraturan perundang- undangan yang berlaku atau hak hak yang
+                    telah diatur dalam perjanjian kerja, peraturan perusahaan,
+                    atau perjanjian kerja bersama.
         - _type: pasal
           _key: 62
           isi:
@@ -1082,9 +1290,15 @@ babs:
                   text: >-
                     (1) Dalam hal perjanjian kerja waktu tidak tertentu dibuat
                     secara lisan, maka pengusaha wajib membuat surat
-                    pengangkatan bagi pekerja/buruh yang bersangkutan. (2) Surat
-                    pengangkatan sebagaimana dimaksud dalam ayat (1), sekurang
-                    kurangnya memuat keterangan : a. nama dan alamat
+                    pengangkatan bagi pekerja/buruh yang bersangkutan.
+              - _type: ayat
+                _key: 2
+                isi:
+                  _type: referenceText
+                  references: []
+                  text: >-
+                    (2) Surat pengangkatan sebagaimana dimaksud dalam ayat (1),
+                    sekurang kurangnya memuat keterangan : a. nama dan alamat
                     pekerja/buruh, b. tanggal mulai bekerja, c. jenis pekerjaan,
                     dan d. besarnya upah.
         - _type: pasal
@@ -1100,41 +1314,78 @@ babs:
         - _type: pasal
           _key: 65
           isi:
-            _type: referenceText
-            references: []
-            text: >-
-              Pasal 65 (l) Penyerahan sebagian pelaksanaan pekerjaan kepada
-              perusahaan lain dilaksanakan melalui perjanjian pem borongan
-              pekerjaan yang dibuat secara tertulis. (2) Pekerjaan yang dapat
-              diserahkan kepada perusahaan lain sebagaimana dimaksud dalam ayat
-              (1) harus memenuhi syarat-syarat sebagai berikut : a. dilakukan
-              secara terpisah dari kegiatan utama, b. dilakukan dengan perintah
-              langsung atau tidak langsung dari pemberi pekerjaan, c. merupakan
-              kegiatan penunjang perusahaan secara keseluruhan, dan d. tidak
-              menghambat proses produksi secara langsung. (3) Perusahaan lain
-              sebagaimana dimaksud dalam ayat (1) harus berbentuk badan hukum.
-              (4) Perlindungan kerja dan syarat-syarat kerja bagi pekerja/buruh
-              pada perusahaan lain sebagaimana dimak-sud dalam ayat (2)
-              sekurang- kurangnya sama dengan perlindungan kerja dan
-              syarat-syarat kerja pada perusahaan pemberi pekerjaan atau sesuai
-              dengan peraturan perundang- undangan yang berlaku. (5) Perubahan
-              dan/atau penambahan syarat-syarat sebagaimana dimaksud dalam ayat
-              (2) diatur lebih lanjut dengan Keputusan Menteri. (6) Hubungan
-              kerja dalam pelaksanaan pekerjaan sebagaimana dimaksud dalam ayat
-              (1) diatur dalam perjanjian kerja secara tertulis antara
-              perusahaan lain dan pekerja/buruh yang dipekerjakannya. (7)
-              Hubungan kerja sebagaimana dimaksud dalam ayat (6) dapat
-              didasarkan atas perjanjian kerja waktu tidak tertentu atau
-              perjanjian kerja waktu tertentu apabila memenuhi persyaratan
-              sebagaimana dimaksud dalam Pasal 59. (8) Dalam hal ketentuan
-              sebagaimana dimaksud dalam ayat (2) dan ayat (3) tidak terpenuhi,
-              maka demi hukum status hubungan kerja pekerja/buruh dengan
-              perusahaan penerima pemborongan beralih menjadi hubungan kerja
-              pekerja/buruh dengan perusahaan pemberi pekerjaan. (9) Dalam hal
-              hubungan kerja beralih ke perusahaan pemberi pekerjaan sebagaimana
-              dimaksud dalam ayat (8), maka hubungan kerja pekerja/buruh dengan
-              pemberi pekerjaan sesuai dengan hubungan kerja sebagaimana
-              dimaksud dalam ayat (7).
+            _type: ayats
+            ayats:
+              - _type: ayat
+                _key: 3
+                isi:
+                  _type: referenceText
+                  references: []
+                  text: >-
+                    (3) Perusahaan lain sebagaimana dimaksud dalam ayat (1)
+                    harus berbentuk badan hukum.
+              - _type: ayat
+                _key: 4
+                isi:
+                  _type: referenceText
+                  references: []
+                  text: >-
+                    (4) Perlindungan kerja dan syarat-syarat kerja bagi
+                    pekerja/buruh pada perusahaan lain sebagaimana dimak-sud
+                    dalam ayat (2) sekurang- kurangnya sama dengan perlindungan
+                    kerja dan syarat-syarat kerja pada perusahaan pemberi
+                    pekerjaan atau sesuai dengan peraturan perundang- undangan
+                    yang berlaku.
+              - _type: ayat
+                _key: 5
+                isi:
+                  _type: referenceText
+                  references: []
+                  text: >-
+                    (5) Perubahan dan/atau penambahan syarat-syarat sebagaimana
+                    dimaksud dalam ayat (2) diatur lebih lanjut dengan Keputusan
+                    Menteri.
+              - _type: ayat
+                _key: 6
+                isi:
+                  _type: referenceText
+                  references: []
+                  text: >-
+                    (6) Hubungan kerja dalam pelaksanaan pekerjaan sebagaimana
+                    dimaksud dalam ayat (1) diatur dalam perjanjian kerja secara
+                    tertulis antara perusahaan lain dan pekerja/buruh yang
+                    dipekerjakannya.
+              - _type: ayat
+                _key: 7
+                isi:
+                  _type: referenceText
+                  references: []
+                  text: >-
+                    (7) Hubungan kerja sebagaimana dimaksud dalam ayat (6) dapat
+                    didasarkan atas perjanjian kerja waktu tidak tertentu atau
+                    perjanjian kerja waktu tertentu apabila memenuhi persyaratan
+                    sebagaimana dimaksud dalam Pasal 59.
+              - _type: ayat
+                _key: 8
+                isi:
+                  _type: referenceText
+                  references: []
+                  text: >-
+                    (8) Dalam hal ketentuan sebagaimana dimaksud dalam ayat (2)
+                    dan ayat (3) tidak terpenuhi, maka demi hukum status
+                    hubungan kerja pekerja/buruh dengan perusahaan penerima
+                    pemborongan beralih menjadi hubungan kerja pekerja/buruh
+                    dengan perusahaan pemberi pekerjaan.
+              - _type: ayat
+                _key: 9
+                isi:
+                  _type: referenceText
+                  references: []
+                  text: >-
+                    (9) Dalam hal hubungan kerja beralih ke perusahaan pemberi
+                    pekerjaan sebagaimana dimaksud dalam ayat (8), maka hubungan
+                    kerja pekerja/buruh dengan pemberi pekerjaan sesuai dengan
+                    hubungan kerja sebagaimana dimaksud dalam ayat (7).
         - _type: pasal
           _key: 66
           isi:
@@ -1151,32 +1402,51 @@ babs:
                     melaksanakan kegiatan pokok atau kegiatan yang berhubungan
                     langsung dengan proses produksi, kecuali untuk kegiatan jasa
                     penunjang atau kegiatan yang tidak berhubungan langsung
-                    dengan proses produksi. (2) Penyedia jasa pekerja/buruh
-                    untuk kegiatan jasa penunjang atau kegiatan yang tidak
-                    berhubungan lang-sung dengan proses produksi harus memenuhi
-                    syarat sebagai berikut : a. adanya hubungan kerja antara
-                    pekerja/buruh dan perusahaan penyedia jasa pekerja/buruh, b.
-                    perjanjian kerja yang berlaku dalam hubungan kerja
-                    sebagaimana dimaksud pada huruf a adalah perjanjian kerja
-                    untuk waktu tertentu yang memenuhi persyaratan sebagaimana
-                    dimaksud dalam Pasal 59 dan/atau perjanjian kerja waktu
-                    tidak tertentu yang dibuat secara tertulis dan
-                    ditandatangani oleh kedua belah pihak, c. perlindungan upah
-                    dan kesejahteraan, syarat-syarat kerja, serta perselisihan
-                    yang timbul menjadi tanggung jawab perusahaan penyedia jasa
-                    pekerja/buruh, dan d. perjanjian antara perusahaan pengguna
-                    jasa pekerja/buruh dan perusahaan lain yang bertindak
-                    sebagai perusahaan penyedia jasa pekerja/buruh dibuat secara
-                    tertulis dan wajib memuat pasal-pasal sebagaimana dimaksud
-                    dalam undang-undang ini. (3) Penyedia jasa pekerja/buruh
-                    merupakan bentuk usaha yang berbadan hukum dan memiliki izin
-                    dari instansi yang bertanggung jawab di bidang
-                    ketenagakerjaan. (4) Dalam hal ketentuan sebagaimana
-                    dimaksud dalam ayat (1), ayat (2) huruf a, huruf b, dan
-                    huruf d serta ayat (3) tidak terpenuhi, maka demi hukum
-                    status hubungan kerja antara pekerja/buruh dan perusahaan
-                    penyedia jasa pekerja/buruh beralih menjadi hubungan kerja
-                    antara pekerja/buruh dan perusahaan pemberi pekerjaan.
+                    dengan proses produksi.
+              - _type: ayat
+                _key: 2
+                isi:
+                  _type: referenceText
+                  references: []
+                  text: >-
+                    (2) Penyedia jasa pekerja/buruh untuk kegiatan jasa
+                    penunjang atau kegiatan yang tidak berhubungan lang-sung
+                    dengan proses produksi harus memenuhi syarat sebagai berikut
+                    : a. adanya hubungan kerja antara pekerja/buruh dan
+                    perusahaan penyedia jasa pekerja/buruh, b. perjanjian kerja
+                    yang berlaku dalam hubungan kerja sebagaimana dimaksud pada
+                    huruf a adalah perjanjian kerja untuk waktu tertentu yang
+                    memenuhi persyaratan sebagaimana dimaksud dalam Pasal 59
+                    dan/atau perjanjian kerja waktu tidak tertentu yang dibuat
+                    secara tertulis dan ditandatangani oleh kedua belah pihak,
+                    c. perlindungan upah dan kesejahteraan, syarat-syarat kerja,
+                    serta perselisihan yang timbul menjadi tanggung jawab
+                    perusahaan penyedia jasa pekerja/buruh, dan d. perjanjian
+                    antara perusahaan pengguna jasa pekerja/buruh dan perusahaan
+                    lain yang bertindak sebagai perusahaan penyedia jasa
+                    pekerja/buruh dibuat secara tertulis dan wajib memuat
+                    pasal-pasal sebagaimana dimaksud dalam undang-undang ini.
+              - _type: ayat
+                _key: 3
+                isi:
+                  _type: referenceText
+                  references: []
+                  text: >-
+                    (3) Penyedia jasa pekerja/buruh merupakan bentuk usaha yang
+                    berbadan hukum dan memiliki izin dari instansi yang
+                    bertanggung jawab di bidang ketenagakerjaan.
+              - _type: ayat
+                _key: 4
+                isi:
+                  _type: referenceText
+                  references: []
+                  text: >-
+                    (4) Dalam hal ketentuan sebagaimana dimaksud dalam ayat (1),
+                    ayat (2) huruf a, huruf b, dan huruf d serta ayat (3) tidak
+                    terpenuhi, maka demi hukum status hubungan kerja antara
+                    pekerja/buruh dan perusahaan penyedia jasa pekerja/buruh
+                    beralih menjadi hubungan kerja antara pekerja/buruh dan
+                    perusahaan pemberi pekerjaan.
   - _type: bab
     _key: 10
     _judul: BAB X PERLINDUNGAN, PENGUPAHAN, DAN KESEJAHTERAAN
@@ -1235,20 +1505,33 @@ babs:
                                 antara 13 (tiga belas) tahun sampai dengan 15
                                 (lima belas) tahun untuk melakukan pekerjaan
                                 ringan sepanjang tidak mengganggu perkembangan
-                                dan kesehatan fisik, mental, dan sosial. (2)
-                                Pengusaha yang mempekerjakan anak pada pekerjaan
-                                ringan sebagai-mana dimaksud dalam ayat (1)
-                                ha-rus memenuhi persyaratan : a. izin tertulis
-                                dari orang tua atau wali, b. perjanjian kerja
-                                antara pengusaha dengan orang tua atau wali, c.
-                                waktu kerja maksimum 3 (tiga) jam, d. dilakukan
-                                pada siang hari dan tidak mengganggu waktu
-                                sekolah, e. keselamatan dan kesehatan kerja, f.
-                                adanya hubungan kerja yang jelas, dan g.
-                                menerima upah sesuai dengan ketentuan yang
-                                berlaku. (3) Ketentuan sebagaimana dimaksud
-                                dalam ayat (2) huruf a, b, f, dan g dikecualikan
-                                bagi anak yang bekerja pada usaha keluarganya.
+                                dan kesehatan fisik, mental, dan sosial.
+                          - _type: ayat
+                            _key: 2
+                            isi:
+                              _type: referenceText
+                              references: []
+                              text: >-
+                                (2) Pengusaha yang mempekerjakan anak pada
+                                pekerjaan ringan sebagai-mana dimaksud dalam
+                                ayat (1) ha-rus memenuhi persyaratan : a. izin
+                                tertulis dari orang tua atau wali, b. perjanjian
+                                kerja antara pengusaha dengan orang tua atau
+                                wali, c. waktu kerja maksimum 3 (tiga) jam, d.
+                                dilakukan pada siang hari dan tidak mengganggu
+                                waktu sekolah, e. keselamatan dan kesehatan
+                                kerja, f. adanya hubungan kerja yang jelas, dan
+                                g. menerima upah sesuai dengan ketentuan yang
+                                berlaku.
+                          - _type: ayat
+                            _key: 3
+                            isi:
+                              _type: referenceText
+                              references: []
+                              text: >-
+                                (3) Ketentuan sebagaimana dimaksud dalam ayat
+                                (2) huruf a, b, f, dan g dikecualikan bagi anak
+                                yang bekerja pada usaha keluarganya.
                     - _type: pasal
                       _key: 70
                       isi:
@@ -1307,26 +1590,37 @@ babs:
                     - _type: pasal
                       _key: 74
                       isi:
-                        _type: referenceText
-                        references: []
-                        text: >-
-                          Pasal 74 (l) Siapapun dilarang mempekerjakan dan
-                          melibatkan anak pada pekerjaan- pekerjaan yang
-                          terburuk. (2) Pekerjaan-pekerjaan yang terburuk yang
-                          dimaksud dalam ayat (1) meliputi: a. segala pekerjaan
-                          dalam bentuk perbudakan atau sejenisnya, b. segala
-                          pekerjaan yang memanfaatkan, menyediakan, atau
-                          menawarkan anak untuk pelacuran, produksi pornografi,
-                          pertunjukan porno, atau perjudian, c. segala pekerjaan
-                          yang memanfaatkan, menyediakan, atau melibatkan anak
-                          untuk produksi dan perdagangan minuman keras,
-                          narkotika, psikotropika, dan zat adiktif lainnya,
-                          dan/atau d. semua pekerjaan yang membahayakan
-                          kesehatan, keselamatan, atau moral anak. (3)
-                          Jenis-jenis pekerjaaan yang membahayakan kesehatan,
-                          keselamatan, atau moral anak sebagaimana di-maksud
-                          dalam ayat (2) huruf d ditetapkan dengan Keputusan
-                          Menteri.
+                        _type: ayats
+                        ayats:
+                          - _type: ayat
+                            _key: 2
+                            isi:
+                              _type: referenceText
+                              references: []
+                              text: >-
+                                (2) Pekerjaan-pekerjaan yang terburuk yang
+                                dimaksud dalam ayat (1) meliputi: a. segala
+                                pekerjaan dalam bentuk perbudakan atau
+                                sejenisnya, b. segala pekerjaan yang
+                                memanfaatkan, menyediakan, atau menawarkan anak
+                                untuk pelacuran, produksi pornografi,
+                                pertunjukan porno, atau perjudian, c. segala
+                                pekerjaan yang memanfaatkan, menyediakan, atau
+                                melibatkan anak untuk produksi dan perdagangan
+                                minuman keras, narkotika, psikotropika, dan zat
+                                adiktif lainnya, dan/atau d. semua pekerjaan
+                                yang membahayakan kesehatan, keselamatan, atau
+                                moral anak.
+                          - _type: ayat
+                            _key: 3
+                            isi:
+                              _type: referenceText
+                              references: []
+                              text: >-
+                                (3) Jenis-jenis pekerjaaan yang membahayakan
+                                kesehatan, keselamatan, atau moral anak
+                                sebagaimana di-maksud dalam ayat (2) huruf d
+                                ditetapkan dengan Keputusan Menteri.
                     - _type: pasal
                       _key: 75
                       isi:
@@ -1346,26 +1640,27 @@ babs:
                     - _type: pasal
                       _key: 76
                       isi:
-                        _type: referenceText
-                        references: []
-                        text: >-
-                          Pasal 76 (l) Pekerja/buruh perempuan yang berumur
-                          kurang dari 18 (delapan belas) tahun dilarang
-                          dipekerjakan antara pukul 23.00 sampai dengan pukul
-                          07.00. (2) Pengusaha dilarang mempekerjakan
-                          pekerja/buruh perempuan hamil yang menurut keterangan
-                          dokter berbahaya bagi kesehatan dan keselamatan
-                          kandungannya maupun dirinya apabila bekerja antara
-                          pukul 23.00 sampai dengan pukul 07.00. (3) Pengusaha
-                          yang mempekerjakan pekerja/buruh perempuan antara
-                          pukul 23.00 sampai dengan pukul 07.00 wajib : a.
-                          memberikan makanan dan minuman bergizi, dan b. menjaga
-                          kesusilaan dan keamanan selama di tempat kerja. (4)
-                          Pengusaha wajib menyediakan angkutan antar jemput bagi
-                          pekerja/buruh perempuan yang berangkat dan pulang
-                          bekerja antara pukul 23.00 sampai dengan pukul 05.00.
-                          (5) Ketentuan sebagaimana dimaksud dalam ayat (3) dan
-                          ayat (4) diatur dengan Keputusan Menteri.
+                        _type: ayats
+                        ayats:
+                          - _type: ayat
+                            _key: 4
+                            isi:
+                              _type: referenceText
+                              references: []
+                              text: >-
+                                (4) Pengusaha wajib menyediakan angkutan antar
+                                jemput bagi pekerja/buruh perempuan yang
+                                berangkat dan pulang bekerja antara pukul 23.00
+                                sampai dengan pukul 05.00.
+                          - _type: ayat
+                            _key: 5
+                            isi:
+                              _type: referenceText
+                              references: []
+                              text: >-
+                                (5) Ketentuan sebagaimana dimaksud dalam ayat
+                                (3) dan ayat (4) diatur dengan Keputusan
+                                Menteri.
               - _type: paragraf
                 _key: 4
                 _judul: Paragraf 4 Waktu Kerja
@@ -1471,10 +1766,17 @@ babs:
                                 (1) Pekerja/buruh perempuan yang dalam masa haid
                                 merasakan sakit dan memberitahukan kepada
                                 pengusaha, tidak wajib bekerja pada hari pertama
-                                dan kedua pada waktu haid. (2) Pelaksanaan
-                                ketentuan sebagaimana dimaksud dalam ayat (1)
-                                diatur dalam perjanjian kerja, peraturan
-                                perusahaan, atau perjanjian kerja bersama.
+                                dan kedua pada waktu haid.
+                          - _type: ayat
+                            _key: 2
+                            isi:
+                              _type: referenceText
+                              references: []
+                              text: >-
+                                (2) Pelaksanaan ketentuan sebagaimana dimaksud
+                                dalam ayat (1) diatur dalam perjanjian kerja,
+                                peraturan perusahaan, atau perjanjian kerja
+                                bersama.
                     - _type: pasal
                       _key: 82
                       isi:
@@ -1521,19 +1823,39 @@ babs:
                               references: []
                               text: >-
                                 (1) Pekerja/buruh tidak wajib bekerja pada
-                                hari-hari libur resmi. (2) Pengusaha dapat
-                                mempekerjakan pekerja/buruh untuk bekerja pada
-                                hari- hari libur resmi apabila jenis dan sifat
-                                pekerjaan tersebut harus dilaksanakan atau
-                                dijalankan secara terus- menerus atau pada
-                                keadaan lain berdasarkan kesepakatan antara
-                                pekerja/buruh dengan pengusaha. (3) Pengusaha
-                                yang mempekerjakan pekerja/buruh yang melakukan
-                                pekerjaan pada hari libur resmi sebagaimana
-                                dimaksud dalam ayat (2) wajib membayar upah
-                                kerja lembur. (4) Ketentuan mengenai jenis dan
-                                sifat pekerjaan sebagaimana dimaksud dalam ayat
-                                (2) diatur dengan Keputusan Menteri.
+                                hari-hari libur resmi.
+                          - _type: ayat
+                            _key: 2
+                            isi:
+                              _type: referenceText
+                              references: []
+                              text: >-
+                                (2) Pengusaha dapat mempekerjakan pekerja/buruh
+                                untuk bekerja pada hari- hari libur resmi
+                                apabila jenis dan sifat pekerjaan tersebut harus
+                                dilaksanakan atau dijalankan secara terus-
+                                menerus atau pada keadaan lain berdasarkan
+                                kesepakatan antara pekerja/buruh dengan
+                                pengusaha.
+                          - _type: ayat
+                            _key: 3
+                            isi:
+                              _type: referenceText
+                              references: []
+                              text: >-
+                                (3) Pengusaha yang mempekerjakan pekerja/buruh
+                                yang melakukan pekerjaan pada hari libur resmi
+                                sebagaimana dimaksud dalam ayat (2) wajib
+                                membayar upah kerja lembur.
+                          - _type: ayat
+                            _key: 4
+                            isi:
+                              _type: referenceText
+                              references: []
+                              text: >-
+                                (4) Ketentuan mengenai jenis dan sifat pekerjaan
+                                sebagaimana dimaksud dalam ayat (2) diatur
+                                dengan Keputusan Menteri.
               - _type: paragraf
                 _key: 5
                 _judul: Paragraf 5 Keselamatan dan Kesehatan Kerja
@@ -1555,14 +1877,26 @@ babs:
                                 memperoleh perlindungan atas: a. keselamatan dan
                                 kesehatan kerja, b. moral dan kesusilaan: dan c.
                                 perlakuan yang sesuai dengan harkat dan martabat
-                                manusia serta nilai-nilai agama. (2) Untuk
-                                melindungi keselamatan pekerja/buruh guna
-                                mewujudkan produktivitas kerja yang optimal
+                                manusia serta nilai-nilai agama.
+                          - _type: ayat
+                            _key: 2
+                            isi:
+                              _type: referenceText
+                              references: []
+                              text: >-
+                                (2) Untuk melindungi keselamatan pekerja/buruh
+                                guna mewujudkan produktivitas kerja yang optimal
                                 diselenggarakan upaya keselamatan dan kesehatan
-                                kerja. (3) Perlindungan sebagaimana dimaksud
-                                dalam ayat (1) dan ayat (2) dilaksanakan sesuai
-                                dengan peraturan perundang- undangan yang
-                                berlaku.
+                                kerja.
+                          - _type: ayat
+                            _key: 3
+                            isi:
+                              _type: referenceText
+                              references: []
+                              text: >-
+                                (3) Perlindungan sebagaimana dimaksud dalam ayat
+                                (1) dan ayat (2) dilaksanakan sesuai dengan
+                                peraturan perundang- undangan yang berlaku.
                     - _type: pasal
                       _key: 87
                       isi:
@@ -1577,6 +1911,12 @@ babs:
                                 (1) Setiap perusahaan wajib menerapkan sistem
                                 manajemen keselamatan dan kesehatan kerja yang
                                 terintegrasi dengan sistem manajemen perusahaan.
+                          - _type: ayat
+                            _key: 2
+                            isi:
+                              _type: referenceText
+                              references: []
+                              text: >-
                                 (2) Ketentuan mengenai penerapan sistem
                                 manajemen keselamatan dan kesehatan kerja
                                 sebagaimana dimaksud dalam ayat (1) diatur
@@ -1590,28 +1930,36 @@ babs:
               - _type: pasal
                 _key: 88
                 isi:
-                  _type: referenceText
-                  references: []
-                  text: >-
-                    Pasal 88 (l) Setiap pekerja/buruh berhak memperoleh
-                    penghasilan yang memenuhi penghidupan yang layak bagi
-                    kemanusiaan. (2) Untuk mewujudkan penghasilan yang memenuhi
-                    penghidupan yang layak bagi kemanusiaan sebagaimana dimaksud
-                    dalam ayat (1), pemerintah menetapkan kebijakan pengupahan
-                    yang melindungi pekerja/buruh. (3) Kebijakan pengupahan yang
-                    melindungi pekerja/buruh sebagaimana dimaksud dalam ayat (2)
-                    meliputi : a. upah minimum, b. upah kerja lembur, c. upah
-                    tidak masuk kerja karena berhalangan, d. upah tidak masuk
-                    kerja karena melakukan kegiatan lain di luar pekerjaannya,
-                    e. upah karena menjalankan hak waktu istirahat kerjanya, f.
-                    bentuk dan cara pembayaran upah, g. denda dan potongan upah,
-                    h. hal-hal yang dapat diperhitungkan dengan upah, Ii.
-                    struktur dan skala pengupahan yang proporsional, J- upah
-                    untuk pembayaran pesangon, dan k. upah untuk perhitungan
-                    pajak penghasilan. (4) Pemerintah menetapkan upah minimum
-                    sebagaimana dimaksud dalam ayat (3) huruf a berdasarkan
-                    kebutuhan hidup layak dan dengan mem- perhatikan
-                    produktivitas dan pertumbuhan ekonomi.
+                  _type: ayats
+                  ayats:
+                    - _type: ayat
+                      _key: 3
+                      isi:
+                        _type: referenceText
+                        references: []
+                        text: >-
+                          (3) Kebijakan pengupahan yang melindungi pekerja/buruh
+                          sebagaimana dimaksud dalam ayat (2) meliputi : a. upah
+                          minimum, b. upah kerja lembur, c. upah tidak masuk
+                          kerja karena berhalangan, d. upah tidak masuk kerja
+                          karena melakukan kegiatan lain di luar pekerjaannya,
+                          e. upah karena menjalankan hak waktu istirahat
+                          kerjanya, f. bentuk dan cara pembayaran upah, g. denda
+                          dan potongan upah, h. hal-hal yang dapat
+                          diperhitungkan dengan upah, Ii. struktur dan skala
+                          pengupahan yang proporsional, J- upah untuk pembayaran
+                          pesangon, dan k. upah untuk perhitungan pajak
+                          penghasilan.
+                    - _type: ayat
+                      _key: 4
+                      isi:
+                        _type: referenceText
+                        references: []
+                        text: >-
+                          (4) Pemerintah menetapkan upah minimum sebagaimana
+                          dimaksud dalam ayat (3) huruf a berdasarkan kebutuhan
+                          hidup layak dan dengan mem- perhatikan produktivitas
+                          dan pertumbuhan ekonomi.
               - _type: pasal
                 _key: 89
                 isi:
@@ -1627,15 +1975,34 @@ babs:
                           ayat (3) huruf a dapat terdiri atas : a. upah minimum
                           berdasarkan wilayah provinsi atau kabupaten/kota, b.
                           upah minimum berdasarkan sektor pada wilayah provinsi
-                          atau kabupaten/kota. (2) Upah minimum sebagaimana
-                          dimaksud dalam ayat (1) diarahkan kepada pencapaian
-                          kebutuhan hidup layak. (3) Upah minimum sebagaimana
-                          dimaksud dalam ayat (1) ditetapkan oleh Gubernur
-                          dengan memperhatikan rekomendasi dari Dewan Pengupahan
-                          Provinsi dan/atau Bupati/Walikota. (4) Komponen serta
-                          pelaksanaan tahapan pencapaian kebutuhan hidup layak
-                          sebagaimana dimaksud dalam ayat (2) diatur dengan
-                          Keputusan Menteri.
+                          atau kabupaten/kota.
+                    - _type: ayat
+                      _key: 2
+                      isi:
+                        _type: referenceText
+                        references: []
+                        text: >-
+                          (2) Upah minimum sebagaimana dimaksud dalam ayat (1)
+                          diarahkan kepada pencapaian kebutuhan hidup layak.
+                    - _type: ayat
+                      _key: 3
+                      isi:
+                        _type: referenceText
+                        references: []
+                        text: >-
+                          (3) Upah minimum sebagaimana dimaksud dalam ayat (1)
+                          ditetapkan oleh Gubernur dengan memperhatikan
+                          rekomendasi dari Dewan Pengupahan Provinsi dan/atau
+                          Bupati/Walikota.
+                    - _type: ayat
+                      _key: 4
+                      isi:
+                        _type: referenceText
+                        references: []
+                        text: >-
+                          (4) Komponen serta pelaksanaan tahapan pencapaian
+                          kebutuhan hidup layak sebagaimana dimaksud dalam ayat
+                          (2) diatur dengan Keputusan Menteri.
               - _type: pasal
                 _key: 90
                 isi:
@@ -1689,19 +2056,26 @@ babs:
                         references: []
                         text: >-
                           (1) Upah tidak dibayar apabila pekerja/buruh tidak
-                          melakukan pekerjaan. (2) Ketentuan sebagaimana
-                          dimaksud dalam ayat (1) tidak berlaku, dan pengusaha
-                          wajib membayar upah apabila : a. pekerja/buruh sakit
-                          sehingga tidak dapat melakukan pekerjaan, b.
-                          pekerja/buruh perempuan yang sakit pada hari pertama
-                          dan kedua masa haidnya sehingga tidak dapat melakukan
-                          pekerjaan, c. pekerja/buruh tidak masuk bekerja karena
-                          pekerja/buruh menikah, menikahkan, mengkhitankan,
-                          membaptiskan anaknya, isteri melahirkan atau keguguran
-                          kandungan, suami atau isteri atau anak atau menantu
-                          atau orang tua atau mertua atau anggota keluarga dalam
-                          satu rumah meninggal dunia, d. pekerja/buruh tidak
-                          dapat melakukan pekerjaannya karena sedang menjalankan
+                          melakukan pekerjaan.
+                    - _type: ayat
+                      _key: 2
+                      isi:
+                        _type: referenceText
+                        references: []
+                        text: >-
+                          (2) Ketentuan sebagaimana dimaksud dalam ayat (1)
+                          tidak berlaku, dan pengusaha wajib membayar upah
+                          apabila : a. pekerja/buruh sakit sehingga tidak dapat
+                          melakukan pekerjaan, b. pekerja/buruh perempuan yang
+                          sakit pada hari pertama dan kedua masa haidnya
+                          sehingga tidak dapat melakukan pekerjaan, c.
+                          pekerja/buruh tidak masuk bekerja karena pekerja/buruh
+                          menikah, menikahkan, mengkhitankan, membaptiskan
+                          anaknya, isteri melahirkan atau keguguran kandungan,
+                          suami atau isteri atau anak atau menantu atau orang
+                          tua atau mertua atau anggota keluarga dalam satu rumah
+                          meninggal dunia, d. pekerja/buruh tidak dapat
+                          melakukan pekerjaannya karena sedang menjalankan
                           kewajiban terhadap negara, e. pekerja/buruh tidak
                           dapat melakukan pekerjaannya karena menjalan- kan
                           ibadah yang diperintahkan agamanya, f. pekerja/buruh
@@ -1712,33 +2086,52 @@ babs:
                           melaksanakan hak istirahat, h. pekerja/buruh
                           melaksanakan tugas serikat pekerja/serikat buruh atas
                           persetujuan pengusaha, dan 1. pekerja/buruh
-                          melaksanakan tugas pendidikan dari perusahaan. (3)
-                          Upah yang dibayarkan kepada pekerja/buruh yang sakit
-                          sebagaimana dimaksud dalam ayat (2) huruf a sebagai
-                          berikut : a. untuk 4 (empat) bulan pertama, dibayar
-                          10096 (seratus perseratus) dari upah, b. untuk 4
-                          (empat) bulan kedua, dibayar 7590 (tujuh puluh lima
+                          melaksanakan tugas pendidikan dari perusahaan.
+                    - _type: ayat
+                      _key: 3
+                      isi:
+                        _type: referenceText
+                        references: []
+                        text: >-
+                          (3) Upah yang dibayarkan kepada pekerja/buruh yang
+                          sakit sebagaimana dimaksud dalam ayat (2) huruf a
+                          sebagai berikut : a. untuk 4 (empat) bulan pertama,
+                          dibayar 10096 (seratus perseratus) dari upah, b. untuk
+                          4 (empat) bulan kedua, dibayar 7590 (tujuh puluh lima
                           perseratus) dari upah: c. untuk 4 (empat) bulan
                           ketiga, dibayar 5096 (lima puluh perseratus) dari
                           upah, dan d. untuk bulan selanjutnya dibayar 2596 (dua
                           puluh lima perseratus) dari upah sebelum pemutusan
-                          hubungan kerja dilakukan oleh pengusaha. (4) Upah yang
-                          dibayarkan kepada pekerja/buruh yang tidak masuk
-                          bekerja sebagaimana dimaksud dalam ayat (2) huruf c
-                          sebagai berikut : a. pekerja/buruh menikah, dibayar
-                          untuk selama 3 (tiga) hari: b. menikahkan anaknya,
-                          dibayar untuk selama 2 (dua) hari, c. mengkhitankan
-                          anaknya, dibayar untuk selama 2 (dua) hari d.
-                          membaptiskan anaknya, dibayar untuk selama 2 (dua)
-                          hari, e. isteri melahirkan atau keguguran kandungan,
-                          dibayar untuk selama 2 (dua) hari: f. suami/isteri,
-                          orang tua/mertua atau anak atau menantu meninggal
-                          dunia, dibayar untuk selama 2 (dua) hari, dan g.
-                          anggota keluarga dalam satu rumah meninggal dunia,
-                          dibayar untuk selama 1 (satu) hari. (5) Pengaturan
-                          pelaksanaan ketentuan sebagaimana dimaksud dalam ayat
-                          (2) ditetapkan dalam perjanjian kerja, peraturan
-                          perusahaan, atau perjanjian kerja bersama.
+                          hubungan kerja dilakukan oleh pengusaha.
+                    - _type: ayat
+                      _key: 4
+                      isi:
+                        _type: referenceText
+                        references: []
+                        text: >-
+                          (4) Upah yang dibayarkan kepada pekerja/buruh yang
+                          tidak masuk bekerja sebagaimana dimaksud dalam ayat
+                          (2) huruf c sebagai berikut : a. pekerja/buruh
+                          menikah, dibayar untuk selama 3 (tiga) hari: b.
+                          menikahkan anaknya, dibayar untuk selama 2 (dua) hari,
+                          c. mengkhitankan anaknya, dibayar untuk selama 2 (dua)
+                          hari d. membaptiskan anaknya, dibayar untuk selama 2
+                          (dua) hari, e. isteri melahirkan atau keguguran
+                          kandungan, dibayar untuk selama 2 (dua) hari: f.
+                          suami/isteri, orang tua/mertua atau anak atau menantu
+                          meninggal dunia, dibayar untuk selama 2 (dua) hari,
+                          dan g. anggota keluarga dalam satu rumah meninggal
+                          dunia, dibayar untuk selama 1 (satu) hari.
+                    - _type: ayat
+                      _key: 5
+                      isi:
+                        _type: referenceText
+                        references: []
+                        text: >-
+                          (5) Pengaturan pelaksanaan ketentuan sebagaimana
+                          dimaksud dalam ayat (2) ditetapkan dalam perjanjian
+                          kerja, peraturan perusahaan, atau perjanjian kerja
+                          bersama.
               - _type: pasal
                 _key: 94
                 isi:
@@ -1804,20 +2197,39 @@ babs:
                           merumuskan kebijakan pengupahan yang akan ditetapkan
                           oleh pemerintah, serta untuk pengembangan sistem
                           pengupahan nasional dibentuk Dewan Pengupahan
-                          Nasional, Provinsi, dan Kabupaten/Kota. (2)
-                          Keanggotaan Dewan Pengupahan sebagaimana dimaksud
+                          Nasional, Provinsi, dan Kabupaten/Kota.
+                    - _type: ayat
+                      _key: 2
+                      isi:
+                        _type: referenceText
+                        references: []
+                        text: >-
+                          (2) Keanggotaan Dewan Pengupahan sebagaimana dimaksud
                           dalam ayat (1) terdiri dari unsur pemerintah,
                           organisasi pengusaha, serikat pekerja/-serikat buruh,
-                          perguruan tinggi, dan pakar. (3) Keanggotaan Dewan
-                          Pengupahan tingkat Nasional diangkat dan diberhentikan
-                          oleh Presiden, sedangkan keanggotaan Dewan Pengupahan
-                          Provinsi, Kabupaten/Kota diangkat dan diberhentikan
-                          oleh Gubenur/ Bupati/Walikota. (4) Ketentuan mengenai
-                          tata cara pembentukan, komposisi keanggotaan, tata
-                          cara pengangkatan dan pemberhentian keanggotaan, serta
-                          tugas dan tata kerja Dewan Pengupahan sebagaimana
-                          dimaksud dalam ayat (1) dan ayat (2), diatur dengan
-                          Keputusan Presiden.
+                          perguruan tinggi, dan pakar.
+                    - _type: ayat
+                      _key: 3
+                      isi:
+                        _type: referenceText
+                        references: []
+                        text: >-
+                          (3) Keanggotaan Dewan Pengupahan tingkat Nasional
+                          diangkat dan diberhentikan oleh Presiden, sedangkan
+                          keanggotaan Dewan Pengupahan Provinsi, Kabupaten/Kota
+                          diangkat dan diberhentikan oleh Gubenur/
+                          Bupati/Walikota.
+                    - _type: ayat
+                      _key: 4
+                      isi:
+                        _type: referenceText
+                        references: []
+                        text: >-
+                          (4) Ketentuan mengenai tata cara pembentukan,
+                          komposisi keanggotaan, tata cara pengangkatan dan
+                          pemberhentian keanggotaan, serta tugas dan tata kerja
+                          Dewan Pengupahan sebagaimana dimaksud dalam ayat (1)
+                          dan ayat (2), diatur dengan Keputusan Presiden.
         - _type: bagian
           _key: 3
           _judul: Bagian Ketiga Kesejahteraan
@@ -1836,9 +2248,15 @@ babs:
                         references: []
                         text: >-
                           (1) Setiap pekerja/buruh dan keluarganya berhak untuk
-                          memperoleh jaminan sosial tenaga kerja. (2) Jaminan
-                          sosial tenaga kerja sebagaimana dimaksud dalam ayat
-                          (1), dilaksanakan sesuai dengan peraturan
+                          memperoleh jaminan sosial tenaga kerja.
+                    - _type: ayat
+                      _key: 2
+                      isi:
+                        _type: referenceText
+                        references: []
+                        text: >-
+                          (2) Jaminan sosial tenaga kerja sebagaimana dimaksud
+                          dalam ayat (1), dilaksanakan sesuai dengan peraturan
                           perundang-undangan yang berlaku.
               - _type: pasal
                 _key: 100
@@ -1853,11 +2271,24 @@ babs:
                         text: >-
                           (1) Untuk meningkatkan kesejahteraan bagi
                           pekerja/buruh dan keluarganya, pengusaha wajib
-                          menyediakan fasilitas kesejahteraan. (2) Penyediaan
-                          fasilitas kesejahteraan sebagaimana dimaksud dalam
-                          ayat (1), dilaksanakan dengan memperhatikan kebutuhan
-                          pekerja/buruh dan ukuran kemampuan perusahaan. (3)
-                          Ketentuan mengenai Jenis dan kriteria fasilitas
+                          menyediakan fasilitas kesejahteraan.
+                    - _type: ayat
+                      _key: 2
+                      isi:
+                        _type: referenceText
+                        references: []
+                        text: >-
+                          (2) Penyediaan fasilitas kesejahteraan sebagaimana
+                          dimaksud dalam ayat (1), dilaksanakan dengan
+                          memperhatikan kebutuhan pekerja/buruh dan ukuran
+                          kemampuan perusahaan.
+                    - _type: ayat
+                      _key: 3
+                      isi:
+                        _type: referenceText
+                        references: []
+                        text: >-
+                          (3) Ketentuan mengenai Jenis dan kriteria fasilitas
                           kesejahteraan sesuai dengan kebutuhan pekerja/buruh
                           dan ukuran kemampuan perusahaan sebagaimana dimaksud
                           dalam ayat (1) dan ayat (2), diatur dengan Peraturan
@@ -1875,14 +2306,34 @@ babs:
                         text: >-
                           (1) Untuk meningkatkan kesejahteraan pekerja/buruh,
                           dibentuk koperasi pekerja/buruh dan usaha-usaha
-                          produktif di perusahaan. (2) Pemerintah, pengusaha,
-                          dan pekerja/buruh atau serikat pekerja/serikat buruh
-                          berupaya menumbuhkembangkan koperasi pekerja/buruh,
-                          dan mengembangkan usaha produktif sebagaimana dimaksud
-                          dalam ayat (1). (3) Pembentukan koperasi sebagaimana
-                          dimaksud dalam ayat (1), dilaksanakan sesuai dengan
-                          peraturan perundang-undangan yang berlaku. (4)
-                          Upaya-upaya untuk menumbuhkembangkan koperasi
+                          produktif di perusahaan.
+                    - _type: ayat
+                      _key: 2
+                      isi:
+                        _type: referenceText
+                        references: []
+                        text: >-
+                          (2) Pemerintah, pengusaha, dan pekerja/buruh atau
+                          serikat pekerja/serikat buruh berupaya
+                          menumbuhkembangkan koperasi pekerja/buruh, dan
+                          mengembangkan usaha produktif sebagaimana dimaksud
+                          dalam ayat (1).
+                    - _type: ayat
+                      _key: 3
+                      isi:
+                        _type: referenceText
+                        references: []
+                        text: >-
+                          (3) Pembentukan koperasi sebagaimana dimaksud dalam
+                          ayat (1), dilaksanakan sesuai dengan peraturan
+                          perundang-undangan yang berlaku.
+                    - _type: ayat
+                      _key: 4
+                      isi:
+                        _type: referenceText
+                        references: []
+                        text: >-
+                          (4) Upaya-upaya untuk menumbuhkembangkan koperasi
                           pekerja/buruh sebagaimana dimaksud dalam ayat (2),
                           diatur dengan Peraturan Pemerintah.
   - _type: bab
@@ -1950,15 +2401,28 @@ babs:
                         references: []
                         text: >-
                           (1) Setiap pekerja/buruh berhak membentuk dan menjadi
-                          anggota serikat pekerja/serikat buruh. (2) Dalam
-                          melaksanakan fungsi sebagaimana dimaksud dalam Pasal
-                          102, serikat pekerja/serikat buruh ber-hak menghimpun
-                          dan mengelola keuangan serta mempertanggungjawabkan
-                          keuangan organisasi termasuk dana mogok. (3) Besarnya
-                          dan tata cara pemungutan dana mogok sebagaimana
-                          dimaksud dalam ayat (2) diatur dalam ang-garan dasar
-                          dan/atau anggaran rumah tangga serikat pekerja/serikat
-                          buruh yang bersangkutan.
+                          anggota serikat pekerja/serikat buruh.
+                    - _type: ayat
+                      _key: 2
+                      isi:
+                        _type: referenceText
+                        references: []
+                        text: >-
+                          (2) Dalam melaksanakan fungsi sebagaimana dimaksud
+                          dalam Pasal 102, serikat pekerja/serikat buruh ber-hak
+                          menghimpun dan mengelola keuangan serta
+                          mempertanggungjawabkan keuangan organisasi termasuk
+                          dana mogok.
+                    - _type: ayat
+                      _key: 3
+                      isi:
+                        _type: referenceText
+                        references: []
+                        text: >-
+                          (3) Besarnya dan tata cara pemungutan dana mogok
+                          sebagaimana dimaksud dalam ayat (2) diatur dalam
+                          ang-garan dasar dan/atau anggaran rumah tangga serikat
+                          pekerja/serikat buruh yang bersangkutan.
         - _type: bagian
           _key: 3
           _judul: Bagian Ketiga Organisasi Pengusaha
@@ -1984,22 +2448,18 @@ babs:
               - _type: pasal
                 _key: 106
                 isi:
-                  _type: referenceText
-                  references: []
-                  text: >-
-                    Pasal 106 (l) Setiap perusahaan yang mempekerjakan 50 (lima
-                    puluh) orang pekerja/ buruh atau lebih wajib membentuk
-                    lembaga kerja sama bipartit. (2) Lembaga kerja sama bipartit
-                    sebagaimana dimaksud dalam ayat (1) berfungsi sebagai forum
-                    komunikasi, dan konsultasi mengenai hal ketenagakerjaan di
-                    perusahaan. (3) Susunan keanggotaan lembaga kerja sama
-                    bipartit sebagaimana dimaksud dalam ayat (2) terdiri dari
-                    unsur pengusaha dan unsur pekerja/buruh yang ditunjuk oleh
-                    pekerja/buruh secara demokratis untuk mewakili kepentingan
-                    pekerja/buruh di perusahaan yang bersangkutan. (4) Ketentuan
-                    mengenai tata cara pembentukan dan susunan keanggotaan
-                    lembaga kerja sama bipartit sebagaimana dimaksud dalam ayat
-                    (1) dan ayat (3) diatur dengan Keputusan Menteri.
+                  _type: ayats
+                  ayats:
+                    - _type: ayat
+                      _key: 4
+                      isi:
+                        _type: referenceText
+                        references: []
+                        text: >-
+                          (4) Ketentuan mengenai tata cara pembentukan dan
+                          susunan keanggotaan lembaga kerja sama bipartit
+                          sebagaimana dimaksud dalam ayat (1) dan ayat (3)
+                          diatur dengan Keputusan Menteri.
         - _type: bagian
           _key: 5
           _judul: Bagian Kelima Lembaga Kerja Sama Tripartit
@@ -2073,25 +2533,18 @@ babs:
               - _type: pasal
                 _key: 111
                 isi:
-                  _type: referenceText
-                  references: []
-                  text: >-
-                    Pasal 111 (l) Peraturan perusahaan sekurang-kurangnya memuat
-                    : a. hak dan kewajiban pengusaha, b. hak dan kewajiban
-                    pekerja/buruh, c. syarat kerja, d. tata tertib perusahaan:
-                    dan e. jangka waktu berlakunya peraturan perusahaan. (2)
-                    Ketentuan dalam peraturan perusahaan tidak boleh
-                    bertentangan dengan ketentuan peraturan perundang undangan
-                    yang berlaku. (3) Masa berlaku peraturan perusahaan paling
-                    lama 2 (dua) tahun dan wajib diperbaharui setelah habis masa
-                    berlakunya. (4) Selama masa berlakunya peraturan perusahaan,
-                    apabila serikat pekerja/ serikat buruh di perusahaan meng
-                    hendaki perundingan pembuatan perjanjian kerja bersama, maka
-                    pengusaha wajib melayani. (5) Dalam hal perundingan
-                    pembuatan perjanjian kerja bersama sebagaimana dimaksud
-                    dalam ayat (4) tidak mencapai kesepakatan, maka peraturan
-                    perusahaan tetap berlaku sampai habis jangka waktu
-                    berlakunya.
+                  _type: ayats
+                  ayats:
+                    - _type: ayat
+                      _key: 5
+                      isi:
+                        _type: referenceText
+                        references: []
+                        text: >-
+                          (5) Dalam hal perundingan pembuatan perjanjian kerja
+                          bersama sebagaimana dimaksud dalam ayat (4) tidak
+                          mencapai kesepakatan, maka peraturan perusahaan tetap
+                          berlaku sampai habis jangka waktu berlakunya.
               - _type: pasal
                 _key: 112
                 isi:
@@ -2176,6 +2629,14 @@ babs:
                           oleh penerjemah tersumpah dan terjemahan tersebut
                           dianggap sudah memenuhi ketentuan sebagaimana dimaksud
                           dalam ayat (3).
+                    - _type: ayat
+                      _key: 2
+                      isi:
+                        _type: referenceText
+                        references: []
+                        text: >-
+                          (2) Penyusunan perjanjian kerja bersama sebagaimana
+                          dimaksud dalam ayat
               - _type: pasal
                 _key: 117
                 isi:
@@ -2213,25 +2674,38 @@ babs:
                           kerja bersama dengan pengusaha apabila memiliki jumlah
                           anggota lebih dari 5090 (lima puluh perseratus) dari
                           jumlah seluruh pekerja/buruh di perusahaan yang
-                          bersangkutan. (2) Dalam hal di satu perusahaan hanya
-                          terdapat satu serikat pekerja/serikat buruh
-                          sebagaimana dimaksud pada ayat (1) tetapi tidak
-                          memiliki jumlah anggota lebih dari 509 (lima puluh
-                          perseratus) dari jumlah seluruh pekerja/buruh di
-                          perusahaan maka serikat pekerja/serikat buruh dapat
-                          mewakili pekerja/buruh dalam perundingan dengan
-                          pengusaha apabila serikat pekerja/serikat buruh yang
-                          bersangkutan telah mendapat dukungan lebih 5096 (lima
-                          puluh perseratus) dari jumlah seluruh pekerja/buruh di
-                          perusahaan melalui pemungutan suara. (3) Dalam hal
-                          dukungan sebagaimana dimaksud dalam ayat (2) tidak
-                          tercapai maka serikat pekerja/serikat buruh yang
-                          bersangkutan dapat mengajukan kembali permintaan untuk
-                          merundingkan perjanjian kerja bersama dengan pengusaha
-                          setelah melampaui jangka waktu 6 (enam) bulan
-                          terhitung sejak dilakukannya pemungutan suara dengan
-                          mengikuti prosedur sebagaimana dimaksud dalam ayat
-                          (2).
+                          bersangkutan.
+                    - _type: ayat
+                      _key: 2
+                      isi:
+                        _type: referenceText
+                        references: []
+                        text: >-
+                          (2) Dalam hal di satu perusahaan hanya terdapat satu
+                          serikat pekerja/serikat buruh sebagaimana dimaksud
+                          pada ayat (1) tetapi tidak memiliki jumlah anggota
+                          lebih dari 509 (lima puluh perseratus) dari jumlah
+                          seluruh pekerja/buruh di perusahaan maka serikat
+                          pekerja/serikat buruh dapat mewakili pekerja/buruh
+                          dalam perundingan dengan pengusaha apabila serikat
+                          pekerja/serikat buruh yang bersangkutan telah mendapat
+                          dukungan lebih 5096 (lima puluh perseratus) dari
+                          jumlah seluruh pekerja/buruh di perusahaan melalui
+                          pemungutan suara.
+                    - _type: ayat
+                      _key: 3
+                      isi:
+                        _type: referenceText
+                        references: []
+                        text: >-
+                          (3) Dalam hal dukungan sebagaimana dimaksud dalam ayat
+                          (2) tidak tercapai maka serikat pekerja/serikat buruh
+                          yang bersangkutan dapat mengajukan kembali permintaan
+                          untuk merundingkan perjanjian kerja bersama dengan
+                          pengusaha setelah melampaui jangka waktu 6 (enam)
+                          bulan terhitung sejak dilakukannya pemungutan suara
+                          dengan mengikuti prosedur sebagaimana dimaksud dalam
+                          ayat (2).
               - _type: pasal
                 _key: 120
                 isi:
@@ -2278,21 +2752,18 @@ babs:
               - _type: pasal
                 _key: 123
                 isi:
-                  _type: referenceText
-                  references: []
-                  text: >-
-                    Pasal 123 (l) Masa berlakunya perjanjian kerja bersama
-                    paling lama 2 (dua) tahun. (2) Perjanjian kerja bersama
-                    sebagaimana dimaksud dalam ayat (1) dapat diperpanjang masa
-                    berlakunya pa-ling lama 1 (satu) tahun berdasarkan
-                    kesepakatan tertulis antara pengusaha dengan serikat
-                    pekerja/serikat buruh. (3) Perundingan pembuatan perjanjian
-                    kerja bersama berikutnya dapat dimulai paling cepat 3 (tiga)
-                    bulan se-belum berakhirnya perjanjian kerja bersama yang
-                    sedang berlaku. (4) Dalam hal perundingan sebagaimana
-                    dimaksud dalam ayat (3) tidak mencapai kesepakatan maka
-                    perjan-jian kerja bersama yang sedang berlaku, tetap berlaku
-                    untuk paling lama 1 (satu) tahun.
+                  _type: ayats
+                  ayats:
+                    - _type: ayat
+                      _key: 4
+                      isi:
+                        _type: referenceText
+                        references: []
+                        text: >-
+                          (4) Dalam hal perundingan sebagaimana dimaksud dalam
+                          ayat (3) tidak mencapai kesepakatan maka perjan-jian
+                          kerja bersama yang sedang berlaku, tetap berlaku untuk
+                          paling lama 1 (satu) tahun.
               - _type: pasal
                 _key: 124
                 isi:
@@ -2309,14 +2780,27 @@ babs:
                           serikat pekerja/serikat buruh serta pekerja/buruh, c.
                           jangka waktu dan tanggal mulai berlakunya perjanjian
                           kerja bersama, dan d. tanda tangan para pihak pembuat
-                          perjanjian kerja bersama. (2) Ketentuan dalam
-                          perjanjian kerja bersama tidak boleh bertentangan
-                          dengan peraturan perundang-undangan yang berlaku. (3)
-                          Dalam hal isi perjanjian kerja bersama bertentangan
-                          dengan peraturan perundang-undangan yang berlaku
-                          sebagaimana dimaksud dalam ayat (2), maka ketentuan
-                          yang bertentangan tersebut batal demi hukum dan yang
-                          berlaku adalah ketentuan dalam peraturan
+                          perjanjian kerja bersama.
+                    - _type: ayat
+                      _key: 2
+                      isi:
+                        _type: referenceText
+                        references: []
+                        text: >-
+                          (2) Ketentuan dalam perjanjian kerja bersama tidak
+                          boleh bertentangan dengan peraturan perundang-undangan
+                          yang berlaku.
+                    - _type: ayat
+                      _key: 3
+                      isi:
+                        _type: referenceText
+                        references: []
+                        text: >-
+                          (3) Dalam hal isi perjanjian kerja bersama
+                          bertentangan dengan peraturan perundang-undangan yang
+                          berlaku sebagaimana dimaksud dalam ayat (2), maka
+                          ketentuan yang bertentangan tersebut batal demi hukum
+                          dan yang berlaku adalah ketentuan dalam peraturan
                           perundang-undangan.
               - _type: pasal
                 _key: 125
@@ -2355,12 +2839,19 @@ babs:
                         text: >-
                           (1) Perjanjian kerja yang dibuat oleh pengusaha dan
                           pekerja/buruh tidak boleh bertentangan dengan
-                          perjanjian kerja bersama. (2) Dalam hal ketentuan
-                          dalam perjanjian kerja sebagaimana dimaksud dalam ayat
-                          (1) bertentangan dengan perjanjian kerja bersama, maka
-                          ketentuan dalam perjanjian kerja tersebut batal demi
-                          hukum dan yang berlaku adalah ketentuan dalam
                           perjanjian kerja bersama.
+                    - _type: ayat
+                      _key: 2
+                      isi:
+                        _type: referenceText
+                        references: []
+                        text: >-
+                          (2) Dalam hal ketentuan dalam perjanjian kerja
+                          sebagaimana dimaksud dalam ayat (1) bertentangan
+                          dengan perjanjian kerja bersama, maka ketentuan dalam
+                          perjanjian kerja tersebut batal demi hukum dan yang
+                          berlaku adalah ketentuan dalam perjanjian kerja
+                          bersama.
               - _type: pasal
                 _key: 128
                 isi:
@@ -2388,34 +2879,23 @@ babs:
               - _type: pasal
                 _key: 130
                 isi:
-                  _type: referenceText
-                  references: []
-                  text: >-
-                    Pasal 130 (l) Dalam hal perjanjian kerja bersama yang sudah
-                    berakhir masa berlakunya akan diperpanjang atau
-                    diper-baharui dan di perusahaan tersebut hanya terdapat 1
-                    (satu) serikat pekerja/serikat buruh, maka perpanjangan atau
-                    pembuatan pembaharuan perjanjian kerja bersama tidak
-                    mensyaratkan ketentuan dalam Pasal 119. (2) Dalam hal
-                    perjanjian kerja bersama yang sudah berakhir masa berlakunya
-                    akan diperpanjang atau diper-baharui dan di perusahaan
-                    tersebut terdapat lebih dari 1 (satu) serikat
-                    pekerja/serikat buruh dan serikat pekerja/serikat buruh yang
-                    dulu berunding tidak lagi memenuhi ketentuan Pasal 120 ayat
-                    (l), maka perpanjangan atau pembuatan pembaharuan perjanjian
-                    kerja bersama dilakukan oleh serikat pekerja/serikat buruh
-                    yang anggotanya lebih 5096 (lima puluh perseratus) dari
-                    jumlah seluruh pekerja/buruh di perusahaan bersama-sama
-                    dengan serikat pekerja/serikat buruh yang membuat perjanjian
-                    kerja bersama terdahulu dengan membentuk tim perunding
-                    secara proporsional. (3) Dalam hal perjanjian kerja bersama
-                    yang sudah berakhir masa berlakunya akan diperpanjang atau
-                    diper-baharui dan di perusahaan tersebut terdapat lebih dari
-                    1 (satu) serikat pekerja/ serikat buruh dan tidak satupun
-                    serikat pekerja/serikat buruh yang ada memenuhi ketentuan
-                    Pasal 120 ayat (1), maka perpanjangan atau pembuatan
-                    pembaharuan perjanjian kerja bersama dilakukan menurut
-                    ketentuan Pasal 120 ayat (2) dan ayat (3).
+                  _type: ayats
+                  ayats:
+                    - _type: ayat
+                      _key: 3
+                      isi:
+                        _type: referenceText
+                        references: []
+                        text: >-
+                          (3) Dalam hal perjanjian kerja bersama yang sudah
+                          berakhir masa berlakunya akan diperpanjang atau
+                          diper-baharui dan di perusahaan tersebut terdapat
+                          lebih dari 1 (satu) serikat pekerja/ serikat buruh dan
+                          tidak satupun serikat pekerja/serikat buruh yang ada
+                          memenuhi ketentuan Pasal 120 ayat (1), maka
+                          perpanjangan atau pembuatan pembaharuan perjanjian
+                          kerja bersama dilakukan menurut ketentuan Pasal 120
+                          ayat (2) dan ayat (3).
               - _type: pasal
                 _key: 131
                 isi:
@@ -2538,6 +3018,14 @@ babs:
                               text: >-
                                 (1), dapat memenuhi atau tidak memenuhi ajakan
                                 tersebut.
+                          - _type: ayat
+                            _key: 2
+                            isi:
+                              _type: referenceText
+                              references: []
+                              text: >-
+                                (2) Pekerja/buruh yang diajak mogok kerja
+                                sebagaimana dimaksud dalam ayat
                     - _type: pasal
                       _key: 139
                       isi:
@@ -2566,62 +3054,68 @@ babs:
                                 pekerja/buruh dan serikat pekerja/serikat buruh
                                 wajib memberitahukan secara tertulis kepada
                                 pengusaha dan instansi yang bertanggung jawab di
-                                bidang ketenagakerjaan setempat. (2)
-                                Pemberitahuan sebagaimana dimaksud dalam ayat
-                                (1) sekurang-kurangnya memuat : a. waktu (hari,
-                                tanggal, dan jam) dimulai dan diakhiri mogok
-                                kerja, b. tempat mogok kerja, c. alasan dan
-                                sebab-sebab mengapa harus melakukan mogok kerja,
-                                dan d. tanda tangan ketua dan sekretaris
+                                bidang ketenagakerjaan setempat.
+                          - _type: ayat
+                            _key: 2
+                            isi:
+                              _type: referenceText
+                              references: []
+                              text: >-
+                                (2) Pemberitahuan sebagaimana dimaksud dalam
+                                ayat (1) sekurang-kurangnya memuat : a. waktu
+                                (hari, tanggal, dan jam) dimulai dan diakhiri
+                                mogok kerja, b. tempat mogok kerja, c. alasan
+                                dan sebab-sebab mengapa harus melakukan mogok
+                                kerja, dan d. tanda tangan ketua dan sekretaris
                                 dan/atau masing-masing ketua dan sekretaris
                                 serikat pekerja/serikat buruh sebagai penanggung
-                                jawab mogok kerja. (3) Dalam hal mogok kerja
-                                akan dilakukan oleh pekerja/buruh yang tidak
-                                menjadi anggota serikat pekerja/ serikat buruh,
-                                maka pemberitahuan sebagaimana dimaksud dalam
-                                ayat (2) ditandatangani oleh perwakilan
-                                pekerja/buruh yang ditunjuk sebagai koordinator
-                                dan/atau penanggung jawab mogok kerja. (4) Dalam
-                                hal mogok kerja dilakukan tidak sebagaimana
-                                dimaksud dalam ayat (l), maka demi menyelamat
-                                kan alat produksi dan aset perusahaan, pengusaha
-                                dapat mengambil tindakan sementara dengan cara :
-                                a. melarang para pekerja/buruh yang mogok kerja
-                                berada di lokasi kegiatan proses produksi, atau
-                                b. bila dianggap perlu melarang pekerja/buruh
-                                yang mogok kerja berada di lokasi perusahaan.
+                                jawab mogok kerja.
+                          - _type: ayat
+                            _key: 3
+                            isi:
+                              _type: referenceText
+                              references: []
+                              text: >-
+                                (3) Dalam hal mogok kerja akan dilakukan oleh
+                                pekerja/buruh yang tidak menjadi anggota serikat
+                                pekerja/ serikat buruh, maka pemberitahuan
+                                sebagaimana dimaksud dalam ayat (2)
+                                ditandatangani oleh perwakilan pekerja/buruh
+                                yang ditunjuk sebagai koordinator dan/atau
+                                penanggung jawab mogok kerja.
+                          - _type: ayat
+                            _key: 4
+                            isi:
+                              _type: referenceText
+                              references: []
+                              text: >-
+                                (4) Dalam hal mogok kerja dilakukan tidak
+                                sebagaimana dimaksud dalam ayat (l), maka demi
+                                menyelamat kan alat produksi dan aset
+                                perusahaan, pengusaha dapat mengambil tindakan
+                                sementara dengan cara : a. melarang para
+                                pekerja/buruh yang mogok kerja berada di lokasi
+                                kegiatan proses produksi, atau b. bila dianggap
+                                perlu melarang pekerja/buruh yang mogok kerja
+                                berada di lokasi perusahaan.
                     - _type: pasal
                       _key: 141
                       isi:
-                        _type: referenceText
-                        references: []
-                        text: >-
-                          Pasal 141 (l) Instansi pemerintah dan pihak perusahaan
-                          yang menerima surat pemberitahuan mogok kerja
-                          sebagaimana dimaksud dalam Pasal 140 wajib memberikan
-                          tanda terima. (2) Sebelum dan selama mogok kerja
-                          berlangsung, instansi yang bertanggung jawab di bidang
-                          ketenagakerjaan wajib menyelesaikan masalah yang
-                          menyebabkan timbulnya pemogokan dengan mempertemukan
-                          dan merundingkannya dengan para pihak yang berselisih.
-                          (3) Dalam hal perundingan sebagaimana dimaksud dalam
-                          ayat (2) menghasilkan kesepakatan, maka harus
-                          dibuatkan perjanjian bersama yang ditandatangani oleh
-                          para pihak dan pegawai dari instansi yang bertanggung
-                          jawab di bidang ketenagakerjaan sebagai saksi. (4)
-                          Dalam hal perundingan sebagaimana dimaksud dalam ayat
-                          (2) tidak menghasilkan kesepakatan, maka pegawai dari
-                          instansi yang bertanggung jawab di bidang
-                          ketenagakerjaan segera menyerahkan masalah yang
-                          menyebabkan terjadinya mogok kerja kepada lembaga
-                          penyelesaian perselisihan hubungan industrial yang
-                          berwenang. (5) Dalam hal perundingan tidak
-                          menghasilkan kesepakatan sebagaimana dimaksud dalam
-                          ayat (4), maka atas dasar perundingan antara pengusaha
-                          dengan serikat pekerja/serikat buruh atau penanggung
-                          jawab mogok kerja, mogok kerja dapat diteruskan atau
-                          dihentikan untuk sementara atau dihentikan sama
-                          sekali.
+                        _type: ayats
+                        ayats:
+                          - _type: ayat
+                            _key: 5
+                            isi:
+                              _type: referenceText
+                              references: []
+                              text: >-
+                                (5) Dalam hal perundingan tidak menghasilkan
+                                kesepakatan sebagaimana dimaksud dalam ayat (4),
+                                maka atas dasar perundingan antara pengusaha
+                                dengan serikat pekerja/serikat buruh atau
+                                penanggung jawab mogok kerja, mogok kerja dapat
+                                diteruskan atau dihentikan untuk sementara atau
+                                dihentikan sama sekali.
                     - _type: pasal
                       _key: 142
                       isi:
@@ -2648,13 +3142,19 @@ babs:
                                 (1) Siapapun tidak dapat menghalang-halangi
                                 pekerja/buruh dan serikat pekerja/serikat buruh
                                 untuk mengguna kan hak mogok kerja yang
-                                dilakukan secara sah, tertib, dan damai. (2)
-                                Siapapun dilarang melakukan penangkapan dan/atau
-                                penahanan terhadap pekerja/buruh dan pengurus
-                                serikat pekerja/serikat buruh yang melakukan
-                                mogok kerja secara sah, tertib, dan damai sesuai
-                                dengan peraturan perundang-undangan yang
-                                berlaku.
+                                dilakukan secara sah, tertib, dan damai.
+                          - _type: ayat
+                            _key: 2
+                            isi:
+                              _type: referenceText
+                              references: []
+                              text: >-
+                                (2) Siapapun dilarang melakukan penangkapan
+                                dan/atau penahanan terhadap pekerja/buruh dan
+                                pengurus serikat pekerja/serikat buruh yang
+                                melakukan mogok kerja secara sah, tertib, dan
+                                damai sesuai dengan peraturan perundang-undangan
+                                yang berlaku.
                     - _type: pasal
                       _key: 144
                       isi:
@@ -2688,19 +3188,17 @@ babs:
                     - _type: pasal
                       _key: 146
                       isi:
-                        _type: referenceText
-                        references: []
-                        text: >-
-                          Pasal 146 (l) Penutupan perusahaan (lock out)
-                          merupakan hak dasar pengusaha untuk menolak
-                          pekerja/buruh sebagian atau seluruhnya untuk
-                          menjalankan pekerjaan sebagai akibat gagalnya
-                          perundingan. (2) Pengusaha tidak dibenarkan melakukan
-                          penutupan perusahaan (lock out) sebagai tindakan
-                          balasan sehubungan adanya tuntutan normatif dari
-                          pekerja/buruh dan/atau serikat pekerja/serikat buruh.
-                          (3) Tindakan penutupan perusahaan (lock out) harus
-                          dilakukan sesuai dengan ketentuan hukum yang berlaku.
+                        _type: ayats
+                        ayats:
+                          - _type: ayat
+                            _key: 3
+                            isi:
+                              _type: referenceText
+                              references: []
+                              text: >-
+                                (3) Tindakan penutupan perusahaan (lock out)
+                                harus dilakukan sesuai dengan ketentuan hukum
+                                yang berlaku.
                     - _type: pasal
                       _key: 147
                       isi:
@@ -2737,47 +3235,50 @@ babs:
                     - _type: pasal
                       _key: 149
                       isi:
-                        _type: referenceText
-                        references: []
-                        text: >-
-                          Pasal 149 (l) Pekerja/buruh atau serikat
-                          pekerja/serikat buruh dan instansi yang bertanggung
-                          jawab di bidang ketenaga-kerjaan yang menerima secara
-                          langsung surat pemberitahuan penutupan perusahaan
-                          (lock out) sebagaimana dimaksud dalam Pasal 148 harus
-                          memberikan tanda bukti penerimaan dengan mencantumkan
-                          hari, tanggal, dan jam penerimaan. (2) Sebelum dan
-                          selama penutupan perusahaan (lock out) berlangsung,
-                          instansi yang bertanggung jawab di bidang
-                          ketenagakerjaan berwenang langsung menyelesaikan
-                          masalah yang menyebabkan timbulnya penutupan
-                          perusahaan (lock out) dengan mempertemukan dan
-                          merundingkannya dengan para pihak yang berselisih. (3)
-                          Dalam hal perundingan sebagaimana dimaksud dalam ayat
-                          (2) menghasilkan kesepakatan, maka harus dibuat
-                          perjanjian bersama yang ditandatangani oleh para pihak
-                          dan pegawai dari instansi yang bertanggung jawab di
-                          bidang ketenagakerjaan sebagai saksi. (4) Dalam hal
-                          perundingan sebagaimana dimaksud dalam ayat (2) tidak
-                          menghasilkan kesepakatan, maka pegawai dari instansi
-                          yang bertanggung jawab di bidang ketenagakerjaan
-                          segera menyerahkan masalah yang menyebabkan terjadinya
-                          penutupan perusahaan (lock out) kepada lembaga
-                          penyelesaian perselisihan hubungan industrial. (5)
-                          Apabila perundingan tidak menghasilkan kesepakatan
-                          sebagaimana dimaksud dalam ayat (4), maka atas dasar
-                          perundingan antara pengusaha dan serikat
-                          pekerja/serikat buruh, penutupan perusahaan (lock out)
-                          dapat diteruskan atau dihentikan untuk sementara atau
-                          dihentikan sama sekali. (6) Pemberitahuan sebagaimana
-                          dimaksud dalam Pasal 148 ayat (1) dan ayat (2) tidak
-                          diperlukan apabila : a. pekerja/buruh atau serikat
-                          pekerja/serikat buruh melanggar prosedur mogok kerja
-                          sebagaimana dimaksud dalam Pasal 140, b. pekerja/buruh
-                          atau serikat pekerja/serikat buruh melanggar ketentuan
-                          normatif yang ditentukan dalam perjanjian kerja,
-                          peraturan perusahaan, perjanjian kerja bersama, atau
-                          peraturan perundang-undangan yang berlaku.
+                        _type: ayats
+                        ayats:
+                          - _type: ayat
+                            _key: 4
+                            isi:
+                              _type: referenceText
+                              references: []
+                              text: >-
+                                (4) Dalam hal perundingan sebagaimana dimaksud
+                                dalam ayat (2) tidak menghasilkan kesepakatan,
+                                maka pegawai dari instansi yang bertanggung
+                                jawab di bidang ketenagakerjaan segera
+                                menyerahkan masalah yang menyebabkan terjadinya
+                                penutupan perusahaan (lock out) kepada lembaga
+                                penyelesaian perselisihan hubungan industrial.
+                          - _type: ayat
+                            _key: 5
+                            isi:
+                              _type: referenceText
+                              references: []
+                              text: >-
+                                (5) Apabila perundingan tidak menghasilkan
+                                kesepakatan sebagaimana dimaksud dalam ayat (4),
+                                maka atas dasar perundingan antara pengusaha dan
+                                serikat pekerja/serikat buruh, penutupan
+                                perusahaan (lock out) dapat diteruskan atau
+                                dihentikan untuk sementara atau dihentikan sama
+                                sekali.
+                          - _type: ayat
+                            _key: 6
+                            isi:
+                              _type: referenceText
+                              references: []
+                              text: >-
+                                (6) Pemberitahuan sebagaimana dimaksud dalam
+                                Pasal 148 ayat (1) dan ayat (2) tidak diperlukan
+                                apabila : a. pekerja/buruh atau serikat
+                                pekerja/serikat buruh melanggar prosedur mogok
+                                kerja sebagaimana dimaksud dalam Pasal 140, b.
+                                pekerja/buruh atau serikat pekerja/serikat buruh
+                                melanggar ketentuan normatif yang ditentukan
+                                dalam perjanjian kerja, peraturan perusahaan,
+                                perjanjian kerja bersama, atau peraturan
+                                perundang-undangan yang berlaku.
   - _type: bab
     _key: 12
     _judul: BAB XII PEMUTUSAN HUBUNGAN KERJA
@@ -2870,8 +3371,14 @@ babs:
                     atau status perkawinan, J- pekerja/buruh dalam keadaan cacat
                     tetap, sakit akibat kecelakaan kerja, atau sakit karena
                     hubungan kerja yang menurut surat keterangan dokter yang
-                    jangka waktu penyembuhannya belum dapat dipastikan. (2)
-                    Pemutusan hubungan kerja yang dilakukan dengan alasan
+                    jangka waktu penyembuhannya belum dapat dipastikan.
+              - _type: ayat
+                _key: 2
+                isi:
+                  _type: referenceText
+                  references: []
+                  text: >-
+                    (2) Pemutusan hubungan kerja yang dilakukan dengan alasan
                     sebagaimana dimaksud dalam ayat (1) batal demi hukum dan
                     pengusaha wajib mempekerjakan kembali pekerja/buruh yang
                     bersangkutan.
@@ -2895,18 +3402,20 @@ babs:
         - _type: pasal
           _key: 155
           isi:
-            _type: referenceText
-            references: []
-            text: >-
-              Pasal 155 (l) Pemutusan hubungan kerja tanpa penetapan sebagaimana
-              dimaksud dalam Pasal 151 ayat (3) batal demi hukum. (2) Selama
-              putusan lembaga penyelesaian perselisihan hubungan industrial
-              belum ditetapkan, baik pengusaha maupun pekerja/buruh harus tetap
-              melaksanakan segala kewajibannya. (3) Pengusaha dapat melakukan
-              penyimpangan terhadap ketentuan sebagaimana dimaksud dalam ayat
-              (2) berupa tindakan skorsing kepada pekerja/buruh yang sedang
-              dalam proses pemutusan hubungan kerja dengan tetap wajib membayar
-              upah beserta hak-hak lainnya yang biasa diterima pekerja/buruh.
+            _type: ayats
+            ayats:
+              - _type: ayat
+                _key: 3
+                isi:
+                  _type: referenceText
+                  references: []
+                  text: >-
+                    (3) Pengusaha dapat melakukan penyimpangan terhadap
+                    ketentuan sebagaimana dimaksud dalam ayat (2) berupa
+                    tindakan skorsing kepada pekerja/buruh yang sedang dalam
+                    proses pemutusan hubungan kerja dengan tetap wajib membayar
+                    upah beserta hak-hak lainnya yang biasa diterima
+                    pekerja/buruh.
         - _type: pasal
           _key: 156
           isi:
@@ -2921,12 +3430,19 @@ babs:
                     (1) Dalam hal terjadi pemutusan hubungan kerja, pengusaha
                     diwajibkan membayar uang pesangon dan atau uang penghargaan
                     masa kerja dan uang penggantian hak yang seharusnya
-                    diterima. (2) Perhitungan uang pesangon sebagaimana dimaksud
-                    dalam ayat (1) paling sedikit sebagai berikut : a. masa
-                    kerja kurang dari 1 (satu) tahun, 1 (satu) bulan upah: b.
-                    masa kerja 1 (satu) tahun atau lebih tetapi kurang dari 2
-                    (dua) tahun, 2 (dua) bulan upah, c. masa kerja 2 (dua) tahun
-                    atau lebih tetapi kurang dari 3 (tiga) tahun, 3 (tiga) bulan
+                    diterima.
+              - _type: ayat
+                _key: 2
+                isi:
+                  _type: referenceText
+                  references: []
+                  text: >-
+                    (2) Perhitungan uang pesangon sebagaimana dimaksud dalam
+                    ayat (1) paling sedikit sebagai berikut : a. masa kerja
+                    kurang dari 1 (satu) tahun, 1 (satu) bulan upah: b. masa
+                    kerja 1 (satu) tahun atau lebih tetapi kurang dari 2 (dua)
+                    tahun, 2 (dua) bulan upah, c. masa kerja 2 (dua) tahun atau
+                    lebih tetapi kurang dari 3 (tiga) tahun, 3 (tiga) bulan
                     upah, d. masa kerja 3 (tiga) tahun atau lebih tetapi kurang
                     dari 4 (empat) tahun, 4 (empat) bulan upah, e. masa kerja 4
                     (empat) tahun atau lebih tetapi kurang dari 5 (lima) tahun,
@@ -2936,24 +3452,37 @@ babs:
                     dari 7 (tujuh) tahun, 7 (tujuh) bulan upah. h. masa kerja 7
                     (tujuh) tahun atau lebih tetapi kurang dari 8 (delapan)
                     tahun, 8 (delapan) bulan upah, 1. masa kerja 8 (delapan)
-                    tahun atau lebih, 9 (sembilan) bulan upah. (3) Perhitungan
-                    uang penghargaan masa kerja sebagaimana dimaksud dalam ayat
-                    (1) ditetapkan sebagai be-rikut : a. masa kerja 3 (tiga)
-                    tahun atau lebih tetapi kurang dari 6 (enam) tahun, 2 (dua)
-                    bulan upah: b. masa kerja 6 (enam) tahun atau lebih tetapi
-                    kurang dari 9 (sembilan) tahun, 3 (tiga) bulan upah, c. masa
-                    kerja 9 (sembilan) tahun atau lebih tetapi kurang dari 12
-                    (dua belas) tahun, 4 (empat) bulan upah, d. masa kerja 12
-                    (dua belas) tahun atau lebih tetapi kurang dari 15 lima
-                    belas) tahun, 5 (lima) bulan upah, e. masa kerja 15 (lima
-                    belas) tahun atau lebih tetapi kurang dari 18 (delapan
-                    belas) tahun, 6 (enam) bulan upah, f. masa kerja 18 (delapan
-                    belas) tahun atau lebih tetapi kurang dari 21 (dua puluh
-                    satu) tahun, 7 (tujuh) bulan upah: g. masa kerja 21 (dua
-                    puluh satu) tahun atau lebih tetapi kurang dari 24 (dua
-                    puluh empat) tahun, 8 (delapan) bulan upah, h. masa kerja 24
-                    (dua puluh empat) tahun atau lebih, 10 (sepuluh ) bulan
-                    upah. (4) Uang penggantian hak yang seharusnya diterima
+                    tahun atau lebih, 9 (sembilan) bulan upah.
+              - _type: ayat
+                _key: 3
+                isi:
+                  _type: referenceText
+                  references: []
+                  text: >-
+                    (3) Perhitungan uang penghargaan masa kerja sebagaimana
+                    dimaksud dalam ayat (1) ditetapkan sebagai be-rikut : a.
+                    masa kerja 3 (tiga) tahun atau lebih tetapi kurang dari 6
+                    (enam) tahun, 2 (dua) bulan upah: b. masa kerja 6 (enam)
+                    tahun atau lebih tetapi kurang dari 9 (sembilan) tahun, 3
+                    (tiga) bulan upah, c. masa kerja 9 (sembilan) tahun atau
+                    lebih tetapi kurang dari 12 (dua belas) tahun, 4 (empat)
+                    bulan upah, d. masa kerja 12 (dua belas) tahun atau lebih
+                    tetapi kurang dari 15 lima belas) tahun, 5 (lima) bulan
+                    upah, e. masa kerja 15 (lima belas) tahun atau lebih tetapi
+                    kurang dari 18 (delapan belas) tahun, 6 (enam) bulan upah,
+                    f. masa kerja 18 (delapan belas) tahun atau lebih tetapi
+                    kurang dari 21 (dua puluh satu) tahun, 7 (tujuh) bulan upah:
+                    g. masa kerja 21 (dua puluh satu) tahun atau lebih tetapi
+                    kurang dari 24 (dua puluh empat) tahun, 8 (delapan) bulan
+                    upah, h. masa kerja 24 (dua puluh empat) tahun atau lebih,
+                    10 (sepuluh ) bulan upah.
+              - _type: ayat
+                _key: 4
+                isi:
+                  _type: referenceText
+                  references: []
+                  text: >-
+                    (4) Uang penggantian hak yang seharusnya diterima
                     sebagaimana dimaksud dalam ayat (1) meliputi : a. cuti
                     tahunan yang belum diambil dan belum gugur, b. biaya atau
                     ongkos pulang untuk pekerja/buruh dan keluarganya ketempat
@@ -2962,11 +3491,17 @@ babs:
                     (lima belas perseratus) dari uang pesangon dan/atau uang
                     penghargaan masa kerja bagi yang memenuhi syarat, d. hal-hal
                     lain yang ditetapkan dalam perjanjian kerja, peraturan
-                    perusahaan atau perjanjian kerja bersama. (5) Perubahan
-                    perhitungan uang pesangon, perhitungan uang penghargaan masa
-                    kerja, dan uang penggantian hak sebagaimana dimaksud dalam
-                    ayat (2), ayat (3), dan ayat (4) ditetapkan dengan Peraturan
-                    Pemerintah.
+                    perusahaan atau perjanjian kerja bersama.
+              - _type: ayat
+                _key: 5
+                isi:
+                  _type: referenceText
+                  references: []
+                  text: >-
+                    (5) Perubahan perhitungan uang pesangon, perhitungan uang
+                    penghargaan masa kerja, dan uang penggantian hak sebagaimana
+                    dimaksud dalam ayat (2), ayat (3), dan ayat (4) ditetapkan
+                    dengan Peraturan Pemerintah.
         - _type: pasal
           _key: 157
           isi:
@@ -3026,18 +3561,38 @@ babs:
                     seharusnya dirahasiakan kecuali untuk kepentingan negara,
                     atau j-. melakukan perbuatan lainnya di lingkungan
                     perusahaan yang diancam pidana penjara 5 (lima) tahun atau
-                    lebih. (2) Kesalahan berat sebagaimana dimaksud dalam ayat
-                    (1) harus didukung dengan bukti sebagai berikut : a.
+                    lebih.
+              - _type: ayat
+                _key: 2
+                isi:
+                  _type: referenceText
+                  references: []
+                  text: >-
+                    (2) Kesalahan berat sebagaimana dimaksud dalam ayat (1)
+                    harus didukung dengan bukti sebagai berikut : a.
                     pekerja/buruh tertangkap tangan, b. ada pengakuan dari
                     pekerja/buruh yang bersangkutan, atau c. bukti lain berupa
                     laporan kejadian yang dibuat oleh pihak yang berwenang di
                     perusahaan yang bersangkutan dan didukung oleh
-                    sekurang-kurangnya 2 (dua) orang saksi. (3) Pekerja/buruh
-                    yang diputus hubungan kerjanya berdasarkan alasan
-                    sebagaimana dimaksud dalam ayat (1), dapat memperoleh uang
-                    penggantian hak sebagaimana dimaksud dalam Pasal 156 ayat
-                    (4). (4) Bagi pekerja/buruh sebagaimana dimaksud dalam ayat
-                    (1) yang tugas dan fungsinya tidak mewakili kepentingan
+                    sekurang-kurangnya 2 (dua) orang saksi.
+              - _type: ayat
+                _key: 3
+                isi:
+                  _type: referenceText
+                  references: []
+                  text: >-
+                    (3) Pekerja/buruh yang diputus hubungan kerjanya berdasarkan
+                    alasan sebagaimana dimaksud dalam ayat (1), dapat memperoleh
+                    uang penggantian hak sebagaimana dimaksud dalam Pasal 156
+                    ayat (4).
+              - _type: ayat
+                _key: 4
+                isi:
+                  _type: referenceText
+                  references: []
+                  text: >-
+                    (4) Bagi pekerja/buruh sebagaimana dimaksud dalam ayat (1)
+                    yang tugas dan fungsinya tidak mewakili kepentingan
                     pengusaha secara langsung, selain uang penggantian hak
                     sesuai dengan ketentuan Pasal 156 ayat (4) diberikan uang
                     pisah yang besarnya dan pelaksanaannya diatur dalam
@@ -3074,30 +3629,66 @@ babs:
                     3596 (tiga puluh lima perseratus) dari upah, c. untuk 3
                     (tiga) orang tanggungan : 4596 (empat puluh lima perseratus)
                     dari upah, d. untuk 4 (empat) orang tanggungan atau lebih :
-                    5090 (lima puluh perseratus) dari upah. (2) Bantuan
-                    sebagaimana dimaksud dalam ayat (1) diberikan untuk paling
-                    lama 6 (enam) bulan takwin ter-hitung sejak hari pertama
-                    pekerja/buruh ditahan oleh pihak yang berwajib. (3)
-                    Pengusaha dapat melakukan pemutusan hubungan kerja terhadap
-                    pekerja/buruh yang setelah 6 (enam) bulan tidak dapat
-                    melakukan pekerjaan sebagaimana mestinya karena dalam proses
-                    perkara pidana sebagaimana dimaksud dalam ayat (1). (4)
-                    Dalam hal pengadilan memutuskan perkara pidana sebelum masa
-                    6 (enam) bulan sebagaimana dimaksud dalam ayat (3) berakhir
-                    dan pekerja/buruh dinyatakan tidak bersalah, maka pengusaha
-                    wajib mempekerjakan pekerja/buruh kembali. (5) Dalam hal
-                    pengadilan memutuskan perkara pidana sebelum masa 6 (enam)
-                    bulan berakhir dan pekerja/ buruh dinyatakan bersalah, maka
-                    pengusaha dapat melakukan pemutusan hubungan kerja kepada
-                    pekerja/buruh yang bersangkutan. (6) Pemutusan hubungan
-                    kerja sebagaimana dimaksud dalam ayat (3) dan ayat (5)
-                    dilakukan tanpa penetapan lembaga penyelesaian perselisihan
-                    hubungan industrial. (7) Pengusaha wajib membayar kepada
-                    pekerja/buruh yang mengalami pemutusan hubungan kerja
-                    sebagai-mana dimaksud dalam ayat (3) dan ayat (5), uang
-                    penghargaan masa kerja 1 (satu) kali ketentuan Pasal 156
-                    ayat (3) dan uang penggantian hak sesuai ketentuan dalam
-                    Pasal 156 ayat 4.
+                    5090 (lima puluh perseratus) dari upah.
+              - _type: ayat
+                _key: 2
+                isi:
+                  _type: referenceText
+                  references: []
+                  text: >-
+                    (2) Bantuan sebagaimana dimaksud dalam ayat (1) diberikan
+                    untuk paling lama 6 (enam) bulan takwin ter-hitung sejak
+                    hari pertama pekerja/buruh ditahan oleh pihak yang berwajib.
+              - _type: ayat
+                _key: 3
+                isi:
+                  _type: referenceText
+                  references: []
+                  text: >-
+                    (3) Pengusaha dapat melakukan pemutusan hubungan kerja
+                    terhadap pekerja/buruh yang setelah 6 (enam) bulan tidak
+                    dapat melakukan pekerjaan sebagaimana mestinya karena dalam
+                    proses perkara pidana sebagaimana dimaksud dalam ayat (1).
+              - _type: ayat
+                _key: 4
+                isi:
+                  _type: referenceText
+                  references: []
+                  text: >-
+                    (4) Dalam hal pengadilan memutuskan perkara pidana sebelum
+                    masa 6 (enam) bulan sebagaimana dimaksud dalam ayat (3)
+                    berakhir dan pekerja/buruh dinyatakan tidak bersalah, maka
+                    pengusaha wajib mempekerjakan pekerja/buruh kembali.
+              - _type: ayat
+                _key: 5
+                isi:
+                  _type: referenceText
+                  references: []
+                  text: >-
+                    (5) Dalam hal pengadilan memutuskan perkara pidana sebelum
+                    masa 6 (enam) bulan berakhir dan pekerja/ buruh dinyatakan
+                    bersalah, maka pengusaha dapat melakukan pemutusan hubungan
+                    kerja kepada pekerja/buruh yang bersangkutan.
+              - _type: ayat
+                _key: 6
+                isi:
+                  _type: referenceText
+                  references: []
+                  text: >-
+                    (6) Pemutusan hubungan kerja sebagaimana dimaksud dalam ayat
+                    (3) dan ayat (5) dilakukan tanpa penetapan lembaga
+                    penyelesaian perselisihan hubungan industrial.
+              - _type: ayat
+                _key: 7
+                isi:
+                  _type: referenceText
+                  references: []
+                  text: >-
+                    (7) Pengusaha wajib membayar kepada pekerja/buruh yang
+                    mengalami pemutusan hubungan kerja sebagai-mana dimaksud
+                    dalam ayat (3) dan ayat (5), uang penghargaan masa kerja 1
+                    (satu) kali ketentuan Pasal 156 ayat (3) dan uang
+                    penggantian hak sesuai ketentuan dalam Pasal 156 ayat 4.
         - _type: pasal
           _key: 161
           isi:
@@ -3114,16 +3705,29 @@ babs:
                     atau perjanjian kerja bersama, pengusaha dapat melakukan
                     pemutusan hubungan kerja, setelah kepada pekerja/buruh yang
                     bersangkutan diberikan surat peringatan pertama, kedua, dan
-                    ketiga secara berturut-turut. (2) Surat peringatan
-                    sebagaimana dimaksud dalam ayat (1) masing-masing berlaku
-                    untuk paling lama 6 (enam) bulan, kecuali ditetapkan lain
-                    dalam perjanjian kerja, peraturan perusahaan atau perjanjian
-                    kerja bersama. (3) Pekerja/buruh yang mengalami pemutusan
-                    hubungan kerja dengan alasan sebagaimana dimaksud dalam ayat
-                    (1) memperoleh uang pesangon sebesar 1 (satu) kali ketentuan
-                    Pasal 156 ayat (2), uang penghargaan masa kerja sebesar 1
-                    (satu) kali ketentuan Pasal 156 ayat (3) dan uang
-                    penggantian hak sesuai ketentuan Pasal 156 ayat (4).
+                    ketiga secara berturut-turut.
+              - _type: ayat
+                _key: 2
+                isi:
+                  _type: referenceText
+                  references: []
+                  text: >-
+                    (2) Surat peringatan sebagaimana dimaksud dalam ayat (1)
+                    masing-masing berlaku untuk paling lama 6 (enam) bulan,
+                    kecuali ditetapkan lain dalam perjanjian kerja, peraturan
+                    perusahaan atau perjanjian kerja bersama.
+              - _type: ayat
+                _key: 3
+                isi:
+                  _type: referenceText
+                  references: []
+                  text: >-
+                    (3) Pekerja/buruh yang mengalami pemutusan hubungan kerja
+                    dengan alasan sebagaimana dimaksud dalam ayat (1) memperoleh
+                    uang pesangon sebesar 1 (satu) kali ketentuan Pasal 156 ayat
+                    (2), uang penghargaan masa kerja sebesar 1 (satu) kali
+                    ketentuan Pasal 156 ayat (3) dan uang penggantian hak sesuai
+                    ketentuan Pasal 156 ayat (4).
         - _type: pasal
           _key: 162
           isi:
@@ -3143,52 +3747,69 @@ babs:
                     Pemutusan hubungan kerja dengan alasan pengunduran diri atas
                     kemauan sendiri dilakukan tanpa pene-tapan lembaga
                     penyelesaian perselisihan hubungan industrial.
+              - _type: ayat
+                _key: 2
+                isi:
+                  _type: referenceText
+                  references: []
+                  text: >-
+                    (2) Bagi pekerja/buruh yang mengundurkan diri atas kemauan
+                    sendiri, yang tugas dan fungsinya tidak me-wakili
+                    kepentingan pengusaha secara langsung, selain menerima uang
+                    penggantian hak sesuai ketentuan Pasal 156 ayat (4)
+                    diberikan uang pisah yang besarnya dan pelaksanaannya diatur
+                    dalam perjanjian kerja, peraturan perusahaan atau perjanjian
+                    kerja bersama.
+              - _type: ayat
+                _key: 3
+                isi:
+                  _type: referenceText
+                  references: []
+                  text: >-
+                    (3) Pekerja/buruh yang mengundurkan diri sebagaimana
+                    dimaksud dalam ayat
         - _type: pasal
           _key: 163
           isi:
-            _type: referenceText
-            references: []
-            text: >-
-              Pasal 163 (l) Pengusaha dapat melakukan pemutusan hubungan kerja
-              terhadap pekerja/buruh dalam hal terjadi peru-bahan status,
-              penggabungan, peleburan, atau perubahan kepemilikan perusahaan dan
-              pekerja/buruh tidak bersedia melanjutkan hubungan kerja, maka
-              pekerja/buruh berhak atas uang pesangon sebesar 1 (satu) kali
-              sesuai ketentuan Pasal 156 ayat (2), uang perhargaan masa kerja 1
-              (satu) kali ketentuan Pasal 156 ayat (3) dan uang penggantian hak
-              sesuai ketentuan dalam Pasal 156 ayat (4). (2) Pengusaha dapat
-              melakukan pemutusan hubungan kerja terhadap pekerja/buruh karena
-              perubahan status, penggabungan, atau peleburan perusahaan, dan
-              pengusaha tidak bersedia menerima pekerja/buruh di perusahaannya,
-              maka pekerja/buruh berhak atas uang pesangon sebesar 2 (dua) kali
-              ketentuan Pasal 156 ayat (2), uang penghargaan masa kerja 1 (satu)
-              kali ketentuan dalam Pasal 156 ayat (3), dan uang penggantian hak
-              sesuai ketentuan dalam Pasal 156 ayat (4).
+            _type: ayats
+            ayats:
+              - _type: ayat
+                _key: 2
+                isi:
+                  _type: referenceText
+                  references: []
+                  text: >-
+                    (2), uang perhargaan masa kerja 1 (satu) kali ketentuan
+                    Pasal 156 ayat (3) dan uang penggantian hak sesuai ketentuan
+                    dalam Pasal 156 ayat (4). (2) Pengusaha dapat melakukan
+                    pemutusan hubungan kerja terhadap pekerja/buruh karena
+                    perubahan status, penggabungan, atau peleburan perusahaan,
+                    dan pengusaha tidak bersedia menerima pekerja/buruh di
+                    perusahaannya, maka pekerja/buruh berhak atas uang pesangon
+                    sebesar 2 (dua) kali ketentuan Pasal 156 ayat (2), uang
+                    penghargaan masa kerja 1 (satu) kali ketentuan dalam Pasal
+                    156 ayat (3), dan uang penggantian hak sesuai ketentuan
+                    dalam Pasal 156 ayat (4).
         - _type: pasal
           _key: 164
           isi:
-            _type: referenceText
-            references: []
-            text: >-
-              Pasal 164 (l) Pengusaha dapat melakukan pemutusan hubungan kerja
-              terhadap pekerja/buruh karena perusahaan tutup yang disebabkan
-              perusahaan mengalami kerugian secara terus menerus selama 2 (dua)
-              tahun, atau keadaan memaksa (force majeur), dengan ketentuan
-              pekerja/buruh berhak atas uang pesangon sebesar 1 (satu) kali
-              ketentuan Pasal 156 ayat (2) uang penghargaan masa kerja sebesar 1
-              (satu) kali ketentuan Pasal 156 ayat (3) dan uang penggantian hak
-              sesuai ketentuan Pasal 156 ayat (4). (2) Kerugian perusahaan
-              sebagaimana dimaksud dalam ayat (1) harus dibuktikan dengan
-              laporan keuangan 2 (dua) tahun terakhir yang telah diaudit oleh
-              akuntan publik. (3) Pengusaha dapat melakukan pemutusan hubungan
-              kerja terhadap pekerja/buruh karena perusahaan tutup bukan karena
-              mengalami kerugian 2 (dua) tahun berturut-turut atau bukan karena
-              keadaan memaksa (force majeur) tetapi perusahaan melakukan
-              efisiensi, dengan ketentuan pekerja/buruh berhak atas uang
-              pesangon sebesar 2 (dua) kali ketentuan Pasal 156 ayat (2), uang
-              penghargaan masa kerja sebesar 1 (satu) kali ketentuan Pasal 156
-              ayat (3) dan uang penggantian hak sesuai ketentuan Pasal 156 ayat
-              (4).
+            _type: ayats
+            ayats:
+              - _type: ayat
+                _key: 3
+                isi:
+                  _type: referenceText
+                  references: []
+                  text: >-
+                    (3) Pengusaha dapat melakukan pemutusan hubungan kerja
+                    terhadap pekerja/buruh karena perusahaan tutup bukan karena
+                    mengalami kerugian 2 (dua) tahun berturut-turut atau bukan
+                    karena keadaan memaksa (force majeur) tetapi perusahaan
+                    melakukan efisiensi, dengan ketentuan pekerja/buruh berhak
+                    atas uang pesangon sebesar 2 (dua) kali ketentuan Pasal 156
+                    ayat (2), uang penghargaan masa kerja sebesar 1 (satu) kali
+                    ketentuan Pasal 156 ayat (3) dan uang penggantian hak sesuai
+                    ketentuan Pasal 156 ayat (4).
         - _type: pasal
           _key: 165
           isi:
@@ -3216,40 +3837,47 @@ babs:
         - _type: pasal
           _key: 167
           isi:
-            _type: referenceText
-            references: []
-            text: >-
-              Pasal 167 (l) Pengusaha dapat melakukan pemutusan hubungan kerja
-              terhadap pekerja/buruh karena memasuki usia pensiun dan apabila
-              pengusaha telah mengikutkan pekerja/buruh pada program pensiun
-              yang iurannya dibayar penuh oleh pengusaha, maka pekerja/buruh
-              tidak berhak mendapatkan uang pesangon sesuai ketentuan Pasal 156
-              ayat (2), uang penghargaan masa kerja sesuai ketentuan Pasal 156
-              ayat (3), tetapi tetap berhak atas uang penggantian hak sesuai
-              ketentuan Pasal 156 ayat (4). (2) Dalam hal besarnya jaminan atau
-              manfaat pensiun yang diterima sekaligus dalam program pensiun
-              se-bagaimana dimaksud dalam ayat (1) ternyata lebih kecil daripada
-              jumlah uang pesangon 2 (dua) kali ketentuan Pasal 156 ayat (2) dan
-              uang penghargaan masa kerja 1 (satu) kali ketentuan Pasal 156 ayat
-              (3), dan uang penggantian hak sesuai ketentuan Pasal 156 ayat (4),
-              maka selisihnya dibayar oleh pengusaha. (3) Dalam hal pengusaha
-              telah mengikutsertakan pekerja/buruh dalam program pensiun yang
-              iurannya/premi-nya dibayar oleh pengusaha dan pekerja/buruh, maka
-              yang diperhitungkan dengan uang pesangon yaitu uang pensiun yang
-              premi/iurannya dibayar oleh pengusaha. (4) Ketentuan sebagaimana
-              dimaksud dalam ayat (1), ayat (2), dan ayat (3) dapat diatur lain
-              dalam perjanjian kerja, peraturan perusahaan, atau perjanjian
-              kerja bersama. (5) Dalam hal pengusaha tidak mengikutsertakan
-              pekerja/buruh yang mengalami pemutusan hubungan kerja karena usia
-              pensiun pada program pensiun maka pengusaha wajib memberikan
-              kepada pekerja/buruh uang pesangon sebesar 2 (dua) kali ketentuan
-              Pasal 156 ayat (2), uang penghargaan masa kerja 1 (satu) kali
-              ketentuan Pasal 156 ayat (3) dan uang penggantian hak sesuai
-              ketentuan Pasal 156 ayat (4). (6) Hak atas manfaat pensiun
-              sebagaimana yang dimaksud dalam ayat (1), ayat (2), ayat (3), dan
-              ayat (4) ti-dak menghilangkan hak pekerja/buruh atas jaminan hari
-              tua yang bersifat wajib sesuai dengan peraturan perundang-undangan
-              yang berlaku.
+            _type: ayats
+            ayats:
+              - _type: ayat
+                _key: 4
+                isi:
+                  _type: referenceText
+                  references: []
+                  text: >-
+                    (4), maka selisihnya dibayar oleh pengusaha. (3) Dalam hal
+                    pengusaha telah mengikutsertakan pekerja/buruh dalam program
+                    pensiun yang iurannya/premi-nya dibayar oleh pengusaha dan
+                    pekerja/buruh, maka yang diperhitungkan dengan uang pesangon
+                    yaitu uang pensiun yang premi/iurannya dibayar oleh
+                    pengusaha. (4) Ketentuan sebagaimana dimaksud dalam ayat
+                    (1), ayat (2), dan ayat (3) dapat diatur lain dalam
+                    perjanjian kerja, peraturan perusahaan, atau perjanjian
+                    kerja bersama.
+              - _type: ayat
+                _key: 5
+                isi:
+                  _type: referenceText
+                  references: []
+                  text: >-
+                    (5) Dalam hal pengusaha tidak mengikutsertakan pekerja/buruh
+                    yang mengalami pemutusan hubungan kerja karena usia pensiun
+                    pada program pensiun maka pengusaha wajib memberikan kepada
+                    pekerja/buruh uang pesangon sebesar 2 (dua) kali ketentuan
+                    Pasal 156 ayat (2), uang penghargaan masa kerja 1 (satu)
+                    kali ketentuan Pasal 156 ayat (3) dan uang penggantian hak
+                    sesuai ketentuan Pasal 156 ayat (4).
+              - _type: ayat
+                _key: 6
+                isi:
+                  _type: referenceText
+                  references: []
+                  text: >-
+                    (6) Hak atas manfaat pensiun sebagaimana yang dimaksud dalam
+                    ayat (1), ayat (2), ayat (3), dan ayat (4) ti-dak
+                    menghilangkan hak pekerja/buruh atas jaminan hari tua yang
+                    bersifat wajib sesuai dengan peraturan perundang-undangan
+                    yang berlaku.
         - _type: pasal
           _key: 168
           isi:
@@ -3294,20 +3922,33 @@ babs:
                     diperjanjikan, atau f. memberikan pekerjaan yang
                     membahayakan jiwa, keselamatan, kesehatan, dan kesusilaan
                     pekerja/buruh sedangkan pekerjaan tersebut tidak dicantumkan
-                    pada perjanjian kerja. (2) Pemutusan hubungan kerja dengan
-                    alasan sebagaimana dimaksud dalam ayat (1) pekerja/buruh
-                    berhak mendapat uang pesangon 2 (dua) kali ketentuan Pasal
-                    156 ayat (2), uang penghargaan masa kerja 1 (satu) kali
-                    ketentuan Pasal 156 ayat (3), dan uang penggantian hak
-                    sesuai ketentuan Pasal 156 ayat (4). (3) Dalam hal pengusaha
-                    dinyatakan tidak melakukan perbuatan sebagaimana dimaksud
-                    dalam ayat (1) oleh lembaga penyelesaian perselisihan
-                    hubungan industrial maka pengusaha dapat melakukan pemutusan
-                    hubungan kerja tanpa penetapan lembaga penyelesaian
-                    perselisihan hubungan industrial dan pekerja/buruh yang
-                    bersangkutan tidak berhak atas uang pesangon sesuai
-                    ketentuan Pasal 156 ayat (2), dan uang penghargaan masa
-                    kerja sesuai ketentuan Pasal 156 ayat (3).
+                    pada perjanjian kerja.
+              - _type: ayat
+                _key: 2
+                isi:
+                  _type: referenceText
+                  references: []
+                  text: >-
+                    (2) Pemutusan hubungan kerja dengan alasan sebagaimana
+                    dimaksud dalam ayat (1) pekerja/buruh berhak mendapat uang
+                    pesangon 2 (dua) kali ketentuan Pasal 156 ayat (2), uang
+                    penghargaan masa kerja 1 (satu) kali ketentuan Pasal 156
+                    ayat (3), dan uang penggantian hak sesuai ketentuan Pasal
+                    156 ayat (4).
+              - _type: ayat
+                _key: 3
+                isi:
+                  _type: referenceText
+                  references: []
+                  text: >-
+                    (3) Dalam hal pengusaha dinyatakan tidak melakukan perbuatan
+                    sebagaimana dimaksud dalam ayat (1) oleh lembaga
+                    penyelesaian perselisihan hubungan industrial maka pengusaha
+                    dapat melakukan pemutusan hubungan kerja tanpa penetapan
+                    lembaga penyelesaian perselisihan hubungan industrial dan
+                    pekerja/buruh yang bersangkutan tidak berhak atas uang
+                    pesangon sesuai ketentuan Pasal 156 ayat (2), dan uang
+                    penghargaan masa kerja sesuai ketentuan Pasal 156 ayat (3).
         - _type: pasal
           _key: 170
           isi:
@@ -3427,9 +4068,15 @@ babs:
                     (1) Pengawasan ketenagakerjaan dilaksanakan oleh unit kerja
                     tersendiri pada instansi yang lingkup tugas dan tanggung
                     jawabnya di bidang ketenagakerjaan pada pemerintah pusat,
-                    pemerintah provinsi, dan pemerintah kabupaten/kota. (2)
-                    Pelaksanaan pengawasan ketenagakerjaan sebagaimana dimaksud
-                    dalam ayat (1) diatur dengan Keputu-san Presiden.
+                    pemerintah provinsi, dan pemerintah kabupaten/kota.
+              - _type: ayat
+                _key: 2
+                isi:
+                  _type: referenceText
+                  references: []
+                  text: >-
+                    (2) Pelaksanaan pengawasan ketenagakerjaan sebagaimana
+                    dimaksud dalam ayat (1) diatur dengan Keputu-san Presiden.
         - _type: pasal
           _key: 179
           isi:
@@ -3444,8 +4091,14 @@ babs:
                     (1) Unit kerja pengawasan ketenagakerjaan sebagaimana
                     dimaksud dalam Pasal 178 pada pemerintah provin-si dan
                     pemerintah kabupaten/kota wajib menyampaikan laporan
-                    pelaksanaan pengawasan ketenagakerjaan kepada Menteri. (2)
-                    Tata cara penyampaian laporan sebagaimana dimaksud dalam
+                    pelaksanaan pengawasan ketenagakerjaan kepada Menteri.
+              - _type: ayat
+                _key: 2
+                isi:
+                  _type: referenceText
+                  references: []
+                  text: >-
+                    (2) Tata cara penyampaian laporan sebagaimana dimaksud dalam
                     ayat (1) ditetapkan dengan Keputusan Ment-teri.
         - _type: pasal
           _key: 180
@@ -3476,30 +4129,17 @@ babs:
         - _type: pasal
           _key: 182
           isi:
-            _type: referenceText
-            references: []
-            text: >-
-              Pasal 182 (l) Selain penyidik pejabat Polisi Negara Republik
-              Indonesia, juga kepada pegawai pengawas ketenagakerjaan dapat
-              diberi wewenang khusus sebagai penyidik pegawai negeri sipil
-              sesuai dengan peraturan perundang- undangan yang berlaku. (2)
-              Penyidik Pegawai Negeri Sipil sebagaimana dimaksud dalam ayat (1)
-              berwenang : a. melakukan pemeriksaan atas kebenaran laporan serta
-              keterangan tentang tindak pidana di bidang ketenaga-kerjaan, b.
-              melakukan pemeriksaan terhadap orang yang diduga melakukan tindak
-              pidana di bidang ketenagakerjaan, c. meminta keterangan dan bahan
-              bukti dari orang atau badan hukum sehubungan dengan tindak pidana
-              di bidang ketenagakerjaan, d. melakukan pemeriksaan atau penyitaan
-              bahan atau barang bukti dalam perkara tindak pidana di bidang
-              ketenagakerjaan, e. melakukan pemeriksaan atas surat dan/atau
-              dokumen lain tentang tindak pidana di bidang ketenagakerjaan, f.
-              meminta bantuan tenaga ahli dalam rangka pelaksanaan tugas
-              penyidikan tindak pidana di bidang ketenagakerjaan, dan g.
-              menghentikan penyidikan apabila tidak terdapat cukup bukti yang
-              membuktikan tentang adanya tindak pidana di bidang
-              ketenagakerjaan. (3) Kewenangan penyidik pegawai negeri sipil
-              sebagaimana dimaksud dalam ayat (2) dilaksanakan sesuai dengan
-              peraturan perundang-undangan yang berlaku.
+            _type: ayats
+            ayats:
+              - _type: ayat
+                _key: 3
+                isi:
+                  _type: referenceText
+                  references: []
+                  text: >-
+                    (3) Kewenangan penyidik pegawai negeri sipil sebagaimana
+                    dimaksud dalam ayat (2) dilaksanakan sesuai dengan peraturan
+                    perundang-undangan yang berlaku.
   - _type: bab
     _key: 16
     _judul: BAB XVI KETENTUAN PIDANA DAN SANKSI ADMINISTRATIF

@@ -1,5 +1,5 @@
 import yargs from 'yargs';
-import { jsonToMd } from './command/convert/json-to-md';
+import { jsonToMd } from './command/convert/json_to_md/mod';
 import { jsonToTtl } from './command/convert/json-to-ttl';
 import { downloadPdf } from './command/download-pdf';
 import { updateIndex } from './command/update-index';
