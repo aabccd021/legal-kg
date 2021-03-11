@@ -62,6 +62,7 @@ export function safeParseInt(str: string | undefined): number | undefined {
 
 export function ayatKeyOf(span: Span): number | undefined {
   const { str } = span;
+  if (str.startsWith('(l)')) return 1;
   const firstMatch = str.match(/^\([0-9]+\)/)?.[0];
   if (!isUndefined(firstMatch)) {
     return safeParseInt(firstMatch?.slice(1, -1));
@@ -78,6 +79,17 @@ export function ayatKeyOf(span: Span): number | undefined {
   //   }
   // }
   return undefined;
+}
+export function removeAyatKey(spans: Span[]): Span[] {
+  const [first, ...rest] = spans;
+  if (isUndefined(first)) throw Error();
+  const newFirst = { ...first, str: firstStrWithoutKeyOf(first.str) };
+  return [newFirst, ...rest];
+}
+
+function firstStrWithoutKeyOf(str: string): string {
+  if (str.startsWith('(l)')) return str.slice('(l)'.length).trim();
+  return str.replaceAll(/^\([0-9]+\)/g, '').trim();
 }
 
 function clean(str: string): string {

@@ -1,11 +1,11 @@
-_node:
+_node: &ref_0
   _documentType: uu
   tahun: 2018
   nomor: 6
 babs:
   - _type: bab
     _key: 1
-    _judul: BABI KETENTUAN UMUM
+    _judul: KETENTUAN UMUM
     isi:
       _type: pasals
       pasals:
@@ -15,10 +15,10 @@ babs:
             _type: referenceText
             references: []
             text: >-
-              Pasal 1 Dalam Undang-Undang ini yang dimaksud dengan: 1.
-              Kekarantinaan Kesehatan adalah upaya mencegah dan menangkal keluar
-              atau masuknya penyakit dan/atau faktor risiko kesehatan masyarakat
-              yang berpotensi menimbulkan kedaruratan kesehatan masyarakat. 2.
+              Dalam Undang-Undang ini yang dimaksud dengan: 1. Kekarantinaan
+              Kesehatan adalah upaya mencegah dan menangkal keluar atau masuknya
+              penyakit dan/atau faktor risiko kesehatan masyarakat yang
+              berpotensi menimbulkan kedaruratan kesehatan masyarakat. 2.
               Kedaruratan Kesehatan Masyarakat adalah kejadian kesehatan
               masyarakat yang bersifat luar biasa dengan ditandai penyebaran
               penyakit menular dan/atau kejadian yang disebabkan oleh radiasi
@@ -146,8 +146,8 @@ babs:
             _type: referenceText
             references: []
             text: >-
-              Pasal 2 Kekarantinaan Kesehatan diselenggarakan dengan berasaskan:
-              a. perikemanusiaan, b. manfaat: Cc. pelindungan: d. keadilan: e.
+              Kekarantinaan Kesehatan diselenggarakan dengan berasaskan: a.
+              perikemanusiaan, b. manfaat: Cc. pelindungan: d. keadilan: e.
               nondiskriminatif: f. kepentingan umum: g. keterpaduan, h.
               kesadaran hukumj, dan kedaulatan negara. REPUBLIK INDONESIA -9 -
         - _type: pasal
@@ -156,8 +156,8 @@ babs:
             _type: referenceText
             references: []
             text: >-
-              Pasal 3 Penyelenggaraan Kekarantinaan Kesehatan bertujuan untuk:
-              a. melindungi masyarakat dari penyakit dan/atau Faktor Risiko
+              Penyelenggaraan Kekarantinaan Kesehatan bertujuan untuk: a.
+              melindungi masyarakat dari penyakit dan/atau Faktor Risiko
               Kesehatan Masyarakat yang berpotensi menimbulkan Kedaruratan
               Kesehatan Masyarakat, b. mencegah dan menangkal penyakit dan/atau
               Faktor Risiko Kesehatan Masyarakat yang berpotensi menimbulkan
@@ -167,7 +167,7 @@ babs:
               kesehatan.
   - _type: bab
     _key: 2
-    _judul: BAB II TANGGUNG JAWAB PEMERINTAH PUSAT DAN PEMERINTAH DAERAH
+    _judul: TANGGUNG JAWAB PEMERINTAH PUSAT DAN PEMERINTAH DAERAH
     isi:
       _type: pasals
       pasals:
@@ -177,7 +177,7 @@ babs:
             _type: referenceText
             references: []
             text: >-
-              Pasal 4 Pemerintah Pusat dan Pemerintah Daerah bertanggung jawab
+              Pemerintah Pusat dan Pemerintah Daerah bertanggung jawab
               melindungi kesehatan masyarakat dari penyakit dan/atau Faktor
               Risiko Kesehatan Masyarakat yang berpotensi menimbulkan
               Kedaruratan Kesehatan Masyarakat melalui penyelenggaraan
@@ -193,30 +193,39 @@ babs:
                   _type: referenceText
                   references: []
                   text: >-
-                    (1) Pemerintah Pusat bertanggung jawab menyelenggarakan
+                    Pemerintah Pusat bertanggung jawab menyelenggarakan
                     Kekarantinaan Kesehatan di Pintu Masuk dan di wilayah secara
                     terpadu. REPUBLIK INDONESIA -10-
               - _type: ayat
                 _key: 2
                 isi:
                   _type: referenceText
-                  references: []
+                  references:
+                    - start: 73
+                      end: 81
+                      node:
+                        _key: 1
+                        parentPasal:
+                          _key: 5
+                          parentDocument: *ref_0
+                          _structureType: pasal
+                        _structureType: ayat
                   text: >-
-                    (2) Dalam menyelenggarakan Kekarantinaan Kesehatan
-                    sebagaimana dimaksud pada ayat (1), Pemerintah Pusat dapat
-                    melibatkan Pemerintah Daerah.
+                    Dalam menyelenggarakan Kekarantinaan Kesehatan sebagaimana
+                    dimaksud pada ayat (1), Pemerintah Pusat dapat melibatkan
+                    Pemerintah Daerah.
         - _type: pasal
           _key: 6
           isi:
             _type: referenceText
             references: []
             text: >-
-              Pasal 6 Pemerintah Pusat dan Pemerintah Daerah bertanggung jawab
-              terhadap ketersediaan sumber daya yang diperlukan dalam
-              penyelenggaraan Kekarantinaan Kesehatan.
+              Pemerintah Pusat dan Pemerintah Daerah bertanggung jawab terhadap
+              ketersediaan sumber daya yang diperlukan dalam penyelenggaraan
+              Kekarantinaan Kesehatan.
   - _type: bab
     _key: 3
-    _judul: BAB III HAK DAN KEWAJIBAN
+    _judul: HAK DAN KEWAJIBAN
     isi:
       _type: pasals
       pasals:
@@ -226,17 +235,17 @@ babs:
             _type: referenceText
             references: []
             text: >-
-              Pasal 7 Setiap Orang mempunyai hak memperoleh perlakuan yang sama
-              dalam penyelenggaraan Kekarantinaan Kesehatan.
+              Setiap Orang mempunyai hak memperoleh perlakuan yang sama dalam
+              penyelenggaraan Kekarantinaan Kesehatan.
         - _type: pasal
           _key: 8
           isi:
             _type: referenceText
             references: []
             text: >-
-              Pasal 8 Setiap Orang mempunyai hak mendapatkan pelayanan kesehatan
-              dasar sesuai kebutuhan medis, kebutuhan pangan, dan kebutuhan
-              kehidupan sehari-hari lainnya selama Karantina.
+              Setiap Orang mempunyai hak mendapatkan pelayanan kesehatan dasar
+              sesuai kebutuhan medis, kebutuhan pangan, dan kebutuhan kehidupan
+              sehari-hari lainnya selama Karantina.
         - _type: pasal
           _key: 9
           isi:
@@ -248,20 +257,19 @@ babs:
                   _type: referenceText
                   references: []
                   text: >-
-                    (1) Setiap Orang wajib mematuhi penyelenggaraan
-                    Kekarantinaan Kesehatan.
+                    Setiap Orang wajib mematuhi penyelenggaraan Kekarantinaan
+                    Kesehatan.
               - _type: ayat
                 _key: 2
                 isi:
                   _type: referenceText
                   references: []
                   text: >-
-                    (2) Setiap Orang berkewajiban ikut serta dalam
-                    penyelenggaraan Kekarantinaan Kesehatan. REPUBLIK INDONESIA
-                    -11-
+                    Setiap Orang berkewajiban ikut serta dalam penyelenggaraan
+                    Kekarantinaan Kesehatan. REPUBLIK INDONESIA -11-
   - _type: bab
     _key: 4
-    _judul: BAB IV KEDARURATAN KESEHATAN MASYARAKAT
+    _judul: KEDARURATAN KESEHATAN MASYARAKAT
     isi:
       _type: pasals
       pasals:
@@ -276,7 +284,7 @@ babs:
                   _type: referenceText
                   references: []
                   text: >-
-                    (1) Pemerintah Pusat menetapkan dan mencabut Kedaruratan
+                    Pemerintah Pusat menetapkan dan mencabut Kedaruratan
                     Kesehatan Masyarakat.
               - _type: ayat
                 _key: 2
@@ -284,7 +292,7 @@ babs:
                   _type: referenceText
                   references: []
                   text: >-
-                    (2) Pemerintah Pusat menetapkan dan mencabut penetapan Pintu
+                    Pemerintah Pusat menetapkan dan mencabut penetapan Pintu
                     Masuk dan/atau wilayah di dalam negeri yang Terjangkit
                     Kedaruratan Kesehatan Masyarakat.
               - _type: ayat
@@ -293,7 +301,7 @@ babs:
                   _type: referenceText
                   references: []
                   text: >-
-                    (3) Sebelum menetapkan Kedaruratan Kesehatan Masyarakat,
+                    Sebelum menetapkan Kedaruratan Kesehatan Masyarakat,
                     Pemerintah Pusat terlebih dahulu menetapkan jenis penyakit
                     dan faktor risiko yang dapat menimbulkan Kedaruratan
                     Kesehatan Masyarakat.
@@ -301,9 +309,24 @@ babs:
                 _key: 4
                 isi:
                   _type: referenceText
-                  references: []
+                  references:
+                    - start: 106
+                      end: 114
+                      node:
+                        _key: 2
+                        parentPasal: &ref_1
+                          _key: 10
+                          parentDocument: *ref_0
+                          _structureType: pasal
+                        _structureType: ayat
+                    - start: 93
+                      end: 101
+                      node:
+                        _key: 1
+                        parentPasal: *ref_1
+                        _structureType: ayat
                   text: >-
-                    (4) Ketentuan lebih lanjut mengenai tata cara penetapan dan
+                    Ketentuan lebih lanjut mengenai tata cara penetapan dan
                     pencabutan sebagaimana dimaksud pada ayat (1) dan ayat (2)
                     diatur dengan Peraturan Pemerintah.
         - _type: pasal
@@ -317,7 +340,7 @@ babs:
                   _type: referenceText
                   references: []
                   text: >-
-                    (1) Penyelenggaraan Kekarantinaan Kesehatan pada Kedaruratan
+                    Penyelenggaraan Kekarantinaan Kesehatan pada Kedaruratan
                     Kesehatan Masyarakat dilaksanakan oleh Pemerintah Pusat
                     secara cepat dan tepat berdasarkan besarnya ancaman,
                     efektivitas, dukungan sumber daya, dan teknik operasional
@@ -329,28 +352,26 @@ babs:
                   _type: referenceText
                   references: []
                   text: >-
-                    (2) Penyelenggaraan Kekarantinaan Kesehatan sebagaimana
-                    dimaksud pada ayat (l) dapat berkoordinasi dan bekerja sama
-                    dengan dunia internasional. REPUBLIK INDONESIA -12 -
+                    Penyelenggaraan Kekarantinaan Kesehatan sebagaimana dimaksud
+                    pada ayat (l) dapat berkoordinasi dan bekerja sama dengan
+                    dunia internasional. REPUBLIK INDONESIA -12 -
               - _type: ayat
                 _key: 3
                 isi:
                   _type: referenceText
                   references: []
                   text: >-
-                    (3) Ketentuan lebih lanjut mengenai penanggulangan
-                    Kedaruratan Kesehatan Masyarakat diatur dengan Peraturan
-                    Pemerintah.
+                    Ketentuan lebih lanjut mengenai penanggulangan Kedaruratan
+                    Kesehatan Masyarakat diatur dengan Peraturan Pemerintah.
         - _type: pasal
           _key: 12
           isi:
             _type: referenceText
             references: []
             text: >-
-              Pasal 12 Dalam hal Kedaruratan Kesehatan Masyarakat merupakan
-              kejadidin yang meresahkan dunia, Pemerintah Pusat memberitahukan
-              kepada pihak internasional sesuai dengan ketentuan hukum
-              internasional.
+              Dalam hal Kedaruratan Kesehatan Masyarakat merupakan kejadidin
+              yang meresahkan dunia, Pemerintah Pusat memberitahukan kepada
+              pihak internasional sesuai dengan ketentuan hukum internasional.
         - _type: pasal
           _key: 13
           isi:
@@ -362,7 +383,7 @@ babs:
                   _type: referenceText
                   references: []
                   text: >-
-                    (1) Pada kejadian Kedaruratan Kesehatan Masyarakat yang
+                    Pada kejadian Kedaruratan Kesehatan Masyarakat yang
                     meresahkan dunia, Pemerintah Pusat melakukan komunikasi,
                     koordinasi, dan kerja sama dengan negara lain dan/atau
                     organisasi internasional.
@@ -370,13 +391,21 @@ babs:
                 _key: 2
                 isi:
                   _type: referenceText
-                  references: []
+                  references:
+                    - start: 65
+                      end: 73
+                      node:
+                        _key: 1
+                        parentPasal:
+                          _key: 13
+                          parentDocument: *ref_0
+                          _structureType: pasal
+                        _structureType: ayat
                   text: >-
-                    (2) Komunikasi, koordinasi, dan kerja sama sebagaimana
-                    dimaksud pada ayat (1) dilakukan untuk mengidentifikasi
-                    penyebab, gejala dan tanda, faktor yang mempengaruhi, dan
-                    dampak yang ditimbulkan, serta tindakan yang harus
-                    dilakukan.
+                    Komunikasi, koordinasi, dan kerja sama sebagaimana dimaksud
+                    pada ayat (1) dilakukan untuk mengidentifikasi penyebab,
+                    gejala dan tanda, faktor yang mempengaruhi, dan dampak yang
+                    ditimbulkan, serta tindakan yang harus dilakukan.
         - _type: pasal
           _key: 14
           isi:
@@ -388,22 +417,31 @@ babs:
                   _type: referenceText
                   references: []
                   text: >-
-                    (1) Dalam keadaan Kedaruratan Kesehatan Masyarakat yang
+                    Dalam keadaan Kedaruratan Kesehatan Masyarakat yang
                     meresahkan dunia, Pemerintah Pusat dapat menetapkan
                     Karantina Wilayah di Pintu Masuk.
               - _type: ayat
                 _key: 2
                 isi:
                   _type: referenceText
-                  references: []
+                  references:
+                    - start: 113
+                      end: 121
+                      node:
+                        _key: 1
+                        parentPasal:
+                          _key: 14
+                          parentDocument: *ref_0
+                          _structureType: pasal
+                        _structureType: ayat
                   text: >-
-                    (2) Ketentuan lebih lanjut mengenai tata cara pelaksanaan
+                    Ketentuan lebih lanjut mengenai tata cara pelaksanaan
                     Karantina Wilayah di Pintu Masuk sebagaimana dimaksud pada
                     ayat (1) diatur dengan Peraturan Pemerintah. REPUBLIK
                     INDONESIA -13 -
   - _type: bab
     _key: 5
-    _judul: BAB V KEKARANTINAAN KESEHATAN DI PINTU MASUK DAN DI WILAYAH
+    _judul: KEKARANTINAAN KESEHATAN DI PINTU MASUK DAN DI WILAYAH
     isi:
       _type: pasals
       pasals:
@@ -418,7 +456,7 @@ babs:
                   _type: referenceText
                   references: []
                   text: >-
-                    (1) Kekarantinaan Kesehatan di Pintu Masuk dan di wilayah
+                    Kekarantinaan Kesehatan di Pintu Masuk dan di wilayah
                     dilakukan melalui kegiatan pengamatan penyakit dan Faktor
                     Risiko Kesehatan Masyarakat terhadap Alat Angkut, orang,
                     Barang, dan/atau lingkungan, serta respons terhadap
@@ -428,11 +466,20 @@ babs:
                 _key: 2
                 isi:
                   _type: referenceText
-                  references: []
+                  references:
+                    - start: 59
+                      end: 67
+                      node:
+                        _key: 1
+                        parentPasal: &ref_2
+                          _key: 15
+                          parentDocument: *ref_0
+                          _structureType: pasal
+                        _structureType: ayat
                   text: >-
-                    (2) Tindakan Kekarantinaan Kesehatan sebagaimana dimaksud
-                    pada ayat (1) berupa: a. Karantina, Isolasi, pemberian
-                    vaksinasi atau profilaksis, rujukan, disinfeksi, dan/atau
+                    Tindakan Kekarantinaan Kesehatan sebagaimana dimaksud pada
+                    ayat (1) berupa: a. Karantina, Isolasi, pemberian vaksinasi
+                    atau profilaksis, rujukan, disinfeksi, dan/atau
                     dekontaminasi terhadap orang sesuai indikasi: b. Pembatasan
                     Sosial Berskala Besar: c. disinfeksi, dekontaminasi,
                     disinseksi, dan/atau deratisasi terhadap Alat Angkut dan
@@ -442,9 +489,18 @@ babs:
                 _key: 3
                 isi:
                   _type: referenceText
-                  references: []
+                  references:
+                    - start: 93
+                      end: 109
+                      node:
+                        _key: d
+                        parentPoints:
+                          _key: 2
+                          parentPasal: *ref_2
+                          _structureType: ayat
+                        _structureType: point
                   text: >-
-                    (3) Penyehatan, pengamanan, dan pengendalian terhadap media
+                    Penyehatan, pengamanan, dan pengendalian terhadap media
                     lingkungan sebagaimana dimaksud pada ayat (2) huruf d
                     dilaksanakan sesuai dengan ketentuan peraturan
                     perundang-undangan.
@@ -452,9 +508,15 @@ babs:
                 _key: 4
                 isi:
                   _type: referenceText
-                  references: []
+                  references:
+                    - start: 91
+                      end: 99
+                      node:
+                        _key: 2
+                        parentPasal: *ref_2
+                        _structureType: ayat
                   text: >-
-                    (4) Ketentuan lebih lanjut mengenai tindakan Kekarantinaan
+                    Ketentuan lebih lanjut mengenai tindakan Kekarantinaan
                     Kesehatan sebagaimana dimaksud pada ayat (2) diatur dengan
                     Peraturan Menteri. REPUBLIK INDONESIA -14-
         - _type: pasal
@@ -468,42 +530,62 @@ babs:
                   _type: referenceText
                   references: []
                   text: >-
-                    (1) Tindakan Kekarantinaan Kesehatan terhadap Alat Angkut,
+                    Tindakan Kekarantinaan Kesehatan terhadap Alat Angkut,
                     orang, Barang, dan/atau lingkungan ditetapkan oleh Pejabat
                     Karantina Kesehatan.
               - _type: ayat
                 _key: 2
                 isi:
                   _type: referenceText
-                  references: []
+                  references:
+                    - start: 59
+                      end: 67
+                      node:
+                        _key: 1
+                        parentPasal: &ref_3
+                          _key: 16
+                          parentDocument: *ref_0
+                          _structureType: pasal
+                        _structureType: ayat
                   text: >-
-                    (2) Tindakan Kekarantinaan Kesehatan sebagaimana dimaksud
-                    pada ayat (1) dilaksanakan oleh Pejabat Karantina Kesehatan.
+                    Tindakan Kekarantinaan Kesehatan sebagaimana dimaksud pada
+                    ayat (1) dilaksanakan oleh Pejabat Karantina Kesehatan.
               - _type: ayat
                 _key: 3
                 isi:
                   _type: referenceText
                   references: []
                   text: >-
-                    (3) Tindakan Kekarantinaan Kesehatan tertentu dapat
-                    dilakukan oleh badan usaha atau instansi yang ditetapkan
-                    oleh Menteri.
+                    Tindakan Kekarantinaan Kesehatan tertentu dapat dilakukan
+                    oleh badan usaha atau instansi yang ditetapkan oleh Menteri.
               - _type: ayat
                 _key: 4
                 isi:
                   _type: referenceText
-                  references: []
+                  references:
+                    - start: 107
+                      end: 115
+                      node:
+                        _key: 1
+                        parentPasal: *ref_3
+                        _structureType: ayat
                   text: >-
-                    (4) Dalam situasi Kedaruratan Kesehatan Masyarakat, tindakan
+                    Dalam situasi Kedaruratan Kesehatan Masyarakat, tindakan
                     Kekarantinaan Kesehatan sebagaimana dimaksud pada ayat (1)
                     dilaksanakan oleh Pejabat Karantina Kesehatan.
               - _type: ayat
                 _key: 5
                 isi:
                   _type: referenceText
-                  references: []
+                  references:
+                    - start: 77
+                      end: 85
+                      node:
+                        _key: 4
+                        parentPasal: *ref_3
+                        _structureType: ayat
                   text: >-
-                    (5) Dalam pelaksanaan tindakan Kekarantinaan Kesehatan
+                    Dalam pelaksanaan tindakan Kekarantinaan Kesehatan
                     sebagaimana dimaksud pada ayat (4), Pejabat Karantina
                     Kesehatan harus berkoordinasi dengan pihak yang terkait.
         - _type: pasal
@@ -512,7 +594,7 @@ babs:
             _type: referenceText
             references: []
             text: >-
-              Pasal 17 Kekarantinaan Kesehatan di Pintu Masuk diselenggarakan di
+              Kekarantinaan Kesehatan di Pintu Masuk diselenggarakan di
               Pelabuhan, Bandar Udara, dan Pos Lintas Batas Darat Negara.
         - _type: pasal
           _key: 18
@@ -525,32 +607,40 @@ babs:
                   _type: referenceText
                   references: []
                   text: >-
-                    (1) Kekarantinaan Kesehatan di wilayah diselenggarakan di
-                    tempat atau lokasi yang diduga Terjangkit penyakit menular
-                    dan/atau Terpapar Faktor Risiko Kesehatan Masyarakat yang
-                    dapat menimbulkan Kedaruratan Kesehatan Masyarakat. REPUBLIK
+                    Kekarantinaan Kesehatan di wilayah diselenggarakan di tempat
+                    atau lokasi yang diduga Terjangkit penyakit menular dan/atau
+                    Terpapar Faktor Risiko Kesehatan Masyarakat yang dapat
+                    menimbulkan Kedaruratan Kesehatan Masyarakat. REPUBLIK
                     INDONESIA -15-
               - _type: ayat
                 _key: 2
                 isi:
                   _type: referenceText
-                  references: []
+                  references:
+                    - start: 55
+                      end: 63
+                      node:
+                        _key: 1
+                        parentPasal:
+                          _key: 18
+                          parentDocument: *ref_0
+                          _structureType: pasal
+                        _structureType: ayat
                   text: >-
-                    (2) Penentuan tempat atau lokasi sebagaimana dimaksud pada
-                    ayat (1) didasarkan pada hasil penyelidikan epidemiologi
-                    dan/atau pengujian laboratorium.
+                    Penentuan tempat atau lokasi sebagaimana dimaksud pada ayat
+                    (1) didasarkan pada hasil penyelidikan epidemiologi dan/atau
+                    pengujian laboratorium.
               - _type: ayat
                 _key: 3
                 isi:
                   _type: referenceText
                   references: []
                   text: >-
-                    (3) Tempat atau lokasi penyelenggaraan Kekarantinaan
-                    Kesehatan di wilayah dapat berupa rumah, area, dan rumah
-                    sakit.
+                    Tempat atau lokasi penyelenggaraan Kekarantinaan Kesehatan
+                    di wilayah dapat berupa rumah, area, dan rumah sakit.
   - _type: bab
     _key: 6
-    _judul: BAB VI PENYELENGGARAAN KEKARANTINAAN KESEHATAN DI PINTU MASUK
+    _judul: PENYELENGGARAAN KEKARANTINAAN KESEHATAN DI PINTU MASUK
     isi:
       _type: bagians
       bagians:
@@ -577,19 +667,28 @@ babs:
                               _type: referenceText
                               references: []
                               text: >-
-                                (1) Setiap Kapal yang: a. datang dari luar
-                                negeri, b. datang dari Pelabuhan wilayah
-                                Terjangkit di dalam negeri, atau Cc. mengambil
-                                orang dan/atau Barang dari Kapal sebagaimana
-                                dimaksud pada huruf a dan huruf b, berada dalam
-                                Status Karantina.
+                                Setiap Kapal yang: a. datang dari luar negeri,
+                                b. datang dari Pelabuhan wilayah Terjangkit di
+                                dalam negeri, atau Cc. mengambil orang dan/atau
+                                Barang dari Kapal sebagaimana dimaksud pada
+                                huruf a dan huruf b, berada dalam Status
+                                Karantina.
                           - _type: ayat
                             _key: 2
                             isi:
                               _type: referenceText
-                              references: []
+                              references:
+                                - start: 45
+                                  end: 53
+                                  node:
+                                    _key: 1
+                                    parentPasal: &ref_4
+                                      _key: 19
+                                      parentDocument: *ref_0
+                                      _structureType: pasal
+                                    _structureType: ayat
                               text: >-
-                                (2) Nakhoda pada Kapal sebagaimana dimaksud pada
+                                Nakhoda pada Kapal sebagaimana dimaksud pada
                                 ayat (1) wajib memberikan Deklarasi Kesehatan
                                 Maritim (Maritime Declaration of Healthh kepada
                                 Pejabat Karantina Kesehatan pada saat kedatangan
@@ -598,9 +697,15 @@ babs:
                             _key: 3
                             isi:
                               _type: referenceText
-                              references: []
+                              references:
+                                - start: 45
+                                  end: 53
+                                  node:
+                                    _key: 1
+                                    parentPasal: *ref_4
+                                    _structureType: ayat
                               text: >-
-                                (3) Nakhoda pada Kapal sebagaimana dimaksud pada
+                                Nakhoda pada Kapal sebagaimana dimaksud pada
                                 ayat (1) hanya dapat menurunkan atau menaikkan
                                 orang dan/atau Barang setelah dilakukan
                                 Pengawasan Kekarantinaan Kesehatan oleh Pejabat
@@ -609,19 +714,30 @@ babs:
                             _key: 4
                             isi:
                               _type: referenceText
-                              references: []
+                              references:
+                                - start: 61
+                                  end: 69
+                                  node:
+                                    _key: 3
+                                    parentPasal: *ref_4
+                                    _structureType: ayat
                               text: >-
-                                (4) Pengawasan Kekarantinaan Kesehatan
-                                sebagaimana dimaksud pada ayat (3) dilakukan
-                                untuk memperoleh Persetujuan Karantina
-                                Kesehatan.
+                                Pengawasan Kekarantinaan Kesehatan sebagaimana
+                                dimaksud pada ayat (3) dilakukan untuk
+                                memperoleh Persetujuan Karantina Kesehatan.
                           - _type: ayat
                             _key: 5
                             isi:
                               _type: referenceText
-                              references: []
+                              references:
+                                - start: 58
+                                  end: 66
+                                  node:
+                                    _key: 4
+                                    parentPasal: *ref_4
+                                    _structureType: ayat
                               text: >-
-                                (5) Persetujuan Karantina Kesehatan sebagaimana
+                                Persetujuan Karantina Kesehatan sebagaimana
                                 dimaksud pada ayat (4) berupa: a. persetujuan
                                 bebas karantina, dalam hal tidak ditemukan
                                 penyakit dan/atau faktor risiko yang berpotensi
@@ -637,9 +753,15 @@ babs:
                             _key: 6
                             isi:
                               _type: referenceText
-                              references: []
+                              references:
+                                - start: 119
+                                  end: 127
+                                  node:
+                                    _key: 3
+                                    parentPasal: *ref_4
+                                    _structureType: ayat
                               text: >-
-                                (6) Ketentuan lebih lanjut mengenai tata laksana
+                                Ketentuan lebih lanjut mengenai tata laksana
                                 Pengawasan Kekarantinaan Kesehatan di Pelabuhan
                                 sebagaimana dimaksud pada ayat (3) diatur dengan
                                 Peraturan Menteri.
@@ -647,32 +769,37 @@ babs:
                       _key: 20
                       isi:
                         _type: referenceText
-                        references: []
+                        references:
+                          - start: 80
+                            end: 88
+                            node:
+                              _key: 19
+                              parentDocument: *ref_0
+                              _structureType: pasal
                         text: >-
-                          Pasal 20 Kapal yang memperoleh persetujuan karantina
-                          terbatas sebagaimana dimaksud dalam Pasal 19 ayat (S5)
-                          huruf b harus dilakukan tindakan Kekarantinaan
-                          Kesehatan dan/atau penerbitan atau pembaruan Dokumen
-                          Karantina Kesehatan. REPUBLIK INDONESIA -17 -
+                          Kapal yang memperoleh persetujuan karantina terbatas
+                          sebagaimana dimaksud dalam Pasal 19 ayat (S5) huruf b
+                          harus dilakukan tindakan Kekarantinaan Kesehatan
+                          dan/atau penerbitan atau pembaruan Dokumen Karantina
+                          Kesehatan. REPUBLIK INDONESIA -17 -
                     - _type: pasal
                       _key: 21
                       isi:
                         _type: referenceText
                         references: []
                         text: >-
-                          Pasal 21 Nakhoda menyampaikan permohonan untuk
-                          memperoleh Persetujuan Karantina Kesehatan atau
-                          memberitahukan suatu keadaan di Kapal dengan memakai
-                          isyarat sebagai berikut: a. pada siang hari berupa: 1.
-                          Bendera O, yang berarti Kapal saya sehat atau saya
-                          minta Persetujuan Karantina Kesehatan, 2. Bendera O di
-                          atas panji pengganti kesatu, yang berarti Kapal saya
-                          tersangka, dan 3. Bendera O di atas Bendera L, yang
-                          berarti Kapal saya Terjangkit, dan b. pada malam hari
-                          berupa lampu merah di atas lampu putih dengan jarak
-                          maksimum 1,80 (satu koma delapan nol) meter, yang
-                          berarti saya belum mendapat Persetujuan Karantina
-                          Kesehatan.
+                          Nakhoda menyampaikan permohonan untuk memperoleh
+                          Persetujuan Karantina Kesehatan atau memberitahukan
+                          suatu keadaan di Kapal dengan memakai isyarat sebagai
+                          berikut: a. pada siang hari berupa: 1. Bendera O, yang
+                          berarti Kapal saya sehat atau saya minta Persetujuan
+                          Karantina Kesehatan, 2. Bendera O di atas panji
+                          pengganti kesatu, yang berarti Kapal saya tersangka,
+                          dan 3. Bendera O di atas Bendera L, yang berarti Kapal
+                          saya Terjangkit, dan b. pada malam hari berupa lampu
+                          merah di atas lampu putih dengan jarak maksimum 1,80
+                          (satu koma delapan nol) meter, yang berarti saya belum
+                          mendapat Persetujuan Karantina Kesehatan.
                     - _type: pasal
                       _key: 22
                       isi:
@@ -684,7 +811,7 @@ babs:
                               _type: referenceText
                               references: []
                               text: >-
-                                (1) Jika dalam waktu berlakunya Persetujuan
+                                Jika dalam waktu berlakunya Persetujuan
                                 Karantina Kesehatan timbul suatu kematian atau
                                 penyakit yang berpotensi menimbulkan Kedaruratan
                                 Kesehatan Masyarakat maka Persetujuan Karantina
@@ -694,14 +821,23 @@ babs:
                             _key: 2
                             isi:
                               _type: referenceText
-                              references: []
+                              references:
+                                - start: 109
+                                  end: 117
+                                  node:
+                                    _key: 1
+                                    parentPasal:
+                                      _key: 22
+                                      parentDocument: *ref_0
+                                      _structureType: pasal
+                                    _structureType: ayat
                               text: >-
-                                (2) Kapal yang Persetujuan Karantina
-                                Kesehatannya dicabut dan dinyatakan tidak
-                                berlaku sebagaimana dimaksud pada ayat (1) wajib
-                                menuju ke suatu Zona Karantina untuk mendapat
-                                tindakan Kekarantinaan Kesehatan. REPUBLIK
-                                INDONESIA -18 -
+                                Kapal yang Persetujuan Karantina Kesehatannya
+                                dicabut dan dinyatakan tidak berlaku sebagaimana
+                                dimaksud pada ayat (1) wajib menuju ke suatu
+                                Zona Karantina untuk mendapat tindakan
+                                Kekarantinaan Kesehatan. REPUBLIK INDONESIA -18
+                                -
                     - _type: pasal
                       _key: 23
                       isi:
@@ -713,16 +849,25 @@ babs:
                               _type: referenceText
                               references: []
                               text: >-
-                                (1) Kapal yang tidak mematuhi peraturan
+                                Kapal yang tidak mematuhi peraturan
                                 Kekarantinaan Kesehatan tidak diberikan
                                 Persetujuan Karantina Kesehatan.
                           - _type: ayat
                             _key: 2
                             isi:
                               _type: referenceText
-                              references: []
+                              references:
+                                - start: 32
+                                  end: 40
+                                  node:
+                                    _key: 1
+                                    parentPasal: &ref_5
+                                      _key: 23
+                                      parentDocument: *ref_0
+                                      _structureType: pasal
+                                    _structureType: ayat
                               text: >-
-                                (2) Kapal sebagaimana dimaksud pada ayat (1)
+                                Kapal sebagaimana dimaksud pada ayat (1)
                                 diperintahkan supaya berangkat lagi atas
                                 tanggungan sendiri dan tidak diberikan izin
                                 memasuki Pelabuhan lain di wilayah Indonesia.
@@ -730,9 +875,15 @@ babs:
                             _key: 3
                             isi:
                               _type: referenceText
-                              references: []
+                              references:
+                                - start: 32
+                                  end: 40
+                                  node:
+                                    _key: 1
+                                    parentPasal: *ref_5
+                                    _structureType: ayat
                               text: >-
-                                (3) Kapal sebagaimana dimaksud pada ayat (1)
+                                Kapal sebagaimana dimaksud pada ayat (1)
                                 diberikan izin untuk mengambil bahan bakar, air,
                                 dan bahan makanan di bawah pengawasan Pejabat
                                 Karantina Kesehatan.
@@ -742,10 +893,10 @@ babs:
                         _type: referenceText
                         references: []
                         text: >-
-                          Pasal 24 Kekarantinaan Kesehatan terhadap kapal
-                          perang, kapal negara, dan kapal tamu negara diatur
-                          dengan Peraturan Menteri berkoordinasi dengan menteri
-                          atau lembaga terkait.
+                          Kekarantinaan Kesehatan terhadap kapal perang, kapal
+                          negara, dan kapal tamu negara diatur dengan Peraturan
+                          Menteri berkoordinasi dengan menteri atau lembaga
+                          terkait.
               - _type: paragraf
                 _key: 2
                 _judul: Paragraf 2 Keberangkatan Kapal
@@ -763,30 +914,45 @@ babs:
                               _type: referenceText
                               references: []
                               text: >-
-                                (1) Sebelum keberangkatan Kapal, Nakhoda wajib
+                                Sebelum keberangkatan Kapal, Nakhoda wajib
                                 melengkapi Dokumen Karantina Kesehatan yang
                                 masih berlaku.
                           - _type: ayat
                             _key: 2
                             isi:
                               _type: referenceText
-                              references: []
+                              references:
+                                - start: 62
+                                  end: 70
+                                  node:
+                                    _key: 1
+                                    parentPasal: &ref_6
+                                      _key: 25
+                                      parentDocument: *ref_0
+                                      _structureType: pasal
+                                    _structureType: ayat
                               text: >-
-                                (2) Setelah Dokumen Karantina Kesehatan
-                                sebagaimana dimaksud pada ayat (1) dinyatakan
-                                lengkap dan pada pemeriksaan oleh Pejabat
-                                Karantina Kesehatan tidak ditemukan indikasi
-                                Faktor Risiko Kesehatan Masyarakat maka kepada
-                                Nakhoda dapat diberikan Surat Persetujuan
-                                Berlayar Karantina Kesehatan (Port Health
-                                Ouarantine Clearance). REPUBLIK INDONESIA -19 -
+                                Setelah Dokumen Karantina Kesehatan sebagaimana
+                                dimaksud pada ayat (1) dinyatakan lengkap dan
+                                pada pemeriksaan oleh Pejabat Karantina
+                                Kesehatan tidak ditemukan indikasi Faktor Risiko
+                                Kesehatan Masyarakat maka kepada Nakhoda dapat
+                                diberikan Surat Persetujuan Berlayar Karantina
+                                Kesehatan (Port Health Ouarantine Clearance).
+                                REPUBLIK INDONESIA -19 -
                           - _type: ayat
                             _key: 3
                             isi:
                               _type: referenceText
-                              references: []
+                              references:
+                                - start: 169
+                                  end: 177
+                                  node:
+                                    _key: 2
+                                    parentPasal: *ref_6
+                                    _structureType: ayat
                               text: >-
-                                (3) Dalam hal Kapal yang akan berangkat tidak
+                                Dalam hal Kapal yang akan berangkat tidak
                                 dilengkapi dengan Surat Persetujuan Berlayar
                                 Karantina Kesehatan (Port Health OGuarantine
                                 Clearance) sebagaimana dimaksud pada ayat (2),
@@ -801,20 +967,29 @@ babs:
                             _key: 1
                             isi:
                               _type: referenceText
-                              references: []
+                              references:
+                                - start: 189
+                                  end: 206
+                                  node:
+                                    parentPasal:
+                                      parentDocument: *ref_0
+                                      _key: 15
+                                      _structureType: pasal
+                                    _key: 2
+                                    _structureType: ayat
                               text: >-
-                                (1) Apabila pada saat keberangkatan Kapal
-                                ditemukan adanya Faktor Risiko Kesehatan
-                                Masyarakat maka terhadap Kapal tersebut
-                                dilakukan tindakan Kekarantinaan Kesehatan
-                                sebagaimana dimaksud dalam Pasal 15 ayat (2).
+                                Apabila pada saat keberangkatan Kapal ditemukan
+                                adanya Faktor Risiko Kesehatan Masyarakat maka
+                                terhadap Kapal tersebut dilakukan tindakan
+                                Kekarantinaan Kesehatan sebagaimana dimaksud
+                                dalam Pasal 15 ayat (2).
                           - _type: ayat
                             _key: 2
                             isi:
                               _type: referenceText
                               references: []
                               text: >-
-                                (2) Untuk Pelabuhan yang tidak memungkinkan
+                                Untuk Pelabuhan yang tidak memungkinkan
                                 dilakukan tindakan Kekarantinaan Kesehatan maka
                                 harus dilakukan di Pelabuhan tujuan berikutnya.
         - _type: bagian
@@ -835,9 +1010,8 @@ babs:
                         _type: referenceText
                         references: []
                         text: >-
-                          Pasal 27 Setiap Pesawat Udara yang datang dari luar
-                          negeri berada dalam Pengawasan Kekarantinaan
-                          Kesehatan.
+                          Setiap Pesawat Udara yang datang dari luar negeri
+                          berada dalam Pengawasan Kekarantinaan Kesehatan.
                     - _type: pasal
                       _key: 28
                       isi:
@@ -849,8 +1023,8 @@ babs:
                               _type: referenceText
                               references: []
                               text: >-
-                                (1) Setiap Pesawat Udara yang: a. datang dari
-                                Bandar Udara wilayah yang Terjangkit: REPUBLIK
+                                Setiap Pesawat Udara yang: a. datang dari Bandar
+                                Udara wilayah yang Terjangkit: REPUBLIK
                                 INDONESIA - 20 - b. terdapat orang hidup atau
                                 mati yang diduga Terjangkit: dan/atau c.
                                 terdapat orang dan/atau Barang diduga Terpapar
@@ -860,9 +1034,18 @@ babs:
                             _key: 2
                             isi:
                               _type: referenceText
-                              references: []
+                              references:
+                                - start: 84
+                                  end: 92
+                                  node:
+                                    _key: 1
+                                    parentPasal:
+                                      _key: 28
+                                      parentDocument: *ref_0
+                                      _structureType: pasal
+                                    _structureType: ayat
                               text: >-
-                                (2) Kapten Penerbang wajib segera melaporkan
+                                Kapten Penerbang wajib segera melaporkan
                                 mengenai keadaan sebagaimana dimaksud pada ayat
                                 (1) kepada petugas lalu lintas udara untuk
                                 diteruskan kepada Pejabat Karantina Kesehatan di
@@ -879,7 +1062,7 @@ babs:
                               _type: referenceText
                               references: []
                               text: >-
-                                (1) Setelah kedatangan Pesawat Udara, Kapten
+                                Setelah kedatangan Pesawat Udara, Kapten
                                 Penerbang melalui pengelola Bandar Udara wajib
                                 memberikan dokumen Deklarasi Kesehatan
                                 Penerbangan (Health Part of the Aircraft General
@@ -888,14 +1071,23 @@ babs:
                             _key: 2
                             isi:
                               _type: referenceText
-                              references: []
+                              references:
+                                - start: 62
+                                  end: 79
+                                  node:
+                                    parentPasal:
+                                      parentDocument: *ref_0
+                                      _key: 28
+                                      _structureType: pasal
+                                    _key: 1
+                                    _structureType: ayat
                               text: >-
-                                (2) Dalam hal kedatangan Pesawat Udara
-                                sebagaimana dimaksud dalam Pasal 28 ayat (1),
-                                Kapten Penerbang wajib secara langsung
-                                memberikan dokumen Deklarasi Kesehatan
-                                Penerbangan (Health Part of the Aircraft General
-                                Declaration) kepada Pejabat Karantina Kesehatan.
+                                Dalam hal kedatangan Pesawat Udara sebagaimana
+                                dimaksud dalam Pasal 28 ayat (1), Kapten
+                                Penerbang wajib secara langsung memberikan
+                                dokumen Deklarasi Kesehatan Penerbangan (Health
+                                Part of the Aircraft General Declaration) kepada
+                                Pejabat Karantina Kesehatan.
                     - _type: pasal
                       _key: 30
                       isi:
@@ -905,31 +1097,57 @@ babs:
                             _key: 1
                             isi:
                               _type: referenceText
-                              references: []
+                              references:
+                                - start: 63
+                                  end: 71
+                                  node:
+                                    _key: 27
+                                    parentDocument: *ref_0
+                                    _structureType: pasal
+                                - start: 76
+                                  end: 84
+                                  node:
+                                    _key: 28
+                                    parentDocument: *ref_0
+                                    _structureType: pasal
                               text: >-
-                                (1) Kapten Penerbang pada Pesawat Udara
-                                sebagaimana dimaksud dalam Pasal 27 dan Pasal 28
-                                hanya dapat menurunkan atau menaikkan orang
-                                dan/atau Barang setelah dilakukan Pengawasan
-                                Kekarantinaan Kesehatan oleh Pejabat Karantina
-                                Kesehatan. REPUBLIK INDONESIA - A1 -
+                                Kapten Penerbang pada Pesawat Udara sebagaimana
+                                dimaksud dalam Pasal 27 dan Pasal 28 hanya dapat
+                                menurunkan atau menaikkan orang dan/atau Barang
+                                setelah dilakukan Pengawasan Kekarantinaan
+                                Kesehatan oleh Pejabat Karantina Kesehatan.
+                                REPUBLIK INDONESIA - A1 -
                           - _type: ayat
                             _key: 2
                             isi:
                               _type: referenceText
-                              references: []
+                              references:
+                                - start: 61
+                                  end: 69
+                                  node:
+                                    _key: 1
+                                    parentPasal: &ref_7
+                                      _key: 30
+                                      parentDocument: *ref_0
+                                      _structureType: pasal
+                                    _structureType: ayat
                               text: >-
-                                (2) Pengawasan Kekarantinaan Kesehatan
-                                sebagaimana dimaksud pada ayat (1) dilakukan
-                                untuk memperoleh Persetujuan Karantina
-                                Kesehatan.
+                                Pengawasan Kekarantinaan Kesehatan sebagaimana
+                                dimaksud pada ayat (1) dilakukan untuk
+                                memperoleh Persetujuan Karantina Kesehatan.
                           - _type: ayat
                             _key: 3
                             isi:
                               _type: referenceText
-                              references: []
+                              references:
+                                - start: 58
+                                  end: 66
+                                  node:
+                                    _key: 2
+                                    parentPasal: *ref_7
+                                    _structureType: ayat
                               text: >-
-                                (3) Persetujuan Karantina Kesehatan sebagaimana
+                                Persetujuan Karantina Kesehatan sebagaimana
                                 dimaksud pada ayat (2) dapat berupa: a.
                                 persetujuan bebas karantina, dalam hal tidak
                                 ditemukan penyakit dan/atau faktor risiko yang
@@ -947,31 +1165,40 @@ babs:
                               _type: referenceText
                               references: []
                               text: >-
-                                (4) Ketentuan lebih lanjut mengenai tata laksana
+                                Ketentuan lebih lanjut mengenai tata laksana
                                 Pengawasan Kekarantinaan Kesehatan di Bandar
                                 Udara diatur dengan Peraturan Menteri.
                     - _type: pasal
                       _key: 31
                       isi:
                         _type: referenceText
-                        references: []
+                        references:
+                          - start: 88
+                            end: 105
+                            node:
+                              parentPasal:
+                                parentDocument: *ref_0
+                                _key: 30
+                                _structureType: pasal
+                              _key: 3
+                              _structureType: ayat
                         text: >-
-                          Pasal 31 Pesawat Udara yang memperoleh persetujuan
-                          karantina terbatas sebagaimana dimaksud dalam Pasal 30
-                          ayat (3) huruf b harus dilakukan tindakan
-                          Kekarantinaan Kesehatan dan/atau penerbitan atau
-                          pembaruan Dokumen Karantina Kesehatan.
+                          Pesawat Udara yang memperoleh persetujuan karantina
+                          terbatas sebagaimana dimaksud dalam Pasal 30 ayat (3)
+                          huruf b harus dilakukan tindakan Kekarantinaan
+                          Kesehatan dan/atau penerbitan atau pembaruan Dokumen
+                          Karantina Kesehatan.
                     - _type: pasal
                       _key: 32
                       isi:
                         _type: referenceText
                         references: []
                         text: >-
-                          Pasal 32 Kekarantinaan Kesehatan terhadap pesawat
-                          udara perang, pesawat udara negara, dan pesawat udara
-                          tamu negara diatur dengan Peraturan Menteri
-                          berkoordinasi dengan menteri atau lembaga terkait.
-                          REPUBLIK INDONESIA - 22 -
+                          Kekarantinaan Kesehatan terhadap pesawat udara perang,
+                          pesawat udara negara, dan pesawat udara tamu negara
+                          diatur dengan Peraturan Menteri berkoordinasi dengan
+                          menteri atau lembaga terkait. REPUBLIK INDONESIA - 22
+                          -
               - _type: paragraf
                 _key: 2
                 _judul: Paragraf 2 Keberangkatan Pesawat Udara
@@ -984,19 +1211,28 @@ babs:
                         _type: referenceText
                         references: []
                         text: >-
-                          Pasal 33 Sebelum keberangkatan Pesawat Udara, Kapten
-                          Penerbang wajib melengkapi Dokumen Karantina Kesehatan
-                          sesuai standar Kekarantinaan Kesehatan.
+                          Sebelum keberangkatan Pesawat Udara, Kapten Penerbang
+                          wajib melengkapi Dokumen Karantina Kesehatan sesuai
+                          standar Kekarantinaan Kesehatan.
                     - _type: pasal
                       _key: 34
                       isi:
                         _type: referenceText
-                        references: []
+                        references:
+                          - start: 140
+                            end: 157
+                            node:
+                              parentPasal:
+                                parentDocument: *ref_0
+                                _key: 15
+                                _structureType: pasal
+                              _key: 2
+                              _structureType: ayat
                         text: >-
-                          Pasal 34 Pesawat Udara yang ditemukan Faktor Risiko
-                          Kesehatan Masyarakat harus dilakukan tindakan
-                          Kekarantinaan Kesehatan sebagaimana dimaksud dalam
-                          Pasal 15 ayat (2).
+                          Pesawat Udara yang ditemukan Faktor Risiko Kesehatan
+                          Masyarakat harus dilakukan tindakan Kekarantinaan
+                          Kesehatan sebagaimana dimaksud dalam Pasal 15 ayat
+                          (2).
         - _type: bagian
           _key: 3
           _judul: Bagian Ketiga Pengawasan di Pos Lintas Batas Darat Negara
@@ -1020,7 +1256,7 @@ babs:
                               _type: referenceText
                               references: []
                               text: >-
-                                (1) Setiap Kendaraan Darat yang: a. datang dari
+                                Setiap Kendaraan Darat yang: a. datang dari
                                 wilayah yang Terjangkit: b. terdapat orang hidup
                                 atau mati yang diduga Terjangkit, dan/atau Cc.
                                 terdapat orang atau Barang diduga Terpapar di
@@ -1030,19 +1266,34 @@ babs:
                             _key: 2
                             isi:
                               _type: referenceText
-                              references: []
+                              references:
+                                - start: 42
+                                  end: 50
+                                  node:
+                                    _key: 1
+                                    parentPasal: &ref_8
+                                      _key: 35
+                                      parentDocument: *ref_0
+                                      _structureType: pasal
+                                    _structureType: ayat
                               text: >-
-                                (2) Kendaraan Darat sebagaimana dimaksud pada
-                                ayat (1) harus dilakukan Pengawasan
-                                Kekarantinaan Kesehatan sebelum menurunkan atau
-                                menaikkan orang dan/atau Barang.
+                                Kendaraan Darat sebagaimana dimaksud pada ayat
+                                (1) harus dilakukan Pengawasan Kekarantinaan
+                                Kesehatan sebelum menurunkan atau menaikkan
+                                orang dan/atau Barang.
                           - _type: ayat
                             _key: 3
                             isi:
                               _type: referenceText
-                              references: []
+                              references:
+                                - start: 132
+                                  end: 140
+                                  node:
+                                    _key: 2
+                                    parentPasal: *ref_8
+                                    _structureType: ayat
                               text: >-
-                                (3) Kendaraan Darat yang ditemukan Faktor Risiko
+                                Kendaraan Darat yang ditemukan Faktor Risiko
                                 Kesehatan Masyarakat pada Pengawasan
                                 Kekarantinaan Kesehatan sebagaimana dimaksud
                                 pada ayat (2) harus dilakukan tindakan
@@ -1051,9 +1302,15 @@ babs:
                             _key: 4
                             isi:
                               _type: referenceText
-                              references: []
+                              references:
+                                - start: 67
+                                  end: 75
+                                  node:
+                                    _key: 1
+                                    parentPasal: *ref_8
+                                    _structureType: ayat
                               text: >-
-                                (4) Setiap Kendaraan Darat di luar ketentuan
+                                Setiap Kendaraan Darat di luar ketentuan
                                 sebagaimana dimaksud pada ayat (1) sewaktu-waktu
                                 dapat dilakukan pemeriksaan Faktor Risiko
                                 Kesehatan Masyarakat oleh Pejabat Karantina
@@ -1062,9 +1319,15 @@ babs:
                             _key: 5
                             isi:
                               _type: referenceText
-                              references: []
+                              references:
+                                - start: 124
+                                  end: 132
+                                  node:
+                                    _key: 1
+                                    parentPasal: *ref_8
+                                    _structureType: ayat
                               text: >-
-                                (5) Ketentuan lebih lanjut mengenai tindakan
+                                Ketentuan lebih lanjut mengenai tindakan
                                 Kekarantinaan Kesehatan di Pos Lintas Batas
                                 Darat Negara sebagaimana dimaksud pada ayat (1)
                                 diatur dengan Peraturan Menteri.
@@ -1079,18 +1342,26 @@ babs:
                               _type: referenceText
                               references: []
                               text: >-
-                                (1) Setelah kedatangan Kendaraan Darat,
-                                pengemudi wajib memberikan dokumen Deklarasi
-                                Kesehatan Perlintasan Darat (Ground Crossing
-                                Declaration of Health) kepada Pejabat Karantina
-                                Kesehatan.
+                                Setelah kedatangan Kendaraan Darat, pengemudi
+                                wajib memberikan dokumen Deklarasi Kesehatan
+                                Perlintasan Darat (Ground Crossing Declaration
+                                of Health) kepada Pejabat Karantina Kesehatan.
                           - _type: ayat
                             _key: 2
                             isi:
                               _type: referenceText
-                              references: []
+                              references:
+                                - start: 193
+                                  end: 201
+                                  node:
+                                    _key: 1
+                                    parentPasal:
+                                      _key: 36
+                                      parentDocument: *ref_0
+                                      _structureType: pasal
+                                    _structureType: ayat
                               text: >-
-                                (2) Kendaraan Darat yang tidak ditemukan Faktor
+                                Kendaraan Darat yang tidak ditemukan Faktor
                                 Risiko Kesehatan Masyarakat dan/atau dokumen
                                 Deklarasi Kesehatan Perlintasan Darat (Ground
                                 Crossing Declaration of Health) sebagaimana
@@ -1115,28 +1386,45 @@ babs:
                               _type: referenceText
                               references: []
                               text: >-
-                                (1) Sebelum keberangkatan Kendaraan Darat,
-                                pengemudi wajib melengkapi Dokumen Karantina
-                                Kesehatan yang masih berlaku.
+                                Sebelum keberangkatan Kendaraan Darat, pengemudi
+                                wajib melengkapi Dokumen Karantina Kesehatan
+                                yang masih berlaku.
                           - _type: ayat
                             _key: 2
                             isi:
                               _type: referenceText
-                              references: []
+                              references:
+                                - start: 62
+                                  end: 70
+                                  node:
+                                    _key: 1
+                                    parentPasal:
+                                      _key: 37
+                                      parentDocument: *ref_0
+                                      _structureType: pasal
+                                    _structureType: ayat
                               text: >-
-                                (2) Setelah Dokumen Karantina Kesehatan
-                                sebagaimana dimaksud pada ayat (1) dinyatakan
-                                lengkap dan tidak ditemukan indikasi Faktor
-                                Risiko Kesehatan Masyarakat maka kepada
-                                pengemudi dapat diberikan Persetujuan Karantina
-                                Kesehatan.
+                                Setelah Dokumen Karantina Kesehatan sebagaimana
+                                dimaksud pada ayat (1) dinyatakan lengkap dan
+                                tidak ditemukan indikasi Faktor Risiko Kesehatan
+                                Masyarakat maka kepada pengemudi dapat diberikan
+                                Persetujuan Karantina Kesehatan.
                           - _type: ayat
                             _key: 3
                             isi:
                               _type: referenceText
-                              references: []
+                              references:
+                                - start: 142
+                                  end: 159
+                                  node:
+                                    parentPasal:
+                                      parentDocument: *ref_0
+                                      _key: 15
+                                      _structureType: pasal
+                                    _key: 2
+                                    _structureType: ayat
                               text: >-
-                                (3) Kendaraan Darat yang ditemukan Faktor Risiko
+                                Kendaraan Darat yang ditemukan Faktor Risiko
                                 Kesehatan Masyarakat harus dilakukan tindakan
                                 Kekarantinaan Kesehatan sebagaimana dimaksud
                                 dalam Pasal 15 ayat (2).
@@ -1152,44 +1440,98 @@ babs:
                   _type: ayats
                   ayats:
                     - _type: ayat
+                      _key: 1
+                      isi:
+                        _type: referenceText
+                        references: []
+                        text: >-
+                          Awak, Personel, dan penumpang yang Terjangkit dan/atau
+                          'Terpapar berdasarkan informasi awal mengenai
+                          deklarasi kesehatan, pada saat kedatangan dilakukan
+                          pemeriksaan kesehatan oleh Pejabat Karantina Kesehatan
+                          yang berwenang di atas Alat Angkut.
+                    - _type: ayat
+                      _key: 2
+                      isi:
+                        _type: referenceText
+                        references: []
+                        text: >-
+                          Awak, Personel, dan/atau penumpang yang Terjangkit
+                          dilakukan tindakan Kekarantinaan Kesehatan sesuai
+                          indikasi. - 25 -
+                    - _type: ayat
+                      _key: 3
+                      isi:
+                        _type: referenceText
+                        references: []
+                        text: >-
+                          Awak, Personel, dan/atau penumpang yang Terpapar
+                          dilakukan tindakan sesuai dengan prosedur
+                          penanggulangan kasus.
+                    - _type: ayat
                       _key: 4
                       isi:
                         _type: referenceText
                         references: []
                         text: >-
-                          (4) Terhadap Awak, Personel, dan/atau penumpang yang
-                          tidak Terjangkit dan/atau tidak Terpapar dapat
-                          melanjutkan perjalanannya dan diberikan kartu
-                          kewaspadaan kesehatan. (S5) Jika ditemukan Awak,
-                          Personel, — dan/atau penumpang yang Terjangkit
-                          dan/atau Terpapar, Pejabat Karantina Kesehatan harus
-                          langsung berkoordinasi dengan pihak yang terkait.
+                          Terhadap Awak, Personel, dan/atau penumpang yang tidak
+                          Terjangkit dan/atau tidak Terpapar dapat melanjutkan
+                          perjalanannya dan diberikan kartu kewaspadaan
+                          kesehatan. (S5) Jika ditemukan Awak, Personel, —
+                          dan/atau penumpang yang Terjangkit dan/atau Terpapar,
+                          Pejabat Karantina Kesehatan harus langsung
+                          berkoordinasi dengan pihak yang terkait.
               - _type: pasal
                 _key: 39
                 isi:
-                  _type: referenceText
-                  references: []
-                  text: >-
-                    Pasal 39 (l) Setiap orang yang datang dari negara dan/atau
-                    wilayah Kedaruratan Kesehatan Masyarakat yang meresahkan
-                    dunia dan/atau endemis, Pejabat Karantina Kesehatan
-                    melakukan: a. penapisan, b. pemberian kartu kewaspadaan
-                    kesehatan, c. pemberian informasi tentang cara pencegahan,
-                    pengobatan, dan pelaporan suatu kejadian Kedaruratan
-                    Kesehatan Masyarakat yang meresahkan dunia: dan d.
-                    pengambilan spesimen dan/atau sampel. (2) Apabila hasil
-                    penapisan terhadap orang ditemukan gejala klinis sesuai
-                    dengan jenis penyakit Kedaruratan Kesehatan Masyarakat yang
-                    meresahkan dunia, Pejabat Karantina Kesehatan melakukan
-                    rujukan dan Isolasi. REPUBLIK INDONESIA - 26 -
+                  _type: ayats
+                  ayats:
+                    - _type: ayat
+                      _key: 1
+                      isi:
+                        _type: referenceText
+                        references: []
+                        text: >-
+                          Setiap orang yang datang dari negara dan/atau wilayah
+                          Kedaruratan Kesehatan Masyarakat yang meresahkan dunia
+                          dan/atau endemis, Pejabat Karantina Kesehatan
+                          melakukan: a. penapisan, b. pemberian kartu
+                          kewaspadaan kesehatan, c. pemberian informasi tentang
+                          cara pencegahan, pengobatan, dan pelaporan suatu
+                          kejadian Kedaruratan Kesehatan Masyarakat yang
+                          meresahkan dunia: dan d. pengambilan spesimen dan/atau
+                          sampel.
+                    - _type: ayat
+                      _key: 2
+                      isi:
+                        _type: referenceText
+                        references: []
+                        text: >-
+                          Apabila hasil penapisan terhadap orang ditemukan
+                          gejala klinis sesuai dengan jenis penyakit Kedaruratan
+                          Kesehatan Masyarakat yang meresahkan dunia, Pejabat
+                          Karantina Kesehatan melakukan rujukan dan Isolasi.
+                          REPUBLIK INDONESIA - 26 -
               - _type: pasal
                 _key: 40
                 isi:
                   _type: referenceText
-                  references: []
+                  references:
+                    - start: 43
+                      end: 51
+                      node:
+                        _key: 38
+                        parentDocument: *ref_0
+                        _structureType: pasal
+                    - start: 56
+                      end: 64
+                      node:
+                        _key: 39
+                        parentDocument: *ref_0
+                        _structureType: pasal
                   text: >-
-                    Pasal 40 Dalam hal orang sebagaimana dimaksud dalam Pasal 38
-                    dan Pasal 39 tidak bersedia dilakukan tindakan Kekarantinaan
+                    Dalam hal orang sebagaimana dimaksud dalam Pasal 38 dan
+                    Pasal 39 tidak bersedia dilakukan tindakan Kekarantinaan
                     Kesehatan, Pejabat Karantina Kesehatan berwenang
                     mengeluarkan rekomendasi kepada pejabat imigrasi untuk
                     dilakukan deportasi.
@@ -1204,7 +1546,7 @@ babs:
                         _type: referenceText
                         references: []
                         text: >-
-                          (1) Setiap Awak, Personel, dan penumpang: ayang datang
+                          Setiap Awak, Personel, dan penumpang: ayang datang
                           dari negara endemis, negara Terjangkit, dan/atau
                           negara yang mewajibkan adanya vaksinasi, atau b.yang
                           akan berangkat ke negara endemis, negara Terjangkit,
@@ -1215,31 +1557,64 @@ babs:
                       _key: 2
                       isi:
                         _type: referenceText
-                        references: []
+                        references:
+                          - start: 68
+                            end: 84
+                            node:
+                              _key: a
+                              parentPoints:
+                                _key: 1
+                                parentPasal: &ref_9
+                                  _key: 41
+                                  parentDocument: *ref_0
+                                  _structureType: pasal
+                                _structureType: ayat
+                              _structureType: point
                         text: >-
-                          (2) Setiap Awak, Personel, dan/atau penumpang
-                          sebagaimana dimaksud pada ayat (1) huruf a yang tidak
-                          memiliki sertifikat vaksinasi internasional dilakukan
-                          tindakan Kekarantinaan Kesehatan oleh Pejabat
-                          Karantina Kesehatan.
+                          Setiap Awak, Personel, dan/atau penumpang sebagaimana
+                          dimaksud pada ayat (1) huruf a yang tidak memiliki
+                          sertifikat vaksinasi internasional dilakukan tindakan
+                          Kekarantinaan Kesehatan oleh Pejabat Karantina
+                          Kesehatan.
                     - _type: ayat
                       _key: 3
                       isi:
                         _type: referenceText
-                        references: []
+                        references:
+                          - start: 68
+                            end: 84
+                            node:
+                              _key: b
+                              parentPoints:
+                                _key: 1
+                                parentPasal: *ref_9
+                                _structureType: ayat
+                              _structureType: point
                         text: >-
-                          (3) Setiap Awak, Personel, dan/atau penumpang
-                          sebagaimana dimaksud pada ayat (1) huruf b yang tidak
-                          memiliki sertifikat vaksinasi internasional, dilakukan
+                          Setiap Awak, Personel, dan/atau penumpang sebagaimana
+                          dimaksud pada ayat (1) huruf b yang tidak memiliki
+                          sertifikat vaksinasi internasional, dilakukan
                           penundaan keberangkatannya oleh Pejabat Karantina
                           Kesehatan.
                     - _type: ayat
                       _key: 4
                       isi:
                         _type: referenceText
-                        references: []
+                        references:
+                          - start: 395
+                            end: 403
+                            node:
+                              _key: 3
+                              parentPasal: *ref_9
+                              _structureType: ayat
+                          - start: 70
+                            end: 78
+                            node:
+                              _key: 3
+                              parentPasal: *ref_9
+                              _structureType: ayat
                         text: >-
-                          (4) Terhadap Awak, Personel, dan/atau penumpang
+                          Terhadap Awak, Personel, dan/atau penumpang
                           sebagaimana dimaksud pada ayat (3) harus diberikan
                           vaksinasi sesuai persyaratan dan standar yang berlaku.
                           (S5) Ketentuan .. REPUBLIK INDONESIA - 27 - (S)
@@ -1262,26 +1637,41 @@ babs:
                         _type: referenceText
                         references: []
                         text: >-
-                          (1) Setiap Awak, Personel, dan penumpang yang akan
+                          Setiap Awak, Personel, dan penumpang yang akan
                           berangkat harus dilakukan pengawasan.
                     - _type: ayat
                       _key: 2
                       isi:
                         _type: referenceText
-                        references: []
+                        references:
+                          - start: 47
+                            end: 55
+                            node:
+                              _key: 1
+                              parentPasal: &ref_10
+                                _key: 42
+                                parentDocument: *ref_0
+                                _structureType: pasal
+                              _structureType: ayat
                         text: >-
-                          (2) Pada saat pengawasan sebagaimana dimaksud pada
-                          ayat (1) ditemukan Awak, Personel, dan/atau penumpang
+                          Pada saat pengawasan sebagaimana dimaksud pada ayat
+                          (1) ditemukan Awak, Personel, dan/atau penumpang
                           memiliki Faktor Risiko Kesehatan Masyarakat, Pejabat
                           Karantina Kesehatan harus melakukan pemeriksaan medis.
                     - _type: ayat
                       _key: 3
                       isi:
                         _type: referenceText
-                        references: []
+                        references:
+                          - start: 55
+                            end: 63
+                            node:
+                              _key: 2
+                              parentPasal: *ref_10
+                              _structureType: ayat
                         text: >-
-                          (3) Jika hasil pemeriksaan medis sebagaimana dimaksud
-                          pada ayat (2), ditemukan penyakit yang berpotensi
+                          Jika hasil pemeriksaan medis sebagaimana dimaksud pada
+                          ayat (2), ditemukan penyakit yang berpotensi
                           menimbulkan Kedaruratan Kesehatan Masyarakat, dan/atau
                           tidak dipenuhi persyaratan kesehatan penerbangan atau
                           pelayaran pada Awak, Personel, dan/atau penumpang,
@@ -1301,17 +1691,26 @@ babs:
                         _type: referenceText
                         references: []
                         text: >-
-                          (1) Penundaan keberangkatan orang karena tidak
-                          memiliki sertifikat vaksinasi internasional dan/atau
-                          dikenakan tindakan Kekarantinaan Kesehatan dilakukan
-                          dengan berkoordinasi dengan pihak imigrasi.
+                          Penundaan keberangkatan orang karena tidak memiliki
+                          sertifikat vaksinasi internasional dan/atau dikenakan
+                          tindakan Kekarantinaan Kesehatan dilakukan dengan
+                          berkoordinasi dengan pihak imigrasi.
                     - _type: ayat
                       _key: 2
                       isi:
                         _type: referenceText
-                        references: []
+                        references:
+                          - start: 41
+                            end: 49
+                            node:
+                              _key: 1
+                              parentPasal:
+                                _key: 43
+                                parentDocument: *ref_0
+                                _structureType: pasal
+                              _structureType: ayat
                         text: >-
-                          (2) Terhadap orang sebagaimana dimaksud pada ayat (1)
+                          Terhadap orang sebagaimana dimaksud pada ayat (1)
                           wajib diberikan penjelasan oleh Pejabat Karantina
                           Kesehatan.
         - _type: bagian
@@ -1324,9 +1723,30 @@ babs:
                 _key: 44
                 isi:
                   _type: referenceText
-                  references: []
+                  references:
+                    - start: 215
+                      end: 232
+                      node:
+                        parentPasal:
+                          parentDocument: *ref_0
+                          _key: 15
+                          _structureType: pasal
+                        _key: 2
+                        _structureType: ayat
+                    - start: 245
+                      end: 246
+                      node:
+                        _key: d
+                        parentPoints:
+                          _key: 2
+                          parentPasal:
+                            _key: 44
+                            parentDocument: *ref_0
+                            _structureType: pasal
+                          _structureType: ayat
+                        _structureType: point
                   text: >-
-                    Pasal 44 Setiap Barang yang memiliki Faktor Risiko Kesehatan
+                    Setiap Barang yang memiliki Faktor Risiko Kesehatan
                     Masyarakat dalam Alat Angkut yang berada dalam Status
                     Karantina, Pejabat Karantina Kesehatan melakukan tindakan
                     Kekarantinaan Kesehatan sebagaimana dimaksud dalam Pasal 15
@@ -1343,7 +1763,7 @@ babs:
                         _type: referenceText
                         references: []
                         text: >-
-                          (1) Jenazah dan/atau abu jenazah dalam Alat Angkut
+                          Jenazah dan/atau abu jenazah dalam Alat Angkut
                           dilakukan pemeriksaan terhadap dokumen penyebab
                           kematian sesuai dengan ketentuan peraturan
                           perundang-undangan.
@@ -1351,9 +1771,18 @@ babs:
                       _key: 2
                       isi:
                         _type: referenceText
-                        references: []
+                        references:
+                          - start: 74
+                            end: 82
+                            node:
+                              _key: 1
+                              parentPasal: &ref_11
+                                _key: 45
+                                parentDocument: *ref_0
+                                _structureType: pasal
+                              _structureType: ayat
                         text: >-
-                          (2) Jika pada pemeriksaan dokumen penyebab kematian
+                          Jika pada pemeriksaan dokumen penyebab kematian
                           sebagaimana dimaksud pada ayat (1) didapatkan: a.
                           dokumen tidak lengkap maka penanggung jawab Alat
                           Angkut harus melengkapi dokumen sesuai dengan
@@ -1368,15 +1797,21 @@ babs:
                       _key: 3
                       isi:
                         _type: referenceText
-                        references: []
+                        references:
+                          - start: 157
+                            end: 165
+                            node:
+                              _key: 2
+                              parentPasal: *ref_11
+                              _structureType: ayat
                         text: >-
-                          (3) Jika hasil pemeriksaan tidak didapatkan Faktor
-                          Risiko Kesehatan Masyarakat atau setelah dilakukan
-                          tindakan Kekarantinaan Kesehatan sebagaimana dimaksud
-                          pada ayat (2) huruf c, Pejabat Karantina Kesehatan
-                          memberikan surat persetujuan keluar atau masuk jenazah
-                          dan/atau abu jenazah dari Pelabuhan, Bandar Udara,
-                          atau Pos Lintas Batas Darat Negara.
+                          Jika hasil pemeriksaan tidak didapatkan Faktor Risiko
+                          Kesehatan Masyarakat atau setelah dilakukan tindakan
+                          Kekarantinaan Kesehatan sebagaimana dimaksud pada ayat
+                          (2) huruf c, Pejabat Karantina Kesehatan memberikan
+                          surat persetujuan keluar atau masuk jenazah dan/atau
+                          abu jenazah dari Pelabuhan, Bandar Udara, atau Pos
+                          Lintas Batas Darat Negara.
               - _type: pasal
                 _key: 46
                 isi:
@@ -1388,17 +1823,26 @@ babs:
                         _type: referenceText
                         references: []
                         text: >-
-                          (1) Jika terdapat Awak, Personel, dan/atau penumpang
-                          yang meninggal dalam Alat Angkut yang datang, Pejabat
+                          Jika terdapat Awak, Personel, dan/atau penumpang yang
+                          meninggal dalam Alat Angkut yang datang, Pejabat
                           Karantina Kesehatan melakukan pemeriksaan jenazah
                           untuk mengetahui penyebab kematian.
                     - _type: ayat
                       _key: 2
                       isi:
                         _type: referenceText
-                        references: []
+                        references:
+                          - start: 92
+                            end: 100
+                            node:
+                              _key: 1
+                              parentPasal:
+                                _key: 46
+                                parentDocument: *ref_0
+                                _structureType: pasal
+                              _structureType: ayat
                         text: >-
-                          (2) Dalam hal penyebab kematian berdasarkan hasil
+                          Dalam hal penyebab kematian berdasarkan hasil
                           pemeriksaan jenazah sebagaimana dimaksud pada ayat (1)
                           merupakan penyakit yang memiliki risiko Kedaruratan
                           Kesehatan Masyarakat maka dilakukan tindakan
@@ -1409,18 +1853,30 @@ babs:
                         _type: referenceText
                         references: []
                         text: >-
-                          (3) Terhadap jenazah sebagaimana dimaksud pada ayat
-                          (l) dikirim ke rumah sakit untuk dilakukan
-                          pemulasaraan jenazah. REPUBLIK INDONESIA - 30 -
+                          Terhadap jenazah sebagaimana dimaksud pada ayat (l)
+                          dikirim ke rumah sakit untuk dilakukan pemulasaraan
+                          jenazah. REPUBLIK INDONESIA - 30 -
               - _type: pasal
                 _key: 47
                 isi:
                   _type: referenceText
-                  references: []
+                  references:
+                    - start: 95
+                      end: 103
+                      node:
+                        _key: 44
+                        parentDocument: *ref_0
+                        _structureType: pasal
+                    - start: 118
+                      end: 126
+                      node:
+                        _key: 46
+                        parentDocument: *ref_0
+                        _structureType: pasal
                   text: >-
-                    Pasal 47 Ketentuan lebih lanjut mengenai pengawasan Barang
-                    dalam Alat Angkut sebagaimana dimaksud dalam Pasal 44 sampai
-                    dengan Pasal 46 diatur dengan Peraturan Menteri.
+                    Ketentuan lebih lanjut mengenai pengawasan Barang dalam Alat
+                    Angkut sebagaimana dimaksud dalam Pasal 44 sampai dengan
+                    Pasal 46 diatur dengan Peraturan Menteri.
         - _type: bagian
           _key: 6
           _judul: Bagian Keenam Sanksi Administratif
@@ -1436,20 +1892,49 @@ babs:
                       _key: 1
                       isi:
                         _type: referenceText
-                        references: []
+                        references:
+                          - start: 90
+                            end: 98
+                            node:
+                              _key: 21
+                              parentDocument: *ref_0
+                              _structureType: pasal
+                          - start: 67
+                            end: 84
+                            node:
+                              parentPasal:
+                                parentDocument: *ref_0
+                                _key: 19
+                                _structureType: pasal
+                              _key: 2
+                              _structureType: ayat
                         text: >-
-                          (1) Setiap Nakhoda yang melanggar ketentuan
-                          sebagaimana dimaksud dalam Pasal 19 ayat (2) atau
-                          Pasal 21 dikenai sanksi administratif berupa: a.
-                          peringatan: b. denda administratif: dan/atau C.
-                          pencabutan izin.
+                          Setiap Nakhoda yang melanggar ketentuan sebagaimana
+                          dimaksud dalam Pasal 19 ayat (2) atau Pasal 21 dikenai
+                          sanksi administratif berupa: a. peringatan: b. denda
+                          administratif: dan/atau C. pencabutan izin.
                     - _type: ayat
                       _key: 2
                       isi:
                         _type: referenceText
-                        references: []
+                        references:
+                          - start: 99
+                            end: 107
+                            node:
+                              _key: 29
+                              parentDocument: *ref_0
+                              _structureType: pasal
+                          - start: 76
+                            end: 93
+                            node:
+                              parentPasal:
+                                parentDocument: *ref_0
+                                _key: 28
+                                _structureType: pasal
+                              _key: 2
+                              _structureType: ayat
                         text: >-
-                          (2) Setiap Kapten Penerbang yang melanggar ketentuan
+                          Setiap Kapten Penerbang yang melanggar ketentuan
                           sebagaimana dimaksud dalam Pasal 28 ayat (2) atau
                           Pasal 29 dikenai sanksi administratif berupa: a.
                           peringatan: b. denda administratif, dan/atau Cc.
@@ -1458,49 +1943,90 @@ babs:
                       _key: 3
                       isi:
                         _type: referenceText
-                        references: []
+                        references:
+                          - start: 144
+                            end: 161
+                            node:
+                              parentPasal:
+                                parentDocument: *ref_0
+                                _key: 19
+                                _structureType: pasal
+                              _key: 5
+                              _structureType: ayat
                         text: >-
-                          (3) Setiap Nakhoda yang tidak melengkapi Dokumen
-                          Karantina Kesehatan sehingga dikeluarkan persetujuan
-                          karantina terbatas sebagaimana dimaksud dalam Pasal 19
-                          ayat (5) huruf b dikenai denda administratif.
+                          Setiap Nakhoda yang tidak melengkapi Dokumen Karantina
+                          Kesehatan sehingga dikeluarkan persetujuan karantina
+                          terbatas sebagaimana dimaksud dalam Pasal 19 ayat (5)
+                          huruf b dikenai denda administratif.
                     - _type: ayat
                       _key: 4
                       isi:
                         _type: referenceText
-                        references: []
+                        references:
+                          - start: 153
+                            end: 170
+                            node:
+                              parentPasal:
+                                parentDocument: *ref_0
+                                _key: 30
+                                _structureType: pasal
+                              _key: 3
+                              _structureType: ayat
                         text: >-
-                          (4) Setiap Kapten Penerbang yang tidak melengkapi
-                          Dokumen Karantina Kesehatan sehingga dikeluarkan
-                          persetujuan karantina terbatas sebagaimana dimaksud
-                          dalam Pasal 30 ayat (3) huruf b dikenai denda
-                          administratif. REPUBLIK INDONESIA - 31 -
+                          Setiap Kapten Penerbang yang tidak melengkapi Dokumen
+                          Karantina Kesehatan sehingga dikeluarkan persetujuan
+                          karantina terbatas sebagaimana dimaksud dalam Pasal 30
+                          ayat (3) huruf b dikenai denda administratif. REPUBLIK
+                          INDONESIA - 31 -
                     - _type: ayat
                       _key: 5
                       isi:
                         _type: referenceText
-                        references: []
+                        references:
+                          - start: 189
+                            end: 206
+                            node:
+                              parentPasal:
+                                parentDocument: *ref_0
+                                _key: 36
+                                _structureType: pasal
+                              _key: 1
+                              _structureType: ayat
                         text: >-
-                          (5) Setiap pengemudi atau penanggung jawab kendaraan
-                          darat yang tidak melengkapi Dokumen Karantina
-                          Kesehatan sehingga tidak diberikan Persetujuan
-                          Karantina Kesehatan sebagaimana dimaksud dalam Pasal
-                          36 ayat (1) dikenai sanksi administratif berupa: a.
-                          peringatan, b. denda administratif, dan/atau Cc.
-                          pencabutan izin.
+                          Setiap pengemudi atau penanggung jawab kendaraan darat
+                          yang tidak melengkapi Dokumen Karantina Kesehatan
+                          sehingga tidak diberikan Persetujuan Karantina
+                          Kesehatan sebagaimana dimaksud dalam Pasal 36 ayat (1)
+                          dikenai sanksi administratif berupa: a. peringatan, b.
+                          denda administratif, dan/atau Cc. pencabutan izin.
                     - _type: ayat
                       _key: 6
                       isi:
                         _type: referenceText
-                        references: []
+                        references:
+                          - start: 122
+                            end: 130
+                            node:
+                              _key: 5
+                              parentPasal: &ref_12
+                                _key: 48
+                                parentDocument: *ref_0
+                                _structureType: pasal
+                              _structureType: ayat
+                          - start: 99
+                            end: 107
+                            node:
+                              _key: 1
+                              parentPasal: *ref_12
+                              _structureType: ayat
                         text: >-
-                          (6) Ketentuan lebih lanjut mengenai tata cara
-                          pengenaan sanksi administratif sebagaimana dimaksud
-                          pada ayat (1) sampai dengan ayat (5) diatur dengan
-                          Peraturan Pemerintah.
+                          Ketentuan lebih lanjut mengenai tata cara pengenaan
+                          sanksi administratif sebagaimana dimaksud pada ayat
+                          (1) sampai dengan ayat (5) diatur dengan Peraturan
+                          Pemerintah.
   - _type: bab
     _key: 7
-    _judul: BAB VII PENYELENGGARAAN KEKARANTINAAN KESEHATAN DI WILAYAH
+    _judul: PENYELENGGARAAN KEKARANTINAAN KESEHATAN DI WILAYAH
     isi:
       _type: bagians
       bagians:
@@ -1521,8 +2047,8 @@ babs:
                         _type: referenceText
                         references: []
                         text: >-
-                          (1) Dalam rangka melakukan tindakan mitigasi faktor
-                          risiko di wilayah pada situasi Kedaruratan Kesehatan
+                          Dalam rangka melakukan tindakan mitigasi faktor risiko
+                          di wilayah pada situasi Kedaruratan Kesehatan
                           Masyarakat dilakukan Karantina Rumah, Karantina
                           Wilayah, Karantina Rumah Sakit, atau Pembatasan Sosial
                           Berskala Besar oleh Pejabat Karantina Kesehatan.
@@ -1530,10 +2056,19 @@ babs:
                       _key: 2
                       isi:
                         _type: referenceText
-                        references: []
+                        references:
+                          - start: 123
+                            end: 131
+                            node:
+                              _key: 1
+                              parentPasal: &ref_13
+                                _key: 49
+                                parentDocument: *ref_0
+                                _structureType: pasal
+                              _structureType: ayat
                         text: >-
-                          (2) Karantina Rumah, Karantina Wilayah, Karantina
-                          Rumah Sakit, atau Pembatasan Sosial Berskala Besar
+                          Karantina Rumah, Karantina Wilayah, Karantina Rumah
+                          Sakit, atau Pembatasan Sosial Berskala Besar
                           sebagaimana dimaksud pada ayat (1) harus didasarkan
                           pada pertimbangan epidemiologis, besarnya ancaman,
                           efektifitas, dukungan sumber daya, teknis operasional,
@@ -1543,11 +2078,17 @@ babs:
                       _key: 3
                       isi:
                         _type: referenceText
-                        references: []
+                        references:
+                          - start: 81
+                            end: 89
+                            node:
+                              _key: 1
+                              parentPasal: *ref_13
+                              _structureType: ayat
                         text: >-
-                          (3) Karantina Wilayah dan Pembatasan Sosial Berskala
-                          Besar sebagaimana dimaksud pada ayat (1) ditetapkan
-                          oleh Menteri.
+                          Karantina Wilayah dan Pembatasan Sosial Berskala Besar
+                          sebagaimana dimaksud pada ayat (1) ditetapkan oleh
+                          Menteri.
         - _type: bagian
           _key: 2
           _judul: Bagian Kedua Karantina Rumah
@@ -1565,16 +2106,25 @@ babs:
                         _type: referenceText
                         references: []
                         text: >-
-                          (1) Karantina Rumah dilaksanakan pada situasi
-                          ditemukannya kasus Kedaruratan Kesehatan Masyarakat
-                          yang terjadi hanya di dalam satu rumah.
+                          Karantina Rumah dilaksanakan pada situasi ditemukannya
+                          kasus Kedaruratan Kesehatan Masyarakat yang terjadi
+                          hanya di dalam satu rumah.
                     - _type: ayat
                       _key: 2
                       isi:
                         _type: referenceText
-                        references: []
+                        references:
+                          - start: 42
+                            end: 50
+                            node:
+                              _key: 1
+                              parentPasal: &ref_14
+                                _key: 50
+                                parentDocument: *ref_0
+                                _structureType: pasal
+                              _structureType: ayat
                         text: >-
-                          (2) Karantina Rumah sebagaimana dimaksud pada ayat (1)
+                          Karantina Rumah sebagaimana dimaksud pada ayat (1)
                           dilaksanakan terhadap seluruh orang dalam rumah,
                           Barang, atau Alat Angkut yang terjadi kontak erat
                           dengan kasus.
@@ -1582,9 +2132,15 @@ babs:
                       _key: 3
                       isi:
                         _type: referenceText
-                        references: []
+                        references:
+                          - start: 41
+                            end: 49
+                            node:
+                              _key: 1
+                              parentPasal: *ref_14
+                              _structureType: ayat
                         text: >-
-                          (3) Terhadap kasus sebagaimana dimaksud pada ayat (1)
+                          Terhadap kasus sebagaimana dimaksud pada ayat (1)
                           dirujuk ke rumah sakit yang memiliki kemampuan
                           menangani kasus.
               - _type: pasal
@@ -1598,7 +2154,7 @@ babs:
                         _type: referenceText
                         references: []
                         text: >-
-                          (1) Pejabat Karantina Kesehatan wajib memberikan
+                          Pejabat Karantina Kesehatan wajib memberikan
                           penjelasan kepada penghuni rumah sebelum melaksanakan
                           tindakan Karantina Rumah.
                     - _type: ayat
@@ -1607,10 +2163,9 @@ babs:
                         _type: referenceText
                         references: []
                         text: >-
-                          (2) Penghuni rumah yang dikarantina selain kasus,
-                          dilarang keluar rumah selama waktu yang telah
-                          ditetapkan oleh Pejabat Karantina Kesehatan. REPUBLIK
-                          INDONESIA - 33 -
+                          Penghuni rumah yang dikarantina selain kasus, dilarang
+                          keluar rumah selama waktu yang telah ditetapkan oleh
+                          Pejabat Karantina Kesehatan. REPUBLIK INDONESIA - 33 -
               - _type: pasal
                 _key: 52
                 isi:
@@ -1622,7 +2177,7 @@ babs:
                         _type: referenceText
                         references: []
                         text: >-
-                          (1) Selama penyelenggaraan Karantina Rumah, kebutuhan
+                          Selama penyelenggaraan Karantina Rumah, kebutuhan
                           hidup dasar bagi orang dan makanan hewan ternak yang
                           berada dalam Karantina Rumah menjadi tanggung jawab
                           Pemerintah Pusat.
@@ -1630,12 +2185,21 @@ babs:
                       _key: 2
                       isi:
                         _type: referenceText
-                        references: []
+                        references:
+                          - start: 96
+                            end: 104
+                            node:
+                              _key: 1
+                              parentPasal:
+                                _key: 52
+                                parentDocument: *ref_0
+                                _structureType: pasal
+                              _structureType: ayat
                         text: >-
-                          (2) Tanggung jawab Pemerintah Pusat dalam
-                          penyelenggaraan Karantina Rumah sebagaimana dimaksud
-                          pada ayat (1) dilakukan dengan melibatkan Pemerintah
-                          Daerah dan pihak yang terkait.
+                          Tanggung jawab Pemerintah Pusat dalam penyelenggaraan
+                          Karantina Rumah sebagaimana dimaksud pada ayat (1)
+                          dilakukan dengan melibatkan Pemerintah Daerah dan
+                          pihak yang terkait.
         - _type: bagian
           _key: 3
           _judul: Bagian Ketiga Karantina Wilayah
@@ -1653,16 +2217,25 @@ babs:
                         _type: referenceText
                         references: []
                         text: >-
-                          (1) Karantina Wilayah merupakan bagian respons dari
+                          Karantina Wilayah merupakan bagian respons dari
                           Kedaruratan Kesehatan Masyarakat.
                     - _type: ayat
                       _key: 2
                       isi:
                         _type: referenceText
-                        references: []
+                        references:
+                          - start: 44
+                            end: 52
+                            node:
+                              _key: 1
+                              parentPasal:
+                                _key: 53
+                                parentDocument: *ref_0
+                                _structureType: pasal
+                              _structureType: ayat
                         text: >-
-                          (2) Karantina Wilayah sebagaimana dimaksud pada ayat
-                          (1) dilaksanakan kepada seluruh anggota masyarakat di
+                          Karantina Wilayah sebagaimana dimaksud pada ayat (1)
+                          dilaksanakan kepada seluruh anggota masyarakat di
                           suatu wilayah apabila dari hasil konfirmasi
                           laboratorium sudah terjadi penyebaran penyakit antar
                           anggota masyarakat di wilayah tersebut.
@@ -1677,7 +2250,7 @@ babs:
                         _type: referenceText
                         references: []
                         text: >-
-                          (1) Pejabat Karantina Kesehatan wajib memberikan
+                          Pejabat Karantina Kesehatan wajib memberikan
                           penjelasan kepada masyarakat di wilayah setempat
                           sebelum melaksanakan Karantina Wilayah.
                     - _type: ayat
@@ -1686,27 +2259,26 @@ babs:
                         _type: referenceText
                         references: []
                         text: >-
-                          (2) Wilayah yang dikarantina diberi garis karantina
-                          dan dijaga terus menerus oleh Pejabat Karantina
-                          Kesehatan dan Kepolisian Negara Republik Indonesia
-                          yang berada di luar wilayah karantina. REPUBLIK
-                          INDONESIA - 34 -
+                          Wilayah yang dikarantina diberi garis karantina dan
+                          dijaga terus menerus oleh Pejabat Karantina Kesehatan
+                          dan Kepolisian Negara Republik Indonesia yang berada
+                          di luar wilayah karantina. REPUBLIK INDONESIA - 34 -
                     - _type: ayat
                       _key: 3
                       isi:
                         _type: referenceText
                         references: []
                         text: >-
-                          (3) Anggota masyarakat yang dikarantina tidak boleh
-                          keluar masuk wilayah karantina.
+                          Anggota masyarakat yang dikarantina tidak boleh keluar
+                          masuk wilayah karantina.
                     - _type: ayat
                       _key: 4
                       isi:
                         _type: referenceText
                         references: []
                         text: >-
-                          (4) Selama masa Karantina Wilayah ternyata salah satu
-                          atau beberapa anggota di wilayah tersebut ada yang
+                          Selama masa Karantina Wilayah ternyata salah satu atau
+                          beberapa anggota di wilayah tersebut ada yang
                           menderita penyakit Kedaruratan Kesehatan Masyarakat
                           yang sedang terjadi maka dilakukan tindakan Isolasi
                           dan segera dirujuk ke rumah sakit.
@@ -1721,20 +2293,28 @@ babs:
                         _type: referenceText
                         references: []
                         text: >-
-                          (1) Selama dalam Karantina Wilayah, kebutuhan hidup
-                          dasar orang dan makanan hewan ternak yang berada di
-                          wilayah karantina menjadi tanggung jawab Pemerintah
-                          Pusat.
+                          Selama dalam Karantina Wilayah, kebutuhan hidup dasar
+                          orang dan makanan hewan ternak yang berada di wilayah
+                          karantina menjadi tanggung jawab Pemerintah Pusat.
                     - _type: ayat
                       _key: 2
                       isi:
                         _type: referenceText
-                        references: []
+                        references:
+                          - start: 98
+                            end: 106
+                            node:
+                              _key: 1
+                              parentPasal:
+                                _key: 55
+                                parentDocument: *ref_0
+                                _structureType: pasal
+                              _structureType: ayat
                         text: >-
-                          (2) Tanggung jawab Pemerintah Pusat dalam
-                          penyelenggaraan Karantina Wilayah sebagaimana dimaksud
-                          pada ayat (1) dilakukan dengan melibatkan Pemerintah
-                          Daerah dan pihak yang terkait.
+                          Tanggung jawab Pemerintah Pusat dalam penyelenggaraan
+                          Karantina Wilayah sebagaimana dimaksud pada ayat (1)
+                          dilakukan dengan melibatkan Pemerintah Daerah dan
+                          pihak yang terkait.
         - _type: bagian
           _key: 4
           _judul: Bagian Keempat Karantina Rumah Sakit
@@ -1752,21 +2332,30 @@ babs:
                         _type: referenceText
                         references: []
                         text: >-
-                          (1) Kegiatan Karantina Rumah Sakit merupakan bagian
+                          Kegiatan Karantina Rumah Sakit merupakan bagian
                           respons dari Kedaruratan Kesehatan Masyarakat.
                     - _type: ayat
                       _key: 2
                       isi:
                         _type: referenceText
-                        references: []
+                        references:
+                          - start: 48
+                            end: 56
+                            node:
+                              _key: 1
+                              parentPasal:
+                                _key: 56
+                                parentDocument: *ref_0
+                                _structureType: pasal
+                              _structureType: ayat
                         text: >-
-                          (2) Karantina Rumah Sakit sebagaimana dimaksud pada
-                          ayat (1) dilaksanakan kepada seluruh orang yang
-                          berkunjung, orang yang bertugas, pasien dan Barang,
-                          serta apapun di suatu rumah sakit bila dibuktikan
-                          berdasarkan hasil konfirmasi laboratorium telah
-                          terjadi penularan penyakit yang ada di ruang isolasi
-                          keluar ruang isolasi. REPUBLIK INDONESIA . 35 -
+                          Karantina Rumah Sakit sebagaimana dimaksud pada ayat
+                          (1) dilaksanakan kepada seluruh orang yang berkunjung,
+                          orang yang bertugas, pasien dan Barang, serta apapun
+                          di suatu rumah sakit bila dibuktikan berdasarkan hasil
+                          konfirmasi laboratorium telah terjadi penularan
+                          penyakit yang ada di ruang isolasi keluar ruang
+                          isolasi. REPUBLIK INDONESIA . 35 -
               - _type: pasal
                 _key: 57
                 isi:
@@ -1778,7 +2367,7 @@ babs:
                         _type: referenceText
                         references: []
                         text: >-
-                          (1) Pejabat Karantina Kesehatan wajib memberikan
+                          Pejabat Karantina Kesehatan wajib memberikan
                           penjelasan kepada orang yang berkunjung, orang yang
                           bertugas di rumah sakit, dan pasien sebelum
                           melaksanakan Karantina Rumah Sakit.
@@ -1788,30 +2377,37 @@ babs:
                         _type: referenceText
                         references: []
                         text: >-
-                          (2) Rumah sakit yang dikarantina diberi garis
-                          karantina dan dijaga terus menerus oleh Pejabat
-                          Karantina Kesehatan, dan Kepolisian Negara Republik
-                          Indonesia yang berada di luar wilayah karantina.
+                          Rumah sakit yang dikarantina diberi garis karantina
+                          dan dijaga terus menerus oleh Pejabat Karantina
+                          Kesehatan, dan Kepolisian Negara Republik Indonesia
+                          yang berada di luar wilayah karantina.
                     - _type: ayat
                       _key: 3
                       isi:
                         _type: referenceText
-                        references: []
+                        references:
+                          - start: 108
+                            end: 116
+                            node:
+                              _key: 2
+                              parentPasal:
+                                _key: 57
+                                parentDocument: *ref_0
+                                _structureType: pasal
+                              _structureType: ayat
                         text: >-
-                          (3) Seluruh orang, Barang, dan/atau hewan yang berada
-                          di rumah sakit yang dikarantina sebagaimana dimaksud
-                          pada ayat (2) tidak boleh keluar dan masuk rumah
-                          sakit.
+                          Seluruh orang, Barang, dan/atau hewan yang berada di
+                          rumah sakit yang dikarantina sebagaimana dimaksud pada
+                          ayat (2) tidak boleh keluar dan masuk rumah sakit.
               - _type: pasal
                 _key: 58
                 isi:
                   _type: referenceText
                   references: []
                   text: >-
-                    Pasal 58 Selama dalam tindakan Karantina Rumah Sakit,
-                    kebutuhan hidup dasar seluruh orang yang berada di rumah
-                    sakit menjadi tanggung jawab Pemerintah Pusat dan/atau
-                    Pemerintah Daerah.
+                    Selama dalam tindakan Karantina Rumah Sakit, kebutuhan hidup
+                    dasar seluruh orang yang berada di rumah sakit menjadi
+                    tanggung jawab Pemerintah Pusat dan/atau Pemerintah Daerah.
         - _type: bagian
           _key: 5
           _judul: Bagian Kelima Pembatasan Sosial Berskala Besar
@@ -1829,36 +2425,45 @@ babs:
                         _type: referenceText
                         references: []
                         text: >-
-                          (1) Pembatasan Sosial Berskala Besar merupakan bagian
-                          dari respons Kedaruratan Kesehatan Masyarakat.
+                          Pembatasan Sosial Berskala Besar merupakan bagian dari
+                          respons Kedaruratan Kesehatan Masyarakat.
                     - _type: ayat
                       _key: 2
                       isi:
                         _type: referenceText
                         references: []
                         text: >-
-                          (2) Pembatasan Sosial Berskala Besar bertujuan
-                          mencegah meluasnya penyebaran penyakit Kedaruratan
-                          Kesehatan Masyarakat yang sedang terjadi antar orang
-                          di suatu wilayah tertentu. REPUBLIK INDONESIA - 36 -
+                          Pembatasan Sosial Berskala Besar bertujuan mencegah
+                          meluasnya penyebaran penyakit Kedaruratan Kesehatan
+                          Masyarakat yang sedang terjadi antar orang di suatu
+                          wilayah tertentu. REPUBLIK INDONESIA - 36 -
                     - _type: ayat
                       _key: 3
                       isi:
                         _type: referenceText
-                        references: []
+                        references:
+                          - start: 59
+                            end: 67
+                            node:
+                              _key: 1
+                              parentPasal:
+                                _key: 59
+                                parentDocument: *ref_0
+                                _structureType: pasal
+                              _structureType: ayat
                         text: >-
-                          (3) Pembatasan Sosial Berskala Besar sebagaimana
-                          dimaksud pada ayat (1) paling sedikit meliputi: a.
-                          peliburan sekolah dan tempat kerja: b. pembatasan
-                          kegiatan keagamaan, dan/atau Cc. pembatasan kegiatan
-                          di tempat atau fasilitas umum.
+                          Pembatasan Sosial Berskala Besar sebagaimana dimaksud
+                          pada ayat (1) paling sedikit meliputi: a. peliburan
+                          sekolah dan tempat kerja: b. pembatasan kegiatan
+                          keagamaan, dan/atau Cc. pembatasan kegiatan di tempat
+                          atau fasilitas umum.
                     - _type: ayat
                       _key: 4
                       isi:
                         _type: referenceText
                         references: []
                         text: >-
-                          (4) Penyelenggaraan Pembatasan Sosial Berskala Besar
+                          Penyelenggaraan Pembatasan Sosial Berskala Besar
                           berkoordinasi dan bekerja sama dengan berbagai pihak
                           terkait sesuai dengan ketentuan peraturan
                           perundangan-undangan.
@@ -1868,13 +2473,13 @@ babs:
                   _type: referenceText
                   references: []
                   text: >-
-                    Pasal 60 Ketentuan lebih lanjut mengenai kriteria dan
-                    pelaksanaan Karantina Rumah, Karantina Wilayah, Karantina
-                    Rumah Sakit, dan Pembatasan Sosial Berskala Besar diatur
-                    dengan Peraturan Pemerintah.
+                    Ketentuan lebih lanjut mengenai kriteria dan pelaksanaan
+                    Karantina Rumah, Karantina Wilayah, Karantina Rumah Sakit,
+                    dan Pembatasan Sosial Berskala Besar diatur dengan Peraturan
+                    Pemerintah.
   - _type: bab
     _key: 8
-    _judul: BAB VIII DOKUMEN KARANTINA KESEHATAN
+    _judul: DOKUMEN KARANTINA KESEHATAN
     isi:
       _type: pasals
       pasals:
@@ -1889,29 +2494,38 @@ babs:
                   _type: referenceText
                   references: []
                   text: >-
-                    (1) Dokumen Karantina Kesehatan harus dimiliki oleh setiap
-                    Alat Angkut, orang, dan Barang yang masuk dan/atau keluar
-                    dari dalam atau luar wilayah negara Indonesia.
+                    Dokumen Karantina Kesehatan harus dimiliki oleh setiap Alat
+                    Angkut, orang, dan Barang yang masuk dan/atau keluar dari
+                    dalam atau luar wilayah negara Indonesia.
               - _type: ayat
                 _key: 2
                 isi:
                   _type: referenceText
-                  references: []
+                  references:
+                    - start: 54
+                      end: 62
+                      node:
+                        _key: 1
+                        parentPasal:
+                          _key: 61
+                          parentDocument: *ref_0
+                          _structureType: pasal
+                        _structureType: ayat
                   text: >-
-                    (2) Dokumen Karantina Kesehatan sebagaimana dimaksud pada
-                    ayat (1) dimaksudkan sebagai alat pengawasan dan pencegahan
-                    masuk dan/atau keluarnya penyakit dan Faktor Risiko
-                    Kesehatan Masyarakat yang menjadi sumber penularan penyakit
-                    yang dapat menimbulkan Kedaruratan Kesehatan Masyarakat.
-                    REPUBLIK INDONESIA - 37 -
+                    Dokumen Karantina Kesehatan sebagaimana dimaksud pada ayat
+                    (1) dimaksudkan sebagai alat pengawasan dan pencegahan masuk
+                    dan/atau keluarnya penyakit dan Faktor Risiko Kesehatan
+                    Masyarakat yang menjadi sumber penularan penyakit yang dapat
+                    menimbulkan Kedaruratan Kesehatan Masyarakat. REPUBLIK
+                    INDONESIA - 37 -
               - _type: ayat
                 _key: 3
                 isi:
                   _type: referenceText
                   references: []
                   text: >-
-                    (3) Dokumen Karantina Kesehatan memuat penjelasan suatu
-                    keadaan yang diketahui secara pasti sebagai hasil Pengawasan
+                    Dokumen Karantina Kesehatan memuat penjelasan suatu keadaan
+                    yang diketahui secara pasti sebagai hasil Pengawasan
                     Kekarantinaan Kesehatan.
         - _type: pasal
           _key: 62
@@ -1919,8 +2533,8 @@ babs:
             _type: referenceText
             references: []
             text: >-
-              Pasal 62 Dokumen Karantina Kesehatan untuk Alat Angkut terdiri
-              atas: a. deklarasi kesehatan: b. sertifikat Persetujuan Karantina
+              Dokumen Karantina Kesehatan untuk Alat Angkut terdiri atas: a.
+              deklarasi kesehatan: b. sertifikat Persetujuan Karantina
               Kesehatan: Cc. sertifikat sanitasi: d. sertifikat obat-obatan dan
               alat kesehatan: e. buku kesehatan untuk Kapal: dan f. Surat
               Persetujuan Berlayar Karantina Kesehatan (Port Health Ouarantine
@@ -1934,9 +2548,36 @@ babs:
                 _key: 1
                 isi:
                   _type: referenceText
-                  references: []
+                  references:
+                    - start: 47
+                      end: 55
+                      node:
+                        _key: 62
+                        parentDocument: *ref_0
+                        _structureType: pasal
+                    - start: 326
+                      end: 334
+                      node:
+                        _key: 29
+                        parentDocument: *ref_0
+                        _structureType: pasal
+                    - start: 469
+                      end: 477
+                      node:
+                        _key: 36
+                        parentDocument: *ref_0
+                        _structureType: pasal
+                    - start: 175
+                      end: 192
+                      node:
+                        parentPasal:
+                          parentDocument: *ref_0
+                          _key: 19
+                          _structureType: pasal
+                        _key: 2
+                        _structureType: ayat
                   text: >-
-                    (1) Deklarasi kesehatan sebagaimana dimaksud dalam Pasal 62
+                    Deklarasi kesehatan sebagaimana dimaksud dalam Pasal 62
                     huruf a berupa: a. Deklarasi Kesehatan Maritim (Maritime
                     Declaration of Health) untuk Kapal sebagaimana dimaksud
                     dalam Pasal 19 ayat (2): b. Deklarasi Kesehatan Penerbangan
@@ -1949,20 +2590,35 @@ babs:
                 _key: 2
                 isi:
                   _type: referenceText
-                  references: []
+                  references:
+                    - start: 46
+                      end: 54
+                      node:
+                        _key: 1
+                        parentPasal:
+                          _key: 63
+                          parentDocument: *ref_0
+                          _structureType: pasal
+                        _structureType: ayat
                   text: >-
-                    (2) Deklarasi kesehatan sebagaimana dimaksud pada ayat (1)
-                    harus diisi dan diberikan oleh Nakhoda, Kapten Penerbang,
-                    atau pengemudi Kendaraan Darat kepada Pejabat Karantina
-                    Kesehatan pada saat kedatangan Alat Angkut.
+                    Deklarasi kesehatan sebagaimana dimaksud pada ayat (1) harus
+                    diisi dan diberikan oleh Nakhoda, Kapten Penerbang, atau
+                    pengemudi Kendaraan Darat kepada Pejabat Karantina Kesehatan
+                    pada saat kedatangan Alat Angkut.
         - _type: pasal
           _key: 64
           isi:
             _type: referenceText
-            references: []
+            references:
+              - start: 47
+                end: 55
+                node:
+                  _key: 62
+                  parentDocument: *ref_0
+                  _structureType: pasal
             text: >-
-              Pasal 64 Sertifikat sanitasi sebagaimana dimaksud dalam Pasal 62
-              huruf c berupa: a. Sertifikat Bebas Tindakan Sanitasi Kapal (Ship
+              Sertifikat sanitasi sebagaimana dimaksud dalam Pasal 62 huruf c
+              berupa: a. Sertifikat Bebas Tindakan Sanitasi Kapal (Ship
               Sanitation Control Exemption Certificate) dan Sertifikat Tindakan
               Sanitasi Kapal (Ship Sanitation Control Certificate) untuk Kapal,
               dan b. Sertifikat Bebas Hapus Serangga (Disinsection Exemption
@@ -1975,7 +2631,7 @@ babs:
             _type: referenceText
             references: []
             text: >-
-              Pasal 65 Dokumen Karantina Kesehatan untuk orang terdiri atas: a.
+              Dokumen Karantina Kesehatan untuk orang terdiri atas: a.
               Sertifikat Vaksinasi Internasional (International Certificate of
               Vaccination or Prophylaxis), dan b. surat keterangan pengangkutan
               orang sakit.
@@ -1990,8 +2646,8 @@ babs:
                   _type: referenceText
                   references: []
                   text: >-
-                    (1) Dokumen Karantina Kesehatan untuk Barang terdiri atas:
-                    a. surat izin pengangkutan jenazah atau abu jenazah dari
+                    Dokumen Karantina Kesehatan untuk Barang terdiri atas: a.
+                    surat izin pengangkutan jenazah atau abu jenazah dari
                     Pelabuhan atau Bandar Udara (Human Remains Transport
                     Certificate): dan REPUBLIK INDONESIA - 39 - b. sertifikat
                     kesehatan untuk bahan berbahaya.
@@ -2001,8 +2657,8 @@ babs:
                   _type: referenceText
                   references: []
                   text: >-
-                    (2) Dalam hal diperlukan Dokumen Karantina Kesehatan untuk
-                    obat, makanan, kosmetika, alat kesehatan, dan bahan adiktif
+                    Dalam hal diperlukan Dokumen Karantina Kesehatan untuk obat,
+                    makanan, kosmetika, alat kesehatan, dan bahan adiktif
                     berdasarkan permintaan negara tertentu, Pejabat Karantina
                     Kesehatan menerbitkan sertifikat kesehatan atau surat
                     keterangan kesehatan obat, makanan, kosmetika, alat
@@ -2013,9 +2669,9 @@ babs:
             _type: referenceText
             references: []
             text: >-
-              Pasal 67 Dokumen Karantina Kesehatan dikeluarkan oleh Pejabat
-              Karantina Kesehatan di Pelabuhan, Bandar Udara, atau Pos Lintas
-              Batas Darat Negara.
+              Dokumen Karantina Kesehatan dikeluarkan oleh Pejabat Karantina
+              Kesehatan di Pelabuhan, Bandar Udara, atau Pos Lintas Batas Darat
+              Negara.
         - _type: pasal
           _key: 68
           isi:
@@ -2025,45 +2681,72 @@ babs:
                 _key: 1
                 isi:
                   _type: referenceText
-                  references: []
+                  references:
+                    - start: 121
+                      end: 129
+                      node:
+                        _key: 63
+                        parentDocument: *ref_0
+                        _structureType: pasal
+                    - start: 131
+                      end: 139
+                      node:
+                        _key: 64
+                        parentDocument: *ref_0
+                        _structureType: pasal
+                    - start: 145
+                      end: 153
+                      node:
+                        _key: 65
+                        parentDocument: *ref_0
+                        _structureType: pasal
                   text: >-
-                    (1) Menteri dapat menetapkan perubahan atau penambahan
-                    Dokumen Karantina Kesehatan selain dokumen sebagaimana
-                    dimaksud dalam Pasal 63, Pasal 64, dan Pasal 65 huruf a.
+                    Menteri dapat menetapkan perubahan atau penambahan Dokumen
+                    Karantina Kesehatan selain dokumen sebagaimana dimaksud
+                    dalam Pasal 63, Pasal 64, dan Pasal 65 huruf a.
               - _type: ayat
                 _key: 2
                 isi:
                   _type: referenceText
-                  references: []
+                  references:
+                    - start: 105
+                      end: 113
+                      node:
+                        _key: 1
+                        parentPasal:
+                          _key: 68
+                          parentDocument: *ref_0
+                          _structureType: pasal
+                        _structureType: ayat
                   text: >-
-                    (2) Menteri dalam menetapkan perubahan atau penambahan
-                    Dokumen Karantina Kesehatan sebagaimana dimaksud pada ayat
-                    (1) mempertimbangkan hasil pengawasan dan evaluasi serta
-                    masukan dari berbagai pemangku kepentingan kekarantinaan
-                    kesehatan masyarakat.
+                    Menteri dalam menetapkan perubahan atau penambahan Dokumen
+                    Karantina Kesehatan sebagaimana dimaksud pada ayat (1)
+                    mempertimbangkan hasil pengawasan dan evaluasi serta masukan
+                    dari berbagai pemangku kepentingan kekarantinaan kesehatan
+                    masyarakat.
         - _type: pasal
           _key: 69
           isi:
             _type: referenceText
             references: []
             text: >-
-              Pasal 69 Dokumen Karantina Kesehatan tidak berlaku apabila: a.
-              masa berlaku sudah berakhir: b. berubah nama: Cc. berganti bendera
-              untuk Kapal: REPUBLIK INDONESIA - 40 - d. keterangan dalam dokumen
-              tidak sesuai dengan keadaan sebenarnya, e. diperoleh secara tidak
-              sah, dan/atau f. dicoret, dihapus, atau dinyatakan rusak.
+              Dokumen Karantina Kesehatan tidak berlaku apabila: a. masa berlaku
+              sudah berakhir: b. berubah nama: Cc. berganti bendera untuk Kapal:
+              REPUBLIK INDONESIA - 40 - d. keterangan dalam dokumen tidak sesuai
+              dengan keadaan sebenarnya, e. diperoleh secara tidak sah, dan/atau
+              f. dicoret, dihapus, atau dinyatakan rusak.
         - _type: pasal
           _key: 70
           isi:
             _type: referenceText
             references: []
             text: >-
-              Pasal 70 Ketentuan lebih lanjut mengenai bentuk, isi, tata cara
-              pengajuan dan penerbitan, dan pembatalan Dokumen Karantina
-              Kesehatan diatur dengan Peraturan Menteri.
+              Ketentuan lebih lanjut mengenai bentuk, isi, tata cara pengajuan
+              dan penerbitan, dan pembatalan Dokumen Karantina Kesehatan diatur
+              dengan Peraturan Menteri.
   - _type: bab
     _key: 9
-    _judul: BAB IX SUMBER DAYA KEKARANTINAAN KESEHATAN
+    _judul: SUMBER DAYA KEKARANTINAAN KESEHATAN
     isi:
       _type: bagians
       bagians:
@@ -2079,10 +2762,10 @@ babs:
                   _type: referenceText
                   references: []
                   text: >-
-                    Pasal 71 Sumber daya dalam penyelenggaraan Kekarantinaan
-                    Kesehatan meliputi: a. fasilitas dan perbekalan
-                    Kekarantinaan Kesehatan: b. Pejabat Karantina Kesehatan: C.
-                    penelitian dan pengembangan: dan d. pendanaan.
+                    Sumber daya dalam penyelenggaraan Kekarantinaan Kesehatan
+                    meliputi: a. fasilitas dan perbekalan Kekarantinaan
+                    Kesehatan: b. Pejabat Karantina Kesehatan: C. penelitian dan
+                    pengembangan: dan d. pendanaan.
         - _type: bagian
           _key: 2
           _judul: Bagian Kedua Fasilitas dan Perbekalan Kekarantinaan Kesehatan
@@ -2100,7 +2783,7 @@ babs:
                         _type: referenceText
                         references: []
                         text: >-
-                          (1) Fasilitas dalam penyelenggaraan Kekarantinaan
+                          Fasilitas dalam penyelenggaraan Kekarantinaan
                           Kesehatan meliputi: a. peralatan deteksi dan respons
                           cepat: REPUBLIK INDONESIA - 41 - b. ruang wawancara
                           atau observasi: Cc. ruang diagnosis, d. asrama
@@ -2111,10 +2794,19 @@ babs:
                       _key: 2
                       isi:
                         _type: referenceText
-                        references: []
+                        references:
+                          - start: 36
+                            end: 44
+                            node:
+                              _key: 1
+                              parentPasal:
+                                _key: 72
+                                parentDocument: *ref_0
+                                _structureType: pasal
+                              _structureType: ayat
                         text: >-
-                          (2) Fasilitas sebagaimana dimaksud pada ayat (1)
-                          selain berfungsi dalam penyelenggaraan Kekarantinaan
+                          Fasilitas sebagaimana dimaksud pada ayat (1) selain
+                          berfungsi dalam penyelenggaraan Kekarantinaan
                           Kesehatan juga sebagai sarana pendidikan dan pelatihan
                           serta pengembangan ilmu pengetahuan dan teknologi
                           Kekarantinaan Kesehatan.
@@ -2124,9 +2816,9 @@ babs:
                         _type: referenceText
                         references: []
                         text: >-
-                          (3) Perbekalan Kekarantinaan Kesehatan meliputi
-                          sediaan farmasi, alat kesehatan, dan perbekalan
-                          kesehatan lainnya yang diperlukan.
+                          Perbekalan Kekarantinaan Kesehatan meliputi sediaan
+                          farmasi, alat kesehatan, dan perbekalan kesehatan
+                          lainnya yang diperlukan.
         - _type: bagian
           _key: 3
           _judul: Bagian Ketiga Pejabat Karantina Kesehatan
@@ -2139,21 +2831,20 @@ babs:
                   _type: referenceText
                   references: []
                   text: >-
-                    Pasal 73 Pejabat Karantina Kesehatan merupakan pejabat
-                    fungsional di bidang kesehatan yang memiliki kompetensi dan
-                    kualifikasi di bidang Kekarantinaan Kesehatan serta
-                    ditugaskan di instansi Kekarantinaan Kesehatan di Pintu
-                    Masuk dan di wilayah.
+                    Pejabat Karantina Kesehatan merupakan pejabat fungsional di
+                    bidang kesehatan yang memiliki kompetensi dan kualifikasi di
+                    bidang Kekarantinaan Kesehatan serta ditugaskan di instansi
+                    Kekarantinaan Kesehatan di Pintu Masuk dan di wilayah.
               - _type: pasal
                 _key: 74
                 isi:
                   _type: referenceText
                   references: []
                   text: >-
-                    Pasal 74 Perekrutan Pejabat Karantina Kesehatan dalam
-                    penyelenggaraan Kekarantinaan Kesehatan diselenggarakan
-                    melalui pendidikan dan pelatihan yang dilaksanakan oleh
-                    Pemerintah Pusat. REPUBLIK INDONESIA - 42 -
+                    Perekrutan Pejabat Karantina Kesehatan dalam penyelenggaraan
+                    Kekarantinaan Kesehatan diselenggarakan melalui pendidikan
+                    dan pelatihan yang dilaksanakan oleh Pemerintah Pusat.
+                    REPUBLIK INDONESIA - 42 -
               - _type: pasal
                 _key: 75
                 isi:
@@ -2165,25 +2856,34 @@ babs:
                         _type: referenceText
                         references: []
                         text: >-
-                          (1) Pemerintah Pusat mengatur penempatan Pejabat
-                          Karantina Kesehatan di Pintu Masuk dalam rangka
-                          penyelenggaraan Kekarantinaan Kesehatan.
+                          Pemerintah Pusat mengatur penempatan Pejabat Karantina
+                          Kesehatan di Pintu Masuk dalam rangka penyelenggaraan
+                          Kekarantinaan Kesehatan.
                     - _type: ayat
                       _key: 2
                       isi:
                         _type: referenceText
                         references: []
                         text: >-
-                          (2) Pemerintah Daerah mengatur penempatan Pejabat
+                          Pemerintah Daerah mengatur penempatan Pejabat
                           Karantina Kesehatan di wilayah dalam rangka
                           penyelenggaraan Kekarantinaan Kesehatan.
                     - _type: ayat
                       _key: 3
                       isi:
                         _type: referenceText
-                        references: []
+                        references:
+                          - start: 160
+                            end: 177
+                            node:
+                              parentPasal:
+                                parentDocument: *ref_0
+                                _key: 15
+                                _structureType: pasal
+                              _key: 2
+                              _structureType: ayat
                         text: >-
-                          (3) Dalam menyelenggarakan Kekarantinaan Kesehatan,
+                          Dalam menyelenggarakan Kekarantinaan Kesehatan,
                           Pejabat Karantina Kesehatan berwenang: a. melakukan
                           tindakan Kekarantinaan Kesehatan sebagaimana dimaksud
                           dalam Pasal 15 ayat (2), b. menetapkan tindakan
@@ -2196,11 +2896,20 @@ babs:
                       _key: 4
                       isi:
                         _type: referenceText
-                        references: []
+                        references:
+                          - start: 91
+                            end: 99
+                            node:
+                              _key: 3
+                              parentPasal:
+                                _key: 75
+                                parentDocument: *ref_0
+                                _structureType: pasal
+                              _structureType: ayat
                         text: >-
-                          (4) Ketentuan lebih lanjut mengenai tata cara
-                          pelaksanaan kewenangan sebagaimana dimaksud pada ayat
-                          (3) diatur dengan Peraturan Menteri.
+                          Ketentuan lebih lanjut mengenai tata cara pelaksanaan
+                          kewenangan sebagaimana dimaksud pada ayat (3) diatur
+                          dengan Peraturan Menteri.
               - _type: pasal
                 _key: 76
                 isi:
@@ -2212,7 +2921,7 @@ babs:
                         _type: referenceText
                         references: []
                         text: >-
-                          (1) Pejabat Karantina Kesehatan dalam melaksanakan
+                          Pejabat Karantina Kesehatan dalam melaksanakan
                           tugasnya berhak mendapatkan: a. pelindungan hukum: b.
                           pelindungan kesehatan dari risiko kerusakan organ, dan
                           c. keselamatan jiwa.
@@ -2222,7 +2931,7 @@ babs:
                         _type: referenceText
                         references: []
                         text: >-
-                          (2) Setiap Pejabat Karantina Kesehatan yang melakukan
+                          Setiap Pejabat Karantina Kesehatan yang melakukan
                           kelalaian dalam melaksanakan tugasnya dikenakan sanksi
                           sesuai dengan ketentuan peraturan perundang-undangan.
                           REPUBLIK INDONESIA - 43 -
@@ -2232,7 +2941,7 @@ babs:
                         _type: referenceText
                         references: []
                         text: >-
-                          (3) Setiap Pejabat Karantina Kesehatan berhak mendapat
+                          Setiap Pejabat Karantina Kesehatan berhak mendapat
                           pelindungan hukum dalam melaksanakan tugas sepanjang
                           sesuai dengan standar prosedur operasional dan
                           ketentuan peraturan perundang- undangan.
@@ -2253,26 +2962,47 @@ babs:
                         _type: referenceText
                         references: []
                         text: >-
-                          (1) Penelitian dan pengembangan dilaksanakan untuk
-                          menapis dan menetapkan ilmu pengetahuan dan teknologi
-                          tepat guna yang dipergunakan dalam rangka
-                          penyelenggaraan Kekarantinaan Kesehatan.
+                          Penelitian dan pengembangan dilaksanakan untuk menapis
+                          dan menetapkan ilmu pengetahuan dan teknologi tepat
+                          guna yang dipergunakan dalam rangka penyelenggaraan
+                          Kekarantinaan Kesehatan.
                     - _type: ayat
                       _key: 2
                       isi:
                         _type: referenceText
-                        references: []
+                        references:
+                          - start: 54
+                            end: 62
+                            node:
+                              _key: 1
+                              parentPasal: &ref_15
+                                _key: 77
+                                parentDocument: *ref_0
+                                _structureType: pasal
+                              _structureType: ayat
                         text: >-
-                          (2) Penelitian dan pengembangan sebagaimana dimaksud
-                          pada ayat (1), dilaksanakan dengan memperhatikan
-                          kesehatan dan keselamatan masyarakat.
+                          Penelitian dan pengembangan sebagaimana dimaksud pada
+                          ayat (1), dilaksanakan dengan memperhatikan kesehatan
+                          dan keselamatan masyarakat.
                     - _type: ayat
                       _key: 3
                       isi:
                         _type: referenceText
-                        references: []
+                        references:
+                          - start: 86
+                            end: 94
+                            node:
+                              _key: 2
+                              parentPasal: *ref_15
+                              _structureType: ayat
+                          - start: 73
+                            end: 81
+                            node:
+                              _key: 1
+                              parentPasal: *ref_15
+                              _structureType: ayat
                         text: >-
-                          (3) Ketentuan mengenai penelitian dan pengembangan
+                          Ketentuan mengenai penelitian dan pengembangan
                           sebagaimana dimaksud pada ayat (1) dan ayat (2) diatur
                           dengan Peraturan Menteri.
         - _type: bagian
@@ -2292,7 +3022,7 @@ babs:
                         _type: referenceText
                         references: []
                         text: >-
-                          (1) Pendanaan kegiatan penyelenggaraan Kekarantinaan
+                          Pendanaan kegiatan penyelenggaraan Kekarantinaan
                           Kesehatan bersumber dari anggaran pendapatan dan
                           belanja negara, anggaran pendapatan dan belanja
                           daerah, dan/atau masyarakat.
@@ -2302,7 +3032,7 @@ babs:
                         _type: referenceText
                         references: []
                         text: >-
-                          (2) Pendanaan kegiatan penyelenggaraan Kekarantinaan
+                          Pendanaan kegiatan penyelenggaraan Kekarantinaan
                           Kesehatan di Pintu Masuk pada Alat Angkut di luar
                           situasi Kedaruratan Kesehatan Masyarakat yang
                           meresahkan dunia dibebankan pada pemilik Alat Angkut.
@@ -2313,12 +3043,12 @@ babs:
                         _type: referenceText
                         references: []
                         text: >-
-                          (3) Pendanaan mengenai pelaksanaan tindakan penyehatan
+                          Pendanaan mengenai pelaksanaan tindakan penyehatan
                           yang dimohonkan pengelola Alat Angkut menjadi tanggung
                           jawab pemohon dan merupakan penerimaan negara.
   - _type: bab
     _key: 10
-    _judul: BAB X INFORMASI KEKARANTINAAN KESEHATAN
+    _judul: INFORMASI KEKARANTINAAN KESEHATAN
     isi:
       _type: pasals
       pasals:
@@ -2328,9 +3058,9 @@ babs:
             _type: referenceText
             references: []
             text: >-
-              Pasal 79 Informasi Kekarantinaan Kesehatan diselenggarakan sebagai
-              upaya pencegahan dan pemberantasan masuk dan/atau keluarnya
-              kejadian dan/atau faktor risiko yang dapat menyebabkan Kedaruratan
+              Informasi Kekarantinaan Kesehatan diselenggarakan sebagai upaya
+              pencegahan dan pemberantasan masuk dan/atau keluarnya kejadian
+              dan/atau faktor risiko yang dapat menyebabkan Kedaruratan
               Kesehatan Masyarakat.
         - _type: pasal
           _key: 80
@@ -2343,15 +3073,24 @@ babs:
                   _type: referenceText
                   references: []
                   text: >-
-                    (1) Penyelenggaraan informasi Kekarantinaan Kesehatan
+                    Penyelenggaraan informasi Kekarantinaan Kesehatan
                     dilaksanakan oleh Pemerintah Pusat dan Pemerintah Daerah.
               - _type: ayat
                 _key: 2
                 isi:
                   _type: referenceText
-                  references: []
+                  references:
+                    - start: 76
+                      end: 84
+                      node:
+                        _key: 1
+                        parentPasal: &ref_16
+                          _key: 80
+                          parentDocument: *ref_0
+                          _structureType: pasal
+                        _structureType: ayat
                   text: >-
-                    (2) Penyelenggaraan informasi Kekarantinaan Kesehatan
+                    Penyelenggaraan informasi Kekarantinaan Kesehatan
                     sebagaimana dimaksud pada ayat (1) dapat berkoordinasi dan
                     bekerja sama dengan lembaga kesehatan, baik dalam negeri
                     maupun luar negeri.
@@ -2359,9 +3098,21 @@ babs:
                 _key: 3
                 isi:
                   _type: referenceText
-                  references: []
+                  references:
+                    - start: 89
+                      end: 97
+                      node:
+                        _key: 2
+                        parentPasal: *ref_16
+                        _structureType: ayat
+                    - start: 76
+                      end: 84
+                      node:
+                        _key: 1
+                        parentPasal: *ref_16
+                        _structureType: ayat
                   text: >-
-                    (3) Penyelenggaraan informasi Kekarantinaan Kesehatan
+                    Penyelenggaraan informasi Kekarantinaan Kesehatan
                     sebagaimana dimaksud pada ayat (1) dan ayat (2) dilaksanakan
                     sesuai dengan ketentuan peraturan perundang-undangan.
         - _type: pasal
@@ -2370,14 +3121,14 @@ babs:
             _type: referenceText
             references: []
             text: >-
-              Pasal 81 Dalam rangka penyelenggaraan informasi Kekarantinaan
-              Kesehatan, Pemerintah Pusat memberi wewenang kepada Pejabat
-              Karantina Kesehatan untuk berkoordinasi dan bekerja sama dengan
+              Dalam rangka penyelenggaraan informasi Kekarantinaan Kesehatan,
+              Pemerintah Pusat memberi wewenang kepada Pejabat Karantina
+              Kesehatan untuk berkoordinasi dan bekerja sama dengan
               badan/lembaga kesehatan, baik dari dalam negeri maupun luar
               negeri. REPUBLIK INDONESIA - 45 -
   - _type: bab
     _key: 11
-    _judul: BAB XI PEMBINAAN DAN PENGAWASAN
+    _judul: PEMBINAAN DAN PENGAWASAN
     isi:
       _type: bagians
       bagians:
@@ -2398,8 +3149,8 @@ babs:
                         _type: referenceText
                         references: []
                         text: >-
-                          (1) Pemerintah Pusat melakukan pembinaan terhadap
-                          semua kegiatan yang berkaitan dengan penyelenggaraan
+                          Pemerintah Pusat melakukan pembinaan terhadap semua
+                          kegiatan yang berkaitan dengan penyelenggaraan
                           Kekarantinaan Kesehatan di Pintu Masuk.
                     - _type: ayat
                       _key: 2
@@ -2407,22 +3158,37 @@ babs:
                         _type: referenceText
                         references: []
                         text: >-
-                          (2) Pemerintah Pusat melakukan pembinaan terhadap
-                          semua kegiatan yang berkaitan dengan penyelenggaraan
+                          Pemerintah Pusat melakukan pembinaan terhadap semua
+                          kegiatan yang berkaitan dengan penyelenggaraan
                           Kekarantinaan Kesehatan di wilayah dengan melibatkan
                           Pemerintah Daerah.
                     - _type: ayat
                       _key: 3
                       isi:
                         _type: referenceText
-                        references: []
+                        references:
+                          - start: 49
+                            end: 57
+                            node:
+                              _key: 2
+                              parentPasal: &ref_17
+                                _key: 82
+                                parentDocument: *ref_0
+                                _structureType: pasal
+                              _structureType: ayat
+                          - start: 36
+                            end: 44
+                            node:
+                              _key: 1
+                              parentPasal: *ref_17
+                              _structureType: ayat
                         text: >-
-                          (3) Pembinaan sebagaimana dimaksud pada ayat (1) dan
-                          ayat (2) diarahkan untuk: a. meningkatkan mutu
-                          pelayanan dan profesionalisme Pejabat Karantina
-                          Kesehatan sesuai dengan perkembangan ilmu pengetahuan
-                          dan teknologi dalam rangka kerja sama antarnegara baik
-                          secara bilateral, regional, dan internasional, b.
+                          Pembinaan sebagaimana dimaksud pada ayat (1) dan ayat
+                          (2) diarahkan untuk: a. meningkatkan mutu pelayanan
+                          dan profesionalisme Pejabat Karantina Kesehatan sesuai
+                          dengan perkembangan ilmu pengetahuan dan teknologi
+                          dalam rangka kerja sama antarnegara baik secara
+                          bilateral, regional, dan internasional, b.
                           meningkatkan partisipasi masyarakat dalam menunjang
                           peningkatan penyelenggaraan Kekarantinaan Kesehatan:
                           dan c. meningkatkan keterpaduan berbagai sektor
@@ -2432,11 +3198,23 @@ babs:
                       _key: 4
                       isi:
                         _type: referenceText
-                        references: []
+                        references:
+                          - start: 81
+                            end: 89
+                            node:
+                              _key: 2
+                              parentPasal: *ref_17
+                              _structureType: ayat
+                          - start: 68
+                            end: 76
+                            node:
+                              _key: 1
+                              parentPasal: *ref_17
+                              _structureType: ayat
                         text: >-
-                          (4) Ketentuan lebih lanjut mengenai pembinaan
-                          sebagaimana dimaksud pada ayat (1) dan ayat (2) diatur
-                          dengan Peraturan Menteri. REPUBLIK INDONESIA - 46 -
+                          Ketentuan lebih lanjut mengenai pembinaan sebagaimana
+                          dimaksud pada ayat (1) dan ayat (2) diatur dengan
+                          Peraturan Menteri. REPUBLIK INDONESIA - 46 -
         - _type: bagian
           _key: 2
           _judul: Bagian Kedua Pengawasan
@@ -2454,8 +3232,8 @@ babs:
                         _type: referenceText
                         references: []
                         text: >-
-                          (1) Pemerintah Pusat melakukan pengawasan terhadap
-                          semua kegiatan yang berkaitan dengan penyelenggaraan
+                          Pemerintah Pusat melakukan pengawasan terhadap semua
+                          kegiatan yang berkaitan dengan penyelenggaraan
                           Kekarantinaan Kesehatan di Pelabuhan, Bandar Udara,
                           dan Pos Lintas Batas Darat Negara.
                     - _type: ayat
@@ -2464,21 +3242,30 @@ babs:
                         _type: referenceText
                         references: []
                         text: >-
-                          (2) Pemerintah Daerah melakukan pengawasan terhadap
+                          Pemerintah Daerah melakukan pengawasan terhadap
                           kegiatan yang berkaitan dengan penyelenggaraan
                           Kekarantinaan Kesehatan di daerah.
                     - _type: ayat
                       _key: 3
                       isi:
                         _type: referenceText
-                        references: []
+                        references:
+                          - start: 69
+                            end: 77
+                            node:
+                              _key: 1
+                              parentPasal:
+                                _key: 83
+                                parentDocument: *ref_0
+                                _structureType: pasal
+                              _structureType: ayat
                         text: >-
-                          (3) Ketentuan lebih lanjut mengenai pengawasan
-                          sebagaimana dimaksud pada ayat (1) diatur dengan
-                          Peraturan Menteri.
+                          Ketentuan lebih lanjut mengenai pengawasan sebagaimana
+                          dimaksud pada ayat (1) diatur dengan Peraturan
+                          Menteri.
   - _type: bab
     _key: 12
-    _judul: BAB XII PENYIDIKAN
+    _judul: PENYIDIKAN
     isi:
       _type: pasals
       pasals:
@@ -2488,36 +3275,36 @@ babs:
             _type: referenceText
             references: []
             text: >-
-              Pasal 84 Selain penyidik pejabat Kepolisian Negara Republik
-              Indonesia, pejabat pegawai negeri sipil tertentu di lingkungan
-              kementerian yang menyelenggarakan urusan pemerintahan di bidang
-              kesehatan diberi wewenang khusus sebagai penyidik sebagaimana
-              dimaksud dalam Undang-Undang yang mengatur mengenai hukum acara
-              pidana untuk melakukan penyidikan tindak pidana di bidang
-              Kekarantinaan Kesehatan. REPUBLIK INDONESIA - 47 -
+              Selain penyidik pejabat Kepolisian Negara Republik Indonesia,
+              pejabat pegawai negeri sipil tertentu di lingkungan kementerian
+              yang menyelenggarakan urusan pemerintahan di bidang kesehatan
+              diberi wewenang khusus sebagai penyidik sebagaimana dimaksud dalam
+              Undang-Undang yang mengatur mengenai hukum acara pidana untuk
+              melakukan penyidikan tindak pidana di bidang Kekarantinaan
+              Kesehatan. REPUBLIK INDONESIA - 47 -
         - _type: pasal
           _key: 85
           isi:
             _type: referenceText
             references: []
             text: >-
-              Pasal 85 PPNS Kekarantinaan Kesehatan berwenang: a. menerima
-              laporan tentang adanya tindak pidana di bidang Kekarantinaan
-              Kesehatan: b. mencari keterangan dan alat bukti, c. melakukan
-              tindakan pertama di tempat kejadian, d. melarang setiap orang
-              meninggalkan atau memasuki tempat kejadian perkara untuk
-              kepentingan penyidikan, e. memanggil, memeriksa, menggeledah,
-              menangkap, atau menahan seseorang yang disangka melakukan tindak
-              pidana di bidang Kekarantinaan Kesehatan: I. menahan, memeriksa,
-              dan menyita dokumen: g. menyuruh berhenti orang yang dicurigai
-              atau tersangka dan memeriksa identitas dirinya: h. memeriksa atau
-              menyita surat, dokumen, atau benda yang ada hubungannya dengan
-              tindak pidana Kekarantinaan Kesehatan: i. memanggil seseorang
-              untuk diperiksa dan didengar keterangannya sebagai tersangka atau
-              saksi: j. mendatangkan ahli yang diperlukan dalam hubungannya
-              dengan pemeriksaan perkara: k. melakukan pemeriksaan di tempat
-              tertentu yang diduga terdapat surat, dokumen, atau benda lain yang
-              ada hubungannya dengan tindak pidana di bidang Kekarantinaan
+              PPNS Kekarantinaan Kesehatan berwenang: a. menerima laporan
+              tentang adanya tindak pidana di bidang Kekarantinaan Kesehatan: b.
+              mencari keterangan dan alat bukti, c. melakukan tindakan pertama
+              di tempat kejadian, d. melarang setiap orang meninggalkan atau
+              memasuki tempat kejadian perkara untuk kepentingan penyidikan, e.
+              memanggil, memeriksa, menggeledah, menangkap, atau menahan
+              seseorang yang disangka melakukan tindak pidana di bidang
+              Kekarantinaan Kesehatan: I. menahan, memeriksa, dan menyita
+              dokumen: g. menyuruh berhenti orang yang dicurigai atau tersangka
+              dan memeriksa identitas dirinya: h. memeriksa atau menyita surat,
+              dokumen, atau benda yang ada hubungannya dengan tindak pidana
+              Kekarantinaan Kesehatan: i. memanggil seseorang untuk diperiksa
+              dan didengar keterangannya sebagai tersangka atau saksi: j.
+              mendatangkan ahli yang diperlukan dalam hubungannya dengan
+              pemeriksaan perkara: k. melakukan pemeriksaan di tempat tertentu
+              yang diduga terdapat surat, dokumen, atau benda lain yang ada
+              hubungannya dengan tindak pidana di bidang Kekarantinaan
               Kesehatan: 1. ' mengambil foto dan sidik jari tersangka: m.
               meminta keterangan dari masyarakat atau sumber yang berkompeten:
               n. menghentikan penyidikan apabila tidak terdapat cukup bukti yang
@@ -2530,21 +3317,21 @@ babs:
             _type: referenceText
             references: []
             text: >-
-              Pasal 86 Alat bukti yang sah dalam pemeriksaan tindak pidana di
-              bidang Kekarantinaan Kesehatan berupa: a. alat bukti sebagaimana
-              dimaksud dalam hukum acara pidana, dan b. alat bukti lain berupa
-              informasi yang diucapkan, dikirimkan, dan diterima atau disimpan
-              secara elektronik atau yang serupa dengan itu.
+              Alat bukti yang sah dalam pemeriksaan tindak pidana di bidang
+              Kekarantinaan Kesehatan berupa: a. alat bukti sebagaimana dimaksud
+              dalam hukum acara pidana, dan b. alat bukti lain berupa informasi
+              yang diucapkan, dikirimkan, dan diterima atau disimpan secara
+              elektronik atau yang serupa dengan itu.
         - _type: pasal
           _key: 87
           isi:
             _type: referenceText
             references: []
             text: >-
-              Pasal 87 PPNS Kekarantinaan Kesehatan dapat melaksanakan kerja
-              sama dalam penyelidikan dan penyidikan tindak pidana Kekarantinaan
-              Kesehatan dengan lembaga penegak hukum dalam negeri dan negara
-              lain sesuai dengan ketentuan peraturan perundang-undangan mengenai
+              PPNS Kekarantinaan Kesehatan dapat melaksanakan kerja sama dalam
+              penyelidikan dan penyidikan tindak pidana Kekarantinaan Kesehatan
+              dengan lembaga penegak hukum dalam negeri dan negara lain sesuai
+              dengan ketentuan peraturan perundang-undangan mengenai
               administrasi penyidikan atau berdasarkan perjanjian internasional
               yang telah diakui oleh Pemerintah Republik Indonesia.
         - _type: pasal
@@ -2553,16 +3340,16 @@ babs:
             _type: referenceText
             references: []
             text: >-
-              Pasal 88 Persyaratan, tata cara pengangkatan PPNS Kekarantinaan
-              Kesehatan, dan administrasi penyidikan dilaksanakan sesuai dengan
-              ketentuan peraturan perundang-undangan.
+              Persyaratan, tata cara pengangkatan PPNS Kekarantinaan Kesehatan,
+              dan administrasi penyidikan dilaksanakan sesuai dengan ketentuan
+              peraturan perundang-undangan.
         - _type: pasal
           _key: 89
           isi:
             _type: referenceText
             references: []
             text: >-
-              Pasal 89 Dalam melakukan penyidikan, PPNS Kekarantinaan Kesehatan
+              Dalam melakukan penyidikan, PPNS Kekarantinaan Kesehatan
               berkoordinasi dan bekerja sama dengan penyidik di lingkungan
               Kepolisian Negara Republik Indonesia dan dapat berkoordinasi dan
               bekerja sama dengan penyidik di lingkungan Tentara Nasional
@@ -2570,7 +3357,7 @@ babs:
               REPUBLIK INDONESIA - 49 -
   - _type: bab
     _key: 13
-    _judul: BAB XIII KETENTUAN PIDANA
+    _judul: KETENTUAN PIDANA
     isi:
       _type: pasals
       pasals:
@@ -2578,24 +3365,42 @@ babs:
           _key: 90
           isi:
             _type: referenceText
-            references: []
+            references:
+              - start: 192
+                end: 209
+                node:
+                  parentPasal:
+                    parentDocument: *ref_0
+                    _key: 19
+                    _structureType: pasal
+                  _key: 3
+                  _structureType: ayat
             text: >-
-              Pasal 90 Nakhoda yang menurunkan atau menaikkan orang dan/atau
-              Barang sebelum memperoleh Persetujuan Karantina Kesehatan
-              berdasarkan hasil pengawasan Kekarantinaan Kesehatan sebagaimana
-              dimaksud dalam Pasal 19 ayat (3) dengan maksud menyebarkan
-              penyakit dan/atau faktor risiko kesehatan yang menimbulkan
-              Kedaruratan Kesehatan Masyarakat dipidana dengan pidana penjara
-              paling lama 10 (sepuluh) tahun atau denda paling banyak
-              Rp15.000.000.000,00 (lima belas miliar rupiah).
+              Nakhoda yang menurunkan atau menaikkan orang dan/atau Barang
+              sebelum memperoleh Persetujuan Karantina Kesehatan berdasarkan
+              hasil pengawasan Kekarantinaan Kesehatan sebagaimana dimaksud
+              dalam Pasal 19 ayat (3) dengan maksud menyebarkan penyakit
+              dan/atau faktor risiko kesehatan yang menimbulkan Kedaruratan
+              Kesehatan Masyarakat dipidana dengan pidana penjara paling lama 10
+              (sepuluh) tahun atau denda paling banyak Rp15.000.000.000,00 (lima
+              belas miliar rupiah).
         - _type: pasal
           _key: 91
           isi:
             _type: referenceText
-            references: []
+            references:
+              - start: 201
+                end: 218
+                node:
+                  parentPasal:
+                    parentDocument: *ref_0
+                    _key: 30
+                    _structureType: pasal
+                  _key: 1
+                  _structureType: ayat
             text: >-
-              Pasal 91 Kapten Penerbang yang menurunkan atau menaikkan orang
-              dan/atau Barang sebelum memperoleh Persetujuan Karantina Kesehatan
+              Kapten Penerbang yang menurunkan atau menaikkan orang dan/atau
+              Barang sebelum memperoleh Persetujuan Karantina Kesehatan
               berdasarkan hasil pengawasan Kekarantinaan Kesehatan sebagaimana
               dimaksud dalam Pasal 30 ayat (1) dengan maksud menyebarkan
               penyakit dan/atau faktor risiko kesehatan yang menimbulkan
@@ -2607,10 +3412,19 @@ babs:
           _key: 92
           isi:
             _type: referenceText
-            references: []
+            references:
+              - start: 159
+                end: 176
+                node:
+                  parentPasal:
+                    parentDocument: *ref_0
+                    _key: 35
+                    _structureType: pasal
+                  _key: 2
+                  _structureType: ayat
             text: >-
-              Pasal 92 Pengemudi Kendaraan Darat yang menurunkan atau menaikkan
-              orang dan/atau Barang sebelum dilakukan pengawasan Kekarantinaan
+              Pengemudi Kendaraan Darat yang menurunkan atau menaikkan orang
+              dan/atau Barang sebelum dilakukan pengawasan Kekarantinaan
               Kesehatan sebagaimana dimaksud dalam Pasal 35 ayat (2) dengan
               maksud menyebarkan penyakit dan/atau faktor risiko kesehatan yang
               menimbulkan Kedaruratan Kesehatan Masyarakat dipidana dengan
@@ -2620,14 +3434,23 @@ babs:
           _key: 93
           isi:
             _type: referenceText
-            references: []
+            references:
+              - start: 100
+                end: 116
+                node:
+                  parentPasal:
+                    parentDocument: *ref_0
+                    _key: 9
+                    _structureType: pasal
+                  _key: 1
+                  _structureType: ayat
             text: >-
-              Pasal 93 Setiap orang yang tidak mematuhi penyelenggaraan
-              Kekarantinaan Kesehatan sebagaimana dimaksud dalam Pasal 9 ayat
-              (1) dan/atau menghalang-halangi penyelenggaraan Kekarantinaan
-              Kesehatan sehingga menyebabkan Kedaruratan Kesehatan Masyarakat
-              dipidana dengan pidana penjara paling lama 1 (satu) tahun dan/atau
-              pidana denda paling banyak Rp100.000.000,00 (seratus juta rupiah).
+              Setiap orang yang tidak mematuhi penyelenggaraan Kekarantinaan
+              Kesehatan sebagaimana dimaksud dalam Pasal 9 ayat (1) dan/atau
+              menghalang-halangi penyelenggaraan Kekarantinaan Kesehatan
+              sehingga menyebabkan Kedaruratan Kesehatan Masyarakat dipidana
+              dengan pidana penjara paling lama 1 (satu) tahun dan/atau pidana
+              denda paling banyak Rp100.000.000,00 (seratus juta rupiah).
         - _type: pasal
           _key: 94
           isi:
@@ -2637,10 +3460,28 @@ babs:
                 _key: 1
                 isi:
                   _type: referenceText
-                  references: []
+                  references:
+                    - start: 51
+                      end: 59
+                      node:
+                        _key: 90
+                        parentDocument: *ref_0
+                        _structureType: pasal
+                    - start: 61
+                      end: 69
+                      node:
+                        _key: 91
+                        parentDocument: *ref_0
+                        _structureType: pasal
+                    - start: 75
+                      end: 83
+                      node:
+                        _key: 92
+                        parentDocument: *ref_0
+                        _structureType: pasal
                   text: >-
-                    (1) Dalam hal tindak pidana sebagaimana dimaksud dalam Pasal
-                    90, Pasal 91, dan Pasal 92 dilakukan oleh korporasi
+                    Dalam hal tindak pidana sebagaimana dimaksud dalam Pasal 90,
+                    Pasal 91, dan Pasal 92 dilakukan oleh korporasi
                     pertanggungjawaban pidana dikenakan terhadap korporasi
                     dan/atau pengurusnya.
               - _type: ayat
@@ -2649,11 +3490,11 @@ babs:
                   _type: referenceText
                   references: []
                   text: >-
-                    (2) Korporasi dikenai pertanggungjawaban secara pidana
-                    terhadap suatu perbuatan yang dilakukan untuk dan/atau atas
-                    nama korporasi jika perbuatan tersebut termasuk dalam
-                    lingkup usahanya sebagaimana ditentukan dalam anggaran dasar
-                    atau ketentuan lain yang berlaku bagi korporasi yang
+                    Korporasi dikenai pertanggungjawaban secara pidana terhadap
+                    suatu perbuatan yang dilakukan untuk dan/atau atas nama
+                    korporasi jika perbuatan tersebut termasuk dalam lingkup
+                    usahanya sebagaimana ditentukan dalam anggaran dasar atau
+                    ketentuan lain yang berlaku bagi korporasi yang
                     bersangkutan. REPUBLIK INDONESIA -51-
               - _type: ayat
                 _key: 3
@@ -2661,8 +3502,8 @@ babs:
                   _type: referenceText
                   references: []
                   text: >-
-                    (3) Pidana dijatuhkan kepada korporasi jika tindak pidana:
-                    a. dilakukan atau diperintahkan oleh personel pengendali
+                    Pidana dijatuhkan kepada korporasi jika tindak pidana: a.
+                    dilakukan atau diperintahkan oleh personel pengendali
                     korporasi, b. dilakukan dalam rangka pemenuhan maksud dan
                     tujuan korporasi, c. dilakukan sesuai dengan tugas dan
                     fungsi pelaku atau pemberi perintah, dan/atau d. dilakukan
@@ -2671,11 +3512,23 @@ babs:
                 _key: 4
                 isi:
                   _type: referenceText
-                  references: []
+                  references:
+                    - start: 114
+                      end: 130
+                      node:
+                        _key: a
+                        parentPoints:
+                          _key: 3
+                          parentPasal:
+                            _key: 94
+                            parentDocument: *ref_0
+                            _structureType: pasal
+                          _structureType: ayat
+                        _structureType: point
                   text: >-
-                    (4) Dalam hal tindak pidana dilakukan atau diperintahkan
-                    oleh personel pengendali korporasi sebagaimana dimaksud pada
-                    ayat (3) huruf a atau pengurus korporasi, pidana pokok yang
+                    Dalam hal tindak pidana dilakukan atau diperintahkan oleh
+                    personel pengendali korporasi sebagaimana dimaksud pada ayat
+                    (3) huruf a atau pengurus korporasi, pidana pokok yang
                     dijatuhkan adalah pidana penjara maksimum dan pidana denda
                     maksimum yang masing-masing ditambah dengan pidana
                     pemberatan 2/3 (dua pertiga). (S5) Pidana pokok yang
@@ -2683,7 +3536,7 @@ babs:
                     ditambah dengan pidana pemberatan 2/3 (dua pertiga).
   - _type: bab
     _key: 14
-    _judul: BAB XIV KETENTUAN PENUTUP
+    _judul: KETENTUAN PENUTUP
     isi:
       _type: pasals
       pasals:
@@ -2693,11 +3546,11 @@ babs:
             _type: referenceText
             references: []
             text: >-
-              Pasal 95 Pada saat Undang-Undang ini mulai berlaku, semua
-              peraturan pelaksanaan yang mengatur karantina udara dan karantina
-              laut tetap berlaku sepanjang tidak bertentangan dan/atau belum
-              diganti dengan peraturan yang baru berdasarkan Undang-Undang ini.
-              REPUBLIK INDONESIA -.52 -
+              Pada saat Undang-Undang ini mulai berlaku, semua peraturan
+              pelaksanaan yang mengatur karantina udara dan karantina laut tetap
+              berlaku sepanjang tidak bertentangan dan/atau belum diganti dengan
+              peraturan yang baru berdasarkan Undang-Undang ini. REPUBLIK
+              INDONESIA -.52 -
         - _type: pasal
           _key: 96
           isi:
@@ -2709,7 +3562,7 @@ babs:
                   _type: referenceText
                   references: []
                   text: >-
-                    (1) Peraturan pelaksanaan dari Undang-Undang ini harus telah
+                    Peraturan pelaksanaan dari Undang-Undang ini harus telah
                     ditetapkan paling lambat 3 (tiga) tahun terhitung sejak
                     Undang-Undang ini diundangkan.
               - _type: ayat
@@ -2718,36 +3571,36 @@ babs:
                   _type: referenceText
                   references: []
                   text: >-
-                    (2) Pemerintah Pusat harus melaporkan pelaksanaan
-                    Undang-Undang ini kepada Dewan Perwakilan Rakyat paling
-                    lambat 3 (tiga) tahun sejak Undang-Undang ini berlaku.
+                    Pemerintah Pusat harus melaporkan pelaksanaan Undang-Undang
+                    ini kepada Dewan Perwakilan Rakyat paling lambat 3 (tiga)
+                    tahun sejak Undang-Undang ini berlaku.
         - _type: pasal
           _key: 97
           isi:
             _type: referenceText
             references: []
             text: >-
-              Pasal 97 Pada saat Undang-Undang ini mulai berlaku: 1.
-              Undang-Undang Nomor 1 Tahun 1962 tentang Karantina Laut (Lembaran
-              Negara Republik Indonesia Tahun 1962 Nomor 2, Tambahan Lembaran
-              Negara Republik Indonesia Nomor 2373): dan 2. Undang-Undang Nomor
-              2 Tahun 1962 tentang Karantina Udara (Lembaran Negara Republik
-              Indonesia Tahun 1962 Nomor 3, Tambahan Lembaran Negara Republik
-              Indonesia Nomor 2374), dicabut dan dinyatakan tidak berlaku.
+              Pada saat Undang-Undang ini mulai berlaku: 1. Undang-Undang Nomor
+              1 Tahun 1962 tentang Karantina Laut (Lembaran Negara Republik
+              Indonesia Tahun 1962 Nomor 2, Tambahan Lembaran Negara Republik
+              Indonesia Nomor 2373): dan 2. Undang-Undang Nomor 2 Tahun 1962
+              tentang Karantina Udara (Lembaran Negara Republik Indonesia Tahun
+              1962 Nomor 3, Tambahan Lembaran Negara Republik Indonesia Nomor
+              2374), dicabut dan dinyatakan tidak berlaku.
         - _type: pasal
           _key: 98
           isi:
             _type: referenceText
             references: []
             text: >-
-              Pasal 98 Undang-Undang ini mulai berlaku pada tanggal diundangkan.
-              Agar... - 53 - Agar setiap orang mengetahuinya, memerintahkan
-              pengundangan Undang-Undang ini dengan penempatannya dalam Lembaran
-              Negara Republik Indonesia. Disahkan di Jakarta pada tanggal 7
-              Agustus 2018 PRESIDEN REPUBLIK INDONESIA, ttd. JOKO WIDODO
-              Diundangkan di Jakarta pada tanggal 8 Agustus 2018 MENTERI HUKUM
-              DAN HAK ASASI MANUSIA REPUBLIK INDONESIA, ttd. YASONNA H. LAOLY
-              LEMBARAN NEGARA REPUBLIK INDONESIA TAHUN 2018 NOMOR 128 Salinan
-              sesuai dengan aslinya KEMENTERIAN SEKRETARIAT NEGARA REPUBLIK
-              INDONESIA Asisten Deputi Bidang Pembangunan ara sia dan
-              Kebudayaan, REPUBLIK INDONESIA
+              Undang-Undang ini mulai berlaku pada tanggal diundangkan. Agar...
+              - 53 - Agar setiap orang mengetahuinya, memerintahkan pengundangan
+              Undang-Undang ini dengan penempatannya dalam Lembaran Negara
+              Republik Indonesia. Disahkan di Jakarta pada tanggal 7 Agustus
+              2018 PRESIDEN REPUBLIK INDONESIA, ttd. JOKO WIDODO Diundangkan di
+              Jakarta pada tanggal 8 Agustus 2018 MENTERI HUKUM DAN HAK ASASI
+              MANUSIA REPUBLIK INDONESIA, ttd. YASONNA H. LAOLY LEMBARAN NEGARA
+              REPUBLIK INDONESIA TAHUN 2018 NOMOR 128 Salinan sesuai dengan
+              aslinya KEMENTERIAN SEKRETARIAT NEGARA REPUBLIK INDONESIA Asisten
+              Deputi Bidang Pembangunan ara sia dan Kebudayaan, REPUBLIK
+              INDONESIA

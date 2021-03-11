@@ -15,6 +15,7 @@ import { KeyIds } from './babs_spans_to_key_ids';
 import { spansInRange, spanIdKeyMapOf, toSpansWith } from './util';
 import { AmendPoints } from '../../../legal/structure/amend';
 import { Ayat, Ayats } from '../../../legal/structure/ayat';
+import { removeAyatKey } from './parse_key_from_spans';
 
 export type Context = {
   hasAmendPasal: boolean;
@@ -40,7 +41,7 @@ function spansToBab(context: Context, keySpans: [string, Span[]]): Bab {
     spans,
     context
   );
-  const { preKeySpans, spansOfKey } = toSpansWith(spanIdKeyMap, spans);
+  const { preKeySpans, spansOfKey } = toSpansWith(spanIdKeyMap, spans.slice(1));
   const isi = chain(spansOfKey).toPairs().thru<Bagians | Pasals>(toStructure).value();
   const _judul = preKeySpans.map(({ str }) => str).join(' ');
   const _key = parseInt(key);
@@ -77,7 +78,7 @@ function spansToParagraf(context: Context, keySpans: [string, Span[]]): Paragraf
 const spansToPasalWith = curry(spansToPasal);
 function spansToPasal(context: Context, keySpans: [string, Span[]]): Pasal {
   const [key, spans] = keySpans;
-  const isi = isiPasalOf(context, spans);
+  const isi = isiPasalOf(context, spans.slice(1));
   const _key = parseInt(key);
   return { _type: 'pasal', _key, isi };
 }
@@ -107,7 +108,7 @@ function spanToAyat(_: Context, keySpans: [string, Span[]]): Ayat {
   // const isi = getPoints(linesWithoutKey);
   // const text = stringToEmptyReference(linesWithoutKey.join(' '));
 
-  return { _type: 'ayat', _key, isi: emptyReferenceOf(spans) };
+  return { _type: 'ayat', _key, isi: emptyReferenceOf(removeAyatKey(spans)) };
 }
 
 function amendPointsOf(context: Context, spans: Span[]): AmendPoints {

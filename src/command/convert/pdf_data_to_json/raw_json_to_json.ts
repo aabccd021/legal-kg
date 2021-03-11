@@ -1,18 +1,18 @@
-import { IsiPasal } from './../../../legal/structure/pasal';
+import { ReferenceText } from './../../../legal/reference';
+import { Paragraf, ParagrafNode, Paragrafs } from './../../../legal/structure/paragraf';
+import { IsiPasal, Pasals } from './../../../legal/structure/pasal';
 import assertNever from 'assert-never';
 import _, { curry } from 'lodash';
 import { isNil, compact } from 'lodash';
 import { DocumentNode } from '../../../legal/document';
 import { Ayat, AyatNode } from '../../../legal/structure/ayat';
 import { Bab, BabNode } from '../../../legal/structure/bab';
-import { Bagian, BagianNode } from '../../../legal/structure/bagian';
+import { Bagian, BagianNode, Bagians } from '../../../legal/structure/bagian';
 import { Metadata, MetadataNode } from '../../../legal/structure/metadata';
-import { Paragraf, ParagrafNode } from '../../../legal/structure/paragraf';
 import {
   PasalParentNode,
   getPasalParentDocument,
   PasalNode,
-  isPasals,
   Pasal,
 } from '../../../legal/structure/pasal';
 import { PointsNode, PointNode, Point, Points } from '../../../legal/structure/point';
@@ -56,14 +56,16 @@ function mengimbangToDetectedMengimbang(
 function babToDetectedBab(bab: Bab, parentDocument: DocumentNode): Bab {
   const { isi, _key } = bab;
   const babNode: BabNode = { _key, parentDocument, _structureType: 'bab' };
-  const detectedIsi = isPasals(isi)
-    ? isi.map((pasal) => pasalToDetectedPasal(pasal, babNode))
-    : isi.map((bagian) => bagianToDetectedBagian(bagian, babNode));
+  const detectedIsi: Pasals | Bagians =
+    isi._type === 'pasals'
+      ? { _type: 'pasals', pasals: isi.pasals.map(toDetectedPasalWith(babNode)) }
+      : { _type: 'bagians', bagians: isi.bagians.map(toDetectedBagianWith(babNode)) };
 
   return { ...bab, isi: detectedIsi };
 }
 
-function pasalToDetectedPasal(pasal: Pasal, parent: PasalParentNode): Pasal {
+const toDetectedPasalWith = curry(toDetectedPasal);
+function toDetectedPasal(parent: PasalParentNode, pasal: Pasal): Pasal {
   const { isi, _key } = pasal;
   const parentDocument = getPasalParentDocument(parent);
   const pasalNode: PasalNode = { _key, parentDocument, _structureType: 'pasal' };
@@ -152,33 +154,35 @@ function pointToDetectedPoint(point: Point, parentPoints: PointsNode): Point {
   return { ...point, text: detectedText, isi: detectedIsi };
 }
 
-function ayatToDetectedAyat(pasal: Ayat, parentPasal: PasalNode): Ayat {
-  const { isi, text, _key } = pasal;
+function ayatToDetectedAyat(ayat: Ayat, parentPasal: PasalNode): Ayat {
+  const { isi, _key } = ayat;
   const ayatNode: AyatNode = { _key, parentPasal, _structureType: 'ayat' };
-  const detectedText = isNil(isi)
-    ? { ...text, references: detectAyatNode(text.text, ayatNode) }
-    : text;
-  const detectedIsi = !isNil(isi) ? pointsToDetectedPoints(isi, ayatNode) : isi;
+  const detectedText: ReferenceText | Points =
+    isi._type === 'referenceText'
+      ? { ...isi, references: detectAyatNode(isi.text, ayatNode) }
+      : pointsToDetectedPoints(isi, ayatNode);
 
-  return { ...pasal, text: detectedText, isi: detectedIsi };
+  return { ...ayat, isi: detectedText };
 }
 
-function bagianToDetectedBagian(bagian: Bagian, parentBab: BabNode): Bagian {
+const toDetectedBagianWith = curry(toDetectedBagian);
+function toDetectedBagian(parentBab: BabNode, bagian: Bagian): Bagian {
   const { _key, isi } = bagian;
   const bagianNode: BagianNode = { _key, parentBab, _structureType: 'bagian' };
-  const detectedIsi = isPasals(isi)
-    ? isi.map((pasal) => pasalToDetectedPasal(pasal, bagianNode))
-    : isi.map((paragraf) => paragrafToDetectedParagraf(paragraf, bagianNode));
+  const detectedIsi: Pasals | Paragrafs =
+    isi._type === 'pasals'
+      ? { _type: 'pasals', pasals: isi.pasals.map(toDetectedPasalWith(bagianNode)) }
+      : { _type: 'paragrafs', paragrafs: isi.paragrafs.map(toDetectedParagrafWith(bagianNode)) };
 
   return { ...bagian, isi: detectedIsi };
 }
 
-function paragrafToDetectedParagraf(paragraf: Paragraf, parentBagian: BagianNode): Paragraf {
+const toDetectedParagrafWith = curry(toDetectedParagraf);
+function toDetectedParagraf(parentBagian: BagianNode, paragraf: Paragraf): Paragraf {
   const { _key, isi } = paragraf;
   const paragrafNode: ParagrafNode = { _key, parentBagian, _structureType: 'paragraf' };
-  const detectedIsi = isi.map((pasal) => pasalToDetectedPasal(pasal, paragrafNode));
-
-  return { ...paragraf, isi: detectedIsi };
+  const pasals = isi.pasals.map(toDetectedPasalWith(paragrafNode));
+  return { ...paragraf, isi: { _type: 'pasals', pasals } };
 }
 
 function detectPointNode(text: string, pointNode: PointNode): Reference[] {
