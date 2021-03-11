@@ -33,8 +33,8 @@ export type Span = UnindexedSpan & {
   id: number;
 };
 
-export function neverNum(x?: string): number {
-  throw Error(x);
+export function neverNum(x?: string | number): number {
+  throw Error(x?.toString());
 }
 export function neverString(x?: string): string {
   throw Error(x);

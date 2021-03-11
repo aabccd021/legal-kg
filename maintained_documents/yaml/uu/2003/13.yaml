@@ -622,7 +622,16 @@ babs:
                 _key: 3
                 isi:
                   _type: referenceText
-                  references: []
+                  references:
+                    - start: 62
+                      end: 70
+                      node:
+                        _key: 1
+                        parentPasal:
+                          _key: 13
+                          parentDocument: *ref_0
+                          _structureType: pasal
+                        _structureType: ayat
                   text: >-
                     Lembaga pelatihan kerja pemerintah sebagaimana dimaksud
                     dalam ayat (l) dalam menyelenggarakan pe-latihan kerja dapat
@@ -1755,7 +1764,16 @@ babs:
                 _key: 2
                 isi:
                   _type: referenceText
-                  references: []
+                  references:
+                    - start: 65
+                      end: 73
+                      node:
+                        _key: 1
+                        parentPasal:
+                          _key: 40
+                          parentDocument: *ref_0
+                          _structureType: pasal
+                        _structureType: ayat
                   text: >-
                     Penciptaan perluasan kesempatan kerja sebagaimana dimaksud
                     dalam ayat (l) dilakukan dengan pola pembentukan dan
@@ -2471,7 +2489,16 @@ babs:
                   _type: points
                   _description:
                     _type: referenceText
-                    references: []
+                    references:
+                      - start: 65
+                        end: 73
+                        node:
+                          _key: 1
+                          parentPasal:
+                            _key: 56
+                            parentDocument: *ref_0
+                            _structureType: pasal
+                          _structureType: ayat
                     text: >-
                       Perjanjian kerja untuk waktu tertentu sebagaimana dimaksud
                       dalam ayat (l) didasarkan atas :
@@ -6578,11 +6605,14 @@ babs:
                         _type: referenceText
                         references:
                           - start: 278
-                            end: 287
+                            end: 296
                             node:
-                              _key: 120
-                              parentDocument: *ref_0
-                              _structureType: pasal
+                              parentPasal:
+                                parentDocument: *ref_0
+                                _key: 120
+                                _structureType: pasal
+                              _key: 1
+                              _structureType: ayat
                         text: >-
                           Dalam hal perjanjian kerja bersama yang sudah berakhir
                           masa berlakunya akan diperpanjang atau diper-baharui
@@ -6936,7 +6966,13 @@ babs:
                               _type: points
                               _description:
                                 _type: referenceText
-                                references: []
+                                references:
+                                  - start: 65
+                                    end: 73
+                                    node:
+                                      _key: 1
+                                      parentPasal: *ref_50
+                                      _structureType: ayat
                                 text: >-
                                   Dalam hal mogok kerja dilakukan tidak
                                   sebagaimana dimaksud dalam ayat (l), maka demi

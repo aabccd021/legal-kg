@@ -2,8 +2,8 @@ import { ReferenceText } from './../../../legal/reference';
 import { Paragraf, ParagrafNode, Paragrafs } from './../../../legal/structure/paragraf';
 import { IsiPasal, Pasals } from './../../../legal/structure/pasal';
 import assertNever from 'assert-never';
-import _, { curry } from 'lodash';
-import { isNil, compact } from 'lodash';
+import _, { chain, curry } from 'lodash';
+import { isNil, compact, isUndefined } from 'lodash';
 import { DocumentNode } from '../../../legal/document';
 import { Ayat, AyatNode } from '../../../legal/structure/ayat';
 import { Bab, BabNode } from '../../../legal/structure/bab';
@@ -25,6 +25,8 @@ import {
   AmendPoints,
   AmendUpdatePasalPoint,
 } from '../../../legal/structure/amend';
+import { safeParseInt } from './parse_key_from_spans';
+import { neverNum, neverString } from '../../../util';
 
 export function rawJsonToJson(document: Document): Document {
   const { babs, mengingat, menimbang, _node } = document;
@@ -252,27 +254,34 @@ function detectHardCoded(text: string): Reference[] {
 }
 
 function detectPasalXAyatX(text: string, parentDocument: DocumentNode): Reference[] {
-  const regexp = /Pasal [0-9]+ ayat \([0-9]+\)/g;
+  const regexp = /Pasal [0-9]+ ayat \((l|[0-9]+)\)/g;
   const matches = [...text.matchAll(regexp)];
 
-  return matches.map((match) => {
-    const keyStrs = compact(match[0]?.split(/(Pasal |ayat \(|\))/));
-    const [, pasal, , ayat] = keyStrs.map((x) => parseInt(x));
-    const start = match.index ?? neverNum();
-    const end = (match.index ?? neverNum()) + (match[0]?.length ?? neverNum());
-    const parentPasal: PasalNode = {
-      parentDocument,
-      _key: pasal ?? neverNum(),
-      _structureType: 'pasal',
-    };
-    const node: AyatNode = {
-      parentPasal,
-      _key: ayat ?? neverNum(),
-      _structureType: 'ayat',
-    };
+  return chain(matches)
+    .map((match) => {
+      const keyStrs = compact(match[0]?.split(/(Pasal |ayat \(|\))/));
+      const [, pasal, , ayat] = keyStrs.map((x) => safeParseInt(x));
+      if (isUndefined(pasal) || isUndefined(ayat)) {
+        console.log(`Unparsable reference: ${match[0]}===${keyStrs}===${match}`);
+        return undefined;
+      }
+      const start = match.index ?? neverNum();
+      const end = (match.index ?? neverNum()) + (match[0]?.length ?? neverNum());
+      const parentPasal: PasalNode = {
+        parentDocument,
+        _key: pasal,
+        _structureType: 'pasal',
+      };
+      const node: AyatNode = {
+        parentPasal,
+        _key: ayat,
+        _structureType: 'ayat',
+      };
 
-    return { start, end, node };
-  });
+      return { start, end, node };
+    })
+    .compact()
+    .value();
 }
 
 function detectHurufXYZ(text: string, parentPoint: PointNode): Reference[] {
@@ -300,7 +309,7 @@ function detectHurufXYZ(text: string, parentPoint: PointNode): Reference[] {
 }
 
 function detectAyatNHurufXYZ(text: string, parentPasal: PasalNode): Reference[] {
-  const regexp = /ayat \([0-9]+\) huruf ?([a-z]?,? ?)+( [a-z]( |,))/g;
+  const regexp = /ayat \((l|[0-9]+)\) huruf ?([a-z]?,? ?)+( [a-z]( |,))/g;
 
   const matches = [...text.matchAll(regexp)];
 
@@ -309,7 +318,7 @@ function detectAyatNHurufXYZ(text: string, parentPasal: PasalNode): Reference[] 
       ?.replaceAll(/(ayat|\(|\))/g, ',')
       .split(',')
       .filter((x) => ![',', ' ', ''].includes(x));
-    const _key = parseInt(arr?.[0] ?? neverString());
+    const _key = safeParseInt(arr?.[0] ?? neverString()) ?? neverNum();
     const start = match.index ?? neverNum();
     const offset = start + `ayat (${_key})`.length;
     const hurufString = arr?.splice(1).join(',') ?? neverString();
@@ -327,11 +336,11 @@ function detectAyatNHurufXYZ(text: string, parentPasal: PasalNode): Reference[] 
 }
 
 function detectAyatX(text: string, parentPasal: PasalNode): Reference[] {
-  const regexp = /ayat \([0-9]+\)/g;
+  const regexp = /ayat \((l|[0-9]+)\)/g;
   const matches = [...text.matchAll(regexp)];
 
   return matches.map((match) => {
-    const _key = parseInt(match[0]?.slice('ayat ('.length, -1) ?? neverString());
+    const _key = safeParseInt(match[0]?.slice('ayat ('.length, -1) ?? neverString()) ?? neverNum();
     const start = match.index ?? neverNum();
     const end = start + (match[0]?.length ?? neverNum());
     const node: AyatNode = { _key, parentPasal, _structureType: 'ayat' };
@@ -364,7 +373,7 @@ function detectPasalX(text: string, parentDocument: DocumentNode): Reference[] {
   const matches = [...text.matchAll(regexp)];
 
   return matches.map((match) => {
-    const _key = parseInt(match[0]?.slice('Pasal '.length) ?? neverString());
+    const _key = safeParseInt(match[0]?.slice('Pasal '.length) ?? neverString()) ?? neverNum();
     const start = match.index ?? neverNum();
     const end = start + (match[0]?.length ?? neverNum());
     const node: PasalNode = { _key, parentDocument, _structureType: 'pasal' };
@@ -396,12 +405,4 @@ function isReferenceCompatible(newReference: Reference, references: Reference[])
   return !references.some(
     (r) => (r.start <= start && start < r.end) || (r.start < end && end <= r.end)
   );
-}
-
-function neverNum(): number {
-  throw Error();
-}
-
-function neverString(): string {
-  throw Error();
 }

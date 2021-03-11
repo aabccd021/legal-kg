@@ -444,7 +444,16 @@ babs:
                 _key: 2
                 isi:
                   _type: referenceText
-                  references: []
+                  references:
+                    - start: 66
+                      end: 74
+                      node:
+                        _key: 1
+                        parentPasal:
+                          _key: 11
+                          parentDocument: *ref_0
+                          _structureType: pasal
+                        _structureType: ayat
                   text: >-
                     Penyelenggaraan Kekarantinaan Kesehatan sebagaimana dimaksud
                     pada ayat (l) dapat berkoordinasi dan bekerja sama dengan
@@ -2144,7 +2153,7 @@ babs:
                             end: 100
                             node:
                               _key: 1
-                              parentPasal:
+                              parentPasal: &ref_13
                                 _key: 46
                                 parentDocument: *ref_0
                                 _structureType: pasal
@@ -2159,7 +2168,13 @@ babs:
                       _key: 3
                       isi:
                         _type: referenceText
-                        references: []
+                        references:
+                          - start: 43
+                            end: 51
+                            node:
+                              _key: 1
+                              parentPasal: *ref_13
+                              _structureType: ayat
                         text: >-
                           Terhadap jenazah sebagaimana dimaksud pada ayat (l)
                           dikirim ke rumah sakit untuk dilakukan pemulasaraan
@@ -2363,7 +2378,7 @@ babs:
                             end: 130
                             node:
                               _key: 5
-                              parentPasal: &ref_13
+                              parentPasal: &ref_14
                                 _key: 48
                                 parentDocument: *ref_0
                                 _structureType: pasal
@@ -2372,7 +2387,7 @@ babs:
                             end: 107
                             node:
                               _key: 1
-                              parentPasal: *ref_13
+                              parentPasal: *ref_14
                               _structureType: ayat
                         text: >-
                           Ketentuan lebih lanjut mengenai tata cara pengenaan
@@ -2416,7 +2431,7 @@ babs:
                             end: 131
                             node:
                               _key: 1
-                              parentPasal: &ref_14
+                              parentPasal: &ref_15
                                 _key: 49
                                 parentDocument: *ref_0
                                 _structureType: pasal
@@ -2438,7 +2453,7 @@ babs:
                             end: 89
                             node:
                               _key: 1
-                              parentPasal: *ref_14
+                              parentPasal: *ref_15
                               _structureType: ayat
                         text: >-
                           Karantina Wilayah dan Pembatasan Sosial Berskala Besar
@@ -2473,7 +2488,7 @@ babs:
                             end: 50
                             node:
                               _key: 1
-                              parentPasal: &ref_15
+                              parentPasal: &ref_16
                                 _key: 50
                                 parentDocument: *ref_0
                                 _structureType: pasal
@@ -2492,7 +2507,7 @@ babs:
                             end: 49
                             node:
                               _key: 1
-                              parentPasal: *ref_15
+                              parentPasal: *ref_16
                               _structureType: ayat
                         text: >-
                           Terhadap kasus sebagaimana dimaksud pada ayat (1)
@@ -3522,7 +3537,7 @@ babs:
                             end: 62
                             node:
                               _key: 1
-                              parentPasal: &ref_16
+                              parentPasal: &ref_17
                                 _key: 77
                                 parentDocument: *ref_0
                                 _structureType: pasal
@@ -3540,13 +3555,13 @@ babs:
                             end: 94
                             node:
                               _key: 2
-                              parentPasal: *ref_16
+                              parentPasal: *ref_17
                               _structureType: ayat
                           - start: 73
                             end: 81
                             node:
                               _key: 1
-                              parentPasal: *ref_16
+                              parentPasal: *ref_17
                               _structureType: ayat
                         text: >-
                           Ketentuan mengenai penelitian dan pengembangan
@@ -3631,7 +3646,7 @@ babs:
                       end: 84
                       node:
                         _key: 1
-                        parentPasal: &ref_17
+                        parentPasal: &ref_18
                           _key: 80
                           parentDocument: *ref_0
                           _structureType: pasal
@@ -3650,13 +3665,13 @@ babs:
                       end: 97
                       node:
                         _key: 2
-                        parentPasal: *ref_17
+                        parentPasal: *ref_18
                         _structureType: ayat
                     - start: 76
                       end: 84
                       node:
                         _key: 1
-                        parentPasal: *ref_17
+                        parentPasal: *ref_18
                         _structureType: ayat
                   text: >-
                     Penyelenggaraan informasi Kekarantinaan Kesehatan
@@ -3720,7 +3735,7 @@ babs:
                               end: 57
                               node:
                                 _key: 2
-                                parentPasal: &ref_18
+                                parentPasal: &ref_19
                                   _key: 82
                                   parentDocument: *ref_0
                                   _structureType: pasal
@@ -3729,7 +3744,7 @@ babs:
                               end: 44
                               node:
                                 _key: 1
-                                parentPasal: *ref_18
+                                parentPasal: *ref_19
                                 _structureType: ayat
                           text: >-
                             Pembinaan sebagaimana dimaksud pada ayat (1) dan
@@ -3773,13 +3788,13 @@ babs:
                             end: 89
                             node:
                               _key: 2
-                              parentPasal: *ref_18
+                              parentPasal: *ref_19
                               _structureType: ayat
                           - start: 68
                             end: 76
                             node:
                               _key: 1
-                              parentPasal: *ref_18
+                              parentPasal: *ref_19
                               _structureType: ayat
                         text: >-
                           Ketentuan lebih lanjut mengenai pembinaan sebagaimana

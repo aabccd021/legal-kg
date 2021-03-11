@@ -11255,6 +11255,12 @@ babs:
                                     _key: 3
                                     parentPasal: *ref_13
                                     _structureType: ayat
+                                - start: 295
+                                  end: 303
+                                  node:
+                                    _key: 1
+                                    parentPasal: *ref_13
+                                    _structureType: ayat
                               text: >-
                                 19. Ketentuan Pasal 41 diubah sehingga berbunyi
                                 sebagai berikut: Pasal 41 (1) Pemerintah Pusat
@@ -12855,6 +12861,18 @@ babs:
                                     _key: 58
                                     parentDocument: *ref_0
                                     _structureType: pasal
+                                - start: 966
+                                  end: 974
+                                  node:
+                                    _key: 1
+                                    parentPasal: *ref_15
+                                    _structureType: ayat
+                                - start: 788
+                                  end: 796
+                                  node:
+                                    _key: 1
+                                    parentPasal: *ref_15
+                                    _structureType: ayat
                                 - start: 507
                                   end: 515
                                   node:
@@ -15099,6 +15117,12 @@ babs:
                                     _key: 100
                                     parentDocument: *ref_0
                                     _structureType: pasal
+                                - start: 233
+                                  end: 241
+                                  node:
+                                    _key: 1
+                                    parentPasal: *ref_20
+                                    _structureType: ayat
                               text: >-
                                 18. Ketentuan Pasal 100 diubah sehingga berbunyi
                                 sebagai berikut: REPUBLIK INDONESIA -175 - Pasal
@@ -15741,6 +15765,12 @@ babs:
                                     _key: 36
                                     parentDocument: *ref_0
                                     _structureType: pasal
+                                - start: 1106
+                                  end: 1114
+                                  node:
+                                    _key: 1
+                                    parentPasal: *ref_21
+                                    _structureType: ayat
                                 - start: 649
                                   end: 657
                                   node:
@@ -16051,6 +16081,12 @@ babs:
                                   end: 598
                                   node:
                                     _key: 2
+                                    parentPasal: *ref_21
+                                    _structureType: ayat
+                                - start: 417
+                                  end: 425
+                                  node:
+                                    _key: 1
                                     parentPasal: *ref_21
                                     _structureType: ayat
                               text: >-
@@ -16751,6 +16787,12 @@ babs:
                                     _key: 28
                                     parentDocument: *ref_0
                                     _structureType: pasal
+                                - start: 314
+                                  end: 322
+                                  node:
+                                    _key: 1
+                                    parentPasal: *ref_22
+                                    _structureType: ayat
                               text: >-
                                 6. Ketentuan Pasal 28 diubah sehingga berbunyi
                                 sebagai berikut: Pasal 28 (1) Pemanfaatan hutan
@@ -20808,6 +20850,12 @@ babs:
                                     _key: 2
                                     parentPasal: *ref_27
                                     _structureType: ayat
+                                - start: 974
+                                  end: 982
+                                  node:
+                                    _key: 1
+                                    parentPasal: *ref_27
+                                    _structureType: ayat
                               text: >-
                                 18. Ketentuan Pasal 42 diubah sehingga berbunyi
                                 sebagai berikut: REPUBLIK INDONESIA - 237 -
@@ -22681,6 +22729,12 @@ babs:
                                     _structureType: pasal
                                 - start: 490
                                   end: 498
+                                  node:
+                                    _key: 1
+                                    parentPasal: *ref_29
+                                    _structureType: ayat
+                                - start: 271
+                                  end: 279
                                   node:
                                     _key: 1
                                     parentPasal: *ref_29
@@ -24885,11 +24939,14 @@ babs:
                                     parentDocument: *ref_0
                                     _structureType: pasal
                                 - start: 111
-                                  end: 119
+                                  end: 128
                                   node:
-                                    _key: 12
-                                    parentDocument: *ref_0
-                                    _structureType: pasal
+                                    parentPasal:
+                                      parentDocument: *ref_0
+                                      _key: 12
+                                      _structureType: pasal
+                                    _key: 1
+                                    _structureType: ayat
                                 - start: 572
                                   end: 580
                                   node:
@@ -25070,11 +25127,14 @@ babs:
                                     parentDocument: *ref_0
                                     _structureType: pasal
                                 - start: 203
-                                  end: 211
+                                  end: 220
                                   node:
-                                    _key: 32
-                                    parentDocument: *ref_0
-                                    _structureType: pasal
+                                    parentPasal:
+                                      parentDocument: *ref_0
+                                      _key: 32
+                                      _structureType: pasal
+                                    _key: 1
+                                    _structureType: ayat
                                 - start: 608
                                   end: 616
                                   node:
@@ -26855,6 +26915,12 @@ babs:
                                     _key: 7
                                     parentDocument: *ref_0
                                     _structureType: pasal
+                                - start: 253
+                                  end: 261
+                                  node:
+                                    _key: 1
+                                    parentPasal: *ref_33
+                                    _structureType: ayat
                               text: >-
                                 3. Ketentuan Pasal 10 diubah sehingga berbunyi
                                 sebagai berikut: Pasal 10 (l) Kerja sama BPJPH
@@ -35723,6 +35789,12 @@ babs:
                                     _key: 51
                                     parentDocument: *ref_0
                                     _structureType: pasal
+                                - start: 263
+                                  end: 271
+                                  node:
+                                    _key: 1
+                                    parentPasal: *ref_42
+                                    _structureType: ayat
                               text: >-
                                 12. Ketentuan Pasal 51 diubah sehingga berbunyi
                                 sebagai berikut: Pasal 51 (1) Angkutan multimoda
@@ -38008,18 +38080,21 @@ babs:
                                     _key: 297
                                     parentDocument: *ref_0
                                     _structureType: pasal
-                                - start: 220
-                                  end: 228
-                                  node:
-                                    _key: 98
-                                    parentDocument: *ref_0
-                                    _structureType: pasal
                                 - start: 815
                                   end: 824
                                   node:
                                     _key: 339
                                     parentDocument: *ref_0
                                     _structureType: pasal
+                                - start: 220
+                                  end: 237
+                                  node:
+                                    parentPasal:
+                                      parentDocument: *ref_0
+                                      _key: 98
+                                      _structureType: pasal
+                                    _key: 1
+                                    _structureType: ayat
                               text: >-
                                 58. Ketentuan Pasal 297 diubah sehingga berbunyi
                                 sebagai berikut: Pasal 297 (1) Setiap orang yang
@@ -38181,11 +38256,14 @@ babs:
                                     parentDocument: *ref_0
                                     _structureType: pasal
                                 - start: 188
-                                  end: 197
+                                  end: 206
                                   node:
-                                    _key: 132
-                                    parentDocument: *ref_0
-                                    _structureType: pasal
+                                    parentPasal:
+                                      parentDocument: *ref_0
+                                      _key: 132
+                                      _structureType: pasal
+                                    _key: 1
+                                    _structureType: ayat
                               text: >-
                                 62. Ketentuan Pasal 308 diubah sehingga berbunyi
                                 sebagai berikut: Pasal 308 Setiap orang yang
@@ -40445,6 +40523,12 @@ babs:
                                   end: 673
                                   node:
                                     _key: 2
+                                    parentPasal: *ref_43
+                                    _structureType: ayat
+                                - start: 487
+                                  end: 495
+                                  node:
+                                    _key: 1
                                     parentPasal: *ref_43
                                     _structureType: ayat
                               text: >-
@@ -44302,6 +44386,12 @@ babs:
                                     _key: 2
                                     parentPasal: *ref_48
                                     _structureType: ayat
+                                - start: 491
+                                  end: 499
+                                  node:
+                                    _key: 1
+                                    parentPasal: *ref_48
+                                    _structureType: ayat
                               text: >-
                                 20. Ketentuan Pasal 141 diubah sehingga berbunyi
                                 sebagai berikut: Pasal 141 (1) Setiap Orang yang
@@ -45620,6 +45710,12 @@ babs:
                                     _key: 85
                                     parentDocument: *ref_0
                                     _structureType: pasal
+                                - start: 377
+                                  end: 385
+                                  node:
+                                    _key: 1
+                                    parentPasal: *ref_51
+                                    _structureType: ayat
                                 - start: 166
                                   end: 174
                                   node:
@@ -50122,6 +50218,12 @@ babs:
                               _key: 4
                               parentPasal: *ref_58
                               _structureType: ayat
+                          - start: 956
+                            end: 964
+                            node:
+                              _key: 1
+                              parentPasal: *ref_58
+                              _structureType: ayat
                           - start: 681
                             end: 689
                             node:
@@ -51486,6 +51588,12 @@ babs:
                               _key: 157
                               parentDocument: *ref_0
                               _structureType: pasal
+                          - start: 508
+                            end: 516
+                            node:
+                              _key: 1
+                              parentPasal: *ref_58
+                              _structureType: ayat
                         text: >-
                           46. Di antara Pasal 157 dan Pasal 158 disisipkan 1
                           (satu) pasal, yakni Pasal 157A sehingga berbunyi
@@ -60414,6 +60522,12 @@ babs:
                                 parentDocument: *ref_0
                                 _structureType: pasal
                               _structureType: ayat
+                          - start: 689
+                            end: 697
+                            node:
+                              _key: 1
+                              parentPasal: *ref_84
+                              _structureType: ayat
                           - start: 570
                             end: 578
                             node:
@@ -61133,6 +61247,12 @@ babs:
                               _key: 14
                               parentDocument: *ref_0
                               _structureType: pasal
+                          - start: 403
+                            end: 411
+                            node:
+                              _key: 1
+                              parentPasal: *ref_86
+                              _structureType: ayat
                         text: >-
                           3. Ketentuan Pasal 14 diubah sehingga berbunyi sebagai
                           berikut: Pasal 14 (1) Instansi yang memerlukan tanah
@@ -67278,11 +67398,14 @@ babs:
                               parentDocument: *ref_0
                               _structureType: pasal
                           - start: 122
-                            end: 131
+                            end: 140
                             node:
-                              _key: 249
-                              parentDocument: *ref_0
-                              _structureType: pasal
+                              parentPasal:
+                                parentDocument: *ref_0
+                                _key: 249
+                                _structureType: pasal
+                              _key: 1
+                              _structureType: ayat
                           - start: 145
                             end: 153
                             node:
