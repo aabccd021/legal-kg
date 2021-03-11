@@ -20,6 +20,7 @@ export type KeyIds = {
   amendPasalKeyOfId: SpanIdKeyMap<string[]>;
   amendDeletePasalKeyOfId: SpanIdKeyMap<string>;
   amendUpdatePasalKeyOfId: SpanIdKeyMap<string>;
+  amendInsertPasalKeyOfId: SpanIdKeyMap<string[]>;
   lastAmendedNomor?: { key: number; id: number };
   lastNomor?: { key: number; id: number };
   lastPasalKey?: number;
@@ -43,6 +44,7 @@ export function babsSpansToKeyIds(hasAmendPasal: boolean, spans: Span[]): KeyIds
     amendNomorKeyOfId: {},
     amendDeletePasalKeyOfId: {},
     amendUpdatePasalKeyOfId: {},
+    amendInsertPasalKeyOfId: {},
     afterPasalXls: [],
     afterAbovePasal: false,
     afterTruePasal: false,
@@ -67,6 +69,7 @@ function toKeys(
     amendPasalKeyOfId,
     amendDeletePasalKeyOfId,
     amendUpdatePasalKeyOfId,
+    amendInsertPasalKeyOfId,
     lastAmendedNomor,
     nomorKeyOfId,
     amendNomorKeyOfId,
@@ -186,6 +189,7 @@ function toKeys(
     return {
       ...acc,
       amendNomorKeyOfId: { ...amendNomorKeyOfId, [span.id]: amendNomor },
+      amendInsertPasalKeyOfId: { ...amendInsertPasalKeyOfId, [span.id]: [] },
       nomorKeyOfId: { ...nomorKeyOfId, [span.id]: amendNomor },
       lastNomor: newLastNomor,
       lastAmendedNomor: newLastNomor,
@@ -268,6 +272,11 @@ function toKeys(
           `${newPasalKey}`
         ),
         amendNomorKeyOfId: newNomorKeyOfIdOf(amendNomorKeyOfId, lastNomor),
+        amendInsertPasalKeyOfId: newAmendInsertPasalKeyOfIdOf(
+          amendInsertPasalKeyOfId,
+          lastNomor?.id,
+          `${newPasalKey}`
+        ),
         lastAmendedNomor: lastNomor,
         afterTruePasal: false,
       };
@@ -290,15 +299,17 @@ function toKeys(
         JSON.stringify(span) + JSON.stringify(lastNomor) + JSON.stringify(lastAmendedNomor)
       );
 
+    const newPasalKey = span.str.slice('Pasal '.length);
     return {
       ...acc,
       afterAbovePasal: false,
-      amendPasalKeyOfId: newAmendPasalKeyOfIdOf(
-        amendPasalKeyOfId,
-        lastNomor?.id,
-        span.str.slice('Pasal '.length)
-      ),
+      amendPasalKeyOfId: newAmendPasalKeyOfIdOf(amendPasalKeyOfId, lastNomor?.id, newPasalKey),
       amendNomorKeyOfId: newNomorKeyOfIdOf(amendNomorKeyOfId, lastNomor),
+      amendInsertPasalKeyOfId: newAmendInsertPasalKeyOfIdOf(
+        amendInsertPasalKeyOfId,
+        lastNomor?.id,
+        newPasalKey
+      ),
       lastAmendedNomor: lastNomor,
       afterTruePasal: false,
     };
@@ -332,4 +343,16 @@ function newAmendPasalKeyOfIdOf(
   if (isUndefined(lastNomorId)) return amendPasalKeyOfId;
   const newAmendedPasalKey = [...(amendPasalKeyOfId[lastNomorId] ?? []), newPasalKey];
   return { ...amendPasalKeyOfId, [lastNomorId]: newAmendedPasalKey };
+}
+
+function newAmendInsertPasalKeyOfIdOf(
+  amendInsertPasalKeyOfId: SpanIdKeyMap<string[]>,
+  lastNomorId: number | undefined,
+  newPasalKey: string
+): SpanIdKeyMap<string[]> {
+  if (isUndefined(lastNomorId)) return amendInsertPasalKeyOfId;
+  const amendedPasalKey = amendInsertPasalKeyOfId[lastNomorId];
+  if (isUndefined(amendedPasalKey)) return amendInsertPasalKeyOfId;
+  const newAmendedPasalKey = [...amendedPasalKey, newPasalKey];
+  return { ...amendInsertPasalKeyOfId, [lastNomorId]: newAmendedPasalKey };
 }

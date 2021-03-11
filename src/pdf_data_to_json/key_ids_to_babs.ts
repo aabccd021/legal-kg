@@ -1,6 +1,7 @@
 import {
   AmendDeletePasalPoint,
   AmendedPoint,
+  AmendInsertPasalPoint,
   AmendUpdatePasalPoint,
 } from './../legal/structure/amend';
 import { Paragraf } from './../legal/structure/paragraf';
@@ -11,7 +12,7 @@ import { Bagian } from '../legal/structure/bagian';
 import { IsiPasal, Pasal } from '../legal/structure/pasal';
 import { Span } from '../util';
 import { KeyIds } from './babs_spans_to_key_ids';
-import { getSpansInRange, spanIdKeyMapOf, toSpansWith } from './util';
+import { spansInRange, spanIdKeyMapOf, toSpansWith } from './util';
 import { AmendPoints } from '../legal/structure/amend';
 
 export type Context = {
@@ -73,32 +74,19 @@ function spansToParagraf(context: Context, keySpans: [string, Span[]]): Paragraf
 
 const spansToPasalWith = curry(spansToPasal);
 function spansToPasal(context: Context, keySpans: [string, Span[]]): Pasal {
-  // const { amendPasalKeyOfId } = context.keyIds;
   const [key, spans] = keySpans;
-  // const childStructure = spanIdKeyMapOf(
-  //   ['paragraf', paragrafKeyOfId],
-  //   ['pasal', pasalKeyOfId],
-  //   spans
-  // );
-  // const spanIdKeyMap = childStructure === 'paragraf' ? paragrafKeyOfId : pasalKeyOfId;
-  // const { spansOfKey } = toSpansWith(spanIdKeyMap, spans);
   const isi = isiPasalOf(context, spans);
   const _key = parseInt(key);
-
   return { _type: 'pasal', _key, isi };
 }
 
 function isiPasalOf(context: Context, spans: Span[]): IsiPasal {
   const { keyIds, hasAmendPasal } = context;
   const { amendNomorKeyOfId } = keyIds;
-  if (hasAmendPasal && !isEmpty(getSpansInRange(amendNomorKeyOfId, spans))) {
+  if (hasAmendPasal && !isEmpty(spansInRange(amendNomorKeyOfId, spans))) {
     return amendPointsOf(context, spans);
   }
-  return chain(spans)
-    .map(({ str }) => str)
-    .join(' ')
-    .thru(stringToEmptyReference)
-    .value();
+  return emptyReferenceOf(spans);
 }
 
 function amendPointsOf(context: Context, spans: Span[]): AmendPoints {
@@ -106,11 +94,7 @@ function amendPointsOf(context: Context, spans: Span[]): AmendPoints {
   const { amendNomorKeyOfId } = keyIds;
   const { preKeySpans, spansOfKey } = toSpansWith(amendNomorKeyOfId, spans);
   const isi = chain(spansOfKey).toPairs().map(spansToAmendedPointWith(context)).compact().value();
-  const description = chain(preKeySpans)
-    .map(({ str }) => str)
-    .join(' ')
-    .thru(stringToEmptyReference)
-    .value();
+  const description = emptyReferenceOf(preKeySpans);
   return { _type: 'amendPoints', description, isi };
 }
 
@@ -119,28 +103,17 @@ function spansToAmendedPoint(
   context: Context,
   keySpans: [string, Span[]]
 ): AmendedPoint | undefined {
-  // const { keyIds } = context;
-  // const { amendPasalKeyOfId } = keyIds;
-  // const [key, spans] = keySpans;
-  // const _key = parseInt(key);
-  // const pasalKeys = uniq(amendPasalKeyOfId[spans[0]?.id ?? neverNum()]);
-  // if (isUndefined(pasalKeys)) console.log(spans[0]?.id, spans[0]?.pageNum, spans[0]?.str);
-  // const isi = chain(spans)
-  //   .map(({ str }) => str)
-  //   .join(' ')
-  //   .thru(stringToEmptyReference)
-  //   .value();
-  // return { _type: 'amendedPoint', _key, pasalKeys, isi };
-
-  // const { keyIds } = context;
-  // const { amendDeletePasalKeyOfId } = keyIds;
-  // const [key, spans] = keySpans;
-  // const _key = parseInt(key);
-  // const pasalKeys = uniq(amendPasalKeyOfId[spans[0]?.id ?? neverNum()]);
-  return (
+  const res =
     spansToAmendDeletePasalPoint(context, keySpans) ??
-    spansToAmendUpdatePasalPoint(context, keySpans)
-  );
+    spansToAmendUpdatePasalPoint(context, keySpans) ??
+    spansToAmendInsertPasalPoint(context, keySpans);
+  if (isUndefined(res)) {
+    const firstSpan = keySpans[1][0];
+    console.log(
+      `Unparsed amend: id:${firstSpan?.id}, pageNum:${firstSpan?.pageNum}, str:${firstSpan?.str}`
+    );
+  }
+  return res;
 }
 
 function spansToAmendDeletePasalPoint(
@@ -151,9 +124,10 @@ function spansToAmendDeletePasalPoint(
   const _nomorKey = parseInt(nomorKey);
   const firstSpanId = spans[0]?.id;
   if (isUndefined(firstSpanId)) return undefined;
-  const deletedPasalKey = context.keyIds.amendDeletePasalKeyOfId[firstSpanId];
-  if (isUndefined(deletedPasalKey)) return undefined;
-  return { _type: 'amendPoint', _nomorKey, _operation: 'delete', _pasalKey: deletedPasalKey };
+  const _pasalKey = context.keyIds.amendDeletePasalKeyOfId[firstSpanId];
+  if (isUndefined(_pasalKey)) return undefined;
+  const isi = emptyReferenceOf(spans);
+  return { _type: 'amendPoint', _nomorKey, _operation: 'delete', _pasalKey, isi };
 }
 
 function spansToAmendUpdatePasalPoint(
@@ -166,20 +140,28 @@ function spansToAmendUpdatePasalPoint(
   if (isUndefined(firstSpanId)) return undefined;
   const _pasalKey = context.keyIds.amendUpdatePasalKeyOfId[firstSpanId];
   if (isUndefined(_pasalKey)) return undefined;
-  const isi = chain(spans)
-    .map(({ str }) => str)
-    .join(' ')
-    .thru(stringToEmptyReference)
-    .value();
+  const isi = emptyReferenceOf(spans);
   return { _type: 'amendPoint', _operation: 'update', _nomorKey, _pasalKey, isi };
 }
 
-// function amendPasalOf(context: Context, spans: Span[]): AmendPoints {
-//   const { keyIds } = context;
-//   const { amendPasalKeyOfId } = keyIds;
-//   const { preKeySpans, spansOfKey } = toSpansWith(amendPasalKeyOfId, spans);
-// }
+function spansToAmendInsertPasalPoint(
+  context: Context,
+  keySpans: [string, Span[]]
+): AmendInsertPasalPoint | undefined {
+  const [nomorKey, spans] = keySpans;
+  const _nomorKey = parseInt(nomorKey);
+  const firstSpanId = spans[0]?.id;
+  if (isUndefined(firstSpanId)) return undefined;
+  const _pasalKeys = context.keyIds.amendInsertPasalKeyOfId[firstSpanId];
+  if (isUndefined(_pasalKeys)) return undefined;
+  const isi = emptyReferenceOf(spans);
+  return { _type: 'amendPoint', _operation: 'insert', _nomorKey, _pasalKeys, isi };
+}
 
-function stringToEmptyReference(text: string): ReferenceText {
-  return { _type: 'referenceText', references: [], text };
+function emptyReferenceOf(spans: Span[]): ReferenceText {
+  return chain(spans)
+    .map(({ str }) => str)
+    .join(' ')
+    .thru<ReferenceText>((text) => ({ _type: 'referenceText', references: [], text }))
+    .value();
 }

@@ -23,8 +23,8 @@ export function spanIdKeyMapOf<A extends Structure, B extends Structure>(
   spans: Span[],
   context: Context
 ): StructureUtil<A> | StructureUtil<B> {
-  return (min(getSpansInRange(map1[0], spans)) ?? Infinity) <
-    (min(getSpansInRange(map2[0], spans)) ?? Infinity)
+  return (min(spansInRange(map1[0], spans)) ?? Infinity) <
+    (min(spansInRange(map2[0], spans)) ?? Infinity)
     ? transform(map1, context)
     : transform(map2, context);
 }
@@ -39,7 +39,7 @@ function transform<T extends Structure>(
   };
 }
 
-export function getSpansInRange<T>(map: SpanIdKeyMap<T>, spans: Span[]): number[] {
+export function spansInRange<T>(map: SpanIdKeyMap<T>, spans: Span[]): number[] {
   return chain(map)
     .keys()
     .map((key) => parseInt(key))
