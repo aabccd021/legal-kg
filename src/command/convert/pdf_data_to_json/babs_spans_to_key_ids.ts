@@ -1,4 +1,4 @@
-import { curry, mean, isUndefined } from 'lodash';
+import { curry, mean, isUndefined, isEmpty } from 'lodash';
 import { lastOf, neverNum, neverString, Span } from '../../../util';
 import {
   ayatKeyOf,
@@ -31,6 +31,7 @@ export type KeyIds = {
   amendNomorKeyOfId: SpanIdKeyMap<number>;
   afterTruePasal: boolean;
   afterPasalXls: number[];
+  ayatXls: number[];
   afterAbovePasal: boolean;
 };
 
@@ -50,6 +51,7 @@ export function babsSpansToKeyIds(hasAmendPasal: boolean, spans: Span[]): KeyIds
     amendUpdatePasalKeyOfId: {},
     amendInsertPasalKeyOfId: {},
     afterPasalXls: [],
+    ayatXls: [],
     afterAbovePasal: false,
     afterTruePasal: false,
   };
@@ -81,6 +83,7 @@ function toKeys(
     afterAbovePasal,
     afterTruePasal,
     afterPasalXls,
+    ayatXls,
     lastBabKey,
     lastBagianKey,
     lastParagrafKey,
@@ -332,11 +335,16 @@ function toKeys(
   }
 
   const newAyatKey = ayatKeyOf(span);
-  if (!isUndefined(newAyatKey) && (newAyatKey === 1 || newAyatKey - 1 === lastAyatKey)) {
+  if (
+    !isUndefined(newAyatKey) &&
+    (newAyatKey === 1 || newAyatKey - 1 === lastAyatKey) &&
+    (isEmpty(ayatXls) || Math.abs(mean(ayatXls) - span.xL) < 13)
+  ) {
     return {
       ...acc,
       ayatKeyOfId: { ...ayatKeyOfId, [span.id]: newAyatKey },
       lastAyatKey: newAyatKey,
+      ayatXls: [...ayatXls, span.xL],
     };
   }
   return acc;

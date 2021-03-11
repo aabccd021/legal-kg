@@ -608,8 +608,8 @@ babs:
                   _type: referenceText
                   references: []
                   text: >-
-                    dalam menyelenggarakan pe-latihan kerja dapat bekerja sama
-                    dengan swasta.
+                    Pelatihan kerja diselenggarakan oleh lembaga pelatihan kerja
+                    pemerintah dan/atau lembaga pelatihan kerja swasta.
               - _type: ayat
                 _key: 2
                 isi:
@@ -625,7 +625,8 @@ babs:
                   references: []
                   text: >-
                     Lembaga pelatihan kerja pemerintah sebagaimana dimaksud
-                    dalam ayat
+                    dalam ayat (l) dalam menyelenggarakan pe-latihan kerja dapat
+                    bekerja sama dengan swasta.
         - _type: pasal
           _key: 14
           isi:
@@ -1746,11 +1747,10 @@ babs:
                   _type: referenceText
                   references: []
                   text: >-
-                    dilakukan dengan pola pembentukan dan pembinaan tenaga kerja
-                    mandiri, penerapan sistem padat karya, penerapan teknologi
-                    tepat guna, dan pendayagunaan tenaga kerja sukarela atau
-                    pola lain yang dapat mendorong terciptanya perluasan
-                    kesempatan kerja.
+                    Perluasan kesempatan kerja di luar hubungan kerja dilakukan
+                    melalui penciptaan kegiatan yang produktif dan berkelanjutan
+                    dengan mendayagunakan potensi sumber daya alam, sumber daya
+                    manusia dan teknologi tepat guna.
               - _type: ayat
                 _key: 2
                 isi:
@@ -1758,7 +1758,11 @@ babs:
                   references: []
                   text: >-
                     Penciptaan perluasan kesempatan kerja sebagaimana dimaksud
-                    dalam ayat
+                    dalam ayat (l) dilakukan dengan pola pembentukan dan
+                    pembinaan tenaga kerja mandiri, penerapan sistem padat
+                    karya, penerapan teknologi tepat guna, dan pendayagunaan
+                    tenaga kerja sukarela atau pola lain yang dapat mendorong
+                    terciptanya perluasan kesempatan kerja.
         - _type: pasal
           _key: 41
           isi:
@@ -1926,11 +1930,31 @@ babs:
               - _type: ayat
                 _key: 1
                 isi:
+                  _type: referenceText
+                  references: []
+                  text: >-
+                    Pemberi kerja yang menggunakan tenaga kerja asing harus
+                    memiliki rencana penggunaan tenaga kerja asing yang disahkan
+                    oleh Menteri atau pejabat yang ditunjuk.
+              - _type: ayat
+                _key: 2
+                isi:
                   _type: points
                   _description:
                     _type: referenceText
-                    references: []
-                    text: 'sekurang-kurangnya me muat keterangan :'
+                    references:
+                      - start: 65
+                        end: 73
+                        node:
+                          _key: 1
+                          parentPasal: &ref_13
+                            _key: 43
+                            parentDocument: *ref_0
+                            _structureType: pasal
+                          _structureType: ayat
+                    text: >-
+                      Rencana penggunaan tenaga kerja asing sebagaimana dimaksud
+                      dalam ayat (1) sekurang-kurangnya me muat keterangan :
                   isi:
                     - _type: alphaPoint
                       _key: a
@@ -1956,33 +1980,33 @@ babs:
                       _key: d
                       isi:
                         _type: referenceText
-                        references:
-                          - start: 145
-                            end: 153
-                            node:
-                              _key: 1
-                              parentPasal:
-                                _key: 43
-                                parentDocument: *ref_0
-                                _structureType: pasal
-                              _structureType: ayat
+                        references: []
                         text: >-
                           penunjukan tenaga kerja warga negara Indonesia sebagai
-                          pendamping tenaga kerja asing yang dipekerjakan. (3)
-                          Ketentuan sebagaimana dimaksud dalam ayat (1) tidak
-                          berlaku bagi instansi pemerintah, badan-badan
-                          internasional dan perwakilan negara asing. (4)
-                          Ketentuan mengenai tata cara pengesahan rencana
-                          penggunaan tenaga kerja asing diatur dengan Keputu san
-                          Menteri.
+                          pendamping tenaga kerja asing yang dipekerjakan.
               - _type: ayat
-                _key: 2
+                _key: 3
+                isi:
+                  _type: referenceText
+                  references:
+                    - start: 37
+                      end: 45
+                      node:
+                        _key: 1
+                        parentPasal: *ref_13
+                        _structureType: ayat
+                  text: >-
+                    Ketentuan sebagaimana dimaksud dalam ayat (1) tidak berlaku
+                    bagi instansi pemerintah, badan-badan internasional dan
+                    perwakilan negara asing.
+              - _type: ayat
+                _key: 4
                 isi:
                   _type: referenceText
                   references: []
                   text: >-
-                    Rencana penggunaan tenaga kerja asing sebagaimana dimaksud
-                    dalam ayat
+                    Ketentuan mengenai tata cara pengesahan rencana penggunaan
+                    tenaga kerja asing diatur dengan Keputu san Menteri.
         - _type: pasal
           _key: 44
           isi:
@@ -2049,7 +2073,7 @@ babs:
                               _key: a
                               parentPoints:
                                 _key: 1
-                                parentPasal: &ref_13
+                                parentPasal: &ref_14
                                   _key: 45
                                   parentDocument: *ref_0
                                   _structureType: pasal
@@ -2069,7 +2093,7 @@ babs:
                       end: 45
                       node:
                         _key: 1
-                        parentPasal: *ref_13
+                        parentPasal: *ref_14
                         _structureType: ayat
                   text: >-
                     Ketentuan sebagaimana dimaksud dalam ayat (1) tidak berlaku
@@ -2127,7 +2151,7 @@ babs:
                       end: 65
                       node:
                         _key: 1
-                        parentPasal: &ref_14
+                        parentPasal: &ref_15
                           _key: 47
                           parentDocument: *ref_0
                           _structureType: pasal
@@ -2147,7 +2171,7 @@ babs:
                       end: 101
                       node:
                         _key: 2
-                        parentPasal: *ref_14
+                        parentPasal: *ref_15
                         _structureType: ayat
                   text: >-
                     Ketentuan mengenai jabatan-jabatan tertentu di lembaga
@@ -2263,9 +2287,9 @@ babs:
                       end: 129
                       node:
                         _key: b
-                        parentPoints: &ref_15
+                        parentPoints: &ref_16
                           _key: 1
-                          parentPasal: &ref_16
+                          parentPasal: &ref_17
                             _key: 52
                             parentDocument: *ref_0
                             _structureType: pasal
@@ -2275,7 +2299,7 @@ babs:
                       end: 123
                       node:
                         _key: a
-                        parentPoints: *ref_15
+                        parentPoints: *ref_16
                         _structureType: point
                   text: >-
                     Perjanjian kerja yang dibuat oleh para pihak yang
@@ -2290,16 +2314,16 @@ babs:
                       end: 129
                       node:
                         _key: d
-                        parentPoints: &ref_17
+                        parentPoints: &ref_18
                           _key: 1
-                          parentPasal: *ref_16
+                          parentPasal: *ref_17
                           _structureType: ayat
                         _structureType: point
                     - start: 107
                       end: 123
                       node:
                         _key: c
-                        parentPoints: *ref_17
+                        parentPoints: *ref_18
                         _structureType: point
                   text: >-
                     Perjanjian kerja yang dibuat oleh para pihak yang
@@ -2393,7 +2417,7 @@ babs:
                         _key: e
                         parentPoints:
                           _key: 1
-                          parentPasal: &ref_18
+                          parentPasal: &ref_19
                             _key: 54
                             parentDocument: *ref_0
                             _structureType: pasal
@@ -2413,7 +2437,7 @@ babs:
                       end: 52
                       node:
                         _key: 1
-                        parentPasal: *ref_18
+                        parentPasal: *ref_19
                         _structureType: ayat
                   text: >-
                     Perjanjian kerja sebagaimana dimaksud dalam ayat (1) dibuat
@@ -2436,11 +2460,21 @@ babs:
               - _type: ayat
                 _key: 1
                 isi:
+                  _type: referenceText
+                  references: []
+                  text: >-
+                    Perjanjian kerja dibuat untuk waktu tertentu atau untuk
+                    waktu tidak tertentu.
+              - _type: ayat
+                _key: 2
+                isi:
                   _type: points
                   _description:
                     _type: referenceText
                     references: []
-                    text: 'didasarkan atas :'
+                    text: >-
+                      Perjanjian kerja untuk waktu tertentu sebagaimana dimaksud
+                      dalam ayat (l) didasarkan atas :
                   isi:
                     - _type: alphaPoint
                       _key: a
@@ -2454,14 +2488,6 @@ babs:
                         _type: referenceText
                         references: []
                         text: selesainya suatu pekerjaan tertentu.
-              - _type: ayat
-                _key: 2
-                isi:
-                  _type: referenceText
-                  references: []
-                  text: >-
-                    Perjanjian kerja untuk waktu tertentu sebagaimana dimaksud
-                    dalam ayat
         - _type: pasal
           _key: 57
           isi:
@@ -2630,7 +2656,7 @@ babs:
                       end: 147
                       node:
                         _key: 6
-                        parentPasal: &ref_19
+                        parentPasal: &ref_20
                           _key: 59
                           parentDocument: *ref_0
                           _structureType: pasal
@@ -2639,25 +2665,25 @@ babs:
                       end: 133
                       node:
                         _key: 5
-                        parentPasal: *ref_19
+                        parentPasal: *ref_20
                         _structureType: ayat
                     - start: 115
                       end: 123
                       node:
                         _key: 4
-                        parentPasal: *ref_19
+                        parentPasal: *ref_20
                         _structureType: ayat
                     - start: 105
                       end: 113
                       node:
                         _key: 2
-                        parentPasal: *ref_19
+                        parentPasal: *ref_20
                         _structureType: ayat
                     - start: 95
                       end: 103
                       node:
                         _key: 1
-                        parentPasal: *ref_19
+                        parentPasal: *ref_20
                         _structureType: ayat
                   text: >-
                     Perjanjian kerja untuk waktu tertentu yang tidak memenuhi
@@ -2903,7 +2929,7 @@ babs:
                         end: 90
                         node:
                           _key: 1
-                          parentPasal: &ref_20
+                          parentPasal: &ref_21
                             _key: 65
                             parentDocument: *ref_0
                             _structureType: pasal
@@ -2950,7 +2976,7 @@ babs:
                       end: 51
                       node:
                         _key: 1
-                        parentPasal: *ref_20
+                        parentPasal: *ref_21
                         _structureType: ayat
                   text: >-
                     Perusahaan lain sebagaimana dimaksud dalam ayat (1) harus
@@ -2964,7 +2990,7 @@ babs:
                       end: 119
                       node:
                         _key: 2
-                        parentPasal: *ref_20
+                        parentPasal: *ref_21
                         _structureType: ayat
                   text: >-
                     Perlindungan kerja dan syarat-syarat kerja bagi
@@ -2982,7 +3008,7 @@ babs:
                       end: 79
                       node:
                         _key: 2
-                        parentPasal: *ref_20
+                        parentPasal: *ref_21
                         _structureType: ayat
                   text: >-
                     Perubahan dan/atau penambahan syarat-syarat sebagaimana
@@ -2997,7 +3023,7 @@ babs:
                       end: 78
                       node:
                         _key: 1
-                        parentPasal: *ref_20
+                        parentPasal: *ref_21
                         _structureType: ayat
                   text: >-
                     Hubungan kerja dalam pelaksanaan pekerjaan sebagaimana
@@ -3019,7 +3045,7 @@ babs:
                       end: 50
                       node:
                         _key: 6
-                        parentPasal: *ref_20
+                        parentPasal: *ref_21
                         _structureType: ayat
                   text: >-
                     Hubungan kerja sebagaimana dimaksud dalam ayat (6) dapat
@@ -3035,13 +3061,13 @@ babs:
                       end: 68
                       node:
                         _key: 3
-                        parentPasal: *ref_20
+                        parentPasal: *ref_21
                         _structureType: ayat
                     - start: 47
                       end: 55
                       node:
                         _key: 2
-                        parentPasal: *ref_20
+                        parentPasal: *ref_21
                         _structureType: ayat
                   text: >-
                     Dalam hal ketentuan sebagaimana dimaksud dalam ayat (2) dan
@@ -3058,13 +3084,13 @@ babs:
                       end: 225
                       node:
                         _key: 7
-                        parentPasal: *ref_20
+                        parentPasal: *ref_21
                         _structureType: ayat
                     - start: 92
                       end: 100
                       node:
                         _key: 8
-                        parentPasal: *ref_20
+                        parentPasal: *ref_21
                         _structureType: ayat
                   text: >-
                     Dalam hal hubungan kerja beralih ke perusahaan pemberi
@@ -3119,7 +3145,7 @@ babs:
                               _key: a
                               parentPoints:
                                 _key: 2
-                                parentPasal: &ref_21
+                                parentPasal: &ref_22
                                   _key: 66
                                   parentDocument: *ref_0
                                   _structureType: pasal
@@ -3177,34 +3203,34 @@ babs:
                       end: 83
                       node:
                         _key: d
-                        parentPoints: &ref_22
+                        parentPoints: &ref_23
                           _key: 2
-                          parentPasal: *ref_21
+                          parentPasal: *ref_22
                           _structureType: ayat
                         _structureType: point
                     - start: 75
                       end: 76
                       node:
                         _key: b
-                        parentPoints: *ref_22
+                        parentPoints: *ref_23
                         _structureType: point
                     - start: 57
                       end: 73
                       node:
                         _key: a
-                        parentPoints: *ref_22
+                        parentPoints: *ref_23
                         _structureType: point
                     - start: 102
                       end: 110
                       node:
                         _key: 3
-                        parentPasal: *ref_21
+                        parentPasal: *ref_22
                         _structureType: ayat
                     - start: 47
                       end: 55
                       node:
                         _key: 1
-                        parentPasal: *ref_21
+                        parentPasal: *ref_22
                         _structureType: ayat
                   text: >-
                     Dalam hal ketentuan sebagaimana dimaksud dalam ayat (1),
@@ -3309,7 +3335,7 @@ babs:
                                     end: 92
                                     node:
                                       _key: 1
-                                      parentPasal: &ref_23
+                                      parentPasal: &ref_24
                                         _key: 69
                                         parentDocument: *ref_0
                                         _structureType: pasal
@@ -3376,28 +3402,28 @@ babs:
                                   end: 66
                                   node:
                                     _key: g
-                                    parentPoints: &ref_24
+                                    parentPoints: &ref_25
                                       _key: 2
-                                      parentPasal: *ref_23
+                                      parentPasal: *ref_24
                                       _structureType: ayat
                                     _structureType: point
                                 - start: 58
                                   end: 59
                                   node:
                                     _key: f
-                                    parentPoints: *ref_24
+                                    parentPoints: *ref_25
                                     _structureType: point
                                 - start: 55
                                   end: 56
                                   node:
                                     _key: b
-                                    parentPoints: *ref_24
+                                    parentPoints: *ref_25
                                     _structureType: point
                                 - start: 37
                                   end: 53
                                   node:
                                     _key: a
-                                    parentPoints: *ref_24
+                                    parentPoints: *ref_25
                                     _structureType: point
                               text: >-
                                 Ketentuan sebagaimana dimaksud dalam ayat (2)
@@ -3427,7 +3453,7 @@ babs:
                                   end: 40
                                   node:
                                     _key: 1
-                                    parentPasal: &ref_25
+                                    parentPasal: &ref_26
                                       _key: 70
                                       parentDocument: *ref_0
                                       _structureType: pasal
@@ -3446,7 +3472,7 @@ babs:
                                     end: 45
                                     node:
                                       _key: 1
-                                      parentPasal: *ref_25
+                                      parentPasal: *ref_26
                                       _structureType: ayat
                                 text: >-
                                   Pekerjaan sebagaimana dimaksud dalam ayat (1)
@@ -3478,11 +3504,31 @@ babs:
                           - _type: ayat
                             _key: 1
                             isi:
+                              _type: referenceText
+                              references: []
+                              text: >-
+                                Anak dapat melakukan pekerjaan untuk
+                                mengembangkan bakat dan minatnya.
+                          - _type: ayat
+                            _key: 2
+                            isi:
                               _type: points
                               _description:
                                 _type: referenceText
-                                references: []
-                                text: 'wajib memenuhi syarat :'
+                                references:
+                                  - start: 61
+                                    end: 69
+                                    node:
+                                      _key: 1
+                                      parentPasal: &ref_27
+                                        _key: 71
+                                        parentDocument: *ref_0
+                                        _structureType: pasal
+                                      _structureType: ayat
+                                text: >-
+                                  Pengusaha yang mempekerjakan anak sebagaimana
+                                  dimaksud dalam ayat (1) wajib memenuhi syarat
+                                  :
                               isi:
                                 - _type: alphaPoint
                                   _key: a
@@ -3504,38 +3550,33 @@ babs:
                                   _key: c
                                   isi:
                                     _type: referenceText
-                                    references:
-                                      - start: 205
-                                        end: 213
-                                        node:
-                                          _key: 1
-                                          parentPasal: &ref_26
-                                            _key: 71
-                                            parentDocument: *ref_0
-                                            _structureType: pasal
-                                          _structureType: ayat
-                                      - start: 218
-                                        end: 226
-                                        node:
-                                          _key: 2
-                                          parentPasal: *ref_26
-                                          _structureType: ayat
+                                    references: []
                                     text: >-
                                       kondisi dan lingkungan kerja tidak
                                       mengganggu perkembangan fisik, mental,
-                                      sosial, dan waktu sekolah. (3) Ketentuan
-                                      mengenai anak yang bekerja untuk
-                                      mengembangkan bakat dan minat sebagaimana
-                                      dimaksud dalam ayat (1) dan ayat (2)
-                                      diatur dengan Keputusan Menteri.
+                                      sosial, dan waktu sekolah.
                           - _type: ayat
-                            _key: 2
+                            _key: 3
                             isi:
                               _type: referenceText
-                              references: []
+                              references:
+                                - start: 113
+                                  end: 121
+                                  node:
+                                    _key: 2
+                                    parentPasal: *ref_27
+                                    _structureType: ayat
+                                - start: 100
+                                  end: 108
+                                  node:
+                                    _key: 1
+                                    parentPasal: *ref_27
+                                    _structureType: ayat
                               text: >-
-                                Pengusaha yang mempekerjakan anak sebagaimana
-                                dimaksud dalam ayat
+                                Ketentuan mengenai anak yang bekerja untuk
+                                mengembangkan bakat dan minat sebagaimana
+                                dimaksud dalam ayat (1) dan ayat (2) diatur
+                                dengan Keputusan Menteri.
                     - _type: pasal
                       _key: 72
                       isi:
@@ -3577,7 +3618,7 @@ babs:
                                     end: 62
                                     node:
                                       _key: 1
-                                      parentPasal: &ref_27
+                                      parentPasal: &ref_28
                                         _key: 74
                                         parentDocument: *ref_0
                                         _structureType: pasal
@@ -3634,7 +3675,7 @@ babs:
                                     _key: d
                                     parentPoints:
                                       _key: 2
-                                      parentPasal: *ref_27
+                                      parentPasal: *ref_28
                                       _structureType: ayat
                                     _structureType: point
                               text: >-
@@ -3751,7 +3792,7 @@ babs:
                                   end: 58
                                   node:
                                     _key: 4
-                                    parentPasal: &ref_28
+                                    parentPasal: &ref_29
                                       _key: 76
                                       parentDocument: *ref_0
                                       _structureType: pasal
@@ -3760,7 +3801,7 @@ babs:
                                   end: 45
                                   node:
                                     _key: 3
-                                    parentPasal: *ref_28
+                                    parentPasal: *ref_29
                                     _structureType: ayat
                               text: >-
                                 Ketentuan sebagaimana dimaksud dalam ayat (3)
@@ -3795,7 +3836,7 @@ babs:
                                     end: 47
                                     node:
                                       _key: 1
-                                      parentPasal: &ref_29
+                                      parentPasal: &ref_30
                                         _key: 77
                                         parentDocument: *ref_0
                                         _structureType: pasal
@@ -3831,7 +3872,7 @@ babs:
                                   end: 57
                                   node:
                                     _key: 2
-                                    parentPasal: *ref_29
+                                    parentPasal: *ref_30
                                     _structureType: ayat
                               text: >-
                                 Ketentuan waktu kerja sebagaimana dimaksud dalam
@@ -3846,7 +3887,7 @@ babs:
                                   end: 108
                                   node:
                                     _key: 3
-                                    parentPasal: *ref_29
+                                    parentPasal: *ref_30
                                     _structureType: ayat
                               text: >-
                                 Ketentuan mengenai waktu kerja pada sektor usaha
@@ -3906,7 +3947,7 @@ babs:
                                   end: 99
                                   node:
                                     _key: 1
-                                    parentPasal: &ref_30
+                                    parentPasal: &ref_31
                                       _key: 78
                                       parentDocument: *ref_0
                                       _structureType: pasal
@@ -3926,7 +3967,7 @@ babs:
                                     _key: b
                                     parentPoints:
                                       _key: 1
-                                      parentPasal: *ref_30
+                                      parentPasal: *ref_31
                                       _structureType: ayat
                                     _structureType: point
                               text: >-
@@ -3942,13 +3983,13 @@ babs:
                                   end: 108
                                   node:
                                     _key: 3
-                                    parentPasal: *ref_30
+                                    parentPasal: *ref_31
                                     _structureType: ayat
                                 - start: 87
                                   end: 95
                                   node:
                                     _key: 2
-                                    parentPasal: *ref_30
+                                    parentPasal: *ref_31
                                     _structureType: ayat
                               text: >-
                                 Ketentuan mengenai waktu kerja lembur dan upah
@@ -3978,7 +4019,7 @@ babs:
                                     end: 60
                                     node:
                                       _key: 1
-                                      parentPasal: &ref_31
+                                      parentPasal: &ref_32
                                         _key: 79
                                         parentDocument: *ref_0
                                         _structureType: pasal
@@ -4046,7 +4087,7 @@ babs:
                                     _key: c
                                     parentPoints:
                                       _key: 2
-                                      parentPasal: *ref_31
+                                      parentPasal: *ref_32
                                       _structureType: ayat
                                     _structureType: point
                               text: >-
@@ -4065,7 +4106,7 @@ babs:
                                     _key: d
                                     parentPoints:
                                       _key: 2
-                                      parentPasal: *ref_31
+                                      parentPasal: *ref_32
                                       _structureType: ayat
                                     _structureType: point
                               text: >-
@@ -4082,7 +4123,7 @@ babs:
                                   end: 55
                                   node:
                                     _key: 4
-                                    parentPasal: *ref_31
+                                    parentPasal: *ref_32
                                     _structureType: ayat
                               text: >-
                                 Perusahaan tertentu sebagaimana dimaksud dalam
@@ -4244,7 +4285,7 @@ babs:
                                   end: 125
                                   node:
                                     _key: 2
-                                    parentPasal: &ref_32
+                                    parentPasal: &ref_33
                                       _key: 85
                                       parentDocument: *ref_0
                                       _structureType: pasal
@@ -4263,7 +4304,7 @@ babs:
                                   end: 80
                                   node:
                                     _key: 2
-                                    parentPasal: *ref_32
+                                    parentPasal: *ref_33
                                     _structureType: ayat
                               text: >-
                                 Ketentuan mengenai jenis dan sifat pekerjaan
@@ -4330,7 +4371,7 @@ babs:
                                   end: 61
                                   node:
                                     _key: 2
-                                    parentPasal: &ref_33
+                                    parentPasal: &ref_34
                                       _key: 86
                                       parentDocument: *ref_0
                                       _structureType: pasal
@@ -4339,7 +4380,7 @@ babs:
                                   end: 48
                                   node:
                                     _key: 1
-                                    parentPasal: *ref_33
+                                    parentPasal: *ref_34
                                     _structureType: ayat
                               text: >-
                                 Perlindungan sebagaimana dimaksud dalam ayat (1)
@@ -4406,7 +4447,7 @@ babs:
                             end: 118
                             node:
                               _key: 1
-                              parentPasal: &ref_34
+                              parentPasal: &ref_35
                                 _key: 88
                                 parentDocument: *ref_0
                                 _structureType: pasal
@@ -4427,7 +4468,7 @@ babs:
                               end: 86
                               node:
                                 _key: 2
-                                parentPasal: *ref_34
+                                parentPasal: *ref_35
                                 _structureType: ayat
                           text: >-
                             Kebijakan pengupahan yang melindungi pekerja/buruh
@@ -4500,7 +4541,7 @@ babs:
                               _key: a
                               parentPoints:
                                 _key: 3
-                                parentPasal: *ref_34
+                                parentPasal: *ref_35
                                 _structureType: ayat
                               _structureType: point
                         text: >-
@@ -4558,7 +4599,7 @@ babs:
                             end: 48
                             node:
                               _key: 1
-                              parentPasal: &ref_35
+                              parentPasal: &ref_36
                                 _key: 89
                                 parentDocument: *ref_0
                                 _structureType: pasal
@@ -4575,7 +4616,7 @@ babs:
                             end: 48
                             node:
                               _key: 1
-                              parentPasal: *ref_35
+                              parentPasal: *ref_36
                               _structureType: ayat
                         text: >-
                           Upah minimum sebagaimana dimaksud dalam ayat (1)
@@ -4591,7 +4632,7 @@ babs:
                             end: 103
                             node:
                               _key: 2
-                              parentPasal: *ref_35
+                              parentPasal: *ref_36
                               _structureType: ayat
                         text: >-
                           Komponen serta pelaksanaan tahapan pencapaian
@@ -4749,7 +4790,7 @@ babs:
                               end: 45
                               node:
                                 _key: 1
-                                parentPasal: &ref_36
+                                parentPasal: &ref_37
                                   _key: 93
                                   parentDocument: *ref_0
                                   _structureType: pasal
@@ -4856,7 +4897,7 @@ babs:
                                 _key: a
                                 parentPoints:
                                   _key: 2
-                                  parentPasal: *ref_36
+                                  parentPasal: *ref_37
                                   _structureType: ayat
                                 _structureType: point
                           text: >-
@@ -4910,7 +4951,7 @@ babs:
                                 _key: c
                                 parentPoints:
                                   _key: 2
-                                  parentPasal: *ref_36
+                                  parentPasal: *ref_37
                                   _structureType: ayat
                                 _structureType: point
                           text: >-
@@ -4984,7 +5025,7 @@ babs:
                             end: 68
                             node:
                               _key: 2
-                              parentPasal: *ref_36
+                              parentPasal: *ref_37
                               _structureType: ayat
                         text: >-
                           Pengaturan pelaksanaan ketentuan sebagaimana dimaksud
@@ -5081,7 +5122,7 @@ babs:
                       end: 300
                       node:
                         _key: 3
-                        parentPasal: &ref_37
+                        parentPasal: &ref_38
                           _key: 97
                           parentDocument: *ref_0
                           _structureType: pasal
@@ -5090,7 +5131,7 @@ babs:
                       end: 287
                       node:
                         _key: 2
-                        parentPasal: *ref_37
+                        parentPasal: *ref_38
                         _structureType: ayat
                   text: >-
                     Ketentuan mengenai penghasilan yang layak, kebijakan
@@ -5125,7 +5166,7 @@ babs:
                             end: 64
                             node:
                               _key: 1
-                              parentPasal: &ref_38
+                              parentPasal: &ref_39
                                 _key: 98
                                 parentDocument: *ref_0
                                 _structureType: pasal
@@ -5154,13 +5195,13 @@ babs:
                             end: 211
                             node:
                               _key: 2
-                              parentPasal: *ref_38
+                              parentPasal: *ref_39
                               _structureType: ayat
                           - start: 190
                             end: 198
                             node:
                               _key: 1
-                              parentPasal: *ref_38
+                              parentPasal: *ref_39
                               _structureType: ayat
                         text: >-
                           Ketentuan mengenai tata cara pembentukan, komposisi
@@ -5228,7 +5269,7 @@ babs:
                             end: 70
                             node:
                               _key: 1
-                              parentPasal: &ref_39
+                              parentPasal: &ref_40
                                 _key: 100
                                 parentDocument: *ref_0
                                 _structureType: pasal
@@ -5247,13 +5288,13 @@ babs:
                             end: 180
                             node:
                               _key: 2
-                              parentPasal: *ref_39
+                              parentPasal: *ref_40
                               _structureType: ayat
                           - start: 159
                             end: 167
                             node:
                               _key: 1
-                              parentPasal: *ref_39
+                              parentPasal: *ref_40
                               _structureType: ayat
                         text: >-
                           Ketentuan mengenai Jenis dan kriteria fasilitas
@@ -5284,7 +5325,7 @@ babs:
                             end: 197
                             node:
                               _key: 1
-                              parentPasal: &ref_40
+                              parentPasal: &ref_41
                                 _key: 101
                                 parentDocument: *ref_0
                                 _structureType: pasal
@@ -5303,7 +5344,7 @@ babs:
                             end: 56
                             node:
                               _key: 1
-                              parentPasal: *ref_40
+                              parentPasal: *ref_41
                               _structureType: ayat
                         text: >-
                           Pembentukan koperasi sebagaimana dimaksud dalam ayat
@@ -5318,7 +5359,7 @@ babs:
                             end: 95
                             node:
                               _key: 2
-                              parentPasal: *ref_40
+                              parentPasal: *ref_41
                               _structureType: ayat
                         text: >-
                           Upaya-upaya untuk menumbuhkembangkan koperasi
@@ -5514,7 +5555,7 @@ babs:
                             end: 63
                             node:
                               _key: 1
-                              parentPasal: &ref_41
+                              parentPasal: &ref_42
                                 _key: 106
                                 parentDocument: *ref_0
                                 _structureType: pasal
@@ -5532,7 +5573,7 @@ babs:
                             end: 83
                             node:
                               _key: 2
-                              parentPasal: *ref_41
+                              parentPasal: *ref_42
                               _structureType: ayat
                         text: >-
                           Susunan keanggotaan lembaga kerja sama bipartit
@@ -5550,13 +5591,13 @@ babs:
                             end: 141
                             node:
                               _key: 3
-                              parentPasal: *ref_41
+                              parentPasal: *ref_42
                               _structureType: ayat
                           - start: 120
                             end: 128
                             node:
                               _key: 1
-                              parentPasal: *ref_41
+                              parentPasal: *ref_42
                               _structureType: ayat
                         text: >-
                           Ketentuan mengenai tata cara pembentukan dan susunan
@@ -5595,7 +5636,7 @@ babs:
                               end: 64
                               node:
                                 _key: 1
-                                parentPasal: &ref_42
+                                parentPasal: &ref_43
                                   _key: 107
                                   parentDocument: *ref_0
                                   _structureType: pasal
@@ -5638,7 +5679,7 @@ babs:
                             end: 98
                             node:
                               _key: 1
-                              parentPasal: *ref_42
+                              parentPasal: *ref_43
                               _structureType: ayat
                         text: >-
                           Tata kerja dan susunan organisasi Lembaga Kerja sama
@@ -5714,7 +5755,7 @@ babs:
                             end: 149
                             node:
                               _key: 1
-                              parentPasal: &ref_43
+                              parentPasal: &ref_44
                                 _key: 110
                                 parentDocument: *ref_0
                                 _structureType: pasal
@@ -5733,7 +5774,7 @@ babs:
                             end: 145
                             node:
                               _key: 1
-                              parentPasal: *ref_43
+                              parentPasal: *ref_44
                               _structureType: ayat
                         text: >-
                           Dalam hal di perusahaan yang bersangkutan belum
@@ -5876,7 +5917,7 @@ babs:
                             end: 181
                             node:
                               _key: 1
-                              parentPasal: &ref_44
+                              parentPasal: &ref_45
                                 _key: 112
                                 parentDocument: *ref_0
                                 _structureType: pasal
@@ -5885,7 +5926,7 @@ babs:
                             end: 101
                             node:
                               _key: 2
-                              parentPasal: *ref_44
+                              parentPasal: *ref_45
                               _structureType: ayat
                         text: >-
                           Apabila peraturan perusahaan telah sesuai sebagaimana
@@ -5913,7 +5954,7 @@ babs:
                             end: 116
                             node:
                               _key: 2
-                              parentPasal: *ref_44
+                              parentPasal: *ref_45
                               _structureType: ayat
                         text: >-
                           Dalam hal peraturan perusahaan belum memenuhi
@@ -5930,7 +5971,7 @@ babs:
                             end: 139
                             node:
                               _key: 3
-                              parentPasal: *ref_44
+                              parentPasal: *ref_45
                               _structureType: ayat
                         text: >-
                           Dalam waktu paling lama 14 (empat belas) hari kerja
@@ -5949,16 +5990,27 @@ babs:
                         _type: referenceText
                         references: []
                         text: >-
-                          harus mendapat pengesa-han dari Menteri atau pejabat
-                          yang ditunjuk.
+                          Perubahan peraturan perusahaan sebelum berakhir jangka
+                          waktu berlakunya hanya dapat dilakukan atas dasar
+                          kesepakatan antara pengusaha dan wakil pekerja/buruh.
                     - _type: ayat
                       _key: 2
                       isi:
                         _type: referenceText
-                        references: []
+                        references:
+                          - start: 64
+                            end: 72
+                            node:
+                              _key: 1
+                              parentPasal:
+                                _key: 113
+                                parentDocument: *ref_0
+                                _structureType: pasal
+                              _structureType: ayat
                         text: >-
                           Peraturan perusahaan hasil perubahan sebagaimana
-                          dimaksud dalam ayat
+                          dimaksud dalam ayat (1) harus mendapat pengesa-han
+                          dari Menteri atau pejabat yang ditunjuk.
               - _type: pasal
                 _key: 114
                 isi:
@@ -5991,41 +6043,65 @@ babs:
                       _key: 1
                       isi:
                         _type: referenceText
-                        references:
-                          - start: 470
-                            end: 478
-                            node:
-                              _key: 3
-                              parentPasal: &ref_45
-                                _key: 116
-                                parentDocument: *ref_0
-                                _structureType: pasal
-                              _structureType: ayat
-                          - start: 89
-                            end: 97
-                            node:
-                              _key: 1
-                              parentPasal: *ref_45
-                              _structureType: ayat
+                        references: []
                         text: >-
-                          dilaksanakan secara musya-warah. (3) Perjanjian kerja
-                          bersama sebagaimana dimaksud dalam ayat (1) harus
-                          dibuat secara tertulis dengan huruf latin dan
-                          menggunakan bahasa Indonesia. (4) Dalam hal terdapat
-                          perjanjian kerja bersama yang dibuat tidak menggunakan
-                          bahasa Indonesia, maka per-janjian kerja bersama
-                          tersebut harus diterjemahkan dalam bahasa Indonesia
-                          oleh penerjemah tersumpah dan terjemahan tersebut
-                          dianggap sudah memenuhi ketentuan sebagaimana dimaksud
-                          dalam ayat (3).
+                          Perjanjian kerja bersama dibuat oleh serikat
+                          pekerja/serikat buruh atau beberapa serikat
+                          pekerja/serikat buruh yang telah tercatat pada
+                          instansi yang bertanggung jawab di bidang
+                          ketenagakerjaan dengan pengusaha atau beberapa
+                          pengusaha.
                     - _type: ayat
                       _key: 2
                       isi:
                         _type: referenceText
-                        references: []
+                        references:
+                          - start: 63
+                            end: 71
+                            node:
+                              _key: 1
+                              parentPasal: &ref_46
+                                _key: 116
+                                parentDocument: *ref_0
+                                _structureType: pasal
+                              _structureType: ayat
                         text: >-
                           Penyusunan perjanjian kerja bersama sebagaimana
-                          dimaksud dalam ayat
+                          dimaksud dalam ayat (1) dilaksanakan secara
+                          musya-warah.
+                    - _type: ayat
+                      _key: 3
+                      isi:
+                        _type: referenceText
+                        references:
+                          - start: 52
+                            end: 60
+                            node:
+                              _key: 1
+                              parentPasal: *ref_46
+                              _structureType: ayat
+                        text: >-
+                          Perjanjian kerja bersama sebagaimana dimaksud dalam
+                          ayat (1) harus dibuat secara tertulis dengan huruf
+                          latin dan menggunakan bahasa Indonesia.
+                    - _type: ayat
+                      _key: 4
+                      isi:
+                        _type: referenceText
+                        references:
+                          - start: 286
+                            end: 294
+                            node:
+                              _key: 3
+                              parentPasal: *ref_46
+                              _structureType: ayat
+                        text: >-
+                          Dalam hal terdapat perjanjian kerja bersama yang
+                          dibuat tidak menggunakan bahasa Indonesia, maka
+                          per-janjian kerja bersama tersebut harus diterjemahkan
+                          dalam bahasa Indonesia oleh penerjemah tersumpah dan
+                          terjemahan tersebut dianggap sudah memenuhi ketentuan
+                          sebagaimana dimaksud dalam ayat (3).
               - _type: pasal
                 _key: 117
                 isi:
@@ -6082,7 +6158,7 @@ babs:
                             end: 113
                             node:
                               _key: 1
-                              parentPasal: &ref_46
+                              parentPasal: &ref_47
                                 _key: 119
                                 parentDocument: *ref_0
                                 _structureType: pasal
@@ -6108,13 +6184,13 @@ babs:
                             end: 373
                             node:
                               _key: 2
-                              parentPasal: *ref_46
+                              parentPasal: *ref_47
                               _structureType: ayat
                           - start: 46
                             end: 54
                             node:
                               _key: 2
-                              parentPasal: *ref_46
+                              parentPasal: *ref_47
                               _structureType: ayat
                         text: >-
                           Dalam hal dukungan sebagaimana dimaksud dalam ayat (2)
@@ -6151,7 +6227,7 @@ babs:
                             end: 55
                             node:
                               _key: 1
-                              parentPasal: &ref_47
+                              parentPasal: &ref_48
                                 _key: 120
                                 parentDocument: *ref_0
                                 _structureType: pasal
@@ -6172,13 +6248,13 @@ babs:
                             end: 69
                             node:
                               _key: 2
-                              parentPasal: *ref_47
+                              parentPasal: *ref_48
                               _structureType: ayat
                           - start: 47
                             end: 55
                             node:
                               _key: 1
-                              parentPasal: *ref_47
+                              parentPasal: *ref_48
                               _structureType: ayat
                         text: >-
                           Dalam hal ketentuan sebagaimana dimaksud dalam ayat
@@ -6251,7 +6327,7 @@ babs:
                             end: 60
                             node:
                               _key: 1
-                              parentPasal: &ref_48
+                              parentPasal: &ref_49
                                 _key: 123
                                 parentDocument: *ref_0
                                 _structureType: pasal
@@ -6280,7 +6356,7 @@ babs:
                             end: 57
                             node:
                               _key: 3
-                              parentPasal: *ref_48
+                              parentPasal: *ref_49
                               _structureType: ayat
                         text: >-
                           Dalam hal perundingan sebagaimana dimaksud dalam ayat
@@ -6483,50 +6559,19 @@ babs:
                       isi:
                         _type: referenceText
                         references:
-                          - start: 641
-                            end: 659
+                          - start: 295
+                            end: 304
                             node:
-                              parentPasal:
-                                parentDocument: *ref_0
-                                _key: 120
-                                _structureType: pasal
-                              _key: 1
-                              _structureType: ayat
-                          - start: 759
-                            end: 777
-                            node:
-                              parentPasal:
-                                parentDocument: *ref_0
-                                _key: 120
-                                _structureType: pasal
-                              _key: 2
-                              _structureType: ayat
-                          - start: 782
-                            end: 790
-                            node:
-                              _key: 3
-                              parentPasal:
-                                _key: 130
-                                parentDocument: *ref_0
-                                _structureType: pasal
-                              _structureType: ayat
+                              _key: 119
+                              parentDocument: *ref_0
+                              _structureType: pasal
                         text: >-
-                          , maka perpanjangan atau pembuatan pembaharuan
-                          perjanjian kerja bersama dilakukan oleh serikat
-                          pekerja/serikat buruh yang anggotanya lebih 5096 (lima
-                          puluh perseratus) dari jumlah seluruh pekerja/buruh di
-                          perusahaan bersama-sama dengan serikat pekerja/serikat
-                          buruh yang membuat perjanjian kerja bersama terdahulu
-                          dengan membentuk tim perunding secara proporsional.
-                          (3) Dalam hal perjanjian kerja bersama yang sudah
-                          berakhir masa berlakunya akan diperpanjang atau
-                          diper-baharui dan di perusahaan tersebut terdapat
-                          lebih dari 1 (satu) serikat pekerja/ serikat buruh dan
-                          tidak satupun serikat pekerja/serikat buruh yang ada
-                          memenuhi ketentuan Pasal 120 ayat (1), maka
-                          perpanjangan atau pembuatan pembaharuan perjanjian
-                          kerja bersama dilakukan menurut ketentuan Pasal 120
-                          ayat (2) dan ayat (3).
+                          Dalam hal perjanjian kerja bersama yang sudah berakhir
+                          masa berlakunya akan diperpanjang atau diper-baharui
+                          dan di perusahaan tersebut hanya terdapat 1 (satu)
+                          serikat pekerja/serikat buruh, maka perpanjangan atau
+                          pembuatan pembaharuan perjanjian kerja bersama tidak
+                          mensyaratkan ketentuan dalam Pasal 119.
                     - _type: ayat
                       _key: 2
                       isi:
@@ -6544,7 +6589,56 @@ babs:
                           dan di perusahaan tersebut terdapat lebih dari 1
                           (satu) serikat pekerja/serikat buruh dan serikat
                           pekerja/serikat buruh yang dulu berunding tidak lagi
-                          memenuhi ketentuan Pasal 120 ayat
+                          memenuhi ketentuan Pasal 120 ayat (l), maka
+                          perpanjangan atau pembuatan pembaharuan perjanjian
+                          kerja bersama dilakukan oleh serikat pekerja/serikat
+                          buruh yang anggotanya lebih 5096 (lima puluh
+                          perseratus) dari jumlah seluruh pekerja/buruh di
+                          perusahaan bersama-sama dengan serikat pekerja/serikat
+                          buruh yang membuat perjanjian kerja bersama terdahulu
+                          dengan membentuk tim perunding secara proporsional.
+                    - _type: ayat
+                      _key: 3
+                      isi:
+                        _type: referenceText
+                        references:
+                          - start: 271
+                            end: 289
+                            node:
+                              parentPasal:
+                                parentDocument: *ref_0
+                                _key: 120
+                                _structureType: pasal
+                              _key: 1
+                              _structureType: ayat
+                          - start: 389
+                            end: 407
+                            node:
+                              parentPasal:
+                                parentDocument: *ref_0
+                                _key: 120
+                                _structureType: pasal
+                              _key: 2
+                              _structureType: ayat
+                          - start: 412
+                            end: 420
+                            node:
+                              _key: 3
+                              parentPasal:
+                                _key: 130
+                                parentDocument: *ref_0
+                                _structureType: pasal
+                              _structureType: ayat
+                        text: >-
+                          Dalam hal perjanjian kerja bersama yang sudah berakhir
+                          masa berlakunya akan diperpanjang atau diper-baharui
+                          dan di perusahaan tersebut terdapat lebih dari 1
+                          (satu) serikat pekerja/ serikat buruh dan tidak
+                          satupun serikat pekerja/serikat buruh yang ada
+                          memenuhi ketentuan Pasal 120 ayat (1), maka
+                          perpanjangan atau pembuatan pembaharuan perjanjian
+                          kerja bersama dilakukan menurut ketentuan Pasal 120
+                          ayat (2) dan ayat (3).
               - _type: pasal
                 _key: 131
                 isi:
@@ -6713,16 +6807,29 @@ babs:
                               _type: referenceText
                               references: []
                               text: >-
-                                , dapat memenuhi atau tidak memenuhi ajakan
-                                tersebut.
+                                Pekerja/buruh dan/atau serikat pekerja/serikat
+                                buruh yang bermaksud mengajak pekerja/buruh lain
+                                untuk mogok kerja pada saat mogok kerja
+                                berlangsung dilakukan dengan tidak melanggar
+                                hukum.
                           - _type: ayat
                             _key: 2
                             isi:
                               _type: referenceText
-                              references: []
+                              references:
+                                - start: 65
+                                  end: 73
+                                  node:
+                                    _key: 1
+                                    parentPasal:
+                                      _key: 138
+                                      parentDocument: *ref_0
+                                      _structureType: pasal
+                                    _structureType: ayat
                               text: >-
                                 Pekerja/buruh yang diajak mogok kerja
-                                sebagaimana dimaksud dalam ayat
+                                sebagaimana dimaksud dalam ayat (1), dapat
+                                memenuhi atau tidak memenuhi ajakan tersebut.
                     - _type: pasal
                       _key: 139
                       isi:
@@ -6743,33 +6850,15 @@ babs:
                           - _type: ayat
                             _key: 1
                             isi:
-                              _type: points
-                              _description:
-                                _type: referenceText
-                                references: []
-                                text: >-
-                                  , maka demi menyelamat kan alat produksi dan
-                                  aset perusahaan, pengusaha dapat mengambil
-                                  tindakan sementara dengan cara :
-                              isi:
-                                - _type: alphaPoint
-                                  _key: a
-                                  isi:
-                                    _type: referenceText
-                                    references: []
-                                    text: >-
-                                      melarang para pekerja/buruh yang mogok
-                                      kerja berada di lokasi kegiatan proses
-                                      produksi, atau
-                                - _type: alphaPoint
-                                  _key: b
-                                  isi:
-                                    _type: referenceText
-                                    references: []
-                                    text: >-
-                                      bila dianggap perlu melarang pekerja/buruh
-                                      yang mogok kerja berada di lokasi
-                                      perusahaan.
+                              _type: referenceText
+                              references: []
+                              text: >-
+                                Sekurang-kurangnya dalam waktu 7 (tujuh) hari
+                                kerja sebelum mogok kerja dilaksanakan,
+                                pekerja/buruh dan serikat pekerja/serikat buruh
+                                wajib memberitahukan secara tertulis kepada
+                                pengusaha dan instansi yang bertanggung jawab di
+                                bidang ketenagakerjaan setempat.
                           - _type: ayat
                             _key: 2
                             isi:
@@ -6781,7 +6870,7 @@ babs:
                                     end: 49
                                     node:
                                       _key: 1
-                                      parentPasal: &ref_49
+                                      parentPasal: &ref_50
                                         _key: 140
                                         parentDocument: *ref_0
                                         _structureType: pasal
@@ -6831,7 +6920,7 @@ babs:
                                   end: 169
                                   node:
                                     _key: 2
-                                    parentPasal: *ref_49
+                                    parentPasal: *ref_50
                                     _structureType: ayat
                               text: >-
                                 Dalam hal mogok kerja akan dilakukan oleh
@@ -6844,11 +6933,35 @@ babs:
                           - _type: ayat
                             _key: 4
                             isi:
-                              _type: referenceText
-                              references: []
-                              text: >-
-                                Dalam hal mogok kerja dilakukan tidak
-                                sebagaimana dimaksud dalam ayat
+                              _type: points
+                              _description:
+                                _type: referenceText
+                                references: []
+                                text: >-
+                                  Dalam hal mogok kerja dilakukan tidak
+                                  sebagaimana dimaksud dalam ayat (l), maka demi
+                                  menyelamat kan alat produksi dan aset
+                                  perusahaan, pengusaha dapat mengambil tindakan
+                                  sementara dengan cara :
+                              isi:
+                                - _type: alphaPoint
+                                  _key: a
+                                  isi:
+                                    _type: referenceText
+                                    references: []
+                                    text: >-
+                                      melarang para pekerja/buruh yang mogok
+                                      kerja berada di lokasi kegiatan proses
+                                      produksi, atau
+                                - _type: alphaPoint
+                                  _key: b
+                                  isi:
+                                    _type: referenceText
+                                    references: []
+                                    text: >-
+                                      bila dianggap perlu melarang pekerja/buruh
+                                      yang mogok kerja berada di lokasi
+                                      perusahaan.
                     - _type: pasal
                       _key: 141
                       isi:
@@ -6891,7 +7004,7 @@ babs:
                                   end: 57
                                   node:
                                     _key: 2
-                                    parentPasal: &ref_50
+                                    parentPasal: &ref_51
                                       _key: 141
                                       parentDocument: *ref_0
                                       _structureType: pasal
@@ -6912,7 +7025,7 @@ babs:
                                   end: 57
                                   node:
                                     _key: 2
-                                    parentPasal: *ref_50
+                                    parentPasal: *ref_51
                                     _structureType: ayat
                               text: >-
                                 Dalam hal perundingan sebagaimana dimaksud dalam
@@ -6931,7 +7044,7 @@ babs:
                                   end: 88
                                   node:
                                     _key: 4
-                                    parentPasal: *ref_50
+                                    parentPasal: *ref_51
                                     _structureType: ayat
                               text: >-
                                 Dalam hal perundingan tidak menghasilkan
@@ -7135,7 +7248,7 @@ babs:
                                     end: 49
                                     node:
                                       _key: 1
-                                      parentPasal: &ref_51
+                                      parentPasal: &ref_52
                                         _key: 148
                                         parentDocument: *ref_0
                                         _structureType: pasal
@@ -7170,7 +7283,7 @@ babs:
                                   end: 49
                                   node:
                                     _key: 1
-                                    parentPasal: *ref_51
+                                    parentPasal: *ref_52
                                     _structureType: ayat
                               text: >-
                                 Pemberitahuan sebagaimana dimaksud dalam ayat
@@ -7222,7 +7335,7 @@ babs:
                                   end: 57
                                   node:
                                     _key: 2
-                                    parentPasal: &ref_52
+                                    parentPasal: &ref_53
                                       _key: 149
                                       parentDocument: *ref_0
                                       _structureType: pasal
@@ -7243,7 +7356,7 @@ babs:
                                   end: 57
                                   node:
                                     _key: 2
-                                    parentPasal: *ref_52
+                                    parentPasal: *ref_53
                                     _structureType: ayat
                               text: >-
                                 Dalam hal perundingan sebagaimana dimaksud dalam
@@ -7262,7 +7375,7 @@ babs:
                                   end: 86
                                   node:
                                     _key: 4
-                                    parentPasal: *ref_52
+                                    parentPasal: *ref_53
                                     _structureType: ayat
                               text: >-
                                 Apabila perundingan tidak menghasilkan
@@ -7292,7 +7405,7 @@ babs:
                                     end: 72
                                     node:
                                       _key: 2
-                                      parentPasal: *ref_52
+                                      parentPasal: *ref_53
                                       _structureType: ayat
                                 text: >-
                                   Pemberitahuan sebagaimana dimaksud dalam Pasal
@@ -7694,7 +7807,7 @@ babs:
                         end: 61
                         node:
                           _key: 1
-                          parentPasal: &ref_53
+                          parentPasal: &ref_54
                             _key: 156
                             parentDocument: *ref_0
                             _structureType: pasal
@@ -7789,7 +7902,7 @@ babs:
                         end: 75
                         node:
                           _key: 1
-                          parentPasal: *ref_53
+                          parentPasal: *ref_54
                           _structureType: ayat
                     text: >-
                       Perhitungan uang penghargaan masa kerja sebagaimana
@@ -7873,7 +7986,7 @@ babs:
                         end: 81
                         node:
                           _key: 1
-                          parentPasal: *ref_53
+                          parentPasal: *ref_54
                           _structureType: ayat
                     text: >-
                       Uang penggantian hak yang seharusnya diterima sebagaimana
@@ -7908,19 +8021,19 @@ babs:
                       end: 162
                       node:
                         _key: 4
-                        parentPasal: *ref_53
+                        parentPasal: *ref_54
                         _structureType: ayat
                     - start: 140
                       end: 148
                       node:
                         _key: 3
-                        parentPasal: *ref_53
+                        parentPasal: *ref_54
                         _structureType: ayat
                     - start: 130
                       end: 138
                       node:
                         _key: 2
-                        parentPasal: *ref_53
+                        parentPasal: *ref_54
                         _structureType: ayat
                   text: >-
                     Perubahan perhitungan uang pesangon, perhitungan uang
@@ -8101,7 +8214,7 @@ babs:
                         end: 51
                         node:
                           _key: 1
-                          parentPasal: &ref_54
+                          parentPasal: &ref_55
                             _key: 158
                             parentDocument: *ref_0
                             _structureType: pasal
@@ -8152,7 +8265,7 @@ babs:
                       end: 99
                       node:
                         _key: 1
-                        parentPasal: *ref_54
+                        parentPasal: *ref_55
                         _structureType: ayat
                   text: >-
                     Pekerja/buruh yang diputus hubungan kerjanya berdasarkan
@@ -8177,7 +8290,7 @@ babs:
                       end: 54
                       node:
                         _key: 1
-                        parentPasal: *ref_54
+                        parentPasal: *ref_55
                         _structureType: ayat
                   text: >-
                     Bagi pekerja/buruh sebagaimana dimaksud dalam ayat (1) yang
@@ -8266,7 +8379,7 @@ babs:
                       end: 43
                       node:
                         _key: 1
-                        parentPasal: &ref_55
+                        parentPasal: &ref_56
                           _key: 160
                           parentDocument: *ref_0
                           _structureType: pasal
@@ -8284,7 +8397,7 @@ babs:
                       end: 225
                       node:
                         _key: 1
-                        parentPasal: *ref_55
+                        parentPasal: *ref_56
                         _structureType: ayat
                   text: >-
                     Pengusaha dapat melakukan pemutusan hubungan kerja terhadap
@@ -8300,7 +8413,7 @@ babs:
                       end: 110
                       node:
                         _key: 3
-                        parentPasal: *ref_55
+                        parentPasal: *ref_56
                         _structureType: ayat
                   text: >-
                     Dalam hal pengadilan memutuskan perkara pidana sebelum masa
@@ -8326,13 +8439,13 @@ babs:
                       end: 73
                       node:
                         _key: 5
-                        parentPasal: *ref_55
+                        parentPasal: *ref_56
                         _structureType: ayat
                     - start: 52
                       end: 60
                       node:
                         _key: 3
-                        parentPasal: *ref_55
+                        parentPasal: *ref_56
                         _structureType: ayat
                   text: >-
                     Pemutusan hubungan kerja sebagaimana dimaksud dalam ayat (3)
@@ -8362,13 +8475,13 @@ babs:
                       end: 135
                       node:
                         _key: 5
-                        parentPasal: *ref_55
+                        parentPasal: *ref_56
                         _structureType: ayat
                     - start: 114
                       end: 122
                       node:
                         _key: 3
-                        parentPasal: *ref_55
+                        parentPasal: *ref_56
                         _structureType: ayat
                   text: >-
                     Pengusaha wajib membayar kepada pekerja/buruh yang mengalami
@@ -8402,7 +8515,7 @@ babs:
                       end: 52
                       node:
                         _key: 1
-                        parentPasal: &ref_56
+                        parentPasal: &ref_57
                           _key: 161
                           parentDocument: *ref_0
                           _structureType: pasal
@@ -8448,7 +8561,7 @@ babs:
                       end: 103
                       node:
                         _key: 1
-                        parentPasal: *ref_56
+                        parentPasal: *ref_57
                         _structureType: ayat
                   text: >-
                     Pekerja/buruh yang mengalami pemutusan hubungan kerja dengan
@@ -8465,38 +8578,21 @@ babs:
               - _type: ayat
                 _key: 1
                 isi:
-                  _type: points
-                  _description:
-                    _type: referenceText
-                    references: []
-                    text: 'harus memenuhi syarat :'
-                  isi:
-                    - _type: alphaPoint
-                      _key: a
-                      isi:
-                        _type: referenceText
-                        references: []
-                        text: >-
-                          mengajukan permohonan pengunduran diri secara tertulis
-                          selambat- lambatnya 30 (tiga puluh) hari sebelum
-                          tanggal mulai pengunduran diri:
-                    - _type: alphaPoint
-                      _key: b
-                      isi:
-                        _type: referenceText
-                        references: []
-                        text: 'tidak terikat dalam ikatan dinas: dan'
-                    - _type: alphaPoint
-                      _key: c
-                      isi:
-                        _type: referenceText
-                        references: []
-                        text: >-
-                          tetap melaksanakan kewajibannya sampai tanggal mulai
-                          pengunduran diri. (4) Pemutusan hubungan kerja dengan
-                          alasan pengunduran diri atas kemauan sendiri dilakukan
-                          tanpa pene-tapan lembaga penyelesaian perselisihan
-                          hubungan industrial.
+                  _type: referenceText
+                  references:
+                    - start: 108
+                      end: 126
+                      node:
+                        parentPasal:
+                          parentDocument: *ref_0
+                          _key: 156
+                          _structureType: pasal
+                        _key: 4
+                        _structureType: ayat
+                  text: >-
+                    Pekerja/buruh yang mengundurkan diri atas kemauan sendiri,
+                    memperoleh uang penggantian hak sesuai ketentuan Pasal 156
+                    ayat (4).
               - _type: ayat
                 _key: 2
                 isi:
@@ -8522,11 +8618,55 @@ babs:
               - _type: ayat
                 _key: 3
                 isi:
+                  _type: points
+                  _description:
+                    _type: referenceText
+                    references:
+                      - start: 64
+                        end: 72
+                        node:
+                          _key: 1
+                          parentPasal:
+                            _key: 162
+                            parentDocument: *ref_0
+                            _structureType: pasal
+                          _structureType: ayat
+                    text: >-
+                      Pekerja/buruh yang mengundurkan diri sebagaimana dimaksud
+                      dalam ayat (1) harus memenuhi syarat :
+                  isi:
+                    - _type: alphaPoint
+                      _key: a
+                      isi:
+                        _type: referenceText
+                        references: []
+                        text: >-
+                          mengajukan permohonan pengunduran diri secara tertulis
+                          selambat- lambatnya 30 (tiga puluh) hari sebelum
+                          tanggal mulai pengunduran diri:
+                    - _type: alphaPoint
+                      _key: b
+                      isi:
+                        _type: referenceText
+                        references: []
+                        text: 'tidak terikat dalam ikatan dinas: dan'
+                    - _type: alphaPoint
+                      _key: c
+                      isi:
+                        _type: referenceText
+                        references: []
+                        text: >-
+                          tetap melaksanakan kewajibannya sampai tanggal mulai
+                          pengunduran diri.
+              - _type: ayat
+                _key: 4
+                isi:
                   _type: referenceText
                   references: []
                   text: >-
-                    Pekerja/buruh yang mengundurkan diri sebagaimana dimaksud
-                    dalam ayat
+                    Pemutusan hubungan kerja dengan alasan pengunduran diri atas
+                    kemauan sendiri dilakukan tanpa pene-tapan lembaga
+                    penyelesaian perselisihan hubungan industrial.
         - _type: pasal
           _key: 163
           isi:
@@ -8538,43 +8678,7 @@ babs:
                   _type: referenceText
                   references:
                     - start: 319
-                      end: 328
-                      node:
-                        _key: 156
-                        parentDocument: *ref_0
-                        _structureType: pasal
-                  text: >-
-                    Pengusaha dapat melakukan pemutusan hubungan kerja terhadap
-                    pekerja/buruh dalam hal terjadi peru-bahan status,
-                    penggabungan, peleburan, atau perubahan kepemilikan
-                    perusahaan dan pekerja/buruh tidak bersedia melanjutkan
-                    hubungan kerja, maka pekerja/buruh berhak atas uang pesangon
-                    sebesar 1 (satu) kali sesuai ketentuan Pasal 156 ayat
-              - _type: ayat
-                _key: 2
-                isi:
-                  _type: referenceText
-                  references:
-                    - start: 53
-                      end: 71
-                      node:
-                        parentPasal:
-                          parentDocument: *ref_0
-                          _key: 156
-                          _structureType: pasal
-                        _key: 3
-                        _structureType: ayat
-                    - start: 120
-                      end: 138
-                      node:
-                        parentPasal:
-                          parentDocument: *ref_0
-                          _key: 156
-                          _structureType: pasal
-                        _key: 4
-                        _structureType: ayat
-                    - start: 430
-                      end: 448
+                      end: 337
                       node:
                         parentPasal:
                           parentDocument: *ref_0
@@ -8582,8 +8686,8 @@ babs:
                           _structureType: pasal
                         _key: 2
                         _structureType: ayat
-                    - start: 508
-                      end: 526
+                    - start: 390
+                      end: 408
                       node:
                         parentPasal:
                           parentDocument: *ref_0
@@ -8591,8 +8695,8 @@ babs:
                           _structureType: pasal
                         _key: 3
                         _structureType: ayat
-                    - start: 576
-                      end: 594
+                    - start: 457
+                      end: 475
                       node:
                         parentPasal:
                           parentDocument: *ref_0
@@ -8601,17 +8705,56 @@ babs:
                         _key: 4
                         _structureType: ayat
                   text: >-
-                    , uang perhargaan masa kerja 1 (satu) kali ketentuan Pasal
-                    156 ayat (3) dan uang penggantian hak sesuai ketentuan dalam
-                    Pasal 156 ayat (4). (2) Pengusaha dapat melakukan pemutusan
-                    hubungan kerja terhadap pekerja/buruh karena perubahan
-                    status, penggabungan, atau peleburan perusahaan, dan
-                    pengusaha tidak bersedia menerima pekerja/buruh di
-                    perusahaannya, maka pekerja/buruh berhak atas uang pesangon
-                    sebesar 2 (dua) kali ketentuan Pasal 156 ayat (2), uang
-                    penghargaan masa kerja 1 (satu) kali ketentuan dalam Pasal
-                    156 ayat (3), dan uang penggantian hak sesuai ketentuan
-                    dalam Pasal 156 ayat (4).
+                    Pengusaha dapat melakukan pemutusan hubungan kerja terhadap
+                    pekerja/buruh dalam hal terjadi peru-bahan status,
+                    penggabungan, peleburan, atau perubahan kepemilikan
+                    perusahaan dan pekerja/buruh tidak bersedia melanjutkan
+                    hubungan kerja, maka pekerja/buruh berhak atas uang pesangon
+                    sebesar 1 (satu) kali sesuai ketentuan Pasal 156 ayat (2),
+                    uang perhargaan masa kerja 1 (satu) kali ketentuan Pasal 156
+                    ayat (3) dan uang penggantian hak sesuai ketentuan dalam
+                    Pasal 156 ayat (4).
+              - _type: ayat
+                _key: 2
+                isi:
+                  _type: referenceText
+                  references:
+                    - start: 286
+                      end: 304
+                      node:
+                        parentPasal:
+                          parentDocument: *ref_0
+                          _key: 156
+                          _structureType: pasal
+                        _key: 2
+                        _structureType: ayat
+                    - start: 364
+                      end: 382
+                      node:
+                        parentPasal:
+                          parentDocument: *ref_0
+                          _key: 156
+                          _structureType: pasal
+                        _key: 3
+                        _structureType: ayat
+                    - start: 432
+                      end: 450
+                      node:
+                        parentPasal:
+                          parentDocument: *ref_0
+                          _key: 156
+                          _structureType: pasal
+                        _key: 4
+                        _structureType: ayat
+                  text: >-
+                    Pengusaha dapat melakukan pemutusan hubungan kerja terhadap
+                    pekerja/buruh karena perubahan status, penggabungan, atau
+                    peleburan perusahaan, dan pengusaha tidak bersedia menerima
+                    pekerja/buruh di perusahaannya, maka pekerja/buruh berhak
+                    atas uang pesangon sebesar 2 (dua) kali ketentuan Pasal 156
+                    ayat (2), uang penghargaan masa kerja 1 (satu) kali
+                    ketentuan dalam Pasal 156 ayat (3), dan uang penggantian hak
+                    sesuai ketentuan dalam Pasal 156 ayat (4).
         - _type: pasal
           _key: 164
           isi:
@@ -8880,7 +9023,7 @@ babs:
                       end: 130
                       node:
                         _key: 1
-                        parentPasal: &ref_57
+                        parentPasal: &ref_58
                           _key: 167
                           parentDocument: *ref_0
                           _structureType: pasal
@@ -8913,19 +9056,19 @@ babs:
                       end: 69
                       node:
                         _key: 3
-                        parentPasal: *ref_57
+                        parentPasal: *ref_58
                         _structureType: ayat
                     - start: 47
                       end: 55
                       node:
                         _key: 2
-                        parentPasal: *ref_57
+                        parentPasal: *ref_58
                         _structureType: ayat
                     - start: 37
                       end: 45
                       node:
                         _key: 1
-                        parentPasal: *ref_57
+                        parentPasal: *ref_58
                         _structureType: ayat
                   text: >-
                     Ketentuan sebagaimana dimaksud dalam ayat (1), ayat (2), dan
@@ -8980,25 +9123,25 @@ babs:
                       end: 99
                       node:
                         _key: 4
-                        parentPasal: *ref_57
+                        parentPasal: *ref_58
                         _structureType: ayat
                     - start: 77
                       end: 85
                       node:
                         _key: 3
-                        parentPasal: *ref_57
+                        parentPasal: *ref_58
                         _structureType: ayat
                     - start: 67
                       end: 75
                       node:
                         _key: 2
-                        parentPasal: *ref_57
+                        parentPasal: *ref_58
                         _structureType: ayat
                     - start: 57
                       end: 65
                       node:
                         _key: 1
-                        parentPasal: *ref_57
+                        parentPasal: *ref_58
                         _structureType: ayat
                   text: >-
                     Hak atas manfaat pensiun sebagaimana yang dimaksud dalam
@@ -9032,7 +9175,7 @@ babs:
                       end: 77
                       node:
                         _key: 1
-                        parentPasal: &ref_58
+                        parentPasal: &ref_59
                           _key: 168
                           parentDocument: *ref_0
                           _structureType: pasal
@@ -9059,7 +9202,7 @@ babs:
                       end: 60
                       node:
                         _key: 1
-                        parentPasal: *ref_58
+                        parentPasal: *ref_59
                         _structureType: ayat
                   text: >-
                     Pemutusan hubungan kerja sebagaimana dimaksud dalam ayat (1)
@@ -9174,7 +9317,7 @@ babs:
                       end: 74
                       node:
                         _key: 1
-                        parentPasal: &ref_59
+                        parentPasal: &ref_60
                           _key: 169
                           parentDocument: *ref_0
                           _structureType: pasal
@@ -9212,7 +9355,7 @@ babs:
                       end: 92
                       node:
                         _key: 1
-                        parentPasal: *ref_59
+                        parentPasal: *ref_60
                         _structureType: ayat
                   text: >-
                     Dalam hal pengusaha dinyatakan tidak melakukan perbuatan
@@ -9386,7 +9529,7 @@ babs:
                       end: 45
                       node:
                         _key: 1
-                        parentPasal: &ref_60
+                        parentPasal: &ref_61
                           _key: 173
                           parentDocument: *ref_0
                           _structureType: pasal
@@ -9404,13 +9547,13 @@ babs:
                       end: 59
                       node:
                         _key: 2
-                        parentPasal: *ref_60
+                        parentPasal: *ref_61
                         _structureType: ayat
                     - start: 37
                       end: 45
                       node:
                         _key: 1
-                        parentPasal: *ref_60
+                        parentPasal: *ref_61
                         _structureType: ayat
                   text: >-
                     Pembinaan sebagaimana dimaksud dalam ayat (1), dan ayat (2),
@@ -9635,7 +9778,7 @@ babs:
                         end: 65
                         node:
                           _key: 1
-                          parentPasal: &ref_61
+                          parentPasal: &ref_62
                             _key: 182
                             parentDocument: *ref_0
                             _structureType: pasal
@@ -9714,7 +9857,7 @@ babs:
                       end: 76
                       node:
                         _key: 2
-                        parentPasal: *ref_61
+                        parentPasal: *ref_62
                         _structureType: ayat
                   text: >-
                     Kewenangan penyidik pegawai negeri sipil sebagaimana
@@ -9889,7 +10032,7 @@ babs:
                             end: 206
                             node:
                               _key: 7
-                              parentPasal: &ref_62
+                              parentPasal: &ref_63
                                 _key: 185
                                 parentDocument: *ref_0
                                 _structureType: pasal
@@ -9898,7 +10041,7 @@ babs:
                             end: 90
                             node:
                               _key: 2
-                              parentPasal: *ref_62
+                              parentPasal: *ref_63
                               _structureType: ayat
                         text: >-
                           Barang siapa melanggar ketentuan sebagaimana dimaksud
@@ -9919,7 +10062,7 @@ babs:
                             end: 49
                             node:
                               _key: 1
-                              parentPasal: *ref_62
+                              parentPasal: *ref_63
                               _structureType: ayat
                         text: >-
                           Tindak pidana sebagaimana dimaksud dalam ayat (1)
@@ -9971,7 +10114,7 @@ babs:
                             end: 90
                             node:
                               _key: 3
-                              parentPasal: &ref_63
+                              parentPasal: &ref_64
                                 _key: 186
                                 parentDocument: *ref_0
                                 _structureType: pasal
@@ -9994,7 +10137,7 @@ babs:
                             end: 49
                             node:
                               _key: 1
-                              parentPasal: *ref_63
+                              parentPasal: *ref_64
                               _structureType: ayat
                         text: >-
                           Tindak pidana sebagaimana dimaksud dalam ayat (1)
@@ -10097,7 +10240,7 @@ babs:
                             end: 215
                             node:
                               _key: 2
-                              parentPasal: &ref_64
+                              parentPasal: &ref_65
                                 _key: 187
                                 parentDocument: *ref_0
                                 _structureType: pasal
@@ -10122,7 +10265,7 @@ babs:
                             end: 49
                             node:
                               _key: 1
-                              parentPasal: *ref_64
+                              parentPasal: *ref_65
                               _structureType: ayat
                         text: >-
                           Tindak pidana sebagaimana dimaksud dalam ayat (1)
@@ -10344,7 +10487,7 @@ babs:
                             end: 310
                             node:
                               _key: 2
-                              parentPasal: &ref_65
+                              parentPasal: &ref_66
                                 _key: 190
                                 parentDocument: *ref_0
                                 _structureType: pasal
@@ -10368,7 +10511,7 @@ babs:
                               end: 56
                               node:
                                 _key: 1
-                                parentPasal: *ref_65
+                                parentPasal: *ref_66
                                 _structureType: ayat
                           text: >-
                             Sanksi administratif sebagaimana dimaksud dalam ayat
@@ -10433,13 +10576,13 @@ babs:
                             end: 88
                             node:
                               _key: 2
-                              parentPasal: *ref_65
+                              parentPasal: *ref_66
                               _structureType: ayat
                           - start: 67
                             end: 75
                             node:
                               _key: 1
-                              parentPasal: *ref_65
+                              parentPasal: *ref_66
                               _structureType: ayat
                         text: >-
                           Ketentuan mengenai sanksi administratif sebagaimana

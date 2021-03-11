@@ -150,18 +150,61 @@ babs:
               - _type: ayat
                 _key: 1
                 isi:
-                  _type: referenceText
-                  references: []
-                  text: >-
-                    , penyelenggaraan Cipta Kerja dilaksanakan berdasarkan asas
-                    lain sesuai dengan bidang hukum yang diatur dalam
-                    undang-undang yang bersangkutan. REPUBLIK INDONESIA -5 -
+                  _type: points
+                  _description:
+                    _type: referenceText
+                    references: []
+                    text: 'Undang-Undang ini diselenggarakan berdasarkan asas:'
+                  isi:
+                    - _type: alphaPoint
+                      _key: a
+                      isi:
+                        _type: referenceText
+                        references: []
+                        text: pemerataan hak,
+                    - _type: alphaPoint
+                      _key: b
+                      isi:
+                        _type: referenceText
+                        references: []
+                        text: 'kepastian hukum:'
+                    - _type: alphaPoint
+                      _key: c
+                      isi:
+                        _type: referenceText
+                        references: []
+                        text: 'kemudahan berusaha:'
+                    - _type: alphaPoint
+                      _key: d
+                      isi:
+                        _type: referenceText
+                        references: []
+                        text: 'kebersamaan: dan'
+                    - _type: alphaPoint
+                      _key: e
+                      isi:
+                        _type: referenceText
+                        references: []
+                        text: kemandirian.
               - _type: ayat
                 _key: 2
                 isi:
                   _type: referenceText
-                  references: []
-                  text: Selain berdasarkan asas sebagaimana dimaksud pada ayat
+                  references:
+                    - start: 50
+                      end: 58
+                      node:
+                        _key: 1
+                        parentPasal:
+                          _key: 2
+                          parentDocument: *ref_0
+                          _structureType: pasal
+                        _structureType: ayat
+                  text: >-
+                    Selain berdasarkan asas sebagaimana dimaksud pada ayat (1),
+                    penyelenggaraan Cipta Kerja dilaksanakan berdasarkan asas
+                    lain sesuai dengan bidang hukum yang diatur dalam
+                    undang-undang yang bersangkutan. REPUBLIK INDONESIA -5 -
         - _type: pasal
           _key: 3
           isi:
@@ -609,20 +652,42 @@ babs:
                             _key: 1
                             isi:
                               _type: referenceText
-                              references: []
+                              references:
+                                - start: 83
+                                  end: 99
+                                  node:
+                                    parentPasal:
+                                      parentDocument: *ref_0
+                                      _key: 7
+                                      _structureType: pasal
+                                    _key: 7
+                                    _structureType: ayat
                               text: >-
-                                merupakan bukti registrasi/pendaftaran Pelaku
-                                Usaha untuk melakukan kegiatan usaha dan sebagai
-                                identitas bagi Pelaku Usaha dalam pelaksanaan
-                                kegiatan usahanya.
+                                Perizinan Berusaha untuk kegiatan usaha berisiko
+                                rendah sebagaimana dimaksud dalam Pasal 7 ayat
+                                (7) huruf a berupa pemberian nomor induk
+                                berusaha yang merupakan legalitas pelaksanaan
+                                kegiatan berusaha.
                           - _type: ayat
                             _key: 2
                             isi:
                               _type: referenceText
-                              references: []
+                              references:
+                                - start: 47
+                                  end: 55
+                                  node:
+                                    _key: 1
+                                    parentPasal:
+                                      _key: 8
+                                      parentDocument: *ref_0
+                                      _structureType: pasal
+                                    _structureType: ayat
                               text: >-
                                 Nomor induk berusaha sebagaimana dimaksud pada
-                                ayat
+                                ayat (1) merupakan bukti registrasi/pendaftaran
+                                Pelaku Usaha untuk melakukan kegiatan usaha dan
+                                sebagai identitas bagi Pelaku Usaha dalam
+                                pelaksanaan kegiatan usahanya.
               - _type: paragraf
                 _key: 3
                 _judul: Paragraf 3 Perizinan Berusaha Kegiatan Usaha Berisiko Menengah
@@ -48513,208 +48578,196 @@ babs:
                     - _type: pasal
                       _key: 75
                       isi:
-                        _type: ayats
-                        ayats:
-                          - _type: ayat
-                            _key: 1
+                        _type: points
+                        _description:
+                          _type: referenceText
+                          references:
+                            - start: 10
+                              end: 18
+                              node:
+                                _key: 15
+                                parentDocument: *ref_0
+                                _structureType: pasal
+                            - start: 252
+                              end: 260
+                              node:
+                                _key: 15
+                                parentDocument: *ref_0
+                                _structureType: pasal
+                            - start: 328
+                              end: 336
+                              node:
+                                _key: 13
+                                parentDocument: *ref_0
+                                _structureType: pasal
+                            - start: 341
+                              end: 349
+                              node:
+                                _key: 14
+                                parentDocument: *ref_0
+                                _structureType: pasal
+                          text: >-
+                            Ketentuan Pasal 15 Undang-Undang Nomor 2 Tahun 2002
+                            tentang Kepolisian (Lembaran Negara Republik
+                            Indonesia Tahun 2002 Nomor 2, Tambahan Lembaran
+                            Negara Republik Indonesia Nomor 4168) diubah
+                            sehingga berbunyi sebagai berikut: REPUBLIK
+                            INDONESIA - 525 - Pasal 15 (1) Dalam rangka
+                            menyelenggarakan tugas sebagaimana dimaksud dalam
+                            Pasal 13 dan Pasal 14, Kepolisian Negara Republik
+                            Indonesia secara umum berwenang:
+                        isi:
+                          - _type: alphaPoint
+                            _key: a
                             isi:
-                              _type: points
-                              _description:
-                                _type: referenceText
-                                references:
-                                  - start: 63
-                                    end: 71
-                                    node:
-                                      _key: 13
-                                      parentDocument: *ref_0
-                                      _structureType: pasal
-                                  - start: 76
-                                    end: 84
-                                    node:
-                                      _key: 14
-                                      parentDocument: *ref_0
-                                      _structureType: pasal
-                                text: >-
-                                  Dalam rangka menyelenggarakan tugas
-                                  sebagaimana dimaksud dalam Pasal 13 dan Pasal
-                                  14, Kepolisian Negara Republik Indonesia
-                                  secara umum berwenang:
-                              isi:
-                                - _type: alphaPoint
-                                  _key: a
-                                  isi:
-                                    _type: referenceText
-                                    references: []
-                                    text: menerima laporan dan/atau pengaduan,
-                                - _type: alphaPoint
-                                  _key: b
-                                  isi:
-                                    _type: points
-                                    _description:
-                                      _type: referenceText
-                                      references: []
-                                      text: >-
-                                        membantu menyelesaikan perselisihan
-                                        warga masyarakat yang dapat mengganggu
-                                        ketertiban umum, Cc. mencegah dan
-                                        menanggulangi tumbuhnya penyakit
-                                        masyarakat, d. mengawasi aliran yang
-                                        dapat menimbulkan perpecahan atau
-                                        mengancam persatuan dan kesatuan bangsa,
-                                        e. mengeluarkan peraturan kepolisian
-                                        dalam lingkup kewenangan administratif
-                                        kepolisian, f. melaksanakan pemeriksaan
-                                        khusus sebagai bagian dari tindakan
-                                        kepolisian dalam rangka pencegahan, g.
-                                        melakukan tindakan pertama di tempat
-                                        kejadian, h. mengambil sidik jari dan
-                                        identitas lainnya serta memotret
-                                        seseorang, i. mencari keterangan dan
-                                        barang bukti, J. menyelenggarakan Pusat
-                                        Informasi Kriminal Nasional: k.
-                                        mengeluarkan surat izin dan/atau surat
-                                        keterangan yang diperlukan dalam rangka
-                                        pelayanan masyarakat,
-                                    isi:
-                                      - _type: numPoint
-                                        _key: '1'
-                                        isi:
-                                          _type: referenceText
-                                          references: []
-                                          text: >-
-                                            memberikan bantuan pengamanan dalam
-                                            sidang dan pelaksanaan putusan
-                                            pengadilan, kegiatan instansi lain,
-                                            serta kegiatan masyarakat, dan m.
-                                            menerima dan menyimpan barang temuan
-                                            untuk sementara waktu.
-                          - _type: ayat
-                            _key: 2
+                              _type: referenceText
+                              references: []
+                              text: menerima laporan dan/atau pengaduan,
+                          - _type: alphaPoint
+                            _key: b
                             isi:
                               _type: points
                               _description:
                                 _type: referenceText
                                 references: []
                                 text: >-
-                                  Kepolisian Negara Republik Indonesia sesuai
-                                  dengan ketentuan peraturan perundang-undangan
-                                  berwenang:
+                                  membantu menyelesaikan perselisihan warga
+                                  masyarakat yang dapat mengganggu ketertiban
+                                  umum, Cc. mencegah dan menanggulangi tumbuhnya
+                                  penyakit masyarakat, d. mengawasi aliran yang
+                                  dapat menimbulkan perpecahan atau mengancam
+                                  persatuan dan kesatuan bangsa, e. mengeluarkan
+                                  peraturan kepolisian dalam lingkup kewenangan
+                                  administratif kepolisian, f. melaksanakan
+                                  pemeriksaan khusus sebagai bagian dari
+                                  tindakan kepolisian dalam rangka pencegahan,
+                                  g. melakukan tindakan pertama di tempat
+                                  kejadian, h. mengambil sidik jari dan
+                                  identitas lainnya serta memotret seseorang, i.
+                                  mencari keterangan dan barang bukti, J.
+                                  menyelenggarakan Pusat Informasi Kriminal
+                                  Nasional: k. mengeluarkan surat izin dan/atau
+                                  surat keterangan yang diperlukan dalam rangka
+                                  pelayanan masyarakat,
                               isi:
-                                - _type: alphaPoint
-                                  _key: a
+                                - _type: numPoint
+                                  _key: '1'
                                   isi:
-                                    _type: referenceText
-                                    references: []
-                                    text: >-
-                                      memberikan izin dan mengawasi kegiatan
-                                      keramaian umum dan kegiatan masyarakat
-                                      lainnya, SK No 052026 A REPUBLIK INDONESIA
-                                      - 526 -
-                                - _type: alphaPoint
-                                  _key: b
-                                  isi:
-                                    _type: referenceText
-                                    references: []
-                                    text: >-
-                                      menyelenggarakan registrasi dan
-                                      identifikasi kendaraan bermotor,
-                                - _type: alphaPoint
-                                  _key: c
-                                  isi:
-                                    _type: referenceText
-                                    references: []
-                                    text: >-
-                                      memberikan surat izin mengemudi kendaraan
-                                      bermotor,
-                                - _type: alphaPoint
-                                  _key: d
-                                  isi:
-                                    _type: referenceText
-                                    references: []
-                                    text: >-
-                                      menerima pemberitahuan tentang kegiatan
-                                      politik,
-                                - _type: alphaPoint
-                                  _key: e
-                                  isi:
-                                    _type: referenceText
-                                    references: []
-                                    text: >-
-                                      memberikan izin dan melakukan pengawasan
-                                      senjata api, bahan peledak, dan senjata
-                                      tajam,
-                                - _type: alphaPoint
-                                  _key: f
-                                  isi:
-                                    _type: referenceText
-                                    references: []
-                                    text: >-
-                                      ' memberikan Perizinan Berusaha dan
-                                      melakukan pengawasan terhadap badan usaha
-                                      di bidang jasa pengamanan sesuai dengan
-                                      ketentuan perundang- undangan di bidang
-                                      Perizinan Berusaha,
-                                - _type: alphaPoint
-                                  _key: g
-                                  isi:
-                                    _type: referenceText
-                                    references: []
-                                    text: >-
-                                      memberikan petunjuk, mendidik, dan melatih
-                                      aparat kepolisian khusus dan petugas
-                                      pengamanan swakarsa dalam bidang teknis
-                                      kepolisian,
-                                - _type: alphaPoint
-                                  _key: h
-                                  isi:
-                                    _type: referenceText
-                                    references: []
-                                    text: >-
-                                      melakukan kerja sama dengan kepolisian
-                                      negara lain dalam menyidik dan memberantas
-                                      kejahatan internasional)
-                                - _type: alphaPoint
-                                  _key: i
-                                  isi:
-                                    _type: referenceText
-                                    references: []
-                                    text: >-
-                                      melakukan pengawasan fungsional kepolisian
-                                      terhadap orang asing yang berada di
-                                      wilayah Indonesia dengan koordinasi
-                                      instansi terkait, J- mewakili pemerintah
-                                      Republik Indonesia dalam organisasi
-                                      kepolisian internasional, dan k.
-                                      melaksanakan kewenangan lain yang termasuk
-                                      dalam lingkup tugas kepolisian.
-                          - _type: ayat
-                            _key: 3
+                                    _type: points
+                                    _description:
+                                      _type: referenceText
+                                      references: []
+                                      text: >-
+                                        memberikan bantuan pengamanan dalam
+                                        sidang dan pelaksanaan putusan
+                                        pengadilan, kegiatan instansi lain,
+                                        serta kegiatan masyarakat, dan m.
+                                        menerima dan menyimpan barang temuan
+                                        untuk sementara waktu. (2) Kepolisian
+                                        Negara Republik Indonesia sesuai dengan
+                                        ketentuan peraturan perundang-undangan
+                                        berwenang:
+                                    isi:
+                                      - _type: alphaPoint
+                                        _key: a
+                                        isi:
+                                          _type: referenceText
+                                          references: []
+                                          text: >-
+                                            memberikan izin dan mengawasi kegiatan
+                                            keramaian umum dan kegiatan masyarakat
+                                            lainnya, SK No 052026 A REPUBLIK
+                                            INDONESIA - 526 -
+                                      - _type: alphaPoint
+                                        _key: b
+                                        isi:
+                                          _type: referenceText
+                                          references: []
+                                          text: >-
+                                            menyelenggarakan registrasi dan
+                                            identifikasi kendaraan bermotor,
+                          - _type: alphaPoint
+                            _key: c
+                            isi:
+                              _type: referenceText
+                              references: []
+                              text: >-
+                                memberikan surat izin mengemudi kendaraan
+                                bermotor,
+                          - _type: alphaPoint
+                            _key: d
+                            isi:
+                              _type: referenceText
+                              references: []
+                              text: menerima pemberitahuan tentang kegiatan politik,
+                          - _type: alphaPoint
+                            _key: e
+                            isi:
+                              _type: referenceText
+                              references: []
+                              text: >-
+                                memberikan izin dan melakukan pengawasan senjata
+                                api, bahan peledak, dan senjata tajam,
+                          - _type: alphaPoint
+                            _key: f
+                            isi:
+                              _type: referenceText
+                              references: []
+                              text: >-
+                                ' memberikan Perizinan Berusaha dan melakukan
+                                pengawasan terhadap badan usaha di bidang jasa
+                                pengamanan sesuai dengan ketentuan perundang-
+                                undangan di bidang Perizinan Berusaha,
+                          - _type: alphaPoint
+                            _key: g
+                            isi:
+                              _type: referenceText
+                              references: []
+                              text: >-
+                                memberikan petunjuk, mendidik, dan melatih
+                                aparat kepolisian khusus dan petugas pengamanan
+                                swakarsa dalam bidang teknis kepolisian,
+                          - _type: alphaPoint
+                            _key: h
+                            isi:
+                              _type: referenceText
+                              references: []
+                              text: >-
+                                melakukan kerja sama dengan kepolisian negara
+                                lain dalam menyidik dan memberantas kejahatan
+                                internasional)
+                          - _type: alphaPoint
+                            _key: i
                             isi:
                               _type: referenceText
                               references:
-                                - start: 79
-                                  end: 80
+                                - start: 383
+                                  end: 384
                                   node:
                                     _key: d
                                     parentPoints: &ref_56
-                                      _key: 2
-                                      parentPasal:
-                                        _key: 75
-                                        parentDocument: *ref_0
-                                        _structureType: pasal
-                                      _structureType: ayat
+                                      _key: 75
+                                      parentDocument: *ref_0
+                                      _structureType: pasal
                                     _structureType: point
-                                - start: 58
-                                  end: 74
+                                - start: 371
+                                  end: 378
                                   node:
                                     _key: a
                                     parentPoints: *ref_56
                                     _structureType: point
                               text: >-
-                                Tata cara pelaksanaan ketentuan sebagaimana
-                                dimaksud pada ayat (2) huruf a dan huruf d
-                                diatur lebih lanjut dengan Peraturan Pemerintah.
-                                SK No 052027 A REPUBLIK INDONESIA - 527 -
+                                melakukan pengawasan fungsional kepolisian
+                                terhadap orang asing yang berada di wilayah
+                                Indonesia dengan koordinasi instansi terkait, J-
+                                mewakili pemerintah Republik Indonesia dalam
+                                organisasi kepolisian internasional, dan k.
+                                melaksanakan kewenangan lain yang termasuk dalam
+                                lingkup tugas kepolisian. (3) Tata cara
+                                pelaksanaan ketentuan sebagaimana dimaksud pada
+                                ayat (2) huruf a dan huruf d diatur lebih lanjut
+                                dengan Peraturan Pemerintah. SK No 052027 A
+                                REPUBLIK INDONESIA - 527 -
         - _type: bagian
           _key: 5
           _judul: >-
@@ -49086,43 +49139,49 @@ babs:
                     - _type: pasal
                       _key: 78
                       isi:
-                        _type: ayats
-                        ayats:
-                          - _type: ayat
-                            _key: 1
+                        _type: points
+                        _description:
+                          _type: referenceText
+                          references:
+                            - start: 10
+                              end: 18
+                              node:
+                                _key: 22
+                                parentDocument: *ref_0
+                                _structureType: pasal
+                            - start: 479
+                              end: 487
+                              node:
+                                _key: 22
+                                parentDocument: *ref_0
+                                _structureType: pasal
+                          text: >-
+                            Ketentuan Pasal 22 Undang-Undang Nomor 7 Tahun 1992
+                            tentang Perbankan (Lembaran Negara Republik
+                            Indonesia Tahun 1992 Nomor 31, Tambahan Lembaran
+                            Negara Republik Indonesia Nomor 3472) sebagaimana
+                            telah diubah dengan Undang-Undang Nomor 10 Tahun
+                            1998 tentang perubahan atas Undang-Undang Nomor 7
+                            Tahun 1992 tentang Perbankan (Lembaran Negara
+                            Republik Indonesia Tahun 1998 Nomor 182, Tambahan
+                            Lembaran Negara Republik Indonesia Nomor 3790)
+                            diubah sehingga berbunyi sebagai berikut: Pasal 22
+                            (1) Bank Umum dapat didirikan oleh: REPUBLIK
+                            INDONESIA - 532 -
+                        isi:
+                          - _type: alphaPoint
+                            _key: a
                             isi:
-                              _type: points
-                              _description:
-                                _type: referenceText
-                                references: []
-                                text: >-
-                                  Bank Umum dapat didirikan oleh: REPUBLIK
-                                  INDONESIA - 532 -
-                              isi:
-                                - _type: alphaPoint
-                                  _key: a
-                                  isi:
-                                    _type: referenceText
-                                    references: []
-                                    text: warga negara Indonesia,
-                                - _type: alphaPoint
-                                  _key: b
-                                  isi:
-                                    _type: referenceText
-                                    references: []
-                                    text: >-
-                                      badan hukum Indonesia, atau Cc. warga
-                                      negara Indonesia dan/atau badan hukum
-                                      Indonesia dengan warga negara asing
-                                      dan/atau badan hukum asing secara
-                                      kemitraan.
-                          - _type: ayat
-                            _key: 2
+                              _type: referenceText
+                              references: []
+                              text: warga negara Indonesia,
+                          - _type: alphaPoint
+                            _key: b
                             isi:
                               _type: referenceText
                               references:
-                                - start: 112
-                                  end: 120
+                                - start: 273
+                                  end: 281
                                   node:
                                     _key: 1
                                     parentPasal:
@@ -49131,10 +49190,13 @@ babs:
                                       _structureType: pasal
                                     _structureType: ayat
                               text: >-
-                                Ketentuan lebih lanjut mengenai persyaratan
-                                pendirian yang wajib dipenuhi pihak-pihak
-                                sebagaimana dimaksud pada ayat (1) ditetapkan
-                                oleh Otoritas Jasa Keuangan.
+                                badan hukum Indonesia, atau Cc. warga negara
+                                Indonesia dan/atau badan hukum Indonesia dengan
+                                warga negara asing dan/atau badan hukum asing
+                                secara kemitraan. (2) Ketentuan lebih lanjut
+                                mengenai persyaratan pendirian yang wajib
+                                dipenuhi pihak-pihak sebagaimana dimaksud pada
+                                ayat (1) ditetapkan oleh Otoritas Jasa Keuangan.
               - _type: paragraf
                 _key: 4
                 _judul: Paragraf 4 Perbankan Syariah
@@ -61891,102 +61953,86 @@ babs:
                     - _type: pasal
                       _key: 125
                       isi:
-                        _type: ayats
-                        ayats:
-                          - _type: ayat
-                            _key: 1
-                            isi:
-                              _type: referenceText
-                              references: []
-                              text: >-
-                                merupakan badan khusus yang mengelola tanah. (3)
-                                Kekayaan badan bank tanah merupakan kekayaan
-                                negara yang dipisahkan. (4) Badan bank tanah
-                                berfungsi melaksanakan perencanaan, perolehan,
-                                pengadaan, pengelolaan, pemanfaatan, dan
-                                pendistribusian tanah.
-                          - _type: ayat
-                            _key: 2
-                            isi:
-                              _type: referenceText
-                              references: []
-                              text: Badan bank tanah sebagaimana dimaksud pada ayat
+                        _type: referenceText
+                        references:
+                          - start: 96
+                            end: 104
+                            node:
+                              _key: 1
+                              parentPasal:
+                                _key: 125
+                                parentDocument: *ref_0
+                                _structureType: pasal
+                              _structureType: ayat
+                        text: >-
+                          (1) Pemerintah Pusat membentuk badan bank tanah. (2)
+                          Badan bank tanah sebagaimana dimaksud pada ayat (1)
+                          merupakan badan khusus yang mengelola tanah. (3)
+                          Kekayaan badan bank tanah merupakan kekayaan negara
+                          yang dipisahkan. (4) Badan bank tanah berfungsi
+                          melaksanakan perencanaan, perolehan, pengadaan,
+                          pengelolaan, pemanfaatan, dan pendistribusian tanah.
                     - _type: pasal
                       _key: 126
                       isi:
-                        _type: ayats
-                        ayats:
-                          - _type: ayat
-                            _key: 1
+                        _type: points
+                        _description:
+                          _type: referenceText
+                          references: []
+                          text: >-
+                            (1) Badan bank tanah menjamin ketersediaan tanah
+                            dalam rangka ekonomi berkeadilan untuk:
+                        isi:
+                          - _type: alphaPoint
+                            _key: a
                             isi:
-                              _type: points
-                              _description:
-                                _type: referenceText
-                                references: []
-                                text: >-
-                                  Badan bank tanah menjamin ketersediaan tanah
-                                  dalam rangka ekonomi berkeadilan untuk:
-                              isi:
-                                - _type: alphaPoint
-                                  _key: a
-                                  isi:
-                                    _type: referenceText
-                                    references: []
-                                    text: kepentingan umum,
-                                - _type: alphaPoint
-                                  _key: b
-                                  isi:
-                                    _type: referenceText
-                                    references: []
-                                    text: >-
-                                      kepentingan sosial: REPUBLIK INDONESIA -
-                                      703 -
-                                - _type: alphaPoint
-                                  _key: c
-                                  isi:
-                                    _type: referenceText
-                                    references: []
-                                    text: kepentingan pembangunan nasional,
-                                - _type: alphaPoint
-                                  _key: d
-                                  isi:
-                                    _type: referenceText
-                                    references: []
-                                    text: pemerataan ekonomi,
-                                - _type: alphaPoint
-                                  _key: e
-                                  isi:
-                                    _type: referenceText
-                                    references: []
-                                    text: 'konsolidasi lahan: dan'
-                                - _type: alphaPoint
-                                  _key: f
-                                  isi:
-                                    _type: referenceText
-                                    references: []
-                                    text: '''reforma agraria.'
-                          - _type: ayat
-                            _key: 2
+                              _type: referenceText
+                              references: []
+                              text: kepentingan umum,
+                          - _type: alphaPoint
+                            _key: b
+                            isi:
+                              _type: referenceText
+                              references: []
+                              text: 'kepentingan sosial: REPUBLIK INDONESIA - 703 -'
+                          - _type: alphaPoint
+                            _key: c
+                            isi:
+                              _type: referenceText
+                              references: []
+                              text: kepentingan pembangunan nasional,
+                          - _type: alphaPoint
+                            _key: d
+                            isi:
+                              _type: referenceText
+                              references: []
+                              text: pemerataan ekonomi,
+                          - _type: alphaPoint
+                            _key: e
+                            isi:
+                              _type: referenceText
+                              references: []
+                              text: 'konsolidasi lahan: dan'
+                          - _type: alphaPoint
+                            _key: f
                             isi:
                               _type: referenceText
                               references:
-                                - start: 67
-                                  end: 83
+                                - start: 98
+                                  end: 105
                                   node:
                                     _key: f
                                     parentPoints:
-                                      _key: 1
-                                      parentPasal:
-                                        _key: 126
-                                        parentDocument: *ref_0
-                                        _structureType: pasal
-                                      _structureType: ayat
+                                      _key: 126
+                                      parentDocument: *ref_0
+                                      _structureType: pasal
                                     _structureType: point
                               text: >-
-                                Ketersediaan tanah untuk reforma agraria
-                                sebagaimana dimaksud pada ayat (1) huruf f
-                                paling sedikit 30”6 (tiga puluh persen) dari
-                                tanah negara yang diperuntukkan bank tanah.
+                                'reforma agraria. (2) Ketersediaan tanah untuk
+                                reforma agraria sebagaimana dimaksud pada ayat
+                                (1) huruf f paling sedikit 30”6 (tiga puluh
+                                persen) dari tanah negara yang diperuntukkan
+                                bank tanah.
                     - _type: pasal
                       _key: 127
                       isi:
@@ -67724,38 +67770,32 @@ babs:
               - _type: ayat
                 _key: 4
                 isi:
-                  _type: referenceText
-                  references:
-                    - start: 247
-                      end: 255
-                      node:
-                        _key: 1
-                        parentPasal: *ref_109
-                        _structureType: ayat
-                  text: >-
-                    Dalam hal Aparatur Sipil Negara dan profesi bersertifikat
-                    dalam melaksanakan tugasnya menemukan pelanggaran terhadap
-                    ketentuan yang tertuang dalam setiap Perizinan Berusaha yang
-                    dilakukan oleh pemegang Perizinan Berusaha sebagaimana
-                    dimaksud pada ayat (1), Aparatur Sipil Negara sesuai dengan
-                    kewenangannya dapat memberikan sanksi administratif kepada
-                    pemegang Perizinan Berusaha. REPUBLIK INDONESIA - 765 -
-              - _type: ayat
-                _key: 5
-                isi:
                   _type: points
                   _description:
                     _type: referenceText
                     references:
-                      - start: 47
-                        end: 55
+                      - start: 459
+                        end: 467
                         node:
                           _key: 4
                           parentPasal: *ref_109
                           _structureType: ayat
+                      - start: 247
+                        end: 255
+                        node:
+                          _key: 1
+                          parentPasal: *ref_109
+                          _structureType: ayat
                     text: >-
-                      Sanksi administratif sebagaimana dimaksud pada ayat (4)
-                      dapat berupa:
+                      Dalam hal Aparatur Sipil Negara dan profesi bersertifikat
+                      dalam melaksanakan tugasnya menemukan pelanggaran terhadap
+                      ketentuan yang tertuang dalam setiap Perizinan Berusaha
+                      yang dilakukan oleh pemegang Perizinan Berusaha
+                      sebagaimana dimaksud pada ayat (1), Aparatur Sipil Negara
+                      sesuai dengan kewenangannya dapat memberikan sanksi
+                      administratif kepada pemegang Perizinan Berusaha. REPUBLIK
+                      INDONESIA - 765 - (5) Sanksi administratif sebagaimana
+                      dimaksud pada ayat (4) dapat berupa:
                   isi:
                     - _type: alphaPoint
                       _key: a
@@ -67767,71 +67807,53 @@ babs:
                       _key: b
                       isi:
                         _type: referenceText
-                        references: []
+                        references:
+                          - start: 308
+                            end: 316
+                            node:
+                              _key: 1
+                              parentPasal: *ref_109
+                              _structureType: ayat
+                          - start: 378
+                            end: 386
+                            node:
+                              _key: 4
+                              parentPasal: *ref_109
+                              _structureType: ayat
+                          - start: 620
+                            end: 628
+                            node:
+                              _key: 4
+                              parentPasal: *ref_109
+                              _structureType: ayat
                         text: >-
                           penghentian sementara kegiatan berusaha, Cc. pengenaan
                           denda administratif, d. pengenaan daya paksa
                           polisional, e. pencabutan Lisensi / Sertifikasi/
                           Persetujuan, dan/atau f. pencabutan Perizinan
-                          Berusaha.
-              - _type: ayat
-                _key: 6
-                isi:
-                  _type: referenceText
-                  references:
-                    - start: 169
-                      end: 177
-                      node:
-                        _key: 4
-                        parentPasal: *ref_109
-                        _structureType: ayat
-                    - start: 99
-                      end: 107
-                      node:
-                        _key: 1
-                        parentPasal: *ref_109
-                        _structureType: ayat
-                  text: >-
-                    Kewenangan Pemerintah Pusat dalam melaksanakan pengawasan.
-                    dan pembinaan sebagaimana dimaksud pada ayat (1) dan
-                    pengenaan sanksi administratif sebagaimana dimaksud pada
-                    ayat (4) dapat dilimpahkan kepada Pemerintah Daerah sesuai
-                    dengan ketentuan peraturan perundang-undangan.
-              - _type: ayat
-                _key: 7
-                isi:
-                  _type: referenceText
-                  references:
-                    - start: 132
-                      end: 140
-                      node:
-                        _key: 4
-                        parentPasal: *ref_109
-                        _structureType: ayat
-                  text: >-
-                    Ketentuan lebih lanjut mengenai sanksi administratif lainnya
-                    dan tata cara pengenaan sanksi administratif sebagaimana
-                    dimaksud pada ayat (4) diatur dalam Peraturan Pemerintah.
+                          Berusaha. (6) Kewenangan Pemerintah Pusat dalam
+                          melaksanakan pengawasan. dan pembinaan sebagaimana
+                          dimaksud pada ayat (1) dan pengenaan sanksi
+                          administratif sebagaimana dimaksud pada ayat (4) dapat
+                          dilimpahkan kepada Pemerintah Daerah sesuai dengan
+                          ketentuan peraturan perundang-undangan. (7) Ketentuan
+                          lebih lanjut mengenai sanksi administratif lainnya dan
+                          tata cara pengenaan sanksi administratif sebagaimana
+                          dimaksud pada ayat (4) diatur dalam Peraturan
+                          Pemerintah.
         - _type: pasal
           _key: 178
           isi:
-            _type: referenceText
-            references:
-              - start: 193
-                end: 211
-                node:
-                  parentPasal:
-                    parentDocument: *ref_0
-                    _key: 177
-                    _structureType: pasal
-                  _key: 5
-                  _structureType: ayat
-            text: >-
-              Setiap pemegang Perizinan Berusaha yang dalam melaksanakan
-              kegiatan/usahanya menimbulkan dampak. kerusakan pada lingkungan
-              hidup, selain dikenai sanksi administratif sebagaimana dimaksud
-              dalam Pasal 177 ayat (5), pemegang Perizinan Berusaha wajib
-              memulihkan kerusakan lingkungan akibat dari kegiatan/usahanya.
+            _type: ayats
+            ayats:
+              - _type: ayat
+                _key: 5
+                isi:
+                  _type: referenceText
+                  references: []
+                  text: >-
+                    , pemegang Perizinan Berusaha wajib memulihkan kerusakan
+                    lingkungan akibat dari kegiatan/usahanya.
         - _type: pasal
           _key: 179
           isi:
