@@ -3,17 +3,17 @@ import {
   AmendedPoint,
   AmendInsertPasalPoint,
   AmendUpdatePasalPoint,
-} from './../legal/structure/amend';
-import { Paragraf } from './../legal/structure/paragraf';
+} from '../../../legal/structure/amend';
+import { Paragraf } from '../../../legal/structure/paragraf';
 import { chain, curry, isEmpty, isUndefined } from 'lodash';
-import { ReferenceText } from '../legal/reference';
-import { Bab } from '../legal/structure/bab';
-import { Bagian } from '../legal/structure/bagian';
-import { IsiPasal, Pasal } from '../legal/structure/pasal';
-import { Span } from '../util';
+import { ReferenceText } from '../../../legal/reference';
+import { Bab } from '../../../legal/structure/bab';
+import { Bagian } from '../../../legal/structure/bagian';
+import { IsiPasal, Pasal } from '../../../legal/structure/pasal';
+import { Span } from '../../../util';
 import { KeyIds } from './babs_spans_to_key_ids';
 import { spansInRange, spanIdKeyMapOf, toSpansWith } from './util';
-import { AmendPoints } from '../legal/structure/amend';
+import { AmendPoints } from '../../../legal/structure/amend';
 
 export type Context = {
   hasAmendPasal: boolean;
@@ -95,7 +95,7 @@ function amendPointsOf(context: Context, spans: Span[]): AmendPoints {
   const { preKeySpans, spansOfKey } = toSpansWith(amendNomorKeyOfId, spans);
   const isi = chain(spansOfKey).toPairs().map(spansToAmendedPointWith(context)).compact().value();
   const description = emptyReferenceOf(preKeySpans);
-  return { _type: 'amendPoints', description, isi };
+  return { _type: 'amendPoints', description, isi: isi };
 }
 
 const spansToAmendedPointWith = curry(spansToAmendedPoint);

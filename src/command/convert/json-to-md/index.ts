@@ -1,11 +1,11 @@
-import { UpdateAmend } from './../../../legal/structure/amend';
+import { IsiPasal } from './../../../legal/structure/pasal';
 import { assertNever } from 'assert-never';
-import { map, flatten, compact, isNil, repeat, isArray } from 'lodash';
+import { map, flatten, compact, isNil, repeat } from 'lodash';
 import { toRoman } from 'roman-numerals';
 import { getDocumentName, _getDocumentUri, DocumentNode } from '../../../legal/document';
 import * as fs from 'fs';
 import { getLegalUri } from '../../../legal';
-import { Ayat, AyatNode, isAyats } from '../../../legal/structure/ayat';
+import { Ayat, AyatNode } from '../../../legal/structure/ayat';
 import { Bab, BabNode } from '../../../legal/structure/bab';
 import { Bagian, BagianNode, isBagians } from '../../../legal/structure/bagian';
 import { Metadata, MetadataNode } from '../../../legal/structure/metadata';
@@ -21,6 +21,13 @@ import { Point, PointNode, Points } from '../../../legal/structure/point';
 import { ReferenceText } from '../../../legal/reference';
 import { Document } from '../../../legal/document/index';
 import { getDocumentData, getDocumentFilePath } from '../../../data';
+import {
+  AmendDeletePasalPoint,
+  AmendedPoint,
+  AmendInsertPasalPoint,
+  AmendPoints,
+  AmendUpdatePasalPoint,
+} from '../../../legal/structure/amend';
 
 type Option = { overwrite: boolean };
 export function jsonToMd(option: Option): void {
@@ -30,7 +37,7 @@ export function jsonToMd(option: Option): void {
 
 function handleJson(jsonNode: DocumentNode, option: Option): void {
   const { overwrite } = option;
-  const jsonFile = getDocumentFilePath(jsonNode, 'json');
+  const jsonFile = getDocumentFilePath(jsonNode, 'jsonv2');
   const { path: mdPath, exists: mdExists } = getDocumentFilePath(jsonNode, 'md');
 
   try {
@@ -169,10 +176,35 @@ function pasalToMd(pasal: Pasal, pasalParent: PasalParentNode): string {
   return `\n### [Pasal ${_key}](${uri})\n${isiStr}\n`;
 }
 
-function pasalContentToMd(isi: Points | Ayat[] | ReferenceText, pasalNode: PasalNode): string {
-  if (isArray(isi) && isAyats(isi)) return isi.map((a) => ayatToMd(a, pasalNode)).join('\n');
+function pasalContentToMd(isi: IsiPasal, pasalNode: PasalNode): string {
+  if (isi._type === 'ayats') return isi.ayats.map((a) => ayatToMd(a, pasalNode)).join('\n');
   if (isi._type === 'points') return pointsToMd(isi, pasalNode);
-  return referenceToMd(isi);
+  if (isi._type === 'referenceText') return referenceToMd(isi);
+  if (isi._type === 'amendPoints') return amendPointsToMd(isi);
+  assertNever(isi);
+}
+
+function amendPointsToMd(amendPoints: AmendPoints): string {
+  const { description, isi } = amendPoints;
+  const isiMd = isi.map(amendPointToMd).join('\n');
+  return `${description}\n${isiMd}`;
+}
+
+function amendPointToMd(amendPoint: AmendedPoint): string {
+  if (amendPoint._operation === 'delete') return amendDeletePasalPointToMd(amendPoint);
+  if (amendPoint._operation === 'update') return amendUpdatePasalPointToMd(amendPoint);
+  if (amendPoint._operation === 'insert') return amendInsertPasalPointToMd(amendPoint);
+  assertNever(amendPoint);
+}
+
+function amendDeletePasalPointToMd(amendPoint: AmendDeletePasalPoint): string {
+  return amendPoint.isi.text;
+}
+function amendUpdatePasalPointToMd(amendPoint: AmendUpdatePasalPoint): string {
+  return amendPoint.isi.text;
+}
+function amendInsertPasalPointToMd(amendPoint: AmendInsertPasalPoint): string {
+  return amendPoint.isi.text;
 }
 
 function ayatToMd(ayat: Ayat, parentPasal: PasalNode): string {
@@ -196,9 +228,9 @@ function pointsToMd(
   return `${description}\n${isiStr}`;
 }
 
-function updateAmendToMd(_: UpdateAmend, __: PointNode): string {
-  return '';
-}
+// function updateAmendToMd(_: UpdateAmend, __: PointNode): string {
+//   return '';
+// }
 
 function pointToMd(
   point: Point,
@@ -207,16 +239,11 @@ function pointToMd(
 ): string {
   const { isi, _key, text } = point;
   const pointNode: PointNode = { _key, parentPoints: parent, _structureType: 'point' };
-  const isiStr = !isNil(isi) ? pointContentToMd(isi, pointNode, depth + 1) : referenceToMd(text);
+  const isiStr = !isNil(isi) ? pointsToMd(isi, pointNode, depth + 1) : referenceToMd(text);
   const indent = repeat(' ', depth * 4);
   const uri = getLegalUri(pointNode);
 
   return `${indent}* [${_key}.](${uri}) ${isiStr}`;
-}
-
-function pointContentToMd(isi: Points | UpdateAmend, pointNode: PointNode, depth: number): string {
-  if (isi._type === 'updateAmend') return updateAmendToMd(isi, pointNode);
-  return pointsToMd(isi, pointNode, depth);
 }
 
 function metadata(key: string, value: string | number | undefined): string | undefined {

@@ -1,29 +1,32 @@
-import { SpanOf } from './../util';
-import { DocumentNode } from '../legal/document/index';
-import { getDocumentData, getDocumentFilePath } from '../data';
+import { SpanOf } from '../../../util';
+import { DocumentNode } from '../../../legal/document/index';
+import { getDocumentData, getDocumentFilePath } from '../../../data';
 import { readFileSync, writeFileSync } from 'fs';
-import { Accumulator, Span, toSpansWith } from '../util';
+import { Accumulator, Span, toSpansWith } from '../../../util';
 import { babsSpansToKeyIds as keyIdsOfBabSpans } from './babs_spans_to_key_ids';
 import { babsOfKeyIds } from './key_ids_to_babs';
 import { chain, isUndefined } from 'lodash';
 import { pasalKeyOfSpan } from './parse_key_from_spans';
+import { Document } from '../../../legal/document/index';
+import { rawJsonToJson } from './raw_json_to_json';
 
 function pdfDataToJson(): void {
   getDocumentData('pdf-data').forEach(writeToJson);
   console.log('\ndone');
 }
 
-function writeToJson(pdfNode: DocumentNode): void {
-  console.log('\nstart', pdfNode);
-  const dataFile = getDocumentFilePath(pdfNode, 'pdf-data');
-  const jsonFile = getDocumentFilePath(pdfNode, 'jsonv2');
+function writeToJson(documentNode: DocumentNode): void {
+  console.log('\nstart', documentNode);
+  const dataFile = getDocumentFilePath(documentNode, 'pdf-data');
+  const jsonFile = getDocumentFilePath(documentNode, 'jsonv2');
   const pdfSpans: Span[] = JSON.parse(readFileSync(dataFile.path).toString());
   const documentSpans = documentSpansOf(pdfSpans);
   const hasAmendPasal = spansHasAmendPasal(documentSpans.babs);
   const babKeyIds = keyIdsOfBabSpans(hasAmendPasal, documentSpans.babs);
-  writeFileSync('temp.json', JSON.stringify(babKeyIds, undefined, 2));
   const babs = babsOfKeyIds({ hasAmendPasal, keyIds: babKeyIds }, documentSpans.babs);
-  writeFileSync(jsonFile.path, JSON.stringify(babs, undefined, 2));
+  const document: Document = { _node: documentNode, babs };
+  const detectedDocument = rawJsonToJson(document);
+  writeFileSync(jsonFile.path, JSON.stringify(detectedDocument, undefined, 2));
 }
 
 type DocumentExtractedKey = 'preBab' | 'babs' | 'penjelasan';

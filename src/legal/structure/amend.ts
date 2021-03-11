@@ -7,19 +7,6 @@ export type AmendPoints = {
 };
 
 export type AmendedPoint = AmendDeletePasalPoint | AmendUpdatePasalPoint | AmendInsertPasalPoint;
-// export type AmendedPoint = {
-//   _type: 'amendedPoint';
-//   _key: number;
-//   description: ReferenceText;
-//   pasalKeys?: string[];
-//   isi:
-//     | Points
-//     | ReferenceText
-//     | {
-//         _type: 'ayats';
-//         ayats: Ayat[];
-//       };
-// };
 
 type AmendPointBase = {
   _type: 'amendPoint';

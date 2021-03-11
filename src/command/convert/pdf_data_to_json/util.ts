@@ -1,6 +1,6 @@
-import { Structure } from './../legal/structure/index';
+import { Structure } from '../../../legal/structure/index';
 import { chain, curry, isUndefined, min } from 'lodash';
-import { Span, neverNum, lastOf } from '../util';
+import { Span, neverNum, lastOf } from '../../../util';
 import { SpanIdKeyMap } from './babs_spans_to_key_ids';
 import { Context } from './key_ids_to_babs';
 

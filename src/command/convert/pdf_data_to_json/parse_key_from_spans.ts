@@ -1,6 +1,6 @@
 import { isUndefined } from 'lodash';
 import { toArabic } from 'roman-numerals';
-import { Span } from '../util';
+import { Span } from '../../../util';
 
 export function nomorKeyOfSpan(span: Span): number | undefined {
   const { str } = span;

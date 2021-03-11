@@ -1,9 +1,9 @@
-import { UpdateAmend } from './../../../legal/structure/amend';
+import { IsiPasal } from './../../../legal/structure/pasal';
 import assertNever from 'assert-never';
-import _ from 'lodash';
-import { isNil, isArray, compact } from 'lodash';
+import _, { curry } from 'lodash';
+import { isNil, compact } from 'lodash';
 import { DocumentNode } from '../../../legal/document';
-import { Ayat, AyatNode, isAyats } from '../../../legal/structure/ayat';
+import { Ayat, AyatNode } from '../../../legal/structure/ayat';
 import { Bab, BabNode } from '../../../legal/structure/bab';
 import { Bagian, BagianNode } from '../../../legal/structure/bagian';
 import { Metadata, MetadataNode } from '../../../legal/structure/metadata';
@@ -18,15 +18,22 @@ import {
 import { PointsNode, PointNode, Point, Points } from '../../../legal/structure/point';
 import { Document } from '../../../legal/document/index';
 import { Reference } from '../../../legal/reference';
+import {
+  AmendDeletePasalPoint,
+  AmendedPoint,
+  AmendInsertPasalPoint,
+  AmendPoints,
+  AmendUpdatePasalPoint,
+} from '../../../legal/structure/amend';
 
-export function rawJsonToJson(document: Document, documentNode: DocumentNode): Document {
-  const { babs, mengingat, menimbang } = document;
+export function rawJsonToJson(document: Document): Document {
+  const { babs, mengingat, menimbang, _node } = document;
 
   return {
     ...document,
-    mengingat: mengimbangToDetectedMengimbang(mengingat, 'documentMengingat', documentNode),
-    menimbang: mengimbangToDetectedMengimbang(menimbang, 'documentMenimbang', documentNode),
-    babs: babs?.map((bab) => babToDetectedBab(bab, documentNode)),
+    mengingat: mengimbangToDetectedMengimbang(mengingat, 'documentMengingat', _node),
+    menimbang: mengimbangToDetectedMengimbang(menimbang, 'documentMenimbang', _node),
+    babs: babs?.map((bab) => babToDetectedBab(bab, _node)),
   };
 }
 
@@ -57,24 +64,69 @@ function babToDetectedBab(bab: Bab, parentDocument: DocumentNode): Bab {
 }
 
 function pasalToDetectedPasal(pasal: Pasal, parent: PasalParentNode): Pasal {
-  const { isi, text, _key } = pasal;
+  const { isi, _key } = pasal;
   const parentDocument = getPasalParentDocument(parent);
   const pasalNode: PasalNode = { _key, parentDocument, _structureType: 'pasal' };
-  const detectedText = isNil(isi)
-    ? { ...text, references: detectPasalNode(text.text, pasalNode) }
-    : text;
-  const detectedIsi = !isNil(isi) ? pasalContentToDetectedPasalContent(isi, pasalNode) : isi;
-
-  return { ...pasal, text: detectedText, isi: detectedIsi };
+  // const detectedText = isNil(isi)
+  //   ? { ...text, references: detectPasalNode(text.text, pasalNode) }
+  //   : text;
+  const detectedIsi = pasalContentToDetectedPasalContent(isi, pasalNode);
+  return { ...pasal, isi: detectedIsi };
 }
 
-function pasalContentToDetectedPasalContent(
-  isi: Ayat[] | Points,
-  pasalNode: PasalNode
-): Ayat[] | Points {
-  if (isArray(isi) && isAyats(isi)) return isi.map((ayat) => ayatToDetectedAyat(ayat, pasalNode));
+function pasalContentToDetectedPasalContent(isi: IsiPasal, pasalNode: PasalNode): IsiPasal {
+  if (isi._type === 'ayats')
+    return { ...isi, ayats: isi.ayats.map((ayat) => ayatToDetectedAyat(ayat, pasalNode)) };
+  if (isi._type === 'points') return pointsToDetectedPoints(isi, pasalNode);
+  if (isi._type === 'referenceText')
+    return { ...isi, references: detectPasalNode(isi.text, pasalNode) };
+  if (isi._type === 'amendPoints') return detectedAmendPointsOf(isi, pasalNode);
+  assertNever(isi);
+}
 
-  return pointsToDetectedPoints(isi, pasalNode);
+function detectedAmendPointsOf(amendPoints: AmendPoints, pasalNode: PasalNode): AmendPoints {
+  const { description, isi } = amendPoints;
+  const detectedIsi = isi.map(detectedAmendPointOf(pasalNode));
+  const detectedDescription = {
+    ...description,
+    references: detectPasalNode(description.text, pasalNode),
+  };
+  return { ...amendPoints, description: detectedDescription, isi: detectedIsi };
+}
+
+const detectedAmendPointOf = curry(_detectedAmendPointOf);
+function _detectedAmendPointOf(pasalNode: PasalNode, amendPoint: AmendedPoint): AmendedPoint {
+  if (amendPoint._operation === 'delete')
+    return detectedAmendDeletePasalPointOf(pasalNode, amendPoint);
+  if (amendPoint._operation === 'update')
+    return detectedAmendUpdatePasalPointOf(pasalNode, amendPoint);
+  if (amendPoint._operation === 'insert')
+    return detectedAmendInsertPasalPointOf(pasalNode, amendPoint);
+  assertNever(amendPoint);
+}
+function detectedAmendDeletePasalPointOf(
+  pasalNode: PasalNode,
+  amendPoint: AmendDeletePasalPoint
+): AmendDeletePasalPoint {
+  const { isi } = amendPoint;
+  const detectedIsi = { ...isi, references: detectPasalNode(isi.text, pasalNode) };
+  return { ...amendPoint, isi: detectedIsi };
+}
+function detectedAmendUpdatePasalPointOf(
+  pasalNode: PasalNode,
+  amendPoint: AmendUpdatePasalPoint
+): AmendUpdatePasalPoint {
+  const { isi } = amendPoint;
+  const detectedIsi = { ...isi, references: detectPasalNode(isi.text, pasalNode) };
+  return { ...amendPoint, isi: detectedIsi };
+}
+function detectedAmendInsertPasalPointOf(
+  pasalNode: PasalNode,
+  amendPoint: AmendInsertPasalPoint
+): AmendInsertPasalPoint {
+  const { isi } = amendPoint;
+  const detectedIsi = { ...isi, references: detectPasalNode(isi.text, pasalNode) };
+  return { ...amendPoint, isi: detectedIsi };
 }
 
 function pointsToDetectedPoints(points: Points, pointsNode: PointsNode): Points {
@@ -95,22 +147,9 @@ function pointToDetectedPoint(point: Point, parentPoints: PointsNode): Point {
   const detectedText = isNil(isi)
     ? { ...text, references: detectPointNode(text.text, pointNode) }
     : text;
-  const detectedIsi = !isNil(isi) ? pointContentToDetectedPointContent(isi, pointNode) : isi;
+  const detectedIsi = !isNil(isi) ? pointsToDetectedPoints(isi, pointNode) : isi;
 
   return { ...point, text: detectedText, isi: detectedIsi };
-}
-
-function pointContentToDetectedPointContent(
-  isi: Points | UpdateAmend,
-  pointNode: PointNode
-): Points | UpdateAmend {
-  if (isi._type === 'points') return pointsToDetectedPoints(isi, pointNode);
-  if (isi._type === 'updateAmend') return updateAmendToDetectedUpdateAmend(isi, pointNode);
-  assertNever(isi);
-}
-
-function updateAmendToDetectedUpdateAmend(amend: UpdateAmend, _: PointNode): UpdateAmend {
-  return amend;
 }
 
 function ayatToDetectedAyat(pasal: Ayat, parentPasal: PasalNode): Ayat {
