@@ -8,6 +8,19 @@ export function nomorKeyOfSpan(span: Span): number | undefined {
   const numberStr = str?.match(/^(l|S|S?[0-9]+)\./)?.[0]?.match(/^(l|S|S?[0-9]+)/)?.[0];
   return safeParseInt(numberStr);
 }
+export function removeNomorKey(span: Span): Span {
+  const str = span.str.replace(/^(l|S|S?[0-9]+)\./, '').trim();
+  return { ...span, str };
+}
+
+export function hurufKeyOfSpan(span: Span): number | undefined {
+  return span.str?.match(/^[a-z][.)]/)?.[0]?.charCodeAt(0);
+}
+
+export function removeHurufKey(span: Span): Span {
+  const str = span.str.replace(/^[a-z][.)]/, '').trim();
+  return { ...span, str };
+}
 
 export function pasalKeyOfSpan(span: Span): number | undefined {
   const { str } = span;
@@ -67,17 +80,6 @@ export function ayatKeyOf(span: Span): number | undefined {
   if (!isUndefined(firstMatch)) {
     return safeParseInt(firstMatch?.slice(1, -1));
   }
-  // if (!isUndefined(prevKey)) {
-  //   const dirtyAyatRegexp = /^\([0-9]+ /;
-  //   const firstDirtyMatches = line?.match(dirtyAyatRegexp)?.[0];
-  //   if (!isUndefined(firstDirtyMatches)) {
-  //     // `(21 ` -> 2
-  //     const cleanedKey = safeParseInt(line.split(' ')?.[0]?.slice(1, -1));
-  //     if (!isUndefined(cleanedKey) && cleanedKey === prevKey + 1) {
-  //       return cleanedKey;
-  //     }
-  //   }
-  // }
   return undefined;
 }
 export function removeAyatKey(spans: Span[]): Span[] {

@@ -2,7 +2,7 @@ import { Structure } from '../../../legal/structure/index';
 import { chain, curry, isUndefined, min } from 'lodash';
 import { Span, neverNum, lastOf } from '../../../util';
 import { SpanIdKeyMap } from './babs_spans_to_key_ids';
-import { Context } from './key_ids_to_babs';
+import { Context, KeySpans } from './key_ids_to_babs';
 
 type Acc = {
   spansOfKey: SpansOfKey;
@@ -11,10 +11,10 @@ type Acc = {
 };
 
 type SpansOfKey = { [key: number]: Span[] };
-type ToStructureWith<T extends Structure> = (context: Context, keySpans: [string, Span[]]) => T;
+type ToStructureWith<T extends Structure> = (context: Context, keySpans: KeySpans) => T;
 type StructureUtil<U> = {
   spanIdKeyMap: SpanIdKeyMap<number>;
-  toStructure: (keySpans: [string, Span[]][]) => U;
+  toStructure: (keySpans: KeySpans[]) => U;
 };
 
 export function spanIdKeyMapOf<A extends Structure, B extends Structure, T, U>(
@@ -35,7 +35,9 @@ function transform<T extends Structure, U>(
 ): StructureUtil<U> {
   return {
     spanIdKeyMap: map1[0],
-    toStructure: (keySpans: [string, Span[]][]) => map1[2](keySpans.map(curry(map1[1])(context))),
+    toStructure: (keySpans: KeySpans[]) => {
+      return map1[2](keySpans.map(curry(map1[1])(context)));
+    },
   };
 }
 
@@ -49,7 +51,6 @@ export function spansInRange<T>(map: SpanIdKeyMap<T>, spans: Span[]): number[] {
 }
 
 export const toSpansWith = curry(_toSpansWith);
-
 function _toSpansWith(keyOfId: SpanIdKeyMap<number>, spans: Span[]): Acc {
   return spans.reduce(toSpans(keyOfId), { spansOfKey: {}, preKeySpans: [] });
 }

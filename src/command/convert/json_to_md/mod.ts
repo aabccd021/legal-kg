@@ -235,9 +235,10 @@ function pointToMd(
   parent: PointNode | AyatNode | PasalNode | MetadataNode,
   depth: number
 ): string {
-  const { isi, _key, text } = point;
+  const { isi, _key } = point;
   const pointNode: PointNode = { _key, parentPoints: parent, _structureType: 'point' };
-  const isiStr = !isNil(isi) ? pointsToMd(isi, pointNode, depth + 1) : referenceToMd(text);
+  const isiStr =
+    isi._type === 'points' ? pointsToMd(isi, pointNode, depth + 1) : referenceToMd(isi);
   const indent = repeat(' ', depth * 4);
   const uri = getLegalUri(pointNode);
 

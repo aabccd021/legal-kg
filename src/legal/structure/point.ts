@@ -21,8 +21,7 @@ export function _getPointUri(pointNode: PointNode): string {
 export type Point = {
   _type: 'numPoint' | 'alphaPoint';
   _key: string | number;
-  isi?: Points;
-  text: ReferenceText;
+  isi: Points | ReferenceText;
 };
 
 /**
@@ -34,5 +33,4 @@ export type Points = {
   _type: 'points';
   _description: ReferenceText;
   isi: Point[];
-  text: string;
 };

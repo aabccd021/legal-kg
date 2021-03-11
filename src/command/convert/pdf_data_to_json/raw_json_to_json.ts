@@ -135,7 +135,6 @@ function pointsToDetectedPoints(points: Points, pointsNode: PointsNode): Points 
   const { isi, _description } = points;
   const detectedIsi = isi.map((p) => pointToDetectedPoint(p, pointsNode));
   const descriptionReferences = detectPointParentNode(_description.text, pointsNode);
-
   return {
     ...points,
     isi: detectedIsi,
@@ -144,14 +143,13 @@ function pointsToDetectedPoints(points: Points, pointsNode: PointsNode): Points 
 }
 
 function pointToDetectedPoint(point: Point, parentPoints: PointsNode): Point {
-  const { _key, isi, text } = point;
+  const { _key, isi } = point;
   const pointNode: PointNode = { _key, parentPoints, _structureType: 'point' };
-  const detectedText = isNil(isi)
-    ? { ...text, references: detectPointNode(text.text, pointNode) }
-    : text;
-  const detectedIsi = !isNil(isi) ? pointsToDetectedPoints(isi, pointNode) : isi;
-
-  return { ...point, text: detectedText, isi: detectedIsi };
+  const detectedIsi: Points | ReferenceText =
+    isi._type === 'points'
+      ? pointsToDetectedPoints(isi, pointNode)
+      : { ...isi, references: detectPointNode(isi.text, pointNode) };
+  return { ...point, isi: detectedIsi };
 }
 
 function ayatToDetectedAyat(ayat: Ayat, parentPasal: PasalNode): Ayat {

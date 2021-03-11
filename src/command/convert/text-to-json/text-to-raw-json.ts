@@ -1,19 +1,17 @@
-// import { chain, compact, flatMap, isEmpty, isNil, isUndefined, mapValues, curry } from 'lodash';
-// import { toArabic } from 'roman-numerals';
-// import { DocumentNode } from '../../../legal/document';
-// import { Document } from '../../../legal/document/index';
+// import { curry, isEmpty, isUndefined } from 'lodash';
 // import { Ayat } from '../../../legal/structure/ayat';
-// import { Bab } from '../../../legal/structure/bab';
-// import { Bagian } from '../../../legal/structure/bagian';
-// import { Metadata } from '../../../legal/structure/metadata';
-// import { Paragraf } from '../../../legal/structure/paragraf';
 // import { Pasal } from '../../../legal/structure/pasal';
-// import { Points, Point } from '../../../legal/structure/point';
-// import { ReferenceText } from '../../../legal/reference';
+// import { Point, Points } from '../../../legal/structure/point';
 // const padaTaggalRegexp = /^pada tanggal [12]?[0-9]/;
 // const padaTaggalExtractRegexp = /^pada tanggal/;
 // const mengingatRegex = /^Mengingat\s*:/;
 // const menimbangRegex = /(^Menimbang\s*:?)/;
+
+// import { isEmpty } from 'lodash';
+// import { Ayat } from '../../../legal/structure/ayat';
+// import { Pasal } from '../../../legal/structure/pasal';
+// import { Points } from '../../../legal/structure/point';
+// import { safeParseInt } from '../pdf_data_to_json/parse_key_from_spans';
 
 // export function textToRawJson(text: string, documentNode: DocumentNode): Document {
 //   const lines = text.split('\n');
@@ -238,13 +236,13 @@
 
 // const amendPasalRegex = /^Beberapa ketentuan dalam Undang-Undang/;
 
-function _linesToPasal(incLines: IncLines): Pasal {
-  const { _key, lines } = incLines;
-  const isiLines = lines.slice(1);
-  const isi =
-    getAyats(isiLines) ?? getPoints(isiLines) ?? stringToEmptyReference(isiLines.join(' '));
-  return { _type: 'pasal', _key, isi };
-}
+// function _linesToPasal(incLines: IncLines): Pasal {
+//   const { _key, lines } = incLines;
+//   const isiLines = lines.slice(1);
+//   const isi =
+//     getAyats(isiLines) ?? getPoints(isiLines) ?? stringToEmptyReference(isiLines.join(' '));
+//   return { _type: 'pasal', _key, isi };
+// }
 
 // // function getAmendPoints(lines: string[]): Points | undefined {
 // //   if (!amendPasalRegex.test(lines.join(' '))) return undefined;
@@ -299,31 +297,32 @@ function _linesToPasal(incLines: IncLines): Pasal {
 //   return undefined;
 // }
 
-function getAyats(lines: string[]): Ayat[] | undefined {
-  const firstKey = getAyatKey(lines[0]);
-  if (firstKey !== 1) return undefined;
-  const ayatsLines = extractIncLines(lines, getAyatKey);
+// function getAyats(lines: string[]): Ayat[] | undefined {
+//   const firstKey = getAyatKey(lines[0]);
+//   if (firstKey !== 1) return undefined;
+//   const ayatsLines = extractIncLines(lines, getAyatKey);
 
-  return ayatsLines.map(_linesToAyat);
-}
+//   return ayatsLines.map(_linesToAyat);
+// }
 
-function _linesToAyat({ _key, lines }: IncLines): Ayat {
-  const linesWithoutKey = removeKeyFromLines(lines, ayatRegexp);
-  const isi = getPoints(linesWithoutKey);
-  const text = stringToEmptyReference(linesWithoutKey.join(' '));
+// function _linesToAyat({ _key, lines }: IncLines): Ayat {
+//   const linesWithoutKey = removeKeyFromLines(lines, ayatRegexp);
+//   const isi = getPoints(linesWithoutKey);
+//   const text = stringToEmptyReference(linesWithoutKey.join(' '));
 
-  return { _type: 'ayat', _key, isi, text };
-}
+//   return { _type: 'ayat', _key, isi, text };
+// }
 
 // /**
 //  * Point
 //  */
 // // I to handle 1
-// const numPointRegexp = /^[0-9I]+\s?[0-9]?([.)]|$)/;
+// const numPointRegexp = ;
 
 // function getNumPointKey(line?: string): number | undefined {
-//   const numberExtractRegexp = /^[0-9I]+\s?[0-9]?/;
-//   const numberStr = line?.match(numPointRegexp)?.[0]?.match(numberExtractRegexp)?.[0];
+//   const numberExtractRegexp = ;
+//   const numberStr =
+// line?.match(/^[0-9I]+\s?[0-9]?([.)]|$)/)?.[0]?.match(/^[0-9I]+\s?[0-9]?/)?.[0];
 
 //   return safeParseInt(numberStr);
 // }
@@ -355,8 +354,6 @@ function _linesToAyat({ _key, lines }: IncLines): Ayat {
 //   return undefined;
 // }
 
-// // const amendRegex = /^Ketentuan Pasal.*diubah sehingga.*:/;
-
 // function getGetKeyInt(
 //   _type: 'numPoint' | 'alphaPoint'
 // ): {
@@ -366,16 +363,10 @@ function _linesToAyat({ _key, lines }: IncLines): Ayat {
 // } {
 //   switch (_type) {
 //     case 'numPoint':
-//       return {
-//         regexp: numPointRegexp,
-//         getKeyInt: getNumPointKey,
-//       };
+//       return { regexp: numPointRegexp, getKeyInt: getNumPointKey };
 //     case 'alphaPoint':
 //       return {
-//         regexp: alphaPointRegexp,
-//         getKeyInt: getAlphaPointKey,
-//         getKey: String.fromCharCode,
-//       };
+// regexp: alphaPointRegexp, getKeyInt: getAlphaPointKey, getKey: String.fromCharCode };
 //   }
 // }
 
@@ -383,27 +374,24 @@ function _linesToAyat({ _key, lines }: IncLines): Ayat {
 //   _type: 'numPoint' | 'alphaPoint',
 //   isiLines: string[],
 //   __description: string,
-//   shouldSkip?: (lines: string[]) => boolean
 // ): Points {
-//   // const toDetect = isiLines.slice(10).join(' ') ?? '';
-//   // const skip: [boolean, number] |
-// undefined = amendRegex.test(toDetect) ? [true, 2] : undefined;
-//   // if (!isUndefined(skip)) {
-//   //   console.log(toDetect);
-//   //   console.log('===');
-//   // }
-//   const isi = getPointsContent(_type, isiLines, shouldSkip);
-//   const textLines = [__description, ...isiLines];
-//   const text = textLines.filter((x) => !isEmpty(x)).join(' ');
-//   const _description = stringToEmptyReference(__description);
+// const toDetect = isiLines.slice(10).join(' ') ?? '';
+// const skip: [boolean, number] | undefined = amendRegex.test(toDetect) ? [true, 2] : undefined;
+// if (!isUndefined(skip)) {
+//   console.log(toDetect);
+//   console.log('===');
+// }
+// const isi = getPointsContent(_type, isiLines);
+// const textLines = [__description, ...isiLines];
+// const text = textLines.filter((x) => !isEmpty(x)).join(' ');
+// const _description = stringToEmptyReference(__description);
 
-//   return { _type: 'points', _description, text, isi };
+// return { _type: 'points', _description, text, isi };
 // }
 
 // function getPointsContent(
 //   _type: 'numPoint' | 'alphaPoint',
 //   isiLines: string[],
-//   shouldSkip?: (lines: string[]) => boolean
 // ): Point[] {
 //   const { getKeyInt } = getGetKeyInt(_type);
 //   return extractIncLines(isiLines, getKeyInt, shouldSkip).map(getPointIsi(_type));
