@@ -18,6 +18,8 @@ export type KeyIds = {
   lastParagrafKey?: number;
   pasalKeyOfId: SpanIdKeyMap<number>;
   amendPasalKeyOfId: SpanIdKeyMap<string[]>;
+  amendDeletePasalKeyOfId: SpanIdKeyMap<string>;
+  amendUpdatePasalKeyOfId: SpanIdKeyMap<string>;
   lastAmendedNomor?: { key: number; id: number };
   lastNomor?: { key: number; id: number };
   lastPasalKey?: number;
@@ -39,6 +41,8 @@ export function babsSpansToKeyIds(hasAmendPasal: boolean, spans: Span[]): KeyIds
     amendPasalKeyOfId: {},
     nomorKeyOfId: {},
     amendNomorKeyOfId: {},
+    amendDeletePasalKeyOfId: {},
+    amendUpdatePasalKeyOfId: {},
     afterPasalXls: [],
     afterAbovePasal: false,
     afterTruePasal: false,
@@ -61,6 +65,8 @@ function toKeys(
     paragrafKeyOfId,
     pasalKeyOfId,
     amendPasalKeyOfId,
+    amendDeletePasalKeyOfId,
+    amendUpdatePasalKeyOfId,
     lastAmendedNomor,
     nomorKeyOfId,
     amendNomorKeyOfId,
@@ -133,6 +139,7 @@ function toKeys(
       amendNomorKeyOfId: { ...amendNomorKeyOfId, [span.id]: amendNomor },
       nomorKeyOfId: { ...nomorKeyOfId, [span.id]: amendNomor },
       amendPasalKeyOfId: newAmendPasalKeyOfIdOf(amendPasalKeyOfId, span.id, amendedPasalKey),
+      amendDeletePasalKeyOfId: { ...amendDeletePasalKeyOfId, [span.id]: amendedPasalKey },
       lastNomor: newLastNomor,
       lastAmendedNomor: newLastNomor,
       afterTruePasal: false,
@@ -164,6 +171,7 @@ function toKeys(
       ...acc,
       amendNomorKeyOfId: { ...amendNomorKeyOfId, [span.id]: amendNomor },
       amendPasalKeyOfId: newAmendPasalKeyOfIdOf(amendPasalKeyOfId, span.id, amendedPasalKey),
+      amendUpdatePasalKeyOfId: { ...amendUpdatePasalKeyOfId, [span.id]: amendedPasalKey },
       nomorKeyOfId: { ...nomorKeyOfId, [span.id]: amendNomor },
       lastNomor: newLastNomor,
       lastAmendedNomor: newLastNomor,
