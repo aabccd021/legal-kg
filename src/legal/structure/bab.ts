@@ -1,6 +1,6 @@
 import { DocumentNode, _getDocumentUri } from '../document';
-import { Bagian } from './bagian';
-import { Pasal } from './pasal';
+import { Bagians } from './bagian';
+import { Pasals } from './pasal';
 
 export type BabNode = {
   _structureType: 'bab';
@@ -17,5 +17,5 @@ export type Bab = {
   _type: 'bab';
   _key: number;
   _judul: string;
-  isi: Bagian[] | Pasal[];
+  isi: Bagians | Pasals;
 };

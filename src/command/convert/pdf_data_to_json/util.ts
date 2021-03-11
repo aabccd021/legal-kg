@@ -12,30 +12,30 @@ type Acc = {
 
 type SpansOfKey = { [key: number]: Span[] };
 type ToStructureWith<T extends Structure> = (context: Context, keySpans: [string, Span[]]) => T;
-type StructureUtil<T extends Structure> = {
+type StructureUtil<U> = {
   spanIdKeyMap: SpanIdKeyMap<number>;
-  toStructure: (keySpans: [string, Span[]][]) => T[];
+  toStructure: (keySpans: [string, Span[]][]) => U;
 };
 
-export function spanIdKeyMapOf<A extends Structure, B extends Structure>(
-  map1: [SpanIdKeyMap<number>, ToStructureWith<A>],
-  map2: [SpanIdKeyMap<number>, ToStructureWith<B>],
+export function spanIdKeyMapOf<A extends Structure, B extends Structure, T, U>(
+  map1: [SpanIdKeyMap<number>, ToStructureWith<A>, (a: A[]) => T],
+  map2: [SpanIdKeyMap<number>, ToStructureWith<B>, (a: B[]) => U],
   spans: Span[],
   context: Context
-): StructureUtil<A> | StructureUtil<B> {
+): StructureUtil<T> | StructureUtil<U> {
   return (min(spansInRange(map1[0], spans)) ?? Infinity) <
     (min(spansInRange(map2[0], spans)) ?? Infinity)
     ? transform(map1, context)
     : transform(map2, context);
 }
 
-function transform<T extends Structure>(
-  map1: [SpanIdKeyMap<number>, ToStructureWith<T>],
+function transform<T extends Structure, U>(
+  map1: [SpanIdKeyMap<number>, ToStructureWith<T>, (a: T[]) => U],
   context: Context
-): StructureUtil<T> {
+): StructureUtil<U> {
   return {
     spanIdKeyMap: map1[0],
-    toStructure: (keySpans: [string, Span[]][]) => keySpans.map(curry(map1[1])(context)),
+    toStructure: (keySpans: [string, Span[]][]) => map1[2](keySpans.map(curry(map1[1])(context))),
   };
 }
 

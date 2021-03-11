@@ -8,7 +8,6 @@ import { babsOfKeyIds } from './key_ids_to_babs';
 import { chain, isUndefined } from 'lodash';
 import { pasalKeyOfSpan } from './parse_key_from_spans';
 import { Document } from '../../../legal/document/index';
-import { rawJsonToJson } from './raw_json_to_json';
 
 function pdfDataToJson(): void {
   getDocumentData('pdf-data').forEach(writeToJson);
@@ -25,8 +24,8 @@ function writeToJson(documentNode: DocumentNode): void {
   const babKeyIds = keyIdsOfBabSpans(hasAmendPasal, documentSpans.babs);
   const babs = babsOfKeyIds({ hasAmendPasal, keyIds: babKeyIds }, documentSpans.babs);
   const document: Document = { _node: documentNode, babs };
-  const detectedDocument = rawJsonToJson(document);
-  writeFileSync(jsonFile.path, JSON.stringify(detectedDocument, undefined, 2));
+  // const detectedDocument = rawJsonToJson(document);
+  writeFileSync(jsonFile.path, JSON.stringify(document, undefined, 2));
 }
 
 type DocumentExtractedKey = 'preBab' | 'babs' | 'penjelasan';

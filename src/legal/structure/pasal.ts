@@ -2,10 +2,10 @@ import assertNever from 'assert-never';
 import { DocumentNode, _getDocumentUri } from '../document';
 import { ReferenceText } from '../reference';
 import { AmendPoints } from './amend';
-import { Ayat } from './ayat';
+import { Ayats } from './ayat';
 import { BabNode } from './bab';
-import { Bagian, BagianNode } from './bagian';
-import { Paragraf, ParagrafNode } from './paragraf';
+import { BagianNode } from './bagian';
+import { ParagrafNode } from './paragraf';
 import { Points } from './point';
 
 /**
@@ -41,15 +41,9 @@ export type Pasal = {
   _key: number;
   isi: IsiPasal;
 };
+export type Pasals = {
+  _type: 'pasals';
+  pasals: Pasal[];
+};
 
-export type IsiPasal =
-  | Points
-  | ReferenceText
-  | AmendPoints
-  | {
-      _type: 'ayats';
-      ayats: Ayat[];
-    };
-export function isPasals(isi: Bagian[] | Pasal[] | Paragraf[]): isi is Pasal[] {
-  return isi?.[0]?._type === 'pasal';
-}
+export type IsiPasal = Points | ReferenceText | AmendPoints | Ayats;

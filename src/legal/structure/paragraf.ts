@@ -1,6 +1,6 @@
 import { _getStructureUri } from '.';
-import { Bagian, BagianNode } from './bagian';
-import { Pasal } from './pasal';
+import { BagianNode } from './bagian';
+import { Pasals } from './pasal';
 
 export type ParagrafNode = {
   _structureType: 'paragraf';
@@ -17,8 +17,9 @@ export type Paragraf = {
   _type: 'paragraf';
   _key: number;
   _judul: string;
-  isi: Pasal[];
+  isi: Pasals;
 };
-export function isParagrafs(isi: Bagian[] | Pasal[] | Paragraf[]): isi is Paragraf[] {
-  return isi?.[0]?._type === 'paragraf';
-}
+export type Paragrafs = {
+  _type: 'paragrafs';
+  paragrafs: Paragraf[];
+};

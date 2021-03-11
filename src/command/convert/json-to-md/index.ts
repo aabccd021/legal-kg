@@ -1,20 +1,19 @@
-import { IsiPasal } from './../../../legal/structure/pasal';
+import { IsiPasal } from '../../../legal/structure/pasal';
 import { assertNever } from 'assert-never';
-import { map, flatten, compact, isNil, repeat } from 'lodash';
+import { map, flatten, compact, isNil, repeat, curry } from 'lodash';
 import { toRoman } from 'roman-numerals';
 import { getDocumentName, _getDocumentUri, DocumentNode } from '../../../legal/document';
 import * as fs from 'fs';
 import { getLegalUri } from '../../../legal';
 import { Ayat, AyatNode } from '../../../legal/structure/ayat';
 import { Bab, BabNode } from '../../../legal/structure/bab';
-import { Bagian, BagianNode, isBagians } from '../../../legal/structure/bagian';
+import { Bagian, BagianNode } from '../../../legal/structure/bagian';
 import { Metadata, MetadataNode } from '../../../legal/structure/metadata';
 import { Paragraf, ParagrafNode } from '../../../legal/structure/paragraf';
 import {
   PasalParentNode,
   PasalNode,
   getPasalParentDocument,
-  isPasals,
   Pasal,
 } from '../../../legal/structure/pasal';
 import { Point, PointNode, Points } from '../../../legal/structure/point';
@@ -133,46 +132,44 @@ function mengimbangToMd(
 function babToMd(bab: Bab, parentDocument: DocumentNode): string {
   const { _key, _judul, isi } = bab;
   const babNode: BabNode = { _key, parentDocument, _structureType: 'bab' };
-  const isiStr: string = isiBabToMd(isi, babNode);
+  const isiStr: string =
+    isi._type === 'pasals'
+      ? isi.pasals.map(pasalToMdWith(babNode)).join('\n')
+      : isi.bagians.map(bagianToMdWith(babNode)).join('\n');
   const romanKey = toRoman(_key);
   const babUri = getLegalUri(babNode);
 
   return `\n# [BAB ${romanKey}: ${_judul}](${babUri})\n${isiStr} \n`;
 }
 
-function isiBabToMd(isi: Bagian[] | Pasal[], babNode: BabNode): string {
-  if (isPasals(isi)) return isi.map((p) => pasalToMd(p, babNode)).join('\n');
-  if (isBagians(isi)) return isi.map((b) => bagianToMd(b, babNode)).join('\n');
-  assertNever(isi);
-}
-
-function bagianToMd(bagian: Bagian, parentBab: BabNode): string {
+const bagianToMdWith = curry(bagianToMd);
+function bagianToMd(parentBab: BabNode, bagian: Bagian): string {
   const { _key, isi } = bagian;
   const bagianNode: BagianNode = { _key, parentBab, _structureType: 'bagian' };
-  const isiStr = isPasals(isi)
-    ? isi.map((p) => pasalToMd(p, parentBab))
-    : isi.map((p) => paragrafToMd(p, bagianNode));
+  const isiStr =
+    isi._type === 'pasals'
+      ? isi.pasals.map(pasalToMdWith(parentBab))
+      : isi.paragrafs.map(paragrafToMdWith(bagianNode));
   const uri = getLegalUri(bagianNode);
-
   return `\n## [Bagian ${_key}](${uri})\n${isiStr}\n`;
 }
 
-function paragrafToMd(paragraf: Paragraf, parentBagian: BagianNode): string {
+const paragrafToMdWith = curry(paragrafToMd);
+function paragrafToMd(parentBagian: BagianNode, paragraf: Paragraf): string {
   const { _key, isi } = paragraf;
   const paragrafNode: ParagrafNode = { _key, parentBagian, _structureType: 'paragraf' };
-  const isiStr = isi.map((p) => pasalToMd(p, parentBagian));
+  const isiStr = isi.pasals.map(pasalToMdWith(parentBagian));
   const uri = getLegalUri(paragrafNode);
-
   return `\n## [Paragraf ${_key}](${uri})\n${isiStr}\n`;
 }
 
-function pasalToMd(pasal: Pasal, pasalParent: PasalParentNode): string {
+const pasalToMdWith = curry(pasalToMd);
+function pasalToMd(pasalParent: PasalParentNode, pasal: Pasal): string {
   const { _key, isi } = pasal;
   const parentDocument = getPasalParentDocument(pasalParent);
   const pasalNode: PasalNode = { _key, parentDocument, _structureType: 'pasal' };
   const isiStr: string = pasalContentToMd(isi, pasalNode);
   const uri = getLegalUri(pasalNode);
-
   return `\n### [Pasal ${_key}](${uri})\n${isiStr}\n`;
 }
 
@@ -208,9 +205,9 @@ function amendInsertPasalPointToMd(amendPoint: AmendInsertPasalPoint): string {
 }
 
 function ayatToMd(ayat: Ayat, parentPasal: PasalNode): string {
-  const { _key, isi, text } = ayat;
+  const { _key, isi } = ayat;
   const ayatNode: AyatNode = { _key, parentPasal, _structureType: 'ayat' };
-  const isiStr = !isNil(isi) ? pointsToMd(isi, ayatNode) : referenceToMd(text);
+  const isiStr = isi._type === 'points' ? pointsToMd(isi, ayatNode) : referenceToMd(isi);
   const uri = getLegalUri(ayatNode);
 
   return `\n#### [Ayat (${_key})](${uri})\n${isiStr}`;

@@ -238,13 +238,13 @@
 
 // const amendPasalRegex = /^Beberapa ketentuan dalam Undang-Undang/;
 
-// function _linesToPasal(incLines: IncLines): Pasal {
-//   const { _key, lines } = incLines;
-//   const isiLines = lines.slice(1);
-//   const isi =
-//     getAyats(isiLines) ?? getPoints(isiLines) ?? stringToEmptyReference(isiLines.join(' '));
-//   return { _type: 'pasal', _key, isi };
-// }
+function _linesToPasal(incLines: IncLines): Pasal {
+  const { _key, lines } = incLines;
+  const isiLines = lines.slice(1);
+  const isi =
+    getAyats(isiLines) ?? getPoints(isiLines) ?? stringToEmptyReference(isiLines.join(' '));
+  return { _type: 'pasal', _key, isi };
+}
 
 // // function getAmendPoints(lines: string[]): Points | undefined {
 // //   if (!amendPasalRegex.test(lines.join(' '))) return undefined;
@@ -299,21 +299,21 @@
 //   return undefined;
 // }
 
-// function getAyats(lines: string[]): Ayat[] | undefined {
-//   const firstKey = getAyatKey(lines[0]);
-//   if (firstKey !== 1) return undefined;
-//   const ayatsLines = extractIncLines(lines, getAyatKey);
+function getAyats(lines: string[]): Ayat[] | undefined {
+  const firstKey = getAyatKey(lines[0]);
+  if (firstKey !== 1) return undefined;
+  const ayatsLines = extractIncLines(lines, getAyatKey);
 
-//   return ayatsLines.map(_linesToAyat);
-// }
+  return ayatsLines.map(_linesToAyat);
+}
 
-// function _linesToAyat({ _key, lines }: IncLines): Ayat {
-//   const linesWithoutKey = removeKeyFromLines(lines, ayatRegexp);
-//   const isi = getPoints(linesWithoutKey);
-//   const text = stringToEmptyReference(linesWithoutKey.join(' '));
+function _linesToAyat({ _key, lines }: IncLines): Ayat {
+  const linesWithoutKey = removeKeyFromLines(lines, ayatRegexp);
+  const isi = getPoints(linesWithoutKey);
+  const text = stringToEmptyReference(linesWithoutKey.join(' '));
 
-//   return { _type: 'ayat', _key, isi, text };
-// }
+  return { _type: 'ayat', _key, isi, text };
+}
 
 // /**
 //  * Point

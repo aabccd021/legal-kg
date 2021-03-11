@@ -17,9 +17,10 @@ export function _getAyatUri(node: AyatNode): string {
 export type Ayat = {
   _type: 'ayat';
   _key: number;
-  isi?: Points;
-  text: ReferenceText;
+  isi: Points | ReferenceText;
 };
-export function isAyats(isi: string[] | Ayat[]): isi is Ayat[] {
-  return (isi?.[0] as Ayat)?._type === 'ayat';
-}
+
+export type Ayats = {
+  _type: 'ayats';
+  ayats: Ayat[];
+};

@@ -1,7 +1,7 @@
 import { _getStructureUri } from '.';
 import { BabNode } from './bab';
-import { Paragraf } from './paragraf';
-import { Pasal } from './pasal';
+import { Paragrafs } from './paragraf';
+import { Pasals } from './pasal';
 
 export type BagianNode = {
   _structureType: 'bagian';
@@ -18,8 +18,9 @@ export type Bagian = {
   _type: 'bagian';
   _key: number;
   _judul: string;
-  isi: Paragraf[] | Pasal[];
+  isi: Paragrafs | Pasals;
 };
-export function isBagians(isi: Bagian[] | Pasal[] | Paragraf[]): isi is Bagian[] {
-  return isi?.[0]?._type === 'bagian';
-}
+export type Bagians = {
+  _type: 'bagians';
+  bagians: Bagian[];
+};

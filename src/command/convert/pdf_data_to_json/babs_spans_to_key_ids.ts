@@ -1,6 +1,7 @@
 import { curry, mean, isUndefined } from 'lodash';
 import { lastOf, neverNum, neverString, Span } from '../../../util';
 import {
+  ayatKeyOf,
   babKeyOfSpan,
   bagianKeyOfSpan,
   nomorKeyOfSpan,
@@ -21,6 +22,8 @@ export type KeyIds = {
   amendDeletePasalKeyOfId: SpanIdKeyMap<string>;
   amendUpdatePasalKeyOfId: SpanIdKeyMap<string>;
   amendInsertPasalKeyOfId: SpanIdKeyMap<string[]>;
+  ayatKeyOfId: SpanIdKeyMap<number>;
+  lastAyatKey?: number;
   lastAmendedNomor?: { key: number; id: number };
   lastNomor?: { key: number; id: number };
   lastPasalKey?: number;
@@ -39,6 +42,7 @@ export function babsSpansToKeyIds(hasAmendPasal: boolean, spans: Span[]): KeyIds
     bagianKeyOfId: {},
     paragrafKeyOfId: {},
     pasalKeyOfId: {},
+    ayatKeyOfId: {},
     amendPasalKeyOfId: {},
     nomorKeyOfId: {},
     amendNomorKeyOfId: {},
@@ -81,6 +85,8 @@ function toKeys(
     lastBagianKey,
     lastParagrafKey,
     lastPasalKey,
+    ayatKeyOfId,
+    lastAyatKey,
   } = acc;
 
   const newBabKey = babKeyOfSpan(span);
@@ -325,6 +331,10 @@ function toKeys(
     };
   }
 
+  const newAyatKey = ayatKeyOf(span);
+  if (!isUndefined(newAyatKey) && (newAyatKey === 1 || newAyatKey - 1 === lastAyatKey)) {
+    return { ...acc, ayatKeyOfId: { ...ayatKeyOfId, [span.id]: newAyatKey } };
+  }
   return acc;
 }
 

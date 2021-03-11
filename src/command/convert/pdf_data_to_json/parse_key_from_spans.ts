@@ -60,6 +60,26 @@ export function safeParseInt(str: string | undefined): number | undefined {
   }
 }
 
+export function ayatKeyOf(span: Span): number | undefined {
+  const { str } = span;
+  const firstMatch = str.match(/^\([0-9]+\)/)?.[0];
+  if (!isUndefined(firstMatch)) {
+    return safeParseInt(firstMatch?.slice(1, -1));
+  }
+  // if (!isUndefined(prevKey)) {
+  //   const dirtyAyatRegexp = /^\([0-9]+ /;
+  //   const firstDirtyMatches = line?.match(dirtyAyatRegexp)?.[0];
+  //   if (!isUndefined(firstDirtyMatches)) {
+  //     // `(21 ` -> 2
+  //     const cleanedKey = safeParseInt(line.split(' ')?.[0]?.slice(1, -1));
+  //     if (!isUndefined(cleanedKey) && cleanedKey === prevKey + 1) {
+  //       return cleanedKey;
+  //     }
+  //   }
+  // }
+  return undefined;
+}
+
 function clean(str: string): string {
   if (str === 'S5') return '5';
   if (str === 'S1') return '51';

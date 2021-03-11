@@ -1,8 +1,6 @@
 import yargs from 'yargs';
 import { jsonToMd } from './command/convert/json-to-md';
 import { jsonToTtl } from './command/convert/json-to-ttl';
-import { pdfToTxt } from './command/convert/pdf-to-text';
-import { textToJson } from './command/convert/text-to-json';
 import { downloadPdf } from './command/download-pdf';
 import { updateIndex } from './command/update-index';
 
@@ -36,7 +34,7 @@ yargs
         describe: 'Overwrite existing pdf',
       },
     },
-    handler: pdfToTxt,
+    handler: () => console.log('UNIMPLEMENTED'),
   })
   .command<CommandOption>({
     command: 'convert:text-to-json',
@@ -48,7 +46,7 @@ yargs
         describe: 'Overwrite existing json',
       },
     },
-    handler: textToJson,
+    handler: () => console.log('UNIMPLEMENTED'),
   })
   .command<CommandOption>({
     command: 'convert:json-to-md',
