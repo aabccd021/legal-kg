@@ -8,6 +8,7 @@ import { babsOfKeyIds } from './key_ids_to_babs';
 import { chain, isUndefined } from 'lodash';
 import { pasalKeyOfSpan } from './parse_key_from_spans';
 import { Document } from '../../../legal/document/index';
+import * as yaml from 'js-yaml';
 
 function pdfDataToJson(): void {
   getDocumentData('pdf-data').forEach(writeToJson);
@@ -17,7 +18,7 @@ function pdfDataToJson(): void {
 function writeToJson(documentNode: DocumentNode): void {
   console.log('\nstart', documentNode);
   const dataFile = getDocumentFilePath(documentNode, 'pdf-data');
-  const jsonFile = getDocumentFilePath(documentNode, 'jsonv2');
+  const jsonFile = getDocumentFilePath(documentNode, 'yaml');
   const pdfSpans: Span[] = JSON.parse(readFileSync(dataFile.path).toString());
   const documentSpans = documentSpansOf(pdfSpans);
   const hasAmendPasal = spansHasAmendPasal(documentSpans.babs);
@@ -25,7 +26,7 @@ function writeToJson(documentNode: DocumentNode): void {
   const babs = babsOfKeyIds({ hasAmendPasal, keyIds: babKeyIds }, documentSpans.babs);
   const document: Document = { _node: documentNode, babs };
   // const detectedDocument = rawJsonToJson(document);
-  writeFileSync(jsonFile.path, JSON.stringify(document, undefined, 2));
+  writeFileSync(jsonFile.path, yaml.dump(document));
 }
 
 type DocumentExtractedKey = 'preBab' | 'babs' | 'penjelasan';

@@ -15,7 +15,7 @@ export type DataType =
   | 'pdf-data'
   | 'text'
   | 'json'
-  | 'jsonv2'
+  | 'yaml'
   | 'md'
   | 'ttl';
 export function getDataTypeExtension(dataType: DataType): string {
@@ -28,7 +28,7 @@ function getDataTypeExtensionStr(dataType: DataType): string {
   if (dataType === 'pdf-data') return 'json';
   if (dataType === 'text') return 'txt';
   if (dataType === 'json') return 'json';
-  if (dataType === 'jsonv2') return 'json';
+  if (dataType === 'yaml') return 'yaml';
   if (dataType === 'md') return 'md';
   if (dataType === 'ttl') return 'ttl';
   assertNever(dataType);

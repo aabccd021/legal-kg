@@ -36,7 +36,7 @@ export function jsonToMd(option: Option): void {
 
 function handleJson(jsonNode: DocumentNode, option: Option): void {
   const { overwrite } = option;
-  const jsonFile = getDocumentFilePath(jsonNode, 'jsonv2');
+  const jsonFile = getDocumentFilePath(jsonNode, 'yaml');
   const { path: mdPath, exists: mdExists } = getDocumentFilePath(jsonNode, 'md');
 
   try {

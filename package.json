@@ -75,6 +75,7 @@
   },
   "devDependencies": {
     "@comunica/actor-init-sparql-file": "^1.19.0",
+    "@types/js-yaml": "^4.0.0",
     "@types/json-stable-stringify": "^1.0.32",
     "@types/lodash": "^4.14.167",
     "@types/n3": "^1.4.4",
@@ -105,6 +106,7 @@
     "@types/p-timeout": "^1.2.2",
     "@types/yargs": "^16.0.0",
     "add": "^2.0.6",
+    "js-yaml": "^4.0.0",
     "p-timeout": "^4.1.0",
     "striptags": "^3.1.1",
     "tabletojson": "^2.0.4",
