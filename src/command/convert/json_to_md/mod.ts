@@ -185,7 +185,7 @@ function pasalContentToMd(isi: IsiPasal, pasalNode: PasalNode): string {
 function amendPointsToMd(amendPoints: AmendPoints): string {
   const { description, isi } = amendPoints;
   const isiMd = isi.map(amendPointToMd).join('\n');
-  return `${description}\n${isiMd}`;
+  return `${description.text}\n${isiMd}`;
 }
 
 function amendPointToMd(amendPoint: AmendedPoint): string {
@@ -199,7 +199,8 @@ function amendDeletePasalPointToMd(amendPoint: AmendDeletePasalPoint): string {
   return amendPoint.isi.text;
 }
 function amendUpdatePasalPointToMd(amendPoint: AmendUpdatePasalPoint): string {
-  return amendPoint.isi.text;
+  const { description, _pasalKey, isi } = amendPoint;
+  return `* ${description.text}\n    * > Pasal ${_pasalKey}\n    * > ${isi.text}`;
 }
 function amendInsertPasalPointToMd(amendPoint: AmendInsertPasalPoint): string {
   return amendPoint.isi.text;

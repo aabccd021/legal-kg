@@ -22,6 +22,7 @@ export type AmendDeletePasalPoint = AmendPointBase & {
 export type AmendUpdatePasalPoint = AmendPointBase & {
   _operation: 'update';
   _pasalKey: string;
+  description: ReferenceText;
   isi: ReferenceText;
 };
 

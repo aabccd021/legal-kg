@@ -239,14 +239,25 @@ function spansToAmendUpdatePasalPoint(
   context: Context,
   keySpans: KeySpans
 ): AmendUpdatePasalPoint | undefined {
+  const { amendUpdatePasalKeyOfId, selfAmendPasalKeyOfId } = context.keyIds;
   const [nomorKey, spans] = keySpans;
   const _nomorKey = parseInt(nomorKey);
   const firstSpanId = spans[0]?.id;
   if (isUndefined(firstSpanId)) return undefined;
-  const _pasalKey = context.keyIds.amendUpdatePasalKeyOfId[firstSpanId];
+  const _pasalKey = amendUpdatePasalKeyOfId[firstSpanId];
   if (isUndefined(_pasalKey)) return undefined;
-  const isi = emptyReferenceOf(spans);
-  return { _type: 'amendPoint', _operation: 'update', _nomorKey, _pasalKey, isi };
+  const pasalTitleIdx =
+    chain(spans)
+      .toPairs()
+      .filter(([, span]) => selfAmendPasalKeyOfId.includes(span.id))
+      .map(([idx]) => parseInt(idx))
+      .first()
+      .value() ?? 0;
+  // const description = emptyReferenceOf(spans.slice(0, pasalTitleIdx));
+  if (pasalTitleIdx === 0) console.log('UND', spans[0]);
+  const description = emptyReferenceOf(spans.slice(0, pasalTitleIdx));
+  const isi = emptyReferenceOf(spans.slice(pasalTitleIdx + 1));
+  return { _type: 'amendPoint', _operation: 'update', _nomorKey, _pasalKey, isi, description };
 }
 
 function spansToAmendInsertPasalPoint(

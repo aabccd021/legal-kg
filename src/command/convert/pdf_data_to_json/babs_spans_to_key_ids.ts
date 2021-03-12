@@ -29,6 +29,7 @@ export type KeyIds = {
   lastPasalKey?: number;
   nomorKeyOfId: SpanIdKeyMap<number>;
   amendNomorKeyOfId: SpanIdKeyMap<number>;
+  selfAmendPasalKeyOfId: number[];
   afterTruePasal: boolean;
   afterPasalXls: number[];
   ayatXls: number[];
@@ -50,6 +51,7 @@ export function babsSpansToKeyIds(hasAmendPasal: boolean, spans: Span[]): KeyIds
     amendDeletePasalKeyOfId: {},
     amendUpdatePasalKeyOfId: {},
     amendInsertPasalKeyOfId: {},
+    selfAmendPasalKeyOfId: [],
     afterPasalXls: [],
     ayatXls: [],
     afterAbovePasal: false,
@@ -84,6 +86,7 @@ function toKeys(
     afterTruePasal,
     afterPasalXls,
     ayatXls,
+    selfAmendPasalKeyOfId,
     lastBabKey,
     lastBagianKey,
     lastParagrafKey,
@@ -286,6 +289,7 @@ function toKeys(
           lastNomor?.id,
           `${newPasalKey}`
         ),
+        selfAmendPasalKeyOfId: [...selfAmendPasalKeyOfId, span.id],
         lastAmendedNomor: lastNomor,
         afterTruePasal: false,
       };
@@ -319,6 +323,7 @@ function toKeys(
         lastNomor?.id,
         newPasalKey
       ),
+      selfAmendPasalKeyOfId: [...selfAmendPasalKeyOfId, span.id],
       lastAmendedNomor: lastNomor,
       afterTruePasal: false,
     };
