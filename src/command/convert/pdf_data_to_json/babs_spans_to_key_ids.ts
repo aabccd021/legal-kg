@@ -339,16 +339,6 @@ function toKeys(
 
   const newAyatKey = ayatKeyOf(span);
 
-  if (span.str.includes('Dewan Nasional'))
-    console.log(
-      'zzz',
-      span.pageNum,
-      span.str,
-      span.xL,
-      mean(ayatXls),
-      mean(amendAyatXls),
-      newAyatKey
-    );
   if (
     !isUndefined(newAyatKey) &&
     (newAyatKey === 1 || newAyatKey - 1 === lastAyatKey) &&
