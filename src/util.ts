@@ -1,4 +1,4 @@
-import { curry, reduce } from 'lodash';
+import { curry, reduce, isUndefined } from 'lodash';
 
 export function bothFilter<T>(
   arr: T[],
@@ -38,6 +38,11 @@ export function neverNum(x?: string | number): number {
 }
 export function neverString(x?: string): string {
   throw Error(x);
+}
+
+export function neverUndefined<T>(x: T | undefined, msg?: string): T {
+  if (!isUndefined(x)) return x;
+  throw Error(`${msg ?? ''} ${JSON.stringify(x)}`);
 }
 
 export type Accumulator<T extends string> = { spans: SpanOf<T>; flag: T };

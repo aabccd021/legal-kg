@@ -281,7 +281,10 @@ function spansToAmendUpdatePasalPoint(
       .first()
       .value() ?? 0;
   if (pasalTitleIdx === 0) console.log('UND', spans[0]);
-  const description = emptyReferenceOf(spans.slice(0, pasalTitleIdx));
+  const _descSpans = spans.slice(0, pasalTitleIdx);
+  const [descFirst, ...descRest] = _descSpans;
+  const descSpans = !isUndefined(descFirst) ? [removeNomorKey(descFirst), ...descRest] : _descSpans;
+  const description = emptyReferenceOf(descSpans);
   const isiSpans = spans.slice(pasalTitleIdx + 1);
   const isi =
     amendAyatsOf(context, isiSpans) ?? pointsOf(context, isiSpans) ?? emptyReferenceOf(isiSpans);

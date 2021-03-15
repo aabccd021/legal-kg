@@ -208,7 +208,7 @@ function amendUpdatePasalPointToMd(
   documentNode: DocumentNode,
   amendPoint: AmendUpdatePasalPoint
 ): string {
-  const { description, _pasalKey, isi } = amendPoint;
+  const { description, _pasalKey, _nomorKey, isi } = amendPoint;
   const pasalNode: PasalNode = {
     _structureType: 'pasal',
     _key: _pasalKey,
@@ -218,7 +218,7 @@ function amendUpdatePasalPointToMd(
     .split('\n')
     .map((str) => `        > ${str}`)
     .join('\n');
-  return `* ${description.text}\n        >\n        > Pasal ${_pasalKey}\n\n${isiMd}`;
+  return `* ${_nomorKey}. ${description.text}\n        >\n        > Pasal ${_pasalKey}\n\n${isiMd}`;
 }
 
 function amendInsertPasalPointToMd(_: DocumentNode, amendPoint: AmendInsertPasalPoint): string {

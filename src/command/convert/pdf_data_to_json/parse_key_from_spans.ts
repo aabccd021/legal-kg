@@ -12,8 +12,9 @@ export function nomorKeyOfSpan(span: Span): number | undefined {
     .slice(0, -1);
   return safeParseInt(numberStr);
 }
+
 export function removeNomorKey(span: Span): Span {
-  const str = span.str.replace(/^(l|S|(S|l)?[0-9]+)\s?\./, '').trim();
+  const str = span.str.split('.').slice(1).join('.').trim();
   return { ...span, str };
 }
 
