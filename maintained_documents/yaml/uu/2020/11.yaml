@@ -7076,12 +7076,24 @@ babs:
                                       Daya tampung lingkungan hidup adalah
                                       kemampuan lngkungan hidup untuk menyerap
                                       zat, energi, dan/atau komponen lain yang
-                                      masuk atau dimasukkan ke dalamnya. 0.
+                                      masuk atau dimasukkan ke dalamnya.
+                                - _type: numPoint
+                                  _key: '9'
+                                  isi:
+                                    _type: referenceText
+                                    references: []
+                                    text: >-
                                       Sumber daya alam adalah unsur lingkungan
                                       hidup yang terdiri atas sumber daya hayati
                                       dan nonhayati yang secara keseluruhan
-                                      membentuk kesatuan ekosistem. 10. Kajian
-                                      lingkungan hidup strategis yang
+                                      membentuk kesatuan ekosistem.
+                                - _type: numPoint
+                                  _key: '10'
+                                  isi:
+                                    _type: referenceText
+                                    references: []
+                                    text: >-
+                                      Kajian lingkungan hidup strategis yang
                                       selanjutnya disingkat KLHS adalah
                                       rangkaian analisis yang sistematis,
                                       menyeluruh, dan partisipatif untuk
@@ -7089,61 +7101,117 @@ babs:
                                       berkelanjutan telah menjadi dasar dan
                                       terintegrasi dalam pembangunan suatu
                                       wilayah dan/atau kebijakan, rencana,
-                                      dan/atau program. 11. Analisis mengenai
-                                      dampak lingkungan hidup yang selanjutnya
-                                      disebut Amdal adalah Kajian mengenai
-                                      dampak penting pada lingkungan hidup dari
-                                      suatu usaha dan/atau kegiatan yang
-                                      direncanakan, untuk digunakan sebagai
-                                      prasyarat pengambilan keputusan tentang
-                                      penyelenggaraan usaha dan/atau kegiatan
-                                      serta termuat dalam Perizinan Berusaha,
-                                      atau persetujuan Pemerintah Pusat atau
-                                      Pemerintah Daerah. 12. Upaya pengelolaan
-                                      lingkungan hidup dan upaya pemantauan
-                                      lingkungan hidup yang selanjutnya disebut
-                                      UKL-UPL adalah rangkaian proses
-                                      pengelolaan dan pemantauan lingkungan
-                                      hidup yang dituangkan dalam bentuk standar
-                                      untuk digunakan sebagai prasyarat
-                                      pengambilan keputusan serta termuat dalam
+                                      dan/atau program.
+                                - _type: numPoint
+                                  _key: '11'
+                                  isi:
+                                    _type: referenceText
+                                    references: []
+                                    text: >-
+                                      Analisis mengenai dampak lingkungan hidup
+                                      yang selanjutnya disebut Amdal adalah
+                                      Kajian mengenai dampak penting pada
+                                      lingkungan hidup dari suatu usaha dan/atau
+                                      kegiatan yang direncanakan, untuk
+                                      digunakan sebagai prasyarat pengambilan
+                                      keputusan tentang penyelenggaraan usaha
+                                      dan/atau kegiatan serta termuat dalam
                                       Perizinan Berusaha, atau persetujuan
                                       Pemerintah Pusat atau Pemerintah Daerah.
-                                      13. Baku mutu lingkungan hidup adalah
-                                      ukuran batas atau kadar makhluk hidup,
-                                      zat, energi, atau komponen yang ada atau
-                                      harus ada dan/atau unsur pencemar yang
+                                - _type: numPoint
+                                  _key: '12'
+                                  isi:
+                                    _type: referenceText
+                                    references: []
+                                    text: >-
+                                      Upaya pengelolaan lingkungan hidup dan
+                                      upaya pemantauan lingkungan hidup yang
+                                      selanjutnya disebut UKL-UPL adalah
+                                      rangkaian proses pengelolaan dan
+                                      pemantauan lingkungan hidup yang
+                                      dituangkan dalam bentuk standar untuk
+                                      digunakan sebagai prasyarat pengambilan
+                                      keputusan serta termuat dalam Perizinan
+                                      Berusaha, atau persetujuan Pemerintah
+                                      Pusat atau Pemerintah Daerah.
+                                - _type: numPoint
+                                  _key: '13'
+                                  isi:
+                                    _type: referenceText
+                                    references: []
+                                    text: >-
+                                      Baku mutu lingkungan hidup adalah ukuran
+                                      batas atau kadar makhluk hidup, zat,
+                                      energi, atau komponen yang ada atau harus
+                                      ada dan/atau unsur pencemar yang
                                       ditenggang keberadaannya dalam suatu
                                       sumber daya tertentu sebagai unsur
-                                      lingkungan hidup. 14. Pencemaran
-                                      lingkungan hidup adalah masuk atau
-                                      dimasukkannya makhluk hidup, zat, energi,
-                                      dan/atau komponen lain ke dalam lingkungan
-                                      hidup oleh kegiatan manusia sehingga
-                                      melampaui baku mutu lingkungan hidup yang
-                                      telah ditetapkan. 15. Kriteria baku
-                                      kerusakan lingkungan hidup adalah ukuran
-                                      batas perubahan sifat fisik, kimia,
-                                      dan/atau hayati lingkungan hidup yang
-                                      dapat ditenggang oleh llngkungan hidup
-                                      untuk dapat tetap melestarikan fungsinya.
-                                      16. Perusakan lingkungan hidup adalah
-                                      tindakan orang yang menimbulkan perubahan
-                                      langsung atau tidak langsung terhadap
-                                      sifat fisik, kimia, dan/atau hayati
-                                      lingkungan hidup sehingga melampaui
-                                      kriteria baku kerusakan lingkungan hidup.
-                                      17. Kerusakan lingkungan hidup adalah
+                                      lingkungan hidup.
+                                - _type: numPoint
+                                  _key: '14'
+                                  isi:
+                                    _type: referenceText
+                                    references: []
+                                    text: >-
+                                      Pencemaran lingkungan hidup adalah masuk
+                                      atau dimasukkannya makhluk hidup, zat,
+                                      energi, dan/atau komponen lain ke dalam
+                                      lingkungan hidup oleh kegiatan manusia
+                                      sehingga melampaui baku mutu lingkungan
+                                      hidup yang telah ditetapkan.
+                                - _type: numPoint
+                                  _key: '15'
+                                  isi:
+                                    _type: referenceText
+                                    references: []
+                                    text: >-
+                                      Kriteria baku kerusakan lingkungan hidup
+                                      adalah ukuran batas perubahan sifat fisik,
+                                      kimia, dan/atau hayati lingkungan hidup
+                                      yang dapat ditenggang oleh llngkungan
+                                      hidup untuk dapat tetap melestarikan
+                                      fungsinya.
+                                - _type: numPoint
+                                  _key: '16'
+                                  isi:
+                                    _type: referenceText
+                                    references: []
+                                    text: >-
+                                      Perusakan lingkungan hidup adalah tindakan
+                                      orang yang menimbulkan perubahan langsung
+                                      atau tidak langsung terhadap sifat fisik,
+                                      kimia, dan/atau hayati lingkungan hidup
+                                      sehingga melampaui kriteria baku kerusakan
+                                      lingkungan hidup.
+                                - _type: numPoint
+                                  _key: '17'
+                                  isi:
+                                    _type: referenceText
+                                    references: []
+                                    text: >-
+                                      Kerusakan lingkungan hidup adalah
                                       perubahan langsung dan/atau tidak langsung
                                       terhadap sifat fisik, kimia, dan/atau
                                       hayati lingkungan hidup yang melampaui
                                       kriteria baku kerusakan lingkungan hidup.
-                                      18. Konservasi sumber daya alam adalah
+                                - _type: numPoint
+                                  _key: '18'
+                                  isi:
+                                    _type: referenceText
+                                    references: []
+                                    text: >-
+                                      Konservasi sumber daya alam adalah
                                       pengelolaan sumber daya alam untuk
                                       menjamin pemanfaatannya secara bijaksana
                                       serta kesinambungan ketersediaannya dengan
                                       tetap memelihara dan meningkatkan kualitas
-                                      nilai serta keanekaragamannya. 19.
+                                      nilai serta keanekaragamannya.
+                                - _type: numPoint
+                                  _key: '19'
+                                  isi:
+                                    _type: referenceText
+                                    references: []
+                                    text: >-
                                       Perubahan iklim adalah berubahnya iklim
                                       yang diakibatkan langsung atau tidak
                                       langsung oleh aktivitas manusia sehingga
@@ -7151,57 +7219,135 @@ babs:
                                       secara global dan selain itu juga berupa
                                       perubahan variabilitas iklim alamiah yang
                                       teramati pada kurun waktu yang dapat
-                                      dibandingkan. 20. Limbah adalah sisa suatu
-                                      usaha dan/atau kegiatan. 21. Bahan
-                                      berbahaya dan beracun yang selanjutnya
-                                      disingkat B3 adalah zat, energi, dan/atau
-                                      komponen lan yang karena sifat,
-                                      konsentrasi, dan/atau jumlahnya, baik
-                                      secara langsung maupun tidak langsung,
-                                      dapat mencemarkan dan/atau merusak
-                                      lingkungan hidup, dan/atau membahayakan
-                                      lingkungan hidup, kesehatan, serta
-                                      kelangsungan hidup manusia dan makhluk
-                                      hidup lain. 22. Limbah bahan berbahaya dan
-                                      beracun yang selanjutnya disebut Limbah B3
-                                      adalah sisa suatu usaha dan/atau kegiatan
-                                      yang mengandung B3. 23. Pengelolaan limbah
-                                      B3 adalah kegiatan yang meliputi
-                                      pengurangan, penyimpanan, pengumpulan,
-                                      pengangkutan, pemanfaatan, pengolahan,
-                                      dan/atau penimbunan. 24. Dumping
-                                      (pembuangan) adalah kegiatan membuang,
-                                      menempatkan, dan/atau memasukkan limbah
-                                      dan/atau bahan dalam jumlah, konsentrasi,
-                                      waktu, dan lokasi tertentu dengan
-                                      persyaratan tertentu ke media lingkungan
-                                      hidup tertentu. 25. Sengketa lingkungan
-                                      hidup adalah perselisihan antara dua pihak
-                                      atau lebih yang timbul dari kegiatan yang
-                                      berpotensi dan/atau telah berdampak pada
-                                      lingkungan hidup. 26. Dampak lingkungan
-                                      hidup adalah pengaruh perubahan pada
-                                      lingkungan hidup yang diakibatkan oleh
-                                      suatu usaha dan/atau kegiatan. 27.
+                                      dibandingkan.
+                                - _type: numPoint
+                                  _key: '20'
+                                  isi:
+                                    _type: referenceText
+                                    references: []
+                                    text: >-
+                                      Limbah adalah sisa suatu usaha dan/atau
+                                      kegiatan.
+                                - _type: numPoint
+                                  _key: '21'
+                                  isi:
+                                    _type: referenceText
+                                    references: []
+                                    text: >-
+                                      Bahan berbahaya dan beracun yang
+                                      selanjutnya disingkat B3 adalah zat,
+                                      energi, dan/atau komponen lan yang karena
+                                      sifat, konsentrasi, dan/atau jumlahnya,
+                                      baik secara langsung maupun tidak
+                                      langsung, dapat mencemarkan dan/atau
+                                      merusak lingkungan hidup, dan/atau
+                                      membahayakan lingkungan hidup, kesehatan,
+                                      serta kelangsungan hidup manusia dan
+                                      makhluk hidup lain.
+                                - _type: numPoint
+                                  _key: '22'
+                                  isi:
+                                    _type: referenceText
+                                    references: []
+                                    text: >-
+                                      Limbah bahan berbahaya dan beracun yang
+                                      selanjutnya disebut Limbah B3 adalah sisa
+                                      suatu usaha dan/atau kegiatan yang
+                                      mengandung B3.
+                                - _type: numPoint
+                                  _key: '23'
+                                  isi:
+                                    _type: referenceText
+                                    references: []
+                                    text: >-
+                                      Pengelolaan limbah B3 adalah kegiatan yang
+                                      meliputi pengurangan, penyimpanan,
+                                      pengumpulan, pengangkutan, pemanfaatan,
+                                      pengolahan, dan/atau penimbunan.
+                                - _type: numPoint
+                                  _key: '24'
+                                  isi:
+                                    _type: referenceText
+                                    references: []
+                                    text: >-
+                                      Dumping (pembuangan) adalah kegiatan
+                                      membuang, menempatkan, dan/atau memasukkan
+                                      limbah dan/atau bahan dalam jumlah,
+                                      konsentrasi, waktu, dan lokasi tertentu
+                                      dengan persyaratan tertentu ke media
+                                      lingkungan hidup tertentu.
+                                - _type: numPoint
+                                  _key: '25'
+                                  isi:
+                                    _type: referenceText
+                                    references: []
+                                    text: >-
+                                      Sengketa lingkungan hidup adalah
+                                      perselisihan antara dua pihak atau lebih
+                                      yang timbul dari kegiatan yang berpotensi
+                                      dan/atau telah berdampak pada lingkungan
+                                      hidup.
+                                - _type: numPoint
+                                  _key: '26'
+                                  isi:
+                                    _type: referenceText
+                                    references: []
+                                    text: >-
+                                      Dampak lingkungan hidup adalah pengaruh
+                                      perubahan pada lingkungan hidup yang
+                                      diakibatkan oleh suatu usaha dan/atau
+                                      kegiatan.
+                                - _type: numPoint
+                                  _key: '27'
+                                  isi:
+                                    _type: referenceText
+                                    references: []
+                                    text: >-
                                       Organisasi lingkungan hidup adalah
                                       kelompok orang yang terorganisasi dan
                                       terbentuk atas kehendak sendiri yang
                                       tujuan dan kegiatannya berkaitan dengan
-                                      lingkungan hidup. 28. Audit lingkungan
-                                      hidup adalah evaluasi yang dilakukan untuk
-                                      menilai ketaatan penanggung jawab usaha
-                                      dan/atau kegiatan terhadap persyaratan
-                                      hukum dan kebijakan yang ditetapkan oleh
-                                      pemerintah. 29. Ekoregion adalah wilayah
-                                      geografis yang memiliki kesamaan ciri
-                                      iklim, tanah, air, flora, dan fauna asli,
-                                      serta pola interaksi manusia dengan alam
-                                      yang menggambarkan integritas sistem alam
-                                      dan lingkungan hidup. 30. Kearifan lokal
-                                      adalah nilai-nilai luhur yang berlaku
-                                      dalam tata kehidupan masyarakat untuk
-                                      antara lain melindungi dan mengelola
-                                      lingkungan hidup secara lestari. 31.
+                                      lingkungan hidup.
+                                - _type: numPoint
+                                  _key: '28'
+                                  isi:
+                                    _type: referenceText
+                                    references: []
+                                    text: >-
+                                      Audit lingkungan hidup adalah evaluasi
+                                      yang dilakukan untuk menilai ketaatan
+                                      penanggung jawab usaha dan/atau kegiatan
+                                      terhadap persyaratan hukum dan kebijakan
+                                      yang ditetapkan oleh pemerintah.
+                                - _type: numPoint
+                                  _key: '29'
+                                  isi:
+                                    _type: referenceText
+                                    references: []
+                                    text: >-
+                                      Ekoregion adalah wilayah geografis yang
+                                      memiliki kesamaan ciri iklim, tanah, air,
+                                      flora, dan fauna asli, serta pola
+                                      interaksi manusia dengan alam yang
+                                      menggambarkan integritas sistem alam dan
+                                      lingkungan hidup.
+                                - _type: numPoint
+                                  _key: '30'
+                                  isi:
+                                    _type: referenceText
+                                    references: []
+                                    text: >-
+                                      Kearifan lokal adalah nilai-nilai luhur
+                                      yang berlaku dalam tata kehidupan
+                                      masyarakat untuk antara lain melindungi
+                                      dan mengelola lingkungan hidup secara
+                                      lestari.
+                                - _type: numPoint
+                                  _key: '31'
+                                  isi:
+                                    _type: referenceText
+                                    references: []
+                                    text: >-
                                       Masyarakat hukum adat adalah kelompok
                                       masyarakat yang secara turun temurun
                                       bermukim di wilayah geografis tertentu
@@ -7209,34 +7355,77 @@ babs:
                                       leluhur, adanya hubungan yang kuat dengan
                                       lingkungan hidup, serta adanya sistem
                                       nilai yang menentukan pranata ekonomi,
-                                      politik, sosial, dan hukum. 32. Setiap
-                                      orang adalah orang perseorangan atau badan
-                                      usaha, baik yang berbadan hukum maupun
-                                      yang tidak berbadan hukum. 33. Instrumen
-                                      ekonomi lingkungan hidup adalah
+                                      politik, sosial, dan hukum.
+                                - _type: numPoint
+                                  _key: '32'
+                                  isi:
+                                    _type: referenceText
+                                    references: []
+                                    text: >-
+                                      Setiap orang adalah orang perseorangan
+                                      atau badan usaha, baik yang berbadan hukum
+                                      maupun yang tidak berbadan hukum.
+                                - _type: numPoint
+                                  _key: '33'
+                                  isi:
+                                    _type: referenceText
+                                    references: []
+                                    text: >-
+                                      Instrumen ekonomi lingkungan hidup adalah
                                       seperangkat kebijakan ekonomi untuk
                                       mendorong Pemerintah, pemerintah daerah,
                                       atau setiap orang ke arah pelestarian
-                                      fungsi lingkungan hidup. 34. Ancaman
-                                      serius adalah ancaman yang berdampak luas
-                                      terhadap lingkungan hidup dan menimbulkan
-                                      keresahan masyarakat. 35. Persetujuan
-                                      Lingkungan adalah Keputusan Kelayakan
-                                      Lingkungan Hidup atau Pernyataan
+                                      fungsi lingkungan hidup.
+                                - _type: numPoint
+                                  _key: '34'
+                                  isi:
+                                    _type: referenceText
+                                    references: []
+                                    text: >-
+                                      Ancaman serius adalah ancaman yang
+                                      berdampak luas terhadap lingkungan hidup
+                                      dan menimbulkan keresahan masyarakat.
+                                - _type: numPoint
+                                  _key: '35'
+                                  isi:
+                                    _type: referenceText
+                                    references: []
+                                    text: >-
+                                      Persetujuan Lingkungan adalah Keputusan
+                                      Kelayakan Lingkungan Hidup atau Pernyataan
                                       Kesanggupan Pengelolaan Lingkungan Hidup
                                       yang telah mendapatkan persetujuan dari
                                       Pemerintah Pusat atau Pemerintah Daerah.
-                                      36. Pemerintah Pusat adalah Presiden
-                                      Republik Indonesia yang memegang kekuasaan
+                                - _type: numPoint
+                                  _key: '36'
+                                  isi:
+                                    _type: referenceText
+                                    references: []
+                                    text: >-
+                                      Pemerintah Pusat adalah Presiden Republik
+                                      Indonesia yang memegang kekuasaan
                                       pemerintahan negara Republik Indonesia
                                       yang dibantu oleh Wakil Presiden dan
                                       menteri sebagaimana dimaksud dalam Undang-
                                       Undang Dasar Negara Republik Indonesia
-                                      Tahun 1945. 37. Pemerintah Daerah adalah
-                                      kepala daerah sebagai unsur penyelenggara
-                                      Pemerintahan Daerah yang memimpin
-                                      pelaksanaan urusan pemerintahan yang
-                                      menjadi kewenangan daerah otonom. 38.
+                                      Tahun 1945.
+                                - _type: numPoint
+                                  _key: '37'
+                                  isi:
+                                    _type: referenceText
+                                    references: []
+                                    text: >-
+                                      Pemerintah Daerah adalah kepala daerah
+                                      sebagai unsur penyelenggara Pemerintahan
+                                      Daerah yang memimpin pelaksanaan urusan
+                                      pemerintahan yang menjadi kewenangan
+                                      daerah otonom.
+                                - _type: numPoint
+                                  _key: '38'
+                                  isi:
+                                    _type: referenceText
+                                    references: []
+                                    text: >-
                                       Menteri adalah menteri yang
                                       menyelenggarakan urusan pemerintahan di
                                       bidang perlindungan dan pengelolaan
