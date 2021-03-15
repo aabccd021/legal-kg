@@ -2249,9 +2249,13 @@ babs:
                             isi:
                               _type: referenceText
                               references: []
-                              text: >-
-                                denda administratif: dan/atau C. pencabutan
-                                izin.
+                              text: 'denda administratif: dan/atau'
+                          - _type: alphaPoint
+                            _key: c
+                            isi:
+                              _type: referenceText
+                              references: []
+                              text: pencabutan izin.
                     - _type: ayat
                       _key: 2
                       isi:
@@ -3258,9 +3262,19 @@ babs:
                       isi:
                         _type: referenceText
                         references: []
-                        text: >-
-                          Pejabat Karantina Kesehatan: C. penelitian dan
-                          pengembangan: dan d. pendanaan.
+                        text: 'Pejabat Karantina Kesehatan:'
+                    - _type: alphaPoint
+                      _key: c
+                      isi:
+                        _type: referenceText
+                        references: []
+                        text: 'penelitian dan pengembangan: dan'
+                    - _type: alphaPoint
+                      _key: d
+                      isi:
+                        _type: referenceText
+                        references: []
+                        text: pendanaan.
         - _type: bagian
           _key: 2
           _judul: Bagian Kedua Fasilitas dan Perbekalan Kekarantinaan Kesehatan

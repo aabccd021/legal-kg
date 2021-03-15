@@ -1,6 +1,6 @@
 import { isUndefined } from 'lodash';
 import { toArabic } from 'roman-numerals';
-import { Span } from '../../../util';
+import { neverString, Span } from '../../../util';
 
 export function nomorKeyOfSpan(span: Span): number | undefined {
   const { str } = span;
@@ -15,11 +15,15 @@ export function removeNomorKey(span: Span): Span {
 }
 
 export function hurufKeyOfSpan(span: Span): number | undefined {
-  return span.str?.match(/^[a-z][.)]/)?.[0]?.charCodeAt(0);
+  return span.str
+    ?.match(/^([A-Z]|[a-z])[.)]/)?.[0]
+    ?.toLowerCase()
+    ?.charCodeAt(0);
 }
 
 export function removeHurufKey(span: Span): Span {
-  const str = span.str.replace(/^[a-z][.)]/, '').trim();
+  const splitter = span.str[1] ?? neverString();
+  const str = span.str.split(splitter).slice(1).join(splitter).trim();
   return { ...span, str };
 }
 
