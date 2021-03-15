@@ -6112,11 +6112,17 @@ babs:
                         text: >-
                           karena perbedaan paham, agama, aliran politik, suku,
                           warna kulit, golongan, jenis kelamin, kondisi fisik,
-                          atau status perkawinan, J- pekerja/buruh dalam keadaan
-                          cacat tetap, sakit akibat kecelakaan kerja, atau sakit
-                          karena hubungan kerja yang menurut surat keterangan
-                          dokter yang jangka waktu penyembuhannya belum dapat
-                          dipastikan.
+                          atau status perkawinan,
+                    - _type: alphaPoint
+                      _key: j
+                      isi:
+                        _type: referenceText
+                        references: []
+                        text: >-
+                          pekerja/buruh dalam keadaan cacat tetap, sakit akibat
+                          kecelakaan kerja, atau sakit karena hubungan kerja
+                          yang menurut surat keterangan dokter yang jangka waktu
+                          penyembuhannya belum dapat dipastikan.
               - _type: ayat
                 _key: 2
                 isi:
@@ -6598,9 +6604,15 @@ babs:
                         text: >-
                           membongkar atau membocorkan rahasia perusahaan yang
                           seharusnya dirahasiakan kecuali untuk kepentingan
-                          negara, atau j-. melakukan perbuatan lainnya di
-                          lingkungan perusahaan yang diancam pidana penjara 5
-                          (lima) tahun atau lebih.
+                          negara, atau
+                    - _type: alphaPoint
+                      _key: j
+                      isi:
+                        _type: referenceText
+                        references: []
+                        text: >-
+                          . melakukan perbuatan lainnya di lingkungan perusahaan
+                          yang diancam pidana penjara 5 (lima) tahun atau lebih.
               - _type: ayat
                 _key: 2
                 isi:

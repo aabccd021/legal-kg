@@ -11666,9 +11666,20 @@ babs:
                             isi:
                               _type: referenceText
                               references: []
+                              text: 'transportasi:'
+                          - _type: alphaPoint
+                            _key: j
+                            isi:
+                              _type: referenceText
+                              references: []
+                              text: '. kesehatan, obat dan makanan:'
+                          - _type: alphaPoint
+                            _key: k
+                            isi:
+                              _type: referenceText
+                              references: []
                               text: >-
-                                transportasi: J-. kesehatan, obat dan makanan:
-                                k. pendidikan dan kebudayaan: l pariwisata, m.
+                                pendidikan dan kebudayaan: l pariwisata, m.
                                 keagamaan: n. pos, telekomunikasi, dan
                                 penyiaran: dan O. pertahanan dan keamanan.
               - _type: paragraf
@@ -12092,13 +12103,24 @@ babs:
                                           references: []
                                           text: >-
                                             persyaratan atau standar prosedur
-                                            operasional penangkapan ikan, J-.
-                                            pelabuhan perikanan, k. sistem
-                                            pemantauan kapal perikanan, Il. jenis
-                                            ikan baru yang akan dibudidayakan, m.
-                                            jenis ikan dan wilayah penebaran kembali
-                                            serta penangkapan ikan berbasis budi
-                                            daya, n. pembudidayaan ikan dan
+                                            operasional penangkapan ikan,
+                                      - _type: alphaPoint
+                                        _key: j
+                                        isi:
+                                          _type: referenceText
+                                          references: []
+                                          text: . pelabuhan perikanan,
+                                      - _type: alphaPoint
+                                        _key: k
+                                        isi:
+                                          _type: referenceText
+                                          references: []
+                                          text: >-
+                                            sistem pemantauan kapal perikanan, Il.
+                                            jenis ikan baru yang akan dibudidayakan,
+                                            m. jenis ikan dan wilayah penebaran
+                                            kembali serta penangkapan ikan berbasis
+                                            budi daya, n. pembudidayaan ikan dan
                                             pelindungannya, O. pencegahan pencemaran
                                             dan kerusakan sumber daya ikan serta
                                             lingkungannya, p. rehabilitasi dan
@@ -24247,13 +24269,25 @@ babs:
                                           references: []
                                           text: >-
                                             sertifikasi peralatan dan pemanfaat
-                                            tenaga listrik: j- sertifikasi
-                                            kompetensi tenaga teknik
-                                            ketenagalistrikan, k. sertifikasi badan
-                                            usaha jasa penunjang tenaga listrik, dan
-                                            Il. usaha jasa lain yang secara langsung
-                                            berkaitan dengan penyediaan tenaga
-                                            listrik.
+                                            tenaga listrik:
+                                      - _type: alphaPoint
+                                        _key: j
+                                        isi:
+                                          _type: referenceText
+                                          references: []
+                                          text: >-
+                                            sertifikasi kompetensi tenaga teknik
+                                            ketenagalistrikan,
+                                      - _type: alphaPoint
+                                        _key: k
+                                        isi:
+                                          _type: referenceText
+                                          references: []
+                                          text: >-
+                                            sertifikasi badan usaha jasa penunjang
+                                            tenaga listrik, dan Il. usaha jasa lain
+                                            yang secara langsung berkaitan dengan
+                                            penyediaan tenaga listrik.
                                 - _type: ayat
                                   _key: 2
                                   isi:
@@ -25293,9 +25327,19 @@ babs:
                                         isi:
                                           _type: referenceText
                                           references: []
+                                          text: pemenuhan persyaratan perizinan,
+                                      - _type: alphaPoint
+                                        _key: j
+                                        isi:
+                                          _type: referenceText
+                                          references: []
+                                          text: '. penerapan tarif tenaga listrik: dan'
+                                      - _type: alphaPoint
+                                        _key: k
+                                        isi:
+                                          _type: referenceText
+                                          references: []
                                           text: >-
-                                            pemenuhan persyaratan perizinan, j-.
-                                            penerapan tarif tenaga listrik: dan k.
                                             pemenuhan mutu jasa yang diberikan oleh
                                             usaha penunjang tenaga listrik.
                                 - _type: ayat
@@ -30984,11 +31028,21 @@ babs:
                                         isi:
                                           _type: referenceText
                                           references: []
+                                          text: pembekuan Persetujuan Bangunan Gedung,
+                                      - _type: alphaPoint
+                                        _key: j
+                                        isi:
+                                          _type: referenceText
+                                          references: []
+                                          text: 'pencabutan Persetujuan Bangunan Gedung:'
+                                      - _type: alphaPoint
+                                        _key: k
+                                        isi:
+                                          _type: referenceText
+                                          references: []
                                           text: >-
-                                            pembekuan Persetujuan Bangunan Gedung,
-                                            J- pencabutan Persetujuan Bangunan
-                                            Gedung: k. pembekuan/pencabutan surat
-                                            bukti kepemilikan rumah, Il. perintah
+                                            pembekuan/pencabutan surat bukti
+                                            kepemilikan rumah, Il. perintah
                                             pembongkaran bangunan rumah, m.
                                             pembekuan Perizinan Berusaha, n.
                                             pencabutan Perizinan Berusaha, O.
@@ -45056,10 +45110,23 @@ babs:
                                           text: >-
                                             berperan aktif dalam upaya pengembangan
                                             prasarana dan program pemberdayaan
-                                            masyarakat, J-. turut serta mencegah
-                                            segala bentuk perbuatan yang melanggar
-                                            kesusilaan dan kegiatan yang melanggar
-                                            hukum di lingkungan tempat usahanya, k.
+                                            masyarakat,
+                                      - _type: alphaPoint
+                                        _key: j
+                                        isi:
+                                          _type: referenceText
+                                          references: []
+                                          text: >-
+                                            . turut serta mencegah segala bentuk
+                                            perbuatan yang melanggar kesusilaan dan
+                                            kegiatan yang melanggar hukum di
+                                            lingkungan tempat usahanya,
+                                      - _type: alphaPoint
+                                        _key: k
+                                        isi:
+                                          _type: referenceText
+                                          references: []
+                                          text: >-
                                             memelihara lingkungan yang sehat,
                                             bersih, dan asri, Il. memelihara
                                             kelestarian lingkungan alam dan budaya,
@@ -46159,11 +46226,22 @@ babs:
                                           references: []
                                           text: >-
                                             mengikuti standar pelayanan minimal dan
-                                            harga referensi, j- mengikuti prinsip
-                                            syariat, dan k. membuka rekening
-                                            penampungan yang digunakan untuk
-                                            menampung dana jamaah untuk kegiatan
-                                            umrah.
+                                            harga referensi,
+                                      - _type: alphaPoint
+                                        _key: j
+                                        isi:
+                                          _type: referenceText
+                                          references: []
+                                          text: mengikuti prinsip syariat, dan
+                                      - _type: alphaPoint
+                                        _key: k
+                                        isi:
+                                          _type: referenceText
+                                          references: []
+                                          text: >-
+                                            membuka rekening penampungan yang
+                                            digunakan untuk menampung dana jamaah
+                                            untuk kegiatan umrah.
                                 - _type: ayat
                                   _key: 2
                                   isi:
@@ -48369,9 +48447,22 @@ babs:
                                       melakukan pengawasan fungsional kepolisian
                                       terhadap orang asing yang berada di
                                       wilayah Indonesia dengan koordinasi
-                                      instansi terkait, J- mewakili pemerintah
-                                      Republik Indonesia dalam organisasi
-                                      kepolisian internasional, dan k.
+                                      instansi terkait,
+                                - _type: alphaPoint
+                                  _key: j
+                                  isi:
+                                    _type: referenceText
+                                    references: []
+                                    text: >-
+                                      mewakili pemerintah Republik Indonesia
+                                      dalam organisasi kepolisian internasional,
+                                      dan
+                                - _type: alphaPoint
+                                  _key: k
+                                  isi:
+                                    _type: referenceText
+                                    references: []
+                                    text: >-
                                       melaksanakan kewenangan lain yang termasuk
                                       dalam lingkup tugas kepolisian. (3) Tata
                                       cara pelaksanaan ketentuan sebagaimana
@@ -52578,9 +52669,13 @@ babs:
                             isi:
                               _type: referenceText
                               references: []
-                              text: >-
-                                digitalisasi, dan j-. penelitian dan
-                                pengembangan.
+                              text: digitalisasi, dan
+                          - _type: alphaPoint
+                            _key: j
+                            isi:
+                              _type: referenceText
+                              references: []
+                              text: . penelitian dan pengembangan.
                     - _type: ayat
                       _key: 7
                       isi:
@@ -55443,10 +55538,22 @@ babs:
                             isi:
                               _type: referenceText
                               references: []
+                              text: pertambangan dan penggalian sumber alam,
+                          - _type: alphaPoint
+                            _key: j
+                            isi:
+                              _type: referenceText
+                              references: []
                               text: >-
-                                pertambangan dan penggalian sumber alam, j-.
-                                wilayah kerja pertambangan minyak dan gas bumi,
-                                k. perikanan, peternakan, pertanian, perkebunan,
+                                . wilayah kerja pertambangan minyak dan gas
+                                bumi,
+                          - _type: alphaPoint
+                            _key: k
+                            isi:
+                              _type: referenceText
+                              references: []
+                              text: >-
+                                perikanan, peternakan, pertanian, perkebunan,
                                 atau kehutanan, Il. proyek konstruksi,
                                 instalasi, atau proyek perakitan, m. pemberian
                                 jasa dalam bentuk apa pun oleh pegawai atau
@@ -65679,11 +65786,23 @@ babs:
                                     references: []
                                     text: >-
                                       menyetujui laporan keuangan tahunan
-                                      Lembaga, J- memberhentikan sementara satu
-                                      atau lebih anggota Dewan Direktur dan
-                                      menunjuk pengganti sementara untuk Dewan
-                                      Direktur: dan k. menyetujui penunjukan
-                                      auditor Lembaga.
+                                      Lembaga,
+                                - _type: alphaPoint
+                                  _key: j
+                                  isi:
+                                    _type: referenceText
+                                    references: []
+                                    text: >-
+                                      memberhentikan sementara satu atau lebih
+                                      anggota Dewan Direktur dan menunjuk
+                                      pengganti sementara untuk Dewan Direktur:
+                                      dan
+                                - _type: alphaPoint
+                                  _key: k
+                                  isi:
+                                    _type: referenceText
+                                    references: []
+                                    text: menyetujui penunjukan auditor Lembaga.
                           - _type: ayat
                             _key: 16
                             isi:
