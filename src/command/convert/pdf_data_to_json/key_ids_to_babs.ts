@@ -11,7 +11,7 @@ import { Bab } from '../../../legal/structure/bab';
 import { Bagian, Bagians } from '../../../legal/structure/bagian';
 import { IsiPasal, Pasal, Pasals } from '../../../legal/structure/pasal';
 import { lastOf, Span } from '../../../util';
-import { KeyIds, SpanIdKeyMap } from './babs_spans_to_key_ids';
+import { KeyIds } from './babs_spans_to_key_ids';
 import { spansInRange, spanIdKeyMapOf, toSpansWith } from './util';
 import { AmendPoints } from '../../../legal/structure/amend';
 import { Ayat, Ayats } from '../../../legal/structure/ayat';
@@ -119,7 +119,6 @@ function amendAyatsOf(context: Context, spans: Span[]): Ayats | undefined {
   const ayats = chain(spansOfKey).toPairs().map(spanToAyatWith(context)).value();
   return { _type: 'ayats', ayats };
 }
-
 
 function pointsOf(context: Context, spans: Span[]): Points | undefined {
   for (const [spanIdx, span] of spans.entries()) {
