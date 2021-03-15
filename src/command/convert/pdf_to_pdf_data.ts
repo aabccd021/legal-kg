@@ -1,10 +1,10 @@
-import { UnindexedSpan } from './../util';
-import { DocumentNode } from '../legal/document/index';
+import { UnindexedSpan } from '../../util';
+import { DocumentNode } from '../../legal/document/index';
 import { writeFileSync } from 'fs';
 import { PDFExtract, PDFExtractPage, PDFExtractText } from 'pdf.js-extract';
-import { getDocumentData, getDocumentFilePath } from '../data';
+import { getDocumentData, getDocumentFilePath } from '../../data';
 import { chain, curry, isUndefined, isEmpty, filter, zip } from 'lodash';
-import { bothFilter, neverNum, Span } from '../util';
+import { bothFilter, neverNum, Span } from '../../util';
 
 const pdfExtract = new PDFExtract();
 

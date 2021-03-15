@@ -1,32 +1,32 @@
-import { IsiPasal } from '../../../legal/structure/pasal';
+import { IsiPasal } from '../../legal/structure/pasal';
 import { assertNever } from 'assert-never';
 import { map, flatten, compact, isNil, repeat, curry } from 'lodash';
 import { toRoman } from 'roman-numerals';
-import { getDocumentName, _getDocumentUri, DocumentNode } from '../../../legal/document';
+import { getDocumentName, _getDocumentUri, DocumentNode } from '../../legal/document';
 import * as fs from 'fs';
-import { getLegalUri } from '../../../legal';
-import { Ayat, AyatNode } from '../../../legal/structure/ayat';
-import { Bab, BabNode } from '../../../legal/structure/bab';
-import { Bagian, BagianNode } from '../../../legal/structure/bagian';
-import { Metadata, MetadataNode } from '../../../legal/structure/metadata';
-import { Paragraf, ParagrafNode } from '../../../legal/structure/paragraf';
+import { getLegalUri } from '../../legal';
+import { Ayat, AyatNode } from '../../legal/structure/ayat';
+import { Bab, BabNode } from '../../legal/structure/bab';
+import { Bagian, BagianNode } from '../../legal/structure/bagian';
+import { Metadata, MetadataNode } from '../../legal/structure/metadata';
+import { Paragraf, ParagrafNode } from '../../legal/structure/paragraf';
 import {
   PasalParentNode,
   PasalNode,
   getPasalParentDocument,
   Pasal,
-} from '../../../legal/structure/pasal';
-import { Point, PointNode, Points } from '../../../legal/structure/point';
-import { ReferenceText } from '../../../legal/reference';
-import { Document } from '../../../legal/document/index';
-import { getDocumentData, getDocumentFilePath } from '../../../data';
+} from '../../legal/structure/pasal';
+import { Point, PointNode, Points } from '../../legal/structure/point';
+import { ReferenceText } from '../../legal/reference';
+import { Document } from '../../legal/document/index';
+import { getDocumentData, getDocumentFilePath } from '../../data';
 import {
   AmendDeletePasalPoint,
   AmendedPoint,
   AmendInsertPasalPoint,
   AmendPoints,
   AmendUpdatePasalPoint,
-} from '../../../legal/structure/amend';
+} from '../../legal/structure/amend';
 import * as yaml from 'js-yaml';
 
 type Option = { overwrite: boolean };
