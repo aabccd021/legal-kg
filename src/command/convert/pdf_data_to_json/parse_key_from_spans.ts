@@ -80,9 +80,9 @@ export function safeParseInt(str: string | undefined): number | undefined {
 export function ayatKeyOf(span: Span): number | undefined {
   const { str } = span;
   if (str.startsWith('(l)')) return 1;
-  const firstMatch = str.match(/^\(?[0-9]+\)/)?.[0];
+  const firstMatch = str.match(/^\(?S?[0-9]+\)/)?.[0];
   if (!isUndefined(firstMatch)) {
-    return safeParseInt(firstMatch?.split(')')?.[0]?.replace('(', ''));
+    return safeParseInt(firstMatch?.split(')')?.[0]?.replace('(', '')?.replace('S', ''));
   }
   return undefined;
 }

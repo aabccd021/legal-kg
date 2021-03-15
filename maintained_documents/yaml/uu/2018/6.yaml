@@ -1745,10 +1745,17 @@ babs:
                           Terhadap Awak, Personel, dan/atau penumpang yang tidak
                           Terjangkit dan/atau tidak Terpapar dapat melanjutkan
                           perjalanannya dan diberikan kartu kewaspadaan
-                          kesehatan. (S5) Jika ditemukan Awak, Personel, —
-                          dan/atau penumpang yang Terjangkit dan/atau Terpapar,
-                          Pejabat Karantina Kesehatan harus langsung
-                          berkoordinasi dengan pihak yang terkait.
+                          kesehatan.
+                    - _type: ayat
+                      _key: 5
+                      isi:
+                        _type: referenceText
+                        references: []
+                        text: >-
+                          Jika ditemukan Awak, Personel, — dan/atau penumpang
+                          yang Terjangkit dan/atau Terpapar, Pejabat Karantina
+                          Kesehatan harus langsung berkoordinasi dengan pihak
+                          yang terkait.
               - _type: pasal
                 _key: 39
                 isi:
@@ -4220,9 +4227,16 @@ babs:
                     (3) huruf a atau pengurus korporasi, pidana pokok yang
                     dijatuhkan adalah pidana penjara maksimum dan pidana denda
                     maksimum yang masing-masing ditambah dengan pidana
-                    pemberatan 2/3 (dua pertiga). (S5) Pidana pokok yang
-                    dijatuhkan terhadap korporasi adalah pidana denda maksimum
-                    ditambah dengan pidana pemberatan 2/3 (dua pertiga).
+                    pemberatan 2/3 (dua pertiga).
+              - _type: ayat
+                _key: 5
+                isi:
+                  _type: referenceText
+                  references: []
+                  text: >-
+                    Pidana pokok yang dijatuhkan terhadap korporasi adalah
+                    pidana denda maksimum ditambah dengan pidana pemberatan 2/3
+                    (dua pertiga).
   - _type: bab
     _key: 14
     _judul: KETENTUAN PENUTUP

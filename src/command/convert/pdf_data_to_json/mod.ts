@@ -18,15 +18,34 @@ function pdfDataToJson(): void {
 
 function writeToJson(documentNode: DocumentNode): void {
   console.log('\nstart', documentNode);
+
+  console.time(`${JSON.stringify(documentNode)} init`);
   const dataFile = getDocumentFilePath(documentNode, 'pdf-data');
   const jsonFile = getDocumentFilePath(documentNode, 'yaml');
   const pdfSpans: Span[] = JSON.parse(readFileSync(dataFile.path).toString());
+  console.timeEnd(`${JSON.stringify(documentNode)} init`);
+
+  console.time(`${JSON.stringify(documentNode)} spans`);
   const documentSpans = documentSpansOf(pdfSpans);
+  console.timeEnd(`${JSON.stringify(documentNode)} spans`);
+
+  console.time(`${JSON.stringify(documentNode)} hasAmendPasal`);
   const hasAmendPasal = spansHasAmendPasal(documentSpans.babs);
+  console.timeEnd(`${JSON.stringify(documentNode)} hasAmendPasal`);
+
+  console.time(`${JSON.stringify(documentNode)} keyIds`);
   const babKeyIds = keyIdsOfBabSpans(hasAmendPasal, documentSpans.babs);
+  console.timeEnd(`${JSON.stringify(documentNode)} keyIds`);
+
+  console.time(`${JSON.stringify(documentNode)} babs`);
   const babs = babsOfKeyIds({ hasAmendPasal, keyIds: babKeyIds }, documentSpans.babs);
+  console.timeEnd(`${JSON.stringify(documentNode)} babs`);
+
+  console.time(`${JSON.stringify(documentNode)} detect`);
   const document: Document = { _node: documentNode, babs };
   const detectedDocument = rawJsonToJson(document);
+  console.timeEnd(`${JSON.stringify(documentNode)} detect`);
+
   writeFileSync(jsonFile.path, yaml.dump(detectedDocument));
 }
 
