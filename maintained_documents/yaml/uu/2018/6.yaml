@@ -1,4 +1,4 @@
-_node: &ref_0
+_node:
   _documentType: uu
   tahun: 2018
   nomor: 6
@@ -294,16 +294,7 @@ babs:
                 _key: 2
                 isi:
                   _type: referenceText
-                  references:
-                    - start: 73
-                      end: 81
-                      node:
-                        _key: 1
-                        parentPasal:
-                          _key: 5
-                          parentDocument: *ref_0
-                          _structureType: pasal
-                        _structureType: ayat
+                  references: []
                   text: >-
                     Dalam menyelenggarakan Kekarantinaan Kesehatan sebagaimana
                     dimaksud pada ayat (1), Pemerintah Pusat dapat melibatkan
@@ -403,22 +394,7 @@ babs:
                 _key: 4
                 isi:
                   _type: referenceText
-                  references:
-                    - start: 106
-                      end: 114
-                      node:
-                        _key: 2
-                        parentPasal: &ref_1
-                          _key: 10
-                          parentDocument: *ref_0
-                          _structureType: pasal
-                        _structureType: ayat
-                    - start: 93
-                      end: 101
-                      node:
-                        _key: 1
-                        parentPasal: *ref_1
-                        _structureType: ayat
+                  references: []
                   text: >-
                     Ketentuan lebih lanjut mengenai tata cara penetapan dan
                     pencabutan sebagaimana dimaksud pada ayat (1) dan ayat (2)
@@ -444,16 +420,7 @@ babs:
                 _key: 2
                 isi:
                   _type: referenceText
-                  references:
-                    - start: 66
-                      end: 74
-                      node:
-                        _key: 1
-                        parentPasal:
-                          _key: 11
-                          parentDocument: *ref_0
-                          _structureType: pasal
-                        _structureType: ayat
+                  references: []
                   text: >-
                     Penyelenggaraan Kekarantinaan Kesehatan sebagaimana dimaksud
                     pada ayat (l) dapat berkoordinasi dan bekerja sama dengan
@@ -494,16 +461,7 @@ babs:
                 _key: 2
                 isi:
                   _type: referenceText
-                  references:
-                    - start: 65
-                      end: 73
-                      node:
-                        _key: 1
-                        parentPasal:
-                          _key: 13
-                          parentDocument: *ref_0
-                          _structureType: pasal
-                        _structureType: ayat
+                  references: []
                   text: >-
                     Komunikasi, koordinasi, dan kerja sama sebagaimana dimaksud
                     pada ayat (1) dilakukan untuk mengidentifikasi penyebab,
@@ -527,16 +485,7 @@ babs:
                 _key: 2
                 isi:
                   _type: referenceText
-                  references:
-                    - start: 113
-                      end: 121
-                      node:
-                        _key: 1
-                        parentPasal:
-                          _key: 14
-                          parentDocument: *ref_0
-                          _structureType: pasal
-                        _structureType: ayat
+                  references: []
                   text: >-
                     Ketentuan lebih lanjut mengenai tata cara pelaksanaan
                     Karantina Wilayah di Pintu Masuk sebagaimana dimaksud pada
@@ -571,16 +520,7 @@ babs:
                   _type: points
                   _description:
                     _type: referenceText
-                    references:
-                      - start: 59
-                        end: 67
-                        node:
-                          _key: 1
-                          parentPasal: &ref_2
-                            _key: 15
-                            parentDocument: *ref_0
-                            _structureType: pasal
-                          _structureType: ayat
+                    references: []
                     text: >-
                       Tindakan Kekarantinaan Kesehatan sebagaimana dimaksud pada
                       ayat (1) berupa:
@@ -620,16 +560,7 @@ babs:
                 _key: 3
                 isi:
                   _type: referenceText
-                  references:
-                    - start: 93
-                      end: 109
-                      node:
-                        _key: d
-                        parentPoints:
-                          _key: 2
-                          parentPasal: *ref_2
-                          _structureType: ayat
-                        _structureType: point
+                  references: []
                   text: >-
                     Penyehatan, pengamanan, dan pengendalian terhadap media
                     lingkungan sebagaimana dimaksud pada ayat (2) huruf d
@@ -639,13 +570,7 @@ babs:
                 _key: 4
                 isi:
                   _type: referenceText
-                  references:
-                    - start: 91
-                      end: 99
-                      node:
-                        _key: 2
-                        parentPasal: *ref_2
-                        _structureType: ayat
+                  references: []
                   text: >-
                     Ketentuan lebih lanjut mengenai tindakan Kekarantinaan
                     Kesehatan sebagaimana dimaksud pada ayat (2) diatur dengan
@@ -668,16 +593,7 @@ babs:
                 _key: 2
                 isi:
                   _type: referenceText
-                  references:
-                    - start: 59
-                      end: 67
-                      node:
-                        _key: 1
-                        parentPasal: &ref_3
-                          _key: 16
-                          parentDocument: *ref_0
-                          _structureType: pasal
-                        _structureType: ayat
+                  references: []
                   text: >-
                     Tindakan Kekarantinaan Kesehatan sebagaimana dimaksud pada
                     ayat (1) dilaksanakan oleh Pejabat Karantina Kesehatan.
@@ -693,13 +609,7 @@ babs:
                 _key: 4
                 isi:
                   _type: referenceText
-                  references:
-                    - start: 107
-                      end: 115
-                      node:
-                        _key: 1
-                        parentPasal: *ref_3
-                        _structureType: ayat
+                  references: []
                   text: >-
                     Dalam situasi Kedaruratan Kesehatan Masyarakat, tindakan
                     Kekarantinaan Kesehatan sebagaimana dimaksud pada ayat (1)
@@ -708,13 +618,7 @@ babs:
                 _key: 5
                 isi:
                   _type: referenceText
-                  references:
-                    - start: 77
-                      end: 85
-                      node:
-                        _key: 4
-                        parentPasal: *ref_3
-                        _structureType: ayat
+                  references: []
                   text: >-
                     Dalam pelaksanaan tindakan Kekarantinaan Kesehatan
                     sebagaimana dimaksud pada ayat (4), Pejabat Karantina
@@ -747,16 +651,7 @@ babs:
                 _key: 2
                 isi:
                   _type: referenceText
-                  references:
-                    - start: 55
-                      end: 63
-                      node:
-                        _key: 1
-                        parentPasal:
-                          _key: 18
-                          parentDocument: *ref_0
-                          _structureType: pasal
-                        _structureType: ayat
+                  references: []
                   text: >-
                     Penentuan tempat atau lokasi sebagaimana dimaksud pada ayat
                     (1) didasarkan pada hasil penyelidikan epidemiologi dan/atau
@@ -811,25 +706,7 @@ babs:
                                   _key: b
                                   isi:
                                     _type: referenceText
-                                    references:
-                                      - start: 148
-                                        end: 149
-                                        node:
-                                          _key: b
-                                          parentPoints: &ref_4
-                                            _key: 1
-                                            parentPasal: &ref_5
-                                              _key: 19
-                                              parentDocument: *ref_0
-                                              _structureType: pasal
-                                            _structureType: ayat
-                                          _structureType: point
-                                      - start: 136
-                                        end: 143
-                                        node:
-                                          _key: a
-                                          parentPoints: *ref_4
-                                          _structureType: point
+                                    references: []
                                     text: >-
                                       datang dari Pelabuhan wilayah Terjangkit
                                       di dalam negeri, atau Cc. mengambil orang
@@ -840,13 +717,7 @@ babs:
                             _key: 2
                             isi:
                               _type: referenceText
-                              references:
-                                - start: 45
-                                  end: 53
-                                  node:
-                                    _key: 1
-                                    parentPasal: *ref_5
-                                    _structureType: ayat
+                              references: []
                               text: >-
                                 Nakhoda pada Kapal sebagaimana dimaksud pada
                                 ayat (1) wajib memberikan Deklarasi Kesehatan
@@ -857,13 +728,7 @@ babs:
                             _key: 3
                             isi:
                               _type: referenceText
-                              references:
-                                - start: 45
-                                  end: 53
-                                  node:
-                                    _key: 1
-                                    parentPasal: *ref_5
-                                    _structureType: ayat
+                              references: []
                               text: >-
                                 Nakhoda pada Kapal sebagaimana dimaksud pada
                                 ayat (1) hanya dapat menurunkan atau menaikkan
@@ -874,13 +739,7 @@ babs:
                             _key: 4
                             isi:
                               _type: referenceText
-                              references:
-                                - start: 61
-                                  end: 69
-                                  node:
-                                    _key: 3
-                                    parentPasal: *ref_5
-                                    _structureType: ayat
+                              references: []
                               text: >-
                                 Pengawasan Kekarantinaan Kesehatan sebagaimana
                                 dimaksud pada ayat (3) dilakukan untuk
@@ -891,13 +750,7 @@ babs:
                               _type: points
                               _description:
                                 _type: referenceText
-                                references:
-                                  - start: 58
-                                    end: 66
-                                    node:
-                                      _key: 4
-                                      parentPasal: *ref_5
-                                      _structureType: ayat
+                                references: []
                                 text: >-
                                   Persetujuan Karantina Kesehatan sebagaimana
                                   dimaksud pada ayat (4) berupa:
@@ -930,13 +783,7 @@ babs:
                             _key: 6
                             isi:
                               _type: referenceText
-                              references:
-                                - start: 119
-                                  end: 127
-                                  node:
-                                    _key: 3
-                                    parentPasal: *ref_5
-                                    _structureType: ayat
+                              references: []
                               text: >-
                                 Ketentuan lebih lanjut mengenai tata laksana
                                 Pengawasan Kekarantinaan Kesehatan di Pelabuhan
@@ -946,13 +793,7 @@ babs:
                       _key: 20
                       isi:
                         _type: referenceText
-                        references:
-                          - start: 80
-                            end: 88
-                            node:
-                              _key: 19
-                              parentDocument: *ref_0
-                              _structureType: pasal
+                        references: []
                         text: >-
                           Kapal yang memperoleh persetujuan karantina terbatas
                           sebagaimana dimaksud dalam Pasal 19 ayat (S5) huruf b
@@ -1037,16 +878,7 @@ babs:
                             _key: 2
                             isi:
                               _type: referenceText
-                              references:
-                                - start: 109
-                                  end: 117
-                                  node:
-                                    _key: 1
-                                    parentPasal:
-                                      _key: 22
-                                      parentDocument: *ref_0
-                                      _structureType: pasal
-                                    _structureType: ayat
+                              references: []
                               text: >-
                                 Kapal yang Persetujuan Karantina Kesehatannya
                                 dicabut dan dinyatakan tidak berlaku sebagaimana
@@ -1072,16 +904,7 @@ babs:
                             _key: 2
                             isi:
                               _type: referenceText
-                              references:
-                                - start: 32
-                                  end: 40
-                                  node:
-                                    _key: 1
-                                    parentPasal: &ref_6
-                                      _key: 23
-                                      parentDocument: *ref_0
-                                      _structureType: pasal
-                                    _structureType: ayat
+                              references: []
                               text: >-
                                 Kapal sebagaimana dimaksud pada ayat (1)
                                 diperintahkan supaya berangkat lagi atas
@@ -1091,13 +914,7 @@ babs:
                             _key: 3
                             isi:
                               _type: referenceText
-                              references:
-                                - start: 32
-                                  end: 40
-                                  node:
-                                    _key: 1
-                                    parentPasal: *ref_6
-                                    _structureType: ayat
+                              references: []
                               text: >-
                                 Kapal sebagaimana dimaksud pada ayat (1)
                                 diberikan izin untuk mengambil bahan bakar, air,
@@ -1137,16 +954,7 @@ babs:
                             _key: 2
                             isi:
                               _type: referenceText
-                              references:
-                                - start: 62
-                                  end: 70
-                                  node:
-                                    _key: 1
-                                    parentPasal: &ref_7
-                                      _key: 25
-                                      parentDocument: *ref_0
-                                      _structureType: pasal
-                                    _structureType: ayat
+                              references: []
                               text: >-
                                 Setelah Dokumen Karantina Kesehatan sebagaimana
                                 dimaksud pada ayat (1) dinyatakan lengkap dan
@@ -1160,13 +968,7 @@ babs:
                             _key: 3
                             isi:
                               _type: referenceText
-                              references:
-                                - start: 169
-                                  end: 177
-                                  node:
-                                    _key: 2
-                                    parentPasal: *ref_7
-                                    _structureType: ayat
+                              references: []
                               text: >-
                                 Dalam hal Kapal yang akan berangkat tidak
                                 dilengkapi dengan Surat Persetujuan Berlayar
@@ -1183,16 +985,7 @@ babs:
                             _key: 1
                             isi:
                               _type: referenceText
-                              references:
-                                - start: 189
-                                  end: 206
-                                  node:
-                                    parentPasal:
-                                      parentDocument: *ref_0
-                                      _key: 15
-                                      _structureType: pasal
-                                    _key: 2
-                                    _structureType: ayat
+                              references: []
                               text: >-
                                 Apabila pada saat keberangkatan Kapal ditemukan
                                 adanya Faktor Risiko Kesehatan Masyarakat maka
@@ -1271,16 +1064,7 @@ babs:
                             _key: 2
                             isi:
                               _type: referenceText
-                              references:
-                                - start: 84
-                                  end: 92
-                                  node:
-                                    _key: 1
-                                    parentPasal:
-                                      _key: 28
-                                      parentDocument: *ref_0
-                                      _structureType: pasal
-                                    _structureType: ayat
+                              references: []
                               text: >-
                                 Kapten Penerbang wajib segera melaporkan
                                 mengenai keadaan sebagaimana dimaksud pada ayat
@@ -1308,16 +1092,7 @@ babs:
                             _key: 2
                             isi:
                               _type: referenceText
-                              references:
-                                - start: 62
-                                  end: 79
-                                  node:
-                                    parentPasal:
-                                      parentDocument: *ref_0
-                                      _key: 28
-                                      _structureType: pasal
-                                    _key: 1
-                                    _structureType: ayat
+                              references: []
                               text: >-
                                 Dalam hal kedatangan Pesawat Udara sebagaimana
                                 dimaksud dalam Pasal 28 ayat (1), Kapten
@@ -1334,19 +1109,7 @@ babs:
                             _key: 1
                             isi:
                               _type: referenceText
-                              references:
-                                - start: 63
-                                  end: 71
-                                  node:
-                                    _key: 27
-                                    parentDocument: *ref_0
-                                    _structureType: pasal
-                                - start: 76
-                                  end: 84
-                                  node:
-                                    _key: 28
-                                    parentDocument: *ref_0
-                                    _structureType: pasal
+                              references: []
                               text: >-
                                 Kapten Penerbang pada Pesawat Udara sebagaimana
                                 dimaksud dalam Pasal 27 dan Pasal 28 hanya dapat
@@ -1358,16 +1121,7 @@ babs:
                             _key: 2
                             isi:
                               _type: referenceText
-                              references:
-                                - start: 61
-                                  end: 69
-                                  node:
-                                    _key: 1
-                                    parentPasal: &ref_8
-                                      _key: 30
-                                      parentDocument: *ref_0
-                                      _structureType: pasal
-                                    _structureType: ayat
+                              references: []
                               text: >-
                                 Pengawasan Kekarantinaan Kesehatan sebagaimana
                                 dimaksud pada ayat (1) dilakukan untuk
@@ -1378,13 +1132,7 @@ babs:
                               _type: points
                               _description:
                                 _type: referenceText
-                                references:
-                                  - start: 58
-                                    end: 66
-                                    node:
-                                      _key: 2
-                                      parentPasal: *ref_8
-                                      _structureType: ayat
+                                references: []
                                 text: >-
                                   Persetujuan Karantina Kesehatan sebagaimana
                                   dimaksud pada ayat (2) dapat berupa:
@@ -1426,16 +1174,7 @@ babs:
                       _key: 31
                       isi:
                         _type: referenceText
-                        references:
-                          - start: 88
-                            end: 105
-                            node:
-                              parentPasal:
-                                parentDocument: *ref_0
-                                _key: 30
-                                _structureType: pasal
-                              _key: 3
-                              _structureType: ayat
+                        references: []
                         text: >-
                           Pesawat Udara yang memperoleh persetujuan karantina
                           terbatas sebagaimana dimaksud dalam Pasal 30 ayat (3)
@@ -1472,16 +1211,7 @@ babs:
                       _key: 34
                       isi:
                         _type: referenceText
-                        references:
-                          - start: 140
-                            end: 157
-                            node:
-                              parentPasal:
-                                parentDocument: *ref_0
-                                _key: 15
-                                _structureType: pasal
-                              _key: 2
-                              _structureType: ayat
+                        references: []
                         text: >-
                           Pesawat Udara yang ditemukan Faktor Risiko Kesehatan
                           Masyarakat harus dilakukan tindakan Kekarantinaan
@@ -1534,16 +1264,7 @@ babs:
                             _key: 2
                             isi:
                               _type: referenceText
-                              references:
-                                - start: 42
-                                  end: 50
-                                  node:
-                                    _key: 1
-                                    parentPasal: &ref_9
-                                      _key: 35
-                                      parentDocument: *ref_0
-                                      _structureType: pasal
-                                    _structureType: ayat
+                              references: []
                               text: >-
                                 Kendaraan Darat sebagaimana dimaksud pada ayat
                                 (1) harus dilakukan Pengawasan Kekarantinaan
@@ -1553,13 +1274,7 @@ babs:
                             _key: 3
                             isi:
                               _type: referenceText
-                              references:
-                                - start: 132
-                                  end: 140
-                                  node:
-                                    _key: 2
-                                    parentPasal: *ref_9
-                                    _structureType: ayat
+                              references: []
                               text: >-
                                 Kendaraan Darat yang ditemukan Faktor Risiko
                                 Kesehatan Masyarakat pada Pengawasan
@@ -1570,13 +1285,7 @@ babs:
                             _key: 4
                             isi:
                               _type: referenceText
-                              references:
-                                - start: 67
-                                  end: 75
-                                  node:
-                                    _key: 1
-                                    parentPasal: *ref_9
-                                    _structureType: ayat
+                              references: []
                               text: >-
                                 Setiap Kendaraan Darat di luar ketentuan
                                 sebagaimana dimaksud pada ayat (1) sewaktu-waktu
@@ -1587,13 +1296,7 @@ babs:
                             _key: 5
                             isi:
                               _type: referenceText
-                              references:
-                                - start: 124
-                                  end: 132
-                                  node:
-                                    _key: 1
-                                    parentPasal: *ref_9
-                                    _structureType: ayat
+                              references: []
                               text: >-
                                 Ketentuan lebih lanjut mengenai tindakan
                                 Kekarantinaan Kesehatan di Pos Lintas Batas
@@ -1618,16 +1321,7 @@ babs:
                             _key: 2
                             isi:
                               _type: referenceText
-                              references:
-                                - start: 193
-                                  end: 201
-                                  node:
-                                    _key: 1
-                                    parentPasal:
-                                      _key: 36
-                                      parentDocument: *ref_0
-                                      _structureType: pasal
-                                    _structureType: ayat
+                              references: []
                               text: >-
                                 Kendaraan Darat yang tidak ditemukan Faktor
                                 Risiko Kesehatan Masyarakat dan/atau dokumen
@@ -1661,16 +1355,7 @@ babs:
                             _key: 2
                             isi:
                               _type: referenceText
-                              references:
-                                - start: 62
-                                  end: 70
-                                  node:
-                                    _key: 1
-                                    parentPasal:
-                                      _key: 37
-                                      parentDocument: *ref_0
-                                      _structureType: pasal
-                                    _structureType: ayat
+                              references: []
                               text: >-
                                 Setelah Dokumen Karantina Kesehatan sebagaimana
                                 dimaksud pada ayat (1) dinyatakan lengkap dan
@@ -1681,16 +1366,7 @@ babs:
                             _key: 3
                             isi:
                               _type: referenceText
-                              references:
-                                - start: 142
-                                  end: 159
-                                  node:
-                                    parentPasal:
-                                      parentDocument: *ref_0
-                                      _key: 15
-                                      _structureType: pasal
-                                    _key: 2
-                                    _structureType: ayat
+                              references: []
                               text: >-
                                 Kendaraan Darat yang ditemukan Faktor Risiko
                                 Kesehatan Masyarakat harus dilakukan tindakan
@@ -1817,19 +1493,7 @@ babs:
                 _key: 40
                 isi:
                   _type: referenceText
-                  references:
-                    - start: 43
-                      end: 51
-                      node:
-                        _key: 38
-                        parentDocument: *ref_0
-                        _structureType: pasal
-                    - start: 56
-                      end: 64
-                      node:
-                        _key: 39
-                        parentDocument: *ref_0
-                        _structureType: pasal
+                  references: []
                   text: >-
                     Dalam hal orang sebagaimana dimaksud dalam Pasal 38 dan
                     Pasal 39 tidak bersedia dilakukan tindakan Kekarantinaan
@@ -1858,19 +1522,7 @@ babs:
                       _key: 2
                       isi:
                         _type: referenceText
-                        references:
-                          - start: 68
-                            end: 84
-                            node:
-                              _key: a
-                              parentPoints:
-                                _key: 1
-                                parentPasal: &ref_10
-                                  _key: 41
-                                  parentDocument: *ref_0
-                                  _structureType: pasal
-                                _structureType: ayat
-                              _structureType: point
+                        references: []
                         text: >-
                           Setiap Awak, Personel, dan/atau penumpang sebagaimana
                           dimaksud pada ayat (1) huruf a yang tidak memiliki
@@ -1881,16 +1533,7 @@ babs:
                       _key: 3
                       isi:
                         _type: referenceText
-                        references:
-                          - start: 68
-                            end: 84
-                            node:
-                              _key: b
-                              parentPoints:
-                                _key: 1
-                                parentPasal: *ref_10
-                                _structureType: ayat
-                              _structureType: point
+                        references: []
                         text: >-
                           Setiap Awak, Personel, dan/atau penumpang sebagaimana
                           dimaksud pada ayat (1) huruf b yang tidak memiliki
@@ -1901,19 +1544,7 @@ babs:
                       _key: 4
                       isi:
                         _type: referenceText
-                        references:
-                          - start: 395
-                            end: 403
-                            node:
-                              _key: 3
-                              parentPasal: *ref_10
-                              _structureType: ayat
-                          - start: 70
-                            end: 78
-                            node:
-                              _key: 3
-                              parentPasal: *ref_10
-                              _structureType: ayat
+                        references: []
                         text: >-
                           Terhadap Awak, Personel, dan/atau penumpang
                           sebagaimana dimaksud pada ayat (3) harus diberikan
@@ -1944,16 +1575,7 @@ babs:
                       _key: 2
                       isi:
                         _type: referenceText
-                        references:
-                          - start: 47
-                            end: 55
-                            node:
-                              _key: 1
-                              parentPasal: &ref_11
-                                _key: 42
-                                parentDocument: *ref_0
-                                _structureType: pasal
-                              _structureType: ayat
+                        references: []
                         text: >-
                           Pada saat pengawasan sebagaimana dimaksud pada ayat
                           (1) ditemukan Awak, Personel, dan/atau penumpang
@@ -1963,13 +1585,7 @@ babs:
                       _key: 3
                       isi:
                         _type: referenceText
-                        references:
-                          - start: 55
-                            end: 63
-                            node:
-                              _key: 2
-                              parentPasal: *ref_11
-                              _structureType: ayat
+                        references: []
                         text: >-
                           Jika hasil pemeriksaan medis sebagaimana dimaksud pada
                           ayat (2), ditemukan penyakit yang berpotensi
@@ -2000,16 +1616,7 @@ babs:
                       _key: 2
                       isi:
                         _type: referenceText
-                        references:
-                          - start: 41
-                            end: 49
-                            node:
-                              _key: 1
-                              parentPasal:
-                                _key: 43
-                                parentDocument: *ref_0
-                                _structureType: pasal
-                              _structureType: ayat
+                        references: []
                         text: >-
                           Terhadap orang sebagaimana dimaksud pada ayat (1)
                           wajib diberikan penjelasan oleh Pejabat Karantina
@@ -2024,28 +1631,7 @@ babs:
                 _key: 44
                 isi:
                   _type: referenceText
-                  references:
-                    - start: 215
-                      end: 232
-                      node:
-                        parentPasal:
-                          parentDocument: *ref_0
-                          _key: 15
-                          _structureType: pasal
-                        _key: 2
-                        _structureType: ayat
-                    - start: 245
-                      end: 246
-                      node:
-                        _key: d
-                        parentPoints:
-                          _key: 2
-                          parentPasal:
-                            _key: 44
-                            parentDocument: *ref_0
-                            _structureType: pasal
-                          _structureType: ayat
-                        _structureType: point
+                  references: []
                   text: >-
                     Setiap Barang yang memiliki Faktor Risiko Kesehatan
                     Masyarakat dalam Alat Angkut yang berada dalam Status
@@ -2074,16 +1660,7 @@ babs:
                         _type: points
                         _description:
                           _type: referenceText
-                          references:
-                            - start: 74
-                              end: 82
-                              node:
-                                _key: 1
-                                parentPasal: &ref_12
-                                  _key: 45
-                                  parentDocument: *ref_0
-                                  _structureType: pasal
-                                _structureType: ayat
+                          references: []
                           text: >-
                             Jika pada pemeriksaan dokumen penyebab kematian
                             sebagaimana dimaksud pada ayat (1) didapatkan:
@@ -2121,13 +1698,7 @@ babs:
                       _key: 3
                       isi:
                         _type: referenceText
-                        references:
-                          - start: 157
-                            end: 165
-                            node:
-                              _key: 2
-                              parentPasal: *ref_12
-                              _structureType: ayat
+                        references: []
                         text: >-
                           Jika hasil pemeriksaan tidak didapatkan Faktor Risiko
                           Kesehatan Masyarakat atau setelah dilakukan tindakan
@@ -2155,16 +1726,7 @@ babs:
                       _key: 2
                       isi:
                         _type: referenceText
-                        references:
-                          - start: 92
-                            end: 100
-                            node:
-                              _key: 1
-                              parentPasal: &ref_13
-                                _key: 46
-                                parentDocument: *ref_0
-                                _structureType: pasal
-                              _structureType: ayat
+                        references: []
                         text: >-
                           Dalam hal penyebab kematian berdasarkan hasil
                           pemeriksaan jenazah sebagaimana dimaksud pada ayat (1)
@@ -2175,13 +1737,7 @@ babs:
                       _key: 3
                       isi:
                         _type: referenceText
-                        references:
-                          - start: 43
-                            end: 51
-                            node:
-                              _key: 1
-                              parentPasal: *ref_13
-                              _structureType: ayat
+                        references: []
                         text: >-
                           Terhadap jenazah sebagaimana dimaksud pada ayat (l)
                           dikirim ke rumah sakit untuk dilakukan pemulasaraan
@@ -2190,19 +1746,7 @@ babs:
                 _key: 47
                 isi:
                   _type: referenceText
-                  references:
-                    - start: 95
-                      end: 103
-                      node:
-                        _key: 44
-                        parentDocument: *ref_0
-                        _structureType: pasal
-                    - start: 118
-                      end: 126
-                      node:
-                        _key: 46
-                        parentDocument: *ref_0
-                        _structureType: pasal
+                  references: []
                   text: >-
                     Ketentuan lebih lanjut mengenai pengawasan Barang dalam Alat
                     Angkut sebagaimana dimaksud dalam Pasal 44 sampai dengan
@@ -2224,22 +1768,7 @@ babs:
                         _type: points
                         _description:
                           _type: referenceText
-                          references:
-                            - start: 90
-                              end: 98
-                              node:
-                                _key: 21
-                                parentDocument: *ref_0
-                                _structureType: pasal
-                            - start: 67
-                              end: 84
-                              node:
-                                parentPasal:
-                                  parentDocument: *ref_0
-                                  _key: 19
-                                  _structureType: pasal
-                                _key: 2
-                                _structureType: ayat
+                          references: []
                           text: >-
                             Setiap Nakhoda yang melanggar ketentuan sebagaimana
                             dimaksud dalam Pasal 19 ayat (2) atau Pasal 21
@@ -2269,22 +1798,7 @@ babs:
                         _type: points
                         _description:
                           _type: referenceText
-                          references:
-                            - start: 99
-                              end: 107
-                              node:
-                                _key: 29
-                                parentDocument: *ref_0
-                                _structureType: pasal
-                            - start: 76
-                              end: 93
-                              node:
-                                parentPasal:
-                                  parentDocument: *ref_0
-                                  _key: 28
-                                  _structureType: pasal
-                                _key: 2
-                                _structureType: ayat
+                          references: []
                           text: >-
                             Setiap Kapten Penerbang yang melanggar ketentuan
                             sebagaimana dimaksud dalam Pasal 28 ayat (2) atau
@@ -2308,16 +1822,7 @@ babs:
                       _key: 3
                       isi:
                         _type: referenceText
-                        references:
-                          - start: 144
-                            end: 161
-                            node:
-                              parentPasal:
-                                parentDocument: *ref_0
-                                _key: 19
-                                _structureType: pasal
-                              _key: 5
-                              _structureType: ayat
+                        references: []
                         text: >-
                           Setiap Nakhoda yang tidak melengkapi Dokumen Karantina
                           Kesehatan sehingga dikeluarkan persetujuan karantina
@@ -2327,16 +1832,7 @@ babs:
                       _key: 4
                       isi:
                         _type: referenceText
-                        references:
-                          - start: 153
-                            end: 170
-                            node:
-                              parentPasal:
-                                parentDocument: *ref_0
-                                _key: 30
-                                _structureType: pasal
-                              _key: 3
-                              _structureType: ayat
+                        references: []
                         text: >-
                           Setiap Kapten Penerbang yang tidak melengkapi Dokumen
                           Karantina Kesehatan sehingga dikeluarkan persetujuan
@@ -2349,16 +1845,7 @@ babs:
                         _type: points
                         _description:
                           _type: referenceText
-                          references:
-                            - start: 189
-                              end: 206
-                              node:
-                                parentPasal:
-                                  parentDocument: *ref_0
-                                  _key: 36
-                                  _structureType: pasal
-                                _key: 1
-                                _structureType: ayat
+                          references: []
                           text: >-
                             Setiap pengemudi atau penanggung jawab kendaraan
                             darat yang tidak melengkapi Dokumen Karantina
@@ -2384,22 +1871,7 @@ babs:
                       _key: 6
                       isi:
                         _type: referenceText
-                        references:
-                          - start: 122
-                            end: 130
-                            node:
-                              _key: 5
-                              parentPasal: &ref_14
-                                _key: 48
-                                parentDocument: *ref_0
-                                _structureType: pasal
-                              _structureType: ayat
-                          - start: 99
-                            end: 107
-                            node:
-                              _key: 1
-                              parentPasal: *ref_14
-                              _structureType: ayat
+                        references: []
                         text: >-
                           Ketentuan lebih lanjut mengenai tata cara pengenaan
                           sanksi administratif sebagaimana dimaksud pada ayat
@@ -2437,16 +1909,7 @@ babs:
                       _key: 2
                       isi:
                         _type: referenceText
-                        references:
-                          - start: 123
-                            end: 131
-                            node:
-                              _key: 1
-                              parentPasal: &ref_15
-                                _key: 49
-                                parentDocument: *ref_0
-                                _structureType: pasal
-                              _structureType: ayat
+                        references: []
                         text: >-
                           Karantina Rumah, Karantina Wilayah, Karantina Rumah
                           Sakit, atau Pembatasan Sosial Berskala Besar
@@ -2459,13 +1922,7 @@ babs:
                       _key: 3
                       isi:
                         _type: referenceText
-                        references:
-                          - start: 81
-                            end: 89
-                            node:
-                              _key: 1
-                              parentPasal: *ref_15
-                              _structureType: ayat
+                        references: []
                         text: >-
                           Karantina Wilayah dan Pembatasan Sosial Berskala Besar
                           sebagaimana dimaksud pada ayat (1) ditetapkan oleh
@@ -2494,16 +1951,7 @@ babs:
                       _key: 2
                       isi:
                         _type: referenceText
-                        references:
-                          - start: 42
-                            end: 50
-                            node:
-                              _key: 1
-                              parentPasal: &ref_16
-                                _key: 50
-                                parentDocument: *ref_0
-                                _structureType: pasal
-                              _structureType: ayat
+                        references: []
                         text: >-
                           Karantina Rumah sebagaimana dimaksud pada ayat (1)
                           dilaksanakan terhadap seluruh orang dalam rumah,
@@ -2513,13 +1961,7 @@ babs:
                       _key: 3
                       isi:
                         _type: referenceText
-                        references:
-                          - start: 41
-                            end: 49
-                            node:
-                              _key: 1
-                              parentPasal: *ref_16
-                              _structureType: ayat
+                        references: []
                         text: >-
                           Terhadap kasus sebagaimana dimaksud pada ayat (1)
                           dirujuk ke rumah sakit yang memiliki kemampuan
@@ -2566,16 +2008,7 @@ babs:
                       _key: 2
                       isi:
                         _type: referenceText
-                        references:
-                          - start: 96
-                            end: 104
-                            node:
-                              _key: 1
-                              parentPasal:
-                                _key: 52
-                                parentDocument: *ref_0
-                                _structureType: pasal
-                              _structureType: ayat
+                        references: []
                         text: >-
                           Tanggung jawab Pemerintah Pusat dalam penyelenggaraan
                           Karantina Rumah sebagaimana dimaksud pada ayat (1)
@@ -2604,16 +2037,7 @@ babs:
                       _key: 2
                       isi:
                         _type: referenceText
-                        references:
-                          - start: 44
-                            end: 52
-                            node:
-                              _key: 1
-                              parentPasal:
-                                _key: 53
-                                parentDocument: *ref_0
-                                _structureType: pasal
-                              _structureType: ayat
+                        references: []
                         text: >-
                           Karantina Wilayah sebagaimana dimaksud pada ayat (1)
                           dilaksanakan kepada seluruh anggota masyarakat di
@@ -2681,16 +2105,7 @@ babs:
                       _key: 2
                       isi:
                         _type: referenceText
-                        references:
-                          - start: 98
-                            end: 106
-                            node:
-                              _key: 1
-                              parentPasal:
-                                _key: 55
-                                parentDocument: *ref_0
-                                _structureType: pasal
-                              _structureType: ayat
+                        references: []
                         text: >-
                           Tanggung jawab Pemerintah Pusat dalam penyelenggaraan
                           Karantina Wilayah sebagaimana dimaksud pada ayat (1)
@@ -2719,16 +2134,7 @@ babs:
                       _key: 2
                       isi:
                         _type: referenceText
-                        references:
-                          - start: 48
-                            end: 56
-                            node:
-                              _key: 1
-                              parentPasal:
-                                _key: 56
-                                parentDocument: *ref_0
-                                _structureType: pasal
-                              _structureType: ayat
+                        references: []
                         text: >-
                           Karantina Rumah Sakit sebagaimana dimaksud pada ayat
                           (1) dilaksanakan kepada seluruh orang yang berkunjung,
@@ -2766,16 +2172,7 @@ babs:
                       _key: 3
                       isi:
                         _type: referenceText
-                        references:
-                          - start: 108
-                            end: 116
-                            node:
-                              _key: 2
-                              parentPasal:
-                                _key: 57
-                                parentDocument: *ref_0
-                                _structureType: pasal
-                              _structureType: ayat
+                        references: []
                         text: >-
                           Seluruh orang, Barang, dan/atau hewan yang berada di
                           rumah sakit yang dikarantina sebagaimana dimaksud pada
@@ -2824,16 +2221,7 @@ babs:
                         _type: points
                         _description:
                           _type: referenceText
-                          references:
-                            - start: 59
-                              end: 67
-                              node:
-                                _key: 1
-                                parentPasal:
-                                  _key: 59
-                                  parentDocument: *ref_0
-                                  _structureType: pasal
-                                _structureType: ayat
+                          references: []
                           text: >-
                             Pembatasan Sosial Berskala Besar sebagaimana
                             dimaksud pada ayat (1) paling sedikit meliputi:
@@ -2897,16 +2285,7 @@ babs:
                 _key: 2
                 isi:
                   _type: referenceText
-                  references:
-                    - start: 54
-                      end: 62
-                      node:
-                        _key: 1
-                        parentPasal:
-                          _key: 61
-                          parentDocument: *ref_0
-                          _structureType: pasal
-                        _structureType: ayat
+                  references: []
                   text: >-
                     Dokumen Karantina Kesehatan sebagaimana dimaksud pada ayat
                     (1) dimaksudkan sebagai alat pengawasan dan pencegahan masuk
@@ -2960,13 +2339,7 @@ babs:
                   _type: points
                   _description:
                     _type: referenceText
-                    references:
-                      - start: 47
-                        end: 55
-                        node:
-                          _key: 62
-                          parentDocument: *ref_0
-                          _structureType: pasal
+                    references: []
                     text: >-
                       Deklarasi kesehatan sebagaimana dimaksud dalam Pasal 62
                       huruf a berupa:
@@ -2975,16 +2348,7 @@ babs:
                       _key: a
                       isi:
                         _type: referenceText
-                        references:
-                          - start: 100
-                            end: 117
-                            node:
-                              parentPasal:
-                                parentDocument: *ref_0
-                                _key: 19
-                                _structureType: pasal
-                              _key: 2
-                              _structureType: ayat
+                        references: []
                         text: >-
                           Deklarasi Kesehatan Maritim (Maritime Declaration of
                           Health) untuk Kapal sebagaimana dimaksud dalam Pasal
@@ -2993,13 +2357,7 @@ babs:
                       _key: b
                       isi:
                         _type: referenceText
-                        references:
-                          - start: 129
-                            end: 137
-                            node:
-                              _key: 29
-                              parentDocument: *ref_0
-                              _structureType: pasal
+                        references: []
                         text: >-
                           Deklarasi Kesehatan Penerbangan (Health Part of the
                           Aircraft General Declaration) untuk Pesawat Udara
@@ -3008,13 +2366,7 @@ babs:
                       _key: c
                       isi:
                         _type: referenceText
-                        references:
-                          - start: 126
-                            end: 134
-                            node:
-                              _key: 36
-                              parentDocument: *ref_0
-                              _structureType: pasal
+                        references: []
                         text: >-
                           Deklarasi Kesehatan Pelintasan Darat (Ground Crossing
                           Declaration of Health) untuk Kendaraan Darat
@@ -3024,16 +2376,7 @@ babs:
                 _key: 2
                 isi:
                   _type: referenceText
-                  references:
-                    - start: 46
-                      end: 54
-                      node:
-                        _key: 1
-                        parentPasal:
-                          _key: 63
-                          parentDocument: *ref_0
-                          _structureType: pasal
-                        _structureType: ayat
+                  references: []
                   text: >-
                     Deklarasi kesehatan sebagaimana dimaksud pada ayat (1) harus
                     diisi dan diberikan oleh Nakhoda, Kapten Penerbang, atau
@@ -3045,13 +2388,7 @@ babs:
             _type: points
             _description:
               _type: referenceText
-              references:
-                - start: 47
-                  end: 55
-                  node:
-                    _key: 62
-                    parentDocument: *ref_0
-                    _structureType: pasal
+              references: []
               text: >-
                 Sertifikat sanitasi sebagaimana dimaksud dalam Pasal 62 huruf c
                 berupa:
@@ -3158,25 +2495,7 @@ babs:
                 _key: 1
                 isi:
                   _type: referenceText
-                  references:
-                    - start: 121
-                      end: 129
-                      node:
-                        _key: 63
-                        parentDocument: *ref_0
-                        _structureType: pasal
-                    - start: 131
-                      end: 139
-                      node:
-                        _key: 64
-                        parentDocument: *ref_0
-                        _structureType: pasal
-                    - start: 145
-                      end: 153
-                      node:
-                        _key: 65
-                        parentDocument: *ref_0
-                        _structureType: pasal
+                  references: []
                   text: >-
                     Menteri dapat menetapkan perubahan atau penambahan Dokumen
                     Karantina Kesehatan selain dokumen sebagaimana dimaksud
@@ -3185,16 +2504,7 @@ babs:
                 _key: 2
                 isi:
                   _type: referenceText
-                  references:
-                    - start: 105
-                      end: 113
-                      node:
-                        _key: 1
-                        parentPasal:
-                          _key: 68
-                          parentDocument: *ref_0
-                          _structureType: pasal
-                        _structureType: ayat
+                  references: []
                   text: >-
                     Menteri dalam menetapkan perubahan atau penambahan Dokumen
                     Karantina Kesehatan sebagaimana dimaksud pada ayat (1)
@@ -3328,16 +2638,7 @@ babs:
                       _key: 2
                       isi:
                         _type: referenceText
-                        references:
-                          - start: 36
-                            end: 44
-                            node:
-                              _key: 1
-                              parentPasal:
-                                _key: 72
-                                parentDocument: *ref_0
-                                _structureType: pasal
-                              _structureType: ayat
+                        references: []
                         text: >-
                           Fasilitas sebagaimana dimaksud pada ayat (1) selain
                           berfungsi dalam penyelenggaraan Kekarantinaan
@@ -3417,16 +2718,7 @@ babs:
                             _key: a
                             isi:
                               _type: referenceText
-                              references:
-                                - start: 70
-                                  end: 87
-                                  node:
-                                    parentPasal:
-                                      parentDocument: *ref_0
-                                      _key: 15
-                                      _structureType: pasal
-                                    _key: 2
-                                    _structureType: ayat
+                              references: []
                               text: >-
                                 melakukan tindakan Kekarantinaan Kesehatan
                                 sebagaimana dimaksud dalam Pasal 15 ayat (2),
@@ -3458,16 +2750,7 @@ babs:
                       _key: 4
                       isi:
                         _type: referenceText
-                        references:
-                          - start: 91
-                            end: 99
-                            node:
-                              _key: 3
-                              parentPasal:
-                                _key: 75
-                                parentDocument: *ref_0
-                                _structureType: pasal
-                              _structureType: ayat
+                        references: []
                         text: >-
                           Ketentuan lebih lanjut mengenai tata cara pelaksanaan
                           kewenangan sebagaimana dimaksud pada ayat (3) diatur
@@ -3553,16 +2836,7 @@ babs:
                       _key: 2
                       isi:
                         _type: referenceText
-                        references:
-                          - start: 54
-                            end: 62
-                            node:
-                              _key: 1
-                              parentPasal: &ref_17
-                                _key: 77
-                                parentDocument: *ref_0
-                                _structureType: pasal
-                              _structureType: ayat
+                        references: []
                         text: >-
                           Penelitian dan pengembangan sebagaimana dimaksud pada
                           ayat (1), dilaksanakan dengan memperhatikan kesehatan
@@ -3571,19 +2845,7 @@ babs:
                       _key: 3
                       isi:
                         _type: referenceText
-                        references:
-                          - start: 86
-                            end: 94
-                            node:
-                              _key: 2
-                              parentPasal: *ref_17
-                              _structureType: ayat
-                          - start: 73
-                            end: 81
-                            node:
-                              _key: 1
-                              parentPasal: *ref_17
-                              _structureType: ayat
+                        references: []
                         text: >-
                           Ketentuan mengenai penelitian dan pengembangan
                           sebagaimana dimaksud pada ayat (1) dan ayat (2) diatur
@@ -3662,16 +2924,7 @@ babs:
                 _key: 2
                 isi:
                   _type: referenceText
-                  references:
-                    - start: 76
-                      end: 84
-                      node:
-                        _key: 1
-                        parentPasal: &ref_18
-                          _key: 80
-                          parentDocument: *ref_0
-                          _structureType: pasal
-                        _structureType: ayat
+                  references: []
                   text: >-
                     Penyelenggaraan informasi Kekarantinaan Kesehatan
                     sebagaimana dimaksud pada ayat (1) dapat berkoordinasi dan
@@ -3681,19 +2934,7 @@ babs:
                 _key: 3
                 isi:
                   _type: referenceText
-                  references:
-                    - start: 89
-                      end: 97
-                      node:
-                        _key: 2
-                        parentPasal: *ref_18
-                        _structureType: ayat
-                    - start: 76
-                      end: 84
-                      node:
-                        _key: 1
-                        parentPasal: *ref_18
-                        _structureType: ayat
+                  references: []
                   text: >-
                     Penyelenggaraan informasi Kekarantinaan Kesehatan
                     sebagaimana dimaksud pada ayat (1) dan ayat (2) dilaksanakan
@@ -3751,22 +2992,7 @@ babs:
                         _type: points
                         _description:
                           _type: referenceText
-                          references:
-                            - start: 49
-                              end: 57
-                              node:
-                                _key: 2
-                                parentPasal: &ref_19
-                                  _key: 82
-                                  parentDocument: *ref_0
-                                  _structureType: pasal
-                                _structureType: ayat
-                            - start: 36
-                              end: 44
-                              node:
-                                _key: 1
-                                parentPasal: *ref_19
-                                _structureType: ayat
+                          references: []
                           text: >-
                             Pembinaan sebagaimana dimaksud pada ayat (1) dan
                             ayat (2) diarahkan untuk:
@@ -3804,19 +3030,7 @@ babs:
                       _key: 4
                       isi:
                         _type: referenceText
-                        references:
-                          - start: 81
-                            end: 89
-                            node:
-                              _key: 2
-                              parentPasal: *ref_19
-                              _structureType: ayat
-                          - start: 68
-                            end: 76
-                            node:
-                              _key: 1
-                              parentPasal: *ref_19
-                              _structureType: ayat
+                        references: []
                         text: >-
                           Ketentuan lebih lanjut mengenai pembinaan sebagaimana
                           dimaksud pada ayat (1) dan ayat (2) diatur dengan
@@ -3855,16 +3069,7 @@ babs:
                       _key: 3
                       isi:
                         _type: referenceText
-                        references:
-                          - start: 69
-                            end: 77
-                            node:
-                              _key: 1
-                              parentPasal:
-                                _key: 83
-                                parentDocument: *ref_0
-                                _structureType: pasal
-                              _structureType: ayat
+                        references: []
                         text: >-
                           Ketentuan lebih lanjut mengenai pengawasan sebagaimana
                           dimaksud pada ayat (1) diatur dengan Peraturan
@@ -4032,16 +3237,7 @@ babs:
           _key: 90
           isi:
             _type: referenceText
-            references:
-              - start: 192
-                end: 209
-                node:
-                  parentPasal:
-                    parentDocument: *ref_0
-                    _key: 19
-                    _structureType: pasal
-                  _key: 3
-                  _structureType: ayat
+            references: []
             text: >-
               Nakhoda yang menurunkan atau menaikkan orang dan/atau Barang
               sebelum memperoleh Persetujuan Karantina Kesehatan berdasarkan
@@ -4055,16 +3251,7 @@ babs:
           _key: 91
           isi:
             _type: referenceText
-            references:
-              - start: 201
-                end: 218
-                node:
-                  parentPasal:
-                    parentDocument: *ref_0
-                    _key: 30
-                    _structureType: pasal
-                  _key: 1
-                  _structureType: ayat
+            references: []
             text: >-
               Kapten Penerbang yang menurunkan atau menaikkan orang dan/atau
               Barang sebelum memperoleh Persetujuan Karantina Kesehatan
@@ -4079,16 +3266,7 @@ babs:
           _key: 92
           isi:
             _type: referenceText
-            references:
-              - start: 159
-                end: 176
-                node:
-                  parentPasal:
-                    parentDocument: *ref_0
-                    _key: 35
-                    _structureType: pasal
-                  _key: 2
-                  _structureType: ayat
+            references: []
             text: >-
               Pengemudi Kendaraan Darat yang menurunkan atau menaikkan orang
               dan/atau Barang sebelum dilakukan pengawasan Kekarantinaan
@@ -4101,16 +3279,7 @@ babs:
           _key: 93
           isi:
             _type: referenceText
-            references:
-              - start: 100
-                end: 116
-                node:
-                  parentPasal:
-                    parentDocument: *ref_0
-                    _key: 9
-                    _structureType: pasal
-                  _key: 1
-                  _structureType: ayat
+            references: []
             text: >-
               Setiap orang yang tidak mematuhi penyelenggaraan Kekarantinaan
               Kesehatan sebagaimana dimaksud dalam Pasal 9 ayat (1) dan/atau
@@ -4127,25 +3296,7 @@ babs:
                 _key: 1
                 isi:
                   _type: referenceText
-                  references:
-                    - start: 51
-                      end: 59
-                      node:
-                        _key: 90
-                        parentDocument: *ref_0
-                        _structureType: pasal
-                    - start: 61
-                      end: 69
-                      node:
-                        _key: 91
-                        parentDocument: *ref_0
-                        _structureType: pasal
-                    - start: 75
-                      end: 83
-                      node:
-                        _key: 92
-                        parentDocument: *ref_0
-                        _structureType: pasal
+                  references: []
                   text: >-
                     Dalam hal tindak pidana sebagaimana dimaksud dalam Pasal 90,
                     Pasal 91, dan Pasal 92 dilakukan oleh korporasi
@@ -4208,19 +3359,7 @@ babs:
                 _key: 4
                 isi:
                   _type: referenceText
-                  references:
-                    - start: 114
-                      end: 130
-                      node:
-                        _key: a
-                        parentPoints:
-                          _key: 3
-                          parentPasal:
-                            _key: 94
-                            parentDocument: *ref_0
-                            _structureType: pasal
-                          _structureType: ayat
-                        _structureType: point
+                  references: []
                   text: >-
                     Dalam hal tindak pidana dilakukan atau diperintahkan oleh
                     personel pengendali korporasi sebagaimana dimaksud pada ayat
