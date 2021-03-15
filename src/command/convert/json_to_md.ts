@@ -218,7 +218,7 @@ function amendUpdatePasalPointToMd(
     .split('\n')
     .map((str) => `        > ${str}`)
     .join('\n');
-  return `* ${description.text}\n        >\n         > Pasal ${_pasalKey}\n\n${isiMd}`;
+  return `* ${description.text}\n        >\n        > Pasal ${_pasalKey}\n\n${isiMd}`;
 }
 
 function amendInsertPasalPointToMd(_: DocumentNode, amendPoint: AmendInsertPasalPoint): string {
