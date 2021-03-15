@@ -13,6 +13,8 @@ export type DataType =
   | 'pdf'
   | 'normalized-pdf'
   | 'pdf-data'
+  | 'pdf-detect'
+  | 'normalized-pdf-detect'
   | 'text'
   | 'json'
   | 'yaml'
@@ -27,6 +29,8 @@ function getDataTypeExtensionStr(dataType: DataType): string {
   if (dataType === 'pdf') return 'pdf';
   if (dataType === 'normalized-pdf') return 'pdf';
   if (dataType === 'pdf-data') return 'json';
+  if (dataType === 'pdf-detect') return 'json';
+  if (dataType === 'normalized-pdf-detect') return 'json';
   if (dataType === 'text') return 'txt';
   if (dataType === 'json') return 'json';
   if (dataType === 'yaml') return 'yaml';

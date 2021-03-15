@@ -4817,9 +4817,54 @@ babs:
                                 Wilayah Pesisir dan Pulau-Pulau Kecil
                                 sebagaimana dimaksud dalam Pasal 7, Pasal 7A,
                                 dan Pasal 7B diatur dalam Peraturan Pemerintah.
-                                Pasal 8 dihapus. Pasal 9 dihapus. Pasal 10
-                                dihapus. Pasal 11 dihapus. Pasal 12 dihapus.
-                                Pasal 13 dihapus.
+                          - _type: amendPoint
+                            _nomorKey: 4
+                            _operation: delete
+                            _pasalKey: '8'
+                            isi:
+                              _type: referenceText
+                              references: []
+                              text: 4. Pasal 8 dihapus.
+                          - _type: amendPoint
+                            _nomorKey: 5
+                            _operation: delete
+                            _pasalKey: '9'
+                            isi:
+                              _type: referenceText
+                              references: []
+                              text: 5. Pasal 9 dihapus.
+                          - _type: amendPoint
+                            _nomorKey: 6
+                            _operation: delete
+                            _pasalKey: '10'
+                            isi:
+                              _type: referenceText
+                              references: []
+                              text: 6. Pasal 10 dihapus.
+                          - _type: amendPoint
+                            _nomorKey: 7
+                            _operation: delete
+                            _pasalKey: '11'
+                            isi:
+                              _type: referenceText
+                              references: []
+                              text: 7. Pasal 11 dihapus.
+                          - _type: amendPoint
+                            _nomorKey: 8
+                            _operation: delete
+                            _pasalKey: '12'
+                            isi:
+                              _type: referenceText
+                              references: []
+                              text: 8. Pasal 12 dihapus.
+                          - _type: amendPoint
+                            _nomorKey: 9
+                            _operation: delete
+                            _pasalKey: '13'
+                            isi:
+                              _type: referenceText
+                              references: []
+                              text: 9. Pasal 13 dihapus.
                           - _type: amendPoint
                             _nomorKey: 10
                             _operation: delete

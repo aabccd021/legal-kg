@@ -496,10 +496,10 @@
     "id": 61
   },
   {
-    "xL": 193.44,
+    "xL": 166.08,
     "xR": 287.0401,
     "y": 337.67999999999995,
-    "str": "Perusahaan adalah :",
+    "str": "6. Perusahaan adalah :",
     "pageNum": 3,
     "id": 62
   },
@@ -560,10 +560,10 @@
     "id": 69
   },
   {
-    "xL": 193.44,
+    "xL": 166.08,
     "xR": 555.36024,
     "y": 503.28,
-    "str": "Perencanaan tenaga kerja adalah proses penyusunan rencana",
+    "str": "7. Perencanaan tenaga kerja adalah proses penyusunan rencana",
     "pageNum": 3,
     "id": 70
   },
@@ -592,10 +592,10 @@
     "id": 73
   },
   {
-    "xL": 193.44,
+    "xL": 166.08,
     "xR": 555.3601,
     "y": 586.0799999999999,
-    "str": "Informasi ketenagakerjaan adalah gabungan, rangkaian, dan analisis data",
+    "str": "8. Informasi ketenagakerjaan adalah gabungan, rangkaian, dan analisis data",
     "pageNum": 3,
     "id": 74
   },
@@ -616,10 +616,10 @@
     "id": 76
   },
   {
-    "xL": 193.44,
+    "xL": 166.08,
     "xR": 554.64012,
     "y": 648.24,
-    "str": "Pelatihan kerja adalah keseluruhan kegiatan untuk memberi, memperoleh,",
+    "str": "9. Pelatihan kerja adalah keseluruhan kegiatan untuk memberi, memperoleh,",
     "pageNum": 3,
     "id": 77
   },
@@ -857,9 +857,9 @@
   },
   {
     "xL": 193.44,
-    "xR": 252.7203,
+    "xR": 253.68,
     "y": 586.0799999999999,
-    "str": "Tahun 1945.",
+    "str": "Tahun 1945. 5.",
     "pageNum": 4,
     "id": 107
   },

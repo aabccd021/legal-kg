@@ -82,166 +82,312 @@ babs:
                     - _type: alphaPoint
                       _key: c
                       isi:
-                        _type: points
-                        _description:
-                          _type: referenceText
-                          references: []
-                          text: >-
-                            orang perseorangan, persekutuan, atau badan hukum
-                            yang berada di Indonesia mewakili perusahaan
-                            sebagaimana dimaksud dalam huruf a dan b yang
-                            berkedudukan di luar wilayah Indonesia. Perusahaan
-                            adalah :
-                        isi:
-                          - _type: alphaPoint
-                            _key: a
-                            isi:
-                              _type: referenceText
-                              references: []
-                              text: >-
-                                setiap bentuk usaha yang berbadan hukum atau
-                                tidak, milik orang perseorangan, milik
-                                persekutuan, atau milik badan hukum, baik milik
-                                swasta maupun milik negara yang mempekerjakan
-                                pekerja/buruh dengan membayar upah atau imbalan
-                                dalam bentuk lain:
-                          - _type: alphaPoint
-                            _key: b
-                            isi:
-                              _type: referenceText
-                              references: []
-                              text: >-
-                                usaha-usaha sosial dan usaha-usaha lain yang
-                                mempunyai pengurus dan mempekerjakan orang lain
-                                dengan membayar upah atau imbalan dalam bentuk
-                                lain. Perencanaan tenaga kerja adalah proses
-                                penyusunan rencana ketenagakerjaan secara
-                                sistematis yang dijadikan dasar dan acuan dalam
-                                penyusunan kebijakan, strategi, dan pelaksanaan
-                                program pembangunan ketenagakerjaan yang
-                                berkesinambungan. Informasi ketenagakerjaan
-                                adalah gabungan, rangkaian, dan analisis data
-                                yang berbentuk angka yang telah diolah, naskah
-                                dan dokumen yang mempunyai arti, nilai dan makna
-                                tertentu mengenai ketenagakerjaan. Pelatihan
-                                kerja adalah keseluruhan kegiatan untuk memberi,
-                                memperoleh, meningkatkan, serta mengembangkan
-                                kompetensi kerja, produktivitas, disiplin,
-                                sikap, dan etos kerja pada tingkat keterampilan
-                                dan keahlian tertentu sesuai dengan jenjang dan
-                                kualifikasi jabatan atau pekerjaan. 10.
-                                Kompetensi kerja adalah kemampuan kerja setiap
-                                individu yang mencakup aspek pengetahuan,
-                                keterampilan, dan sikap kerja yang sesuai dengan
-                                standar yang ditetapkan. 11. Pemagangan adalah
-                                bagian dari sistem pelatihan kerja yang
-                                diselenggarakan secara terpadu antara pelatihan
-                                di lembaga pelatihan dengan bekerja secara
-                                langsung di bawah bimbingan dan pengawasan
-                                instruktur atau pekerja/buruh yang lebih
-                                berpengalaman, dalam proses produksi barang
-                                dan/atau jasa di perusahaan, dalam rangka
-                                menguasai keterampilan atau keahlian tertentu.
-                                12. Pelayanan penempatan tenaga kerja adalah
-                                kegiatan untuk mempertemukan tenaga kerja dengan
-                                pemberi kerja, sehingga tenaga kerja dapat
-                                memperoleh pekerjaan yang sesuai dengan bakat,
-                                minat, dan kemampuannya, dan pemberi kerja dapat
-                                memperoleh tenaga kerja yang sesuai dengan
-                                kebutuhannya. 13. Tenaga kerja asing adalah
-                                warga negara asing pemegang visa dengan maksud
-                                bekerja di wilayah Indonesia. 14. Perjanjian
-                                kerja adalah perjanjian antara pekerja/buruh
-                                dengan pengusaha atau pemberi kerja yang memuat
-                                syarat syarat kerja, hak, dan kewajiban para
-                                pihak. 15. Hubungan kerja adalah hubungan antara
-                                pengusaha dengan pekerja/buruh berdasarkan
-                                perjanjian kerja, yang mempunyai unsur
-                                pekerjaan, upah, dan perintah. 16. Hubungan
-                                industrial adalah suatu sistem hubungan yang
-                                terbentuk antara para pelaku dalam proses
-                                produksi barang dan/atau jasa yang terdiri dari
-                                unsur pengusaha, pekerja/buruh, dan pemerintah
-                                yang didasarkan pada nilai nilai Pancasila dan
-                                Undang Undang Dasar Negara Republik Indonesia
-                                Tahun 1945. 17. Serikat pekerja/serikat buruh
-                                adalah organisasi yang dibentuk dari, oleh, dan
-                                untuk pekerja/buruh baik di perusahaan maupun di
-                                luar perusahaan, yang bersifat bebas, terbuka,
-                                mandiri, demokratis, dan bertanggung jawab guna
-                                memperjuangkan, membela serta melindungi hak dan
-                                kepentingan pekerja/buruh serta meningkatkan
-                                kesejahteraan pekerja/buruh dan keluarganya. 18.
-                                Lembaga kerja sama bipartit adalah forum
-                                komunikasi dan konsultasi mengenai hal-hal yang
-                                berkaitan dengan hubungan industrial di satu
-                                perusahaan yang anggotanya terdiri dari
-                                pengusaha dan serikat pekerja/ serikat buruh
-                                yang sudah tercatat instansi yang bertanggung
-                                jawab di bidang ketenagakerjaan atau unsur
-                                pekerja/buruh. 19. Lembaga kerja sama tripartit
-                                adalah forum komunikasi, konsultasi dan
-                                musyawarah tentang masalah ketenagakerjaan yang
-                                anggotanya terdiri dari unsur organisasi
-                                pengusaha, serikat pekerja/serikat buruh, dan
-                                pemerintah. 20. Peraturan perusahaan adalah
-                                peraturan yang dibuat secara tertulis oleh
-                                pengusaha yang memuat syarat syarat kerja dan
-                                tata tertib perusahaan. 21. Perjanjian kerja
-                                bersama adalah perjanjian yang merupakan hasil
-                                perundingan antara serikat pekerja/serikat buruh
-                                atau beberapa serikat pekerja/serikat buruh yang
-                                tercatat pada instansi yang bertanggung jawab di
-                                bidang ketenagakerjaan dengan pengusaha, atau
-                                beberapa pengusaha atau perkumpulan pengusaha
-                                yang memuat syarat syarat kerja, hak dan
-                                kewajiban kedua belah pihak. 22. Perselisihan
-                                hubungan industrial adalah perbedaan pendapat
-                                yang mengakibatkan pertentangan antara pengusaha
-                                atau gabungan pengusaha dengan pekerja/buruh
-                                atau serikat pekerja/serikat buruh karena adanya
-                                perselisihan mengenai hak, perselisihan
-                                kepentingan, dan perselisihan pemutusan hubungan
-                                kerja serta perselisihan antar serikat
-                                pekerja/serikat buruh hanya dalam satu
-                                perusahaan. 23. Mogok kerja adalah tindakan
-                                pekerja/buruh yang direncanakan dan dilaksanakan
-                                secara bersama-sama dan/atau oleh serikat
-                                pekerja/serikat buruh untuk menghentikan atau
-                                memperlambat pekerjaan. 24. Penutupan perusahaan
-                                (lock out) adalah tindakan pengusaha untuk
-                                menolak pekerja/buruh seluruhnya atau sebagian
-                                untuk menjalankan pekerjaan. 25. Pemutusan
-                                hubungan kerja adalah pengakhiran hubungan kerja
-                                karena suatu hal tertentu yang mengakibatkan
-                                berakhirnya hak dan kewajiban antara
-                                pekerja/buruh dan pengusaha. 26. Anak adalah
-                                setiap orang yang berumur dibawah 18 (delapan
-                                belas) tahun. 27. Siang hari adalah waktu antara
-                                pukul 06.00 sampai dengan pukul 18.00. 28. 1
-                                (satu) hari adalah waktu selama 24 (dua puluh
-                                empat) jam. 29. Seminggu adalah waktu selama 7
-                                (tujuh) hari. 30. Upah adalah hak pekerja/buruh
-                                yang diterima dan dinyatakan dalam bentuk uang
-                                sebagai imbalan dari pengusaha atau pemberi
-                                kerja kepada pekerja/buruh yang ditetapkan dan
-                                dibayarkan menurut suatu perjanjian kerja,
-                                kesepakatan, atau peraturan perundang undangan,
-                                termasuk tunjangan bagi pekerja/buruh dan
-                                keluarganya atas suatu pekerjaan dan/atau jasa
-                                yang telah atau akan dilakukan. 31.
-                                Kesejahteraan pekerja/buruh adalah suatu
-                                pemenuhan kebutuhan dan/atau keperluan yang
-                                bersifat jasmaniah dan rohaniah, baik di dalam
-                                maupun di luar hubungan kerja, yang secara
-                                langsung atau tidak langsung dapat mempertinggi
-                                produktivitas kerja dalam lingkungan kerja yang
-                                aman dan sehat. 32. Pengawasan ketenagakerjaan
-                                adalah kegiatan mengawasi dan menegakkan
-                                pelaksanaan peraturan perundang undangan di
-                                bidang ketenagakerjaan. 33. Menteri adalah
-                                menteri yang bertanggung jawab di bidang
-                                ketenagakerjaan.
+                        _type: referenceText
+                        references: []
+                        text: >-
+                          orang perseorangan, persekutuan, atau badan hukum yang
+                          berada di Indonesia mewakili perusahaan sebagaimana
+                          dimaksud dalam huruf a dan b yang berkedudukan di luar
+                          wilayah Indonesia.
+              - _type: numPoint
+                _key: '6'
+                isi:
+                  _type: points
+                  _description:
+                    _type: referenceText
+                    references: []
+                    text: 'Perusahaan adalah :'
+                  isi:
+                    - _type: alphaPoint
+                      _key: a
+                      isi:
+                        _type: referenceText
+                        references: []
+                        text: >-
+                          setiap bentuk usaha yang berbadan hukum atau tidak,
+                          milik orang perseorangan, milik persekutuan, atau
+                          milik badan hukum, baik milik swasta maupun milik
+                          negara yang mempekerjakan pekerja/buruh dengan
+                          membayar upah atau imbalan dalam bentuk lain:
+                    - _type: alphaPoint
+                      _key: b
+                      isi:
+                        _type: referenceText
+                        references: []
+                        text: >-
+                          usaha-usaha sosial dan usaha-usaha lain yang mempunyai
+                          pengurus dan mempekerjakan orang lain dengan membayar
+                          upah atau imbalan dalam bentuk lain.
+              - _type: numPoint
+                _key: '7'
+                isi:
+                  _type: referenceText
+                  references: []
+                  text: >-
+                    Perencanaan tenaga kerja adalah proses penyusunan rencana
+                    ketenagakerjaan secara sistematis yang dijadikan dasar dan
+                    acuan dalam penyusunan kebijakan, strategi, dan pelaksanaan
+                    program pembangunan ketenagakerjaan yang berkesinambungan.
+              - _type: numPoint
+                _key: '8'
+                isi:
+                  _type: referenceText
+                  references: []
+                  text: >-
+                    Informasi ketenagakerjaan adalah gabungan, rangkaian, dan
+                    analisis data yang berbentuk angka yang telah diolah, naskah
+                    dan dokumen yang mempunyai arti, nilai dan makna tertentu
+                    mengenai ketenagakerjaan.
+              - _type: numPoint
+                _key: '9'
+                isi:
+                  _type: referenceText
+                  references: []
+                  text: >-
+                    Pelatihan kerja adalah keseluruhan kegiatan untuk memberi,
+                    memperoleh, meningkatkan, serta mengembangkan kompetensi
+                    kerja, produktivitas, disiplin, sikap, dan etos kerja pada
+                    tingkat keterampilan dan keahlian tertentu sesuai dengan
+                    jenjang dan kualifikasi jabatan atau pekerjaan.
+              - _type: numPoint
+                _key: '10'
+                isi:
+                  _type: referenceText
+                  references: []
+                  text: >-
+                    Kompetensi kerja adalah kemampuan kerja setiap individu yang
+                    mencakup aspek pengetahuan, keterampilan, dan sikap kerja
+                    yang sesuai dengan standar yang ditetapkan.
+              - _type: numPoint
+                _key: '11'
+                isi:
+                  _type: referenceText
+                  references: []
+                  text: >-
+                    Pemagangan adalah bagian dari sistem pelatihan kerja yang
+                    diselenggarakan secara terpadu antara pelatihan di lembaga
+                    pelatihan dengan bekerja secara langsung di bawah bimbingan
+                    dan pengawasan instruktur atau pekerja/buruh yang lebih
+                    berpengalaman, dalam proses produksi barang dan/atau jasa di
+                    perusahaan, dalam rangka menguasai keterampilan atau
+                    keahlian tertentu.
+              - _type: numPoint
+                _key: '12'
+                isi:
+                  _type: referenceText
+                  references: []
+                  text: >-
+                    Pelayanan penempatan tenaga kerja adalah kegiatan untuk
+                    mempertemukan tenaga kerja dengan pemberi kerja, sehingga
+                    tenaga kerja dapat memperoleh pekerjaan yang sesuai dengan
+                    bakat, minat, dan kemampuannya, dan pemberi kerja dapat
+                    memperoleh tenaga kerja yang sesuai dengan kebutuhannya.
+              - _type: numPoint
+                _key: '13'
+                isi:
+                  _type: referenceText
+                  references: []
+                  text: >-
+                    Tenaga kerja asing adalah warga negara asing pemegang visa
+                    dengan maksud bekerja di wilayah Indonesia.
+              - _type: numPoint
+                _key: '14'
+                isi:
+                  _type: referenceText
+                  references: []
+                  text: >-
+                    Perjanjian kerja adalah perjanjian antara pekerja/buruh
+                    dengan pengusaha atau pemberi kerja yang memuat syarat
+                    syarat kerja, hak, dan kewajiban para pihak.
+              - _type: numPoint
+                _key: '15'
+                isi:
+                  _type: referenceText
+                  references: []
+                  text: >-
+                    Hubungan kerja adalah hubungan antara pengusaha dengan
+                    pekerja/buruh berdasarkan perjanjian kerja, yang mempunyai
+                    unsur pekerjaan, upah, dan perintah.
+              - _type: numPoint
+                _key: '16'
+                isi:
+                  _type: referenceText
+                  references: []
+                  text: >-
+                    Hubungan industrial adalah suatu sistem hubungan yang
+                    terbentuk antara para pelaku dalam proses produksi barang
+                    dan/atau jasa yang terdiri dari unsur pengusaha,
+                    pekerja/buruh, dan pemerintah yang didasarkan pada nilai
+                    nilai Pancasila dan Undang Undang Dasar Negara Republik
+                    Indonesia Tahun 1945. 5.
+              - _type: numPoint
+                _key: '17'
+                isi:
+                  _type: referenceText
+                  references: []
+                  text: >-
+                    Serikat pekerja/serikat buruh adalah organisasi yang
+                    dibentuk dari, oleh, dan untuk pekerja/buruh baik di
+                    perusahaan maupun di luar perusahaan, yang bersifat bebas,
+                    terbuka, mandiri, demokratis, dan bertanggung jawab guna
+                    memperjuangkan, membela serta melindungi hak dan kepentingan
+                    pekerja/buruh serta meningkatkan kesejahteraan pekerja/buruh
+                    dan keluarganya.
+              - _type: numPoint
+                _key: '18'
+                isi:
+                  _type: referenceText
+                  references: []
+                  text: >-
+                    Lembaga kerja sama bipartit adalah forum komunikasi dan
+                    konsultasi mengenai hal-hal yang berkaitan dengan hubungan
+                    industrial di satu perusahaan yang anggotanya terdiri dari
+                    pengusaha dan serikat pekerja/ serikat buruh yang sudah
+                    tercatat instansi yang bertanggung jawab di bidang
+                    ketenagakerjaan atau unsur pekerja/buruh.
+              - _type: numPoint
+                _key: '19'
+                isi:
+                  _type: referenceText
+                  references: []
+                  text: >-
+                    Lembaga kerja sama tripartit adalah forum komunikasi,
+                    konsultasi dan musyawarah tentang masalah ketenagakerjaan
+                    yang anggotanya terdiri dari unsur organisasi pengusaha,
+                    serikat pekerja/serikat buruh, dan pemerintah.
+              - _type: numPoint
+                _key: '20'
+                isi:
+                  _type: referenceText
+                  references: []
+                  text: >-
+                    Peraturan perusahaan adalah peraturan yang dibuat secara
+                    tertulis oleh pengusaha yang memuat syarat syarat kerja dan
+                    tata tertib perusahaan.
+              - _type: numPoint
+                _key: '21'
+                isi:
+                  _type: referenceText
+                  references: []
+                  text: >-
+                    Perjanjian kerja bersama adalah perjanjian yang merupakan
+                    hasil perundingan antara serikat pekerja/serikat buruh atau
+                    beberapa serikat pekerja/serikat buruh yang tercatat pada
+                    instansi yang bertanggung jawab di bidang ketenagakerjaan
+                    dengan pengusaha, atau beberapa pengusaha atau perkumpulan
+                    pengusaha yang memuat syarat syarat kerja, hak dan kewajiban
+                    kedua belah pihak.
+              - _type: numPoint
+                _key: '22'
+                isi:
+                  _type: referenceText
+                  references: []
+                  text: >-
+                    Perselisihan hubungan industrial adalah perbedaan pendapat
+                    yang mengakibatkan pertentangan antara pengusaha atau
+                    gabungan pengusaha dengan pekerja/buruh atau serikat
+                    pekerja/serikat buruh karena adanya perselisihan mengenai
+                    hak, perselisihan kepentingan, dan perselisihan pemutusan
+                    hubungan kerja serta perselisihan antar serikat
+                    pekerja/serikat buruh hanya dalam satu perusahaan.
+              - _type: numPoint
+                _key: '23'
+                isi:
+                  _type: referenceText
+                  references: []
+                  text: >-
+                    Mogok kerja adalah tindakan pekerja/buruh yang direncanakan
+                    dan dilaksanakan secara bersama-sama dan/atau oleh serikat
+                    pekerja/serikat buruh untuk menghentikan atau memperlambat
+                    pekerjaan.
+              - _type: numPoint
+                _key: '24'
+                isi:
+                  _type: referenceText
+                  references: []
+                  text: >-
+                    Penutupan perusahaan (lock out) adalah tindakan pengusaha
+                    untuk menolak pekerja/buruh seluruhnya atau sebagian untuk
+                    menjalankan pekerjaan.
+              - _type: numPoint
+                _key: '25'
+                isi:
+                  _type: referenceText
+                  references: []
+                  text: >-
+                    Pemutusan hubungan kerja adalah pengakhiran hubungan kerja
+                    karena suatu hal tertentu yang mengakibatkan berakhirnya hak
+                    dan kewajiban antara pekerja/buruh dan pengusaha.
+              - _type: numPoint
+                _key: '26'
+                isi:
+                  _type: referenceText
+                  references: []
+                  text: >-
+                    Anak adalah setiap orang yang berumur dibawah 18 (delapan
+                    belas) tahun.
+              - _type: numPoint
+                _key: '27'
+                isi:
+                  _type: referenceText
+                  references: []
+                  text: >-
+                    Siang hari adalah waktu antara pukul 06.00 sampai dengan
+                    pukul 18.00.
+              - _type: numPoint
+                _key: '28'
+                isi:
+                  _type: referenceText
+                  references: []
+                  text: 1 (satu) hari adalah waktu selama 24 (dua puluh empat) jam.
+              - _type: numPoint
+                _key: '29'
+                isi:
+                  _type: referenceText
+                  references: []
+                  text: Seminggu adalah waktu selama 7 (tujuh) hari.
+              - _type: numPoint
+                _key: '30'
+                isi:
+                  _type: referenceText
+                  references: []
+                  text: >-
+                    Upah adalah hak pekerja/buruh yang diterima dan dinyatakan
+                    dalam bentuk uang sebagai imbalan dari pengusaha atau
+                    pemberi kerja kepada pekerja/buruh yang ditetapkan dan
+                    dibayarkan menurut suatu perjanjian kerja, kesepakatan, atau
+                    peraturan perundang undangan, termasuk tunjangan bagi
+                    pekerja/buruh dan keluarganya atas suatu pekerjaan dan/atau
+                    jasa yang telah atau akan dilakukan.
+              - _type: numPoint
+                _key: '31'
+                isi:
+                  _type: referenceText
+                  references: []
+                  text: >-
+                    Kesejahteraan pekerja/buruh adalah suatu pemenuhan kebutuhan
+                    dan/atau keperluan yang bersifat jasmaniah dan rohaniah,
+                    baik di dalam maupun di luar hubungan kerja, yang secara
+                    langsung atau tidak langsung dapat mempertinggi
+                    produktivitas kerja dalam lingkungan kerja yang aman dan
+                    sehat.
+              - _type: numPoint
+                _key: '32'
+                isi:
+                  _type: referenceText
+                  references: []
+                  text: >-
+                    Pengawasan ketenagakerjaan adalah kegiatan mengawasi dan
+                    menegakkan pelaksanaan peraturan perundang undangan di
+                    bidang ketenagakerjaan.
+              - _type: numPoint
+                _key: '33'
+                isi:
+                  _type: referenceText
+                  references: []
+                  text: >-
+                    Menteri adalah menteri yang bertanggung jawab di bidang
+                    ketenagakerjaan.
   - _type: bab
     _key: 2
     _judul: LANDASAN, ASAS, DAN TUJUAN

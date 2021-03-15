@@ -3,7 +3,7 @@ import { DocumentNode } from '../legal/document/index';
 import { writeFileSync } from 'fs';
 import { PDFExtract, PDFExtractPage, PDFExtractText } from 'pdf.js-extract';
 import { getDocumentData, getDocumentFilePath } from '../data';
-import { chain, curry, isUndefined, isEmpty, filter } from 'lodash';
+import { chain, curry, isUndefined, isEmpty, filter, zip } from 'lodash';
 import { bothFilter, neverNum, Span } from '../util';
 
 const pdfExtract = new PDFExtract();
@@ -16,14 +16,37 @@ async function normalizedPdfToPdfData(): Promise<void> {
 }
 
 async function toPdfJson(pdfNode: DocumentNode): Promise<void> {
-  console.log('jtart', pdfNode);
-  const pdfFile = getDocumentFilePath(pdfNode, 'normalized-pdf');
+  console.log('start', pdfNode);
+  const pdfFile = getDocumentFilePath(pdfNode, 'pdf');
+  const normalizedPdfFile = getDocumentFilePath(pdfNode, 'normalized-pdf');
   const jsonFile = getDocumentFilePath(pdfNode, 'pdf-data');
   const { pages } = await pdfExtract.extract(pdfFile.path);
-  const cleanPages: Span[] = pages
+  const { pages: normalizedPages } = await pdfExtract.extract(normalizedPdfFile.path);
+  const mergedPages = chain(zip(pages, normalizedPages)).map(mergePage).compact().value();
+  const cleanPages: Span[] = mergedPages
     .flatMap(toPageWithoutNoise)
     .map((span, index) => ({ ...span, id: index }));
   writeFileSync(jsonFile.path, JSON.stringify(cleanPages, undefined, 2));
+}
+
+function mergePage(
+  pages: [PDFExtractPage | undefined, PDFExtractPage | undefined]
+): PDFExtractPage | undefined {
+  const [page0, page1] = pages;
+  if (isUndefined(page0) || isUndefined(page1)) return undefined;
+  const candidates = page0.content.filter(
+    (text0) =>
+      /^[0-9]+\.\s?$/.test(text0.str) &&
+      text0.str.split('.')[0] !== '1' &&
+      text0.x < 280 &&
+      page1.content.every((text1) => !hasSamePos(text0, text1))
+  );
+  const newContent = [...page1.content, ...candidates];
+  return { ...page1, content: newContent };
+}
+
+function hasSamePos(text1: PDFExtractText, text2: PDFExtractText): boolean {
+  return Math.abs(text1.x - text2.x) < 5 && Math.abs(text1.y - text2.y) < 5;
 }
 
 /**
