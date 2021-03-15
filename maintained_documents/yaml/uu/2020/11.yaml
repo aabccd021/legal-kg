@@ -895,10 +895,19 @@ babs:
                                 standar dan dapat diakses dengan mudah oleh
                                 masyarakat untuk mendapatkan informasi mengenai
                                 kesesuaian rencana lokasi kegiatan dan/atau
-                                usahanya dengan RDTR. (44 Pemerintah Pusat wajib
-                                mengintegrasikan RDTR dalam bentuk digital
-                                sebagaimana dimaksud pada ayat (2) ke dalam
-                                sistem Perizinan Berusaha secara elektronik. (5)
+                                usahanya dengan RDTR.
+                          - _type: ayat
+                            _key: 4
+                            isi:
+                              _type: referenceText
+                              references: []
+                              text: ' bentuk digital sebagaimana dimaksud pada ayat (2) ke dalam sistem Perizinan Berusaha secara elektronik.'
+                          - _type: ayat
+                            _key: 5
+                            isi:
+                              _type: referenceText
+                              references: []
+                              text: >-
                                 Dalam hal Pelaku Usaha mendapatkan informasi
                                 rencana lokasi kegiatan usahanya sebagaimana
                                 dimaksud pada ayat (3) telah sesuai dengan RDTR,
@@ -908,7 +917,13 @@ babs:
                                 secara elektronik sebagaimana dimaksud pada ayat
                                 (4) dengan mengisi koordinat lokasi yang
                                 diinginkan untuk memperoleh konfirmasi
-                                kesesuaian kegiatan pemanfaatan ruang. (6)
+                                kesesuaian kegiatan pemanfaatan ruang.
+                          - _type: ayat
+                            _key: 6
+                            isi:
+                              _type: referenceText
+                              references: []
+                              text: >-
                                 Setelah memperoleh konfirmasi kesesuaian
                                 kegiatan pemanfaatan ruang sebagaimana dimaksud
                                 pada ayat (5), Pelaku Usaha mengajukan
@@ -37439,11 +37454,17 @@ babs:
                                       ayat (1) mengakibatkan luka berat bagi
                                       orang, pelaku penyelenggara dipidana
                                       dengan pidana penjara paling lama 3 (tiga)
-                                      tahun. (3) Jika tindakan sebagaimana
-                                      dimaksud pada ayat (1) mengakibatkan
-                                      matinya orang, pelaku penyelenggara
-                                      dipidana dengan pidana penjara paling lama
-                                      5 (lima) tahun.
+                                      tahun.
+                                - _type: ayat
+                                  _key: 3
+                                  isi:
+                                    _type: referenceText
+                                    references: []
+                                    text: >-
+                                      Jika tindakan sebagaimana dimaksud pada
+                                      ayat (1) mengakibatkan matinya orang,
+                                      pelaku penyelenggara dipidana dengan
+                                      pidana penjara paling lama 5 (lima) tahun.
                             description:
                               _type: referenceText
                               references: []
@@ -37455,18 +37476,24 @@ babs:
                             _nomorKey: 22
                             _pasalKey: '203'
                             isi:
-                              _type: ayats
-                              ayats:
-                                - _type: ayat
-                                  _key: 3
-                                  isi:
-                                    _type: referenceText
-                                    references: []
-                                    text: >-
-                                      Jika tindakan sebagaimana dimaksud pada
-                                      ayat (1) mengakibatkan kematian orang,
-                                      Awak Sarana Perkeretaapian dipidana dengan
-                                      pidana penjara paling lama 5 (lima) tahun.
+                              _type: referenceText
+                              references: []
+                              text: >-
+                                (1) Awak Sarana Perkeretaapian yang
+                                mengoperasikan sarana perkeretaapian tidak
+                                memiliki sertifikat kecakapan sebagaimana
+                                dimaksud dalam Pasal 116 ayat (1) yang
+                                mengakibatkan kecelakaan kereta api dan/atau
+                                kerugian bagi harta benda dipidana dengan pidana
+                                penjara paling lama 2 (dua) tahun. (2) Jika
+                                tindakan sebagaimana dimaksud pada ayat (1)
+                                mengakibatkan luka berat bagi orang, Awak Sarana
+                                Perkeretaapian dipidana dengan pidana penjara
+                                paling lama 3 (tiga) tahun. REPUBLIK INDONESIA -
+                                388 - (3) Jika tindakan sebagaimana dimaksud
+                                pada ayat (1) mengakibatkan kematian orang, Awak
+                                Sarana Perkeretaapian dipidana dengan pidana
+                                penjara paling lama 5 (lima) tahun.
                             description:
                               _type: referenceText
                               references: []
@@ -37478,27 +37505,41 @@ babs:
                             _nomorKey: 23
                             _pasalKey: '204'
                             isi:
-                              _type: referenceText
-                              references: []
-                              text: >-
-                                (1) Penyelenggara Sarana Perkeretaapian yang
-                                mengoperasikan Sarana Perkeretaapian dengan Awak
-                                Sarana Perkeretaapian yang tidak memiliki
-                                sertifikat tanda kecakapan sebagaimana dimaksud
-                                dalam Pasal 116 ayat (1) yang mengakibatkan
-                                terjadinya kecelakaan dan/atau menimbulkan
-                                korban dipidana dengan pidana penjara paling
-                                lama 1 (satu) tahun dan pidana denda paling
-                                banyak Rp250.000.000,00 (dua ratus lima puluh
-                                juta rupiah). (2) Jika tindakan sebagaimana
-                                dimaksud pada ayat (1) mengakibatkan luka berat
-                                bagi orang, Penyelenggara Sarana Perkeretaapian
-                                dipidana dengan pidana penjara paling lama 3
-                                (tiga) tahun. (3) Jika tindakan sebagaimana
-                                dimaksud pada ayat (1) mengakibatkan kematian
-                                orang, Penyelenggara Sarana Perkeretaapian
-                                dipidana dengan pidana penjara paling lama 5
-                                (lima) tahun.
+                              _type: ayats
+                              ayats:
+                                - _type: ayat
+                                  _key: 1
+                                  isi:
+                                    _type: referenceText
+                                    references: []
+                                    text: >-
+                                      Penyelenggara Sarana Perkeretaapian yang
+                                      mengoperasikan Sarana Perkeretaapian
+                                      dengan Awak Sarana Perkeretaapian yang
+                                      tidak memiliki sertifikat tanda kecakapan
+                                      sebagaimana dimaksud dalam Pasal 116 ayat
+                                      (1) yang mengakibatkan terjadinya
+                                      kecelakaan dan/atau menimbulkan korban
+                                      dipidana dengan pidana penjara paling lama
+                                      1 (satu) tahun dan pidana denda paling
+                                      banyak Rp250.000.000,00 (dua ratus lima
+                                      puluh juta rupiah).
+                                - _type: ayat
+                                  _key: 2
+                                  isi:
+                                    _type: referenceText
+                                    references: []
+                                    text: >-
+                                      Jika tindakan sebagaimana dimaksud pada
+                                      ayat (1) mengakibatkan luka berat bagi
+                                      orang, Penyelenggara Sarana Perkeretaapian
+                                      dipidana dengan pidana penjara paling lama
+                                      3 (tiga) tahun. (3) Jika tindakan
+                                      sebagaimana dimaksud pada ayat (1)
+                                      mengakibatkan kematian orang,
+                                      Penyelenggara Sarana Perkeretaapian
+                                      dipidana dengan pidana penjara paling lama
+                                      5 (lima) tahun.
                             description:
                               _type: referenceText
                               references: []
@@ -46144,14 +46185,26 @@ babs:
                             _nomorKey: 18
                             _pasalKey: '101'
                             isi:
-                              _type: referenceText
-                              references: []
-                              text: >-
-                                (1) Hasil pengawasan dan evaluasi pelaksanaan
-                                Ibadah Umrah digunakan sebagai dasar akreditasi
-                                dan pengenaan sanksi. (2) Ketentuan lebih lanjut
-                                mengenai pengawasan dan evaluasi diatur dalam
-                                Peraturan Pemerintah.
+                              _type: ayats
+                              ayats:
+                                - _type: ayat
+                                  _key: 1
+                                  isi:
+                                    _type: referenceText
+                                    references: []
+                                    text: >-
+                                      Hasil pengawasan dan evaluasi pelaksanaan
+                                      Ibadah Umrah digunakan sebagai dasar
+                                      akreditasi dan pengenaan sanksi.
+                                - _type: ayat
+                                  _key: 2
+                                  isi:
+                                    _type: referenceText
+                                    references: []
+                                    text: >-
+                                      Ketentuan lebih lanjut mengenai pengawasan
+                                      dan evaluasi diatur dalam Peraturan
+                                      Pemerintah.
                             description:
                               _type: referenceText
                               references: []
@@ -67048,20 +67101,26 @@ babs:
               - _type: ayat
                 _key: 4
                 isi:
+                  _type: referenceText
+                  references: []
+                  text: >-
+                    Dalam hal Aparatur Sipil Negara dan profesi bersertifikat
+                    dalam melaksanakan tugasnya menemukan pelanggaran terhadap
+                    ketentuan yang tertuang dalam setiap Perizinan Berusaha yang
+                    dilakukan oleh pemegang Perizinan Berusaha sebagaimana
+                    dimaksud pada ayat (1), Aparatur Sipil Negara sesuai dengan
+                    kewenangannya dapat memberikan sanksi administratif kepada
+                    pemegang Perizinan Berusaha. REPUBLIK INDONESIA - 765 -
+              - _type: ayat
+                _key: 5
+                isi:
                   _type: points
                   _description:
                     _type: referenceText
                     references: []
                     text: >-
-                      Dalam hal Aparatur Sipil Negara dan profesi bersertifikat
-                      dalam melaksanakan tugasnya menemukan pelanggaran terhadap
-                      ketentuan yang tertuang dalam setiap Perizinan Berusaha
-                      yang dilakukan oleh pemegang Perizinan Berusaha
-                      sebagaimana dimaksud pada ayat (1), Aparatur Sipil Negara
-                      sesuai dengan kewenangannya dapat memberikan sanksi
-                      administratif kepada pemegang Perizinan Berusaha. REPUBLIK
-                      INDONESIA - 765 - (5) Sanksi administratif sebagaimana
-                      dimaksud pada ayat (4) dapat berupa:
+                      Sanksi administratif sebagaimana dimaksud pada ayat (4)
+                      dapat berupa:
                   isi:
                     - _type: alphaPoint
                       _key: a
@@ -67100,30 +67159,38 @@ babs:
                       isi:
                         _type: referenceText
                         references: []
-                        text: >-
-                          pencabutan Perizinan Berusaha. (6) Kewenangan
-                          Pemerintah Pusat dalam melaksanakan pengawasan. dan
-                          pembinaan sebagaimana dimaksud pada ayat (1) dan
-                          pengenaan sanksi administratif sebagaimana dimaksud
-                          pada ayat (4) dapat dilimpahkan kepada Pemerintah
-                          Daerah sesuai dengan ketentuan peraturan
-                          perundang-undangan. (7) Ketentuan lebih lanjut
-                          mengenai sanksi administratif lainnya dan tata cara
-                          pengenaan sanksi administratif sebagaimana dimaksud
-                          pada ayat (4) diatur dalam Peraturan Pemerintah.
-        - _type: pasal
-          _key: 178
-          isi:
-            _type: ayats
-            ayats:
+                        text: pencabutan Perizinan Berusaha.
               - _type: ayat
-                _key: 5
+                _key: 6
                 isi:
                   _type: referenceText
                   references: []
                   text: >-
-                    , pemegang Perizinan Berusaha wajib memulihkan kerusakan
-                    lingkungan akibat dari kegiatan/usahanya.
+                    Kewenangan Pemerintah Pusat dalam melaksanakan pengawasan.
+                    dan pembinaan sebagaimana dimaksud pada ayat (1) dan
+                    pengenaan sanksi administratif sebagaimana dimaksud pada
+                    ayat (4) dapat dilimpahkan kepada Pemerintah Daerah sesuai
+                    dengan ketentuan peraturan perundang-undangan.
+              - _type: ayat
+                _key: 7
+                isi:
+                  _type: referenceText
+                  references: []
+                  text: >-
+                    Ketentuan lebih lanjut mengenai sanksi administratif lainnya
+                    dan tata cara pengenaan sanksi administratif sebagaimana
+                    dimaksud pada ayat (4) diatur dalam Peraturan Pemerintah.
+        - _type: pasal
+          _key: 178
+          isi:
+            _type: referenceText
+            references: []
+            text: >-
+              Setiap pemegang Perizinan Berusaha yang dalam melaksanakan
+              kegiatan/usahanya menimbulkan dampak. kerusakan pada lingkungan
+              hidup, selain dikenai sanksi administratif sebagaimana dimaksud
+              dalam Pasal 177 ayat (5), pemegang Perizinan Berusaha wajib
+              memulihkan kerusakan lingkungan akibat dari kegiatan/usahanya.
         - _type: pasal
           _key: 179
           isi:
