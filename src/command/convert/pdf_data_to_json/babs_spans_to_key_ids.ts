@@ -342,16 +342,6 @@ function toKeys(
   if (!isUndefined(newAyatKey) && (newAyatKey === 1 || newAyatKey - 1 === lastAyatKey)) {
     const ayatXlsMean = mean(ayatXls);
     if (isEmpty(ayatXls) || span.xL < ayatXlsMean || span.xL - ayatXlsMean < 9) {
-      if (span.str.startsWith('(1) Dalam hal tindakan')) {
-        console.log('g', newAyatKey, ayatXlsMean, span.xL, span.str);
-      }
-      console.log(
-        'ayat     ',
-        mean([...ayatXls, span.xL]).toFixed(2),
-        span.xL.toFixed(2),
-        span.pageNum,
-        span.str
-      );
       return {
         ...acc,
         ayatKeyOfId: { ...ayatKeyOfId, [span.id]: newAyatKey },
@@ -364,16 +354,6 @@ function toKeys(
   if (!isUndefined(newAyatKey) && (newAyatKey === 1 || newAyatKey - 1 === lastAmendAyatKey)) {
     const amendAyatXlsMean = mean(amendAyatXls);
     if (isEmpty(amendAyatXls) || Math.abs(amendAyatXlsMean - span.xL) < 20) {
-      if (span.str.startsWith('(1) Dalam hal tindakan')) {
-        console.log('r', newAyatKey, amendAyatXlsMean, span.xL, span.str);
-      }
-      console.log(
-        'amendAyat',
-        mean([...amendAyatXls, span.xL]).toFixed(2),
-        span.xL.toFixed(2),
-        span.pageNum,
-        span.str
-      );
       return {
         ...acc,
         amendAyatKeyOfId: { ...amendAyatKeyOfId, [span.id]: newAyatKey },

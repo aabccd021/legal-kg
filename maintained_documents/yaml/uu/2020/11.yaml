@@ -54672,12 +54672,24 @@ babs:
                       _nomorKey: 1
                       _pasalKey: '6'
                       isi:
-                        _type: referenceText
-                        references: []
-                        text: >-
-                          (1) Koperasi Primer dibentuk paling sedikit oleh 9
-                          (sembilan) orang. (2) — Koperasi Sekunder dibentuk
-                          oleh paling sedikit 3 (tiga) Koperasi.
+                        _type: ayats
+                        ayats:
+                          - _type: ayat
+                            _key: 1
+                            isi:
+                              _type: referenceText
+                              references: []
+                              text: >-
+                                Koperasi Primer dibentuk paling sedikit oleh 9
+                                (sembilan) orang.
+                          - _type: ayat
+                            _key: 2
+                            isi:
+                              _type: referenceText
+                              references: []
+                              text: >-
+                                — Koperasi Sekunder dibentuk oleh paling sedikit
+                                3 (tiga) Koperasi.
                       description:
                         _type: referenceText
                         references: []
@@ -57978,14 +57990,31 @@ babs:
                       _nomorKey: 3
                       _pasalKey: '32'
                       isi:
-                        _type: referenceText
-                        references: []
-                        text: >-
-                          (1) Perseroan wajib memiliki modal dasar Perseroan.
-                          (2) Besaran modal dasar Perseroan sebagaimana dimaksud
-                          pada ayat (1) ditentukan berdasarkan keputusan pendiri
-                          Perseroan. (3) Ketentuan lebih lanjut mengenai modal
-                          dasar Perseroan diatur dalam Peraturan Pemerintah.
+                        _type: ayats
+                        ayats:
+                          - _type: ayat
+                            _key: 1
+                            isi:
+                              _type: referenceText
+                              references: []
+                              text: Perseroan wajib memiliki modal dasar Perseroan.
+                          - _type: ayat
+                            _key: 2
+                            isi:
+                              _type: referenceText
+                              references: []
+                              text: >-
+                                Besaran modal dasar Perseroan sebagaimana
+                                dimaksud pada ayat (1) ditentukan berdasarkan
+                                keputusan pendiri Perseroan.
+                          - _type: ayat
+                            _key: 3
+                            isi:
+                              _type: referenceText
+                              references: []
+                              text: >-
+                                Ketentuan lebih lanjut mengenai modal dasar
+                                Perseroan diatur dalam Peraturan Pemerintah.
                       description:
                         _type: referenceText
                         references: []
@@ -58178,56 +58207,72 @@ babs:
                       _nomorKey: 1
                       _pasalKey: '2'
                       isi:
-                        _type: points
-                        _description:
-                          _type: referenceText
-                          references: []
-                          text: '(1) Yang menjadi subjek pajak adalah:'
-                        isi:
-                          - _type: alphaPoint
-                            _key: a
+                        _type: ayats
+                        ayats:
+                          - _type: ayat
+                            _key: 1
                             isi:
                               _type: points
                               _description:
                                 _type: referenceText
                                 references: []
-                                text: ''
+                                text: 'Yang menjadi subjek pajak adalah:'
                               isi:
-                                - _type: numPoint
-                                  _key: '1'
+                                - _type: alphaPoint
+                                  _key: a
+                                  isi:
+                                    _type: points
+                                    _description:
+                                      _type: referenceText
+                                      references: []
+                                      text: ''
+                                    isi:
+                                      - _type: numPoint
+                                        _key: '1'
+                                        isi:
+                                          _type: referenceText
+                                          references: []
+                                          text: orang pribadi, dan
+                                      - _type: numPoint
+                                        _key: '2'
+                                        isi:
+                                          _type: referenceText
+                                          references: []
+                                          text: >-
+                                            warisan yang belum terbagi sebagai satu
+                                            kesatuan menggantikan yang berhak,
+                                - _type: alphaPoint
+                                  _key: b
                                   isi:
                                     _type: referenceText
                                     references: []
-                                    text: orang pribadi, dan
-                                - _type: numPoint
-                                  _key: '2'
+                                    text: 'badan: dan'
+                                - _type: alphaPoint
+                                  _key: c
                                   isi:
                                     _type: referenceText
                                     references: []
                                     text: >-
-                                      warisan yang belum terbagi sebagai satu
-                                      kesatuan menggantikan yang berhak,
-                          - _type: alphaPoint
-                            _key: b
+                                      bentuk usaha tetap. (la) Bentuk usaha
+                                      tetap merupakan subjek pajak yang
+                                      perlakuan perpajakannya dipersamakan
+                                      dengan subjek pajak badan.
+                          - _type: ayat
+                            _key: 2
                             isi:
                               _type: referenceText
                               references: []
-                              text: 'badan: dan'
-                          - _type: alphaPoint
-                            _key: c
+                              text: >-
+                                Subjek pajak dibedakan menjadi subjek pajak
+                                dalam negeri dan subjek pajak luar negeri.
+                          - _type: ayat
+                            _key: 3
                             isi:
                               _type: points
                               _description:
                                 _type: referenceText
                                 references: []
-                                text: >-
-                                  bentuk usaha tetap. (la) Bentuk usaha tetap
-                                  merupakan subjek pajak yang perlakuan
-                                  perpajakannya dipersamakan dengan subjek pajak
-                                  badan. (2) Subjek pajak dibedakan menjadi
-                                  subjek pajak dalam negeri dan subjek pajak
-                                  luar negeri. (3) — Subjek pajak dalam negeri
-                                  adalah:
+                                text: '— Subjek pajak dalam negeri adalah:'
                               isi:
                                 - _type: alphaPoint
                                   _key: a
@@ -58315,103 +58360,115 @@ babs:
                                 - _type: alphaPoint
                                   _key: c
                                   isi:
+                                    _type: referenceText
+                                    references: []
+                                    text: >-
+                                      warisan yang belum terbagi sebagai satu
+                                      kesatuan menggantikan yang berhak.
+                          - _type: ayat
+                            _key: 4
+                            isi:
+                              _type: points
+                              _description:
+                                _type: referenceText
+                                references: []
+                                text: 'Subjek pajak luar negeri adalah:'
+                              isi:
+                                - _type: alphaPoint
+                                  _key: a
+                                  isi:
+                                    _type: referenceText
+                                    references: []
+                                    text: >-
+                                      orang pribadi yang tidak bertempat tinggal
+                                      di Indonesia:
+                                - _type: alphaPoint
+                                  _key: b
+                                  isi:
+                                    _type: referenceText
+                                    references: []
+                                    text: >-
+                                      warga negara asing yang berada di
+                                      Indonesia tidak lebih dari 183 (seratus
+                                      delapan puluh tiga) hari dalam jangka
+                                      waktu 12 (dua belas) bulan,
+                                - _type: alphaPoint
+                                  _key: c
+                                  isi:
                                     _type: points
                                     _description:
                                       _type: referenceText
                                       references: []
                                       text: >-
-                                        warisan yang belum terbagi sebagai satu
-                                        kesatuan menggantikan yang berhak. (4)
-                                        Subjek pajak luar negeri adalah:
+                                        . Warga Negara Indonesia yang berada di
+                                        luar Indonesia lebih dari 183 (seratus
+                                        delapan puluh tiga) hari dalam jangka
+                                        waktu 12 (dua belas) bulan serta
+                                        memenuhi persyaratan:
                                     isi:
-                                      - _type: alphaPoint
-                                        _key: a
+                                      - _type: numPoint
+                                        _key: '1'
+                                        isi:
+                                          _type: referenceText
+                                          references: []
+                                          text: tempat tinggal,
+                                      - _type: numPoint
+                                        _key: '2'
+                                        isi:
+                                          _type: referenceText
+                                          references: []
+                                          text: pusat kegiatan utama,
+                                      - _type: numPoint
+                                        _key: '3'
+                                        isi:
+                                          _type: referenceText
+                                          references: []
+                                          text: tempat menjalankan kebiasan,
+                                      - _type: numPoint
+                                        _key: '4'
+                                        isi:
+                                          _type: referenceText
+                                          references: []
+                                          text: 'status subjek pajak: dan/atau'
+                                      - _type: numPoint
+                                        _key: '5'
                                         isi:
                                           _type: referenceText
                                           references: []
                                           text: >-
-                                            orang pribadi yang tidak bertempat
-                                            tinggal di Indonesia:
-                                      - _type: alphaPoint
-                                        _key: b
-                                        isi:
-                                          _type: referenceText
-                                          references: []
-                                          text: >-
-                                            warga negara asing yang berada di
-                                            Indonesia tidak lebih dari 183 (seratus
-                                            delapan puluh tiga) hari dalam jangka
-                                            waktu 12 (dua belas) bulan,
-                                      - _type: alphaPoint
-                                        _key: c
-                                        isi:
-                                          _type: points
-                                          _description:
-                                            _type: referenceText
-                                            references: []
-                                            text: >-
-                                              . Warga Negara Indonesia yang berada di
-                                              luar Indonesia lebih dari 183 (seratus
-                                              delapan puluh tiga) hari dalam jangka
-                                              waktu 12 (dua belas) bulan serta
-                                              memenuhi persyaratan:
-                                          isi:
-                                            - _type: numPoint
-                                              _key: '1'
-                                              isi:
-                                                _type: referenceText
-                                                references: []
-                                                text: tempat tinggal,
-                                            - _type: numPoint
-                                              _key: '2'
-                                              isi:
-                                                _type: referenceText
-                                                references: []
-                                                text: pusat kegiatan utama,
-                                            - _type: numPoint
-                                              _key: '3'
-                                              isi:
-                                                _type: referenceText
-                                                references: []
-                                                text: tempat menjalankan kebiasan,
-                                            - _type: numPoint
-                                              _key: '4'
-                                              isi:
-                                                _type: referenceText
-                                                references: []
-                                                text: 'status subjek pajak: dan/atau'
-                                            - _type: numPoint
-                                              _key: '5'
-                                              isi:
-                                                _type: referenceText
-                                                references: []
-                                                text: >-
-                                                  persyaratan tertentu lainnya yang
-                                                  ketentuan lebih lanjut mengenai
-                                                  persyaratan tersebut diatur dalam
-                                                  Peraturan Menteri Keuangan, dan
-                          - _type: alphaPoint
-                            _key: d
+                                            persyaratan tertentu lainnya yang
+                                            ketentuan lebih lanjut mengenai
+                                            persyaratan tersebut diatur dalam
+                                            Peraturan Menteri Keuangan, dan
+                                - _type: alphaPoint
+                                  _key: d
+                                  isi:
+                                    _type: referenceText
+                                    references: []
+                                    text: >-
+                                      badan yang tidak didirikan dan tidak
+                                      bertempat kedudukan di Indonesia yang
+                                      menjalankan usaha atau melakukan kegiatan
+                                      melalui bentuk usaha tetap di Indonesia
+                                      atau yang dapat menerima atau memperoleh
+                                      penghasilan dari Indonesia tidak dari
+                                      menjalankan usaha atau melakukan kegiatan
+                                      melalui bentuk usaha tetap di Indonesia.
+                          - _type: ayat
+                            _key: 5
                             isi:
                               _type: points
                               _description:
                                 _type: referenceText
                                 references: []
                                 text: >-
-                                  badan yang tidak didirikan dan tidak bertempat
-                                  kedudukan di Indonesia yang menjalankan usaha
-                                  atau melakukan kegiatan melalui bentuk usaha
-                                  tetap di Indonesia atau yang dapat menerima
-                                  atau memperoleh penghasilan dari Indonesia
-                                  tidak dari menjalankan usaha atau melakukan
-                                  kegiatan melalui bentuk usaha tetap di
-                                  Indonesia. (5) Bentuk usaha tetap adalah
-                                  bentuk usaha yang dipergunakan oleh orang
-                                  pribadi sebagaimana dimaksud pada ayat (4)
-                                  huruf a, huruf b, dan huruf c, dan badan
-                                  sebagaimana dimaksud pada ayat (4) huruf d
-                                  untuk menjalankan usaha atau melakukan
-                                  kegiatan di Indonesia yang dapat berupa:
+                                  Bentuk usaha tetap adalah bentuk usaha yang
+                                  dipergunakan oleh orang pribadi sebagaimana
+                                  dimaksud pada ayat (4) huruf a, huruf b, dan
+                                  huruf c, dan badan sebagaimana dimaksud pada
+                                  ayat (4) huruf d untuk menjalankan usaha atau
+                                  melakukan kegiatan di Indonesia yang dapat
+                                  berupa:
                               isi:
                                 - _type: alphaPoint
                                   _key: a
@@ -58437,66 +58494,75 @@ babs:
                                     _type: referenceText
                                     references: []
                                     text: gedung kantor,
-                          - _type: alphaPoint
-                            _key: e
-                            isi:
-                              _type: referenceText
-                              references: []
-                              text: pabrik,
-                          - _type: alphaPoint
-                            _key: f
-                            isi:
-                              _type: referenceText
-                              references: []
-                              text: ''' bengkel:'
-                          - _type: alphaPoint
-                            _key: g
-                            isi:
-                              _type: referenceText
-                              references: []
-                              text: gudang,
-                          - _type: alphaPoint
-                            _key: h
-                            isi:
-                              _type: referenceText
-                              references: []
-                              text: ruang untuk promosi dan penjualan,
-                          - _type: alphaPoint
-                            _key: i
-                            isi:
-                              _type: referenceText
-                              references: []
-                              text: pertambangan dan penggalian sumber alam,
-                          - _type: alphaPoint
-                            _key: j
+                                - _type: alphaPoint
+                                  _key: e
+                                  isi:
+                                    _type: referenceText
+                                    references: []
+                                    text: pabrik,
+                                - _type: alphaPoint
+                                  _key: f
+                                  isi:
+                                    _type: referenceText
+                                    references: []
+                                    text: ''' bengkel:'
+                                - _type: alphaPoint
+                                  _key: g
+                                  isi:
+                                    _type: referenceText
+                                    references: []
+                                    text: gudang,
+                                - _type: alphaPoint
+                                  _key: h
+                                  isi:
+                                    _type: referenceText
+                                    references: []
+                                    text: ruang untuk promosi dan penjualan,
+                                - _type: alphaPoint
+                                  _key: i
+                                  isi:
+                                    _type: referenceText
+                                    references: []
+                                    text: pertambangan dan penggalian sumber alam,
+                                - _type: alphaPoint
+                                  _key: j
+                                  isi:
+                                    _type: referenceText
+                                    references: []
+                                    text: >-
+                                      . wilayah kerja pertambangan minyak dan
+                                      gas bumi,
+                                - _type: alphaPoint
+                                  _key: k
+                                  isi:
+                                    _type: referenceText
+                                    references: []
+                                    text: >-
+                                      perikanan, peternakan, pertanian,
+                                      perkebunan, atau kehutanan, Il. proyek
+                                      konstruksi, instalasi, atau proyek
+                                      perakitan, m. pemberian jasa dalam bentuk
+                                      apa pun oleh pegawai atau orang lain
+                                      sepanjang dilakukan lebih dari 60 (enam
+                                      puluh) hari dalam jangka waktu 12 (dua
+                                      belas) bulan, n. orang atau badan yang
+                                      bertindak selaku agen yang kedudukannya
+                                      tidak bebas, O. agen atau pegawai dari
+                                      perusahan asuransi yang tidak didirikan
+                                      dan tidak bertempat kedudukan di Indonesia
+                                      yang menerima premi asuransi atau
+                                      menanggung risiko di Indonesia, dan p.
+                                      komputer, agen elektronik, atau peralatan
+                                      otomatis yang dimiliki, disewa, atau
+                                      digunakan oleh penyelenggara transaksi
+                                      elektronik untuk menjalankan kegiatan
+                                      usaha melalui internet.
+                          - _type: ayat
+                            _key: 6
                             isi:
                               _type: referenceText
                               references: []
                               text: >-
-                                . wilayah kerja pertambangan minyak dan gas
-                                bumi,
-                          - _type: alphaPoint
-                            _key: k
-                            isi:
-                              _type: referenceText
-                              references: []
-                              text: >-
-                                perikanan, peternakan, pertanian, perkebunan,
-                                atau kehutanan, Il. proyek konstruksi,
-                                instalasi, atau proyek perakitan, m. pemberian
-                                jasa dalam bentuk apa pun oleh pegawai atau
-                                orang lain sepanjang dilakukan lebih dari 60
-                                (enam puluh) hari dalam jangka waktu 12 (dua
-                                belas) bulan, n. orang atau badan yang bertindak
-                                selaku agen yang kedudukannya tidak bebas, O.
-                                agen atau pegawai dari perusahan asuransi yang
-                                tidak didirikan dan tidak bertempat kedudukan di
-                                Indonesia yang menerima premi asuransi atau
-                                menanggung risiko di Indonesia, dan p. komputer,
-                                agen elektronik, atau peralatan otomatis yang
-                                dimiliki, disewa, atau digunakan oleh
-                                penyelenggara transaksi elektronik untuk
-                                menjalankan kegiatan usaha melalui internet. (6)
                                 Tempat tinggal orang pribadi atau tempat
                                 kedudukan badan ditetapkan oleh Direktur
                                 Jenderal Pajak menurut keadaan yang sebenarnya.
@@ -58511,239 +58577,260 @@ babs:
                       _nomorKey: 2
                       _pasalKey: '4'
                       isi:
-                        _type: points
-                        _description:
-                          _type: referenceText
-                          references: []
-                          text: >-
-                            (1) Yang menjadi objek pajak adalah penghasilan,
-                            yaitu setiap tambahan kemampuan ekonomis yang
-                            diterima atau diperoleh Wajib Pajak, baik yang
-                            berasal dari Indonesia maupun dari luar Indonesia,
-                            yang dapat dipakai untuk konsumsi atau untuk
-                            menambah kekayaan Wajib Pajak yang bersangkutan,
-                            dengan nama dan dalam bentuk apa pun, termasuk:
-                        isi:
-                          - _type: alphaPoint
-                            _key: a
-                            isi:
-                              _type: referenceText
-                              references: []
-                              text: >-
-                                penggantian atau imbalan berkenaan dengan
-                                pekerjaan atau jasa yang diterima atau diperoleh
-                                termasuk gaji, upah, tunjangan, honorarium,
-                                komisi, bonus, gratifikasi, uang pensiun, atau
-                                imbalan dalam bentuk lainnya, kecuali ditentukan
-                                lain dalam Undang-Undang ini,
-                          - _type: alphaPoint
-                            _key: b
-                            isi:
-                              _type: referenceText
-                              references: []
-                              text: >-
-                                hadiah dari undian atau pekerjaan atau kegiatan,
-                                dan penghargaan,
-                          - _type: alphaPoint
-                            _key: c
-                            isi:
-                              _type: referenceText
-                              references: []
-                              text: laba usaha,
-                          - _type: alphaPoint
-                            _key: d
+                        _type: ayats
+                        ayats:
+                          - _type: ayat
+                            _key: 1
                             isi:
                               _type: points
                               _description:
                                 _type: referenceText
                                 references: []
                                 text: >-
-                                  keuntungan karena penjualan atau karena
-                                  pengalihan harta termasuk:
-                              isi:
-                                - _type: numPoint
-                                  _key: '1'
-                                  isi:
-                                    _type: referenceText
-                                    references: []
-                                    text: >-
-                                      keuntungan karena pengalihan harta kepada
-                                      perseroan, persekutuan, dan badan lainnya
-                                      sebagai pengganti saham atau penyertaan
-                                      modal:
-                                - _type: numPoint
-                                  _key: '2'
-                                  isi:
-                                    _type: referenceText
-                                    references: []
-                                    text: >-
-                                      keuntungan karena pengalihan harta kepada
-                                      pemegang saham, sekutu, atau anggota yang
-                                      diperoleh perseroan, persekutuan, dan
-                                      badan lainnya,
-                                - _type: numPoint
-                                  _key: '3'
-                                  isi:
-                                    _type: referenceText
-                                    references: []
-                                    text: >-
-                                      keuntungan karena likuidasi, penggabungan,
-                                      peleburan, pemekaran, pemecahan,
-                                      pengambilalihan usaha, atau reorganisasi
-                                      dengan nama dan dalam bentuk apa pun, 4,
-                                      keuntungan karena pengalihan harta berupa
-                                      hibah, bantuan, atau sumbangan, kecuali
-                                      yang diberikan kepada keluarga sedarah
-                                      dalam garis keturunan lurus satu derajat
-                                      dan badan keagamaan, badan pendidikan,
-                                      badan sosial termasuk yayasan, koperasi,
-                                      atau orang pribadi yang menjalankan usaha
-                                      mikro dan kecil, yang ketentuannya diatur
-                                      lebih lanjut dengan Peraturan Menteri
-                                      Keuangan sepanjang tidak ada hubungan
-                                      dengan usaha, pekerjaan, kepemilikan, atau
-                                      penguasaan di antara pihak-pihak yang
-                                      bersangkutan, dan 5. keuntungan karena
-                                      penjualan atau pengalihan sebagian atau
-                                      seluruh hak penambangan, tanda turut serta
-                                      dalam pembiayaan, atau permodalan dalam
-                                      perusahaan pertambangan,
-                          - _type: alphaPoint
-                            _key: e
-                            isi:
-                              _type: referenceText
-                              references: []
-                              text: >-
-                                penerimaan kembali pembayaran pajak yang telah
-                                dibebankan sebagai biaya dan pembayaran tambahan
-                                pengembalian pajak,
-                          - _type: alphaPoint
-                            _key: f
-                            isi:
-                              _type: referenceText
-                              references: []
-                              text: >-
-                                bunga termasuk premium, diskonto, dan imbalan
-                                karena jaminan pengembalian utang,
-                          - _type: alphaPoint
-                            _key: g
-                            isi:
-                              _type: referenceText
-                              references: []
-                              text: >-
-                                dividen dengan nama dan dalam bentuk apapun,
-                                termasuk dividen dari perusahaan asuransi kepada
-                                pemegang polis:
-                          - _type: alphaPoint
-                            _key: h
-                            isi:
-                              _type: referenceText
-                              references: []
-                              text: royalti atau imbalan atas penggunaan hak,
-                          - _type: alphaPoint
-                            _key: i
-                            isi:
-                              _type: referenceText
-                              references: []
-                              text: >-
-                                sewa dan penghasilan lain sehubungan dengan
-                                penggunaan harta,
-                          - _type: alphaPoint
-                            _key: j
-                            isi:
-                              _type: referenceText
-                              references: []
-                              text: penerimaan atau perolehan pembayaran berkala,
-                          - _type: alphaPoint
-                            _key: k
-                            isi:
-                              _type: points
-                              _description:
-                                _type: referenceText
-                                references: []
-                                text: >-
-                                  keuntungan karena pembebasan utang, kecuali
-                                  sampai dengan jumlah tertentu yang ditetapkan
-                                  dengan Peraturan Pemerintah, Il. keuntungan
-                                  selisih kurs mata uang asing, m. selisih lebih
-                                  karena penilaian kembali aktiva, n. premi
-                                  asuransi, O. iuran yang diterima atau
-                                  diperoleh perkumpulan dari anggotanya yang
-                                  terdiri dari Wajib Pajak yang menjalankan
-                                  usaha atau pekerjaan bebas, p. tambahan
-                                  kekayaan neto yang berasal dari penghasilan
-                                  yang belum dikenakan pajak, g. penghasilan
-                                  dari usaha berbasis syariah, r. imbalan bunga
-                                  sebagaimana dimaksud dalam Undang-Undang yang
-                                  mengatur mengenai ketentuan umum dan tata cara
-                                  perpajakan, dan Ss. surplus Bank Indonesia.
-                                  (la) Dikecualikan dari ketentuan sebagaimana
-                                  dimaksud pada ayat (1), warga negara asing
-                                  yang telah menjadi subjek pajak dalam negeri
-                                  dikenai Pajak Penghasilan hanya atas
-                                  penghasilan yang diterima atau diperoleh dari
-                                  Indonesia dengan ketentuan:
+                                  Yang menjadi objek pajak adalah penghasilan,
+                                  yaitu setiap tambahan kemampuan ekonomis yang
+                                  diterima atau diperoleh Wajib Pajak, baik yang
+                                  berasal dari Indonesia maupun dari luar
+                                  Indonesia, yang dapat dipakai untuk konsumsi
+                                  atau untuk menambah kekayaan Wajib Pajak yang
+                                  bersangkutan, dengan nama dan dalam bentuk apa
+                                  pun, termasuk:
                               isi:
                                 - _type: alphaPoint
                                   _key: a
                                   isi:
                                     _type: referenceText
                                     references: []
-                                    text: memiliki keahlian tertentu, dan
+                                    text: >-
+                                      penggantian atau imbalan berkenaan dengan
+                                      pekerjaan atau jasa yang diterima atau
+                                      diperoleh termasuk gaji, upah, tunjangan,
+                                      honorarium, komisi, bonus, gratifikasi,
+                                      uang pensiun, atau imbalan dalam bentuk
+                                      lainnya, kecuali ditentukan lain dalam
+                                      Undang-Undang ini,
                                 - _type: alphaPoint
                                   _key: b
+                                  isi:
+                                    _type: referenceText
+                                    references: []
+                                    text: >-
+                                      hadiah dari undian atau pekerjaan atau
+                                      kegiatan, dan penghargaan,
+                                - _type: alphaPoint
+                                  _key: c
+                                  isi:
+                                    _type: referenceText
+                                    references: []
+                                    text: laba usaha,
+                                - _type: alphaPoint
+                                  _key: d
                                   isi:
                                     _type: points
                                     _description:
                                       _type: referenceText
                                       references: []
                                       text: >-
-                                        berlaku selama 4 (empat) tahun pajak
-                                        yang dihitung sejak menjadi subjek pajak
-                                        dalam negeri. (1b) Termasuk dalam
-                                        pengertian penghasilan yang diterima
-                                        atau diperoleh dari Indonesia
-                                        sebagaimana dimaksud pada ayat (la)
-                                        berupa penghasilan yang diterima atau
-                                        diperoleh warga negara asing sehubungan
-                                        dengan pekerjaan, jasa, atau kegiatan di
-                                        Indonesia dengan nama dan dalam bentuk
-                                        apapun yang dibayarkan di luar
-                                        Indonesia. (lc) Ketentuan sebagaimana
-                                        dimaksud pada ayat (la) tidak berlaku
-                                        terhadap warga negara asing yang
-                                        memanfaatkan Persetujuan Penghindaran
-                                        Pajak Berganda antara pemerintah
-                                        Indonesia dan pemerintah negara mitra
-                                        atau yurisdiksi mitra Persetujuan
-                                        Penghindaran Pajak Berganda tempat warga
-                                        negara asing memperoleh penghasilan dari
-                                        luar Indonesia. (1d) Ketentuan lebih
-                                        lanjut mengenai kriteria keahlian
-                                        tertentu serta tata cara pengenaan Pajak
-                                        Penghasilan bagi warga negara asing
-                                        sebagaimana dimaksud pada ayat (la)
-                                        diatur dalam Peraturan Menteri Keuangan.
-                                        (2) Penghasilan di bawah ini dapat
-                                        dikenai pajak bersifat final:
+                                        keuntungan karena penjualan atau karena
+                                        pengalihan harta termasuk:
+                                    isi:
+                                      - _type: numPoint
+                                        _key: '1'
+                                        isi:
+                                          _type: referenceText
+                                          references: []
+                                          text: >-
+                                            keuntungan karena pengalihan harta
+                                            kepada perseroan, persekutuan, dan badan
+                                            lainnya sebagai pengganti saham atau
+                                            penyertaan modal:
+                                      - _type: numPoint
+                                        _key: '2'
+                                        isi:
+                                          _type: referenceText
+                                          references: []
+                                          text: >-
+                                            keuntungan karena pengalihan harta
+                                            kepada pemegang saham, sekutu, atau
+                                            anggota yang diperoleh perseroan,
+                                            persekutuan, dan badan lainnya,
+                                      - _type: numPoint
+                                        _key: '3'
+                                        isi:
+                                          _type: referenceText
+                                          references: []
+                                          text: >-
+                                            keuntungan karena likuidasi,
+                                            penggabungan, peleburan, pemekaran,
+                                            pemecahan, pengambilalihan usaha, atau
+                                            reorganisasi dengan nama dan dalam
+                                            bentuk apa pun, 4, keuntungan karena
+                                            pengalihan harta berupa hibah, bantuan,
+                                            atau sumbangan, kecuali yang diberikan
+                                            kepada keluarga sedarah dalam garis
+                                            keturunan lurus satu derajat dan badan
+                                            keagamaan, badan pendidikan, badan
+                                            sosial termasuk yayasan, koperasi, atau
+                                            orang pribadi yang menjalankan usaha
+                                            mikro dan kecil, yang ketentuannya
+                                            diatur lebih lanjut dengan Peraturan
+                                            Menteri Keuangan sepanjang tidak ada
+                                            hubungan dengan usaha, pekerjaan,
+                                            kepemilikan, atau penguasaan di antara
+                                            pihak-pihak yang bersangkutan, dan 5.
+                                            keuntungan karena penjualan atau
+                                            pengalihan sebagian atau seluruh hak
+                                            penambangan, tanda turut serta dalam
+                                            pembiayaan, atau permodalan dalam
+                                            perusahaan pertambangan,
+                                - _type: alphaPoint
+                                  _key: e
+                                  isi:
+                                    _type: referenceText
+                                    references: []
+                                    text: >-
+                                      penerimaan kembali pembayaran pajak yang
+                                      telah dibebankan sebagai biaya dan
+                                      pembayaran tambahan pengembalian pajak,
+                                - _type: alphaPoint
+                                  _key: f
+                                  isi:
+                                    _type: referenceText
+                                    references: []
+                                    text: >-
+                                      bunga termasuk premium, diskonto, dan
+                                      imbalan karena jaminan pengembalian utang,
+                                - _type: alphaPoint
+                                  _key: g
+                                  isi:
+                                    _type: referenceText
+                                    references: []
+                                    text: >-
+                                      dividen dengan nama dan dalam bentuk
+                                      apapun, termasuk dividen dari perusahaan
+                                      asuransi kepada pemegang polis:
+                                - _type: alphaPoint
+                                  _key: h
+                                  isi:
+                                    _type: referenceText
+                                    references: []
+                                    text: royalti atau imbalan atas penggunaan hak,
+                                - _type: alphaPoint
+                                  _key: i
+                                  isi:
+                                    _type: referenceText
+                                    references: []
+                                    text: >-
+                                      sewa dan penghasilan lain sehubungan
+                                      dengan penggunaan harta,
+                                - _type: alphaPoint
+                                  _key: j
+                                  isi:
+                                    _type: referenceText
+                                    references: []
+                                    text: >-
+                                      penerimaan atau perolehan pembayaran
+                                      berkala,
+                                - _type: alphaPoint
+                                  _key: k
+                                  isi:
+                                    _type: points
+                                    _description:
+                                      _type: referenceText
+                                      references: []
+                                      text: >-
+                                        keuntungan karena pembebasan utang,
+                                        kecuali sampai dengan jumlah tertentu
+                                        yang ditetapkan dengan Peraturan
+                                        Pemerintah, Il. keuntungan selisih kurs
+                                        mata uang asing, m. selisih lebih karena
+                                        penilaian kembali aktiva, n. premi
+                                        asuransi, O. iuran yang diterima atau
+                                        diperoleh perkumpulan dari anggotanya
+                                        yang terdiri dari Wajib Pajak yang
+                                        menjalankan usaha atau pekerjaan bebas,
+                                        p. tambahan kekayaan neto yang berasal
+                                        dari penghasilan yang belum dikenakan
+                                        pajak, g. penghasilan dari usaha
+                                        berbasis syariah, r. imbalan bunga
+                                        sebagaimana dimaksud dalam Undang-Undang
+                                        yang mengatur mengenai ketentuan umum
+                                        dan tata cara perpajakan, dan Ss.
+                                        surplus Bank Indonesia. (la)
+                                        Dikecualikan dari ketentuan sebagaimana
+                                        dimaksud pada ayat (1), warga negara
+                                        asing yang telah menjadi subjek pajak
+                                        dalam negeri dikenai Pajak Penghasilan
+                                        hanya atas penghasilan yang diterima
+                                        atau diperoleh dari Indonesia dengan
+                                        ketentuan:
                                     isi:
                                       - _type: alphaPoint
                                         _key: a
                                         isi:
                                           _type: referenceText
                                           references: []
-                                          text: >-
-                                            penghasilan berupa bunga deposito dan
-                                            tabungan lainnya, bunga obligasi dan
-                                            surat utang negara, dan bunga simpanan
-                                            yang dibayarkan oleh koperasi kepada
-                                            anggota koperasi orang pribadi,
+                                          text: memiliki keahlian tertentu, dan
                                       - _type: alphaPoint
                                         _key: b
                                         isi:
                                           _type: referenceText
                                           references: []
-                                          text: penghasilan berupa hadiah undian,
+                                          text: >-
+                                            berlaku selama 4 (empat) tahun pajak
+                                            yang dihitung sejak menjadi subjek pajak
+                                            dalam negeri. (1b) Termasuk dalam
+                                            pengertian penghasilan yang diterima
+                                            atau diperoleh dari Indonesia
+                                            sebagaimana dimaksud pada ayat (la)
+                                            berupa penghasilan yang diterima atau
+                                            diperoleh warga negara asing sehubungan
+                                            dengan pekerjaan, jasa, atau kegiatan di
+                                            Indonesia dengan nama dan dalam bentuk
+                                            apapun yang dibayarkan di luar
+                                            Indonesia. (lc) Ketentuan sebagaimana
+                                            dimaksud pada ayat (la) tidak berlaku
+                                            terhadap warga negara asing yang
+                                            memanfaatkan Persetujuan Penghindaran
+                                            Pajak Berganda antara pemerintah
+                                            Indonesia dan pemerintah negara mitra
+                                            atau yurisdiksi mitra Persetujuan
+                                            Penghindaran Pajak Berganda tempat warga
+                                            negara asing memperoleh penghasilan dari
+                                            luar Indonesia. (1d) Ketentuan lebih
+                                            lanjut mengenai kriteria keahlian
+                                            tertentu serta tata cara pengenaan Pajak
+                                            Penghasilan bagi warga negara asing
+                                            sebagaimana dimaksud pada ayat (la)
+                                            diatur dalam Peraturan Menteri Keuangan.
+                          - _type: ayat
+                            _key: 2
+                            isi:
+                              _type: points
+                              _description:
+                                _type: referenceText
+                                references: []
+                                text: >-
+                                  Penghasilan di bawah ini dapat dikenai pajak
+                                  bersifat final:
+                              isi:
+                                - _type: alphaPoint
+                                  _key: a
+                                  isi:
+                                    _type: referenceText
+                                    references: []
+                                    text: >-
+                                      penghasilan berupa bunga deposito dan
+                                      tabungan lainnya, bunga obligasi dan surat
+                                      utang negara, dan bunga simpanan yang
+                                      dibayarkan oleh koperasi kepada anggota
+                                      koperasi orang pribadi,
+                                - _type: alphaPoint
+                                  _key: b
+                                  isi:
+                                    _type: referenceText
+                                    references: []
+                                    text: penghasilan berupa hadiah undian,
                                 - _type: alphaPoint
                                   _key: c
                                   isi:
@@ -58770,105 +58857,110 @@ babs:
                                 - _type: alphaPoint
                                   _key: e
                                   isi:
+                                    _type: referenceText
+                                    references: []
+                                    text: >-
+                                      penghasilan tertentu lainnya, yang diatur
+                                      dalam atau berdasarkan Peraturan
+                                      Pemerintah.
+                          - _type: ayat
+                            _key: 3
+                            isi:
+                              _type: points
+                              _description:
+                                _type: referenceText
+                                references: []
+                                text: 'Yang dikecualikan dari objek pajak adalah:'
+                              isi:
+                                - _type: alphaPoint
+                                  _key: a
+                                  isi:
                                     _type: points
                                     _description:
                                       _type: referenceText
                                       references: []
-                                      text: >-
-                                        penghasilan tertentu lainnya, yang
-                                        diatur dalam atau berdasarkan Peraturan
-                                        Pemerintah. (3) Yang dikecualikan dari
-                                        objek pajak adalah:
+                                      text: ''
                                     isi:
-                                      - _type: alphaPoint
-                                        _key: a
-                                        isi:
-                                          _type: points
-                                          _description:
-                                            _type: referenceText
-                                            references: []
-                                            text: ''
-                                          isi:
-                                            - _type: numPoint
-                                              _key: '1'
-                                              isi:
-                                                _type: referenceText
-                                                references: []
-                                                text: >-
-                                                  bantuan atau sumbangan, termasuk zakat
-                                                  yang diterima oleh badan amil zakat atau
-                                                  lembaga amil zakat yang dibentuk atau
-                                                  disahkan oleh pemerintah dan yang
-                                                  diterima oleh penerima zakat yang berhak
-                                                  atau sumbangan keagamaan yang sifatnya
-                                                  wajib bagi pemeluk agama yang diakui di
-                                                  Indonesia, yang diterima oleh lembaga
-                                                  keagamaan yang dibentuk atau disahkan
-                                                  oleh pemerintah dan yang diterima oleh
-                                                  penerima sumbangan yang berhak, yang
-                                                  ketentuannya diatur dengan atau
-                                                  berdasarkan Peraturan Pemerintah, dan
-                                            - _type: numPoint
-                                              _key: '2'
-                                              isi:
-                                                _type: referenceText
-                                                references: []
-                                                text: >-
-                                                  harta hibahan yang diterima oleh
-                                                  keluarga sedarah dalam garis keturunan
-                                                  lurus satu derajat, badan keagamaan,
-                                                  badan pendidikan, badan sosial termasuk
-                                                  yayasan, koperasi, atau orang pribadi
-                                                  yang menjalankan usaha mikro dan kecil,
-                                                  yang ketentuannya diatur dengan atau
-                                                  berdasarkan Peraturan Menteri Keuangan
-                                                  sepanjang tidak ada hubungan dengan
-                                                  usaha, pekerjaan, kepemilikan, atau
-                                                  penguasaan di antara pihak-pihak yang
-                                                  bersangkutan,
-                                      - _type: alphaPoint
-                                        _key: b
-                                        isi:
-                                          _type: referenceText
-                                          references: []
-                                          text: 'warisan:'
-                                      - _type: alphaPoint
-                                        _key: c
+                                      - _type: numPoint
+                                        _key: '1'
                                         isi:
                                           _type: referenceText
                                           references: []
                                           text: >-
-                                            harta termasuk setoran tunai yang
-                                            diterima oleh badan sebagaimana dimaksud
-                                            dalam Pasal 2 ayat (1) huruf b sebagai
-                                            pengganti saham atau sebagai pengganti
-                                            penyertaan modal,
-                                      - _type: alphaPoint
-                                        _key: d
+                                            bantuan atau sumbangan, termasuk zakat
+                                            yang diterima oleh badan amil zakat atau
+                                            lembaga amil zakat yang dibentuk atau
+                                            disahkan oleh pemerintah dan yang
+                                            diterima oleh penerima zakat yang berhak
+                                            atau sumbangan keagamaan yang sifatnya
+                                            wajib bagi pemeluk agama yang diakui di
+                                            Indonesia, yang diterima oleh lembaga
+                                            keagamaan yang dibentuk atau disahkan
+                                            oleh pemerintah dan yang diterima oleh
+                                            penerima sumbangan yang berhak, yang
+                                            ketentuannya diatur dengan atau
+                                            berdasarkan Peraturan Pemerintah, dan
+                                      - _type: numPoint
+                                        _key: '2'
                                         isi:
                                           _type: referenceText
                                           references: []
                                           text: >-
-                                            penggantian atau imbalan sehubungan
-                                            dengan pekerjaan atau jasa yang diterima
-                                            atau diperoleh dalam bentuk natura
-                                            dan/atau kenikmatan dari Wajib Pajak
-                                            atau Pemerintah, kecuali yang diberikan
-                                            oleh bukan Wajib Pajak, Wajib Pajak yang
-                                            dikenakan pajak secara final atau Wajib
-                                            Pajak yang menggunakan norma
-                                            penghitungan khusus (deemed profit
-                                            sebagaimana dimaksud dalam Pasal 15:
-                                      - _type: alphaPoint
-                                        _key: e
-                                        isi:
-                                          _type: referenceText
-                                          references: []
-                                          text: >-
-                                            pembayaran dari perusahaan asuransi
-                                            karena kecelakaan, sakit, atau karena
-                                            meninggalnya orang yang tertanggung, dan
-                                            pembayaran asuransi beasiswa,
+                                            harta hibahan yang diterima oleh
+                                            keluarga sedarah dalam garis keturunan
+                                            lurus satu derajat, badan keagamaan,
+                                            badan pendidikan, badan sosial termasuk
+                                            yayasan, koperasi, atau orang pribadi
+                                            yang menjalankan usaha mikro dan kecil,
+                                            yang ketentuannya diatur dengan atau
+                                            berdasarkan Peraturan Menteri Keuangan
+                                            sepanjang tidak ada hubungan dengan
+                                            usaha, pekerjaan, kepemilikan, atau
+                                            penguasaan di antara pihak-pihak yang
+                                            bersangkutan,
+                                - _type: alphaPoint
+                                  _key: b
+                                  isi:
+                                    _type: referenceText
+                                    references: []
+                                    text: 'warisan:'
+                                - _type: alphaPoint
+                                  _key: c
+                                  isi:
+                                    _type: referenceText
+                                    references: []
+                                    text: >-
+                                      harta termasuk setoran tunai yang diterima
+                                      oleh badan sebagaimana dimaksud dalam
+                                      Pasal 2 ayat (1) huruf b sebagai pengganti
+                                      saham atau sebagai pengganti penyertaan
+                                      modal,
+                                - _type: alphaPoint
+                                  _key: d
+                                  isi:
+                                    _type: referenceText
+                                    references: []
+                                    text: >-
+                                      penggantian atau imbalan sehubungan dengan
+                                      pekerjaan atau jasa yang diterima atau
+                                      diperoleh dalam bentuk natura dan/atau
+                                      kenikmatan dari Wajib Pajak atau
+                                      Pemerintah, kecuali yang diberikan oleh
+                                      bukan Wajib Pajak, Wajib Pajak yang
+                                      dikenakan pajak secara final atau Wajib
+                                      Pajak yang menggunakan norma penghitungan
+                                      khusus (deemed profit sebagaimana dimaksud
+                                      dalam Pasal 15:
+                                - _type: alphaPoint
+                                  _key: e
+                                  isi:
+                                    _type: referenceText
+                                    references: []
+                                    text: >-
+                                      pembayaran dari perusahaan asuransi karena
+                                      kecelakaan, sakit, atau karena
+                                      meninggalnya orang yang tertanggung, dan
+                                      pembayaran asuransi beasiswa,
                                 - _type: alphaPoint
                                   _key: f
                                   isi:
@@ -59316,71 +59408,77 @@ babs:
                                           text: >-
                                             sahamnya tidak diperdagangkan di bursa
                                             efek di Indonesia:
-                          - _type: alphaPoint
-                            _key: l
-                            isi:
-                              _type: referenceText
-                              references: []
-                              text: >-
-                                | beasiswa yang memenuhi persyaratan tertentu
-                                yang ketentuannya diatur lebih lanjut dengan
-                                atau berdasarkan Peraturan Menteri Keuangan,
-                          - _type: alphaPoint
-                            _key: m
-                            isi:
-                              _type: referenceText
-                              references: []
-                              text: >-
-                                sisa lebih yang diterima atau diperoleh badan
-                                atau lembaga nirlaba yang bergerak dalam bidang
-                                pendidikan dan/atau bidang penelitian dan
-                                pengembangan, yang telah terdaftar pada instansi
-                                yang membidanginya, yang ditanamkan kembali
-                                dalam bentuk sarana dan prasarana kegiatan
-                                pendidikan dan/atau penelitian dan pengembangan,
-                                dalam jangka waktu paling lama 4 (empat) tahun
-                                sejak diperolehnya sisa lebih tersebut, yang
-                                ketentuannya diatur lebih lanjut dengan atau
-                                berdasarkan Peraturan Menteri Keuangan,
-                          - _type: alphaPoint
-                            _key: 'n'
-                            isi:
-                              _type: referenceText
-                              references: []
-                              text: >-
-                                bantuan atau santunan yang dibayarkan oleh Badan
-                                Penyelenggara Jaminan Sosial kepada Wajib Pajak
-                                tertentu, yang ketentuannya diatur lebih lanjut
-                                dengan atau berdasarkan Peraturan Menteri
-                                Keuangan,
-                          - _type: alphaPoint
-                            _key: o
-                            isi:
-                              _type: referenceText
-                              references: []
-                              text: >-
-                                dana setoran Biaya Penyelenggaraan Ibadah Haji
-                                (BPIH) dan/atau BPIH khusus, dan penghasilan
-                                dari pengembangan keuangan haji dalam bidang
-                                atau instrumen keuangan tertentu, diterima Badan
-                                Pengelola Keuangan Haji (BPKH) yang ketentuannya
-                                diatur dengan atau berdasarkan Peraturan Menteri
-                                Keuangan, dan
-                          - _type: alphaPoint
-                            _key: p
-                            isi:
-                              _type: referenceText
-                              references: []
-                              text: >-
-                                sisa lebih yang diterima/diperoleh badan atau
-                                lembaga sosial dan keagamaan yang terdaftar pada
-                                instansi yang membidanginya, yang ditanamkan
-                                kembali dalam bentuk sarana dan prasarana sosial
-                                dan keagamaan dalam jangka waktu paling lama 4
-                                (empat) tahun sejak diperolehnya sisa lebih
-                                tersebut, atau ditempatkan sebagai dana abadi,
-                                yang ketentuannya diatur lebih lanjut dengan
-                                atau berdasarkan Peraturan Menteri Keuangan.
+                                - _type: alphaPoint
+                                  _key: l
+                                  isi:
+                                    _type: referenceText
+                                    references: []
+                                    text: >-
+                                      | beasiswa yang memenuhi persyaratan
+                                      tertentu yang ketentuannya diatur lebih
+                                      lanjut dengan atau berdasarkan Peraturan
+                                      Menteri Keuangan,
+                                - _type: alphaPoint
+                                  _key: m
+                                  isi:
+                                    _type: referenceText
+                                    references: []
+                                    text: >-
+                                      sisa lebih yang diterima atau diperoleh
+                                      badan atau lembaga nirlaba yang bergerak
+                                      dalam bidang pendidikan dan/atau bidang
+                                      penelitian dan pengembangan, yang telah
+                                      terdaftar pada instansi yang
+                                      membidanginya, yang ditanamkan kembali
+                                      dalam bentuk sarana dan prasarana kegiatan
+                                      pendidikan dan/atau penelitian dan
+                                      pengembangan, dalam jangka waktu paling
+                                      lama 4 (empat) tahun sejak diperolehnya
+                                      sisa lebih tersebut, yang ketentuannya
+                                      diatur lebih lanjut dengan atau
+                                      berdasarkan Peraturan Menteri Keuangan,
+                                - _type: alphaPoint
+                                  _key: 'n'
+                                  isi:
+                                    _type: referenceText
+                                    references: []
+                                    text: >-
+                                      bantuan atau santunan yang dibayarkan oleh
+                                      Badan Penyelenggara Jaminan Sosial kepada
+                                      Wajib Pajak tertentu, yang ketentuannya
+                                      diatur lebih lanjut dengan atau
+                                      berdasarkan Peraturan Menteri Keuangan,
+                                - _type: alphaPoint
+                                  _key: o
+                                  isi:
+                                    _type: referenceText
+                                    references: []
+                                    text: >-
+                                      dana setoran Biaya Penyelenggaraan Ibadah
+                                      Haji (BPIH) dan/atau BPIH khusus, dan
+                                      penghasilan dari pengembangan keuangan
+                                      haji dalam bidang atau instrumen keuangan
+                                      tertentu, diterima Badan Pengelola
+                                      Keuangan Haji (BPKH) yang ketentuannya
+                                      diatur dengan atau berdasarkan Peraturan
+                                      Menteri Keuangan, dan
+                                - _type: alphaPoint
+                                  _key: p
+                                  isi:
+                                    _type: referenceText
+                                    references: []
+                                    text: >-
+                                      sisa lebih yang diterima/diperoleh badan
+                                      atau lembaga sosial dan keagamaan yang
+                                      terdaftar pada instansi yang
+                                      membidanginya, yang ditanamkan kembali
+                                      dalam bentuk sarana dan prasarana sosial
+                                      dan keagamaan dalam jangka waktu paling
+                                      lama 4 (empat) tahun sejak diperolehnya
+                                      sisa lebih tersebut, atau ditempatkan
+                                      sebagai dana abadi, yang ketentuannya
+                                      diatur lebih lanjut dengan atau
+                                      berdasarkan Peraturan Menteri Keuangan.
                       description:
                         _type: referenceText
                         references: []
@@ -59392,121 +59490,153 @@ babs:
                       _nomorKey: 3
                       _pasalKey: '26'
                       isi:
-                        _type: points
-                        _description:
-                          _type: referenceText
-                          references: []
-                          text: >-
-                            (1) Atas penghasilan tersebut di bawah ini, dengan
-                            nama dan dalam bentuk apa pun, yang dibayarkan,
-                            disediakan untuk dibayarkan, atau telah jatuh tempo
-                            pembayarannya oleh badan pemerintah, subjek pajak
-                            dalam negeri, penyelenggara kegiatan, bentuk usaha
-                            tetap, atau perwakilan perusahaan luar negeri
-                            lainnya kepada Wajib Pajak luar negeri selain bentuk
-                            usaha tetap di Indonesia dipotong pajak sebesar 20Y5
-                            (dua puluh persen) dari jumlah bruto oleh pihak yang
-                            wajib membayarkan:
-                        isi:
-                          - _type: alphaPoint
-                            _key: a
-                            isi:
-                              _type: referenceText
-                              references: []
-                              text: 'dividen:'
-                          - _type: alphaPoint
-                            _key: b
-                            isi:
-                              _type: referenceText
-                              references: []
-                              text: >-
-                                bunga termasuk premium, diskonto, dan imbalan
-                                sehubungan dengan jaminan pengembalian utang,
-                          - _type: alphaPoint
-                            _key: c
-                            isi:
-                              _type: referenceText
-                              references: []
-                              text: >-
-                                royalti, sewa, dan penghasilan lain sehubungan
-                                dengan penggunaan harta,
-                          - _type: alphaPoint
-                            _key: d
-                            isi:
-                              _type: referenceText
-                              references: []
-                              text: >-
-                                imbalan sehubungan dengan jasa, pekerjaan, dan
-                                kegiatan,
-                          - _type: alphaPoint
-                            _key: e
-                            isi:
-                              _type: referenceText
-                              references: []
-                              text: hadiah dan penghargaan,
-                          - _type: alphaPoint
-                            _key: f
-                            isi:
-                              _type: referenceText
-                              references: []
-                              text: ''' pensiun dan pembayaran berkala lainnya,'
-                          - _type: alphaPoint
-                            _key: g
-                            isi:
-                              _type: referenceText
-                              references: []
-                              text: >-
-                                premi swap dan transaksi lindung nilai lainnya,
-                                dan/atau
-                          - _type: alphaPoint
-                            _key: h
+                        _type: ayats
+                        ayats:
+                          - _type: ayat
+                            _key: 1
                             isi:
                               _type: points
                               _description:
                                 _type: referenceText
                                 references: []
                                 text: >-
-                                  keuntungan karena pembebasan utang. (la)
-                                  Negara domisili dari Wajib Pajak luar negeri
-                                  selain yang menjalankan usaha atau melakukan
-                                  kegiatan usaha melalui bentuk usaha tetap di
-                                  Indonesia sebagaimana dimaksud pada ayat (1)
-                                  adalah negara tempat tinggal atau tempat
-                                  kedudukan Wajib Pajak luar negeri yang
-                                  sebenarnya menerima manfaat dari penghasilan
-                                  tersebut (beneficial owner). (1b) Tarif ...
-                                  (lb) Tarif sebesar 20Y6 (dua puluh persen)
-                                  dari jumlah bruto oleh pihak yang wajib
-                                  membayarkan bunga termasuk premium, diskonto,
-                                  dan imbalan sehubungan dengan jaminan
-                                  pengembalian utang sebagaimana dimaksud pada
-                                  ayat (1) huruf b dapat diturunkan dengan
-                                  Peraturan Pemerintah. (2) Atas penghasilan
-                                  dari penjualan atau pengalihan harta di
-                                  Indonesia, kecuali yang diatur dalam Pasal 4
-                                  ayat (2), yang diterima atau diperoleh Wajib
-                                  Pajak luar negeri selain bentuk usaha tetap di
-                                  Indonesia, dan premi asuransi yang dibayarkan
-                                  kepada perusahaan asuransi luar negeri
-                                  dipotong pajak 206 (dua puluh persen) dari
-                                  perkiraan penghasilan neto. (2a) Atas
-                                  penghasilan dari penjualan atau pengalihan
-                                  saham sebagaimana dimaksud dalam Pasal 18 ayat
-                                  (3c) dipotong pajak sebesar 20” (dua puluh
-                                  persen) dari perkiraan penghasilan neto. (3)
-                                  Pelaksanaan ketentuan sebagaimana dimaksud
-                                  pada ayat (2) dan ayat (2a) diatur dengan atau
-                                  berdasarkan Peraturan Menteri Keuangan. (4)
-                                  Penghasilan Kena Pajak sesudah dikurangi pajak
-                                  dari suatu bentuk usaha tetap di Indonesia
-                                  dikenai pajak sebesar 206 (dua puluh persen),
-                                  kecuali penghasilan tersebut ditanamkan
-                                  kembali di Indonesia, yang ketentuannya diatur
-                                  lebih lanjut dengan atau berdasarkan Peraturan
-                                  Menteri Keuangan. (5) Pemotongan pajak
-                                  sebagaimana dimaksud pada ayat (1), ayat (2),
-                                  ayat (2a), dan ayat (4) bersifat final,
-                                  kecuali:
+                                  Atas penghasilan tersebut di bawah ini, dengan
+                                  nama dan dalam bentuk apa pun, yang
+                                  dibayarkan, disediakan untuk dibayarkan, atau
+                                  telah jatuh tempo pembayarannya oleh badan
+                                  pemerintah, subjek pajak dalam negeri,
+                                  penyelenggara kegiatan, bentuk usaha tetap,
+                                  atau perwakilan perusahaan luar negeri lainnya
+                                  kepada Wajib Pajak luar negeri selain bentuk
+                                  usaha tetap di Indonesia dipotong pajak
+                                  sebesar 20Y5 (dua puluh persen) dari jumlah
+                                  bruto oleh pihak yang wajib membayarkan:
+                              isi:
+                                - _type: alphaPoint
+                                  _key: a
+                                  isi:
+                                    _type: referenceText
+                                    references: []
+                                    text: 'dividen:'
+                                - _type: alphaPoint
+                                  _key: b
+                                  isi:
+                                    _type: referenceText
+                                    references: []
+                                    text: >-
+                                      bunga termasuk premium, diskonto, dan
+                                      imbalan sehubungan dengan jaminan
+                                      pengembalian utang,
+                                - _type: alphaPoint
+                                  _key: c
+                                  isi:
+                                    _type: referenceText
+                                    references: []
+                                    text: >-
+                                      royalti, sewa, dan penghasilan lain
+                                      sehubungan dengan penggunaan harta,
+                                - _type: alphaPoint
+                                  _key: d
+                                  isi:
+                                    _type: referenceText
+                                    references: []
+                                    text: >-
+                                      imbalan sehubungan dengan jasa, pekerjaan,
+                                      dan kegiatan,
+                                - _type: alphaPoint
+                                  _key: e
+                                  isi:
+                                    _type: referenceText
+                                    references: []
+                                    text: hadiah dan penghargaan,
+                                - _type: alphaPoint
+                                  _key: f
+                                  isi:
+                                    _type: referenceText
+                                    references: []
+                                    text: ''' pensiun dan pembayaran berkala lainnya,'
+                                - _type: alphaPoint
+                                  _key: g
+                                  isi:
+                                    _type: referenceText
+                                    references: []
+                                    text: >-
+                                      premi swap dan transaksi lindung nilai
+                                      lainnya, dan/atau
+                                - _type: alphaPoint
+                                  _key: h
+                                  isi:
+                                    _type: referenceText
+                                    references: []
+                                    text: >-
+                                      keuntungan karena pembebasan utang. (la)
+                                      Negara domisili dari Wajib Pajak luar
+                                      negeri selain yang menjalankan usaha atau
+                                      melakukan kegiatan usaha melalui bentuk
+                                      usaha tetap di Indonesia sebagaimana
+                                      dimaksud pada ayat (1) adalah negara
+                                      tempat tinggal atau tempat kedudukan Wajib
+                                      Pajak luar negeri yang sebenarnya menerima
+                                      manfaat dari penghasilan tersebut
+                                      (beneficial owner). (1b) Tarif ... (lb)
+                                      Tarif sebesar 20Y6 (dua puluh persen) dari
+                                      jumlah bruto oleh pihak yang wajib
+                                      membayarkan bunga termasuk premium,
+                                      diskonto, dan imbalan sehubungan dengan
+                                      jaminan pengembalian utang sebagaimana
+                                      dimaksud pada ayat (1) huruf b dapat
+                                      diturunkan dengan Peraturan Pemerintah.
+                          - _type: ayat
+                            _key: 2
+                            isi:
+                              _type: referenceText
+                              references: []
+                              text: >-
+                                Atas penghasilan dari penjualan atau pengalihan
+                                harta di Indonesia, kecuali yang diatur dalam
+                                Pasal 4 ayat (2), yang diterima atau diperoleh
+                                Wajib Pajak luar negeri selain bentuk usaha
+                                tetap di Indonesia, dan premi asuransi yang
+                                dibayarkan kepada perusahaan asuransi luar
+                                negeri dipotong pajak 206 (dua puluh persen)
+                                dari perkiraan penghasilan neto. (2a) Atas
+                                penghasilan dari penjualan atau pengalihan saham
+                                sebagaimana dimaksud dalam Pasal 18 ayat (3c)
+                                dipotong pajak sebesar 20” (dua puluh persen)
+                                dari perkiraan penghasilan neto.
+                          - _type: ayat
+                            _key: 3
+                            isi:
+                              _type: referenceText
+                              references: []
+                              text: >-
+                                Pelaksanaan ketentuan sebagaimana dimaksud pada
+                                ayat (2) dan ayat (2a) diatur dengan atau
+                                berdasarkan Peraturan Menteri Keuangan.
+                          - _type: ayat
+                            _key: 4
+                            isi:
+                              _type: referenceText
+                              references: []
+                              text: >-
+                                Penghasilan Kena Pajak sesudah dikurangi pajak
+                                dari suatu bentuk usaha tetap di Indonesia
+                                dikenai pajak sebesar 206 (dua puluh persen),
+                                kecuali penghasilan tersebut ditanamkan kembali
+                                di Indonesia, yang ketentuannya diatur lebih
+                                lanjut dengan atau berdasarkan Peraturan Menteri
+                                Keuangan.
+                          - _type: ayat
+                            _key: 5
+                            isi:
+                              _type: points
+                              _description:
+                                _type: referenceText
+                                references: []
+                                text: >-
+                                  Pemotongan pajak sebagaimana dimaksud pada
+                                  ayat (1), ayat (2), ayat (2a), dan ayat (4)
+                                  bersifat final, kecuali:
                               isi:
                                 - _type: alphaPoint
                                   _key: a
