@@ -15,7 +15,7 @@ export function removeNomorKey(span: Span): Span {
 
 export function hurufKeyOfSpan(span: Span): number | undefined {
   return span.str
-    ?.match(/^([A-Z]|[a-z])[.)]/)?.[0]
+    ?.match(/^([A-Z]|[a-z]|Cc)[.)]/)?.[0]
     ?.toLowerCase()
     ?.charCodeAt(0);
 }

@@ -226,10 +226,45 @@ babs:
                 isi:
                   _type: referenceText
                   references: []
+                  text: 'manfaat:'
+              - _type: alphaPoint
+                _key: c
+                isi:
+                  _type: referenceText
+                  references: []
+                  text: '. pelindungan:'
+              - _type: alphaPoint
+                _key: d
+                isi:
+                  _type: referenceText
+                  references: []
+                  text: 'keadilan:'
+              - _type: alphaPoint
+                _key: e
+                isi:
+                  _type: referenceText
+                  references: []
+                  text: 'nondiskriminatif:'
+              - _type: alphaPoint
+                _key: f
+                isi:
+                  _type: referenceText
+                  references: []
+                  text: 'kepentingan umum:'
+              - _type: alphaPoint
+                _key: g
+                isi:
+                  _type: referenceText
+                  references: []
+                  text: keterpaduan,
+              - _type: alphaPoint
+                _key: h
+                isi:
+                  _type: referenceText
+                  references: []
                   text: >-
-                    manfaat: Cc. pelindungan: d. keadilan: e. nondiskriminatif:
-                    f. kepentingan umum: g. keterpaduan, h. kesadaran hukumj,
-                    dan kedaulatan negara. REPUBLIK INDONESIA -9 -
+                    kesadaran hukumj, dan kedaulatan negara. REPUBLIK INDONESIA
+                    -9 -
         - _type: pasal
           _key: 3
           isi:
@@ -256,9 +291,23 @@ babs:
                   text: >-
                     mencegah dan menangkal penyakit dan/atau Faktor Risiko
                     Kesehatan Masyarakat yang berpotensi menimbulkan Kedaruratan
-                    Kesehatan Masyarakat, Cc. meningkatkan ketahanan nasional di
-                    bidang kesehatan masyarakat, dan d. memberikan pelindungan
-                    dan kepastian hukum bagi masyarakat dan petugas kesehatan.
+                    Kesehatan Masyarakat,
+              - _type: alphaPoint
+                _key: c
+                isi:
+                  _type: referenceText
+                  references: []
+                  text: >-
+                    . meningkatkan ketahanan nasional di bidang kesehatan
+                    masyarakat, dan
+              - _type: alphaPoint
+                _key: d
+                isi:
+                  _type: referenceText
+                  references: []
+                  text: >-
+                    memberikan pelindungan dan kepastian hukum bagi masyarakat
+                    dan petugas kesehatan.
   - _type: bab
     _key: 2
     _judul: TANGGUNG JAWAB PEMERINTAH PUSAT DAN PEMERINTAH DAERAH
@@ -709,10 +758,17 @@ babs:
                                     references: []
                                     text: >-
                                       datang dari Pelabuhan wilayah Terjangkit
-                                      di dalam negeri, atau Cc. mengambil orang
-                                      dan/atau Barang dari Kapal sebagaimana
-                                      dimaksud pada huruf a dan huruf b, berada
-                                      dalam Status Karantina.
+                                      di dalam negeri, atau
+                                - _type: alphaPoint
+                                  _key: c
+                                  isi:
+                                    _type: referenceText
+                                    references: []
+                                    text: >-
+                                      . mengambil orang dan/atau Barang dari
+                                      Kapal sebagaimana dimaksud pada huruf a
+                                      dan huruf b, berada dalam Status
+                                      Karantina.
                           - _type: ayat
                             _key: 2
                             isi:
@@ -1256,10 +1312,17 @@ babs:
                                     references: []
                                     text: >-
                                       terdapat orang hidup atau mati yang diduga
-                                      Terjangkit, dan/atau Cc. terdapat orang
-                                      atau Barang diduga Terpapar di dalam
-                                      Kendaraan Darat, berada dalam Status
-                                      Karantina. REPUBLIK INDONESIA -23 -
+                                      Terjangkit, dan/atau
+                                - _type: alphaPoint
+                                  _key: c
+                                  isi:
+                                    _type: referenceText
+                                    references: []
+                                    text: >-
+                                      . terdapat orang atau Barang diduga
+                                      Terpapar di dalam Kendaraan Darat, berada
+                                      dalam Status Karantina. REPUBLIK INDONESIA
+                                      -23 -
                           - _type: ayat
                             _key: 2
                             isi:
@@ -1815,9 +1878,13 @@ babs:
                             isi:
                               _type: referenceText
                               references: []
-                              text: >-
-                                denda administratif, dan/atau Cc. pencabutan
-                                izin.
+                              text: denda administratif, dan/atau
+                          - _type: alphaPoint
+                            _key: c
+                            isi:
+                              _type: referenceText
+                              references: []
+                              text: . pencabutan izin.
                     - _type: ayat
                       _key: 3
                       isi:
@@ -1864,9 +1931,13 @@ babs:
                             isi:
                               _type: referenceText
                               references: []
-                              text: >-
-                                denda administratif, dan/atau Cc. pencabutan
-                                izin.
+                              text: denda administratif, dan/atau
+                          - _type: alphaPoint
+                            _key: c
+                            isi:
+                              _type: referenceText
+                              references: []
+                              text: . pencabutan izin.
                     - _type: ayat
                       _key: 6
                       isi:
@@ -2237,9 +2308,14 @@ babs:
                             isi:
                               _type: referenceText
                               references: []
+                              text: pembatasan kegiatan keagamaan, dan/atau
+                          - _type: alphaPoint
+                            _key: c
+                            isi:
+                              _type: referenceText
+                              references: []
                               text: >-
-                                pembatasan kegiatan keagamaan, dan/atau Cc.
-                                pembatasan kegiatan di tempat atau fasilitas
+                                . pembatasan kegiatan di tempat atau fasilitas
                                 umum.
                     - _type: ayat
                       _key: 4
@@ -2322,12 +2398,33 @@ babs:
                 isi:
                   _type: referenceText
                   references: []
+                  text: 'sertifikat Persetujuan Karantina Kesehatan:'
+              - _type: alphaPoint
+                _key: c
+                isi:
+                  _type: referenceText
+                  references: []
+                  text: '. sertifikat sanitasi:'
+              - _type: alphaPoint
+                _key: d
+                isi:
+                  _type: referenceText
+                  references: []
+                  text: 'sertifikat obat-obatan dan alat kesehatan:'
+              - _type: alphaPoint
+                _key: e
+                isi:
+                  _type: referenceText
+                  references: []
+                  text: 'buku kesehatan untuk Kapal: dan'
+              - _type: alphaPoint
+                _key: f
+                isi:
+                  _type: referenceText
+                  references: []
                   text: >-
-                    sertifikat Persetujuan Karantina Kesehatan: Cc. sertifikat
-                    sanitasi: d. sertifikat obat-obatan dan alat kesehatan: e.
-                    buku kesehatan untuk Kapal: dan f. Surat Persetujuan
-                    Berlayar Karantina Kesehatan (Port Health Ouarantine
-                    Clearance) untuk Kapal.
+                    Surat Persetujuan Berlayar Karantina Kesehatan (Port Health
+                    Ouarantine Clearance) untuk Kapal.
         - _type: pasal
           _key: 63
           isi:
@@ -2531,11 +2628,33 @@ babs:
                 isi:
                   _type: referenceText
                   references: []
+                  text: 'berubah nama:'
+              - _type: alphaPoint
+                _key: c
+                isi:
+                  _type: referenceText
+                  references: []
+                  text: '. berganti bendera untuk Kapal: REPUBLIK INDONESIA - 40 -'
+              - _type: alphaPoint
+                _key: d
+                isi:
+                  _type: referenceText
+                  references: []
                   text: >-
-                    berubah nama: Cc. berganti bendera untuk Kapal: REPUBLIK
-                    INDONESIA - 40 - d. keterangan dalam dokumen tidak sesuai
-                    dengan keadaan sebenarnya, e. diperoleh secara tidak sah,
-                    dan/atau f. dicoret, dihapus, atau dinyatakan rusak.
+                    keterangan dalam dokumen tidak sesuai dengan keadaan
+                    sebenarnya,
+              - _type: alphaPoint
+                _key: e
+                isi:
+                  _type: referenceText
+                  references: []
+                  text: diperoleh secara tidak sah, dan/atau
+              - _type: alphaPoint
+                _key: f
+                isi:
+                  _type: referenceText
+                  references: []
+                  text: dicoret, dihapus, atau dinyatakan rusak.
         - _type: pasal
           _key: 70
           isi:
@@ -2627,13 +2746,45 @@ babs:
                             isi:
                               _type: referenceText
                               references: []
+                              text: 'ruang wawancara atau observasi:'
+                          - _type: alphaPoint
+                            _key: c
+                            isi:
+                              _type: referenceText
+                              references: []
+                              text: . ruang diagnosis,
+                          - _type: alphaPoint
+                            _key: d
+                            isi:
+                              _type: referenceText
+                              references: []
+                              text: 'asrama karantina kesehatan:'
+                          - _type: alphaPoint
+                            _key: e
+                            isi:
+                              _type: referenceText
+                              references: []
+                              text: ruang isolasi,
+                          - _type: alphaPoint
+                            _key: f
+                            isi:
+                              _type: referenceText
+                              references: []
+                              text: 'rumah sakit rujukan:'
+                          - _type: alphaPoint
+                            _key: g
+                            isi:
+                              _type: referenceText
+                              references: []
+                              text: 'laboratorium rujukan: dan'
+                          - _type: alphaPoint
+                            _key: h
+                            isi:
+                              _type: referenceText
+                              references: []
                               text: >-
-                                ruang wawancara atau observasi: Cc. ruang
-                                diagnosis, d. asrama karantina kesehatan: e.
-                                ruang isolasi, f. rumah sakit rujukan: g.
-                                laboratorium rujukan: dan h. transportasi
-                                evakuasi penyakit Kedaruratan Kesehatan
-                                Masyarakat.
+                                transportasi evakuasi penyakit Kedaruratan
+                                Kesehatan Masyarakat.
                     - _type: ayat
                       _key: 2
                       isi:

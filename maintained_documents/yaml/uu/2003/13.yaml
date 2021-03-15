@@ -2069,7 +2069,19 @@ babs:
                         text: >-
                           pekerjaan yang diperkirakan penyelesaiannya dalam
                           waktu yang tidak terlalu lama dan paling lama 3 (tiga)
-                          tahun, Cc. pekerjaan yang bersifat musiman, atau d.
+                          tahun,
+                    - _type: alphaPoint
+                      _key: c
+                      isi:
+                        _type: referenceText
+                        references: []
+                        text: . pekerjaan yang bersifat musiman, atau
+                    - _type: alphaPoint
+                      _key: d
+                      isi:
+                        _type: referenceText
+                        references: []
+                        text: >-
                           pekerjaan yang berhubungan dengan produk baru,
                           kegiatan baru, atau produk tambahan yang masih dalam
                           percobaan atau penjajakan.
@@ -4195,12 +4207,43 @@ babs:
                       isi:
                         _type: referenceText
                         references: []
-                        text: >-
-                          organisasi pengusaha, Cc. lembaga kerja sama bipartit,
-                          d. embaga kerja sama tripartit, e. peraturan
-                          perusahaan, f. perjanjian kerja bersama, g. peraturan
-                          perundang-undangan ketenagakerjaan: dan h. lembaga
-                          penyelesaian perselisihan hubungan industrial.
+                        text: organisasi pengusaha,
+                    - _type: alphaPoint
+                      _key: c
+                      isi:
+                        _type: referenceText
+                        references: []
+                        text: . lembaga kerja sama bipartit,
+                    - _type: alphaPoint
+                      _key: d
+                      isi:
+                        _type: referenceText
+                        references: []
+                        text: embaga kerja sama tripartit,
+                    - _type: alphaPoint
+                      _key: e
+                      isi:
+                        _type: referenceText
+                        references: []
+                        text: peraturan perusahaan,
+                    - _type: alphaPoint
+                      _key: f
+                      isi:
+                        _type: referenceText
+                        references: []
+                        text: perjanjian kerja bersama,
+                    - _type: alphaPoint
+                      _key: g
+                      isi:
+                        _type: referenceText
+                        references: []
+                        text: 'peraturan perundang-undangan ketenagakerjaan: dan'
+                    - _type: alphaPoint
+                      _key: h
+                      isi:
+                        _type: referenceText
+                        references: []
+                        text: lembaga penyelesaian perselisihan hubungan industrial.
         - _type: bagian
           _key: 2
           _judul: Bagian Kedua Serikat Pekerja/Serikat Buruh
@@ -6220,12 +6263,25 @@ babs:
                         text: >-
                           biaya atau ongkos pulang untuk pekerja/buruh dan
                           keluarganya ketempat dimana pekerja/buruh diterima
-                          bekerja, Cc. penggantian perumahan serta pengobatan
-                          dan perawatan ditetapkan 1590 (lima belas perseratus)
-                          dari uang pesangon dan/atau uang penghargaan masa
-                          kerja bagi yang memenuhi syarat, d. hal-hal lain yang
-                          ditetapkan dalam perjanjian kerja, peraturan
-                          perusahaan atau perjanjian kerja bersama.
+                          bekerja,
+                    - _type: alphaPoint
+                      _key: c
+                      isi:
+                        _type: referenceText
+                        references: []
+                        text: >-
+                          . penggantian perumahan serta pengobatan dan perawatan
+                          ditetapkan 1590 (lima belas perseratus) dari uang
+                          pesangon dan/atau uang penghargaan masa kerja bagi
+                          yang memenuhi syarat,
+                    - _type: alphaPoint
+                      _key: d
+                      isi:
+                        _type: referenceText
+                        references: []
+                        text: >-
+                          hal-hal lain yang ditetapkan dalam perjanjian kerja,
+                          peraturan perusahaan atau perjanjian kerja bersama.
               - _type: ayat
                 _key: 5
                 isi:
