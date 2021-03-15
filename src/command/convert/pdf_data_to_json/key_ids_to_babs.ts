@@ -113,8 +113,8 @@ function ayatsOf(context: Context, spans: Span[]): Ayats | undefined {
 }
 
 function amendAyatsOf(context: Context, spans: Span[]): Ayats | undefined {
-  const { amendAyatKeyOfId, ayatKeyOfId } = context.keyIds;
-  const { spansOfKey } = toSpansWith({ ...amendAyatKeyOfId, ...ayatKeyOfId }, spans);
+  const { amendAyatKeyOfId } = context.keyIds;
+  const { spansOfKey } = toSpansWith(amendAyatKeyOfId, spans);
   if (isEmpty(spansOfKey)) return undefined;
   const ayats = chain(spansOfKey).toPairs().map(spanToAyatWith(context)).value();
   return { _type: 'ayats', ayats };
