@@ -6,7 +6,6 @@ export function nomorKeyOfSpan(span: Span): number | undefined {
   const { str } = span;
   // Handle S5 -> 5
   const numberStr = str?.match(/^(l|S|(l|S)?[0-9]+)\./)?.[0]?.slice(0, -1);
-  if (str.startsWith('l1')) console.log(numberStr, '===', str);
   return safeParseInt(numberStr);
 }
 export function removeNomorKey(span: Span): Span {

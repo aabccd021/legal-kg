@@ -24,6 +24,10 @@ export type KeyIds = {
   amendInsertPasalKeyOfId: SpanIdKeyMap<string[]>;
   ayatKeyOfId: SpanIdKeyMap<number>;
   lastAyatKey?: number;
+  ayatXls: number[];
+  amendAyatKeyOfId: SpanIdKeyMap<number>;
+  lastAmendAyatKey?: number;
+  amendAyatXls: number[];
   lastAmendedNomor?: { key: number; id: number };
   lastNomor?: { key: number; id: number };
   lastPasalKey?: number;
@@ -32,7 +36,6 @@ export type KeyIds = {
   selfAmendPasalKeyOfId: number[];
   afterTruePasal: boolean;
   afterPasalXls: number[];
-  ayatXls: number[];
   afterAbovePasal: boolean;
 };
 
@@ -44,7 +47,6 @@ export function babsSpansToKeyIds(hasAmendPasal: boolean, spans: Span[]): KeyIds
     bagianKeyOfId: {},
     paragrafKeyOfId: {},
     pasalKeyOfId: {},
-    ayatKeyOfId: {},
     amendPasalKeyOfId: {},
     nomorKeyOfId: {},
     amendNomorKeyOfId: {},
@@ -53,7 +55,10 @@ export function babsSpansToKeyIds(hasAmendPasal: boolean, spans: Span[]): KeyIds
     amendInsertPasalKeyOfId: {},
     selfAmendPasalKeyOfId: [],
     afterPasalXls: [],
+    ayatKeyOfId: {},
     ayatXls: [],
+    amendAyatKeyOfId: {},
+    amendAyatXls: [],
     afterAbovePasal: false,
     afterTruePasal: false,
   };
@@ -85,14 +90,17 @@ function toKeys(
     afterAbovePasal,
     afterTruePasal,
     afterPasalXls,
-    ayatXls,
     selfAmendPasalKeyOfId,
     lastBabKey,
     lastBagianKey,
     lastParagrafKey,
     lastPasalKey,
     ayatKeyOfId,
+    ayatXls,
     lastAyatKey,
+    amendAyatKeyOfId,
+    amendAyatXls,
+    lastAmendAyatKey,
   } = acc;
 
   const newBabKey = babKeyOfSpan(span);
@@ -350,6 +358,19 @@ function toKeys(
       ayatKeyOfId: { ...ayatKeyOfId, [span.id]: newAyatKey },
       lastAyatKey: newAyatKey,
       ayatXls: [...ayatXls, span.xL],
+    };
+  }
+
+  if (
+    !isUndefined(newAyatKey) &&
+    (newAyatKey === 1 || newAyatKey - 1 === lastAmendAyatKey) &&
+    (isEmpty(amendAyatXls) || Math.abs(mean(amendAyatXls) - span.xL) < 13)
+  ) {
+    return {
+      ...acc,
+      amendAyatKeyOfId: { ...amendAyatKeyOfId, [span.id]: newAyatKey },
+      lastAmendAyatKey: newAyatKey,
+      amendAyatXls: [...amendAyatXls, span.xL],
     };
   }
   return acc;

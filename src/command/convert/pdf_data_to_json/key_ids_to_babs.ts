@@ -112,6 +112,14 @@ function ayatsOf(context: Context, spans: Span[]): Ayats | undefined {
   return { _type: 'ayats', ayats };
 }
 
+function amendAyatsOf(context: Context, spans: Span[]): Ayats | undefined {
+  const { amendAyatKeyOfId } = context.keyIds;
+  const { spansOfKey } = toSpansWith(amendAyatKeyOfId, spans);
+  if (isEmpty(spansOfKey)) return undefined;
+  const ayats = chain(spansOfKey).toPairs().map(spanToAyat).value();
+  return { _type: 'ayats', ayats };
+}
+
 function pointsOf(spans: Span[]): Points | undefined {
   for (const [spanIdx, span] of spans.entries()) {
     if (nomorKeyOfSpan(span) === 1) {
@@ -270,7 +278,7 @@ function spansToAmendUpdatePasalPoint(
   if (pasalTitleIdx === 0) console.log('UND', spans[0]);
   const description = emptyReferenceOf(spans.slice(0, pasalTitleIdx));
   const isiSpans = spans.slice(pasalTitleIdx + 1);
-  const isi = ayatsOf(context, isiSpans) ?? pointsOf(isiSpans) ?? emptyReferenceOf(isiSpans);
+  const isi = amendAyatsOf(context, isiSpans) ?? pointsOf(isiSpans) ?? emptyReferenceOf(isiSpans);
   return { _type: 'amendPoint', _operation: 'update', _nomorKey, _pasalKey, isi, description };
 }
 
