@@ -367,8 +367,7 @@ function toKeys(
 
   const detectedNomorKey = nomorKeyOfSpan(span);
   if (!isUndefined(detectedNomorKey)) {
-    const newNomorKey =
-      detectedNomorKey === 0 ? (lastNomor?.key ?? neverNum()) + 1 : detectedNomorKey;
+    const newNomorKey = getNewNomorKey(detectedNomorKey, lastNomor?.key);
     return {
       ...acc,
       nomorKeyOfId: { ...nomorKeyOfId, [span.id]: newNomorKey },
@@ -376,6 +375,14 @@ function toKeys(
     };
   }
   return acc;
+}
+
+function getNewNomorKey(detectedNomorKey: number, lastNomorKey: number | undefined): number {
+  if (isUndefined(lastNomorKey)) return detectedNomorKey;
+  const zeroReplacement = lastNomorKey + 1;
+  const keyStr = `${detectedNomorKey}`;
+  if (parseInt(keyStr.replace('0', '9')) === zeroReplacement) return zeroReplacement;
+  return detectedNomorKey;
 }
 
 function newNomorKeyOfIdOf(

@@ -201,72 +201,177 @@ babs:
                     Awak Kapal yang selanjutnya disebut Awak adalah orang yang
                     bekerja atau dipekerjakan di atas Kapal oleh pemilik atau
                     operator Kapal untuk melakukan tugas di atas Kapal sesuai
-                    dengan jabatannya yang tercantum dalam buku sijil. 10.
+                    dengan jabatannya yang tercantum dalam buku sijil.
+              - _type: numPoint
+                _key: '19'
+                isi:
+                  _type: referenceText
+                  references: []
+                  text: >-
                     Personel Pesawat Udara yang selanjutnya disebut Personel
                     adalah orang yang bekerja atau dipekerjakan di atas Pesawat
                     Udara oleh pemilik atau operator Pesawat Udara untuk
-                    melakukan tugas di atas Pesawat Udara. 20. Nakhoda adalah
-                    salah seorang dari Awak Kapal yang menjadi pemimpin
-                    tertinggi di Kapal dan mempunyai wewenang dan tanggung jawab
-                    tertentu sesuai dengan ketentuan peraturan
-                    perundang-undangan. 21. Kapten Penerbang adalah penerbang
-                    yang ditugaskan oleh perusahaan atau pemilik Pesawat Udara
-                    untuk memimpin penerbangan dan bertanggung jawab penuh
-                    terhadap keselamatan penerbangan selama pengoperasian
-                    Pesawat Udara sesuai dengan ketentuan peraturan
-                    perundang-undangan. 22. Pelabuhan adalah tempat yang terdiri
-                    atas daratan dan/atau perairan dengan batas-batas tertentu
-                    sebagai tempat kegiatan pemerintahan dan kegiatan
-                    pengusahaan yang dipergunakan sebagai tempat Kapal
-                    bersandar, naik turun penumpang, dan/atau bongkar muat
-                    Barang, berupa terminal dan tempat berlabuh Kapal yang
-                    dilengkapi dengan fasilitas keselamatan dan keamanan
-                    pelayaran dan kegiatan penunjang pelabuhan serta sebagai
-                    tempat perpindahan intra dan antarmoda transportasi. 23.
+                    melakukan tugas di atas Pesawat Udara.
+              - _type: numPoint
+                _key: '20'
+                isi:
+                  _type: referenceText
+                  references: []
+                  text: >-
+                    Nakhoda adalah salah seorang dari Awak Kapal yang menjadi
+                    pemimpin tertinggi di Kapal dan mempunyai wewenang dan
+                    tanggung jawab tertentu sesuai dengan ketentuan peraturan
+                    perundang-undangan.
+              - _type: numPoint
+                _key: '21'
+                isi:
+                  _type: referenceText
+                  references: []
+                  text: >-
+                    Kapten Penerbang adalah penerbang yang ditugaskan oleh
+                    perusahaan atau pemilik Pesawat Udara untuk memimpin
+                    penerbangan dan bertanggung jawab penuh terhadap keselamatan
+                    penerbangan selama pengoperasian Pesawat Udara sesuai dengan
+                    ketentuan peraturan perundang-undangan.
+              - _type: numPoint
+                _key: '22'
+                isi:
+                  _type: referenceText
+                  references: []
+                  text: >-
+                    Pelabuhan adalah tempat yang terdiri atas daratan dan/atau
+                    perairan dengan batas-batas tertentu sebagai tempat kegiatan
+                    pemerintahan dan kegiatan pengusahaan yang dipergunakan
+                    sebagai tempat Kapal bersandar, naik turun penumpang,
+                    dan/atau bongkar muat Barang, berupa terminal dan tempat
+                    berlabuh Kapal yang dilengkapi dengan fasilitas keselamatan
+                    dan keamanan pelayaran dan kegiatan penunjang pelabuhan
+                    serta sebagai tempat perpindahan intra dan antarmoda
+                    transportasi.
+              - _type: numPoint
+                _key: '23'
+                isi:
+                  _type: referenceText
+                  references: []
+                  text: >-
                     Bandar Udara adalah kawasan di daratan dan/atau perairan
                     dengan batas-batas tertentu yang digunakan sebagai tempat
                     Pesawat Udara mendarat dan lepas landas, naik turun
                     penumpang, bongkar muat Barang, dan tempat perpindahan intra
                     dan antarmoda transportasi, yang dilengkapi dengan fasilitas
                     keselamatan dan keamanan penerbangan, serta fasilitas pokok
-                    dan fasilitas penunjang lainnya. 24. Pos Lintas Batas Darat
-                    Negara adalah Pintu Masuk orang, Barang, dan Alat Angkut
-                    melalui darat lintas negara. 25. Pengawasan Kekarantinaan
-                    Kesehatan adalah kegiatan pemeriksaan dokumen karantina
-                    kesehatan dan faktor risiko kesehatan masyarakat terhadap
-                    Alat Angkut, orang, serta Barang oleh pejabat karantina
-                    kesehatan. 26. Faktor Risiko Kesehatan Masyarakat adalah
-                    hal, keadaan, atau peristiwa yang dapat mempengaruhi
-                    kemungkinan timbulnya pengaruh buruk terhadap kesehatan
-                    masyarakat. 27. Terjangkit adalah kondisi seseorang yang
-                    menderita penyakit yang dapat menjadi sumber penular
-                    penyakit yang berpotensi menyebabkan Kedaruratan Kesehatan
-                    Masyarakat. 28. Terpapar adalah kondisi orang, Barang, atau
-                    Alat Angkut yang terpajan, terkontaminasi, dalam masa
-                    inkubasi, insektasi, pestasi, ratisasi, termasuk kimia dan
-                    radiasi. 29. Pejabat Karantina Kesehatan adalah pegawai
-                    negeri sipil yang bekerja di bidang kesehatan yang diberi
-                    kewenangan oleh menteri yang menyelenggarakan urusan
-                    pemerintahan di bidang kesehatan untuk melaksanakan
-                    Kekarantinaan Kesehatan. 30. Dokumen Karantina Kesehatan
-                    adalah surat keterangan kesehatan yang dimiliki setiap Alat
-                    Angkut, orang, dan Barang yang memenuhi persyaratan baik
-                    nasional maupun internasional. 31. Setiap Orang adalah orang
-                    perseorangan dan/atau badan, baik yang berbentuk badan hukum
-                    maupun tidak berbadan hukum. 32. Penyidik '” Pegawai Negeri
-                    Sipil Kekarantinaan Kesehatan yang selanjutnya disebut PPNS
-                    Kekarantinaan Kesehatan adalah pejabat pegawai negeri sipil
-                    tertentu yang diberi wewenang khusus oleh Undang-Undang ini
-                    untuk melakukan penyidikan tindak pidana di bidang
-                    Kekarantinaan Kesehatan. 33. Pemerintah Pusat adalah
-                    Presiden Republik Indonesia yang memegang kekuasaan
-                    pemerintahan negara Republik Indonesia yang dibantu oleh
-                    Wakil Presiden dan menteri sebagaimana dimaksud dalam
-                    Undang- Undang Dasar Negara Republik Indonesia Tahun 1945.
-                    34. Pemerintah Daerah adalah kepala daerah sebagai unsur
+                    dan fasilitas penunjang lainnya.
+              - _type: numPoint
+                _key: '24'
+                isi:
+                  _type: referenceText
+                  references: []
+                  text: >-
+                    Pos Lintas Batas Darat Negara adalah Pintu Masuk orang,
+                    Barang, dan Alat Angkut melalui darat lintas negara.
+              - _type: numPoint
+                _key: '25'
+                isi:
+                  _type: referenceText
+                  references: []
+                  text: >-
+                    Pengawasan Kekarantinaan Kesehatan adalah kegiatan
+                    pemeriksaan dokumen karantina kesehatan dan faktor risiko
+                    kesehatan masyarakat terhadap Alat Angkut, orang, serta
+                    Barang oleh pejabat karantina kesehatan.
+              - _type: numPoint
+                _key: '26'
+                isi:
+                  _type: referenceText
+                  references: []
+                  text: >-
+                    Faktor Risiko Kesehatan Masyarakat adalah hal, keadaan, atau
+                    peristiwa yang dapat mempengaruhi kemungkinan timbulnya
+                    pengaruh buruk terhadap kesehatan masyarakat.
+              - _type: numPoint
+                _key: '27'
+                isi:
+                  _type: referenceText
+                  references: []
+                  text: >-
+                    Terjangkit adalah kondisi seseorang yang menderita penyakit
+                    yang dapat menjadi sumber penular penyakit yang berpotensi
+                    menyebabkan Kedaruratan Kesehatan Masyarakat.
+              - _type: numPoint
+                _key: '28'
+                isi:
+                  _type: referenceText
+                  references: []
+                  text: >-
+                    Terpapar adalah kondisi orang, Barang, atau Alat Angkut yang
+                    terpajan, terkontaminasi, dalam masa inkubasi, insektasi,
+                    pestasi, ratisasi, termasuk kimia dan radiasi.
+              - _type: numPoint
+                _key: '29'
+                isi:
+                  _type: referenceText
+                  references: []
+                  text: >-
+                    Pejabat Karantina Kesehatan adalah pegawai negeri sipil yang
+                    bekerja di bidang kesehatan yang diberi kewenangan oleh
+                    menteri yang menyelenggarakan urusan pemerintahan di bidang
+                    kesehatan untuk melaksanakan Kekarantinaan Kesehatan.
+              - _type: numPoint
+                _key: '30'
+                isi:
+                  _type: referenceText
+                  references: []
+                  text: >-
+                    Dokumen Karantina Kesehatan adalah surat keterangan
+                    kesehatan yang dimiliki setiap Alat Angkut, orang, dan
+                    Barang yang memenuhi persyaratan baik nasional maupun
+                    internasional.
+              - _type: numPoint
+                _key: '31'
+                isi:
+                  _type: referenceText
+                  references: []
+                  text: >-
+                    Setiap Orang adalah orang perseorangan dan/atau badan, baik
+                    yang berbentuk badan hukum maupun tidak berbadan hukum.
+              - _type: numPoint
+                _key: '32'
+                isi:
+                  _type: referenceText
+                  references: []
+                  text: >-
+                    Penyidik '” Pegawai Negeri Sipil Kekarantinaan Kesehatan
+                    yang selanjutnya disebut PPNS Kekarantinaan Kesehatan adalah
+                    pejabat pegawai negeri sipil tertentu yang diberi wewenang
+                    khusus oleh Undang-Undang ini untuk melakukan penyidikan
+                    tindak pidana di bidang Kekarantinaan Kesehatan.
+              - _type: numPoint
+                _key: '33'
+                isi:
+                  _type: referenceText
+                  references: []
+                  text: >-
+                    Pemerintah Pusat adalah Presiden Republik Indonesia yang
+                    memegang kekuasaan pemerintahan negara Republik Indonesia
+                    yang dibantu oleh Wakil Presiden dan menteri sebagaimana
+                    dimaksud dalam Undang- Undang Dasar Negara Republik
+                    Indonesia Tahun 1945.
+              - _type: numPoint
+                _key: '34'
+                isi:
+                  _type: referenceText
+                  references: []
+                  text: >-
+                    Pemerintah Daerah adalah kepala daerah sebagai unsur
                     penyelenggara Pemerintahan Daerah yang memimpin pelaksanaan
                     urusan pemerintahan yang menjadi kewenangan daerah otonom.
-                    35. Menteri adalah menteri yang menyelenggarakan urusan
+              - _type: numPoint
+                _key: '35'
+                isi:
+                  _type: referenceText
+                  references: []
+                  text: >-
+                    Menteri adalah menteri yang menyelenggarakan urusan
                     pemerintahan di bidang kesehatan.
         - _type: pasal
           _key: 2
