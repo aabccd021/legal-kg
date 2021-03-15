@@ -38,7 +38,7 @@ export function jsonToMd(option: Option): void {
 function handleJson(jsonNode: DocumentNode, option: Option): void {
   const { overwrite } = option;
   const jsonFile = getDocumentFilePath(jsonNode, 'yaml');
-  const { path: mdPath, exists: mdExists } = getDocumentFilePath(jsonNode, 'md');
+  const { path: mdPath, exists: mdExists } = getDocumentFilePath(jsonNode, 'mdv2');
 
   try {
     if (!overwrite && mdExists) {
@@ -183,26 +183,42 @@ function pasalContentToMd(isi: IsiPasal, pasalNode: PasalNode): string {
 }
 
 function amendPointsToMd(amendPoints: AmendPoints): string {
-  const { description, isi } = amendPoints;
-  const isiMd = isi.map(amendPointToMd).join('\n');
+  const { description, isi, documentNode } = amendPoints;
+  const isiMd = isi.map(amendPointToMdWith(documentNode)).join('\n');
   return `${description.text}\n${isiMd}`;
 }
 
-function amendPointToMd(amendPoint: AmendedPoint): string {
-  if (amendPoint._operation === 'delete') return amendDeletePasalPointToMd(amendPoint);
-  if (amendPoint._operation === 'update') return amendUpdatePasalPointToMd(amendPoint);
-  if (amendPoint._operation === 'insert') return amendInsertPasalPointToMd(amendPoint);
+const amendPointToMdWith = curry(amendPointToMd);
+function amendPointToMd(documentNode: DocumentNode, amendPoint: AmendedPoint): string {
+  if (amendPoint._operation === 'delete')
+    return amendDeletePasalPointToMd(documentNode, amendPoint);
+  if (amendPoint._operation === 'update')
+    return amendUpdatePasalPointToMd(documentNode, amendPoint);
+  if (amendPoint._operation === 'insert')
+    return amendInsertPasalPointToMd(documentNode, amendPoint);
   assertNever(amendPoint);
 }
 
-function amendDeletePasalPointToMd(amendPoint: AmendDeletePasalPoint): string {
+function amendDeletePasalPointToMd(_: DocumentNode, amendPoint: AmendDeletePasalPoint): string {
   return amendPoint.isi.text;
 }
-function amendUpdatePasalPointToMd(amendPoint: AmendUpdatePasalPoint): string {
+function amendUpdatePasalPointToMd(
+  documentNode: DocumentNode,
+  amendPoint: AmendUpdatePasalPoint
+): string {
   const { description, _pasalKey, isi } = amendPoint;
-  return `* ${description.text}\n    * > Pasal ${_pasalKey}\n    * > ${isi.text}`;
+  const pasalNode: PasalNode = {
+    _structureType: 'pasal',
+    _key: _pasalKey,
+    parentDocument: documentNode,
+  };
+  const isiMd = pasalContentToMd(isi, pasalNode)
+    .split('\n')
+    .map((str) => `        > ${str}`)
+    .join('\n');
+  return `* ${description.text}\n    * > Pasal ${_pasalKey}\n\n${isiMd}`;
 }
-function amendInsertPasalPointToMd(amendPoint: AmendInsertPasalPoint): string {
+function amendInsertPasalPointToMd(_: DocumentNode, amendPoint: AmendInsertPasalPoint): string {
   return amendPoint.isi.text;
 }
 

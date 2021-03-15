@@ -17,6 +17,7 @@ export type DataType =
   | 'json'
   | 'yaml'
   | 'md'
+  | 'mdv2'
   | 'ttl';
 export function getDataTypeExtension(dataType: DataType): string {
   const extension = getDataTypeExtensionStr(dataType);
@@ -30,6 +31,7 @@ function getDataTypeExtensionStr(dataType: DataType): string {
   if (dataType === 'json') return 'json';
   if (dataType === 'yaml') return 'yaml';
   if (dataType === 'md') return 'md';
+  if (dataType === 'mdv2') return 'md';
   if (dataType === 'ttl') return 'ttl';
   assertNever(dataType);
 }

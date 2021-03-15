@@ -24,6 +24,7 @@ import {
   AmendInsertPasalPoint,
   AmendPoints,
   AmendUpdatePasalPoint,
+  IsiAmendUpdatePasal,
 } from '../../../legal/structure/amend';
 import { safeParseInt } from './parse_key_from_spans';
 import { neverNum, neverString } from '../../../util';
@@ -79,12 +80,19 @@ function toDetectedPasal(parent: PasalParentNode, pasal: Pasal): Pasal {
 }
 
 function pasalContentToDetectedPasalContent(isi: IsiPasal, pasalNode: PasalNode): IsiPasal {
+  if (isi._type === 'amendPoints') return detectedAmendPointsOf(isi, pasalNode);
+  return toDetectedIsiAmendedUpdatePasal(isi, pasalNode);
+}
+
+function toDetectedIsiAmendedUpdatePasal(
+  isi: IsiAmendUpdatePasal,
+  pasalNode: PasalNode
+): IsiAmendUpdatePasal {
   if (isi._type === 'ayats')
     return { ...isi, ayats: isi.ayats.map((ayat) => ayatToDetectedAyat(ayat, pasalNode)) };
   if (isi._type === 'points') return pointsToDetectedPoints(isi, pasalNode);
   if (isi._type === 'referenceText')
     return { ...isi, references: detectPasalNode(isi.text, pasalNode) };
-  if (isi._type === 'amendPoints') return detectedAmendPointsOf(isi, pasalNode);
   assertNever(isi);
 }
 
@@ -121,7 +129,7 @@ function detectedAmendUpdatePasalPointOf(
   amendPoint: AmendUpdatePasalPoint
 ): AmendUpdatePasalPoint {
   const { isi } = amendPoint;
-  const detectedIsi = { ...isi, references: detectPasalNode(isi.text, pasalNode) };
+  const detectedIsi = toDetectedIsiAmendedUpdatePasal(isi, pasalNode);
   return { ...amendPoint, isi: detectedIsi };
 }
 function detectedAmendInsertPasalPointOf(
@@ -135,7 +143,7 @@ function detectedAmendInsertPasalPointOf(
 
 function pointsToDetectedPoints(points: Points, pointsNode: PointsNode): Points {
   const { isi, _description } = points;
-  const detectedIsi = isi.map((p) => pointToDetectedPoint(p, pointsNode));
+  const detectedIsi = isi.map(toDetectedPointWith(pointsNode));
   const descriptionReferences = detectPointParentNode(_description.text, pointsNode);
   return {
     ...points,
@@ -144,7 +152,8 @@ function pointsToDetectedPoints(points: Points, pointsNode: PointsNode): Points 
   };
 }
 
-function pointToDetectedPoint(point: Point, parentPoints: PointsNode): Point {
+const toDetectedPointWith = curry(pointToDetectedPoint);
+function pointToDetectedPoint(parentPoints: PointsNode, point: Point): Point {
   const { _key, isi } = point;
   const pointNode: PointNode = { _key, parentPoints, _structureType: 'point' };
   const detectedIsi: Points | ReferenceText =

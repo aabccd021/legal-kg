@@ -21,9 +21,11 @@ import {
   removeAyatKey,
   removeHurufKey,
   removeNomorKey,
+  safeParseInt,
 } from './parse_key_from_spans';
 import { Point, Points } from '../../../legal/structure/point';
 import assertNever from 'assert-never';
+import { DocumentNode } from '../../../legal/document';
 
 export type Context = {
   hasAmendPasal: boolean;
@@ -203,7 +205,19 @@ function amendPointsOf(context: Context, spans: Span[]): AmendPoints {
   const { preKeySpans, spansOfKey } = toSpansWith(amendNomorKeyOfId, spans);
   const isi = chain(spansOfKey).toPairs().map(spansToAmendedPointWith(context)).compact().value();
   const description = emptyReferenceOf(preKeySpans);
-  return { _type: 'amendPoints', description, isi: isi };
+  const documentNode = getAmendedDocumentNode(preKeySpans);
+  return { _type: 'amendPoints', description, isi, documentNode };
+}
+
+function getAmendedDocumentNode(spans: Span[]): DocumentNode {
+  const str = spans.map(toStr).join(' ');
+  const [, , _nomor, , _tahun] =
+    str?.match(/Undang-Undang Nomor [0-9]+ Tahun [0-9]+/)?.[0]?.split(' ') ?? [];
+  const nomor = safeParseInt(_nomor);
+  const tahun = safeParseInt(_tahun);
+  if (!isUndefined(nomor) && !isUndefined(tahun)) return { _documentType: 'uu', nomor, tahun };
+  console.log('Legal Not Detected', str);
+  return { _documentType: 'uu', nomor: 999, tahun: 2099 };
 }
 
 const spansToAmendedPointWith = curry(spansToAmendedPoint);
@@ -253,10 +267,10 @@ function spansToAmendUpdatePasalPoint(
       .map(([idx]) => parseInt(idx))
       .first()
       .value() ?? 0;
-  // const description = emptyReferenceOf(spans.slice(0, pasalTitleIdx));
   if (pasalTitleIdx === 0) console.log('UND', spans[0]);
   const description = emptyReferenceOf(spans.slice(0, pasalTitleIdx));
-  const isi = emptyReferenceOf(spans.slice(pasalTitleIdx + 1));
+  const isiSpans = spans.slice(pasalTitleIdx + 1);
+  const isi = ayatsOf(context, isiSpans) ?? pointsOf(isiSpans) ?? emptyReferenceOf(isiSpans);
   return { _type: 'amendPoint', _operation: 'update', _nomorKey, _pasalKey, isi, description };
 }
 
@@ -280,4 +294,8 @@ function emptyReferenceOf(spans: Span[]): ReferenceText {
     .join(' ')
     .thru<ReferenceText>((text) => ({ _type: 'referenceText', references: [], text }))
     .value();
+}
+
+export function toStr(span: Span): string {
+  return span.str;
 }

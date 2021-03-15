@@ -14,7 +14,7 @@ import { Points } from './point';
 export type PasalNode = {
   _structureType: 'pasal';
   parentDocument: DocumentNode;
-  _key: number;
+  _key: number | string;
 };
 export function _getPasalUri(node: PasalNode): string {
   const { _key, parentDocument } = node;

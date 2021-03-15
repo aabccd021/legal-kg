@@ -1,8 +1,12 @@
+import { DocumentNode } from './../document/index';
 import { ReferenceText } from '../reference';
+import { Ayats } from './ayat';
+import { Points } from './point';
 
 export type AmendPoints = {
   _type: 'amendPoints';
   description: ReferenceText;
+  documentNode: DocumentNode;
   isi: AmendedPoint[];
 };
 
@@ -23,8 +27,9 @@ export type AmendUpdatePasalPoint = AmendPointBase & {
   _operation: 'update';
   _pasalKey: string;
   description: ReferenceText;
-  isi: ReferenceText;
+  isi: IsiAmendUpdatePasal;
 };
+export type IsiAmendUpdatePasal = Points | ReferenceText | Ayats;
 
 export type AmendInsertPasalPoint = AmendPointBase & {
   _operation: 'insert';
