@@ -9112,51 +9112,25 @@ babs:
                             _nomorKey: 36
                             _pasalKey: '109'
                             isi:
-                              _type: points
-                              _description:
-                                _type: referenceText
-                                references: []
-                                text: >-
-                                  Setiap orang yang melakukan usaha dan/atau
-                                  kegiatan tanpa memiliki:
-                              isi:
-                                - _type: alphaPoint
-                                  _key: a
+                              _type: ayats
+                              ayats:
+                                - _type: ayat
+                                  _key: 3
                                   isi:
                                     _type: referenceText
                                     references: []
                                     text: >-
-                                      Perizinan Berusaha atau persetujuan
-                                      Pemerintah Pusat, atau Pemerintah Daerah
-                                      sebagaimana dimaksud dalam Pasal 24 ayat
-                                      (5), Pasal 34 ayat (3), Pasal 59 ayat (1),
-                                      atau Pasal 59 ayat (4),
-                                - _type: alphaPoint
-                                  _key: b
-                                  isi:
-                                    _type: referenceText
-                                    references: []
-                                    text: >-
-                                      persetujuan dari Pemerintah Pusat atau
-                                      Pemerintah Daerah sebagaimana dimaksud
-                                      dalam Pasal 20 ayat (3) huruf b: atau
-                                - _type: alphaPoint
-                                  _key: c
-                                  isi:
-                                    _type: referenceText
-                                    references: []
-                                    text: >-
-                                      persetujuan dari Pemerintah Pusat
-                                      sebagaimana dimaksud dalam Pasal 61 ayat
-                                      (1): yang mengakibatkan timbulnya
-                                      korban/kerusakan terhadap kesehatan,
-                                      keselamatan, dan/atau lingkungan, dipidana
-                                      dengan pidana penjara paling singkat 1
-                                      (satu) tahun dan paling lama 3 (tiga)
-                                      tahun dan denda paling sedikit
-                                      Rp1.000.000.000,00 (satu miliar rupiah)
-                                      dan paling banyak Rp3.000.000.000,00 (tiga
-                                      miliar rupiah).
+                                      huruf b: atau C. persetujuan dari
+                                      Pemerintah Pusat sebagaimana dimaksud
+                                      dalam Pasal 61 ayat (1): yang
+                                      mengakibatkan timbulnya korban/kerusakan
+                                      terhadap kesehatan, keselamatan, dan/atau
+                                      lingkungan, dipidana dengan pidana penjara
+                                      paling singkat 1 (satu) tahun dan paling
+                                      lama 3 (tiga) tahun dan denda paling
+                                      sedikit Rp1.000.000.000,00 (satu miliar
+                                      rupiah) dan paling banyak
+                                      Rp3.000.000.000,00 (tiga miliar rupiah).
                             description:
                               _type: referenceText
                               references: []
@@ -37856,11 +37830,22 @@ babs:
                                 - _type: ayat
                                   _key: 1
                                   isi:
+                                    _type: referenceText
+                                    references: []
+                                    text: >-
+                                      Pelayaran dikuasai oleh negara dan
+                                      pembinaannya dilakukan oleh Pemerintah
+                                      Pusat.
+                                - _type: ayat
+                                  _key: 2
+                                  isi:
                                     _type: points
                                     _description:
                                       _type: referenceText
                                       references: []
-                                      text: 'meliputi:'
+                                      text: >-
+                                        Pembinaan Pelayaran sebagaimana dimaksud
+                                        pada ayat (1) meliputi:
                                     isi:
                                       - _type: alphaPoint
                                         _key: a
@@ -37879,20 +37864,17 @@ babs:
                                         isi:
                                           _type: referenceText
                                           references: []
-                                          text: >-
-                                            . pengawasan. (3) Ketentuan lebih lanjut
-                                            mengenai pembinaan Pelayaran sebagaimana
-                                            dimaksud pada ayat (2) huruf a, huruf b,
-                                            dan huruf c diatur dalam Peraturan
-                                            Pemerintah.
+                                          text: . pengawasan.
                                 - _type: ayat
-                                  _key: 2
+                                  _key: 3
                                   isi:
                                     _type: referenceText
                                     references: []
                                     text: >-
-                                      Pembinaan Pelayaran sebagaimana dimaksud
-                                      pada ayat
+                                      Ketentuan lebih lanjut mengenai pembinaan
+                                      Pelayaran sebagaimana dimaksud pada ayat
+                                      (2) huruf a, huruf b, dan huruf c diatur
+                                      dalam Peraturan Pemerintah.
                             description:
                               _type: referenceText
                               references: []
@@ -39063,11 +39045,24 @@ babs:
                                 - _type: ayat
                                   _key: 1
                                   isi:
+                                    _type: referenceText
+                                    references: []
+                                    text: >-
+                                      Kegiatan pelabuhan untuk menunjang
+                                      kelancaran perdagangan yang terbuka bagi
+                                      perdagangan luar negeri dilakukan oleh
+                                      pelabuhan utama.
+                                - _type: ayat
+                                  _key: 2
+                                  isi:
                                     _type: points
                                     _description:
                                       _type: referenceText
                                       references: []
-                                      text: 'dilakukan berdasarkan pertimbangan:'
+                                      text: >-
+                                        Penetapan pelabuhan sebagaimana dimaksud
+                                        pada ayat (1) dilakukan berdasarkan
+                                        pertimbangan:
                                     isi:
                                       - _type: alphaPoint
                                         _key: a
@@ -39120,73 +39115,82 @@ babs:
                                       - _type: alphaPoint
                                         _key: h
                                         isi:
-                                          _type: points
-                                          _description:
-                                            _type: referenceText
-                                            references: []
-                                            text: >-
-                                              kepentingan nasional lainnya. (3)
-                                              Terminal khusus tertentu dapat digunakan
-                                              untuk melakukan kegiatan perdagangan
-                                              luar negeri. (4) Terminal khusus
-                                              tertentu sebagaimana dimaksud pada ayat
-                                              (2) wajib memenuhi persyaratan:
-                                          isi:
-                                            - _type: alphaPoint
-                                              _key: a
-                                              isi:
-                                                _type: referenceText
-                                                references: []
-                                                text: '- aspek administrasi,'
-                                            - _type: alphaPoint
-                                              _key: b
-                                              isi:
-                                                _type: referenceText
-                                                references: []
-                                                text: aspek ekonomi,
-                                            - _type: alphaPoint
-                                              _key: c
-                                              isi:
-                                                _type: referenceText
-                                                references: []
-                                                text: >-
-                                                  aspek keselamatan dan keamanan
-                                                  pelayaran,
-                                            - _type: alphaPoint
-                                              _key: d
-                                              isi:
-                                                _type: referenceText
-                                                references: []
-                                                text: aspek teknis fasilitas kepelabuhanan,
-                                            - _type: alphaPoint
-                                              _key: e
-                                              isi:
-                                                _type: referenceText
-                                                references: []
-                                                text: >-
-                                                  fasilitas kantor dan peralatan penunjang
-                                                  bagi instansi pemegang fungsi
-                                                  keselamatan dan keamanan pelayaran,
-                                                  instansi bea cukai, imigrasi, dan
-                                                  Karantina, dan
-                                            - _type: alphaPoint
-                                              _key: f
-                                              isi:
-                                                _type: referenceText
-                                                references: []
-                                                text: >-
-                                                  jenis komoditas khusus. (5) Pelabuhan
-                                                  dan terminal khusus yang terbuka bagi
-                                                  perdagangan luar negeri ditetapkan oleh
-                                                  Pemerintah Pusat.
+                                          _type: referenceText
+                                          references: []
+                                          text: kepentingan nasional lainnya.
                                 - _type: ayat
-                                  _key: 2
+                                  _key: 3
                                   isi:
                                     _type: referenceText
                                     references: []
                                     text: >-
-                                      Penetapan pelabuhan sebagaimana dimaksud
-                                      pada ayat
+                                      Terminal khusus tertentu dapat digunakan
+                                      untuk melakukan kegiatan perdagangan luar
+                                      negeri.
+                                - _type: ayat
+                                  _key: 4
+                                  isi:
+                                    _type: points
+                                    _description:
+                                      _type: referenceText
+                                      references: []
+                                      text: >-
+                                        Terminal khusus tertentu sebagaimana
+                                        dimaksud pada ayat (2) wajib memenuhi
+                                        persyaratan:
+                                    isi:
+                                      - _type: alphaPoint
+                                        _key: a
+                                        isi:
+                                          _type: referenceText
+                                          references: []
+                                          text: '- aspek administrasi,'
+                                      - _type: alphaPoint
+                                        _key: b
+                                        isi:
+                                          _type: referenceText
+                                          references: []
+                                          text: aspek ekonomi,
+                                      - _type: alphaPoint
+                                        _key: c
+                                        isi:
+                                          _type: referenceText
+                                          references: []
+                                          text: >-
+                                            aspek keselamatan dan keamanan
+                                            pelayaran,
+                                      - _type: alphaPoint
+                                        _key: d
+                                        isi:
+                                          _type: referenceText
+                                          references: []
+                                          text: aspek teknis fasilitas kepelabuhanan,
+                                      - _type: alphaPoint
+                                        _key: e
+                                        isi:
+                                          _type: referenceText
+                                          references: []
+                                          text: >-
+                                            fasilitas kantor dan peralatan penunjang
+                                            bagi instansi pemegang fungsi
+                                            keselamatan dan keamanan pelayaran,
+                                            instansi bea cukai, imigrasi, dan
+                                            Karantina, dan
+                                      - _type: alphaPoint
+                                        _key: f
+                                        isi:
+                                          _type: referenceText
+                                          references: []
+                                          text: jenis komoditas khusus.
+                                - _type: ayat
+                                  _key: 5
+                                  isi:
+                                    _type: referenceText
+                                    references: []
+                                    text: >-
+                                      Pelabuhan dan terminal khusus yang terbuka
+                                      bagi perdagangan luar negeri ditetapkan
+                                      oleh Pemerintah Pusat.
                             description:
                               _type: referenceText
                               references: []
@@ -39518,8 +39522,10 @@ babs:
                                     _type: referenceText
                                     references: []
                                     text: >-
-                                      dilakukan secara berkala dan
-                                      sewaktu-waktu.
+                                      Setiap kapal yang memperoleh sertifikat
+                                      sebagaimana dimaksud dalam Pasal 126 ayat
+                                      (1) wajib dipelihara sehingga tetap
+                                      memenuhi persyaratan keselamatan kapal.
                                 - _type: ayat
                                   _key: 2
                                   isi:
@@ -39537,7 +39543,8 @@ babs:
                                     references: []
                                     text: >-
                                       Pemeliharaan kapal sebagaimana dimaksud
-                                      pada ayat
+                                      pada ayat (1) dilakukan secara berkala dan
+                                      sewaktu-waktu.
                             description:
                               _type: referenceText
                               references: []
@@ -40068,10 +40075,20 @@ babs:
                                     _type: referenceText
                                     references: []
                                     text: >-
-                                      , Pasal 152 ayat (1), Pasal 156 ayat (1),
-                                      Pasal 158 ayat (5), Pasal 160 ayat (1),
-                                      Pasal 162 ayat (1), atau Pasal 165 ayat
-                                      (1) dikenai sanksi administratif.
+                                      Setiap orang yang melanggar ketentuan
+                                      sebagaimana dimaksud dalam Pasal 96 ayat
+                                      (1), Pasal 97 ayat (1), Pasal 98 ayat (1),
+                                      Pasal 100 ayat (3), Pasal 104 ayat (2),
+                                      Pasal 106, Pasal 125 ayat (1), Pasal 130
+                                      ayat (1), Pasal 131 ayat (2), Pasal 132
+                                      ayat (1) atau ayat (2), Pasal 135, Pasal
+                                      137 ayat (1) atau ayat (2), Pasal 138 ayat
+                                      (1) atau ayat (2), Pasal 141 ayat (1) atau
+                                      ayat (2), Pasal 149 ayat (1), Pasal 152
+                                      ayat (1), Pasal 156 ayat (1), Pasal 158
+                                      ayat (5), Pasal 160 ayat (1), Pasal 162
+                                      ayat (1), atau Pasal 165 ayat (1) dikenai
+                                      sanksi administratif.
                                 - _type: ayat
                                   _key: 2
                                   isi:
@@ -42801,26 +42818,68 @@ babs:
                                 - _type: ayat
                                   _key: 1
                                   isi:
-                                    _type: referenceText
-                                    references: []
-                                    text: >-
-                                      tidak dapat dipindahtangankan. (3)
-                                      Pelayanan jasa terkait bandar udara
-                                      sebagaimana dimaksud dalam Pasal 232 ayat
-                                      (3) dapat diselenggarakan oleh orang
-                                      perseorangan warga negara Indonesia
-                                      dan/atau badan hukum Indonesia. (4) Badan
-                                      usaha bandar udara yang memindahtangankan
-                                      Perizinan Berusaha sebagaimana dimaksud
-                                      pada ayat
+                                    _type: points
+                                    _description:
+                                      _type: referenceText
+                                      references: []
+                                      text: >-
+                                        Pelayanan jasa kebandarudaraan
+                                        sebagaimana dimaksud dalam Pasal 232
+                                        ayat (2) dapat diselenggarakan oleh:
+                                    isi:
+                                      - _type: alphaPoint
+                                        _key: a
+                                        isi:
+                                          _type: referenceText
+                                          references: []
+                                          text: >-
+                                            badan usaha bandar udara untuk bandar
+                                            udara yang diusahakan secara komersial
+                                            setelah memenuhi Perizinan Berusaha dari
+                                            Pemerintah Pusat, atau
+                                      - _type: alphaPoint
+                                        _key: b
+                                        isi:
+                                          _type: referenceText
+                                          references: []
+                                          text: >-
+                                            unit penyelenggara bandar udara untuk
+                                            bandar udara yang belum diusahakan
+                                            secara komersial yang dibentuk oleh dan
+                                            bertanggung jawab kepada Pemerintah
+                                            Pusat dan/atau Pemerintah Daerah sesuai
+                                            kewenangan.
                                 - _type: ayat
                                   _key: 2
                                   isi:
                                     _type: referenceText
                                     references: []
                                     text: >-
-                                      dikenai sanksi administratif berupa
-                                      pencabutan Perizinan Berusahanya.
+                                      Perizinan Berusaha sebagaimana dimaksud
+                                      pada ayat (1) tidak dapat
+                                      dipindahtangankan.
+                                - _type: ayat
+                                  _key: 3
+                                  isi:
+                                    _type: referenceText
+                                    references: []
+                                    text: >-
+                                      Pelayanan jasa terkait bandar udara
+                                      sebagaimana dimaksud dalam Pasal 232 ayat
+                                      (3) dapat diselenggarakan oleh orang
+                                      perseorangan warga negara Indonesia
+                                      dan/atau badan hukum Indonesia.
+                                - _type: ayat
+                                  _key: 4
+                                  isi:
+                                    _type: referenceText
+                                    references: []
+                                    text: >-
+                                      Badan usaha bandar udara yang
+                                      memindahtangankan Perizinan Berusaha
+                                      sebagaimana dimaksud pada ayat (2) dikenai
+                                      sanksi administratif berupa pencabutan
+                                      Perizinan Berusahanya.
                             description:
                               _type: referenceText
                               references: []
@@ -44012,16 +44071,28 @@ babs:
                                     _type: referenceText
                                     references: []
                                     text: >-
-                                      dikenai sanksi administratif. (3)
-                                      Ketentuan lebih lanjut mengenai tata cara
-                                      pengenaan sanksi administratif sebagaimana
-                                      dimaksud pada ayat
+                                      Setiap penyelenggara Rumah Sakit wajib
+                                      memenuhi Perizinan Berusaha.
                                 - _type: ayat
                                   _key: 2
                                   isi:
                                     _type: referenceText
                                     references: []
-                                    text: diatur dalam Peraturan Pemerintah.
+                                    text: >-
+                                      Setiap penyelenggara Rumah Sakit yang
+                                      tidak memenuhi kewajiban sebagaimana
+                                      dimaksud pada ayat (1) dikenai sanksi
+                                      administratif.
+                                - _type: ayat
+                                  _key: 3
+                                  isi:
+                                    _type: referenceText
+                                    references: []
+                                    text: >-
+                                      Ketentuan lebih lanjut mengenai tata cara
+                                      pengenaan sanksi administratif sebagaimana
+                                      dimaksud pada ayat (2) diatur dalam
+                                      Peraturan Pemerintah.
                             description:
                               _type: referenceText
                               references: []
@@ -44853,7 +44924,10 @@ babs:
                                   isi:
                                     _type: referenceText
                                     references: []
-                                    text: diatur dalam Peraturan Pemerintah.
+                                    text: >-
+                                      Narkotika dalam bentuk obat jadi hanya
+                                      dapat diedarkan setelah memenuhi Perizinan
+                                      Berusaha dari Pemerintah Pusat.
                                 - _type: ayat
                                   _key: 2
                                   isi:
@@ -44862,7 +44936,8 @@ babs:
                                     text: >-
                                       Ketentuan lebih lanjut mengenai syarat dan
                                       tata cara Perizinan Berusaha sebagaimana
-                                      dimaksud pada ayat
+                                      dimaksud pada ayat (1) diatur dalam
+                                      Peraturan Pemerintah.
                             description:
                               _type: referenceText
                               references: []
@@ -60161,79 +60236,88 @@ babs:
                                 - _type: alphaPoint
                                   _key: c
                                   isi:
-                                    _type: points
-                                    _description:
-                                      _type: referenceText
-                                      references: []
-                                      text: >-
-                                        akhir bulan berikutnya setelah tanggal
-                                        pembubaran (pengakhiran) usaha atau
-                                        pencabutan Pengusaha Kena Pajak
-                                        sebagaimana dimaksud pada ayat (Ed).
-                                        (6g) Dalam... (6g) Dalam hal Pengusaha
-                                        Kena Pajak tidak melaksanakan kewajiban
-                                        pembayaran kembali sesuai dengan jangka
-                                        waktu sebagaimana dimaksud pada ayat
-                                        (Ef), Direktur Jenderal Pajak
-                                        menerbitkan Surat Ketetapan Pajak Kurang
-                                        Bayar atas jumlah pajak yang seharusnya
-                                        dibayar kembali sebagaimana dimaksud
-                                        pada ayat (6e) huruf a oleh Pengusaha
-                                        Kena Pajak ditambah sanksi administrasi
-                                        berupa bunga sebagaimana dimaksud dalam
-                                        Pasal 13 ayat (2a) Undang- Undang Nomor
-                                        6 Tahun 1983 tentang Ketentuan Umum dan
-                                        Tata Cara Perpajakan dan perubahannya.
-                                        (7) Besarnya Pajak Masukan yang dapat
-                                        dikreditkan oleh Pengusaha Kena Pajak
-                                        yang peredaran usahanya dalam 1 (satu)
-                                        tahun tidak melebihi jumlah tertentu,
-                                        kecuali Pengusaha Kena Pajak sebagaimana
-                                        dimaksud pada ayat (7a) dapat dihitung
-                                        dengan menggunakan pedoman penghitungan
-                                        pengkreditan Pajak Masukan. (7a)
-                                        Besarnya Pajak Masukan yang dapat
-                                        dikreditkan oleh Pengusaha Kena Pajak
-                                        yang melakukan kegiatan usaha tertentu
-                                        dihitung dengan menggunakan pedoman
-                                        penghitungan pengkreditan Pajak Masukan.
-                                        (7b) Ketentuan mengenai peredaran usaha
-                                        sebagaimana dimaksud pada ayat (7),
-                                        kegiatan usaha tertentu sebagaimana
-                                        dimaksud pada ayat (7a), dan pedoman
-                                        penghitungan pengkreditan Pajak Masukan
-                                        sebagaimana dimaksud pada ayat (7) dan
-                                        ayat (7a) diatur dengan atau berdasarkan
-                                        Peraturan Menteri Keuangan. (8)
-                                        Pengkreditan Pajak Masukan sebagaimana
-                                        dimaksud pada ayat (2) tidak dapat
-                                        diberlakukan bagi pengeluaran untuk:
-                                    isi:
-                                      - _type: alphaPoint
-                                        _key: a
-                                        isi:
-                                          _type: referenceText
-                                          references: []
-                                          text: dihapus,
-                                      - _type: alphaPoint
-                                        _key: b
-                                        isi:
-                                          _type: referenceText
-                                          references: []
-                                          text: >-
-                                            perolehan Barang Kena Pajak atau Jasa
-                                            Kena Pajak yang tidak mempunyai hubungan
-                                            langsung dengan kegiatan usaha,
-                                      - _type: alphaPoint
-                                        _key: c
-                                        isi:
-                                          _type: referenceText
-                                          references: []
-                                          text: >-
-                                            . perolehan dan pemeliharaan kendaraan
-                                            bermotor berupa sedan dan station wagon,
-                                            kecuali merupakan barang dagangan atau
-                                            disewakan:
+                                    _type: referenceText
+                                    references: []
+                                    text: >-
+                                      akhir bulan berikutnya setelah tanggal
+                                      pembubaran (pengakhiran) usaha atau
+                                      pencabutan Pengusaha Kena Pajak
+                                      sebagaimana dimaksud pada ayat (Ed). (6g)
+                                      Dalam... (6g) Dalam hal Pengusaha Kena
+                                      Pajak tidak melaksanakan kewajiban
+                                      pembayaran kembali sesuai dengan jangka
+                                      waktu sebagaimana dimaksud pada ayat (Ef),
+                                      Direktur Jenderal Pajak menerbitkan Surat
+                                      Ketetapan Pajak Kurang Bayar atas jumlah
+                                      pajak yang seharusnya dibayar kembali
+                                      sebagaimana dimaksud pada ayat (6e) huruf
+                                      a oleh Pengusaha Kena Pajak ditambah
+                                      sanksi administrasi berupa bunga
+                                      sebagaimana dimaksud dalam Pasal 13 ayat
+                                      (2a) Undang- Undang Nomor 6 Tahun 1983
+                                      tentang Ketentuan Umum dan Tata Cara
+                                      Perpajakan dan perubahannya.
+                          - _type: ayat
+                            _key: 7
+                            isi:
+                              _type: referenceText
+                              references: []
+                              text: >-
+                                Besarnya Pajak Masukan yang dapat dikreditkan
+                                oleh Pengusaha Kena Pajak yang peredaran
+                                usahanya dalam 1 (satu) tahun tidak melebihi
+                                jumlah tertentu, kecuali Pengusaha Kena Pajak
+                                sebagaimana dimaksud pada ayat (7a) dapat
+                                dihitung dengan menggunakan pedoman penghitungan
+                                pengkreditan Pajak Masukan. (7a) Besarnya Pajak
+                                Masukan yang dapat dikreditkan oleh Pengusaha
+                                Kena Pajak yang melakukan kegiatan usaha
+                                tertentu dihitung dengan menggunakan pedoman
+                                penghitungan pengkreditan Pajak Masukan. (7b)
+                                Ketentuan mengenai peredaran usaha sebagaimana
+                                dimaksud pada ayat (7), kegiatan usaha tertentu
+                                sebagaimana dimaksud pada ayat (7a), dan pedoman
+                                penghitungan pengkreditan Pajak Masukan
+                                sebagaimana dimaksud pada ayat (7) dan ayat (7a)
+                                diatur dengan atau berdasarkan Peraturan Menteri
+                                Keuangan.
+                          - _type: ayat
+                            _key: 8
+                            isi:
+                              _type: points
+                              _description:
+                                _type: referenceText
+                                references: []
+                                text: >-
+                                  Pengkreditan Pajak Masukan sebagaimana
+                                  dimaksud pada ayat (2) tidak dapat
+                                  diberlakukan bagi pengeluaran untuk:
+                              isi:
+                                - _type: alphaPoint
+                                  _key: a
+                                  isi:
+                                    _type: referenceText
+                                    references: []
+                                    text: dihapus,
+                                - _type: alphaPoint
+                                  _key: b
+                                  isi:
+                                    _type: referenceText
+                                    references: []
+                                    text: >-
+                                      perolehan Barang Kena Pajak atau Jasa Kena
+                                      Pajak yang tidak mempunyai hubungan
+                                      langsung dengan kegiatan usaha,
+                                - _type: alphaPoint
+                                  _key: c
+                                  isi:
+                                    _type: referenceText
+                                    references: []
+                                    text: >-
+                                      . perolehan dan pemeliharaan kendaraan
+                                      bermotor berupa sedan dan station wagon,
+                                      kecuali merupakan barang dagangan atau
+                                      disewakan:
                                 - _type: alphaPoint
                                   _key: d
                                   isi:
@@ -60286,131 +60370,152 @@ babs:
                                 - _type: alphaPoint
                                   _key: j
                                   isi:
-                                    _type: points
-                                    _description:
-                                      _type: referenceText
-                                      references: []
-                                      text: >-
-                                        dihapus. (9) Pajak Masukan yang dapat
-                                        dikreditkan tetapi belum dikreditkan
-                                        dengan Pajak Keluaran pada Masa Pajak
-                                        yang sama dapat dikreditkan pada Masa
-                                        Pajak berikutnya paling lama 3 (tiga)
-                                        Masa Pajak setelah berakhirnya Masa
-                                        Pajak saat Faktur Pajak dibuat sepanjang
-                                        belum dibebankan sebagai biaya atau
-                                        belum ditambahkan (dikapitalisasi) dalam
-                                        harga perolehan Barang Kena Pajak atau
-                                        Jasa Kena Pajak serta memenuhi ketentuan
-                                        pengkreditan sesuai dengan Undang-Undang
-                                        ini. (9a) Pajak Masukan atas perolehan
-                                        Barang Kena Pajak dan/atau Jasa Kena
-                                        Pajak, impor Barang Kena Pajak serta
-                                        pemanfaatan Barang Kena Pajak Tidak
-                                        Berwujud dan/atau pemanfaatan Jasa Kena
-                                        Pajak dari luar Daerah Pabean di dalam
-                                        Daerah Pabean sebelum Pengusaha
-                                        dikukuhkan sebagai Pengusaha Kena Pajak,
-                                        dapat dikreditkan oleh Pengusaha Kena
-                                        Pajak dengan menggunakan pedoman
-                                        pengkreditan Pajak Masukan sebesar 800
-                                        (delapan puluh persen) dari Pajak
-                                        Keluaran yang seharusnya dipungut. (9b)
-                                        Pajak Masukan atas perolehan Barang Kena
-                                        Pajak dan/atau Jasa Kena Pajak, impor
-                                        Barang Kena Pajak, serta pemanfaatan
-                                        Barang Kena Pajak Tidak Berwujud
-                                        dan/atau pemanfaatan Jasa Kena Pajak
-                                        dari luar Daerah Pabean di dalam Daerah
-                                        Pabean yang tidak dilaporkan dalam Surat
-                                        Pemberitahuan Masa Pajak Pertambahan
-                                        Nilai yang diberitahukan dan/atau
-                                        ditemukan pada waktu dilakukan
-                                        pemeriksaan dapat dikreditkan oleh
-                                        Pengusaha Kena Pajak sepanjang memenuhi
-                                        ketentuan pengkreditan sesuai dengan
-                                        Undang- Undang ini. (9c) Pajak Masukan
-                                        atas perolehan Barang Kena Pajak
-                                        dan/atau Jasa Kena Pajak, impor Barang
-                                        Kena Pajak, serta pemanfaatan Barang
-                                        Kena Pajak Tidak Berwujud dan/atau
-                                        pemanfaatan Jasa Kena Pajak dari luar
-                                        Daerah Pabean di dalam Daerah Pabean
-                                        yang ditagih dengan penerbitan ketetapan
-                                        pajak dapat dikreditkan oleh Pengusaha
-                                        Kena Pajak sebesar jumlah pokok Pajak
-                                        Pertambahan Nilai yang tercantum dalam
-                                        ketetapan pajak dengan ketentuan
-                                        ketetapan pajak dimaksud telah dilakukan
-                                        pelunasan dan tidak dilakukan upaya
-                                        hukum serta memenuhi ketentuan
-                                        pengkreditan sesuai dengan Undang-
-                                        Undang ini. (10) Dihapus. (11) Dihapus.
-                                        (12) Dihapus. (13) Ketentuan lebih
-                                        lanjut mengenai:
-                                    isi:
-                                      - _type: alphaPoint
-                                        _key: a
-                                        isi:
-                                          _type: referenceText
-                                          references: []
-                                          text: >-
-                                            kriteria belum melakukan penyerahan
-                                            Barang Kena Pajak dan/atau Jasa Kena
-                                            Pajak dan/atau ekspor Barang Kena Pajak
-                                            dan/atau Jasa Kena Pajak sebagaimana
-                                            dimaksud pada ayat (2a),
-                                      - _type: alphaPoint
-                                        _key: b
-                                        isi:
-                                          _type: referenceText
-                                          references: []
-                                          text: >-
-                                            penghitungan dan tata cara pengembalian
-                                            kelebihan Pajak Masukan sebagaimana
-                                            dimaksud pada ayat (Ya), ayat (4b), dan
-                                            ayat (4),
-                                      - _type: alphaPoint
-                                        _key: c
-                                        isi:
-                                          _type: referenceText
-                                          references: []
-                                          text: >-
-                                            penentuan sektor usaha tertentu
-                                            sebagaimana dimaksud pada ayat (6c),
-                                      - _type: alphaPoint
-                                        _key: d
-                                        isi:
-                                          _type: referenceText
-                                          references: []
-                                          text: >-
-                                            tata cara pembayaran kembali Pajak
-                                            Masukan sebagaimana dimaksud pada ayat
-                                            (6e) huruf a, dan
-                                      - _type: alphaPoint
-                                        _key: e
-                                        isi:
-                                          _type: referenceText
-                                          references: []
-                                          text: >-
-                                            tata cara pengkreditan Pajak Masukan
-                                            sebagaimana dimaksud pada ayat (9a),
-                                            ayat (9b), dan ayat (9c) diatur dengan
-                                            atau berdasarkan Peraturan Menteri
-                                            Keuangan. (14) Dalam hal terjadi
-                                            pengalihan Barang Kena Pajak dalam
-                                            rangka penggabungan, peleburan,
-                                            pemekaran, pemecahan, dan
-                                            pengambilalihan usaha, Pajak Masukan
-                                            atas Barang Kena Pajak yang dialihkan
-                                            yang belum dikreditkan oleh Pengusaha
-                                            Kena Pajak yang mengalihkan dapat
-                                            dikreditkan oleh Pengusaha Kena Pajak
-                                            yang menerima pengalihan sepanjang
-                                            Faktur Pajaknya diterima setelah
-                                            terjadinya pengalihan dan Pajak Masukan
-                                            tersebut belum dibebankan sebagai biaya
-                                            atau dikapitalisasi.
+                                    _type: referenceText
+                                    references: []
+                                    text: dihapus.
+                          - _type: ayat
+                            _key: 9
+                            isi:
+                              _type: referenceText
+                              references: []
+                              text: >-
+                                Pajak Masukan yang dapat dikreditkan tetapi
+                                belum dikreditkan dengan Pajak Keluaran pada
+                                Masa Pajak yang sama dapat dikreditkan pada Masa
+                                Pajak berikutnya paling lama 3 (tiga) Masa Pajak
+                                setelah berakhirnya Masa Pajak saat Faktur Pajak
+                                dibuat sepanjang belum dibebankan sebagai biaya
+                                atau belum ditambahkan (dikapitalisasi) dalam
+                                harga perolehan Barang Kena Pajak atau Jasa Kena
+                                Pajak serta memenuhi ketentuan pengkreditan
+                                sesuai dengan Undang-Undang ini. (9a) Pajak
+                                Masukan atas perolehan Barang Kena Pajak
+                                dan/atau Jasa Kena Pajak, impor Barang Kena
+                                Pajak serta pemanfaatan Barang Kena Pajak Tidak
+                                Berwujud dan/atau pemanfaatan Jasa Kena Pajak
+                                dari luar Daerah Pabean di dalam Daerah Pabean
+                                sebelum Pengusaha dikukuhkan sebagai Pengusaha
+                                Kena Pajak, dapat dikreditkan oleh Pengusaha
+                                Kena Pajak dengan menggunakan pedoman
+                                pengkreditan Pajak Masukan sebesar 800 (delapan
+                                puluh persen) dari Pajak Keluaran yang
+                                seharusnya dipungut. (9b) Pajak Masukan atas
+                                perolehan Barang Kena Pajak dan/atau Jasa Kena
+                                Pajak, impor Barang Kena Pajak, serta
+                                pemanfaatan Barang Kena Pajak Tidak Berwujud
+                                dan/atau pemanfaatan Jasa Kena Pajak dari luar
+                                Daerah Pabean di dalam Daerah Pabean yang tidak
+                                dilaporkan dalam Surat Pemberitahuan Masa Pajak
+                                Pertambahan Nilai yang diberitahukan dan/atau
+                                ditemukan pada waktu dilakukan pemeriksaan dapat
+                                dikreditkan oleh Pengusaha Kena Pajak sepanjang
+                                memenuhi ketentuan pengkreditan sesuai dengan
+                                Undang- Undang ini. (9c) Pajak Masukan atas
+                                perolehan Barang Kena Pajak dan/atau Jasa Kena
+                                Pajak, impor Barang Kena Pajak, serta
+                                pemanfaatan Barang Kena Pajak Tidak Berwujud
+                                dan/atau pemanfaatan Jasa Kena Pajak dari luar
+                                Daerah Pabean di dalam Daerah Pabean yang
+                                ditagih dengan penerbitan ketetapan pajak dapat
+                                dikreditkan oleh Pengusaha Kena Pajak sebesar
+                                jumlah pokok Pajak Pertambahan Nilai yang
+                                tercantum dalam ketetapan pajak dengan ketentuan
+                                ketetapan pajak dimaksud telah dilakukan
+                                pelunasan dan tidak dilakukan upaya hukum serta
+                                memenuhi ketentuan pengkreditan sesuai dengan
+                                Undang- Undang ini.
+                          - _type: ayat
+                            _key: 10
+                            isi:
+                              _type: referenceText
+                              references: []
+                              text: Dihapus.
+                          - _type: ayat
+                            _key: 11
+                            isi:
+                              _type: referenceText
+                              references: []
+                              text: Dihapus.
+                          - _type: ayat
+                            _key: 12
+                            isi:
+                              _type: referenceText
+                              references: []
+                              text: Dihapus.
+                          - _type: ayat
+                            _key: 13
+                            isi:
+                              _type: points
+                              _description:
+                                _type: referenceText
+                                references: []
+                                text: 'Ketentuan lebih lanjut mengenai:'
+                              isi:
+                                - _type: alphaPoint
+                                  _key: a
+                                  isi:
+                                    _type: referenceText
+                                    references: []
+                                    text: >-
+                                      kriteria belum melakukan penyerahan Barang
+                                      Kena Pajak dan/atau Jasa Kena Pajak
+                                      dan/atau ekspor Barang Kena Pajak dan/atau
+                                      Jasa Kena Pajak sebagaimana dimaksud pada
+                                      ayat (2a),
+                                - _type: alphaPoint
+                                  _key: b
+                                  isi:
+                                    _type: referenceText
+                                    references: []
+                                    text: >-
+                                      penghitungan dan tata cara pengembalian
+                                      kelebihan Pajak Masukan sebagaimana
+                                      dimaksud pada ayat (Ya), ayat (4b), dan
+                                      ayat (4),
+                                - _type: alphaPoint
+                                  _key: c
+                                  isi:
+                                    _type: referenceText
+                                    references: []
+                                    text: >-
+                                      penentuan sektor usaha tertentu
+                                      sebagaimana dimaksud pada ayat (6c),
+                                - _type: alphaPoint
+                                  _key: d
+                                  isi:
+                                    _type: referenceText
+                                    references: []
+                                    text: >-
+                                      tata cara pembayaran kembali Pajak Masukan
+                                      sebagaimana dimaksud pada ayat (6e) huruf
+                                      a, dan
+                                - _type: alphaPoint
+                                  _key: e
+                                  isi:
+                                    _type: referenceText
+                                    references: []
+                                    text: >-
+                                      tata cara pengkreditan Pajak Masukan
+                                      sebagaimana dimaksud pada ayat (9a), ayat
+                                      (9b), dan ayat (9c) diatur dengan atau
+                                      berdasarkan Peraturan Menteri Keuangan.
+                          - _type: ayat
+                            _key: 14
+                            isi:
+                              _type: referenceText
+                              references: []
+                              text: >-
+                                Dalam hal terjadi pengalihan Barang Kena Pajak
+                                dalam rangka penggabungan, peleburan, pemekaran,
+                                pemecahan, dan pengambilalihan usaha, Pajak
+                                Masukan atas Barang Kena Pajak yang dialihkan
+                                yang belum dikreditkan oleh Pengusaha Kena Pajak
+                                yang mengalihkan dapat dikreditkan oleh
+                                Pengusaha Kena Pajak yang menerima pengalihan
+                                sepanjang Faktur Pajaknya diterima setelah
+                                terjadinya pengalihan dan Pajak Masukan tersebut
+                                belum dibebankan sebagai biaya atau
+                                dikapitalisasi.
                       description:
                         _type: referenceText
                         references: []

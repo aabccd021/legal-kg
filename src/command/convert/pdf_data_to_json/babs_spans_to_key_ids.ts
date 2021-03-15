@@ -300,6 +300,7 @@ function toKeys(
         selfAmendPasalKeyOfId: [...selfAmendPasalKeyOfId, span.id],
         lastAmendedNomor: lastNomor,
         afterTruePasal: false,
+        amendAyatXls: [],
       };
     }
   }
@@ -334,6 +335,7 @@ function toKeys(
       selfAmendPasalKeyOfId: [...selfAmendPasalKeyOfId, span.id],
       lastAmendedNomor: lastNomor,
       afterTruePasal: false,
+      amendAyatXls: [],
     };
   }
 
