@@ -3362,27 +3362,51 @@ babs:
                                       prosedur yang benar tetapi kemudian
                                       terbukti tidak sesuai dengan rencana tata
                                       ruang wilayah, dibatalkan oleh Pemerintah
-                                      Pusat. (S) Terhadap kerugian yang
-                                      ditimbulkan akibat pembatalan persetujuan
-                                      sebagaimana dimaksud pada ayat (2) dan
-                                      ayat (4), dapat dimintakan ganti kerugian
-                                      yang layak kepada instansi pemberi
-                                      persetujuan. (6) Kegiatan pemanfaatan
-                                      ruang yang tidak sesuai lagi akibat adanya
-                                      perubahan rencana tata ruang wilayah dapat
+                                      Pusat.
+                                - _type: ayat
+                                  _key: 5
+                                  isi:
+                                    _type: referenceText
+                                    references: []
+                                    text: >-
+                                      Terhadap kerugian yang ditimbulkan akibat
+                                      pembatalan persetujuan sebagaimana
+                                      dimaksud pada ayat (2) dan ayat (4), dapat
+                                      dimintakan ganti kerugian yang layak
+                                      kepada instansi pemberi persetujuan.
+                                - _type: ayat
+                                  _key: 6
+                                  isi:
+                                    _type: referenceText
+                                    references: []
+                                    text: >-
+                                      Kegiatan pemanfaatan ruang yang tidak
+                                      sesuai lagi akibat adanya perubahan
+                                      rencana tata ruang wilayah dapat
                                       dibatalkan oleh Pemerintah Pusat dengan
-                                      memberikan ganti kerugian yang layak. (7)
+                                      memberikan ganti kerugian yang layak.
+                                - _type: ayat
+                                  _key: 7
+                                  isi:
+                                    _type: referenceText
+                                    references: []
+                                    text: >-
                                       Setiap pejabat pemerintah yang berwenang
                                       dilarang menerbitkan persetujuan
                                       Kesesuaian Kegiatan Pemanfaatan Ruang yang
                                       tidak sesuai dengan rencana tata ruang.
-                                      (8) Ketentuan lebih lanjut mengenai
-                                      prosedur perolehan persetujuan Kesesuaian
-                                      Kegiatan Pemanfaatan Ruang dan tata cara
-                                      pemberian ganti kerugian yang layak
-                                      sebagaimana dimaksud pada ayat (5) dan
-                                      ayat (6) diatur dalam Peraturan
-                                      Pemerintah.
+                                - _type: ayat
+                                  _key: 8
+                                  isi:
+                                    _type: referenceText
+                                    references: []
+                                    text: >-
+                                      Ketentuan lebih lanjut mengenai prosedur
+                                      perolehan persetujuan Kesesuaian Kegiatan
+                                      Pemanfaatan Ruang dan tata cara pemberian
+                                      ganti kerugian yang layak sebagaimana
+                                      dimaksud pada ayat (5) dan ayat (6) diatur
+                                      dalam Peraturan Pemerintah.
                             description:
                               _type: referenceText
                               references: []
@@ -10628,7 +10652,13 @@ babs:
                                       Dalam proses peradilan atas tindakan
                                       sebagaimana dimaksud pada ayat (1), ayat
                                       (2), dan ayat (3), hakim memperhatikan
-                                      pertimbangan dari Profesi Ahli. (S)
+                                      pertimbangan dari Profesi Ahli.
+                                - _type: ayat
+                                  _key: 5
+                                  isi:
+                                    _type: referenceText
+                                    references: []
+                                    text: >-
                                       Ketentuan lebih lanjut mengenai kriteria,
                                       jenis, besaran dan tata cara pengenaan
                                       sanksi sebagaimana dimaksud dalam ayat
@@ -14546,13 +14576,26 @@ babs:
                                       Perkebunan, dan/atau pemenuhan hasil
                                       Perkebunan untuk kebutuhan pangan, bahan
                                       bakar nabati, dan hilirisasi industri
-                                      Perkebunan. (S) Dana yang dihimpun oleh
-                                      Pelaku Usaha Perkebunan sebagaimana
-                                      dimaksud pada ayat (3) dikelola oleh badan
-                                      pengelola dana perkebunan, yang berwenang
-                                      untuk menghimpun, mengadministrasikan,
+                                      Perkebunan.
+                                - _type: ayat
+                                  _key: 5
+                                  isi:
+                                    _type: referenceText
+                                    references: []
+                                    text: >-
+                                      Dana yang dihimpun oleh Pelaku Usaha
+                                      Perkebunan sebagaimana dimaksud pada ayat
+                                      (3) dikelola oleh badan pengelola dana
+                                      perkebunan, yang berwenang untuk
+                                      menghimpun, mengadministrasikan,
                                       mengelola, menyimpan, dan menyalurkan dana
-                                      tersebut. REPUBLIK INDONESIA - 156 - (6)
+                                      tersebut. REPUBLIK INDONESIA - 156 -
+                                - _type: ayat
+                                  _key: 6
+                                  isi:
+                                    _type: referenceText
+                                    references: []
+                                    text: >-
                                       Ketentuan lebih lanjut mengenai
                                       penghimpunan dana sebagaimana dimaksud
                                       pada ayat (4) dan badan pengelola dana
@@ -15248,10 +15291,16 @@ babs:
                                       pada ayat (2) yang dilaksanakan pada Lahan
                                       Pertanian yang telah memiliki jaringan
                                       pengairan lengkap wajib menjaga fungsi
-                                      jaringan pengairan lengkap. (S) Ketentuan
-                                      lebih lanjut mengenai Pengalihfungsian
-                                      Lahan budi daya Pertanian diatur dalam
-                                      Peraturan Pemerintah.
+                                      jaringan pengairan lengkap.
+                                - _type: ayat
+                                  _key: 5
+                                  isi:
+                                    _type: referenceText
+                                    references: []
+                                    text: >-
+                                      Ketentuan lebih lanjut mengenai
+                                      Pengalihfungsian Lahan budi daya Pertanian
+                                      diatur dalam Peraturan Pemerintah.
                             description:
                               _type: referenceText
                               references: []
@@ -22237,18 +22286,30 @@ babs:
                                           text: >-
                                             wilayah laut paling jauh 1/3 (satu per
                                             tiga) dari wilayah laut kewenangan
-                                            provinsi. (S) Perizinan Berusaha terkait
-                                            Pemanfaatan Langsung sebagaimana
-                                            dimaksud pada ayat (2), ayat (3), dan
-                                            ayat (4) diberikan berdasarkan
-                                            permohonan dari Setiap Orang. (6)
-                                            Perizinan Berusaha terkait Pemanfaatan
-                                            Langsung diberikan setelah Setiap Orang
-                                            sebagaimana dimaksud pada ayat (5)
-                                            mendapat persetujuan lingkungan sesuai
-                                            dengan ketentuan peraturan
-                                            perundang-undangan di bidang pelindungan
-                                            dan pengelolaan lingkungan hidup.
+                                            provinsi.
+                                - _type: ayat
+                                  _key: 5
+                                  isi:
+                                    _type: referenceText
+                                    references: []
+                                    text: >-
+                                      Perizinan Berusaha terkait Pemanfaatan
+                                      Langsung sebagaimana dimaksud pada ayat
+                                      (2), ayat (3), dan ayat (4) diberikan
+                                      berdasarkan permohonan dari Setiap Orang.
+                                - _type: ayat
+                                  _key: 6
+                                  isi:
+                                    _type: referenceText
+                                    references: []
+                                    text: >-
+                                      Perizinan Berusaha terkait Pemanfaatan
+                                      Langsung diberikan setelah Setiap Orang
+                                      sebagaimana dimaksud pada ayat (5)
+                                      mendapat persetujuan lingkungan sesuai
+                                      dengan ketentuan peraturan
+                                      perundang-undangan di bidang pelindungan
+                                      dan pengelolaan lingkungan hidup.
                             description:
                               _type: referenceText
                               references: []
@@ -23881,16 +23942,29 @@ babs:
                                       distribusi, dan penjualan dilakukan secara
                                       terintegrasi, usaha pembangkitan dan/atau
                                       transmisi dapat dilakukan di luar Wilayah
-                                      Usahanya. (S) Usaha penyediaan tenaga
-                                      listrik untuk kepentingan umum dengan
-                                      jenis usaha distribusi tenaga listrik
-                                      dan/atau penjualan tenaga listrik
-                                      dilakukan oleh 1 (satu) badan usaha dalam
-                                      1 (satu) Wilayah Usaha. (6) Ketentuan
-                                      lebih lanjut mengenai Wilayah Usaha
-                                      sebagaimana dimaksud pada ayat (3), ayat
-                                      (4), dan ayat (5) diatur dalam Peraturan
-                                      Pemerintah.
+                                      Usahanya.
+                                - _type: ayat
+                                  _key: 5
+                                  isi:
+                                    _type: referenceText
+                                    references: []
+                                    text: >-
+                                      Usaha penyediaan tenaga listrik untuk
+                                      kepentingan umum dengan jenis usaha
+                                      distribusi tenaga listrik dan/atau
+                                      penjualan tenaga listrik dilakukan oleh 1
+                                      (satu) badan usaha dalam 1 (satu) Wilayah
+                                      Usaha.
+                                - _type: ayat
+                                  _key: 6
+                                  isi:
+                                    _type: referenceText
+                                    references: []
+                                    text: >-
+                                      Ketentuan lebih lanjut mengenai Wilayah
+                                      Usaha sebagaimana dimaksud pada ayat (3),
+                                      ayat (4), dan ayat (5) diatur dalam
+                                      Peraturan Pemerintah.
                             description:
                               _type: referenceText
                               references: []
@@ -23954,13 +24028,19 @@ babs:
                                       badan usaha milik daerah, badan usaha
                                       milik swasta, atau koperasi sebagai
                                       penyelenggara usaha penyediaan tenaga
-                                      listrik terintegrasi. (S) Dalam hal tidak
-                                      ada badan usaha milik daerah, badan usaha
-                                      swasta, atau koperasi yang dapat
-                                      menyediakan tenaga listrik di wilayah
-                                      tersebut, Pemerintah Pusat wajib menugasi
-                                      badan usaha milik negara untuk menyediakan
-                                      tenaga listrik.
+                                      listrik terintegrasi.
+                                - _type: ayat
+                                  _key: 5
+                                  isi:
+                                    _type: referenceText
+                                    references: []
+                                    text: >-
+                                      Dalam hal tidak ada badan usaha milik
+                                      daerah, badan usaha swasta, atau koperasi
+                                      yang dapat menyediakan tenaga listrik di
+                                      wilayah tersebut, Pemerintah Pusat wajib
+                                      menugasi badan usaha milik negara untuk
+                                      menyediakan tenaga listrik.
                             description:
                               _type: referenceText
                               references: []
@@ -24974,18 +25054,37 @@ babs:
                                     text: >-
                                       Setiap instalasi tenaga listrik yang
                                       beroperasi wajib memiliki sertifikat laik
-                                      operasi. (S) Setiap peralatan dan
-                                      pemanfaat tenaga listrik wajib memenuhi
-                                      ketentuan standar nasional Indonesia. (6)
+                                      operasi.
+                                - _type: ayat
+                                  _key: 5
+                                  isi:
+                                    _type: referenceText
+                                    references: []
+                                    text: >-
+                                      Setiap peralatan dan pemanfaat tenaga
+                                      listrik wajib memenuhi ketentuan standar
+                                      nasional Indonesia.
+                                - _type: ayat
+                                  _key: 6
+                                  isi:
+                                    _type: referenceText
+                                    references: []
+                                    text: >-
                                       Setiap tenaga teknik dalam usaha
                                       ketenagalistrikan wajib memiliki
-                                      sertifikat kompetensi. (7) Ketentuan
-                                      mengenai keselamatan ketenagalistrikan,
-                                      sertifikat laik operasi, standar nasional
-                                      Indonesia, dan sertifikat kompetensi
-                                      sebagaimana dimaksud pada ayat (1) sampai
-                                      dengan ayat (6) diatur dalam Peraturan
-                                      Pemerintah.
+                                      sertifikat kompetensi.
+                                - _type: ayat
+                                  _key: 7
+                                  isi:
+                                    _type: referenceText
+                                    references: []
+                                    text: >-
+                                      Ketentuan mengenai keselamatan
+                                      ketenagalistrikan, sertifikat laik
+                                      operasi, standar nasional Indonesia, dan
+                                      sertifikat kompetensi sebagaimana dimaksud
+                                      pada ayat (1) sampai dengan ayat (6)
+                                      diatur dalam Peraturan Pemerintah.
                             description:
                               _type: referenceText
                               references: []
@@ -31586,10 +31685,16 @@ babs:
                                       mendapatkan Perizinan Berusaha dari
                                       Gubernur sesuai dengan norma, standar,
                                       prosedur, dan kriteria yang ditetapkan
-                                      oleh Pemerintah Pusat. (S) Ketentuan lebih
-                                      lanjut mengenai Perizinan Berusaha
-                                      sebagaimana dimaksud pada ayat (3) dan
-                                      ayat (4) diatur dalam Peraturan
+                                      oleh Pemerintah Pusat.
+                                - _type: ayat
+                                  _key: 5
+                                  isi:
+                                    _type: referenceText
+                                    references: []
+                                    text: >-
+                                      Ketentuan lebih lanjut mengenai Perizinan
+                                      Berusaha sebagaimana dimaksud pada ayat
+                                      (3) dan ayat (4) diatur dalam Peraturan
                                       Pemerintah.
                             description:
                               _type: referenceText
@@ -32653,47 +32758,54 @@ babs:
                                       - _type: alphaPoint
                                         _key: c
                                         isi:
-                                          _type: points
-                                          _description:
-                                            _type: referenceText
-                                            references: []
-                                            text: >-
-                                              upah tenaga kerja konstruksi. REPUBLIK
-                                              INDONESIA - 339 - (S) Untuk mencapai
-                                              tujuan sebagaimana dimaksud dalam Pasal
-                                              4 ayat (1) huruf e, gubernur sebagai
-                                              wakil Pemerintah Pusat di daerah sesuai
-                                              dengan norma, standar, prosedur, dan
-                                              kriteria yang ditetapkan oleh Pemerintah
-                                              Pusat memiliki kewenangan:
-                                          isi:
-                                            - _type: alphaPoint
-                                              _key: a
-                                              isi:
-                                                _type: referenceText
-                                                references: []
-                                                text: >-
-                                                  menyelenggarakan pengawasan penggunaan
-                                                  material, peralatan, dan teknologi
-                                                  konstruksi,
-                                            - _type: alphaPoint
-                                              _key: b
-                                              isi:
-                                                _type: referenceText
-                                                references: []
-                                                text: >-
-                                                  memfasilitasi kerja sama antara
-                                                  institusi penelitian dan pengembangan
-                                                  Jasa Konstruksi dengan seluruh pemangku
-                                                  kepentingan Jasa Konstruksi,
-                                            - _type: alphaPoint
-                                              _key: c
-                                              isi:
-                                                _type: referenceText
-                                                references: []
-                                                text: >-
-                                                  . memfasilitasi pengembangan teknologi
-                                                  prioritas,
+                                          _type: referenceText
+                                          references: []
+                                          text: >-
+                                            upah tenaga kerja konstruksi. REPUBLIK
+                                            INDONESIA - 339 -
+                                - _type: ayat
+                                  _key: 5
+                                  isi:
+                                    _type: points
+                                    _description:
+                                      _type: referenceText
+                                      references: []
+                                      text: >-
+                                        Untuk mencapai tujuan sebagaimana
+                                        dimaksud dalam Pasal 4 ayat (1) huruf e,
+                                        gubernur sebagai wakil Pemerintah Pusat
+                                        di daerah sesuai dengan norma, standar,
+                                        prosedur, dan kriteria yang ditetapkan
+                                        oleh Pemerintah Pusat memiliki
+                                        kewenangan:
+                                    isi:
+                                      - _type: alphaPoint
+                                        _key: a
+                                        isi:
+                                          _type: referenceText
+                                          references: []
+                                          text: >-
+                                            menyelenggarakan pengawasan penggunaan
+                                            material, peralatan, dan teknologi
+                                            konstruksi,
+                                      - _type: alphaPoint
+                                        _key: b
+                                        isi:
+                                          _type: referenceText
+                                          references: []
+                                          text: >-
+                                            memfasilitasi kerja sama antara
+                                            institusi penelitian dan pengembangan
+                                            Jasa Konstruksi dengan seluruh pemangku
+                                            kepentingan Jasa Konstruksi,
+                                      - _type: alphaPoint
+                                        _key: c
+                                        isi:
+                                          _type: referenceText
+                                          references: []
+                                          text: >-
+                                            . memfasilitasi pengembangan teknologi
+                                            prioritas,
                                       - _type: alphaPoint
                                         _key: d
                                         isi:
@@ -32706,58 +32818,72 @@ babs:
                                       - _type: alphaPoint
                                         _key: e
                                         isi:
-                                          _type: points
-                                          _description:
-                                            _type: referenceText
-                                            references: []
-                                            text: >-
-                                              meningkatkan penggunaan standar mutu
-                                              material dan peralatan sesuai dengan
-                                              Standar Nasional Indonesia. (6) Untuk
-                                              mencapai tujuan sebagaimana dimaksud
-                                              dalam Pasal 4 ayat (1) huruf f, gubernur
-                                              sebagai wakil Pemerintah Pusat di daerah
-                                              sesuai dengan norma, standar, prosedur,
-                                              dan kriteria yang ditetapkan oleh
-                                              Pemerintah Pusat memiliki kewenangan:
-                                          isi:
-                                            - _type: alphaPoint
-                                              _key: a
-                                              isi:
-                                                _type: referenceText
-                                                references: []
-                                                text: >-
-                                                  memperkuat kapasitas kelembagaan
-                                                  masyarakat Jasa Konstruksi provinsi,
-                                            - _type: alphaPoint
-                                              _key: b
-                                              isi:
-                                                _type: referenceText
-                                                references: []
-                                                text: >-
-                                                  meningkatkan partisipasi masyarakat Jasa
-                                                  Konstruksi yang berkualitas dan
-                                                  bertanggung jawab dalam pengawasan
-                                                  penyelenggaraan usaha Jasa Konstruksi,
-                                                  dan
-                                            - _type: alphaPoint
-                                              _key: c
-                                              isi:
-                                                _type: referenceText
-                                                references: []
-                                                text: >-
-                                                  . meningkatkan partisipasi masyarakat
-                                                  Jasa Konstruksi yang berkualitas dan
-                                                  bertanggung jawab dalam usaha penyediaan
-                                                  bangunan. (7) Untuk mencapai tujuan
-                                                  sebagaimana dimaksud dalam Pasal 4 ayat
-                                                  (1) huruf g, gubernur sebagai wakil
-                                                  Pemerintah Pusat di daerah sesuai dengan
-                                                  norma, standar, prosedur, dan kriteria
-                                                  yang ditetapkan oleh Pemerintah Pusat
-                                                  memiliki kewenangan mengumpulkan data
-                                                  dan informasi Jasa Konstruksi di
-                                                  provinsi. REPUBLIK INDONESIA - 340 -
+                                          _type: referenceText
+                                          references: []
+                                          text: >-
+                                            meningkatkan penggunaan standar mutu
+                                            material dan peralatan sesuai dengan
+                                            Standar Nasional Indonesia.
+                                - _type: ayat
+                                  _key: 6
+                                  isi:
+                                    _type: points
+                                    _description:
+                                      _type: referenceText
+                                      references: []
+                                      text: >-
+                                        Untuk mencapai tujuan sebagaimana
+                                        dimaksud dalam Pasal 4 ayat (1) huruf f,
+                                        gubernur sebagai wakil Pemerintah Pusat
+                                        di daerah sesuai dengan norma, standar,
+                                        prosedur, dan kriteria yang ditetapkan
+                                        oleh Pemerintah Pusat memiliki
+                                        kewenangan:
+                                    isi:
+                                      - _type: alphaPoint
+                                        _key: a
+                                        isi:
+                                          _type: referenceText
+                                          references: []
+                                          text: >-
+                                            memperkuat kapasitas kelembagaan
+                                            masyarakat Jasa Konstruksi provinsi,
+                                      - _type: alphaPoint
+                                        _key: b
+                                        isi:
+                                          _type: referenceText
+                                          references: []
+                                          text: >-
+                                            meningkatkan partisipasi masyarakat Jasa
+                                            Konstruksi yang berkualitas dan
+                                            bertanggung jawab dalam pengawasan
+                                            penyelenggaraan usaha Jasa Konstruksi,
+                                            dan
+                                      - _type: alphaPoint
+                                        _key: c
+                                        isi:
+                                          _type: referenceText
+                                          references: []
+                                          text: >-
+                                            . meningkatkan partisipasi masyarakat
+                                            Jasa Konstruksi yang berkualitas dan
+                                            bertanggung jawab dalam usaha penyediaan
+                                            bangunan.
+                                - _type: ayat
+                                  _key: 7
+                                  isi:
+                                    _type: referenceText
+                                    references: []
+                                    text: >-
+                                      Untuk mencapai tujuan sebagaimana dimaksud
+                                      dalam Pasal 4 ayat (1) huruf g, gubernur
+                                      sebagai wakil Pemerintah Pusat di daerah
+                                      sesuai dengan norma, standar, prosedur,
+                                      dan kriteria yang ditetapkan oleh
+                                      Pemerintah Pusat memiliki kewenangan
+                                      mengumpulkan data dan informasi Jasa
+                                      Konstruksi di provinsi. REPUBLIK INDONESIA
+                                      - 340 -
                             description:
                               _type: referenceText
                               references: []
@@ -33534,13 +33660,26 @@ babs:
                                       diselenggarakan oleh lembaga pendidikan
                                       dan pelatihan kerja sesuai dengan
                                       ketentuan peraturan perundang-undangan.
-                                      (S) Lembaga pendidikan dan pelatihan kerja
+                                - _type: ayat
+                                  _key: 5
+                                  isi:
+                                    _type: referenceText
+                                    references: []
+                                    text: >-
+                                      Lembaga pendidikan dan pelatihan kerja
                                       sebagaimana dimaksud pada ayat (4)
                                       memenuhi Perizinan Berusaha dari
-                                      Pemerintah Pusat. (6) Ketentuan lebih
-                                      lanjut mengenai tata cara Perizinan
-                                      Berusaha sebagaimana dimaksud pada ayat
-                                      (5) diatur dalam Peraturan Pemerintah.
+                                      Pemerintah Pusat.
+                                - _type: ayat
+                                  _key: 6
+                                  isi:
+                                    _type: referenceText
+                                    references: []
+                                    text: >-
+                                      Ketentuan lebih lanjut mengenai tata cara
+                                      Perizinan Berusaha sebagaimana dimaksud
+                                      pada ayat (5) diatur dalam Peraturan
+                                      Pemerintah.
                             description:
                               _type: referenceText
                               references: []
@@ -33682,25 +33821,44 @@ babs:
                                       ayat (3) ditetapkan oleh Pemerintah Pusat
                                       setelah mendapatkan persetujuan dari Dewan
                                       Perwakilan Rakyat. REPUBLIK INDONESIA -
-                                      349 - (S) Penyelenggaraan sebagian
-                                      kewenangan yang dilakukan oleh lembaga
-                                      sebagaimana dimaksud pada ayat (1)
-                                      dibiayai dengan anggaran pendapatan dan
-                                      belanja negara dan/atau sumber lain yang
-                                      sah sesuai dengan ketentuan peraturan
-                                      perundang-undangan. (6) Biaya yang
-                                      diperoleh dari masyarakat atas layanan
-                                      dalam penyelenggaraan sebagian kewenangan
-                                      yang dilakukan lembaga sebagaimana
-                                      dimaksud pada ayat (3) merupakan
-                                      penerimaan negara bukan pajak sesuai
+                                      349 -
+                                - _type: ayat
+                                  _key: 5
+                                  isi:
+                                    _type: referenceText
+                                    references: []
+                                    text: >-
+                                      Penyelenggaraan sebagian kewenangan yang
+                                      dilakukan oleh lembaga sebagaimana
+                                      dimaksud pada ayat (1) dibiayai dengan
+                                      anggaran pendapatan dan belanja negara
+                                      dan/atau sumber lain yang sah sesuai
                                       dengan ketentuan peraturan
-                                      perundang-undangan. (7) Ketentuan lebih
-                                      lanjut mengenai penyelenggaraan sebagian
-                                      kewenangan Pemerintah Pusat yang
-                                      mengikutsertakan masyarakat Jasa
-                                      Konstruksi dan pembentukan lembaga diatur
-                                      dalam Peraturan Pemerintah.
+                                      perundang-undangan.
+                                - _type: ayat
+                                  _key: 6
+                                  isi:
+                                    _type: referenceText
+                                    references: []
+                                    text: >-
+                                      Biaya yang diperoleh dari masyarakat atas
+                                      layanan dalam penyelenggaraan sebagian
+                                      kewenangan yang dilakukan lembaga
+                                      sebagaimana dimaksud pada ayat (3)
+                                      merupakan penerimaan negara bukan pajak
+                                      sesuai dengan ketentuan peraturan
+                                      perundang-undangan.
+                                - _type: ayat
+                                  _key: 7
+                                  isi:
+                                    _type: referenceText
+                                    references: []
+                                    text: >-
+                                      Ketentuan lebih lanjut mengenai
+                                      penyelenggaraan sebagian kewenangan
+                                      Pemerintah Pusat yang mengikutsertakan
+                                      masyarakat Jasa Konstruksi dan pembentukan
+                                      lembaga diatur dalam Peraturan Pemerintah.
                             description:
                               _type: referenceText
                               references: []
@@ -38530,129 +38688,127 @@ babs:
                             _nomorKey: 25
                             _pasalKey: '111'
                             isi:
-                              _type: points
-                              _description:
-                                _type: referenceText
-                                references: []
-                                text: >-
-                                  (1) Kegiatan pelabuhan untuk menunjang
-                                  kelancaran perdagangan yang terbuka bagi
-                                  perdagangan luar negeri dilakukan oleh
-                                  pelabuhan utama. REPUBLIK INDONESIA - 402 -
-                                  (2) Penetapan pelabuhan sebagaimana dimaksud
-                                  pada ayat (1) dilakukan berdasarkan
-                                  pertimbangan:
-                              isi:
-                                - _type: alphaPoint
-                                  _key: a
-                                  isi:
-                                    _type: referenceText
-                                    references: []
-                                    text: >-
-                                      pertumbuhan dan pengembangan ekonomi
-                                      nasional,
-                                - _type: alphaPoint
-                                  _key: b
-                                  isi:
-                                    _type: referenceText
-                                    references: []
-                                    text: kepentingan perdagangan internasional,
-                                - _type: alphaPoint
-                                  _key: c
-                                  isi:
-                                    _type: referenceText
-                                    references: []
-                                    text: >-
-                                      . kepentingan pengembangan kemampuan
-                                      angkutan laut nasional,
-                                - _type: alphaPoint
-                                  _key: d
-                                  isi:
-                                    _type: referenceText
-                                    references: []
-                                    text: >-
-                                      posisi geografis yang terletak pada
-                                      lintasan pelayaran internasional,
-                                - _type: alphaPoint
-                                  _key: e
-                                  isi:
-                                    _type: referenceText
-                                    references: []
-                                    text: Tatanan Kepelabuhanan Nasional,
-                                - _type: alphaPoint
-                                  _key: f
-                                  isi:
-                                    _type: referenceText
-                                    references: []
-                                    text: fasilitas pelabuhan,
-                                - _type: alphaPoint
-                                  _key: g
-                                  isi:
-                                    _type: referenceText
-                                    references: []
-                                    text: keamanan dan kedaulatan negara, dan
-                                - _type: alphaPoint
-                                  _key: h
+                              _type: ayats
+                              ayats:
+                                - _type: ayat
+                                  _key: 1
                                   isi:
                                     _type: points
                                     _description:
                                       _type: referenceText
                                       references: []
-                                      text: >-
-                                        kepentingan nasional lainnya. (3)
-                                        Terminal khusus tertentu dapat digunakan
-                                        untuk melakukan kegiatan perdagangan
-                                        luar negeri. (4) Terminal khusus
-                                        tertentu sebagaimana dimaksud pada ayat
-                                        (2) wajib memenuhi persyaratan:
+                                      text: 'dilakukan berdasarkan pertimbangan:'
                                     isi:
                                       - _type: alphaPoint
                                         _key: a
                                         isi:
                                           _type: referenceText
                                           references: []
-                                          text: '- aspek administrasi,'
+                                          text: >-
+                                            pertumbuhan dan pengembangan ekonomi
+                                            nasional,
                                       - _type: alphaPoint
                                         _key: b
                                         isi:
                                           _type: referenceText
                                           references: []
-                                          text: aspek ekonomi,
+                                          text: kepentingan perdagangan internasional,
                                       - _type: alphaPoint
                                         _key: c
                                         isi:
                                           _type: referenceText
                                           references: []
                                           text: >-
-                                            aspek keselamatan dan keamanan
-                                            pelayaran,
+                                            . kepentingan pengembangan kemampuan
+                                            angkutan laut nasional,
                                       - _type: alphaPoint
                                         _key: d
                                         isi:
                                           _type: referenceText
                                           references: []
-                                          text: aspek teknis fasilitas kepelabuhanan,
+                                          text: >-
+                                            posisi geografis yang terletak pada
+                                            lintasan pelayaran internasional,
                                       - _type: alphaPoint
                                         _key: e
                                         isi:
                                           _type: referenceText
                                           references: []
-                                          text: >-
-                                            fasilitas kantor dan peralatan penunjang
-                                            bagi instansi pemegang fungsi
-                                            keselamatan dan keamanan pelayaran,
-                                            instansi bea cukai, imigrasi, dan
-                                            Karantina, dan
+                                          text: Tatanan Kepelabuhanan Nasional,
                                       - _type: alphaPoint
                                         _key: f
                                         isi:
                                           _type: referenceText
                                           references: []
-                                          text: >-
-                                            jenis komoditas khusus. (5) Pelabuhan
-                                            dan terminal khusus yang terbuka bagi
-                                            perdagangan luar negeri ditetapkan oleh
-                                            Pemerintah Pusat.
+                                          text: fasilitas pelabuhan,
+                                      - _type: alphaPoint
+                                        _key: g
+                                        isi:
+                                          _type: referenceText
+                                          references: []
+                                          text: keamanan dan kedaulatan negara, dan
+                                      - _type: alphaPoint
+                                        _key: h
+                                        isi:
+                                          _type: points
+                                          _description:
+                                            _type: referenceText
+                                            references: []
+                                            text: >-
+                                              kepentingan nasional lainnya. (3)
+                                              Terminal khusus tertentu dapat digunakan
+                                              untuk melakukan kegiatan perdagangan
+                                              luar negeri. (4) Terminal khusus
+                                              tertentu sebagaimana dimaksud pada ayat
+                                              (2) wajib memenuhi persyaratan:
+                                          isi:
+                                            - _type: alphaPoint
+                                              _key: a
+                                              isi:
+                                                _type: referenceText
+                                                references: []
+                                                text: '- aspek administrasi,'
+                                            - _type: alphaPoint
+                                              _key: b
+                                              isi:
+                                                _type: referenceText
+                                                references: []
+                                                text: aspek ekonomi,
+                                            - _type: alphaPoint
+                                              _key: c
+                                              isi:
+                                                _type: referenceText
+                                                references: []
+                                                text: >-
+                                                  aspek keselamatan dan keamanan
+                                                  pelayaran,
+                                            - _type: alphaPoint
+                                              _key: d
+                                              isi:
+                                                _type: referenceText
+                                                references: []
+                                                text: aspek teknis fasilitas kepelabuhanan,
+                                            - _type: alphaPoint
+                                              _key: e
+                                              isi:
+                                                _type: referenceText
+                                                references: []
+                                                text: >-
+                                                  fasilitas kantor dan peralatan penunjang
+                                                  bagi instansi pemegang fungsi
+                                                  keselamatan dan keamanan pelayaran,
+                                                  instansi bea cukai, imigrasi, dan
+                                                  Karantina, dan
+                                            - _type: alphaPoint
+                                              _key: f
+                                              isi:
+                                                _type: referenceText
+                                                references: []
+                                                text: >-
+                                                  jenis komoditas khusus. (5) Pelabuhan
+                                                  dan terminal khusus yang terbuka bagi
+                                                  perdagangan luar negeri ditetapkan oleh
+                                                  Pemerintah Pusat.
                             description:
                               _type: referenceText
                               references: []
@@ -38900,19 +39056,16 @@ babs:
                             _nomorKey: 31
                             _pasalKey: '130'
                             isi:
-                              _type: referenceText
-                              references: []
-                              text: >-
-                                (1) Setiap kapal yang memperoleh sertifikat
-                                sebagaimana dimaksud dalam Pasal 126 ayat (1)
-                                wajib dipelihara sehingga tetap memenuhi
-                                persyaratan keselamatan kapal. (2) Dalam keadaan
-                                tertentu Pemerintah Pusat dapat memberikan
-                                pembebasan sebagian persyaratan yang ditetapkan
-                                dengan tetap memperhatikan keselamatan kapal.
-                                (3) Pemeliharaan kapal sebagaimana dimaksud pada
-                                ayat (1) dilakukan secara berkala dan
-                                sewaktu-waktu.
+                              _type: ayats
+                              ayats:
+                                - _type: ayat
+                                  _key: 1
+                                  isi:
+                                    _type: referenceText
+                                    references: []
+                                    text: >-
+                                      dilakukan secara berkala dan
+                                      sewaktu-waktu.
                             description:
                               _type: referenceText
                               references: []
@@ -39257,30 +39410,29 @@ babs:
                             _nomorKey: 42
                             _pasalKey: '171'
                             isi:
-                              _type: referenceText
-                              references: []
-                              text: >-
-                                (1) Setiap orang yang melanggar ketentuan
-                                sebagaimana dimaksud dalam Pasal 96 ayat (1),
-                                Pasal 97 ayat (1), Pasal 98 ayat (1), Pasal 100
-                                ayat (3), Pasal 104 ayat (2), Pasal 106, Pasal
-                                125 ayat (1), Pasal 130 ayat (1), Pasal 131 ayat
-                                (2), Pasal 132 ayat (1) atau ayat (2), Pasal
-                                135, Pasal 137 ayat (1) atau ayat (2), Pasal 138
-                                ayat (1) atau ayat (2), Pasal 141 ayat (1) atau
-                                ayat (2), Pasal 149 ayat (1), Pasal 152 ayat
-                                (1), Pasal 156 ayat (1), Pasal 158 ayat (5),
-                                Pasal 160 ayat (1), Pasal 162 ayat (1), atau
-                                Pasal 165 ayat (1) dikenai sanksi administratif.
-                                REPUBLIK INDONESIA -411 - (2) Pejabat pemerintah
-                                yang melanggar ketentuan sebagaimana dimaksud
-                                dalam Pasal 126 dikenai sanksi administratif
-                                sesuai dengan ketentuan peraturan
-                                perundang-undangan di bidang kepegawaian. (3)
-                                Ketentuan lebih lanjut mengenai kriteria, jenis,
-                                besaran denda, dan tata cara pengenaan sanksi
-                                administratif sebagaimana dimaksud pada ayat (1)
-                                diatur dalam Peraturan Pemerintah.
+                              _type: ayats
+                              ayats:
+                                - _type: ayat
+                                  _key: 1
+                                  isi:
+                                    _type: referenceText
+                                    references: []
+                                    text: >-
+                                      , Pasal 152 ayat (1), Pasal 156 ayat (1),
+                                      Pasal 158 ayat (5), Pasal 160 ayat (1),
+                                      Pasal 162 ayat (1), atau Pasal 165 ayat
+                                      (1) dikenai sanksi administratif. REPUBLIK
+                                      INDONESIA -411 - (2) Pejabat pemerintah
+                                      yang melanggar ketentuan sebagaimana
+                                      dimaksud dalam Pasal 126 dikenai sanksi
+                                      administratif sesuai dengan ketentuan
+                                      peraturan perundang-undangan di bidang
+                                      kepegawaian. (3) Ketentuan lebih lanjut
+                                      mengenai kriteria, jenis, besaran denda,
+                                      dan tata cara pengenaan sanksi
+                                      administratif sebagaimana dimaksud pada
+                                      ayat (1) diatur dalam Peraturan
+                                      Pemerintah.
                             description:
                               _type: referenceText
                               references: []
@@ -39344,28 +39496,16 @@ babs:
                             _nomorKey: 45
                             _pasalKey: '213'
                             isi:
-                              _type: referenceText
-                              references: []
-                              text: >-
-                                (1) Pemilik, Operator Kapal, atau Nakhoda wajib
-                                memberitahukan kedatangan kapalnya di pelabuhan
-                                kepada Syahbandar. (2) Setiap kapal yang
-                                memasuki pelabuhan wajib menyerahkan surat,
-                                dokumen, dan warta Kapal kepada Syahbandar
-                                seketika pada saat kapal tiba di pelabuhan
-                                dan/atau menyampaikan secara elektronik sebelum
-                                kapal tiba untuk dilakukan pemeriksaan. (3)
-                                Setelah dilakukan pemeriksaan sebagaimana
-                                dimaksud pada ayat (2), surat, dokumen, dan
-                                warta kapal disimpan oleh Syahbandar untuk
-                                diserahkan kembali bersamaan dengan
-                                diterbitkannya Surat Persetujuan Berlayar. (4)
-                                Ketentuan lebih lanjut mengenai tata cara
-                                pemberitahuan kedatangan kapal, pemeriksaan,
-                                penyerahan, serta penyimpanan surat, dokumen,
-                                dan warta kapal sebagaimana dimaksud pada ayat
-                                (1), ayat (2), dan ayat (3) diatur dalam
-                                Peraturan Pemerintah.
+                              _type: ayats
+                              ayats:
+                                - _type: ayat
+                                  _key: 2
+                                  isi:
+                                    _type: referenceText
+                                    references: []
+                                    text: >-
+                                      , dan ayat (3) diatur dalam Peraturan
+                                      Pemerintah.
                             description:
                               _type: referenceText
                               references: []
@@ -41473,47 +41613,30 @@ babs:
                             _nomorKey: 69
                             _pasalKey: '233'
                             isi:
-                              _type: points
-                              _description:
-                                _type: referenceText
-                                references: []
-                                text: >-
-                                  (1) Pelayanan jasa kebandarudaraan sebagaimana
-                                  dimaksud dalam Pasal 232 ayat (2) dapat
-                                  diselenggarakan oleh:
-                              isi:
-                                - _type: alphaPoint
-                                  _key: a
+                              _type: ayats
+                              ayats:
+                                - _type: ayat
+                                  _key: 1
                                   isi:
                                     _type: referenceText
                                     references: []
                                     text: >-
-                                      badan usaha bandar udara untuk bandar
-                                      udara yang diusahakan secara komersial
-                                      setelah memenuhi Perizinan Berusaha dari
-                                      Pemerintah Pusat, atau
-                                - _type: alphaPoint
-                                  _key: b
+                                      tidak dapat dipindahtangankan. (3)
+                                      Pelayanan jasa terkait bandar udara
+                                      sebagaimana dimaksud dalam Pasal 232 ayat
+                                      (3) dapat diselenggarakan oleh orang
+                                      perseorangan warga negara Indonesia
+                                      dan/atau badan hukum Indonesia. (4) Badan
+                                      usaha bandar udara yang memindahtangankan
+                                      Perizinan Berusaha sebagaimana dimaksud
+                                      pada ayat
+                                - _type: ayat
+                                  _key: 2
                                   isi:
                                     _type: referenceText
                                     references: []
                                     text: >-
-                                      unit penyelenggara bandar udara untuk
-                                      bandar udara yang belum diusahakan secara
-                                      komersial yang dibentuk oleh dan
-                                      bertanggung jawab kepada Pemerintah Pusat
-                                      dan/atau Pemerintah Daerah sesuai
-                                      kewenangan. (2) Perizinan Berusaha
-                                      sebagaimana dimaksud pada ayat (1) tidak
-                                      dapat dipindahtangankan. (3) Pelayanan
-                                      jasa terkait bandar udara sebagaimana
-                                      dimaksud dalam Pasal 232 ayat (3) dapat
-                                      diselenggarakan oleh orang perseorangan
-                                      warga negara Indonesia dan/atau badan
-                                      hukum Indonesia. (4) Badan usaha bandar
-                                      udara yang memindahtangankan Perizinan
-                                      Berusaha sebagaimana dimaksud pada ayat
-                                      (2) dikenai sanksi administratif berupa
+                                      dikenai sanksi administratif berupa
                                       pencabutan Perizinan Berusahanya. REPUBLIK
                                       INDONESIA - 444 -
                             description:
@@ -42486,17 +42609,24 @@ babs:
                             _nomorKey: 3
                             _pasalKey: '25'
                             isi:
-                              _type: referenceText
-                              references: []
-                              text: >-
-                                (1) Setiap penyelenggara Rumah Sakit wajib
-                                memenuhi Perizinan Berusaha. (2) Setiap
-                                penyelenggara Rumah Sakit yang tidak memenuhi
-                                kewajiban sebagaimana dimaksud pada ayat (1)
-                                dikenai sanksi administratif. (3) Ketentuan
-                                lebih lanjut mengenai tata cara pengenaan sanksi
-                                administratif sebagaimana dimaksud pada ayat (2)
-                                diatur dalam Peraturan Pemerintah.
+                              _type: ayats
+                              ayats:
+                                - _type: ayat
+                                  _key: 1
+                                  isi:
+                                    _type: referenceText
+                                    references: []
+                                    text: >-
+                                      dikenai sanksi administratif. (3)
+                                      Ketentuan lebih lanjut mengenai tata cara
+                                      pengenaan sanksi administratif sebagaimana
+                                      dimaksud pada ayat
+                                - _type: ayat
+                                  _key: 2
+                                  isi:
+                                    _type: referenceText
+                                    references: []
+                                    text: diatur dalam Peraturan Pemerintah.
                             description:
                               _type: referenceText
                               references: []
@@ -44566,16 +44696,28 @@ babs:
                             _nomorKey: 2
                             _pasalKey: '17'
                             isi:
-                              _type: referenceText
-                              references: []
-                              text: >-
-                                (1) Pembuatan film oleh pelaku usaha pembuat
-                                film sebagaimana dimaksud dalam Pasal 16 ayat
-                                (3) harus memenuhi Perizinan Berusaha dari
-                                Pemerintah Pusat. (2) Ketentuan lebih lanjut
-                                mengenai Perizinan Berusaha terkait pembuatan
-                                film diatur dalam Peraturan Pemerintah. REPUBLIK
-                                INDONESIA - 486 -
+                              _type: ayats
+                              ayats:
+                                - _type: ayat
+                                  _key: 1
+                                  isi:
+                                    _type: referenceText
+                                    references: []
+                                    text: >-
+                                      Pembuatan film oleh pelaku usaha pembuat
+                                      film sebagaimana dimaksud dalam Pasal 16
+                                      ayat (3) harus memenuhi Perizinan Berusaha
+                                      dari Pemerintah Pusat.
+                                - _type: ayat
+                                  _key: 2
+                                  isi:
+                                    _type: referenceText
+                                    references: []
+                                    text: >-
+                                      Ketentuan lebih lanjut mengenai Perizinan
+                                      Berusaha terkait pembuatan film diatur
+                                      dalam Peraturan Pemerintah. REPUBLIK
+                                      INDONESIA - 486 -
                             description:
                               _type: referenceText
                               references: []
@@ -44684,11 +44826,17 @@ babs:
                                           references: []
                                           text: >-
                                             pembubaran atau pencabutan Perizinan
-                                            Berusaha. REPUBLIK INDONESIA -487 - (3)
-                                            Ketentuan lebih lanjut mengenai
-                                            kriteria, jenis, besaran denda, dan tata
-                                            cara pengenaan sanksi administratif
-                                            diatur dalam Peraturan Pemerintah.
+                                            Berusaha. REPUBLIK INDONESIA -487 -
+                                - _type: ayat
+                                  _key: 3
+                                  isi:
+                                    _type: referenceText
+                                    references: []
+                                    text: >-
+                                      Ketentuan lebih lanjut mengenai kriteria,
+                                      jenis, besaran denda, dan tata cara
+                                      pengenaan sanksi administratif diatur
+                                      dalam Peraturan Pemerintah.
                             description:
                               _type: referenceText
                               references: []
@@ -56517,89 +56665,102 @@ babs:
                       _nomorKey: 1
                       _pasalKey: 1A
                       isi:
-                        _type: points
-                        _description:
-                          _type: referenceText
-                          references: []
-                          text: >-
-                            (1) Yang termasuk dalam pengertian penyerahan Barang
-                            Kena Pajak adalah:
-                        isi:
-                          - _type: alphaPoint
-                            _key: a
-                            isi:
-                              _type: referenceText
-                              references: []
-                              text: >-
-                                penyerahan hak atas Barang Kena Pajak karena
-                                suatu perjanjian,
-                          - _type: alphaPoint
-                            _key: b
-                            isi:
-                              _type: referenceText
-                              references: []
-                              text: >-
-                                pengalihan Barang Kena Pajak karena suatu
-                                perjanjian sewa beli dan/atau perjanjian sewa
-                                guna usaha (leasing),
-                          - _type: alphaPoint
-                            _key: c
-                            isi:
-                              _type: referenceText
-                              references: []
-                              text: >-
-                                . penyerahan Barang Kena Pajak kepada pedagang
-                                perantara atau melalui juru lelang,
-                          - _type: alphaPoint
-                            _key: d
-                            isi:
-                              _type: referenceText
-                              references: []
-                              text: >-
-                                pemakaian sendiri dan/atau pemberian cuma- cuma
-                                atas Barang Kena Pajak,
-                          - _type: alphaPoint
-                            _key: e
-                            isi:
-                              _type: referenceText
-                              references: []
-                              text: >-
-                                Barang Kena Pajak berupa persediaan dan/atau
-                                aktiva yang menurut tujuan semula tidak untuk
-                                diperjualbelikan, yang masih tersisa pada saat
-                                pembubaran perusahaan,
-                          - _type: alphaPoint
-                            _key: f
-                            isi:
-                              _type: referenceText
-                              references: []
-                              text: >-
-                                ' penyerahan Barang Kena Pajak dari pusat ke
-                                cabang atau sebaliknya dan/atau penyerahan
-                                Barang Kena Pajak antarcabang, SK No 052136 A
-                                REPUBLIK INDONESIA - 634 -
-                          - _type: alphaPoint
-                            _key: g
-                            isi:
-                              _type: referenceText
-                              references: []
-                              text: dihapus, dan
-                          - _type: alphaPoint
-                            _key: h
+                        _type: ayats
+                        ayats:
+                          - _type: ayat
+                            _key: 1
                             isi:
                               _type: points
                               _description:
                                 _type: referenceText
                                 references: []
                                 text: >-
-                                  penyerahan Barang Kena Pajak oleh Pengusaha
-                                  Kena Pajak dalam rangka perjanjian pembiayaan
-                                  yang dilakukan berdasarkan prinsip syariah,
-                                  yang penyerahannya dianggap langsung dari
-                                  Pengusaha Kena Pajak kepada pihak yang
-                                  membutuhkan Barang Kena Pajak. (2) Yang tidak
-                                  termasuk dalam pengertian penyerahan Barang
-                                  Kena Pajak adalah:
+                                  Yang termasuk dalam pengertian penyerahan
+                                  Barang Kena Pajak adalah:
+                              isi:
+                                - _type: alphaPoint
+                                  _key: a
+                                  isi:
+                                    _type: referenceText
+                                    references: []
+                                    text: >-
+                                      penyerahan hak atas Barang Kena Pajak
+                                      karena suatu perjanjian,
+                                - _type: alphaPoint
+                                  _key: b
+                                  isi:
+                                    _type: referenceText
+                                    references: []
+                                    text: >-
+                                      pengalihan Barang Kena Pajak karena suatu
+                                      perjanjian sewa beli dan/atau perjanjian
+                                      sewa guna usaha (leasing),
+                                - _type: alphaPoint
+                                  _key: c
+                                  isi:
+                                    _type: referenceText
+                                    references: []
+                                    text: >-
+                                      . penyerahan Barang Kena Pajak kepada
+                                      pedagang perantara atau melalui juru
+                                      lelang,
+                                - _type: alphaPoint
+                                  _key: d
+                                  isi:
+                                    _type: referenceText
+                                    references: []
+                                    text: >-
+                                      pemakaian sendiri dan/atau pemberian cuma-
+                                      cuma atas Barang Kena Pajak,
+                                - _type: alphaPoint
+                                  _key: e
+                                  isi:
+                                    _type: referenceText
+                                    references: []
+                                    text: >-
+                                      Barang Kena Pajak berupa persediaan
+                                      dan/atau aktiva yang menurut tujuan semula
+                                      tidak untuk diperjualbelikan, yang masih
+                                      tersisa pada saat pembubaran perusahaan,
+                                - _type: alphaPoint
+                                  _key: f
+                                  isi:
+                                    _type: referenceText
+                                    references: []
+                                    text: >-
+                                      ' penyerahan Barang Kena Pajak dari pusat
+                                      ke cabang atau sebaliknya dan/atau
+                                      penyerahan Barang Kena Pajak antarcabang,
+                                      SK No 052136 A REPUBLIK INDONESIA - 634 -
+                                - _type: alphaPoint
+                                  _key: g
+                                  isi:
+                                    _type: referenceText
+                                    references: []
+                                    text: dihapus, dan
+                                - _type: alphaPoint
+                                  _key: h
+                                  isi:
+                                    _type: referenceText
+                                    references: []
+                                    text: >-
+                                      penyerahan Barang Kena Pajak oleh
+                                      Pengusaha Kena Pajak dalam rangka
+                                      perjanjian pembiayaan yang dilakukan
+                                      berdasarkan prinsip syariah, yang
+                                      penyerahannya dianggap langsung dari
+                                      Pengusaha Kena Pajak kepada pihak yang
+                                      membutuhkan Barang Kena Pajak.
+                          - _type: ayat
+                            _key: 2
+                            isi:
+                              _type: points
+                              _description:
+                                _type: referenceText
+                                references: []
+                                text: >-
+                                  Yang tidak termasuk dalam pengertian
+                                  penyerahan Barang Kena Pajak adalah:
                               isi:
                                 - _type: alphaPoint
                                   _key: a
@@ -61197,12 +61358,18 @@ babs:
                                     references: []
                                     text: >-
                                       bentuk lain yang disetujui oleh kedua
-                                      belah pihak. (2) Ketentuan lebih lanjut
-                                      mengenai pemberian Ganti Kerugian dalam
-                                      bentuk tanah pengganti, pemukiman kembali,
-                                      kepemilikan saham, atau bentuk lainnya
-                                      sebagaimana dimaksud pada ayat (1) diatur
-                                      dalam Peraturan Pemerintah.
+                                      belah pihak.
+                          - _type: ayat
+                            _key: 2
+                            isi:
+                              _type: referenceText
+                              references: []
+                              text: >-
+                                Ketentuan lebih lanjut mengenai pemberian Ganti
+                                Kerugian dalam bentuk tanah pengganti, pemukiman
+                                kembali, kepemilikan saham, atau bentuk lainnya
+                                sebagaimana dimaksud pada ayat (1) diatur dalam
+                                Peraturan Pemerintah.
                       description:
                         _type: referenceText
                         references: []
@@ -63618,12 +63785,24 @@ babs:
                                 dikenai pembatasan apabila barang dimaksud bukan
                                 merupakan bahan baku bagi kegiatan usaha dan
                                 institusi teknis terkait secara khusus
-                                memberlakukan ketentuan pembatasan di KEK. (4)
+                                memberlakukan ketentuan pembatasan di KEK.
+                          - _type: ayat
+                            _key: 4
+                            isi:
+                              _type: referenceText
+                              references: []
+                              text: >-
                                 Pelaksanaan ketentuan mengenai impor dan ekspor
                                 dilakukan melalui sistem elektronik yang
-                                terintegrasi secara nasional. (5) Pemerintah
-                                Pusat mengembangkan sistem elektronik yang
-                                terintegrasi secara nasional sebagaimana
+                                terintegrasi secara nasional.
+                          - _type: ayat
+                            _key: 5
+                            isi:
+                              _type: referenceText
+                              references: []
+                              text: >-
+                                Pemerintah Pusat mengembangkan sistem elektronik
+                                yang terintegrasi secara nasional sebagaimana
                                 dimaksud pada ayat (4).
                       description:
                         _type: referenceText
@@ -63636,18 +63815,37 @@ babs:
                       _nomorKey: 22
                       _pasalKey: '30'
                       isi:
-                        _type: referenceText
-                        references: []
-                        text: >-
-                          (1) Wajib pajak yang melakukan kegiatan usaha di KEK
-                          diberi fasilitas Pajak Penghasilan. REPUBLIK INDONESIA
-                          - 723 - (2) Selain fasilitas Pajak Penghasilan
-                          sebagaimana dimaksud pada ayat (1), dapat diberikan
-                          tambahan fasilitas Pajak Penghasilan sesuai dengan
-                          jenis kegiatan usaha di KEK. (3) Ketentuan lebih
-                          lanjut mengenai pemberian fasilitas Pajak Penghasilan
-                          sebagaimana dimaksud pada ayat (1) dan ayat (2) diatur
-                          dalam atau berdasarkan Peraturan Pemerintah.
+                        _type: ayats
+                        ayats:
+                          - _type: ayat
+                            _key: 1
+                            isi:
+                              _type: referenceText
+                              references: []
+                              text: >-
+                                Wajib pajak yang melakukan kegiatan usaha di KEK
+                                diberi fasilitas Pajak Penghasilan. REPUBLIK
+                                INDONESIA - 723 -
+                          - _type: ayat
+                            _key: 2
+                            isi:
+                              _type: referenceText
+                              references: []
+                              text: >-
+                                Selain fasilitas Pajak Penghasilan sebagaimana
+                                dimaksud pada ayat (1), dapat diberikan tambahan
+                                fasilitas Pajak Penghasilan sesuai dengan jenis
+                                kegiatan usaha di KEK.
+                          - _type: ayat
+                            _key: 3
+                            isi:
+                              _type: referenceText
+                              references: []
+                              text: >-
+                                Ketentuan lebih lanjut mengenai pemberian
+                                fasilitas Pajak Penghasilan sebagaimana dimaksud
+                                pada ayat (1) dan ayat (2) diatur dalam atau
+                                berdasarkan Peraturan Pemerintah.
                       description:
                         _type: referenceText
                         references: []

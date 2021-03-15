@@ -80,6 +80,7 @@ export function safeParseInt(str: string | undefined): number | undefined {
 export function ayatKeyOf(span: Span): number | undefined {
   const { str } = span;
   if (str.startsWith('(l)')) return 1;
+  if (str.startsWith('(S)')) return 5;
   if (str.startsWith('(44')) return 4;
   const firstMatch = str.match(/^\(?S?[0-9]+\)/)?.[0];
   if (!isUndefined(firstMatch)) {

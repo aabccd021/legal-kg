@@ -1612,15 +1612,27 @@ babs:
                           Terhadap Awak, Personel, dan/atau penumpang
                           sebagaimana dimaksud pada ayat (3) harus diberikan
                           vaksinasi sesuai persyaratan dan standar yang berlaku.
-                          (S5) Ketentuan .. REPUBLIK INDONESIA - 27 - (S)
+                          (S5) Ketentuan .. REPUBLIK INDONESIA - 27 -
+                    - _type: ayat
+                      _key: 5
+                      isi:
+                        _type: referenceText
+                        references: []
+                        text: >-
                           Ketentuan mengenai tata laksana vaksinasi dan
                           pemberian sertifikat vaksinasi internasional diatur
-                          dengan Peraturan Menteri. (6) Apabila Awak, Personel,
-                          dan/atau penumpang sebagaimana dimaksud pada ayat (3)
-                          menolak pemberian vaksin maka Pejabat Karantina
-                          Kesehatan berwenang mengeluarkan rekomendasi kepada
-                          pejabat imigrasi untuk dilakukan pembatalan
-                          pemberangkatan.
+                          dengan Peraturan Menteri.
+                    - _type: ayat
+                      _key: 6
+                      isi:
+                        _type: referenceText
+                        references: []
+                        text: >-
+                          Apabila Awak, Personel, dan/atau penumpang sebagaimana
+                          dimaksud pada ayat (3) menolak pemberian vaksin maka
+                          Pejabat Karantina Kesehatan berwenang mengeluarkan
+                          rekomendasi kepada pejabat imigrasi untuk dilakukan
+                          pembatalan pemberangkatan.
               - _type: pasal
                 _key: 42
                 isi:
