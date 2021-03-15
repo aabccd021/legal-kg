@@ -219,13 +219,16 @@ function amendPointsOf(context: Context, spans: Span[]): AmendPoints {
 
 function getAmendedDocumentNode(spans: Span[]): DocumentNode {
   const str = spans.map(toStr).join(' ');
-  const [, , _nomor, , _tahun] =
-    str?.match(/Undang-Undang Nomor [0-9]+ Tahun [0-9]+/)?.[0]?.split(' ') ?? [];
+  const [, _nomor, , _tahun] =
+    str
+      .replace('Undang- Undang', 'Undang-Undang')
+      .replaceAll('Nomor ', '')
+      ?.match(/Undang-Undang [0-9]+ Tahun [0-9]+/)?.[0]
+      ?.split(' ') ?? [];
   const nomor = safeParseInt(_nomor);
   const tahun = safeParseInt(_tahun);
   if (!isUndefined(nomor) && !isUndefined(tahun)) return { _documentType: 'uu', nomor, tahun };
-  console.log('Legal Not Detected', str);
-  return { _documentType: 'uu', nomor: 999, tahun: 2099 };
+  throw Error(`Legal Not Detected ${str}`);
 }
 
 const spansToAmendedPointWith = curry(spansToAmendedPoint);

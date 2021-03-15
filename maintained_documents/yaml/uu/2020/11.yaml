@@ -11472,8 +11472,8 @@ babs:
                               text: 16. Pasal 41 dihapus.
                         documentNode:
                           _documentType: uu
-                          nomor: 999
-                          tahun: 2099
+                          nomor: 6
+                          tahun: 2017
         - _type: bagian
           _key: 4
           _judul: >-
@@ -26012,8 +26012,8 @@ babs:
                                 sebagai berikut:
                         documentNode:
                           _documentType: uu
-                          nomor: 999
-                          tahun: 2099
+                          nomor: 10
+                          tahun: 1997
               - _type: paragraf
                 _key: 7
                 _judul: Paragraf 7 Perindustrian
@@ -27008,8 +27008,8 @@ babs:
                                 sebagai berikut:
                         documentNode:
                           _documentType: uu
-                          nomor: 999
-                          tahun: 2099
+                          nomor: 3
+                          tahun: 2014
               - _type: paragraf
                 _key: 8
                 _judul: >-
@@ -45468,8 +45468,8 @@ babs:
                               text: 9. Pasal 64 dihapus.
                         documentNode:
                           _documentType: uu
-                          nomor: 999
-                          tahun: 2099
+                          nomor: 10
+                          tahun: 2009
               - _type: paragraf
                 _key: 14
                 _judul: Paragraf 14 Keagamaan
@@ -46582,8 +46582,8 @@ babs:
                                 sebagai berikut: REPLBLIK INDONESIA - 505 -
                         documentNode:
                           _documentType: uu
-                          nomor: 999
-                          tahun: 2099
+                          nomor: 8
+                          tahun: 2019
               - _type: paragraf
                 _key: 15
                 _judul: Paragraf 15 Pos, Telekomunikasi, dan Penyiaran
