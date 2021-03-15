@@ -142,35 +142,73 @@ babs:
                   text: >-
                     Status Karantina adalah keadaan Alat Angkut, orang, dan
                     Barang yang berada di suatu tempat untuk dilakukan
-                    Kekarantinaan Kesehatan. 13 .Zona Karantina adalah area atau
-                    tempat tertentu untuk dapat menyelenggarakan tindakan
-                    Kekarantinaan Kesehatan. 14. Persetujuan Karantina Kesehatan
-                    adalah surat pernyataan yang diberikan oleh pejabat
-                    karantina kesehatan kepada penanggung jawab Alat Angkut yang
-                    berupa pernyataan persetujuan bebas karantina atau
-                    persetujuan karantina terbatas. 15 .Kapal adalah kendaraan
-                    air dengan bentuk dan jenis tertentu, yang digerakkan dengan
-                    tenaga angin, tenaga mekanik, energi lainnya, ditarik atau
-                    ditunda termasuk kendaraan yang berdaya dukung dinamis,
-                    kendaraan di bawah permukaan air, serta alat apung dan
-                    bangunan terapung yang tidak berpindah- pindah. 16. Pesawat
-                    Udara adalah setiap mesin atau alat yang dapat terbang di
-                    atmosfer karena gaya angkat dari reaksi udara, tetapi bukan
-                    karena reaksi udara terhadap permukaan bumi yang digunakan
-                    untuk penerbangan. 17. Kendaraan Darat adalah suatu sarana
-                    angkut di darat yang terdiri atas kendaraan bermotor
-                    termasuk kendaraan yang berjalan di atas rel dan kendaraan
-                    tidak bermotor. 18 .Awak Kapal yang selanjutnya disebut Awak
-                    adalah orang yang bekerja atau dipekerjakan di atas Kapal
-                    oleh pemilik atau operator Kapal untuk melakukan tugas di
-                    atas Kapal sesuai dengan jabatannya yang tercantum dalam
-                    buku sijil. 10. Personel Pesawat Udara yang selanjutnya
-                    disebut Personel adalah orang yang bekerja atau dipekerjakan
-                    di atas Pesawat Udara oleh pemilik atau operator Pesawat
-                    Udara untuk melakukan tugas di atas Pesawat Udara. 20.
-                    Nakhoda adalah salah seorang dari Awak Kapal yang menjadi
-                    pemimpin tertinggi di Kapal dan mempunyai wewenang dan
-                    tanggung jawab tertentu sesuai dengan ketentuan peraturan
+                    Kekarantinaan Kesehatan.
+              - _type: numPoint
+                _key: '13'
+                isi:
+                  _type: referenceText
+                  references: []
+                  text: >-
+                    Zona Karantina adalah area atau tempat tertentu untuk dapat
+                    menyelenggarakan tindakan Kekarantinaan Kesehatan.
+              - _type: numPoint
+                _key: '14'
+                isi:
+                  _type: referenceText
+                  references: []
+                  text: >-
+                    Persetujuan Karantina Kesehatan adalah surat pernyataan yang
+                    diberikan oleh pejabat karantina kesehatan kepada penanggung
+                    jawab Alat Angkut yang berupa pernyataan persetujuan bebas
+                    karantina atau persetujuan karantina terbatas.
+              - _type: numPoint
+                _key: '15'
+                isi:
+                  _type: referenceText
+                  references: []
+                  text: >-
+                    Kapal adalah kendaraan air dengan bentuk dan jenis tertentu,
+                    yang digerakkan dengan tenaga angin, tenaga mekanik, energi
+                    lainnya, ditarik atau ditunda termasuk kendaraan yang
+                    berdaya dukung dinamis, kendaraan di bawah permukaan air,
+                    serta alat apung dan bangunan terapung yang tidak berpindah-
+                    pindah.
+              - _type: numPoint
+                _key: '16'
+                isi:
+                  _type: referenceText
+                  references: []
+                  text: >-
+                    Pesawat Udara adalah setiap mesin atau alat yang dapat
+                    terbang di atmosfer karena gaya angkat dari reaksi udara,
+                    tetapi bukan karena reaksi udara terhadap permukaan bumi
+                    yang digunakan untuk penerbangan.
+              - _type: numPoint
+                _key: '17'
+                isi:
+                  _type: referenceText
+                  references: []
+                  text: >-
+                    Kendaraan Darat adalah suatu sarana angkut di darat yang
+                    terdiri atas kendaraan bermotor termasuk kendaraan yang
+                    berjalan di atas rel dan kendaraan tidak bermotor.
+              - _type: numPoint
+                _key: '18'
+                isi:
+                  _type: referenceText
+                  references: []
+                  text: >-
+                    Awak Kapal yang selanjutnya disebut Awak adalah orang yang
+                    bekerja atau dipekerjakan di atas Kapal oleh pemilik atau
+                    operator Kapal untuk melakukan tugas di atas Kapal sesuai
+                    dengan jabatannya yang tercantum dalam buku sijil. 10.
+                    Personel Pesawat Udara yang selanjutnya disebut Personel
+                    adalah orang yang bekerja atau dipekerjakan di atas Pesawat
+                    Udara oleh pemilik atau operator Pesawat Udara untuk
+                    melakukan tugas di atas Pesawat Udara. 20. Nakhoda adalah
+                    salah seorang dari Awak Kapal yang menjadi pemimpin
+                    tertinggi di Kapal dan mempunyai wewenang dan tanggung jawab
+                    tertentu sesuai dengan ketentuan peraturan
                     perundang-undangan. 21. Kapten Penerbang adalah penerbang
                     yang ditugaskan oleh perusahaan atau pemilik Pesawat Udara
                     untuk memimpin penerbangan dan bertanggung jawab penuh
