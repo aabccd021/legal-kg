@@ -200,8 +200,10 @@ function amendPointToMd(documentNode: DocumentNode, amendPoint: AmendedPoint): s
 }
 
 function amendDeletePasalPointToMd(_: DocumentNode, amendPoint: AmendDeletePasalPoint): string {
-  return amendPoint.isi.text;
+  const { text } = amendPoint.isi;
+  return `* ${text}`;
 }
+
 function amendUpdatePasalPointToMd(
   documentNode: DocumentNode,
   amendPoint: AmendUpdatePasalPoint
@@ -216,10 +218,12 @@ function amendUpdatePasalPointToMd(
     .split('\n')
     .map((str) => `        > ${str}`)
     .join('\n');
-  return `* ${description.text}\n    * > Pasal ${_pasalKey}\n\n${isiMd}`;
+  return `* ${description.text}\n        >\n         > Pasal ${_pasalKey}\n\n${isiMd}`;
 }
+
 function amendInsertPasalPointToMd(_: DocumentNode, amendPoint: AmendInsertPasalPoint): string {
-  return amendPoint.isi.text;
+  const { text } = amendPoint.isi;
+  return `* ${text}`;
 }
 
 function ayatToMd(ayat: Ayat, parentPasal: PasalNode): string {
