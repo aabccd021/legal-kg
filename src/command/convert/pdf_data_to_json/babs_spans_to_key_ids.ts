@@ -365,9 +365,10 @@ function toKeys(
     };
   }
 
-  const newNomorKey = nomorKeyOfSpan(span);
-  if (!isUndefined(newNomorKey)) {
-    // console.log(span.str);
+  const detectedNomorKey = nomorKeyOfSpan(span);
+  if (!isUndefined(detectedNomorKey)) {
+    const newNomorKey =
+      detectedNomorKey === 0 ? (lastNomor?.key ?? neverNum()) + 1 : detectedNomorKey;
     return {
       ...acc,
       nomorKeyOfId: { ...nomorKeyOfId, [span.id]: newNomorKey },

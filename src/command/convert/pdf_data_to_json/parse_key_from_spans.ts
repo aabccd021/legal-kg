@@ -5,7 +5,7 @@ import { neverString, Span } from '../../../util';
 export function nomorKeyOfSpan(span: Span): number | undefined {
   const { str } = span;
   // Handle S5 -> 5
-  if (str.startsWith('0.')) return 9;
+  // if (str.startsWith('0.')) return 9;
   const numberStr = str
     ?.match(/^(l|S|(l|S)?[0-9]+)\s?\./)?.[0]
     ?.replace(' ', '')

@@ -101,14 +101,14 @@ function isiPasalOf(context: Context, spans: Span[]): IsiPasal {
   if (hasAmendPasal && !isEmpty(spansInRange(amendNomorKeyOfId, spans))) {
     return amendPointsOf(context, spans);
   }
-  return ayatsOf(context, spans) ?? pointsOf(spans) ?? emptyReferenceOf(spans);
+  return ayatsOf(context, spans) ?? pointsOf(context, spans) ?? emptyReferenceOf(spans);
 }
 
 function ayatsOf(context: Context, spans: Span[]): Ayats | undefined {
   const { ayatKeyOfId } = context.keyIds;
   const { spansOfKey } = toSpansWith(ayatKeyOfId, spans);
   if (isEmpty(spansOfKey)) return undefined;
-  const ayats = chain(spansOfKey).toPairs().map(spanToAyat).value();
+  const ayats = chain(spansOfKey).toPairs().map(spanToAyatWith(context)).value();
   return { _type: 'ayats', ayats };
 }
 
@@ -116,18 +116,18 @@ function amendAyatsOf(context: Context, spans: Span[]): Ayats | undefined {
   const { amendAyatKeyOfId } = context.keyIds;
   const { spansOfKey } = toSpansWith(amendAyatKeyOfId, spans);
   if (isEmpty(spansOfKey)) return undefined;
-  const ayats = chain(spansOfKey).toPairs().map(spanToAyat).value();
+  const ayats = chain(spansOfKey).toPairs().map(spanToAyatWith(context)).value();
   return { _type: 'ayats', ayats };
 }
 
-function pointsOf(spans: Span[]): Points | undefined {
+function pointsOf(context: Context, spans: Span[]): Points | undefined {
   for (const [spanIdx, span] of spans.entries()) {
     if (nomorKeyOfSpan(span) === 1) {
-      return _getPoints('numPoint', spans, spanIdx);
+      return _getPoints(context, 'numPoint', spans, spanIdx);
     }
 
     if (hurufKeyOfSpan(span) === 'a'.charCodeAt(0)) {
-      return _getPoints('alphaPoint', spans, spanIdx);
+      return _getPoints(context, 'alphaPoint', spans, spanIdx);
     }
   }
 
@@ -136,21 +136,21 @@ function pointsOf(spans: Span[]): Points | undefined {
 
 type PointType = 'numPoint' | 'alphaPoint';
 
-function _getPoints(_type: PointType, spans: Span[], spanIdx: number): Points {
+function _getPoints(context: Context, _type: PointType, spans: Span[], spanIdx: number): Points {
   const isi = chain(spans)
     .slice(spanIdx)
-    .reduce<Acc>(toKeySpansWith(_type), { keySpans: [] })
+    .reduce<Acc>(toKeySpansWith(context, _type), { keySpans: [] })
     .thru(({ keySpans }) => keySpans)
-    .map(toPointWith(_type))
+    .map(toPointWith(context, _type))
     .value();
   const _description = emptyReferenceOf(spans.slice(0, spanIdx));
   return { _type: 'points', _description, isi };
 }
 
 const toPointWith = curry(toPoint);
-function toPoint(_type: PointType, keySpans: KeySpans): Point {
+function toPoint(context: Context, _type: PointType, keySpans: KeySpans): Point {
   const [_key, spans] = keySpans;
-  const isi = pointsOf(spans) ?? emptyReferenceOf(spans);
+  const isi = pointsOf(context, spans) ?? emptyReferenceOf(spans);
   const point: Point = { _type, _key, isi };
 
   return point;
@@ -162,9 +162,9 @@ type Acc = {
 };
 
 const toKeySpansWith = curry(toKeySpans);
-function toKeySpans(_type: PointType, acc: Acc, span: Span): Acc {
+function toKeySpans(context: Context, _type: PointType, acc: Acc, span: Span): Acc {
   const { lastKey, keySpans } = acc;
-  const newKey = keyOfSpanOf(_type)(span);
+  const newKey = keyOfSpanOf(context, _type)(span);
   if (!isUndefined(newKey) && (isUndefined(lastKey) || newKey === lastKey + 1)) {
     const cleanedSpan = removeKeyOf(_type)(span);
     const strKey = strOfKeyInt(_type)(newKey);
@@ -187,9 +187,10 @@ function removeKeyOf(_type: PointType): (span: Span) => Span {
   assertNever(_type);
 }
 
-function keyOfSpanOf(_type: PointType): (span: Span) => number | undefined {
+function keyOfSpanOf(context: Context, _type: PointType): (span: Span) => number | undefined {
   if (_type === 'alphaPoint') return hurufKeyOfSpan;
-  if (_type === 'numPoint') return nomorKeyOfSpan;
+  if (_type === 'numPoint')
+    return (span) => context.keyIds.nomorKeyOfId[span.id] ?? nomorKeyOfSpan(span);
   assertNever(_type);
 }
 
@@ -199,11 +200,12 @@ function strOfKeyInt(_type: PointType): (number: number) => string {
   assertNever(_type);
 }
 
-function spanToAyat(keySpans: KeySpans): Ayat {
+const spanToAyatWith = curry(spanToAyat);
+function spanToAyat(context: Context, keySpans: KeySpans): Ayat {
   const [key, spans] = keySpans;
   const _key = parseInt(key);
   const spansWithoutKey = removeAyatKey(spans);
-  const isi = pointsOf(spansWithoutKey) ?? emptyReferenceOf(spansWithoutKey);
+  const isi = pointsOf(context, spansWithoutKey) ?? emptyReferenceOf(spansWithoutKey);
   return { _type: 'ayat', _key, isi };
 }
 
@@ -281,7 +283,8 @@ function spansToAmendUpdatePasalPoint(
   if (pasalTitleIdx === 0) console.log('UND', spans[0]);
   const description = emptyReferenceOf(spans.slice(0, pasalTitleIdx));
   const isiSpans = spans.slice(pasalTitleIdx + 1);
-  const isi = amendAyatsOf(context, isiSpans) ?? pointsOf(isiSpans) ?? emptyReferenceOf(isiSpans);
+  const isi =
+    amendAyatsOf(context, isiSpans) ?? pointsOf(context, isiSpans) ?? emptyReferenceOf(isiSpans);
   return { _type: 'amendPoint', _operation: 'update', _nomorKey, _pasalKey, isi, description };
 }
 
