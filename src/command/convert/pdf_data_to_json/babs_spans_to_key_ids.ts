@@ -337,16 +337,6 @@ function toKeys(
     };
   }
 
-  const newNomorKey = nomorKeyOfSpan(span);
-  if (!isUndefined(newNomorKey)) {
-    // console.log(span.str);
-    return {
-      ...acc,
-      nomorKeyOfId: { ...nomorKeyOfId, [span.id]: newNomorKey },
-      lastNomor: { id: span.id, key: newNomorKey },
-    };
-  }
-
   const newAyatKey = ayatKeyOf(span);
   if (
     !isUndefined(newAyatKey) &&
@@ -371,6 +361,16 @@ function toKeys(
       amendAyatKeyOfId: { ...amendAyatKeyOfId, [span.id]: newAyatKey },
       lastAmendAyatKey: newAyatKey,
       amendAyatXls: [...amendAyatXls, span.xL],
+    };
+  }
+
+  const newNomorKey = nomorKeyOfSpan(span);
+  if (!isUndefined(newNomorKey)) {
+    // console.log(span.str);
+    return {
+      ...acc,
+      nomorKeyOfId: { ...nomorKeyOfId, [span.id]: newNomorKey },
+      lastNomor: { id: span.id, key: newNomorKey },
     };
   }
   return acc;
