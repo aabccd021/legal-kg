@@ -339,30 +339,48 @@ function toKeys(
 
   const newAyatKey = ayatKeyOf(span);
 
-  if (
-    !isUndefined(newAyatKey) &&
-    (newAyatKey === 1 || newAyatKey - 1 === lastAyatKey) &&
-    (isEmpty(ayatXls) || Math.abs(mean(ayatXls) - span.xL) < 13)
-  ) {
-    return {
-      ...acc,
-      ayatKeyOfId: { ...ayatKeyOfId, [span.id]: newAyatKey },
-      lastAyatKey: newAyatKey,
-      ayatXls: [...ayatXls, span.xL],
-    };
+  if (!isUndefined(newAyatKey) && (newAyatKey === 1 || newAyatKey - 1 === lastAyatKey)) {
+    const ayatXlsMean = mean(ayatXls);
+    if (isEmpty(ayatXls) || span.xL < ayatXlsMean || span.xL - ayatXlsMean < 9) {
+      if (span.str.startsWith('(1) Dalam hal tindakan')) {
+        console.log('g', newAyatKey, ayatXlsMean, span.xL, span.str);
+      }
+      console.log(
+        'ayat     ',
+        mean([...ayatXls, span.xL]).toFixed(2),
+        span.xL.toFixed(2),
+        span.pageNum,
+        span.str
+      );
+      return {
+        ...acc,
+        ayatKeyOfId: { ...ayatKeyOfId, [span.id]: newAyatKey },
+        lastAyatKey: newAyatKey,
+        ayatXls: [...ayatXls, span.xL],
+      };
+    }
   }
 
-  if (
-    !isUndefined(newAyatKey) &&
-    (newAyatKey === 1 || newAyatKey - 1 === lastAmendAyatKey) &&
-    (isEmpty(amendAyatXls) || Math.abs(mean(amendAyatXls) - span.xL) < 15)
-  ) {
-    return {
-      ...acc,
-      amendAyatKeyOfId: { ...amendAyatKeyOfId, [span.id]: newAyatKey },
-      lastAmendAyatKey: newAyatKey,
-      amendAyatXls: [...amendAyatXls, span.xL],
-    };
+  if (!isUndefined(newAyatKey) && (newAyatKey === 1 || newAyatKey - 1 === lastAmendAyatKey)) {
+    const amendAyatXlsMean = mean(amendAyatXls);
+    if (isEmpty(amendAyatXls) || Math.abs(amendAyatXlsMean - span.xL) < 20) {
+      if (span.str.startsWith('(1) Dalam hal tindakan')) {
+        console.log('r', newAyatKey, amendAyatXlsMean, span.xL, span.str);
+      }
+      console.log(
+        'amendAyat',
+        mean([...amendAyatXls, span.xL]).toFixed(2),
+        span.xL.toFixed(2),
+        span.pageNum,
+        span.str
+      );
+      return {
+        ...acc,
+        amendAyatKeyOfId: { ...amendAyatKeyOfId, [span.id]: newAyatKey },
+        lastAmendAyatKey: newAyatKey,
+        amendAyatXls: [...amendAyatXls, span.xL],
+      };
+    }
   }
 
   const detectedNomorKey = nomorKeyOfSpan(span);
