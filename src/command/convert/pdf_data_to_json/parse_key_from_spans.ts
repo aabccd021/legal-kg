@@ -89,13 +89,13 @@ export function ayatKeyOf(span: Span): number | undefined {
 export function removeAyatKey(spans: Span[]): Span[] {
   const [first, ...rest] = spans;
   if (isUndefined(first)) throw Error();
-  const newFirst = { ...first, str: firstStrWithoutKeyOf(first.str) };
+  const newFirst = { ...first, str: ayatFirstStrWithoutKeyOf(first.str) };
   return [newFirst, ...rest];
 }
 
-function firstStrWithoutKeyOf(str: string): string {
+function ayatFirstStrWithoutKeyOf(str: string): string {
   if (str.startsWith('(l)')) return str.slice('(l)'.length).trim();
-  return str.replaceAll(/^\([0-9]+\)/g, '').trim();
+  return str.split(')').slice(1).join(')').trim();
 }
 
 function clean(str: string): string {
