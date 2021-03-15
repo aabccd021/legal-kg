@@ -5,11 +5,12 @@ import { Span } from '../../../util';
 export function nomorKeyOfSpan(span: Span): number | undefined {
   const { str } = span;
   // Handle S5 -> 5
-  const numberStr = str?.match(/^(l|S|S?[0-9]+)\./)?.[0]?.match(/^(l|S|S?[0-9]+)/)?.[0];
+  const numberStr = str?.match(/^(l|S|(l|S)?[0-9]+)\./)?.[0]?.slice(0, -1);
+  if (str.startsWith('l1')) console.log(numberStr, '===', str);
   return safeParseInt(numberStr);
 }
 export function removeNomorKey(span: Span): Span {
-  const str = span.str.replace(/^(l|S|S?[0-9]+)\./, '').trim();
+  const str = span.str.replace(/^(l|S|(S|l)?[0-9]+)\./, '').trim();
   return { ...span, str };
 }
 
@@ -99,5 +100,6 @@ function clean(str: string): string {
   if (str === 'S1') return '51';
   if (str === 'S') return '5';
   if (str === 'l') return '1';
+  if (str.includes('l')) return str.replace('l', '1');
   return str.trim();
 }
