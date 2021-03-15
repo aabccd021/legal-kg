@@ -136,7 +136,7 @@ function isNotHeader(span: UnindexedSpan): boolean {
   const { xL, xR, y, str } = span;
 
   // is header
-  if (y < 210 && xL > 250 && xR < 400 && str !== 'PENJELASAN') {
+  if (y < 220 && xL > 200 && xR < 450 && str !== 'PENJELASAN') {
     // debug
     if (
       str.length > 5 &&
