@@ -141,7 +141,7 @@ function toKeys(
   }
 
   // Amended Hapus Pasal
-  if (/^[0-9]+\. Pasal [0-9]+[A-Z]? dihapus.$/.test(span.str)) {
+  if (/^[0-9]+\. Pasal [0-9]+[A-Z]? dihapus\.$/.test(span.str)) {
     const nomorStr = span.str.split(' ')[0]?.replaceAll('.', '');
     const amendNomor = safeParseInt(nomorStr) ?? neverNum(nomorStr);
     const amendedPasalKey = span.str.split(' ')[2] ?? neverString();
