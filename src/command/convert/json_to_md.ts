@@ -214,11 +214,16 @@ function amendUpdatePasalPointToMd(
     _key: _pasalKey,
     parentDocument: documentNode,
   };
+  const pasalUri = getLegalUri(pasalNode);
   const isiMd = pasalContentToMd(isi, pasalNode)
     .split('\n')
     .map((str) => `        > ${str}`)
     .join('\n');
-  return `* ${_nomorKey}. ${description.text}\n        >\n        > Pasal ${_pasalKey}\n\n${isiMd}`;
+  return `* ${_nomorKey}. ${description.text}
+        >
+        > [Pasal ${_pasalKey}](${pasalUri})
+        
+${isiMd}`;
 }
 
 function amendInsertPasalPointToMd(_: DocumentNode, amendPoint: AmendInsertPasalPoint): string {
