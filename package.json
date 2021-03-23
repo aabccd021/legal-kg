@@ -6,7 +6,7 @@
     "build": "tsc",
     "lint": "eslint '**/*.ts'",
     "lint:fix": "eslint --fix '**/*.ts'",
-    "convert": "ts-node src/command/convert/pdf_data_to_json/mod.ts >> temp_pdf_data_to_json && ts-node src/command/convert/json_to_md.ts >> temp_json_to_md",
+    "convert": "ts-node src/command/convert/pdf_data_to_json/mod.ts > temp_pdf_data_to_json && ts-node src/command/convert/json_to_md.ts > temp_json_to_md",
     "test:types": "tsc --noEmit"
   },
   "engines": {

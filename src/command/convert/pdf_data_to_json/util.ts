@@ -1,7 +1,7 @@
 import { Structure } from '../../../legal/structure/index';
 import { chain, curry, isUndefined, min } from 'lodash';
 import { Span, neverNum, lastOf } from '../../../util';
-import { SpanIdKeyMap } from './babs_spans_to_key_ids';
+import { SpanIdKeyMap } from './scan';
 import { Context, KeySpans } from './key_ids_to_babs';
 
 type Acc = {

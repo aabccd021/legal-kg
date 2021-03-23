@@ -1,6 +1,6 @@
 import { IsiPasal } from '../../legal/structure/pasal';
 import { assertNever } from 'assert-never';
-import { map, flatten, compact, isNil, repeat, curry } from 'lodash';
+import { map, flatten, compact, isNil, repeat, curry, chain } from 'lodash';
 import { toRoman } from 'roman-numerals';
 import { getDocumentName, _getDocumentUri, DocumentNode } from '../../legal/document';
 import * as fs from 'fs';
@@ -216,6 +216,8 @@ function amendDeletePasalPointToMd(
   return `* ${_nomorKey}. [${pasalkeyStr}](${pasalUri}) ${restStr}`;
 }
 
+const s8 = '        ';
+
 function amendUpdatePasalPointToMd(
   documentNode: DocumentNode,
   amendPoint: AmendUpdatePasalPoint
@@ -227,20 +229,40 @@ function amendUpdatePasalPointToMd(
     parentDocument: documentNode,
   };
   const pasalUri = getLegalUri(pasalNode);
-  const isiMd = pasalContentToMd(isi, pasalNode)
-    .split('\n')
-    .map((str) => `        > ${str}`)
-    .join('\n');
-  return `* ${_nomorKey}. ${description.text}
-        >
-        > [Pasal ${_pasalKey}](${pasalUri})
-        
-${isiMd}`;
+  const descriptionMd = referenceToMd(description);
+  const isiMd = toIndentedAmend(pasalContentToMd(isi, pasalNode));
+  return `* ${_nomorKey}. ${descriptionMd}
+${s8}>\n${s8}> [Pasal ${_pasalKey}](${pasalUri})\n\n${isiMd}`;
 }
 
-function amendInsertPasalPointToMd(_: DocumentNode, amendPoint: AmendInsertPasalPoint): string {
-  const { text } = amendPoint.isi;
-  return `* ${text}`;
+function toIndentedAmend(str: string): string {
+  return str
+    .split('\n')
+    .map((str) => `${s8}> ${str}`)
+    .join('\n');
+}
+
+function amendInsertPasalPointToMd(
+  parentDocument: DocumentNode,
+  amendPoint: AmendInsertPasalPoint
+): string {
+  const { isi, description, _nomorKey } = amendPoint;
+  const descriptionMd = referenceToMd(description);
+  const isiMd: string = chain(isi)
+    .toPairs()
+    .map(([pasalKey, isiAmend]) => {
+      const pasalNode: PasalNode = {
+        _structureType: 'pasal',
+        _key: pasalKey,
+        parentDocument,
+      };
+      const pasalUri = getLegalUri(pasalNode);
+      const isiMd = toIndentedAmend(pasalContentToMd(isiAmend, pasalNode));
+      return `${s8}>\n${s8}> [Pasal ${pasalKey}](${pasalUri})\n\n${isiMd}`;
+    })
+    .join('\n\n')
+    .value();
+  return `* ${_nomorKey}. ${descriptionMd}\n${isiMd}`;
 }
 
 function ayatToMd(ayat: Ayat, parentPasal: PasalNode): string {

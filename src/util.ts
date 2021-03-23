@@ -40,9 +40,9 @@ export function neverString(x?: string): string {
   throw Error(x);
 }
 
-export function neverUndefined<T>(x: T | undefined, msg?: string): T {
+export function neverUndefined<T>(x: T | undefined, msg?: unknown): T {
   if (!isUndefined(x)) return x;
-  throw Error(`${msg ?? ''} ${JSON.stringify(x)}`);
+  throw Error(JSON.stringify(msg));
 }
 
 export type Accumulator<T extends string> = { spans: SpanOf<T>; flag: T };

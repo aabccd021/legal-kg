@@ -2,7 +2,7 @@ import { ReferenceText } from './../../../legal/reference';
 import { Paragraf, ParagrafNode, Paragrafs } from './../../../legal/structure/paragraf';
 import { IsiPasal, Pasals } from './../../../legal/structure/pasal';
 import assertNever from 'assert-never';
-import _, { chain, curry } from 'lodash';
+import _, { chain, curry, mapValues } from 'lodash';
 import { isNil, compact, isUndefined } from 'lodash';
 import { DocumentNode } from '../../../legal/document';
 import { Ayat, AyatNode } from '../../../legal/structure/ayat';
@@ -24,7 +24,7 @@ import {
   AmendInsertPasalPoint,
   AmendPoints,
   AmendUpdatePasalPoint,
-  IsiAmendUpdatePasal,
+  IsiAmendPasal,
 } from '../../../legal/structure/amend';
 import { safeParseInt } from './parse_key_from_spans';
 import { neverNum, neverString } from '../../../util';
@@ -84,10 +84,7 @@ function pasalContentToDetectedPasalContent(isi: IsiPasal, pasalNode: PasalNode)
   return toDetectedIsiAmendedUpdatePasal(isi, pasalNode);
 }
 
-function toDetectedIsiAmendedUpdatePasal(
-  isi: IsiAmendUpdatePasal,
-  pasalNode: PasalNode
-): IsiAmendUpdatePasal {
+function toDetectedIsiAmendedUpdatePasal(isi: IsiAmendPasal, pasalNode: PasalNode): IsiAmendPasal {
   if (isi._type === 'ayats')
     return { ...isi, ayats: isi.ayats.map((ayat) => ayatToDetectedAyat(ayat, pasalNode)) };
   if (isi._type === 'points') return pointsToDetectedPoints(isi, pasalNode);
@@ -128,17 +125,27 @@ function detectedAmendUpdatePasalPointOf(
   pasalNode: PasalNode,
   amendPoint: AmendUpdatePasalPoint
 ): AmendUpdatePasalPoint {
-  const { isi } = amendPoint;
+  const { isi, description } = amendPoint;
+  const newDescription: ReferenceText = {
+    ...description,
+    references: detectPasalNode(description.text, pasalNode),
+  };
   const detectedIsi = toDetectedIsiAmendedUpdatePasal(isi, pasalNode);
-  return { ...amendPoint, isi: detectedIsi };
+  return { ...amendPoint, isi: detectedIsi, description: newDescription };
 }
 function detectedAmendInsertPasalPointOf(
   pasalNode: PasalNode,
   amendPoint: AmendInsertPasalPoint
 ): AmendInsertPasalPoint {
-  const { isi } = amendPoint;
-  const detectedIsi = { ...isi, references: detectPasalNode(isi.text, pasalNode) };
-  return { ...amendPoint, isi: detectedIsi };
+  const { isi, description } = amendPoint;
+  const newDescription: ReferenceText = {
+    ...description,
+    references: detectPasalNode(description.text, pasalNode),
+  };
+  const detectedIsi: Record<string, IsiAmendPasal> = mapValues(isi, (isiAmendPasal) =>
+    toDetectedIsiAmendedUpdatePasal(isiAmendPasal, pasalNode)
+  );
+  return { ...amendPoint, isi: detectedIsi, description: newDescription };
 }
 
 function pointsToDetectedPoints(points: Points, pointsNode: PointsNode): Points {

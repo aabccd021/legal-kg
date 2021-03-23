@@ -27,12 +27,12 @@ export type AmendUpdatePasalPoint = AmendPointBase & {
   _operation: 'update';
   _pasalKey: string;
   description: ReferenceText;
-  isi: IsiAmendUpdatePasal;
+  isi: IsiAmendPasal;
 };
-export type IsiAmendUpdatePasal = Points | ReferenceText | Ayats;
+export type IsiAmendPasal = Points | ReferenceText | Ayats;
 
 export type AmendInsertPasalPoint = AmendPointBase & {
   _operation: 'insert';
-  _pasalKeys: string[];
-  isi: ReferenceText;
+  description: ReferenceText;
+  isi: Record<string, IsiAmendPasal>;
 };

@@ -3,7 +3,7 @@ import { DocumentNode } from '../../../legal/document/index';
 import { getDocumentData, getDocumentFilePath } from '../../../data';
 import { readFileSync, writeFileSync } from 'fs';
 import { Accumulator, Span, toSpansWith } from '../../../util';
-import { babsSpansToKeyIds as keyIdsOfBabSpans } from './babs_spans_to_key_ids';
+import { babsSpansToKeyIds as keyIdsOfBabSpans } from './scan';
 import { babsOfKeyIds } from './key_ids_to_babs';
 import { chain, isUndefined } from 'lodash';
 import { pasalKeyOfSpan } from './parse_key_from_spans';

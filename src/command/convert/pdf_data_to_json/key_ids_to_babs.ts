@@ -1,3 +1,4 @@
+import { IsiAmendPasal } from './../../../legal/structure/amend';
 import {
   AmendDeletePasalPoint,
   AmendedPoint,
@@ -5,13 +6,13 @@ import {
   AmendUpdatePasalPoint,
 } from '../../../legal/structure/amend';
 import { Paragraf, Paragrafs } from '../../../legal/structure/paragraf';
-import { chain, curry, isEmpty, isUndefined } from 'lodash';
+import { chain, curry, isEmpty, isUndefined, keys, mapValues, reduce } from 'lodash';
 import { ReferenceText } from '../../../legal/reference';
 import { Bab } from '../../../legal/structure/bab';
 import { Bagian, Bagians } from '../../../legal/structure/bagian';
 import { IsiPasal, Pasal, Pasals } from '../../../legal/structure/pasal';
-import { lastOf, Span } from '../../../util';
-import { KeyIds } from './babs_spans_to_key_ids';
+import { lastOf, neverUndefined, Span } from '../../../util';
+import { KeyIds } from './scan';
 import { spansInRange, spanIdKeyMapOf, toSpansWith } from './util';
 import { AmendPoints } from '../../../legal/structure/amend';
 import { Ayat, Ayats } from '../../../legal/structure/ayat';
@@ -101,7 +102,7 @@ function isiPasalOf(context: Context, spans: Span[]): IsiPasal {
   if (hasAmendPasal && !isEmpty(spansInRange(amendNomorKeyOfId, spans))) {
     return amendPointsOf(context, spans);
   }
-  return ayatsOf(context, spans) ?? pointsOf(context, spans) ?? emptyReferenceOf(spans);
+  return ayatsOf(context, spans) ?? pointsOf(context, spans) ?? toEmptyReference(spans);
 }
 
 function ayatsOf(context: Context, spans: Span[]): Ayats | undefined {
@@ -143,14 +144,14 @@ function _getPoints(context: Context, _type: PointType, spans: Span[], spanIdx: 
     .thru(({ keySpans }) => keySpans)
     .map(toPointWith(context, _type))
     .value();
-  const _description = emptyReferenceOf(spans.slice(0, spanIdx));
+  const _description = toEmptyReference(spans.slice(0, spanIdx));
   return { _type: 'points', _description, isi };
 }
 
 const toPointWith = curry(toPoint);
 function toPoint(context: Context, _type: PointType, keySpans: KeySpans): Point {
   const [_key, spans] = keySpans;
-  const isi = pointsOf(context, spans) ?? emptyReferenceOf(spans);
+  const isi = pointsOf(context, spans) ?? toEmptyReference(spans);
   const point: Point = { _type, _key, isi };
 
   return point;
@@ -205,7 +206,7 @@ function spanToAyat(context: Context, keySpans: KeySpans): Ayat {
   const [key, spans] = keySpans;
   const _key = parseInt(key);
   const spansWithoutKey = removeAyatKey(spans);
-  const isi = pointsOf(context, spansWithoutKey) ?? emptyReferenceOf(spansWithoutKey);
+  const isi = pointsOf(context, spansWithoutKey) ?? toEmptyReference(spansWithoutKey);
   return { _type: 'ayat', _key, isi };
 }
 
@@ -214,7 +215,7 @@ function amendPointsOf(context: Context, spans: Span[]): AmendPoints {
   const { amendNomorKeyOfId } = keyIds;
   const { preKeySpans, spansOfKey } = toSpansWith(amendNomorKeyOfId, spans);
   const isi = chain(spansOfKey).toPairs().map(spansToAmendedPointWith(context)).compact().value();
-  const description = emptyReferenceOf(preKeySpans);
+  const description = toEmptyReference(preKeySpans);
   const documentNode = getAmendedDocumentNode(preKeySpans);
   return { _type: 'amendPoints', description, isi, documentNode };
 }
@@ -258,7 +259,7 @@ function spansToAmendDeletePasalPoint(
   if (isUndefined(firstSpanId)) return undefined;
   const _pasalKey = context.keyIds.amendDeletePasalKeyOfId[firstSpanId];
   if (isUndefined(_pasalKey)) return undefined;
-  const isi = emptyReferenceOf(spans);
+  const isi = toEmptyReference(spans);
   return { _type: 'amendPoint', _nomorKey, _operation: 'delete', _pasalKey, isi };
 }
 
@@ -284,11 +285,14 @@ function spansToAmendUpdatePasalPoint(
   const _descSpans = spans.slice(0, pasalTitleIdx);
   const [descFirst, ...descRest] = _descSpans;
   const descSpans = !isUndefined(descFirst) ? [removeNomorKey(descFirst), ...descRest] : _descSpans;
-  const description = emptyReferenceOf(descSpans);
+  const description = toEmptyReference(descSpans);
   const isiSpans = spans.slice(pasalTitleIdx + 1);
-  const isi =
-    amendAyatsOf(context, isiSpans) ?? pointsOf(context, isiSpans) ?? emptyReferenceOf(isiSpans);
+  const isi = spansToIsiAmendPasal(context, isiSpans);
   return { _type: 'amendPoint', _operation: 'update', _nomorKey, _pasalKey, isi, description };
+}
+
+function spansToIsiAmendPasal(context: Context, spans: Span[]): IsiAmendPasal {
+  return amendAyatsOf(context, spans) ?? pointsOf(context, spans) ?? toEmptyReference(spans);
 }
 
 function spansToAmendInsertPasalPoint(
@@ -299,13 +303,45 @@ function spansToAmendInsertPasalPoint(
   const _nomorKey = parseInt(nomorKey);
   const firstSpanId = spans[0]?.id;
   if (isUndefined(firstSpanId)) return undefined;
-  const _pasalKeys = context.keyIds.amendInsertPasalKeyOfId[firstSpanId];
-  if (isUndefined(_pasalKeys)) return undefined;
-  const isi = emptyReferenceOf(spans);
-  return { _type: 'amendPoint', _operation: 'insert', _nomorKey, _pasalKeys, isi };
+  const pasalData = context.keyIds.amendInsertPasalKeyOfId[firstSpanId];
+  if (isUndefined(pasalData)) return undefined;
+  if (isEmpty(pasalData)) {
+    const description = toEmptyReference(spans);
+    console.log('Insert not detected', { pasalData }, { nomorKey, spans });
+    return { _type: 'amendPoint', _operation: 'insert', _nomorKey, description, isi: {} };
+  }
+  const pasalDataKeys = keys(pasalData).map((t) => parseInt(t));
+  const firstPasalTitleIdx =
+    chain(spans)
+      .toPairs()
+      .filter(([, span]) => pasalDataKeys.includes(span.id))
+      .map(([idx]) => parseInt(idx))
+      .first()
+      .value() ?? 0;
+  if (firstPasalTitleIdx === 0) console.log('UNDI', spans[0]);
+  const _descSpans = spans.slice(0, firstPasalTitleIdx);
+  const [descFirst, ...descRest] = _descSpans;
+  const descSpans = !isUndefined(descFirst) ? [removeNomorKey(descFirst), ...descRest] : _descSpans;
+  const description = toEmptyReference(descSpans);
+  const isiSpans = spans.slice(firstPasalTitleIdx);
+  const reducedIsiSpans = reduce<Span, { record: Record<string, Span[]>; lastPasalKey?: string }>(
+    isiSpans,
+    (acc, span) => {
+      const { record, lastPasalKey } = acc;
+      const newPasalKey = pasalData[span.id];
+      if (!isUndefined(newPasalKey)) return { ...acc, lastPasalKey: newPasalKey };
+      const pasalKey = neverUndefined(lastPasalKey);
+      const pasalStrArr = record[pasalKey] ?? [];
+      const newRecord = { ...record, [pasalKey]: [...pasalStrArr, span] };
+      return { ...acc, record: newRecord };
+    },
+    { record: {} }
+  );
+  const isi = mapValues(reducedIsiSpans.record, (spans) => spansToIsiAmendPasal(context, spans));
+  return { _type: 'amendPoint', _operation: 'insert', _nomorKey, description, isi };
 }
 
-function emptyReferenceOf(spans: Span[]): ReferenceText {
+function toEmptyReference(spans: Span[]): ReferenceText {
   return chain(spans)
     .map(({ str }) => str)
     .join(' ')
