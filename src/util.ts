@@ -65,3 +65,4 @@ function toSpans<T extends string>(
 export function lastOf<T>(arr: T[]): T | undefined {
   return arr.slice(-1)[0];
 }
+

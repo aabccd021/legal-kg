@@ -199,9 +199,21 @@ function amendPointToMd(documentNode: DocumentNode, amendPoint: AmendedPoint): s
   assertNever(amendPoint);
 }
 
-function amendDeletePasalPointToMd(_: DocumentNode, amendPoint: AmendDeletePasalPoint): string {
-  const { text } = amendPoint.isi;
-  return `* ${text}`;
+function amendDeletePasalPointToMd(
+  documentNode: DocumentNode,
+  amendPoint: AmendDeletePasalPoint
+): string {
+  const { _nomorKey, isi, _pasalKey } = amendPoint;
+  const [, pasalConstStr, pasalNumStr, ...rest] = isi.text.split(' ');
+  const pasalNode: PasalNode = {
+    _structureType: 'pasal',
+    _key: _pasalKey,
+    parentDocument: documentNode,
+  };
+  const pasalUri = getLegalUri(pasalNode);
+  const restStr = rest.join(' ');
+  const pasalkeyStr = [pasalConstStr, pasalNumStr].join(' ');
+  return `* ${_nomorKey}. [${pasalkeyStr}](${pasalUri}) ${restStr}`;
 }
 
 function amendUpdatePasalPointToMd(
