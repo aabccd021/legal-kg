@@ -9,6 +9,7 @@ export type Daerah = typeof DAERAHS[number];
 export const DAERAHS = ['provinsi_dki_jakarta'] as const;
 
 export type PerdaNode = {
+  _structureType: 'document';
   _documentType: 'perda';
   daerah: Daerah;
   tahun: number;
@@ -68,6 +69,7 @@ function getFiles(dir: string, dataType: DataType): PerdaNode[] {
         .readdirSync(path.join(daerahDir, year))
         .map((pdfName) => path.basename(pdfName, getDataTypeExtension(dataType)))
         .map((number) => ({
+          _structureType: 'document',
           _documentType: 'perda',
           daerah,
           tahun: parseInt(year),

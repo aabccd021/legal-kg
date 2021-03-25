@@ -1,8 +1,8 @@
-import { isNil, isNumber, isString, toPairs, compact } from 'lodash';
+import { isNil, isNumber, isString, toPairs, compact, upperFirst } from 'lodash';
 import * as n3 from 'n3';
 import { Triple } from './triple';
 import _ from 'lodash';
-import { LegalNode, getLegalUri, getOntologyBaseUri, getLegalClass } from '../../../legal';
+import { LegalNode, getOntologyBaseUri, getUri } from '../../../legal';
 
 const { triple, namedNode, literal } = n3.DataFactory;
 
@@ -15,7 +15,7 @@ const rdfType = 'http://www.w3.org/1999/02/22-rdf-syntax-ns#type';
  * Node
  */
 function node(node: LegalNode): n3.NamedNode<string> {
-  const uri = getLegalUri(node);
+  const uri = getUri(node);
   return namedNode(uri);
 }
 function onto(predicate: string): n3.NamedNode<string> {
@@ -60,7 +60,7 @@ function getClassTypeQuads(triples: Triple[]): n3.Quad[] {
   return _(triples)
     .map(([s]) => s)
     .uniq()
-    .map((x) => triple(node(x), namedNode(rdfType), onto(getLegalClass(x))))
+    .map((x) => triple(node(x), namedNode(rdfType), onto(upperFirst(x._structureType))))
     .value();
 }
 

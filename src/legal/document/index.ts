@@ -16,6 +16,7 @@ export type ScrapableDocumentCategory = typeof SCRAPABLE_DOCUMENT_CATEGORY[numbe
 export const SCRAPABLE_DOCUMENT_CATEGORY = ['uu'] as const;
 export type ScrapableDocumentNode = UuNode & {
   _documentType: ScrapableDocumentCategory;
+  _structureType: 'document';
 };
 
 /**
@@ -25,6 +26,7 @@ export type ConvertableDocumentCategory = typeof CONVERTABLE_DOCUMENT_CATEGORY[n
 export const CONVERTABLE_DOCUMENT_CATEGORY = [...SCRAPABLE_DOCUMENT_CATEGORY, 'perda'] as const;
 export type ConvertableDocumentNode = (ScrapableDocumentNode | PerdaNode) & {
   _documentType: ConvertableDocumentCategory;
+  _structureType: 'document';
 };
 
 /**
@@ -34,6 +36,7 @@ export type DocumentCategory = typeof DOCUMENT_CATEGORY[number];
 export const DOCUMENT_CATEGORY = [...CONVERTABLE_DOCUMENT_CATEGORY, 'uud'] as const;
 export type DocumentNode = (ConvertableDocumentNode | UudNode) & {
   _documentType: DocumentCategory;
+  _structureType: 'document';
 };
 
 /**
@@ -120,7 +123,7 @@ export function getScrapableDocumentLastPage(category: ScrapableDocumentCategory
 /**
  * Get Document URI
  */
-export function _getDocumentUri(documentNode: DocumentNode): string {
+export function getDocumentUri(documentNode: DocumentNode): string {
   const path = getDocumentPath(documentNode);
   const uriBase = getDocumentBaseUri();
   return `${uriBase}/${path}`;

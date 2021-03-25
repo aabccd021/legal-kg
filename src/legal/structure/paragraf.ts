@@ -1,4 +1,4 @@
-import { _getStructureUri } from '.';
+import { getUri } from '..';
 import { BagianNode } from './bagian';
 import { Pasals } from './pasal';
 
@@ -7,9 +7,9 @@ export type ParagrafNode = {
   parentBagian: BagianNode;
   _key: number;
 };
-export function _getParagrafUri(node: ParagrafNode): string {
+export function getParagrafUri(node: ParagrafNode): string {
   const { _key, parentBagian } = node;
-  const bagianUri = _getStructureUri(parentBagian);
+  const bagianUri = getUri(parentBagian);
   return `${bagianUri}/paragraf/${_key}`;
 }
 

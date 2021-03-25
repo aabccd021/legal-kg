@@ -15,7 +15,6 @@ import {
   getPasalParentDocument,
   PasalNode,
 } from '../../../legal/structure/pasal';
-import assertNever from 'assert-never';
 
 export function yamlToTriples({
   _name,
@@ -127,25 +126,34 @@ function paragrafToTriple(paragraf: Paragraf, parentBagian: BagianNode): Triple[
 
 function pasalToTriple(pasal: Pasal, parent: PasalParentNode): Triple[] {
   const { _key, isi } = pasal;
-  const parentDocument = getPasalParentDocument(parent);
-  const pasalKey: PasalNode = { _key, parentDocument, _structureType: 'pasal' };
+  const parentDocumentNode = getPasalParentDocument(parent);
+  const pasalNode: PasalNode = {
+    _key,
+    parentDocumentNode,
+    _structureType: 'pasal',
+  };
 
   return [
-    [parent, 'hasPasal', pasalKey],
-    [pasalKey, 'hasKey', _key],
-    ...pasalContentToTriple(pasalKey, isi),
+    [parent, 'hasPasal', pasalNode],
+    [pasalNode, 'hasKey', _key],
+    ...pasalContentToTriple(pasalNode, isi),
   ];
 }
 
-function pasalContentToTriple(pasal_key: PasalNode, isi: IsiPasal): Triple[] {
-  if (isi._type === 'ayats') return isi.ayats.flatMap(ayatToTripleWith(pasal_key));
-  if (isi._type === 'points') return pointsToTriple(pasal_key, isi);
-  if (isi._type === 'referenceText') return referencesToTriple(pasal_key, isi.references);
-  if (isi._type === 'amendPoints') return tripleOfAmendPoints(pasal_key, isi);
-  assertNever(isi);
+function pasalContentToTriple(pasalNode: PasalNode, isi: IsiPasal): Triple[] {
+  switch (isi._type) {
+    case 'ayats':
+      return isi.ayats.flatMap(ayatToTripleWith(pasalNode));
+    case 'points':
+      return pointsToTriple(pasalNode, isi);
+    case 'referenceText':
+      return referencesToTriple(pasalNode, isi.references);
+    case 'amenderPoints':
+      return tripleOfAmendPoints(pasalNode, isi);
+  }
 }
 
-function tripleOfAmendPoints(_pasal_key: PasalNode, _isi: IsiPasal): Triple[] {
+function tripleOfAmendPoints(_pasalNode: PasalNode, _isi: IsiPasal): Triple[] {
   return [];
 }
 
@@ -161,26 +169,26 @@ function ayatToTriple(parentPasal: PasalNode, ayat: Ayat): Triple[] {
 
   return [[parentPasal, 'hasAyat', ayat_key], [ayat_key, 'hasKey', _key], ...isiTriples];
 }
-function pointsToTriple(points_key: PointsNode, points: Points | undefined): Triple[] {
+function pointsToTriple(pointsNode: PointsNode, points: Points | undefined): Triple[] {
   if (isNil(points)) return [];
   const { _description, isi } = points;
 
   return [
-    [points_key, 'hasDescription', _description.text],
-    ...referencesToTriple(points_key, _description.references),
-    ...isi.flatMap((i) => pointToTriple(points_key, i)),
+    [pointsNode, 'hasDescription', _description.text],
+    ...referencesToTriple(pointsNode, _description.references),
+    ...isi.flatMap((i) => pointToTriple(pointsNode, i)),
   ];
 }
 
-function pointToTriple(points_key: PointsNode, point: Point): Triple[] {
+function pointToTriple(pointsNode: PointsNode, point: Point): Triple[] {
   const { _key, isi } = point;
-  const point_key: PointNode = { _key, parentPoints: points_key, _structureType: 'point' };
+  const pointNode: PointNode = { _key, parentPoints: pointsNode, _structureType: 'point' };
   const isiTriples: Triple[] =
     isi._type === 'points'
-      ? pointsToTriple(point_key, isi)
-      : [[point_key, 'hasText', isi.text], ...referencesToTriple(point_key, isi.references)];
+      ? pointsToTriple(pointNode, isi)
+      : [[pointNode, 'hasText', isi.text], ...referencesToTriple(pointNode, isi.references)];
 
-  return [[points_key, 'hasPoint', point_key], [point_key, 'hasKey', _key], ...isiTriples];
+  return [[pointsNode, 'hasPoint', pointNode], [pointNode, 'hasKey', _key], ...isiTriples];
 }
 
 function referencesToTriple(parent: PointsNode, references: Reference[]): Triple[] {

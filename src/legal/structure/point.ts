@@ -1,4 +1,5 @@
-import { _getStructureUri } from '.';
+import { AmendedPasalNode } from './amend';
+import { getUri } from '..';
 import { ReferenceText } from '../reference';
 import { AyatNode } from './ayat';
 import { MetadataNode } from './metadata';
@@ -12,9 +13,9 @@ export type PointNode = {
   _key: string | number;
   parentPoints: PointsNode;
 };
-export function _getPointUri(pointNode: PointNode): string {
+export function getPointUri(pointNode: PointNode): string {
   const { _key, parentPoints } = pointNode;
-  const parentUri = _getStructureUri(parentPoints);
+  const parentUri = getUri(parentPoints);
   return `${parentUri}/point/${_key}`;
 }
 
@@ -27,7 +28,7 @@ export type Point = {
 /**
  * Points
  */
-export type PointsNode = PointNode | AyatNode | PasalNode | MetadataNode;
+export type PointsNode = PointNode | AyatNode | PasalNode | MetadataNode | AmendedPasalNode;
 
 export type Points = {
   _type: 'points';

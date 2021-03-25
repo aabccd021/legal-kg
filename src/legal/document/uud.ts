@@ -1,6 +1,7 @@
 import { _DocumentHandler } from './_utils';
 
 export type UudNode = {
+  _structureType: 'document';
   _documentType: 'uud';
 };
 

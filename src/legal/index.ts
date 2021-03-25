@@ -1,8 +1,14 @@
-import { assertNever } from 'assert-never';
-import { upperFirst } from 'lodash';
 import { getConfig } from '../config';
-import { DocumentNode, _getDocumentUri, DOCUMENT_CATEGORY } from './document';
-import { _getStructureUri, StructureNode, STRUCTURE_CATEGORY } from './structure';
+import { DocumentNode, getDocumentUri } from './document';
+import { StructureNode } from './structure';
+import { getAmendedPasalUri, getAmenderPointUri } from './structure/amend';
+import { getAyatUri as getAyatUri } from './structure/ayat';
+import { getBabUri } from './structure/bab';
+import { getBagianUri } from './structure/bagian';
+import { getMetadataUri } from './structure/metadata';
+import { getParagrafUri } from './structure/paragraf';
+import { getPasalUri } from './structure/pasal';
+import { getPointUri } from './structure/point';
 
 /**
  * Legal Node
@@ -12,22 +18,34 @@ export type LegalNode = DocumentNode | StructureNode;
 /**
  * Get URI
  */
-export function getLegalUri(node: LegalNode): string {
-  if (isDocumentNode(node)) return _getDocumentUri(node);
-  if (isStructureNode(node)) return _getStructureUri(node);
-  assertNever(node);
+export function getUri(node: LegalNode): string {
+  switch (node._structureType) {
+    case 'document':
+      return getDocumentUri(node);
+    case 'ayat':
+      return getAyatUri(node);
+    case 'bab':
+      return getBabUri(node);
+    case 'bagian':
+      return getBagianUri(node);
+    case 'metadata':
+      return getMetadataUri(node);
+    case 'paragraf':
+      return getParagrafUri(node);
+    case 'pasal':
+      return getPasalUri(node);
+    case 'point':
+      return getPointUri(node);
+    case 'amendedPasal':
+      return getAmendedPasalUri(node);
+    case 'amenderPoint':
+      return getAmenderPointUri(node);
+  }
 }
 
 /**
  * Type Guards
  */
-function isDocumentNode(x: LegalNode): x is DocumentNode {
-  return DOCUMENT_CATEGORY.includes((x as DocumentNode)._documentType);
-}
-function isStructureNode(x: LegalNode): x is StructureNode {
-  return STRUCTURE_CATEGORY.includes((x as StructureNode)._structureType);
-}
-
 /**
  * Get Base Uri
  */
@@ -38,13 +56,4 @@ export function getOntologyBaseUri(): string {
 export function getDocumentBaseUri(): string {
   const { uriBase } = getConfig();
   return `${uriBase}/document`;
-}
-
-/**
- * Class Name
- */
-export function getLegalClass(node: LegalNode): string {
-  if (isDocumentNode(node)) return 'Document';
-  if (isStructureNode(node)) return upperFirst(node._structureType);
-  assertNever(node);
 }

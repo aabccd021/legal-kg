@@ -1,11 +1,10 @@
 import { ReferenceText } from './../../../legal/reference';
 import { Paragraf, ParagrafNode, Paragrafs } from './../../../legal/structure/paragraf';
-import { IsiPasal, Pasals } from './../../../legal/structure/pasal';
 import assertNever from 'assert-never';
-import _, { chain, curry, mapValues } from 'lodash';
+import _, { chain, curry, map } from 'lodash';
 import { isNil, compact, isUndefined } from 'lodash';
 import { DocumentNode } from '../../../legal/document';
-import { Ayat, AyatNode } from '../../../legal/structure/ayat';
+import { Ayat, AyatNode, Ayats } from '../../../legal/structure/ayat';
 import { Bab, BabNode } from '../../../legal/structure/bab';
 import { Bagian, BagianNode, Bagians } from '../../../legal/structure/bagian';
 import { Metadata, MetadataNode } from '../../../legal/structure/metadata';
@@ -14,17 +13,20 @@ import {
   getPasalParentDocument,
   PasalNode,
   Pasal,
+  IsiPasal,
+  Pasals,
 } from '../../../legal/structure/pasal';
 import { PointsNode, PointNode, Point, Points } from '../../../legal/structure/point';
 import { Document } from '../../../legal/document/index';
 import { Reference } from '../../../legal/reference';
 import {
-  AmendDeletePasalPoint,
+  AmenderDeletePoint,
   AmendedPoint,
-  AmendInsertPasalPoint,
+  AmenderInsertPoint,
   AmendPoints,
-  AmendUpdatePasalPoint,
-  IsiAmendPasal,
+  AmenderUpdatePoint,
+  AmendedPasal,
+  AmendedPasalNode,
 } from '../../../legal/structure/amend';
 import { safeParseInt } from './parse_key_from_spans';
 import { neverNum, neverString } from '../../../util';
@@ -70,8 +72,8 @@ function babToDetectedBab(bab: Bab, parentDocument: DocumentNode): Bab {
 const toDetectedPasalWith = curry(toDetectedPasal);
 function toDetectedPasal(parent: PasalParentNode, pasal: Pasal): Pasal {
   const { isi, _key } = pasal;
-  const parentDocument = getPasalParentDocument(parent);
-  const pasalNode: PasalNode = { _key, parentDocument, _structureType: 'pasal' };
+  const parentDocumentNode = getPasalParentDocument(parent);
+  const pasalNode: PasalNode = { _key, parentDocumentNode, _structureType: 'pasal' };
   // const detectedText = isNil(isi)
   //   ? { ...text, references: detectPasalNode(text.text, pasalNode) }
   //   : text;
@@ -80,11 +82,18 @@ function toDetectedPasal(parent: PasalParentNode, pasal: Pasal): Pasal {
 }
 
 function pasalContentToDetectedPasalContent(isi: IsiPasal, pasalNode: PasalNode): IsiPasal {
-  if (isi._type === 'amendPoints') return detectedAmendPointsOf(isi, pasalNode);
-  return toDetectedIsiAmendedUpdatePasal(isi, pasalNode);
+  switch (isi._type) {
+    case 'amenderPoints':
+      return detectedAmendPointsOf(isi, pasalNode);
+    default:
+      return toDetectedIsiAmendedUpdatePasal(isi, pasalNode);
+  }
 }
 
-function toDetectedIsiAmendedUpdatePasal(isi: IsiAmendPasal, pasalNode: PasalNode): IsiAmendPasal {
+function toDetectedIsiAmendedUpdatePasal(
+  isi: Points | ReferenceText | Ayats,
+  pasalNode: PasalNode
+): Points | ReferenceText | Ayats {
   if (isi._type === 'ayats')
     return { ...isi, ayats: isi.ayats.map((ayat) => ayatToDetectedAyat(ayat, pasalNode)) };
   if (isi._type === 'points') return pointsToDetectedPoints(isi, pasalNode);
@@ -115,37 +124,39 @@ function _detectedAmendPointOf(pasalNode: PasalNode, amendPoint: AmendedPoint): 
 }
 function detectedAmendDeletePasalPointOf(
   pasalNode: PasalNode,
-  amendPoint: AmendDeletePasalPoint
-): AmendDeletePasalPoint {
+  amendPoint: AmenderDeletePoint
+): AmenderDeletePoint {
   const { isi } = amendPoint;
   const detectedIsi = { ...isi, references: detectPasalNode(isi.text, pasalNode) };
   return { ...amendPoint, isi: detectedIsi };
 }
 function detectedAmendUpdatePasalPointOf(
   pasalNode: PasalNode,
-  amendPoint: AmendUpdatePasalPoint
-): AmendUpdatePasalPoint {
-  const { isi, description } = amendPoint;
+  amendPoint: AmenderUpdatePoint
+): AmenderUpdatePoint {
+  const { amendedPasal, description } = amendPoint;
   const newDescription: ReferenceText = {
     ...description,
     references: detectPasalNode(description.text, pasalNode),
   };
-  const detectedIsi = toDetectedIsiAmendedUpdatePasal(isi, pasalNode);
-  return { ...amendPoint, isi: detectedIsi, description: newDescription };
+  const detectedIsi = toDetectedIsiAmendedUpdatePasal(amendedPasal.isi, pasalNode);
+  const newAmendedPasal: AmendedPasal = { ...amendedPasal, isi: detectedIsi };
+  return { ...amendPoint, amendedPasal: newAmendedPasal, description: newDescription };
 }
 function detectedAmendInsertPasalPointOf(
   pasalNode: PasalNode,
-  amendPoint: AmendInsertPasalPoint
-): AmendInsertPasalPoint {
-  const { isi, description } = amendPoint;
+  amendPoint: AmenderInsertPoint
+): AmenderInsertPoint {
+  const { amendedPasals, description } = amendPoint;
   const newDescription: ReferenceText = {
     ...description,
     references: detectPasalNode(description.text, pasalNode),
   };
-  const detectedIsi: Record<string, IsiAmendPasal> = mapValues(isi, (isiAmendPasal) =>
-    toDetectedIsiAmendedUpdatePasal(isiAmendPasal, pasalNode)
-  );
-  return { ...amendPoint, isi: detectedIsi, description: newDescription };
+  const newAmendedPasals: AmendedPasal[] = map(amendedPasals, (amendedPasal) => ({
+    ...amendedPasal,
+    isi: toDetectedIsiAmendedUpdatePasal(amendedPasal.isi, pasalNode),
+  }));
+  return { ...amendPoint, amendedPasals: newAmendedPasals, description: newDescription };
 }
 
 function pointsToDetectedPoints(points: Points, pointsNode: PointsNode): Points {
@@ -212,12 +223,18 @@ function detectPointNode(text: string, pointNode: PointNode): Reference[] {
 }
 
 function detectPointParentNode(text: string, pointsNode: PointsNode): Reference[] {
-  if (pointsNode._structureType === 'point') return [];
-  if (pointsNode._structureType === 'ayat') return detectAyatNode(text, pointsNode);
-  if (pointsNode._structureType === 'pasal') return detectPasalNode(text, pointsNode);
-  if (pointsNode._structureType === 'metadata')
-    return detectDocNode(text, pointsNode.parentDocument);
-  assertNever(pointsNode);
+  switch (pointsNode._structureType) {
+    case 'point':
+      return [];
+    case 'ayat':
+      return detectAyatNode(text, pointsNode);
+    case 'pasal':
+      return detectPasalNode(text, pointsNode);
+    case 'metadata':
+      return detectDocNode(text, pointsNode.parentDocument);
+    case 'amendedPasal':
+      return detectPasalNode(text, pointsNode);
+  }
 }
 
 function detectAyatNode(text: string, ayatNode: AyatNode): Reference[] {
@@ -225,18 +242,18 @@ function detectAyatNode(text: string, ayatNode: AyatNode): Reference[] {
   return detectPasalNode(text, parentPasal);
 }
 
-function detectPasalNode(text: string, pasalNode: PasalNode): Reference[] {
-  const { parentDocument } = pasalNode;
-  const detectors = [detectAyatX, detectAyatNHurufXYZ];
+function detectPasalNode(text: string, pasalNode: PasalNode | AmendedPasalNode): Reference[] {
+  const { parentDocumentNode } = pasalNode;
+  const detectors: Detector<PasalNode | AmendedPasalNode>[] = [detectAyatX, detectAyatNHurufXYZ];
   const detectedReferences = detectors.flatMap((detector) => detector(text, pasalNode));
-  const docReferences = detectDocNode(text, parentDocument);
+  const docReferences = detectDocNode(text, parentDocumentNode);
   const allReferences = [...detectedReferences, ...docReferences];
 
   return _resolveConflictingReferences(allReferences);
 }
 
 function detectDocNode(text: string, documentNode: DocumentNode): Reference[] {
-  const detectors = [detectPasalX, detectPasalXAyatX];
+  const detectors: Detector<DocumentNode>[] = [detectPasalX, detectPasalXAyatX];
 
   const detectedReferences = detectors.flatMap((detector) => detector(text, documentNode));
   const rootReferences = detectRootNode(text);
@@ -251,7 +268,10 @@ function detectRootNode(text: string): Reference[] {
 
 function detectHardCoded(text: string): Reference[] {
   const map: [string, DocumentNode][] = [
-    ['Undang Undang Dasar Negara Republik Indonesia Tahun 1945', { _documentType: 'uud' }],
+    [
+      'Undang Undang Dasar Negara Republik Indonesia Tahun 1945',
+      { _structureType: 'document', _documentType: 'uud' },
+    ],
   ];
 
   const references = map.flatMap(([key, node]) => {
@@ -269,7 +289,7 @@ function detectHardCoded(text: string): Reference[] {
   return references;
 }
 
-function detectPasalXAyatX(text: string, parentDocument: DocumentNode): Reference[] {
+function detectPasalXAyatX(text: string, parentDocumentNode: DocumentNode): Reference[] {
   const regexp = /Pasal [0-9]+ ayat \((l|[0-9]+)\)/g;
   const matches = [...text.matchAll(regexp)];
 
@@ -284,7 +304,7 @@ function detectPasalXAyatX(text: string, parentDocument: DocumentNode): Referenc
       const start = match.index ?? neverNum();
       const end = (match.index ?? neverNum()) + (match[0]?.length ?? neverNum());
       const parentPasal: PasalNode = {
-        parentDocument,
+        parentDocumentNode,
         _key: pasal,
         _structureType: 'pasal',
       };
@@ -324,7 +344,9 @@ function detectHurufXYZ(text: string, parentPoint: PointNode): Reference[] {
   });
 }
 
-function detectAyatNHurufXYZ(text: string, parentPasal: PasalNode): Reference[] {
+type Detector<T> = (text: string, node: T) => Reference[];
+
+const detectAyatNHurufXYZ: Detector<PasalNode | AmendedPasalNode> = (text, parentPasal) => {
   const regexp = /ayat \((l|[0-9]+)\) huruf ?([a-z]?,? ?)+( [a-z]( |,))/g;
 
   const matches = [...text.matchAll(regexp)];
@@ -349,9 +371,9 @@ function detectAyatNHurufXYZ(text: string, parentPasal: PasalNode): Reference[] 
 
     return hurufs;
   });
-}
+};
 
-function detectAyatX(text: string, parentPasal: PasalNode): Reference[] {
+const detectAyatX: Detector<PasalNode | AmendedPasalNode> = (text, parentPasal) => {
   const regexp = /ayat \((l|[0-9]+)\)/g;
   const matches = [...text.matchAll(regexp)];
 
@@ -364,7 +386,7 @@ function detectAyatX(text: string, parentPasal: PasalNode): Reference[] {
     const reference: Reference = { start, end, node };
     return reference;
   });
-}
+};
 
 // TODO: shorten
 function getPosByLenAndIndex(arrLen: number, index: number, start: number): [number, number] {
@@ -384,7 +406,7 @@ function getPosByLenAndIndex(arrLen: number, index: number, start: number): [num
   return [_start, _start + 1];
 }
 
-function detectPasalX(text: string, parentDocument: DocumentNode): Reference[] {
+function detectPasalX(text: string, parentDocumentNode: DocumentNode): Reference[] {
   const regexp = /Pasal [0-9]+/g;
   const matches = [...text.matchAll(regexp)];
 
@@ -392,7 +414,7 @@ function detectPasalX(text: string, parentDocument: DocumentNode): Reference[] {
     const _key = safeParseInt(match[0]?.slice('Pasal '.length) ?? neverString()) ?? neverNum();
     const start = match.index ?? neverNum();
     const end = start + (match[0]?.length ?? neverNum());
-    const node: PasalNode = { _key, parentDocument, _structureType: 'pasal' };
+    const node: PasalNode = { _key, parentDocumentNode, _structureType: 'pasal' };
 
     const reference: Reference = { start, end, node };
     return reference;

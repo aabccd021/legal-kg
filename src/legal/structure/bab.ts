@@ -1,4 +1,4 @@
-import { DocumentNode, _getDocumentUri } from '../document';
+import { DocumentNode, getDocumentUri } from '../document';
 import { Bagians } from './bagian';
 import { Pasals } from './pasal';
 
@@ -7,9 +7,9 @@ export type BabNode = {
   parentDocument: DocumentNode;
   _key: number;
 };
-export function _getBabUri(node: BabNode): string {
+export function getBabUri(node: BabNode): string {
   const { _key, parentDocument } = node;
-  const docUri = _getDocumentUri(parentDocument);
+  const docUri = getDocumentUri(parentDocument);
   return `${docUri}/bab/${_key}`;
 }
 

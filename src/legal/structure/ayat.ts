@@ -1,16 +1,17 @@
-import { _getStructureUri } from '.';
+import { getUri } from '..';
 import { ReferenceText } from '../reference';
+import { AmendedPasalNode } from './amend';
 import { PasalNode } from './pasal';
 import { Points } from './point';
 
 export type AyatNode = {
   _structureType: 'ayat';
-  parentPasal: PasalNode;
+  parentPasal: PasalNode | AmendedPasalNode;
   _key: number;
 };
-export function _getAyatUri(node: AyatNode): string {
+export function getAyatUri(node: AyatNode): string {
   const { _key, parentPasal } = node;
-  const pasalUri = _getStructureUri(parentPasal);
+  const pasalUri = getUri(parentPasal);
   return `${pasalUri}/ayat/${_key}`;
 }
 

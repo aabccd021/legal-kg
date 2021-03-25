@@ -1,38 +1,87 @@
 import { DocumentNode } from './../document/index';
 import { ReferenceText } from '../reference';
 import { Ayats } from './ayat';
-import { Points } from './point';
+import { Points, PointsNode } from './point';
+import { getUri } from '..';
 
 export type AmendPoints = {
-  _type: 'amendPoints';
+  _type: 'amenderPoints';
   description: ReferenceText;
-  documentNode: DocumentNode;
+  parentDocument: DocumentNode;
   isi: AmendedPoint[];
 };
 
-export type AmendedPoint = AmendDeletePasalPoint | AmendUpdatePasalPoint | AmendInsertPasalPoint;
+export type AmendedPoint = AmenderDeletePoint | AmenderUpdatePoint | AmenderInsertPoint;
 
-type AmendPointBase = {
-  _type: 'amendPoint';
+type AmenderPointBase = {
+  _type: 'amenderPoint';
   _nomorKey: number;
 };
 
-export type AmendDeletePasalPoint = AmendPointBase & {
+type AmenderPointNodeBase = {
+  _structureType: 'amenderPoint';
+  _key: number;
+  parentPoints: PointsNode;
+};
+
+export type AmenderPointNode =
+  | AmenderDeletePointNode
+  | AmenderInsertPointNode
+  | AmenderUpdatePointNode;
+
+export type AmenderDeletePointNode = AmenderPointNodeBase & {
+  _operation: 'delete';
+};
+export type AmenderInsertPointNode = AmenderPointNodeBase & {
+  _operation: 'insert';
+};
+export type AmenderUpdatePointNode = AmenderPointNodeBase & {
+  _operation: 'update';
+};
+
+export function getAmenderPointUri(node: AmenderPointNode): string {
+  const { _key, parentPoints, _operation } = node;
+  const parentPointsUri = getUri(parentPoints);
+  return `${parentPointsUri}/point/${_key}/amend/${_operation}`;
+}
+
+export type AmenderDeletePoint = AmenderPointBase & {
   _operation: 'delete';
   _pasalKey: string;
   isi: ReferenceText;
 };
 
-export type AmendUpdatePasalPoint = AmendPointBase & {
+export type AmenderUpdatePoint = AmenderPointBase & {
   _operation: 'update';
-  _pasalKey: string;
   description: ReferenceText;
-  isi: IsiAmendPasal;
+  amendedPasal: AmendedPasal;
 };
-export type IsiAmendPasal = Points | ReferenceText | Ayats;
 
-export type AmendInsertPasalPoint = AmendPointBase & {
+export type AmenderInsertPoint = AmenderPointBase & {
   _operation: 'insert';
   description: ReferenceText;
-  isi: Record<string, IsiAmendPasal>;
+  amendedPasals: AmendedPasal[];
 };
+
+/**
+ *
+ */
+export type AmendedPasal = {
+  _structureType: 'amendedPasal';
+  _key: string;
+  isi: Points | ReferenceText | Ayats;
+};
+
+export type AmendedPasalNode = {
+  _structureType: 'amendedPasal';
+  parentDocumentNode: DocumentNode;
+  amendPointNode: AmenderPointNode;
+  _key: number | string;
+};
+
+export function getAmendedPasalUri(node: AmendedPasalNode): string {
+  const { _key, parentDocumentNode, amendPointNode } = node;
+  const parentPointUri = getUri(amendPointNode);
+  const documentUri = getUri(parentDocumentNode);
+  return `${parentPointUri}/document/${documentUri}/pasal/${_key}`;
+}

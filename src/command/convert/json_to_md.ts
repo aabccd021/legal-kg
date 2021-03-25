@@ -2,9 +2,9 @@ import { IsiPasal } from '../../legal/structure/pasal';
 import { assertNever } from 'assert-never';
 import { map, flatten, compact, isNil, repeat, curry, chain } from 'lodash';
 import { toRoman } from 'roman-numerals';
-import { getDocumentName, _getDocumentUri, DocumentNode } from '../../legal/document';
+import { getDocumentName, getDocumentUri, DocumentNode } from '../../legal/document';
 import * as fs from 'fs';
-import { getLegalUri } from '../../legal';
+import { getUri } from '../../legal';
 import { Ayat, AyatNode } from '../../legal/structure/ayat';
 import { Bab, BabNode } from '../../legal/structure/bab';
 import { Bagian, BagianNode } from '../../legal/structure/bagian';
@@ -21,11 +21,11 @@ import { ReferenceText } from '../../legal/reference';
 import { Document } from '../../legal/document/index';
 import { getDocumentData, getDocumentFilePath } from '../../data';
 import {
-  AmendDeletePasalPoint,
+  AmenderDeletePoint,
   AmendedPoint,
-  AmendInsertPasalPoint,
+  AmenderInsertPoint,
   AmendPoints,
-  AmendUpdatePasalPoint,
+  AmenderUpdatePoint,
 } from '../../legal/structure/amend';
 import * as yaml from 'js-yaml';
 
@@ -83,7 +83,7 @@ function _jsonToMd(doc: Document): string {
     _node,
     babs,
   } = doc;
-  const uri = _getDocumentUri(_node);
+  const uri = getDocumentUri(_node);
   const name = getDocumentName(_node);
   const lines: (string | undefined)[] = [
     `# [${name}](${uri})`,
@@ -125,7 +125,7 @@ function mengimbangToMd(
   const { points, text } = isi;
   const metadataNode: MetadataNode = { metadataType, parentDocument, _structureType: 'metadata' };
   const isiStr = !isNil(points) ? pointsToMd(points, metadataNode) : referenceToMd(text);
-  const uri = getLegalUri(metadataNode);
+  const uri = getUri(metadataNode);
 
   return `\n# [${title}](${uri})\n${isiStr}`;
 }
@@ -138,7 +138,7 @@ function babToMd(bab: Bab, parentDocument: DocumentNode): string {
       ? isi.pasals.map(pasalToMdWith(babNode)).join('\n')
       : isi.bagians.map(bagianToMdWith(babNode)).join('\n');
   const romanKey = toRoman(_key);
-  const babUri = getLegalUri(babNode);
+  const babUri = getUri(babNode);
 
   return `\n# [BAB ${romanKey}: ${_judul}](${babUri})\n${isiStr} \n`;
 }
@@ -151,7 +151,7 @@ function bagianToMd(parentBab: BabNode, bagian: Bagian): string {
     isi._type === 'pasals'
       ? isi.pasals.map(pasalToMdWith(parentBab))
       : isi.paragrafs.map(paragrafToMdWith(bagianNode));
-  const uri = getLegalUri(bagianNode);
+  const uri = getUri(bagianNode);
   return `\n## [Bagian ${_key}](${uri})\n${isiStr}\n`;
 }
 
@@ -160,31 +160,40 @@ function paragrafToMd(parentBagian: BagianNode, paragraf: Paragraf): string {
   const { _key, isi } = paragraf;
   const paragrafNode: ParagrafNode = { _key, parentBagian, _structureType: 'paragraf' };
   const isiStr = isi.pasals.map(pasalToMdWith(parentBagian));
-  const uri = getLegalUri(paragrafNode);
+  const uri = getUri(paragrafNode);
   return `\n## [Paragraf ${_key}](${uri})\n${isiStr}\n`;
 }
 
 const pasalToMdWith = curry(pasalToMd);
 function pasalToMd(pasalParent: PasalParentNode, pasal: Pasal): string {
   const { _key, isi } = pasal;
-  const parentDocument = getPasalParentDocument(pasalParent);
-  const pasalNode: PasalNode = { _key, parentDocument, _structureType: 'pasal' };
+  const parentDocumentNode = getPasalParentDocument(pasalParent);
+  const pasalNode: PasalNode = {
+    _key,
+    parentDocumentNode,
+    _structureType: 'pasal',
+  };
   const isiStr: string = pasalContentToMd(isi, pasalNode);
-  const uri = getLegalUri(pasalNode);
+  const uri = getUri(pasalNode);
   return `\n### [Pasal ${_key}](${uri})\n${isiStr}\n`;
 }
 
 function pasalContentToMd(isi: IsiPasal, pasalNode: PasalNode): string {
-  if (isi._type === 'ayats') return isi.ayats.map((a) => ayatToMd(a, pasalNode)).join('\n');
-  if (isi._type === 'points') return pointsToMd(isi, pasalNode);
-  if (isi._type === 'referenceText') return referenceToMd(isi);
-  if (isi._type === 'amendPoints') return amendPointsToMd(isi);
-  assertNever(isi);
+  switch (isi._type) {
+    case 'ayats':
+      return isi.ayats.map((a) => ayatToMd(a, pasalNode)).join('\n');
+    case 'points':
+      return pointsToMd(isi, pasalNode);
+    case 'referenceText':
+      return referenceToMd(isi);
+    case 'amenderPoints':
+      return amendPointsToMd(isi);
+  }
 }
 
 function amendPointsToMd(amendPoints: AmendPoints): string {
-  const { description, isi, documentNode } = amendPoints;
-  const isiMd = isi.map(amendPointToMdWith(documentNode)).join('\n');
+  const { description, isi, parentDocument } = amendPoints;
+  const isiMd = isi.map(amendPointToMdWith(parentDocument)).join('\n');
   return `${description.text}\n${isiMd}`;
 }
 
@@ -200,17 +209,17 @@ function amendPointToMd(documentNode: DocumentNode, amendPoint: AmendedPoint): s
 }
 
 function amendDeletePasalPointToMd(
-  documentNode: DocumentNode,
-  amendPoint: AmendDeletePasalPoint
+  parentDocumentNode: DocumentNode,
+  amendPoint: AmenderDeletePoint
 ): string {
   const { _nomorKey, isi, _pasalKey } = amendPoint;
   const [, pasalConstStr, pasalNumStr, ...rest] = isi.text.split(' ');
   const pasalNode: PasalNode = {
     _structureType: 'pasal',
     _key: _pasalKey,
-    parentDocument: documentNode,
+    parentDocumentNode,
   };
-  const pasalUri = getLegalUri(pasalNode);
+  const pasalUri = getUri(pasalNode);
   const restStr = rest.join(' ');
   const pasalkeyStr = [pasalConstStr, pasalNumStr].join(' ');
   return `* ${_nomorKey}. [${pasalkeyStr}](${pasalUri}) ${restStr}`;
@@ -219,20 +228,20 @@ function amendDeletePasalPointToMd(
 const s8 = '        ';
 
 function amendUpdatePasalPointToMd(
-  documentNode: DocumentNode,
-  amendPoint: AmendUpdatePasalPoint
+  parentDocumentNode: DocumentNode,
+  amendPoint: AmenderUpdatePoint
 ): string {
-  const { description, _pasalKey, _nomorKey, isi } = amendPoint;
+  const { description, _nomorKey, amendedPasal } = amendPoint;
   const pasalNode: PasalNode = {
     _structureType: 'pasal',
-    _key: _pasalKey,
-    parentDocument: documentNode,
+    _key: amendedPasal._key,
+    parentDocumentNode,
   };
-  const pasalUri = getLegalUri(pasalNode);
+  const pasalUri = getUri(pasalNode);
   const descriptionMd = referenceToMd(description);
-  const isiMd = toIndentedAmend(pasalContentToMd(isi, pasalNode));
+  const isiMd = toIndentedAmend(pasalContentToMd(amendedPasal.isi, pasalNode));
   return `* ${_nomorKey}. ${descriptionMd}
-${s8}>\n${s8}> [Pasal ${_pasalKey}](${pasalUri})\n\n${isiMd}`;
+${s8}>\n${s8}> [Pasal ${amendedPasal._key}](${pasalUri})\n\n${isiMd}`;
 }
 
 function toIndentedAmend(str: string): string {
@@ -243,22 +252,21 @@ function toIndentedAmend(str: string): string {
 }
 
 function amendInsertPasalPointToMd(
-  parentDocument: DocumentNode,
-  amendPoint: AmendInsertPasalPoint
+  parentDocumentNode: DocumentNode,
+  amendPoint: AmenderInsertPoint
 ): string {
-  const { isi, description, _nomorKey } = amendPoint;
+  const { amendedPasals, description, _nomorKey } = amendPoint;
   const descriptionMd = referenceToMd(description);
-  const isiMd: string = chain(isi)
-    .toPairs()
-    .map(([pasalKey, isiAmend]) => {
+  const isiMd: string = chain(amendedPasals)
+    .map((amendedPasal) => {
       const pasalNode: PasalNode = {
         _structureType: 'pasal',
-        _key: pasalKey,
-        parentDocument,
+        _key: amendedPasal._key,
+        parentDocumentNode,
       };
-      const pasalUri = getLegalUri(pasalNode);
-      const isiMd = toIndentedAmend(pasalContentToMd(isiAmend, pasalNode));
-      return `${s8}>\n${s8}> [Pasal ${pasalKey}](${pasalUri})\n\n${isiMd}`;
+      const pasalUri = getUri(pasalNode);
+      const isiMd = toIndentedAmend(pasalContentToMd(amendedPasal.isi, pasalNode));
+      return `${s8}>\n${s8}> [Pasal ${amendedPasal._key}](${pasalUri})\n\n${isiMd}`;
     })
     .join('\n\n')
     .value();
@@ -269,7 +277,7 @@ function ayatToMd(ayat: Ayat, parentPasal: PasalNode): string {
   const { _key, isi } = ayat;
   const ayatNode: AyatNode = { _key, parentPasal, _structureType: 'ayat' };
   const isiStr = isi._type === 'points' ? pointsToMd(isi, ayatNode) : referenceToMd(isi);
-  const uri = getLegalUri(ayatNode);
+  const uri = getUri(ayatNode);
 
   return `\n#### [Ayat (${_key})](${uri})\n${isiStr}`;
 }
@@ -300,7 +308,7 @@ function pointToMd(
   const isiStr =
     isi._type === 'points' ? pointsToMd(isi, pointNode, depth + 1) : referenceToMd(isi);
   const indent = repeat(' ', depth * 4);
-  const uri = getLegalUri(pointNode);
+  const uri = getUri(pointNode);
 
   return `${indent}* [${_key}.](${uri}) ${isiStr}`;
 }
@@ -319,7 +327,7 @@ function referenceToMd(ref: ReferenceText): string {
   const { references, text } = ref;
   const sortedReferences = references.sort((a, b) => a.start - b.start);
   const indices = sortedReferences.flatMap(({ start, end }) => [start, end]);
-  const uris = sortedReferences.map(({ node }) => getLegalUri(node));
+  const uris = sortedReferences.map(({ node }) => getUri(node));
   const splitted = splitAt(text, indices);
 
   return splitted.map((text, index) => `${getPrefixByIndex(index, uris)}${text}`).join('');

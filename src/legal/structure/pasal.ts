@@ -1,5 +1,5 @@
 import assertNever from 'assert-never';
-import { DocumentNode, _getDocumentUri } from '../document';
+import { DocumentNode, getDocumentUri } from '../document';
 import { ReferenceText } from '../reference';
 import { AmendPoints } from './amend';
 import { Ayats } from './ayat';
@@ -13,13 +13,14 @@ import { Points } from './point';
  */
 export type PasalNode = {
   _structureType: 'pasal';
-  parentDocument: DocumentNode;
+  parentDocumentNode: DocumentNode;
   _key: number | string;
 };
-export function _getPasalUri(node: PasalNode): string {
-  const { _key, parentDocument } = node;
-  const docUri = _getDocumentUri(parentDocument);
-  return `${docUri}/pasal/${_key}`;
+
+export function getPasalUri(node: PasalNode): string {
+  const { _key, parentDocumentNode: parentNode } = node;
+  const parentUri = getDocumentUri(parentNode);
+  return `${parentUri}/pasal/${_key}`;
 }
 
 /**
