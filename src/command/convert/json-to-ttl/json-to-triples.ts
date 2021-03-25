@@ -128,13 +128,24 @@ function paragrafToTriple(paragraf: Paragraf, parentBagian: BagianNode): Triple[
 function pasalToTriple(pasal: Pasal, parent: PasalParentNode): Triple[] {
   const { _key, isi } = pasal;
   const parentDocument = getPasalParentDocument(parent);
-  const pasal_key: PasalNode = { _key, parentDocument, _structureType: 'pasal' };
+  const pasalKey: PasalNode = { _key, parentDocument, _structureType: 'pasal' };
 
   return [
-    [parent, 'hasPasal', pasal_key],
-    [pasal_key, 'hasKey', _key],
-    ...pasalContentToTriple(pasal_key, isi),
+    pasalParentToTriple(parent, pasalKey),
+    [pasalKey, 'hasKey', _key],
+    ...pasalContentToTriple(pasalKey, isi),
   ];
+}
+
+function pasalParentToTriple(parent: PasalParentNode, pasalNode: PasalNode): Triple {
+  switch (parent._structureType) {
+    case 'bab':
+      return [parent, 'hasPasal', pasalNode];
+    case 'bagian':
+      return [parent, 'hasPasal', pasalNode];
+    case 'paragraf':
+      return [parent, 'hasPasal', pasalNode];
+  }
 }
 
 function pasalContentToTriple(pasal_key: PasalNode, isi: IsiPasal): Triple[] {
