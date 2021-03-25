@@ -5,7 +5,7 @@ import { AyatNode } from '../../../legal/structure/ayat';
 import { BabNode } from '../../../legal/structure/bab';
 import { BagianNode } from '../../../legal/structure/bagian';
 import { MetadataNode } from '../../../legal/structure/metadata';
-import { PasalNode } from '../../../legal/structure/pasal';
+import { PasalNode, PasalParentNode } from '../../../legal/structure/pasal';
 import { PointsNode, PointNode } from '../../../legal/structure/point';
 
 export type Triple = (
@@ -16,6 +16,7 @@ export type Triple = (
   | MetadataTriple
   | ParagrafTriple
   | PasalTriple
+  | PasalParentTriple
   | PointTriple
   | PointsTriple
 ) &
@@ -24,24 +25,20 @@ export type Triple = (
 type AllowedTriple = [LegalNode, unknown, unknown];
 
 type AyatTriple =
-  | [PasalNode, 'hasAyat', AyatNode]
   | [AyatNode, 'hasKey', number]
-  | [AyatNode, 'references', LegalNode]
   | [AyatNode, 'hasText', string]
   | [AyatNode, 'hasPoints', PointsNode];
 
 type BabTriple =
   | [BabNode, 'hasKey', number]
   | [BabNode, 'hasJudul', string]
-  | [BabNode, 'hasBagian', BagianNode]
-  | [BabNode, 'hasPasal', PasalNode];
+  | [BabNode, 'hasBagian', BagianNode];
 
 type BagianTriple =
   | [BabNode, 'hasBagian', BagianNode]
   | [BagianNode, 'hasKey', number]
   | [BagianNode, 'hasJudul', string]
-  | [BagianNode, 'hasParagraf', ParagrafNode]
-  | [BagianNode, 'hasPasal', PasalNode];
+  | [BagianNode, 'hasParagraf', ParagrafNode];
 
 type DocumentTriple =
   | [DocumentNode, 'hasBab', BabNode]
@@ -77,23 +74,19 @@ type MetadataTriple =
   | [MetadataNode, 'references', LegalNode]
   | [MetadataNode, 'hasText', string];
 
-type ParagrafTriple =
-  | [ParagrafNode, 'hasKey', number]
-  | [ParagrafNode, 'hasJudul', string]
-  | [ParagrafNode, 'hasPasal', PasalNode];
+type ParagrafTriple = [ParagrafNode, 'hasKey', number] | [ParagrafNode, 'hasJudul', string];
 
 type PasalTriple =
   | [PasalNode, 'hasKey', number]
   | [PasalNode, 'hasPoint', PointsNode]
-  | [PasalNode, 'references', LegalNode]
   | [PasalNode, 'hasText', string]
   | [PasalNode, 'hasAyat', AyatNode];
-// TODO: hasAmend
+
+type PasalParentTriple = [PasalParentNode, 'hasPasal', PasalNode];
 
 type PointTriple =
   | [PointNode, 'hasKey', number | string]
   | [PointNode, 'hasPoints', PointsNode]
-  | [PointNode, 'references', LegalNode]
   | [PointNode, 'hasText', string];
 
 type PointsTriple =
