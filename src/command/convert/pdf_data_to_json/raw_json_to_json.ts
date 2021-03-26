@@ -20,7 +20,6 @@ import { PointsNode, PointNode, Point, Points } from '../../../legal/structure/p
 import { Document } from '../../../legal/document/index';
 import { Reference } from '../../../legal/reference';
 import {
-  AmenderDeletePoint,
   AmendedPoint,
   AmenderInsertPoint,
   AmendPoints,
@@ -74,9 +73,6 @@ function toDetectedPasal(parent: PasalParentNode, pasal: Pasal): Pasal {
   const { isi, _key } = pasal;
   const parentDocumentNode = getPasalParentDocument(parent);
   const pasalNode: PasalNode = { _key, parentDocumentNode, _structureType: 'pasal' };
-  // const detectedText = isNil(isi)
-  //   ? { ...text, references: detectPasalNode(text.text, pasalNode) }
-  //   : text;
   const detectedIsi = pasalContentToDetectedPasalContent(isi, pasalNode);
   return { ...pasal, isi: detectedIsi };
 }
@@ -103,51 +99,43 @@ function toDetectedIsiAmendedUpdatePasal(
 }
 
 function detectedAmendPointsOf(amendPoints: AmendPoints, pasalNode: PasalNode): AmendPoints {
-  const { description, isi } = amendPoints;
+  const { _description: description, isi } = amendPoints;
   const detectedIsi = isi.map(detectedAmendPointOf(pasalNode));
   const detectedDescription = {
     ...description,
     references: detectPasalNode(description.text, pasalNode),
   };
-  return { ...amendPoints, description: detectedDescription, isi: detectedIsi };
+  return { ...amendPoints, _description: detectedDescription, isi: detectedIsi };
 }
 
 const detectedAmendPointOf = curry(_detectedAmendPointOf);
 function _detectedAmendPointOf(pasalNode: PasalNode, amendPoint: AmendedPoint): AmendedPoint {
-  if (amendPoint._operation === 'delete')
-    return detectedAmendDeletePasalPointOf(pasalNode, amendPoint);
+  if (amendPoint._operation === 'delete') return amendPoint;
   if (amendPoint._operation === 'update')
     return detectedAmendUpdatePasalPointOf(pasalNode, amendPoint);
   if (amendPoint._operation === 'insert')
     return detectedAmendInsertPasalPointOf(pasalNode, amendPoint);
   assertNever(amendPoint);
 }
-function detectedAmendDeletePasalPointOf(
-  pasalNode: PasalNode,
-  amendPoint: AmenderDeletePoint
-): AmenderDeletePoint {
-  const { isi } = amendPoint;
-  const detectedIsi = { ...isi, references: detectPasalNode(isi.text, pasalNode) };
-  return { ...amendPoint, isi: detectedIsi };
-}
+
 function detectedAmendUpdatePasalPointOf(
   pasalNode: PasalNode,
   amendPoint: AmenderUpdatePoint
 ): AmenderUpdatePoint {
-  const { amendedPasal, description } = amendPoint;
+  const { updatedPasal: amendedPasal, description } = amendPoint;
   const newDescription: ReferenceText = {
     ...description,
     references: detectPasalNode(description.text, pasalNode),
   };
   const detectedIsi = toDetectedIsiAmendedUpdatePasal(amendedPasal.isi, pasalNode);
   const newAmendedPasal: AmendedPasal = { ...amendedPasal, isi: detectedIsi };
-  return { ...amendPoint, amendedPasal: newAmendedPasal, description: newDescription };
+  return { ...amendPoint, updatedPasal: newAmendedPasal, description: newDescription };
 }
 function detectedAmendInsertPasalPointOf(
   pasalNode: PasalNode,
   amendPoint: AmenderInsertPoint
 ): AmenderInsertPoint {
-  const { amendedPasals, description } = amendPoint;
+  const { insertedPasals: amendedPasals, description } = amendPoint;
   const newDescription: ReferenceText = {
     ...description,
     references: detectPasalNode(description.text, pasalNode),
@@ -156,7 +144,7 @@ function detectedAmendInsertPasalPointOf(
     ...amendedPasal,
     isi: toDetectedIsiAmendedUpdatePasal(amendedPasal.isi, pasalNode),
   }));
-  return { ...amendPoint, amendedPasals: newAmendedPasals, description: newDescription };
+  return { ...amendPoint, insertedPasals: newAmendedPasals, description: newDescription };
 }
 
 function pointsToDetectedPoints(points: Points, pointsNode: PointsNode): Points {

@@ -1,3 +1,15 @@
+import {
+  AmendedPoint,
+  AmendPoints,
+  AmenderInsertPoint,
+  AmenderUpdatePoint,
+  AmenderDeletePointNode,
+  AmenderDeletePoint,
+  AmendedPasal,
+  AmenderInsertPointNode,
+  AmenderUpdatePointNode,
+  AmendedPasalNode,
+} from './../../../legal/structure/amend';
 import { IsiPasal } from './../../../legal/structure/pasal';
 import { flatten, compact, isNil, curry, flatMap } from 'lodash';
 import { Triple } from './triple';
@@ -149,12 +161,8 @@ function pasalContentToTriple(pasalNode: PasalNode, isi: IsiPasal): Triple[] {
     case 'referenceText':
       return referencesToTriple(pasalNode, isi.references);
     case 'amenderPoints':
-      return tripleOfAmendPoints(pasalNode, isi);
+      return amendPointsToTriple(pasalNode, isi);
   }
-}
-
-function tripleOfAmendPoints(_pasalNode: PasalNode, _isi: IsiPasal): Triple[] {
-  return [];
 }
 
 const ayatToTripleWith = curry(ayatToTriple);
@@ -169,7 +177,18 @@ function ayatToTriple(parentPasal: PasalNode, ayat: Ayat): Triple[] {
 
   return [[parentPasal, 'hasAyat', ayat_key], [ayat_key, 'hasKey', _key], ...isiTriples];
 }
-function pointsToTriple(pointsNode: PointsNode, points: Points | undefined): Triple[] {
+function amendPointsToTriple(pointsNode: PointsNode, points: AmendPoints): Triple[] {
+  if (isNil(points)) return [];
+  const { _description, isi, parentDocument } = points;
+
+  return [
+    [pointsNode, 'hasDescription', _description.text],
+    ...referencesToTriple(pointsNode, _description.references),
+    ...isi.flatMap((i) => amendedPointToTriple(pointsNode, parentDocument, i)),
+  ];
+}
+
+function pointsToTriple(pointsNode: PointsNode, points: Points): Triple[] {
   if (isNil(points)) return [];
   const { _description, isi } = points;
 
@@ -180,6 +199,87 @@ function pointsToTriple(pointsNode: PointsNode, points: Points | undefined): Tri
   ];
 }
 
+function amendedPointToTriple(
+  pointsNode: PointsNode,
+  parentDocument: DocumentNode,
+  point: AmendedPoint
+): Triple[] {
+  switch (point._operation) {
+    case 'delete':
+      return amenderDeletePointToTriple(pointsNode, point);
+    case 'insert':
+      return amenderInsertPointToTriple(pointsNode, parentDocument, point);
+    case 'update':
+      return amenderUpdatePointToTriple(pointsNode, parentDocument, point);
+  }
+}
+
+function amenderDeletePointToTriple(pointsNode: PointsNode, point: AmenderDeletePoint): Triple[] {
+  const { _nomorKey, deletedPasal } = point;
+  const node: AmenderDeletePointNode = {
+    _structureType: 'amenderPoint',
+    _operation: 'delete',
+    _key: _nomorKey,
+    parentPoints: pointsNode,
+  };
+  return [[node, 'hasPasal', deletedPasal]];
+}
+
+function amenderInsertPointToTriple(
+  pointsNode: PointsNode,
+  parentDocument: DocumentNode,
+  point: AmenderInsertPoint
+): Triple[] {
+  const { _nomorKey, insertedPasals: amendedPasals, description } = point;
+  const node: AmenderInsertPointNode = {
+    _structureType: 'amenderPoint',
+    _operation: 'insert',
+    _key: _nomorKey,
+    parentPoints: pointsNode,
+  };
+  return [
+    ...flatMap(amendedPasals, (amendedPasal) =>
+      amendedPasalToTriple(node, parentDocument, amendedPasal)
+    ),
+    [node, 'hasDescription', description.text],
+    ...referencesToTriple(node, description.references),
+  ];
+}
+
+function amenderUpdatePointToTriple(
+  pointsNode: PointsNode,
+  parentDocument: DocumentNode,
+  point: AmenderUpdatePoint
+): Triple[] {
+  const { _nomorKey, updatedPasal: amendedPasal, description } = point;
+  const node: AmenderUpdatePointNode = {
+    _structureType: 'amenderPoint',
+    _operation: 'update',
+    _key: _nomorKey,
+    parentPoints: pointsNode,
+  };
+  return [
+    ...amendedPasalToTriple(node, parentDocument, amendedPasal),
+    [node, 'hasDescription', description.text],
+    ...referencesToTriple(node, description.references),
+  ];
+}
+
+function amendedPasalToTriple(
+  parentPointNode: AmenderUpdatePointNode | AmenderInsertPointNode,
+  parentDocumentNode: DocumentNode,
+  amendedPasal: AmendedPasal
+): Triple[] {
+  const { _key } = amendedPasal;
+  const node: AmendedPasalNode = {
+    _structureType: 'amendedPasal',
+    _key,
+    parentDocumentNode,
+    amendPointNode: parentPointNode,
+  };
+  return [[parentPointNode, 'hasPasal', node]];
+}
+
 function pointToTriple(pointsNode: PointsNode, point: Point): Triple[] {
   const { _key, isi } = point;
   const pointNode: PointNode = { _key, parentPoints: pointsNode, _structureType: 'point' };
@@ -187,10 +287,12 @@ function pointToTriple(pointsNode: PointsNode, point: Point): Triple[] {
     isi._type === 'points'
       ? pointsToTriple(pointNode, isi)
       : [[pointNode, 'hasText', isi.text], ...referencesToTriple(pointNode, isi.references)];
-
   return [[pointsNode, 'hasPoint', pointNode], [pointNode, 'hasKey', _key], ...isiTriples];
 }
 
-function referencesToTriple(parent: PointsNode, references: Reference[]): Triple[] {
-  return references.map(({ node: _key }) => [parent, 'references', _key]);
+function referencesToTriple(
+  parent: PointsNode | AmenderUpdatePointNode | AmenderInsertPointNode | AmendedPasalNode,
+  references: Reference[]
+): Triple[] {
+  return references.map(({ node }) => [parent, 'references', node]);
 }

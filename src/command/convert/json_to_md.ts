@@ -192,7 +192,7 @@ function pasalContentToMd(isi: IsiPasal, pasalNode: PasalNode): string {
 }
 
 function amendPointsToMd(amendPoints: AmendPoints): string {
-  const { description, isi, parentDocument } = amendPoints;
+  const { _description: description, isi, parentDocument } = amendPoints;
   const isiMd = isi.map(amendPointToMdWith(parentDocument)).join('\n');
   return `${description.text}\n${isiMd}`;
 }
@@ -212,17 +212,14 @@ function amendDeletePasalPointToMd(
   parentDocumentNode: DocumentNode,
   amendPoint: AmenderDeletePoint
 ): string {
-  const { _nomorKey, isi, _pasalKey } = amendPoint;
-  const [, pasalConstStr, pasalNumStr, ...rest] = isi.text.split(' ');
+  const { _nomorKey, deletedPasal } = amendPoint;
   const pasalNode: PasalNode = {
     _structureType: 'pasal',
-    _key: _pasalKey,
+    _key: deletedPasal._key,
     parentDocumentNode,
   };
   const pasalUri = getUri(pasalNode);
-  const restStr = rest.join(' ');
-  const pasalkeyStr = [pasalConstStr, pasalNumStr].join(' ');
-  return `* ${_nomorKey}. [${pasalkeyStr}](${pasalUri}) ${restStr}`;
+  return `* ${_nomorKey}. [Pasal ${deletedPasal._key}](${pasalUri}) dihapus.`;
 }
 
 const s8 = '        ';
@@ -231,7 +228,7 @@ function amendUpdatePasalPointToMd(
   parentDocumentNode: DocumentNode,
   amendPoint: AmenderUpdatePoint
 ): string {
-  const { description, _nomorKey, amendedPasal } = amendPoint;
+  const { description, _nomorKey, updatedPasal: amendedPasal } = amendPoint;
   const pasalNode: PasalNode = {
     _structureType: 'pasal',
     _key: amendedPasal._key,
@@ -255,7 +252,7 @@ function amendInsertPasalPointToMd(
   parentDocumentNode: DocumentNode,
   amendPoint: AmenderInsertPoint
 ): string {
-  const { amendedPasals, description, _nomorKey } = amendPoint;
+  const { insertedPasals: amendedPasals, description, _nomorKey } = amendPoint;
   const descriptionMd = referenceToMd(description);
   const isiMd: string = chain(amendedPasals)
     .map((amendedPasal) => {

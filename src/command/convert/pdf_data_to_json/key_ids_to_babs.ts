@@ -10,7 +10,7 @@ import { chain, curry, isEmpty, isUndefined, keys, reduce } from 'lodash';
 import { ReferenceText } from '../../../legal/reference';
 import { Bab } from '../../../legal/structure/bab';
 import { Bagian, Bagians } from '../../../legal/structure/bagian';
-import { IsiPasal, Pasal, Pasals } from '../../../legal/structure/pasal';
+import { IsiPasal, Pasal, PasalNode, Pasals } from '../../../legal/structure/pasal';
 import { lastOf, neverUndefined, Span } from '../../../util';
 import { KeyIds } from './scan';
 import { spansInRange, spanIdKeyMapOf, toSpansWith } from './util';
@@ -214,10 +214,20 @@ function amenderPointsOf(context: Context, spans: Span[]): AmendPoints {
   const { keyIds } = context;
   const { amendNomorKeyOfId } = keyIds;
   const { preKeySpans, spansOfKey } = toSpansWith(amendNomorKeyOfId, spans);
-  const isi = chain(spansOfKey).toPairs().map(spansToAmendedPointWith(context)).compact().value();
+  const amendedDocument = getAmendedDocumentNode(preKeySpans);
+  const amendedContext: AmendedContext = { context, amendedDocument };
+  const isi = chain(spansOfKey)
+    .toPairs()
+    .map(spansToAmendedPointWith(amendedContext))
+    .compact()
+    .value();
   const description = toEmptyReference(preKeySpans);
-  const parentDocument = getAmendedDocumentNode(preKeySpans);
-  return { _type: 'amenderPoints', description, isi, parentDocument };
+  return {
+    _type: 'amenderPoints',
+    _description: description,
+    isi,
+    parentDocument: amendedDocument,
+  };
 }
 
 function getAmendedDocumentNode(spans: Span[]): DocumentNode {
@@ -235,8 +245,12 @@ function getAmendedDocumentNode(spans: Span[]): DocumentNode {
   throw Error(`Legal Not Detected ${str}`);
 }
 
+type AmendedContext = { context: Context; amendedDocument: DocumentNode };
 const spansToAmendedPointWith = curry(spansToAmendedPoint);
-function spansToAmendedPoint(context: Context, keySpans: KeySpans): AmendedPoint | undefined {
+function spansToAmendedPoint(
+  context: AmendedContext,
+  keySpans: KeySpans
+): AmendedPoint | undefined {
   const res =
     spansToAmendDeletePasalPoint(context, keySpans) ??
     spansToAmendUpdatePasalPoint(context, keySpans) ??
@@ -251,23 +265,29 @@ function spansToAmendedPoint(context: Context, keySpans: KeySpans): AmendedPoint
 }
 
 function spansToAmendDeletePasalPoint(
-  context: Context,
+  amendedContext: AmendedContext,
   keySpans: KeySpans
 ): AmenderDeletePoint | undefined {
+  const { context, amendedDocument } = amendedContext;
   const [nomorKey, spans] = keySpans;
   const _nomorKey = parseInt(nomorKey);
   const firstSpanId = spans[0]?.id;
   if (isUndefined(firstSpanId)) return undefined;
   const _pasalKey = context.keyIds.amendDeletePasalKeyOfId[firstSpanId];
   if (isUndefined(_pasalKey)) return undefined;
-  const isi = toEmptyReference(spans);
-  return { _type: 'amenderPoint', _nomorKey, _operation: 'delete', _pasalKey, isi };
+  const deletedPasal: PasalNode = {
+    _structureType: 'pasal',
+    _key: _pasalKey,
+    parentDocumentNode: amendedDocument,
+  };
+  return { _type: 'amenderPoint', _nomorKey, _operation: 'delete', deletedPasal: deletedPasal };
 }
 
 function spansToAmendUpdatePasalPoint(
-  context: Context,
+  amendedContext: AmendedContext,
   keySpans: KeySpans
 ): AmenderUpdatePoint | undefined {
+  const { context } = amendedContext;
   const { amendUpdatePasalKeyOfId, selfAmendPasalKeyOfId } = context.keyIds;
   const [nomorKey, spans] = keySpans;
   const _nomorKey = parseInt(nomorKey);
@@ -288,25 +308,31 @@ function spansToAmendUpdatePasalPoint(
   const descSpans = !isUndefined(descFirst) ? [removeNomorKey(descFirst), ...descRest] : _descSpans;
   const description = toEmptyReference(descSpans);
   const isiSpans = spans.slice(pasalTitleIdx + 1);
-  const isi = spansToIsiAmendPasal(context, pasalKey, isiSpans);
+  const isi = spansToIsiAmendPasal(amendedContext, pasalKey, isiSpans);
   return {
     _type: 'amenderPoint',
     _operation: 'update',
     _nomorKey,
-    amendedPasal: isi,
+    updatedPasal: isi,
     description,
   };
 }
 
-function spansToIsiAmendPasal(context: Context, pasalKey: string, spans: Span[]): AmendedPasal {
+function spansToIsiAmendPasal(
+  amendedContext: AmendedContext,
+  pasalKey: string,
+  spans: Span[]
+): AmendedPasal {
+  const { context } = amendedContext;
   const isi = amendAyatsOf(context, spans) ?? pointsOf(context, spans) ?? toEmptyReference(spans);
   return { _structureType: 'amendedPasal', isi, _key: pasalKey };
 }
 
 function spansToAmendInsertPasalPoint(
-  context: Context,
+  amendedContext: AmendedContext,
   keySpans: KeySpans
 ): AmenderInsertPoint | undefined {
+  const { context } = amendedContext;
   const [nomorKey, spans] = keySpans;
   const _nomorKey = parseInt(nomorKey);
   const firstSpanId = spans[0]?.id;
@@ -321,7 +347,7 @@ function spansToAmendInsertPasalPoint(
       _operation: 'insert',
       _nomorKey,
       description,
-      amendedPasals: [],
+      insertedPasals: [],
     };
   }
   const pasalDataKeys = keys(pasalData).map((t) => parseInt(t));
@@ -353,14 +379,14 @@ function spansToAmendInsertPasalPoint(
   );
   const amendedPasals = chain(reducedIsiSpans.record)
     .toPairs()
-    .map(([pasalKey, spans]) => spansToIsiAmendPasal(context, pasalKey, spans))
+    .map(([pasalKey, spans]) => spansToIsiAmendPasal(amendedContext, pasalKey, spans))
     .value();
   return {
     _type: 'amenderPoint',
     _operation: 'insert',
     _nomorKey,
     description,
-    amendedPasals,
+    insertedPasals: amendedPasals,
   };
 }
 

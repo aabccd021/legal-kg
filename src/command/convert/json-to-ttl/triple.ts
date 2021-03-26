@@ -1,5 +1,6 @@
 import {
   AmendedPasalNode,
+  AmenderDeletePointNode,
   AmenderInsertPointNode,
   AmenderPointNode,
   AmenderUpdatePointNode,
@@ -28,6 +29,7 @@ export type Triple = (
   | PasalParentTriple
   | PointTriple
   | PointsTriple
+  | HasReferenceTriple
 ) &
   AllowedTriple;
 
@@ -74,21 +76,25 @@ type PointTriple =
 type PointsTriple =
   | [PointsNode, 'hasPoint', PointNode | AmenderPointNode]
   | [PointsNode, 'amends', DocumentNode]
-  | [PointsNode, 'hasDescription', string]
-  | [PointsNode, 'references', LegalNode];
+  | [PointsNode, 'hasDescription', string];
 
 // gimana caranya biar ga bisa exist barengan?
 
 type AmendPointTriple =
-  | [AmenderPointNode, 'hasPasal', AmendedPasalNode]
+  | [AmenderDeletePointNode, 'hasPasal', PasalNode]
   | [AmenderUpdatePointNode | AmenderInsertPointNode, 'hasDescription', string]
-  | [AmenderUpdatePointNode | AmenderInsertPointNode, 'references', string];
+  | [AmenderUpdatePointNode | AmenderInsertPointNode, 'hasPasal', AmendedPasalNode];
+
+type HasReferenceTriple = [
+  AmenderUpdatePointNode | AmenderInsertPointNode | AmendedPasalNode | PointsNode,
+  'references',
+  LegalNode
+];
 
 type AmendedPasalTriple =
   | [AmendedPasalNode, 'hasKey', number]
   | [AmendedPasalNode, 'hasPoints', PointsNode]
   | [AmendedPasalNode, 'hasText', string]
-  | [AmendedPasalNode, 'references', LegalNode]
   | [AmendedPasalNode, 'hasAyat', AyatNode];
 
 type StringMetadataVocab =

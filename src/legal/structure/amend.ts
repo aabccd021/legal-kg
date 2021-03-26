@@ -1,3 +1,4 @@
+import { PasalNode } from './pasal';
 import { DocumentNode } from './../document/index';
 import { ReferenceText } from '../reference';
 import { Ayats } from './ayat';
@@ -6,12 +7,10 @@ import { getUri } from '..';
 
 export type AmendPoints = {
   _type: 'amenderPoints';
-  description: ReferenceText;
+  _description: ReferenceText;
   parentDocument: DocumentNode;
   isi: AmendedPoint[];
 };
-
-export type AmendedPoint = AmenderDeletePoint | AmenderUpdatePoint | AmenderInsertPoint;
 
 type AmenderPointBase = {
   _type: 'amenderPoint';
@@ -45,22 +44,23 @@ export function getAmenderPointUri(node: AmenderPointNode): string {
   return `${parentPointsUri}/point/${_key}/amend/${_operation}`;
 }
 
+export type AmendedPoint = AmenderDeletePoint | AmenderUpdatePoint | AmenderInsertPoint;
+
 export type AmenderDeletePoint = AmenderPointBase & {
   _operation: 'delete';
-  _pasalKey: string;
-  isi: ReferenceText;
+  deletedPasal: PasalNode;
 };
 
 export type AmenderUpdatePoint = AmenderPointBase & {
   _operation: 'update';
   description: ReferenceText;
-  amendedPasal: AmendedPasal;
+  updatedPasal: AmendedPasal;
 };
 
 export type AmenderInsertPoint = AmenderPointBase & {
   _operation: 'insert';
   description: ReferenceText;
-  amendedPasals: AmendedPasal[];
+  insertedPasals: AmendedPasal[];
 };
 
 /**
