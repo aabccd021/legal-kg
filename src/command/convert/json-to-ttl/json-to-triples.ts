@@ -11,7 +11,7 @@ import {
   AmendedPasalNode,
 } from './../../../legal/structure/amend';
 import { IsiPasal } from './../../../legal/structure/pasal';
-import { flatten, compact, isNil, curry, flatMap } from 'lodash';
+import { compact, isNil, curry, flatMap, isUndefined, map } from 'lodash';
 import { Triple } from './triple';
 import { Document, DocumentNode } from '../../../legal/document/index';
 import { Ayat, AyatNode } from '../../../legal/structure/ayat';
@@ -29,24 +29,24 @@ import {
 } from '../../../legal/structure/pasal';
 
 export function yamlToTriples({
-  _name,
-  _nomor,
-  _tahun,
-  _pemutus,
-  _tentang,
-  _salinan,
-  _memutuskan,
-  _tempatDisahkan,
-  _tanggalDisahkan,
-  _tempatDitetapkan,
-  _tanggalDitetapkan,
-  _jabatanPengesah,
-  _namaPengesah,
-  _tempatDiundangkan,
-  _tanggalDiundangkan,
-  _sekretaris,
+  // _name,
+  // _nomor,
+  // _tahun,
+  // _pemutus,
+  // _tentang,
+  // _salinan,
+  // _memutuskan,
+  // _tempatDisahkan,
+  // _tanggalDisahkan,
+  // _tempatDitetapkan,
+  // _tanggalDitetapkan,
+  // _jabatanPengesah,
+  // _namaPengesah,
+  // _tempatDiundangkan,
+  // _tanggalDiundangkan,
+  // _sekretaris,
   _denganPersetujuan,
-  _dokumen,
+  // _dokumen,
   _node,
   penjelasan,
   mengingat,
@@ -58,25 +58,25 @@ export function yamlToTriples({
   const triples: (Triple | undefined)[] = [
     ...metadataToTriple(_node, 'documentMenimbang', menimbang),
     ...metadataToTriple(_node, 'documentMengingat', mengingat),
-    ...flatten(babs?.map((b) => babsToTriple(b, _node))),
-    [_node, 'penjelasan', penjelasan?.join('\n')],
-    [_node, 'name', _name],
-    [_node, 'nomor', _nomor],
-    [_node, 'tahun', _tahun],
-    [_node, 'pemutus', _pemutus],
-    [_node, 'tentang', _tentang],
-    [_node, 'salinan', _salinan],
-    [_node, 'memutuskan', _memutuskan],
-    [_node, 'tempatDisahkan', _tempatDisahkan],
-    [_node, 'tanggalDisahkan', _tanggalDisahkan],
-    [_node, 'tempatDitetapkan', _tempatDitetapkan],
-    [_node, 'tanggalDitetapkan', _tanggalDitetapkan],
-    [_node, 'jabatanPengesah', _jabatanPengesah],
-    [_node, 'namaPengesah', _namaPengesah],
-    [_node, 'tempatDiundangkan', _tempatDiundangkan],
-    [_node, 'tanggalDiundangkan', _tanggalDiundangkan],
-    [_node, 'sekretaris', _sekretaris],
-    [_node, 'dokumen', _dokumen],
+    ...flatMap(babs, babToTripleWith(_node)),
+    isUndefined(penjelasan) ? undefined : [_node, 'penjelasan', penjelasan.join('\n')],
+    // [_node, 'name', _name],
+    // [_node, 'nomor', _nomor],
+    // [_node, 'tahun', _tahun],
+    // [_node, 'pemutus', _pemutus],
+    // [_node, 'tentang', _tentang],
+    // [_node, 'salinan', _salinan],
+    // [_node, 'memutuskan', _memutuskan],
+    // [_node, 'tempatDisahkan', _tempatDisahkan],
+    // [_node, 'tanggalDisahkan', _tanggalDisahkan],
+    // [_node, 'tempatDitetapkan', _tempatDitetapkan],
+    // [_node, 'tanggalDitetapkan', _tanggalDitetapkan],
+    // [_node, 'jabatanPengesah', _jabatanPengesah],
+    // [_node, 'namaPengesah', _namaPengesah],
+    // [_node, 'tempatDiundangkan', _tempatDiundangkan],
+    // [_node, 'tanggalDiundangkan', _tanggalDiundangkan],
+    // [_node, 'sekretaris', _sekretaris],
+    // [_node, 'dokumen', _dokumen],
     ...denganPersetujuanTriple,
   ];
 
@@ -98,7 +98,8 @@ function metadataToTriple(
   return [...isiTriples, [parentDocument, 'hasMetadata', metadata]];
 }
 
-function babsToTriple(bab: Bab, parentDocument: DocumentNode): Triple[] {
+const babToTripleWith = curry(babToTriple);
+function babToTriple(parentDocument: DocumentNode, bab: Bab): Triple[] {
   const { _key, _judul, isi } = bab;
   const bab_key: BabNode = { _key, parentDocument, _structureType: 'bab' };
   const isi_keys =
@@ -296,5 +297,5 @@ function referencesToTriple(
   parent: PointsNode | AmenderUpdatePointNode | AmenderInsertPointNode | AmendedPasalNode,
   references: Reference[]
 ): Triple[] {
-  return references.map(({ node }) => [parent, 'references', node]);
+  return map(references, ({ node }) => [parent, 'references', node] as Triple);
 }

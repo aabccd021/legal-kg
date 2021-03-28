@@ -16,112 +16,68 @@ import { PasalNode, PasalParentNode } from '../../../legal/structure/pasal';
 import { PointsNode, PointNode } from '../../../legal/structure/point';
 
 export type Triple = (
-  | AyatTriple
-  | AmendedPasalTriple
-  | AmendPointTriple
-  | AyatTriple
-  | BabTriple
-  | BagianTriple
-  | DocumentTriple
-  | MetadataTriple
-  | ParagrafTriple
-  | PasalTriple
-  | PasalParentTriple
-  | PointTriple
-  | PointsTriple
-  | HasReferenceTriple
-) &
-  AllowedTriple;
-
-type AllowedTriple = [LegalNode, unknown, unknown];
-
-type AyatTriple =
+  | [AmendedPasalNode, 'hasAyat', AyatNode]
+  | [AmendedPasalNode, 'hasKey', number]
+  | [AmendedPasalNode, 'hasPoints', PointsNode]
+  | [AmendedPasalNode, 'hasText', string]
+  | [AmendedPasalNode, 'references', LegalNode]
+  | [AmenderDeletePointNode, 'hasPasal', PasalNode]
+  | [AmenderInsertPointNode, 'hasDescription', string]
+  | [AmenderInsertPointNode, 'insertedPasal', AmendedPasalNode]
+  | [AmenderInsertPointNode, 'references', LegalNode]
+  | [AmenderUpdatePointNode, 'hasDescription', string]
+  | [AmenderUpdatePointNode, 'references', LegalNode]
+  | [AmenderUpdatePointNode, 'updatedPasal', AmendedPasalNode]
   | [AyatNode, 'hasKey', number]
+  | [AyatNode, 'hasPoints', PointsNode]
   | [AyatNode, 'hasText', string]
-  | [AyatNode, 'hasPoints', PointsNode];
-
-type BabTriple =
-  | [BabNode, 'hasKey', number]
-  | [BabNode, 'hasJudul', string]
-  | [BabNode, 'hasBagian', BagianNode];
-
-type BagianTriple =
   | [BabNode, 'hasBagian', BagianNode]
-  | [BagianNode, 'hasKey', number]
+  | [BabNode, 'hasJudul', string]
+  | [BabNode, 'hasKey', number]
   | [BagianNode, 'hasJudul', string]
-  | [BagianNode, 'hasParagraf', ParagrafNode];
-
-type DocumentTriple =
+  | [BagianNode, 'hasKey', number]
+  | [BagianNode, 'hasParagraf', ParagrafNode]
+  | [DocumentNode, 'denganPersetujuan', string]
+  | [DocumentNode, 'dokumen', string]
   | [DocumentNode, 'hasBab', BabNode]
   | [DocumentNode, 'hasJudul', string]
-  | [DocumentNode, StringMetadataVocab, string | undefined]
-  | [DocumentNode, NumberMetadataVocab, number | undefined];
-
-type ParagrafTriple = [ParagrafNode, 'hasKey', number] | [ParagrafNode, 'hasJudul', string];
-
-type PasalTriple =
+  | [DocumentNode, 'hasMetadata', MetadataNode]
+  | [DocumentNode, 'jabatanPengesah', string]
+  | [DocumentNode, 'memutuskan', string]
+  | [DocumentNode, 'mengingat', string]
+  | [DocumentNode, 'menimbang', string]
+  | [DocumentNode, 'namaPengesah', string]
+  | [DocumentNode, 'name', string]
+  | [DocumentNode, 'nomor', number]
+  | [DocumentNode, 'pemutus', string]
+  | [DocumentNode, 'penjelasan', string]
+  | [DocumentNode, 'salinan', string]
+  | [DocumentNode, 'sekretaris', string]
+  | [DocumentNode, 'tahun', number]
+  | [DocumentNode, 'tanggalDisahkan', string]
+  | [DocumentNode, 'tanggalDitetapkan', string]
+  | [DocumentNode, 'tanggalDiundangkan', string]
+  | [DocumentNode, 'tempatDisahkan', string]
+  | [DocumentNode, 'tempatDitetapkan', string]
+  | [DocumentNode, 'tempatDiundangkan', string]
+  | [DocumentNode, 'tentang', string]
+  | [MetadataNode, 'hasText', string]
+  | [MetadataNode, 'references', LegalNode]
+  | [ParagrafNode, 'hasJudul', string]
+  | [ParagrafNode, 'hasKey', number]
+  | [PasalNode, 'hasAyat', AyatNode]
   | [PasalNode, 'hasKey', number]
   | [PasalNode, 'hasPoints', PointsNode]
   | [PasalNode, 'hasText', string]
   | [PasalNode, 'references', LegalNode]
-  | [PasalNode, 'hasAyat', AyatNode];
-
-type PasalParentTriple = [PasalParentNode, 'hasPasal', PasalNode];
-
-type PointTriple =
+  | [PasalParentNode, 'hasPasal', PasalNode]
   | [PointNode, 'hasKey', number | string]
   | [PointNode, 'hasPoints', PointsNode]
-  | [PointNode, 'hasText', string];
-
-type PointsTriple =
-  | [PointsNode, 'hasPoint', PointNode | AmenderPointNode]
+  | [PointNode, 'hasText', string]
   | [PointsNode, 'amends', DocumentNode]
-  | [PointsNode, 'hasDescription', string];
-
-// gimana caranya biar ga bisa exist barengan?
-
-type AmendPointTriple =
-  | [AmenderDeletePointNode, 'hasPasal', PasalNode]
-  | [AmenderUpdatePointNode | AmenderInsertPointNode, 'hasDescription', string]
-  | [AmenderUpdatePointNode, 'updatedPasal', AmendedPasalNode]
-  | [AmenderInsertPointNode, 'insertedPasal', AmendedPasalNode];
-
-type HasReferenceTriple = [
-  AmenderUpdatePointNode | AmenderInsertPointNode | AmendedPasalNode | PointsNode,
-  'references',
-  LegalNode
-];
-
-type AmendedPasalTriple =
-  | [AmendedPasalNode, 'hasKey', number]
-  | [AmendedPasalNode, 'hasPoints', PointsNode]
-  | [AmendedPasalNode, 'hasText', string]
-  | [AmendedPasalNode, 'hasAyat', AyatNode];
-
-type StringMetadataVocab =
-  | 'denganPersetujuan'
-  | 'dokumen'
-  | 'jabatanPengesah'
-  | 'memutuskan'
-  | 'menimbang'
-  | 'mengingat'
-  | 'namaPengesah'
-  | 'name'
-  | 'pemutus'
-  | 'penjelasan'
-  | 'salinan'
-  | 'sekretaris'
-  | 'tanggalDisahkan'
-  | 'tanggalDitetapkan'
-  | 'tanggalDiundangkan'
-  | 'tempatDisahkan'
-  | 'tempatDitetapkan'
-  | 'tempatDiundangkan'
-  | 'tentang';
-
-type NumberMetadataVocab = 'tahun' | 'nomor';
-
-type MetadataTriple =
-  | [DocumentNode, 'hasMetadata', MetadataNode]
-  | [MetadataNode, 'references', LegalNode]
-  | [MetadataNode, 'hasText', string];
+  | [PointsNode, 'hasDescription', string]
+  | [PointsNode, 'hasPoint', AmenderPointNode]
+  | [PointsNode, 'hasPoint', PointNode]
+  | [PointsNode, 'references', LegalNode]
+) &
+  [LegalNode, unknown, string | number | LegalNode];

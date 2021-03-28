@@ -8,6 +8,7 @@
     "lint:fix": "eslint --fix '**/*.ts'",
     "cli": "ts-node src/cli.ts",
     "convert": "ts-node src/command/convert/pdf_data_to_json/mod.ts > temp_pdf_data_to_json && ts-node src/command/convert/json_to_md.ts > temp_json_to_md  && ts-node src/command/convert/json-to-ttl/mod.ts > temp_json_to_ttl",
+    "query": "yarn cli convert > temp_convert",
     "generate-ttl": "ts-node src/command/convert/json-to-ttl/mod.ts > temp_json_to_ttl",
     "test:types": "tsc --noEmit"
   },

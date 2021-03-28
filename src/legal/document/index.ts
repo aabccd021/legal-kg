@@ -148,7 +148,7 @@ export type Document = {
   penjelasan?: string[];
   pengesahanText?: string;
   opText?: string;
-  babs?: Bab[];
+  babs: Bab[];
   _name?: string;
   _nomor?: number;
   _tahun?: number;

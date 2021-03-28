@@ -1,0 +1,9 @@
+PREFIX legal: <http://example.org/legal/ontology/>
+SELECT ?pasal2Ayat1
+WHERE{
+  ?pasal2Ayat1 a legal:Ayat .
+  ?pasal2Ayat1 legal:hasKey 1 .
+  ?pasal2 a legal:Pasal .
+  ?pasal2 legal:hasKey 2 .
+  ?pasal2 legal:hasAyat ?pasal2Ayat1 .
+}
