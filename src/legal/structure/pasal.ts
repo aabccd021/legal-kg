@@ -1,7 +1,7 @@
 import assertNever from 'assert-never';
 import { DocumentNode, getDocumentUri } from '../document';
 import { ReferenceText } from '../reference';
-import { AmendPoints } from './amend';
+import { AmenderPoints } from './amend';
 import { Ayats } from './ayat';
 import { BabNode } from './bab';
 import { BagianNode } from './bagian';
@@ -47,4 +47,4 @@ export type Pasals = {
   pasals: Pasal[];
 };
 
-export type IsiPasal = Points | ReferenceText | AmendPoints | Ayats;
+export type IsiPasal = Points | ReferenceText | AmenderPoints | Ayats;

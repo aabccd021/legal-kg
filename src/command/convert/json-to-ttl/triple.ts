@@ -33,10 +33,12 @@ export type Triple = (
 ) &
   AllowedTriple;
 
+type HAS_KEY = 'hasKey';
+
 type AllowedTriple = [LegalNode, unknown, unknown];
 
 type AyatTriple =
-  | [AyatNode, 'hasKey', number]
+  | [AyatNode, HAS_KEY, number]
   | [AyatNode, 'hasText', string]
   | [AyatNode, 'hasPoints', PointsNode];
 
@@ -83,7 +85,8 @@ type PointsTriple =
 type AmendPointTriple =
   | [AmenderDeletePointNode, 'hasPasal', PasalNode]
   | [AmenderUpdatePointNode | AmenderInsertPointNode, 'hasDescription', string]
-  | [AmenderUpdatePointNode | AmenderInsertPointNode, 'hasPasal', AmendedPasalNode];
+  | [AmenderUpdatePointNode, 'updatedPasal', AmendedPasalNode]
+  | [AmenderInsertPointNode, 'insertedPasal', AmendedPasalNode];
 
 type HasReferenceTriple = [
   AmenderUpdatePointNode | AmenderInsertPointNode | AmendedPasalNode | PointsNode,

@@ -24,7 +24,7 @@ import {
   AmenderDeletePoint,
   AmendedPoint,
   AmenderInsertPoint,
-  AmendPoints,
+  AmenderPoints,
   AmenderUpdatePoint,
 } from '../../legal/structure/amend';
 import * as yaml from 'js-yaml';
@@ -191,7 +191,7 @@ function pasalContentToMd(isi: IsiPasal, pasalNode: PasalNode): string {
   }
 }
 
-function amendPointsToMd(amendPoints: AmendPoints): string {
+function amendPointsToMd(amendPoints: AmenderPoints): string {
   const { _description: description, isi, parentDocument } = amendPoints;
   const isiMd = isi.map(amendPointToMdWith(parentDocument)).join('\n');
   return `${description.text}\n${isiMd}`;

@@ -5,7 +5,7 @@ import { Ayats } from './ayat';
 import { Points, PointsNode } from './point';
 import { getUri } from '..';
 
-export type AmendPoints = {
+export type AmenderPoints = {
   _type: 'amenderPoints';
   _description: ReferenceText;
   parentDocument: DocumentNode;

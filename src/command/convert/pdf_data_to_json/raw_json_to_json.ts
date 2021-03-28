@@ -22,7 +22,7 @@ import { Reference } from '../../../legal/reference';
 import {
   AmendedPoint,
   AmenderInsertPoint,
-  AmendPoints,
+  AmenderPoints,
   AmenderUpdatePoint,
   AmendedPasal,
   AmendedPasalNode,
@@ -98,7 +98,7 @@ function toDetectedIsiAmendedUpdatePasal(
   assertNever(isi);
 }
 
-function detectedAmendPointsOf(amendPoints: AmendPoints, pasalNode: PasalNode): AmendPoints {
+function detectedAmendPointsOf(amendPoints: AmenderPoints, pasalNode: PasalNode): AmenderPoints {
   const { _description: description, isi } = amendPoints;
   const detectedIsi = isi.map(detectedAmendPointOf(pasalNode));
   const detectedDescription = {

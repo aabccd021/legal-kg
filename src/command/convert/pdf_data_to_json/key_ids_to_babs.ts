@@ -14,7 +14,7 @@ import { IsiPasal, Pasal, PasalNode, Pasals } from '../../../legal/structure/pas
 import { lastOf, neverUndefined, Span } from '../../../util';
 import { KeyIds } from './scan';
 import { spansInRange, spanIdKeyMapOf, toSpansWith } from './util';
-import { AmendPoints } from '../../../legal/structure/amend';
+import { AmenderPoints } from '../../../legal/structure/amend';
 import { Ayat, Ayats } from '../../../legal/structure/ayat';
 import {
   hurufKeyOfSpan,
@@ -210,7 +210,7 @@ function spanToAyat(context: Context, keySpans: KeySpans): Ayat {
   return { _type: 'ayat', _key, isi };
 }
 
-function amenderPointsOf(context: Context, spans: Span[]): AmendPoints {
+function amenderPointsOf(context: Context, spans: Span[]): AmenderPoints {
   const { keyIds } = context;
   const { amendNomorKeyOfId } = keyIds;
   const { preKeySpans, spansOfKey } = toSpansWith(amendNomorKeyOfId, spans);
