@@ -21,6 +21,7 @@ export type DataType =
   | 'yaml'
   | 'md'
   | 'mdv2'
+  | 'query_result'
   | 'ttl';
 export function getDataTypeExtension(dataType: DataType): string {
   const extension = getDataTypeExtensionStr(dataType);
@@ -38,11 +39,12 @@ function getDataTypeExtensionStr(dataType: DataType): string {
   if (dataType === 'md') return 'md';
   if (dataType === 'mdv2') return 'md';
   if (dataType === 'ttl') return 'ttl';
+  if (dataType === 'query_result') return 'md';
   assertNever(dataType);
 }
 
-export const nodeToFilePathWith = curry(nodeToFilePath);
-export function nodeToFilePath(
+export const nodeToFileWith = curry(nodeToFile);
+export function nodeToFile(
   dataType: DataType,
   node: DocumentNode
 ): { path: string; exists: boolean } {

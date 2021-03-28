@@ -2,7 +2,7 @@ import { IsiPasal } from '../../legal/structure/pasal';
 import { assertNever } from 'assert-never';
 import { map, flatten, compact, isNil, repeat, curry, chain } from 'lodash';
 import { toRoman } from 'roman-numerals';
-import { getDocumentName, getDocumentUri, DocumentNode } from '../../legal/document';
+import { nameOfNode, getDocumentUri, DocumentNode } from '../../legal/document';
 import * as fs from 'fs';
 import { getUri } from '../../legal';
 import { Ayat, AyatNode } from '../../legal/structure/ayat';
@@ -19,7 +19,7 @@ import {
 import { Point, PointNode, Points } from '../../legal/structure/point';
 import { ReferenceText } from '../../legal/reference';
 import { Document } from '../../legal/document/index';
-import { getDocumentData, nodeToFilePath } from '../../data';
+import { getDocumentData, nodeToFile } from '../../data';
 import {
   AmenderDeletePoint,
   AmendedPoint,
@@ -37,8 +37,8 @@ export function jsonToMd(option: Option): void {
 
 function handleJson(node: DocumentNode, option: Option): void {
   const { overwrite } = option;
-  const jsonFile = nodeToFilePath('yaml', node);
-  const { path: mdPath, exists: mdExists } = nodeToFilePath('mdv2', node);
+  const jsonFile = nodeToFile('yaml', node);
+  const { path: mdPath, exists: mdExists } = nodeToFile('mdv2', node);
 
   try {
     if (!overwrite && mdExists) {
@@ -84,7 +84,7 @@ function _jsonToMd(doc: Document): string {
     babs,
   } = doc;
   const uri = getDocumentUri(_node);
-  const name = getDocumentName(_node);
+  const name = nameOfNode(_node);
   const lines: (string | undefined)[] = [
     `# [${name}](${uri})`,
     `\n| Nama | Data |`,

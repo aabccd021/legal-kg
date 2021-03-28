@@ -1,4 +1,5 @@
-import { curry, reduce, isUndefined } from 'lodash';
+import { writeFileSync } from 'fs';
+import { curry, reduce, isUndefined, join } from 'lodash';
 
 export function bothFilter<T>(
   arr: T[],
@@ -66,8 +67,28 @@ export function lastOf<T>(arr: T[]): T | undefined {
   return arr.slice(-1)[0];
 }
 
-export function toValueOfKey<T, K extends keyof T>(key: K): (obj: T) => T[K] {
+export function toValue<T, K extends keyof T>(key: K): (obj: T) => T[K] {
   return function mapper(obj: T): T[K] {
     return obj[key];
+  };
+}
+
+export async function sequential<T>(promises: Promise<T>[]): Promise<T[]> {
+  return await reduce<Promise<T>, Promise<T[]>>(
+    promises,
+    async (prev, curr) => Promise.resolve([...(await prev), await curr]),
+    Promise.resolve([])
+  );
+}
+
+export function writeFile(path: string) {
+  return function write(content: string): void {
+    return writeFileSync(path, content);
+  };
+}
+
+export function joinWith(joiner: string) {
+  return function _join(strArr: string[]): string {
+    return join(strArr, joiner);
   };
 }

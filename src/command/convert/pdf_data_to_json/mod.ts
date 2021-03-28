@@ -1,6 +1,6 @@
 import { SpanOf } from '../../../util';
 import { DocumentNode } from '../../../legal/document/index';
-import { getDocumentData, nodeToFilePath } from '../../../data';
+import { getDocumentData, nodeToFile } from '../../../data';
 import { readFileSync, writeFileSync } from 'fs';
 import { Accumulator, Span, toSpansWith } from '../../../util';
 import { babsSpansToKeyIds as keyIdsOfBabSpans } from './scan';
@@ -19,8 +19,8 @@ function writeToJson(node: DocumentNode): void {
   console.log('\nstart', node);
 
   console.time(`TIME ${JSON.stringify(node)} init`);
-  const dataFile = nodeToFilePath('pdf-data', node);
-  const jsonFile = nodeToFilePath('yaml', node);
+  const dataFile = nodeToFile('pdf-data', node);
+  const jsonFile = nodeToFile('yaml', node);
   const pdfSpans: Span[] = JSON.parse(readFileSync(dataFile.path).toString());
   console.timeEnd(`TIME ${JSON.stringify(node)} init`);
 

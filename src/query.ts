@@ -1,53 +1,51 @@
 import { newEngine } from '@comunica/actor-init-sparql-file';
-import { compact, curry, isUndefined } from 'lodash';
+import { compact, curry, isUndefined, join } from 'lodash';
 import * as fs from 'fs';
 import path from 'path';
-import { DocumentNode, pathToNode } from './legal/document';
-import { getDocumentData, nodeToFilePathWith } from './data';
-import { toValueOfKey } from './util';
+import { getDocumentData, nodeToFile } from './data';
+import { DocumentNode, nameOfNode } from './legal/document';
+import { joinWith, sequential, writeFile } from './util';
 
-export async function query(args: { legalId?: string }): Promise<void> {
-  const nodes: DocumentNode[] = !isUndefined(args.legalId)
-    ? [pathToNode(args.legalId)]
-    : getDocumentData('yaml');
-  const ttlFilePaths = nodes.map(nodeToFilePathWith('ttl')).map(toValueOfKey('path'));
+export async function query(args: { legalDocPath?: string }): Promise<void> {
   const sparqlFileDirPath = 'example_queries';
-  const sparqlContexes = fs
-    .readdirSync(sparqlFileDirPath)
-    .filter(isSparqlFilePath)
-    .map(queryFileNameToSparqlContextWith(sparqlFileDirPath));
-  for (const { queryStr, resultFilePath } of sparqlContexes) {
-    console.log(`querying ${resultFilePath}`);
-    const result = await _getQueryResult(queryStr, ttlFilePaths);
-    fs.writeFileSync(resultFilePath, result);
-  }
+  const queryArr = fs.readdirSync(sparqlFileDirPath).map(fileNameToQueryWith(sparqlFileDirPath));
+  if (!isUndefined(args.legalDocPath)) throw Error('TODO');
+  await sequential(getDocumentData('ttl').map(queryNodeWith(queryArr)));
 }
 
-function isSparqlFilePath(filePath: string): boolean {
-  return path.extname(filePath) === '.sparql';
-}
+type Query = { str: string; name: string };
 
-type SparqlContext = { queryStr: string; resultFilePath: string };
-
-const queryFileNameToSparqlContextWith = curry(queryFileNameToSparqlContext);
-function queryFileNameToSparqlContext(sparqlFileDirPath: string, fileName: string): SparqlContext {
+const fileNameToQueryWith = curry(fileNameToQuery);
+function fileNameToQuery(sparqlFileDirPath: string, fileName: string): Query {
   const sparqlFilePath = path.join(sparqlFileDirPath, fileName);
-  const queryStr = fs.readFileSync(sparqlFilePath, { encoding: 'utf-8' });
-  const baseName = path.basename(fileName, '.sparql');
-  const resultFileName = path.format({ name: `${baseName}_result`, ext: '.txt' });
-  const resultFilePath = path.join(sparqlFileDirPath, resultFileName);
-  return { queryStr, resultFilePath };
+  const str = fs.readFileSync(sparqlFilePath, { encoding: 'utf-8' });
+  const name = path.basename(fileName, '.sparql');
+  return { str, name };
 }
 
-async function _getQueryResult(queryStr: string, sources: string[]): Promise<string> {
-  const result = await newEngine().query(queryStr, { sources });
+const queryNodeWith = curry(queryNode);
+function queryNode(queryArr: Query[], node: DocumentNode): Promise<void> {
+  console.log(`Querying ${nameOfNode(node)}`);
+  return sequential(queryArr.map(toQueryResultWith(node)))
+    .then(joinWith('\n'))
+    .then(writeFile(nodeToFile('query_result', node).path));
+}
 
+const toQueryResultWith = curry(toQueryResult);
+function toQueryResult(node: DocumentNode, query: Query): Promise<string> {
+  console.log(`    ${query.name}`);
+  return _getQueryResult(query, [nodeToFile('ttl', node).path]);
+}
+
+async function _getQueryResult(query: Query, sources: string[]): Promise<string> {
+  const result = await newEngine().query(query.str, { sources });
   if (result.type == 'bindings') {
     const bindings = await result.bindings();
-
-    return compact(bindings)
-      .map((y) => result.variables.map((x) => `${x}: ${y.get(x).value}`).join('\n'))
+    const content = compact(bindings)
+      .map((y) => result.variables.map((x) => `|${x}| ${y.get(x).value}|`).join('\n'))
+      .map((resultStr, idx) => `## ${idx}\n| key | value |\n|--|--|\n${resultStr}`)
       .join('\n\n');
+    return `\n# ${query.name}\n${content}`;
   }
   throw Error('unknown result type');
 }
