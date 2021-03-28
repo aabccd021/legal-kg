@@ -1,9 +1,9 @@
 import { newEngine } from '@comunica/actor-init-sparql-file';
-import { compact, curry, isUndefined, join } from 'lodash';
+import { compact, curry, isUndefined } from 'lodash';
 import * as fs from 'fs';
 import path from 'path';
 import { getDocumentData, nodeToFile } from './data';
-import { DocumentNode, nameOfNode } from './legal/document';
+import { DocumentNode, nodeToName } from './legal/document';
 import { joinWith, sequential, writeFile } from './util';
 
 export async function query(args: { legalDocPath?: string }): Promise<void> {
@@ -25,7 +25,7 @@ function fileNameToQuery(sparqlFileDirPath: string, fileName: string): Query {
 
 const queryNodeWith = curry(queryNode);
 function queryNode(queryArr: Query[], node: DocumentNode): Promise<void> {
-  console.log(`Querying ${nameOfNode(node)}`);
+  console.log(`Querying ${nodeToName(node)}`);
   return sequential(queryArr.map(toQueryResultWith(node)))
     .then(joinWith('\n'))
     .then(writeFile(nodeToFile('query_result', node).path));

@@ -42,7 +42,7 @@ export type DocumentNode = (ConvertableDocumentNode | UudNode) & {
 /**
  * Get Document Name
  */
-export function nameOfNode(node: DocumentNode): string {
+export function nodeToName(node: DocumentNode): string {
   if (node._documentType === 'uu') return _uu.getName(node);
   if (node._documentType === 'perda') return _perda.getName(node);
   if (node._documentType === 'uud') return _uud.getName(node);

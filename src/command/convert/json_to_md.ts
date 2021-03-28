@@ -2,7 +2,7 @@ import { IsiPasal } from '../../legal/structure/pasal';
 import { assertNever } from 'assert-never';
 import { map, flatten, compact, isNil, repeat, curry, chain } from 'lodash';
 import { toRoman } from 'roman-numerals';
-import { nameOfNode, getDocumentUri, DocumentNode } from '../../legal/document';
+import { nodeToName, getDocumentUri, DocumentNode } from '../../legal/document';
 import * as fs from 'fs';
 import { getUri } from '../../legal';
 import { Ayat, AyatNode } from '../../legal/structure/ayat';
@@ -84,7 +84,7 @@ function _jsonToMd(doc: Document): string {
     babs,
   } = doc;
   const uri = getDocumentUri(_node);
-  const name = nameOfNode(_node);
+  const name = nodeToName(_node);
   const lines: (string | undefined)[] = [
     `# [${name}](${uri})`,
     `\n| Nama | Data |`,

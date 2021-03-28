@@ -3,8 +3,8 @@ import _, { compact } from 'lodash';
 import fetch from 'node-fetch';
 import { pipeline } from 'stream';
 import * as util from 'util';
-import { nodeToFilePath } from '../../data';
-import { getDocumentName } from '../../legal/document';
+import { nodeToFile } from '../../data';
+import { nodeToName } from '../../legal/document';
 import {
   ConvertDocumentLog,
   DocumentLog,
@@ -37,7 +37,7 @@ async function downloadFile(
     const { pdfUrl, _node } = log;
     const { overwrite } = option;
 
-    const pdfFile = nodeToFilePath('pdf', _node);
+    const pdfFile = nodeToFile('pdf', _node);
 
     if (!overwrite && pdfFile.exists) {
       return { ...log, downloadPdfError: undefined };
@@ -46,7 +46,7 @@ async function downloadFile(
     const response = await fetch(pdfUrl);
     await streamPipeline(response.body, fs.createWriteStream(pdfFile.path));
 
-    const legalName = getDocumentName(_node);
+    const legalName = nodeToName(_node);
     console.log(`Done download ${legalName}`);
   } catch (error) {
     if (error instanceof Error) {
