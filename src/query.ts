@@ -1,5 +1,5 @@
 import { newEngine } from '@comunica/actor-init-sparql-file';
-import { compact, curry, isUndefined } from 'lodash';
+import { compact, curry, isUndefined, isEmpty } from 'lodash';
 import * as fs from 'fs';
 import path from 'path';
 import { getDocumentData, nodeToFile } from './data';
@@ -42,10 +42,11 @@ async function _getQueryResult(query: Query, sources: string[]): Promise<string>
   if (result.type == 'bindings') {
     const bindings = await result.bindings();
     const content = compact(bindings)
-      .map((y) => result.variables.map((x) => `|${x}| ${y.get(x).value}|`).join('\n'))
-      .map((resultStr, idx) => `## ${idx}\n| key | value |\n|--|--|\n${resultStr}`)
-      .join('\n\n');
-    return `\n# ${query.name}\n${content}`;
+      .map((y) => result.variables.map((x) => `| |${x}| ${y.get(x).value}|`).join('\n'))
+      .map((resultStr, idx) => `| ${idx} | | |\n${resultStr}`)
+      .join('\n');
+    const contentTable = isEmpty(content) ? 'empty result' : `\n| | | |\n|-|-|-|\n${content}`;
+    return `\n# ${query.name}\n${contentTable}`;
   }
   throw Error('unknown result type');
 }
