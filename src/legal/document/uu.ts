@@ -1,5 +1,5 @@
 import * as fs from 'fs';
-import { chain, isNil, parseInt } from 'lodash';
+import { chain, isNil, parseInt, isNumber } from 'lodash';
 import path from 'path';
 import { DataType, getDataTypeExtension } from '../../data';
 import { _ScrapableDocumentHandler } from './_utils';
@@ -14,12 +14,19 @@ export type UuNode = {
 export const _uu: _ScrapableDocumentHandler<UuNode> = {
   getPath,
   getName,
+  nodeOfPath,
   compare,
   getFiles,
   htmlToPdfUrl: getPdfUrl,
   nameToNode,
   lastPage: 85,
 };
+
+function nodeOfPath(path: string[]): UuNode {
+  const [tahun, nomor] = path;
+  if (!isNumber(tahun) || !isNumber(nomor)) throw Error(`Unknown UU Path ${path}`);
+  return { _structureType: 'document', _documentType: 'uu', tahun, nomor };
+}
 
 function getPath(node: UuNode): string {
   const { tahun, nomor } = node;

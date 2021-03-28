@@ -4,6 +4,7 @@ import { DataType } from '../../data';
 
 export type _DocumentHandler<T extends DocumentNode> = {
   getPath: (node: T) => string;
+  nodeOfPath: (path: string[]) => T;
   getName: (node: T) => string;
 };
 

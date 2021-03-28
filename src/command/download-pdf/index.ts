@@ -3,7 +3,7 @@ import _, { compact } from 'lodash';
 import fetch from 'node-fetch';
 import { pipeline } from 'stream';
 import * as util from 'util';
-import { getDocumentFilePath } from '../../data';
+import { nodeToFilePath } from '../../data';
 import { getDocumentName } from '../../legal/document';
 import {
   ConvertDocumentLog,
@@ -37,7 +37,7 @@ async function downloadFile(
     const { pdfUrl, _node } = log;
     const { overwrite } = option;
 
-    const pdfFile = getDocumentFilePath(_node, 'pdf');
+    const pdfFile = nodeToFilePath('pdf', _node);
 
     if (!overwrite && pdfFile.exists) {
       return { ...log, downloadPdfError: undefined };

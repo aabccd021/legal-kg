@@ -2,7 +2,7 @@ import { UnindexedSpan } from '../../util';
 import { DocumentNode } from '../../legal/document/index';
 import { writeFileSync } from 'fs';
 import { PDFExtract, PDFExtractPage, PDFExtractText } from 'pdf.js-extract';
-import { getDocumentData, getDocumentFilePath } from '../../data';
+import { getDocumentData, nodeToFilePath } from '../../data';
 import { chain, curry, isUndefined, isEmpty, filter, zip } from 'lodash';
 import { bothFilter, neverNum, Span } from '../../util';
 
@@ -15,11 +15,11 @@ async function normalizedPdfToPdfData(): Promise<void> {
   console.log('===DONE');
 }
 
-async function toPdfJson(pdfNode: DocumentNode): Promise<void> {
-  console.log('start', pdfNode);
-  const pdfFile = getDocumentFilePath(pdfNode, 'pdf');
-  const normalizedPdfFile = getDocumentFilePath(pdfNode, 'normalized-pdf');
-  const jsonFile = getDocumentFilePath(pdfNode, 'pdf-data');
+async function toPdfJson(node: DocumentNode): Promise<void> {
+  console.log('start', node);
+  const pdfFile = nodeToFilePath('pdf', node);
+  const normalizedPdfFile = nodeToFilePath('normalized-pdf', node);
+  const jsonFile = nodeToFilePath('pdf-data', node);
   const { pages } = await pdfExtract.extract(pdfFile.path);
   const { pages: normalizedPages } = await pdfExtract.extract(normalizedPdfFile.path);
   const mergedPages = chain(zip(pages, normalizedPages)).map(mergePage).compact().value();

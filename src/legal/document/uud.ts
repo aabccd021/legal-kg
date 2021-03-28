@@ -6,6 +6,7 @@ export type UudNode = {
 };
 
 export const _uud: _DocumentHandler<UudNode> = {
+  nodeOfPath: () => ({ _documentType: 'uud', _structureType: 'document' }),
   getPath: () => 'UUD',
   getName: () => 'UNDANG-UNDANG DASAR NEGARA REPUBLIK INDONESIA TAHUN 1945',
 };

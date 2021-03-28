@@ -3,10 +3,16 @@ import path from 'path';
 import { _ConvertableDocumentHandler } from './_utils';
 import * as fs from 'fs';
 import { DataType, getDataTypeExtension } from '../../data';
+import { isNumber, isUndefined } from 'lodash';
 
 export type Daerah = typeof DAERAHS[number];
 
 export const DAERAHS = ['provinsi_dki_jakarta'] as const;
+
+function isDaerahString(str: string | undefined): str is Daerah {
+  if (isUndefined(str)) return false;
+  return DAERAHS.includes(str as Daerah);
+}
 
 export type PerdaNode = {
   _structureType: 'document';
@@ -19,6 +25,7 @@ export type PerdaNode = {
 export const _perda: _ConvertableDocumentHandler<PerdaNode> = {
   getPath,
   getName,
+  nodeOfPath,
   compare,
   getFiles,
 };
@@ -29,6 +36,14 @@ export const _perda: _ConvertableDocumentHandler<PerdaNode> = {
 function getPath(node: PerdaNode): string {
   const { daerah, tahun, nomor } = node;
   return `${daerah}/${tahun}/${nomor}`;
+}
+
+function nodeOfPath(path: string[]): PerdaNode {
+  const [daerah, tahun, nomor] = path;
+  if (!isDaerahString(daerah) || !isNumber(tahun) || !isNumber(nomor)) {
+    throw Error(`Unknown Perda Path ${path}`);
+  }
+  return { _structureType: 'document', _documentType: 'perda', daerah, tahun, nomor };
 }
 
 /**

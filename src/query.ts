@@ -1,44 +1,53 @@
-// import { newEngine } from '@comunica/actor-init-sparql-file';
-// import { compact } from 'lodash';
-// import * as fs from 'fs';
-// import path from 'path';
+import { newEngine } from '@comunica/actor-init-sparql-file';
+import { compact, curry, isUndefined } from 'lodash';
+import * as fs from 'fs';
+import path from 'path';
+import { DocumentNode, pathToNode } from './legal/document';
+import { getDocumentData, nodeToFilePathWith } from './data';
+import { toValueOfKey } from './util';
 
-// export async function query({
-//   legals,
-//   extractedDirPath,
-// }: {
-//   legals: string[];
-//   extractedDirPath: string;
-// }): Promise<void> {
-//   const ttlFilePaths = legals.map((legal) => path.join(extractedDirPath, legal, `${legal}.ttl`));
-//   const ontologyFilePath = path.join('ontology', 'legal.ttl');
-//   const tripleFilePaths = [...ttlFilePaths, ontologyFilePath];
-//   const queryDirPath = 'example_queries';
-//   const queryDirFileNames = fs.readdirSync(queryDirPath);
-//   const queryFileNames = queryDirFileNames.filter((f) => path.extname(f) === '.sparql');
+export async function query(args: { legalId?: string }): Promise<void> {
+  const nodes: DocumentNode[] = !isUndefined(args.legalId)
+    ? [pathToNode(args.legalId)]
+    : getDocumentData('yaml');
+  const ttlFilePaths = nodes.map(nodeToFilePathWith('ttl')).map(toValueOfKey('path'));
+  const sparqlFileDirPath = 'example_queries';
+  const sparqlContexes = fs
+    .readdirSync(sparqlFileDirPath)
+    .filter(isSparqlFilePath)
+    .map(queryFileNameToSparqlContextWith(sparqlFileDirPath));
+  for (const { queryStr, resultFilePath } of sparqlContexes) {
+    console.log(`querying ${resultFilePath}`);
+    const result = await _getQueryResult(queryStr, ttlFilePaths);
+    fs.writeFileSync(resultFilePath, result);
+  }
+}
 
-//   for (const queryFileName of queryFileNames) {
-//     console.log(`querying ${queryFileName}`);
-//     const query = fs.readFileSync(path.join(queryDirPath, queryFileName)).toString();
-//     const result = await _getQueryResult(query, tripleFilePaths);
-//     const baseName = path.basename(queryFileName, '.sparql');
-//     const queryResultFileName = path.format({
-//       name: `${baseName}_result`,
-//       ext: '.txt',
-//     });
-//     fs.writeFileSync(path.join(queryDirPath, queryResultFileName), result);
-//   }
-// }
+function isSparqlFilePath(filePath: string): boolean {
+  return path.extname(filePath) === '.sparql';
+}
 
-// async function _getQueryResult(queryStr: string, sources: string[]): Promise<string> {
-//   const result = await newEngine().query(queryStr, { sources });
+type SparqlContext = { queryStr: string; resultFilePath: string };
 
-//   if (result.type == 'bindings') {
-//     const bindings = await result.bindings();
+const queryFileNameToSparqlContextWith = curry(queryFileNameToSparqlContext);
+function queryFileNameToSparqlContext(sparqlFileDirPath: string, fileName: string): SparqlContext {
+  const sparqlFilePath = path.join(sparqlFileDirPath, fileName);
+  const queryStr = fs.readFileSync(sparqlFilePath, { encoding: 'utf-8' });
+  const baseName = path.basename(fileName, '.sparql');
+  const resultFileName = path.format({ name: `${baseName}_result`, ext: '.txt' });
+  const resultFilePath = path.join(sparqlFileDirPath, resultFileName);
+  return { queryStr, resultFilePath };
+}
 
-//     return compact(bindings)
-//       .map((y) => result.variables.map((x) => `${x}: ${y.get(x).value}`).join('\n'))
-//       .join('\n\n');
-//   }
-//   throw Error('unknown result type');
-// }
+async function _getQueryResult(queryStr: string, sources: string[]): Promise<string> {
+  const result = await newEngine().query(queryStr, { sources });
+
+  if (result.type == 'bindings') {
+    const bindings = await result.bindings();
+
+    return compact(bindings)
+      .map((y) => result.variables.map((x) => `${x}: ${y.get(x).value}`).join('\n'))
+      .join('\n\n');
+  }
+  throw Error('unknown result type');
+}

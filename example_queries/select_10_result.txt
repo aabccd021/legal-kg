@@ -1,39 +1,39 @@
-?s: http://example.org/legal/document/UU13-2003/menimbang
-?p: http://www.w3.org/1999/02/22-rdf-syntax-ns#type
-?o: http://example.org/legal/ontology/Points
+?s: http://example.org/legal/document/uu/2003/13
+?p: http://example.org/legal/ontology/hasBab
+?o: http://example.org/legal/document/uu/2003/13/bab/1
 
-?s: http://example.org/legal/document/PERGUB33-2020/menimbang
-?p: http://www.w3.org/1999/02/22-rdf-syntax-ns#type
-?o: http://example.org/legal/ontology/Points
+?s: http://example.org/legal/document/uu/2018/6
+?p: http://example.org/legal/ontology/hasBab
+?o: http://example.org/legal/document/uu/2018/6/bab/1
 
-?s: http://example.org/legal/document/UU13-2003/menimbang
-?p: http://example.org/legal/ontology/hasPoint
-?o: http://example.org/legal/document/UU13-2003/menimbang/point/a
+?s: http://example.org/legal/document/uu/2003/13
+?p: http://example.org/legal/ontology/hasBab
+?o: http://example.org/legal/document/uu/2003/13/bab/4
 
-?s: http://example.org/legal/document/PERGUB33-2020
-?p: http://example.org/legal/ontology/tahun
-?o: 2020
+?s: http://example.org/legal/document/uu/2020/11
+?p: http://example.org/legal/ontology/hasBab
+?o: http://example.org/legal/document/uu/2020/11/bab/6
 
-?s: http://example.org/legal/document/PERGUB33-2020/pasal/1/point/11
-?p: http://example.org/legal/ontology/hasText
-?o: Gugus Tugas Percepatan Penanganan Corona Virus Disease (COVID-19) Provinsi DKI Jakarta yang selanjutnya disebut Gugus Tugas COVID-19 tingkat Provinsi adalah Gugus Tugas Percepatan Penanganan Corona Virus Disease (COVID-19) yang dibentuk Pemerintah Provinsi DKI Jakarta untuk tingkat Provinsi.
-
-?s: http://example.org/legal/document/PERGUB33-2020/menimbang/point/b
-?p: http://example.org/legal/ontology/hasText
-?o: bahwa berdasarkan pertimbangan sebagaimana dimaksud dalam huruf a, perlu menetapkan Peraturan Gubernur tentang Pelaksanaan Pembatasan Sosial Berskala Besar Dalam Penanganan Corona Virus Disease 2019 (COVID-19) di Provinsi Daerah Khusus Ibukota Jakarta;
-
-?s: http://example.org/legal/document/PERGUB33-2020/pasal/1/point/8
+?s: http://example.org/legal/document/uu/2020/11/bab/1
 ?p: http://example.org/legal/ontology/hasKey
-?o: 8
+?o: 1
 
-?s: http://example.org/legal/document/UU13-2003/menimbang
-?p: http://example.org/legal/ontology/hasPoint
-?o: http://example.org/legal/document/UU13-2003/menimbang/point/f
+?s: http://example.org/legal/document/uu/2018/6
+?p: http://example.org/legal/ontology/hasBab
+?o: http://example.org/legal/document/uu/2018/6/bab/11
 
-?s: http://example.org/legal/document/UU13-2003/menimbang/point/a
-?p: http://example.org/legal/ontology/partOf
-?o: http://example.org/legal/document/UU13-2003/menimbang
+?s: http://example.org/legal/document/uu/2018/6
+?p: http://example.org/legal/ontology/hasBab
+?o: http://example.org/legal/document/uu/2018/6/bab/13
 
-?s: http://example.org/legal/document/UU13-2003/menimbang/point/b
+?s: http://example.org/legal/document/uu/2003/13
+?p: http://example.org/legal/ontology/hasBab
+?o: http://example.org/legal/document/uu/2003/13/bab/16
+
+?s: http://example.org/legal/document/uu/2020/11/bab/1
+?p: http://example.org/legal/ontology/hasJudul
+?o: KETENTUAN UMUM
+
+?s: http://example.org/legal/document/uu/2018/6/bab/1
 ?p: http://www.w3.org/1999/02/22-rdf-syntax-ns#type
-?o: http://example.org/legal/ontology/Point
+?o: http://example.org/legal/ontology/Bab

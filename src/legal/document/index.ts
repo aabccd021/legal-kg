@@ -32,8 +32,8 @@ export type ConvertableDocumentNode = (ScrapableDocumentNode | PerdaNode) & {
 /**
  * Document
  */
-export type DocumentCategory = typeof DOCUMENT_CATEGORY[number];
-export const DOCUMENT_CATEGORY = [...CONVERTABLE_DOCUMENT_CATEGORY, 'uud'] as const;
+export type DocumentCategory = typeof LEGAL_DOCUMENT_CATEGORY[number];
+export const LEGAL_DOCUMENT_CATEGORY = [...CONVERTABLE_DOCUMENT_CATEGORY, 'uud'] as const;
 export type DocumentNode = (ConvertableDocumentNode | UudNode) & {
   _documentType: DocumentCategory;
   _structureType: 'document';
@@ -61,6 +61,17 @@ function _getDocumentPath(node: DocumentNode): string {
   if (node._documentType === 'perda') return _perda.getPath(node);
   if (node._documentType === 'uud') return '';
   assertNever(node);
+}
+
+/**
+ * Get Document Path
+ */
+export function pathToNode(path: string): DocumentNode {
+  const [legalDocCategory, ...restDocumentPath] = path.split('/');
+  if (legalDocCategory === 'uu') return _uu.nodeOfPath(restDocumentPath);
+  if (legalDocCategory === 'perda') return _perda.nodeOfPath(restDocumentPath);
+  if (legalDocCategory === 'uud') return _uud.nodeOfPath(restDocumentPath);
+  throw Error(`unknown legal document category: ${legalDocCategory}`);
 }
 
 /**

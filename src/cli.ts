@@ -1,75 +1,15 @@
 import yargs from 'yargs';
-import { jsonToMd } from './command/convert/json_to_md';
-import { downloadPdf } from './command/download-pdf';
-import { updateIndex } from './command/update-index';
-
-type CommandOption = { overwrite: boolean };
+import { query } from './query';
 
 yargs
-  .command({
-    command: 'update-index',
-    describe: 'Update legal index',
-    handler: updateIndex,
-  })
-  .command<CommandOption>({
-    command: 'download-pdf',
-    describe: 'Download legal pdf',
+  .command<{ legalId?: string }>({
+    command: 'query',
+    describe: 'Query',
     builder: {
-      overwrite: {
-        boolean: true,
-        default: false,
-        describe: 'Overwrite existing pdf file',
+      legalId: {
+        string: true,
       },
     },
-    handler: downloadPdf,
+    handler: query,
   })
-  .command<CommandOption>({
-    command: 'convert:pdf-to-text',
-    describe: 'Convert legal pdf to text file',
-    builder: {
-      overwrite: {
-        boolean: true,
-        default: false,
-        describe: 'Overwrite existing pdf',
-      },
-    },
-    handler: () => console.log('UNIMPLEMENTED'),
-  })
-  .command<CommandOption>({
-    command: 'convert:text-to-json',
-    describe: 'Convert legal text file to json',
-    builder: {
-      overwrite: {
-        boolean: true,
-        default: false,
-        describe: 'Overwrite existing json',
-      },
-    },
-    handler: () => console.log('UNIMPLEMENTED'),
-  })
-  .command<CommandOption>({
-    command: 'convert:json-to-md',
-    describe: 'Convert legal json to markdown',
-    builder: {
-      overwrite: {
-        boolean: true,
-        default: false,
-        describe: 'Overwrite existing markdown',
-      },
-    },
-    handler: jsonToMd,
-  })
-  // .command<CommandOption>({
-  //   command: 'convert:json-to-ttl',
-  //   describe: 'Convert legal json to turtle file',
-  //   builder: {
-  //     overwrite: {
-  //       boolean: true,
-  //       default: false,
-  //       describe: 'Overwrite existing turtle file',
-  //     },
-  //   },
-  // handler: jsonToTtl,
-  // })
-
   .demandCommand().argv;

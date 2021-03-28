@@ -33,12 +33,10 @@ export type Triple = (
 ) &
   AllowedTriple;
 
-type HAS_KEY = 'hasKey';
-
 type AllowedTriple = [LegalNode, unknown, unknown];
 
 type AyatTriple =
-  | [AyatNode, HAS_KEY, number]
+  | [AyatNode, 'hasKey', number]
   | [AyatNode, 'hasText', string]
   | [AyatNode, 'hasPoints', PointsNode];
 

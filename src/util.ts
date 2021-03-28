@@ -66,3 +66,8 @@ export function lastOf<T>(arr: T[]): T | undefined {
   return arr.slice(-1)[0];
 }
 
+export function toValueOfKey<T, K extends keyof T>(key: K): (obj: T) => T[K] {
+  return function mapper(obj: T): T[K] {
+    return obj[key];
+  };
+}

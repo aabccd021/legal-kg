@@ -8,6 +8,7 @@ import {
 } from '../legal/document';
 import { getConfig } from '../config';
 import path from 'path';
+import { curry } from 'lodash';
 
 export type DataType =
   | 'pdf'
@@ -40,9 +41,10 @@ function getDataTypeExtensionStr(dataType: DataType): string {
   assertNever(dataType);
 }
 
-export function getDocumentFilePath(
-  node: DocumentNode,
-  dataType: DataType
+export const nodeToFilePathWith = curry(nodeToFilePath);
+export function nodeToFilePath(
+  dataType: DataType,
+  node: DocumentNode
 ): { path: string; exists: boolean } {
   const { dataDir } = getConfig();
   const extension = getDataTypeExtension(dataType);

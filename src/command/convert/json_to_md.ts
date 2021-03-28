@@ -19,7 +19,7 @@ import {
 import { Point, PointNode, Points } from '../../legal/structure/point';
 import { ReferenceText } from '../../legal/reference';
 import { Document } from '../../legal/document/index';
-import { getDocumentData, getDocumentFilePath } from '../../data';
+import { getDocumentData, nodeToFilePath } from '../../data';
 import {
   AmenderDeletePoint,
   AmendedPoint,
@@ -35,10 +35,10 @@ export function jsonToMd(option: Option): void {
   jsonNodes.forEach((jsonNode) => handleJson(jsonNode, option));
 }
 
-function handleJson(jsonNode: DocumentNode, option: Option): void {
+function handleJson(node: DocumentNode, option: Option): void {
   const { overwrite } = option;
-  const jsonFile = getDocumentFilePath(jsonNode, 'yaml');
-  const { path: mdPath, exists: mdExists } = getDocumentFilePath(jsonNode, 'mdv2');
+  const jsonFile = nodeToFilePath('yaml', node);
+  const { path: mdPath, exists: mdExists } = nodeToFilePath('mdv2', node);
 
   try {
     if (!overwrite && mdExists) {
@@ -339,4 +339,4 @@ function getPrefixByIndex(index: number, uris: string[]): string {
   return `](${uri})`;
 }
 
-jsonToMd({ overwrite: true });
+// jsonToMd({ overwrite: true });
