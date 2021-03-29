@@ -1,4 +1,4 @@
-import { Structure } from '../../../legal/structure/index';
+import { Component } from '../../../legal/component/index';
 import { chain, curry, isUndefined, min } from 'lodash';
 import { Span, neverNum, lastOf } from '../../../util';
 import { SpanIdKeyMap } from './scan';
@@ -11,13 +11,13 @@ type Acc = {
 };
 
 type SpansOfKey = { [key: number]: Span[] };
-type ToStructureWith<T extends Structure> = (context: Context, keySpans: KeySpans) => T;
+type ToStructureWith<T extends Component> = (context: Context, keySpans: KeySpans) => T;
 type StructureUtil<U> = {
   spanIdKeyMap: SpanIdKeyMap<number>;
   toStructure: (keySpans: KeySpans[]) => U;
 };
 
-export function spanIdKeyMapOf<A extends Structure, B extends Structure, T, U>(
+export function spanIdKeyMapOf<A extends Component, B extends Component, T, U>(
   map1: [SpanIdKeyMap<number>, ToStructureWith<A>, (a: A[]) => T],
   map2: [SpanIdKeyMap<number>, ToStructureWith<B>, (a: B[]) => U],
   spans: Span[],
@@ -29,7 +29,7 @@ export function spanIdKeyMapOf<A extends Structure, B extends Structure, T, U>(
     : transform(map2, context);
 }
 
-function transform<T extends Structure, U>(
+function transform<T extends Component, U>(
   map1: [SpanIdKeyMap<number>, ToStructureWith<T>, (a: T[]) => U],
   context: Context
 ): StructureUtil<U> {

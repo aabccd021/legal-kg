@@ -15,8 +15,8 @@ function isDaerahString(str: string | undefined): str is Daerah {
 }
 
 export type PerdaNode = {
-  _structureType: 'document';
-  _documentType: 'perda';
+  nodeType: 'document';
+  docType: 'perda';
   daerah: Daerah;
   tahun: number;
   nomor: number;
@@ -43,7 +43,7 @@ function nodeOfPath(path: string[]): PerdaNode {
   if (!isDaerahString(daerah) || !isNumber(tahun) || !isNumber(nomor)) {
     throw Error(`Unknown Perda Path ${path}`);
   }
-  return { _structureType: 'document', _documentType: 'perda', daerah, tahun, nomor };
+  return { nodeType: 'document', docType: 'perda', daerah, tahun, nomor };
 }
 
 /**
@@ -84,8 +84,8 @@ function getFiles(dir: string, dataType: DataType): PerdaNode[] {
         .readdirSync(path.join(daerahDir, year))
         .map((pdfName) => path.basename(pdfName, getDataTypeExtension(dataType)))
         .map((number) => ({
-          _structureType: 'document',
-          _documentType: 'perda',
+          nodeType: 'document',
+          docType: 'perda',
           daerah,
           tahun: parseInt(year),
           nomor: parseInt(number),

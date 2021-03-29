@@ -2,7 +2,7 @@ import { isNil, isNumber, isString, toPairs, compact, upperFirst } from 'lodash'
 import * as n3 from 'n3';
 import { Triple } from './triple';
 import _ from 'lodash';
-import { LegalNode, getOntologyBaseUri, getUri } from '../../../legal';
+import { LegalNode, getOntologyBaseUri, nodeToUri } from '../../../legal';
 
 const { triple, namedNode, literal } = n3.DataFactory;
 
@@ -15,7 +15,7 @@ const rdfType = 'http://www.w3.org/1999/02/22-rdf-syntax-ns#type';
  * Node
  */
 function node(node: LegalNode): n3.NamedNode<string> {
-  const uri = getUri(node);
+  const uri = nodeToUri(node);
   return namedNode(uri);
 }
 function onto(predicate: string): n3.NamedNode<string> {
@@ -60,7 +60,7 @@ function getClassTypeQuads(triples: Triple[]): n3.Quad[] {
   return _(triples)
     .map(([s]) => s)
     .uniq()
-    .map((x) => triple(node(x), namedNode(rdfType), onto(upperFirst(x._structureType))))
+    .map((x) => triple(node(x), namedNode(rdfType), onto(upperFirst(x.nodeType))))
     .value();
 }
 
@@ -72,13 +72,17 @@ function getAlternativeVocabQuads(triples: Triple[]): n3.Quad[] {
     .map(([s, p, o]) => {
       if (isNil(o) || isString(o) || isNumber(o)) return undefined;
       if (
-        p === 'hasAyat' ||
-        p === 'hasBab' ||
-        p === 'hasBagian' ||
-        p === 'hasMetadata' ||
-        p === 'hasParagraf' ||
-        p === 'hasPasal' ||
-        p === 'hasPoint'
+        p === 'ayatHasPoints' ||
+        p === 'babHasBagian' ||
+        p === 'babHasPasal' ||
+        p === 'bagianHasParagraf' ||
+        p === 'bagianHasPasal' ||
+        p === 'documentHasBab' ||
+        p === 'paragrafHasPasal' ||
+        p === 'pasalHasAyat' ||
+        p === 'pasalHasPoints' ||
+        p === 'pointHasPoints' ||
+        p === 'pointsHasPoint'
       ) {
         return triple(node(o), onto('partOf'), node(s));
       }

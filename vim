@@ -172,10 +172,10 @@
                  }[m
                ][m
              }[m
-[1mdiff --git a/src/pdf_data_to_json/babs_spans_to_key_ids.ts b/src/pdf_data_to_json/babs_spans_to_key_ids.ts[m
+[1mdiff --git a/src/pdf_data_to_json/babs_spans_tokey_ids.ts b/src/pdf_data_to_json/babs_spans_tokey_ids.ts[m
 [1mindex 2816363..b87a960 100644[m
-[1m--- a/src/pdf_data_to_json/babs_spans_to_key_ids.ts[m
-[1m+++ b/src/pdf_data_to_json/babs_spans_to_key_ids.ts[m
+[1m--- a/src/pdf_data_to_json/babs_spans_tokey_ids.ts[m
+[1m+++ b/src/pdf_data_to_json/babs_spans_tokey_ids.ts[m
 [36m@@ -144,7 +144,7 @@[m [mfunction toKeys([m
    }[m
  [m

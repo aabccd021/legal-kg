@@ -1,20 +1,20 @@
 {
   "_node": {
-    "_documentType": "uu",
+    "docType": "uu",
     "tahun": 2003,
     "nomor": 13
   },
   "babs": [
     {
       "_type": "bab",
-      "_key": 1,
+      "key": 1,
       "_judul": "BAB I KETENTUAN UMUM",
       "isi": {
         "_type": "pasals",
         "pasals": [
           {
             "_type": "pasal",
-            "_key": 1,
+            "key": 1,
             "isi": {
               "_type": "referenceText",
               "references": [],
@@ -26,14 +26,14 @@
     },
     {
       "_type": "bab",
-      "_key": 2,
+      "key": 2,
       "_judul": "BAB II LANDASAN, ASAS, DAN TUJUAN",
       "isi": {
         "_type": "pasals",
         "pasals": [
           {
             "_type": "pasal",
-            "_key": 2,
+            "key": 2,
             "isi": {
               "_type": "referenceText",
               "references": [],
@@ -42,7 +42,7 @@
           },
           {
             "_type": "pasal",
-            "_key": 3,
+            "key": 3,
             "isi": {
               "_type": "referenceText",
               "references": [],
@@ -51,7 +51,7 @@
           },
           {
             "_type": "pasal",
-            "_key": 4,
+            "key": 4,
             "isi": {
               "_type": "referenceText",
               "references": [],
@@ -63,14 +63,14 @@
     },
     {
       "_type": "bab",
-      "_key": 3,
+      "key": 3,
       "_judul": "BAB III KESEMPATAN DAN PERLAKUAN YANG SAMA",
       "isi": {
         "_type": "pasals",
         "pasals": [
           {
             "_type": "pasal",
-            "_key": 5,
+            "key": 5,
             "isi": {
               "_type": "referenceText",
               "references": [],
@@ -79,7 +79,7 @@
           },
           {
             "_type": "pasal",
-            "_key": 6,
+            "key": 6,
             "isi": {
               "_type": "referenceText",
               "references": [],
@@ -91,14 +91,14 @@
     },
     {
       "_type": "bab",
-      "_key": 4,
+      "key": 4,
       "_judul": "BAB IV PERENCANAAN TENAGA KERJA DAN INFORMASI KETENAGAKERJAAN",
       "isi": {
         "_type": "pasals",
         "pasals": [
           {
             "_type": "pasal",
-            "_key": 7,
+            "key": 7,
             "isi": {
               "_type": "referenceText",
               "references": [],
@@ -107,7 +107,7 @@
           },
           {
             "_type": "pasal",
-            "_key": 8,
+            "key": 8,
             "isi": {
               "_type": "referenceText",
               "references": [],
@@ -119,14 +119,14 @@
     },
     {
       "_type": "bab",
-      "_key": 5,
+      "key": 5,
       "_judul": "BAB V PELATIHAN KERJA",
       "isi": {
         "_type": "pasals",
         "pasals": [
           {
             "_type": "pasal",
-            "_key": 9,
+            "key": 9,
             "isi": {
               "_type": "referenceText",
               "references": [],
@@ -135,7 +135,7 @@
           },
           {
             "_type": "pasal",
-            "_key": 10,
+            "key": 10,
             "isi": {
               "_type": "referenceText",
               "references": [],
@@ -144,7 +144,7 @@
           },
           {
             "_type": "pasal",
-            "_key": 11,
+            "key": 11,
             "isi": {
               "_type": "referenceText",
               "references": [],
@@ -153,7 +153,7 @@
           },
           {
             "_type": "pasal",
-            "_key": 12,
+            "key": 12,
             "isi": {
               "_type": "referenceText",
               "references": [],
@@ -162,7 +162,7 @@
           },
           {
             "_type": "pasal",
-            "_key": 13,
+            "key": 13,
             "isi": {
               "_type": "referenceText",
               "references": [],
@@ -171,13 +171,13 @@
           },
           {
             "_type": "pasal",
-            "_key": 14,
+            "key": 14,
             "isi": {
               "_type": "ayats",
               "ayats": [
                 {
                   "_type": "ayat",
-                  "_key": 1,
+                  "key": 1,
                   "isi": {
                     "_type": "referenceText",
                     "references": [],
@@ -189,7 +189,7 @@
           },
           {
             "_type": "pasal",
-            "_key": 15,
+            "key": 15,
             "isi": {
               "_type": "referenceText",
               "references": [],
@@ -198,13 +198,13 @@
           },
           {
             "_type": "pasal",
-            "_key": 16,
+            "key": 16,
             "isi": {
               "_type": "ayats",
               "ayats": [
                 {
                   "_type": "ayat",
-                  "_key": 1,
+                  "key": 1,
                   "isi": {
                     "_type": "referenceText",
                     "references": [],
@@ -216,7 +216,7 @@
           },
           {
             "_type": "pasal",
-            "_key": 17,
+            "key": 17,
             "isi": {
               "_type": "referenceText",
               "references": [],
@@ -225,7 +225,7 @@
           },
           {
             "_type": "pasal",
-            "_key": 18,
+            "key": 18,
             "isi": {
               "_type": "referenceText",
               "references": [],
@@ -234,7 +234,7 @@
           },
           {
             "_type": "pasal",
-            "_key": 19,
+            "key": 19,
             "isi": {
               "_type": "referenceText",
               "references": [],
@@ -243,13 +243,13 @@
           },
           {
             "_type": "pasal",
-            "_key": 20,
+            "key": 20,
             "isi": {
               "_type": "ayats",
               "ayats": [
                 {
                   "_type": "ayat",
-                  "_key": 1,
+                  "key": 1,
                   "isi": {
                     "_type": "referenceText",
                     "references": [],
@@ -261,7 +261,7 @@
           },
           {
             "_type": "pasal",
-            "_key": 21,
+            "key": 21,
             "isi": {
               "_type": "referenceText",
               "references": [],
@@ -270,7 +270,7 @@
           },
           {
             "_type": "pasal",
-            "_key": 22,
+            "key": 22,
             "isi": {
               "_type": "referenceText",
               "references": [],
@@ -279,7 +279,7 @@
           },
           {
             "_type": "pasal",
-            "_key": 23,
+            "key": 23,
             "isi": {
               "_type": "referenceText",
               "references": [],
@@ -288,7 +288,7 @@
           },
           {
             "_type": "pasal",
-            "_key": 24,
+            "key": 24,
             "isi": {
               "_type": "referenceText",
               "references": [],
@@ -297,13 +297,13 @@
           },
           {
             "_type": "pasal",
-            "_key": 25,
+            "key": 25,
             "isi": {
               "_type": "ayats",
               "ayats": [
                 {
                   "_type": "ayat",
-                  "_key": 1,
+                  "key": 1,
                   "isi": {
                     "_type": "referenceText",
                     "references": [],
@@ -315,7 +315,7 @@
           },
           {
             "_type": "pasal",
-            "_key": 26,
+            "key": 26,
             "isi": {
               "_type": "referenceText",
               "references": [],
@@ -324,13 +324,13 @@
           },
           {
             "_type": "pasal",
-            "_key": 27,
+            "key": 27,
             "isi": {
               "_type": "ayats",
               "ayats": [
                 {
                   "_type": "ayat",
-                  "_key": 1,
+                  "key": 1,
                   "isi": {
                     "_type": "referenceText",
                     "references": [],
@@ -342,7 +342,7 @@
           },
           {
             "_type": "pasal",
-            "_key": 28,
+            "key": 28,
             "isi": {
               "_type": "referenceText",
               "references": [],
@@ -351,7 +351,7 @@
           },
           {
             "_type": "pasal",
-            "_key": 29,
+            "key": 29,
             "isi": {
               "_type": "referenceText",
               "references": [],
@@ -360,13 +360,13 @@
           },
           {
             "_type": "pasal",
-            "_key": 30,
+            "key": 30,
             "isi": {
               "_type": "ayats",
               "ayats": [
                 {
                   "_type": "ayat",
-                  "_key": 1,
+                  "key": 1,
                   "isi": {
                     "_type": "referenceText",
                     "references": [],
@@ -381,14 +381,14 @@
     },
     {
       "_type": "bab",
-      "_key": 6,
+      "key": 6,
       "_judul": "BAB VI PENEMPATAN TENAGA KERJA",
       "isi": {
         "_type": "pasals",
         "pasals": [
           {
             "_type": "pasal",
-            "_key": 31,
+            "key": 31,
             "isi": {
               "_type": "referenceText",
               "references": [],
@@ -397,7 +397,7 @@
           },
           {
             "_type": "pasal",
-            "_key": 32,
+            "key": 32,
             "isi": {
               "_type": "referenceText",
               "references": [],
@@ -406,7 +406,7 @@
           },
           {
             "_type": "pasal",
-            "_key": 33,
+            "key": 33,
             "isi": {
               "_type": "referenceText",
               "references": [],
@@ -415,7 +415,7 @@
           },
           {
             "_type": "pasal",
-            "_key": 34,
+            "key": 34,
             "isi": {
               "_type": "referenceText",
               "references": [],
@@ -424,7 +424,7 @@
           },
           {
             "_type": "pasal",
-            "_key": 35,
+            "key": 35,
             "isi": {
               "_type": "referenceText",
               "references": [],
@@ -433,7 +433,7 @@
           },
           {
             "_type": "pasal",
-            "_key": 36,
+            "key": 36,
             "isi": {
               "_type": "referenceText",
               "references": [],
@@ -442,7 +442,7 @@
           },
           {
             "_type": "pasal",
-            "_key": 37,
+            "key": 37,
             "isi": {
               "_type": "referenceText",
               "references": [],
@@ -451,7 +451,7 @@
           },
           {
             "_type": "pasal",
-            "_key": 38,
+            "key": 38,
             "isi": {
               "_type": "referenceText",
               "references": [],
@@ -463,20 +463,20 @@
     },
     {
       "_type": "bab",
-      "_key": 7,
+      "key": 7,
       "_judul": "BAB VII PERLUASAN KESEMPATAN KERJA",
       "isi": {
         "_type": "pasals",
         "pasals": [
           {
             "_type": "pasal",
-            "_key": 39,
+            "key": 39,
             "isi": {
               "_type": "ayats",
               "ayats": [
                 {
                   "_type": "ayat",
-                  "_key": 1,
+                  "key": 1,
                   "isi": {
                     "_type": "referenceText",
                     "references": [],
@@ -488,7 +488,7 @@
           },
           {
             "_type": "pasal",
-            "_key": 40,
+            "key": 40,
             "isi": {
               "_type": "referenceText",
               "references": [],
@@ -497,7 +497,7 @@
           },
           {
             "_type": "pasal",
-            "_key": 41,
+            "key": 41,
             "isi": {
               "_type": "referenceText",
               "references": [],
@@ -509,14 +509,14 @@
     },
     {
       "_type": "bab",
-      "_key": 8,
+      "key": 8,
       "_judul": "BAB VIII PENGGUNAAN TENAGA KERJA ASING",
       "isi": {
         "_type": "pasals",
         "pasals": [
           {
             "_type": "pasal",
-            "_key": 42,
+            "key": 42,
             "isi": {
               "_type": "referenceText",
               "references": [],
@@ -525,13 +525,13 @@
           },
           {
             "_type": "pasal",
-            "_key": 43,
+            "key": 43,
             "isi": {
               "_type": "ayats",
               "ayats": [
                 {
                   "_type": "ayat",
-                  "_key": 1,
+                  "key": 1,
                   "isi": {
                     "_type": "referenceText",
                     "references": [],
@@ -543,7 +543,7 @@
           },
           {
             "_type": "pasal",
-            "_key": 44,
+            "key": 44,
             "isi": {
               "_type": "referenceText",
               "references": [],
@@ -552,13 +552,13 @@
           },
           {
             "_type": "pasal",
-            "_key": 45,
+            "key": 45,
             "isi": {
               "_type": "ayats",
               "ayats": [
                 {
                   "_type": "ayat",
-                  "_key": 1,
+                  "key": 1,
                   "isi": {
                     "_type": "referenceText",
                     "references": [],
@@ -570,7 +570,7 @@
           },
           {
             "_type": "pasal",
-            "_key": 46,
+            "key": 46,
             "isi": {
               "_type": "referenceText",
               "references": [],
@@ -579,7 +579,7 @@
           },
           {
             "_type": "pasal",
-            "_key": 47,
+            "key": 47,
             "isi": {
               "_type": "referenceText",
               "references": [],
@@ -588,7 +588,7 @@
           },
           {
             "_type": "pasal",
-            "_key": 48,
+            "key": 48,
             "isi": {
               "_type": "referenceText",
               "references": [],
@@ -597,7 +597,7 @@
           },
           {
             "_type": "pasal",
-            "_key": 49,
+            "key": 49,
             "isi": {
               "_type": "referenceText",
               "references": [],
@@ -609,14 +609,14 @@
     },
     {
       "_type": "bab",
-      "_key": 9,
+      "key": 9,
       "_judul": "BAB IX HUBUNGAN KERJA",
       "isi": {
         "_type": "pasals",
         "pasals": [
           {
             "_type": "pasal",
-            "_key": 50,
+            "key": 50,
             "isi": {
               "_type": "referenceText",
               "references": [],
@@ -625,7 +625,7 @@
           },
           {
             "_type": "pasal",
-            "_key": 51,
+            "key": 51,
             "isi": {
               "_type": "referenceText",
               "references": [],
@@ -634,7 +634,7 @@
           },
           {
             "_type": "pasal",
-            "_key": 52,
+            "key": 52,
             "isi": {
               "_type": "referenceText",
               "references": [],
@@ -643,7 +643,7 @@
           },
           {
             "_type": "pasal",
-            "_key": 53,
+            "key": 53,
             "isi": {
               "_type": "referenceText",
               "references": [],
@@ -652,7 +652,7 @@
           },
           {
             "_type": "pasal",
-            "_key": 54,
+            "key": 54,
             "isi": {
               "_type": "referenceText",
               "references": [],
@@ -661,7 +661,7 @@
           },
           {
             "_type": "pasal",
-            "_key": 55,
+            "key": 55,
             "isi": {
               "_type": "referenceText",
               "references": [],
@@ -670,13 +670,13 @@
           },
           {
             "_type": "pasal",
-            "_key": 56,
+            "key": 56,
             "isi": {
               "_type": "ayats",
               "ayats": [
                 {
                   "_type": "ayat",
-                  "_key": 1,
+                  "key": 1,
                   "isi": {
                     "_type": "referenceText",
                     "references": [],
@@ -688,7 +688,7 @@
           },
           {
             "_type": "pasal",
-            "_key": 57,
+            "key": 57,
             "isi": {
               "_type": "referenceText",
               "references": [],
@@ -697,13 +697,13 @@
           },
           {
             "_type": "pasal",
-            "_key": 58,
+            "key": 58,
             "isi": {
               "_type": "ayats",
               "ayats": [
                 {
                   "_type": "ayat",
-                  "_key": 1,
+                  "key": 1,
                   "isi": {
                     "_type": "referenceText",
                     "references": [],
@@ -715,13 +715,13 @@
           },
           {
             "_type": "pasal",
-            "_key": 59,
+            "key": 59,
             "isi": {
               "_type": "ayats",
               "ayats": [
                 {
                   "_type": "ayat",
-                  "_key": 1,
+                  "key": 1,
                   "isi": {
                     "_type": "referenceText",
                     "references": [],
@@ -733,13 +733,13 @@
           },
           {
             "_type": "pasal",
-            "_key": 60,
+            "key": 60,
             "isi": {
               "_type": "ayats",
               "ayats": [
                 {
                   "_type": "ayat",
-                  "_key": 1,
+                  "key": 1,
                   "isi": {
                     "_type": "referenceText",
                     "references": [],
@@ -751,13 +751,13 @@
           },
           {
             "_type": "pasal",
-            "_key": 61,
+            "key": 61,
             "isi": {
               "_type": "ayats",
               "ayats": [
                 {
                   "_type": "ayat",
-                  "_key": 1,
+                  "key": 1,
                   "isi": {
                     "_type": "referenceText",
                     "references": [],
@@ -769,7 +769,7 @@
           },
           {
             "_type": "pasal",
-            "_key": 62,
+            "key": 62,
             "isi": {
               "_type": "referenceText",
               "references": [],
@@ -778,13 +778,13 @@
           },
           {
             "_type": "pasal",
-            "_key": 63,
+            "key": 63,
             "isi": {
               "_type": "ayats",
               "ayats": [
                 {
                   "_type": "ayat",
-                  "_key": 1,
+                  "key": 1,
                   "isi": {
                     "_type": "referenceText",
                     "references": [],
@@ -796,7 +796,7 @@
           },
           {
             "_type": "pasal",
-            "_key": 64,
+            "key": 64,
             "isi": {
               "_type": "referenceText",
               "references": [],
@@ -805,7 +805,7 @@
           },
           {
             "_type": "pasal",
-            "_key": 65,
+            "key": 65,
             "isi": {
               "_type": "referenceText",
               "references": [],
@@ -814,13 +814,13 @@
           },
           {
             "_type": "pasal",
-            "_key": 66,
+            "key": 66,
             "isi": {
               "_type": "ayats",
               "ayats": [
                 {
                   "_type": "ayat",
-                  "_key": 1,
+                  "key": 1,
                   "isi": {
                     "_type": "referenceText",
                     "references": [],
@@ -835,28 +835,28 @@
     },
     {
       "_type": "bab",
-      "_key": 10,
+      "key": 10,
       "_judul": "BAB X PERLINDUNGAN, PENGUPAHAN, DAN KESEJAHTERAAN",
       "isi": {
         "_type": "bagians",
         "bagians": [
           {
             "_type": "bagian",
-            "_key": 1,
+            "key": 1,
             "_judul": "Bagian Kesatu Perlindungan",
             "isi": {
               "_type": "paragrafs",
               "paragrafs": [
                 {
                   "_type": "paragraf",
-                  "_key": 1,
+                  "key": 1,
                   "_judul": "Paragraf 1 Penyandang Cacat",
                   "isi": {
                     "_type": "pasals",
                     "pasals": [
                       {
                         "_type": "pasal",
-                        "_key": 67,
+                        "key": 67,
                         "isi": {
                           "_type": "referenceText",
                           "references": [],
@@ -868,14 +868,14 @@
                 },
                 {
                   "_type": "paragraf",
-                  "_key": 2,
+                  "key": 2,
                   "_judul": "Paragraf 2 Anak",
                   "isi": {
                     "_type": "pasals",
                     "pasals": [
                       {
                         "_type": "pasal",
-                        "_key": 68,
+                        "key": 68,
                         "isi": {
                           "_type": "referenceText",
                           "references": [],
@@ -884,13 +884,13 @@
                       },
                       {
                         "_type": "pasal",
-                        "_key": 69,
+                        "key": 69,
                         "isi": {
                           "_type": "ayats",
                           "ayats": [
                             {
                               "_type": "ayat",
-                              "_key": 1,
+                              "key": 1,
                               "isi": {
                                 "_type": "referenceText",
                                 "references": [],
@@ -902,7 +902,7 @@
                       },
                       {
                         "_type": "pasal",
-                        "_key": 70,
+                        "key": 70,
                         "isi": {
                           "_type": "referenceText",
                           "references": [],
@@ -911,13 +911,13 @@
                       },
                       {
                         "_type": "pasal",
-                        "_key": 71,
+                        "key": 71,
                         "isi": {
                           "_type": "ayats",
                           "ayats": [
                             {
                               "_type": "ayat",
-                              "_key": 1,
+                              "key": 1,
                               "isi": {
                                 "_type": "referenceText",
                                 "references": [],
@@ -929,7 +929,7 @@
                       },
                       {
                         "_type": "pasal",
-                        "_key": 72,
+                        "key": 72,
                         "isi": {
                           "_type": "referenceText",
                           "references": [],
@@ -938,7 +938,7 @@
                       },
                       {
                         "_type": "pasal",
-                        "_key": 73,
+                        "key": 73,
                         "isi": {
                           "_type": "referenceText",
                           "references": [],
@@ -947,7 +947,7 @@
                       },
                       {
                         "_type": "pasal",
-                        "_key": 74,
+                        "key": 74,
                         "isi": {
                           "_type": "referenceText",
                           "references": [],
@@ -956,7 +956,7 @@
                       },
                       {
                         "_type": "pasal",
-                        "_key": 75,
+                        "key": 75,
                         "isi": {
                           "_type": "referenceText",
                           "references": [],
@@ -968,14 +968,14 @@
                 },
                 {
                   "_type": "paragraf",
-                  "_key": 3,
+                  "key": 3,
                   "_judul": "Paragraf 3 Perempuan",
                   "isi": {
                     "_type": "pasals",
                     "pasals": [
                       {
                         "_type": "pasal",
-                        "_key": 76,
+                        "key": 76,
                         "isi": {
                           "_type": "referenceText",
                           "references": [],
@@ -987,14 +987,14 @@
                 },
                 {
                   "_type": "paragraf",
-                  "_key": 4,
+                  "key": 4,
                   "_judul": "Paragraf 4 Waktu Kerja",
                   "isi": {
                     "_type": "pasals",
                     "pasals": [
                       {
                         "_type": "pasal",
-                        "_key": 77,
+                        "key": 77,
                         "isi": {
                           "_type": "referenceText",
                           "references": [],
@@ -1003,7 +1003,7 @@
                       },
                       {
                         "_type": "pasal",
-                        "_key": 78,
+                        "key": 78,
                         "isi": {
                           "_type": "referenceText",
                           "references": [],
@@ -1012,7 +1012,7 @@
                       },
                       {
                         "_type": "pasal",
-                        "_key": 79,
+                        "key": 79,
                         "isi": {
                           "_type": "referenceText",
                           "references": [],
@@ -1021,7 +1021,7 @@
                       },
                       {
                         "_type": "pasal",
-                        "_key": 80,
+                        "key": 80,
                         "isi": {
                           "_type": "referenceText",
                           "references": [],
@@ -1030,13 +1030,13 @@
                       },
                       {
                         "_type": "pasal",
-                        "_key": 81,
+                        "key": 81,
                         "isi": {
                           "_type": "ayats",
                           "ayats": [
                             {
                               "_type": "ayat",
-                              "_key": 1,
+                              "key": 1,
                               "isi": {
                                 "_type": "referenceText",
                                 "references": [],
@@ -1048,7 +1048,7 @@
                       },
                       {
                         "_type": "pasal",
-                        "_key": 82,
+                        "key": 82,
                         "isi": {
                           "_type": "referenceText",
                           "references": [],
@@ -1057,7 +1057,7 @@
                       },
                       {
                         "_type": "pasal",
-                        "_key": 83,
+                        "key": 83,
                         "isi": {
                           "_type": "referenceText",
                           "references": [],
@@ -1066,7 +1066,7 @@
                       },
                       {
                         "_type": "pasal",
-                        "_key": 84,
+                        "key": 84,
                         "isi": {
                           "_type": "referenceText",
                           "references": [],
@@ -1075,13 +1075,13 @@
                       },
                       {
                         "_type": "pasal",
-                        "_key": 85,
+                        "key": 85,
                         "isi": {
                           "_type": "ayats",
                           "ayats": [
                             {
                               "_type": "ayat",
-                              "_key": 1,
+                              "key": 1,
                               "isi": {
                                 "_type": "referenceText",
                                 "references": [],
@@ -1096,20 +1096,20 @@
                 },
                 {
                   "_type": "paragraf",
-                  "_key": 5,
+                  "key": 5,
                   "_judul": "Paragraf 5 Keselamatan dan Kesehatan Kerja",
                   "isi": {
                     "_type": "pasals",
                     "pasals": [
                       {
                         "_type": "pasal",
-                        "_key": 86,
+                        "key": 86,
                         "isi": {
                           "_type": "ayats",
                           "ayats": [
                             {
                               "_type": "ayat",
-                              "_key": 1,
+                              "key": 1,
                               "isi": {
                                 "_type": "referenceText",
                                 "references": [],
@@ -1121,13 +1121,13 @@
                       },
                       {
                         "_type": "pasal",
-                        "_key": 87,
+                        "key": 87,
                         "isi": {
                           "_type": "ayats",
                           "ayats": [
                             {
                               "_type": "ayat",
-                              "_key": 1,
+                              "key": 1,
                               "isi": {
                                 "_type": "referenceText",
                                 "references": [],
@@ -1145,14 +1145,14 @@
           },
           {
             "_type": "bagian",
-            "_key": 2,
+            "key": 2,
             "_judul": "Bagian Kedua Pengupahan.",
             "isi": {
               "_type": "pasals",
               "pasals": [
                 {
                   "_type": "pasal",
-                  "_key": 88,
+                  "key": 88,
                   "isi": {
                     "_type": "referenceText",
                     "references": [],
@@ -1161,13 +1161,13 @@
                 },
                 {
                   "_type": "pasal",
-                  "_key": 89,
+                  "key": 89,
                   "isi": {
                     "_type": "ayats",
                     "ayats": [
                       {
                         "_type": "ayat",
-                        "_key": 1,
+                        "key": 1,
                         "isi": {
                           "_type": "referenceText",
                           "references": [],
@@ -1179,7 +1179,7 @@
                 },
                 {
                   "_type": "pasal",
-                  "_key": 90,
+                  "key": 90,
                   "isi": {
                     "_type": "referenceText",
                     "references": [],
@@ -1188,7 +1188,7 @@
                 },
                 {
                   "_type": "pasal",
-                  "_key": 91,
+                  "key": 91,
                   "isi": {
                     "_type": "referenceText",
                     "references": [],
@@ -1197,7 +1197,7 @@
                 },
                 {
                   "_type": "pasal",
-                  "_key": 92,
+                  "key": 92,
                   "isi": {
                     "_type": "referenceText",
                     "references": [],
@@ -1206,13 +1206,13 @@
                 },
                 {
                   "_type": "pasal",
-                  "_key": 93,
+                  "key": 93,
                   "isi": {
                     "_type": "ayats",
                     "ayats": [
                       {
                         "_type": "ayat",
-                        "_key": 1,
+                        "key": 1,
                         "isi": {
                           "_type": "referenceText",
                           "references": [],
@@ -1224,7 +1224,7 @@
                 },
                 {
                   "_type": "pasal",
-                  "_key": 94,
+                  "key": 94,
                   "isi": {
                     "_type": "referenceText",
                     "references": [],
@@ -1233,7 +1233,7 @@
                 },
                 {
                   "_type": "pasal",
-                  "_key": 95,
+                  "key": 95,
                   "isi": {
                     "_type": "referenceText",
                     "references": [],
@@ -1242,7 +1242,7 @@
                 },
                 {
                   "_type": "pasal",
-                  "_key": 96,
+                  "key": 96,
                   "isi": {
                     "_type": "referenceText",
                     "references": [],
@@ -1251,7 +1251,7 @@
                 },
                 {
                   "_type": "pasal",
-                  "_key": 97,
+                  "key": 97,
                   "isi": {
                     "_type": "referenceText",
                     "references": [],
@@ -1260,13 +1260,13 @@
                 },
                 {
                   "_type": "pasal",
-                  "_key": 98,
+                  "key": 98,
                   "isi": {
                     "_type": "ayats",
                     "ayats": [
                       {
                         "_type": "ayat",
-                        "_key": 1,
+                        "key": 1,
                         "isi": {
                           "_type": "referenceText",
                           "references": [],
@@ -1281,20 +1281,20 @@
           },
           {
             "_type": "bagian",
-            "_key": 3,
+            "key": 3,
             "_judul": "Bagian Ketiga Kesejahteraan",
             "isi": {
               "_type": "pasals",
               "pasals": [
                 {
                   "_type": "pasal",
-                  "_key": 99,
+                  "key": 99,
                   "isi": {
                     "_type": "ayats",
                     "ayats": [
                       {
                         "_type": "ayat",
-                        "_key": 1,
+                        "key": 1,
                         "isi": {
                           "_type": "referenceText",
                           "references": [],
@@ -1306,13 +1306,13 @@
                 },
                 {
                   "_type": "pasal",
-                  "_key": 100,
+                  "key": 100,
                   "isi": {
                     "_type": "ayats",
                     "ayats": [
                       {
                         "_type": "ayat",
-                        "_key": 1,
+                        "key": 1,
                         "isi": {
                           "_type": "referenceText",
                           "references": [],
@@ -1324,13 +1324,13 @@
                 },
                 {
                   "_type": "pasal",
-                  "_key": 101,
+                  "key": 101,
                   "isi": {
                     "_type": "ayats",
                     "ayats": [
                       {
                         "_type": "ayat",
-                        "_key": 1,
+                        "key": 1,
                         "isi": {
                           "_type": "referenceText",
                           "references": [],
@@ -1348,21 +1348,21 @@
     },
     {
       "_type": "bab",
-      "_key": 11,
+      "key": 11,
       "_judul": "BAB XI HUBUNGAN INDUSTRIAL",
       "isi": {
         "_type": "bagians",
         "bagians": [
           {
             "_type": "bagian",
-            "_key": 1,
+            "key": 1,
             "_judul": "Bagian Kesatu Umum",
             "isi": {
               "_type": "pasals",
               "pasals": [
                 {
                   "_type": "pasal",
-                  "_key": 102,
+                  "key": 102,
                   "isi": {
                     "_type": "referenceText",
                     "references": [],
@@ -1371,7 +1371,7 @@
                 },
                 {
                   "_type": "pasal",
-                  "_key": 103,
+                  "key": 103,
                   "isi": {
                     "_type": "referenceText",
                     "references": [],
@@ -1383,20 +1383,20 @@
           },
           {
             "_type": "bagian",
-            "_key": 2,
+            "key": 2,
             "_judul": "Bagian Kedua Serikat Pekerja/Serikat Buruh",
             "isi": {
               "_type": "pasals",
               "pasals": [
                 {
                   "_type": "pasal",
-                  "_key": 104,
+                  "key": 104,
                   "isi": {
                     "_type": "ayats",
                     "ayats": [
                       {
                         "_type": "ayat",
-                        "_key": 1,
+                        "key": 1,
                         "isi": {
                           "_type": "referenceText",
                           "references": [],
@@ -1411,14 +1411,14 @@
           },
           {
             "_type": "bagian",
-            "_key": 3,
+            "key": 3,
             "_judul": "Bagian Ketiga Organisasi Pengusaha",
             "isi": {
               "_type": "pasals",
               "pasals": [
                 {
                   "_type": "pasal",
-                  "_key": 105,
+                  "key": 105,
                   "isi": {
                     "_type": "referenceText",
                     "references": [],
@@ -1430,14 +1430,14 @@
           },
           {
             "_type": "bagian",
-            "_key": 4,
+            "key": 4,
             "_judul": "Bagian Keempat Lembaga Kerja Sama Bipartit",
             "isi": {
               "_type": "pasals",
               "pasals": [
                 {
                   "_type": "pasal",
-                  "_key": 106,
+                  "key": 106,
                   "isi": {
                     "_type": "referenceText",
                     "references": [],
@@ -1449,14 +1449,14 @@
           },
           {
             "_type": "bagian",
-            "_key": 5,
+            "key": 5,
             "_judul": "Bagian Kelima Lembaga Kerja Sama Tripartit",
             "isi": {
               "_type": "pasals",
               "pasals": [
                 {
                   "_type": "pasal",
-                  "_key": 107,
+                  "key": 107,
                   "isi": {
                     "_type": "referenceText",
                     "references": [],
@@ -1468,14 +1468,14 @@
           },
           {
             "_type": "bagian",
-            "_key": 6,
+            "key": 6,
             "_judul": "Bagian Keenam Peraturan Perusahaan",
             "isi": {
               "_type": "pasals",
               "pasals": [
                 {
                   "_type": "pasal",
-                  "_key": 108,
+                  "key": 108,
                   "isi": {
                     "_type": "referenceText",
                     "references": [],
@@ -1484,7 +1484,7 @@
                 },
                 {
                   "_type": "pasal",
-                  "_key": 109,
+                  "key": 109,
                   "isi": {
                     "_type": "referenceText",
                     "references": [],
@@ -1493,7 +1493,7 @@
                 },
                 {
                   "_type": "pasal",
-                  "_key": 110,
+                  "key": 110,
                   "isi": {
                     "_type": "referenceText",
                     "references": [],
@@ -1502,7 +1502,7 @@
                 },
                 {
                   "_type": "pasal",
-                  "_key": 111,
+                  "key": 111,
                   "isi": {
                     "_type": "referenceText",
                     "references": [],
@@ -1511,7 +1511,7 @@
                 },
                 {
                   "_type": "pasal",
-                  "_key": 112,
+                  "key": 112,
                   "isi": {
                     "_type": "referenceText",
                     "references": [],
@@ -1520,13 +1520,13 @@
                 },
                 {
                   "_type": "pasal",
-                  "_key": 113,
+                  "key": 113,
                   "isi": {
                     "_type": "ayats",
                     "ayats": [
                       {
                         "_type": "ayat",
-                        "_key": 1,
+                        "key": 1,
                         "isi": {
                           "_type": "referenceText",
                           "references": [],
@@ -1538,7 +1538,7 @@
                 },
                 {
                   "_type": "pasal",
-                  "_key": 114,
+                  "key": 114,
                   "isi": {
                     "_type": "referenceText",
                     "references": [],
@@ -1547,7 +1547,7 @@
                 },
                 {
                   "_type": "pasal",
-                  "_key": 115,
+                  "key": 115,
                   "isi": {
                     "_type": "referenceText",
                     "references": [],
@@ -1559,20 +1559,20 @@
           },
           {
             "_type": "bagian",
-            "_key": 7,
+            "key": 7,
             "_judul": "Bagian Ketujuh Perjanjian Kerja Bersama",
             "isi": {
               "_type": "pasals",
               "pasals": [
                 {
                   "_type": "pasal",
-                  "_key": 116,
+                  "key": 116,
                   "isi": {
                     "_type": "ayats",
                     "ayats": [
                       {
                         "_type": "ayat",
-                        "_key": 1,
+                        "key": 1,
                         "isi": {
                           "_type": "referenceText",
                           "references": [],
@@ -1584,7 +1584,7 @@
                 },
                 {
                   "_type": "pasal",
-                  "_key": 117,
+                  "key": 117,
                   "isi": {
                     "_type": "referenceText",
                     "references": [],
@@ -1593,7 +1593,7 @@
                 },
                 {
                   "_type": "pasal",
-                  "_key": 118,
+                  "key": 118,
                   "isi": {
                     "_type": "referenceText",
                     "references": [],
@@ -1602,13 +1602,13 @@
                 },
                 {
                   "_type": "pasal",
-                  "_key": 119,
+                  "key": 119,
                   "isi": {
                     "_type": "ayats",
                     "ayats": [
                       {
                         "_type": "ayat",
-                        "_key": 1,
+                        "key": 1,
                         "isi": {
                           "_type": "referenceText",
                           "references": [],
@@ -1620,7 +1620,7 @@
                 },
                 {
                   "_type": "pasal",
-                  "_key": 120,
+                  "key": 120,
                   "isi": {
                     "_type": "referenceText",
                     "references": [],
@@ -1629,7 +1629,7 @@
                 },
                 {
                   "_type": "pasal",
-                  "_key": 121,
+                  "key": 121,
                   "isi": {
                     "_type": "referenceText",
                     "references": [],
@@ -1638,7 +1638,7 @@
                 },
                 {
                   "_type": "pasal",
-                  "_key": 122,
+                  "key": 122,
                   "isi": {
                     "_type": "referenceText",
                     "references": [],
@@ -1647,7 +1647,7 @@
                 },
                 {
                   "_type": "pasal",
-                  "_key": 123,
+                  "key": 123,
                   "isi": {
                     "_type": "referenceText",
                     "references": [],
@@ -1656,13 +1656,13 @@
                 },
                 {
                   "_type": "pasal",
-                  "_key": 124,
+                  "key": 124,
                   "isi": {
                     "_type": "ayats",
                     "ayats": [
                       {
                         "_type": "ayat",
-                        "_key": 1,
+                        "key": 1,
                         "isi": {
                           "_type": "referenceText",
                           "references": [],
@@ -1674,7 +1674,7 @@
                 },
                 {
                   "_type": "pasal",
-                  "_key": 125,
+                  "key": 125,
                   "isi": {
                     "_type": "referenceText",
                     "references": [],
@@ -1683,7 +1683,7 @@
                 },
                 {
                   "_type": "pasal",
-                  "_key": 126,
+                  "key": 126,
                   "isi": {
                     "_type": "referenceText",
                     "references": [],
@@ -1692,13 +1692,13 @@
                 },
                 {
                   "_type": "pasal",
-                  "_key": 127,
+                  "key": 127,
                   "isi": {
                     "_type": "ayats",
                     "ayats": [
                       {
                         "_type": "ayat",
-                        "_key": 1,
+                        "key": 1,
                         "isi": {
                           "_type": "referenceText",
                           "references": [],
@@ -1710,7 +1710,7 @@
                 },
                 {
                   "_type": "pasal",
-                  "_key": 128,
+                  "key": 128,
                   "isi": {
                     "_type": "referenceText",
                     "references": [],
@@ -1719,7 +1719,7 @@
                 },
                 {
                   "_type": "pasal",
-                  "_key": 129,
+                  "key": 129,
                   "isi": {
                     "_type": "referenceText",
                     "references": [],
@@ -1728,7 +1728,7 @@
                 },
                 {
                   "_type": "pasal",
-                  "_key": 130,
+                  "key": 130,
                   "isi": {
                     "_type": "referenceText",
                     "references": [],
@@ -1737,7 +1737,7 @@
                 },
                 {
                   "_type": "pasal",
-                  "_key": 131,
+                  "key": 131,
                   "isi": {
                     "_type": "referenceText",
                     "references": [],
@@ -1746,7 +1746,7 @@
                 },
                 {
                   "_type": "pasal",
-                  "_key": 132,
+                  "key": 132,
                   "isi": {
                     "_type": "referenceText",
                     "references": [],
@@ -1755,7 +1755,7 @@
                 },
                 {
                   "_type": "pasal",
-                  "_key": 133,
+                  "key": 133,
                   "isi": {
                     "_type": "referenceText",
                     "references": [],
@@ -1764,7 +1764,7 @@
                 },
                 {
                   "_type": "pasal",
-                  "_key": 134,
+                  "key": 134,
                   "isi": {
                     "_type": "referenceText",
                     "references": [],
@@ -1773,7 +1773,7 @@
                 },
                 {
                   "_type": "pasal",
-                  "_key": 135,
+                  "key": 135,
                   "isi": {
                     "_type": "referenceText",
                     "references": [],
@@ -1785,21 +1785,21 @@
           },
           {
             "_type": "bagian",
-            "_key": 8,
+            "key": 8,
             "_judul": "Bagian Kedelapan Lembaga Penyelesaian Perselisihan Hubungan Industrial",
             "isi": {
               "_type": "paragrafs",
               "paragrafs": [
                 {
                   "_type": "paragraf",
-                  "_key": 1,
+                  "key": 1,
                   "_judul": "Paragraf 1 Perselisihan Hubungan Industrial",
                   "isi": {
                     "_type": "pasals",
                     "pasals": [
                       {
                         "_type": "pasal",
-                        "_key": 136,
+                        "key": 136,
                         "isi": {
                           "_type": "referenceText",
                           "references": [],
@@ -1811,14 +1811,14 @@
                 },
                 {
                   "_type": "paragraf",
-                  "_key": 2,
+                  "key": 2,
                   "_judul": "Paragraf 2 Mogok Kerja",
                   "isi": {
                     "_type": "pasals",
                     "pasals": [
                       {
                         "_type": "pasal",
-                        "_key": 137,
+                        "key": 137,
                         "isi": {
                           "_type": "referenceText",
                           "references": [],
@@ -1827,13 +1827,13 @@
                       },
                       {
                         "_type": "pasal",
-                        "_key": 138,
+                        "key": 138,
                         "isi": {
                           "_type": "ayats",
                           "ayats": [
                             {
                               "_type": "ayat",
-                              "_key": 1,
+                              "key": 1,
                               "isi": {
                                 "_type": "referenceText",
                                 "references": [],
@@ -1845,7 +1845,7 @@
                       },
                       {
                         "_type": "pasal",
-                        "_key": 139,
+                        "key": 139,
                         "isi": {
                           "_type": "referenceText",
                           "references": [],
@@ -1854,13 +1854,13 @@
                       },
                       {
                         "_type": "pasal",
-                        "_key": 140,
+                        "key": 140,
                         "isi": {
                           "_type": "ayats",
                           "ayats": [
                             {
                               "_type": "ayat",
-                              "_key": 1,
+                              "key": 1,
                               "isi": {
                                 "_type": "referenceText",
                                 "references": [],
@@ -1872,7 +1872,7 @@
                       },
                       {
                         "_type": "pasal",
-                        "_key": 141,
+                        "key": 141,
                         "isi": {
                           "_type": "referenceText",
                           "references": [],
@@ -1881,7 +1881,7 @@
                       },
                       {
                         "_type": "pasal",
-                        "_key": 142,
+                        "key": 142,
                         "isi": {
                           "_type": "referenceText",
                           "references": [],
@@ -1890,13 +1890,13 @@
                       },
                       {
                         "_type": "pasal",
-                        "_key": 143,
+                        "key": 143,
                         "isi": {
                           "_type": "ayats",
                           "ayats": [
                             {
                               "_type": "ayat",
-                              "_key": 1,
+                              "key": 1,
                               "isi": {
                                 "_type": "referenceText",
                                 "references": [],
@@ -1908,7 +1908,7 @@
                       },
                       {
                         "_type": "pasal",
-                        "_key": 144,
+                        "key": 144,
                         "isi": {
                           "_type": "referenceText",
                           "references": [],
@@ -1917,7 +1917,7 @@
                       },
                       {
                         "_type": "pasal",
-                        "_key": 145,
+                        "key": 145,
                         "isi": {
                           "_type": "referenceText",
                           "references": [],
@@ -1929,14 +1929,14 @@
                 },
                 {
                   "_type": "paragraf",
-                  "_key": 3,
+                  "key": 3,
                   "_judul": "Paragraf 3 Penutupan Perusahaan (lock-out)",
                   "isi": {
                     "_type": "pasals",
                     "pasals": [
                       {
                         "_type": "pasal",
-                        "_key": 146,
+                        "key": 146,
                         "isi": {
                           "_type": "referenceText",
                           "references": [],
@@ -1945,7 +1945,7 @@
                       },
                       {
                         "_type": "pasal",
-                        "_key": 147,
+                        "key": 147,
                         "isi": {
                           "_type": "referenceText",
                           "references": [],
@@ -1954,7 +1954,7 @@
                       },
                       {
                         "_type": "pasal",
-                        "_key": 148,
+                        "key": 148,
                         "isi": {
                           "_type": "referenceText",
                           "references": [],
@@ -1963,7 +1963,7 @@
                       },
                       {
                         "_type": "pasal",
-                        "_key": 149,
+                        "key": 149,
                         "isi": {
                           "_type": "referenceText",
                           "references": [],
@@ -1981,14 +1981,14 @@
     },
     {
       "_type": "bab",
-      "_key": 12,
+      "key": 12,
       "_judul": "BAB XII PEMUTUSAN HUBUNGAN KERJA",
       "isi": {
         "_type": "pasals",
         "pasals": [
           {
             "_type": "pasal",
-            "_key": 150,
+            "key": 150,
             "isi": {
               "_type": "referenceText",
               "references": [],
@@ -1997,7 +1997,7 @@
           },
           {
             "_type": "pasal",
-            "_key": 151,
+            "key": 151,
             "isi": {
               "_type": "referenceText",
               "references": [],
@@ -2006,7 +2006,7 @@
           },
           {
             "_type": "pasal",
-            "_key": 152,
+            "key": 152,
             "isi": {
               "_type": "referenceText",
               "references": [],
@@ -2015,13 +2015,13 @@
           },
           {
             "_type": "pasal",
-            "_key": 153,
+            "key": 153,
             "isi": {
               "_type": "ayats",
               "ayats": [
                 {
                   "_type": "ayat",
-                  "_key": 1,
+                  "key": 1,
                   "isi": {
                     "_type": "referenceText",
                     "references": [],
@@ -2033,7 +2033,7 @@
           },
           {
             "_type": "pasal",
-            "_key": 154,
+            "key": 154,
             "isi": {
               "_type": "referenceText",
               "references": [],
@@ -2042,7 +2042,7 @@
           },
           {
             "_type": "pasal",
-            "_key": 155,
+            "key": 155,
             "isi": {
               "_type": "referenceText",
               "references": [],
@@ -2051,13 +2051,13 @@
           },
           {
             "_type": "pasal",
-            "_key": 156,
+            "key": 156,
             "isi": {
               "_type": "ayats",
               "ayats": [
                 {
                   "_type": "ayat",
-                  "_key": 1,
+                  "key": 1,
                   "isi": {
                     "_type": "referenceText",
                     "references": [],
@@ -2069,7 +2069,7 @@
           },
           {
             "_type": "pasal",
-            "_key": 157,
+            "key": 157,
             "isi": {
               "_type": "referenceText",
               "references": [],
@@ -2078,13 +2078,13 @@
           },
           {
             "_type": "pasal",
-            "_key": 158,
+            "key": 158,
             "isi": {
               "_type": "ayats",
               "ayats": [
                 {
                   "_type": "ayat",
-                  "_key": 1,
+                  "key": 1,
                   "isi": {
                     "_type": "referenceText",
                     "references": [],
@@ -2096,7 +2096,7 @@
           },
           {
             "_type": "pasal",
-            "_key": 159,
+            "key": 159,
             "isi": {
               "_type": "referenceText",
               "references": [],
@@ -2105,13 +2105,13 @@
           },
           {
             "_type": "pasal",
-            "_key": 160,
+            "key": 160,
             "isi": {
               "_type": "ayats",
               "ayats": [
                 {
                   "_type": "ayat",
-                  "_key": 1,
+                  "key": 1,
                   "isi": {
                     "_type": "referenceText",
                     "references": [],
@@ -2123,13 +2123,13 @@
           },
           {
             "_type": "pasal",
-            "_key": 161,
+            "key": 161,
             "isi": {
               "_type": "ayats",
               "ayats": [
                 {
                   "_type": "ayat",
-                  "_key": 1,
+                  "key": 1,
                   "isi": {
                     "_type": "referenceText",
                     "references": [],
@@ -2141,13 +2141,13 @@
           },
           {
             "_type": "pasal",
-            "_key": 162,
+            "key": 162,
             "isi": {
               "_type": "ayats",
               "ayats": [
                 {
                   "_type": "ayat",
-                  "_key": 1,
+                  "key": 1,
                   "isi": {
                     "_type": "referenceText",
                     "references": [],
@@ -2159,7 +2159,7 @@
           },
           {
             "_type": "pasal",
-            "_key": 163,
+            "key": 163,
             "isi": {
               "_type": "referenceText",
               "references": [],
@@ -2168,7 +2168,7 @@
           },
           {
             "_type": "pasal",
-            "_key": 164,
+            "key": 164,
             "isi": {
               "_type": "referenceText",
               "references": [],
@@ -2177,7 +2177,7 @@
           },
           {
             "_type": "pasal",
-            "_key": 165,
+            "key": 165,
             "isi": {
               "_type": "referenceText",
               "references": [],
@@ -2186,7 +2186,7 @@
           },
           {
             "_type": "pasal",
-            "_key": 166,
+            "key": 166,
             "isi": {
               "_type": "referenceText",
               "references": [],
@@ -2195,7 +2195,7 @@
           },
           {
             "_type": "pasal",
-            "_key": 167,
+            "key": 167,
             "isi": {
               "_type": "referenceText",
               "references": [],
@@ -2204,7 +2204,7 @@
           },
           {
             "_type": "pasal",
-            "_key": 168,
+            "key": 168,
             "isi": {
               "_type": "referenceText",
               "references": [],
@@ -2213,13 +2213,13 @@
           },
           {
             "_type": "pasal",
-            "_key": 169,
+            "key": 169,
             "isi": {
               "_type": "ayats",
               "ayats": [
                 {
                   "_type": "ayat",
-                  "_key": 1,
+                  "key": 1,
                   "isi": {
                     "_type": "referenceText",
                     "references": [],
@@ -2231,7 +2231,7 @@
           },
           {
             "_type": "pasal",
-            "_key": 170,
+            "key": 170,
             "isi": {
               "_type": "referenceText",
               "references": [],
@@ -2240,7 +2240,7 @@
           },
           {
             "_type": "pasal",
-            "_key": 171,
+            "key": 171,
             "isi": {
               "_type": "referenceText",
               "references": [],
@@ -2249,7 +2249,7 @@
           },
           {
             "_type": "pasal",
-            "_key": 172,
+            "key": 172,
             "isi": {
               "_type": "referenceText",
               "references": [],
@@ -2261,14 +2261,14 @@
     },
     {
       "_type": "bab",
-      "_key": 13,
+      "key": 13,
       "_judul": "BAB XIII PEMBINAAN",
       "isi": {
         "_type": "pasals",
         "pasals": [
           {
             "_type": "pasal",
-            "_key": 173,
+            "key": 173,
             "isi": {
               "_type": "referenceText",
               "references": [],
@@ -2277,7 +2277,7 @@
           },
           {
             "_type": "pasal",
-            "_key": 174,
+            "key": 174,
             "isi": {
               "_type": "referenceText",
               "references": [],
@@ -2286,7 +2286,7 @@
           },
           {
             "_type": "pasal",
-            "_key": 175,
+            "key": 175,
             "isi": {
               "_type": "referenceText",
               "references": [],
@@ -2298,14 +2298,14 @@
     },
     {
       "_type": "bab",
-      "_key": 14,
+      "key": 14,
       "_judul": "BAB XIV PENGAWASAN",
       "isi": {
         "_type": "pasals",
         "pasals": [
           {
             "_type": "pasal",
-            "_key": 176,
+            "key": 176,
             "isi": {
               "_type": "referenceText",
               "references": [],
@@ -2314,7 +2314,7 @@
           },
           {
             "_type": "pasal",
-            "_key": 177,
+            "key": 177,
             "isi": {
               "_type": "referenceText",
               "references": [],
@@ -2323,13 +2323,13 @@
           },
           {
             "_type": "pasal",
-            "_key": 178,
+            "key": 178,
             "isi": {
               "_type": "ayats",
               "ayats": [
                 {
                   "_type": "ayat",
-                  "_key": 1,
+                  "key": 1,
                   "isi": {
                     "_type": "referenceText",
                     "references": [],
@@ -2341,13 +2341,13 @@
           },
           {
             "_type": "pasal",
-            "_key": 179,
+            "key": 179,
             "isi": {
               "_type": "ayats",
               "ayats": [
                 {
                   "_type": "ayat",
-                  "_key": 1,
+                  "key": 1,
                   "isi": {
                     "_type": "referenceText",
                     "references": [],
@@ -2359,7 +2359,7 @@
           },
           {
             "_type": "pasal",
-            "_key": 180,
+            "key": 180,
             "isi": {
               "_type": "referenceText",
               "references": [],
@@ -2368,7 +2368,7 @@
           },
           {
             "_type": "pasal",
-            "_key": 181,
+            "key": 181,
             "isi": {
               "_type": "referenceText",
               "references": [],
@@ -2380,14 +2380,14 @@
     },
     {
       "_type": "bab",
-      "_key": 15,
+      "key": 15,
       "_judul": "BAB XV PENYIDIKAN",
       "isi": {
         "_type": "pasals",
         "pasals": [
           {
             "_type": "pasal",
-            "_key": 182,
+            "key": 182,
             "isi": {
               "_type": "referenceText",
               "references": [],
@@ -2399,21 +2399,21 @@
     },
     {
       "_type": "bab",
-      "_key": 16,
+      "key": 16,
       "_judul": "BAB XVI KETENTUAN PIDANA DAN SANKSI ADMINISTRATIF",
       "isi": {
         "_type": "bagians",
         "bagians": [
           {
             "_type": "bagian",
-            "_key": 1,
+            "key": 1,
             "_judul": "Bagian Pertama Ketentuan Pidana",
             "isi": {
               "_type": "pasals",
               "pasals": [
                 {
                   "_type": "pasal",
-                  "_key": 183,
+                  "key": 183,
                   "isi": {
                     "_type": "referenceText",
                     "references": [],
@@ -2422,7 +2422,7 @@
                 },
                 {
                   "_type": "pasal",
-                  "_key": 184,
+                  "key": 184,
                   "isi": {
                     "_type": "referenceText",
                     "references": [],
@@ -2431,7 +2431,7 @@
                 },
                 {
                   "_type": "pasal",
-                  "_key": 185,
+                  "key": 185,
                   "isi": {
                     "_type": "referenceText",
                     "references": [],
@@ -2440,7 +2440,7 @@
                 },
                 {
                   "_type": "pasal",
-                  "_key": 186,
+                  "key": 186,
                   "isi": {
                     "_type": "referenceText",
                     "references": [],
@@ -2449,7 +2449,7 @@
                 },
                 {
                   "_type": "pasal",
-                  "_key": 187,
+                  "key": 187,
                   "isi": {
                     "_type": "referenceText",
                     "references": [],
@@ -2458,7 +2458,7 @@
                 },
                 {
                   "_type": "pasal",
-                  "_key": 188,
+                  "key": 188,
                   "isi": {
                     "_type": "referenceText",
                     "references": [],
@@ -2467,7 +2467,7 @@
                 },
                 {
                   "_type": "pasal",
-                  "_key": 189,
+                  "key": 189,
                   "isi": {
                     "_type": "referenceText",
                     "references": [],
@@ -2479,14 +2479,14 @@
           },
           {
             "_type": "bagian",
-            "_key": 2,
+            "key": 2,
             "_judul": "Bagian Kedua Sanksi Administratif",
             "isi": {
               "_type": "pasals",
               "pasals": [
                 {
                   "_type": "pasal",
-                  "_key": 190,
+                  "key": 190,
                   "isi": {
                     "_type": "referenceText",
                     "references": [],
@@ -2501,14 +2501,14 @@
     },
     {
       "_type": "bab",
-      "_key": 17,
+      "key": 17,
       "_judul": "BAB XVII KETENTUAN PERALIHAN",
       "isi": {
         "_type": "pasals",
         "pasals": [
           {
             "_type": "pasal",
-            "_key": 191,
+            "key": 191,
             "isi": {
               "_type": "referenceText",
               "references": [],
@@ -2520,14 +2520,14 @@
     },
     {
       "_type": "bab",
-      "_key": 18,
+      "key": 18,
       "_judul": "BAB XVIII KETENTUAN PENUTUP",
       "isi": {
         "_type": "pasals",
         "pasals": [
           {
             "_type": "pasal",
-            "_key": 192,
+            "key": 192,
             "isi": {
               "_type": "referenceText",
               "references": [],
@@ -2536,7 +2536,7 @@
           },
           {
             "_type": "pasal",
-            "_key": 193,
+            "key": 193,
             "isi": {
               "_type": "referenceText",
               "references": [],

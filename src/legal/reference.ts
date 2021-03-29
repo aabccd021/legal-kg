@@ -1,7 +1,7 @@
 import { LegalNode } from '.';
 
 export type ReferenceText = {
-  _type: 'referenceText';
+  type: 'referenceText';
   text: string;
   references: Reference[];
 };

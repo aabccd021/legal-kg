@@ -5,7 +5,7 @@
   "_namaPengesah": "JOKO WIDODO",
   "_name": "UNDANG-UNDANG REPUBLIK INDONESIA",
   "_node": {
-    "_documentType": "uu",
+    "docType": "uu",
     "nomor": 6,
     "tahun": 2018
   },
@@ -382,12 +382,12 @@
                     "end": 81,
                     "node": {
                       "_key": 1,
-                      "_structureType": "ayat",
+                      "nodeType": "ayat",
                       "parentPasal": {
                         "_key": 5,
-                        "_structureType": "pasal",
+                        "nodeType": "pasal",
                         "parentDocument": {
-                          "_documentType": "uu",
+                          "docType": "uu",
                           "nomor": 6,
                           "tahun": 2018
                         }
@@ -529,12 +529,12 @@
                     "end": 114,
                     "node": {
                       "_key": 2,
-                      "_structureType": "ayat",
+                      "nodeType": "ayat",
                       "parentPasal": {
                         "_key": 10,
-                        "_structureType": "pasal",
+                        "nodeType": "pasal",
                         "parentDocument": {
-                          "_documentType": "uu",
+                          "docType": "uu",
                           "nomor": 6,
                           "tahun": 2018
                         }
@@ -546,12 +546,12 @@
                     "end": 101,
                     "node": {
                       "_key": 1,
-                      "_structureType": "ayat",
+                      "nodeType": "ayat",
                       "parentPasal": {
                         "_key": 10,
-                        "_structureType": "pasal",
+                        "nodeType": "pasal",
                         "parentDocument": {
-                          "_documentType": "uu",
+                          "docType": "uu",
                           "nomor": 6,
                           "tahun": 2018
                         }
@@ -595,12 +595,12 @@
                     "end": 74,
                     "node": {
                       "_key": 1,
-                      "_structureType": "ayat",
+                      "nodeType": "ayat",
                       "parentPasal": {
                         "_key": 11,
-                        "_structureType": "pasal",
+                        "nodeType": "pasal",
                         "parentDocument": {
-                          "_documentType": "uu",
+                          "docType": "uu",
                           "nomor": 6,
                           "tahun": 2018
                         }
@@ -664,12 +664,12 @@
                     "end": 73,
                     "node": {
                       "_key": 1,
-                      "_structureType": "ayat",
+                      "nodeType": "ayat",
                       "parentPasal": {
                         "_key": 13,
-                        "_structureType": "pasal",
+                        "nodeType": "pasal",
                         "parentDocument": {
-                          "_documentType": "uu",
+                          "docType": "uu",
                           "nomor": 6,
                           "tahun": 2018
                         }
@@ -713,12 +713,12 @@
                     "end": 121,
                     "node": {
                       "_key": 1,
-                      "_structureType": "ayat",
+                      "nodeType": "ayat",
                       "parentPasal": {
                         "_key": 14,
-                        "_structureType": "pasal",
+                        "nodeType": "pasal",
                         "parentDocument": {
-                          "_documentType": "uu",
+                          "docType": "uu",
                           "nomor": 6,
                           "tahun": 2018
                         }
@@ -771,12 +771,12 @@
                       "end": 67,
                       "node": {
                         "_key": 1,
-                        "_structureType": "ayat",
+                        "nodeType": "ayat",
                         "parentPasal": {
                           "_key": 15,
-                          "_structureType": "pasal",
+                          "nodeType": "pasal",
                           "parentDocument": {
-                            "_documentType": "uu",
+                            "docType": "uu",
                             "nomor": 6,
                             "tahun": 2018
                           }
@@ -871,12 +871,12 @@
                     "end": 67,
                     "node": {
                       "_key": 1,
-                      "_structureType": "ayat",
+                      "nodeType": "ayat",
                       "parentPasal": {
                         "_key": 16,
-                        "_structureType": "pasal",
+                        "nodeType": "pasal",
                         "parentDocument": {
-                          "_documentType": "uu",
+                          "docType": "uu",
                           "nomor": 6,
                           "tahun": 2018
                         }
@@ -908,12 +908,12 @@
                     "end": 115,
                     "node": {
                       "_key": 1,
-                      "_structureType": "ayat",
+                      "nodeType": "ayat",
                       "parentPasal": {
                         "_key": 16,
-                        "_structureType": "pasal",
+                        "nodeType": "pasal",
                         "parentDocument": {
-                          "_documentType": "uu",
+                          "docType": "uu",
                           "nomor": 6,
                           "tahun": 2018
                         }
@@ -935,12 +935,12 @@
                     "end": 85,
                     "node": {
                       "_key": 4,
-                      "_structureType": "ayat",
+                      "nodeType": "ayat",
                       "parentPasal": {
                         "_key": 16,
-                        "_structureType": "pasal",
+                        "nodeType": "pasal",
                         "parentDocument": {
-                          "_documentType": "uu",
+                          "docType": "uu",
                           "nomor": 6,
                           "tahun": 2018
                         }
@@ -994,12 +994,12 @@
                     "end": 63,
                     "node": {
                       "_key": 1,
-                      "_structureType": "ayat",
+                      "nodeType": "ayat",
                       "parentPasal": {
                         "_key": 18,
-                        "_structureType": "pasal",
+                        "nodeType": "pasal",
                         "parentDocument": {
-                          "_documentType": "uu",
+                          "docType": "uu",
                           "nomor": 6,
                           "tahun": 2018
                         }
@@ -1093,15 +1093,15 @@
                                   "end": 82,
                                   "node": {
                                     "_key": "b",
-                                    "_structureType": "point",
+                                    "nodeType": "point",
                                     "parentPoints": {
                                       "_key": 1,
-                                      "_structureType": "ayat",
+                                      "nodeType": "ayat",
                                       "parentPasal": {
                                         "_key": 19,
-                                        "_structureType": "pasal",
+                                        "nodeType": "pasal",
                                         "parentDocument": {
-                                          "_documentType": "uu",
+                                          "docType": "uu",
                                           "nomor": 6,
                                           "tahun": 2018
                                         }
@@ -1114,15 +1114,15 @@
                                   "end": 76,
                                   "node": {
                                     "_key": "a",
-                                    "_structureType": "point",
+                                    "nodeType": "point",
                                     "parentPoints": {
                                       "_key": 1,
-                                      "_structureType": "ayat",
+                                      "nodeType": "ayat",
                                       "parentPasal": {
                                         "_key": 19,
-                                        "_structureType": "pasal",
+                                        "nodeType": "pasal",
                                         "parentDocument": {
-                                          "_documentType": "uu",
+                                          "docType": "uu",
                                           "nomor": 6,
                                           "tahun": 2018
                                         }
@@ -1155,12 +1155,12 @@
                             "end": 53,
                             "node": {
                               "_key": 1,
-                              "_structureType": "ayat",
+                              "nodeType": "ayat",
                               "parentPasal": {
                                 "_key": 19,
-                                "_structureType": "pasal",
+                                "nodeType": "pasal",
                                 "parentDocument": {
-                                  "_documentType": "uu",
+                                  "docType": "uu",
                                   "nomor": 6,
                                   "tahun": 2018
                                 }
@@ -1182,12 +1182,12 @@
                             "end": 53,
                             "node": {
                               "_key": 1,
-                              "_structureType": "ayat",
+                              "nodeType": "ayat",
                               "parentPasal": {
                                 "_key": 19,
-                                "_structureType": "pasal",
+                                "nodeType": "pasal",
                                 "parentDocument": {
-                                  "_documentType": "uu",
+                                  "docType": "uu",
                                   "nomor": 6,
                                   "tahun": 2018
                                 }
@@ -1209,12 +1209,12 @@
                             "end": 69,
                             "node": {
                               "_key": 3,
-                              "_structureType": "ayat",
+                              "nodeType": "ayat",
                               "parentPasal": {
                                 "_key": 19,
-                                "_structureType": "pasal",
+                                "nodeType": "pasal",
                                 "parentDocument": {
-                                  "_documentType": "uu",
+                                  "docType": "uu",
                                   "nomor": 6,
                                   "tahun": 2018
                                 }
@@ -1237,12 +1237,12 @@
                               "end": 66,
                               "node": {
                                 "_key": 4,
-                                "_structureType": "ayat",
+                                "nodeType": "ayat",
                                 "parentPasal": {
                                   "_key": 19,
-                                  "_structureType": "pasal",
+                                  "nodeType": "pasal",
                                   "parentDocument": {
-                                    "_documentType": "uu",
+                                    "docType": "uu",
                                     "nomor": 6,
                                     "tahun": 2018
                                   }
@@ -1295,12 +1295,12 @@
                             "end": 127,
                             "node": {
                               "_key": 3,
-                              "_structureType": "ayat",
+                              "nodeType": "ayat",
                               "parentPasal": {
                                 "_key": 19,
-                                "_structureType": "pasal",
+                                "nodeType": "pasal",
                                 "parentDocument": {
-                                  "_documentType": "uu",
+                                  "docType": "uu",
                                   "nomor": 6,
                                   "tahun": 2018
                                 }
@@ -1330,15 +1330,15 @@
                         "end": 105,
                         "node": {
                           "_key": "b",
-                          "_structureType": "point",
+                          "nodeType": "point",
                           "parentPoints": {
                             "_key": 5,
-                            "_structureType": "ayat",
+                            "nodeType": "ayat",
                             "parentPasal": {
                               "_key": 20,
-                              "_structureType": "pasal",
+                              "nodeType": "pasal",
                               "parentDocument": {
-                                "_documentType": "uu",
+                                "docType": "uu",
                                 "nomor": 6,
                                 "tahun": 2018
                               }
@@ -1459,12 +1459,12 @@
                             "end": 117,
                             "node": {
                               "_key": 1,
-                              "_structureType": "ayat",
+                              "nodeType": "ayat",
                               "parentPasal": {
                                 "_key": 22,
-                                "_structureType": "pasal",
+                                "nodeType": "pasal",
                                 "parentDocument": {
-                                  "_documentType": "uu",
+                                  "docType": "uu",
                                   "nomor": 6,
                                   "tahun": 2018
                                 }
@@ -1508,12 +1508,12 @@
                             "end": 40,
                             "node": {
                               "_key": 1,
-                              "_structureType": "ayat",
+                              "nodeType": "ayat",
                               "parentPasal": {
                                 "_key": 23,
-                                "_structureType": "pasal",
+                                "nodeType": "pasal",
                                 "parentDocument": {
-                                  "_documentType": "uu",
+                                  "docType": "uu",
                                   "nomor": 6,
                                   "tahun": 2018
                                 }
@@ -1535,12 +1535,12 @@
                             "end": 40,
                             "node": {
                               "_key": 1,
-                              "_structureType": "ayat",
+                              "nodeType": "ayat",
                               "parentPasal": {
                                 "_key": 23,
-                                "_structureType": "pasal",
+                                "nodeType": "pasal",
                                 "parentDocument": {
-                                  "_documentType": "uu",
+                                  "docType": "uu",
                                   "nomor": 6,
                                   "tahun": 2018
                                 }
@@ -1602,12 +1602,12 @@
                             "end": 70,
                             "node": {
                               "_key": 1,
-                              "_structureType": "ayat",
+                              "nodeType": "ayat",
                               "parentPasal": {
                                 "_key": 25,
-                                "_structureType": "pasal",
+                                "nodeType": "pasal",
                                 "parentDocument": {
-                                  "_documentType": "uu",
+                                  "docType": "uu",
                                   "nomor": 6,
                                   "tahun": 2018
                                 }
@@ -1651,12 +1651,12 @@
                             "end": 206,
                             "node": {
                               "_key": 2,
-                              "_structureType": "ayat",
+                              "nodeType": "ayat",
                               "parentPasal": {
                                 "_key": 15,
-                                "_structureType": "pasal",
+                                "nodeType": "pasal",
                                 "parentDocument": {
-                                  "_documentType": "uu",
+                                  "docType": "uu",
                                   "nomor": 6,
                                   "tahun": 2018
                                 }
@@ -1778,12 +1778,12 @@
                             "end": 92,
                             "node": {
                               "_key": 1,
-                              "_structureType": "ayat",
+                              "nodeType": "ayat",
                               "parentPasal": {
                                 "_key": 28,
-                                "_structureType": "pasal",
+                                "nodeType": "pasal",
                                 "parentDocument": {
-                                  "_documentType": "uu",
+                                  "docType": "uu",
                                   "nomor": 6,
                                   "tahun": 2018
                                 }
@@ -1827,12 +1827,12 @@
                             "end": 79,
                             "node": {
                               "_key": 1,
-                              "_structureType": "ayat",
+                              "nodeType": "ayat",
                               "parentPasal": {
                                 "_key": 28,
-                                "_structureType": "pasal",
+                                "nodeType": "pasal",
                                 "parentDocument": {
-                                  "_documentType": "uu",
+                                  "docType": "uu",
                                   "nomor": 6,
                                   "tahun": 2018
                                 }
@@ -1866,9 +1866,9 @@
                             "end": 71,
                             "node": {
                               "_key": 27,
-                              "_structureType": "pasal",
+                              "nodeType": "pasal",
                               "parentDocument": {
-                                "_documentType": "uu",
+                                "docType": "uu",
                                 "nomor": 6,
                                 "tahun": 2018
                               }
@@ -1889,12 +1889,12 @@
                             "end": 69,
                             "node": {
                               "_key": 1,
-                              "_structureType": "ayat",
+                              "nodeType": "ayat",
                               "parentPasal": {
                                 "_key": 30,
-                                "_structureType": "pasal",
+                                "nodeType": "pasal",
                                 "parentDocument": {
-                                  "_documentType": "uu",
+                                  "docType": "uu",
                                   "nomor": 6,
                                   "tahun": 2018
                                 }
@@ -1976,15 +1976,15 @@
                         "end": 113,
                         "node": {
                           "_key": "b",
-                          "_structureType": "point",
+                          "nodeType": "point",
                           "parentPoints": {
                             "_key": 3,
-                            "_structureType": "ayat",
+                            "nodeType": "ayat",
                             "parentPasal": {
                               "_key": 31,
-                              "_structureType": "pasal",
+                              "nodeType": "pasal",
                               "parentDocument": {
-                                "_documentType": "uu",
+                                "docType": "uu",
                                 "nomor": 6,
                                 "tahun": 2018
                               }
@@ -2035,12 +2035,12 @@
                         "end": 157,
                         "node": {
                           "_key": 2,
-                          "_structureType": "ayat",
+                          "nodeType": "ayat",
                           "parentPasal": {
                             "_key": 15,
-                            "_structureType": "pasal",
+                            "nodeType": "pasal",
                             "parentDocument": {
-                              "_documentType": "uu",
+                              "docType": "uu",
                               "nomor": 6,
                               "tahun": 2018
                             }
@@ -2134,12 +2134,12 @@
                             "end": 50,
                             "node": {
                               "_key": 1,
-                              "_structureType": "ayat",
+                              "nodeType": "ayat",
                               "parentPasal": {
                                 "_key": 35,
-                                "_structureType": "pasal",
+                                "nodeType": "pasal",
                                 "parentDocument": {
-                                  "_documentType": "uu",
+                                  "docType": "uu",
                                   "nomor": 6,
                                   "tahun": 2018
                                 }
@@ -2161,12 +2161,12 @@
                             "end": 140,
                             "node": {
                               "_key": 2,
-                              "_structureType": "ayat",
+                              "nodeType": "ayat",
                               "parentPasal": {
                                 "_key": 35,
-                                "_structureType": "pasal",
+                                "nodeType": "pasal",
                                 "parentDocument": {
-                                  "_documentType": "uu",
+                                  "docType": "uu",
                                   "nomor": 6,
                                   "tahun": 2018
                                 }
@@ -2188,12 +2188,12 @@
                             "end": 75,
                             "node": {
                               "_key": 1,
-                              "_structureType": "ayat",
+                              "nodeType": "ayat",
                               "parentPasal": {
                                 "_key": 35,
-                                "_structureType": "pasal",
+                                "nodeType": "pasal",
                                 "parentDocument": {
-                                  "_documentType": "uu",
+                                  "docType": "uu",
                                   "nomor": 6,
                                   "tahun": 2018
                                 }
@@ -2215,12 +2215,12 @@
                             "end": 132,
                             "node": {
                               "_key": 1,
-                              "_structureType": "ayat",
+                              "nodeType": "ayat",
                               "parentPasal": {
                                 "_key": 35,
-                                "_structureType": "pasal",
+                                "nodeType": "pasal",
                                 "parentDocument": {
-                                  "_documentType": "uu",
+                                  "docType": "uu",
                                   "nomor": 6,
                                   "tahun": 2018
                                 }
@@ -2264,12 +2264,12 @@
                             "end": 201,
                             "node": {
                               "_key": 1,
-                              "_structureType": "ayat",
+                              "nodeType": "ayat",
                               "parentPasal": {
                                 "_key": 36,
-                                "_structureType": "pasal",
+                                "nodeType": "pasal",
                                 "parentDocument": {
-                                  "_documentType": "uu",
+                                  "docType": "uu",
                                   "nomor": 6,
                                   "tahun": 2018
                                 }
@@ -2321,12 +2321,12 @@
                             "end": 70,
                             "node": {
                               "_key": 1,
-                              "_structureType": "ayat",
+                              "nodeType": "ayat",
                               "parentPasal": {
                                 "_key": 37,
-                                "_structureType": "pasal",
+                                "nodeType": "pasal",
                                 "parentDocument": {
-                                  "_documentType": "uu",
+                                  "docType": "uu",
                                   "nomor": 6,
                                   "tahun": 2018
                                 }
@@ -2348,12 +2348,12 @@
                             "end": 159,
                             "node": {
                               "_key": 2,
-                              "_structureType": "ayat",
+                              "nodeType": "ayat",
                               "parentPasal": {
                                 "_key": 15,
-                                "_structureType": "pasal",
+                                "nodeType": "pasal",
                                 "parentDocument": {
-                                  "_documentType": "uu",
+                                  "docType": "uu",
                                   "nomor": 6,
                                   "tahun": 2018
                                 }
@@ -2540,9 +2540,9 @@
                     "end": 64,
                     "node": {
                       "_key": 39,
-                      "_structureType": "pasal",
+                      "nodeType": "pasal",
                       "parentDocument": {
-                        "_documentType": "uu",
+                        "docType": "uu",
                         "nomor": 6,
                         "tahun": 2018
                       }
@@ -2609,15 +2609,15 @@
                         "end": 84,
                         "node": {
                           "_key": "a",
-                          "_structureType": "point",
+                          "nodeType": "point",
                           "parentPoints": {
                             "_key": 1,
-                            "_structureType": "ayat",
+                            "nodeType": "ayat",
                             "parentPasal": {
                               "_key": 41,
-                              "_structureType": "pasal",
+                              "nodeType": "pasal",
                               "parentDocument": {
-                                "_documentType": "uu",
+                                "docType": "uu",
                                 "nomor": 6,
                                 "tahun": 2018
                               }
@@ -2640,15 +2640,15 @@
                         "end": 84,
                         "node": {
                           "_key": "b",
-                          "_structureType": "point",
+                          "nodeType": "point",
                           "parentPoints": {
                             "_key": 1,
-                            "_structureType": "ayat",
+                            "nodeType": "ayat",
                             "parentPasal": {
                               "_key": 41,
-                              "_structureType": "pasal",
+                              "nodeType": "pasal",
                               "parentDocument": {
-                                "_documentType": "uu",
+                                "docType": "uu",
                                 "nomor": 6,
                                 "tahun": 2018
                               }
@@ -2671,12 +2671,12 @@
                         "end": 78,
                         "node": {
                           "_key": 3,
-                          "_structureType": "ayat",
+                          "nodeType": "ayat",
                           "parentPasal": {
                             "_key": 41,
-                            "_structureType": "pasal",
+                            "nodeType": "pasal",
                             "parentDocument": {
-                              "_documentType": "uu",
+                              "docType": "uu",
                               "nomor": 6,
                               "tahun": 2018
                             }
@@ -2708,12 +2708,12 @@
                         "end": 77,
                         "node": {
                           "_key": 3,
-                          "_structureType": "ayat",
+                          "nodeType": "ayat",
                           "parentPasal": {
                             "_key": 41,
-                            "_structureType": "pasal",
+                            "nodeType": "pasal",
                             "parentDocument": {
-                              "_documentType": "uu",
+                              "docType": "uu",
                               "nomor": 6,
                               "tahun": 2018
                             }
@@ -2757,12 +2757,12 @@
                         "end": 55,
                         "node": {
                           "_key": 1,
-                          "_structureType": "ayat",
+                          "nodeType": "ayat",
                           "parentPasal": {
                             "_key": 42,
-                            "_structureType": "pasal",
+                            "nodeType": "pasal",
                             "parentDocument": {
-                              "_documentType": "uu",
+                              "docType": "uu",
                               "nomor": 6,
                               "tahun": 2018
                             }
@@ -2784,12 +2784,12 @@
                         "end": 63,
                         "node": {
                           "_key": 2,
-                          "_structureType": "ayat",
+                          "nodeType": "ayat",
                           "parentPasal": {
                             "_key": 42,
-                            "_structureType": "pasal",
+                            "nodeType": "pasal",
                             "parentDocument": {
-                              "_documentType": "uu",
+                              "docType": "uu",
                               "nomor": 6,
                               "tahun": 2018
                             }
@@ -2833,12 +2833,12 @@
                         "end": 49,
                         "node": {
                           "_key": 1,
-                          "_structureType": "ayat",
+                          "nodeType": "ayat",
                           "parentPasal": {
                             "_key": 43,
-                            "_structureType": "pasal",
+                            "nodeType": "pasal",
                             "parentDocument": {
-                              "_documentType": "uu",
+                              "docType": "uu",
                               "nomor": 6,
                               "tahun": 2018
                             }
@@ -2876,12 +2876,12 @@
                     "end": 232,
                     "node": {
                       "_key": 2,
-                      "_structureType": "ayat",
+                      "nodeType": "ayat",
                       "parentPasal": {
                         "_key": 15,
-                        "_structureType": "pasal",
+                        "nodeType": "pasal",
                         "parentDocument": {
-                          "_documentType": "uu",
+                          "docType": "uu",
                           "nomor": 6,
                           "tahun": 2018
                         }
@@ -2893,15 +2893,15 @@
                     "end": 246,
                     "node": {
                       "_key": "d",
-                      "_structureType": "point",
+                      "nodeType": "point",
                       "parentPoints": {
                         "_key": 2,
-                        "_structureType": "ayat",
+                        "nodeType": "ayat",
                         "parentPasal": {
                           "_key": 44,
-                          "_structureType": "pasal",
+                          "nodeType": "pasal",
                           "parentDocument": {
-                            "_documentType": "uu",
+                            "docType": "uu",
                             "nomor": 6,
                             "tahun": 2018
                           }
@@ -2925,12 +2925,12 @@
                       "end": 248,
                       "node": {
                         "_key": 1,
-                        "_structureType": "ayat",
+                        "nodeType": "ayat",
                         "parentPasal": {
                           "_key": 45,
-                          "_structureType": "pasal",
+                          "nodeType": "pasal",
                           "parentDocument": {
-                            "_documentType": "uu",
+                            "docType": "uu",
                             "nomor": 6,
                             "tahun": 2018
                           }
@@ -2973,12 +2973,12 @@
                           "end": 289,
                           "node": {
                             "_key": "c",
-                            "_structureType": "point",
+                            "nodeType": "point",
                             "parentPoints": {
                               "_key": 45,
-                              "_structureType": "pasal",
+                              "nodeType": "pasal",
                               "parentDocument": {
-                                "_documentType": "uu",
+                                "docType": "uu",
                                 "nomor": 6,
                                 "tahun": 2018
                               }
@@ -3024,12 +3024,12 @@
                         "end": 100,
                         "node": {
                           "_key": 1,
-                          "_structureType": "ayat",
+                          "nodeType": "ayat",
                           "parentPasal": {
                             "_key": 46,
-                            "_structureType": "pasal",
+                            "nodeType": "pasal",
                             "parentDocument": {
-                              "_documentType": "uu",
+                              "docType": "uu",
                               "nomor": 6,
                               "tahun": 2018
                             }
@@ -3051,12 +3051,12 @@
                         "end": 51,
                         "node": {
                           "_key": 1,
-                          "_structureType": "ayat",
+                          "nodeType": "ayat",
                           "parentPasal": {
                             "_key": 46,
-                            "_structureType": "pasal",
+                            "nodeType": "pasal",
                             "parentDocument": {
-                              "_documentType": "uu",
+                              "docType": "uu",
                               "nomor": 6,
                               "tahun": 2018
                             }
@@ -3086,9 +3086,9 @@
                     "end": 103,
                     "node": {
                       "_key": 44,
-                      "_structureType": "pasal",
+                      "nodeType": "pasal",
                       "parentDocument": {
-                        "_documentType": "uu",
+                        "docType": "uu",
                         "nomor": 6,
                         "tahun": 2018
                       }
@@ -3099,9 +3099,9 @@
                     "end": 126,
                     "node": {
                       "_key": 46,
-                      "_structureType": "pasal",
+                      "nodeType": "pasal",
                       "parentDocument": {
-                        "_documentType": "uu",
+                        "docType": "uu",
                         "nomor": 6,
                         "tahun": 2018
                       }
@@ -3135,9 +3135,9 @@
                           "end": 98,
                           "node": {
                             "_key": 21,
-                            "_structureType": "pasal",
+                            "nodeType": "pasal",
                             "parentDocument": {
-                              "_documentType": "uu",
+                              "docType": "uu",
                               "nomor": 6,
                               "tahun": 2018
                             }
@@ -3148,12 +3148,12 @@
                           "end": 84,
                           "node": {
                             "_key": 2,
-                            "_structureType": "ayat",
+                            "nodeType": "ayat",
                             "parentPasal": {
                               "_key": 19,
-                              "_structureType": "pasal",
+                              "nodeType": "pasal",
                               "parentDocument": {
-                                "_documentType": "uu",
+                                "docType": "uu",
                                 "nomor": 6,
                                 "tahun": 2018
                               }
@@ -3217,9 +3217,9 @@
                           "end": 107,
                           "node": {
                             "_key": 29,
-                            "_structureType": "pasal",
+                            "nodeType": "pasal",
                             "parentDocument": {
-                              "_documentType": "uu",
+                              "docType": "uu",
                               "nomor": 6,
                               "tahun": 2018
                             }
@@ -3230,12 +3230,12 @@
                           "end": 93,
                           "node": {
                             "_key": 2,
-                            "_structureType": "ayat",
+                            "nodeType": "ayat",
                             "parentPasal": {
                               "_key": 28,
-                              "_structureType": "pasal",
+                              "nodeType": "pasal",
                               "parentDocument": {
-                                "_documentType": "uu",
+                                "docType": "uu",
                                 "nomor": 6,
                                 "tahun": 2018
                               }
@@ -3298,12 +3298,12 @@
                         "end": 161,
                         "node": {
                           "_key": 5,
-                          "_structureType": "ayat",
+                          "nodeType": "ayat",
                           "parentPasal": {
                             "_key": 19,
-                            "_structureType": "pasal",
+                            "nodeType": "pasal",
                             "parentDocument": {
-                              "_documentType": "uu",
+                              "docType": "uu",
                               "nomor": 6,
                               "tahun": 2018
                             }
@@ -3325,12 +3325,12 @@
                         "end": 170,
                         "node": {
                           "_key": 3,
-                          "_structureType": "ayat",
+                          "nodeType": "ayat",
                           "parentPasal": {
                             "_key": 30,
-                            "_structureType": "pasal",
+                            "nodeType": "pasal",
                             "parentDocument": {
-                              "_documentType": "uu",
+                              "docType": "uu",
                               "nomor": 6,
                               "tahun": 2018
                             }
@@ -3353,12 +3353,12 @@
                           "end": 206,
                           "node": {
                             "_key": 1,
-                            "_structureType": "ayat",
+                            "nodeType": "ayat",
                             "parentPasal": {
                               "_key": 36,
-                              "_structureType": "pasal",
+                              "nodeType": "pasal",
                               "parentDocument": {
-                                "_documentType": "uu",
+                                "docType": "uu",
                                 "nomor": 6,
                                 "tahun": 2018
                               }
@@ -3421,12 +3421,12 @@
                         "end": 130,
                         "node": {
                           "_key": 5,
-                          "_structureType": "ayat",
+                          "nodeType": "ayat",
                           "parentPasal": {
                             "_key": 48,
-                            "_structureType": "pasal",
+                            "nodeType": "pasal",
                             "parentDocument": {
-                              "_documentType": "uu",
+                              "docType": "uu",
                               "nomor": 6,
                               "tahun": 2018
                             }
@@ -3438,12 +3438,12 @@
                         "end": 107,
                         "node": {
                           "_key": 1,
-                          "_structureType": "ayat",
+                          "nodeType": "ayat",
                           "parentPasal": {
                             "_key": 48,
-                            "_structureType": "pasal",
+                            "nodeType": "pasal",
                             "parentDocument": {
-                              "_documentType": "uu",
+                              "docType": "uu",
                               "nomor": 6,
                               "tahun": 2018
                             }
@@ -3503,12 +3503,12 @@
                         "end": 131,
                         "node": {
                           "_key": 1,
-                          "_structureType": "ayat",
+                          "nodeType": "ayat",
                           "parentPasal": {
                             "_key": 49,
-                            "_structureType": "pasal",
+                            "nodeType": "pasal",
                             "parentDocument": {
-                              "_documentType": "uu",
+                              "docType": "uu",
                               "nomor": 6,
                               "tahun": 2018
                             }
@@ -3530,12 +3530,12 @@
                         "end": 89,
                         "node": {
                           "_key": 1,
-                          "_structureType": "ayat",
+                          "nodeType": "ayat",
                           "parentPasal": {
                             "_key": 49,
-                            "_structureType": "pasal",
+                            "nodeType": "pasal",
                             "parentDocument": {
-                              "_documentType": "uu",
+                              "docType": "uu",
                               "nomor": 6,
                               "tahun": 2018
                             }
@@ -3587,12 +3587,12 @@
                         "end": 50,
                         "node": {
                           "_key": 1,
-                          "_structureType": "ayat",
+                          "nodeType": "ayat",
                           "parentPasal": {
                             "_key": 50,
-                            "_structureType": "pasal",
+                            "nodeType": "pasal",
                             "parentDocument": {
-                              "_documentType": "uu",
+                              "docType": "uu",
                               "nomor": 6,
                               "tahun": 2018
                             }
@@ -3614,12 +3614,12 @@
                         "end": 49,
                         "node": {
                           "_key": 1,
-                          "_structureType": "ayat",
+                          "nodeType": "ayat",
                           "parentPasal": {
                             "_key": 50,
-                            "_structureType": "pasal",
+                            "nodeType": "pasal",
                             "parentDocument": {
-                              "_documentType": "uu",
+                              "docType": "uu",
                               "nomor": 6,
                               "tahun": 2018
                             }
@@ -3695,12 +3695,12 @@
                         "end": 104,
                         "node": {
                           "_key": 1,
-                          "_structureType": "ayat",
+                          "nodeType": "ayat",
                           "parentPasal": {
                             "_key": 52,
-                            "_structureType": "pasal",
+                            "nodeType": "pasal",
                             "parentDocument": {
-                              "_documentType": "uu",
+                              "docType": "uu",
                               "nomor": 6,
                               "tahun": 2018
                             }
@@ -3752,12 +3752,12 @@
                         "end": 52,
                         "node": {
                           "_key": 1,
-                          "_structureType": "ayat",
+                          "nodeType": "ayat",
                           "parentPasal": {
                             "_key": 53,
-                            "_structureType": "pasal",
+                            "nodeType": "pasal",
                             "parentDocument": {
-                              "_documentType": "uu",
+                              "docType": "uu",
                               "nomor": 6,
                               "tahun": 2018
                             }
@@ -3853,12 +3853,12 @@
                         "end": 106,
                         "node": {
                           "_key": 1,
-                          "_structureType": "ayat",
+                          "nodeType": "ayat",
                           "parentPasal": {
                             "_key": 55,
-                            "_structureType": "pasal",
+                            "nodeType": "pasal",
                             "parentDocument": {
-                              "_documentType": "uu",
+                              "docType": "uu",
                               "nomor": 6,
                               "tahun": 2018
                             }
@@ -3910,12 +3910,12 @@
                         "end": 56,
                         "node": {
                           "_key": 1,
-                          "_structureType": "ayat",
+                          "nodeType": "ayat",
                           "parentPasal": {
                             "_key": 56,
-                            "_structureType": "pasal",
+                            "nodeType": "pasal",
                             "parentDocument": {
-                              "_documentType": "uu",
+                              "docType": "uu",
                               "nomor": 6,
                               "tahun": 2018
                             }
@@ -4030,12 +4030,12 @@
                           "end": 67,
                           "node": {
                             "_key": 1,
-                            "_structureType": "ayat",
+                            "nodeType": "ayat",
                             "parentPasal": {
                               "_key": 59,
-                              "_structureType": "pasal",
+                              "nodeType": "pasal",
                               "parentDocument": {
-                                "_documentType": "uu",
+                                "docType": "uu",
                                 "nomor": 6,
                                 "tahun": 2018
                               }
@@ -4151,12 +4151,12 @@
                     "end": 62,
                     "node": {
                       "_key": 1,
-                      "_structureType": "ayat",
+                      "nodeType": "ayat",
                       "parentPasal": {
                         "_key": 61,
-                        "_structureType": "pasal",
+                        "nodeType": "pasal",
                         "parentDocument": {
-                          "_documentType": "uu",
+                          "docType": "uu",
                           "nomor": 6,
                           "tahun": 2018
                         }
@@ -4283,9 +4283,9 @@
                       "end": 55,
                       "node": {
                         "_key": 62,
-                        "_structureType": "pasal",
+                        "nodeType": "pasal",
                         "parentDocument": {
-                          "_documentType": "uu",
+                          "docType": "uu",
                           "nomor": 6,
                           "tahun": 2018
                         }
@@ -4307,9 +4307,9 @@
                           "end": 108,
                           "node": {
                             "_key": 19,
-                            "_structureType": "pasal",
+                            "nodeType": "pasal",
                             "parentDocument": {
-                              "_documentType": "uu",
+                              "docType": "uu",
                               "nomor": 6,
                               "tahun": 2018
                             }
@@ -4330,9 +4330,9 @@
                           "end": 137,
                           "node": {
                             "_key": 29,
-                            "_structureType": "pasal",
+                            "nodeType": "pasal",
                             "parentDocument": {
-                              "_documentType": "uu",
+                              "docType": "uu",
                               "nomor": 6,
                               "tahun": 2018
                             }
@@ -4353,9 +4353,9 @@
                           "end": 134,
                           "node": {
                             "_key": 36,
-                            "_structureType": "pasal",
+                            "nodeType": "pasal",
                             "parentDocument": {
-                              "_documentType": "uu",
+                              "docType": "uu",
                               "nomor": 6,
                               "tahun": 2018
                             }
@@ -4386,12 +4386,12 @@
                     "end": 54,
                     "node": {
                       "_key": 1,
-                      "_structureType": "ayat",
+                      "nodeType": "ayat",
                       "parentPasal": {
                         "_key": 63,
-                        "_structureType": "pasal",
+                        "nodeType": "pasal",
                         "parentDocument": {
-                          "_documentType": "uu",
+                          "docType": "uu",
                           "nomor": 6,
                           "tahun": 2018
                         }
@@ -4529,9 +4529,9 @@
                     "end": 139,
                     "node": {
                       "_key": 64,
-                      "_structureType": "pasal",
+                      "nodeType": "pasal",
                       "parentDocument": {
-                        "_documentType": "uu",
+                        "docType": "uu",
                         "nomor": 6,
                         "tahun": 2018
                       }
@@ -4542,9 +4542,9 @@
                     "end": 153,
                     "node": {
                       "_key": 65,
-                      "_structureType": "pasal",
+                      "nodeType": "pasal",
                       "parentDocument": {
-                        "_documentType": "uu",
+                        "docType": "uu",
                         "nomor": 6,
                         "tahun": 2018
                       }
@@ -4864,12 +4864,12 @@
                         "end": 44,
                         "node": {
                           "_key": 1,
-                          "_structureType": "ayat",
+                          "nodeType": "ayat",
                           "parentPasal": {
                             "_key": 72,
-                            "_structureType": "pasal",
+                            "nodeType": "pasal",
                             "parentDocument": {
-                              "_documentType": "uu",
+                              "docType": "uu",
                               "nomor": 6,
                               "tahun": 2018
                             }
@@ -4973,12 +4973,12 @@
                               "end": 87,
                               "node": {
                                 "_key": 2,
-                                "_structureType": "ayat",
+                                "nodeType": "ayat",
                                 "parentPasal": {
                                   "_key": 15,
-                                  "_structureType": "pasal",
+                                  "nodeType": "pasal",
                                   "parentDocument": {
-                                    "_documentType": "uu",
+                                    "docType": "uu",
                                     "nomor": 6,
                                     "tahun": 2018
                                   }
@@ -5040,12 +5040,12 @@
                         "end": 99,
                         "node": {
                           "_key": 3,
-                          "_structureType": "ayat",
+                          "nodeType": "ayat",
                           "parentPasal": {
                             "_key": 75,
-                            "_structureType": "pasal",
+                            "nodeType": "pasal",
                             "parentDocument": {
-                              "_documentType": "uu",
+                              "docType": "uu",
                               "nomor": 6,
                               "tahun": 2018
                             }
@@ -5181,12 +5181,12 @@
                         "end": 62,
                         "node": {
                           "_key": 1,
-                          "_structureType": "ayat",
+                          "nodeType": "ayat",
                           "parentPasal": {
                             "_key": 77,
-                            "_structureType": "pasal",
+                            "nodeType": "pasal",
                             "parentDocument": {
-                              "_documentType": "uu",
+                              "docType": "uu",
                               "nomor": 6,
                               "tahun": 2018
                             }
@@ -5208,12 +5208,12 @@
                         "end": 81,
                         "node": {
                           "_key": 1,
-                          "_structureType": "ayat",
+                          "nodeType": "ayat",
                           "parentPasal": {
                             "_key": 77,
-                            "_structureType": "pasal",
+                            "nodeType": "pasal",
                             "parentDocument": {
-                              "_documentType": "uu",
+                              "docType": "uu",
                               "nomor": 6,
                               "tahun": 2018
                             }
@@ -5304,9 +5304,9 @@
                 "end": 214,
                 "node": {
                   "_key": 8,
-                  "_structureType": "pasal",
+                  "nodeType": "pasal",
                   "parentDocument": {
-                    "_documentType": "uu",
+                    "docType": "uu",
                     "nomor": 6,
                     "tahun": 2018
                   }
@@ -5317,9 +5317,9 @@
                 "end": 695,
                 "node": {
                   "_key": 81,
-                  "_structureType": "pasal",
+                  "nodeType": "pasal",
                   "parentDocument": {
-                    "_documentType": "uu",
+                    "docType": "uu",
                     "nomor": 6,
                     "tahun": 2018
                   }
@@ -5330,12 +5330,12 @@
                 "end": 606,
                 "node": {
                   "_key": 1,
-                  "_structureType": "ayat",
+                  "nodeType": "ayat",
                   "parentPasal": {
                     "_key": 79,
-                    "_structureType": "pasal",
+                    "nodeType": "pasal",
                     "parentDocument": {
-                      "_documentType": "uu",
+                      "docType": "uu",
                       "nomor": 6,
                       "tahun": 2018
                     }
@@ -5347,12 +5347,12 @@
                 "end": 416,
                 "node": {
                   "_key": 1,
-                  "_structureType": "ayat",
+                  "nodeType": "ayat",
                   "parentPasal": {
                     "_key": 79,
-                    "_structureType": "pasal",
+                    "nodeType": "pasal",
                     "parentDocument": {
-                      "_documentType": "uu",
+                      "docType": "uu",
                       "nomor": 6,
                       "tahun": 2018
                     }
@@ -5412,12 +5412,12 @@
                           "end": 57,
                           "node": {
                             "_key": 2,
-                            "_structureType": "ayat",
+                            "nodeType": "ayat",
                             "parentPasal": {
                               "_key": 82,
-                              "_structureType": "pasal",
+                              "nodeType": "pasal",
                               "parentDocument": {
-                                "_documentType": "uu",
+                                "docType": "uu",
                                 "nomor": 6,
                                 "tahun": 2018
                               }
@@ -5429,12 +5429,12 @@
                           "end": 44,
                           "node": {
                             "_key": 1,
-                            "_structureType": "ayat",
+                            "nodeType": "ayat",
                             "parentPasal": {
                               "_key": 82,
-                              "_structureType": "pasal",
+                              "nodeType": "pasal",
                               "parentDocument": {
-                                "_documentType": "uu",
+                                "docType": "uu",
                                 "nomor": 6,
                                 "tahun": 2018
                               }
@@ -5497,12 +5497,12 @@
                         "end": 89,
                         "node": {
                           "_key": 2,
-                          "_structureType": "ayat",
+                          "nodeType": "ayat",
                           "parentPasal": {
                             "_key": 82,
-                            "_structureType": "pasal",
+                            "nodeType": "pasal",
                             "parentDocument": {
-                              "_documentType": "uu",
+                              "docType": "uu",
                               "nomor": 6,
                               "tahun": 2018
                             }
@@ -5564,12 +5564,12 @@
                         "end": 77,
                         "node": {
                           "_key": 1,
-                          "_structureType": "ayat",
+                          "nodeType": "ayat",
                           "parentPasal": {
                             "_key": 83,
-                            "_structureType": "pasal",
+                            "nodeType": "pasal",
                             "parentDocument": {
-                              "_documentType": "uu",
+                              "docType": "uu",
                               "nomor": 6,
                               "tahun": 2018
                             }
@@ -5854,12 +5854,12 @@
                 "end": 209,
                 "node": {
                   "_key": 3,
-                  "_structureType": "ayat",
+                  "nodeType": "ayat",
                   "parentPasal": {
                     "_key": 19,
-                    "_structureType": "pasal",
+                    "nodeType": "pasal",
                     "parentDocument": {
-                      "_documentType": "uu",
+                      "docType": "uu",
                       "nomor": 6,
                       "tahun": 2018
                     }
@@ -5881,12 +5881,12 @@
                 "end": 218,
                 "node": {
                   "_key": 1,
-                  "_structureType": "ayat",
+                  "nodeType": "ayat",
                   "parentPasal": {
                     "_key": 30,
-                    "_structureType": "pasal",
+                    "nodeType": "pasal",
                     "parentDocument": {
-                      "_documentType": "uu",
+                      "docType": "uu",
                       "nomor": 6,
                       "tahun": 2018
                     }
@@ -5908,9 +5908,9 @@
                 "end": 167,
                 "node": {
                   "_key": 35,
-                  "_structureType": "pasal",
+                  "nodeType": "pasal",
                   "parentDocument": {
-                    "_documentType": "uu",
+                    "docType": "uu",
                     "nomor": 6,
                     "tahun": 2018
                   }
@@ -5931,12 +5931,12 @@
                 "end": 116,
                 "node": {
                   "_key": 1,
-                  "_structureType": "ayat",
+                  "nodeType": "ayat",
                   "parentPasal": {
                     "_key": 9,
-                    "_structureType": "pasal",
+                    "nodeType": "pasal",
                     "parentDocument": {
-                      "_documentType": "uu",
+                      "docType": "uu",
                       "nomor": 6,
                       "tahun": 2018
                     }
@@ -5959,9 +5959,9 @@
                   "end": 64,
                   "node": {
                     "_key": 90,
-                    "_structureType": "pasal",
+                    "nodeType": "pasal",
                     "parentDocument": {
-                      "_documentType": "uu",
+                      "docType": "uu",
                       "nomor": 6,
                       "tahun": 2018
                     }
@@ -5972,9 +5972,9 @@
                   "end": 74,
                   "node": {
                     "_key": 91,
-                    "_structureType": "pasal",
+                    "nodeType": "pasal",
                     "parentDocument": {
-                      "_documentType": "uu",
+                      "docType": "uu",
                       "nomor": 6,
                       "tahun": 2018
                     }
@@ -6026,12 +6026,12 @@
                       "end": 193,
                       "node": {
                         "_key": "a",
-                        "_structureType": "point",
+                        "nodeType": "point",
                         "parentPoints": {
                           "_key": 94,
-                          "_structureType": "pasal",
+                          "nodeType": "pasal",
                           "parentDocument": {
-                            "_documentType": "uu",
+                            "docType": "uu",
                             "nomor": 6,
                             "tahun": 2018
                           }
@@ -6219,12 +6219,12 @@
                 "end": 78,
                 "node": {
                   "_key": "d",
-                  "_structureType": "point",
+                  "nodeType": "point",
                   "parentPoints": {
-                    "_structureType": "metadata",
+                    "nodeType": "metadata",
                     "metadataType": "documentMenimbang",
                     "parentDocument": {
-                      "_documentType": "uu",
+                      "docType": "uu",
                       "nomor": 6,
                       "tahun": 2018
                     }
@@ -6236,12 +6236,12 @@
                 "end": 71,
                 "node": {
                   "_key": "c",
-                  "_structureType": "point",
+                  "nodeType": "point",
                   "parentPoints": {
-                    "_structureType": "metadata",
+                    "nodeType": "metadata",
                     "metadataType": "documentMenimbang",
                     "parentDocument": {
-                      "_documentType": "uu",
+                      "docType": "uu",
                       "nomor": 6,
                       "tahun": 2018
                     }
@@ -6253,12 +6253,12 @@
                 "end": 68,
                 "node": {
                   "_key": "b",
-                  "_structureType": "point",
+                  "nodeType": "point",
                   "parentPoints": {
-                    "_structureType": "metadata",
+                    "nodeType": "metadata",
                     "metadataType": "documentMenimbang",
                     "parentDocument": {
-                      "_documentType": "uu",
+                      "docType": "uu",
                       "nomor": 6,
                       "tahun": 2018
                     }
@@ -6270,12 +6270,12 @@
                 "end": 65,
                 "node": {
                   "_key": "a",
-                  "_structureType": "point",
+                  "nodeType": "point",
                   "parentPoints": {
-                    "_structureType": "metadata",
+                    "nodeType": "metadata",
                     "metadataType": "documentMenimbang",
                     "parentDocument": {
-                      "_documentType": "uu",
+                      "docType": "uu",
                       "nomor": 6,
                       "tahun": 2018
                     }
@@ -6287,9 +6287,9 @@
                 "end": 197,
                 "node": {
                   "_key": 20,
-                  "_structureType": "pasal",
+                  "nodeType": "pasal",
                   "parentDocument": {
-                    "_documentType": "uu",
+                    "docType": "uu",
                     "nomor": 6,
                     "tahun": 2018
                   }
@@ -6300,9 +6300,9 @@
                 "end": 207,
                 "node": {
                   "_key": 28,
-                  "_structureType": "pasal",
+                  "nodeType": "pasal",
                   "parentDocument": {
-                    "_documentType": "uu",
+                    "docType": "uu",
                     "nomor": 6,
                     "tahun": 2018
                   }
@@ -6313,12 +6313,12 @@
                 "end": 187,
                 "node": {
                   "_key": 1,
-                  "_structureType": "ayat",
+                  "nodeType": "ayat",
                   "parentPasal": {
                     "_key": 5,
-                    "_structureType": "pasal",
+                    "nodeType": "pasal",
                     "parentDocument": {
-                      "_documentType": "uu",
+                      "docType": "uu",
                       "nomor": 6,
                       "tahun": 2018
                     }

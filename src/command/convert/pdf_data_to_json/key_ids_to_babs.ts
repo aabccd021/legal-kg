@@ -1,21 +1,21 @@
-import { AmendedPasal } from './../../../legal/structure/amend';
+import { AmendedPasal } from '../../../legal/component/amend';
 import {
   AmenderDeletePoint,
   AmendedPoint,
   AmenderInsertPoint,
   AmenderUpdatePoint,
-} from '../../../legal/structure/amend';
-import { Paragraf, Paragrafs } from '../../../legal/structure/paragraf';
+} from '../../../legal/component/amend';
+import { Paragraf, Paragrafs } from '../../../legal/component/paragraf';
 import { chain, curry, isEmpty, isUndefined, keys, reduce } from 'lodash';
 import { ReferenceText } from '../../../legal/reference';
-import { Bab } from '../../../legal/structure/bab';
-import { Bagian, Bagians } from '../../../legal/structure/bagian';
-import { IsiPasal, Pasal, PasalNode, Pasals } from '../../../legal/structure/pasal';
+import { Bab } from '../../../legal/component/bab';
+import { Bagian, Bagians } from '../../../legal/component/bagian';
+import { PasalContent, Pasal, PasalNode, Pasals } from '../../../legal/component/pasal';
 import { lastOf, neverUndefined, Span } from '../../../util';
 import { KeyIds } from './scan';
 import { spansInRange, spanIdKeyMapOf, toSpansWith } from './util';
-import { AmenderPoints } from '../../../legal/structure/amend';
-import { Ayat, Ayats } from '../../../legal/structure/ayat';
+import { AmenderPoints } from '../../../legal/component/amend';
+import { Ayat, Ayats } from '../../../legal/component/ayat';
 import {
   hurufKeyOfSpan,
   nomorKeyOfSpan,
@@ -24,7 +24,7 @@ import {
   removeNomorKey,
   safeParseInt,
 } from './parse_key_from_spans';
-import { Point, Points } from '../../../legal/structure/point';
+import { Point, Points } from '../../../legal/component/point';
 import assertNever from 'assert-never';
 import { DocumentNode } from '../../../legal/document';
 
@@ -45,47 +45,55 @@ export function babsOfKeyIds(context: Context, spans: Span[]): Bab[] {
 export type KeySpans = [string, Span[]];
 
 const spansToBabWith = curry(spansToBab);
-function spansToBab(context: Context, keySpans: KeySpans): Bab {
+function spansToBab(context: Context, [key, spans]: KeySpans): Bab {
   const { bagianKeyOfId, pasalKeyOfId } = context.keyIds;
-  const [key, spans] = keySpans;
   const { spanIdKeyMap, toStructure } = spanIdKeyMapOf<Bagian, Pasal, Bagians, Pasals>(
-    [bagianKeyOfId, spansToBagian, (bagians) => ({ _type: 'bagians', bagians })],
-    [pasalKeyOfId, spansToPasal, (pasals) => ({ _type: 'pasals', pasals })],
+    [bagianKeyOfId, spansToBagian, (bagians) => ({ type: 'bagians', bagianArr: bagians })],
+    [pasalKeyOfId, spansToPasal, (pasals) => ({ type: 'pasals', pasalArr: pasals })],
     spans,
     context
   );
   const { preKeySpans, spansOfKey } = toSpansWith(spanIdKeyMap, spans.slice(1));
-  const isi = chain(spansOfKey).toPairs().thru<Bagians | Pasals>(toStructure).value();
-  const _judul = preKeySpans.map(({ str }) => str).join(' ');
-  const _key = parseInt(key);
-  return { _type: 'bab', _key, _judul, isi };
+  return {
+    type: 'bab',
+    key: parseInt(key),
+    title: preKeySpans.map(spanToStr).join(' '),
+    content: chain(spansOfKey).toPairs().thru<Bagians | Pasals>(toStructure).value(),
+  };
 }
 
-function spansToBagian(context: Context, keySpans: KeySpans): Bagian {
+function spansToBagian(context: Context, [key, spans]: KeySpans): Bagian {
   const { paragrafKeyOfId, pasalKeyOfId } = context.keyIds;
-  const [key, spans] = keySpans;
   const { spanIdKeyMap, toStructure } = spanIdKeyMapOf<Paragraf, Pasal, Paragrafs, Pasals>(
-    [paragrafKeyOfId, spansToParagraf, (paragrafs) => ({ _type: 'paragrafs', paragrafs })],
-    [pasalKeyOfId, spansToPasal, (pasals) => ({ _type: 'pasals', pasals })],
+    [
+      paragrafKeyOfId,
+      spansToParagraf,
+      (paragrafs) => ({ type: 'paragrafs', paragrafArr: paragrafs }),
+    ],
+    [pasalKeyOfId, spansToPasal, (pasals) => ({ type: 'pasals', pasalArr: pasals })],
     spans,
     context
   );
   const { preKeySpans, spansOfKey } = toSpansWith(spanIdKeyMap, spans);
-  const isi = chain(spansOfKey).toPairs().thru<Paragrafs | Pasals>(toStructure).value();
-  const _judul = preKeySpans.map(({ str }) => str).join(' ');
-  const _key = parseInt(key);
-  return { _type: 'bagian', _key, _judul, isi };
+  return {
+    type: 'bagian',
+    key: parseInt(key),
+    title: preKeySpans.map(spanToStr).join(' '),
+    content: chain(spansOfKey).toPairs().thru<Paragrafs | Pasals>(toStructure).value(),
+  };
 }
 
-function spansToParagraf(context: Context, keySpans: KeySpans): Paragraf {
-  const { pasalKeyOfId } = context.keyIds;
-  const [key, spans] = keySpans;
-  const { preKeySpans, spansOfKey } = toSpansWith(pasalKeyOfId, spans);
-  const pasals = chain(spansOfKey).toPairs().map(spansToPasalWith(context)).value();
-  const isi: Pasals = { _type: 'pasals', pasals };
-  const _judul = preKeySpans.map(({ str }) => str).join(' ');
-  const _key = parseInt(key);
-  return { _type: 'paragraf', _key, _judul, isi };
+function spansToParagraf(context: Context, [key, spans]: KeySpans): Paragraf {
+  const { preKeySpans, spansOfKey } = toSpansWith(context.keyIds.pasalKeyOfId, spans);
+  return {
+    type: 'paragraf',
+    key: parseInt(key),
+    title: preKeySpans.map(({ str }) => str).join(' '),
+    content: {
+      type: 'pasals',
+      pasalArr: chain(spansOfKey).toPairs().map(spansToPasalWith(context)).value(),
+    },
+  };
 }
 
 const spansToPasalWith = curry(spansToPasal);
@@ -93,10 +101,10 @@ function spansToPasal(context: Context, keySpans: KeySpans): Pasal {
   const [key, spans] = keySpans;
   const isi = isiPasalOf(context, spans.slice(1));
   const _key = parseInt(key);
-  return { _type: 'pasal', _key, isi };
+  return { type: 'pasal', key: _key, content: isi };
 }
 
-function isiPasalOf(context: Context, spans: Span[]): IsiPasal {
+function isiPasalOf(context: Context, spans: Span[]): PasalContent {
   const { keyIds, hasAmendPasal } = context;
   const { amendNomorKeyOfId } = keyIds;
   if (hasAmendPasal && !isEmpty(spansInRange(amendNomorKeyOfId, spans))) {
@@ -110,7 +118,7 @@ function ayatsOf(context: Context, spans: Span[]): Ayats | undefined {
   const { spansOfKey } = toSpansWith(ayatKeyOfId, spans);
   if (isEmpty(spansOfKey)) return undefined;
   const ayats = chain(spansOfKey).toPairs().map(spanToAyatWith(context)).value();
-  return { _type: 'ayats', ayats };
+  return { type: 'ayats', ayatArr: ayats };
 }
 
 function amendAyatsOf(context: Context, spans: Span[]): Ayats | undefined {
@@ -118,7 +126,7 @@ function amendAyatsOf(context: Context, spans: Span[]): Ayats | undefined {
   const { spansOfKey } = toSpansWith(amendAyatKeyOfId, spans);
   if (isEmpty(spansOfKey)) return undefined;
   const ayats = chain(spansOfKey).toPairs().map(spanToAyatWith(context)).value();
-  return { _type: 'ayats', ayats };
+  return { type: 'ayats', ayatArr: ayats };
 }
 
 function pointsOf(context: Context, spans: Span[]): Points | undefined {
@@ -145,14 +153,14 @@ function _getPoints(context: Context, _type: PointType, spans: Span[], spanIdx: 
     .map(toPointWith(context, _type))
     .value();
   const _description = toEmptyReference(spans.slice(0, spanIdx));
-  return { _type: 'points', _description, isi };
+  return { type: 'points', description: _description, content: isi };
 }
 
 const toPointWith = curry(toPoint);
 function toPoint(context: Context, _type: PointType, keySpans: KeySpans): Point {
   const [_key, spans] = keySpans;
   const isi = pointsOf(context, spans) ?? toEmptyReference(spans);
-  const point: Point = { _type, _key, isi };
+  const point: Point = { type: _type, key: _key, content: isi };
 
   return point;
 }
@@ -204,10 +212,12 @@ function strOfKeyInt(_type: PointType): (number: number) => string {
 const spanToAyatWith = curry(spanToAyat);
 function spanToAyat(context: Context, keySpans: KeySpans): Ayat {
   const [key, spans] = keySpans;
-  const _key = parseInt(key);
   const spansWithoutKey = removeAyatKey(spans);
-  const isi = pointsOf(context, spansWithoutKey) ?? toEmptyReference(spansWithoutKey);
-  return { _type: 'ayat', _key, isi };
+  return {
+    type: 'ayat',
+    key: parseInt(key),
+    content: pointsOf(context, spansWithoutKey) ?? toEmptyReference(spansWithoutKey),
+  };
 }
 
 function amenderPointsOf(context: Context, spans: Span[]): AmenderPoints {
@@ -223,15 +233,15 @@ function amenderPointsOf(context: Context, spans: Span[]): AmenderPoints {
     .value();
   const description = toEmptyReference(preKeySpans);
   return {
-    _type: 'amenderPoints',
-    _description: description,
-    isi,
-    parentDocument: amendedDocument,
+    type: 'amenderPoints',
+    description: description,
+    amendedPointArr: isi,
+    parent: amendedDocument,
   };
 }
 
 function getAmendedDocumentNode(spans: Span[]): DocumentNode {
-  const str = spans.map(toStr).join(' ');
+  const str = spans.map(spanToStr).join(' ');
   const [, _nomor, , _tahun] =
     str
       .replace('Undang- Undang', 'Undang-Undang')
@@ -241,7 +251,7 @@ function getAmendedDocumentNode(spans: Span[]): DocumentNode {
   const nomor = safeParseInt(_nomor);
   const tahun = safeParseInt(_tahun);
   if (!isUndefined(nomor) && !isUndefined(tahun))
-    return { _structureType: 'document', _documentType: 'uu', nomor, tahun };
+    return { nodeType: 'document', docType: 'uu', nomor, tahun };
   throw Error(`Legal Not Detected ${str}`);
 }
 
@@ -276,11 +286,11 @@ function spansToAmendDeletePasalPoint(
   const _pasalKey = context.keyIds.amendDeletePasalKeyOfId[firstSpanId];
   if (isUndefined(_pasalKey)) return undefined;
   const deletedPasal: PasalNode = {
-    _structureType: 'pasal',
-    _key: _pasalKey,
-    parentDocumentNode: amendedDocument,
+    nodeType: 'pasal',
+    key: _pasalKey,
+    parentDoc: amendedDocument,
   };
-  return { _type: 'amenderPoint', _nomorKey, _operation: 'delete', deletedPasal: deletedPasal };
+  return { type: 'amenderPoint', key: _nomorKey, operation: 'delete', deletedNode: deletedPasal };
 }
 
 function spansToAmendUpdatePasalPoint(
@@ -310,9 +320,9 @@ function spansToAmendUpdatePasalPoint(
   const isiSpans = spans.slice(pasalTitleIdx + 1);
   const isi = spansToIsiAmendPasal(amendedContext, pasalKey, isiSpans);
   return {
-    _type: 'amenderPoint',
-    _operation: 'update',
-    _nomorKey,
+    type: 'amenderPoint',
+    operation: 'update',
+    key: _nomorKey,
     updatedPasal: isi,
     description,
   };
@@ -324,8 +334,11 @@ function spansToIsiAmendPasal(
   spans: Span[]
 ): AmendedPasal {
   const { context } = amendedContext;
-  const isi = amendAyatsOf(context, spans) ?? pointsOf(context, spans) ?? toEmptyReference(spans);
-  return { _structureType: 'amendedPasal', isi, _key: pasalKey };
+  return {
+    componentType: 'amendedPasal',
+    content: amendAyatsOf(context, spans) ?? pointsOf(context, spans) ?? toEmptyReference(spans),
+    key: pasalKey,
+  };
 }
 
 function spansToAmendInsertPasalPoint(
@@ -343,11 +356,11 @@ function spansToAmendInsertPasalPoint(
     const description = toEmptyReference(spans);
     console.log('Insert not detected', { pasalData }, { nomorKey, spans });
     return {
-      _type: 'amenderPoint',
-      _operation: 'insert',
-      _nomorKey,
+      type: 'amenderPoint',
+      operation: 'insert',
+      key: _nomorKey,
       description,
-      insertedPasals: [],
+      amendedPasalArr: [],
     };
   }
   const pasalDataKeys = keys(pasalData).map((t) => parseInt(t));
@@ -382,11 +395,11 @@ function spansToAmendInsertPasalPoint(
     .map(([pasalKey, spans]) => spansToIsiAmendPasal(amendedContext, pasalKey, spans))
     .value();
   return {
-    _type: 'amenderPoint',
-    _operation: 'insert',
-    _nomorKey,
+    type: 'amenderPoint',
+    operation: 'insert',
+    key: _nomorKey,
     description,
-    insertedPasals: amendedPasals,
+    amendedPasalArr: amendedPasals,
   };
 }
 
@@ -394,10 +407,10 @@ function toEmptyReference(spans: Span[]): ReferenceText {
   return chain(spans)
     .map(({ str }) => str)
     .join(' ')
-    .thru<ReferenceText>((text) => ({ _type: 'referenceText', references: [], text }))
+    .thru<ReferenceText>((text) => ({ type: 'referenceText', references: [], text }))
     .value();
 }
 
-export function toStr(span: Span): string {
+export function spanToStr(span: Span): string {
   return span.str;
 }

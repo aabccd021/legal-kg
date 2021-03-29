@@ -1,20 +1,20 @@
 {
   "_node": {
-    "_documentType": "uu",
+    "docType": "uu",
     "tahun": 2018,
     "nomor": 6
   },
   "babs": [
     {
       "_type": "bab",
-      "_key": 1,
+      "key": 1,
       "_judul": "BABI KETENTUAN UMUM",
       "isi": {
         "_type": "pasals",
         "pasals": [
           {
             "_type": "pasal",
-            "_key": 1,
+            "key": 1,
             "isi": {
               "_type": "referenceText",
               "references": [],
@@ -23,7 +23,7 @@
           },
           {
             "_type": "pasal",
-            "_key": 2,
+            "key": 2,
             "isi": {
               "_type": "referenceText",
               "references": [],
@@ -32,7 +32,7 @@
           },
           {
             "_type": "pasal",
-            "_key": 3,
+            "key": 3,
             "isi": {
               "_type": "referenceText",
               "references": [],
@@ -44,14 +44,14 @@
     },
     {
       "_type": "bab",
-      "_key": 2,
+      "key": 2,
       "_judul": "BAB II TANGGUNG JAWAB PEMERINTAH PUSAT DAN PEMERINTAH DAERAH",
       "isi": {
         "_type": "pasals",
         "pasals": [
           {
             "_type": "pasal",
-            "_key": 4,
+            "key": 4,
             "isi": {
               "_type": "referenceText",
               "references": [],
@@ -60,13 +60,13 @@
           },
           {
             "_type": "pasal",
-            "_key": 5,
+            "key": 5,
             "isi": {
               "_type": "ayats",
               "ayats": [
                 {
                   "_type": "ayat",
-                  "_key": 1,
+                  "key": 1,
                   "isi": {
                     "_type": "referenceText",
                     "references": [],
@@ -78,7 +78,7 @@
           },
           {
             "_type": "pasal",
-            "_key": 6,
+            "key": 6,
             "isi": {
               "_type": "referenceText",
               "references": [],
@@ -90,14 +90,14 @@
     },
     {
       "_type": "bab",
-      "_key": 3,
+      "key": 3,
       "_judul": "BAB III HAK DAN KEWAJIBAN",
       "isi": {
         "_type": "pasals",
         "pasals": [
           {
             "_type": "pasal",
-            "_key": 7,
+            "key": 7,
             "isi": {
               "_type": "referenceText",
               "references": [],
@@ -106,7 +106,7 @@
           },
           {
             "_type": "pasal",
-            "_key": 8,
+            "key": 8,
             "isi": {
               "_type": "referenceText",
               "references": [],
@@ -115,13 +115,13 @@
           },
           {
             "_type": "pasal",
-            "_key": 9,
+            "key": 9,
             "isi": {
               "_type": "ayats",
               "ayats": [
                 {
                   "_type": "ayat",
-                  "_key": 1,
+                  "key": 1,
                   "isi": {
                     "_type": "referenceText",
                     "references": [],
@@ -136,20 +136,20 @@
     },
     {
       "_type": "bab",
-      "_key": 4,
+      "key": 4,
       "_judul": "BAB IV KEDARURATAN KESEHATAN MASYARAKAT",
       "isi": {
         "_type": "pasals",
         "pasals": [
           {
             "_type": "pasal",
-            "_key": 10,
+            "key": 10,
             "isi": {
               "_type": "ayats",
               "ayats": [
                 {
                   "_type": "ayat",
-                  "_key": 1,
+                  "key": 1,
                   "isi": {
                     "_type": "referenceText",
                     "references": [],
@@ -161,13 +161,13 @@
           },
           {
             "_type": "pasal",
-            "_key": 11,
+            "key": 11,
             "isi": {
               "_type": "ayats",
               "ayats": [
                 {
                   "_type": "ayat",
-                  "_key": 1,
+                  "key": 1,
                   "isi": {
                     "_type": "referenceText",
                     "references": [],
@@ -179,7 +179,7 @@
           },
           {
             "_type": "pasal",
-            "_key": 12,
+            "key": 12,
             "isi": {
               "_type": "referenceText",
               "references": [],
@@ -188,13 +188,13 @@
           },
           {
             "_type": "pasal",
-            "_key": 13,
+            "key": 13,
             "isi": {
               "_type": "ayats",
               "ayats": [
                 {
                   "_type": "ayat",
-                  "_key": 1,
+                  "key": 1,
                   "isi": {
                     "_type": "referenceText",
                     "references": [],
@@ -206,13 +206,13 @@
           },
           {
             "_type": "pasal",
-            "_key": 14,
+            "key": 14,
             "isi": {
               "_type": "ayats",
               "ayats": [
                 {
                   "_type": "ayat",
-                  "_key": 1,
+                  "key": 1,
                   "isi": {
                     "_type": "referenceText",
                     "references": [],
@@ -227,20 +227,20 @@
     },
     {
       "_type": "bab",
-      "_key": 5,
+      "key": 5,
       "_judul": "BAB V KEKARANTINAAN KESEHATAN DI PINTU MASUK DAN DI WILAYAH",
       "isi": {
         "_type": "pasals",
         "pasals": [
           {
             "_type": "pasal",
-            "_key": 15,
+            "key": 15,
             "isi": {
               "_type": "ayats",
               "ayats": [
                 {
                   "_type": "ayat",
-                  "_key": 1,
+                  "key": 1,
                   "isi": {
                     "_type": "referenceText",
                     "references": [],
@@ -252,13 +252,13 @@
           },
           {
             "_type": "pasal",
-            "_key": 16,
+            "key": 16,
             "isi": {
               "_type": "ayats",
               "ayats": [
                 {
                   "_type": "ayat",
-                  "_key": 1,
+                  "key": 1,
                   "isi": {
                     "_type": "referenceText",
                     "references": [],
@@ -270,7 +270,7 @@
           },
           {
             "_type": "pasal",
-            "_key": 17,
+            "key": 17,
             "isi": {
               "_type": "referenceText",
               "references": [],
@@ -279,13 +279,13 @@
           },
           {
             "_type": "pasal",
-            "_key": 18,
+            "key": 18,
             "isi": {
               "_type": "ayats",
               "ayats": [
                 {
                   "_type": "ayat",
-                  "_key": 1,
+                  "key": 1,
                   "isi": {
                     "_type": "referenceText",
                     "references": [],
@@ -300,34 +300,34 @@
     },
     {
       "_type": "bab",
-      "_key": 6,
+      "key": 6,
       "_judul": "BAB VI PENYELENGGARAAN KEKARANTINAAN KESEHATAN DI PINTU MASUK",
       "isi": {
         "_type": "bagians",
         "bagians": [
           {
             "_type": "bagian",
-            "_key": 1,
+            "key": 1,
             "_judul": "Bagian Kesatu Pengawasan di Pelabuhan",
             "isi": {
               "_type": "paragrafs",
               "paragrafs": [
                 {
                   "_type": "paragraf",
-                  "_key": 1,
+                  "key": 1,
                   "_judul": "Paragraf 1 Kedatangan Kapal",
                   "isi": {
                     "_type": "pasals",
                     "pasals": [
                       {
                         "_type": "pasal",
-                        "_key": 19,
+                        "key": 19,
                         "isi": {
                           "_type": "ayats",
                           "ayats": [
                             {
                               "_type": "ayat",
-                              "_key": 1,
+                              "key": 1,
                               "isi": {
                                 "_type": "referenceText",
                                 "references": [],
@@ -339,7 +339,7 @@
                       },
                       {
                         "_type": "pasal",
-                        "_key": 20,
+                        "key": 20,
                         "isi": {
                           "_type": "referenceText",
                           "references": [],
@@ -348,7 +348,7 @@
                       },
                       {
                         "_type": "pasal",
-                        "_key": 21,
+                        "key": 21,
                         "isi": {
                           "_type": "referenceText",
                           "references": [],
@@ -357,13 +357,13 @@
                       },
                       {
                         "_type": "pasal",
-                        "_key": 22,
+                        "key": 22,
                         "isi": {
                           "_type": "ayats",
                           "ayats": [
                             {
                               "_type": "ayat",
-                              "_key": 1,
+                              "key": 1,
                               "isi": {
                                 "_type": "referenceText",
                                 "references": [],
@@ -375,13 +375,13 @@
                       },
                       {
                         "_type": "pasal",
-                        "_key": 23,
+                        "key": 23,
                         "isi": {
                           "_type": "ayats",
                           "ayats": [
                             {
                               "_type": "ayat",
-                              "_key": 1,
+                              "key": 1,
                               "isi": {
                                 "_type": "referenceText",
                                 "references": [],
@@ -393,7 +393,7 @@
                       },
                       {
                         "_type": "pasal",
-                        "_key": 24,
+                        "key": 24,
                         "isi": {
                           "_type": "referenceText",
                           "references": [],
@@ -405,20 +405,20 @@
                 },
                 {
                   "_type": "paragraf",
-                  "_key": 2,
+                  "key": 2,
                   "_judul": "Paragraf 2 Keberangkatan Kapal",
                   "isi": {
                     "_type": "pasals",
                     "pasals": [
                       {
                         "_type": "pasal",
-                        "_key": 25,
+                        "key": 25,
                         "isi": {
                           "_type": "ayats",
                           "ayats": [
                             {
                               "_type": "ayat",
-                              "_key": 1,
+                              "key": 1,
                               "isi": {
                                 "_type": "referenceText",
                                 "references": [],
@@ -430,13 +430,13 @@
                       },
                       {
                         "_type": "pasal",
-                        "_key": 26,
+                        "key": 26,
                         "isi": {
                           "_type": "ayats",
                           "ayats": [
                             {
                               "_type": "ayat",
-                              "_key": 1,
+                              "key": 1,
                               "isi": {
                                 "_type": "referenceText",
                                 "references": [],
@@ -454,21 +454,21 @@
           },
           {
             "_type": "bagian",
-            "_key": 2,
+            "key": 2,
             "_judul": "Bagian Kedua Pengawasan di Bandar Udara",
             "isi": {
               "_type": "paragrafs",
               "paragrafs": [
                 {
                   "_type": "paragraf",
-                  "_key": 1,
+                  "key": 1,
                   "_judul": "Paragraf 1 Kedatangan Pesawat Udara",
                   "isi": {
                     "_type": "pasals",
                     "pasals": [
                       {
                         "_type": "pasal",
-                        "_key": 27,
+                        "key": 27,
                         "isi": {
                           "_type": "referenceText",
                           "references": [],
@@ -477,13 +477,13 @@
                       },
                       {
                         "_type": "pasal",
-                        "_key": 28,
+                        "key": 28,
                         "isi": {
                           "_type": "ayats",
                           "ayats": [
                             {
                               "_type": "ayat",
-                              "_key": 1,
+                              "key": 1,
                               "isi": {
                                 "_type": "referenceText",
                                 "references": [],
@@ -495,13 +495,13 @@
                       },
                       {
                         "_type": "pasal",
-                        "_key": 29,
+                        "key": 29,
                         "isi": {
                           "_type": "ayats",
                           "ayats": [
                             {
                               "_type": "ayat",
-                              "_key": 1,
+                              "key": 1,
                               "isi": {
                                 "_type": "referenceText",
                                 "references": [],
@@ -513,13 +513,13 @@
                       },
                       {
                         "_type": "pasal",
-                        "_key": 30,
+                        "key": 30,
                         "isi": {
                           "_type": "ayats",
                           "ayats": [
                             {
                               "_type": "ayat",
-                              "_key": 1,
+                              "key": 1,
                               "isi": {
                                 "_type": "referenceText",
                                 "references": [],
@@ -531,7 +531,7 @@
                       },
                       {
                         "_type": "pasal",
-                        "_key": 31,
+                        "key": 31,
                         "isi": {
                           "_type": "referenceText",
                           "references": [],
@@ -540,7 +540,7 @@
                       },
                       {
                         "_type": "pasal",
-                        "_key": 32,
+                        "key": 32,
                         "isi": {
                           "_type": "referenceText",
                           "references": [],
@@ -552,14 +552,14 @@
                 },
                 {
                   "_type": "paragraf",
-                  "_key": 2,
+                  "key": 2,
                   "_judul": "Paragraf 2 Keberangkatan Pesawat Udara",
                   "isi": {
                     "_type": "pasals",
                     "pasals": [
                       {
                         "_type": "pasal",
-                        "_key": 33,
+                        "key": 33,
                         "isi": {
                           "_type": "referenceText",
                           "references": [],
@@ -568,7 +568,7 @@
                       },
                       {
                         "_type": "pasal",
-                        "_key": 34,
+                        "key": 34,
                         "isi": {
                           "_type": "referenceText",
                           "references": [],
@@ -583,27 +583,27 @@
           },
           {
             "_type": "bagian",
-            "_key": 3,
+            "key": 3,
             "_judul": "Bagian Ketiga Pengawasan di Pos Lintas Batas Darat Negara",
             "isi": {
               "_type": "paragrafs",
               "paragrafs": [
                 {
                   "_type": "paragraf",
-                  "_key": 1,
+                  "key": 1,
                   "_judul": "Paragraf 1 Kedatangan Kendaraan Darat",
                   "isi": {
                     "_type": "pasals",
                     "pasals": [
                       {
                         "_type": "pasal",
-                        "_key": 35,
+                        "key": 35,
                         "isi": {
                           "_type": "ayats",
                           "ayats": [
                             {
                               "_type": "ayat",
-                              "_key": 1,
+                              "key": 1,
                               "isi": {
                                 "_type": "referenceText",
                                 "references": [],
@@ -615,13 +615,13 @@
                       },
                       {
                         "_type": "pasal",
-                        "_key": 36,
+                        "key": 36,
                         "isi": {
                           "_type": "ayats",
                           "ayats": [
                             {
                               "_type": "ayat",
-                              "_key": 1,
+                              "key": 1,
                               "isi": {
                                 "_type": "referenceText",
                                 "references": [],
@@ -636,20 +636,20 @@
                 },
                 {
                   "_type": "paragraf",
-                  "_key": 2,
+                  "key": 2,
                   "_judul": "Paragraf 2 Keberangkatan Kendaraan Darat",
                   "isi": {
                     "_type": "pasals",
                     "pasals": [
                       {
                         "_type": "pasal",
-                        "_key": 37,
+                        "key": 37,
                         "isi": {
                           "_type": "ayats",
                           "ayats": [
                             {
                               "_type": "ayat",
-                              "_key": 1,
+                              "key": 1,
                               "isi": {
                                 "_type": "referenceText",
                                 "references": [],
@@ -667,14 +667,14 @@
           },
           {
             "_type": "bagian",
-            "_key": 4,
+            "key": 4,
             "_judul": "Bagian Keempat Pengawasan Awak, Personel, dan Penumpang",
             "isi": {
               "_type": "pasals",
               "pasals": [
                 {
                   "_type": "pasal",
-                  "_key": 38,
+                  "key": 38,
                   "isi": {
                     "_type": "referenceText",
                     "references": [],
@@ -683,7 +683,7 @@
                 },
                 {
                   "_type": "pasal",
-                  "_key": 39,
+                  "key": 39,
                   "isi": {
                     "_type": "referenceText",
                     "references": [],
@@ -692,7 +692,7 @@
                 },
                 {
                   "_type": "pasal",
-                  "_key": 40,
+                  "key": 40,
                   "isi": {
                     "_type": "referenceText",
                     "references": [],
@@ -701,13 +701,13 @@
                 },
                 {
                   "_type": "pasal",
-                  "_key": 41,
+                  "key": 41,
                   "isi": {
                     "_type": "ayats",
                     "ayats": [
                       {
                         "_type": "ayat",
-                        "_key": 1,
+                        "key": 1,
                         "isi": {
                           "_type": "referenceText",
                           "references": [],
@@ -719,13 +719,13 @@
                 },
                 {
                   "_type": "pasal",
-                  "_key": 42,
+                  "key": 42,
                   "isi": {
                     "_type": "ayats",
                     "ayats": [
                       {
                         "_type": "ayat",
-                        "_key": 1,
+                        "key": 1,
                         "isi": {
                           "_type": "referenceText",
                           "references": [],
@@ -737,13 +737,13 @@
                 },
                 {
                   "_type": "pasal",
-                  "_key": 43,
+                  "key": 43,
                   "isi": {
                     "_type": "ayats",
                     "ayats": [
                       {
                         "_type": "ayat",
-                        "_key": 1,
+                        "key": 1,
                         "isi": {
                           "_type": "referenceText",
                           "references": [],
@@ -758,14 +758,14 @@
           },
           {
             "_type": "bagian",
-            "_key": 5,
+            "key": 5,
             "_judul": "Bagian Kelima Pengawasan Barang",
             "isi": {
               "_type": "pasals",
               "pasals": [
                 {
                   "_type": "pasal",
-                  "_key": 44,
+                  "key": 44,
                   "isi": {
                     "_type": "referenceText",
                     "references": [],
@@ -774,13 +774,13 @@
                 },
                 {
                   "_type": "pasal",
-                  "_key": 45,
+                  "key": 45,
                   "isi": {
                     "_type": "ayats",
                     "ayats": [
                       {
                         "_type": "ayat",
-                        "_key": 1,
+                        "key": 1,
                         "isi": {
                           "_type": "referenceText",
                           "references": [],
@@ -792,13 +792,13 @@
                 },
                 {
                   "_type": "pasal",
-                  "_key": 46,
+                  "key": 46,
                   "isi": {
                     "_type": "ayats",
                     "ayats": [
                       {
                         "_type": "ayat",
-                        "_key": 1,
+                        "key": 1,
                         "isi": {
                           "_type": "referenceText",
                           "references": [],
@@ -810,7 +810,7 @@
                 },
                 {
                   "_type": "pasal",
-                  "_key": 47,
+                  "key": 47,
                   "isi": {
                     "_type": "referenceText",
                     "references": [],
@@ -822,20 +822,20 @@
           },
           {
             "_type": "bagian",
-            "_key": 6,
+            "key": 6,
             "_judul": "Bagian Keenam Sanksi Administratif",
             "isi": {
               "_type": "pasals",
               "pasals": [
                 {
                   "_type": "pasal",
-                  "_key": 48,
+                  "key": 48,
                   "isi": {
                     "_type": "ayats",
                     "ayats": [
                       {
                         "_type": "ayat",
-                        "_key": 1,
+                        "key": 1,
                         "isi": {
                           "_type": "referenceText",
                           "references": [],
@@ -853,27 +853,27 @@
     },
     {
       "_type": "bab",
-      "_key": 7,
+      "key": 7,
       "_judul": "BAB VII PENYELENGGARAAN KEKARANTINAAN KESEHATAN DI WILAYAH",
       "isi": {
         "_type": "bagians",
         "bagians": [
           {
             "_type": "bagian",
-            "_key": 1,
+            "key": 1,
             "_judul": "Bagian Kesatu Umum",
             "isi": {
               "_type": "pasals",
               "pasals": [
                 {
                   "_type": "pasal",
-                  "_key": 49,
+                  "key": 49,
                   "isi": {
                     "_type": "ayats",
                     "ayats": [
                       {
                         "_type": "ayat",
-                        "_key": 1,
+                        "key": 1,
                         "isi": {
                           "_type": "referenceText",
                           "references": [],
@@ -888,20 +888,20 @@
           },
           {
             "_type": "bagian",
-            "_key": 2,
+            "key": 2,
             "_judul": "Bagian Kedua Karantina Rumah",
             "isi": {
               "_type": "pasals",
               "pasals": [
                 {
                   "_type": "pasal",
-                  "_key": 50,
+                  "key": 50,
                   "isi": {
                     "_type": "ayats",
                     "ayats": [
                       {
                         "_type": "ayat",
-                        "_key": 1,
+                        "key": 1,
                         "isi": {
                           "_type": "referenceText",
                           "references": [],
@@ -913,13 +913,13 @@
                 },
                 {
                   "_type": "pasal",
-                  "_key": 51,
+                  "key": 51,
                   "isi": {
                     "_type": "ayats",
                     "ayats": [
                       {
                         "_type": "ayat",
-                        "_key": 1,
+                        "key": 1,
                         "isi": {
                           "_type": "referenceText",
                           "references": [],
@@ -931,13 +931,13 @@
                 },
                 {
                   "_type": "pasal",
-                  "_key": 52,
+                  "key": 52,
                   "isi": {
                     "_type": "ayats",
                     "ayats": [
                       {
                         "_type": "ayat",
-                        "_key": 1,
+                        "key": 1,
                         "isi": {
                           "_type": "referenceText",
                           "references": [],
@@ -952,20 +952,20 @@
           },
           {
             "_type": "bagian",
-            "_key": 3,
+            "key": 3,
             "_judul": "Bagian Ketiga Karantina Wilayah",
             "isi": {
               "_type": "pasals",
               "pasals": [
                 {
                   "_type": "pasal",
-                  "_key": 53,
+                  "key": 53,
                   "isi": {
                     "_type": "ayats",
                     "ayats": [
                       {
                         "_type": "ayat",
-                        "_key": 1,
+                        "key": 1,
                         "isi": {
                           "_type": "referenceText",
                           "references": [],
@@ -977,13 +977,13 @@
                 },
                 {
                   "_type": "pasal",
-                  "_key": 54,
+                  "key": 54,
                   "isi": {
                     "_type": "ayats",
                     "ayats": [
                       {
                         "_type": "ayat",
-                        "_key": 1,
+                        "key": 1,
                         "isi": {
                           "_type": "referenceText",
                           "references": [],
@@ -995,13 +995,13 @@
                 },
                 {
                   "_type": "pasal",
-                  "_key": 55,
+                  "key": 55,
                   "isi": {
                     "_type": "ayats",
                     "ayats": [
                       {
                         "_type": "ayat",
-                        "_key": 1,
+                        "key": 1,
                         "isi": {
                           "_type": "referenceText",
                           "references": [],
@@ -1016,20 +1016,20 @@
           },
           {
             "_type": "bagian",
-            "_key": 4,
+            "key": 4,
             "_judul": "Bagian Keempat Karantina Rumah Sakit",
             "isi": {
               "_type": "pasals",
               "pasals": [
                 {
                   "_type": "pasal",
-                  "_key": 56,
+                  "key": 56,
                   "isi": {
                     "_type": "ayats",
                     "ayats": [
                       {
                         "_type": "ayat",
-                        "_key": 1,
+                        "key": 1,
                         "isi": {
                           "_type": "referenceText",
                           "references": [],
@@ -1041,13 +1041,13 @@
                 },
                 {
                   "_type": "pasal",
-                  "_key": 57,
+                  "key": 57,
                   "isi": {
                     "_type": "ayats",
                     "ayats": [
                       {
                         "_type": "ayat",
-                        "_key": 1,
+                        "key": 1,
                         "isi": {
                           "_type": "referenceText",
                           "references": [],
@@ -1059,7 +1059,7 @@
                 },
                 {
                   "_type": "pasal",
-                  "_key": 58,
+                  "key": 58,
                   "isi": {
                     "_type": "referenceText",
                     "references": [],
@@ -1071,20 +1071,20 @@
           },
           {
             "_type": "bagian",
-            "_key": 5,
+            "key": 5,
             "_judul": "Bagian Kelima Pembatasan Sosial Berskala Besar",
             "isi": {
               "_type": "pasals",
               "pasals": [
                 {
                   "_type": "pasal",
-                  "_key": 59,
+                  "key": 59,
                   "isi": {
                     "_type": "ayats",
                     "ayats": [
                       {
                         "_type": "ayat",
-                        "_key": 1,
+                        "key": 1,
                         "isi": {
                           "_type": "referenceText",
                           "references": [],
@@ -1096,7 +1096,7 @@
                 },
                 {
                   "_type": "pasal",
-                  "_key": 60,
+                  "key": 60,
                   "isi": {
                     "_type": "referenceText",
                     "references": [],
@@ -1111,20 +1111,20 @@
     },
     {
       "_type": "bab",
-      "_key": 8,
+      "key": 8,
       "_judul": "BAB VIII DOKUMEN KARANTINA KESEHATAN",
       "isi": {
         "_type": "pasals",
         "pasals": [
           {
             "_type": "pasal",
-            "_key": 61,
+            "key": 61,
             "isi": {
               "_type": "ayats",
               "ayats": [
                 {
                   "_type": "ayat",
-                  "_key": 1,
+                  "key": 1,
                   "isi": {
                     "_type": "referenceText",
                     "references": [],
@@ -1136,7 +1136,7 @@
           },
           {
             "_type": "pasal",
-            "_key": 62,
+            "key": 62,
             "isi": {
               "_type": "referenceText",
               "references": [],
@@ -1145,13 +1145,13 @@
           },
           {
             "_type": "pasal",
-            "_key": 63,
+            "key": 63,
             "isi": {
               "_type": "ayats",
               "ayats": [
                 {
                   "_type": "ayat",
-                  "_key": 1,
+                  "key": 1,
                   "isi": {
                     "_type": "referenceText",
                     "references": [],
@@ -1163,7 +1163,7 @@
           },
           {
             "_type": "pasal",
-            "_key": 64,
+            "key": 64,
             "isi": {
               "_type": "referenceText",
               "references": [],
@@ -1172,7 +1172,7 @@
           },
           {
             "_type": "pasal",
-            "_key": 65,
+            "key": 65,
             "isi": {
               "_type": "referenceText",
               "references": [],
@@ -1181,13 +1181,13 @@
           },
           {
             "_type": "pasal",
-            "_key": 66,
+            "key": 66,
             "isi": {
               "_type": "ayats",
               "ayats": [
                 {
                   "_type": "ayat",
-                  "_key": 1,
+                  "key": 1,
                   "isi": {
                     "_type": "referenceText",
                     "references": [],
@@ -1199,7 +1199,7 @@
           },
           {
             "_type": "pasal",
-            "_key": 67,
+            "key": 67,
             "isi": {
               "_type": "referenceText",
               "references": [],
@@ -1208,13 +1208,13 @@
           },
           {
             "_type": "pasal",
-            "_key": 68,
+            "key": 68,
             "isi": {
               "_type": "ayats",
               "ayats": [
                 {
                   "_type": "ayat",
-                  "_key": 1,
+                  "key": 1,
                   "isi": {
                     "_type": "referenceText",
                     "references": [],
@@ -1226,7 +1226,7 @@
           },
           {
             "_type": "pasal",
-            "_key": 69,
+            "key": 69,
             "isi": {
               "_type": "referenceText",
               "references": [],
@@ -1235,7 +1235,7 @@
           },
           {
             "_type": "pasal",
-            "_key": 70,
+            "key": 70,
             "isi": {
               "_type": "referenceText",
               "references": [],
@@ -1247,21 +1247,21 @@
     },
     {
       "_type": "bab",
-      "_key": 9,
+      "key": 9,
       "_judul": "BAB IX SUMBER DAYA KEKARANTINAAN KESEHATAN",
       "isi": {
         "_type": "bagians",
         "bagians": [
           {
             "_type": "bagian",
-            "_key": 1,
+            "key": 1,
             "_judul": "Bagian Kesatu Umum",
             "isi": {
               "_type": "pasals",
               "pasals": [
                 {
                   "_type": "pasal",
-                  "_key": 71,
+                  "key": 71,
                   "isi": {
                     "_type": "referenceText",
                     "references": [],
@@ -1273,20 +1273,20 @@
           },
           {
             "_type": "bagian",
-            "_key": 2,
+            "key": 2,
             "_judul": "Bagian Kedua Fasilitas dan Perbekalan Kekarantinaan Kesehatan",
             "isi": {
               "_type": "pasals",
               "pasals": [
                 {
                   "_type": "pasal",
-                  "_key": 72,
+                  "key": 72,
                   "isi": {
                     "_type": "ayats",
                     "ayats": [
                       {
                         "_type": "ayat",
-                        "_key": 1,
+                        "key": 1,
                         "isi": {
                           "_type": "referenceText",
                           "references": [],
@@ -1301,14 +1301,14 @@
           },
           {
             "_type": "bagian",
-            "_key": 3,
+            "key": 3,
             "_judul": "Bagian Ketiga Pejabat Karantina Kesehatan",
             "isi": {
               "_type": "pasals",
               "pasals": [
                 {
                   "_type": "pasal",
-                  "_key": 73,
+                  "key": 73,
                   "isi": {
                     "_type": "referenceText",
                     "references": [],
@@ -1317,7 +1317,7 @@
                 },
                 {
                   "_type": "pasal",
-                  "_key": 74,
+                  "key": 74,
                   "isi": {
                     "_type": "referenceText",
                     "references": [],
@@ -1326,13 +1326,13 @@
                 },
                 {
                   "_type": "pasal",
-                  "_key": 75,
+                  "key": 75,
                   "isi": {
                     "_type": "ayats",
                     "ayats": [
                       {
                         "_type": "ayat",
-                        "_key": 1,
+                        "key": 1,
                         "isi": {
                           "_type": "referenceText",
                           "references": [],
@@ -1344,13 +1344,13 @@
                 },
                 {
                   "_type": "pasal",
-                  "_key": 76,
+                  "key": 76,
                   "isi": {
                     "_type": "ayats",
                     "ayats": [
                       {
                         "_type": "ayat",
-                        "_key": 1,
+                        "key": 1,
                         "isi": {
                           "_type": "referenceText",
                           "references": [],
@@ -1365,20 +1365,20 @@
           },
           {
             "_type": "bagian",
-            "_key": 4,
+            "key": 4,
             "_judul": "Bagian Keempat Penelitian dan Pengembangan",
             "isi": {
               "_type": "pasals",
               "pasals": [
                 {
                   "_type": "pasal",
-                  "_key": 77,
+                  "key": 77,
                   "isi": {
                     "_type": "ayats",
                     "ayats": [
                       {
                         "_type": "ayat",
-                        "_key": 1,
+                        "key": 1,
                         "isi": {
                           "_type": "referenceText",
                           "references": [],
@@ -1393,20 +1393,20 @@
           },
           {
             "_type": "bagian",
-            "_key": 5,
+            "key": 5,
             "_judul": "Bagian Kelima Pendanaan",
             "isi": {
               "_type": "pasals",
               "pasals": [
                 {
                   "_type": "pasal",
-                  "_key": 78,
+                  "key": 78,
                   "isi": {
                     "_type": "ayats",
                     "ayats": [
                       {
                         "_type": "ayat",
-                        "_key": 1,
+                        "key": 1,
                         "isi": {
                           "_type": "referenceText",
                           "references": [],
@@ -1424,14 +1424,14 @@
     },
     {
       "_type": "bab",
-      "_key": 10,
+      "key": 10,
       "_judul": "BAB X INFORMASI KEKARANTINAAN KESEHATAN",
       "isi": {
         "_type": "pasals",
         "pasals": [
           {
             "_type": "pasal",
-            "_key": 79,
+            "key": 79,
             "isi": {
               "_type": "referenceText",
               "references": [],
@@ -1440,13 +1440,13 @@
           },
           {
             "_type": "pasal",
-            "_key": 80,
+            "key": 80,
             "isi": {
               "_type": "ayats",
               "ayats": [
                 {
                   "_type": "ayat",
-                  "_key": 1,
+                  "key": 1,
                   "isi": {
                     "_type": "referenceText",
                     "references": [],
@@ -1458,7 +1458,7 @@
           },
           {
             "_type": "pasal",
-            "_key": 81,
+            "key": 81,
             "isi": {
               "_type": "referenceText",
               "references": [],
@@ -1470,27 +1470,27 @@
     },
     {
       "_type": "bab",
-      "_key": 11,
+      "key": 11,
       "_judul": "BAB XI PEMBINAAN DAN PENGAWASAN",
       "isi": {
         "_type": "bagians",
         "bagians": [
           {
             "_type": "bagian",
-            "_key": 1,
+            "key": 1,
             "_judul": "Bagian Kesatu Pembinaan",
             "isi": {
               "_type": "pasals",
               "pasals": [
                 {
                   "_type": "pasal",
-                  "_key": 82,
+                  "key": 82,
                   "isi": {
                     "_type": "ayats",
                     "ayats": [
                       {
                         "_type": "ayat",
-                        "_key": 1,
+                        "key": 1,
                         "isi": {
                           "_type": "referenceText",
                           "references": [],
@@ -1505,20 +1505,20 @@
           },
           {
             "_type": "bagian",
-            "_key": 2,
+            "key": 2,
             "_judul": "Bagian Kedua Pengawasan",
             "isi": {
               "_type": "pasals",
               "pasals": [
                 {
                   "_type": "pasal",
-                  "_key": 83,
+                  "key": 83,
                   "isi": {
                     "_type": "ayats",
                     "ayats": [
                       {
                         "_type": "ayat",
-                        "_key": 1,
+                        "key": 1,
                         "isi": {
                           "_type": "referenceText",
                           "references": [],
@@ -1536,14 +1536,14 @@
     },
     {
       "_type": "bab",
-      "_key": 12,
+      "key": 12,
       "_judul": "BAB XII PENYIDIKAN",
       "isi": {
         "_type": "pasals",
         "pasals": [
           {
             "_type": "pasal",
-            "_key": 84,
+            "key": 84,
             "isi": {
               "_type": "referenceText",
               "references": [],
@@ -1552,7 +1552,7 @@
           },
           {
             "_type": "pasal",
-            "_key": 85,
+            "key": 85,
             "isi": {
               "_type": "referenceText",
               "references": [],
@@ -1561,7 +1561,7 @@
           },
           {
             "_type": "pasal",
-            "_key": 86,
+            "key": 86,
             "isi": {
               "_type": "referenceText",
               "references": [],
@@ -1570,7 +1570,7 @@
           },
           {
             "_type": "pasal",
-            "_key": 87,
+            "key": 87,
             "isi": {
               "_type": "referenceText",
               "references": [],
@@ -1579,7 +1579,7 @@
           },
           {
             "_type": "pasal",
-            "_key": 88,
+            "key": 88,
             "isi": {
               "_type": "referenceText",
               "references": [],
@@ -1588,7 +1588,7 @@
           },
           {
             "_type": "pasal",
-            "_key": 89,
+            "key": 89,
             "isi": {
               "_type": "referenceText",
               "references": [],
@@ -1600,14 +1600,14 @@
     },
     {
       "_type": "bab",
-      "_key": 13,
+      "key": 13,
       "_judul": "BAB XIII KETENTUAN PIDANA",
       "isi": {
         "_type": "pasals",
         "pasals": [
           {
             "_type": "pasal",
-            "_key": 90,
+            "key": 90,
             "isi": {
               "_type": "referenceText",
               "references": [],
@@ -1616,7 +1616,7 @@
           },
           {
             "_type": "pasal",
-            "_key": 91,
+            "key": 91,
             "isi": {
               "_type": "referenceText",
               "references": [],
@@ -1625,7 +1625,7 @@
           },
           {
             "_type": "pasal",
-            "_key": 92,
+            "key": 92,
             "isi": {
               "_type": "referenceText",
               "references": [],
@@ -1634,7 +1634,7 @@
           },
           {
             "_type": "pasal",
-            "_key": 93,
+            "key": 93,
             "isi": {
               "_type": "referenceText",
               "references": [],
@@ -1643,13 +1643,13 @@
           },
           {
             "_type": "pasal",
-            "_key": 94,
+            "key": 94,
             "isi": {
               "_type": "ayats",
               "ayats": [
                 {
                   "_type": "ayat",
-                  "_key": 1,
+                  "key": 1,
                   "isi": {
                     "_type": "referenceText",
                     "references": [],
@@ -1664,14 +1664,14 @@
     },
     {
       "_type": "bab",
-      "_key": 14,
+      "key": 14,
       "_judul": "BAB XIV KETENTUAN PENUTUP",
       "isi": {
         "_type": "pasals",
         "pasals": [
           {
             "_type": "pasal",
-            "_key": 95,
+            "key": 95,
             "isi": {
               "_type": "referenceText",
               "references": [],
@@ -1680,13 +1680,13 @@
           },
           {
             "_type": "pasal",
-            "_key": 96,
+            "key": 96,
             "isi": {
               "_type": "ayats",
               "ayats": [
                 {
                   "_type": "ayat",
-                  "_key": 1,
+                  "key": 1,
                   "isi": {
                     "_type": "referenceText",
                     "references": [],
@@ -1698,7 +1698,7 @@
           },
           {
             "_type": "pasal",
-            "_key": 97,
+            "key": 97,
             "isi": {
               "_type": "referenceText",
               "references": [],
@@ -1707,7 +1707,7 @@
           },
           {
             "_type": "pasal",
-            "_key": 98,
+            "key": 98,
             "isi": {
               "_type": "referenceText",
               "references": [],

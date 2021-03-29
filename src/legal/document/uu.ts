@@ -5,8 +5,8 @@ import { DataType, getDataTypeExtension } from '../../data';
 import { _ScrapableDocumentHandler } from './_utils';
 
 export type UuNode = {
-  _structureType: 'document';
-  _documentType: 'uu';
+  nodeType: 'document';
+  docType: 'uu';
   tahun: number;
   nomor: number;
 };
@@ -25,7 +25,7 @@ export const _uu: _ScrapableDocumentHandler<UuNode> = {
 function nodeOfPath(path: string[]): UuNode {
   const [tahun, nomor] = path;
   if (!isNumber(tahun) || !isNumber(nomor)) throw Error(`Unknown UU Path ${path}`);
-  return { _structureType: 'document', _documentType: 'uu', tahun, nomor };
+  return { nodeType: 'document', docType: 'uu', tahun, nomor };
 }
 
 function getPath(node: UuNode): string {
@@ -51,8 +51,8 @@ function getFiles(uuDir: string, dataType: DataType): UuNode[] {
       .map((pdfName) => path.basename(pdfName, getDataTypeExtension(dataType)))
       .filter((number) => parseInt(number) >= 0)
       .map((number) => ({
-        _structureType: 'document',
-        _documentType: 'uu',
+        nodeType: 'document',
+        docType: 'uu',
         tahun: parseInt(year),
         nomor: parseInt(number),
       }))
@@ -93,5 +93,5 @@ function nameToNode(name: string): UuNode {
   const tahun = parseInt(_tahun);
   if (isNil(nomor) || isNaN(nomor)) throw Error(`can't extract nomor: ${name}`);
   if (isNil(tahun) || isNaN(tahun)) throw Error(`can't extract tahun: ${name}`);
-  return { _structureType: 'document', _documentType: 'uu', nomor, tahun };
+  return { nodeType: 'document', docType: 'uu', nomor, tahun };
 }

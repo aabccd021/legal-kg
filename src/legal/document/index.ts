@@ -1,7 +1,5 @@
 import assertNever from 'assert-never';
-import { getDocumentBaseUri } from '..';
-import { Bab } from '../structure/bab';
-import { Metadata } from '../structure/metadata';
+import { Bab } from '../component/bab';
 import { PerdaNode, _perda } from './perda';
 import { UuNode, _uu } from './uu';
 import { UudNode, _uud } from './uud';
@@ -15,8 +13,8 @@ import * as fs from 'fs';
 export type ScrapableDocumentCategory = typeof SCRAPABLE_DOCUMENT_CATEGORY[number];
 export const SCRAPABLE_DOCUMENT_CATEGORY = ['uu'] as const;
 export type ScrapableDocumentNode = UuNode & {
-  _documentType: ScrapableDocumentCategory;
-  _structureType: 'document';
+  docType: ScrapableDocumentCategory;
+  nodeType: 'document';
 };
 
 /**
@@ -25,8 +23,8 @@ export type ScrapableDocumentNode = UuNode & {
 export type ConvertableDocumentCategory = typeof CONVERTABLE_DOCUMENT_CATEGORY[number];
 export const CONVERTABLE_DOCUMENT_CATEGORY = [...SCRAPABLE_DOCUMENT_CATEGORY, 'perda'] as const;
 export type ConvertableDocumentNode = (ScrapableDocumentNode | PerdaNode) & {
-  _documentType: ConvertableDocumentCategory;
-  _structureType: 'document';
+  docType: ConvertableDocumentCategory;
+  nodeType: 'document';
 };
 
 /**
@@ -35,17 +33,17 @@ export type ConvertableDocumentNode = (ScrapableDocumentNode | PerdaNode) & {
 export type DocumentCategory = typeof LEGAL_DOCUMENT_CATEGORY[number];
 export const LEGAL_DOCUMENT_CATEGORY = [...CONVERTABLE_DOCUMENT_CATEGORY, 'uud'] as const;
 export type DocumentNode = (ConvertableDocumentNode | UudNode) & {
-  _documentType: DocumentCategory;
-  _structureType: 'document';
+  docType: DocumentCategory;
+  nodeType: 'document';
 };
 
 /**
  * Get Document Name
  */
 export function nodeToName(node: DocumentNode): string {
-  if (node._documentType === 'uu') return _uu.getName(node);
-  if (node._documentType === 'perda') return _perda.getName(node);
-  if (node._documentType === 'uud') return _uud.getName(node);
+  if (node.docType === 'uu') return _uu.getName(node);
+  if (node.docType === 'perda') return _perda.getName(node);
+  if (node.docType === 'uud') return _uud.getName(node);
   assertNever(node);
 }
 
@@ -54,12 +52,12 @@ export function nodeToName(node: DocumentNode): string {
  */
 export function getDocumentPath(node: DocumentNode): string {
   const path = _getDocumentPath(node);
-  return `${node._documentType}/${path}`;
+  return `${node.docType}/${path}`;
 }
 function _getDocumentPath(node: DocumentNode): string {
-  if (node._documentType === 'uu') return _uu.getPath(node);
-  if (node._documentType === 'perda') return _perda.getPath(node);
-  if (node._documentType === 'uud') return '';
+  if (node.docType === 'uu') return _uu.getPath(node);
+  if (node.docType === 'perda') return _perda.getPath(node);
+  if (node.docType === 'uud') return '';
   assertNever(node);
 }
 
@@ -107,9 +105,9 @@ export function compareConvertableDocument(
   a: ConvertableDocumentNode,
   b: ConvertableDocumentNode
 ): number {
-  if (a._documentType === 'uu' && b._documentType === 'uu') return _uu.compare(a, b);
-  if (a._documentType === 'perda' && b._documentType === 'perda') return _perda.compare(a, b);
-  return a._documentType.localeCompare(b._documentType);
+  if (a.docType === 'uu' && b.docType === 'uu') return _uu.compare(a, b);
+  if (a.docType === 'perda' && b.docType === 'perda') return _perda.compare(a, b);
+  return a.docType.localeCompare(b.docType);
 }
 
 /**
@@ -129,15 +127,6 @@ export function scrapableDocumentHtmlToPdfUrl(
 export function getScrapableDocumentLastPage(category: ScrapableDocumentCategory): number {
   if (category === 'uu') return _uu.lastPage;
   assertNever(category);
-}
-
-/**
- * Get Document URI
- */
-export function getDocumentUri(documentNode: DocumentNode): string {
-  const path = getDocumentPath(documentNode);
-  const uriBase = getDocumentBaseUri();
-  return `${uriBase}/${path}`;
 }
 
 /**
@@ -168,6 +157,6 @@ export type Document = {
   _sekretaris?: string;
   _dokumen?: string;
   salinanSesuaiDenganAslinya?: string;
-  menimbang?: Metadata;
-  mengingat?: Metadata;
+  // menimbang?: Metadata;
+  // mengingat?: Metadata;
 };
