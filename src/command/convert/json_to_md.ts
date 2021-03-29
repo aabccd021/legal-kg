@@ -1,41 +1,46 @@
-import { PasalContent } from '../../legal/component/pasal';
-import { assertNever } from 'assert-never';
-import { map, flatten, compact, isNil, repeat, curry, chain } from 'lodash';
+import assertNever from 'assert-never';
+import * as yaml from 'js-yaml';
+import { map, flatten, compact, curry, chain, repeat, isNil } from 'lodash';
+import { readFileSync, writeFileSync } from 'node:fs';
 import { toRoman } from 'roman-numerals';
-import { nodeToName, DocumentNode } from '../../legal/document';
-import * as fs from 'fs';
-import { nodeToUri } from '../../legal';
-import { Ayat, AyatNode } from '../../legal/component/ayat';
-import { Bab, BabNode } from '../../legal/component/bab';
-import { Bagian, BagianNode } from '../../legal/component/bagian';
-import { Paragraf, ParagrafNode } from '../../legal/component/paragraf';
-import {
-  PasalParentNode,
-  PasalNode,
-  getPasalParentDocument,
-  Pasal,
-} from '../../legal/component/pasal';
-import { Point, PointNode, Points } from '../../legal/component/point';
-import { ReferenceText } from '../../legal/reference';
-import { Document } from '../../legal/document/index';
 import { getDocumentData, nodeToFile } from '../../data';
+import { nodeToUri } from '../../legal';
 import {
-  AmenderDeletePoint,
-  AmendedPoint,
-  AmenderInsertPoint,
+  AyatSet,
+  Bab,
+  BabNode,
+  Bagian,
+  BagianNode,
+  Paragraf,
+  ParagrafNode,
+  Pasal,
+  getPasalParentDocument,
+  PasalNode,
+  Ayat,
+  AyatNode,
+  PointSet,
+  PointNode,
+  Point,
+  Text,
+} from '../../legal/component';
+import {
   AmenderPoints,
+  AmendedPoint,
+  AmenderDeletePoint,
   AmenderUpdatePoint,
+  AmenderInsertPoint,
   AmendedPasal,
 } from '../../legal/component/amend';
-import * as yaml from 'js-yaml';
+import { DocumentNode, nodeToName, Document } from '../../legal/document';
 
 type Option = { overwrite: boolean };
 export function jsonToMd(option: Option): void {
   const jsonNodes = getDocumentData('yaml');
-  jsonNodes.forEach((jsonNode) => handleJson(jsonNode, option));
+  jsonNodes.forEach(handleJsonWith(option));
 }
 
-function handleJson(node: DocumentNode, option: Option): void {
+const handleJsonWith = curry(handleJson);
+function handleJson(option: Option, node: DocumentNode): void {
   const { overwrite } = option;
   const jsonFile = nodeToFile('yaml', node);
   const { path: mdPath, exists: mdExists } = nodeToFile('mdv2', node);
@@ -46,10 +51,10 @@ function handleJson(node: DocumentNode, option: Option): void {
       return;
     }
 
-    const json = yaml.load(fs.readFileSync(jsonFile.path, 'utf8')) as Document;
+    const json = yaml.load(readFileSync(jsonFile.path, 'utf8')) as Document;
     const md = _jsonToMd(json);
 
-    fs.writeFileSync(mdPath, md);
+    writeFileSync(mdPath, md);
 
     console.log(`Finished json-to-md ${mdPath}`);
   } catch (e) {
@@ -81,7 +86,7 @@ function _jsonToMd(doc: Document): string {
     // mengingat,
     // menimbang,
     _node,
-    babs,
+    babArr: babs,
   } = doc;
   const uri = nodeToUri(_node);
   const name = nodeToName(_node);
@@ -132,11 +137,11 @@ function _jsonToMd(doc: Document): string {
 // }
 
 function babToMd(bab: Bab, parent: DocumentNode): string {
-  const babNode: BabNode = { key: bab.key, parent, nodeType: 'bab' };
+  const babNode: BabNode = { key: bab.key, parent: parent, nodeType: 'bab' };
   const contentStr: string =
     bab.content.type === 'pasals'
-      ? bab.content.pasalArr.map(pasalToMdWith(babNode)).join('\n')
-      : bab.content.bagianArr.map(bagianToMdWith(babNode)).join('\n');
+      ? bab.content.elements.map(pasalToMdWith(babNode)).join('\n')
+      : bab.content.elements.map(bagianToMdWith(babNode)).join('\n');
   const romanKey = toRoman(bab.key);
   const babUri = nodeToUri(babNode);
 
@@ -148,8 +153,8 @@ function bagianToMd(parent: BabNode, bagian: Bagian): string {
   const bagianNode: BagianNode = { key: bagian.key, parent, nodeType: 'bagian' };
   const contentStr =
     bagian.content.type === 'pasals'
-      ? bagian.content.pasalArr.map(pasalToMdWith(parent))
-      : bagian.content.paragrafArr.map(paragrafToMdWith(bagianNode));
+      ? bagian.content.elements.map(pasalToMdWith(parent))
+      : bagian.content.elements.map(paragrafToMdWith(bagianNode));
   const uri = nodeToUri(bagianNode);
   return `\n## [Bagian ${bagian.key}](${uri})\n${contentStr}\n`;
 }
@@ -157,13 +162,13 @@ function bagianToMd(parent: BabNode, bagian: Bagian): string {
 const paragrafToMdWith = curry(paragrafToMd);
 function paragrafToMd(parent: BagianNode, paragraf: Paragraf): string {
   const paragrafNode: ParagrafNode = { key: paragraf.key, parent, nodeType: 'paragraf' };
-  const contentStr = paragraf.content.pasalArr.map(pasalToMdWith(parent));
+  const contentStr = paragraf.content.elements.map(pasalToMdWith(parent));
   const uri = nodeToUri(paragrafNode);
   return `\n## [Paragraf ${paragraf.key}](${uri})\n${contentStr}\n`;
 }
 
 const pasalToMdWith = curry(pasalToMd);
-function pasalToMd(pasalParent: PasalParentNode, pasal: Pasal): string {
+function pasalToMd(pasalParent: BagianNode | BabNode | ParagrafNode, pasal: Pasal): string {
   const parentDocumentNode = getPasalParentDocument(pasalParent);
   const pasalNode: PasalNode = { key: pasal.key, parentDoc: parentDocumentNode, nodeType: 'pasal' };
   const uri = nodeToUri(pasalNode);
@@ -171,8 +176,11 @@ function pasalToMd(pasalParent: PasalParentNode, pasal: Pasal): string {
   return `\n### [Pasal ${pasal.key}](${uri})\n${contentStr}\n`;
 }
 
-function pasalContentToMd(content: PasalContent, pasalNode: PasalNode): string {
-  if (content.type === 'ayats') return content.ayatArr.map(ayatToMdWith(pasalNode)).join('\n');
+function pasalContentToMd(
+  content: AyatSet | PointSet | Text | AmenderPoints,
+  pasalNode: PasalNode
+): string {
+  if (content.type === 'ayats') return content.elements.map(ayatToMdWith(pasalNode)).join('\n');
   if (content.type === 'points') return pointsToMd(content, pasalNode);
   if (content.type === 'referenceText') return referenceToMd(content);
   if (content.type === 'amenderPoints') return amenderPointsToMd(content);
@@ -265,12 +273,12 @@ function ayatToMd(parentPasal: PasalNode, ayat: Ayat): string {
 }
 
 function pointsToMd(
-  points: Points,
+  points: PointSet,
   parent: PointNode | AyatNode | PasalNode,
   // | MetadataNode
   depth = 0
 ): string {
-  const contentStr = points.content.map(pointToMdWith({ parent, depth })).join('\n');
+  const contentStr = points.elements.map(pointToMdWith({ parent, depth })).join('\n');
   const descriptionStr = referenceToMd(points.description);
   return `${descriptionStr}\n${contentStr}`;
 }
@@ -304,7 +312,7 @@ function splitAt(slicable: string, indices: number[]): string[] {
   return [0, ...indices].map((n, i, m) => slicable.slice(n, m[i + 1]));
 }
 
-function referenceToMd(ref: ReferenceText): string {
+function referenceToMd(ref: Text): string {
   const { references, text } = ref;
   const sortedReferences = references.sort((a, b) => a.start - b.start);
   const indices = sortedReferences.flatMap(({ start, end }) => [start, end]);

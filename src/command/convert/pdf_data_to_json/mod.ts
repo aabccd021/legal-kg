@@ -41,7 +41,7 @@ function writeToJson(node: DocumentNode): void {
   console.timeEnd(`TIME ${JSON.stringify(node)} babs`);
 
   console.time(`TIME ${JSON.stringify(node)} detect`);
-  const document: Document = { _node: node, babs };
+  const document: Document = { _node: node, babArr: babs };
   // const detectedDocument = rawJsonToJson(document);
   console.timeEnd(`TIME ${JSON.stringify(node)} detect`);
 

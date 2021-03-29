@@ -1,32 +1,40 @@
-import { assertNever } from 'assert-never';
+import { BabSet, BabSetNode, BagianSet, BagianSetNode, ParagrafSet } from './../../../legal/component/index';
+import assertNever from 'assert-never';
+import { flatMap, compact, curry, isNil, map } from 'lodash';
 import {
-  AmendedPoint,
-  AmenderPoints,
-  AmenderInsertPoint,
-  AmenderUpdatePoint,
-  AmenderDeletePointNode,
-  AmenderDeletePoint,
-  AmendedPasal,
-  AmenderInsertPointNode,
-  AmenderUpdatePointNode,
-  AmendedPasalNode,
-} from '../../../legal/component/amend';
-import { PasalContent } from '../../../legal/component/pasal';
-import { compact, isNil, curry, flatMap, map } from 'lodash';
-import { Triple } from './triple';
-import { Document, DocumentNode } from '../../../legal/document/index';
-import { Ayat, AyatNode } from '../../../legal/component/ayat';
-import { Bab, BabNode } from '../../../legal/component/bab';
-import { Bagian, BagianNode } from '../../../legal/component/bagian';
-import { Paragraf, ParagrafNode } from '../../../legal/component/paragraf';
-import { Points, PointsNode, Point, PointNode } from '../../../legal/component/point';
-import { Reference } from '../../../legal/reference';
-import {
+  Bab,
+  BabNode,
+  Bagian,
+  BagianNode,
+  Paragraf,
+  ParagrafNode,
   Pasal,
-  PasalParentNode,
-  getPasalParentDocument,
   PasalNode,
-} from '../../../legal/component/pasal';
+  getPasalParentDocument,
+  Ayat,
+  AyatNode,
+  PointSet,
+  Text,
+  AyatSet,
+  Point,
+  PointNode,
+  Reference,
+  BabSetNode,
+} from '../../../legal/component';
+import {
+  AmendedPasalNode,
+  AmenderPoints,
+  AmendedPoint,
+  AmenderDeletePoint,
+  AmenderDeletePointNode,
+  AmenderInsertPoint,
+  AmenderInsertPointNode,
+  AmenderUpdatePoint,
+  AmenderUpdatePointNode,
+  AmendedPasal,
+} from '../../../legal/component/amend';
+import { Document, DocumentNode } from '../../../legal/document';
+import { LegalTriple } from './triple';
 
 export function yamlToTriples({
   // _name,
@@ -51,14 +59,14 @@ export function yamlToTriples({
   // penjelasan,
   // mengingat,
   // menimbang,
-  babs,
-}: Document): Triple[] {
+  babSet,
+}: Document): LegalTriple[] {
   // const denganPersetujuanTriple: Triple[] =
   // _denganPersetujuan?.map((x) => [_node, 'denganPersetujuan', x]) ?? [];
-  const triples: (Triple | undefined)[] = [
+  const triples: (LegalTriple | undefined)[] = [
     // ...metadataToTriple(_node, 'documentMenimbang', menimbang),
     // ...metadataToTriple(_node, 'documentMengingat', mengingat),
-    ...flatMap(babs, babToTripleWith(_node)),
+    ...babSetToTriple(_node, babSet),
     // isUndefined(penjelasan) ? undefined : [_node, 'penjelasan', penjelasan.join('\n')],
     // [_node, 'name', _name],
     // [_node, 'nomor', _nomor],
@@ -98,46 +106,65 @@ export function yamlToTriples({
 //   return [...contentTriples, [parentDocument, 'hasMetadata', metadata]];
 // }
 
+function babSetToTriple(parentDocNode: DocumentNode, babSet: BabSet): LegalTriple[] {
+  const babSetNode: BabSetNode = { nodeType: 'babSet', parent: parentDocNode };
+  return flatMap(babSet.elements, babToTripleWith(babSetNode));
+}
+
 const babToTripleWith = curry(babToTriple);
-function babToTriple(parentDocument: DocumentNode, bab: Bab): Triple[] {
-  const { key, title, content } = bab;
-  const babkey: BabNode = { key, parent: parentDocument, nodeType: 'bab' };
-  const contentTriples: Triple[] =
-    content.type === 'bagians'
-      ? flatMap(content.bagianArr, bagianToTripleWith(babkey))
-      : flatMap(content.pasalArr, pasalToTripleWith(babkey));
+function babToTriple(parentBabSetNode: BabSetNode, bab: Bab): LegalTriple[] {
+  // const babNode: BabNode = { key, parent: parentDocument, nodeType: 'bab' };
+  // const contentTriples: Triple[] =
+  //   content.type === 'bagians'
+  //     ? flatMap(content.bagianArr, bagianToTripleWith(babNode))
+  //     : flatMap(content.pasalArr, pasalToTripleWith(babNode));
+  const babNode: BabNode = { nodeType: 'bab', key: bab.key, parent: parentBabSetNode };
   return [
-    [parentDocument, 'documentHasBab', babkey],
-    [babkey, 'babHasKey', key],
-    [babkey, 'babHasTitle', title],
-    ...contentTriples,
+    [parentBabSetNode, 'babSetHasBab', babNode],
+    [babNode, 'babHasKey', bab.key],
+    [babNode, 'babHasTitle', bab.title],
+    // ...contentTriples,
   ];
+}
+
+function bagianSetToTriple(parentBabNode: BabNode, bagianSet: BagianSet): LegalTriple[] {
+  const bagianSetNode: BagianSetNode = { nodeType: 'bagianSet', parent: parentBabNode };
+  return flatMap(bagianSet.elements, bagianToTripleWith(bagianSetNode));
 }
 
 const bagianToTripleWith = curry(bagianToTriple);
-function bagianToTriple(parentBab: BabNode, bagian: Bagian): Triple[] {
-  const bagiankey: BagianNode = { nodeType: 'bagian', key: bagian.key, parent: parentBab };
+function bagianToTriple(parentBagianSetNode: BagianSetNode, bagian: Bagian): LegalTriple[] {
+  const bagianNode: BagianNode = {
+    nodeType: 'bagian',
+    key: bagian.key,
+    parent: parentBagianSetNode,
+  };
   return [
-    [parentBab, 'babHasBagian', bagiankey],
-    [bagiankey, 'bagianHasKey', bagian.key],
-    ...(bagian.content.type === 'paragrafs'
-      ? flatMap(bagian.content.paragrafArr, paragrafToTripleWith(bagiankey))
-      : flatMap(bagian.content.pasalArr, pasalToTripleWith(parentBab))),
+    [parentBagianSetNode, 'bagianSetHasBagian', bagianNode],
+    [bagianNode, 'bagianHasKey', bagian.key],
+    [bagianNode, 'bagianHasJudul', bagian.title],
+    // ...(bagian.content.type === 'paragrafs'
+    //   ? flatMap(bagian.content.paragrafArr, paragrafToTripleWith(bagiankey))
+    //   : flatMap(bagian.content.pasalArr, pasalToTripleWith(parentBab))),
   ];
 }
 
+function paragrafSetToTriple(parentBagianNode: BagianNode, paragrafSet: ParagrafSet): LegalTriple[] {
+
+}
+
 const paragrafToTripleWith = curry(paragrafToTriple);
-function paragrafToTriple(parent: BagianNode, paragraf: Paragraf): Triple[] {
+function paragrafToTriple(parent: BagianNode, paragraf: Paragraf): LegalTriple[] {
   const paragrafNode: ParagrafNode = { nodeType: 'paragraf', key: paragraf.key, parent };
   return [
     [parent, 'bagianHasParagraf', paragrafNode],
     [paragrafNode, 'paragrafHasKey', paragraf.key],
-    ...flatMap(paragraf.content.pasalArr, pasalToTripleWith(paragrafNode)),
+    ...flatMap(paragraf.content.elements, pasalToTripleWith(paragrafNode)),
   ];
 }
 
 const pasalToTripleWith = curry(pasalToTriple);
-function pasalToTriple(parent: PasalParentNode, pasal: Pasal): Triple[] {
+function pasalToTriple(parent: PasalParentNode, pasal: Pasal): LegalTriple[] {
   const pasalNode: PasalNode = {
     nodeType: 'pasal',
     key: pasal.key,
@@ -150,14 +177,14 @@ function pasalToTriple(parent: PasalParentNode, pasal: Pasal): Triple[] {
   ];
 }
 
-function pasalParentToTriple(parent: PasalParentNode, pasal: PasalNode): Triple {
+function pasalParentToTriple(parent: PasalParentNode, pasal: PasalNode): LegalTriple {
   if (parent.nodeType === 'bab') return [parent, 'babHasPasal', pasal];
   if (parent.nodeType === 'bagian') return [parent, 'bagianHasPasal', pasal];
   if (parent.nodeType === 'paragraf') return [parent, 'paragrafHasPasal', pasal];
   assertNever(parent);
 }
 
-function pasalContentToTriple(pasalNode: PasalNode, content: PasalContent): Triple[] {
+function pasalContentToTriple(pasalNode: PasalNode, content: PasalContent): LegalTriple[] {
   if (content.type === 'ayats') return content.ayatArr.flatMap(ayatToTripleWith(pasalNode));
   if (content.type === 'points') return pointsToTriple(pasalNode, content);
   if (content.type === 'referenceText') return referencesToTriple(pasalNode, content.references);
@@ -166,9 +193,9 @@ function pasalContentToTriple(pasalNode: PasalNode, content: PasalContent): Trip
 }
 
 const ayatToTripleWith = curry(ayatToTriple);
-function ayatToTriple(parent: PasalNode, ayat: Ayat): Triple[] {
+function ayatToTriple(parent: PasalNode | AmendedPasalNode, ayat: Ayat): LegalTriple[] {
   const ayatNode: AyatNode = { nodeType: 'ayat', key: ayat.key, parent };
-  const contentTriples: Triple[] =
+  const contentTriples: LegalTriple[] =
     ayat.content.type === 'points'
       ? pointsToTriple(ayatNode, ayat.content)
       : [
@@ -182,7 +209,7 @@ function ayatToTriple(parent: PasalNode, ayat: Ayat): Triple[] {
   ];
 }
 
-function amenderPointsToTriple(pointsNode: PointsNode, points: AmenderPoints): Triple[] {
+function amenderPointsToTriple(pointsNode: PointsNode, points: AmenderPoints): LegalTriple[] {
   return [
     [pointsNode, 'pointsHasDescription', points.description.text],
     ...referencesToTriple(pointsNode, points.description.references),
@@ -190,12 +217,12 @@ function amenderPointsToTriple(pointsNode: PointsNode, points: AmenderPoints): T
   ];
 }
 
-function pointsToTriple(pointsNode: PointsNode, points: Points): Triple[] {
+function pointsToTriple(pointsNode: PointsNode, points: PointSet): LegalTriple[] {
   if (isNil(points)) return [];
   return [
     [pointsNode, 'pointsHasDescription', points.description.text],
     ...referencesToTriple(pointsNode, points.description.references),
-    ...points.content.flatMap(pointToTripleWith(pointsNode)),
+    ...points.elements.flatMap(pointToTripleWith(pointsNode)),
   ];
 }
 
@@ -204,7 +231,7 @@ function amendedPointToTriple(
   pointsNode: PointsNode,
   parentDocument: DocumentNode,
   point: AmendedPoint
-): Triple[] {
+): LegalTriple[] {
   switch (point.operation) {
     case 'delete':
       return amenderDeletePointToTriple(pointsNode, point);
@@ -215,7 +242,10 @@ function amendedPointToTriple(
   }
 }
 
-function amenderDeletePointToTriple(pointsNode: PointsNode, point: AmenderDeletePoint): Triple[] {
+function amenderDeletePointToTriple(
+  pointsNode: PointsNode,
+  point: AmenderDeletePoint
+): LegalTriple[] {
   const { key: _nomorKey, deletedNode: deletedPasal } = point;
   const node: AmenderDeletePointNode = {
     nodeType: 'amenderPoint',
@@ -230,7 +260,7 @@ function amenderInsertPointToTriple(
   pointsNode: PointsNode,
   parentDocument: DocumentNode,
   point: AmenderInsertPoint
-): Triple[] {
+): LegalTriple[] {
   const { key, amendedPasalArr, description } = point;
   const node: AmenderInsertPointNode = {
     nodeType: 'amenderPoint',
@@ -243,16 +273,16 @@ function amenderInsertPointToTriple(
     ...referencesToTriple(node, description.references),
     ...flatMap(
       amendedPasalArr,
-      amendedPasalToTripleWith({ parentPointNode: node, parentDocument })
+      amendedPasalToTripleWith({ amenderPointNode: node, parentDoc: parentDocument })
     ),
   ];
 }
 
 function amenderUpdatePointToTriple(
   pointsNode: PointsNode,
-  parentDocument: DocumentNode,
+  parentDoc: DocumentNode,
   point: AmenderUpdatePoint
-): Triple[] {
+): LegalTriple[] {
   const { key, updatedPasal, description } = point;
   const node: AmenderUpdatePointNode = {
     nodeType: 'amenderPoint',
@@ -263,34 +293,50 @@ function amenderUpdatePointToTriple(
   return [
     [node, 'amenderUpdatePointHasDescription', description.text],
     ...referencesToTriple(node, description.references),
-    ...amendedPasalToTriple({ parentPointNode: node, parentDocument }, updatedPasal),
+    ...amendedPasalToTriple({ amenderPointNode: node, parentDoc }, updatedPasal),
   ];
 }
 
 const amendedPasalToTripleWith = curry(amendedPasalToTriple);
 function amendedPasalToTriple(
   context: {
-    parentPointNode: AmenderUpdatePointNode | AmenderInsertPointNode;
-    parentDocument: DocumentNode;
+    amenderPointNode: AmenderUpdatePointNode | AmenderInsertPointNode;
+    parentDoc: DocumentNode;
   },
   amendedPasal: AmendedPasal
-): Triple[] {
-  const { parentPointNode, parentDocument } = context;
+): LegalTriple[] {
+  const { amenderPointNode, parentDoc } = context;
   const node: AmendedPasalNode = {
     nodeType: 'amendedPasal',
     key: amendedPasal.key,
-    parentDoc: parentDocument,
-    amenderPointNode: parentPointNode,
+    parentDoc,
+    amenderPointNode,
   };
-  return parentPointNode.operation === 'insert'
-    ? [[parentPointNode, 'amenderInsertPointInsertedPasal', node]]
-    : [[parentPointNode, 'amenderUpdatePointUpdatedPasal', node]];
+  const parentHasPasalTriple: LegalTriple =
+    amenderPointNode.operation === 'insert'
+      ? [amenderPointNode, 'amenderInsertPointInsertedPasal', node]
+      : [amenderPointNode, 'amenderUpdatePointUpdatedPasal', node];
+  return [
+    parentHasPasalTriple,
+    [node, 'amendedPasalHasKey', amendedPasal.key],
+    ...amendedPasalContentToTriple(node, amendedPasal.content),
+  ];
+}
+
+function amendedPasalContentToTriple(
+  pasalNode: AmendedPasalNode,
+  content: PointSet | Text | AyatSet
+): LegalTriple[] {
+  if (content.type === 'ayats') return content.elements.flatMap(ayatToTripleWith(pasalNode));
+  if (content.type === 'points') return pointsToTriple(pasalNode, content);
+  if (content.type === 'referenceText') return referencesToTriple(pasalNode, content.references);
+  assertNever(content);
 }
 
 const pointToTripleWith = curry(pointToTriple);
-function pointToTriple(parent: PointsNode, point: Point): Triple[] {
+function pointToTriple(parent: PointsNode, point: Point): LegalTriple[] {
   const pointNode: PointNode = { key: point.key, parent, nodeType: 'point' };
-  const contentTriples: Triple[] =
+  const contentTriples: LegalTriple[] =
     point.content.type === 'points'
       ? pointsToTriple(pointNode, point.content)
       : [
@@ -307,6 +353,6 @@ function pointToTriple(parent: PointsNode, point: Point): Triple[] {
 function referencesToTriple(
   parent: PointsNode | AmenderUpdatePointNode | AmenderInsertPointNode | AmendedPasalNode,
   references: Reference[]
-): Triple[] {
-  return map(references, ({ node }) => [parent, 'references', node] as Triple);
+): LegalTriple[] {
+  return map(references, ({ node }) => [parent, 'references', node] as LegalTriple);
 }

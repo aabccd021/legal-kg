@@ -1,6 +1,6 @@
 import { isNil, isNumber, isString, toPairs, compact, upperFirst } from 'lodash';
 import * as n3 from 'n3';
-import { Triple } from './triple';
+import { LegalTriple } from './triple';
 import _ from 'lodash';
 import { LegalNode, getOntologyBaseUri, nodeToUri } from '../../../legal';
 
@@ -26,7 +26,7 @@ function onto(predicate: string): n3.NamedNode<string> {
 /**
  * triples2ttl
  */
-export function triplesToTtl(triples: Triple[]): string {
+export function triplesToTtl(triples: LegalTriple[]): string {
   const ontologyBaseUri = getOntologyBaseUri();
   const prefixes = { legal: `${ontologyBaseUri}/` };
 
@@ -45,7 +45,7 @@ export function triplesToTtl(triples: Triple[]): string {
   return `${prefixStr}\n\n${processedTtlStr}`;
 }
 
-function tripleToQuad([subject, predicate, object]: Triple): n3.Quad | undefined {
+function tripleToQuad([subject, predicate, object]: LegalTriple): n3.Quad | undefined {
   if (isNil(object)) return undefined;
   const _subject = node(subject);
   const _predicate = onto(predicate);
@@ -56,7 +56,7 @@ function tripleToQuad([subject, predicate, object]: Triple): n3.Quad | undefined
 /**
  * Node Classes
  */
-function getClassTypeQuads(triples: Triple[]): n3.Quad[] {
+function getClassTypeQuads(triples: LegalTriple[]): n3.Quad[] {
   return _(triples)
     .map(([s]) => s)
     .uniq()
@@ -67,12 +67,12 @@ function getClassTypeQuads(triples: Triple[]): n3.Quad[] {
 /**
  * PartOf
  */
-function getAlternativeVocabQuads(triples: Triple[]): n3.Quad[] {
+function getAlternativeVocabQuads(triples: LegalTriple[]): n3.Quad[] {
   return _(triples)
     .map(([s, p, o]) => {
       if (isNil(o) || isString(o) || isNumber(o)) return undefined;
       if (
-        p === 'ayatHasPoints' ||
+        p === 'ayatHasPoint' ||
         p === 'babHasBagian' ||
         p === 'babHasPasal' ||
         p === 'bagianHasParagraf' ||
@@ -80,9 +80,8 @@ function getAlternativeVocabQuads(triples: Triple[]): n3.Quad[] {
         p === 'documentHasBab' ||
         p === 'paragrafHasPasal' ||
         p === 'pasalHasAyat' ||
-        p === 'pasalHasPoints' ||
-        p === 'pointHasPoints' ||
-        p === 'pointsHasPoint'
+        p === 'pasalHasPoint' ||
+        p === 'pointHasPoint'
       ) {
         return triple(node(o), onto('partOf'), node(s));
       }

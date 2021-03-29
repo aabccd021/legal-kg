@@ -31,13 +31,13 @@ import { neverNum, neverString } from '../../../util';
 import { safeParseInt } from './parse_key_from_spans';
 
 export function rawJsonToJson(document: Document): Document {
-  const { babs, _node } = document;
+  const { babArr: babs, _node } = document;
 
   return {
     ...document,
     // mengingat: mengimbangToDetectedMengimbang(mengingat, 'documentMengingat', _node),
     // menimbang: mengimbangToDetectedMengimbang(menimbang, 'documentMenimbang', _node),
-    babs: babs?.map((bab) => babToDetectedBab(bab, _node)),
+    babArr: babs?.map((bab) => babToDetectedBab(bab, _node)),
   };
 }
 

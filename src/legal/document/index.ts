@@ -6,6 +6,7 @@ import { UudNode, _uud } from './uud';
 import { DataType } from '../../data';
 import path from 'path';
 import * as fs from 'fs';
+import { BabSet } from '../component';
 
 /**
  * Scrapable Document
@@ -137,7 +138,7 @@ export type Document = {
   penjelasan?: string[];
   pengesahanText?: string;
   opText?: string;
-  babs: Bab[];
+  babSet: BabSet;
   _name?: string;
   _nomor?: number;
   _tahun?: number;

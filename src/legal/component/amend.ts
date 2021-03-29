@@ -1,41 +1,38 @@
-import { PasalNode } from './pasal';
-import { DocumentNode } from '../document/index';
-import { ReferenceText } from '../reference';
-import { Ayats } from './ayat';
-import { Points, PointsNode } from './point';
+import { Text, PasalNode, PointSet, AyatSet } from '.';
 import { nodeToUri } from '..';
+import { DocumentNode } from '../document';
 
 export type AmenderPoints = {
   type: 'amenderPoints';
   parent: DocumentNode;
-  description: ReferenceText;
+  description: Text;
   amendedPointArr: AmendedPoint[];
 };
 
-type AmenderPointBase = {
-  type: 'amenderPoint';
-  key: number;
-};
+// type AmenderPointBase = {
+//   type: 'amenderPoint';
+//   key: number;
+// };
 
-type AmenderPointNodeBase = {
-  nodeType: 'amenderPoint';
-  key: number;
-  parent: PointsNode;
-};
+// type AmenderPointNodeBase = {
+//   nodeType: 'amenderPoint';
+//   key: number;
+//   parent: PointNode | AyatNode;
+// };
 
 export type AmenderPointNode =
   | AmenderDeletePointNode
   | AmenderInsertPointNode
   | AmenderUpdatePointNode;
 
-export type AmenderDeletePointNode = AmenderPointNodeBase & {
-  operation: 'delete';
+export type AmenderDeletePointNode = {
+  nodeType: 'amenderDeletePoint';
 };
-export type AmenderInsertPointNode = AmenderPointNodeBase & {
-  operation: 'insert';
+export type AmenderInsertPointNode = {
+  nodeType: 'amenderDeletePoint';
 };
-export type AmenderUpdatePointNode = AmenderPointNodeBase & {
-  operation: 'update';
+export type AmenderUpdatePointNode = {
+  nodeType: 'amenderDeletePoint';
 };
 
 export function getAmenderPointUri(node: AmenderPointNode): string {
@@ -53,13 +50,13 @@ export type AmenderDeletePoint = AmenderPointBase & {
 
 export type AmenderUpdatePoint = AmenderPointBase & {
   operation: 'update';
-  description: ReferenceText;
+  description: Text;
   updatedPasal: AmendedPasal;
 };
 
 export type AmenderInsertPoint = AmenderPointBase & {
   operation: 'insert';
-  description: ReferenceText;
+  description: Text;
   amendedPasalArr: AmendedPasal[];
 };
 
@@ -69,7 +66,7 @@ export type AmenderInsertPoint = AmenderPointBase & {
 export type AmendedPasal = {
   componentType: 'amendedPasal';
   key: string;
-  content: Points | ReferenceText | Ayats;
+  content: PointSet | Text | AyatSet;
 };
 
 export type AmendedPasalNode = {

@@ -1,32 +1,40 @@
-import { AmendedPasal } from '../../../legal/component/amend';
-import {
-  AmenderDeletePoint,
-  AmendedPoint,
-  AmenderInsertPoint,
-  AmenderUpdatePoint,
-} from '../../../legal/component/amend';
-import { Paragraf, Paragrafs } from '../../../legal/component/paragraf';
+import assertNever from 'assert-never';
 import { chain, curry, isEmpty, isUndefined, keys } from 'lodash';
-import { ReferenceText } from '../../../legal/reference';
-import { Bab } from '../../../legal/component/bab';
-import { Bagian, Bagians } from '../../../legal/component/bagian';
-import { PasalContent, Pasal, PasalNode, Pasals } from '../../../legal/component/pasal';
-import { lastOf, neverUndefined, Span } from '../../../util';
-import { KeyIds } from './scan';
-import { spansInRange, spanIdKeyMapOf, toSpansWith } from './util';
-import { AmenderPoints } from '../../../legal/component/amend';
-import { Ayat, Ayats } from '../../../legal/component/ayat';
 import {
-  hurufKeyOfSpan,
+  Bab,
+  Bagian,
+  Pasal,
+  BagianSet,
+  PasalSet,
+  Paragraf,
+  ParagrafSet,
+  AyatSet,
+  PointSet,
+  Point,
+  Ayat,
+  PasalNode,
+  Text,
+} from '../../../legal/component';
+import {
+  AmenderPoints,
+  AmendedPoint,
+  AmenderDeletePoint,
+  AmenderUpdatePoint,
+  AmendedPasal,
+  AmenderInsertPoint,
+} from '../../../legal/component/amend';
+import { DocumentNode } from '../../../legal/document';
+import { Span, lastOf, neverUndefined } from '../../../util';
+import { KeyIds } from './babs_spans_to_key_ids';
+import {
   nomorKeyOfSpan,
-  removeAyatKey,
+  hurufKeyOfSpan,
   removeHurufKey,
   removeNomorKey,
+  removeAyatKey,
   safeParseInt,
 } from './parse_key_from_spans';
-import { Point, Points } from '../../../legal/component/point';
-import assertNever from 'assert-never';
-import { DocumentNode } from '../../../legal/document';
+import { toSpansWith, spanIdKeyMapOf, spansInRange } from './util';
 
 export type Context = {
   hasAmendPasal: boolean;
@@ -47,9 +55,9 @@ export type KeySpans = [string, Span[]];
 const spansToBabWith = curry(spansToBab);
 function spansToBab(context: Context, [key, spans]: KeySpans): Bab {
   const { bagianKeyOfId, pasalKeyOfId } = context.keyIds;
-  const { spanIdKeyMap, toStructure } = spanIdKeyMapOf<Bagian, Pasal, Bagians, Pasals>(
-    [bagianKeyOfId, spansToBagian, (bagians) => ({ type: 'bagians', bagianArr: bagians })],
-    [pasalKeyOfId, spansToPasal, (pasals) => ({ type: 'pasals', pasalArr: pasals })],
+  const { spanIdKeyMap, toStructure } = spanIdKeyMapOf<Bagian, Pasal, BagianSet, PasalSet>(
+    [bagianKeyOfId, spansToBagian, (bagians) => ({ type: 'bagians', elements: bagians })],
+    [pasalKeyOfId, spansToPasal, (pasals) => ({ type: 'pasals', elements: pasals })],
     spans,
     context
   );
@@ -58,19 +66,19 @@ function spansToBab(context: Context, [key, spans]: KeySpans): Bab {
     type: 'bab',
     key: parseInt(key),
     title: preKeySpans.map(spanToStr).join(' '),
-    content: chain(spansOfKey).toPairs().thru<Bagians | Pasals>(toStructure).value(),
+    content: chain(spansOfKey).toPairs().thru<BagianSet | PasalSet>(toStructure).value(),
   };
 }
 
 function spansToBagian(context: Context, [key, spans]: KeySpans): Bagian {
   const { paragrafKeyOfId, pasalKeyOfId } = context.keyIds;
-  const { spanIdKeyMap, toStructure } = spanIdKeyMapOf<Paragraf, Pasal, Paragrafs, Pasals>(
+  const { spanIdKeyMap, toStructure } = spanIdKeyMapOf<Paragraf, Pasal, ParagrafSet, PasalSet>(
     [
       paragrafKeyOfId,
       spansToParagraf,
-      (paragrafs) => ({ type: 'paragrafs', paragrafArr: paragrafs }),
+      (paragrafs) => ({ type: 'paragrafs', elements: paragrafs }),
     ],
-    [pasalKeyOfId, spansToPasal, (pasals) => ({ type: 'pasals', pasalArr: pasals })],
+    [pasalKeyOfId, spansToPasal, (pasals) => ({ type: 'pasals', elements: pasals })],
     spans,
     context
   );
@@ -79,7 +87,7 @@ function spansToBagian(context: Context, [key, spans]: KeySpans): Bagian {
     type: 'bagian',
     key: parseInt(key),
     title: preKeySpans.map(spanToStr).join(' '),
-    content: chain(spansOfKey).toPairs().thru<Paragrafs | Pasals>(toStructure).value(),
+    content: chain(spansOfKey).toPairs().thru<ParagrafSet | PasalSet>(toStructure).value(),
   };
 }
 
@@ -91,7 +99,7 @@ function spansToParagraf(context: Context, [key, spans]: KeySpans): Paragraf {
     title: preKeySpans.map(({ str }) => str).join(' '),
     content: {
       type: 'pasals',
-      pasalArr: chain(spansOfKey).toPairs().map(spansToPasalWith(context)).value(),
+      elements: chain(spansOfKey).toPairs().map(spansToPasalWith(context)).value(),
     },
   };
 }
@@ -105,28 +113,31 @@ function spansToPasal(context: Context, [key, spans]: KeySpans): Pasal {
   };
 }
 
-function spansToPasalContent(context: Context, spans: Span[]): PasalContent {
+function spansToPasalContent(
+  context: Context,
+  spans: Span[]
+): PointSet | Text | AmenderPoints | AyatSet {
   if (context.hasAmendPasal && !isEmpty(spansInRange(context.keyIds.amendNomorKeyOfId, spans))) {
     return amenderPointsOf(context, spans);
   }
   return ayatsOf(context, spans) ?? pointsOf(context, spans) ?? toEmptyReference(spans);
 }
 
-function ayatsOf(context: Context, spans: Span[]): Ayats | undefined {
+function ayatsOf(context: Context, spans: Span[]): AyatSet | undefined {
   const { spansOfKey } = toSpansWith(context.keyIds.ayatKeyOfId, spans);
   if (isEmpty(spansOfKey)) return undefined;
   const ayats = chain(spansOfKey).toPairs().map(spanToAyatWith(context)).value();
-  return { type: 'ayats', ayatArr: ayats };
+  return { type: 'ayats', elements: ayats };
 }
 
-function amendAyatsOf(context: Context, spans: Span[]): Ayats | undefined {
+function amendAyatsOf(context: Context, spans: Span[]): AyatSet | undefined {
   const { spansOfKey } = toSpansWith(context.keyIds.amendAyatKeyOfId, spans);
   if (isEmpty(spansOfKey)) return undefined;
   const ayats = chain(spansOfKey).toPairs().map(spanToAyatWith(context)).value();
-  return { type: 'ayats', ayatArr: ayats };
+  return { type: 'ayats', elements: ayats };
 }
 
-function pointsOf(context: Context, spans: Span[]): Points | undefined {
+function pointsOf(context: Context, spans: Span[]): PointSet | undefined {
   for (const [spanIdx, span] of spans.entries()) {
     if (nomorKeyOfSpan(span) === 1) {
       return _getPoints(context, 'numPoint', spans, spanIdx);
@@ -140,11 +151,11 @@ function pointsOf(context: Context, spans: Span[]): Points | undefined {
 
 type PointType = 'numPoint' | 'alphaPoint';
 
-function _getPoints(context: Context, _type: PointType, spans: Span[], spanIdx: number): Points {
+function _getPoints(context: Context, _type: PointType, spans: Span[], spanIdx: number): PointSet {
   return {
     type: 'points',
     description: toEmptyReference(spans.slice(0, spanIdx)),
-    content: chain(spans)
+    elements: chain(spans)
       .slice(spanIdx)
       .reduce<Acc>(toKeySpansWith(context, _type), { keySpans: [] })
       .thru(({ keySpans }) => keySpans)
@@ -384,11 +395,11 @@ function spansToAmendInsertPasalPoint(
   };
 }
 
-function toEmptyReference(spans: Span[]): ReferenceText {
+function toEmptyReference(spans: Span[]): Text {
   return chain(spans)
     .map(({ str }) => str)
     .join(' ')
-    .thru<ReferenceText>((text) => ({ type: 'referenceText', references: [], text }))
+    .thru<Text>((text) => ({ type: 'referenceText', references: [], text }))
     .value();
 }
 
