@@ -91,37 +91,32 @@ export function yamlToTriples({
 //   if (isNil(mengimbang)) return [];
 //   const metadata: MetadataNode = { metadataType, parentDocument, nodeType: 'metadata' };
 //   const { points, text } = mengimbang;
-//   const isiTriples: Triple[] = isNil(points)
+//   const contentTriples: Triple[] = isNil(points)
 //     ? [[metadata, 'hasText', text.text]]
 //     : pointsToTriple(metadata, points);
 
-//   return [...isiTriples, [parentDocument, 'hasMetadata', metadata]];
+//   return [...contentTriples, [parentDocument, 'hasMetadata', metadata]];
 // }
 
 const babToTripleWith = curry(babToTriple);
 function babToTriple(parentDocument: DocumentNode, bab: Bab): Triple[] {
   const { key, title, content } = bab;
   const babkey: BabNode = { key, parent: parentDocument, nodeType: 'bab' };
-  const isikeys =
+  const contentTriples: Triple[] =
     content.type === 'bagians'
       ? flatMap(content.bagianArr, bagianToTripleWith(babkey))
       : flatMap(content.pasalArr, pasalToTripleWith(babkey));
-
   return [
     [parentDocument, 'documentHasBab', babkey],
     [babkey, 'babHasKey', key],
     [babkey, 'babHasTitle', title],
-    ...isikeys,
+    ...contentTriples,
   ];
 }
 
 const bagianToTripleWith = curry(bagianToTriple);
 function bagianToTriple(parentBab: BabNode, bagian: Bagian): Triple[] {
-  const bagiankey: BagianNode = {
-    nodeType: 'bagian',
-    key: bagian.key,
-    parent: parentBab,
-  };
+  const bagiankey: BagianNode = { nodeType: 'bagian', key: bagian.key, parent: parentBab };
   return [
     [parentBab, 'babHasBagian', bagiankey],
     [bagiankey, 'bagianHasKey', bagian.key],
@@ -133,11 +128,7 @@ function bagianToTriple(parentBab: BabNode, bagian: Bagian): Triple[] {
 
 const paragrafToTripleWith = curry(paragrafToTriple);
 function paragrafToTriple(parent: BagianNode, paragraf: Paragraf): Triple[] {
-  const paragrafNode: ParagrafNode = {
-    nodeType: 'paragraf',
-    key: paragraf.key,
-    parent,
-  };
+  const paragrafNode: ParagrafNode = { nodeType: 'paragraf', key: paragraf.key, parent };
   return [
     [parent, 'bagianHasParagraf', paragrafNode],
     [paragrafNode, 'paragrafHasKey', paragraf.key],
@@ -176,37 +167,35 @@ function pasalContentToTriple(pasalNode: PasalNode, content: PasalContent): Trip
 
 const ayatToTripleWith = curry(ayatToTriple);
 function ayatToTriple(parent: PasalNode, ayat: Ayat): Triple[] {
-  const ayatNode: AyatNode = {
-    nodeType: 'ayat',
-    key: ayat.key,
-    parent,
-  };
-  const isiTriples: Triple[] =
+  const ayatNode: AyatNode = { nodeType: 'ayat', key: ayat.key, parent };
+  const contentTriples: Triple[] =
     ayat.content.type === 'points'
       ? pointsToTriple(ayatNode, ayat.content)
       : [
           [ayatNode, 'ayatHasText', ayat.content.text],
           ...referencesToTriple(ayatNode, ayat.content.references),
         ];
-  return [[parent, 'pasalHasAyat', ayatNode], [ayatNode, 'ayatHasKey', ayat.key], ...isiTriples];
+  return [
+    [parent, 'pasalHasAyat', ayatNode],
+    [ayatNode, 'ayatHasKey', ayat.key],
+    ...contentTriples,
+  ];
 }
 
 function amenderPointsToTriple(pointsNode: PointsNode, points: AmenderPoints): Triple[] {
-  const { description: _description, amendedPointArr: isi, parent: parentDocument } = points;
   return [
-    [pointsNode, 'pointsHasDescription', _description.text],
-    ...referencesToTriple(pointsNode, _description.references),
-    ...isi.flatMap(amendedPointToTripleWith(pointsNode, parentDocument)),
+    [pointsNode, 'pointsHasDescription', points.description.text],
+    ...referencesToTriple(pointsNode, points.description.references),
+    ...points.amendedPointArr.flatMap(amendedPointToTripleWith(pointsNode, points.parent)),
   ];
 }
 
 function pointsToTriple(pointsNode: PointsNode, points: Points): Triple[] {
   if (isNil(points)) return [];
-  const { description: _description, content: isi } = points;
   return [
-    [pointsNode, 'pointsHasDescription', _description.text],
-    ...referencesToTriple(pointsNode, _description.references),
-    ...isi.flatMap((i) => pointToTriple(pointsNode, i)),
+    [pointsNode, 'pointsHasDescription', points.description.text],
+    ...referencesToTriple(pointsNode, points.description.references),
+    ...points.content.flatMap(pointToTripleWith(pointsNode)),
   ];
 }
 
@@ -298,17 +287,20 @@ function amendedPasalToTriple(
     : [[parentPointNode, 'amenderUpdatePointUpdatedPasal', node]];
 }
 
-function pointToTriple(pointsNode: PointsNode, point: Point): Triple[] {
-  const { key, content: isi } = point;
-  const pointNode: PointNode = { key, parent: pointsNode, nodeType: 'point' };
-  const isiTriples: Triple[] =
-    isi.type === 'points'
-      ? pointsToTriple(pointNode, isi)
-      : [[pointNode, 'pointHasText', isi.text], ...referencesToTriple(pointNode, isi.references)];
+const pointToTripleWith = curry(pointToTriple);
+function pointToTriple(parent: PointsNode, point: Point): Triple[] {
+  const pointNode: PointNode = { key: point.key, parent, nodeType: 'point' };
+  const contentTriples: Triple[] =
+    point.content.type === 'points'
+      ? pointsToTriple(pointNode, point.content)
+      : [
+          [pointNode, 'pointHasText', point.content.text],
+          ...referencesToTriple(pointNode, point.content.references),
+        ];
   return [
-    [pointsNode, 'pointsHasPoint', pointNode],
-    [pointNode, 'pointHasKey', key],
-    ...isiTriples,
+    [parent, 'pointsHasPoint', pointNode],
+    [pointNode, 'pointHasKey', point.key],
+    ...contentTriples,
   ];
 }
 
