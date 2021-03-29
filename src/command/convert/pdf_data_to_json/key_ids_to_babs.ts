@@ -106,25 +106,21 @@ function spansToPasal(context: Context, [key, spans]: KeySpans): Pasal {
 }
 
 function spansToPasalContent(context: Context, spans: Span[]): PasalContent {
-  const { keyIds, hasAmendPasal } = context;
-  const { amendNomorKeyOfId } = keyIds;
-  if (hasAmendPasal && !isEmpty(spansInRange(amendNomorKeyOfId, spans))) {
+  if (context.hasAmendPasal && !isEmpty(spansInRange(context.keyIds.amendNomorKeyOfId, spans))) {
     return amenderPointsOf(context, spans);
   }
   return ayatsOf(context, spans) ?? pointsOf(context, spans) ?? toEmptyReference(spans);
 }
 
 function ayatsOf(context: Context, spans: Span[]): Ayats | undefined {
-  const { ayatKeyOfId } = context.keyIds;
-  const { spansOfKey } = toSpansWith(ayatKeyOfId, spans);
+  const { spansOfKey } = toSpansWith(context.keyIds.ayatKeyOfId, spans);
   if (isEmpty(spansOfKey)) return undefined;
   const ayats = chain(spansOfKey).toPairs().map(spanToAyatWith(context)).value();
   return { type: 'ayats', ayatArr: ayats };
 }
 
 function amendAyatsOf(context: Context, spans: Span[]): Ayats | undefined {
-  const { amendAyatKeyOfId } = context.keyIds;
-  const { spansOfKey } = toSpansWith(amendAyatKeyOfId, spans);
+  const { spansOfKey } = toSpansWith(context.keyIds.amendAyatKeyOfId, spans);
   if (isEmpty(spansOfKey)) return undefined;
   const ayats = chain(spansOfKey).toPairs().map(spanToAyatWith(context)).value();
   return { type: 'ayats', ayatArr: ayats };
@@ -135,12 +131,10 @@ function pointsOf(context: Context, spans: Span[]): Points | undefined {
     if (nomorKeyOfSpan(span) === 1) {
       return _getPoints(context, 'numPoint', spans, spanIdx);
     }
-
     if (hurufKeyOfSpan(span) === 'a'.charCodeAt(0)) {
       return _getPoints(context, 'alphaPoint', spans, spanIdx);
     }
   }
-
   return undefined;
 }
 
@@ -182,8 +176,7 @@ function toKeySpans(context: Context, _type: PointType, acc: Acc, span: Span): A
   const firsts = keySpans.slice(0, -1);
   const last = lastOf(keySpans);
   if (isUndefined(last)) throw Error();
-  const lastSpans = last[1];
-  const newLastSpans: Span[] = [...lastSpans, span];
+  const newLastSpans: Span[] = [...last[1], span];
   const newLast: KeySpans = [last[0], newLastSpans];
   const newKeySpans: KeySpans[] = [...firsts, newLast];
   return { ...acc, keySpans: newKeySpans };
