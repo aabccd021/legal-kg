@@ -3,47 +3,45 @@ import { DocumentNode } from '../../../legal/document/index';
 import { getDocumentData, nodeToFile } from '../../../data';
 import { readFileSync, writeFileSync } from 'fs';
 import { Accumulator, Span, toSpansWith } from '../../../util';
-import { babsSpansToKeyIds as keyIdsOfBabSpans } from './scan';
-import { babsOfKeyIds } from './key_ids_to_babs';
+import { babsSpansToKeyIds } from './scan';
 import { chain, isUndefined } from 'lodash';
 import { pasalKeyOfSpan } from './parse_key_from_spans';
-import { Document } from '../../../legal/document/index';
 import * as yaml from 'js-yaml';
+import { spansToDocument } from './spans_to_component';
 
 function pdfDataToJson(): void {
   getDocumentData('pdf-data').forEach(writeToJson);
   console.log('\ndone');
 }
 
-function writeToJson(node: DocumentNode): void {
-  console.log('\nstart', node);
+function writeToJson(documentNode: DocumentNode): void {
+  console.log('\nstart', documentNode);
 
-  console.time(`TIME ${JSON.stringify(node)} init`);
-  const dataFile = nodeToFile('pdf-data', node);
-  const jsonFile = nodeToFile('yaml', node);
+  console.time(`TIME ${JSON.stringify(documentNode)} init`);
+  const dataFile = nodeToFile('pdf-data', documentNode);
+  const jsonFile = nodeToFile('yaml', documentNode);
   const pdfSpans: Span[] = JSON.parse(readFileSync(dataFile.path).toString());
-  console.timeEnd(`TIME ${JSON.stringify(node)} init`);
+  console.timeEnd(`TIME ${JSON.stringify(documentNode)} init`);
 
-  console.time(`TIME ${JSON.stringify(node)} spans`);
+  console.time(`TIME ${JSON.stringify(documentNode)} spans`);
   const documentSpans = documentSpansOf(pdfSpans);
-  console.timeEnd(`TIME ${JSON.stringify(node)} spans`);
+  console.timeEnd(`TIME ${JSON.stringify(documentNode)} spans`);
 
-  console.time(`TIME ${JSON.stringify(node)} hasAmendPasal`);
+  console.time(`TIME ${JSON.stringify(documentNode)} hasAmendPasal`);
   const hasAmendPasal = spansHasAmendPasal(documentSpans.babs);
-  console.timeEnd(`TIME ${JSON.stringify(node)} hasAmendPasal`);
+  console.timeEnd(`TIME ${JSON.stringify(documentNode)} hasAmendPasal`);
 
-  console.time(`TIME ${JSON.stringify(node)} keyIds`);
-  const babKeyIds = keyIdsOfBabSpans(hasAmendPasal, documentSpans.babs);
-  console.timeEnd(`TIME ${JSON.stringify(node)} keyIds`);
+  console.time(`TIME ${JSON.stringify(documentNode)} keyIds`);
+  const keyIds = babsSpansToKeyIds(hasAmendPasal, documentSpans.babs);
+  console.timeEnd(`TIME ${JSON.stringify(documentNode)} keyIds`);
 
-  console.time(`TIME ${JSON.stringify(node)} babs`);
-  const babs = babsOfKeyIds({ hasAmendPasal, keyIds: babKeyIds }, documentSpans.babs);
-  console.timeEnd(`TIME ${JSON.stringify(node)} babs`);
+  console.time(`TIME ${JSON.stringify(documentNode)} babs`);
+  const document = spansToDocument({ hasAmendPasal, keyIds, documentNode }, documentSpans.babs);
+  console.timeEnd(`TIME ${JSON.stringify(documentNode)} babs`);
 
-  console.time(`TIME ${JSON.stringify(node)} detect`);
-  const document: Document = { _node: node, babArr: babs };
+  console.time(`TIME ${JSON.stringify(documentNode)} detect`);
   // const detectedDocument = rawJsonToJson(document);
-  console.timeEnd(`TIME ${JSON.stringify(node)} detect`);
+  console.timeEnd(`TIME ${JSON.stringify(documentNode)} detect`);
 
   writeFileSync(jsonFile.path, yaml.dump(document));
 }

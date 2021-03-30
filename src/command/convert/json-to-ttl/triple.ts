@@ -7,7 +7,7 @@ import {
   ParagrafNode,
   PointNode,
   TextNode,
-  PasalStateNode,
+  PasalVersionNode,
   BagianSetNode,
   PasalSetNode,
   ParagrafSetNode,
@@ -18,40 +18,39 @@ import {
 import { DocumentNode } from '../../../legal/document';
 
 export type LegalTriple = (
-  | [AyatNode, 'ayatHasDescription', TextNode]
   | [AyatNode, 'ayatHasKey', number]
-  | [AyatNode, 'ayatHasPoint', PointNode]
+  | [AyatNode, 'ayatHasPointSet', PointSetNode]
   | [AyatNode, 'ayatHasText', TextNode]
   | [AyatSetNode, 'ayatSetHasAyat', AyatNode]
   | [BabNode, 'babHasBagianSet', BagianSetNode]
-  | [BabNode, 'babHasKey', number] //
+  | [BabNode, 'babHasKey', number]
   | [BabNode, 'babHasPasalSet', PasalSetNode]
-  | [BabNode, 'babHasTitle', string] //
-  | [BabSetNode, 'babSetHasBab', BabNode] //
-  | [BagianNode, 'bagianHasJudul', string] //
-  | [BagianNode, 'bagianHasKey', number] //
+  | [BabNode, 'babHasTitle', string]
+  | [BabSetNode, 'babSetHasBab', BabNode]
+  | [BagianNode, 'bagianHasKey', number]
   | [BagianNode, 'bagianHasParagrafSet', ParagrafSetNode]
   | [BagianNode, 'bagianHasPasalSet', PasalSetNode]
-  | [BagianSetNode, 'bagianSetHasBagian', BagianNode] //
+  | [BagianNode, 'bagianHasTitle', string]
+  | [BagianSetNode, 'bagianSetHasBagian', BagianNode]
   | [DocumentNode, 'documentHasBabSet', BabSetNode]
-  | [ParagrafNode, 'paragrafHasJudul', string]
   | [ParagrafNode, 'paragrafHasKey', number]
   | [ParagrafNode, 'paragrafHasPasalSet', PasalSetNode]
+  | [ParagrafNode, 'paragrafHasTitle', string]
   | [ParagrafSetNode, 'paragrafSetHasParagraf', ParagrafNode]
-  | [PasalNode, 'pasalHasPasalState', PasalStateNode]
-  | [PasalNode, 'pasalHasKey', number]
+  | [PasalNode, 'pasalHasKey', number | string]
+  | [PasalNode, 'pasalHasPasalState', PasalVersionNode]
   | [PasalSetNode, 'pasalSetHasPasal', PasalNode]
-  | [PasalStateNode, 'pasalStateHasState', 'exists' | 'deleted']
-  | [PasalStateNode, 'pasalStateHasDescription', TextNode]
-  | [PasalStateNode, 'pasalStateHasPointSet', PointSetNode]
-  | [PasalStateNode, 'pasalStateHasAyatSet', AyatSetNode]
-  | [PasalStateNode, 'pasalStateHasText', TextNode]
-  | [PointSetNode, 'pointSetHasPoint', PointNode]
-  | [PointSetNode, 'pointSetHasDescription', TextNode]
-  | [PointNode, 'pointUpdatePasal' | 'pointDeletePasal', PasalStateNode]
-  | [PointNode, 'pointHasCharKey', string]
-  | [PointNode, 'pointHasNumKey', number]
+  | [PasalVersionNode, 'pasalStateHasAyatSet', AyatSetNode]
+  | [PasalVersionNode, 'pasalStateHasPointSet', PointSetNode]
+  | [PasalVersionNode, 'pasalStateHasState', 'exists' | 'delete']
+  | [PasalVersionNode, 'pasalStateHasText', TextNode]
+  | [PointNode, 'pointHasKey', string | number]
   | [PointNode, 'pointHasPointSet', PointSetNode]
   | [PointNode, 'pointHasText', TextNode]
+  | [PointNode, 'pointUpdatePasal' | 'pointDeletePasal' | 'pointInsertPasal', PasalVersionNode]
+  | [PointSetNode, 'pointSetHasDescription', TextNode]
+  | [PointSetNode, 'pointSetHasPoint', PointNode]
+  | [TextNode, 'textHasTextString', string]
+  | [TextNode, 'textReferencesLegal', LegalNode]
 ) &
   [LegalNode, unknown, string | number | LegalNode];

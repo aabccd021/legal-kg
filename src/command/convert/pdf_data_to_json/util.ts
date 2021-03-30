@@ -1,25 +1,30 @@
-import { Component } from '../../../legal/component/index';
+import { Component } from '../../../legal/component';
 import { chain, curry, isUndefined, min } from 'lodash';
 import { Span, neverNum, lastOf } from '../../../util';
-import { SpanIdKeyMap } from './scan';
-import { Context, KeySpans } from './key_ids_to_babs';
+import { SpanIdToComponentKeyMap } from './scan';
+import { Context, KeySpans } from './spans_to_component';
 
-type Acc = {
-  spansOfKey: SpansOfKey;
+type SpansExtractResult = {
+  keyToSpanMap: KeyToSpanMap;
   preKeySpans: Span[];
   currentKey?: number;
 };
 
-type SpansOfKey = { [key: number]: Span[] };
+type KeyToSpanMap = { [key: number]: Span[] };
 type ToStructureWith<T extends Component> = (context: Context, keySpans: KeySpans) => T;
-type StructureUtil<U> = {
-  spanIdKeyMap: SpanIdKeyMap<number>;
-  toStructure: (keySpans: KeySpans[]) => U;
+type StructureUtil<U extends Component> = {
+  spanIdMap: SpanIdToComponentKeyMap<number>;
+  keySpansToComponent: (keySpans: KeySpans[]) => U;
 };
 
-export function spanIdKeyMapOf<A extends Component, B extends Component, T, U>(
-  map1: [SpanIdKeyMap<number>, ToStructureWith<A>, (a: A[]) => T],
-  map2: [SpanIdKeyMap<number>, ToStructureWith<B>, (a: B[]) => U],
+export function spanIdKeyMapOf<
+  A extends Component,
+  B extends Component,
+  T extends Component,
+  U extends Component
+>(
+  map1: [SpanIdToComponentKeyMap<number>, ToStructureWith<A>, (a: A[]) => T],
+  map2: [SpanIdToComponentKeyMap<number>, ToStructureWith<B>, (a: B[]) => U],
   spans: Span[],
   context: Context
 ): StructureUtil<T> | StructureUtil<U> {
@@ -29,19 +34,19 @@ export function spanIdKeyMapOf<A extends Component, B extends Component, T, U>(
     : transform(map2, context);
 }
 
-function transform<T extends Component, U>(
-  map1: [SpanIdKeyMap<number>, ToStructureWith<T>, (a: T[]) => U],
+function transform<T extends Component, U extends Component>(
+  map1: [SpanIdToComponentKeyMap<number>, ToStructureWith<T>, (a: T[]) => U],
   context: Context
 ): StructureUtil<U> {
   return {
-    spanIdKeyMap: map1[0],
-    toStructure: (keySpans: KeySpans[]) => {
-      return map1[2](keySpans.map(curry(map1[1])(context)));
+    spanIdMap: map1[0],
+    keySpansToComponent: (keySpansTupleArr: KeySpans[]) => {
+      return map1[2](keySpansTupleArr.map(curry(map1[1])(context)));
     },
   };
 }
 
-export function spansInRange<T>(map: SpanIdKeyMap<T>, spans: Span[]): number[] {
+export function spansInRange<T>(map: SpanIdToComponentKeyMap<T>, spans: Span[]): number[] {
   return chain(map)
     .keys()
     .map((key) => parseInt(key))
@@ -50,23 +55,30 @@ export function spansInRange<T>(map: SpanIdKeyMap<T>, spans: Span[]): number[] {
     .value();
 }
 
-export const toSpansWith = curry(_toSpansWith);
-function _toSpansWith(keyOfId: SpanIdKeyMap<number>, spans: Span[]): Acc {
-  return spans.reduce(toSpans(keyOfId), { spansOfKey: {}, preKeySpans: [] });
+export const extractSpansWith = curry(extractSpans);
+export function extractSpans(
+  keyOfId: SpanIdToComponentKeyMap<number>,
+  spans: Span[]
+): SpansExtractResult {
+  return spans.reduce(toSpans(keyOfId), { keyToSpanMap: {}, preKeySpans: [] });
 }
 
 const toSpans = curry(_toSpans);
-function _toSpans(keyOfId: SpanIdKeyMap<number>, acc: Acc, span: Span): Acc {
-  const { spansOfKey, currentKey, preKeySpans } = acc;
+function _toSpans(
+  keyOfId: SpanIdToComponentKeyMap<number>,
+  acc: SpansExtractResult,
+  span: Span
+): SpansExtractResult {
+  const { keyToSpanMap: spansOfKey, currentKey, preKeySpans } = acc;
   const newKey = keyOfId[span.id];
 
   if (isUndefined(currentKey)) {
     if (isUndefined(newKey)) return { ...acc, preKeySpans: [...preKeySpans, span] };
-    return { ...acc, currentKey: newKey, spansOfKey: { ...spansOfKey, [newKey]: [span] } };
+    return { ...acc, currentKey: newKey, keyToSpanMap: { ...spansOfKey, [newKey]: [span] } };
   }
 
   if (!isUndefined(newKey)) {
-    return { ...acc, currentKey: newKey, spansOfKey: { ...spansOfKey, [newKey]: [span] } };
+    return { ...acc, currentKey: newKey, keyToSpanMap: { ...spansOfKey, [newKey]: [span] } };
   }
 
   const currentSpans = spansOfKey[currentKey];
@@ -74,5 +86,5 @@ function _toSpans(keyOfId: SpanIdKeyMap<number>, acc: Acc, span: Span): Acc {
 
   const newCurrentSpans = [...currentSpans, span];
   const newSpansOfKey = { ...spansOfKey, [currentKey]: newCurrentSpans };
-  return { ...acc, spansOfKey: newSpansOfKey };
+  return { ...acc, keyToSpanMap: newSpansOfKey };
 }

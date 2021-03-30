@@ -1,5 +1,4 @@
 import assertNever from 'assert-never';
-import { Bab } from '../component/bab';
 import { PerdaNode, _perda } from './perda';
 import { UuNode, _uu } from './uu';
 import { UudNode, _uud } from './uud';
@@ -134,7 +133,7 @@ export function getScrapableDocumentLastPage(category: ScrapableDocumentCategory
  * Document Data
  */
 export type Document = {
-  _node: DocumentNode;
+  node: DocumentNode;
   penjelasan?: string[];
   pengesahanText?: string;
   opText?: string;

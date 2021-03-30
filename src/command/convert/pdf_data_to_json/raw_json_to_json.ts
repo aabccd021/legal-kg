@@ -31,7 +31,7 @@ import { neverNum, neverString } from '../../../util';
 import { safeParseInt } from './parse_key_from_spans';
 
 export function rawJsonToJson(document: Document): Document {
-  const { babArr: babs, _node } = document;
+  const { babArr: babs, node: _node } = document;
 
   return {
     ...document,
@@ -110,7 +110,7 @@ function detectedAmendPointsOf(amendPoints: AmenderPoints, pasalNode: PasalNode)
   const detectedIsi = isi.map(detectedAmendPointOf(pasalNode));
   const detectedDescription = {
     ...description,
-    references: detectPasalNode(description.text, pasalNode),
+    references: detectPasalNode(description.textString, pasalNode),
   };
   return { ...amendPoints, description: detectedDescription, amendedPointArr: detectedIsi };
 }

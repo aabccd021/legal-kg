@@ -1,6 +1,7 @@
+import { BabSetNode } from '../../legal/component';
 import assertNever from 'assert-never';
 import * as yaml from 'js-yaml';
-import { map, flatten, compact, curry, chain, repeat, isNil } from 'lodash';
+import { map, flatten, compact, curry, chain, repeat, isNil, flatMap } from 'lodash';
 import { readFileSync, writeFileSync } from 'node:fs';
 import { toRoman } from 'roman-numerals';
 import { getDocumentData, nodeToFile } from '../../data';
@@ -14,23 +15,12 @@ import {
   Paragraf,
   ParagrafNode,
   Pasal,
-  getPasalParentDocument,
   PasalNode,
   Ayat,
   AyatNode,
-  PointSet,
-  PointNode,
-  Point,
   Text,
+  BabSet,
 } from '../../legal/component';
-import {
-  AmenderPoints,
-  AmendedPoint,
-  AmenderDeletePoint,
-  AmenderUpdatePoint,
-  AmenderInsertPoint,
-  AmendedPasal,
-} from '../../legal/component/amend';
 import { DocumentNode, nodeToName, Document } from '../../legal/document';
 
 type Option = { overwrite: boolean };
@@ -85,8 +75,8 @@ function _jsonToMd(doc: Document): string {
     _dokumen,
     // mengingat,
     // menimbang,
-    _node,
-    babArr: babs,
+    node: _node,
+    babSet,
   } = doc;
   const uri = nodeToUri(_node);
   const name = nodeToName(_node);
@@ -114,7 +104,7 @@ function _jsonToMd(doc: Document): string {
     ...map(_denganPersetujuan, (d) => metadata('Dengan Persetujuan', d)),
     // mengimbangToMd('Menimbang', menimbang, 'documentMenimbang', _node),
     // mengimbangToMd('Mengingat', mengingat, 'documentMengingat', _node),
-    ...flatten(babs?.map((b) => babToMd(b, _node))),
+    ...flatten(babSet?.map((b) => babToMd(b, _node))),
   ];
 
   return compact(lines).join('\n');
@@ -136,8 +126,14 @@ function _jsonToMd(doc: Document): string {
 // return `\n# [${title}](${uri})\n${contentStr}`;
 // }
 
-function babToMd(bab: Bab, parent: DocumentNode): string {
-  const babNode: BabNode = { key: bab.key, parent: parent, nodeType: 'bab' };
+function babSetToMd(babSet: BabSet, parentDocumentNode: DocumentNode): string[] {
+  const babSetNode: BabSetNode = { nodeType: 'babSet', parentDocumentNode };
+  return flatMap(babSet.elements, babToMdWith(parentDocumentNode));
+}
+
+const babToMdWith = curry(babToMd);
+function babToMd(parentDocumentNode: BabSetNode, bab: Bab): string {
+  const babNode: BabNode = { key: bab.key, parentBabSetNode: parent, nodeType: 'bab' };
   const contentStr: string =
     bab.content.type === 'pasals'
       ? bab.content.elements.map(pasalToMdWith(babNode)).join('\n')
@@ -150,7 +146,11 @@ function babToMd(bab: Bab, parent: DocumentNode): string {
 
 const bagianToMdWith = curry(bagianToMd);
 function bagianToMd(parent: BabNode, bagian: Bagian): string {
-  const bagianNode: BagianNode = { key: bagian.key, parent, nodeType: 'bagian' };
+  const bagianNode: BagianNode = {
+    key: bagian.key,
+    parentBagianSetNode: parent,
+    nodeType: 'bagian',
+  };
   const contentStr =
     bagian.content.type === 'pasals'
       ? bagian.content.elements.map(pasalToMdWith(parent))
@@ -161,14 +161,18 @@ function bagianToMd(parent: BabNode, bagian: Bagian): string {
 
 const paragrafToMdWith = curry(paragrafToMd);
 function paragrafToMd(parent: BagianNode, paragraf: Paragraf): string {
-  const paragrafNode: ParagrafNode = { key: paragraf.key, parent, nodeType: 'paragraf' };
-  const contentStr = paragraf.content.elements.map(pasalToMdWith(parent));
+  const paragrafNode: ParagrafNode = {
+    key: paragraf.key,
+    parentParagrafSetNode: parent,
+    nodeType: 'paragraf',
+  };
+  const contentStr = paragraf.pasalSet.elements.map(pasalToMdWith(parent));
   const uri = nodeToUri(paragrafNode);
   return `\n## [Paragraf ${paragraf.key}](${uri})\n${contentStr}\n`;
 }
 
 const pasalToMdWith = curry(pasalToMd);
-function pasalToMd(pasalParent: BagianNode | BabNode | ParagrafNode, pasal: Pasal): string {
+function pasalToMd(pasalParent: BagianNode | BabNode | ParagrafNode, pasal: Pasal[]): string {
   const parentDocumentNode = getPasalParentDocument(pasalParent);
   const pasalNode: PasalNode = { key: pasal.key, parentDoc: parentDocumentNode, nodeType: 'pasal' };
   const uri = nodeToUri(pasalNode);
@@ -177,7 +181,7 @@ function pasalToMd(pasalParent: BagianNode | BabNode | ParagrafNode, pasal: Pasa
 }
 
 function pasalContentToMd(
-  content: AyatSet | PointSet | Text | AmenderPoints,
+  content: AyatSet | NumPointSet | Text | AmenderPoints,
   pasalNode: PasalNode
 ): string {
   if (content.type === 'ayats') return content.elements.map(ayatToMdWith(pasalNode)).join('\n');
@@ -190,7 +194,7 @@ function pasalContentToMd(
 function amenderPointsToMd(amendPoints: AmenderPoints): string {
   const { description, amendedPointArr, parent } = amendPoints;
   const contentMd = amendedPointArr.map(amendPointToMdWith(parent)).join('\n');
-  return `${description.text}\n${contentMd}`;
+  return `${description.textString}\n${contentMd}`;
 }
 
 const amendPointToMdWith = curry(amendPointToMd);
@@ -263,7 +267,7 @@ function amendedPasalToMd(parentDoc: DocumentNode, amendedPasal: AmendedPasal): 
 
 const ayatToMdWith = curry(ayatToMd);
 function ayatToMd(parentPasal: PasalNode, ayat: Ayat): string {
-  const ayatNode: AyatNode = { key: ayat.key, parent: parentPasal, nodeType: 'ayat' };
+  const ayatNode: AyatNode = { key: ayat.key, parentAyatSetNode: parentPasal, nodeType: 'ayat' };
   const ayatUri = nodeToUri(ayatNode);
   const contentStr =
     ayat.content.type === 'points'
@@ -273,8 +277,8 @@ function ayatToMd(parentPasal: PasalNode, ayat: Ayat): string {
 }
 
 function pointsToMd(
-  points: PointSet,
-  parent: PointNode | AyatNode | PasalNode,
+  points: NumPointSet,
+  parent: NumPointNode | AyatNode | PasalNode,
   // | MetadataNode
   depth = 0
 ): string {
@@ -286,14 +290,14 @@ function pointsToMd(
 const pointToMdWith = curry(pointToMd);
 function pointToMd(
   context: {
-    parent: PointNode | AyatNode | PasalNode;
+    parent: NumPointNode | AyatNode | PasalNode;
     // | MetadataNode
     depth: number;
   },
-  point: Point
+  point: NumPoint
 ): string {
   const { parent, depth } = context;
-  const pointNode: PointNode = { key: point.key, parent: parent, nodeType: 'point' };
+  const pointNode: NumPointNode = { key: point.key, parent: parent, nodeType: 'point' };
   const uri = nodeToUri(pointNode);
   const contentStr =
     point.content.type === 'points'
@@ -313,7 +317,7 @@ function splitAt(slicable: string, indices: number[]): string[] {
 }
 
 function referenceToMd(ref: Text): string {
-  const { references, text } = ref;
+  const { references, textString: text } = ref;
   const sortedReferences = references.sort((a, b) => a.start - b.start);
   const indices = sortedReferences.flatMap(({ start, end }) => [start, end]);
   const uris = sortedReferences.map(({ node }) => nodeToUri(node));

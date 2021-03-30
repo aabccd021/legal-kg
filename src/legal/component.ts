@@ -1,11 +1,8 @@
-import { PasalNode, PointNode } from './index';
-import assertNever from 'assert-never';
-import { LegalNode } from '..';
-import { DocumentNode } from '../document';
-import { AmendedPasalNode, AmenderPoints } from './amend';
+import { LegalNode } from '.';
+import { DocumentNode } from './document';
 
 /**
- * ComponentNode
+ * Component Node
  */
 export type ComponentNode =
   | AyatNode
@@ -18,88 +15,88 @@ export type ComponentNode =
   | ParagrafSetNode
   | PasalNode
   | PasalSetNode
+  | PasalVersionNode
   | PointNode
   | PointSetNode
   | TextNode;
 
 export type AyatNode = {
   nodeType: 'ayat';
-  parent: AyatSetNode;
+  parentAyatSetNode: AyatSetNode;
   key: number;
 };
 
 export type AyatSetNode = {
   nodeType: 'ayatSet';
-  parent: PasalNode | AmendedPasalNode;
-  key: number;
+  parentPasalVersionNode: PasalVersionNode;
 };
 
 export type BabNode = {
   nodeType: 'bab';
-  parent: BabSetNode;
+  parentBabSetNode: BabSetNode;
   key: number;
 };
 
 export type BabSetNode = {
   nodeType: 'babSet';
-  parent: DocumentNode;
+  parentDocumentNode: DocumentNode;
 };
 
 export type BagianSetNode = {
   nodeType: 'bagianSet';
-  parent: BabNode;
+  parentBabNode: BabNode;
 };
 
 export type BagianNode = {
   nodeType: 'bagian';
-  parent: BagianSetNode;
+  parentBagianSetNode: BagianSetNode;
   key: number;
 };
 
 export type ParagrafNode = {
   nodeType: 'paragraf';
-  parent: BagianNode;
+  parentParagrafSetNode: ParagrafSetNode;
   key: number;
 };
 
 export type ParagrafSetNode = {
   nodeType: 'paragrafSet';
-  parent: BabNode;
+  parentBagianNode: BagianNode;
 };
 
 export type PasalSetNode = {
   nodeType: 'pasalSet';
-  parent: BabNode;
+  parentNode: BabNode | BagianNode | ParagrafNode;
 };
 
 export type PasalNode = {
   nodeType: 'pasal';
-  parentDoc: DocumentNode;
+  parentNode: DocumentNode;
   key: number | string;
 };
 
-export type PasalStateNode = {
-  parentDoc: PasalNode;
-  date: number;
+export type PasalVersionNode = {
+  nodeType: 'pasalVersion';
+  timeCreatedEpoch: number;
   state: 'exists' | 'deleted';
+  parentPasalNode: PasalNode;
 };
 
 export type PointNode = {
   nodeType: 'point';
   key: string | number;
-  parent: PointSetNode;
+  parentPointSetNode: PointSetNode;
 };
 
 export type PointSetNode = {
   nodeType: 'pointSet';
-  key: number;
-  parent: PointNode | AyatNode | PasalNode | AmendedPasalNode;
+  parentNode: PointNode | AyatNode | PasalVersionNode;
 };
 
 export type TextNode = {
   nodeType: 'text';
   textName: string;
-  parent: AyatNode | PasalNode | PointNode;
+  parentNode: PointNode | AyatNode | PasalVersionNode | PointSetNode;
 };
 
 export type AmenderDeletePointNode = {
@@ -115,81 +112,104 @@ export type AmenderUpdatePointNode = {
 /**
  * Component
  */
-export type Component = Bab | Bagian | Pasal | Paragraf | Ayat;
+export type Component =
+  | Bab
+  | BabSet
+  | BagianSet
+  | Bagian
+  | PasalSet
+  | Pasal
+  | ParagrafSet
+  | Paragraf
+  | AyatSet
+  | Ayat;
 
 export type Ayat = {
   type: 'ayat';
-  key: number;
+  node: AyatNode;
   content: PointSet | Text;
 };
 
 export type AyatSet = {
   type: 'ayatSet';
+  node: AyatSetNode;
   elements: Ayat[];
 };
 
 export type Bab = {
   type: 'bab';
-  key: number;
   title: string;
+  node: BabNode;
   content: BagianSet | PasalSet;
 };
 
 export type BabSet = {
   type: 'babSet';
+  node: BabSetNode;
   elements: Bab[];
 };
 
 export type Bagian = {
   type: 'bagian';
-  key: number;
+  node: BagianNode;
   title: string;
   content: ParagrafSet | PasalSet;
 };
 
 export type BagianSet = {
   type: 'bagianSet';
+  node: BagianSetNode;
   elements: Bagian[];
 };
 
 export type Paragraf = {
   type: 'paragraf';
-  key: number;
+  node: ParagrafNode;
   title: string;
-  content: PasalSet;
+  pasalSet: PasalSet;
 };
 
 export type ParagrafSet = {
   type: 'paragrafSet';
+  node: ParagrafSetNode;
   elements: Paragraf[];
 };
 
 export type Pasal = {
   type: 'pasal';
-  key: number;
-  content: PointSet | Text | AmenderPoints | AyatSet;
+  node: PasalNode;
+  content: PointSet | Text | AyatSet;
 };
 
 export type PasalSet = {
   type: 'pasalSet';
+  node: PasalSetNode;
   elements: Pasal[];
 };
 
 export type Point = {
-  type: 'numPoint' | 'alphaPoint';
-  key: string | number;
-  content: PointSet | Text;
+  type: 'point';
+  node: PointNode;
+  content:
+    | PointSet
+    | PasalDeleteAmenderPoint
+    | PasalUpdateAmenderPoint
+    | PasalInsertAmenderPoint
+    | Text;
 };
 
 export type PointSet = {
-  type: 'points';
+  type: 'pointSet';
+  node: PointSetNode;
+  description: Text;
   elements: Point[];
 };
 
 export type Text = {
-  type: 'referenceText';
-  text: string;
+  type: 'text';
+  node: TextNode;
   references: Reference[];
+  textString: string;
 };
 
 export type Reference = {
@@ -198,12 +218,24 @@ export type Reference = {
   node: LegalNode;
 };
 
-/**
- * Utils
- */
-export function getPasalParentDocument(parent: BagianNode | BabNode | ParagrafNode): DocumentNode {
-  if (parent.nodeType === 'paragraf') return getPasalParentDocument(parent.parent);
-  if (parent.nodeType === 'bagian') return getPasalParentDocument(parent.parent);
-  if (parent.nodeType === 'bab') return parent.parent;
-  assertNever(parent);
-}
+export type PasalDeleteAmenderPoint = {
+  type: 'pasalDeleteAmenderPoint';
+  node: PointNode;
+  deletedPasalVersionNode: PasalVersionNode;
+};
+
+export type PasalUpdateAmenderPoint = {
+  type: 'pasalUpdateAmenderPoint';
+  node: PointNode;
+  updatedPasalVersionNode: PasalVersionNode;
+  updatedPasal: Pasal;
+  description: Text;
+};
+
+export type PasalInsertAmenderPoint = {
+  type: 'pasalInsertAmenderPoint';
+  node: PointNode;
+  insertedPasalVersionNodeArr: PasalVersionNode[];
+  insertedPasalArr: Pasal[];
+  description: Text;
+};
