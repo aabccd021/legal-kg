@@ -8,7 +8,7 @@ export type LegalNode = DocumentNode | ComponentNode;
 
 export function nodeToUri(node: LegalNode): string {
   if (node.nodeType === 'ayat') return `${nodeToUri(node.parentAyatSetNode)}/${node.key}`;
-  if (node.nodeType === 'ayatSet') return `${nodeToUri(node.parent)}/ayat`;
+  if (node.nodeType === 'ayatSet') return `${nodeToUri(node.parentPasalVersionNode)}/ayat`;
   if (node.nodeType === 'bab') return `${nodeToUri(node.parentBabSetNode)}/${node.key}`;
   if (node.nodeType === 'babSet') return `${nodeToUri(node.parentDocumentNode)}/bab`;
   if (node.nodeType === 'bagian') return `${nodeToUri(node.parentBagianSetNode)}/${node.key}`;
@@ -37,12 +37,6 @@ function pasalSetParentNodeToDocumentNode(node: BabNode | BagianNode | ParagrafN
   assertNever(node);
 }
 
-/**
- * Type Guards
- */
-/**
- * Get Base Uri
- */
 export function getOntologyBaseUri(): string {
   const { uriBase } = getConfig();
   return `${uriBase}/ontology`;

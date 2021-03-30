@@ -69,22 +69,22 @@ function getClassTypeQuads(triples: LegalTriple[]): n3.Quad[] {
  */
 function getAlternativeVocabQuads(triples: LegalTriple[]): n3.Quad[] {
   return _(triples)
-    .map(([s, p, o]) => {
+    .map(([_s, _p, o]) => {
       if (isNil(o) || isString(o) || isNumber(o)) return undefined;
-      if (
-        p === 'ayatHasPoint' ||
-        p === 'babHasBagian' ||
-        p === 'babHasPasal' ||
-        p === 'bagianHasParagraf' ||
-        p === 'bagianHasPasal' ||
-        p === 'documentHasBab' ||
-        p === 'paragrafHasPasal' ||
-        p === 'pasalHasAyat' ||
-        p === 'pasalHasPoint' ||
-        p === 'pointHasPoint'
-      ) {
-        return triple(node(o), onto('partOf'), node(s));
-      }
+      // if (
+      // p === 'ayatHasPoint' ||
+      // p === 'babHasBagian' ||
+      // p === 'babHasPasal' ||
+      // p === 'bagianHasParagraf' ||
+      // p === 'bagianHasPasal' ||
+      // p === 'documentHasBab' ||
+      // p === 'paragrafHasPasal' ||
+      // p === 'pasalHasAyat' ||
+      // p === 'pasalHasPoint' ||
+      // p === 'pointHasPoint'
+      // ) {
+      // return triple(node(o), onto('partOf'), node(s));
+      // }
       return undefined;
     })
     .compact()

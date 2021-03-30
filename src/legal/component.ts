@@ -113,16 +113,23 @@ export type AmenderUpdatePointNode = {
  * Component
  */
 export type Component =
+  | Ayat
+  | AyatSet
   | Bab
   | BabSet
-  | BagianSet
   | Bagian
-  | PasalSet
-  | Pasal
-  | ParagrafSet
+  | BagianSet
   | Paragraf
-  | AyatSet
-  | Ayat;
+  | ParagrafSet
+  | Pasal
+  | PasalDeleteAmenderPoint
+  | PasalInsertAmenderPoint
+  | PasalSet
+  | PasalUpdateAmenderPoint
+  | PasalVersion
+  | Point
+  | PointSet
+  | Text;
 
 export type Ayat = {
   type: 'ayat';
@@ -178,6 +185,12 @@ export type ParagrafSet = {
 export type Pasal = {
   type: 'pasal';
   node: PasalNode;
+  version: PasalVersion;
+};
+
+export type PasalVersion = {
+  type: 'pasalVersion';
+  node: PasalVersionNode;
   content: PointSet | Text | AyatSet;
 };
 
@@ -227,15 +240,13 @@ export type PasalDeleteAmenderPoint = {
 export type PasalUpdateAmenderPoint = {
   type: 'pasalUpdateAmenderPoint';
   node: PointNode;
-  updatedPasalVersionNode: PasalVersionNode;
-  updatedPasal: Pasal;
+  updatedPasalVersion: PasalVersion;
   description: Text;
 };
 
 export type PasalInsertAmenderPoint = {
   type: 'pasalInsertAmenderPoint';
   node: PointNode;
-  insertedPasalVersionNodeArr: PasalVersionNode[];
-  insertedPasalArr: Pasal[];
+  insertedPasalVersionArr: PasalVersion[];
   description: Text;
 };

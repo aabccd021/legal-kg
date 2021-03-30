@@ -27,6 +27,7 @@ import {
   PointNode,
   PointSetNode,
   AyatSetNode,
+  PasalVersion,
 } from '../../../legal/component';
 import { Document, DocumentNode } from '../../../legal/document';
 import { Span, lastOf, neverUndefined } from '../../../util';
@@ -95,11 +96,7 @@ function spansToBab(context: Context, parentBabSetNode: BabSetNode, [key, spans]
       spansToBagianWith(babNode),
       bagianArrToBagianSetWith(babNode),
     ],
-    [
-      context.keyIds.spanIdToPasalKeyMap,
-      spansToPasalWith({ parentDocumentNode: context.documentNode }),
-      pasalArrToPasalSetWith(babNode),
-    ],
+    [context.keyIds.spanIdToPasalKeyMap, spansToPasal, pasalArrToPasalSetWith(babNode)],
     spans,
     context
   );
@@ -125,11 +122,7 @@ function spansToBagian(parentBabNode: BabNode, context: Context, [key, spans]: K
       spansToParagrafWith(bagianNode),
       paragrafArrToParagrafSetWith(bagianNode),
     ],
-    [
-      context.keyIds.spanIdToPasalKeyMap,
-      spansToPasalWith({ parentDocumentNode: context.documentNode }),
-      pasalArrToPasalSetWith(bagianNode),
-    ],
+    [context.keyIds.spanIdToPasalKeyMap, spansToPasal, pasalArrToPasalSetWith(bagianNode)],
     spans,
     context
   );
@@ -164,39 +157,27 @@ function spansToParagraf(
     pasalSet: {
       type: 'pasalSet',
       node: { nodeType: 'pasalSet', parentNode: paragrafNode },
-      elements: chain(keyToSpanMap)
-        .toPairs()
-        .map(spansToPasalWith({ parentDocumentNode: context.documentNode }, context))
-        .value(),
+      elements: chain(keyToSpanMap).toPairs().map(spansToPasalWith(context)).value(),
     },
   };
 }
 
 const spansToPasalWith = curry(spansToPasal);
-function spansToPasal(
-  { parentDocumentNode }: { parentDocumentNode: DocumentNode },
-  context: Context,
-  [key, spans]: KeySpans
-): Pasal {
+function spansToPasal(context: Context, keySpans: KeySpans): Pasal {
+  const [key] = keySpans;
   const pasalNode: PasalNode = {
     nodeType: 'pasal',
     key: parseInt(key),
-    parentNode: parentDocumentNode,
+    parentNode: context.documentNode,
   };
-  const pasalVersionNode: PasalVersionNode = {
-    nodeType: 'pasalVersion',
-    parentPasalNode: pasalNode,
-    state: 'exists',
-    timeCreatedEpoch: Date.now(),
-  };
-  const contentSpans = spans.slice(1);
   return {
     type: 'pasal',
     node: pasalNode,
-    content:
-      spansToAyatSet(pasalVersionNode, context, contentSpans) ??
-      spansToPointSet(pasalVersionNode, context, contentSpans) ??
-      spansToText(pasalVersionNode, 'text', contentSpans),
+    version: keySpansToPasalVersion(
+      { parentDocumentNode: context.documentNode },
+      context,
+      keySpans
+    ),
   };
 }
 
@@ -429,11 +410,11 @@ function spansToAmendUpdatePasalPoint(
     type: 'pasalUpdateAmenderPoint',
     node: pointNode,
     description: spansToText(pointNode, 'description', descSpans),
-    updatedPasal: spansToPasal({ parentDocumentNode: amendedDocumentNode }, context, [
-      pasalKey,
-      spans.slice(pasalTitleIdx),
-    ]),
-    updatedPasalVersionNode: pasalVersionNodeFromAmended(amendedDocumentNode, pasalKey),
+    updatedPasalVersion: keySpansToPasalVersion(
+      { parentDocumentNode: amendedDocumentNode },
+      context,
+      [pasalKey, spans.slice(pasalTitleIdx)]
+    ),
   };
 }
 
@@ -457,8 +438,7 @@ function spansToAmendInsertPasalPoint(
       type: 'pasalInsertAmenderPoint',
       node: pointNode,
       description: spansToText(pointNode, 'description', spans),
-      insertedPasalArr: [],
-      insertedPasalVersionNodeArr: [],
+      insertedPasalVersionArr: [],
     };
   }
   const pasalDataKeys = keys(pasalStringArr).map((t) => parseInt(t));
@@ -473,39 +453,40 @@ function spansToAmendInsertPasalPoint(
   const _descSpans = spans.slice(0, firstPasalTitleIdx);
   const [descFirst, ...descRest] = _descSpans;
   const descSpans = !isUndefined(descFirst) ? [removeNomorKey(descFirst), ...descRest] : _descSpans;
-  const pasalSpansMap = chain(spans)
-    .slice(firstPasalTitleIdx)
-    .reduce(mapSpanArrToPasalKeyWith(pasalStringArr), { record: {} })
-    .thru(({ record }) => record)
-    .toPairs();
   return {
     type: 'pasalInsertAmenderPoint',
     node: pointNode,
     description: spansToText(pointNode, 'description', descSpans),
-    insertedPasalArr: pasalSpansMap
-      .map(spansToPasalWith({ parentDocumentNode: amendedDocumentNode }, context))
-      .value(),
-    insertedPasalVersionNodeArr: pasalSpansMap
-      .map(([key]) => key)
-      .map(pasalVersionNodeFromAmendedWith(amendedDocumentNode))
+    insertedPasalVersionArr: chain(spans)
+      .slice(firstPasalTitleIdx)
+      .reduce(mapSpanArrToPasalKeyWith(pasalStringArr), { record: {} })
+      .thru(({ record }) => record)
+      .toPairs()
+      .map(keySpansToPasalVersionWith({ parentDocumentNode: amendedDocumentNode }, context))
       .value(),
   };
 }
 
-const pasalVersionNodeFromAmendedWith = curry(pasalVersionNodeFromAmended);
-function pasalVersionNodeFromAmended(
-  documentNode: DocumentNode,
-  pasalKey: string
-): PasalVersionNode {
-  return {
+const keySpansToPasalVersionWith = curry(keySpansToPasalVersion);
+function keySpansToPasalVersion(
+  { parentDocumentNode }: { parentDocumentNode: DocumentNode },
+  context: Context,
+  [key, spans]: KeySpans
+): PasalVersion {
+  const pasalVersionNode: PasalVersionNode = {
     nodeType: 'pasalVersion',
     timeCreatedEpoch: Date.now(),
     state: 'exists',
-    parentPasalNode: {
-      nodeType: 'pasal',
-      key: pasalKey,
-      parentNode: documentNode,
-    },
+    parentPasalNode: { nodeType: 'pasal', key, parentNode: parentDocumentNode },
+  };
+  const contentSpans = spans.slice(1);
+  return {
+    type: 'pasalVersion',
+    node: pasalVersionNode,
+    content:
+      spansToAyatSet(pasalVersionNode, context, contentSpans) ??
+      spansToPointSet(pasalVersionNode, context, contentSpans) ??
+      spansToText(pasalVersionNode, 'text', contentSpans),
   };
 }
 

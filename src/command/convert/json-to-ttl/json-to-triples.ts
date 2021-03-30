@@ -6,6 +6,7 @@ import {
   PointSetNode,
   PasalUpdateAmenderPoint,
   PasalInsertAmenderPoint,
+  PasalVersion,
 } from '../../../legal/component';
 import assertNever from 'assert-never';
 import { flatMap, curry, map } from 'lodash';
@@ -130,55 +131,43 @@ function pasalToTriple(parentPasalSetNode: PasalSetNode, pasal: Pasal): LegalTri
   return [
     [parentPasalSetNode, 'pasalSetHasPasal', pasal.node],
     [pasal.node, 'pasalHasKey', pasal.node.key],
-    // [pasal.node, 'pasalHasPasalState', pasalStateNode],
-    // [pasalStateNode, 'pasalStateHasState', 'exists'],
-    ...pasalContentToTriple(pasal.content),
+    [pasal.node, 'pasalHasPasalVersion', pasal.version.node],
+    [pasal.version.node, 'pasalVersionHasState', pasal.version.node.state],
+    [pasal.version.node, 'pasalVersionHasCreatedTimeEpoch', pasal.version.node.timeCreatedEpoch],
+    ...pasalContentToTriple(pasal.version.content),
   ];
 }
 
 function pasalContentToTriple(content: PointSet | Text | AyatSet): LegalTriple[] {
   if (content.type === 'pointSet') return pointSetToTriple(content);
   if (content.type === 'ayatSet') return ayatSetToTriple(content);
-  if (content.type === 'text') return textToTriple('text', content);
+  if (content.type === 'text') return textToTriple(content);
   assertNever(content);
 }
 
-function ayatSetToTriple(parentPasalStateNode: PasalVersionNode, ayatSet: AyatSet): LegalTriple[] {
-  const ayatSetNode: AyatSetNode = {
-    nodeType: 'ayatSet',
-    parentPasalVersionNode: parentPasalStateNode,
-  };
+function ayatSetToTriple(ayatSet: AyatSet): LegalTriple[] {
   return [
-    [parentPasalStateNode, 'pasalStateHasAyatSet', ayatSetNode],
-    ...flatMap(ayatSet.elements, ayatToTripleWith(ayatSetNode)),
+    [ayatSet.node.parentPasalVersionNode, 'pasalVersionHasAyatSet', ayatSet.node],
+    ...flatMap(ayatSet.elements, ayatToTripleWith(ayatSet.node)),
   ];
 }
 
 const ayatToTripleWith = curry(ayatToTriple);
 function ayatToTriple(parentAyatSetNode: AyatSetNode, ayat: Ayat): LegalTriple[] {
-  const ayatNode: AyatNode = {
-    nodeType: 'ayat',
-    key: ayat.key,
-    parentAyatSetNode: parentAyatSetNode,
-  };
   return [
-    [parentAyatSetNode, 'ayatSetHasAyat', ayatNode],
-    [ayatNode, 'ayatHasKey', ayat.key],
+    [parentAyatSetNode, 'ayatSetHasAyat', ayat.node],
+    [ayat.node, 'ayatHasKey', ayat.node.key],
     ...(ayat.content.type === 'pointSet'
-      ? pointSetToTriple(ayatNode, ayat.content)
-      : textToTriple(ayatNode, 'text', ayat.content)),
+      ? pointSetToTriple(ayat.content)
+      : textToTriple(ayat.content)),
   ];
 }
 
-function pointSetToTriple(
-  parentNode: PointNode | AyatNode | PasalVersionNode,
-  pointSet: PointSet
-): LegalTriple[] {
-  const pointSetNode: PointSetNode = { nodeType: 'pointSet', parentNode: parentNode };
+function pointSetToTriple(pointSet: PointSet): LegalTriple[] {
   return [
-    _pointSetToTriple(parentNode, pointSetNode),
-    ...textToTriple(parentNode, 'description', pointSet.description),
-    ...flatMap(pointSet.elements, pointToTripleWith(pointSetNode)),
+    _pointSetToTriple(pointSet.node.parentNode, pointSet.node),
+    ...textToTriple(pointSet.description),
+    ...flatMap(pointSet.elements, pointToTripleWith(pointSet.node)),
   ];
 }
 
@@ -188,21 +177,17 @@ function _pointSetToTriple(
 ): LegalTriple {
   if (parentNode.nodeType === 'ayat') return [parentNode, 'ayatHasPointSet', pointSetNode];
   if (parentNode.nodeType === 'pasalVersion')
-    return [parentNode, 'pasalStateHasPointSet', pointSetNode];
+    return [parentNode, 'pasalVersionHasPointSet', pointSetNode];
   if (parentNode.nodeType === 'point') return [parentNode, 'pointHasPointSet', pointSetNode];
   assertNever(parentNode);
 }
 
 const pointToTripleWith = curry(pointToTriple);
 function pointToTriple(parentPointSetNode: PointSetNode, point: Point): LegalTriple[] {
-  const pointNode: PointNode = {
-    key: point.key,
-    parentPointSetNode: parentPointSetNode,
-    nodeType: 'point',
-  };
   return [
-    [parentPointSetNode, 'pointSetHasPoint', pointNode],
-    ...pointContentToTriple(pointNode, point.content),
+    [parentPointSetNode, 'pointSetHasPoint', point.node],
+    [point.node, 'pointHasKey', point.node.key],
+    ...pointContentToTriple(point.node, point.content),
   ];
 }
 
@@ -215,32 +200,27 @@ function pointContentToTriple(
     | PasalInsertAmenderPoint
     | Text
 ): LegalTriple[] {
-  if (content.type === 'pointSet') return pointSetToTriple(pointNode, content);
+  if (content.type === 'pointSet') return pointSetToTriple(content);
   if (content.type === 'pasalDeleteAmenderPoint')
     return [[pointNode, 'pointDeletePasal', content.deletedPasalVersionNode]];
   if (content.type === 'pasalUpdateAmenderPoint')
-    return [[pointNode, 'pointUpdatePasal', content.updatedPasalVersionNode]];
+    return [[pointNode, 'pointUpdatePasal', content.updatedPasalVersion.node]];
   if (content.type === 'pasalInsertAmenderPoint')
-    return map(content.insertedPasalVersionNodeArr, pointToAmendInsertTripleWith(pointNode));
-  if (content.type === 'text') return textToTriple(pointNode, 'text', content);
+    return map(content.insertedPasalVersionArr, pointToAmendInsertTripleWith(pointNode));
+  if (content.type === 'text') return textToTriple(content);
   assertNever(content);
 }
 
 const pointToAmendInsertTripleWith = curry(pointToAmendInsertTriple);
-function pointToAmendInsertTriple(pointNode: PointNode, point: PasalVersionNode): LegalTriple {
-  return [pointNode, 'pointInsertPasal', point];
+function pointToAmendInsertTriple(pointNode: PointNode, pasalVersion: PasalVersion): LegalTriple {
+  return [pointNode, 'pointInsertPasal', pasalVersion.node];
 }
 
-function textToTriple(
-  parentNode: PointSetNode | PointNode | PasalVersionNode | AyatNode,
-  textName: string,
-  text: Text
-): LegalTriple[] {
-  const textNode: TextNode = { nodeType: 'text', textName, parentNode: parentNode };
+function textToTriple(text: Text): LegalTriple[] {
   return [
-    [textNode, 'textHasTextString', text.textString],
-    _textToTriple(parentNode, textNode),
-    ...map(text.references, referenceToTripleWith(textNode)),
+    [text.node, 'textHasTextString', text.textString],
+    _textToTriple(text.node.parentNode, text.node),
+    ...map(text.references, referenceToTripleWith(text.node)),
   ];
 }
 
@@ -249,7 +229,7 @@ function _textToTriple(
   textNode: TextNode
 ): LegalTriple {
   if (parentNode.nodeType === 'ayat') return [parentNode, 'ayatHasText', textNode];
-  if (parentNode.nodeType === 'pasalVersion') return [parentNode, 'pasalStateHasText', textNode];
+  if (parentNode.nodeType === 'pasalVersion') return [parentNode, 'pasalVersionHasText', textNode];
   if (parentNode.nodeType === 'point') return [parentNode, 'pointHasText', textNode];
   if (parentNode.nodeType === 'pointSet') return [parentNode, 'pointSetHasDescription', textNode];
   assertNever(parentNode);

@@ -1,26 +1,19 @@
-import { BabSetNode } from '../../legal/component';
+import {
+  PasalDeleteAmenderPoint,
+  PasalInsertAmenderPoint,
+  PasalUpdateAmenderPoint,
+  PasalVersion,
+  Point,
+  PointSet,
+} from '../../legal/component';
 import assertNever from 'assert-never';
 import * as yaml from 'js-yaml';
-import { map, flatten, compact, curry, chain, repeat, isNil, flatMap } from 'lodash';
+import { compact, curry, chain, repeat, isNil, flatMap } from 'lodash';
 import { readFileSync, writeFileSync } from 'node:fs';
 import { toRoman } from 'roman-numerals';
 import { getDocumentData, nodeToFile } from '../../data';
 import { nodeToUri } from '../../legal';
-import {
-  AyatSet,
-  Bab,
-  BabNode,
-  Bagian,
-  BagianNode,
-  Paragraf,
-  ParagrafNode,
-  Pasal,
-  PasalNode,
-  Ayat,
-  AyatNode,
-  Text,
-  BabSet,
-} from '../../legal/component';
+import { Bab, Bagian, Paragraf, Pasal, Ayat, Text, BabSet } from '../../legal/component';
 import { DocumentNode, nodeToName, Document } from '../../legal/document';
 
 type Option = { overwrite: boolean };
@@ -71,7 +64,6 @@ function _jsonToMd(doc: Document): string {
     _tempatDiundangkan,
     _tanggalDiundangkan,
     _sekretaris,
-    _denganPersetujuan,
     _dokumen,
     // mengingat,
     // menimbang,
@@ -101,10 +93,11 @@ function _jsonToMd(doc: Document): string {
     metadata('Tanggal Diundangkan', _tanggalDiundangkan),
     metadata('Sekretaris', _sekretaris),
     metadata('Dokumen', _dokumen),
-    ...map(_denganPersetujuan, (d) => metadata('Dengan Persetujuan', d)),
+    // ...map(_denganPersetujuan, (d) => metadata('Dengan Persetujuan', d)),
     // mengimbangToMd('Menimbang', menimbang, 'documentMenimbang', _node),
     // mengimbangToMd('Mengingat', mengingat, 'documentMengingat', _node),
-    ...flatten(babSet?.map((b) => babToMd(b, _node))),
+    // ...flatten(babSet?.map((b) => babToMd(b, _node))),
+    ...babSetToMd(babSet),
   ];
 
   return compact(lines).join('\n');
@@ -126,185 +119,114 @@ function _jsonToMd(doc: Document): string {
 // return `\n# [${title}](${uri})\n${contentStr}`;
 // }
 
-function babSetToMd(babSet: BabSet, parentDocumentNode: DocumentNode): string[] {
-  const babSetNode: BabSetNode = { nodeType: 'babSet', parentDocumentNode };
-  return flatMap(babSet.elements, babToMdWith(parentDocumentNode));
+function babSetToMd(babSet: BabSet): string[] {
+  return flatMap(babSet.elements, babToMd);
 }
 
-const babToMdWith = curry(babToMd);
-function babToMd(parentDocumentNode: BabSetNode, bab: Bab): string {
-  const babNode: BabNode = { key: bab.key, parentBabSetNode: parent, nodeType: 'bab' };
+function babToMd(bab: Bab): string {
   const contentStr: string =
-    bab.content.type === 'pasals'
-      ? bab.content.elements.map(pasalToMdWith(babNode)).join('\n')
-      : bab.content.elements.map(bagianToMdWith(babNode)).join('\n');
-  const romanKey = toRoman(bab.key);
-  const babUri = nodeToUri(babNode);
+    bab.content.type === 'pasalSet'
+      ? bab.content.elements.map(pasalToMd).join('\n')
+      : bab.content.elements.map(bagianToMd).join('\n');
+  const romanKey = toRoman(bab.node.key);
+  const babUri = nodeToUri(bab.node);
 
   return `\n# [BAB ${romanKey}: ${bab.title}](${babUri})\n${contentStr} \n`;
 }
 
-const bagianToMdWith = curry(bagianToMd);
-function bagianToMd(parent: BabNode, bagian: Bagian): string {
-  const bagianNode: BagianNode = {
-    key: bagian.key,
-    parentBagianSetNode: parent,
-    nodeType: 'bagian',
-  };
+function bagianToMd(bagian: Bagian): string {
   const contentStr =
-    bagian.content.type === 'pasals'
-      ? bagian.content.elements.map(pasalToMdWith(parent))
-      : bagian.content.elements.map(paragrafToMdWith(bagianNode));
-  const uri = nodeToUri(bagianNode);
-  return `\n## [Bagian ${bagian.key}](${uri})\n${contentStr}\n`;
+    bagian.content.type === 'pasalSet'
+      ? bagian.content.elements.map(pasalToMd)
+      : bagian.content.elements.map(paragrafToMd);
+  const uri = nodeToUri(bagian.node);
+  return `\n## [Bagian ${bagian.node.key}](${uri})\n${contentStr}\n`;
 }
 
-const paragrafToMdWith = curry(paragrafToMd);
-function paragrafToMd(parent: BagianNode, paragraf: Paragraf): string {
-  const paragrafNode: ParagrafNode = {
-    key: paragraf.key,
-    parentParagrafSetNode: parent,
-    nodeType: 'paragraf',
-  };
-  const contentStr = paragraf.pasalSet.elements.map(pasalToMdWith(parent));
-  const uri = nodeToUri(paragrafNode);
-  return `\n## [Paragraf ${paragraf.key}](${uri})\n${contentStr}\n`;
+function paragrafToMd(paragraf: Paragraf): string {
+  const contentStr = paragraf.pasalSet.elements.map(pasalToMd);
+  const uri = nodeToUri(paragraf.node);
+  return `\n## [Paragraf ${paragraf.node.key}](${uri})\n${contentStr}\n`;
 }
 
-const pasalToMdWith = curry(pasalToMd);
-function pasalToMd(pasalParent: BagianNode | BabNode | ParagrafNode, pasal: Pasal[]): string {
-  const parentDocumentNode = getPasalParentDocument(pasalParent);
-  const pasalNode: PasalNode = { key: pasal.key, parentDoc: parentDocumentNode, nodeType: 'pasal' };
-  const uri = nodeToUri(pasalNode);
-  const contentStr: string = pasalContentToMd(pasal.content, pasalNode);
-  return `\n### [Pasal ${pasal.key}](${uri})\n${contentStr}\n`;
+function pasalToMd(pasal: Pasal): string {
+  const uri = nodeToUri(pasal.node);
+  const contentStr: string = pasalVersionToMd(pasal.version);
+  return `\n### [Pasal ${pasal.node.key}](${uri})\n${contentStr}\n`;
 }
 
-function pasalContentToMd(
-  content: AyatSet | NumPointSet | Text | AmenderPoints,
-  pasalNode: PasalNode
-): string {
-  if (content.type === 'ayats') return content.elements.map(ayatToMdWith(pasalNode)).join('\n');
-  if (content.type === 'points') return pointsToMd(content, pasalNode);
-  if (content.type === 'referenceText') return referenceToMd(content);
-  if (content.type === 'amenderPoints') return amenderPointsToMd(content);
+function pasalVersionToMd({ content }: PasalVersion): string {
+  if (content.type === 'ayatSet') return content.elements.map(ayatToMd).join('\n');
+  if (content.type === 'pointSet') return pointSetToMd(content);
+  if (content.type === 'text') return textToMd(content);
   assertNever(content);
 }
 
-function amenderPointsToMd(amendPoints: AmenderPoints): string {
-  const { description, amendedPointArr, parent } = amendPoints;
-  const contentMd = amendedPointArr.map(amendPointToMdWith(parent)).join('\n');
-  return `${description.textString}\n${contentMd}`;
-}
-
-const amendPointToMdWith = curry(amendPointToMd);
-function amendPointToMd(documentNode: DocumentNode, amendPoint: AmendedPoint): string {
-  if (amendPoint.operation === 'delete') return amendDeletePasalPointToMd(documentNode, amendPoint);
-  if (amendPoint.operation === 'update') return amendUpdatePasalPointToMd(documentNode, amendPoint);
-  if (amendPoint.operation === 'insert') return amendInsertPasalPointToMd(documentNode, amendPoint);
-  assertNever(amendPoint);
-}
-
-function amendDeletePasalPointToMd(
-  parentDocumentNode: DocumentNode,
-  amendPoint: AmenderDeletePoint
-): string {
-  const { key: _nomorKey, deletedNode: deletedPasal } = amendPoint;
-  const pasalNode: PasalNode = {
-    nodeType: 'pasal',
-    key: deletedPasal.key,
-    parentDoc: parentDocumentNode,
-  };
-  const pasalUri = nodeToUri(pasalNode);
-  return `* ${_nomorKey}. [Pasal ${deletedPasal.key}](${pasalUri}) dihapus.`;
-}
-
-const s8 = '        ';
-
-function amendUpdatePasalPointToMd(
-  parentDocumentNode: DocumentNode,
-  amendPoint: AmenderUpdatePoint
-): string {
-  const { updatedPasal } = amendPoint;
-  const pasalNode: PasalNode = {
-    nodeType: 'pasal',
-    key: updatedPasal.key,
-    parentDoc: parentDocumentNode,
-  };
-  const pasalUri = nodeToUri(pasalNode);
-  const descriptionMd = referenceToMd(amendPoint.description);
-  const contentMd = toIndentedAmend(pasalContentToMd(updatedPasal.content, pasalNode));
-  return `* ${amendPoint.key}. ${descriptionMd}
-${s8}>\n${s8}> [Pasal ${updatedPasal.key}](${pasalUri})\n\n${contentMd}`;
-}
-
-function toIndentedAmend(str: string): string {
-  return str
+function amendedPasalVersionToMd(pasalVersion: PasalVersion): string {
+  const pasalUri = nodeToUri(pasalVersion.node);
+  const contentMd = pasalVersionToMd(pasalVersion)
     .split('\n')
-    .map((str) => `${s8}> ${str}`)
+    .map((str) => `        > ${str}`)
     .join('\n');
+
+  return (
+    `        >` +
+    `\n        > [Pasal ${pasalVersion.node.parentPasalNode.key}](${pasalUri})` +
+    `\n\n${contentMd}`
+  );
 }
 
-function amendInsertPasalPointToMd(
-  parentDoc: DocumentNode,
-  amendPoint: AmenderInsertPoint
-): string {
-  const descriptionMd = referenceToMd(amendPoint.description);
-  const contentMd: string = chain(amendPoint.amendedPasalArr)
-    .map(amendedPasalToMdWith(parentDoc))
-    .join('\n\n')
-    .value();
-  return `* ${amendPoint.key}. ${descriptionMd}\n${contentMd}`;
-}
-
-const amendedPasalToMdWith = curry(amendedPasalToMd);
-function amendedPasalToMd(parentDoc: DocumentNode, amendedPasal: AmendedPasal): string {
-  const pasalNode: PasalNode = { nodeType: 'pasal', key: amendedPasal.key, parentDoc };
-  const pasalUri = nodeToUri(pasalNode);
-  const contentMd = toIndentedAmend(pasalContentToMd(amendedPasal.content, pasalNode));
-  return `${s8}>\n${s8}> [Pasal ${amendedPasal.key}](${pasalUri})\n\n${contentMd}`;
-}
-
-const ayatToMdWith = curry(ayatToMd);
-function ayatToMd(parentPasal: PasalNode, ayat: Ayat): string {
-  const ayatNode: AyatNode = { key: ayat.key, parentAyatSetNode: parentPasal, nodeType: 'ayat' };
-  const ayatUri = nodeToUri(ayatNode);
+function ayatToMd(ayat: Ayat): string {
+  const ayatUri = nodeToUri(ayat.node);
   const contentStr =
-    ayat.content.type === 'points'
-      ? pointsToMd(ayat.content, ayatNode)
-      : referenceToMd(ayat.content);
-  return `\n#### [Ayat (${ayat.key})](${ayatUri})\n${contentStr}`;
+    ayat.content.type === 'pointSet' ? pointSetToMd(ayat.content) : textToMd(ayat.content);
+  return `\n#### [Ayat (${ayat.node.key})](${ayatUri})\n${contentStr}`;
 }
 
-function pointsToMd(
-  points: NumPointSet,
-  parent: NumPointNode | AyatNode | PasalNode,
-  // | MetadataNode
-  depth = 0
-): string {
-  const contentStr = points.elements.map(pointToMdWith({ parent, depth })).join('\n');
-  const descriptionStr = referenceToMd(points.description);
+function pointSetToMd(points: PointSet, depth = 0): string {
+  const contentStr = points.elements.map(pointToMdWith(depth)).join('\n');
+  const descriptionStr = textToMd(points.description);
   return `${descriptionStr}\n${contentStr}`;
 }
 
 const pointToMdWith = curry(pointToMd);
-function pointToMd(
-  context: {
-    parent: NumPointNode | AyatNode | PasalNode;
-    // | MetadataNode
-    depth: number;
-  },
-  point: NumPoint
-): string {
-  const { parent, depth } = context;
-  const pointNode: NumPointNode = { key: point.key, parent: parent, nodeType: 'point' };
-  const uri = nodeToUri(pointNode);
-  const contentStr =
-    point.content.type === 'points'
-      ? pointsToMd(point.content, pointNode, depth + 1)
-      : referenceToMd(point.content);
+function pointToMd(depth: number, point: Point): string {
+  const uri = nodeToUri(point.node);
+  const contentStr = pointContentToMd(point.content, depth + 1);
   const indent = repeat(' ', depth * 4);
-  return `${indent}* [${point.key}.](${uri}) ${contentStr}`;
+  return `${indent}* [${point.node.key}.](${uri}) ${contentStr}`;
+}
+
+function pointContentToMd(
+  component:
+    | PointSet
+    | PasalDeleteAmenderPoint
+    | PasalUpdateAmenderPoint
+    | PasalInsertAmenderPoint
+    | Text,
+  depth: number
+): string {
+  if (component.type === 'pointSet') return pointSetToMd(component, depth);
+  if (component.type === 'text') return textToMd(component);
+  if (component.type === 'pasalDeleteAmenderPoint') {
+    const pasalUri = nodeToUri(component.deletedPasalVersionNode);
+    const pasalKey = component.deletedPasalVersionNode.parentPasalNode.key;
+    return `* ${component.node.key}. [Pasal ${pasalKey}](${pasalUri}) dihapus.`;
+  }
+  if (component.type === 'pasalUpdateAmenderPoint') {
+    const descriptionMd = textToMd(component.description);
+    const contentMd = amendedPasalVersionToMd(component.updatedPasalVersion);
+    return `* ${component.node.key}. ${descriptionMd}\n${contentMd}`;
+  }
+  if (component.type === 'pasalInsertAmenderPoint') {
+    const descriptionMd = textToMd(component.description);
+    const contentMd: string = chain(component.insertedPasalVersionArr)
+      .map(amendedPasalVersionToMd)
+      .join('\n\n')
+      .value();
+    return `* ${component.node.key}. ${descriptionMd}\n${contentMd}`;
+  }
+  assertNever(component);
 }
 
 function metadata(key: string, value: string | number | undefined): string | undefined {
@@ -316,7 +238,7 @@ function splitAt(slicable: string, indices: number[]): string[] {
   return [0, ...indices].map((n, i, m) => slicable.slice(n, m[i + 1]));
 }
 
-function referenceToMd(ref: Text): string {
+function textToMd(ref: Text): string {
   const { references, textString: text } = ref;
   const sortedReferences = references.sort((a, b) => a.start - b.start);
   const indices = sortedReferences.flatMap(({ start, end }) => [start, end]);
