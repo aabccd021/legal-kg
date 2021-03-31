@@ -186,14 +186,24 @@ function spansToPasal(context: Context, keySpans: KeySpans): Pasal {
 }
 
 function spansToAyatSet(
-  parentPasalVersionNode: PasalVersionNode,
-  context: Context,
+  {
+    parentPasalVersionNode,
+    context,
+    isAmendAyat,
+  }: {
+    parentPasalVersionNode: PasalVersionNode;
+    context: Context;
+    isAmendAyat: boolean;
+  },
   spans: Span[]
 ): AyatSet | undefined {
-  const { keyToSpanMap } = extractSpansWith(context.keyIds.spanIdToAyatKeyMap, spans);
+  const { keyToSpanMap } = extractSpansWith(
+    isAmendAyat ? context.keyIds.spanIdToAmendAyatKeyMap : context.keyIds.spanIdToAyatKeyMap,
+    spans
+  );
   if (isEmpty(keyToSpanMap)) return undefined;
   const ayatSetNode: AyatSetNode = { nodeType: 'ayatSet', parentPasalVersionNode };
-  const ayats = chain(keyToSpanMap).toPairs().map(spanToAyatWith(ayatSetNode, context)).value();
+  const ayats = chain(keyToSpanMap).toPairs().map(spansToAyatWith(ayatSetNode, context)).value();
   return {
     type: 'ayatSet',
     node: ayatSetNode,
@@ -325,8 +335,8 @@ function keyIntToStr(pointType: 'numPoint' | 'charPoint'): (number: number) => s
   assertNever(pointType);
 }
 
-const spanToAyatWith = curry(spanToAyat);
-function spanToAyat(parentAyatSetNode: AyatSetNode, context: Context, keySpans: KeySpans): Ayat {
+const spansToAyatWith = curry(spansToAyat);
+function spansToAyat(parentAyatSetNode: AyatSetNode, context: Context, keySpans: KeySpans): Ayat {
   const [keyStr, spans] = keySpans;
   const spansWithoutKey = removeAyatKey(spans);
   const ayatNode: AyatNode = { nodeType: 'ayat', key: parseInt(keyStr), parentAyatSetNode };
@@ -482,21 +492,23 @@ function keySpansToPasalVersion(
     state: 'exists',
     parentPasalNode: { nodeType: 'pasal', key, parentNode: parentDocumentNode },
   };
-  const contentSpans = spans.slice(1);
   const amendedPointSet =
     !isAmendedPasal &&
     context.hasAmendPasal &&
     !isEmpty(spansInRange(context.keyIds.spanIdToAmendNomorKeyMap, spans))
-      ? spansToAmendedPointSet(pasalVersionNode, context, contentSpans)
+      ? spansToAmendedPointSet(pasalVersionNode, context, spans.slice(1))
       : undefined;
   return {
     type: 'pasalVersion',
     node: pasalVersionNode,
     content:
       amendedPointSet ??
-      spansToAyatSet(pasalVersionNode, context, contentSpans) ??
-      spansToPointSet(pasalVersionNode, context, contentSpans) ??
-      spansToText(pasalVersionNode, 'text', contentSpans),
+      spansToAyatSet(
+        { parentPasalVersionNode: pasalVersionNode, context, isAmendAyat: isAmendedPasal },
+        spans
+      ) ??
+      spansToPointSet(pasalVersionNode, context, spans.slice(1)) ??
+      spansToText(pasalVersionNode, 'text', spans.slice(1)),
   };
 }
 
