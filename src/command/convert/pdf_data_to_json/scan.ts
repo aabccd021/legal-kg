@@ -21,7 +21,7 @@ export type KeyIds = {
   spanIdToAmendPasalKeyMap: SpanIdToComponentKeyMap<string[]>;
   spanIdToDeletePasalKeyMap: SpanIdToComponentKeyMap<string>;
   spanIdToUpdatePasalKeyMap: SpanIdToComponentKeyMap<string>;
-  spanIdToInsertPasalKeyMap: SpanIdToComponentKeyMap<string[]>;
+  spanIdToInsertPasalKeyMap: SpanIdToComponentKeyMap<Record<number, string>>;
   spanIdToAyatKeyMap: SpanIdToComponentKeyMap<number>;
   lastAyatKey?: number;
   ayatXls: number[];
@@ -217,7 +217,7 @@ function toKeys(
     return {
       ...acc,
       spanIdToAmendNomorKeyMap: { ...spanIdToAmendNomorKeyMap, [span.id]: amendNomor },
-      spanIdToInsertPasalKeyMap: { ...spanIdToInsertPasalKeyMap, [span.id]: [] },
+      spanIdToInsertPasalKeyMap: { ...spanIdToInsertPasalKeyMap, [span.id]: {} },
       spanIdToNomorKeyMap: { ...spanIdToNomorKeyMap, [span.id]: amendNomor },
       lastNomor: newLastNomor,
       lastAmendedNomor: newLastNomor,
@@ -300,11 +300,9 @@ function toKeys(
           `${newPasalKey}`
         ),
         spanIdToAmendNomorKeyMap: newNomorKeyOfIdOf(spanIdToAmendNomorKeyMap, lastNomor),
-        spanIdToInsertPasalKeyMap: newAmendInsertPasalKeyOfIdOf(
-          spanIdToInsertPasalKeyMap,
-          lastNomor?.id,
-          `${newPasalKey}`
-        ),
+        spanIdToInsertPasalKeyMap: newAmendInsertPasalKeyOfIdOf(acc, lastNomor?.id, {
+          [span.id]: `${newPasalKey}`,
+        }),
         selfAmendPasalKeyOfId: [...selfAmendPasalKeyOfId, span.id],
         lastAmendedNomor: lastNomor,
         afterTruePasal: false,
@@ -339,11 +337,9 @@ function toKeys(
         newPasalKey
       ),
       spanIdToAmendNomorKeyMap: newNomorKeyOfIdOf(spanIdToAmendNomorKeyMap, lastNomor),
-      spanIdToInsertPasalKeyMap: newAmendInsertPasalKeyOfIdOf(
-        spanIdToInsertPasalKeyMap,
-        lastNomor?.id,
-        newPasalKey
-      ),
+      spanIdToInsertPasalKeyMap: newAmendInsertPasalKeyOfIdOf(acc, lastNomor?.id, {
+        [span.id]: newPasalKey,
+      }),
       selfAmendPasalKeyOfId: [...selfAmendPasalKeyOfId, span.id],
       lastAmendedNomor: lastNomor,
       afterTruePasal: false,
@@ -415,13 +411,14 @@ function newAmendPasalKeyOfIdOf(
 }
 
 function newAmendInsertPasalKeyOfIdOf(
-  amendInsertPasalKeyOfId: SpanIdToComponentKeyMap<string[]>,
+  keyIds: KeyIds,
   lastNomorId: number | undefined,
-  newPasalKey: string
-): SpanIdToComponentKeyMap<string[]> {
-  if (isUndefined(lastNomorId)) return amendInsertPasalKeyOfId;
-  const amendedPasalKey = amendInsertPasalKeyOfId[lastNomorId];
-  if (isUndefined(amendedPasalKey)) return amendInsertPasalKeyOfId;
-  const newAmendedPasalKey = [...amendedPasalKey, newPasalKey];
-  return { ...amendInsertPasalKeyOfId, [lastNomorId]: newAmendedPasalKey };
+  newPasalKeySpan: Record<number, string>
+): SpanIdToComponentKeyMap<Record<number, string>> {
+  const { spanIdToInsertPasalKeyMap } = keyIds;
+  if (isUndefined(lastNomorId)) return spanIdToInsertPasalKeyMap;
+  const amendedPasalKey = spanIdToInsertPasalKeyMap[lastNomorId];
+  if (isUndefined(amendedPasalKey)) return spanIdToInsertPasalKeyMap;
+  const newAmendedPasalKey = { ...amendedPasalKey, ...newPasalKeySpan };
+  return { ...spanIdToInsertPasalKeyMap, [lastNomorId]: newAmendedPasalKey };
 }

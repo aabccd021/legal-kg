@@ -9,7 +9,7 @@ import {
 import assertNever from 'assert-never';
 import * as yaml from 'js-yaml';
 import { compact, curry, chain, repeat, isNil, flatMap } from 'lodash';
-import { readFileSync, writeFileSync } from 'node:fs';
+import { readFileSync, writeFileSync } from 'fs';
 import { toRoman } from 'roman-numerals';
 import { getDocumentData, nodeToFile } from '../../data';
 import { nodeToUri } from '../../legal';
@@ -26,22 +26,22 @@ const handleJsonWith = curry(handleJson);
 function handleJson(option: Option, node: DocumentNode): void {
   const { overwrite } = option;
   const jsonFile = nodeToFile('yaml', node);
-  const { path: mdPath, exists: mdExists } = nodeToFile('mdv2', node);
+  const mdFile = nodeToFile('mdv2', node);
 
   try {
-    if (!overwrite && mdExists) {
-      console.log(`Skipped json-to-md ${mdPath}`);
+    if (!overwrite && mdFile.exists) {
+      console.log(`Skipped json-to-md ${mdFile.path}`);
       return;
     }
 
     const json = yaml.load(readFileSync(jsonFile.path, 'utf8')) as Document;
     const md = _jsonToMd(json);
 
-    writeFileSync(mdPath, md);
+    writeFileSync(mdFile.path, md);
 
-    console.log(`Finished json-to-md ${mdPath}`);
+    console.log(`Finished json-to-md ${mdFile.path}`);
   } catch (e) {
-    console.log(`Error json-to-md ${mdPath}`);
+    console.log(`Error json-to-md ${mdFile.path}`);
     console.log(e);
   }
 }
@@ -255,4 +255,4 @@ function getPrefixByIndex(index: number, uris: string[]): string {
   return `](${uri})`;
 }
 
-// jsonToMd({ overwrite: true });
+jsonToMd({ overwrite: true });

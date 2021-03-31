@@ -14,14 +14,15 @@ export function nodeToUri(node: LegalNode): string {
   if (node.nodeType === 'bagian') return `${nodeToUri(node.parentBagianSetNode)}/${node.key}`;
   if (node.nodeType === 'bagianSet') return `${nodeToUri(node.parentBabNode)}/bagian`;
   if (node.nodeType === 'document')
-    return `$${getConfig().uriBase}/document/${getDocumentPath(node)}`;
+    return `${getConfig().uriBase}/document/${getDocumentPath(node)}`;
   if (node.nodeType === 'paragraf') return `${nodeToUri(node.parentParagrafSetNode)}/${node.key}`;
   if (node.nodeType === 'paragrafSet') return `${nodeToUri(node.parentBagianNode)}/paragraf`;
-  if (node.nodeType === 'pasal') return `${nodeToUri(node.parentNode)}/${node.key}`;
+  if (node.nodeType === 'pasal') return `${nodeToUri(node.parentNode)}/pasal/${node.key}`;
   if (node.nodeType === 'pasalSet')
-    return `${nodeToUri(pasalSetParentNodeToDocumentNode(node.parentNode))}/pasal`;
+    return `${nodeToUri(pasalSetParentNodeToDocumentNode(node.parentNode))}`;
   if (node.nodeType === 'pasalVersion')
-    return `${nodeToUri(node.parentPasalNode)}/version/${node.timeCreatedEpoch}`;
+    // return `${nodeToUri(node.parentPasalNode)}/version/${node.timeCreatedEpoch}`;
+    return `${nodeToUri(node.parentPasalNode)}`;
   if (node.nodeType === 'point') return `${nodeToUri(node.parentPointSetNode)}/${node.key}`;
   if (node.nodeType === 'pointSet') return `${nodeToUri(node.parentNode)}/point`;
   if (node.nodeType === 'text') return `${nodeToUri(node.parentNode)}/${node.textName}`;
