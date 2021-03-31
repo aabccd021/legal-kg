@@ -190,42 +190,40 @@ function pointSetToMd(points: PointSet, depth = 0): string {
 }
 
 const pointToMdWith = curry(pointToMd);
-function pointToMd(depth: number, point: Point): string {
-  const uri = nodeToUri(point.node);
-  const contentStr = pointContentToMd(point.content, depth + 1);
-  const indent = repeat(' ', depth * 4);
-  return `${indent}* [${point.node.key}.](${uri}) ${contentStr}`;
-}
-
-function pointContentToMd(
-  component:
-    | PointSet
-    | PasalDeleteAmenderPoint
-    | PasalUpdateAmenderPoint
-    | PasalInsertAmenderPoint
-    | Text,
-  depth: number
+function pointToMd(
+  depth: number,
+  point: Point | PasalDeleteAmenderPoint | PasalUpdateAmenderPoint | PasalInsertAmenderPoint
 ): string {
-  if (component.type === 'pointSet') return pointSetToMd(component, depth);
-  if (component.type === 'text') return textToMd(component);
-  if (component.type === 'pasalDeleteAmenderPoint') {
-    const pasalUri = nodeToUri(component.deletedPasalVersionNode);
-    const pasalKey = component.deletedPasalVersionNode.parentPasalNode.key;
-    return `* ${component.node.key}. [Pasal ${pasalKey}](${pasalUri}) dihapus.`;
+  if (point.type === 'point') {
+    const uri = nodeToUri(point.node);
+    const contentStr = pointContentToMd(point.content, depth + 1);
+    const indent = repeat(' ', depth * 4);
+    return `${indent}* [${point.node.key}.](${uri}) ${contentStr}`;
   }
-  if (component.type === 'pasalUpdateAmenderPoint') {
-    const descriptionMd = textToMd(component.description);
-    const contentMd = amendedPasalVersionToMd(component.updatedPasalVersion);
-    return `* ${component.node.key}. ${descriptionMd}\n${contentMd}`;
+  if (point.type === 'pasalDeleteAmenderPoint') {
+    const pasalUri = nodeToUri(point.deletedPasalVersionNode);
+    const pasalKey = point.deletedPasalVersionNode.parentPasalNode.key;
+    return `* ${point.node.key}. [Pasal ${pasalKey}](${pasalUri}) dihapus.`;
   }
-  if (component.type === 'pasalInsertAmenderPoint') {
-    const descriptionMd = textToMd(component.description);
-    const contentMd: string = chain(component.insertedPasalVersionArr)
+  if (point.type === 'pasalUpdateAmenderPoint') {
+    const descriptionMd = textToMd(point.description);
+    const contentMd = amendedPasalVersionToMd(point.updatedPasalVersion);
+    return `* ${point.node.key}. ${descriptionMd}\n${contentMd}`;
+  }
+  if (point.type === 'pasalInsertAmenderPoint') {
+    const descriptionMd = textToMd(point.description);
+    const contentMd: string = chain(point.insertedPasalVersionArr)
       .map(amendedPasalVersionToMd)
       .join('\n\n')
       .value();
-    return `* ${component.node.key}. ${descriptionMd}\n${contentMd}`;
+    return `* ${point.node.key}. ${descriptionMd}\n${contentMd}`;
   }
+  assertNever(point);
+}
+
+function pointContentToMd(component: PointSet | Text, depth: number): string {
+  if (component.type === 'pointSet') return pointSetToMd(component, depth);
+  if (component.type === 'text') return textToMd(component);
   assertNever(component);
 }
 

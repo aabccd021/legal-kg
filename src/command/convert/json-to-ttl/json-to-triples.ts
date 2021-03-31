@@ -183,32 +183,31 @@ function _pointSetToTriple(
 }
 
 const pointToTripleWith = curry(pointToTriple);
-function pointToTriple(parentPointSetNode: PointSetNode, point: Point): LegalTriple[] {
+function pointToTriple(
+  parentPointSetNode: PointSetNode,
+  point: Point | PasalDeleteAmenderPoint | PasalUpdateAmenderPoint | PasalInsertAmenderPoint
+): LegalTriple[] {
   return [
     [parentPointSetNode, 'pointSetHasPoint', point.node],
     [point.node, 'pointHasKey', point.node.key],
-    ...pointContentToTriple(point.node, point.content),
+    ..._pointToTriple(point),
   ];
 }
 
-function pointContentToTriple(
-  pointNode: PointNode,
-  content:
-    | PointSet
-    | PasalDeleteAmenderPoint
-    | PasalUpdateAmenderPoint
-    | PasalInsertAmenderPoint
-    | Text
+function _pointToTriple(
+  point: Point | PasalDeleteAmenderPoint | PasalUpdateAmenderPoint | PasalInsertAmenderPoint
 ): LegalTriple[] {
-  if (content.type === 'pointSet') return pointSetToTriple(content);
-  if (content.type === 'pasalDeleteAmenderPoint')
-    return [[pointNode, 'pointDeletePasal', content.deletedPasalVersionNode]];
-  if (content.type === 'pasalUpdateAmenderPoint')
-    return [[pointNode, 'pointUpdatePasal', content.updatedPasalVersion.node]];
-  if (content.type === 'pasalInsertAmenderPoint')
-    return map(content.insertedPasalVersionArr, pointToAmendInsertTripleWith(pointNode));
-  if (content.type === 'text') return textToTriple(content);
-  assertNever(content);
+  if (point.type === 'pasalDeleteAmenderPoint')
+    return [[point.node, 'pointDeletePasal', point.deletedPasalVersionNode]];
+  if (point.type === 'pasalUpdateAmenderPoint')
+    return [[point.node, 'pointUpdatePasal', point.updatedPasalVersion.node]];
+  if (point.type === 'pasalInsertAmenderPoint')
+    return map(point.insertedPasalVersionArr, pointToAmendInsertTripleWith(point.node));
+  if (point.type === 'point')
+    return point.content.type === 'pointSet'
+      ? pointSetToTriple(point.content)
+      : textToTriple(point.content);
+  assertNever(point);
 }
 
 const pointToAmendInsertTripleWith = curry(pointToAmendInsertTriple);

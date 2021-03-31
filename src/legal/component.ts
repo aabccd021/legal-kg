@@ -203,19 +203,14 @@ export type PasalSet = {
 export type Point = {
   type: 'point';
   node: PointNode;
-  content:
-    | PointSet
-    | PasalDeleteAmenderPoint
-    | PasalUpdateAmenderPoint
-    | PasalInsertAmenderPoint
-    | Text;
+  content: PointSet | Text;
 };
 
 export type PointSet = {
   type: 'pointSet';
   node: PointSetNode;
   description: Text;
-  elements: Point[];
+  elements: (Point | PasalDeleteAmenderPoint | PasalUpdateAmenderPoint | PasalInsertAmenderPoint)[];
 };
 
 export type Text = {

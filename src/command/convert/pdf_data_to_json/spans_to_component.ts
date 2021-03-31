@@ -484,7 +484,7 @@ function keySpansToPasalVersion(
   };
   const contentSpans = spans.slice(1);
   const amendedPointSet =
-    isAmendedPasal &&
+    !isAmendedPasal &&
     context.hasAmendPasal &&
     !isEmpty(spansInRange(context.keyIds.spanIdToAmendNomorKeyMap, spans))
       ? spansToAmendedPointSet(pasalVersionNode, context, contentSpans)
@@ -522,14 +522,6 @@ function spansToAmendedPointSet(
         spansToAmendedPointWith({ context, amendedDocumentNode, parentPointSetNode: pointSetNode })
       )
       .compact()
-      .map((content) => {
-        const x: Point = {
-          type: 'point',
-          content,
-          node: { nodeType: 'point', key: 0, parentPointSetNode: pointSetNode },
-        };
-        return x;
-      })
       .value(),
   };
 }
