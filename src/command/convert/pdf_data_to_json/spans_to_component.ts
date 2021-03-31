@@ -496,7 +496,7 @@ function keySpansToPasalVersion(
     !isAmendedPasal &&
     context.hasAmendPasal &&
     !isEmpty(spansInRange(context.keyIds.spanIdToAmendNomorKeyMap, spans))
-      ? spansToAmendedPointSet(pasalVersionNode, context, spans.slice(1))
+      ? spansToAmendedPointSet(pasalVersionNode, context, spans)
       : undefined;
   return {
     type: 'pasalVersion',
@@ -508,7 +508,7 @@ function keySpansToPasalVersion(
         spans
       ) ??
       spansToPointSet(pasalVersionNode, context, spans.slice(1)) ??
-      spansToText(pasalVersionNode, 'text', spans.slice(1)),
+      spansToText(pasalVersionNode, 'text', !isAmendedPasal ? spans.slice(1) : spans),
   };
 }
 

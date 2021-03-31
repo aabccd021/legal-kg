@@ -576,7 +576,7 @@
 <http://example.org/legal/document/uu/2020/11/pasal/17> legal:pasalVersionHasState "exists" .
 <http://example.org/legal/document/uu/2020/11/pasal/17> legal:pasalVersionHasCreatedTimeEpoch 0 .
 <http://example.org/legal/document/uu/2020/11/pasal/17> legal:pasalVersionHasPointSet <http://example.org/legal/document/uu/2020/11/pasal/17/point> .
-<http://example.org/legal/document/uu/2020/11/pasal/17/point/description> legal:textHasTextString "Beberapa ketentuan dalam Undang-Undang Nomor 26 Tahun 2007 tentang Penataan Ruang (Lembaran Negara Republik Indonesia Tahun 2007 Nomor 68, Tambahan Lembaran Negara Republik Indonesia Nomor 4725) diubah sebagai berikut:" .
+<http://example.org/legal/document/uu/2020/11/pasal/17/point/description> legal:textHasTextString "Pasal 17 Beberapa ketentuan dalam Undang-Undang Nomor 26 Tahun 2007 tentang Penataan Ruang (Lembaran Negara Republik Indonesia Tahun 2007 Nomor 68, Tambahan Lembaran Negara Republik Indonesia Nomor 4725) diubah sebagai berikut:" .
 <http://example.org/legal/document/uu/2020/11/pasal/17/point> legal:pointSetHasDescription <http://example.org/legal/document/uu/2020/11/pasal/17/point/description> .
 <http://example.org/legal/document/uu/2020/11/pasal/17/point> legal:pointSetHasPoint <http://example.org/legal/document/uu/2020/11/pasal/17/point/1> .
 <http://example.org/legal/document/uu/2020/11/pasal/17/point/1> legal:pointHasKey 1 .
@@ -695,7 +695,7 @@
 <http://example.org/legal/document/uu/2020/11/pasal/18> legal:pasalVersionHasState "exists" .
 <http://example.org/legal/document/uu/2020/11/pasal/18> legal:pasalVersionHasCreatedTimeEpoch 0 .
 <http://example.org/legal/document/uu/2020/11/pasal/18> legal:pasalVersionHasPointSet <http://example.org/legal/document/uu/2020/11/pasal/18/point> .
-<http://example.org/legal/document/uu/2020/11/pasal/18/point/description> legal:textHasTextString "Beberapa ketentuan dalam Undang-Undang Nomor 27 Tahun 2007 tentang Pengelolaan Wilayah Pesisir dan Pulau-Pulau Kecil (Lembaran Negara Republik Indonesia Tahun 2007 Nomor 84, Tambahan Lembaran Negara Republik Indonesia Nomor 4739) sebagaimana telah diubah dengan Undang-Undang Nomor 1 Tahun 2014 tentang Perubahan Atas Undang-Undang Nomor 27 Tahun 2007 tentang Pengelolaan Wilayah Pesisir dan Pulau-Pulau Kecil (Lembaran Negara Republik Indonesia Tahun 2014 Nomor 2, Tambahan Lembaran Negara Republik Indonesia Nomor 5490) diubah sebagai berikut:" .
+<http://example.org/legal/document/uu/2020/11/pasal/18/point/description> legal:textHasTextString "Pasal 18 Beberapa ketentuan dalam Undang-Undang Nomor 27 Tahun 2007 tentang Pengelolaan Wilayah Pesisir dan Pulau-Pulau Kecil (Lembaran Negara Republik Indonesia Tahun 2007 Nomor 84, Tambahan Lembaran Negara Republik Indonesia Nomor 4739) sebagaimana telah diubah dengan Undang-Undang Nomor 1 Tahun 2014 tentang Perubahan Atas Undang-Undang Nomor 27 Tahun 2007 tentang Pengelolaan Wilayah Pesisir dan Pulau-Pulau Kecil (Lembaran Negara Republik Indonesia Tahun 2014 Nomor 2, Tambahan Lembaran Negara Republik Indonesia Nomor 5490) diubah sebagai berikut:" .
 <http://example.org/legal/document/uu/2020/11/pasal/18/point> legal:pointSetHasDescription <http://example.org/legal/document/uu/2020/11/pasal/18/point/description> .
 <http://example.org/legal/document/uu/2020/11/pasal/18/point> legal:pointSetHasPoint <http://example.org/legal/document/uu/2020/11/pasal/18/point/1> .
 <http://example.org/legal/document/uu/2020/11/pasal/18/point/1> legal:pointHasKey 1 .
@@ -801,7 +801,7 @@
 <http://example.org/legal/document/uu/2020/11/pasal/19> legal:pasalVersionHasState "exists" .
 <http://example.org/legal/document/uu/2020/11/pasal/19> legal:pasalVersionHasCreatedTimeEpoch 0 .
 <http://example.org/legal/document/uu/2020/11/pasal/19> legal:pasalVersionHasPointSet <http://example.org/legal/document/uu/2020/11/pasal/19/point> .
-<http://example.org/legal/document/uu/2020/11/pasal/19/point/description> legal:textHasTextString "Beberapa ketentuan dalam Undang-Undang Nomor 32 Tahun 2014 tentang Kelautan (Lembaran Negara Republik Indonesia Tahun 2014 Nomor 294, Tambahan Lembaran Negara Republik Indonesia Nomor 5603) diubah sebagai berikut:" .
+<http://example.org/legal/document/uu/2020/11/pasal/19/point/description> legal:textHasTextString "Pasal 19 Beberapa ketentuan dalam Undang-Undang Nomor 32 Tahun 2014 tentang Kelautan (Lembaran Negara Republik Indonesia Tahun 2014 Nomor 294, Tambahan Lembaran Negara Republik Indonesia Nomor 5603) diubah sebagai berikut:" .
 <http://example.org/legal/document/uu/2020/11/pasal/19/point> legal:pointSetHasDescription <http://example.org/legal/document/uu/2020/11/pasal/19/point/description> .
 <http://example.org/legal/document/uu/2020/11/pasal/19/point> legal:pointSetHasPoint <http://example.org/legal/document/uu/2020/11/pasal/19/point/1> .
 <http://example.org/legal/document/uu/2020/11/pasal/19/point/1> legal:pointHasKey 1 .
@@ -837,7 +837,7 @@
 <http://example.org/legal/document/uu/2020/11/pasal/20> legal:pasalVersionHasState "exists" .
 <http://example.org/legal/document/uu/2020/11/pasal/20> legal:pasalVersionHasCreatedTimeEpoch 0 .
 <http://example.org/legal/document/uu/2020/11/pasal/20> legal:pasalVersionHasPointSet <http://example.org/legal/document/uu/2020/11/pasal/20/point> .
-<http://example.org/legal/document/uu/2020/11/pasal/20/point/description> legal:textHasTextString "Beberapa ketentuan dalam Undang-Undang Nomor 4 Tahun 2011 tentang Informasi Geospasial (Lembaran Negara Republik Indonesia Tahun 2011 Nomor 49, Tambahan Lembaran Negara Republik Indonesia Nomor 5214) diubah sebagai berikut:" .
+<http://example.org/legal/document/uu/2020/11/pasal/20/point/description> legal:textHasTextString "Pasal 20 Beberapa ketentuan dalam Undang-Undang Nomor 4 Tahun 2011 tentang Informasi Geospasial (Lembaran Negara Republik Indonesia Tahun 2011 Nomor 49, Tambahan Lembaran Negara Republik Indonesia Nomor 5214) diubah sebagai berikut:" .
 <http://example.org/legal/document/uu/2020/11/pasal/20/point> legal:pointSetHasDescription <http://example.org/legal/document/uu/2020/11/pasal/20/point/description> .
 <http://example.org/legal/document/uu/2020/11/pasal/20/point> legal:pointSetHasPoint <http://example.org/legal/document/uu/2020/11/pasal/20/point/1> .
 <http://example.org/legal/document/uu/2020/11/pasal/20/point/1> legal:pointHasKey 1 .
@@ -886,7 +886,7 @@
 <http://example.org/legal/document/uu/2020/11/pasal/22> legal:pasalVersionHasState "exists" .
 <http://example.org/legal/document/uu/2020/11/pasal/22> legal:pasalVersionHasCreatedTimeEpoch 0 .
 <http://example.org/legal/document/uu/2020/11/pasal/22> legal:pasalVersionHasPointSet <http://example.org/legal/document/uu/2020/11/pasal/22/point> .
-<http://example.org/legal/document/uu/2020/11/pasal/22/point/description> legal:textHasTextString "Beberapa ketentuan dalam Undang-Undang Nomor 32 Tahun 2009 tentang Perlindungan dan Pengelolaan Lingkungan Hidup (Lembaran Negara Republik Indonesia Tahun 2009 Nomor 140, Tambahan Lembaran Negara Republik Indonesia Nomor 5059) diubah sebagai berikut:" .
+<http://example.org/legal/document/uu/2020/11/pasal/22/point/description> legal:textHasTextString "Pasal 22 Beberapa ketentuan dalam Undang-Undang Nomor 32 Tahun 2009 tentang Perlindungan dan Pengelolaan Lingkungan Hidup (Lembaran Negara Republik Indonesia Tahun 2009 Nomor 140, Tambahan Lembaran Negara Republik Indonesia Nomor 5059) diubah sebagai berikut:" .
 <http://example.org/legal/document/uu/2020/11/pasal/22/point> legal:pointSetHasDescription <http://example.org/legal/document/uu/2020/11/pasal/22/point/description> .
 <http://example.org/legal/document/uu/2020/11/pasal/22/point> legal:pointSetHasPoint <http://example.org/legal/document/uu/2020/11/pasal/22/point/1> .
 <http://example.org/legal/document/uu/2020/11/pasal/22/point/1> legal:pointHasKey 1 .
@@ -1033,7 +1033,7 @@
 <http://example.org/legal/document/uu/2020/11/pasal/24> legal:pasalVersionHasState "exists" .
 <http://example.org/legal/document/uu/2020/11/pasal/24> legal:pasalVersionHasCreatedTimeEpoch 0 .
 <http://example.org/legal/document/uu/2020/11/pasal/24> legal:pasalVersionHasPointSet <http://example.org/legal/document/uu/2020/11/pasal/24/point> .
-<http://example.org/legal/document/uu/2020/11/pasal/24/point/description> legal:textHasTextString "Beberapa ketentuan dalam Undang-Undang Nomor 28 Tahun 2002 tentang Bangunan Gedung (Lembaran Negara Republik Indonesia Tahun 2002 Nomor 134, Tambahan Lembaran Negara Republik Indonesia Nomor 4247) diubah sebagai berikut:" .
+<http://example.org/legal/document/uu/2020/11/pasal/24/point/description> legal:textHasTextString "Pasal 24 Beberapa ketentuan dalam Undang-Undang Nomor 28 Tahun 2002 tentang Bangunan Gedung (Lembaran Negara Republik Indonesia Tahun 2002 Nomor 134, Tambahan Lembaran Negara Republik Indonesia Nomor 4247) diubah sebagai berikut:" .
 <http://example.org/legal/document/uu/2020/11/pasal/24/point> legal:pointSetHasDescription <http://example.org/legal/document/uu/2020/11/pasal/24/point/description> .
 <http://example.org/legal/document/uu/2020/11/pasal/24/point> legal:pointSetHasPoint <http://example.org/legal/document/uu/2020/11/pasal/24/point/1> .
 <http://example.org/legal/document/uu/2020/11/pasal/24/point/1> legal:pointHasKey 1 .
@@ -1171,7 +1171,7 @@
 <http://example.org/legal/document/uu/2020/11/pasal/25> legal:pasalVersionHasState "exists" .
 <http://example.org/legal/document/uu/2020/11/pasal/25> legal:pasalVersionHasCreatedTimeEpoch 0 .
 <http://example.org/legal/document/uu/2020/11/pasal/25> legal:pasalVersionHasPointSet <http://example.org/legal/document/uu/2020/11/pasal/25/point> .
-<http://example.org/legal/document/uu/2020/11/pasal/25/point/description> legal:textHasTextString "Beberapa ketentuan dalam Undang-Undang 6 Tahun 2017 tentang Arsitek (Lembaran Negara Republik Indonesia Tahun 2017 Nomor 179, Tambahan Lembaran Negara Republik Indonesia Nomor 6108) diubah sebagai berikut:" .
+<http://example.org/legal/document/uu/2020/11/pasal/25/point/description> legal:textHasTextString "Pasal 25 Beberapa ketentuan dalam Undang-Undang 6 Tahun 2017 tentang Arsitek (Lembaran Negara Republik Indonesia Tahun 2017 Nomor 179, Tambahan Lembaran Negara Republik Indonesia Nomor 6108) diubah sebagai berikut:" .
 <http://example.org/legal/document/uu/2020/11/pasal/25/point> legal:pointSetHasDescription <http://example.org/legal/document/uu/2020/11/pasal/25/point/description> .
 <http://example.org/legal/document/uu/2020/11/pasal/25/point> legal:pointSetHasPoint <http://example.org/legal/document/uu/2020/11/pasal/25/point/1> .
 <http://example.org/legal/document/uu/2020/11/pasal/25/point/1> legal:pointHasKey 1 .
@@ -1291,7 +1291,7 @@
 <http://example.org/legal/document/uu/2020/11/pasal/27> legal:pasalVersionHasState "exists" .
 <http://example.org/legal/document/uu/2020/11/pasal/27> legal:pasalVersionHasCreatedTimeEpoch 0 .
 <http://example.org/legal/document/uu/2020/11/pasal/27> legal:pasalVersionHasPointSet <http://example.org/legal/document/uu/2020/11/pasal/27/point> .
-<http://example.org/legal/document/uu/2020/11/pasal/27/point/description> legal:textHasTextString "Untuk memberikan kemudahan bagi masyarakat terutama Pelaku Usaha dalam mendapatkan Perizinan Berusaha dan kemudahan persyaratan investasi dari sektor kelautan dan perikanan, beberapa ketentuan dalam Undang-Undang Nomor 31 Tahun 2004 tentang Perikanan (Lembaran Negara Republik Indonesia Tahun 2004 Nomor 118, Tambahan Lembaran Negara Republik Indonesia Nomor 4433) sebagaimana telah diubah dengan Undang-Undang Nomor 45 Tahun 2009 tentang Perubahan Atas Undang-Undang Nomor 31 Tahun 2004 tentang Perikanan (Lembaran Negara Republik Indonesia Tahun 2009 Nomor 154, Tambahan Lembaran Negara Republik Indonesia Nomor 5073) diubah sebagai berikut:" .
+<http://example.org/legal/document/uu/2020/11/pasal/27/point/description> legal:textHasTextString "Pasal 27 Untuk memberikan kemudahan bagi masyarakat terutama Pelaku Usaha dalam mendapatkan Perizinan Berusaha dan kemudahan persyaratan investasi dari sektor kelautan dan perikanan, beberapa ketentuan dalam Undang-Undang Nomor 31 Tahun 2004 tentang Perikanan (Lembaran Negara Republik Indonesia Tahun 2004 Nomor 118, Tambahan Lembaran Negara Republik Indonesia Nomor 4433) sebagaimana telah diubah dengan Undang-Undang Nomor 45 Tahun 2009 tentang Perubahan Atas Undang-Undang Nomor 31 Tahun 2004 tentang Perikanan (Lembaran Negara Republik Indonesia Tahun 2009 Nomor 154, Tambahan Lembaran Negara Republik Indonesia Nomor 5073) diubah sebagai berikut:" .
 <http://example.org/legal/document/uu/2020/11/pasal/27/point> legal:pointSetHasDescription <http://example.org/legal/document/uu/2020/11/pasal/27/point/description> .
 <http://example.org/legal/document/uu/2020/11/pasal/27/point> legal:pointSetHasPoint <http://example.org/legal/document/uu/2020/11/pasal/27/point/1> .
 <http://example.org/legal/document/uu/2020/11/pasal/27/point/1> legal:pointHasKey 1 .
@@ -1443,7 +1443,7 @@
 <http://example.org/legal/document/uu/2020/11/pasal/29> legal:pasalVersionHasState "exists" .
 <http://example.org/legal/document/uu/2020/11/pasal/29> legal:pasalVersionHasCreatedTimeEpoch 0 .
 <http://example.org/legal/document/uu/2020/11/pasal/29> legal:pasalVersionHasPointSet <http://example.org/legal/document/uu/2020/11/pasal/29/point> .
-<http://example.org/legal/document/uu/2020/11/pasal/29/point/description> legal:textHasTextString "Beberapa ketentuan dalam Undang-Undang Nomor 39 Tahun 2014 tentang Perkebunan (Lembaran Negara Republik Indonesia Tahun 2014 Nomor 308, Tambahan Lembaran Negara Republik Indonesia Nomor 5613) diubah sebagai berikut:" .
+<http://example.org/legal/document/uu/2020/11/pasal/29/point/description> legal:textHasTextString "Pasal 29 Beberapa ketentuan dalam Undang-Undang Nomor 39 Tahun 2014 tentang Perkebunan (Lembaran Negara Republik Indonesia Tahun 2014 Nomor 308, Tambahan Lembaran Negara Republik Indonesia Nomor 5613) diubah sebagai berikut:" .
 <http://example.org/legal/document/uu/2020/11/pasal/29/point> legal:pointSetHasDescription <http://example.org/legal/document/uu/2020/11/pasal/29/point/description> .
 <http://example.org/legal/document/uu/2020/11/pasal/29/point> legal:pointSetHasPoint <http://example.org/legal/document/uu/2020/11/pasal/29/point/1> .
 <http://example.org/legal/document/uu/2020/11/pasal/29/point/1> legal:pointHasKey 1 .
@@ -1547,7 +1547,7 @@
 <http://example.org/legal/document/uu/2020/11/pasal/30> legal:pasalVersionHasState "exists" .
 <http://example.org/legal/document/uu/2020/11/pasal/30> legal:pasalVersionHasCreatedTimeEpoch 0 .
 <http://example.org/legal/document/uu/2020/11/pasal/30> legal:pasalVersionHasPointSet <http://example.org/legal/document/uu/2020/11/pasal/30/point> .
-<http://example.org/legal/document/uu/2020/11/pasal/30/point/description> legal:textHasTextString "Beberapa ketentuan dalam Undang-Undang Nomor 29 Tahun 2000 tentang Perlindungan Varietas Tanaman (Lembaran Negara Republik Indonesia Tahun 2000 Nomor 241, Tambahan Lembaran Negara Republik Indonesia Nomor 4043) diubah sebagai berikut:" .
+<http://example.org/legal/document/uu/2020/11/pasal/30/point/description> legal:textHasTextString "Pasal 30 Beberapa ketentuan dalam Undang-Undang Nomor 29 Tahun 2000 tentang Perlindungan Varietas Tanaman (Lembaran Negara Republik Indonesia Tahun 2000 Nomor 241, Tambahan Lembaran Negara Republik Indonesia Nomor 4043) diubah sebagai berikut:" .
 <http://example.org/legal/document/uu/2020/11/pasal/30/point> legal:pointSetHasDescription <http://example.org/legal/document/uu/2020/11/pasal/30/point/description> .
 <http://example.org/legal/document/uu/2020/11/pasal/30/point> legal:pointSetHasPoint <http://example.org/legal/document/uu/2020/11/pasal/30/point/1> .
 <http://example.org/legal/document/uu/2020/11/pasal/30/point/1> legal:pointHasKey 1 .
@@ -1570,7 +1570,7 @@
 <http://example.org/legal/document/uu/2020/11/pasal/31> legal:pasalVersionHasState "exists" .
 <http://example.org/legal/document/uu/2020/11/pasal/31> legal:pasalVersionHasCreatedTimeEpoch 0 .
 <http://example.org/legal/document/uu/2020/11/pasal/31> legal:pasalVersionHasPointSet <http://example.org/legal/document/uu/2020/11/pasal/31/point> .
-<http://example.org/legal/document/uu/2020/11/pasal/31/point/description> legal:textHasTextString "Beberapa ketentuan dalam Undang-Undang Nomor 22 Tahun 2019 tentang Sistem Budi Daya Pertanian Berkelanjutan (Lembaran Negara Republik Indonesia Tahun 2019 Nomor 201, Tambahan Lembaran Negara Republik Indonesia Nomor 6412) diubah sebagai berikut:" .
+<http://example.org/legal/document/uu/2020/11/pasal/31/point/description> legal:textHasTextString "Pasal 31 Beberapa ketentuan dalam Undang-Undang Nomor 22 Tahun 2019 tentang Sistem Budi Daya Pertanian Berkelanjutan (Lembaran Negara Republik Indonesia Tahun 2019 Nomor 201, Tambahan Lembaran Negara Republik Indonesia Nomor 6412) diubah sebagai berikut:" .
 <http://example.org/legal/document/uu/2020/11/pasal/31/point> legal:pointSetHasDescription <http://example.org/legal/document/uu/2020/11/pasal/31/point/description> .
 <http://example.org/legal/document/uu/2020/11/pasal/31/point> legal:pointSetHasPoint <http://example.org/legal/document/uu/2020/11/pasal/31/point/1> .
 <http://example.org/legal/document/uu/2020/11/pasal/31/point/1> legal:pointHasKey 1 .
@@ -1605,7 +1605,7 @@
 <http://example.org/legal/document/uu/2020/11/pasal/32> legal:pasalVersionHasState "exists" .
 <http://example.org/legal/document/uu/2020/11/pasal/32> legal:pasalVersionHasCreatedTimeEpoch 0 .
 <http://example.org/legal/document/uu/2020/11/pasal/32> legal:pasalVersionHasPointSet <http://example.org/legal/document/uu/2020/11/pasal/32/point> .
-<http://example.org/legal/document/uu/2020/11/pasal/32/point/description> legal:textHasTextString "Beberapa ketentuan dalam Undang-Undang Nomor 19 Tahun 2013 tentang Perlindungan dan Pemberdayaan Petani (Lembaran Negara Republik Indonesia Tahun 2013 Nomor 131, Tambahan Lembaran Negara Republik Indonesia Nomor 5433) diubah sebagai berikut: '" .
+<http://example.org/legal/document/uu/2020/11/pasal/32/point/description> legal:textHasTextString "Pasal 32 Beberapa ketentuan dalam Undang-Undang Nomor 19 Tahun 2013 tentang Perlindungan dan Pemberdayaan Petani (Lembaran Negara Republik Indonesia Tahun 2013 Nomor 131, Tambahan Lembaran Negara Republik Indonesia Nomor 5433) diubah sebagai berikut: '" .
 <http://example.org/legal/document/uu/2020/11/pasal/32/point> legal:pointSetHasDescription <http://example.org/legal/document/uu/2020/11/pasal/32/point/description> .
 <http://example.org/legal/document/uu/2020/11/pasal/32/point> legal:pointSetHasPoint <http://example.org/legal/document/uu/2020/11/pasal/32/point/1> .
 <http://example.org/legal/document/uu/2020/11/pasal/32/point/1> legal:pointHasKey 1 .
@@ -1622,7 +1622,7 @@
 <http://example.org/legal/document/uu/2020/11/pasal/33> legal:pasalVersionHasState "exists" .
 <http://example.org/legal/document/uu/2020/11/pasal/33> legal:pasalVersionHasCreatedTimeEpoch 0 .
 <http://example.org/legal/document/uu/2020/11/pasal/33> legal:pasalVersionHasPointSet <http://example.org/legal/document/uu/2020/11/pasal/33/point> .
-<http://example.org/legal/document/uu/2020/11/pasal/33/point/description> legal:textHasTextString "Beberapa ketentuan dalam Undang-Undang Nomor 13 Tahun 2010 tentang Hortikultura (Lembaran Negara Republik Indonesia Tahun 2010 Nomor 132, Tambahan Lembaran Negara Republik Indonesia Nomor 5170) diubah sebagai berikut:" .
+<http://example.org/legal/document/uu/2020/11/pasal/33/point/description> legal:textHasTextString "Pasal 33 Beberapa ketentuan dalam Undang-Undang Nomor 13 Tahun 2010 tentang Hortikultura (Lembaran Negara Republik Indonesia Tahun 2010 Nomor 132, Tambahan Lembaran Negara Republik Indonesia Nomor 5170) diubah sebagai berikut:" .
 <http://example.org/legal/document/uu/2020/11/pasal/33/point> legal:pointSetHasDescription <http://example.org/legal/document/uu/2020/11/pasal/33/point/description> .
 <http://example.org/legal/document/uu/2020/11/pasal/33/point> legal:pointSetHasPoint <http://example.org/legal/document/uu/2020/11/pasal/33/point/1> .
 <http://example.org/legal/document/uu/2020/11/pasal/33/point/1> legal:pointHasKey 1 .
@@ -1696,7 +1696,7 @@
 <http://example.org/legal/document/uu/2020/11/pasal/34> legal:pasalVersionHasState "exists" .
 <http://example.org/legal/document/uu/2020/11/pasal/34> legal:pasalVersionHasCreatedTimeEpoch 0 .
 <http://example.org/legal/document/uu/2020/11/pasal/34> legal:pasalVersionHasPointSet <http://example.org/legal/document/uu/2020/11/pasal/34/point> .
-<http://example.org/legal/document/uu/2020/11/pasal/34/point/description> legal:textHasTextString "Beberapa ketentuan dalam Undang-Undang Nomor 18 Tahun 2009 tentang Peternakan dan Kesehatan Hewan (Lembaran Negara Republik Indonesia Tahun 2009 Nomor 84, Tambahan Lembaran Negara Republik Indonesia Nomor 5015) sebagaimana diubah dengan Undang-Undang Nomor 41 Tahun 2014 tentang Perubahan Atas Undang-Undang Nomor 18 Tahun 2009 tentang Peternakan dan Kesehatan Hewan (Lembaran Negara Republik Indonesia Tahun 2014 Nomor 338, Tambahan Lembaran Negara Republik Indonesia Nomor 5619) diubah sebagai berikut:" .
+<http://example.org/legal/document/uu/2020/11/pasal/34/point/description> legal:textHasTextString "Pasal 34 Beberapa ketentuan dalam Undang-Undang Nomor 18 Tahun 2009 tentang Peternakan dan Kesehatan Hewan (Lembaran Negara Republik Indonesia Tahun 2009 Nomor 84, Tambahan Lembaran Negara Republik Indonesia Nomor 5015) sebagaimana diubah dengan Undang-Undang Nomor 41 Tahun 2014 tentang Perubahan Atas Undang-Undang Nomor 18 Tahun 2009 tentang Peternakan dan Kesehatan Hewan (Lembaran Negara Republik Indonesia Tahun 2014 Nomor 338, Tambahan Lembaran Negara Republik Indonesia Nomor 5619) diubah sebagai berikut:" .
 <http://example.org/legal/document/uu/2020/11/pasal/34/point> legal:pointSetHasDescription <http://example.org/legal/document/uu/2020/11/pasal/34/point/description> .
 <http://example.org/legal/document/uu/2020/11/pasal/34/point> legal:pointSetHasPoint <http://example.org/legal/document/uu/2020/11/pasal/34/point/2> .
 <http://example.org/legal/document/uu/2020/11/pasal/34/point/2> legal:pointHasKey 2 .
@@ -1778,7 +1778,7 @@
 <http://example.org/legal/document/uu/2020/11/pasal/36> legal:pasalVersionHasState "exists" .
 <http://example.org/legal/document/uu/2020/11/pasal/36> legal:pasalVersionHasCreatedTimeEpoch 0 .
 <http://example.org/legal/document/uu/2020/11/pasal/36> legal:pasalVersionHasPointSet <http://example.org/legal/document/uu/2020/11/pasal/36/point> .
-<http://example.org/legal/document/uu/2020/11/pasal/36/point/description> legal:textHasTextString "Beberapa ketentuan dalam Undang-Undang Nomor 41 Tahun 1999 tentang Kehutanan (Lembaran Negara Republik Indonesia Tahun 1999 Nomor 167, Tambahan Lembaran Negara Republik Indonesia Nomor 3888) sebagaimana telah diubah dengan Undang-Undang Nomor 19 Tahun 2004 tentang Peraturan Pemerintah Pengganti Undang-Undang Nomor 1 Tahun 2004 tentang Perubahan Atas Undang-Undang Nomor 41 Tahun 1999 tentang Kehutanan menjadi Undang-Undang (Lembaran Negara Republik Indonesia Tahun 2004 Nomor 86, Tambahan Lembaran Negara Republik Indonesia Nomor 4374) diubah sebagai berikut:" .
+<http://example.org/legal/document/uu/2020/11/pasal/36/point/description> legal:textHasTextString "Pasal 36 Beberapa ketentuan dalam Undang-Undang Nomor 41 Tahun 1999 tentang Kehutanan (Lembaran Negara Republik Indonesia Tahun 1999 Nomor 167, Tambahan Lembaran Negara Republik Indonesia Nomor 3888) sebagaimana telah diubah dengan Undang-Undang Nomor 19 Tahun 2004 tentang Peraturan Pemerintah Pengganti Undang-Undang Nomor 1 Tahun 2004 tentang Perubahan Atas Undang-Undang Nomor 41 Tahun 1999 tentang Kehutanan menjadi Undang-Undang (Lembaran Negara Republik Indonesia Tahun 2004 Nomor 86, Tambahan Lembaran Negara Republik Indonesia Nomor 4374) diubah sebagai berikut:" .
 <http://example.org/legal/document/uu/2020/11/pasal/36/point> legal:pointSetHasDescription <http://example.org/legal/document/uu/2020/11/pasal/36/point/description> .
 <http://example.org/legal/document/uu/2020/11/pasal/36/point> legal:pointSetHasPoint <http://example.org/legal/document/uu/2020/11/pasal/36/point/1> .
 <http://example.org/legal/document/uu/2020/11/pasal/36/point/1> legal:pointHasKey 1 .
@@ -1847,7 +1847,7 @@
 <http://example.org/legal/document/uu/2020/11/pasal/37> legal:pasalVersionHasState "exists" .
 <http://example.org/legal/document/uu/2020/11/pasal/37> legal:pasalVersionHasCreatedTimeEpoch 0 .
 <http://example.org/legal/document/uu/2020/11/pasal/37> legal:pasalVersionHasPointSet <http://example.org/legal/document/uu/2020/11/pasal/37/point> .
-<http://example.org/legal/document/uu/2020/11/pasal/37/point/description> legal:textHasTextString "Beberapa ketentuan dalam Undang-Undang Nomor 18 Tahun 2013 tentang Pencegahan dan Pemberantasan Perusakan Hutan (Lembaran Negara Republik Indonesia Tahun 2013 Nomor 130, Tambahan Lembaran Negara Republik Indonesia Nomor 5432) diubah sebagai berikut:" .
+<http://example.org/legal/document/uu/2020/11/pasal/37/point/description> legal:textHasTextString "Pasal 37 Beberapa ketentuan dalam Undang-Undang Nomor 18 Tahun 2013 tentang Pencegahan dan Pemberantasan Perusakan Hutan (Lembaran Negara Republik Indonesia Tahun 2013 Nomor 130, Tambahan Lembaran Negara Republik Indonesia Nomor 5432) diubah sebagai berikut:" .
 <http://example.org/legal/document/uu/2020/11/pasal/37/point> legal:pointSetHasDescription <http://example.org/legal/document/uu/2020/11/pasal/37/point/description> .
 <http://example.org/legal/document/uu/2020/11/pasal/37/point> legal:pointSetHasPoint <http://example.org/legal/document/uu/2020/11/pasal/37/point/1> .
 <http://example.org/legal/document/uu/2020/11/pasal/37/point/1> legal:pointHasKey 1 .
@@ -1950,7 +1950,7 @@
 <http://example.org/legal/document/uu/2020/11/pasal/39> legal:pasalVersionHasState "exists" .
 <http://example.org/legal/document/uu/2020/11/pasal/39> legal:pasalVersionHasCreatedTimeEpoch 0 .
 <http://example.org/legal/document/uu/2020/11/pasal/39> legal:pasalVersionHasPointSet <http://example.org/legal/document/uu/2020/11/pasal/39/point> .
-<http://example.org/legal/document/uu/2020/11/pasal/39/point/description> legal:textHasTextString "Beberapa ketentuan dalam Undang-Undang Nomor 4 Tahun 2009 tentang Pertambangan Mineral dan Batubara (Lembaran Negara Republik Indonesia Tahun 2009 Nomor 4, Tambahan Lembaran Negara Republik Indonesia Nomor 4959) sebagaimana telah diubah dengan Undang-Undang Nomor 3 Tahun 2020 tentang Perubahan Atas Undang-Undang Nomor 4 Tahun 2009 tentang Pertambangan Mineral dan Batubara (Lembaran Negara Republik Indonesia Tahun 2020 Nomor 147, Tambahan Lembaran Negara Republik Indonesia Nomor 6525) diubah sebagai berikut:" .
+<http://example.org/legal/document/uu/2020/11/pasal/39/point/description> legal:textHasTextString "Pasal 39 Beberapa ketentuan dalam Undang-Undang Nomor 4 Tahun 2009 tentang Pertambangan Mineral dan Batubara (Lembaran Negara Republik Indonesia Tahun 2009 Nomor 4, Tambahan Lembaran Negara Republik Indonesia Nomor 4959) sebagaimana telah diubah dengan Undang-Undang Nomor 3 Tahun 2020 tentang Perubahan Atas Undang-Undang Nomor 4 Tahun 2009 tentang Pertambangan Mineral dan Batubara (Lembaran Negara Republik Indonesia Tahun 2020 Nomor 147, Tambahan Lembaran Negara Republik Indonesia Nomor 6525) diubah sebagai berikut:" .
 <http://example.org/legal/document/uu/2020/11/pasal/39/point> legal:pointSetHasDescription <http://example.org/legal/document/uu/2020/11/pasal/39/point/description> .
 <http://example.org/legal/document/uu/2020/11/pasal/39/point> legal:pointSetHasPoint <http://example.org/legal/document/uu/2020/11/pasal/39/point/1> .
 <http://example.org/legal/document/uu/2020/11/pasal/39/point/1> legal:pointHasKey 1 .
@@ -1964,7 +1964,7 @@
 <http://example.org/legal/document/uu/2020/11/pasal/40> legal:pasalVersionHasState "exists" .
 <http://example.org/legal/document/uu/2020/11/pasal/40> legal:pasalVersionHasCreatedTimeEpoch 0 .
 <http://example.org/legal/document/uu/2020/11/pasal/40> legal:pasalVersionHasPointSet <http://example.org/legal/document/uu/2020/11/pasal/40/point> .
-<http://example.org/legal/document/uu/2020/11/pasal/40/point/description> legal:textHasTextString "Beberapa ketentuan dalam Undang-Undang Nomor 22 Tahun 2001 tentang Minyak dan Gas Bumi (Lembaran Negara Republik Indonesia Tahun 2001 Nomor 136, Tambahan Lembaran Negara Republik Indonesia Nomor 4152) diubah sebagai berikut:" .
+<http://example.org/legal/document/uu/2020/11/pasal/40/point/description> legal:textHasTextString "Pasal 40 Beberapa ketentuan dalam Undang-Undang Nomor 22 Tahun 2001 tentang Minyak dan Gas Bumi (Lembaran Negara Republik Indonesia Tahun 2001 Nomor 136, Tambahan Lembaran Negara Republik Indonesia Nomor 4152) diubah sebagai berikut:" .
 <http://example.org/legal/document/uu/2020/11/pasal/40/point> legal:pointSetHasDescription <http://example.org/legal/document/uu/2020/11/pasal/40/point/description> .
 <http://example.org/legal/document/uu/2020/11/pasal/40/point> legal:pointSetHasPoint <http://example.org/legal/document/uu/2020/11/pasal/40/point/1> .
 <http://example.org/legal/document/uu/2020/11/pasal/40/point/1> legal:pointHasKey 1 .
@@ -1999,7 +1999,7 @@
 <http://example.org/legal/document/uu/2020/11/pasal/41> legal:pasalVersionHasState "exists" .
 <http://example.org/legal/document/uu/2020/11/pasal/41> legal:pasalVersionHasCreatedTimeEpoch 0 .
 <http://example.org/legal/document/uu/2020/11/pasal/41> legal:pasalVersionHasPointSet <http://example.org/legal/document/uu/2020/11/pasal/41/point> .
-<http://example.org/legal/document/uu/2020/11/pasal/41/point/description> legal:textHasTextString "Beberapa ketentuan dalam Undang-Undang Nomor 21 Tahun 2014 tentang Panas Bumi (Lembaran Negara Republik Indonesia Tahun 2014 Nomor 217, Tambahan Lembaran Negara Republik Indonesia Nomor 5585) diubah sebagai berikut:" .
+<http://example.org/legal/document/uu/2020/11/pasal/41/point/description> legal:textHasTextString "Pasal! 41 Beberapa ketentuan dalam Undang-Undang Nomor 21 Tahun 2014 tentang Panas Bumi (Lembaran Negara Republik Indonesia Tahun 2014 Nomor 217, Tambahan Lembaran Negara Republik Indonesia Nomor 5585) diubah sebagai berikut:" .
 <http://example.org/legal/document/uu/2020/11/pasal/41/point> legal:pointSetHasDescription <http://example.org/legal/document/uu/2020/11/pasal/41/point/description> .
 <http://example.org/legal/document/uu/2020/11/pasal/41/point> legal:pointSetHasPoint <http://example.org/legal/document/uu/2020/11/pasal/41/point/1> .
 <http://example.org/legal/document/uu/2020/11/pasal/41/point/1> legal:pointHasKey 1 .
@@ -2112,7 +2112,7 @@
 <http://example.org/legal/document/uu/2020/11/pasal/42> legal:pasalVersionHasState "exists" .
 <http://example.org/legal/document/uu/2020/11/pasal/42> legal:pasalVersionHasCreatedTimeEpoch 0 .
 <http://example.org/legal/document/uu/2020/11/pasal/42> legal:pasalVersionHasPointSet <http://example.org/legal/document/uu/2020/11/pasal/42/point> .
-<http://example.org/legal/document/uu/2020/11/pasal/42/point/description> legal:textHasTextString "Beberapa ketentuan dalam Undang-Undang Nomor 30 Tahun 2009 tentang Ketenagalistrikan (Lembaran Negara Republik Indonesia Tahun 2009 Nomor 133, Tambahan Lembaran Negara Republik Indonesia Nomor 5052) diubah sebagai berikut:" .
+<http://example.org/legal/document/uu/2020/11/pasal/42/point/description> legal:textHasTextString "Pasal 42 Beberapa ketentuan dalam Undang-Undang Nomor 30 Tahun 2009 tentang Ketenagalistrikan (Lembaran Negara Republik Indonesia Tahun 2009 Nomor 133, Tambahan Lembaran Negara Republik Indonesia Nomor 5052) diubah sebagai berikut:" .
 <http://example.org/legal/document/uu/2020/11/pasal/42/point> legal:pointSetHasDescription <http://example.org/legal/document/uu/2020/11/pasal/42/point/description> .
 <http://example.org/legal/document/uu/2020/11/pasal/42/point> legal:pointSetHasPoint <http://example.org/legal/document/uu/2020/11/pasal/42/point/1> .
 <http://example.org/legal/document/uu/2020/11/pasal/42/point/1> legal:pointHasKey 1 .
@@ -2229,7 +2229,7 @@
 <http://example.org/legal/document/uu/2020/11/pasal/43> legal:pasalVersionHasState "exists" .
 <http://example.org/legal/document/uu/2020/11/pasal/43> legal:pasalVersionHasCreatedTimeEpoch 0 .
 <http://example.org/legal/document/uu/2020/11/pasal/43> legal:pasalVersionHasPointSet <http://example.org/legal/document/uu/2020/11/pasal/43/point> .
-<http://example.org/legal/document/uu/2020/11/pasal/43/point/description> legal:textHasTextString "Untuk memberikan kemudahan bagi masyarakat terutama Pelaku Usaha dalam mendapatkan Perizinan Berusaha dari sektor Ketenaganukliran, beberapa ketentuan dalam Undang- Undang Nomor 10 Tahun 1997 tentang Ketenaganukliran (Lembaran Negara Republik Indonesia Tahun 1997 Nomor 23, Tambahan Lembaran Negara Republik Indonesia Nomor 3676) diubah:" .
+<http://example.org/legal/document/uu/2020/11/pasal/43/point/description> legal:textHasTextString "Pasal 43 Untuk memberikan kemudahan bagi masyarakat terutama Pelaku Usaha dalam mendapatkan Perizinan Berusaha dari sektor Ketenaganukliran, beberapa ketentuan dalam Undang- Undang Nomor 10 Tahun 1997 tentang Ketenaganukliran (Lembaran Negara Republik Indonesia Tahun 1997 Nomor 23, Tambahan Lembaran Negara Republik Indonesia Nomor 3676) diubah:" .
 <http://example.org/legal/document/uu/2020/11/pasal/43/point> legal:pointSetHasDescription <http://example.org/legal/document/uu/2020/11/pasal/43/point/description> .
 <http://example.org/legal/document/uu/2020/11/pasal/43/point> legal:pointSetHasPoint <http://example.org/legal/document/uu/2020/11/pasal/43/point/1> .
 <http://example.org/legal/document/uu/2020/11/pasal/43/point/1> legal:pointHasKey 1 .
@@ -2274,7 +2274,7 @@
 <http://example.org/legal/document/uu/2020/11/pasal/44> legal:pasalVersionHasState "exists" .
 <http://example.org/legal/document/uu/2020/11/pasal/44> legal:pasalVersionHasCreatedTimeEpoch 0 .
 <http://example.org/legal/document/uu/2020/11/pasal/44> legal:pasalVersionHasPointSet <http://example.org/legal/document/uu/2020/11/pasal/44/point> .
-<http://example.org/legal/document/uu/2020/11/pasal/44/point/description> legal:textHasTextString "Untuk memberikan kemudahan bagi masyarakat terutama pelaku usaha dalam mendapatkan Perizinan Berusaha dan kemudahan persyaratan investasi dari sektor Perindustrian, beberapa ketentuan dalam Undang-Undang 3 Tahun 2014 tentang Perindustrian (Lembaran Negara Republik Indonesia Tahun 2014 Nomor 4, Tambahan Lembaran Negara Republik Indonesia Nomor 5492) diubah sebagai berikut:" .
+<http://example.org/legal/document/uu/2020/11/pasal/44/point/description> legal:textHasTextString "Pasal 44 Untuk memberikan kemudahan bagi masyarakat terutama pelaku usaha dalam mendapatkan Perizinan Berusaha dan kemudahan persyaratan investasi dari sektor Perindustrian, beberapa ketentuan dalam Undang-Undang 3 Tahun 2014 tentang Perindustrian (Lembaran Negara Republik Indonesia Tahun 2014 Nomor 4, Tambahan Lembaran Negara Republik Indonesia Nomor 5492) diubah sebagai berikut:" .
 <http://example.org/legal/document/uu/2020/11/pasal/44/point> legal:pointSetHasDescription <http://example.org/legal/document/uu/2020/11/pasal/44/point/description> .
 <http://example.org/legal/document/uu/2020/11/pasal/44/point> legal:pointSetHasPoint <http://example.org/legal/document/uu/2020/11/pasal/44/point/1> .
 <http://example.org/legal/document/uu/2020/11/pasal/44/point/1> legal:pointHasKey 1 .
@@ -2354,7 +2354,7 @@
 <http://example.org/legal/document/uu/2020/11/pasal/46> legal:pasalVersionHasState "exists" .
 <http://example.org/legal/document/uu/2020/11/pasal/46> legal:pasalVersionHasCreatedTimeEpoch 0 .
 <http://example.org/legal/document/uu/2020/11/pasal/46> legal:pasalVersionHasPointSet <http://example.org/legal/document/uu/2020/11/pasal/46/point> .
-<http://example.org/legal/document/uu/2020/11/pasal/46/point/description> legal:textHasTextString "Beberapa ketentuan dalam Undang-Undang Nomor 7 Tahun 2014 tentang Perdagangan (Lembaran Negara Republik Indonesia Tahun 2014 Nomor 45, Tambahan Lembaran Negara Republik Indonesia Nomor 5512) diubah sebagai berikut:" .
+<http://example.org/legal/document/uu/2020/11/pasal/46/point/description> legal:textHasTextString "Pasal 46 Beberapa ketentuan dalam Undang-Undang Nomor 7 Tahun 2014 tentang Perdagangan (Lembaran Negara Republik Indonesia Tahun 2014 Nomor 45, Tambahan Lembaran Negara Republik Indonesia Nomor 5512) diubah sebagai berikut:" .
 <http://example.org/legal/document/uu/2020/11/pasal/46/point> legal:pointSetHasDescription <http://example.org/legal/document/uu/2020/11/pasal/46/point/description> .
 <http://example.org/legal/document/uu/2020/11/pasal/46/point> legal:pointSetHasPoint <http://example.org/legal/document/uu/2020/11/pasal/46/point/1> .
 <http://example.org/legal/document/uu/2020/11/pasal/46/point/1> legal:pointHasKey 1 .
@@ -2470,7 +2470,7 @@
 <http://example.org/legal/document/uu/2020/11/pasal/47> legal:pasalVersionHasState "exists" .
 <http://example.org/legal/document/uu/2020/11/pasal/47> legal:pasalVersionHasCreatedTimeEpoch 0 .
 <http://example.org/legal/document/uu/2020/11/pasal/47> legal:pasalVersionHasPointSet <http://example.org/legal/document/uu/2020/11/pasal/47/point> .
-<http://example.org/legal/document/uu/2020/11/pasal/47/point/description> legal:textHasTextString "Beberapa ketentuan dalam Undang-Undang Nomor 2 Tahun 1981 tentang Metrologi Legal (Lembaran Negara Republik Indonesia Tahun 1981 Nomor 11, Tambahan Lembaran Negara Republik Indonesia Nomor 3193) diubah:" .
+<http://example.org/legal/document/uu/2020/11/pasal/47/point/description> legal:textHasTextString "Pasal 47 Beberapa ketentuan dalam Undang-Undang Nomor 2 Tahun 1981 tentang Metrologi Legal (Lembaran Negara Republik Indonesia Tahun 1981 Nomor 11, Tambahan Lembaran Negara Republik Indonesia Nomor 3193) diubah:" .
 <http://example.org/legal/document/uu/2020/11/pasal/47/point> legal:pointSetHasDescription <http://example.org/legal/document/uu/2020/11/pasal/47/point/description> .
 <http://example.org/legal/document/uu/2020/11/pasal/47/point> legal:pointSetHasPoint <http://example.org/legal/document/uu/2020/11/pasal/47/point/1> .
 <http://example.org/legal/document/uu/2020/11/pasal/47/point/1> legal:pointHasKey 1 .
@@ -2490,7 +2490,7 @@
 <http://example.org/legal/document/uu/2020/11/pasal/48> legal:pasalVersionHasState "exists" .
 <http://example.org/legal/document/uu/2020/11/pasal/48> legal:pasalVersionHasCreatedTimeEpoch 0 .
 <http://example.org/legal/document/uu/2020/11/pasal/48> legal:pasalVersionHasPointSet <http://example.org/legal/document/uu/2020/11/pasal/48/point> .
-<http://example.org/legal/document/uu/2020/11/pasal/48/point/description> legal:textHasTextString "Beberapa ketentuan dalam Undang-Undang Nomor 33 Tahun 2014 tentang Jaminan Produk Halal (Lembaran Negara Republik Indonesia Tahun 2014 Nomor 295, Tambahan Lembaran Negara Republik Indonesia Nomor 5604) diubah sebagai berikut:" .
+<http://example.org/legal/document/uu/2020/11/pasal/48/point/description> legal:textHasTextString "Pasal 48 Beberapa ketentuan dalam Undang-Undang Nomor 33 Tahun 2014 tentang Jaminan Produk Halal (Lembaran Negara Republik Indonesia Tahun 2014 Nomor 295, Tambahan Lembaran Negara Republik Indonesia Nomor 5604) diubah sebagai berikut:" .
 <http://example.org/legal/document/uu/2020/11/pasal/48/point> legal:pointSetHasDescription <http://example.org/legal/document/uu/2020/11/pasal/48/point/description> .
 <http://example.org/legal/document/uu/2020/11/pasal/48/point> legal:pointSetHasPoint <http://example.org/legal/document/uu/2020/11/pasal/48/point/1> .
 <http://example.org/legal/document/uu/2020/11/pasal/48/point/1> legal:pointHasKey 1 .
@@ -2598,7 +2598,7 @@
 <http://example.org/legal/document/uu/2020/11/pasal/50> legal:pasalVersionHasState "exists" .
 <http://example.org/legal/document/uu/2020/11/pasal/50> legal:pasalVersionHasCreatedTimeEpoch 0 .
 <http://example.org/legal/document/uu/2020/11/pasal/50> legal:pasalVersionHasPointSet <http://example.org/legal/document/uu/2020/11/pasal/50/point> .
-<http://example.org/legal/document/uu/2020/11/pasal/50/point/description> legal:textHasTextString "Beberapa ketentuan dalam Undang-Undang Nomor 1 Tahun 2011 tentang Perumahan dan Kawasan Permukiman (Lembaran Negara Republik Indonesia Tahun 2011 Nomor 7, Tambahan Lembaran Negara Republik Indonesia Nomor 5158) diubah sebagai berikut:" .
+<http://example.org/legal/document/uu/2020/11/pasal/50/point/description> legal:textHasTextString "Pasal 50 Beberapa ketentuan dalam Undang-Undang Nomor 1 Tahun 2011 tentang Perumahan dan Kawasan Permukiman (Lembaran Negara Republik Indonesia Tahun 2011 Nomor 7, Tambahan Lembaran Negara Republik Indonesia Nomor 5158) diubah sebagai berikut:" .
 <http://example.org/legal/document/uu/2020/11/pasal/50/point> legal:pointSetHasDescription <http://example.org/legal/document/uu/2020/11/pasal/50/point/description> .
 <http://example.org/legal/document/uu/2020/11/pasal/50/point> legal:pointSetHasPoint <http://example.org/legal/document/uu/2020/11/pasal/50/point/1> .
 <http://example.org/legal/document/uu/2020/11/pasal/50/point/1> legal:pointHasKey 1 .
@@ -2654,7 +2654,7 @@
 <http://example.org/legal/document/uu/2020/11/pasal/51> legal:pasalVersionHasState "exists" .
 <http://example.org/legal/document/uu/2020/11/pasal/51> legal:pasalVersionHasCreatedTimeEpoch 0 .
 <http://example.org/legal/document/uu/2020/11/pasal/51> legal:pasalVersionHasPointSet <http://example.org/legal/document/uu/2020/11/pasal/51/point> .
-<http://example.org/legal/document/uu/2020/11/pasal/51/point/description> legal:textHasTextString "Beberapa ketentuan dalam Undang-Undang Nomor 20 Tahun 2011 tentang Rumah Susun (Lembaran Negara Republik Indonesia Tahun 2011 Nomor 108, Tambahan Lembaran Negara Republik Indonesia Nomor 5252) diubah sebagai berikut:" .
+<http://example.org/legal/document/uu/2020/11/pasal/51/point/description> legal:textHasTextString "Pasal 51 Beberapa ketentuan dalam Undang-Undang Nomor 20 Tahun 2011 tentang Rumah Susun (Lembaran Negara Republik Indonesia Tahun 2011 Nomor 108, Tambahan Lembaran Negara Republik Indonesia Nomor 5252) diubah sebagai berikut:" .
 <http://example.org/legal/document/uu/2020/11/pasal/51/point> legal:pointSetHasDescription <http://example.org/legal/document/uu/2020/11/pasal/51/point/description> .
 <http://example.org/legal/document/uu/2020/11/pasal/51/point> legal:pointSetHasPoint <http://example.org/legal/document/uu/2020/11/pasal/51/point/1> .
 <http://example.org/legal/document/uu/2020/11/pasal/51/point/1> legal:pointHasKey 1 .
@@ -2731,7 +2731,7 @@
 <http://example.org/legal/document/uu/2020/11/pasal/52> legal:pasalVersionHasState "exists" .
 <http://example.org/legal/document/uu/2020/11/pasal/52> legal:pasalVersionHasCreatedTimeEpoch 0 .
 <http://example.org/legal/document/uu/2020/11/pasal/52> legal:pasalVersionHasPointSet <http://example.org/legal/document/uu/2020/11/pasal/52/point> .
-<http://example.org/legal/document/uu/2020/11/pasal/52/point/description> legal:textHasTextString "Beberapa ketentuan dalam Undang-Undang Nomor 2 Tahun 2017 tentang Jasa Konstruksi (Lembaran Negara Republik Indonesia Tahun 2017 Nomor 11, Tambahan Lembaran Negara Republik Indonesia Nomor 6018) diubah sebagai berikut:" .
+<http://example.org/legal/document/uu/2020/11/pasal/52/point/description> legal:textHasTextString "Pasal 52 Beberapa ketentuan dalam Undang-Undang Nomor 2 Tahun 2017 tentang Jasa Konstruksi (Lembaran Negara Republik Indonesia Tahun 2017 Nomor 11, Tambahan Lembaran Negara Republik Indonesia Nomor 6018) diubah sebagai berikut:" .
 <http://example.org/legal/document/uu/2020/11/pasal/52/point> legal:pointSetHasDescription <http://example.org/legal/document/uu/2020/11/pasal/52/point/description> .
 <http://example.org/legal/document/uu/2020/11/pasal/52/point> legal:pointSetHasPoint <http://example.org/legal/document/uu/2020/11/pasal/52/point/1> .
 <http://example.org/legal/document/uu/2020/11/pasal/52/point/1> legal:pointHasKey 1 .
@@ -2838,7 +2838,7 @@
 <http://example.org/legal/document/uu/2020/11/pasal/53> legal:pasalVersionHasState "exists" .
 <http://example.org/legal/document/uu/2020/11/pasal/53> legal:pasalVersionHasCreatedTimeEpoch 0 .
 <http://example.org/legal/document/uu/2020/11/pasal/53> legal:pasalVersionHasPointSet <http://example.org/legal/document/uu/2020/11/pasal/53/point> .
-<http://example.org/legal/document/uu/2020/11/pasal/53/point/description> legal:textHasTextString "Beberapa ketentuan dalam Undang-Undang Nomor 17 Tahun 2019 tentang Sumber Daya Air (Lembaran Negara Republik Indonesia Tahun 2019 Nomor 190, Tambahan Lembaran Negara Republik Indonesia Nomor 6405) diubah sebagai berikut:" .
+<http://example.org/legal/document/uu/2020/11/pasal/53/point/description> legal:textHasTextString "Pasal 53 Beberapa ketentuan dalam Undang-Undang Nomor 17 Tahun 2019 tentang Sumber Daya Air (Lembaran Negara Republik Indonesia Tahun 2019 Nomor 190, Tambahan Lembaran Negara Republik Indonesia Nomor 6405) diubah sebagai berikut:" .
 <http://example.org/legal/document/uu/2020/11/pasal/53/point> legal:pointSetHasDescription <http://example.org/legal/document/uu/2020/11/pasal/53/point/description> .
 <http://example.org/legal/document/uu/2020/11/pasal/53/point> legal:pointSetHasPoint <http://example.org/legal/document/uu/2020/11/pasal/53/point/1> .
 <http://example.org/legal/document/uu/2020/11/pasal/53/point/1> legal:pointHasKey 1 .
@@ -2922,7 +2922,7 @@
 <http://example.org/legal/document/uu/2020/11/pasal/55> legal:pasalVersionHasState "exists" .
 <http://example.org/legal/document/uu/2020/11/pasal/55> legal:pasalVersionHasCreatedTimeEpoch 0 .
 <http://example.org/legal/document/uu/2020/11/pasal/55> legal:pasalVersionHasPointSet <http://example.org/legal/document/uu/2020/11/pasal/55/point> .
-<http://example.org/legal/document/uu/2020/11/pasal/55/point/description> legal:textHasTextString "Beberapa ketentuan dalam Undang-Undang Nomor 22 Tahun 2009 tentang Lalu Lintas Angkutan Jalan (Lembaran Negara Republik Indonesia Tahun 2009 Nomor 96, Tambahan Lembaran Negara Republik Indonesia Nomor 5025) diubah sebagai berikut:" .
+<http://example.org/legal/document/uu/2020/11/pasal/55/point/description> legal:textHasTextString "Pasal 55 Beberapa ketentuan dalam Undang-Undang Nomor 22 Tahun 2009 tentang Lalu Lintas Angkutan Jalan (Lembaran Negara Republik Indonesia Tahun 2009 Nomor 96, Tambahan Lembaran Negara Republik Indonesia Nomor 5025) diubah sebagai berikut:" .
 <http://example.org/legal/document/uu/2020/11/pasal/55/point> legal:pointSetHasDescription <http://example.org/legal/document/uu/2020/11/pasal/55/point/description> .
 <http://example.org/legal/document/uu/2020/11/pasal/55/point> legal:pointSetHasPoint <http://example.org/legal/document/uu/2020/11/pasal/55/point/1> .
 <http://example.org/legal/document/uu/2020/11/pasal/55/point/1> legal:pointHasKey 1 .
@@ -3020,7 +3020,7 @@
 <http://example.org/legal/document/uu/2020/11/pasal/56> legal:pasalVersionHasState "exists" .
 <http://example.org/legal/document/uu/2020/11/pasal/56> legal:pasalVersionHasCreatedTimeEpoch 0 .
 <http://example.org/legal/document/uu/2020/11/pasal/56> legal:pasalVersionHasPointSet <http://example.org/legal/document/uu/2020/11/pasal/56/point> .
-<http://example.org/legal/document/uu/2020/11/pasal/56/point/description> legal:textHasTextString "Beberapa ketentuan dalam Undang-Undang Nomor 23 Tahun 2007 tentang Perkeretaapian (Lembaran Negara Republik Indonesia Tahun 2007 Nomor 65, Tambahan Lembaran Negara Republik Indonesia Nomor 4722) diubah sebagai berikut:" .
+<http://example.org/legal/document/uu/2020/11/pasal/56/point/description> legal:textHasTextString "Pasal 56 Beberapa ketentuan dalam Undang-Undang Nomor 23 Tahun 2007 tentang Perkeretaapian (Lembaran Negara Republik Indonesia Tahun 2007 Nomor 65, Tambahan Lembaran Negara Republik Indonesia Nomor 4722) diubah sebagai berikut:" .
 <http://example.org/legal/document/uu/2020/11/pasal/56/point> legal:pointSetHasDescription <http://example.org/legal/document/uu/2020/11/pasal/56/point/description> .
 <http://example.org/legal/document/uu/2020/11/pasal/56/point> legal:pointSetHasPoint <http://example.org/legal/document/uu/2020/11/pasal/56/point/1> .
 <http://example.org/legal/document/uu/2020/11/pasal/56/point/1> legal:pointHasKey 1 .
@@ -3100,7 +3100,7 @@
 <http://example.org/legal/document/uu/2020/11/pasal/57> legal:pasalVersionHasState "exists" .
 <http://example.org/legal/document/uu/2020/11/pasal/57> legal:pasalVersionHasCreatedTimeEpoch 0 .
 <http://example.org/legal/document/uu/2020/11/pasal/57> legal:pasalVersionHasPointSet <http://example.org/legal/document/uu/2020/11/pasal/57/point> .
-<http://example.org/legal/document/uu/2020/11/pasal/57/point/description> legal:textHasTextString "Beberapa ketentuan dalam Undang-Undang Nomor 17 Tahun 2008 tentang Pelayaran (Lembaran Negara Republik Indonesia Tahun 2008 Nomor 64, Tambahan Lembaran Negara Republik Indonesia Nomor 4849) diubah sebagai berikut:" .
+<http://example.org/legal/document/uu/2020/11/pasal/57/point/description> legal:textHasTextString "Pasal 57 Beberapa ketentuan dalam Undang-Undang Nomor 17 Tahun 2008 tentang Pelayaran (Lembaran Negara Republik Indonesia Tahun 2008 Nomor 64, Tambahan Lembaran Negara Republik Indonesia Nomor 4849) diubah sebagai berikut:" .
 <http://example.org/legal/document/uu/2020/11/pasal/57/point> legal:pointSetHasDescription <http://example.org/legal/document/uu/2020/11/pasal/57/point/description> .
 <http://example.org/legal/document/uu/2020/11/pasal/57/point> legal:pointSetHasPoint <http://example.org/legal/document/uu/2020/11/pasal/57/point/1> .
 <http://example.org/legal/document/uu/2020/11/pasal/57/point/1> legal:pointHasKey 1 .
@@ -3309,7 +3309,7 @@
 <http://example.org/legal/document/uu/2020/11/pasal/58> legal:pasalVersionHasState "exists" .
 <http://example.org/legal/document/uu/2020/11/pasal/58> legal:pasalVersionHasCreatedTimeEpoch 0 .
 <http://example.org/legal/document/uu/2020/11/pasal/58> legal:pasalVersionHasPointSet <http://example.org/legal/document/uu/2020/11/pasal/58/point> .
-<http://example.org/legal/document/uu/2020/11/pasal/58/point/description> legal:textHasTextString "Beberapa ketentuan dalam Undang-Undang Nomor 1 Tahun 2009 tentang Penerbangan (Lembaran Negara Republik Indonesia Tahun 2009 Nomor 1, Tambahan Lembaran Negara Republik Indonesia Nomor 4956) diubah sebagai berikut:" .
+<http://example.org/legal/document/uu/2020/11/pasal/58/point/description> legal:textHasTextString "Pasal 58 Beberapa ketentuan dalam Undang-Undang Nomor 1 Tahun 2009 tentang Penerbangan (Lembaran Negara Republik Indonesia Tahun 2009 Nomor 1, Tambahan Lembaran Negara Republik Indonesia Nomor 4956) diubah sebagai berikut:" .
 <http://example.org/legal/document/uu/2020/11/pasal/58/point> legal:pointSetHasDescription <http://example.org/legal/document/uu/2020/11/pasal/58/point/description> .
 <http://example.org/legal/document/uu/2020/11/pasal/58/point> legal:pointSetHasPoint <http://example.org/legal/document/uu/2020/11/pasal/58/point/1> .
 <http://example.org/legal/document/uu/2020/11/pasal/58/point/1> legal:pointHasKey 1 .
@@ -3619,7 +3619,7 @@
 <http://example.org/legal/document/uu/2020/11/pasal/60> legal:pasalVersionHasState "exists" .
 <http://example.org/legal/document/uu/2020/11/pasal/60> legal:pasalVersionHasCreatedTimeEpoch 0 .
 <http://example.org/legal/document/uu/2020/11/pasal/60> legal:pasalVersionHasPointSet <http://example.org/legal/document/uu/2020/11/pasal/60/point> .
-<http://example.org/legal/document/uu/2020/11/pasal/60/point/description> legal:textHasTextString "Beberapa ketentuan dalam Undang-Undang Nomor 36 Tahun 2009 tentang Kesehatan (Lembaran Negara Republik Indonesia Tahun 2009 Nomor 144, Tambahan Lembaran Negara Republik Indonesia Nomor 5063) diubah sebagai berikut." .
+<http://example.org/legal/document/uu/2020/11/pasal/60/point/description> legal:textHasTextString "Pasal 60 Beberapa ketentuan dalam Undang-Undang Nomor 36 Tahun 2009 tentang Kesehatan (Lembaran Negara Republik Indonesia Tahun 2009 Nomor 144, Tambahan Lembaran Negara Republik Indonesia Nomor 5063) diubah sebagai berikut." .
 <http://example.org/legal/document/uu/2020/11/pasal/60/point> legal:pointSetHasDescription <http://example.org/legal/document/uu/2020/11/pasal/60/point/description> .
 <http://example.org/legal/document/uu/2020/11/pasal/60/point> legal:pointSetHasPoint <http://example.org/legal/document/uu/2020/11/pasal/60/point/1> .
 <http://example.org/legal/document/uu/2020/11/pasal/60/point/1> legal:pointHasKey 1 .
@@ -3657,7 +3657,7 @@
 <http://example.org/legal/document/uu/2020/11/pasal/61> legal:pasalVersionHasState "exists" .
 <http://example.org/legal/document/uu/2020/11/pasal/61> legal:pasalVersionHasCreatedTimeEpoch 0 .
 <http://example.org/legal/document/uu/2020/11/pasal/61> legal:pasalVersionHasPointSet <http://example.org/legal/document/uu/2020/11/pasal/61/point> .
-<http://example.org/legal/document/uu/2020/11/pasal/61/point/description> legal:textHasTextString "Beberapa ketentuan dalam Undang-Undang Nomor 44 Tahun 2009 tentang Rumah Sakit (Lembaran Negara Republik Indonesia Tahun 2009 Nomor 153, Tambahan Lembaran Negara Republik Indonesia Nomor 5072) diubah sebagai berikut:" .
+<http://example.org/legal/document/uu/2020/11/pasal/61/point/description> legal:textHasTextString "Pasal 61 Beberapa ketentuan dalam Undang-Undang Nomor 44 Tahun 2009 tentang Rumah Sakit (Lembaran Negara Republik Indonesia Tahun 2009 Nomor 153, Tambahan Lembaran Negara Republik Indonesia Nomor 5072) diubah sebagai berikut:" .
 <http://example.org/legal/document/uu/2020/11/pasal/61/point> legal:pointSetHasDescription <http://example.org/legal/document/uu/2020/11/pasal/61/point/description> .
 <http://example.org/legal/document/uu/2020/11/pasal/61/point> legal:pointSetHasPoint <http://example.org/legal/document/uu/2020/11/pasal/61/point/1> .
 <http://example.org/legal/document/uu/2020/11/pasal/61/point/1> legal:pointHasKey 1 .
@@ -3695,7 +3695,7 @@
 <http://example.org/legal/document/uu/2020/11/pasal/62> legal:pasalVersionHasState "exists" .
 <http://example.org/legal/document/uu/2020/11/pasal/62> legal:pasalVersionHasCreatedTimeEpoch 0 .
 <http://example.org/legal/document/uu/2020/11/pasal/62> legal:pasalVersionHasPointSet <http://example.org/legal/document/uu/2020/11/pasal/62/point> .
-<http://example.org/legal/document/uu/2020/11/pasal/62/point/description> legal:textHasTextString "Beberapa ketentuan dalam Undang-Undang Nomor 5 Tahun 1997 tentang Psikotropika (Lembaran Negara Republik Indonesia Tahun 1997 Nomor 10, Tambahan Lembaran Negara Republik Indonesia Nomor 3671) diubah sebagai berikut:" .
+<http://example.org/legal/document/uu/2020/11/pasal/62/point/description> legal:textHasTextString "Pasal 62 Beberapa ketentuan dalam Undang-Undang Nomor 5 Tahun 1997 tentang Psikotropika (Lembaran Negara Republik Indonesia Tahun 1997 Nomor 10, Tambahan Lembaran Negara Republik Indonesia Nomor 3671) diubah sebagai berikut:" .
 <http://example.org/legal/document/uu/2020/11/pasal/62/point> legal:pointSetHasDescription <http://example.org/legal/document/uu/2020/11/pasal/62/point/description> .
 <http://example.org/legal/document/uu/2020/11/pasal/62/point> legal:pointSetHasPoint <http://example.org/legal/document/uu/2020/11/pasal/62/point/1> .
 <http://example.org/legal/document/uu/2020/11/pasal/62/point/1> legal:pointHasKey 1 .
@@ -3727,7 +3727,7 @@
 <http://example.org/legal/document/uu/2020/11/pasal/63> legal:pasalVersionHasState "exists" .
 <http://example.org/legal/document/uu/2020/11/pasal/63> legal:pasalVersionHasCreatedTimeEpoch 0 .
 <http://example.org/legal/document/uu/2020/11/pasal/63> legal:pasalVersionHasPointSet <http://example.org/legal/document/uu/2020/11/pasal/63/point> .
-<http://example.org/legal/document/uu/2020/11/pasal/63/point/description> legal:textHasTextString "Beberapa ketentuan Undang-Undang Nomor 35 Tahun 2009 tentang Narkotika (Lembaran Negara Republik Indonesia Tahun 2009 Nomor 143, Tambahan Lembaran Negara Republik Indonesia Nomor 5062) diubah sebagai berikut:" .
+<http://example.org/legal/document/uu/2020/11/pasal/63/point/description> legal:textHasTextString "Pasal 63 Beberapa ketentuan Undang-Undang Nomor 35 Tahun 2009 tentang Narkotika (Lembaran Negara Republik Indonesia Tahun 2009 Nomor 143, Tambahan Lembaran Negara Republik Indonesia Nomor 5062) diubah sebagai berikut:" .
 <http://example.org/legal/document/uu/2020/11/pasal/63/point> legal:pointSetHasDescription <http://example.org/legal/document/uu/2020/11/pasal/63/point/description> .
 <http://example.org/legal/document/uu/2020/11/pasal/63/point> legal:pointSetHasPoint <http://example.org/legal/document/uu/2020/11/pasal/63/point/0> .
 <http://example.org/legal/document/uu/2020/11/pasal/63/point/0> legal:pointHasKey 0 .
@@ -3765,7 +3765,7 @@
 <http://example.org/legal/document/uu/2020/11/pasal/64> legal:pasalVersionHasState "exists" .
 <http://example.org/legal/document/uu/2020/11/pasal/64> legal:pasalVersionHasCreatedTimeEpoch 0 .
 <http://example.org/legal/document/uu/2020/11/pasal/64> legal:pasalVersionHasPointSet <http://example.org/legal/document/uu/2020/11/pasal/64/point> .
-<http://example.org/legal/document/uu/2020/11/pasal/64/point/description> legal:textHasTextString "Beberapa ketentuan dalam Undang-Undang Nomor 18 Tahun 2012 tentang Pangan (Lembaran Negara Republik Indonesia Tahun 2012 Nomor 227, Tambahan Lembaran Negara Republik Indonesia Nomor 5360) diubah sebagai berikut:" .
+<http://example.org/legal/document/uu/2020/11/pasal/64/point/description> legal:textHasTextString "Pasal 64 Beberapa ketentuan dalam Undang-Undang Nomor 18 Tahun 2012 tentang Pangan (Lembaran Negara Republik Indonesia Tahun 2012 Nomor 227, Tambahan Lembaran Negara Republik Indonesia Nomor 5360) diubah sebagai berikut:" .
 <http://example.org/legal/document/uu/2020/11/pasal/64/point> legal:pointSetHasDescription <http://example.org/legal/document/uu/2020/11/pasal/64/point/description> .
 <http://example.org/legal/document/uu/2020/11/pasal/64/point> legal:pointSetHasPoint <http://example.org/legal/document/uu/2020/11/pasal/64/point/1> .
 <http://example.org/legal/document/uu/2020/11/pasal/64/point/1> legal:pointHasKey 1 .
@@ -3847,7 +3847,7 @@
 <http://example.org/legal/document/uu/2020/11/pasal/66> legal:pasalVersionHasState "exists" .
 <http://example.org/legal/document/uu/2020/11/pasal/66> legal:pasalVersionHasCreatedTimeEpoch 0 .
 <http://example.org/legal/document/uu/2020/11/pasal/66> legal:pasalVersionHasPointSet <http://example.org/legal/document/uu/2020/11/pasal/66/point> .
-<http://example.org/legal/document/uu/2020/11/pasal/66/point/description> legal:textHasTextString "Untuk mempermudah pelaku usaha perfilman dalam melakukan kegiatan usaha, Undang-Undang ini mengubah, menghapus, atau menetapkan pengaturan baru yang diatur dalam Undang-Undang Nomor 33 Tahun 2009 tentang Perfilman (Lembaran Negara Republik Indonesia Tahun 2009 Nomor 141, Tambahan Lembaran Negara Republik Indonesia Nomor 5060) diubah sebagai berikut:" .
+<http://example.org/legal/document/uu/2020/11/pasal/66/point/description> legal:textHasTextString "Pasal 66 Untuk mempermudah pelaku usaha perfilman dalam melakukan kegiatan usaha, Undang-Undang ini mengubah, menghapus, atau menetapkan pengaturan baru yang diatur dalam Undang-Undang Nomor 33 Tahun 2009 tentang Perfilman (Lembaran Negara Republik Indonesia Tahun 2009 Nomor 141, Tambahan Lembaran Negara Republik Indonesia Nomor 5060) diubah sebagai berikut:" .
 <http://example.org/legal/document/uu/2020/11/pasal/66/point> legal:pointSetHasDescription <http://example.org/legal/document/uu/2020/11/pasal/66/point/description> .
 <http://example.org/legal/document/uu/2020/11/pasal/66/point> legal:pointSetHasPoint <http://example.org/legal/document/uu/2020/11/pasal/66/point/1> .
 <http://example.org/legal/document/uu/2020/11/pasal/66/point/1> legal:pointHasKey 1 .
@@ -3874,7 +3874,7 @@
 <http://example.org/legal/document/uu/2020/11/pasal/67> legal:pasalVersionHasState "exists" .
 <http://example.org/legal/document/uu/2020/11/pasal/67> legal:pasalVersionHasCreatedTimeEpoch 0 .
 <http://example.org/legal/document/uu/2020/11/pasal/67> legal:pasalVersionHasPointSet <http://example.org/legal/document/uu/2020/11/pasal/67/point> .
-<http://example.org/legal/document/uu/2020/11/pasal/67/point/description> legal:textHasTextString "Untuk memberikan kemudahan bagi masyarakat terutama Pelaku Usaha dalam mendapatkan Perizinan Berusaha dari sektor kepariwisataan, beberapa ketentuan dalam Undang- Undang Nomor 10 Tahun 2009 tentang Kepariwisataan (Lembaran Negara Republik Indonesia Tahun 2009 Nomor 11, Tambahan Lembaran Negara Republik Indonesia Nomor 4966) diubah sebagai berikut:" .
+<http://example.org/legal/document/uu/2020/11/pasal/67/point/description> legal:textHasTextString "Pasal 67 Untuk memberikan kemudahan bagi masyarakat terutama Pelaku Usaha dalam mendapatkan Perizinan Berusaha dari sektor kepariwisataan, beberapa ketentuan dalam Undang- Undang Nomor 10 Tahun 2009 tentang Kepariwisataan (Lembaran Negara Republik Indonesia Tahun 2009 Nomor 11, Tambahan Lembaran Negara Republik Indonesia Nomor 4966) diubah sebagai berikut:" .
 <http://example.org/legal/document/uu/2020/11/pasal/67/point> legal:pointSetHasDescription <http://example.org/legal/document/uu/2020/11/pasal/67/point/description> .
 <http://example.org/legal/document/uu/2020/11/pasal/67/point> legal:pointSetHasPoint <http://example.org/legal/document/uu/2020/11/pasal/67/point/1> .
 <http://example.org/legal/document/uu/2020/11/pasal/67/point/1> legal:pointHasKey 1 .
@@ -3913,7 +3913,7 @@
 <http://example.org/legal/document/uu/2020/11/pasal/68> legal:pasalVersionHasState "exists" .
 <http://example.org/legal/document/uu/2020/11/pasal/68> legal:pasalVersionHasCreatedTimeEpoch 0 .
 <http://example.org/legal/document/uu/2020/11/pasal/68> legal:pasalVersionHasPointSet <http://example.org/legal/document/uu/2020/11/pasal/68/point> .
-<http://example.org/legal/document/uu/2020/11/pasal/68/point/description> legal:textHasTextString "Untuk memberikan kemudahan bagi masyarakat terutama Pelaku Usaha dalam mendapatkan Perizinan Berusaha dari sektor keagamaan, beberapa ketentuan dalam Undang- Undang Nomor 8 Tahun 2019 tentang Penyelenggaraan Ibadah Haji dan Umrah (Lembaran Negara Republik Indonesia Tahun 2019 Nomor 75, Tambahan Lembaran Negara Republik Indonesia Nomor 6388) diubah sebagai berikut:" .
+<http://example.org/legal/document/uu/2020/11/pasal/68/point/description> legal:textHasTextString "Pasal 68 Untuk memberikan kemudahan bagi masyarakat terutama Pelaku Usaha dalam mendapatkan Perizinan Berusaha dari sektor keagamaan, beberapa ketentuan dalam Undang- Undang Nomor 8 Tahun 2019 tentang Penyelenggaraan Ibadah Haji dan Umrah (Lembaran Negara Republik Indonesia Tahun 2019 Nomor 75, Tambahan Lembaran Negara Republik Indonesia Nomor 6388) diubah sebagai berikut:" .
 <http://example.org/legal/document/uu/2020/11/pasal/68/point> legal:pointSetHasDescription <http://example.org/legal/document/uu/2020/11/pasal/68/point/description> .
 <http://example.org/legal/document/uu/2020/11/pasal/68/point> legal:pointSetHasPoint <http://example.org/legal/document/uu/2020/11/pasal/68/point/1> .
 <http://example.org/legal/document/uu/2020/11/pasal/68/point/1> legal:pointHasKey 1 .
@@ -4020,7 +4020,7 @@
 <http://example.org/legal/document/uu/2020/11/pasal/70> legal:pasalVersionHasState "exists" .
 <http://example.org/legal/document/uu/2020/11/pasal/70> legal:pasalVersionHasCreatedTimeEpoch 0 .
 <http://example.org/legal/document/uu/2020/11/pasal/70> legal:pasalVersionHasPointSet <http://example.org/legal/document/uu/2020/11/pasal/70/point> .
-<http://example.org/legal/document/uu/2020/11/pasal/70/point/description> legal:textHasTextString "Beberapa ketentuan dalam Undang-Undang Nomor 38 Tahun 2009 tentang Pos (Lembaran Negara Republik Indonesia Tahun 2009 Nomor 146, Tambahan Lembaran Negara Republik Indonesia Nomor 5065) diubah sebagai berikut:" .
+<http://example.org/legal/document/uu/2020/11/pasal/70/point/description> legal:textHasTextString "Pasal 70 Beberapa ketentuan dalam Undang-Undang Nomor 38 Tahun 2009 tentang Pos (Lembaran Negara Republik Indonesia Tahun 2009 Nomor 146, Tambahan Lembaran Negara Republik Indonesia Nomor 5065) diubah sebagai berikut:" .
 <http://example.org/legal/document/uu/2020/11/pasal/70/point> legal:pointSetHasDescription <http://example.org/legal/document/uu/2020/11/pasal/70/point/description> .
 <http://example.org/legal/document/uu/2020/11/pasal/70/point> legal:pointSetHasPoint <http://example.org/legal/document/uu/2020/11/pasal/70/point/1> .
 <http://example.org/legal/document/uu/2020/11/pasal/70/point/1> legal:pointHasKey 1 .
@@ -4040,7 +4040,7 @@
 <http://example.org/legal/document/uu/2020/11/pasal/71> legal:pasalVersionHasState "exists" .
 <http://example.org/legal/document/uu/2020/11/pasal/71> legal:pasalVersionHasCreatedTimeEpoch 0 .
 <http://example.org/legal/document/uu/2020/11/pasal/71> legal:pasalVersionHasPointSet <http://example.org/legal/document/uu/2020/11/pasal/71/point> .
-<http://example.org/legal/document/uu/2020/11/pasal/71/point/description> legal:textHasTextString "Beberapa ketentuan dalam Undang-Undang Nomor 36 Tahun 1999 tentang Telekomunikasi (Lembaran Negara Republik Indonesia Tahun 1999 Nomor 154, Tambahan Lembaran Negara Republik Indonesia Nomor 3881) diubah:" .
+<http://example.org/legal/document/uu/2020/11/pasal/71/point/description> legal:textHasTextString "Pasal 71 Beberapa ketentuan dalam Undang-Undang Nomor 36 Tahun 1999 tentang Telekomunikasi (Lembaran Negara Republik Indonesia Tahun 1999 Nomor 154, Tambahan Lembaran Negara Republik Indonesia Nomor 3881) diubah:" .
 <http://example.org/legal/document/uu/2020/11/pasal/71/point> legal:pointSetHasDescription <http://example.org/legal/document/uu/2020/11/pasal/71/point/description> .
 <http://example.org/legal/document/uu/2020/11/pasal/71/point> legal:pointSetHasPoint <http://example.org/legal/document/uu/2020/11/pasal/71/point/1> .
 <http://example.org/legal/document/uu/2020/11/pasal/71/point/1> legal:pointHasKey 1 .
@@ -4082,7 +4082,7 @@
 <http://example.org/legal/document/uu/2020/11/pasal/72> legal:pasalVersionHasState "exists" .
 <http://example.org/legal/document/uu/2020/11/pasal/72> legal:pasalVersionHasCreatedTimeEpoch 0 .
 <http://example.org/legal/document/uu/2020/11/pasal/72> legal:pasalVersionHasPointSet <http://example.org/legal/document/uu/2020/11/pasal/72/point> .
-<http://example.org/legal/document/uu/2020/11/pasal/72/point/description> legal:textHasTextString "Beberapa ketentuan dalam Undang-Undang Nomor 32 Tahun 2002 tentang Penyiaran (Lembaran Negara Republik Indonesia Tahun 2002 Nomor 139, Tambahan Lembaran Negara Republik Indonesia Nomor 4252) diubah sebagai berikut:" .
+<http://example.org/legal/document/uu/2020/11/pasal/72/point/description> legal:textHasTextString "Pasal 72 Beberapa ketentuan dalam Undang-Undang Nomor 32 Tahun 2002 tentang Penyiaran (Lembaran Negara Republik Indonesia Tahun 2002 Nomor 139, Tambahan Lembaran Negara Republik Indonesia Nomor 4252) diubah sebagai berikut:" .
 <http://example.org/legal/document/uu/2020/11/pasal/72/point> legal:pointSetHasDescription <http://example.org/legal/document/uu/2020/11/pasal/72/point/description> .
 <http://example.org/legal/document/uu/2020/11/pasal/72/point> legal:pointSetHasPoint <http://example.org/legal/document/uu/2020/11/pasal/72/point/1> .
 <http://example.org/legal/document/uu/2020/11/pasal/72/point/1> legal:pointHasKey 1 .
@@ -4134,7 +4134,7 @@
 <http://example.org/legal/document/uu/2020/11/pasal/74> legal:pasalVersionHasState "exists" .
 <http://example.org/legal/document/uu/2020/11/pasal/74> legal:pasalVersionHasCreatedTimeEpoch 0 .
 <http://example.org/legal/document/uu/2020/11/pasal/74> legal:pasalVersionHasPointSet <http://example.org/legal/document/uu/2020/11/pasal/74/point> .
-<http://example.org/legal/document/uu/2020/11/pasal/74/point/description> legal:textHasTextString "Beberapa ketentuan dalam Undang-Undang Nomor 16 Tahun 2012 tentang Industri Pertahanan (Lembaran Negara Republik Indonesia Tahun 2012 Nomor 183, Tambahan Lembaran Negara Republik Indonesia Nomor 5343), diubah sebagai berikut:" .
+<http://example.org/legal/document/uu/2020/11/pasal/74/point/description> legal:textHasTextString "Pasal 74 Beberapa ketentuan dalam Undang-Undang Nomor 16 Tahun 2012 tentang Industri Pertahanan (Lembaran Negara Republik Indonesia Tahun 2012 Nomor 183, Tambahan Lembaran Negara Republik Indonesia Nomor 5343), diubah sebagai berikut:" .
 <http://example.org/legal/document/uu/2020/11/pasal/74/point> legal:pointSetHasDescription <http://example.org/legal/document/uu/2020/11/pasal/74/point/description> .
 <http://example.org/legal/document/uu/2020/11/pasal/74/point> legal:pointSetHasPoint <http://example.org/legal/document/uu/2020/11/pasal/74/point/1> .
 <http://example.org/legal/document/uu/2020/11/pasal/74/point/1> legal:pointHasKey 1 .
@@ -4332,7 +4332,7 @@
 <http://example.org/legal/document/uu/2020/11/pasal/77> legal:pasalVersionHasState "exists" .
 <http://example.org/legal/document/uu/2020/11/pasal/77> legal:pasalVersionHasCreatedTimeEpoch 0 .
 <http://example.org/legal/document/uu/2020/11/pasal/77> legal:pasalVersionHasPointSet <http://example.org/legal/document/uu/2020/11/pasal/77/point> .
-<http://example.org/legal/document/uu/2020/11/pasal/77/point/description> legal:textHasTextString "Beberapa ketentuan dalam Undang-Undang Nomor 25 Tahun 2007 tentang Penanaman Modal (Lembaran Negara Republik Indonesia Tahun 2007 Nomor 67, Tambahan Lembaran Negara Republik Indonesia Nomor 4724) diubah sebagai berikut: SK No 052028 A" .
+<http://example.org/legal/document/uu/2020/11/pasal/77/point/description> legal:textHasTextString "Pasal 77 Beberapa ketentuan dalam Undang-Undang Nomor 25 Tahun 2007 tentang Penanaman Modal (Lembaran Negara Republik Indonesia Tahun 2007 Nomor 67, Tambahan Lembaran Negara Republik Indonesia Nomor 4724) diubah sebagai berikut: SK No 052028 A" .
 <http://example.org/legal/document/uu/2020/11/pasal/77/point> legal:pointSetHasDescription <http://example.org/legal/document/uu/2020/11/pasal/77/point/description> .
 <http://example.org/legal/document/uu/2020/11/pasal/77/point> legal:pointSetHasPoint <http://example.org/legal/document/uu/2020/11/pasal/77/point/1> .
 <http://example.org/legal/document/uu/2020/11/pasal/77/point/1> legal:pointHasKey 1 .
@@ -4474,7 +4474,7 @@
 <http://example.org/legal/document/uu/2020/11/pasal/81> legal:pasalVersionHasState "exists" .
 <http://example.org/legal/document/uu/2020/11/pasal/81> legal:pasalVersionHasCreatedTimeEpoch 0 .
 <http://example.org/legal/document/uu/2020/11/pasal/81> legal:pasalVersionHasPointSet <http://example.org/legal/document/uu/2020/11/pasal/81/point> .
-<http://example.org/legal/document/uu/2020/11/pasal/81/point/description> legal:textHasTextString "Beberapa ketentuan dalam Undang-Undang Nomor 13 Tahun 2003 tentang Ketenagakerjaan (Lembaran Negara Republik Indonesia Tahun 2003 Nomor 39, Tambahan Lembaran Negara Republik Indonesia Nomor 4279) diubah sebagai berikut:" .
+<http://example.org/legal/document/uu/2020/11/pasal/81/point/description> legal:textHasTextString "Pasal 81 Beberapa ketentuan dalam Undang-Undang Nomor 13 Tahun 2003 tentang Ketenagakerjaan (Lembaran Negara Republik Indonesia Tahun 2003 Nomor 39, Tambahan Lembaran Negara Republik Indonesia Nomor 4279) diubah sebagai berikut:" .
 <http://example.org/legal/document/uu/2020/11/pasal/81/point> legal:pointSetHasDescription <http://example.org/legal/document/uu/2020/11/pasal/81/point/description> .
 <http://example.org/legal/document/uu/2020/11/pasal/81/point> legal:pointSetHasPoint <http://example.org/legal/document/uu/2020/11/pasal/81/point/1> .
 <http://example.org/legal/document/uu/2020/11/pasal/81/point/1> legal:pointHasKey 1 .
@@ -4695,7 +4695,7 @@
 <http://example.org/legal/document/uu/2020/11/pasal/82> legal:pasalVersionHasState "exists" .
 <http://example.org/legal/document/uu/2020/11/pasal/82> legal:pasalVersionHasCreatedTimeEpoch 0 .
 <http://example.org/legal/document/uu/2020/11/pasal/82> legal:pasalVersionHasPointSet <http://example.org/legal/document/uu/2020/11/pasal/82/point> .
-<http://example.org/legal/document/uu/2020/11/pasal/82/point/description> legal:textHasTextString "Beberapa ketentuan dalam Undang-Undang Nomor 40 Tahun 2004 tentang Sistem Jaminan Sosial Nasional (Lembaran Negara Republik Indonesia Tahun 2004 Nomor 150, Tambahan Lembaran Negara Republik Indonesia Nomor 4456) diubah sebagai berikut:" .
+<http://example.org/legal/document/uu/2020/11/pasal/82/point/description> legal:textHasTextString "Pasal 82 Beberapa ketentuan dalam Undang-Undang Nomor 40 Tahun 2004 tentang Sistem Jaminan Sosial Nasional (Lembaran Negara Republik Indonesia Tahun 2004 Nomor 150, Tambahan Lembaran Negara Republik Indonesia Nomor 4456) diubah sebagai berikut:" .
 <http://example.org/legal/document/uu/2020/11/pasal/82/point> legal:pointSetHasDescription <http://example.org/legal/document/uu/2020/11/pasal/82/point/description> .
 <http://example.org/legal/document/uu/2020/11/pasal/82/point> legal:pointSetHasPoint <http://example.org/legal/document/uu/2020/11/pasal/82/point/1> .
 <http://example.org/legal/document/uu/2020/11/pasal/82/point/1> legal:pointHasKey 1 .
@@ -4717,7 +4717,7 @@
 <http://example.org/legal/document/uu/2020/11/pasal/83> legal:pasalVersionHasState "exists" .
 <http://example.org/legal/document/uu/2020/11/pasal/83> legal:pasalVersionHasCreatedTimeEpoch 0 .
 <http://example.org/legal/document/uu/2020/11/pasal/83> legal:pasalVersionHasPointSet <http://example.org/legal/document/uu/2020/11/pasal/83/point> .
-<http://example.org/legal/document/uu/2020/11/pasal/83/point/description> legal:textHasTextString "Beberapa ketentuan dalam Undang-Undang Nomor 24 Tahun 2011 tentang Badan Penyelenggara Jaminan Sosial (Lembaran Negara Republik Indonesia Tahun 2011 Nomor 116, Tambahan Lembaran Negara Republik Indonesia Nomor 5256) diubah sebagai berikut:" .
+<http://example.org/legal/document/uu/2020/11/pasal/83/point/description> legal:textHasTextString "Pasal 83 Beberapa ketentuan dalam Undang-Undang Nomor 24 Tahun 2011 tentang Badan Penyelenggara Jaminan Sosial (Lembaran Negara Republik Indonesia Tahun 2011 Nomor 116, Tambahan Lembaran Negara Republik Indonesia Nomor 5256) diubah sebagai berikut:" .
 <http://example.org/legal/document/uu/2020/11/pasal/83/point> legal:pointSetHasDescription <http://example.org/legal/document/uu/2020/11/pasal/83/point/description> .
 <http://example.org/legal/document/uu/2020/11/pasal/83/point> legal:pointSetHasPoint <http://example.org/legal/document/uu/2020/11/pasal/83/point/1> .
 <http://example.org/legal/document/uu/2020/11/pasal/83/point/1> legal:pointHasKey 1 .
@@ -4738,7 +4738,7 @@
 <http://example.org/legal/document/uu/2020/11/pasal/84> legal:pasalVersionHasState "exists" .
 <http://example.org/legal/document/uu/2020/11/pasal/84> legal:pasalVersionHasCreatedTimeEpoch 0 .
 <http://example.org/legal/document/uu/2020/11/pasal/84> legal:pasalVersionHasPointSet <http://example.org/legal/document/uu/2020/11/pasal/84/point> .
-<http://example.org/legal/document/uu/2020/11/pasal/84/point/description> legal:textHasTextString "Beberapa ketentuan dalam Undang-Undang Nomor 18 Tahun 2017 tentang Pelindungan Pekerja Migran Indonesia (Lembaran Negara Republik Indonesia Tahun 2017 Nomor 242, Tambahan Lembaran Negara Republik Indonesia 6141) diubah sebagai berikut:" .
+<http://example.org/legal/document/uu/2020/11/pasal/84/point/description> legal:textHasTextString "Pasal 84 Beberapa ketentuan dalam Undang-Undang Nomor 18 Tahun 2017 tentang Pelindungan Pekerja Migran Indonesia (Lembaran Negara Republik Indonesia Tahun 2017 Nomor 242, Tambahan Lembaran Negara Republik Indonesia 6141) diubah sebagai berikut:" .
 <http://example.org/legal/document/uu/2020/11/pasal/84/point> legal:pointSetHasDescription <http://example.org/legal/document/uu/2020/11/pasal/84/point/description> .
 <http://example.org/legal/document/uu/2020/11/pasal/84/point> legal:pointSetHasPoint <http://example.org/legal/document/uu/2020/11/pasal/84/point/1> .
 <http://example.org/legal/document/uu/2020/11/pasal/84/point/1> legal:pointHasKey 1 .
@@ -4793,7 +4793,7 @@
 <http://example.org/legal/document/uu/2020/11/pasal/86> legal:pasalVersionHasState "exists" .
 <http://example.org/legal/document/uu/2020/11/pasal/86> legal:pasalVersionHasCreatedTimeEpoch 0 .
 <http://example.org/legal/document/uu/2020/11/pasal/86> legal:pasalVersionHasPointSet <http://example.org/legal/document/uu/2020/11/pasal/86/point> .
-<http://example.org/legal/document/uu/2020/11/pasal/86/point/description> legal:textHasTextString "Beberapa ketentuan dalam Undang-Undang Nomor 25 Tahun 1992 tentang Perkoperasian (Lembaran Negara Republik Indonesia Tahun 1992 Nomor 116, Tambahan Lembaran Negara Republik Indonesia Nomor 3502) diubah sebagai berikut:" .
+<http://example.org/legal/document/uu/2020/11/pasal/86/point/description> legal:textHasTextString "Pasal 86 Beberapa ketentuan dalam Undang-Undang Nomor 25 Tahun 1992 tentang Perkoperasian (Lembaran Negara Republik Indonesia Tahun 1992 Nomor 116, Tambahan Lembaran Negara Republik Indonesia Nomor 3502) diubah sebagai berikut:" .
 <http://example.org/legal/document/uu/2020/11/pasal/86/point> legal:pointSetHasDescription <http://example.org/legal/document/uu/2020/11/pasal/86/point/description> .
 <http://example.org/legal/document/uu/2020/11/pasal/86/point> legal:pointSetHasPoint <http://example.org/legal/document/uu/2020/11/pasal/86/point/1> .
 <http://example.org/legal/document/uu/2020/11/pasal/86/point/1> legal:pointHasKey 1 .
@@ -4823,7 +4823,7 @@
 <http://example.org/legal/document/uu/2020/11/pasal/87> legal:pasalVersionHasState "exists" .
 <http://example.org/legal/document/uu/2020/11/pasal/87> legal:pasalVersionHasCreatedTimeEpoch 0 .
 <http://example.org/legal/document/uu/2020/11/pasal/87> legal:pasalVersionHasPointSet <http://example.org/legal/document/uu/2020/11/pasal/87/point> .
-<http://example.org/legal/document/uu/2020/11/pasal/87/point/description> legal:textHasTextString "Beberapa ketentuan dalam Undang-Undang Nomor 20 Tahun 2008 tentang Usaha Mikro, Kecil, dan Menengah (Lembaran Negara Republik Indonesia Tahun 2008 Nomor 93, Tambahan Lembaran Negara Republik Indonesia Nomor 4866) diubah sebagai berikut:" .
+<http://example.org/legal/document/uu/2020/11/pasal/87/point/description> legal:textHasTextString "Pasal 87 Beberapa ketentuan dalam Undang-Undang Nomor 20 Tahun 2008 tentang Usaha Mikro, Kecil, dan Menengah (Lembaran Negara Republik Indonesia Tahun 2008 Nomor 93, Tambahan Lembaran Negara Republik Indonesia Nomor 4866) diubah sebagai berikut:" .
 <http://example.org/legal/document/uu/2020/11/pasal/87/point> legal:pointSetHasDescription <http://example.org/legal/document/uu/2020/11/pasal/87/point/description> .
 <http://example.org/legal/document/uu/2020/11/pasal/87/point> legal:pointSetHasPoint <http://example.org/legal/document/uu/2020/11/pasal/87/point/1> .
 <http://example.org/legal/document/uu/2020/11/pasal/87/point/1> legal:pointHasKey 1 .
@@ -5272,7 +5272,7 @@
 <http://example.org/legal/document/uu/2020/11/pasal/106> legal:pasalVersionHasState "exists" .
 <http://example.org/legal/document/uu/2020/11/pasal/106> legal:pasalVersionHasCreatedTimeEpoch 0 .
 <http://example.org/legal/document/uu/2020/11/pasal/106> legal:pasalVersionHasPointSet <http://example.org/legal/document/uu/2020/11/pasal/106/point> .
-<http://example.org/legal/document/uu/2020/11/pasal/106/point/description> legal:textHasTextString "Beberapa ketentuan dalam Undang-Undang Nomor 6 Tahun 2011 tentang Keimigrasian (Lembaran Negara Republik Indonesia Tahun 2011 Nomor 52, Tambahan Lembaran Negara Republik Indonesia Nomor 5216) diubah sebagai berikut:" .
+<http://example.org/legal/document/uu/2020/11/pasal/106/point/description> legal:textHasTextString "Pasal 106 Beberapa ketentuan dalam Undang-Undang Nomor 6 Tahun 2011 tentang Keimigrasian (Lembaran Negara Republik Indonesia Tahun 2011 Nomor 52, Tambahan Lembaran Negara Republik Indonesia Nomor 5216) diubah sebagai berikut:" .
 <http://example.org/legal/document/uu/2020/11/pasal/106/point> legal:pointSetHasDescription <http://example.org/legal/document/uu/2020/11/pasal/106/point/description> .
 <http://example.org/legal/document/uu/2020/11/pasal/106/point> legal:pointSetHasPoint <http://example.org/legal/document/uu/2020/11/pasal/106/point/1> .
 <http://example.org/legal/document/uu/2020/11/pasal/106/point/1> legal:pointHasKey 1 .
@@ -5308,7 +5308,7 @@
 <http://example.org/legal/document/uu/2020/11/pasal/107> legal:pasalVersionHasState "exists" .
 <http://example.org/legal/document/uu/2020/11/pasal/107> legal:pasalVersionHasCreatedTimeEpoch 0 .
 <http://example.org/legal/document/uu/2020/11/pasal/107> legal:pasalVersionHasPointSet <http://example.org/legal/document/uu/2020/11/pasal/107/point> .
-<http://example.org/legal/document/uu/2020/11/pasal/107/point/description> legal:textHasTextString "Beberapa ketentuan dalam Undang-Undang Nomor 13 Tahun 2016 tentang Paten (Lembaran Negara Republik Indonesia Tahun 2016 Nomor 176, Tambahan Lembaran Negara Republik Indonesia Nomor 5922) diubah sebagai berikut:" .
+<http://example.org/legal/document/uu/2020/11/pasal/107/point/description> legal:textHasTextString "Pasal 107 Beberapa ketentuan dalam Undang-Undang Nomor 13 Tahun 2016 tentang Paten (Lembaran Negara Republik Indonesia Tahun 2016 Nomor 176, Tambahan Lembaran Negara Republik Indonesia Nomor 5922) diubah sebagai berikut:" .
 <http://example.org/legal/document/uu/2020/11/pasal/107/point> legal:pointSetHasDescription <http://example.org/legal/document/uu/2020/11/pasal/107/point/description> .
 <http://example.org/legal/document/uu/2020/11/pasal/107/point> legal:pointSetHasPoint <http://example.org/legal/document/uu/2020/11/pasal/107/point/1> .
 <http://example.org/legal/document/uu/2020/11/pasal/107/point/1> legal:pointHasKey 1 .
@@ -5338,7 +5338,7 @@
 <http://example.org/legal/document/uu/2020/11/pasal/108> legal:pasalVersionHasState "exists" .
 <http://example.org/legal/document/uu/2020/11/pasal/108> legal:pasalVersionHasCreatedTimeEpoch 0 .
 <http://example.org/legal/document/uu/2020/11/pasal/108> legal:pasalVersionHasPointSet <http://example.org/legal/document/uu/2020/11/pasal/108/point> .
-<http://example.org/legal/document/uu/2020/11/pasal/108/point/description> legal:textHasTextString "Beberapa ketentuan dalam Undang-Undang Nomor 20 Tahun 2016 tentang Merek dan Indikasi Geografis (Lembaran Negara Republik Indonesia Tahun 2016 Nomor 252, Tambahan Lembaran Negara Republik Indonesia Nomor 5953) diubah sebagai berikut:" .
+<http://example.org/legal/document/uu/2020/11/pasal/108/point/description> legal:textHasTextString "Pasal 108 Beberapa ketentuan dalam Undang-Undang Nomor 20 Tahun 2016 tentang Merek dan Indikasi Geografis (Lembaran Negara Republik Indonesia Tahun 2016 Nomor 252, Tambahan Lembaran Negara Republik Indonesia Nomor 5953) diubah sebagai berikut:" .
 <http://example.org/legal/document/uu/2020/11/pasal/108/point> legal:pointSetHasDescription <http://example.org/legal/document/uu/2020/11/pasal/108/point/description> .
 <http://example.org/legal/document/uu/2020/11/pasal/108/point> legal:pointSetHasPoint <http://example.org/legal/document/uu/2020/11/pasal/108/point/1> .
 <http://example.org/legal/document/uu/2020/11/pasal/108/point/1> legal:pointHasKey 1 .
@@ -5359,7 +5359,7 @@
 <http://example.org/legal/document/uu/2020/11/pasal/109> legal:pasalVersionHasState "exists" .
 <http://example.org/legal/document/uu/2020/11/pasal/109> legal:pasalVersionHasCreatedTimeEpoch 0 .
 <http://example.org/legal/document/uu/2020/11/pasal/109> legal:pasalVersionHasPointSet <http://example.org/legal/document/uu/2020/11/pasal/109/point> .
-<http://example.org/legal/document/uu/2020/11/pasal/109/point/description> legal:textHasTextString "Beberapa ketentuan dalam Undang-Undang Nomor 40 Tahun 2007 tentang Perseroan Terbatas (Lembaran Negara Republik Indonesia Tahun 2007 Nomor 40, Tambahan Lembaran Negara Republik Indonesia Nomor 4756) diubah sebagai berikut:" .
+<http://example.org/legal/document/uu/2020/11/pasal/109/point/description> legal:textHasTextString "Pasal 109 Beberapa ketentuan dalam Undang-Undang Nomor 40 Tahun 2007 tentang Perseroan Terbatas (Lembaran Negara Republik Indonesia Tahun 2007 Nomor 40, Tambahan Lembaran Negara Republik Indonesia Nomor 4756) diubah sebagai berikut:" .
 <http://example.org/legal/document/uu/2020/11/pasal/109/point> legal:pointSetHasDescription <http://example.org/legal/document/uu/2020/11/pasal/109/point/description> .
 <http://example.org/legal/document/uu/2020/11/pasal/109/point> legal:pointSetHasPoint <http://example.org/legal/document/uu/2020/11/pasal/109/point/1> .
 <http://example.org/legal/document/uu/2020/11/pasal/109/point/1> legal:pointHasKey 1 .
@@ -5406,7 +5406,7 @@
 <http://example.org/legal/document/uu/2020/11/pasal/111> legal:pasalVersionHasState "exists" .
 <http://example.org/legal/document/uu/2020/11/pasal/111> legal:pasalVersionHasCreatedTimeEpoch 0 .
 <http://example.org/legal/document/uu/2020/11/pasal/111> legal:pasalVersionHasPointSet <http://example.org/legal/document/uu/2020/11/pasal/111/point> .
-<http://example.org/legal/document/uu/2020/11/pasal/111/point/description> legal:textHasTextString "Beberapa ketentuan dalam Undang-Undang Nomor 7 Tahun 1983 tentang Pajak Penghasilan (Lembaran Negara Republik Indonesia Tahun 1983 Nomor 50, Tambahan Lembaran Negara Republik Indonesia Nomor 3263) sebagaimana telah beberapa kali diubah, terakhir dengan Undang-Undang Nomor 36 Tahun 2008 tentang Perubahan Keempat atas Undang-Undang Nomor 7 Tahun 1983 tentang Pajak Penghasilan (Lembaran Negara Republik Indonesia Tahun 2008 Nomor 133, Tambahan Lembaran Negara Republik Indonesia Nomor 4893) diubah sebagai berikut:" .
+<http://example.org/legal/document/uu/2020/11/pasal/111/point/description> legal:textHasTextString "Pasal 111 Beberapa ketentuan dalam Undang-Undang Nomor 7 Tahun 1983 tentang Pajak Penghasilan (Lembaran Negara Republik Indonesia Tahun 1983 Nomor 50, Tambahan Lembaran Negara Republik Indonesia Nomor 3263) sebagaimana telah beberapa kali diubah, terakhir dengan Undang-Undang Nomor 36 Tahun 2008 tentang Perubahan Keempat atas Undang-Undang Nomor 7 Tahun 1983 tentang Pajak Penghasilan (Lembaran Negara Republik Indonesia Tahun 2008 Nomor 133, Tambahan Lembaran Negara Republik Indonesia Nomor 4893) diubah sebagai berikut:" .
 <http://example.org/legal/document/uu/2020/11/pasal/111/point> legal:pointSetHasDescription <http://example.org/legal/document/uu/2020/11/pasal/111/point/description> .
 <http://example.org/legal/document/uu/2020/11/pasal/111/point> legal:pointSetHasPoint <http://example.org/legal/document/uu/2020/11/pasal/111/point/1> .
 <http://example.org/legal/document/uu/2020/11/pasal/111/point/1> legal:pointHasKey 1 .
@@ -5423,7 +5423,7 @@
 <http://example.org/legal/document/uu/2020/11/pasal/112> legal:pasalVersionHasState "exists" .
 <http://example.org/legal/document/uu/2020/11/pasal/112> legal:pasalVersionHasCreatedTimeEpoch 0 .
 <http://example.org/legal/document/uu/2020/11/pasal/112> legal:pasalVersionHasPointSet <http://example.org/legal/document/uu/2020/11/pasal/112/point> .
-<http://example.org/legal/document/uu/2020/11/pasal/112/point/description> legal:textHasTextString "Beberapa ketentuan dalam Undang-Undang Nomor 8 Tahun 1983 tentang Pajak Pertambahan Nilai Barang dan Jasa dan Pajak Penjualan atas Barang Mewah (Lembaran Negara Republik Indonesia Tahun 1983 Nomor 51, Tambahan Lembaran Negara Republik Indonesia Nomor 3264) sebagaimana telah beberapa kali diubah, terakhir dengan Undang-Undang Nomor 42 Tahun 2009 tentang Perubahan Ketiga atas Undang-Undang Nomor 8 Tahun 1983 tentang Pajak Pertambahan Nilai Barang dan Jasa dan Pajak Penjualan atas Barang Mewah (Lembaran Negara Republik Indonesia Tahun 2009 Nomor 150, Tambahan Lembaran Negara Republik Indonesia Nomor 5069) diubah sebagai berikut:" .
+<http://example.org/legal/document/uu/2020/11/pasal/112/point/description> legal:textHasTextString "Pasal 112 Beberapa ketentuan dalam Undang-Undang Nomor 8 Tahun 1983 tentang Pajak Pertambahan Nilai Barang dan Jasa dan Pajak Penjualan atas Barang Mewah (Lembaran Negara Republik Indonesia Tahun 1983 Nomor 51, Tambahan Lembaran Negara Republik Indonesia Nomor 3264) sebagaimana telah beberapa kali diubah, terakhir dengan Undang-Undang Nomor 42 Tahun 2009 tentang Perubahan Ketiga atas Undang-Undang Nomor 8 Tahun 1983 tentang Pajak Pertambahan Nilai Barang dan Jasa dan Pajak Penjualan atas Barang Mewah (Lembaran Negara Republik Indonesia Tahun 2009 Nomor 150, Tambahan Lembaran Negara Republik Indonesia Nomor 5069) diubah sebagai berikut:" .
 <http://example.org/legal/document/uu/2020/11/pasal/112/point> legal:pointSetHasDescription <http://example.org/legal/document/uu/2020/11/pasal/112/point/description> .
 <http://example.org/legal/document/uu/2020/11/pasal/112/point> legal:pointSetHasPoint <http://example.org/legal/document/uu/2020/11/pasal/112/point/1> .
 <http://example.org/legal/document/uu/2020/11/pasal/112/point/1> legal:pointHasKey 1 .
@@ -5443,7 +5443,7 @@
 <http://example.org/legal/document/uu/2020/11/pasal/113> legal:pasalVersionHasState "exists" .
 <http://example.org/legal/document/uu/2020/11/pasal/113> legal:pasalVersionHasCreatedTimeEpoch 0 .
 <http://example.org/legal/document/uu/2020/11/pasal/113> legal:pasalVersionHasPointSet <http://example.org/legal/document/uu/2020/11/pasal/113/point> .
-<http://example.org/legal/document/uu/2020/11/pasal/113/point/description> legal:textHasTextString "Beberapa ketentuan dalam Undang-Undang Nomor 6 Tahun 1983 tentang Ketentuan Umum dan Tata Cara Perpajakan (Lembaran Negara Republik Indonesia Tahun 1983 Nomor 49, Tambahan Lembaran Negara Republik Indonesia Nomor 3262) sebagaimana telah beberapa kali diubah, terakhir dengan Undang-Undang Nomor 16 Tahun 2009 tentang Penetapan Peraturan Pemerintah Pengganti Undang-Undang Nomor 5 Tahun 2008 tentang Perubahan Keempat atas Undang- Undang Nomor 6 Tahun 1983 tentang Ketentuan Umum dan Tata Cara Perpajakan Menjadi Undang-Undang (Lembaran Negara Republik Indonesia Tahun 2009 Nomor 62, Tambahan Lembaran Negara Republik Indonesia Nomor 4999) diubah sebagai berikut:" .
+<http://example.org/legal/document/uu/2020/11/pasal/113/point/description> legal:textHasTextString "Pasal 113 Beberapa ketentuan dalam Undang-Undang Nomor 6 Tahun 1983 tentang Ketentuan Umum dan Tata Cara Perpajakan (Lembaran Negara Republik Indonesia Tahun 1983 Nomor 49, Tambahan Lembaran Negara Republik Indonesia Nomor 3262) sebagaimana telah beberapa kali diubah, terakhir dengan Undang-Undang Nomor 16 Tahun 2009 tentang Penetapan Peraturan Pemerintah Pengganti Undang-Undang Nomor 5 Tahun 2008 tentang Perubahan Keempat atas Undang- Undang Nomor 6 Tahun 1983 tentang Ketentuan Umum dan Tata Cara Perpajakan Menjadi Undang-Undang (Lembaran Negara Republik Indonesia Tahun 2009 Nomor 62, Tambahan Lembaran Negara Republik Indonesia Nomor 4999) diubah sebagai berikut:" .
 <http://example.org/legal/document/uu/2020/11/pasal/113/point> legal:pointSetHasDescription <http://example.org/legal/document/uu/2020/11/pasal/113/point/description> .
 <http://example.org/legal/document/uu/2020/11/pasal/113/point> legal:pointSetHasPoint <http://example.org/legal/document/uu/2020/11/pasal/113/point/1> .
 <http://example.org/legal/document/uu/2020/11/pasal/113/point/1> legal:pointHasKey 1 .
@@ -5490,7 +5490,7 @@
 <http://example.org/legal/document/uu/2020/11/pasal/114> legal:pasalVersionHasState "exists" .
 <http://example.org/legal/document/uu/2020/11/pasal/114> legal:pasalVersionHasCreatedTimeEpoch 0 .
 <http://example.org/legal/document/uu/2020/11/pasal/114> legal:pasalVersionHasPointSet <http://example.org/legal/document/uu/2020/11/pasal/114/point> .
-<http://example.org/legal/document/uu/2020/11/pasal/114/point/description> legal:textHasTextString "Beberapa ketentuan dalam Undang-Undang Nomor 28 Tahun 2009 tentang Pajak Daerah dan Retribusi Daerah (Lembaran Negara Republik Indonesia Tahun 2009 Nomor 130, Tambahan Lembaran Negara Republik Indonesia Nomor 5049) diubah sebagai berikut:" .
+<http://example.org/legal/document/uu/2020/11/pasal/114/point/description> legal:textHasTextString "Pasal 114 Beberapa ketentuan dalam Undang-Undang Nomor 28 Tahun 2009 tentang Pajak Daerah dan Retribusi Daerah (Lembaran Negara Republik Indonesia Tahun 2009 Nomor 130, Tambahan Lembaran Negara Republik Indonesia Nomor 5049) diubah sebagai berikut:" .
 <http://example.org/legal/document/uu/2020/11/pasal/114/point> legal:pointSetHasDescription <http://example.org/legal/document/uu/2020/11/pasal/114/point/description> .
 <http://example.org/legal/document/uu/2020/11/pasal/114/point> legal:pointSetHasPoint <http://example.org/legal/document/uu/2020/11/pasal/114/point/1> .
 <http://example.org/legal/document/uu/2020/11/pasal/114/point/1> legal:pointHasKey 1 .
@@ -5527,7 +5527,7 @@
 <http://example.org/legal/document/uu/2020/11/pasal/115> legal:pasalVersionHasState "exists" .
 <http://example.org/legal/document/uu/2020/11/pasal/115> legal:pasalVersionHasCreatedTimeEpoch 0 .
 <http://example.org/legal/document/uu/2020/11/pasal/115> legal:pasalVersionHasPointSet <http://example.org/legal/document/uu/2020/11/pasal/115/point> .
-<http://example.org/legal/document/uu/2020/11/pasal/115/point/description> legal:textHasTextString "Beberapa ketentuan dalam Undang-Undang Nomor 7 Tahun 2016 tentang Perlindungan dan Pemberdayaan Nelayan, Pembudi Daya Ikan, dan Petambak Garam (Lembaran Negara Republik Indonesia Tahun 2016 Nomor 68, Tambahan Lembaran Negara Republik Indonesia Nomor 5870) diubah sebagai berikut:" .
+<http://example.org/legal/document/uu/2020/11/pasal/115/point/description> legal:textHasTextString "Pasal 115 Beberapa ketentuan dalam Undang-Undang Nomor 7 Tahun 2016 tentang Perlindungan dan Pemberdayaan Nelayan, Pembudi Daya Ikan, dan Petambak Garam (Lembaran Negara Republik Indonesia Tahun 2016 Nomor 68, Tambahan Lembaran Negara Republik Indonesia Nomor 5870) diubah sebagai berikut:" .
 <http://example.org/legal/document/uu/2020/11/pasal/115/point> legal:pointSetHasDescription <http://example.org/legal/document/uu/2020/11/pasal/115/point/description> .
 <http://example.org/legal/document/uu/2020/11/pasal/115/point> legal:pointSetHasPoint <http://example.org/legal/document/uu/2020/11/pasal/115/point/1> .
 <http://example.org/legal/document/uu/2020/11/pasal/115/point/1> legal:pointHasKey 1 .
@@ -5565,7 +5565,7 @@
 <http://example.org/legal/document/uu/2020/11/pasal/117> legal:pasalVersionHasState "exists" .
 <http://example.org/legal/document/uu/2020/11/pasal/117> legal:pasalVersionHasCreatedTimeEpoch 0 .
 <http://example.org/legal/document/uu/2020/11/pasal/117> legal:pasalVersionHasPointSet <http://example.org/legal/document/uu/2020/11/pasal/117/point> .
-<http://example.org/legal/document/uu/2020/11/pasal/117/point/description> legal:textHasTextString "Beberapa ketentuan dalam Undang-Undang Nomor 6 Tahun 2014 tentang Desa (Lembaran Negara Republik Indonesia Tahun 2014 Nomor 7, Tambahan Lembaran Negara Republik Indonesia Nomor 5495) diubah sebagai berikut:" .
+<http://example.org/legal/document/uu/2020/11/pasal/117/point/description> legal:textHasTextString "Pasal 117 Beberapa ketentuan dalam Undang-Undang Nomor 6 Tahun 2014 tentang Desa (Lembaran Negara Republik Indonesia Tahun 2014 Nomor 7, Tambahan Lembaran Negara Republik Indonesia Nomor 5495) diubah sebagai berikut:" .
 <http://example.org/legal/document/uu/2020/11/pasal/117/point> legal:pointSetHasDescription <http://example.org/legal/document/uu/2020/11/pasal/117/point/description> .
 <http://example.org/legal/document/uu/2020/11/pasal/117/point> legal:pointSetHasPoint <http://example.org/legal/document/uu/2020/11/pasal/117/point/1> .
 <http://example.org/legal/document/uu/2020/11/pasal/117/point/1> legal:pointHasKey 1 .
@@ -5583,7 +5583,7 @@
 <http://example.org/legal/document/uu/2020/11/pasal/118> legal:pasalVersionHasState "exists" .
 <http://example.org/legal/document/uu/2020/11/pasal/118> legal:pasalVersionHasCreatedTimeEpoch 0 .
 <http://example.org/legal/document/uu/2020/11/pasal/118> legal:pasalVersionHasPointSet <http://example.org/legal/document/uu/2020/11/pasal/118/point> .
-<http://example.org/legal/document/uu/2020/11/pasal/118/point/description> legal:textHasTextString "Beberapa ketentuan dalam Undang-Undang Nomor 5 Tahun 1999 tentang Larangan Praktek Monopoli dan Persaingan Usaha (Lembaran Negara Republik Indonesia Tahun 1999 Nomor 33, Tambahan Lembaran Negara Republik Indonesia Nomor 3817) diubah sebagai berikut:" .
+<http://example.org/legal/document/uu/2020/11/pasal/118/point/description> legal:textHasTextString "Pasal 118 Beberapa ketentuan dalam Undang-Undang Nomor 5 Tahun 1999 tentang Larangan Praktek Monopoli dan Persaingan Usaha (Lembaran Negara Republik Indonesia Tahun 1999 Nomor 33, Tambahan Lembaran Negara Republik Indonesia Nomor 3817) diubah sebagai berikut:" .
 <http://example.org/legal/document/uu/2020/11/pasal/118/point> legal:pointSetHasDescription <http://example.org/legal/document/uu/2020/11/pasal/118/point/description> .
 <http://example.org/legal/document/uu/2020/11/pasal/118/point> legal:pointSetHasPoint <http://example.org/legal/document/uu/2020/11/pasal/118/point/1> .
 <http://example.org/legal/document/uu/2020/11/pasal/118/point/1> legal:pointHasKey 1 .
@@ -5626,7 +5626,7 @@
 <http://example.org/legal/document/uu/2020/11/pasal/120> legal:pasalVersionHasState "exists" .
 <http://example.org/legal/document/uu/2020/11/pasal/120> legal:pasalVersionHasCreatedTimeEpoch 0 .
 <http://example.org/legal/document/uu/2020/11/pasal/120> legal:pasalVersionHasPointSet <http://example.org/legal/document/uu/2020/11/pasal/120/point> .
-<http://example.org/legal/document/uu/2020/11/pasal/120/point/description> legal:textHasTextString "Beberapa ketentuan dalam Undang-Undang Nomor 19 Tahun 2003 tentang Badan Usaha Milik Negara (Lembaran Negara Republik Indonesia Tahun 2003 Nomor 70, Tambahan Lembaran Negara Republik Indonesia Nomor 4297) diubah menjadi sebagai berikut:" .
+<http://example.org/legal/document/uu/2020/11/pasal/120/point/description> legal:textHasTextString "Pasal 120 Beberapa ketentuan dalam Undang-Undang Nomor 19 Tahun 2003 tentang Badan Usaha Milik Negara (Lembaran Negara Republik Indonesia Tahun 2003 Nomor 70, Tambahan Lembaran Negara Republik Indonesia Nomor 4297) diubah menjadi sebagai berikut:" .
 <http://example.org/legal/document/uu/2020/11/pasal/120/point> legal:pointSetHasDescription <http://example.org/legal/document/uu/2020/11/pasal/120/point/description> .
 <http://example.org/legal/document/uu/2020/11/pasal/120/point> legal:pointSetHasPoint <http://example.org/legal/document/uu/2020/11/pasal/120/point/2> .
 <http://example.org/legal/document/uu/2020/11/pasal/120/point/2> legal:pointHasKey 2 .
@@ -5683,7 +5683,7 @@
 <http://example.org/legal/document/uu/2020/11/pasal/123> legal:pasalVersionHasState "exists" .
 <http://example.org/legal/document/uu/2020/11/pasal/123> legal:pasalVersionHasCreatedTimeEpoch 0 .
 <http://example.org/legal/document/uu/2020/11/pasal/123> legal:pasalVersionHasPointSet <http://example.org/legal/document/uu/2020/11/pasal/123/point> .
-<http://example.org/legal/document/uu/2020/11/pasal/123/point/description> legal:textHasTextString "Beberapa ketentuan dalam Undang-Undang Nomor 2 Tahun 2012 tentang Pengadaan Tanah bagi Pembangunan untuk Kepentingan Umum (Lembaran Negara Republik Indonesia Tahun 2012 Nomor 22, Tambahan Lembaran Negara Republik Indonesia Nomor 5280) diubah menjadi sebagai berikut:" .
+<http://example.org/legal/document/uu/2020/11/pasal/123/point/description> legal:textHasTextString "Pasal 123 Beberapa ketentuan dalam Undang-Undang Nomor 2 Tahun 2012 tentang Pengadaan Tanah bagi Pembangunan untuk Kepentingan Umum (Lembaran Negara Republik Indonesia Tahun 2012 Nomor 22, Tambahan Lembaran Negara Republik Indonesia Nomor 5280) diubah menjadi sebagai berikut:" .
 <http://example.org/legal/document/uu/2020/11/pasal/123/point> legal:pointSetHasDescription <http://example.org/legal/document/uu/2020/11/pasal/123/point/description> .
 <http://example.org/legal/document/uu/2020/11/pasal/123/point> legal:pointSetHasPoint <http://example.org/legal/document/uu/2020/11/pasal/123/point/1> .
 <http://example.org/legal/document/uu/2020/11/pasal/123/point/1> legal:pointHasKey 1 .
@@ -5733,7 +5733,7 @@
 <http://example.org/legal/document/uu/2020/11/pasal/124> legal:pasalVersionHasState "exists" .
 <http://example.org/legal/document/uu/2020/11/pasal/124> legal:pasalVersionHasCreatedTimeEpoch 0 .
 <http://example.org/legal/document/uu/2020/11/pasal/124> legal:pasalVersionHasPointSet <http://example.org/legal/document/uu/2020/11/pasal/124/point> .
-<http://example.org/legal/document/uu/2020/11/pasal/124/point/description> legal:textHasTextString "Beberapa ketentuan dalam Undang-Undang Nomor 41 Tahun 2009 tentang Perlindungan Lahan Pertanian Pangan Berkelanjutan (Lembaran Negara Republik Indonesia Tahun 2009 Nomor 149, Tambahan Lembaran Negara Republik Indonesia Nomor 5068) diubah sebagai berikut:" .
+<http://example.org/legal/document/uu/2020/11/pasal/124/point/description> legal:textHasTextString "Pasal 124 Beberapa ketentuan dalam Undang-Undang Nomor 41 Tahun 2009 tentang Perlindungan Lahan Pertanian Pangan Berkelanjutan (Lembaran Negara Republik Indonesia Tahun 2009 Nomor 149, Tambahan Lembaran Negara Republik Indonesia Nomor 5068) diubah sebagai berikut:" .
 <http://example.org/legal/document/uu/2020/11/pasal/124/point> legal:pointSetHasDescription <http://example.org/legal/document/uu/2020/11/pasal/124/point/description> .
 <http://example.org/legal/document/uu/2020/11/pasal/124/point> legal:pointSetHasPoint <http://example.org/legal/document/uu/2020/11/pasal/124/point/1> .
 <http://example.org/legal/document/uu/2020/11/pasal/124/point/1> legal:pointHasKey 1 .
@@ -6253,7 +6253,7 @@
 <http://example.org/legal/document/uu/2020/11/pasal/150> legal:pasalVersionHasState "exists" .
 <http://example.org/legal/document/uu/2020/11/pasal/150> legal:pasalVersionHasCreatedTimeEpoch 0 .
 <http://example.org/legal/document/uu/2020/11/pasal/150> legal:pasalVersionHasPointSet <http://example.org/legal/document/uu/2020/11/pasal/150/point> .
-<http://example.org/legal/document/uu/2020/11/pasal/150/point/description> legal:textHasTextString "Beberapa ketentuan dalam Undang-Undang Nomor 39 Tahun 2009 tentang Kawasan Ekonomi Khusus (Lembaran Negara Republik Indonesia Tahun 2009 Nomor 147, Tambahan Lembaran Negara Republik Indonesia Nomor 5066) diubah menjadi sebagai berikut:" .
+<http://example.org/legal/document/uu/2020/11/pasal/150/point/description> legal:textHasTextString "Pasal 150 Beberapa ketentuan dalam Undang-Undang Nomor 39 Tahun 2009 tentang Kawasan Ekonomi Khusus (Lembaran Negara Republik Indonesia Tahun 2009 Nomor 147, Tambahan Lembaran Negara Republik Indonesia Nomor 5066) diubah menjadi sebagai berikut:" .
 <http://example.org/legal/document/uu/2020/11/pasal/150/point> legal:pointSetHasDescription <http://example.org/legal/document/uu/2020/11/pasal/150/point/description> .
 <http://example.org/legal/document/uu/2020/11/pasal/150/point> legal:pointSetHasPoint <http://example.org/legal/document/uu/2020/11/pasal/150/point/1> .
 <http://example.org/legal/document/uu/2020/11/pasal/150/point/1> legal:pointHasKey 1 .
@@ -6422,7 +6422,7 @@
 <http://example.org/legal/document/uu/2020/11/pasal/152> legal:pasalVersionHasState "exists" .
 <http://example.org/legal/document/uu/2020/11/pasal/152> legal:pasalVersionHasCreatedTimeEpoch 0 .
 <http://example.org/legal/document/uu/2020/11/pasal/152> legal:pasalVersionHasPointSet <http://example.org/legal/document/uu/2020/11/pasal/152/point> .
-<http://example.org/legal/document/uu/2020/11/pasal/152/point/description> legal:textHasTextString "Beberapa ketentuan dalam Undang-Undang Nomor 36 Tahun 2000 tentang Penetapan Peraturan Pemerintah Pengganti Undang-Undang Nomor 1 Tahun 2000 tentang Kawasan Perdagangan Bebas dan Pelabuhan Bebas menjadi Undang- Undang (Lembaran Negara Republik Indonesia Tahun 2000 Nomor 251, Tambahan Lembaran Negara Republik Indonesia Nomor 4053) sebagaimana diubah dengan Undang-Undang Nomor 44 Tahun 2007 tentang Penetapan Peraturan Pemerintah Pengganti Undang-Undang Nomor 1 Tahun 2007 tentang Perubahan Atas Undang-Undang Nomor 36 Tahun 2000 tentang Penetapan Peraturan Pemerintah Pengganti Undang-Undang Nomor 1 Tahun 2000 tentang Kawasan Perdagangan Bebas dan Pelabuhan Bebas menjadi Undang- Undang menjadi Undang-Undang (Lembaran Negara Republik Indonesia Tahun 2007 Nomor 130, Tambahan Lembaran Negara Republik Indonesia Nomor 4775) diubah menjadi sebagai berikut:" .
+<http://example.org/legal/document/uu/2020/11/pasal/152/point/description> legal:textHasTextString "Pasal 152 Beberapa ketentuan dalam Undang-Undang Nomor 36 Tahun 2000 tentang Penetapan Peraturan Pemerintah Pengganti Undang-Undang Nomor 1 Tahun 2000 tentang Kawasan Perdagangan Bebas dan Pelabuhan Bebas menjadi Undang- Undang (Lembaran Negara Republik Indonesia Tahun 2000 Nomor 251, Tambahan Lembaran Negara Republik Indonesia Nomor 4053) sebagaimana diubah dengan Undang-Undang Nomor 44 Tahun 2007 tentang Penetapan Peraturan Pemerintah Pengganti Undang-Undang Nomor 1 Tahun 2007 tentang Perubahan Atas Undang-Undang Nomor 36 Tahun 2000 tentang Penetapan Peraturan Pemerintah Pengganti Undang-Undang Nomor 1 Tahun 2000 tentang Kawasan Perdagangan Bebas dan Pelabuhan Bebas menjadi Undang- Undang menjadi Undang-Undang (Lembaran Negara Republik Indonesia Tahun 2007 Nomor 130, Tambahan Lembaran Negara Republik Indonesia Nomor 4775) diubah menjadi sebagai berikut:" .
 <http://example.org/legal/document/uu/2020/11/pasal/152/point> legal:pointSetHasDescription <http://example.org/legal/document/uu/2020/11/pasal/152/point/description> .
 <http://example.org/legal/document/uu/2020/11/pasal/152/point> legal:pointSetHasPoint <http://example.org/legal/document/uu/2020/11/pasal/152/point/1> .
 <http://example.org/legal/document/uu/2020/11/pasal/152/point/1> legal:pointHasKey 1 .
@@ -7286,7 +7286,7 @@
 <http://example.org/legal/document/uu/2020/11/pasal/175> legal:pasalVersionHasState "exists" .
 <http://example.org/legal/document/uu/2020/11/pasal/175> legal:pasalVersionHasCreatedTimeEpoch 0 .
 <http://example.org/legal/document/uu/2020/11/pasal/175> legal:pasalVersionHasPointSet <http://example.org/legal/document/uu/2020/11/pasal/175/point> .
-<http://example.org/legal/document/uu/2020/11/pasal/175/point/description> legal:textHasTextString "Beberapa ketentuan dalam Undang-Undang Nomor 30 Tahun 2014 tentang Administrasi Pemerintahan (Lembaran Negara Republik Indonesia Tahun 2014 Nomor 292, Tambahan Lembaran Negara Republik Indonesia Nomor 5601) diubah menjadi sebagai berikut:" .
+<http://example.org/legal/document/uu/2020/11/pasal/175/point/description> legal:textHasTextString "Pasal 175 Beberapa ketentuan dalam Undang-Undang Nomor 30 Tahun 2014 tentang Administrasi Pemerintahan (Lembaran Negara Republik Indonesia Tahun 2014 Nomor 292, Tambahan Lembaran Negara Republik Indonesia Nomor 5601) diubah menjadi sebagai berikut:" .
 <http://example.org/legal/document/uu/2020/11/pasal/175/point> legal:pointSetHasDescription <http://example.org/legal/document/uu/2020/11/pasal/175/point/description> .
 <http://example.org/legal/document/uu/2020/11/pasal/175/point> legal:pointSetHasPoint <http://example.org/legal/document/uu/2020/11/pasal/175/point/1> .
 <http://example.org/legal/document/uu/2020/11/pasal/175/point/1> legal:pointHasKey 1 .
@@ -7313,7 +7313,7 @@
 <http://example.org/legal/document/uu/2020/11/pasal/176> legal:pasalVersionHasState "exists" .
 <http://example.org/legal/document/uu/2020/11/pasal/176> legal:pasalVersionHasCreatedTimeEpoch 0 .
 <http://example.org/legal/document/uu/2020/11/pasal/176> legal:pasalVersionHasPointSet <http://example.org/legal/document/uu/2020/11/pasal/176/point> .
-<http://example.org/legal/document/uu/2020/11/pasal/176/point/description> legal:textHasTextString "Beberapa ketentuan dalam Undang Nomor 23 Tahun 2014 tentang Pemerintahan Daerah (Lembaran Negara Republik Indonesia Tahun 2014 Nomor 244, Tambahan Lembaran Negara Republik Indonesia Nomor 5587) sebagaimana telah diubah terakhir dengan Undang-Undang Nomor 9 Tahun 2015 tentang Perubahan Kedua atas Undang-Undang Nomor 23 Tahun 2014 tentang Pemerintahan Daerah (Lembaran Negara Republik Indonesia Tahun 2015 Nomor 58, Tambahan Lembaran Negara Republik Indonesia Nomor 5679) diubah sebagai berikut:" .
+<http://example.org/legal/document/uu/2020/11/pasal/176/point/description> legal:textHasTextString "Pasal 176 Beberapa ketentuan dalam Undang Nomor 23 Tahun 2014 tentang Pemerintahan Daerah (Lembaran Negara Republik Indonesia Tahun 2014 Nomor 244, Tambahan Lembaran Negara Republik Indonesia Nomor 5587) sebagaimana telah diubah terakhir dengan Undang-Undang Nomor 9 Tahun 2015 tentang Perubahan Kedua atas Undang-Undang Nomor 23 Tahun 2014 tentang Pemerintahan Daerah (Lembaran Negara Republik Indonesia Tahun 2015 Nomor 58, Tambahan Lembaran Negara Republik Indonesia Nomor 5679) diubah sebagai berikut:" .
 <http://example.org/legal/document/uu/2020/11/pasal/176/point> legal:pointSetHasDescription <http://example.org/legal/document/uu/2020/11/pasal/176/point/description> .
 <http://example.org/legal/document/uu/2020/11/pasal/176/point> legal:pointSetHasPoint <http://example.org/legal/document/uu/2020/11/pasal/176/point/1> .
 <http://example.org/legal/document/uu/2020/11/pasal/176/point/1> legal:pointHasKey 1 .
