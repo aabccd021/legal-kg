@@ -1,5 +1,5 @@
 import * as fs from 'fs';
-import { Document, DocumentNode } from '../../../legal/document/index';
+import { Document, DocumentNode, nodeToName } from '../../../legal/document/index';
 import { getDocumentData, nodeToFile } from '../../../data';
 import * as yaml from 'js-yaml';
 import { yamlToTriples } from './json-to-triples';
@@ -11,7 +11,7 @@ export function yamlToTtl(): void {
 }
 
 function handleJson(node: DocumentNode): void {
-  console.log(`Start json-to-ttl ${JSON.stringify(node)}`);
+  console.log(`Start json-to-ttl ${nodeToName(node)}`);
   const yamlFile = nodeToFile('yaml', node);
   const { path: ttlPath } = nodeToFile('ttl', node);
 
@@ -21,7 +21,7 @@ function handleJson(node: DocumentNode): void {
 
   fs.writeFileSync(ttlPath, ttl);
 
-  console.log(`Finished json-to-ttl ${ttlPath}`);
+  console.log(`Finished json-to-ttl ${nodeToName(node)}`);
 }
 
 yamlToTtl();

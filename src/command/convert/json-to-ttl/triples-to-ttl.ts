@@ -35,6 +35,7 @@ export function triplesToTtl(triples: LegalTriple[]): string {
   const alternativeVocabQuads = getAlternativeVocabQuads(triples);
 
   const allQuads: n3.Quad[] = compact([...coreQuads, ...classTypeQuads, ...alternativeVocabQuads]);
+  console.log(`${allQuads.length} triples generated`)
 
   const ttlStr = new n3.Writer({ prefixes }).quadsToString(allQuads);
   const processedTtlStr = ttlStr.replaceAll(`<${rdfType}>`, 'a');
@@ -69,22 +70,31 @@ function getClassTypeQuads(triples: LegalTriple[]): n3.Quad[] {
  */
 function getAlternativeVocabQuads(triples: LegalTriple[]): n3.Quad[] {
   return _(triples)
-    .map(([_s, _p, o]) => {
+    .map(([s, p, o]) => {
       if (isNil(o) || isString(o) || isNumber(o)) return undefined;
-      // if (
-      // p === 'ayatHasPoint' ||
-      // p === 'babHasBagian' ||
-      // p === 'babHasPasal' ||
-      // p === 'bagianHasParagraf' ||
-      // p === 'bagianHasPasal' ||
-      // p === 'documentHasBab' ||
-      // p === 'paragrafHasPasal' ||
-      // p === 'pasalHasAyat' ||
-      // p === 'pasalHasPoint' ||
-      // p === 'pointHasPoint'
-      // ) {
-      // return triple(node(o), onto('partOf'), node(s));
-      // }
+      if (
+        p === 'ayatHasPointSet' ||
+        p === 'ayatHasText' ||
+        p === 'ayatSetHasAyat' ||
+        p === 'babHasBagianSet' ||
+        p === 'babHasPasalSet' ||
+        p === 'babSetHasBab' ||
+        p === 'bagianHasParagrafSet' ||
+        p === 'bagianHasPasalSet' ||
+        p === 'bagianSetHasBagian' ||
+        p === 'documentHasBabSet' ||
+        p === 'documentHasPasal' ||
+        p === 'paragrafHasPasalSet' ||
+        p === 'paragrafSetHasParagraf' ||
+        p === 'pasalHasPasalVersion' ||
+        p === 'pointHasPointSet' ||
+        p === 'pasalSetHasPasal' ||
+        p === 'pointSetHasPoint' ||
+        p === 'pasalVersionHasPointSet' ||
+        p === 'pasalVersionHasAyatSet'
+      ) {
+        return triple(node(o), onto('partOf'), node(s));
+      }
       return undefined;
     })
     .compact()
