@@ -1,9 +1,0 @@
-PREFIX legal: <http://example.org/legal/ontology/>
-PREFIX doc: <http://example.org/legal/document/>
-SELECT ?pasal
-WHERE{
-  ?pasal legal:partOf+ doc:UU13-2003 .
-  ?pasal a legal:Pasal .
-  ?pasal legal:hasKey ?key .
-}
-ORDER BY ASC(?key)

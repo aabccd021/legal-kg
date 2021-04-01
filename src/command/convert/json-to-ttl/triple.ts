@@ -33,6 +33,7 @@ export type LegalTriple = (
   | [BagianNode, 'bagianHasTitle', string]
   | [BagianSetNode, 'bagianSetHasBagian', BagianNode]
   | [DocumentNode, 'documentHasBabSet', BabSetNode]
+  | [DocumentNode, 'documentHasPasal', PasalNode]
   | [ParagrafNode, 'paragrafHasKey', number]
   | [ParagrafNode, 'paragrafHasPasalSet', PasalSetNode]
   | [ParagrafNode, 'paragrafHasTitle', string]

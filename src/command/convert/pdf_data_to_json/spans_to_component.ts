@@ -363,7 +363,7 @@ function spansToAmendDeletePasalPoint(
     node: { nodeType: 'point', parentPointSetNode, key: parseInt(pointKeyStr) },
     deletedPasalVersionNode: {
       nodeType: 'pasalVersion',
-      timeCreatedEpoch: Date.now(),
+      timeCreatedEpoch: 1,
       state: 'deleted',
       parentPasalNode: {
         nodeType: 'pasal',
@@ -407,7 +407,7 @@ function spansToAmendUpdatePasalPoint(
       {
         parentDocumentNode: amendedDocumentNode,
         context,
-        timeCreatedEpoch: Date.now(),
+        timeCreatedEpoch: 1,
         isAmendedPasal: true,
       },
       [pasalKey, spans.slice(pasalTitleIdx)]
@@ -463,7 +463,7 @@ function spansToAmendInsertPasalPoint(
         keySpansToPasalVersionWith({
           parentDocumentNode: amendedDocumentNode,
           context,
-          timeCreatedEpoch: Date.now(),
+          timeCreatedEpoch: 1,
           isAmendedPasal: true,
         })
       )

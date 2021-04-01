@@ -21,8 +21,7 @@ export function nodeToUri(node: LegalNode): string {
   if (node.nodeType === 'pasalSet')
     return `${nodeToUri(pasalSetParentNodeToDocumentNode(node.parentNode))}`;
   if (node.nodeType === 'pasalVersion')
-    // return `${nodeToUri(node.parentPasalNode)}/version/${node.timeCreatedEpoch}`;
-    return `${nodeToUri(node.parentPasalNode)}`;
+    return `${nodeToUri(node.parentPasalNode)}/version/${node.timeCreatedEpoch}`;
   if (node.nodeType === 'point') return `${nodeToUri(node.parentPointSetNode)}/${node.key}`;
   if (node.nodeType === 'pointSet') return `${nodeToUri(node.parentNode)}/point`;
   if (node.nodeType === 'text') return `${nodeToUri(node.parentNode)}/${node.textName}`;

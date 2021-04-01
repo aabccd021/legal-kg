@@ -132,6 +132,7 @@ function pasalToTriple(parentPasalSetNode: PasalSetNode, pasal: Pasal): LegalTri
     [parentPasalSetNode, 'pasalSetHasPasal', pasal.node],
     [pasal.node, 'pasalHasKey', pasal.node.key],
     [pasal.node, 'pasalHasPasalVersion', pasal.version.node],
+    [pasal.node.parentNode, 'documentHasPasal', pasal.node],
     [pasal.version.node, 'pasalVersionHasState', pasal.version.node.state],
     [pasal.version.node, 'pasalVersionHasCreatedTimeEpoch', pasal.version.node.timeCreatedEpoch],
     ...pasalContentToTriple(pasal.version.content),
@@ -200,9 +201,21 @@ function _pointToTriple(
   if (point.type === 'pasalDeleteAmenderPoint')
     return [[point.node, 'pointDeletePasal', point.deletedPasalVersionNode]];
   if (point.type === 'pasalUpdateAmenderPoint')
-    return [[point.node, 'pointUpdatePasal', point.updatedPasalVersion.node]];
+    return [
+      [point.node, 'pointUpdatePasal', point.updatedPasalVersion.node],
+      [
+        point.updatedPasalVersion.node.parentPasalNode,
+        'pasalHasPasalVersion',
+        point.updatedPasalVersion.node,
+      ],
+      [
+        point.updatedPasalVersion.node.parentPasalNode.parentNode,
+        'documentHasPasal',
+        point.updatedPasalVersion.node.parentPasalNode,
+      ],
+    ];
   if (point.type === 'pasalInsertAmenderPoint')
-    return map(point.insertedPasalVersionArr, pointToAmendInsertTripleWith(point.node));
+    return flatMap(point.insertedPasalVersionArr, pointToAmendInsertTripleWith(point));
   if (point.type === 'point')
     return point.content.type === 'pointSet'
       ? pointSetToTriple(point.content)
@@ -211,8 +224,19 @@ function _pointToTriple(
 }
 
 const pointToAmendInsertTripleWith = curry(pointToAmendInsertTriple);
-function pointToAmendInsertTriple(pointNode: PointNode, pasalVersion: PasalVersion): LegalTriple {
-  return [pointNode, 'pointInsertPasal', pasalVersion.node];
+function pointToAmendInsertTriple(
+  point: PasalInsertAmenderPoint,
+  pasalVersion: PasalVersion
+): LegalTriple[] {
+  return [
+    [point.node, 'pointInsertPasal', pasalVersion.node],
+    [pasalVersion.node.parentPasalNode, 'pasalHasPasalVersion', pasalVersion.node],
+    [
+      pasalVersion.node.parentPasalNode.parentNode,
+      'documentHasPasal',
+      pasalVersion.node.parentPasalNode,
+    ],
+  ];
 }
 
 function textToTriple(text: Text): LegalTriple[] {
