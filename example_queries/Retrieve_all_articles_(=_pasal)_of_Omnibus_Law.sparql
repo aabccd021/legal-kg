@@ -1,0 +1,19 @@
+PREFIX legal: <http://example.org/legal/ontology/>
+
+SELECT DISTINCT ?pasal 
+(GROUP_CONCAT(?text) AS ?textt)
+WHERE {
+  {
+    SELECT ?pasal (MAX(?pasalVersion) as ?latestPasalVersion) 
+    WHERE {
+      <http://example.org/legal/document/uu/2020/11> legal:documentHasPasal ?pasal .
+      ?pasal legal:pasalHasPasalVersion ?pasalVersion .
+    }
+    GROUP BY ?pasal
+  }
+  ?componentWithText legal:partOf* ?latestPasalVersion .
+  ?componentWithText ?p ?textNode .
+  ?textNode legal:textHasTextString ?text .
+}
+GROUP BY ?pasal
+ORDER BY ?pasal
