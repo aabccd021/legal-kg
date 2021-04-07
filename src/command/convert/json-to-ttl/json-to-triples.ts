@@ -207,8 +207,8 @@ function _pointToTriple(
         'documentHasPasal',
         point.updatedPasalVersion.node.parentPasalNode,
       ],
+      ...pasalVersionToTriple(point.updatedPasalVersion),
     ];
-  // TODO
   if (point.type === 'pasalInsertAmenderPoint')
     return flatMap(point.insertedPasalVersionArr, pointToAmendInsertTripleWith(point));
   if (point.type === 'point')
@@ -231,7 +231,7 @@ function pointToAmendInsertTriple(
       'documentHasPasal',
       pasalVersion.node.parentPasalNode,
     ],
-    // TODO
+    ...pasalVersionToTriple(pasalVersion),
   ];
 }
 
