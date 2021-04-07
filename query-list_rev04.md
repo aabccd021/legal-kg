@@ -230,7 +230,7 @@ SELECT * WHERE {
 }
 ```
 
-# 01. Obtain citations from newly inserted articles by Omnibus Law (UU Cipta Kerja) to the original version of Labor Law (UU Ketenagakerjaan)
+# 016. Obtain citations from newly inserted articles by Omnibus Law (UU Cipta Kerja) to the original version of Labor Law (UU Ketenagakerjaan)
 
 ```sparql
 PREFIX catapa: <https://catapa.com/ns#>
@@ -251,7 +251,7 @@ SELECT ?ayatPengutip ?yangDikutip WHERE {
 }
 ```
 
-# 016. Which law has the most number of updates (= insertions/amendments/removals) by Omnibus Law? For that law, show the most recent version taking into account the updates by Omnibus Law!
+# 017. Which law has the most number of updates (= insertions/amendments/removals) by Omnibus Law? For that law, show the most recent version taking into account the updates by Omnibus Law!
 
 ```sparql
 PREFIX catapa: <https://catapa.com/ns#>

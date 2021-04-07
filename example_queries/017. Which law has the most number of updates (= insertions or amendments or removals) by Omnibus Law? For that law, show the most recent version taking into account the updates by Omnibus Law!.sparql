@@ -1,0 +1,35 @@
+PREFIX legal: <http://example.org/legal/ontology/>
+PREFIX owl: <http://www.w3.org/2002/07/owl#>
+
+
+  SELECT ?law ?numOfUpdates ?pasal (MAX(?pasalVersion) as ?latestPasalVersion) 
+  WHERE {
+    {
+      SELECT 
+        ?law 
+        (COUNT(*) AS ?numOfUpdates)
+      WHERE {
+        {
+          SELECT ?pasal (MAX(?pasalVersion) as ?latestPasalVersion) 
+          WHERE {
+            ?pasal legal:partOf+ <http://example.org/legal/document/uu/2020/11>.
+            ?pasal legal:pasalHasPasalVersion ?pasalVersion .
+          }
+          GROUP BY ?pasal
+        }
+        ?point legal:partOf+ ?latestPasalVersion .
+        { ?point legal:pointUpdatePasalVersion ?amendedPasalVersion }
+        UNION
+        { ?point legal:pointInsertPasalVersion ?amendedPasalVersion }
+        UNION
+        { ?point legal:pointDeletePasalVersion ?amendedPasalVersion }
+        ?amendedPasalVersion legal:partOf+ ?law .
+        ?law a legal:Document .
+      }
+      GROUP BY ?law
+    }
+    ?pasal legal:partOf+ ?law .
+    ?pasal legal:pasalHasPasalVersion ?pasalVersion .
+  }
+GROUP BY ?law ?numOfUpdates ?pasal
+ORDER BY DESC (?numOfUpdates)
