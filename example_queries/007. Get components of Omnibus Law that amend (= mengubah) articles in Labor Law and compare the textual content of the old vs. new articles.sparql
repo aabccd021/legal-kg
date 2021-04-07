@@ -1,0 +1,21 @@
+PREFIX legal: <http://example.org/legal/ontology/>
+
+SELECT 
+	?insertingPoint 
+	?insertedPasal 
+	?insertedPasalVersion
+WHERE {
+  {
+    SELECT ?pasal (MAX(?pasalVersion) as ?latestPasalVersion) 
+    WHERE {
+      ?pasal legal:partOf+ <http://example.org/legal/document/uu/2020/11>.
+      ?pasal legal:pasalHasPasalVersion ?pasalVersion .
+    }
+    GROUP BY ?pasal
+  }
+  ?insertingPoint legal:partOf+ ?latestPasalVersion .
+  ?insertingPoint legal:pointInsertPasalVersion ?insertedPasalVersion .
+  ?insertedPasalVersion legal:partOf+ <http://example.org/legal/document/uu/2003/13> .
+  ?insertedPasal legal:pasalHasPasalVersion ?insertedPasalVersion .
+}
+ORDER BY ?insertingPoint ?insertedPasal ?insertedPasalVersion

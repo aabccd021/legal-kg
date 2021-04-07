@@ -2,7 +2,7 @@ import { assertNever } from 'assert-never';
 import { getConfig } from '../config';
 import { DocumentNode, getDocumentPath } from './document';
 import { ComponentNode } from './component';
-import { isString, isUndefined } from 'lodash';
+import { isString, reduce, isUndefined } from 'lodash';
 import { safeParseInt } from '../command/convert/pdf_data_to_json/parse_key_from_spans';
 
 export type LegalNode = DocumentNode | ComponentNode;
@@ -23,7 +23,7 @@ export function nodeToUri(node: LegalNode): string {
     return `${nodeToUri(node.parentParagrafSetNode)}/${padStartIfNumber(node.key)}`;
   if (node.nodeType === 'paragrafSet') return `${nodeToUri(node.parentBagianNode)}/paragraf`;
   if (node.nodeType === 'pasal')
-    return `${nodeToUri(node.parentNode)}/pasal/${padStartIfNumber(node.key)}`;
+    return `${nodeToUri(node.parentNode)}/pasal/${padPasalIfNumber(node.key)}`;
   if (node.nodeType === 'pasalSet') return `${nodeToUri(node.parentNode)}/pasals`;
   if (node.nodeType === 'pasalVersion')
     return `${nodeToUri(node.parentPasalNode)}/version/${padStartIfNumber(node.timeCreatedEpoch, {
@@ -45,6 +45,25 @@ function padStartIfNumber(x: string | number, arg?: { pad: number }): string {
   return `${x}`.padStart(arg?.pad ?? 4, '0');
 }
 
+function padPasalIfNumber(x: string | number, arg?: { pad: number }): string {
+  if (isString(x)) {
+    const splitPoint = reduce(
+      x,
+      ({ splitIdx, ended }, char, idx) => {
+        if (ended) return { splitIdx, ended };
+        const charAsNumber = safeParseInt(char);
+        if (isUndefined(charAsNumber)) return { splitIdx, ended: true };
+        return { splitIdx: idx, ended };
+      },
+      { splitIdx: -1, ended: false }
+    );
+    const numberStr = x.slice(0, splitPoint.splitIdx + 1);
+    const strStr = x.slice(splitPoint.splitIdx + 1);
+    console.log({ x, numberStr, strStr });
+    return numberStr.padStart(arg?.pad ?? 4, '0') + strStr;
+  }
+  return `${x}`.padStart(arg?.pad ?? 4, '0');
+}
 export function getOntologyBaseUri(): string {
   const { uriBase } = getConfig();
   return `${uriBase}/ontology`;
