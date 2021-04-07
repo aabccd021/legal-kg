@@ -195,7 +195,19 @@ function _pointToTriple(
   point: Point | PasalDeleteAmenderPoint | PasalUpdateAmenderPoint | PasalInsertAmenderPoint
 ): LegalTriple[] {
   if (point.type === 'pasalDeleteAmenderPoint')
-    return [[point.node, 'pointDeletePasalVersion', point.deletedPasalVersionNode]];
+    return [
+      [point.node, 'pointDeletePasalVersion', point.deletedPasalVersionNode],
+      [
+        point.deletedPasalVersionNode.parentPasalNode,
+        'pasalHasPasalVersion',
+        point.deletedPasalVersionNode,
+      ],
+      [
+        point.deletedPasalVersionNode.parentPasalNode.parentNode,
+        'documentHasPasal',
+        point.deletedPasalVersionNode.parentPasalNode,
+      ],
+    ];
   if (point.type === 'pasalUpdateAmenderPoint')
     return [
       [point.node, 'pointUpdatePasal', point.updatedPasalVersion.node],
@@ -236,6 +248,8 @@ function pointToAmendInsertTriple(
     ...pasalVersionToTriple(pasalVersion),
   ];
 }
+
+// TODO: rawText
 
 function textToTriple(text: Text): LegalTriple[] {
   return [
