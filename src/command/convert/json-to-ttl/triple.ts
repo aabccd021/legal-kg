@@ -49,7 +49,11 @@ export type LegalTriple = (
   | [PointNode, 'pointHasKey', string | number]
   | [PointNode, 'pointHasPointSet', PointSetNode]
   | [PointNode, 'pointHasText', TextNode]
-  | [PointNode, 'pointUpdatePasal' | 'pointDeletePasal' | 'pointInsertPasal', PasalVersionNode]
+  | [
+      PointNode,
+      'pointUpdatePasal' | 'pointDeletePasalVersion' | 'pointInsertPasalVersion',
+      PasalVersionNode
+    ]
   | [PointSetNode, 'pointSetHasDescription', TextNode]
   | [PointSetNode, 'pointSetHasPoint', PointNode]
   | [TextNode, 'textHasTextString', string]

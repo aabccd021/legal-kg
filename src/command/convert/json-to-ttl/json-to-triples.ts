@@ -189,11 +189,13 @@ function pointToTriple(
   ];
 }
 
+// TODO: origin component relation
+
 function _pointToTriple(
   point: Point | PasalDeleteAmenderPoint | PasalUpdateAmenderPoint | PasalInsertAmenderPoint
 ): LegalTriple[] {
   if (point.type === 'pasalDeleteAmenderPoint')
-    return [[point.node, 'pointDeletePasal', point.deletedPasalVersionNode]];
+    return [[point.node, 'pointDeletePasalVersion', point.deletedPasalVersionNode]];
   if (point.type === 'pasalUpdateAmenderPoint')
     return [
       [point.node, 'pointUpdatePasal', point.updatedPasalVersion.node],
@@ -224,7 +226,7 @@ function pointToAmendInsertTriple(
   pasalVersion: PasalVersion
 ): LegalTriple[] {
   return [
-    [point.node, 'pointInsertPasal', pasalVersion.node],
+    [point.node, 'pointInsertPasalVersion', pasalVersion.node],
     [pasalVersion.node.parentPasalNode, 'pasalHasPasalVersion', pasalVersion.node],
     [
       pasalVersion.node.parentPasalNode.parentNode,
