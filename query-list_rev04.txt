@@ -18,6 +18,8 @@ SELECT ?pasal ?text WHERE {
 
 # What is the textual content of Article (or Pasal) 5 Subsection (or Ayat) 1 of Omnibus Law?
 
+### Pasal 5 memang tidak ada ayat 1?
+
 PREFIX catapa: <https://catapa.com/ns#>
 
 SELECT * WHERE {

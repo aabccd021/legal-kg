@@ -1,0 +1,24 @@
+PREFIX legal: <http://example.org/legal/ontology/>
+
+SELECT DISTINCT ?ayat (GROUP_CONCAT(?xText; separator='\n') AS ?text)
+WHERE {
+  SELECT ?ayat ?xText
+  WHERE {
+  {
+    SELECT ?pasal (MAX(?pasalVersion) as ?latestPasalVersion) 
+    WHERE {
+      <http://example.org/legal/document/uu/2020/11> legal:documentHasPasal ?pasal .
+      ?pasal legal:pasalHasKey 2 .
+      ?pasal legal:pasalHasPasalVersion ?pasalVersion .
+    }
+    GROUP BY ?pasal
+  	}
+	?ayat legal:partOf* ?latestPasalVersion .
+    ?ayat legal:ayatHasKey 1 .
+    ?ayatChild legal:partOf* ?ayat .
+    ?ayatChild ?p ?textNode .
+    ?textNode legal:textHasTextString ?xText .
+  }
+  ORDER BY(?ayat)
+}
+GROUP BY ?ayat
