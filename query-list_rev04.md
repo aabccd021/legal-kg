@@ -1,4 +1,4 @@
-# Describe Omnibus Law (UU Cipta Kerja)
+# 001. Describe Omnibus Law (UU Cipta Kerja)
 
 ```sparql
 PREFIX catapa: <https://catapa.com/ns#>
@@ -8,7 +8,7 @@ SELECT DISTINCT * WHERE {
 }
 ```
 
-# Retrieve all articles (= pasal) of Omnibus Law
+# 002. Retrieve all articles (= pasal) of Omnibus Law
 
 ```sparql
 PREFIX catapa: <https://catapa.com/ns#>
@@ -20,7 +20,7 @@ SELECT ?pasal ?text WHERE {
 }
 ```
 
-# What is the textual content of Article (or Pasal) 5 Subsection (or Ayat) 1 of Omnibus Law?
+# 003. What is the textual content of Article (or Pasal) 5 Subsection (or Ayat) 1 of Omnibus Law?
 
 ### Pasal 5 memang tidak ada ayat 1?
 
@@ -36,7 +36,7 @@ SELECT * WHERE {
 }
 ```
 
-# Which are the articles of Chapter 2 (Bab 2) of Omnibus Law?
+# 004. Which are the articles of Chapter 2 (Bab 2) of Omnibus Law?
 
 ```sparql
 PREFIX catapa: <https://catapa.com/ns#>
@@ -51,7 +51,7 @@ SELECT ?pasal ?text WHERE {
 }
 ```
 
-# Get subsections (= ayat) containing "kompensasi" and "buruh" that are added by Omnibus Law into other laws
+# 005. Get subsections (= ayat) containing "kompensasi" and "buruh" that are added by Omnibus Law into other laws
 
 ```sparql
 PREFIX catapa: <https://catapa.com/ns#>
@@ -66,7 +66,7 @@ SELECT ?ayat ?text WHERE {
 }
 ```
 
-# Retrieve components of Omnibus Law that insert (= menyisipkan) articles (= pasal) into Labor Law (UU Ketenagakerjaan) and show the textual content of the articles
+# 006. Retrieve components of Omnibus Law that insert (= menyisipkan) articles (= pasal) into Labor Law (UU Ketenagakerjaan) and show the textual content of the articles
 
 ```sparql
 PREFIX catapa: <https://catapa.com/ns#>
@@ -79,7 +79,7 @@ SELECT ?x ?pasalYangDisisipkan ?text WHERE {
 }
 ```
 
-# Get components of Omnibus Law that amend (= mengubah) articles in Labor Law and compare the textual content of the old vs. new articles
+# 007. Get components of Omnibus Law that amend (= mengubah) articles in Labor Law and compare the textual content of the old vs. new articles
 
 ```sparql
 PREFIX catapa: <https://catapa.com/ns#>
@@ -94,7 +94,7 @@ SELECT ?x ?oldArticle ?oldText ?newArticle ?newText WHERE {
 }
 ```
 
-# Give me components of Omnibus Law that remove (= menghapus) articles in Labor Law and show the textual content of the removed articles
+# 008. Give me components of Omnibus Law that remove (= menghapus) articles in Labor Law and show the textual content of the removed articles
 
 ```sparql
 PREFIX catapa: <https://catapa.com/ns#>
@@ -107,7 +107,7 @@ SELECT * WHERE {
 }
 ```
 
-# Retrieve implementing regulations (= peraturan pelaksana) of subsections (= ayat) in Labor Law that are removed by Omnibus Law
+# 009. Retrieve implementing regulations (= peraturan pelaksana) of subsections (= ayat) in Labor Law that are removed by Omnibus Law
 
 ```sparql
 PREFIX catapa: <https://catapa.com/ns#>
@@ -121,7 +121,7 @@ SELECT * WHERE {
 }
 ```
 
-# How many are insertions, amendments, and removals of other laws in Omnibus Law?
+# 010. How many are insertions, amendments, and removals of other laws in Omnibus Law?
 
 ```sparql
 PREFIX catapa: <https://catapa.com/ns#>
@@ -150,7 +150,7 @@ SELECT ?type (COUNT(*) AS ?jumlah) WHERE {
 } GROUP BY ?type
 ```
 
-# Get articles of Labor Law (UU Ketenagakerjaan) taking into account updates (= insertions/amendments/removals) from Omnibus Law (UU Cipta Kerja)
+# 011. Get articles of Labor Law (UU Ketenagakerjaan) taking into account updates (= insertions/amendments/removals) from Omnibus Law (UU Cipta Kerja)
 
 ```sparql
 PREFIX catapa: <https://catapa.com/ns#>
@@ -163,7 +163,7 @@ SELECT ?pasal WHERE {
 }
 ```
 
-# Get articles of Omnibus Law that are not about updating (= insertions/amendments/removals) other laws
+# 012. Get articles of Omnibus Law that are not about updating (= insertions/amendments/removals) other laws
 
 ```sparql
 PREFIX catapa: <https://catapa.com/ns#>
@@ -180,7 +180,7 @@ SELECT ?pasal ?text WHERE {
 }
 ```
 
-# Give me articles (= pasal) of Omnibus Law removing articles of laws legalized later than the year 2001
+# 013. Give me articles (= pasal) of Omnibus Law removing articles of laws legalized later than the year 2001
 
 ```sparql
 PREFIX catapa: <https://catapa.com/ns#>
@@ -197,7 +197,7 @@ SELECT DISTINCT ?pasal WHERE {
 }
 ```
 
-# Retrieve all subsections inserted by Omnibus Law into other laws and *optionally* the citations occurring in those subsections
+# 014. Retrieve all subsections inserted by Omnibus Law into other laws and *optionally* the citations occurring in those subsections
 
 ```sparql
 PREFIX catapa: <https://catapa.com/ns#>
@@ -212,7 +212,7 @@ SELECT ?ayat ?text ?citation WHERE {
 }
 ```
 
-# Give me Omnibus Law articles amending another law where the amended law has an implementing regulation (= peraturan pelaksana) about Foreign Labors (Tenaga Kerja Asing/TKA)
+# 015. Give me Omnibus Law articles amending another law where the amended law has an implementing regulation (= peraturan pelaksana) about Foreign Labors (Tenaga Kerja Asing/TKA)
 
 ```sparql
 PREFIX catapa: <https://catapa.com/ns#>
@@ -230,7 +230,7 @@ SELECT * WHERE {
 }
 ```
 
-# Obtain citations from newly inserted articles by Omnibus Law (UU Cipta Kerja) to the original version of Labor Law (UU Ketenagakerjaan)
+# 01. Obtain citations from newly inserted articles by Omnibus Law (UU Cipta Kerja) to the original version of Labor Law (UU Ketenagakerjaan)
 
 ```sparql
 PREFIX catapa: <https://catapa.com/ns#>
@@ -251,7 +251,7 @@ SELECT ?ayatPengutip ?yangDikutip WHERE {
 }
 ```
 
-# Which law has the most number of updates (= insertions/amendments/removals) by Omnibus Law? For that law, show the most recent version taking into account the updates by Omnibus Law!
+# 016. Which law has the most number of updates (= insertions/amendments/removals) by Omnibus Law? For that law, show the most recent version taking into account the updates by Omnibus Law!
 
 ```sparql
 PREFIX catapa: <https://catapa.com/ns#>
