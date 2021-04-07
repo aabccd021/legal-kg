@@ -35,7 +35,7 @@ export function triplesToTtl(triples: LegalTriple[]): string {
   const alternativeVocabQuads = getAlternativeVocabQuads(triples);
 
   const allQuads: n3.Quad[] = compact([...coreQuads, ...classTypeQuads, ...alternativeVocabQuads]);
-  console.log(`${allQuads.length} triples generated`)
+  console.log(`${allQuads.length} triples generated`);
 
   const ttlStr = new n3.Writer({ prefixes }).quadsToString(allQuads);
   const processedTtlStr = ttlStr.replaceAll(`<${rdfType}>`, 'a');

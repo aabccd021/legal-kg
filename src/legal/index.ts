@@ -1,40 +1,48 @@
-import { BabNode, BagianNode, ParagrafNode } from './component';
 import { assertNever } from 'assert-never';
 import { getConfig } from '../config';
 import { DocumentNode, getDocumentPath } from './document';
 import { ComponentNode } from './component';
+import { isString, isUndefined } from 'lodash';
+import { safeParseInt } from '../command/convert/pdf_data_to_json/parse_key_from_spans';
 
 export type LegalNode = DocumentNode | ComponentNode;
 
 export function nodeToUri(node: LegalNode): string {
-  if (node.nodeType === 'ayat') return `${nodeToUri(node.parentAyatSetNode)}/${node.key}`;
+  if (node.nodeType === 'ayat')
+    return `${nodeToUri(node.parentAyatSetNode)}/${padStartIfNumber(node.key)}`;
   if (node.nodeType === 'ayatSet') return `${nodeToUri(node.parentPasalVersionNode)}/ayat`;
-  if (node.nodeType === 'bab') return `${nodeToUri(node.parentBabSetNode)}/${node.key}`;
+  if (node.nodeType === 'bab')
+    return `${nodeToUri(node.parentBabSetNode)}/${padStartIfNumber(node.key)}`;
   if (node.nodeType === 'babSet') return `${nodeToUri(node.parentDocumentNode)}/bab`;
-  if (node.nodeType === 'bagian') return `${nodeToUri(node.parentBagianSetNode)}/${node.key}`;
+  if (node.nodeType === 'bagian')
+    return `${nodeToUri(node.parentBagianSetNode)}/${padStartIfNumber(node.key)}`;
   if (node.nodeType === 'bagianSet') return `${nodeToUri(node.parentBabNode)}/bagian`;
   if (node.nodeType === 'document')
     return `${getConfig().uriBase}/document/${getDocumentPath(node)}`;
-  if (node.nodeType === 'paragraf') return `${nodeToUri(node.parentParagrafSetNode)}/${node.key}`;
+  if (node.nodeType === 'paragraf')
+    return `${nodeToUri(node.parentParagrafSetNode)}/${padStartIfNumber(node.key)}`;
   if (node.nodeType === 'paragrafSet') return `${nodeToUri(node.parentBagianNode)}/paragraf`;
-  if (node.nodeType === 'pasal') return `${nodeToUri(node.parentNode)}/pasal/${node.key}`;
-  if (node.nodeType === 'pasalSet')
-    return `${nodeToUri(pasalSetParentNodeToDocumentNode(node.parentNode))}`;
+  if (node.nodeType === 'pasal')
+    return `${nodeToUri(node.parentNode)}/pasal/${padStartIfNumber(node.key)}`;
+  if (node.nodeType === 'pasalSet') return `${nodeToUri(node.parentNode)}/pasals`;
   if (node.nodeType === 'pasalVersion')
-    return `${nodeToUri(node.parentPasalNode)}/version/${node.timeCreatedEpoch}`;
-  if (node.nodeType === 'point') return `${nodeToUri(node.parentPointSetNode)}/${node.key}`;
+    return `${nodeToUri(node.parentPasalNode)}/version/${padStartIfNumber(node.timeCreatedEpoch, {
+      pad: 10,
+    })}`;
+  if (node.nodeType === 'point')
+    return `${nodeToUri(node.parentPointSetNode)}/${padStartIfNumber(node.key)}`;
   if (node.nodeType === 'pointSet') return `${nodeToUri(node.parentNode)}/point`;
   if (node.nodeType === 'text') return `${nodeToUri(node.parentNode)}/${node.textName}`;
   assertNever(node);
 }
 
-function pasalSetParentNodeToDocumentNode(node: BabNode | BagianNode | ParagrafNode): DocumentNode {
-  if (node.nodeType === 'bab') return node.parentBabSetNode.parentDocumentNode;
-  if (node.nodeType === 'bagian')
-    return pasalSetParentNodeToDocumentNode(node.parentBagianSetNode.parentBabNode);
-  if (node.nodeType === 'paragraf')
-    return pasalSetParentNodeToDocumentNode(node.parentParagrafSetNode.parentBagianNode);
-  assertNever(node);
+function padStartIfNumber(x: string | number, arg?: { pad: number }): string {
+  if (isString(x)) {
+    const xNumber = safeParseInt(x);
+    if (isUndefined(xNumber)) return x;
+    return `${xNumber}`.padStart(arg?.pad ?? 4, '0');
+  }
+  return `${x}`.padStart(arg?.pad ?? 4, '0');
 }
 
 export function getOntologyBaseUri(): string {
