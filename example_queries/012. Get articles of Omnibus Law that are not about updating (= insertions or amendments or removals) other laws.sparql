@@ -1,0 +1,30 @@
+PREFIX legal: <http://example.org/legal/ontology/>
+
+SELECT DISTINCT ?latestPasalVersion
+WHERE {
+  {
+    SELECT ?pasal (MAX(?pasalVersion) as ?latestPasalVersion) 
+    WHERE {
+      ?pasal legal:partOf+ <http://example.org/legal/document/uu/2020/11>.
+      ?pasal legal:pasalHasPasalVersion ?pasalVersion .
+    }
+    GROUP BY ?pasal
+  }
+  
+  FILTER NOT EXISTS {
+    ?point legal:partOf+ ?latestPasalVersion . 
+    ?point a legal:Point .
+    {
+    	?point legal:pointUpdatePasalVersion ?amendedPasalVersion
+    }
+    UNION
+        {
+    	?point legal:pointInsertPasalVersion ?amendedPasalVersion
+    }
+    UNION
+    {
+    	?point legal:pointDeletePasalVersion ?amendedPasalVersion
+    }
+  }
+}
+ORDER BY ?latestPasalVersion
