@@ -53,3 +53,4 @@ async function _getQueryResult(query: Query, sources: string[]): Promise<string>
   }
   throw Error('unknown result type');
 }
+// TODO: query using fuseki

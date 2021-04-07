@@ -15,6 +15,7 @@ WHERE {
   ?deletingPoint legal:partOf+ ?latestPasalVersion .
   ?deletingPoint legal:pointDeletePasalVersion ?deletedPasalVersion .
   ?deletedPasal legal:pasalHasPasalVersion ?deletedPasalVersion .
+  <http://example.org/legal/document/uu/2003/13> legal:documentHasPasal ?deletedPasal .
   
 }
 ORDER BY 

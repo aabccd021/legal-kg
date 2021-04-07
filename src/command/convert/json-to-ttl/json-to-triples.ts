@@ -210,7 +210,7 @@ function _pointToTriple(
     ];
   if (point.type === 'pasalUpdateAmenderPoint')
     return [
-      [point.node, 'pointUpdatePasal', point.updatedPasalVersion.node],
+      [point.node, 'pointUpdatePasalVersion', point.updatedPasalVersion.node],
       [
         point.updatedPasalVersion.node.parentPasalNode,
         'pasalHasPasalVersion',

@@ -51,7 +51,7 @@ export type LegalTriple = (
   | [PointNode, 'pointHasText', TextNode]
   | [
       PointNode,
-      'pointUpdatePasal' | 'pointDeletePasalVersion' | 'pointInsertPasalVersion',
+      'pointUpdatePasalVersion' | 'pointDeletePasalVersion' | 'pointInsertPasalVersion',
       PasalVersionNode
     ]
   | [PointSetNode, 'pointSetHasDescription', TextNode]
