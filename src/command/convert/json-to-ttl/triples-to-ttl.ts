@@ -1,4 +1,4 @@
-import { isNil, isNumber, isString, toPairs, compact, upperFirst } from 'lodash';
+import { isNil, isNumber, isString, toPairs, compact, upperFirst, chain } from 'lodash';
 import * as n3 from 'n3';
 import { LegalTriple } from './triple';
 import _ from 'lodash';
@@ -38,7 +38,10 @@ export function triplesToTtl(triples: LegalTriple[]): string {
   console.log(`${allQuads.length} triples generated`);
 
   const ttlStr = new n3.Writer({ prefixes }).quadsToString(allQuads);
-  const processedTtlStr = ttlStr.replaceAll(`<${rdfType}>`, 'a');
+  const processedTtlStr = chain(ttlStr.replaceAll(`<${rdfType}>`, 'a').split('\n'))
+    .uniq()
+    .join('\n')
+    .value();
   const prefixStr = toPairs(prefixes)
     .map(([short, prefix]) => `@prefix ${short}: <${prefix}> .`)
     .join('\n');

@@ -22,16 +22,13 @@ import {
   Text,
   AyatSet,
   Reference,
-  BabSetNode,
   BabSet,
   BagianSet,
-  BagianSetNode,
   ParagrafSet,
   ParagrafSetNode,
   PasalSet,
   PasalSetNode,
   PasalVersionNode,
-  AyatSetNode,
   AyatNode,
   TextNode,
 } from '../../../legal/component';
@@ -46,14 +43,13 @@ export function yamlToTriples({ node: _node, babSet }: Document): LegalTriple[] 
 function babSetToTriple(parentDocumentNode: DocumentNode, babSet: BabSet): LegalTriple[] {
   return [
     [parentDocumentNode, 'documentHasBabSet', babSet.node],
-    ...flatMap(babSet.elements, babToTripleWith(babSet.node)),
+    ...flatMap(babSet.elements, babToTriple),
   ];
 }
 
-const babToTripleWith = curry(babToTriple);
-function babToTriple(parentBabSetNode: BabSetNode, bab: Bab): LegalTriple[] {
+function babToTriple(bab: Bab): LegalTriple[] {
   return [
-    [parentBabSetNode, 'babSetHasBab', bab.node],
+    [bab.node.parentBabSetNode, 'babSetHasBab', bab.node],
     [bab.node, 'babHasKey', bab.node.key],
     [bab.node, 'babHasTitle', bab.title],
     ...(bab.content.type === 'bagianSet'
@@ -65,14 +61,13 @@ function babToTriple(parentBabSetNode: BabSetNode, bab: Bab): LegalTriple[] {
 function bagianSetToTriple(parentBabNode: BabNode, bagianSet: BagianSet): LegalTriple[] {
   return [
     [parentBabNode, 'babHasBagianSet', bagianSet.node],
-    ...flatMap(bagianSet.elements, bagianToTripleWith(bagianSet.node)),
+    ...flatMap(bagianSet.elements, bagianToTriple),
   ];
 }
 
-const bagianToTripleWith = curry(bagianToTriple);
-function bagianToTriple(parentBagianSetNode: BagianSetNode, bagian: Bagian): LegalTriple[] {
+function bagianToTriple(bagian: Bagian): LegalTriple[] {
   return [
-    [parentBagianSetNode, 'bagianSetHasBagian', bagian.node],
+    [bagian.node.parentBagianSetNode, 'bagianSetHasBagian', bagian.node],
     [bagian.node, 'bagianHasKey', bagian.node.key],
     [bagian.node, 'bagianHasTitle', bagian.title],
     ...(bagian.content.type === 'paragrafSet'
@@ -88,17 +83,13 @@ function paragrafSetToTriple(
   const paragrafSetNode: ParagrafSetNode = { nodeType: 'paragrafSet', parentBagianNode };
   return [
     [parentBagianNode, 'bagianHasParagrafSet', paragrafSetNode],
-    ...flatMap(paragrafSet.elements, paragrafToTripleWith(paragrafSetNode)),
+    ...flatMap(paragrafSet.elements, paragrafToTriple),
   ];
 }
 
-const paragrafToTripleWith = curry(paragrafToTriple);
-function paragrafToTriple(
-  parentParagrafSetNode: ParagrafSetNode,
-  paragraf: Paragraf
-): LegalTriple[] {
+function paragrafToTriple(paragraf: Paragraf): LegalTriple[] {
   return [
-    [parentParagrafSetNode, 'paragrafSetHasParagraf', paragraf.node],
+    [paragraf.node.parentParagrafSetNode, 'paragrafSetHasParagraf', paragraf.node],
     [paragraf.node, 'paragrafHasKey', paragraf.node.key],
     [paragraf.node, 'paragrafHasTitle', paragraf.title],
     ...pasalSetToTriple(paragraf.node, paragraf.pasalSet),
@@ -155,14 +146,13 @@ function pasalVersionContentToTriple(content: PointSet | Text | AyatSet): LegalT
 function ayatSetToTriple(ayatSet: AyatSet): LegalTriple[] {
   return [
     [ayatSet.node.parentPasalVersionNode, 'pasalVersionHasAyatSet', ayatSet.node],
-    ...flatMap(ayatSet.elements, ayatToTripleWith(ayatSet.node)),
+    ...flatMap(ayatSet.elements, ayatToTriple),
   ];
 }
 
-const ayatToTripleWith = curry(ayatToTriple);
-function ayatToTriple(parentAyatSetNode: AyatSetNode, ayat: Ayat): LegalTriple[] {
+function ayatToTriple(ayat: Ayat): LegalTriple[] {
   return [
-    [parentAyatSetNode, 'ayatSetHasAyat', ayat.node],
+    [ayat.node.parentAyatSetNode, 'ayatSetHasAyat', ayat.node],
     [ayat.node, 'ayatHasKey', ayat.node.key],
     ...(ayat.content.type === 'pointSet'
       ? pointSetToTriple(ayat.content)
@@ -174,7 +164,7 @@ function pointSetToTriple(pointSet: PointSet): LegalTriple[] {
   return [
     _pointSetToTriple(pointSet.node.parentNode, pointSet.node),
     ...textToTriple(pointSet.description),
-    ...flatMap(pointSet.elements, pointToTripleWith(pointSet.node)),
+    ...flatMap(pointSet.elements, pointToTriple),
   ];
 }
 
@@ -189,13 +179,11 @@ function _pointSetToTriple(
   assertNever(parentNode);
 }
 
-const pointToTripleWith = curry(pointToTriple);
 function pointToTriple(
-  parentPointSetNode: PointSetNode,
   point: Point | PasalDeleteAmenderPoint | PasalUpdateAmenderPoint | PasalInsertAmenderPoint
 ): LegalTriple[] {
   return [
-    [parentPointSetNode, 'pointSetHasPoint', point.node],
+    [point.node.parentPointSetNode, 'pointSetHasPoint', point.node],
     [point.node, 'pointHasKey', point.node.key],
     ..._pointToTriple(point),
   ];
