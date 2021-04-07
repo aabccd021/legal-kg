@@ -1,9 +1,7 @@
 PREFIX legal: <http://example.org/legal/ontology/>
 
-SELECT DISTINCT ?ayat (GROUP_CONCAT(?xText; separator='\n') AS ?text)
+SELECT ?x
 WHERE {
-  SELECT ?ayat ?xText
-  WHERE {
   {
     SELECT ?pasal (MAX(?pasalVersion) as ?latestPasalVersion) 
     WHERE {
@@ -12,13 +10,7 @@ WHERE {
       ?pasal legal:pasalHasPasalVersion ?pasalVersion .
     }
     GROUP BY ?pasal
-  	}
-	?ayat legal:partOf* ?latestPasalVersion .
-    ?ayat legal:ayatHasKey 1 .
-    ?ayatChild legal:partOf* ?ayat .
-    ?ayatChild ?p ?textNode .
-    ?textNode legal:textHasTextString ?xText .
   }
-  ORDER BY(?ayat)
+  ?x legal:partOf* ?latestPasalVersion .
+  ?x legal:ayatHasKey 1 .
 }
-GROUP BY ?ayat
