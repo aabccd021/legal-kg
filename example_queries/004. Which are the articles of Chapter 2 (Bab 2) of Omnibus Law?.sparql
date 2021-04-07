@@ -1,6 +1,6 @@
 PREFIX legal: <http://example.org/legal/ontology/>
 
-SELECT ?pasal ?pasalVersion
+SELECT ?latestPasalVersion
 WHERE {
   {
     SELECT ?pasal (MAX(?pasalVersion) as ?latestPasalVersion) 
@@ -13,4 +13,3 @@ WHERE {
     GROUP BY ?pasal
   }
 }
-ORDER BY ?pasal

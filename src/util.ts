@@ -73,14 +73,6 @@ export function toValue<T, K extends keyof T>(key: K): (obj: T) => T[K] {
   };
 }
 
-export async function sequential<T>(promises: Promise<T>[]): Promise<T[]> {
-  return await reduce<Promise<T>, Promise<T[]>>(
-    promises,
-    async (prev, curr) => Promise.resolve([...(await prev), await curr]),
-    Promise.resolve([])
-  );
-}
-
 export function writeFile(path: string) {
   return function write(content: string): void {
     return writeFileSync(path, content);

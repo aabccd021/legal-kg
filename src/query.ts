@@ -4,13 +4,15 @@ import * as fs from 'fs';
 import path from 'path';
 import { getDocumentData, nodeToFile } from './data';
 import { DocumentNode, nodeToName } from './legal/document';
-import { joinWith, sequential, writeFile } from './util';
 
 export async function query(args: { legalDocPath?: string }): Promise<void> {
   const sparqlFileDirPath = 'example_queries';
   const queryArr = fs.readdirSync(sparqlFileDirPath).map(fileNameToQueryWith(sparqlFileDirPath));
   if (!isUndefined(args.legalDocPath)) throw Error('TODO');
-  await sequential(getDocumentData('ttl').map(queryNodeWith(queryArr)));
+  for (const node of getDocumentData('ttl')) {
+    console.log(`Querying ${nodeToName(node)}`);
+    await queryNodeWith(queryArr, node);
+  }
 }
 
 type Query = { str: string; name: string };
@@ -24,16 +26,17 @@ function fileNameToQuery(sparqlFileDirPath: string, fileName: string): Query {
 }
 
 const queryNodeWith = curry(queryNode);
-function queryNode(queryArr: Query[], node: DocumentNode): Promise<void> {
-  console.log(`Querying ${nodeToName(node)}`);
-  return sequential(queryArr.map(toQueryResultWith(node)))
-    .then(joinWith('\n'))
-    .then(writeFile(nodeToFile('query_result', node).path));
+async function queryNode(queryArr: Query[], node: DocumentNode): Promise<void> {
+  let results: string[] = [];
+  for (const query of queryArr) {
+    console.time(`    ${query.name}`);
+    results = [...results, await toQueryResult(node, query)];
+    console.timeEnd(`    ${query.name}`);
+  }
+  fs.writeFileSync(nodeToFile('query_result', node).path, results.join('\n'));
 }
 
-const toQueryResultWith = curry(toQueryResult);
 function toQueryResult(node: DocumentNode, query: Query): Promise<string> {
-  console.log(`    ${query.name}`);
   return _getQueryResult(query, [nodeToFile('ttl', node).path]);
 }
 
@@ -42,7 +45,7 @@ async function _getQueryResult(query: Query, sources: string[]): Promise<string>
   if (result.type == 'bindings') {
     const bindings = await result.bindings();
     const content = compact(bindings)
-      .map((y) => result.variables.map((x) => `| |${x}| ${y.get(x).value}|`).join('\n'))
+      .map((y) => result.variables.map((x) => `| |${x}| ${y.get(x)?.value}|`).join('\n'))
       .map((resultStr, idx) => `| ${idx} | | |\n${resultStr}`)
       .join('\n');
     const contentTable = isEmpty(content) ? 'empty result' : `\n| | | |\n|-|-|-|\n${content}`;
