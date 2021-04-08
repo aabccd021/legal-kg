@@ -4,7 +4,13 @@ PREFIX owl: <http://www.w3.org/2002/07/owl#>
 SELECT ?law ?numOfUpdates ?pasal (MAX(?pasalVersion) as ?latestPasalVersion) WHERE {
   {
     SELECT ?law (COUNT(*) AS ?numOfUpdates) WHERE {
-      ?point legal:partOf+ <http://example.org/legal/document/uu/2020/11> .
+      {
+        SELECT ?pasal (MAX(?pasalVersion) as ?latestPasalVersion) WHERE {
+          ?pasal legal:partOf+ <http://example.org/legal/document/uu/2020/11>.
+          ?pasal legal:pasalHasPasalVersion ?pasalVersion .
+        } GROUP BY ?pasal
+      }
+      ?point legal:partOf+ ?latestPasalVersion .
       { ?point legal:pointUpdatePasalVersion ?amendedPasalVersion }
       UNION { ?point legal:pointInsertPasalVersion ?amendedPasalVersion }
       UNION { ?point legal:pointDeletePasalVersion ?amendedPasalVersion }
