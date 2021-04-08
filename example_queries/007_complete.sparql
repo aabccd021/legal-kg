@@ -1,0 +1,10 @@
+PREFIX legal: <http://example.org/legal/ontology/>
+
+SELECT ?insertingPoint ?insertedPasal ?version ?text WHERE {
+  ?insertingPoint legal:partOf+ <http://example.org/legal/document/uu/2020/11>.
+  ?insertingPoint legal:pointInsertPasalVersion ?insertedPasalVersion .
+  ?insertedPasalVersion legal:partOf+ <http://example.org/legal/document/uu/2003/13> .
+  ?insertedPasalVersion legal:pasalVersionHasCreatedTimeEpoch ?version .
+  ?insertedPasal legal:pasalHasPasalVersion ?insertedPasalVersion .
+  ?insertedPasalVersion legal:pasalVersionHasRawText ?text .
+}
