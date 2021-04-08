@@ -2,6 +2,7 @@ PREFIX legal: <http://example.org/legal/ontology/>
 
 SELECT ?x ?text
 WHERE {
+  ?pasal legal:partOf+ <http://example.org/legal/document/uu/2020/11>.
   ?pasal legal:pasalHasKey 2 .
   ?x legal:partOf* ?pasal .
   ?x legal:ayatHasKey 1 .
