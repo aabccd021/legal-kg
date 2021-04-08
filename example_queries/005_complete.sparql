@@ -1,8 +1,8 @@
 PREFIX legal: <http://example.org/legal/ontology/>
 
 SELECT 
-	?insertingPoint 
 	?ayat
+  ?text
 WHERE {
   {
     SELECT 
@@ -17,8 +17,9 @@ WHERE {
   ?insertingPoint legal:partOf+ ?latestPasalVersion .
   ?insertingPoint legal:pointInsertPasalVersion ?insertedPasalVersion .
   ?ayat legal:partOf+ ?insertedPasalVersion .
-  ?ayat a legal:Ayat .
+  ?ayat legal:ayatHasRawText ?text
+  FILTER REGEX(str(?text), "kompensasi")
+  FILTER REGEX(str(?text), "buruh")
 }
 ORDER BY
-	?insertingPoint
 	?ayat
