@@ -592,3 +592,5 @@ function spansToText(
 export function spanToStr(span: Span): string {
   return span.str;
 }
+
+// TODO: masih ada "Pasal" di isi

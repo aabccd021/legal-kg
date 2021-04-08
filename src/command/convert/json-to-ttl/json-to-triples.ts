@@ -9,7 +9,7 @@ import {
   PasalVersion,
 } from '../../../legal/component';
 import assertNever from 'assert-never';
-import { flatMap, curry, map } from 'lodash';
+import { flatMap, curry, map, chain } from 'lodash';
 import {
   Bab,
   BabNode,
@@ -132,8 +132,49 @@ function pasalVersionToTriple(pasalVersion: PasalVersion): LegalTriple[] {
   return [
     [pasalVersion.node, 'pasalVersionHasState', pasalVersion.node.state],
     [pasalVersion.node, 'pasalVersionHasCreatedTimeEpoch', pasalVersion.node.timeCreatedEpoch],
+    [pasalVersion.node, 'pasalVersionHasRawText', componentToRawText(pasalVersion)],
     ...pasalVersionContentToTriple(pasalVersion.content),
   ];
+}
+
+function componentToRawText(
+  comp:
+    | PasalVersion
+    | PointSet
+    | Text
+    | AyatSet
+    | Point
+    | PasalDeleteAmenderPoint
+    | PasalUpdateAmenderPoint
+    | PasalInsertAmenderPoint
+): string {
+  if (comp.type === 'pasalVersion') return componentToRawText(comp.content);
+  if (comp.type === 'text') return comp.textString;
+  if (comp.type === 'ayatSet') {
+    return comp.elements
+      .map((ayat) => `(${ayat.node.key}). ${componentToRawText(ayat.content)}`)
+      .join('\n');
+  }
+  if (comp.type === 'pointSet') {
+    const content = comp.elements.map((point) => componentToRawText(point)).join('\n');
+    return `${componentToRawText(comp.description)}\n${content}\n`;
+  }
+  if (comp.type === 'point') {
+    return `${comp.node.key}. ${componentToRawText(comp.content)}`;
+  }
+  if (comp.type === 'pasalDeleteAmenderPoint') {
+    return `${comp.node.key}. Pasal ${comp.deletedPasalVersionNode.parentPasalNode.key} dihapus.`;
+  }
+  if (comp.type === 'pasalInsertAmenderPoint') {
+    const content = chain(comp.insertedPasalVersionArr).map(componentToRawText).join('\n').value();
+    return `${comp.node.key}. ${componentToRawText(comp.description)}\n${content}`;
+  }
+  if (comp.type === 'pasalUpdateAmenderPoint') {
+    return `${comp.node.key}. ${componentToRawText(comp.description)}\n${componentToRawText(
+      comp.updatedPasalVersion
+    )}`;
+  }
+  assertNever(comp);
 }
 
 function pasalVersionContentToTriple(content: PointSet | Text | AyatSet): LegalTriple[] {

@@ -46,6 +46,7 @@ export type LegalTriple = (
   | [PasalVersionNode, 'pasalVersionHasState', 'exists' | 'deleted']
   | [PasalVersionNode, 'pasalVersionHasCreatedTimeEpoch', number]
   | [PasalVersionNode, 'pasalVersionHasText', TextNode]
+  | [PasalVersionNode, 'pasalVersionHasRawText', string]
   | [PointNode, 'pointHasKey', string | number]
   | [PointNode, 'pointHasPointSet', PointSetNode]
   | [PointNode, 'pointHasText', TextNode]

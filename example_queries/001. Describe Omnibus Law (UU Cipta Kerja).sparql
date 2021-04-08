@@ -1,5 +1,0 @@
-PREFIX legal: <http://example.org/legal/ontology/>
-
-SELECT DISTINCT * WHERE {
-  <http://example.org/legal/document/uu/2020/11> ?p ?o .
-}
