@@ -21,6 +21,7 @@ export type LegalTriple = (
   | [AyatNode, 'ayatHasKey', number]
   | [AyatNode, 'ayatHasPointSet', PointSetNode]
   | [AyatNode, 'ayatHasText', TextNode]
+  | [AyatNode, 'ayatHasRawText', string]
   | [AyatSetNode, 'ayatSetHasAyat', AyatNode]
   | [BabNode, 'babHasBagianSet', BagianSetNode]
   | [BabNode, 'babHasKey', number]

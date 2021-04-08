@@ -195,11 +195,14 @@ function ayatToTriple(ayat: Ayat): LegalTriple[] {
   return [
     [ayat.node.parentAyatSetNode, 'ayatSetHasAyat', ayat.node],
     [ayat.node, 'ayatHasKey', ayat.node.key],
+    [ayat.node, 'ayatHasRawText', componentToRawText(ayat.content)],
     ...(ayat.content.type === 'pointSet'
       ? pointSetToTriple(ayat.content)
       : textToTriple(ayat.content)),
   ];
 }
+
+// TODO: make all to triple in one function
 
 function pointSetToTriple(pointSet: PointSet): LegalTriple[] {
   return [
