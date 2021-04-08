@@ -1,0 +1,17 @@
+PREFIX legal: <http://example.org/legal/ontology/>
+
+SELECT ?type (COUNT(*) AS ?jumlah) WHERE {
+  {
+    ?point legal:partOf+ <http://example.org/legal/document/uu/2020/11> .
+    ?point legal:pointDeletePasalVersion ?pasal .
+    BIND("menghapus" AS ?type)
+  } UNION {
+    ?point legal:partOf+ <http://example.org/legal/document/uu/2020/11> .
+    ?point legal:pointInsertPasalVersion ?pasal .
+    BIND("menyisipkan" AS ?type)
+  } UNION {
+    ?point legal:partOf+ <http://example.org/legal/document/uu/2020/11> .
+    ?point legal:pointUpdatePasalVersion ?pasal .
+    BIND("mengubah" AS ?type)
+  }
+} GROUP BY ?type
