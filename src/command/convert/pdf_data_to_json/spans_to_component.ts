@@ -361,14 +361,17 @@ function spansToAmendDeletePasalPoint(
   return {
     type: 'pasalDeleteAmenderPoint',
     node: { nodeType: 'point', parentPointSetNode, key: parseInt(pointKeyStr) },
-    deletedPasalVersionNode: {
-      nodeType: 'pasalVersion',
-      timeCreatedEpoch: 1,
-      state: 'deleted',
-      parentPasalNode: {
-        nodeType: 'pasal',
-        key: pasalKey,
-        parentNode: amendedDocumentNode,
+    deletedPasalVersion: {
+      type: 'pasalVersion',
+      node: {
+        nodeType: 'pasalVersion',
+        timeCreatedEpoch: 1,
+        state: 'deleted',
+        parentPasalNode: {
+          nodeType: 'pasal',
+          key: pasalKey,
+          parentNode: amendedDocumentNode,
+        },
       },
     },
   };

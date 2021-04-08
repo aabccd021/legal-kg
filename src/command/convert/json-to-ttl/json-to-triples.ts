@@ -9,7 +9,7 @@ import {
   PasalVersion,
 } from '../../../legal/component';
 import assertNever from 'assert-never';
-import { flatMap, curry, map, chain } from 'lodash';
+import { flatMap, curry, map, chain, isUndefined } from 'lodash';
 import {
   Bab,
   BabNode,
@@ -147,7 +147,9 @@ function componentToRawText(
     | PasalDeleteAmenderPoint
     | PasalUpdateAmenderPoint
     | PasalInsertAmenderPoint
+    | undefined
 ): string {
+  if (isUndefined(comp)) return '';
   if (comp.type === 'pasalVersion') return componentToRawText(comp.content);
   if (comp.type === 'text') return comp.textString;
   if (comp.type === 'ayatSet') {
@@ -163,7 +165,7 @@ function componentToRawText(
     return `${comp.node.key}. ${componentToRawText(comp.content)}`;
   }
   if (comp.type === 'pasalDeleteAmenderPoint') {
-    return `${comp.node.key}. Pasal ${comp.deletedPasalVersionNode.parentPasalNode.key} dihapus.`;
+    return `${comp.node.key}. Pasal ${comp.deletedPasalVersion.node.parentPasalNode.key} dihapus.`;
   }
   if (comp.type === 'pasalInsertAmenderPoint') {
     const content = chain(comp.insertedPasalVersionArr).map(componentToRawText).join('\n').value();
@@ -177,7 +179,10 @@ function componentToRawText(
   assertNever(comp);
 }
 
-function pasalVersionContentToTriple(content: PointSet | Text | AyatSet): LegalTriple[] {
+function pasalVersionContentToTriple(
+  content: PointSet | Text | AyatSet | undefined
+): LegalTriple[] {
+  if (isUndefined(content)) return [];
   if (content.type === 'pointSet') return pointSetToTriple(content);
   if (content.type === 'ayatSet') return ayatSetToTriple(content);
   if (content.type === 'text') return textToTriple(content);
@@ -240,17 +245,18 @@ function _pointToTriple(
 ): LegalTriple[] {
   if (point.type === 'pasalDeleteAmenderPoint')
     return [
-      [point.node, 'pointDeletePasalVersion', point.deletedPasalVersionNode],
+      [point.node, 'pointDeletePasalVersion', point.deletedPasalVersion.node],
       [
-        point.deletedPasalVersionNode.parentPasalNode,
+        point.deletedPasalVersion.node.parentPasalNode,
         'pasalHasPasalVersion',
-        point.deletedPasalVersionNode,
+        point.deletedPasalVersion.node,
       ],
       [
-        point.deletedPasalVersionNode.parentPasalNode.parentNode,
+        point.deletedPasalVersion.node.parentPasalNode.parentNode,
         'documentHasPasal',
-        point.deletedPasalVersionNode.parentPasalNode,
+        point.deletedPasalVersion.node.parentPasalNode,
       ],
+      ...pasalVersionToTriple(point.deletedPasalVersion),
     ];
   if (point.type === 'pasalUpdateAmenderPoint')
     return [

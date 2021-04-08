@@ -1,0 +1,11 @@
+PREFIX legal: <http://example.org/legal/ontology/>
+
+SELECT ?deletingPoint ?deletedPasal ?version ?text WHERE {
+  ?deletingPoint legal:partOf+ <http://example.org/legal/document/uu/2020/11>.
+  ?deletingPoint legal:pointDeletePasalVersion ?deletedPasalVersion .
+  ?deletedPasal legal:pasalHasPasalVersion ?deletedPasalVersion .
+  <http://example.org/legal/document/uu/2003/13> legal:documentHasPasal ?deletedPasal .
+  ?deletedPasal legal:pasalHasPasalVersion ?allPasalVersion .
+  ?allPasalVersion legal:pasalVersionHasRawText ?text .
+  ?allPasalVersion legal:pasalVersionHasCreatedTimeEpoch ?version .
+}

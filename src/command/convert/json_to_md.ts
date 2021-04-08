@@ -8,7 +8,7 @@ import {
 } from '../../legal/component';
 import assertNever from 'assert-never';
 import * as yaml from 'js-yaml';
-import { compact, curry, chain, repeat, isNil, flatMap } from 'lodash';
+import { compact, curry, chain, repeat, isNil, flatMap, isUndefined } from 'lodash';
 import { readFileSync, writeFileSync } from 'fs';
 import { toRoman } from 'roman-numerals';
 import { getDocumentData, nodeToFile } from '../../data';
@@ -156,6 +156,7 @@ function pasalToMd(pasal: Pasal): string {
 }
 
 function pasalVersionToMd({ content }: PasalVersion): string {
+  if (isUndefined(content)) return '';
   if (content.type === 'ayatSet') return content.elements.map(ayatToMd).join('\n');
   if (content.type === 'pointSet') return pointSetToMd(content);
   if (content.type === 'text') return textToMd(content);
@@ -201,8 +202,8 @@ function pointToMd(
     return `${indent}* [${point.node.key}.](${uri}) ${contentStr}`;
   }
   if (point.type === 'pasalDeleteAmenderPoint') {
-    const pasalUri = nodeToUri(point.deletedPasalVersionNode);
-    const pasalKey = point.deletedPasalVersionNode.parentPasalNode.key;
+    const pasalUri = nodeToUri(point.deletedPasalVersion.node);
+    const pasalKey = point.deletedPasalVersion.node.parentPasalNode.key;
     return `* ${point.node.key}. [Pasal ${pasalKey}](${pasalUri}) dihapus.`;
   }
   if (point.type === 'pasalUpdateAmenderPoint') {

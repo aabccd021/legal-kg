@@ -191,7 +191,7 @@ export type Pasal = {
 export type PasalVersion = {
   type: 'pasalVersion';
   node: PasalVersionNode;
-  content: PointSet | Text | AyatSet;
+  content?: PointSet | Text | AyatSet;
 };
 
 export type PasalSet = {
@@ -229,7 +229,7 @@ export type Reference = {
 export type PasalDeleteAmenderPoint = {
   type: 'pasalDeleteAmenderPoint';
   node: PointNode;
-  deletedPasalVersionNode: PasalVersionNode;
+  deletedPasalVersion: PasalVersion;
 };
 
 export type PasalUpdateAmenderPoint = {
