@@ -1,0 +1,10 @@
+PREFIX legal: <http://example.org/legal/ontology/>
+
+SELECT ?latestPasalVersion WHERE {
+  {
+    SELECT ?pasal (MAX(?pasalVersion) as ?latestPasalVersion) WHERE {
+      ?pasal legal:partOf+ <http://example.org/legal/document/uu/2003/13>.
+      ?pasal legal:pasalHasPasalVersion ?pasalVersion .
+    } GROUP BY ?pasal
+  }
+}
