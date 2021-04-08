@@ -1,23 +1,14 @@
 PREFIX legal: <http://example.org/legal/ontology/>
 
-SELECT
-	?insertingPoint
-	?insertedPasalVersion
-WHERE {
+SELECT ?insertingPoint ?insertedPasalVersion ?text WHERE {
   {
-    SELECT
-    	?pasal 
-    	(MAX(?pasalVersion) as ?latestPasalVersion) 
-    WHERE {
+    SELECT ?pasal (MAX(?pasalVersion) as ?latestPasalVersion) WHERE {
       ?pasal legal:partOf+ <http://example.org/legal/document/uu/2020/11>.
       ?pasal legal:pasalHasPasalVersion ?pasalVersion .
-    }
-    GROUP BY ?pasal
+    } GROUP BY ?pasal
   }
   ?insertingPoint legal:partOf+ ?latestPasalVersion .
   ?insertingPoint legal:pointInsertPasalVersion ?insertedPasalVersion .
-  ?insertedPasalVersion legal:partOf+ <http://example.org/legal/document/uu/2003/13>
+  ?insertedPasalVersion legal:partOf+ <http://example.org/legal/document/uu/2003/13> .
+  ?insertedPasalVersion legal:pasalVersionHasRawText ?text .
 }
-ORDER BY 
-	?insertingPoint
-	?insertedPasalVersion

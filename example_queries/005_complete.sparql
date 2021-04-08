@@ -1,18 +1,11 @@
 PREFIX legal: <http://example.org/legal/ontology/>
 
-SELECT 
-	?ayat
-  ?text
-WHERE {
+SELECT ?ayat ?text WHERE {
   {
-    SELECT 
-    	?pasal 
-    	(MAX(?pasalVersion) as ?latestPasalVersion) 
-    WHERE {
+    SELECT ?pasal (MAX(?pasalVersion) as ?latestPasalVersion) WHERE {
       ?pasal legal:partOf+ <http://example.org/legal/document/uu/2020/11>.
       ?pasal legal:pasalHasPasalVersion ?pasalVersion .
-    }
-    GROUP BY ?pasal
+    } GROUP BY ?pasal
   }
   ?insertingPoint legal:partOf+ ?latestPasalVersion .
   ?insertingPoint legal:pointInsertPasalVersion ?insertedPasalVersion .
@@ -21,5 +14,3 @@ WHERE {
   FILTER REGEX(str(?text), "kompensasi")
   FILTER REGEX(str(?text), "buruh")
 }
-ORDER BY
-	?ayat
