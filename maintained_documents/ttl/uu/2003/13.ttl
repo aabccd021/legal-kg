@@ -1,4 +1,5 @@
 @prefix legal: <http://example.org/legal/ontology/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
 <http://example.org/legal/document/uu/2003/13> legal:documentHasBabSet <http://example.org/legal/document/uu/2003/13/bab> .
 <http://example.org/legal/document/uu/2003/13/bab> legal:babSetHasBab <http://example.org/legal/document/uu/2003/13/bab/0001> .

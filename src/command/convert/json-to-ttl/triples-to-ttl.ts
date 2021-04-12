@@ -34,7 +34,7 @@ function onto(predicate: string): n3.NamedNode<string> {
  */
 export function triplesToTtl(triples: LegalTriple[]): string {
   const ontologyBaseUri = getOntologyBaseUri();
-  const prefixes = { legal: `${ontologyBaseUri}/` };
+  const prefixes = { legal: `${ontologyBaseUri}/`, xsd: 'http://www.w3.org/2001/XMLSchema#' };
 
   const coreQuads = triples.map(tripleToQuad);
   const classTypeQuads = getClassTypeQuads(triples);
