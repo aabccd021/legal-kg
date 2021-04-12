@@ -1,5 +1,5 @@
 import assertNever from 'assert-never';
-import { chain, curry, isEmpty, isUndefined, keys, parseInt } from 'lodash';
+import { chain, curry, isEmpty, isUndefined, keys, map, parseInt } from 'lodash';
 import {
   Bab,
   Bagian,
@@ -14,7 +14,6 @@ import {
   Ayat,
   Text,
   PasalVersionNode,
-  BabSet,
   BabNode,
   BagianNode,
   ParagrafNode,
@@ -49,20 +48,15 @@ export type Context = {
 };
 
 export function spansToDocument(context: Context, spans: Span[]): Document {
-  return { node: context.documentNode, babSet: spansToBabSet(context, spans) };
-}
-
-function spansToBabSet(context: Context, spans: Span[]): BabSet {
   const babSetNode: BabSetNode = { nodeType: 'babSet', parentDocumentNode: context.documentNode };
+  const { keyToSpanMap } = extractSpans(context.keyIds.spanIdToBabKeyMap, spans);
   return {
-    type: 'babSet',
-    node: babSetNode,
-    elements: chain(spans)
-      .thru(extractSpansWith(context.keyIds.spanIdToBabKeyMap))
-      .thru(({ keyToSpanMap }) => keyToSpanMap)
-      .toPairs()
-      .map(spansToBabWith(context, babSetNode))
-      .value(),
+    node: context.documentNode,
+    babSet: {
+      type: 'babSet',
+      node: babSetNode,
+      elements: map(keyToSpanMap, spansToBabWith(context, babSetNode)),
+    },
   };
 }
 
@@ -87,7 +81,12 @@ function paragrafArrToParagrafSet(parentBagianNode: BagianNode, elements: Paragr
 }
 
 const spansToBabWith = curry(spansToBab);
-function spansToBab(context: Context, parentBabSetNode: BabSetNode, [key, spans]: KeySpans): Bab {
+function spansToBab(
+  context: Context,
+  parentBabSetNode: BabSetNode,
+  spans: Span[],
+  key: string
+): Bab {
   // TODO use safe parse int
   const babNode: BabNode = { nodeType: 'bab', key: parseInt(key), parentBabSetNode };
   const { spanIdMap, keySpansToComponent } = spanIdKeyMapOf<Bagian, Pasal, BagianSet, PasalSet>(
@@ -110,7 +109,12 @@ function spansToBab(context: Context, parentBabSetNode: BabSetNode, [key, spans]
 }
 
 const spansToBagianWith = curry(spansToBagian);
-function spansToBagian(parentBabNode: BabNode, context: Context, [key, spans]: KeySpans): Bagian {
+function spansToBagian(
+  parentBabNode: BabNode,
+  context: Context,
+  spans: Span[],
+  key: string
+): Bagian {
   const bagianNode: BagianNode = {
     nodeType: 'bagian',
     key: parseInt(key),
@@ -142,7 +146,8 @@ const spansToParagrafWith = curry(spansToParagraf);
 function spansToParagraf(
   parentBagianNode: BagianNode,
   context: Context,
-  [key, spans]: KeySpans
+  spans: Span[],
+  key: string
 ): Paragraf {
   const paragrafNode: ParagrafNode = {
     nodeType: 'paragraf',
@@ -157,14 +162,13 @@ function spansToParagraf(
     pasalSet: {
       type: 'pasalSet',
       node: { nodeType: 'pasalSet', parentNode: paragrafNode },
-      elements: chain(keyToSpanMap).toPairs().map(spansToPasalWith(context)).value(),
+      elements: map(keyToSpanMap, spansToPasalWith(context)),
     },
   };
 }
 
 const spansToPasalWith = curry(spansToPasal);
-function spansToPasal(context: Context, keySpans: KeySpans): Pasal {
-  const [key] = keySpans;
+function spansToPasal(context: Context, spans: Span[], key: string): Pasal {
   const pasalNode: PasalNode = {
     nodeType: 'pasal',
     key: parseInt(key),
@@ -180,7 +184,8 @@ function spansToPasal(context: Context, keySpans: KeySpans): Pasal {
         timeCreatedEpoch: 0,
         isAmendedPasal: false,
       },
-      keySpans
+      spans,
+      key
     ),
   };
 }
@@ -351,7 +356,8 @@ function spansToAyat(parentAyatSetNode: AyatSetNode, context: Context, keySpans:
 
 function spansToAmendDeletePasalPoint(
   amendedContext: AmendedContext,
-  [pointKeyStr, spans]: KeySpans
+  spans: Span[],
+  pointKeyStr: string
 ): PasalDeleteAmenderPoint | undefined {
   const { context, amendedDocumentNode, parentPointSetNode } = amendedContext;
   const firstSpanId = spans[0]?.id;
@@ -379,7 +385,8 @@ function spansToAmendDeletePasalPoint(
 
 function spansToAmendUpdatePasalPoint(
   amendedContext: AmendedContext,
-  [pointKeyStr, spans]: KeySpans
+  spans: Span[],
+  pointKeyStr: string
 ): PasalUpdateAmenderPoint | undefined {
   const { context, amendedDocumentNode, parentPointSetNode } = amendedContext;
   const firstSpanId = spans[0]?.id;
@@ -413,14 +420,16 @@ function spansToAmendUpdatePasalPoint(
         timeCreatedEpoch: 1,
         isAmendedPasal: true,
       },
-      [pasalKey, spans.slice(pasalTitleIdx)]
+      spans.slice(pasalTitleIdx),
+      pasalKey
     ),
   };
 }
 
 function spansToAmendInsertPasalPoint(
   amendedContext: AmendedContext,
-  [pointKeyStr, spans]: KeySpans
+  spans: Span[],
+  pointKeyStr: string
 ): PasalInsertAmenderPoint | undefined {
   const { context, amendedDocumentNode, parentPointSetNode } = amendedContext;
   const firstSpanId = spans[0]?.id;
@@ -461,7 +470,6 @@ function spansToAmendInsertPasalPoint(
       .slice(firstPasalTitleIdx)
       .reduce(mapSpanArrToPasalKeyWith(pasalData), { record: {} })
       .thru(({ record }) => record)
-      .toPairs()
       .map(
         keySpansToPasalVersionWith({
           parentDocumentNode: amendedDocumentNode,
@@ -487,7 +495,8 @@ function keySpansToPasalVersion(
     context: Context;
     isAmendedPasal: boolean;
   },
-  [key, spans]: KeySpans
+  spans: Span[],
+  key: string
 ): PasalVersion {
   const pasalVersionNode: PasalVersionNode = {
     nodeType: 'pasalVersion',
@@ -532,7 +541,6 @@ function spansToAmendedPointSet(
     node: pointSetNode,
     description: spansToText(pointSetNode, 'description', preKeySpans),
     elements: chain(keyToSpanMap)
-      .toPairs()
       .map(
         spansToAmendedPointWith({ context, amendedDocumentNode, parentPointSetNode: pointSetNode })
       )
@@ -544,14 +552,15 @@ function spansToAmendedPointSet(
 const spansToAmendedPointWith = curry(spansToAmendedPoint);
 function spansToAmendedPoint(
   amendedContext: AmendedContext,
-  keySpans: KeySpans
+  spans: Span[],
+  key: string
 ): PasalDeleteAmenderPoint | PasalUpdateAmenderPoint | PasalInsertAmenderPoint | undefined {
   const result =
-    spansToAmendDeletePasalPoint(amendedContext, keySpans) ??
-    spansToAmendUpdatePasalPoint(amendedContext, keySpans) ??
-    spansToAmendInsertPasalPoint(amendedContext, keySpans);
+    spansToAmendDeletePasalPoint(amendedContext, spans, key) ??
+    spansToAmendUpdatePasalPoint(amendedContext, spans, key) ??
+    spansToAmendInsertPasalPoint(amendedContext, spans, key);
   if (isUndefined(result)) {
-    const firstSpan = keySpans[1][0];
+    const firstSpan = spans[0];
     console.log(
       `Unparsed amend: id:${firstSpan?.id}, pageNum:${firstSpan?.pageNum}, str:${firstSpan?.str}`
     );

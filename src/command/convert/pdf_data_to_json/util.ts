@@ -1,5 +1,5 @@
 import { Component } from '../../../legal/component';
-import { chain, curry, isUndefined, min } from 'lodash';
+import { chain, curry, isUndefined, map, min } from 'lodash';
 import { Span, neverNum, lastOf } from '../../../util';
 import { SpanIdToComponentKeyMap } from './scan';
 import { Context, KeySpans } from './spans_to_component';
@@ -11,7 +11,7 @@ type SpansExtractResult = {
 };
 
 type KeyToSpanMap = { [key: number]: Span[] };
-type ToStructureWith<T extends Component> = (context: Context, keySpans: KeySpans) => T;
+type ToStructureWith<T extends Component> = (context: Context, spans: Span[], key: string) => T;
 type StructureUtil<U extends Component> = {
   spanIdMap: SpanIdToComponentKeyMap<number>;
   keySpansToComponent: (keySpans: KeySpans[]) => U;
@@ -35,14 +35,16 @@ export function spanIdKeyMapOf<
 }
 
 function transform<T extends Component, U extends Component>(
-  map1: [SpanIdToComponentKeyMap<number>, ToStructureWith<T>, (a: T[]) => U],
+  mapper: [SpanIdToComponentKeyMap<number>, ToStructureWith<T>, (a: T[]) => U],
   context: Context
 ): StructureUtil<U> {
+  const spanIdMap = mapper[0];
+  const toStructureWith = mapper[1];
+  const fn = mapper[2];
   return {
-    spanIdMap: map1[0],
-    keySpansToComponent: (keySpansTupleArr: KeySpans[]) => {
-      return map1[2](keySpansTupleArr.map(curry(map1[1])(context)));
-    },
+    spanIdMap,
+    keySpansToComponent: (keySpansTupleArr: KeySpans[]) =>
+      fn(map(keySpansTupleArr, ([key, spans]) => toStructureWith(context, spans, key))),
   };
 }
 
