@@ -43,7 +43,7 @@ function writeToJson(documentNode: DocumentNode): void {
   // const detectedDocument = rawJsonToJson(document);
   console.timeEnd(`TIME ${JSON.stringify(documentNode)} detect`);
 
-  writeFileSync(jsonFile.path, yaml.dump(document));
+  writeFileSync(jsonFile.path, yaml.dump(document, { lineWidth: 100 }));
 }
 
 type DocumentExtractedKey = 'preBab' | 'babs' | 'penjelasan';
