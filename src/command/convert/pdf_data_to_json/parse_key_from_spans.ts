@@ -113,3 +113,5 @@ function clean(str: string): string {
   if (str.includes('l')) return str.replace('l', '1');
   return str.trim();
 }
+
+// TODO: http://example.org/legal/document/uu/2020/11/pasal/0081/version/0000000000/point/0038
