@@ -7,6 +7,13 @@ import { safeParseInt } from '../command/convert/pdf_data_to_json/parse_key_from
 
 export type LegalNode = DocumentNode | ComponentNode;
 
+export type DateNode = {
+  nodeType: 'date';
+  date: number;
+  month: number;
+  year: number;
+};
+
 export function nodeToUri(node: LegalNode): string {
   if (node.nodeType === 'ayat')
     return `${nodeToUri(node.parentAyatSetNode)}/${padStartIfNumber(node.key)}`;
@@ -25,10 +32,12 @@ export function nodeToUri(node: LegalNode): string {
   if (node.nodeType === 'pasal')
     return `${nodeToUri(node.parentNode)}/pasal/${padPasalIfNumber(node.key)}`;
   if (node.nodeType === 'pasalSet') return `${nodeToUri(node.parentNode)}/pasals`;
-  if (node.nodeType === 'pasalVersion')
-    return `${nodeToUri(node.parentPasalNode)}/version/${padStartIfNumber(node.timeCreatedEpoch, {
-      pad: 10,
-    })}`;
+  if (node.nodeType === 'pasalVersion') {
+    const yearStr = padStartIfNumber(node.version.year, { pad: 4 });
+    const monthStr = padStartIfNumber(node.version.month, { pad: 2 });
+    const dateStr = padStartIfNumber(node.version.date, { pad: 2 });
+    return `${nodeToUri(node.parentPasalNode)}/version/${yearStr}${monthStr}${dateStr}`;
+  }
   if (node.nodeType === 'point')
     return `${nodeToUri(node.parentPointSetNode)}/${padStartIfNumber(node.key)}`;
   if (node.nodeType === 'pointSet') return `${nodeToUri(node.parentNode)}/point`;
@@ -36,7 +45,7 @@ export function nodeToUri(node: LegalNode): string {
   assertNever(node);
 }
 
-function padStartIfNumber(x: string | number, arg?: { pad: number }): string {
+export function padStartIfNumber(x: string | number, arg?: { pad: number }): string {
   if (isString(x)) {
     const xNumber = safeParseInt(x);
     if (isUndefined(xNumber)) return x;

@@ -9,7 +9,7 @@ import {
   PasalVersion,
 } from '../../../legal/component';
 import assertNever from 'assert-never';
-import { flatMap, curry, map, chain, isUndefined } from 'lodash';
+import { flatMap, curry, map, chain, isUndefined, compact } from 'lodash';
 import {
   Bab,
   BabNode,
@@ -36,8 +36,16 @@ import {
 import { Document, DocumentNode } from '../../../legal/document';
 import { LegalTriple } from './triple';
 
-export function yamlToTriples({ node: _node, babSet }: Document): LegalTriple[] {
-  return babSetToTriple(_node, babSet);
+export function yamlToTriples({ node, babSet, disahkan }: Document): LegalTriple[] {
+  return compact([
+    ...babSetToTriple(node, babSet),
+    [node, 'documentHasDisahkanDate', disahkan.date],
+    disahkan.pengesah ? [node, 'documentHasDisahkanPengesah', disahkan.pengesah] : undefined,
+    disahkan.location ? [node, 'documentHasDisahkanLocation', disahkan.location] : undefined,
+    disahkan.jabatanPengesah
+      ? [node, 'documentHasDisahkanJabatanPengesah', disahkan.jabatanPengesah]
+      : undefined,
+  ]);
 }
 
 function babSetToTriple(parentDocumentNode: DocumentNode, babSet: BabSet): LegalTriple[] {
@@ -131,7 +139,7 @@ function pasalToTriple(parentPasalSetNode: PasalSetNode, pasal: Pasal): LegalTri
 function pasalVersionToTriple(pasalVersion: PasalVersion): LegalTriple[] {
   return [
     [pasalVersion.node, 'pasalVersionHasState', pasalVersion.node.state],
-    [pasalVersion.node, 'pasalVersionHasCreatedTimeEpoch', pasalVersion.node.timeCreatedEpoch],
+    [pasalVersion.node, 'pasalVersionHasVersionDate', pasalVersion.node.version],
     [pasalVersion.node, 'pasalVersionHasRawText', componentToRawText(pasalVersion)],
     ...pasalVersionContentToTriple(pasalVersion.content),
   ];

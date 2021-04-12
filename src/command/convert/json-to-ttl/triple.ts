@@ -1,4 +1,4 @@
-import { LegalNode } from '../../../legal';
+import { DateNode, LegalNode } from '../../../legal';
 import {
   AyatNode,
   PasalNode,
@@ -34,6 +34,10 @@ export type LegalTriple = (
   | [BagianNode, 'bagianHasTitle', string]
   | [BagianSetNode, 'bagianSetHasBagian', BagianNode]
   | [DocumentNode, 'documentHasBabSet', BabSetNode]
+  | [DocumentNode, 'documentHasDisahkanDate', DateNode]
+  | [DocumentNode, 'documentHasDisahkanLocation', string]
+  | [DocumentNode, 'documentHasDisahkanPengesah', string]
+  | [DocumentNode, 'documentHasDisahkanJabatanPengesah', string]
   | [DocumentNode, 'documentHasPasal', PasalNode]
   | [ParagrafNode, 'paragrafHasKey', number]
   | [ParagrafNode, 'paragrafHasPasalSet', PasalSetNode]
@@ -45,7 +49,7 @@ export type LegalTriple = (
   | [PasalVersionNode, 'pasalVersionHasAyatSet', AyatSetNode]
   | [PasalVersionNode, 'pasalVersionHasPointSet', PointSetNode]
   | [PasalVersionNode, 'pasalVersionHasState', 'exists' | 'deleted']
-  | [PasalVersionNode, 'pasalVersionHasCreatedTimeEpoch', number]
+  | [PasalVersionNode, 'pasalVersionHasVersionDate', DateNode]
   | [PasalVersionNode, 'pasalVersionHasText', TextNode]
   | [PasalVersionNode, 'pasalVersionHasRawText', string]
   | [PointNode, 'pointHasKey', string | number]
@@ -61,4 +65,4 @@ export type LegalTriple = (
   | [TextNode, 'textHasTextString', string]
   | [TextNode, 'textReferencesLegal', LegalNode]
 ) &
-  [LegalNode, unknown, string | number | LegalNode];
+  [LegalNode, string, string | number | LegalNode | DateNode];

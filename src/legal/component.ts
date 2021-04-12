@@ -1,4 +1,4 @@
-import { LegalNode } from '.';
+import { DateNode, LegalNode } from '.';
 import { DocumentNode } from './document';
 
 /**
@@ -77,7 +77,7 @@ export type PasalNode = {
 
 export type PasalVersionNode = {
   nodeType: 'pasalVersion';
-  timeCreatedEpoch: number;
+  version: DateNode;
   state: 'exists' | 'deleted';
   parentPasalNode: PasalNode;
 };

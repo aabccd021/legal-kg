@@ -6,6 +6,7 @@ import { DataType } from '../../data';
 import path from 'path';
 import * as fs from 'fs';
 import { BabSet } from '../component';
+import { DateNode } from '..';
 
 /**
  * Scrapable Document
@@ -135,9 +136,9 @@ export function getScrapableDocumentLastPage(category: ScrapableDocumentCategory
 export type Document = {
   node: DocumentNode;
   penjelasan?: string[];
-  pengesahanText?: string;
   opText?: string;
   babSet: BabSet;
+  disahkan: Disahkan;
   _name?: string;
   _nomor?: number;
   _tahun?: number;
@@ -146,12 +147,8 @@ export type Document = {
   _tentang?: string;
   _salinan?: string;
   _memutuskan?: string;
-  _tempatDisahkan?: string;
-  _tanggalDisahkan?: string;
   _tempatDitetapkan?: string;
   _tanggalDitetapkan?: string;
-  _jabatanPengesah?: string;
-  _namaPengesah?: string;
   _tempatDiundangkan?: string;
   _tanggalDiundangkan?: string;
   _sekretaris?: string;
@@ -159,4 +156,11 @@ export type Document = {
   salinanSesuaiDenganAslinya?: string;
   // menimbang?: Metadata;
   // mengingat?: Metadata;
+};
+
+export type Disahkan = {
+  date: DateNode;
+  location: string;
+  pengesah?: string;
+  jabatanPengesah?: string;
 };

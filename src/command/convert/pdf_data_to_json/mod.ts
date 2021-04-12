@@ -1,13 +1,13 @@
 import { SpanOf } from '../../../util';
-import { DocumentNode } from '../../../legal/document/index';
+import { DocumentNode, Document, Disahkan } from '../../../legal/document/index';
 import { getDocumentData, nodeToFile } from '../../../data';
 import { readFileSync, writeFileSync } from 'fs';
 import { Accumulator, Span, toSpansWith } from '../../../util';
 import { babsSpansToKeyIds } from './scan';
 import { chain, isUndefined } from 'lodash';
-import { pasalKeyOfSpan } from './parse_key_from_spans';
+import { pasalKeyOfSpan, safeParseInt } from './parse_key_from_spans';
 import * as yaml from 'js-yaml';
-import { spansToDocument } from './spans_to_component';
+import { spansToBabSet, spansToMetadata } from './spans_to_component';
 
 function pdfDataToJson(): void {
   getDocumentData('pdf-data').forEach(writeToJson);
@@ -21,36 +21,66 @@ function writeToJson(documentNode: DocumentNode): void {
   const dataFile = nodeToFile('pdf-data', documentNode);
   const jsonFile = nodeToFile('yaml', documentNode);
   const pdfSpans: Span[] = JSON.parse(readFileSync(dataFile.path).toString());
-  console.timeEnd(`TIME ${JSON.stringify(documentNode)} init`);
-
-  console.time(`TIME ${JSON.stringify(documentNode)} spans`);
   const documentSpans = documentSpansOf(pdfSpans);
-  console.timeEnd(`TIME ${JSON.stringify(documentNode)} spans`);
-
-  console.time(`TIME ${JSON.stringify(documentNode)} hasAmendPasal`);
   const hasAmendPasal = spansHasAmendPasal(documentSpans.babs);
-  console.timeEnd(`TIME ${JSON.stringify(documentNode)} hasAmendPasal`);
-
-  console.time(`TIME ${JSON.stringify(documentNode)} keyIds`);
   const keyIds = babsSpansToKeyIds(hasAmendPasal, documentSpans.babs);
-  console.timeEnd(`TIME ${JSON.stringify(documentNode)} keyIds`);
-
-  console.time(`TIME ${JSON.stringify(documentNode)} babs`);
-  const document = spansToDocument({ hasAmendPasal, keyIds, documentNode }, documentSpans.babs);
-  console.timeEnd(`TIME ${JSON.stringify(documentNode)} babs`);
-
-  console.time(`TIME ${JSON.stringify(documentNode)} detect`);
+  const disahkan = spansToDisahkan(documentSpans.disahkan);
+  const document: Document = {
+    node: documentNode,
+    opText: spansToMetadata(documentSpans.preBab),
+    babSet: spansToBabSet({ hasAmendPasal, keyIds, documentNode, disahkan }, documentSpans.babs),
+    disahkan,
+  };
   // const detectedDocument = rawJsonToJson(document);
-  console.timeEnd(`TIME ${JSON.stringify(documentNode)} detect`);
+  console.timeEnd(`TIME ${JSON.stringify(documentNode)} init`);
 
   writeFileSync(jsonFile.path, yaml.dump(document, { lineWidth: 100 }));
 }
 
-type DocumentExtractedKey = 'preBab' | 'babs' | 'penjelasan';
+type DocumentExtractedKey = 'preBab' | 'babs' | 'penjelasan' | 'disahkan';
+
+function spansToDisahkan(spans: Span[]): Disahkan {
+  const [, , location] = spans[0]?.str?.split(' ') ?? [];
+  const [, , dateStr, monthStr, yearStr] = spans[1]?.str?.split(' ') ?? [];
+  const date = safeParseInt(dateStr);
+  const year = safeParseInt(yearStr);
+  if (isUndefined(location) || isUndefined(date) || isUndefined(year)) {
+    throw Error(`${{ location, date, year }}`);
+  }
+  const jabatanPengesah = spans[2]?.str;
+  const pengesah = spans[4]?.str;
+  return {
+    date: {
+      nodeType: 'date',
+      month: monthToNumber(monthStr),
+      date,
+      year,
+    },
+    location,
+    pengesah,
+    jabatanPengesah,
+  };
+}
+
+function monthToNumber(monthStr: string | undefined): number {
+  if (monthStr === 'Januari') return 1;
+  if (monthStr === 'Februari') return 2;
+  if (monthStr === 'Maret') return 3;
+  if (monthStr === 'April') return 4;
+  if (monthStr === 'Mei') return 5;
+  if (monthStr === 'Juni') return 6;
+  if (monthStr === 'Juli') return 7;
+  if (monthStr === 'Agustus') return 8;
+  if (monthStr === 'September') return 9;
+  if (monthStr === 'Oktober') return 10;
+  if (monthStr === 'November') return 11;
+  if (monthStr === 'Desember') return 12;
+  throw Error(`unknwon month ${monthStr}`);
+}
 
 function documentSpansOf(spans: Span[]): SpanOf<DocumentExtractedKey> {
   const initialExtraction: Accumulator<DocumentExtractedKey> = {
-    spans: { babs: [], preBab: [], penjelasan: [] },
+    spans: { babs: [], preBab: [], penjelasan: [], disahkan: [] },
     flag: 'preBab',
   };
   return spans.reduce(toSpansWith(reduceFlag), initialExtraction).spans;
@@ -58,7 +88,8 @@ function documentSpansOf(spans: Span[]): SpanOf<DocumentExtractedKey> {
 
 function reduceFlag(oldFlag: DocumentExtractedKey, span: Span): DocumentExtractedKey {
   if (oldFlag === 'preBab' && isBabSpansStart(span)) return 'babs';
-  if (oldFlag === 'babs' && isPenjelasanSpansStart(span)) return 'penjelasan';
+  if (oldFlag === 'babs' && isDisahkanStart(span)) return 'disahkan';
+  if (oldFlag === 'disahkan' && isPenjelasanSpansStart(span)) return 'penjelasan';
   return oldFlag;
 }
 
@@ -67,6 +98,10 @@ function isBabSpansStart(span: Span): boolean {
 }
 function isPenjelasanSpansStart(span: Span): boolean {
   return span.str.replaceAll('', '') === 'PENJELASAN';
+}
+
+function isDisahkanStart(span: Span): boolean {
+  return span.str.startsWith('Disahkan di') && span.xL > 300;
 }
 
 function spansHasAmendPasal(spans: Span[]): boolean {

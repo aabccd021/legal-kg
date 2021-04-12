@@ -27,8 +27,9 @@ import {
   PointSetNode,
   AyatSetNode,
   PasalVersion,
+  BabSet,
 } from '../../../legal/component';
-import { Document, DocumentNode } from '../../../legal/document';
+import { Disahkan, DocumentNode } from '../../../legal/document';
 import { Span, lastOf, neverUndefined } from '../../../util';
 import {
   nomorKeyOfSpan,
@@ -43,20 +44,22 @@ import { extractSpans, extractSpansWith, spanIdKeyMapOf, spansInRange } from './
 
 export type Context = {
   documentNode: DocumentNode;
+  disahkan: Disahkan;
   hasAmendPasal: boolean;
   keyIds: KeyIds;
 };
 
-export function spansToDocument(context: Context, spans: Span[]): Document {
+export function spansToMetadata(spans: Span[]): string {
+  return spans.map(spanToStr).join('\n');
+}
+
+export function spansToBabSet(context: Context, spans: Span[]): BabSet {
   const babSetNode: BabSetNode = { nodeType: 'babSet', parentDocumentNode: context.documentNode };
   const { keyToSpanMap } = extractSpans(context.keyIds.spanIdToBabKeyMap, spans);
   return {
-    node: context.documentNode,
-    babSet: {
-      type: 'babSet',
-      node: babSetNode,
-      elements: map(keyToSpanMap, spansToBabWith(context, babSetNode)),
-    },
+    type: 'babSet',
+    node: babSetNode,
+    elements: map(keyToSpanMap, spansToBabWith(context, babSetNode)),
   };
 }
 
@@ -181,7 +184,6 @@ function spansToPasal(context: Context, spans: Span[], key: string): Pasal {
       {
         parentDocumentNode: context.documentNode,
         context,
-        timeCreatedEpoch: 0,
         isAmendedPasal: false,
       },
       spans,
@@ -371,7 +373,7 @@ function spansToAmendDeletePasalPoint(
       type: 'pasalVersion',
       node: {
         nodeType: 'pasalVersion',
-        timeCreatedEpoch: 1,
+        version: context.disahkan.date,
         state: 'deleted',
         parentPasalNode: {
           nodeType: 'pasal',
@@ -417,7 +419,6 @@ function spansToAmendUpdatePasalPoint(
       {
         parentDocumentNode: amendedDocumentNode,
         context,
-        timeCreatedEpoch: 1,
         isAmendedPasal: true,
       },
       spans.slice(pasalTitleIdx),
@@ -474,7 +475,6 @@ function spansToAmendInsertPasalPoint(
         keySpansToPasalVersionWith({
           parentDocumentNode: amendedDocumentNode,
           context,
-          timeCreatedEpoch: 1,
           isAmendedPasal: true,
         })
       )
@@ -486,12 +486,10 @@ const keySpansToPasalVersionWith = curry(keySpansToPasalVersion);
 function keySpansToPasalVersion(
   {
     parentDocumentNode,
-    timeCreatedEpoch,
     context,
     isAmendedPasal,
   }: {
     parentDocumentNode: DocumentNode;
-    timeCreatedEpoch: number;
     context: Context;
     isAmendedPasal: boolean;
   },
@@ -500,7 +498,7 @@ function keySpansToPasalVersion(
 ): PasalVersion {
   const pasalVersionNode: PasalVersionNode = {
     nodeType: 'pasalVersion',
-    timeCreatedEpoch,
+    version: context.disahkan.date,
     state: 'exists',
     parentPasalNode: { nodeType: 'pasal', key, parentNode: parentDocumentNode },
   };
