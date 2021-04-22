@@ -2247,6 +2247,7 @@
 <http://example.org/legal/document/uu/2003/13/pasal/0084/version/20030325/text> legal:textHasTextString "Setiap pekerja/buruh yang menggunakan hak waktu istirahat sebagaimana dimaksud dalam Pasal 79 ayat (2) huruf b, c, dan d, Pasal 80, dan Pasal 82 berhak mendapat upah penuh." .
 <http://example.org/legal/document/uu/2003/13/pasal/0084/version/20030325> legal:pasalVersionHasText <http://example.org/legal/document/uu/2003/13/pasal/0084/version/20030325/text> .
 <http://example.org/legal/document/uu/2003/13/pasal/0084/version/20030325/text> legal:textReferencesLegal <http://example.org/legal/document/uu/2003/13/pasal/0084/version/20030325/ayat/0002> .
+<http://example.org/legal/document/uu/2003/13/pasal/0084/version/20030325/text> legal:textReferencesLegal <http://example.org/legal/document/uu/2003/13/pasal/0084/version/20030325/ayat/0002/point/c> .
 <http://example.org/legal/document/uu/2003/13/pasal/0084/version/20030325/text> legal:textReferencesLegal <http://example.org/legal/document/uu/2003/13/pasal/0084/version/20030325/point/d> .
 <http://example.org/legal/document/uu/2003/13/pasal/0084/version/20030325/text> legal:textReferencesLegal <http://example.org/legal/document/uu/2003/13/pasal/0084/version/20030325/point/c> .
 <http://example.org/legal/document/uu/2003/13/pasal/0084/version/20030325/text> legal:textReferencesLegal <http://example.org/legal/document/uu/2003/13/pasal/0084/version/20030325/point/b> .
@@ -2677,6 +2678,8 @@
 <http://example.org/legal/document/uu/2003/13/pasal/0097/version/20030325/text> legal:textHasTextString "Ketentuan mengenai penghasilan yang layak, kebijakan pengupahan, kebutuhan hidup layak, dan perlindungan pengupahan sebagaimana dimaksud dalam Pasal 88, penetapan upah minimum sebagaimana dimaksud dalam Pasal 89, dan pengenaan denda sebagaimana dimaksud dalam Pasal 95 ayat (1), ayat (2) dan ayat (3) diatur dengan Peraturan Pemerintah." .
 <http://example.org/legal/document/uu/2003/13/pasal/0097/version/20030325> legal:pasalVersionHasText <http://example.org/legal/document/uu/2003/13/pasal/0097/version/20030325/text> .
 <http://example.org/legal/document/uu/2003/13/pasal/0097/version/20030325/text> legal:textReferencesLegal <http://example.org/legal/document/uu/2003/13/pasal/0097/version/20030325/ayat/0001> .
+<http://example.org/legal/document/uu/2003/13/pasal/0097/version/20030325/text> legal:textReferencesLegal <http://example.org/legal/document/uu/2003/13/pasal/0097/version/20030325/ayat/0003> .
+<http://example.org/legal/document/uu/2003/13/pasal/0097/version/20030325/text> legal:textReferencesLegal <http://example.org/legal/document/uu/2003/13/pasal/0097/version/20030325/ayat/0002> .
 <http://example.org/legal/document/uu/2003/13/pasal/0097/version/20030325/text> legal:textReferencesLegal <http://example.org/legal/document/uu/2003/13/pasal/0089> .
 <http://example.org/legal/document/uu/2003/13/pasal/0097/version/20030325/text> legal:textReferencesLegal <http://example.org/legal/document/uu/2003/13/pasal/0088> .
 <http://example.org/legal/document/uu/2003/13/bab/0010/bagian/0002/pasals> legal:pasalSetHasPasal <http://example.org/legal/document/uu/2003/13/pasal/0098> .

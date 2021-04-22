@@ -1148,7 +1148,7 @@
 <http://example.org/legal/document/uu/2018/6/pasal/0044/version/20180807/text> legal:textHasTextString "Setiap Barang yang memiliki Faktor Risiko Kesehatan Masyarakat dalam Alat Angkut yang berada dalam Status Karantina, Pejabat Karantina Kesehatan melakukan tindakan Kekarantinaan Kesehatan sebagaimana dimaksud dalam Pasal 15 ayat (2) huruf c dan huruf d berkoordinasi dengan pihak yang terkait." .
 <http://example.org/legal/document/uu/2018/6/pasal/0044/version/20180807> legal:pasalVersionHasText <http://example.org/legal/document/uu/2018/6/pasal/0044/version/20180807/text> .
 <http://example.org/legal/document/uu/2018/6/pasal/0044/version/20180807/text> legal:textReferencesLegal <http://example.org/legal/document/uu/2018/6/pasal/0044/version/20180807/ayat/0002> .
-<http://example.org/legal/document/uu/2018/6/pasal/0044/version/20180807/text> legal:textReferencesLegal <http://example.org/legal/document/uu/2018/6/pasal/0044/version/20180807/point/d> .
+<http://example.org/legal/document/uu/2018/6/pasal/0044/version/20180807/text> legal:textReferencesLegal <http://example.org/legal/document/uu/2018/6/pasal/0044/version/20180807/ayat/0002/point/d> .
 <http://example.org/legal/document/uu/2018/6/pasal/0044/version/20180807/text> legal:textReferencesLegal <http://example.org/legal/document/uu/2018/6/pasal/0044/version/20180807/point/c> .
 <http://example.org/legal/document/uu/2018/6/bab/0006/bagian/0005/pasals> legal:pasalSetHasPasal <http://example.org/legal/document/uu/2018/6/pasal/0045> .
 <http://example.org/legal/document/uu/2018/6/pasal/0045> legal:pasalHasKey 45 .

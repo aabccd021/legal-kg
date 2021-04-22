@@ -72,16 +72,24 @@ function detectPasal(pasal: Pasal): Pasal {
     ...pasal,
     version: {
       ...pasal.version,
-      content: detectText(pasal.version.content, pasal.version.node),
+      content: detectPasalVersionText(pasal.version.content, pasal.version.node),
     },
   };
 }
 
-function detectText(text: Text, pasalVersionNode: PasalVersionNode): Text {
+function detectPasalVersionText(text: Text, pasalVersionNode: PasalVersionNode): Text {
   const references: Reference[] = [
     ...detectHardCoded(text.textString),
     ...detectPasalX(text.textString, pasalVersionNode.parentPasalNode.parentNode),
     ...detectHurufXYZ(text.textString, { nodeType: 'pointSet', parentNode: pasalVersionNode }),
+    ...detectAyatNHurufXYZ(text.textString, {
+      nodeType: 'ayatSet',
+      parentPasalVersionNode: pasalVersionNode,
+    }),
+    ...detectAyatX(text.textString, {
+      nodeType: 'ayatSet',
+      parentPasalVersionNode: pasalVersionNode,
+    }),
     ...detectPasalXAyatX(text.textString, {
       nodeType: 'ayatSet',
       parentPasalVersionNode: pasalVersionNode,
@@ -161,50 +169,51 @@ function detectHurufXYZ(text: string, parentPointSetNode: PointSetNode): Referen
   return references;
 }
 
-// type Detector<T> = (text: string, node: T) => Reference[];
+type Detector<T> = (text: string, node: T) => Reference[];
 
-// const detectAyatNHurufXYZ: Detector<PasalNode | AmendedPasalNode> = (text, parentPasal) => {
-//   const regexp = /ayat \((l|[0-9]+)\) huruf ?([a-z]?,? ?)+( [a-z]( |,))/g;
+const detectAyatNHurufXYZ: Detector<AyatSetNode> = (text, parentAyatSetNode) => {
+  const regexp = /ayat \((l|[0-9]+)\) huruf ?([a-z]?,? ?)+( [a-z]( |,))/g;
 
-//   const matches = [...text.matchAll(regexp)];
+  const matches = [...text.matchAll(regexp)];
 
-//   return matches.flatMap((match) => {
-//     const arr = match[0]
-//       ?.replaceAll(/(ayat|\(|\))/g, ',')
-//       .split(',')
-//       .filter((x) => ![',', ' ', ''].includes(x));
-//     const key = safeParseInt(arr?.[0] ?? neverString()) ?? neverNum();
-//     const start = match.index ?? neverNum();
-//     const offset = start + `ayat (${key})`.length;
-//     const hurufString = arr?.splice(1).join(',') ?? neverString();
-//     const ayatNode: AyatNode = { key, parent: parentPasal, nodeType: 'ayat' };
-//     const pointNode: PointNode = { parent: ayatNode, key: -1, nodeType: 'point' };
+  return matches.flatMap((match) => {
+    const arr = match[0]
+      ?.replaceAll(/(ayat|\(|\))/g, ',')
+      .split(',')
+      .filter((x) => ![',', ' ', ''].includes(x));
+    const ayatKey = safeParseInt(arr?.[0] ?? neverString()) ?? neverNum();
+    const start = match.index ?? neverNum();
+    const offset = start + `ayat (${ayatKey})`.length;
+    const hurufString = arr?.splice(1).join(',') ?? neverString();
+    const pointSetNode: PointSetNode = {
+      nodeType: 'pointSet',
+      parentNode: { nodeType: 'ayat', key: ayatKey, parentAyatSetNode },
+    };
 
-//     const hurufs = detectHurufXYZ(hurufString, pointNode).map((r, idx) => ({
-//       ...r,
-//       start: idx === 0 ? start : r.start + offset,
-//       end: r.end + offset,
-//     }));
+    const hurufs = detectHurufXYZ(hurufString, pointSetNode).map((r, idx) => ({
+      ...r,
+      start: idx === 0 ? start : r.start + offset,
+      end: r.end + offset,
+    }));
 
-//     return hurufs;
-//   });
-// };
+    return hurufs;
+  });
+};
 
-// const detectAyatX: Detector<PasalNode | AmendedPasalNode> = (text, parentPasal) => {
-//   const regexp = /ayat \((l|[0-9]+)\)/g;
-//   const matches = [...text.matchAll(regexp)];
+const detectAyatX: Detector<AyatSetNode> = (text, parentAyatSetNode) => {
+  const regexp = /ayat \((l|[0-9]+)\)/g;
+  const matches = [...text.matchAll(regexp)];
 
-//   return matches.map((match) => {
-//     const key =
-// safeParseInt(match[0]?.slice('ayat ('.length, -1) ?? neverString()) ?? neverNum();
-//     const start = match.index ?? neverNum();
-//     const end = start + (match[0]?.length ?? neverNum());
-//     const node: AyatNode = { key, parent: parentPasal, nodeType: 'ayat' };
+  return matches.map((match) => {
+    const key = safeParseInt(match[0]?.slice('ayat ('.length, -1) ?? neverString()) ?? neverNum();
+    const start = match.index ?? neverNum();
+    const end = start + (match[0]?.length ?? neverNum());
+    const node: AyatNode = { key, parentAyatSetNode, nodeType: 'ayat' };
 
-//     const reference: Reference = { start, end, node };
-//     return reference;
-//   });
-// };
+    const reference: Reference = { start, end, node };
+    return reference;
+  });
+};
 
 // // TODO: shorten
 function getPosByLenAndIndex(arrLen: number, index: number, start: number): [number, number] {
