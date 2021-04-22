@@ -5,12 +5,7 @@ import { UudNode, _uud } from './uud';
 import { DataType } from '../../data';
 import path from 'path';
 import * as fs from 'fs';
-import { BabSet, Mengingat, Menimbang } from '../component';
-import { DateNode } from '..';
 
-/**
- * Scrapable Document
- */
 export type ScrapableDocumentCategory = typeof SCRAPABLE_DOCUMENT_CATEGORY[number];
 export const SCRAPABLE_DOCUMENT_CATEGORY = ['uu'] as const;
 export type ScrapableDocumentNode = UuNode & {
@@ -133,40 +128,3 @@ export function getScrapableDocumentLastPage(category: ScrapableDocumentCategory
 /**
  * Document Data
  */
-export type Document = {
-  node: DocumentNode;
-  penjelasan?: string[];
-  opText?: string;
-  babSet: BabSet;
-  disahkan: Disahkan;
-  metadata: DocumentMetadata;
-
-  // menimbang?: Metadata;
-  // mengingat?: Metadata;
-};
-
-export type DocumentMetadata = {
-  name?: string;
-  pemutus?: string;
-  denganPersetujuan?: string;
-  tentang?: string;
-  salinan?: string;
-  memutuskan?: string;
-  tempatDitetapkan?: string;
-  tanggalDitetapkan?: string;
-  tempatDiundangkan?: string;
-  tanggalDiundangkan?: string;
-  sekretaris?: string;
-  dokumen?: string;
-  salinanSesuaiDenganAslinya?: string;
-  menimbang?: Menimbang;
-  mengingat?: Mengingat;
-  menetapkan?: string;
-};
-
-export type Disahkan = {
-  date: DateNode;
-  location: string;
-  pengesah?: string;
-  jabatanPengesah?: string;
-};

@@ -33,9 +33,10 @@ import {
   PasalVersionNode,
   AyatNode,
   TextNode,
+  Document,
 } from '../../../legal/component';
 
-import { Document, DocumentNode } from '../../../legal/document';
+import { DocumentNode } from '../../../legal/document';
 import { LegalTriple } from './triple';
 
 export function yamlToTriples({ node, babSet, disahkan }: Document): LegalTriple[] {

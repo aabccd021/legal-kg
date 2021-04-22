@@ -1,29 +1,81 @@
-// TODO: detect this
-// import { neverNum, neverString } from '../../../util';
-// import { safeParseInt } from './parse_key_from_spans';
+import {
+  Bab,
+  Bagian,
+  Document,
+  PasalSet,
+  PointNode,
+  PointSetNode,
+  Reference,
+  Pasal,
+  Text,
+  PasalVersionNode,
+} from '../../../legal/component';
+import { neverNum } from '../../../util';
 
-// export function rawJsonToJson(document: Document): Document {
-//   const { babArr: babs, node: _node } = document;
+export function detectDocument(document: Document): Document {
+  const { babSet } = document;
 
-//   return {
-//     ...document,
-//     babArr: babs?.map((bab) => babToDetectedBab(bab, _node)),
-//   };
-// }
+  return {
+    ...document,
+    babSet: {
+      ...babSet,
+      elements: babSet.elements.map(detectBab),
+    },
+  };
+}
 
-// function babToDetectedBab(bab: Bab, parent: DocumentNode): Bab {
-//   const babNode: BabNode = {
-//     nodeType: 'bab',
-//     key: bab.key,
-//     parent,
-//   };
-//   const detectedIsi: Pasals | Bagians =
-//     bab.content.type === 'pasals'
-//       ? { type: 'pasals', pasalArr: bab.content.pasalArr.map(toDetectedPasalWith(babNode)) }
-//       : { type: 'bagians', bagianArr: bab.content.bagianArr.map(toDetectedBagianWith(babNode)) };
+function detectBab(bab: Bab): Bab {
+  return {
+    ...bab,
+    content:
+      bab.content.type === 'pasalSet'
+        ? detectPasalSet(bab.content)
+        : {
+            ...bab.content,
+            elements: bab.content.elements.map(detectBagian),
+          },
+  };
+}
 
-//   return { ...bab, content: detectedIsi };
-// }
+function detectPasalSet(pasalSet: PasalSet): PasalSet {
+  return {
+    ...pasalSet,
+    elements: pasalSet.elements.map(detectPasal),
+  };
+}
+
+function detectBagian(bagian: Bagian): Bagian {
+  return {
+    ...bagian,
+    content:
+      bagian.content.type === 'pasalSet'
+        ? detectPasalSet(bagian.content)
+        : {
+            ...bagian.content,
+            elements: bagian.content.elements.map((paragraf) => ({
+              ...paragraf,
+              pasalSet: detectPasalSet(paragraf.pasalSet),
+            })),
+          },
+  };
+}
+
+function detectPasal(pasal: Pasal): Pasal {
+  if (pasal.version.content === undefined) return pasal;
+  if (pasal.version.content?.type !== 'text') return pasal;
+  return {
+    ...pasal,
+    version: {
+      ...pasal.version,
+      content: detectText(pasal.version.content, pasal.version.node),
+    },
+  };
+}
+
+function detectText(text: Text, parentNode: PasalVersionNode): Text {
+  const references = detectHurufXYZ(text.textString, { nodeType: 'pointSet', parentNode });
+  return { ...text, references };
+}
 
 // const toDetectedPasalWith = curry(toDetectedPasal);
 // function toDetectedPasal(parent: PasalParentNode, pasal: Pasal): Pasal {
@@ -180,13 +232,12 @@
 //   };
 // }
 
-// function detectPointNode(text: string, pointNode: PointNode): Reference[] {
-//   const { parent } = pointNode;
-//   const allReferences = [
-//     ...detectPointParentNode(text, parent),
-//     ...detectHurufXYZ(text, pointNode),
-//   ];
-//   return _resolveConflictingReferences(allReferences);
+// function detectPoint(text: string, pointSetNode: PointSetNode): Reference[] {
+// const allReferences = [
+// ...detectPointParentNode(text, parent),
+// ...detectHurufXYZ(text, pointSetNode),
+// ];
+// return _resolveConflictingReferences(allReferences);
 // }
 
 // function detectPointParentNode(text: string, pointsNode: PointsNode): Reference[] {
@@ -277,29 +328,29 @@
 //     .value();
 // }
 
-// function detectHurufXYZ(text: string, parentPoint: PointNode): Reference[] {
-//   const { parent: parentPoints } = parentPoint;
-//   const regexp = /huruf ?([a-z]?,? ?)+( [a-z]( |,))/g;
-//   const matches = [...text.matchAll(regexp)];
+function detectHurufXYZ(text: string, parentPointSetNode: PointSetNode): Reference[] {
+  const regexp = /huruf ?([a-z]?,? ?)+( [a-z]( |,))/g;
+  const matches = [...text.matchAll(regexp)];
 
-//   return matches.flatMap((match) => {
-//     const arr =
-//       match[0]
-//         ?.replaceAll(/(huruf| |dan)/g, ',')
-//         .split(',')
-//         .filter((x) => ![',', ''].includes(x)) ?? [];
+  const references = matches.flatMap((match) => {
+    const arr =
+      match[0]
+        ?.replaceAll(/(huruf| |dan)/g, ',')
+        .split(',')
+        .filter((x) => ![',', ''].includes(x)) ?? [];
 
-//     const start = match.index ?? neverNum();
+    const start = match.index ?? neverNum();
 
-//     return arr.map((key, idx) => {
-//       const [hStart, hEnd] = getPosByLenAndIndex(arr.length, idx, start);
-//       const pointNode: PointNode = { key, parent: parentPoints, nodeType: 'point' };
-//       const reference: Reference = { start: hStart, end: hEnd, node: pointNode };
+    return arr.map((key, idx) => {
+      const [hStart, hEnd] = getPosByLenAndIndex(arr.length, idx, start);
+      const pointNode: PointNode = { key, parentPointSetNode, nodeType: 'point' };
+      const reference: Reference = { start: hStart, end: hEnd, node: pointNode };
 
-//       return reference;
-//     });
-//   });
-// }
+      return reference;
+    });
+  });
+  return references;
+}
 
 // type Detector<T> = (text: string, node: T) => Reference[];
 
@@ -347,22 +398,22 @@
 // };
 
 // // TODO: shorten
-// function getPosByLenAndIndex(arrLen: number, index: number, start: number): [number, number] {
-//   if (index === 0) return [start, start + 'huruf a'.length];
+function getPosByLenAndIndex(arrLen: number, index: number, start: number): [number, number] {
+  if (index === 0) return [start, start + 'huruf a'.length];
 
-//   if (arrLen === 2 && index === 1) {
-//     const _start = start + 'huruf a dan '.length;
-//     return [_start, _start + 1];
-//   }
+  if (arrLen === 2 && index === 1) {
+    const _start = start + 'huruf a dan '.length;
+    return [_start, _start + 1];
+  }
 
-//   if (arrLen - 1 === index) {
-//     const _start = start + 'huruf '.length + 'a, '.length * index + ' dan'.length;
-//     return [_start, _start + 1];
-//   }
+  if (arrLen - 1 === index) {
+    const _start = start + 'huruf '.length + 'a, '.length * index + ' dan'.length;
+    return [_start, _start + 1];
+  }
 
-//   const _start = start + 'huruf '.length + 'a, '.length * index;
-//   return [_start, _start + 1];
-// }
+  const _start = start + 'huruf '.length + 'a, '.length * index;
+  return [_start, _start + 1];
+}
 
 // function detectPasalX(text: string, parentDocumentNode: DocumentNode): Reference[] {
 //   const regexp = /Pasal [0-9]+/g;
@@ -380,7 +431,7 @@
 // }
 
 // function _resolveConflictingReferences(references: Reference[]): Reference[] {
-//   const sortedReferences = _(references)
+//   const sortedReferences = chain(references)
 //     .reverse()
 //     .sort((x) => x.end - x.start)
 //     .value();

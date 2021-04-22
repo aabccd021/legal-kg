@@ -1,5 +1,4 @@
 import { SpanOf } from '../../../util';
-import { DocumentNode, Document, Disahkan } from '../../../legal/document/index';
 import { getDocumentData, nodeToFile } from '../../../data';
 import { readFileSync, writeFileSync } from 'fs';
 import { Accumulator, Span, toSpansWith } from '../../../util';
@@ -8,6 +7,9 @@ import { chain, isUndefined } from 'lodash';
 import { pasalKeyOfSpan, safeParseInt } from './parse_key_from_spans';
 import * as yaml from 'js-yaml';
 import { spansToBabSet, spansToMetadata, spansToStr } from './spans_to_component';
+import { Disahkan, Document } from '../../../legal/component';
+import { DocumentNode } from '../../../legal/document';
+import { detectDocument } from './raw_json_to_json';
 
 function pdfDataToJson(): void {
   getDocumentData('pdf-data').forEach(writeToJson);
@@ -35,8 +37,9 @@ function writeToJson(documentNode: DocumentNode): void {
   };
   // const detectedDocument = rawJsonToJson(document);
   console.timeEnd(`TIME ${JSON.stringify(documentNode)} init`);
+  const detectedDocument: Document = detectDocument(document);
 
-  writeFileSync(jsonFile.path, yaml.dump(document, { lineWidth: 100 }));
+  writeFileSync(jsonFile.path, yaml.dump(detectedDocument, { lineWidth: 100 }));
 }
 
 type DocumentExtractedKey = 'preBab' | 'babs' | 'penjelasan' | 'disahkan';

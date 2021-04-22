@@ -861,6 +861,7 @@
 <http://example.org/legal/document/uu/2003/13/pasal/0034/version/20030325> legal:pasalVersionHasRawText "Ketentuan mengenai penempatan tenaga kerja di luar negeri sebagaimana dimaksud dalam Pasal 33 huruf b diatur dengan undang-undang." .
 <http://example.org/legal/document/uu/2003/13/pasal/0034/version/20030325/text> legal:textHasTextString "Ketentuan mengenai penempatan tenaga kerja di luar negeri sebagaimana dimaksud dalam Pasal 33 huruf b diatur dengan undang-undang." .
 <http://example.org/legal/document/uu/2003/13/pasal/0034/version/20030325> legal:pasalVersionHasText <http://example.org/legal/document/uu/2003/13/pasal/0034/version/20030325/text> .
+<http://example.org/legal/document/uu/2003/13/pasal/0034/version/20030325/text> legal:textReferencesLegal <http://example.org/legal/document/uu/2003/13/pasal/0034/version/20030325/point/b> .
 <http://example.org/legal/document/uu/2003/13/bab/0006/pasals> legal:pasalSetHasPasal <http://example.org/legal/document/uu/2003/13/pasal/0035> .
 <http://example.org/legal/document/uu/2003/13/pasal/0035> legal:pasalHasKey 35 .
 <http://example.org/legal/document/uu/2003/13/pasal/0035> legal:pasalHasPasalVersion <http://example.org/legal/document/uu/2003/13/pasal/0035/version/20030325> .
@@ -2242,6 +2243,9 @@
 <http://example.org/legal/document/uu/2003/13/pasal/0084/version/20030325> legal:pasalVersionHasRawText "Setiap pekerja/buruh yang menggunakan hak waktu istirahat sebagaimana dimaksud dalam Pasal 79 ayat (2) huruf b, c, dan d, Pasal 80, dan Pasal 82 berhak mendapat upah penuh." .
 <http://example.org/legal/document/uu/2003/13/pasal/0084/version/20030325/text> legal:textHasTextString "Setiap pekerja/buruh yang menggunakan hak waktu istirahat sebagaimana dimaksud dalam Pasal 79 ayat (2) huruf b, c, dan d, Pasal 80, dan Pasal 82 berhak mendapat upah penuh." .
 <http://example.org/legal/document/uu/2003/13/pasal/0084/version/20030325> legal:pasalVersionHasText <http://example.org/legal/document/uu/2003/13/pasal/0084/version/20030325/text> .
+<http://example.org/legal/document/uu/2003/13/pasal/0084/version/20030325/text> legal:textReferencesLegal <http://example.org/legal/document/uu/2003/13/pasal/0084/version/20030325/point/b> .
+<http://example.org/legal/document/uu/2003/13/pasal/0084/version/20030325/text> legal:textReferencesLegal <http://example.org/legal/document/uu/2003/13/pasal/0084/version/20030325/point/c> .
+<http://example.org/legal/document/uu/2003/13/pasal/0084/version/20030325/text> legal:textReferencesLegal <http://example.org/legal/document/uu/2003/13/pasal/0084/version/20030325/point/d> .
 <http://example.org/legal/document/uu/2003/13/bab/0010/bagian/0001/paragraf/0004/pasals> legal:pasalSetHasPasal <http://example.org/legal/document/uu/2003/13/pasal/0085> .
 <http://example.org/legal/document/uu/2003/13/pasal/0085> legal:pasalHasKey 85 .
 <http://example.org/legal/document/uu/2003/13/pasal/0085> legal:pasalHasPasalVersion <http://example.org/legal/document/uu/2003/13/pasal/0085/version/20030325> .

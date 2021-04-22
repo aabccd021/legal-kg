@@ -2,6 +2,44 @@ import { DateNode, LegalNode } from '.';
 import { DocumentNode } from './document';
 
 /**
+ * Document Node
+ */
+export type Document = {
+  node: DocumentNode;
+  penjelasan?: string[];
+  opText?: string;
+  babSet: BabSet;
+  disahkan: Disahkan;
+  metadata: DocumentMetadata;
+};
+
+export type DocumentMetadata = {
+  name?: string;
+  pemutus?: string;
+  denganPersetujuan?: string;
+  tentang?: string;
+  salinan?: string;
+  memutuskan?: string;
+  tempatDitetapkan?: string;
+  tanggalDitetapkan?: string;
+  tempatDiundangkan?: string;
+  tanggalDiundangkan?: string;
+  sekretaris?: string;
+  dokumen?: string;
+  salinanSesuaiDenganAslinya?: string;
+  menimbang?: Menimbang;
+  mengingat?: Mengingat;
+  menetapkan?: string;
+};
+
+export type Disahkan = {
+  date: DateNode;
+  location: string;
+  pengesah?: string;
+  jabatanPengesah?: string;
+};
+
+/**
  * Component Node
  */
 export type ComponentNode =

@@ -13,8 +13,8 @@ import { readFileSync, writeFileSync } from 'fs';
 import { toRoman } from 'roman-numerals';
 import { getDocumentData, nodeToFile } from '../../data';
 import { nodeToUri } from '../../legal';
-import { Bab, Bagian, Paragraf, Pasal, Ayat, Text, BabSet } from '../../legal/component';
-import { DocumentNode, nodeToName, Document } from '../../legal/document';
+import { Bab, Bagian, Paragraf, Pasal, Ayat, Text, Document, BabSet } from '../../legal/component';
+import { DocumentNode, nodeToName } from '../../legal/document';
 
 type Option = { overwrite: boolean };
 export function jsonToMd(option: Option): void {

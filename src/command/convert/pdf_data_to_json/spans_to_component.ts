@@ -1,4 +1,9 @@
-import { MengingatNode, MenimbangNode } from './../../../legal/component';
+import {
+  Disahkan,
+  DocumentMetadata,
+  MengingatNode,
+  MenimbangNode,
+} from './../../../legal/component';
 import assertNever from 'assert-never';
 import { chain, curry, isEmpty, isUndefined, keys, map, parseInt, reduce } from 'lodash';
 import {
@@ -30,7 +35,7 @@ import {
   PasalVersion,
   BabSet,
 } from '../../../legal/component';
-import { Disahkan, DocumentMetadata, DocumentNode } from '../../../legal/document';
+import { DocumentNode } from '../../../legal/document';
 import { Span, lastOf, neverUndefined } from '../../../util';
 import {
   nomorKeyOfSpan,

@@ -1,5 +1,6 @@
 import * as fs from 'fs';
-import { Document, DocumentNode, nodeToName } from '../../../legal/document/index';
+import { DocumentNode, nodeToName } from '../../../legal/document/index';
+import { Document } from '../../../legal/component';
 import { getDocumentData, nodeToFile } from '../../../data';
 import * as yaml from 'js-yaml';
 import { yamlToTriples } from './json-to-triples';
