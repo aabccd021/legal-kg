@@ -1,4 +1,6 @@
+import { Mengingat } from './../../legal/component';
 import {
+  Menimbang,
   PasalDeleteAmenderPoint,
   PasalInsertAmenderPoint,
   PasalUpdateAmenderPoint,
@@ -60,6 +62,8 @@ function _jsonToMd(doc: Document): string {
       sekretaris,
       dokumen,
       denganPersetujuan,
+      mengingat,
+      menimbang,
     },
     node: _node,
     babSet,
@@ -90,6 +94,8 @@ function _jsonToMd(doc: Document): string {
     metadataToStr('Dengan Persetujuan', denganPersetujuan),
     // ...map(_denganPersetujuan, (d) => metadata('Dengan Persetujuan', d)),
     // mengimbangToMd('Menimbang', menimbang, 'documentMenimbang', _node),
+    menimbangToMd(menimbang),
+    mengingatToMd(mengingat),
     // mengimbangToMd('Mengingat', mengingat, 'documentMengingat', _node),
     // ...flatten(babSet?.map((b) => babToMd(b, _node))),
     ...babSetToMd(babSet),
@@ -98,21 +104,23 @@ function _jsonToMd(doc: Document): string {
   return compact(lines).join('\n');
 }
 
-// function mengimbangToMd(
-//   title: string,
-//   content: Metadata | undefined,
-//   metadataType: 'documentMengingat' | 'documentMenimbang',
-//   parentDocument: DocumentNode
-// ): string {
-//   if (isNil(content)) return '';
-//   const metadataNode:
-//  MetadataNode = { metadataType, parent: parentDocument, nodeType: 'metadata' };
-//   const contentStr = !isNil(content.points)
-//     ? pointsToMd(content.points, metadataNode)
-//     : referenceToMd(content.text);
-//   const uri = nodeToUri(metadataNode);
-// return `\n# [${title}](${uri})\n${contentStr}`;
-// }
+function menimbangToMd(menimbang?: Menimbang): string {
+  if (isUndefined(menimbang)) return '';
+  const content =
+    menimbang.content.type === 'pointSet'
+      ? pointSetToMd(menimbang.content)
+      : textToMd(menimbang.content);
+  return `# [Menimbang](${nodeToUri(menimbang.node)})\n${content}`;
+}
+
+function mengingatToMd(mengingat?: Mengingat): string {
+  if (isUndefined(mengingat)) return '';
+  const content =
+    mengingat.content.type === 'pointSet'
+      ? pointSetToMd(mengingat.content)
+      : textToMd(mengingat.content);
+  return `# [Mengingat](${nodeToUri(mengingat.node)})\n${content}`;
+}
 
 function babSetToMd(babSet: BabSet): string[] {
   return flatMap(babSet.elements, babToMd);
