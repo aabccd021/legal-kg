@@ -1,5 +1,5 @@
 import assertNever from 'assert-never';
-import { chain, curry, isEmpty, isUndefined, keys, map, parseInt } from 'lodash';
+import { chain, curry, isEmpty, isUndefined, keys, map, parseInt, reduce } from 'lodash';
 import {
   Bab,
   Bagian,
@@ -29,7 +29,7 @@ import {
   PasalVersion,
   BabSet,
 } from '../../../legal/component';
-import { Disahkan, DocumentNode } from '../../../legal/document';
+import { Disahkan, DocumentMetadata, DocumentNode } from '../../../legal/document';
 import { Span, lastOf, neverUndefined } from '../../../util';
 import {
   nomorKeyOfSpan,
@@ -49,8 +49,30 @@ export type Context = {
   keyIds: KeyIds;
 };
 
-export function spansToMetadata(spans: Span[]): string {
+export function spansToStr(spans: Span[]): string {
   return spans.map(spanToStr).join('\n');
+}
+
+type MetadataAcc = {
+  current: 'menimbang' | 'mengingat' | 'init';
+  init: Span[];
+  menimbang: Span[];
+  mengingat: Span[];
+};
+
+export function spansToMetadata(spans: Span[]): DocumentMetadata {
+  const res: MetadataAcc = reduce<Span, MetadataAcc>(
+    spans,
+    (acc, span) => {
+      return {
+        ...acc,
+        [acc.current]: [...acc[acc.current], span],
+      };
+    },
+    { init: [], menimbang: [], mengingat: [], current: 'init' }
+  );
+  console.log(res);
+  return {};
 }
 
 export function spansToBabSet(context: Context, spans: Span[]): BabSet {

@@ -7,7 +7,7 @@ import { babsSpansToKeyIds } from './scan';
 import { chain, isUndefined } from 'lodash';
 import { pasalKeyOfSpan, safeParseInt } from './parse_key_from_spans';
 import * as yaml from 'js-yaml';
-import { spansToBabSet, spansToMetadata } from './spans_to_component';
+import { spansToBabSet, spansToStr } from './spans_to_component';
 
 function pdfDataToJson(): void {
   getDocumentData('pdf-data').forEach(writeToJson);
@@ -27,7 +27,7 @@ function writeToJson(documentNode: DocumentNode): void {
   const disahkan = spansToDisahkan(documentSpans.disahkan);
   const document: Document = {
     node: documentNode,
-    opText: spansToMetadata(documentSpans.preBab),
+    opText: spansToStr(documentSpans.preBab),
     babSet: spansToBabSet({ hasAmendPasal, keyIds, documentNode, disahkan }, documentSpans.babs),
     disahkan,
   };

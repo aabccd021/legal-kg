@@ -5,8 +5,10 @@ ToDo:
 - menimbang & mengingat
 - metadata
 - visualisasi
-- pdf pp
 - config file
-- 2003 13
-- pake tanggal
 - text node for all available
+- eksraksi metadata lainnya
+- ekstraksi citation uu dalam text
+- ekstraksi menimbang & mengingat
+- ekstrak pp 34 2021
+

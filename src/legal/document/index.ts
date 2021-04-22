@@ -133,29 +133,33 @@ export function getScrapableDocumentLastPage(category: ScrapableDocumentCategory
 /**
  * Document Data
  */
-export type Document = {
+export type Document = DocumentMetadata & {
   node: DocumentNode;
   penjelasan?: string[];
   opText?: string;
   babSet: BabSet;
   disahkan: Disahkan;
-  _name?: string;
-  _nomor?: number;
-  _tahun?: number;
-  _pemutus?: string;
-  _denganPersetujuan?: string[];
-  _tentang?: string;
-  _salinan?: string;
-  _memutuskan?: string;
-  _tempatDitetapkan?: string;
-  _tanggalDitetapkan?: string;
-  _tempatDiundangkan?: string;
-  _tanggalDiundangkan?: string;
-  _sekretaris?: string;
-  _dokumen?: string;
-  salinanSesuaiDenganAslinya?: string;
+
   // menimbang?: Metadata;
   // mengingat?: Metadata;
+};
+
+export type DocumentMetadata = {
+  name?: string;
+  pemutus?: string;
+  denganPersetujuan?: string[];
+  tentang?: string;
+  salinan?: string;
+  memutuskan?: string;
+  tempatDitetapkan?: string;
+  tanggalDitetapkan?: string;
+  tempatDiundangkan?: string;
+  tanggalDiundangkan?: string;
+  sekretaris?: string;
+  dokumen?: string;
+  salinanSesuaiDenganAslinya?: string;
+  menimbang?: string;
+  mengingat?: string;
 };
 
 export type Disahkan = {
