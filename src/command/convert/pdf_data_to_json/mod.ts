@@ -9,7 +9,7 @@ import * as yaml from 'js-yaml';
 import { spansToBabSet, spansToMetadata, spansToStr } from './spans_to_component';
 import { Disahkan, Document } from '../../../legal/component';
 import { DocumentNode } from '../../../legal/document';
-import { detectDocument } from './raw_json_to_json';
+import { detectDocument } from './detect';
 
 function pdfDataToJson(): void {
   getDocumentData('pdf-data').forEach(writeToJson);
