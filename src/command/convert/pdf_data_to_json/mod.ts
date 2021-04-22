@@ -25,11 +25,12 @@ function writeToJson(documentNode: DocumentNode): void {
   const hasAmendPasal = spansHasAmendPasal(documentSpans.babs);
   const keyIds = babsSpansToKeyIds(hasAmendPasal, documentSpans.babs);
   const disahkan = spansToDisahkan(documentSpans.disahkan);
+  const context = { hasAmendPasal, keyIds, documentNode, disahkan };
   const document: Document = {
     node: documentNode,
-    metadata: spansToMetadata(documentSpans.preBab),
+    metadata: spansToMetadata(context, documentSpans.preBab),
     opText: spansToStr(documentSpans.preBab),
-    babSet: spansToBabSet({ hasAmendPasal, keyIds, documentNode, disahkan }, documentSpans.babs),
+    babSet: spansToBabSet(context, documentSpans.babs),
     disahkan,
   };
   // const detectedDocument = rawJsonToJson(document);

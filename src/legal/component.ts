@@ -98,7 +98,13 @@ export type PointSetNode = {
 export type TextNode = {
   nodeType: 'text';
   textName: string;
-  parentNode: PointNode | AyatNode | PasalVersionNode | PointSetNode;
+  parentNode:
+    | PointNode
+    | AyatNode
+    | PasalVersionNode
+    | PointSetNode
+    | MenimbangNode
+    | MengingatNode;
 };
 
 export type MenimbangNode = {
@@ -215,6 +221,18 @@ export type PasalSet = {
 export type Point = {
   type: 'point';
   node: PointNode;
+  content: PointSet | Text;
+};
+
+export type Menimbang = {
+  type: 'menimbang';
+  node: MenimbangNode;
+  content: PointSet | Text;
+};
+
+export type Mengingat = {
+  type: 'mengingat';
+  node: MengingatNode;
   content: PointSet | Text;
 };
 

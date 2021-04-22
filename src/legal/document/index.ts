@@ -5,7 +5,7 @@ import { UudNode, _uud } from './uud';
 import { DataType } from '../../data';
 import path from 'path';
 import * as fs from 'fs';
-import { BabSet } from '../component';
+import { BabSet, Mengingat, Menimbang } from '../component';
 import { DateNode } from '..';
 
 /**
@@ -159,8 +159,8 @@ export type DocumentMetadata = {
   sekretaris?: string;
   dokumen?: string;
   salinanSesuaiDenganAslinya?: string;
-  menimbang?: string;
-  mengingat?: string;
+  menimbang?: Menimbang;
+  mengingat?: Mengingat;
   menetapkan?: string;
 };
 

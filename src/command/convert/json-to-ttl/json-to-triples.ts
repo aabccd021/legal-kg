@@ -324,13 +324,21 @@ function textToTriple(text: Text): LegalTriple[] {
 }
 
 function _textToTriple(
-  parentNode: PointSetNode | PointNode | PasalVersionNode | AyatNode,
+  parentNode:
+    | PointSetNode
+    | PointNode
+    | PasalVersionNode
+    | AyatNode
+    | MenimbangNode
+    | MengingatNode,
   textNode: TextNode
 ): LegalTriple {
   if (parentNode.nodeType === 'ayat') return [parentNode, 'ayatHasText', textNode];
   if (parentNode.nodeType === 'pasalVersion') return [parentNode, 'pasalVersionHasText', textNode];
   if (parentNode.nodeType === 'point') return [parentNode, 'pointHasText', textNode];
   if (parentNode.nodeType === 'pointSet') return [parentNode, 'pointSetHasDescription', textNode];
+  if (parentNode.nodeType === 'menimbang') return [parentNode, 'menimbangHasText', textNode];
+  if (parentNode.nodeType === 'mengingat') return [parentNode, 'mengingatHasText', textNode];
   assertNever(parentNode);
 }
 

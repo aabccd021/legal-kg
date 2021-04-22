@@ -1,4 +1,4 @@
-import { MenimbangNode } from './../../../legal/component';
+import { MengingatNode, MenimbangNode } from './../../../legal/component';
 import assertNever from 'assert-never';
 import { chain, curry, isEmpty, isUndefined, keys, map, parseInt, reduce } from 'lodash';
 import {
@@ -62,7 +62,7 @@ type MetadataAcc = {
   };
 };
 
-export function spansToMetadata(spans: Span[]): DocumentMetadata {
+export function spansToMetadata(context: Context, spans: Span[]): DocumentMetadata {
   const res: MetadataAcc = reduce<Span, MetadataAcc>(
     spans,
     (acc, span) => {
@@ -80,9 +80,23 @@ export function spansToMetadata(spans: Span[]): DocumentMetadata {
       section: 'init',
     }
   );
+  const menimbangNode: MenimbangNode = { nodeType: 'menimbang', parentNode: context.documentNode };
+  const mengingatNode: MengingatNode = { nodeType: 'mengingat', parentNode: context.documentNode };
   return {
-    menimbang: res.spans.menimbang.map(spanToStr).join('\n').trim(),
-    mengingat: res.spans.mengingat.map(spanToStr).join('\n').trim(),
+    menimbang: {
+      type: 'menimbang',
+      node: menimbangNode,
+      content:
+        spansToPointSet(menimbangNode, context, res.spans.menimbang) ??
+        spansToText(menimbangNode, 'text', res.spans.menimbang),
+    },
+    mengingat: {
+      type: 'mengingat',
+      node: mengingatNode,
+      content:
+        spansToPointSet(mengingatNode, context, res.spans.mengingat) ??
+        spansToText(mengingatNode, 'text', res.spans.mengingat),
+    },
     memutuskan: res.spans.memutuskan.map(spanToStr).join('\n').trim(),
     denganPersetujuan: res.spans.denganPersetujuan.map(spanToStr).join('\n').trim(),
   };
@@ -90,10 +104,10 @@ export function spansToMetadata(spans: Span[]): DocumentMetadata {
 
 function getNewSection(prevSection: MetadataSection, span: Span): [MetadataSection, Span] {
   if (prevSection === 'init' && span.str.startsWith('Menimbang')) {
-    return ['menimbang', { ...span, str: span.str.split(':').slice(1).join(':') }];
+    return ['menimbang', { ...span, str: span.str.split(':').slice(1).join(':').trim() }];
   }
   if (prevSection === 'menimbang' && span.str.startsWith('Mengingat')) {
-    return ['mengingat', { ...span, str: span.str.split(':').slice(1).join(':') }];
+    return ['mengingat', { ...span, str: span.str.split(':').slice(1).join(':').trim() }];
   }
   if (prevSection === 'mengingat' && span.str.startsWith('Dengan persetujuan bersama antara')) {
     return ['denganPersetujuan', { ...span, str: '' }];
@@ -270,7 +284,7 @@ function spansToAyatSet(
 }
 
 function spansToPointSet(
-  parentNode: PointNode | AyatNode | PasalVersionNode | MenimbangNode,
+  parentNode: PointNode | AyatNode | PasalVersionNode | MenimbangNode | MengingatNode,
   context: Context,
   spans: Span[]
 ): PointSet | undefined {
@@ -284,7 +298,7 @@ function spansToPointSet(
 }
 
 function _spansToPointSet(
-  parentNode: PointNode | AyatNode | PasalVersionNode | MenimbangNode,
+  parentNode: PointNode | AyatNode | PasalVersionNode | MenimbangNode | MengingatNode,
   context: Context,
   pointType: 'numPoint' | 'charPoint',
   spans: Span[],
@@ -635,7 +649,7 @@ function mapSpanArrToPasalKey(
 }
 
 function spansToText(
-  parent: PointNode | AyatNode | PasalVersionNode | PointSetNode,
+  parent: PointNode | AyatNode | PasalVersionNode | PointSetNode | MenimbangNode | MengingatNode,
   textName: string,
   spans: Span[]
 ): Text {
