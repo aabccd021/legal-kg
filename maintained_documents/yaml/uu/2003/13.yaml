@@ -880,7 +880,12 @@ babSet:
                 textString: >-
                   Pembangunan ketenagakerjaan berlandaskan Pancasila dan Undang Undang Dasar Negara
                   Republik Indonesia Tahun 1945.
-                references: []
+                references:
+                  - start: 55
+                    end: 111
+                    node:
+                      nodeType: document
+                      docType: uud
           - type: pasal
             node:
               nodeType: pasal
@@ -2913,6 +2918,12 @@ babSet:
                         nodeType: pointSet
                         parentNode: *ref_199
                       nodeType: point
+                  - start: 85
+                    end: 93
+                    node:
+                      key: 33
+                      parentNode: *ref_0
+                      nodeType: pasal
           - type: pasal
             node:
               nodeType: pasal
@@ -7227,10 +7238,18 @@ babSet:
                               dimaksud dalam Pasal 79 ayat (2) huruf b, c, dan d, Pasal 80, dan
                               Pasal 82 berhak mendapat upah penuh.
                             references:
-                              - start: 103
-                                end: 110
+                              - start: 85
+                                end: 102
                                 node:
-                                  key: b
+                                  parentAyatSetNode:
+                                    nodeType: ayatSet
+                                    parentPasalVersionNode: *ref_512
+                                  key: 2
+                                  nodeType: ayat
+                              - start: 119
+                                end: 120
+                                node:
+                                  key: d
                                   parentPointSetNode: &ref_513
                                     nodeType: pointSet
                                     parentNode: *ref_512
@@ -7241,20 +7260,24 @@ babSet:
                                   key: c
                                   parentPointSetNode: *ref_513
                                   nodeType: point
-                              - start: 119
-                                end: 120
+                              - start: 103
+                                end: 110
                                 node:
-                                  key: d
+                                  key: b
                                   parentPointSetNode: *ref_513
                                   nodeType: point
-                              - start: 85
-                                end: 102
+                              - start: 136
+                                end: 144
                                 node:
-                                  parentAyatSetNode:
-                                    nodeType: ayatSet
-                                    parentPasalVersionNode: *ref_512
-                                  key: 2
-                                  nodeType: ayat
+                                  key: 82
+                                  parentNode: *ref_0
+                                  nodeType: pasal
+                              - start: 122
+                                end: 130
+                                node:
+                                  key: 80
+                                  parentNode: *ref_0
+                                  nodeType: pasal
                       - type: pasal
                         node:
                           nodeType: pasal
@@ -8620,6 +8643,18 @@ babSet:
                               parentPasalVersionNode: *ref_612
                             key: 1
                             nodeType: ayat
+                        - start: 203
+                          end: 211
+                          node:
+                            key: 89
+                            parentNode: *ref_0
+                            nodeType: pasal
+                        - start: 143
+                          end: 151
+                          node:
+                            key: 88
+                            parentNode: *ref_0
+                            nodeType: pasal
                 - type: pasal
                   node:
                     nodeType: pasal
@@ -10401,7 +10436,19 @@ babSet:
                       textString: >-
                         Keanggotaan serikat pekerja/serikat buruh sebagaimana dimaksud dalam Pasal
                         119 dan Pasal 120 dibuktikan dengan kartu tanda anggota.
-                      references: []
+                      references:
+                        - start: 83
+                          end: 92
+                          node:
+                            key: 120
+                            parentNode: *ref_0
+                            nodeType: pasal
+                        - start: 69
+                          end: 78
+                          node:
+                            key: 119
+                            parentNode: *ref_0
+                            nodeType: pasal
                 - type: pasal
                   node:
                     nodeType: pasal
@@ -14248,13 +14295,13 @@ babSet:
                   sebesar 1 (satu) kali ketentuan Pasal 156 ayat (3) dan uang penggantian hak sesuai
                   ketentuan Pasal 156 ayat (4).
                 references:
-                  - start: 190
-                    end: 208
+                  - start: 331
+                    end: 349
                     node:
                       parentAyatSetNode: &ref_998
                         nodeType: ayatSet
                         parentPasalVersionNode: *ref_997
-                      key: 2
+                      key: 4
                       nodeType: ayat
                   - start: 270
                     end: 288
@@ -14262,11 +14309,11 @@ babSet:
                       parentAyatSetNode: *ref_998
                       key: 3
                       nodeType: ayat
-                  - start: 331
-                    end: 349
+                  - start: 190
+                    end: 208
                     node:
                       parentAyatSetNode: *ref_998
-                      key: 4
+                      key: 2
                       nodeType: ayat
           - type: pasal
             node:
@@ -14296,13 +14343,13 @@ babSet:
                   (satu) kali uang penghargaan masa kerja sesuai ketentuan Pasal 156 ayat (3), dan
                   uang penggantian hak sesuai ketentuan Pasal 156 ayat (4).
                 references:
-                  - start: 211
-                    end: 229
+                  - start: 352
+                    end: 370
                     node:
                       parentAyatSetNode: &ref_1000
                         nodeType: ayatSet
                         parentPasalVersionNode: *ref_999
-                      key: 2
+                      key: 4
                       nodeType: ayat
                   - start: 290
                     end: 308
@@ -14310,11 +14357,11 @@ babSet:
                       parentAyatSetNode: *ref_1000
                       key: 3
                       nodeType: ayat
-                  - start: 352
-                    end: 370
+                  - start: 211
+                    end: 229
                     node:
                       parentAyatSetNode: *ref_1000
-                      key: 4
+                      key: 2
                       nodeType: ayat
           - type: pasal
             node:
@@ -14712,8 +14759,8 @@ babSet:
                   Pasal 169 batal demi hukum dan pengusaha wajib mempekerjakan pekerja/buruh yang
                   bersangkutan serta membayar seluruh upah dan hak yang seharusnya diterima.
                 references:
-                  - start: 66
-                    end: 84
+                  - start: 128
+                    end: 146
                     node:
                       parentAyatSetNode: &ref_1027
                         nodeType: ayatSet
@@ -14726,12 +14773,30 @@ babSet:
                       parentAyatSetNode: *ref_1027
                       key: 1
                       nodeType: ayat
-                  - start: 128
-                    end: 146
+                  - start: 66
+                    end: 84
                     node:
                       parentAyatSetNode: *ref_1027
                       key: 3
                       nodeType: ayat
+                  - start: 163
+                    end: 172
+                    node:
+                      key: 169
+                      parentNode: *ref_0
+                      nodeType: pasal
+                  - start: 148
+                    end: 157
+                    node:
+                      key: 162
+                      parentNode: *ref_0
+                      nodeType: pasal
+                  - start: 89
+                    end: 98
+                    node:
+                      key: 168
+                      parentNode: *ref_0
+                      nodeType: pasal
           - type: pasal
             node:
               nodeType: pasal
@@ -14762,20 +14827,26 @@ babSet:
                   hubungan industrial dalam waktu paling lama 1 (satu) tahun sejak tanggal dilakukan
                   pemutusan hubungan kerjanya.
                 references:
-                  - start: 166
-                    end: 184
+                  - start: 186
+                    end: 204
                     node:
                       parentAyatSetNode: &ref_1029
                         nodeType: ayatSet
                         parentPasalVersionNode: *ref_1028
-                      key: 1
-                      nodeType: ayat
-                  - start: 186
-                    end: 204
-                    node:
-                      parentAyatSetNode: *ref_1029
                       key: 3
                       nodeType: ayat
+                  - start: 166
+                    end: 184
+                    node:
+                      parentAyatSetNode: *ref_1029
+                      key: 1
+                      nodeType: ayat
+                  - start: 210
+                    end: 219
+                    node:
+                      key: 162
+                      parentNode: *ref_0
+                      nodeType: pasal
           - type: pasal
             node:
               nodeType: pasal
@@ -14805,13 +14876,13 @@ babSet:
                   (dua) kali ketentuan Pasal 156 ayat (3), dan uang pengganti hak 1 (satu) kali
                   ketentuan Pasal 156 ayat (4).
                 references:
-                  - start: 268
-                    end: 286
+                  - start: 406
+                    end: 424
                     node:
                       parentAyatSetNode: &ref_1031
                         nodeType: ayatSet
                         parentPasalVersionNode: *ref_1030
-                      key: 2
+                      key: 4
                       nodeType: ayat
                   - start: 339
                     end: 357
@@ -14819,11 +14890,11 @@ babSet:
                       parentAyatSetNode: *ref_1031
                       key: 3
                       nodeType: ayat
-                  - start: 406
-                    end: 424
+                  - start: 268
+                    end: 286
                     node:
                       parentAyatSetNode: *ref_1031
-                      key: 4
+                      key: 2
                       nodeType: ayat
     - type: bab
       node: &ref_1032
@@ -15044,7 +15115,13 @@ babSet:
                 textString: >-
                   Pegawai pengawas ketenagakerjaan sebagaimana dimaksud dalam Pasal 176 ditetapkan
                   oleh Menteri atau pejabat yang ditunjuk.
-                references: []
+                references:
+                  - start: 60
+                    end: 69
+                    node:
+                      key: 176
+                      parentNode: *ref_0
+                      nodeType: pasal
           - type: pasal
             node:
               nodeType: pasal
@@ -15174,7 +15251,13 @@ babSet:
                   Ketentuan mengenai persyaratan penunjukan, hak dan kewajiban, serta wewenang
                   pegawai pengawas ketenagakerjaan sebagaimana dimaksud dalam Pasal 176 sesuai
                   dengan peraturan perundang-undangan yang berlaku.
-                references: []
+                references:
+                  - start: 137
+                    end: 146
+                    node:
+                      key: 176
+                      parentNode: *ref_0
+                      nodeType: pasal
           - type: pasal
             node:
               nodeType: pasal

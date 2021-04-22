@@ -183,6 +183,7 @@
 <http://example.org/legal/document/uu/2003/13/pasal/0002/version/20030325> legal:pasalVersionHasRawText "Pembangunan ketenagakerjaan berlandaskan Pancasila dan Undang Undang Dasar Negara Republik Indonesia Tahun 1945." .
 <http://example.org/legal/document/uu/2003/13/pasal/0002/version/20030325/text> legal:textHasTextString "Pembangunan ketenagakerjaan berlandaskan Pancasila dan Undang Undang Dasar Negara Republik Indonesia Tahun 1945." .
 <http://example.org/legal/document/uu/2003/13/pasal/0002/version/20030325> legal:pasalVersionHasText <http://example.org/legal/document/uu/2003/13/pasal/0002/version/20030325/text> .
+<http://example.org/legal/document/uu/2003/13/pasal/0002/version/20030325/text> legal:textReferencesLegal <http://example.org/legal/document/uud/> .
 <http://example.org/legal/document/uu/2003/13/bab/0002/pasals> legal:pasalSetHasPasal <http://example.org/legal/document/uu/2003/13/pasal/0003> .
 <http://example.org/legal/document/uu/2003/13/pasal/0003> legal:pasalHasKey 3 .
 <http://example.org/legal/document/uu/2003/13/pasal/0003> legal:pasalHasPasalVersion <http://example.org/legal/document/uu/2003/13/pasal/0003/version/20030325> .
@@ -862,6 +863,7 @@
 <http://example.org/legal/document/uu/2003/13/pasal/0034/version/20030325/text> legal:textHasTextString "Ketentuan mengenai penempatan tenaga kerja di luar negeri sebagaimana dimaksud dalam Pasal 33 huruf b diatur dengan undang-undang." .
 <http://example.org/legal/document/uu/2003/13/pasal/0034/version/20030325> legal:pasalVersionHasText <http://example.org/legal/document/uu/2003/13/pasal/0034/version/20030325/text> .
 <http://example.org/legal/document/uu/2003/13/pasal/0034/version/20030325/text> legal:textReferencesLegal <http://example.org/legal/document/uu/2003/13/pasal/0034/version/20030325/point/b> .
+<http://example.org/legal/document/uu/2003/13/pasal/0034/version/20030325/text> legal:textReferencesLegal <http://example.org/legal/document/uu/2003/13/pasal/0033> .
 <http://example.org/legal/document/uu/2003/13/bab/0006/pasals> legal:pasalSetHasPasal <http://example.org/legal/document/uu/2003/13/pasal/0035> .
 <http://example.org/legal/document/uu/2003/13/pasal/0035> legal:pasalHasKey 35 .
 <http://example.org/legal/document/uu/2003/13/pasal/0035> legal:pasalHasPasalVersion <http://example.org/legal/document/uu/2003/13/pasal/0035/version/20030325> .
@@ -2244,10 +2246,12 @@
 <http://example.org/legal/document/uu/2003/13/pasal/0084/version/20030325> legal:pasalVersionHasRawText "Setiap pekerja/buruh yang menggunakan hak waktu istirahat sebagaimana dimaksud dalam Pasal 79 ayat (2) huruf b, c, dan d, Pasal 80, dan Pasal 82 berhak mendapat upah penuh." .
 <http://example.org/legal/document/uu/2003/13/pasal/0084/version/20030325/text> legal:textHasTextString "Setiap pekerja/buruh yang menggunakan hak waktu istirahat sebagaimana dimaksud dalam Pasal 79 ayat (2) huruf b, c, dan d, Pasal 80, dan Pasal 82 berhak mendapat upah penuh." .
 <http://example.org/legal/document/uu/2003/13/pasal/0084/version/20030325> legal:pasalVersionHasText <http://example.org/legal/document/uu/2003/13/pasal/0084/version/20030325/text> .
-<http://example.org/legal/document/uu/2003/13/pasal/0084/version/20030325/text> legal:textReferencesLegal <http://example.org/legal/document/uu/2003/13/pasal/0084/version/20030325/point/b> .
-<http://example.org/legal/document/uu/2003/13/pasal/0084/version/20030325/text> legal:textReferencesLegal <http://example.org/legal/document/uu/2003/13/pasal/0084/version/20030325/point/c> .
-<http://example.org/legal/document/uu/2003/13/pasal/0084/version/20030325/text> legal:textReferencesLegal <http://example.org/legal/document/uu/2003/13/pasal/0084/version/20030325/point/d> .
 <http://example.org/legal/document/uu/2003/13/pasal/0084/version/20030325/text> legal:textReferencesLegal <http://example.org/legal/document/uu/2003/13/pasal/0084/version/20030325/ayat/0002> .
+<http://example.org/legal/document/uu/2003/13/pasal/0084/version/20030325/text> legal:textReferencesLegal <http://example.org/legal/document/uu/2003/13/pasal/0084/version/20030325/point/d> .
+<http://example.org/legal/document/uu/2003/13/pasal/0084/version/20030325/text> legal:textReferencesLegal <http://example.org/legal/document/uu/2003/13/pasal/0084/version/20030325/point/c> .
+<http://example.org/legal/document/uu/2003/13/pasal/0084/version/20030325/text> legal:textReferencesLegal <http://example.org/legal/document/uu/2003/13/pasal/0084/version/20030325/point/b> .
+<http://example.org/legal/document/uu/2003/13/pasal/0084/version/20030325/text> legal:textReferencesLegal <http://example.org/legal/document/uu/2003/13/pasal/0082> .
+<http://example.org/legal/document/uu/2003/13/pasal/0084/version/20030325/text> legal:textReferencesLegal <http://example.org/legal/document/uu/2003/13/pasal/0080> .
 <http://example.org/legal/document/uu/2003/13/bab/0010/bagian/0001/paragraf/0004/pasals> legal:pasalSetHasPasal <http://example.org/legal/document/uu/2003/13/pasal/0085> .
 <http://example.org/legal/document/uu/2003/13/pasal/0085> legal:pasalHasKey 85 .
 <http://example.org/legal/document/uu/2003/13/pasal/0085> legal:pasalHasPasalVersion <http://example.org/legal/document/uu/2003/13/pasal/0085/version/20030325> .
@@ -2673,6 +2677,8 @@
 <http://example.org/legal/document/uu/2003/13/pasal/0097/version/20030325/text> legal:textHasTextString "Ketentuan mengenai penghasilan yang layak, kebijakan pengupahan, kebutuhan hidup layak, dan perlindungan pengupahan sebagaimana dimaksud dalam Pasal 88, penetapan upah minimum sebagaimana dimaksud dalam Pasal 89, dan pengenaan denda sebagaimana dimaksud dalam Pasal 95 ayat (1), ayat (2) dan ayat (3) diatur dengan Peraturan Pemerintah." .
 <http://example.org/legal/document/uu/2003/13/pasal/0097/version/20030325> legal:pasalVersionHasText <http://example.org/legal/document/uu/2003/13/pasal/0097/version/20030325/text> .
 <http://example.org/legal/document/uu/2003/13/pasal/0097/version/20030325/text> legal:textReferencesLegal <http://example.org/legal/document/uu/2003/13/pasal/0097/version/20030325/ayat/0001> .
+<http://example.org/legal/document/uu/2003/13/pasal/0097/version/20030325/text> legal:textReferencesLegal <http://example.org/legal/document/uu/2003/13/pasal/0089> .
+<http://example.org/legal/document/uu/2003/13/pasal/0097/version/20030325/text> legal:textReferencesLegal <http://example.org/legal/document/uu/2003/13/pasal/0088> .
 <http://example.org/legal/document/uu/2003/13/bab/0010/bagian/0002/pasals> legal:pasalSetHasPasal <http://example.org/legal/document/uu/2003/13/pasal/0098> .
 <http://example.org/legal/document/uu/2003/13/pasal/0098> legal:pasalHasKey 98 .
 <http://example.org/legal/document/uu/2003/13/pasal/0098> legal:pasalHasPasalVersion <http://example.org/legal/document/uu/2003/13/pasal/0098/version/20030325> .
@@ -3247,6 +3253,8 @@
 <http://example.org/legal/document/uu/2003/13/pasal/0121/version/20030325> legal:pasalVersionHasRawText "Keanggotaan serikat pekerja/serikat buruh sebagaimana dimaksud dalam Pasal 119 dan Pasal 120 dibuktikan dengan kartu tanda anggota." .
 <http://example.org/legal/document/uu/2003/13/pasal/0121/version/20030325/text> legal:textHasTextString "Keanggotaan serikat pekerja/serikat buruh sebagaimana dimaksud dalam Pasal 119 dan Pasal 120 dibuktikan dengan kartu tanda anggota." .
 <http://example.org/legal/document/uu/2003/13/pasal/0121/version/20030325> legal:pasalVersionHasText <http://example.org/legal/document/uu/2003/13/pasal/0121/version/20030325/text> .
+<http://example.org/legal/document/uu/2003/13/pasal/0121/version/20030325/text> legal:textReferencesLegal <http://example.org/legal/document/uu/2003/13/pasal/0120> .
+<http://example.org/legal/document/uu/2003/13/pasal/0121/version/20030325/text> legal:textReferencesLegal <http://example.org/legal/document/uu/2003/13/pasal/0119> .
 <http://example.org/legal/document/uu/2003/13/bab/0011/bagian/0007/pasals> legal:pasalSetHasPasal <http://example.org/legal/document/uu/2003/13/pasal/0122> .
 <http://example.org/legal/document/uu/2003/13/pasal/0122> legal:pasalHasKey 122 .
 <http://example.org/legal/document/uu/2003/13/pasal/0122> legal:pasalHasPasalVersion <http://example.org/legal/document/uu/2003/13/pasal/0122/version/20030325> .
@@ -4415,9 +4423,9 @@
 <http://example.org/legal/document/uu/2003/13/pasal/0165/version/20030325> legal:pasalVersionHasRawText "Pengusaha dapat melakukan pemutusan hubungan kerja terhadap pekerja/ buruh karena perusahaan pailit, dengan ketentuan pekerja/buruh berhak atas uang pesangon sebesar 1 (satu) kali ketentuan Pasal 156 ayat (2), uang penghargaan masa kerja sebesar 1 (satu) kali ketentuan Pasal 156 ayat (3) dan uang penggantian hak sesuai ketentuan Pasal 156 ayat (4)." .
 <http://example.org/legal/document/uu/2003/13/pasal/0165/version/20030325/text> legal:textHasTextString "Pengusaha dapat melakukan pemutusan hubungan kerja terhadap pekerja/ buruh karena perusahaan pailit, dengan ketentuan pekerja/buruh berhak atas uang pesangon sebesar 1 (satu) kali ketentuan Pasal 156 ayat (2), uang penghargaan masa kerja sebesar 1 (satu) kali ketentuan Pasal 156 ayat (3) dan uang penggantian hak sesuai ketentuan Pasal 156 ayat (4)." .
 <http://example.org/legal/document/uu/2003/13/pasal/0165/version/20030325> legal:pasalVersionHasText <http://example.org/legal/document/uu/2003/13/pasal/0165/version/20030325/text> .
-<http://example.org/legal/document/uu/2003/13/pasal/0165/version/20030325/text> legal:textReferencesLegal <http://example.org/legal/document/uu/2003/13/pasal/0165/version/20030325/ayat/0002> .
-<http://example.org/legal/document/uu/2003/13/pasal/0165/version/20030325/text> legal:textReferencesLegal <http://example.org/legal/document/uu/2003/13/pasal/0165/version/20030325/ayat/0003> .
 <http://example.org/legal/document/uu/2003/13/pasal/0165/version/20030325/text> legal:textReferencesLegal <http://example.org/legal/document/uu/2003/13/pasal/0165/version/20030325/ayat/0004> .
+<http://example.org/legal/document/uu/2003/13/pasal/0165/version/20030325/text> legal:textReferencesLegal <http://example.org/legal/document/uu/2003/13/pasal/0165/version/20030325/ayat/0003> .
+<http://example.org/legal/document/uu/2003/13/pasal/0165/version/20030325/text> legal:textReferencesLegal <http://example.org/legal/document/uu/2003/13/pasal/0165/version/20030325/ayat/0002> .
 <http://example.org/legal/document/uu/2003/13/bab/0012/pasals> legal:pasalSetHasPasal <http://example.org/legal/document/uu/2003/13/pasal/0166> .
 <http://example.org/legal/document/uu/2003/13/pasal/0166> legal:pasalHasKey 166 .
 <http://example.org/legal/document/uu/2003/13/pasal/0166> legal:pasalHasPasalVersion <http://example.org/legal/document/uu/2003/13/pasal/0166/version/20030325> .
@@ -4427,9 +4435,9 @@
 <http://example.org/legal/document/uu/2003/13/pasal/0166/version/20030325> legal:pasalVersionHasRawText "Dalam hal hubungan kerja berakhir karena pekerja/buruh meninggal dunia, kepada ahli warisnya diberikan sejumlah uang yang besar perhitungannya sama dengan perhitungan 2 (dua) kali uang pesangon sesuai ketentuan Pasal 156 ayat (2), 1 (satu) kali uang penghargaan masa kerja sesuai ketentuan Pasal 156 ayat (3), dan uang penggantian hak sesuai ketentuan Pasal 156 ayat (4)." .
 <http://example.org/legal/document/uu/2003/13/pasal/0166/version/20030325/text> legal:textHasTextString "Dalam hal hubungan kerja berakhir karena pekerja/buruh meninggal dunia, kepada ahli warisnya diberikan sejumlah uang yang besar perhitungannya sama dengan perhitungan 2 (dua) kali uang pesangon sesuai ketentuan Pasal 156 ayat (2), 1 (satu) kali uang penghargaan masa kerja sesuai ketentuan Pasal 156 ayat (3), dan uang penggantian hak sesuai ketentuan Pasal 156 ayat (4)." .
 <http://example.org/legal/document/uu/2003/13/pasal/0166/version/20030325> legal:pasalVersionHasText <http://example.org/legal/document/uu/2003/13/pasal/0166/version/20030325/text> .
-<http://example.org/legal/document/uu/2003/13/pasal/0166/version/20030325/text> legal:textReferencesLegal <http://example.org/legal/document/uu/2003/13/pasal/0166/version/20030325/ayat/0002> .
-<http://example.org/legal/document/uu/2003/13/pasal/0166/version/20030325/text> legal:textReferencesLegal <http://example.org/legal/document/uu/2003/13/pasal/0166/version/20030325/ayat/0003> .
 <http://example.org/legal/document/uu/2003/13/pasal/0166/version/20030325/text> legal:textReferencesLegal <http://example.org/legal/document/uu/2003/13/pasal/0166/version/20030325/ayat/0004> .
+<http://example.org/legal/document/uu/2003/13/pasal/0166/version/20030325/text> legal:textReferencesLegal <http://example.org/legal/document/uu/2003/13/pasal/0166/version/20030325/ayat/0003> .
+<http://example.org/legal/document/uu/2003/13/pasal/0166/version/20030325/text> legal:textReferencesLegal <http://example.org/legal/document/uu/2003/13/pasal/0166/version/20030325/ayat/0002> .
 <http://example.org/legal/document/uu/2003/13/bab/0012/pasals> legal:pasalSetHasPasal <http://example.org/legal/document/uu/2003/13/pasal/0167> .
 <http://example.org/legal/document/uu/2003/13/pasal/0167> legal:pasalHasKey 167 .
 <http://example.org/legal/document/uu/2003/13/pasal/0167> legal:pasalHasPasalVersion <http://example.org/legal/document/uu/2003/13/pasal/0167/version/20030325> .
@@ -4550,6 +4558,9 @@
 <http://example.org/legal/document/uu/2003/13/pasal/0170/version/20030325> legal:pasalVersionHasText <http://example.org/legal/document/uu/2003/13/pasal/0170/version/20030325/text> .
 <http://example.org/legal/document/uu/2003/13/pasal/0170/version/20030325/text> legal:textReferencesLegal <http://example.org/legal/document/uu/2003/13/pasal/0170/version/20030325/ayat/0003> .
 <http://example.org/legal/document/uu/2003/13/pasal/0170/version/20030325/text> legal:textReferencesLegal <http://example.org/legal/document/uu/2003/13/pasal/0170/version/20030325/ayat/0001> .
+<http://example.org/legal/document/uu/2003/13/pasal/0170/version/20030325/text> legal:textReferencesLegal <http://example.org/legal/document/uu/2003/13/pasal/0169> .
+<http://example.org/legal/document/uu/2003/13/pasal/0170/version/20030325/text> legal:textReferencesLegal <http://example.org/legal/document/uu/2003/13/pasal/0162> .
+<http://example.org/legal/document/uu/2003/13/pasal/0170/version/20030325/text> legal:textReferencesLegal <http://example.org/legal/document/uu/2003/13/pasal/0168> .
 <http://example.org/legal/document/uu/2003/13/bab/0012/pasals> legal:pasalSetHasPasal <http://example.org/legal/document/uu/2003/13/pasal/0171> .
 <http://example.org/legal/document/uu/2003/13/pasal/0171> legal:pasalHasKey 171 .
 <http://example.org/legal/document/uu/2003/13/pasal/0171> legal:pasalHasPasalVersion <http://example.org/legal/document/uu/2003/13/pasal/0171/version/20030325> .
@@ -4559,8 +4570,9 @@
 <http://example.org/legal/document/uu/2003/13/pasal/0171/version/20030325> legal:pasalVersionHasRawText "Pekerja/buruh yang mengalami pemutusan hubungan kerja tanpa penetapan lembaga penyelesaian perselisihan hubungan industrial yang berwenang sebagaimana dimaksud dalam Pasal 158 ayat (1), Pasal 160 ayat (3), dan Pasal 162, dan pekerja/buruh yang bersangkutan tidak dapat menerima pemutusan hubungan kerja tersebut, maka pekerja/buruh dapat mengajukan gugatan ke lembaga penyelesaian perselisihan hubungan industrial dalam waktu paling lama 1 (satu) tahun sejak tanggal dilakukan pemutusan hubungan kerjanya." .
 <http://example.org/legal/document/uu/2003/13/pasal/0171/version/20030325/text> legal:textHasTextString "Pekerja/buruh yang mengalami pemutusan hubungan kerja tanpa penetapan lembaga penyelesaian perselisihan hubungan industrial yang berwenang sebagaimana dimaksud dalam Pasal 158 ayat (1), Pasal 160 ayat (3), dan Pasal 162, dan pekerja/buruh yang bersangkutan tidak dapat menerima pemutusan hubungan kerja tersebut, maka pekerja/buruh dapat mengajukan gugatan ke lembaga penyelesaian perselisihan hubungan industrial dalam waktu paling lama 1 (satu) tahun sejak tanggal dilakukan pemutusan hubungan kerjanya." .
 <http://example.org/legal/document/uu/2003/13/pasal/0171/version/20030325> legal:pasalVersionHasText <http://example.org/legal/document/uu/2003/13/pasal/0171/version/20030325/text> .
-<http://example.org/legal/document/uu/2003/13/pasal/0171/version/20030325/text> legal:textReferencesLegal <http://example.org/legal/document/uu/2003/13/pasal/0171/version/20030325/ayat/0001> .
 <http://example.org/legal/document/uu/2003/13/pasal/0171/version/20030325/text> legal:textReferencesLegal <http://example.org/legal/document/uu/2003/13/pasal/0171/version/20030325/ayat/0003> .
+<http://example.org/legal/document/uu/2003/13/pasal/0171/version/20030325/text> legal:textReferencesLegal <http://example.org/legal/document/uu/2003/13/pasal/0171/version/20030325/ayat/0001> .
+<http://example.org/legal/document/uu/2003/13/pasal/0171/version/20030325/text> legal:textReferencesLegal <http://example.org/legal/document/uu/2003/13/pasal/0162> .
 <http://example.org/legal/document/uu/2003/13/bab/0012/pasals> legal:pasalSetHasPasal <http://example.org/legal/document/uu/2003/13/pasal/0172> .
 <http://example.org/legal/document/uu/2003/13/pasal/0172> legal:pasalHasKey 172 .
 <http://example.org/legal/document/uu/2003/13/pasal/0172> legal:pasalHasPasalVersion <http://example.org/legal/document/uu/2003/13/pasal/0172/version/20030325> .
@@ -4570,9 +4582,9 @@
 <http://example.org/legal/document/uu/2003/13/pasal/0172/version/20030325> legal:pasalVersionHasRawText "Pekerja/buruh yang mengalami sakit berkepanjangan, mengalami cacat akibat kecelakaan kerja dan tidak dapat melakukan pekerjaannya setelah melampaui batas 12 (dua belas) bulan dapat mengajukan pemutusan hubungan kerja dan diberikan uang pesangon 2 (dua) kali ketentuan Pasal 156 ayat (2), uang penghargaan masa kerja 2 (dua) kali ketentuan Pasal 156 ayat (3), dan uang pengganti hak 1 (satu) kali ketentuan Pasal 156 ayat (4)." .
 <http://example.org/legal/document/uu/2003/13/pasal/0172/version/20030325/text> legal:textHasTextString "Pekerja/buruh yang mengalami sakit berkepanjangan, mengalami cacat akibat kecelakaan kerja dan tidak dapat melakukan pekerjaannya setelah melampaui batas 12 (dua belas) bulan dapat mengajukan pemutusan hubungan kerja dan diberikan uang pesangon 2 (dua) kali ketentuan Pasal 156 ayat (2), uang penghargaan masa kerja 2 (dua) kali ketentuan Pasal 156 ayat (3), dan uang pengganti hak 1 (satu) kali ketentuan Pasal 156 ayat (4)." .
 <http://example.org/legal/document/uu/2003/13/pasal/0172/version/20030325> legal:pasalVersionHasText <http://example.org/legal/document/uu/2003/13/pasal/0172/version/20030325/text> .
-<http://example.org/legal/document/uu/2003/13/pasal/0172/version/20030325/text> legal:textReferencesLegal <http://example.org/legal/document/uu/2003/13/pasal/0172/version/20030325/ayat/0002> .
-<http://example.org/legal/document/uu/2003/13/pasal/0172/version/20030325/text> legal:textReferencesLegal <http://example.org/legal/document/uu/2003/13/pasal/0172/version/20030325/ayat/0003> .
 <http://example.org/legal/document/uu/2003/13/pasal/0172/version/20030325/text> legal:textReferencesLegal <http://example.org/legal/document/uu/2003/13/pasal/0172/version/20030325/ayat/0004> .
+<http://example.org/legal/document/uu/2003/13/pasal/0172/version/20030325/text> legal:textReferencesLegal <http://example.org/legal/document/uu/2003/13/pasal/0172/version/20030325/ayat/0003> .
+<http://example.org/legal/document/uu/2003/13/pasal/0172/version/20030325/text> legal:textReferencesLegal <http://example.org/legal/document/uu/2003/13/pasal/0172/version/20030325/ayat/0002> .
 <http://example.org/legal/document/uu/2003/13/bab> legal:babSetHasBab <http://example.org/legal/document/uu/2003/13/bab/0013> .
 <http://example.org/legal/document/uu/2003/13/bab/0013> legal:babHasKey 13 .
 <http://example.org/legal/document/uu/2003/13/bab/0013> legal:babHasTitle "PEMBINAAN" .
@@ -4649,6 +4661,7 @@
 <http://example.org/legal/document/uu/2003/13/pasal/0177/version/20030325> legal:pasalVersionHasRawText "Pegawai pengawas ketenagakerjaan sebagaimana dimaksud dalam Pasal 176 ditetapkan oleh Menteri atau pejabat yang ditunjuk." .
 <http://example.org/legal/document/uu/2003/13/pasal/0177/version/20030325/text> legal:textHasTextString "Pegawai pengawas ketenagakerjaan sebagaimana dimaksud dalam Pasal 176 ditetapkan oleh Menteri atau pejabat yang ditunjuk." .
 <http://example.org/legal/document/uu/2003/13/pasal/0177/version/20030325> legal:pasalVersionHasText <http://example.org/legal/document/uu/2003/13/pasal/0177/version/20030325/text> .
+<http://example.org/legal/document/uu/2003/13/pasal/0177/version/20030325/text> legal:textReferencesLegal <http://example.org/legal/document/uu/2003/13/pasal/0176> .
 <http://example.org/legal/document/uu/2003/13/bab/0014/pasals> legal:pasalSetHasPasal <http://example.org/legal/document/uu/2003/13/pasal/0178> .
 <http://example.org/legal/document/uu/2003/13/pasal/0178> legal:pasalHasKey 178 .
 <http://example.org/legal/document/uu/2003/13/pasal/0178> legal:pasalHasPasalVersion <http://example.org/legal/document/uu/2003/13/pasal/0178/version/20030325> .
@@ -4694,6 +4707,7 @@
 <http://example.org/legal/document/uu/2003/13/pasal/0180/version/20030325> legal:pasalVersionHasRawText "Ketentuan mengenai persyaratan penunjukan, hak dan kewajiban, serta wewenang pegawai pengawas ketenagakerjaan sebagaimana dimaksud dalam Pasal 176 sesuai dengan peraturan perundang-undangan yang berlaku." .
 <http://example.org/legal/document/uu/2003/13/pasal/0180/version/20030325/text> legal:textHasTextString "Ketentuan mengenai persyaratan penunjukan, hak dan kewajiban, serta wewenang pegawai pengawas ketenagakerjaan sebagaimana dimaksud dalam Pasal 176 sesuai dengan peraturan perundang-undangan yang berlaku." .
 <http://example.org/legal/document/uu/2003/13/pasal/0180/version/20030325> legal:pasalVersionHasText <http://example.org/legal/document/uu/2003/13/pasal/0180/version/20030325/text> .
+<http://example.org/legal/document/uu/2003/13/pasal/0180/version/20030325/text> legal:textReferencesLegal <http://example.org/legal/document/uu/2003/13/pasal/0176> .
 <http://example.org/legal/document/uu/2003/13/bab/0014/pasals> legal:pasalSetHasPasal <http://example.org/legal/document/uu/2003/13/pasal/0181> .
 <http://example.org/legal/document/uu/2003/13/pasal/0181> legal:pasalHasKey 181 .
 <http://example.org/legal/document/uu/2003/13/pasal/0181> legal:pasalHasPasalVersion <http://example.org/legal/document/uu/2003/13/pasal/0181/version/20030325> .

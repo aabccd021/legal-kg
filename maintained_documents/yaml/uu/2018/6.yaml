@@ -2184,6 +2184,12 @@ babSet:
                                     nodeType: pointSet
                                     parentNode: *ref_143
                                   nodeType: point
+                              - start: 80
+                                end: 88
+                                node:
+                                  key: 19
+                                  parentNode: *ref_0
+                                  nodeType: pasal
                       - type: pasal
                         node:
                           nodeType: pasal
@@ -2948,14 +2954,6 @@ babSet:
                               tindakan Kekarantinaan Kesehatan dan/atau penerbitan atau pembaruan
                               Dokumen Karantina Kesehatan.
                             references:
-                              - start: 106
-                                end: 113
-                                node:
-                                  key: b
-                                  parentPointSetNode:
-                                    nodeType: pointSet
-                                    parentNode: *ref_196
-                                  nodeType: point
                               - start: 88
                                 end: 105
                                 node:
@@ -2964,6 +2962,14 @@ babSet:
                                     parentPasalVersionNode: *ref_196
                                   key: 3
                                   nodeType: ayat
+                              - start: 106
+                                end: 113
+                                node:
+                                  key: b
+                                  parentPointSetNode:
+                                    nodeType: pointSet
+                                    parentNode: *ref_196
+                                  nodeType: point
                       - type: pasal
                         node:
                           nodeType: pasal
@@ -3631,7 +3637,19 @@ babSet:
                         bersedia dilakukan tindakan Kekarantinaan Kesehatan, Pejabat Karantina
                         Kesehatan berwenang mengeluarkan rekomendasi kepada pejabat imigrasi untuk
                         dilakukan deportasi.
-                      references: []
+                      references:
+                        - start: 56
+                          end: 64
+                          node:
+                            key: 39
+                            parentNode: *ref_0
+                            nodeType: pasal
+                        - start: 43
+                          end: 51
+                          node:
+                            key: 38
+                            parentNode: *ref_0
+                            nodeType: pasal
                 - type: pasal
                   node:
                     nodeType: pasal
@@ -3920,20 +3938,6 @@ babSet:
                         melakukan tindakan Kekarantinaan Kesehatan sebagaimana dimaksud dalam Pasal
                         15 ayat (2) huruf c dan huruf d berkoordinasi dengan pihak yang terkait.
                       references:
-                        - start: 233
-                          end: 240
-                          node:
-                            key: c
-                            parentPointSetNode: &ref_261
-                              nodeType: pointSet
-                              parentNode: *ref_260
-                            nodeType: point
-                        - start: 245
-                          end: 246
-                          node:
-                            key: d
-                            parentPointSetNode: *ref_261
-                            nodeType: point
                         - start: 215
                           end: 232
                           node:
@@ -3942,6 +3946,20 @@ babSet:
                               parentPasalVersionNode: *ref_260
                             key: 2
                             nodeType: ayat
+                        - start: 245
+                          end: 246
+                          node:
+                            key: d
+                            parentPointSetNode: &ref_261
+                              nodeType: pointSet
+                              parentNode: *ref_260
+                            nodeType: point
+                        - start: 233
+                          end: 240
+                          node:
+                            key: c
+                            parentPointSetNode: *ref_261
+                            nodeType: point
                 - type: pasal
                   node:
                     nodeType: pasal
@@ -4159,7 +4177,19 @@ babSet:
                         Ketentuan lebih lanjut mengenai pengawasan Barang dalam Alat Angkut
                         sebagaimana dimaksud dalam Pasal 44 sampai dengan Pasal 46 diatur dengan
                         Peraturan Menteri.
-                      references: []
+                      references:
+                        - start: 118
+                          end: 126
+                          node:
+                            key: 46
+                            parentNode: *ref_0
+                            nodeType: pasal
+                        - start: 95
+                          end: 103
+                          node:
+                            key: 44
+                            parentNode: *ref_0
+                            nodeType: pasal
           - type: bagian
             node: &ref_277
               nodeType: bagian

@@ -600,6 +600,7 @@
 <http://example.org/legal/document/uu/2018/6/pasal/0020/version/20180807/text> legal:textHasTextString "Kapal yang memperoleh persetujuan karantina terbatas sebagaimana dimaksud dalam Pasal 19 ayat (S5) huruf b harus dilakukan tindakan Kekarantinaan Kesehatan dan/atau penerbitan atau pembaruan Dokumen Karantina Kesehatan." .
 <http://example.org/legal/document/uu/2018/6/pasal/0020/version/20180807> legal:pasalVersionHasText <http://example.org/legal/document/uu/2018/6/pasal/0020/version/20180807/text> .
 <http://example.org/legal/document/uu/2018/6/pasal/0020/version/20180807/text> legal:textReferencesLegal <http://example.org/legal/document/uu/2018/6/pasal/0020/version/20180807/point/b> .
+<http://example.org/legal/document/uu/2018/6/pasal/0020/version/20180807/text> legal:textReferencesLegal <http://example.org/legal/document/uu/2018/6/pasal/0019> .
 <http://example.org/legal/document/uu/2018/6/bab/0006/bagian/0001/paragraf/0001/pasals> legal:pasalSetHasPasal <http://example.org/legal/document/uu/2018/6/pasal/0021> .
 <http://example.org/legal/document/uu/2018/6/pasal/0021> legal:pasalHasKey 21 .
 <http://example.org/legal/document/uu/2018/6/pasal/0021> legal:pasalHasPasalVersion <http://example.org/legal/document/uu/2018/6/pasal/0021/version/20180807> .
@@ -838,8 +839,8 @@
 <http://example.org/legal/document/uu/2018/6/pasal/0031/version/20180807> legal:pasalVersionHasRawText "Pesawat Udara yang memperoleh persetujuan karantina terbatas sebagaimana dimaksud dalam Pasal 30 ayat (3) huruf b harus dilakukan tindakan Kekarantinaan Kesehatan dan/atau penerbitan atau pembaruan Dokumen Karantina Kesehatan." .
 <http://example.org/legal/document/uu/2018/6/pasal/0031/version/20180807/text> legal:textHasTextString "Pesawat Udara yang memperoleh persetujuan karantina terbatas sebagaimana dimaksud dalam Pasal 30 ayat (3) huruf b harus dilakukan tindakan Kekarantinaan Kesehatan dan/atau penerbitan atau pembaruan Dokumen Karantina Kesehatan." .
 <http://example.org/legal/document/uu/2018/6/pasal/0031/version/20180807> legal:pasalVersionHasText <http://example.org/legal/document/uu/2018/6/pasal/0031/version/20180807/text> .
-<http://example.org/legal/document/uu/2018/6/pasal/0031/version/20180807/text> legal:textReferencesLegal <http://example.org/legal/document/uu/2018/6/pasal/0031/version/20180807/point/b> .
 <http://example.org/legal/document/uu/2018/6/pasal/0031/version/20180807/text> legal:textReferencesLegal <http://example.org/legal/document/uu/2018/6/pasal/0031/version/20180807/ayat/0003> .
+<http://example.org/legal/document/uu/2018/6/pasal/0031/version/20180807/text> legal:textReferencesLegal <http://example.org/legal/document/uu/2018/6/pasal/0031/version/20180807/point/b> .
 <http://example.org/legal/document/uu/2018/6/bab/0006/bagian/0002/paragraf/0001/pasals> legal:pasalSetHasPasal <http://example.org/legal/document/uu/2018/6/pasal/0032> .
 <http://example.org/legal/document/uu/2018/6/pasal/0032> legal:pasalHasKey 32 .
 <http://example.org/legal/document/uu/2018/6/pasal/0032> legal:pasalHasPasalVersion <http://example.org/legal/document/uu/2018/6/pasal/0032/version/20180807> .
@@ -1052,6 +1053,8 @@
 <http://example.org/legal/document/uu/2018/6/pasal/0040/version/20180807> legal:pasalVersionHasRawText "Dalam hal orang sebagaimana dimaksud dalam Pasal 38 dan Pasal 39 tidak bersedia dilakukan tindakan Kekarantinaan Kesehatan, Pejabat Karantina Kesehatan berwenang mengeluarkan rekomendasi kepada pejabat imigrasi untuk dilakukan deportasi." .
 <http://example.org/legal/document/uu/2018/6/pasal/0040/version/20180807/text> legal:textHasTextString "Dalam hal orang sebagaimana dimaksud dalam Pasal 38 dan Pasal 39 tidak bersedia dilakukan tindakan Kekarantinaan Kesehatan, Pejabat Karantina Kesehatan berwenang mengeluarkan rekomendasi kepada pejabat imigrasi untuk dilakukan deportasi." .
 <http://example.org/legal/document/uu/2018/6/pasal/0040/version/20180807> legal:pasalVersionHasText <http://example.org/legal/document/uu/2018/6/pasal/0040/version/20180807/text> .
+<http://example.org/legal/document/uu/2018/6/pasal/0040/version/20180807/text> legal:textReferencesLegal <http://example.org/legal/document/uu/2018/6/pasal/0039> .
+<http://example.org/legal/document/uu/2018/6/pasal/0040/version/20180807/text> legal:textReferencesLegal <http://example.org/legal/document/uu/2018/6/pasal/0038> .
 <http://example.org/legal/document/uu/2018/6/bab/0006/bagian/0004/pasals> legal:pasalSetHasPasal <http://example.org/legal/document/uu/2018/6/pasal/0041> .
 <http://example.org/legal/document/uu/2018/6/pasal/0041> legal:pasalHasKey 41 .
 <http://example.org/legal/document/uu/2018/6/pasal/0041> legal:pasalHasPasalVersion <http://example.org/legal/document/uu/2018/6/pasal/0041/version/20180807> .
@@ -1144,9 +1147,9 @@
 <http://example.org/legal/document/uu/2018/6/pasal/0044/version/20180807> legal:pasalVersionHasRawText "Setiap Barang yang memiliki Faktor Risiko Kesehatan Masyarakat dalam Alat Angkut yang berada dalam Status Karantina, Pejabat Karantina Kesehatan melakukan tindakan Kekarantinaan Kesehatan sebagaimana dimaksud dalam Pasal 15 ayat (2) huruf c dan huruf d berkoordinasi dengan pihak yang terkait." .
 <http://example.org/legal/document/uu/2018/6/pasal/0044/version/20180807/text> legal:textHasTextString "Setiap Barang yang memiliki Faktor Risiko Kesehatan Masyarakat dalam Alat Angkut yang berada dalam Status Karantina, Pejabat Karantina Kesehatan melakukan tindakan Kekarantinaan Kesehatan sebagaimana dimaksud dalam Pasal 15 ayat (2) huruf c dan huruf d berkoordinasi dengan pihak yang terkait." .
 <http://example.org/legal/document/uu/2018/6/pasal/0044/version/20180807> legal:pasalVersionHasText <http://example.org/legal/document/uu/2018/6/pasal/0044/version/20180807/text> .
-<http://example.org/legal/document/uu/2018/6/pasal/0044/version/20180807/text> legal:textReferencesLegal <http://example.org/legal/document/uu/2018/6/pasal/0044/version/20180807/point/c> .
-<http://example.org/legal/document/uu/2018/6/pasal/0044/version/20180807/text> legal:textReferencesLegal <http://example.org/legal/document/uu/2018/6/pasal/0044/version/20180807/point/d> .
 <http://example.org/legal/document/uu/2018/6/pasal/0044/version/20180807/text> legal:textReferencesLegal <http://example.org/legal/document/uu/2018/6/pasal/0044/version/20180807/ayat/0002> .
+<http://example.org/legal/document/uu/2018/6/pasal/0044/version/20180807/text> legal:textReferencesLegal <http://example.org/legal/document/uu/2018/6/pasal/0044/version/20180807/point/d> .
+<http://example.org/legal/document/uu/2018/6/pasal/0044/version/20180807/text> legal:textReferencesLegal <http://example.org/legal/document/uu/2018/6/pasal/0044/version/20180807/point/c> .
 <http://example.org/legal/document/uu/2018/6/bab/0006/bagian/0005/pasals> legal:pasalSetHasPasal <http://example.org/legal/document/uu/2018/6/pasal/0045> .
 <http://example.org/legal/document/uu/2018/6/pasal/0045> legal:pasalHasKey 45 .
 <http://example.org/legal/document/uu/2018/6/pasal/0045> legal:pasalHasPasalVersion <http://example.org/legal/document/uu/2018/6/pasal/0045/version/20180807> .
@@ -1215,6 +1218,8 @@
 <http://example.org/legal/document/uu/2018/6/pasal/0047/version/20180807> legal:pasalVersionHasRawText "Ketentuan lebih lanjut mengenai pengawasan Barang dalam Alat Angkut sebagaimana dimaksud dalam Pasal 44 sampai dengan Pasal 46 diatur dengan Peraturan Menteri." .
 <http://example.org/legal/document/uu/2018/6/pasal/0047/version/20180807/text> legal:textHasTextString "Ketentuan lebih lanjut mengenai pengawasan Barang dalam Alat Angkut sebagaimana dimaksud dalam Pasal 44 sampai dengan Pasal 46 diatur dengan Peraturan Menteri." .
 <http://example.org/legal/document/uu/2018/6/pasal/0047/version/20180807> legal:pasalVersionHasText <http://example.org/legal/document/uu/2018/6/pasal/0047/version/20180807/text> .
+<http://example.org/legal/document/uu/2018/6/pasal/0047/version/20180807/text> legal:textReferencesLegal <http://example.org/legal/document/uu/2018/6/pasal/0046> .
+<http://example.org/legal/document/uu/2018/6/pasal/0047/version/20180807/text> legal:textReferencesLegal <http://example.org/legal/document/uu/2018/6/pasal/0044> .
 <http://example.org/legal/document/uu/2018/6/bab/0006/bagian> legal:bagianSetHasBagian <http://example.org/legal/document/uu/2018/6/bab/0006/bagian/0006> .
 <http://example.org/legal/document/uu/2018/6/bab/0006/bagian/0006> legal:bagianHasKey 6 .
 <http://example.org/legal/document/uu/2018/6/bab/0006/bagian/0006> legal:bagianHasTitle "Bagian Keenam Sanksi Administratif" .
