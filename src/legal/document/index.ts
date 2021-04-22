@@ -133,12 +133,13 @@ export function getScrapableDocumentLastPage(category: ScrapableDocumentCategory
 /**
  * Document Data
  */
-export type Document = DocumentMetadata & {
+export type Document = {
   node: DocumentNode;
   penjelasan?: string[];
   opText?: string;
   babSet: BabSet;
   disahkan: Disahkan;
+  metadata: DocumentMetadata;
 
   // menimbang?: Metadata;
   // mengingat?: Metadata;
@@ -147,7 +148,7 @@ export type Document = DocumentMetadata & {
 export type DocumentMetadata = {
   name?: string;
   pemutus?: string;
-  denganPersetujuan?: string[];
+  denganPersetujuan?: string;
   tentang?: string;
   salinan?: string;
   memutuskan?: string;
@@ -160,6 +161,7 @@ export type DocumentMetadata = {
   salinanSesuaiDenganAslinya?: string;
   menimbang?: string;
   mengingat?: string;
+  menetapkan?: string;
 };
 
 export type Disahkan = {

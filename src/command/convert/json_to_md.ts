@@ -48,18 +48,19 @@ function handleJson(option: Option, node: DocumentNode): void {
 
 function _jsonToMd(doc: Document): string {
   const {
-    pemutus,
-    tentang,
-    salinan,
-    memutuskan,
-    tempatDitetapkan,
-    tanggalDitetapkan,
-    tempatDiundangkan,
-    tanggalDiundangkan,
-    sekretaris,
-    dokumen,
-    // mengingat,
-    // menimbang,
+    metadata: {
+      pemutus,
+      tentang,
+      salinan,
+      memutuskan,
+      tempatDitetapkan,
+      tanggalDitetapkan,
+      tempatDiundangkan,
+      tanggalDiundangkan,
+      sekretaris,
+      dokumen,
+      denganPersetujuan,
+    },
     node: _node,
     babSet,
   } = doc;
@@ -69,23 +70,24 @@ function _jsonToMd(doc: Document): string {
     `# [${name}](${uri})`,
     `\n| Nama | Data |`,
     `| ------ | ----- |`,
-    metadata('Name', name),
-    metadata('Pemutus', pemutus),
-    metadata('Tentang', tentang),
-    metadata('Salinan', salinan),
-    metadata('Memutuskan', memutuskan),
-    metadata('Tempat Disahkan', doc.disahkan.location),
-    metadata('Tanggal Disahkan', doc.disahkan.date.date),
-    metadata('Bulan Disahkan', doc.disahkan.date.month),
-    metadata('Tahun Disahkan', doc.disahkan.date.year),
-    metadata('Tempat Ditetapkan', tempatDitetapkan),
-    metadata('Tanggal Ditetapkan', tanggalDitetapkan),
-    metadata('Jabatan Pengesah', doc.disahkan.jabatanPengesah),
-    metadata('Nama Pengesah', doc.disahkan.pengesah),
-    metadata('Tempat Diundangkan', tempatDiundangkan),
-    metadata('Tanggal Diundangkan', tanggalDiundangkan),
-    metadata('Sekretaris', sekretaris),
-    metadata('Dokumen', dokumen),
+    metadataToStr('Name', name),
+    metadataToStr('Pemutus', pemutus),
+    metadataToStr('Tentang', tentang),
+    metadataToStr('Salinan', salinan),
+    metadataToStr('Memutuskan', memutuskan),
+    metadataToStr('Tempat Disahkan', doc.disahkan.location),
+    metadataToStr('Tanggal Disahkan', doc.disahkan.date.date),
+    metadataToStr('Bulan Disahkan', doc.disahkan.date.month),
+    metadataToStr('Tahun Disahkan', doc.disahkan.date.year),
+    metadataToStr('Tempat Ditetapkan', tempatDitetapkan),
+    metadataToStr('Tanggal Ditetapkan', tanggalDitetapkan),
+    metadataToStr('Jabatan Pengesah', doc.disahkan.jabatanPengesah),
+    metadataToStr('Nama Pengesah', doc.disahkan.pengesah),
+    metadataToStr('Tempat Diundangkan', tempatDiundangkan),
+    metadataToStr('Tanggal Diundangkan', tanggalDiundangkan),
+    metadataToStr('Sekretaris', sekretaris),
+    metadataToStr('Dokumen', dokumen),
+    metadataToStr('Dengan Persetujuan', denganPersetujuan),
     // ...map(_denganPersetujuan, (d) => metadata('Dengan Persetujuan', d)),
     // mengimbangToMd('Menimbang', menimbang, 'documentMenimbang', _node),
     // mengimbangToMd('Mengingat', mengingat, 'documentMengingat', _node),
@@ -221,7 +223,7 @@ function pointContentToMd(component: PointSet | Text, depth: number): string {
   assertNever(component);
 }
 
-function metadata(key: string, value: string | number | undefined): string | undefined {
+function metadataToStr(key: string, value: string | number | undefined): string | undefined {
   if (isNil(value)) return undefined;
   return `|${key}|${value}|`;
 }

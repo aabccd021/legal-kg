@@ -53,26 +53,54 @@ export function spansToStr(spans: Span[]): string {
   return spans.map(spanToStr).join('\n');
 }
 
+type MetadataSection = 'menimbang' | 'mengingat' | 'init' | 'memutuskan' | 'denganPersetujuan';
 type MetadataAcc = {
-  current: 'menimbang' | 'mengingat' | 'init';
-  init: Span[];
-  menimbang: Span[];
-  mengingat: Span[];
+  section: MetadataSection;
+  spans: {
+    [k in MetadataSection]: Span[];
+  };
 };
 
 export function spansToMetadata(spans: Span[]): DocumentMetadata {
   const res: MetadataAcc = reduce<Span, MetadataAcc>(
     spans,
     (acc, span) => {
+      const newSection = getNewSection(acc.section, span);
       return {
-        ...acc,
-        [acc.current]: [...acc[acc.current], span],
+        section: newSection,
+        spans: {
+          ...acc.spans,
+          [newSection]: [...acc.spans[newSection], span],
+        },
       };
     },
-    { init: [], menimbang: [], mengingat: [], current: 'init' }
+    {
+      spans: { denganPersetujuan: [], memutuskan: [], mengingat: [], menimbang: [], init: [] },
+      section: 'init',
+    }
   );
-  console.log(res);
-  return {};
+  return {
+    menimbang: res.spans.menimbang.map(spanToStr).join(' ').split(':').slice(1).join(':'),
+    mengingat: res.spans.mengingat.map(spanToStr).join(' '),
+    memutuskan: res.spans.memutuskan.map(spanToStr).join(' '),
+    denganPersetujuan: res.spans.denganPersetujuan.slice(1).map(spanToStr).join(' '),
+  };
+}
+
+function getNewSection(prevSection: MetadataSection, span: Span): MetadataSection {
+  if (prevSection === 'init' && span.str.startsWith('Menimbang')) {
+    return 'menimbang';
+  }
+  if (prevSection === 'menimbang' && span.str.startsWith('Mengingat')) {
+    return 'mengingat';
+  }
+  if (prevSection === 'mengingat' && span.str.startsWith('Dengan persetujuan bersama antara')) {
+    return 'denganPersetujuan';
+  }
+  if (prevSection === 'denganPersetujuan' && span.str.startsWith('MEMUTUSKAN')) {
+    return 'memutuskan';
+  }
+  return prevSection;
 }
 
 export function spansToBabSet(context: Context, spans: Span[]): BabSet {
