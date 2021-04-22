@@ -14,6 +14,8 @@ import {
   AyatSetNode,
   PointSetNode,
   BabSetNode,
+  MenimbangNode,
+  MengingatNode,
 } from '../../../legal/component';
 import { DocumentNode } from '../../../legal/document';
 
@@ -39,6 +41,8 @@ export type LegalTriple = (
   | [DocumentNode, 'documentHasDisahkanPengesah', string]
   | [DocumentNode, 'documentHasDisahkanJabatanPengesah', string]
   | [DocumentNode, 'documentHasPasal', PasalNode]
+  | [MenimbangNode, 'menimbangHasPointSet', PointSetNode]
+  | [MengingatNode, 'mengingatHasPointSet', PointSetNode]
   | [ParagrafNode, 'paragrafHasKey', number]
   | [ParagrafNode, 'paragrafHasPasalSet', PasalSetNode]
   | [ParagrafNode, 'paragrafHasTitle', string]

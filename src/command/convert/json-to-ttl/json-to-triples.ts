@@ -7,6 +7,8 @@ import {
   PasalUpdateAmenderPoint,
   PasalInsertAmenderPoint,
   PasalVersion,
+  MenimbangNode,
+  MengingatNode,
 } from '../../../legal/component';
 import assertNever from 'assert-never';
 import { flatMap, curry, map, chain, isUndefined, compact } from 'lodash';
@@ -226,13 +228,17 @@ function pointSetToTriple(pointSet: PointSet): LegalTriple[] {
 }
 
 function _pointSetToTriple(
-  parentNode: PointNode | AyatNode | PasalVersionNode,
+  parentNode: PointNode | AyatNode | PasalVersionNode | MenimbangNode | MengingatNode,
   pointSetNode: PointSetNode
 ): LegalTriple {
   if (parentNode.nodeType === 'ayat') return [parentNode, 'ayatHasPointSet', pointSetNode];
   if (parentNode.nodeType === 'pasalVersion')
     return [parentNode, 'pasalVersionHasPointSet', pointSetNode];
   if (parentNode.nodeType === 'point') return [parentNode, 'pointHasPointSet', pointSetNode];
+  if (parentNode.nodeType === 'menimbang')
+    return [parentNode, 'menimbangHasPointSet', pointSetNode];
+  if (parentNode.nodeType === 'mengingat')
+    return [parentNode, 'mengingatHasPointSet', pointSetNode];
   assertNever(parentNode);
 }
 

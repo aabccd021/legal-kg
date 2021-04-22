@@ -11,6 +11,8 @@ export type ComponentNode =
   | BabSetNode
   | BagianNode
   | BagianSetNode
+  | MenimbangNode
+  | MengingatNode
   | ParagrafNode
   | ParagrafSetNode
   | PasalNode
@@ -90,13 +92,23 @@ export type PointNode = {
 
 export type PointSetNode = {
   nodeType: 'pointSet';
-  parentNode: PointNode | AyatNode | PasalVersionNode;
+  parentNode: PointNode | AyatNode | PasalVersionNode | MenimbangNode | MengingatNode;
 };
 
 export type TextNode = {
   nodeType: 'text';
   textName: string;
   parentNode: PointNode | AyatNode | PasalVersionNode | PointSetNode;
+};
+
+export type MenimbangNode = {
+  nodeType: 'menimbang';
+  parentNode: DocumentNode;
+};
+
+export type MengingatNode = {
+  nodeType: 'mengingat';
+  parentNode: DocumentNode;
 };
 
 export type AmenderDeletePointNode = {

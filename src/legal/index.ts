@@ -42,6 +42,8 @@ export function nodeToUri(node: LegalNode): string {
     return `${nodeToUri(node.parentPointSetNode)}/${padStartIfNumber(node.key)}`;
   if (node.nodeType === 'pointSet') return `${nodeToUri(node.parentNode)}/point`;
   if (node.nodeType === 'text') return `${nodeToUri(node.parentNode)}/${node.textName}`;
+  if (node.nodeType === 'menimbang') return `${nodeToUri(node.parentNode)}/menimbang`;
+  if (node.nodeType === 'mengingat') return `${nodeToUri(node.parentNode)}/mengingat`;
   assertNever(node);
 }
 
