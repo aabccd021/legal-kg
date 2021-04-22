@@ -1,3 +1,5 @@
+import { AyatSetNode } from './../../../legal/component';
+import { chain, compact, isUndefined } from 'lodash';
 import {
   Bab,
   Bagian,
@@ -9,8 +11,10 @@ import {
   Pasal,
   Text,
   PasalVersionNode,
+  AyatNode,
 } from '../../../legal/component';
 import { neverNum } from '../../../util';
+import { safeParseInt } from './parse_key_from_spans';
 
 export function detectDocument(document: Document): Document {
   const { babSet } = document;
@@ -72,8 +76,14 @@ function detectPasal(pasal: Pasal): Pasal {
   };
 }
 
-function detectText(text: Text, parentNode: PasalVersionNode): Text {
-  const references = detectHurufXYZ(text.textString, { nodeType: 'pointSet', parentNode });
+function detectText(text: Text, pasalVersionNode: PasalVersionNode): Text {
+  const references: Reference[] = [
+    ...detectHurufXYZ(text.textString, { nodeType: 'pointSet', parentNode: pasalVersionNode }),
+    ...detectPasalXAyatX(text.textString, {
+      nodeType: 'ayatSet',
+      parentPasalVersionNode: pasalVersionNode,
+    }),
+  ];
   return { ...text, references };
 }
 
@@ -299,34 +309,29 @@ function detectText(text: Text, parentNode: PasalVersionNode): Text {
 //   return references;
 // }
 
-// function detectPasalXAyatX(text: string, parentDocumentNode: DocumentNode): Reference[] {
-//   const regexp = /Pasal [0-9]+ ayat \((l|[0-9]+)\)/g;
-//   const matches = [...text.matchAll(regexp)];
-//   return chain(matches)
-//     .map((match) => {
-//       const keyStrs = compact(match[0]?.split(/(Pasal |ayat \(|\))/));
-//       const [, pasal, , ayat] = keyStrs.map(safeParseInt);
-//       if (isUndefined(pasal) || isUndefined(ayat)) {
-//         console.log(`Unparsable reference: ${match[0]}===${keyStrs}===${match}`);
-//         return undefined;
-//       }
-//       const start = match.index ?? neverNum();
-//       const end = (match.index ?? neverNum()) + (match[0]?.length ?? neverNum());
-//       const parentPasal: PasalNode = {
-//         parentDoc: parentDocumentNode,
-//         key: pasal,
-//         nodeType: 'pasal',
-//       };
-//       const node: AyatNode = {
-//         parent: parentPasal,
-//         key: ayat,
-//         nodeType: 'ayat',
-//       };
-//       return { start, end, node };
-//     })
-//     .compact()
-//     .value();
-// }
+function detectPasalXAyatX(text: string, parentAyatSetNode: AyatSetNode): Reference[] {
+  const regexp = /Pasal [0-9]+ ayat \((l|[0-9]+)\)/g;
+  const matches = [...text.matchAll(regexp)];
+  return chain(matches)
+    .map((match) => {
+      const keyStrs = compact(match[0]?.split(/(Pasal |ayat \(|\))/));
+      const [, pasal, , ayat] = keyStrs.map(safeParseInt);
+      if (isUndefined(pasal) || isUndefined(ayat)) {
+        console.log(`Unparsable reference: ${match[0]}===${keyStrs}===${match}`);
+        return undefined;
+      }
+      const start = match.index ?? neverNum();
+      const end = (match.index ?? neverNum()) + (match[0]?.length ?? neverNum());
+      const node: AyatNode = {
+        parentAyatSetNode,
+        key: ayat,
+        nodeType: 'ayat',
+      };
+      return { start, end, node };
+    })
+    .compact()
+    .value();
+}
 
 function detectHurufXYZ(text: string, parentPointSetNode: PointSetNode): Reference[] {
   const regexp = /huruf ?([a-z]?,? ?)+( [a-z]( |,))/g;

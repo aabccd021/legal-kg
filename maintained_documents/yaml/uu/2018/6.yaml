@@ -2956,6 +2956,14 @@ babSet:
                                     nodeType: pointSet
                                     parentNode: *ref_196
                                   nodeType: point
+                              - start: 88
+                                end: 105
+                                node:
+                                  parentAyatSetNode:
+                                    nodeType: ayatSet
+                                    parentPasalVersionNode: *ref_196
+                                  key: 3
+                                  nodeType: ayat
                       - type: pasal
                         node:
                           nodeType: pasal
@@ -3046,7 +3054,15 @@ babSet:
                               Pesawat Udara yang ditemukan Faktor Risiko Kesehatan Masyarakat harus
                               dilakukan tindakan Kekarantinaan Kesehatan sebagaimana dimaksud dalam
                               Pasal 15 ayat (2).
-                            references: []
+                            references:
+                              - start: 140
+                                end: 157
+                                node:
+                                  parentAyatSetNode:
+                                    nodeType: ayatSet
+                                    parentPasalVersionNode: *ref_200
+                                  key: 2
+                                  nodeType: ayat
           - type: bagian
             node: &ref_201
               nodeType: bagian
@@ -3918,6 +3934,14 @@ babSet:
                             key: d
                             parentPointSetNode: *ref_261
                             nodeType: point
+                        - start: 215
+                          end: 232
+                          node:
+                            parentAyatSetNode:
+                              nodeType: ayatSet
+                              parentPasalVersionNode: *ref_260
+                            key: 2
+                            nodeType: ayat
                 - type: pasal
                   node:
                     nodeType: pasal
@@ -7444,7 +7468,15 @@ babSet:
                   penyakit dan/atau faktor risiko kesehatan yang menimbulkan Kedaruratan Kesehatan
                   Masyarakat dipidana dengan pidana penjara paling lama 10 (sepuluh) tahun atau
                   denda paling banyak Rp15.000.000.000,00 (lima belas miliar rupiah).
-                references: []
+                references:
+                  - start: 192
+                    end: 209
+                    node:
+                      parentAyatSetNode:
+                        nodeType: ayatSet
+                        parentPasalVersionNode: *ref_511
+                      key: 3
+                      nodeType: ayat
           - type: pasal
             node:
               nodeType: pasal
@@ -7473,7 +7505,15 @@ babSet:
                   menyebarkan penyakit dan/atau faktor risiko kesehatan yang menimbulkan Kedaruratan
                   Kesehatan Masyarakat dipidana dengan pidana penjara paling lama 10 (sepuluh) tahun
                   atau denda paling banyak Rp15.000.000.000,00 (lima belas miliar rupiah).
-                references: []
+                references:
+                  - start: 201
+                    end: 218
+                    node:
+                      parentAyatSetNode:
+                        nodeType: ayatSet
+                        parentPasalVersionNode: *ref_512
+                      key: 1
+                      nodeType: ayat
           - type: pasal
             node:
               nodeType: pasal
@@ -7502,7 +7542,15 @@ babSet:
                   kesehatan yang menimbulkan Kedaruratan Kesehatan Masyarakat dipidana dengan pidana
                   penjara paling lama 10 (sepuluh) tahun atau denda paling banyak
                   Rp15.000.000.000,00 (lima belas miliar rupiah).
-                references: []
+                references:
+                  - start: 159
+                    end: 176
+                    node:
+                      parentAyatSetNode:
+                        nodeType: ayatSet
+                        parentPasalVersionNode: *ref_513
+                      key: 2
+                      nodeType: ayat
           - type: pasal
             node:
               nodeType: pasal
@@ -7530,7 +7578,15 @@ babSet:
                   penyelenggaraan Kekarantinaan Kesehatan sehingga menyebabkan Kedaruratan Kesehatan
                   Masyarakat dipidana dengan pidana penjara paling lama 1 (satu) tahun dan/atau
                   pidana denda paling banyak Rp100.000.000,00 (seratus juta rupiah).
-                references: []
+                references:
+                  - start: 100
+                    end: 116
+                    node:
+                      parentAyatSetNode:
+                        nodeType: ayatSet
+                        parentPasalVersionNode: *ref_514
+                      key: 1
+                      nodeType: ayat
           - type: pasal
             node:
               nodeType: pasal

@@ -5191,7 +5191,15 @@ babSet:
                   (1), pihak yang mengakhiri hubungan kerja diwajibkan membayar ganti rugi kepada
                   pihak lainnya sebesar upah pekerja/buruh sampai batas waktu berakhirnya jangka
                   waktu perjanjian kerja.
-                references: []
+                references:
+                  - start: 221
+                    end: 238
+                    node:
+                      parentAyatSetNode:
+                        nodeType: ayatSet
+                        parentPasalVersionNode: *ref_367
+                      key: 1
+                      nodeType: ayat
           - type: pasal
             node:
               nodeType: pasal
@@ -7239,6 +7247,14 @@ babSet:
                                   key: d
                                   parentPointSetNode: *ref_513
                                   nodeType: point
+                              - start: 85
+                                end: 102
+                                node:
+                                  parentAyatSetNode:
+                                    nodeType: ayatSet
+                                    parentPasalVersionNode: *ref_512
+                                  key: 2
+                                  nodeType: ayat
                       - type: pasal
                         node:
                           nodeType: pasal
@@ -8595,7 +8611,15 @@ babSet:
                         88, penetapan upah minimum sebagaimana dimaksud dalam Pasal 89, dan
                         pengenaan denda sebagaimana dimaksud dalam Pasal 95 ayat (1), ayat (2) dan
                         ayat (3) diatur dengan Peraturan Pemerintah.
-                      references: []
+                      references:
+                        - start: 260
+                          end: 277
+                          node:
+                            parentAyatSetNode:
+                              nodeType: ayatSet
+                              parentPasalVersionNode: *ref_612
+                            key: 1
+                            nodeType: ayat
                 - type: pasal
                   node:
                     nodeType: pasal
@@ -10163,7 +10187,15 @@ babSet:
                         Dalam hal musyawarah sebagaimana dimaksud dalam Pasal 116 ayat (2) tidak
                         mencapai kesepakatan, maka penyelesaiannya dilakukan melalui prosedur
                         penyelesaian perselisihan hubungan industrial.
-                      references: []
+                      references:
+                        - start: 48
+                          end: 66
+                          node:
+                            parentAyatSetNode:
+                              nodeType: ayatSet
+                              parentPasalVersionNode: *ref_723
+                            key: 2
+                            nodeType: ayat
                 - type: pasal
                   node:
                     nodeType: pasal
@@ -10396,7 +10428,15 @@ babSet:
                         diselenggarakan oleh panitia yang terdiri dari wakil-wakil pekerja/buruh dan
                         pengurus serikat pekerja/serikat buruh yang disaksikan oleh pihak pejabat
                         yang bertanggung jawab di bidang ketenagakerjaan dan pengusaha.
-                      references: []
+                      references:
+                        - start: 44
+                          end: 62
+                          node:
+                            parentAyatSetNode:
+                              nodeType: ayatSet
+                              parentPasalVersionNode: *ref_736
+                            key: 2
+                            nodeType: ayat
                 - type: pasal
                   node:
                     nodeType: pasal
@@ -13625,7 +13665,15 @@ babSet:
                   Apabila pekerja/buruh tidak menerima pemutusan hubungan kerja sebagaimana dimaksud
                   dalam Pasal 158 ayat (1), pekerja/buruh yang bersangkutan dapat mengajukan gugatan
                   ke lembaga penyelesaian perselisihan hubungan industrial.
-                references: []
+                references:
+                  - start: 89
+                    end: 107
+                    node:
+                      parentAyatSetNode:
+                        nodeType: ayatSet
+                        parentPasalVersionNode: *ref_958
+                      key: 1
+                      nodeType: ayat
           - type: pasal
             node:
               nodeType: pasal
@@ -14199,7 +14247,27 @@ babSet:
                   sebesar 1 (satu) kali ketentuan Pasal 156 ayat (2), uang penghargaan masa kerja
                   sebesar 1 (satu) kali ketentuan Pasal 156 ayat (3) dan uang penggantian hak sesuai
                   ketentuan Pasal 156 ayat (4).
-                references: []
+                references:
+                  - start: 190
+                    end: 208
+                    node:
+                      parentAyatSetNode: &ref_998
+                        nodeType: ayatSet
+                        parentPasalVersionNode: *ref_997
+                      key: 2
+                      nodeType: ayat
+                  - start: 270
+                    end: 288
+                    node:
+                      parentAyatSetNode: *ref_998
+                      key: 3
+                      nodeType: ayat
+                  - start: 331
+                    end: 349
+                    node:
+                      parentAyatSetNode: *ref_998
+                      key: 4
+                      nodeType: ayat
           - type: pasal
             node:
               nodeType: pasal
@@ -14207,7 +14275,7 @@ babSet:
               parentNode: *ref_0
             version:
               type: pasalVersion
-              node: &ref_998
+              node: &ref_999
                 nodeType: pasalVersion
                 version: *ref_55
                 state: exists
@@ -14220,14 +14288,34 @@ babSet:
                 node:
                   nodeType: text
                   textName: text
-                  parentNode: *ref_998
+                  parentNode: *ref_999
                 textString: >-
                   Dalam hal hubungan kerja berakhir karena pekerja/buruh meninggal dunia, kepada
                   ahli warisnya diberikan sejumlah uang yang besar perhitungannya sama dengan
                   perhitungan 2 (dua) kali uang pesangon sesuai ketentuan Pasal 156 ayat (2), 1
                   (satu) kali uang penghargaan masa kerja sesuai ketentuan Pasal 156 ayat (3), dan
                   uang penggantian hak sesuai ketentuan Pasal 156 ayat (4).
-                references: []
+                references:
+                  - start: 211
+                    end: 229
+                    node:
+                      parentAyatSetNode: &ref_1000
+                        nodeType: ayatSet
+                        parentPasalVersionNode: *ref_999
+                      key: 2
+                      nodeType: ayat
+                  - start: 290
+                    end: 308
+                    node:
+                      parentAyatSetNode: *ref_1000
+                      key: 3
+                      nodeType: ayat
+                  - start: 352
+                    end: 370
+                    node:
+                      parentAyatSetNode: *ref_1000
+                      key: 4
+                      nodeType: ayat
           - type: pasal
             node:
               nodeType: pasal
@@ -14235,7 +14323,7 @@ babSet:
               parentNode: *ref_0
             version:
               type: pasalVersion
-              node: &ref_999
+              node: &ref_1001
                 nodeType: pasalVersion
                 version: *ref_55
                 state: exists
@@ -14245,21 +14333,21 @@ babSet:
                   parentNode: *ref_0
               content:
                 type: ayatSet
-                node: &ref_1000
+                node: &ref_1002
                   nodeType: ayatSet
-                  parentPasalVersionNode: *ref_999
+                  parentPasalVersionNode: *ref_1001
                 elements:
                   - type: ayat
-                    node: &ref_1001
+                    node: &ref_1003
                       nodeType: ayat
                       key: 1
-                      parentAyatSetNode: *ref_1000
+                      parentAyatSetNode: *ref_1002
                     content:
                       type: text
                       node:
                         nodeType: text
                         textName: text
-                        parentNode: *ref_1001
+                        parentNode: *ref_1003
                       textString: >-
                         Pengusaha dapat melakukan pemutusan hubungan kerja terhadap pekerja/buruh
                         karena memasuki usia pensiun dan apabila pengusaha telah mengikutkan
@@ -14270,16 +14358,16 @@ babSet:
                         ketentuan Pasal 156 ayat (4).
                       references: []
                   - type: ayat
-                    node: &ref_1002
+                    node: &ref_1004
                       nodeType: ayat
                       key: 2
-                      parentAyatSetNode: *ref_1000
+                      parentAyatSetNode: *ref_1002
                     content:
                       type: text
                       node:
                         nodeType: text
                         textName: text
-                        parentNode: *ref_1002
+                        parentNode: *ref_1004
                       textString: >-
                         Dalam hal besarnya jaminan atau manfaat pensiun yang diterima sekaligus
                         dalam program pensiun se-bagaimana dimaksud dalam ayat (1) ternyata lebih
@@ -14289,16 +14377,16 @@ babSet:
                         selisihnya dibayar oleh pengusaha.
                       references: []
                   - type: ayat
-                    node: &ref_1003
+                    node: &ref_1005
                       nodeType: ayat
                       key: 3
-                      parentAyatSetNode: *ref_1000
+                      parentAyatSetNode: *ref_1002
                     content:
                       type: text
                       node:
                         nodeType: text
                         textName: text
-                        parentNode: *ref_1003
+                        parentNode: *ref_1005
                       textString: >-
                         Dalam hal pengusaha telah mengikutsertakan pekerja/buruh dalam program
                         pensiun yang iurannya/premi-nya dibayar oleh pengusaha dan pekerja/buruh,
@@ -14306,32 +14394,32 @@ babSet:
                         premi/iurannya dibayar oleh pengusaha.
                       references: []
                   - type: ayat
-                    node: &ref_1004
+                    node: &ref_1006
                       nodeType: ayat
                       key: 4
-                      parentAyatSetNode: *ref_1000
+                      parentAyatSetNode: *ref_1002
                     content:
                       type: text
                       node:
                         nodeType: text
                         textName: text
-                        parentNode: *ref_1004
+                        parentNode: *ref_1006
                       textString: >-
                         Ketentuan sebagaimana dimaksud dalam ayat (1), ayat (2), dan ayat (3) dapat
                         diatur lain dalam perjanjian kerja, peraturan perusahaan, atau perjanjian
                         kerja bersama.
                       references: []
                   - type: ayat
-                    node: &ref_1005
+                    node: &ref_1007
                       nodeType: ayat
                       key: 5
-                      parentAyatSetNode: *ref_1000
+                      parentAyatSetNode: *ref_1002
                     content:
                       type: text
                       node:
                         nodeType: text
                         textName: text
-                        parentNode: *ref_1005
+                        parentNode: *ref_1007
                       textString: >-
                         Dalam hal pengusaha tidak mengikutsertakan pekerja/buruh yang mengalami
                         pemutusan hubungan kerja karena usia pensiun pada program pensiun maka
@@ -14341,16 +14429,16 @@ babSet:
                         ketentuan Pasal 156 ayat (4).
                       references: []
                   - type: ayat
-                    node: &ref_1006
+                    node: &ref_1008
                       nodeType: ayat
                       key: 6
-                      parentAyatSetNode: *ref_1000
+                      parentAyatSetNode: *ref_1002
                     content:
                       type: text
                       node:
                         nodeType: text
                         textName: text
-                        parentNode: *ref_1006
+                        parentNode: *ref_1008
                       textString: >-
                         Hak atas manfaat pensiun sebagaimana yang dimaksud dalam ayat (1), ayat (2),
                         ayat (3), dan ayat (4) ti-dak menghilangkan hak pekerja/buruh atas jaminan
@@ -14364,7 +14452,7 @@ babSet:
               parentNode: *ref_0
             version:
               type: pasalVersion
-              node: &ref_1007
+              node: &ref_1009
                 nodeType: pasalVersion
                 version: *ref_55
                 state: exists
@@ -14374,21 +14462,21 @@ babSet:
                   parentNode: *ref_0
               content:
                 type: ayatSet
-                node: &ref_1008
+                node: &ref_1010
                   nodeType: ayatSet
-                  parentPasalVersionNode: *ref_1007
+                  parentPasalVersionNode: *ref_1009
                 elements:
                   - type: ayat
-                    node: &ref_1009
+                    node: &ref_1011
                       nodeType: ayat
                       key: 1
-                      parentAyatSetNode: *ref_1008
+                      parentAyatSetNode: *ref_1010
                     content:
                       type: text
                       node:
                         nodeType: text
                         textName: text
-                        parentNode: *ref_1009
+                        parentNode: *ref_1011
                       textString: >-
                         Pekerja/buruh yang mangkir selama 5 (lima) hari kerja atau lebih berturut-
                         turut tanpa keterangan secara ter tulis yang dilengkapi dengan bukti yang
@@ -14397,32 +14485,32 @@ babSet:
                         mengundurkan diri.
                       references: []
                   - type: ayat
-                    node: &ref_1010
+                    node: &ref_1012
                       nodeType: ayat
                       key: 2
-                      parentAyatSetNode: *ref_1008
+                      parentAyatSetNode: *ref_1010
                     content:
                       type: text
                       node:
                         nodeType: text
                         textName: text
-                        parentNode: *ref_1010
+                        parentNode: *ref_1012
                       textString: >-
                         Keterangan tertulis dengan bukti yang sah sebagaimana dimaksud dalam ayat
                         (1) harus diserahkan paling lambat pada hari pertama pekerja/buruh masuk
                         bekerja.
                       references: []
                   - type: ayat
-                    node: &ref_1011
+                    node: &ref_1013
                       nodeType: ayat
                       key: 3
-                      parentAyatSetNode: *ref_1008
+                      parentAyatSetNode: *ref_1010
                     content:
                       type: text
                       node:
                         nodeType: text
                         textName: text
-                        parentNode: *ref_1011
+                        parentNode: *ref_1013
                       textString: >-
                         Pemutusan hubungan kerja sebagaimana dimaksud dalam ayat (1) pekerja/buruh
                         yang bersangkutan berhak menerima uang penggantian hak sesuai ketentuan
@@ -14437,7 +14525,7 @@ babSet:
               parentNode: *ref_0
             version:
               type: pasalVersion
-              node: &ref_1012
+              node: &ref_1014
                 nodeType: pasalVersion
                 version: *ref_55
                 state: exists
@@ -14447,26 +14535,26 @@ babSet:
                   parentNode: *ref_0
               content:
                 type: ayatSet
-                node: &ref_1013
+                node: &ref_1015
                   nodeType: ayatSet
-                  parentPasalVersionNode: *ref_1012
+                  parentPasalVersionNode: *ref_1014
                 elements:
                   - type: ayat
-                    node: &ref_1014
+                    node: &ref_1016
                       nodeType: ayat
                       key: 1
-                      parentAyatSetNode: *ref_1013
+                      parentAyatSetNode: *ref_1015
                     content:
                       type: pointSet
-                      node: &ref_1015
+                      node: &ref_1017
                         nodeType: pointSet
-                        parentNode: *ref_1014
+                        parentNode: *ref_1016
                       description:
                         type: text
                         node:
                           nodeType: text
                           textName: description
-                          parentNode: *ref_1015
+                          parentNode: *ref_1017
                         textString: >-
                           Pekerja/buruh dapat mengajukan permohonan pemutusan hubungan kerja kepada
                           lembaga penyelesaian perselisihan hubungan industrial dalam hal pengusaha
@@ -14474,66 +14562,38 @@ babSet:
                         references: []
                       elements:
                         - type: point
-                          node: &ref_1016
-                            nodeType: point
-                            key: a
-                            parentPointSetNode: *ref_1015
-                          content:
-                            type: text
-                            node:
-                              nodeType: text
-                              textName: text
-                              parentNode: *ref_1016
-                            textString: menganiaya, menghina secara kasar atau mengancam pekerja/buruh,
-                            references: []
-                        - type: point
-                          node: &ref_1017
-                            nodeType: point
-                            key: b
-                            parentPointSetNode: *ref_1015
-                          content:
-                            type: text
-                            node:
-                              nodeType: text
-                              textName: text
-                              parentNode: *ref_1017
-                            textString: >-
-                              membujuk dan/atau menyuruh pekerja/buruh untuk melakukan perbuatan
-                              yang bertentangan dengan peraturan perundang-undangan,
-                            references: []
-                        - type: point
                           node: &ref_1018
                             nodeType: point
-                            key: c
-                            parentPointSetNode: *ref_1015
+                            key: a
+                            parentPointSetNode: *ref_1017
                           content:
                             type: text
                             node:
                               nodeType: text
                               textName: text
                               parentNode: *ref_1018
-                            textString: >-
-                              tidak membayar upah tepat pada waktu yang telah ditentukan selama 3
-                              (tiga) bulan berturut-turut atau lebih:
+                            textString: menganiaya, menghina secara kasar atau mengancam pekerja/buruh,
                             references: []
                         - type: point
                           node: &ref_1019
                             nodeType: point
-                            key: d
-                            parentPointSetNode: *ref_1015
+                            key: b
+                            parentPointSetNode: *ref_1017
                           content:
                             type: text
                             node:
                               nodeType: text
                               textName: text
                               parentNode: *ref_1019
-                            textString: 'tidak melakukan kewajiban yang telah dijanjikan kepada pekerja/ buruh:'
+                            textString: >-
+                              membujuk dan/atau menyuruh pekerja/buruh untuk melakukan perbuatan
+                              yang bertentangan dengan peraturan perundang-undangan,
                             references: []
                         - type: point
                           node: &ref_1020
                             nodeType: point
-                            key: e
-                            parentPointSetNode: *ref_1015
+                            key: c
+                            parentPointSetNode: *ref_1017
                           content:
                             type: text
                             node:
@@ -14541,36 +14601,64 @@ babSet:
                               textName: text
                               parentNode: *ref_1020
                             textString: >-
-                              memerintahkan pekerja/buruh untuk melaksanakan pekerjaan di luar yang
-                              diperjanjikan, atau
+                              tidak membayar upah tepat pada waktu yang telah ditentukan selama 3
+                              (tiga) bulan berturut-turut atau lebih:
                             references: []
                         - type: point
                           node: &ref_1021
                             nodeType: point
-                            key: f
-                            parentPointSetNode: *ref_1015
+                            key: d
+                            parentPointSetNode: *ref_1017
                           content:
                             type: text
                             node:
                               nodeType: text
                               textName: text
                               parentNode: *ref_1021
+                            textString: 'tidak melakukan kewajiban yang telah dijanjikan kepada pekerja/ buruh:'
+                            references: []
+                        - type: point
+                          node: &ref_1022
+                            nodeType: point
+                            key: e
+                            parentPointSetNode: *ref_1017
+                          content:
+                            type: text
+                            node:
+                              nodeType: text
+                              textName: text
+                              parentNode: *ref_1022
+                            textString: >-
+                              memerintahkan pekerja/buruh untuk melaksanakan pekerjaan di luar yang
+                              diperjanjikan, atau
+                            references: []
+                        - type: point
+                          node: &ref_1023
+                            nodeType: point
+                            key: f
+                            parentPointSetNode: *ref_1017
+                          content:
+                            type: text
+                            node:
+                              nodeType: text
+                              textName: text
+                              parentNode: *ref_1023
                             textString: >-
                               memberikan pekerjaan yang membahayakan jiwa, keselamatan, kesehatan,
                               dan kesusilaan pekerja/buruh sedangkan pekerjaan tersebut tidak
                               dicantumkan pada perjanjian kerja.
                             references: []
                   - type: ayat
-                    node: &ref_1022
+                    node: &ref_1024
                       nodeType: ayat
                       key: 2
-                      parentAyatSetNode: *ref_1013
+                      parentAyatSetNode: *ref_1015
                     content:
                       type: text
                       node:
                         nodeType: text
                         textName: text
-                        parentNode: *ref_1022
+                        parentNode: *ref_1024
                       textString: >-
                         Pemutusan hubungan kerja dengan alasan sebagaimana dimaksud dalam ayat (1)
                         pekerja/buruh berhak mendapat uang pesangon 2 (dua) kali ketentuan Pasal 156
@@ -14578,16 +14666,16 @@ babSet:
                         (3), dan uang penggantian hak sesuai ketentuan Pasal 156 ayat (4).
                       references: []
                   - type: ayat
-                    node: &ref_1023
+                    node: &ref_1025
                       nodeType: ayat
                       key: 3
-                      parentAyatSetNode: *ref_1013
+                      parentAyatSetNode: *ref_1015
                     content:
                       type: text
                       node:
                         nodeType: text
                         textName: text
-                        parentNode: *ref_1023
+                        parentNode: *ref_1025
                       textString: >-
                         Dalam hal pengusaha dinyatakan tidak melakukan perbuatan sebagaimana
                         dimaksud dalam ayat (1) oleh lembaga penyelesaian perselisihan hubungan
@@ -14604,7 +14692,7 @@ babSet:
               parentNode: *ref_0
             version:
               type: pasalVersion
-              node: &ref_1024
+              node: &ref_1026
                 nodeType: pasalVersion
                 version: *ref_55
                 state: exists
@@ -14617,13 +14705,33 @@ babSet:
                 node:
                   nodeType: text
                   textName: text
-                  parentNode: *ref_1024
+                  parentNode: *ref_1026
                 textString: >-
                   Pemutusan hubungan kerja yang dilakukan tidak memenuhi keten-tuan Pasal 151 ayat
                   (3) dan Pasal 168, kecuali Pasal 158 ayat (1), Pasal 160 ayat (3), Pasal 162, dan
                   Pasal 169 batal demi hukum dan pengusaha wajib mempekerjakan pekerja/buruh yang
                   bersangkutan serta membayar seluruh upah dan hak yang seharusnya diterima.
-                references: []
+                references:
+                  - start: 66
+                    end: 84
+                    node:
+                      parentAyatSetNode: &ref_1027
+                        nodeType: ayatSet
+                        parentPasalVersionNode: *ref_1026
+                      key: 3
+                      nodeType: ayat
+                  - start: 108
+                    end: 126
+                    node:
+                      parentAyatSetNode: *ref_1027
+                      key: 1
+                      nodeType: ayat
+                  - start: 128
+                    end: 146
+                    node:
+                      parentAyatSetNode: *ref_1027
+                      key: 3
+                      nodeType: ayat
           - type: pasal
             node:
               nodeType: pasal
@@ -14631,7 +14739,7 @@ babSet:
               parentNode: *ref_0
             version:
               type: pasalVersion
-              node: &ref_1025
+              node: &ref_1028
                 nodeType: pasalVersion
                 version: *ref_55
                 state: exists
@@ -14644,7 +14752,7 @@ babSet:
                 node:
                   nodeType: text
                   textName: text
-                  parentNode: *ref_1025
+                  parentNode: *ref_1028
                 textString: >-
                   Pekerja/buruh yang mengalami pemutusan hubungan kerja tanpa penetapan lembaga
                   penyelesaian perselisihan hubungan industrial yang berwenang sebagaimana dimaksud
@@ -14653,7 +14761,21 @@ babSet:
                   pekerja/buruh dapat mengajukan gugatan ke lembaga penyelesaian perselisihan
                   hubungan industrial dalam waktu paling lama 1 (satu) tahun sejak tanggal dilakukan
                   pemutusan hubungan kerjanya.
-                references: []
+                references:
+                  - start: 166
+                    end: 184
+                    node:
+                      parentAyatSetNode: &ref_1029
+                        nodeType: ayatSet
+                        parentPasalVersionNode: *ref_1028
+                      key: 1
+                      nodeType: ayat
+                  - start: 186
+                    end: 204
+                    node:
+                      parentAyatSetNode: *ref_1029
+                      key: 3
+                      nodeType: ayat
           - type: pasal
             node:
               nodeType: pasal
@@ -14661,7 +14783,7 @@ babSet:
               parentNode: *ref_0
             version:
               type: pasalVersion
-              node: &ref_1026
+              node: &ref_1030
                 nodeType: pasalVersion
                 version: *ref_55
                 state: exists
@@ -14674,7 +14796,7 @@ babSet:
                 node:
                   nodeType: text
                   textName: text
-                  parentNode: *ref_1026
+                  parentNode: *ref_1030
                 textString: >-
                   Pekerja/buruh yang mengalami sakit berkepanjangan, mengalami cacat akibat
                   kecelakaan kerja dan tidak dapat melakukan pekerjaannya setelah melampaui batas 12
@@ -14682,9 +14804,29 @@ babSet:
                   pesangon 2 (dua) kali ketentuan Pasal 156 ayat (2), uang penghargaan masa kerja 2
                   (dua) kali ketentuan Pasal 156 ayat (3), dan uang pengganti hak 1 (satu) kali
                   ketentuan Pasal 156 ayat (4).
-                references: []
+                references:
+                  - start: 268
+                    end: 286
+                    node:
+                      parentAyatSetNode: &ref_1031
+                        nodeType: ayatSet
+                        parentPasalVersionNode: *ref_1030
+                      key: 2
+                      nodeType: ayat
+                  - start: 339
+                    end: 357
+                    node:
+                      parentAyatSetNode: *ref_1031
+                      key: 3
+                      nodeType: ayat
+                  - start: 406
+                    end: 424
+                    node:
+                      parentAyatSetNode: *ref_1031
+                      key: 4
+                      nodeType: ayat
     - type: bab
-      node: &ref_1027
+      node: &ref_1032
         nodeType: bab
         key: 13
         parentBabSetNode: *ref_10
@@ -14693,7 +14835,7 @@ babSet:
         type: pasalSet
         node:
           nodeType: pasalSet
-          parentNode: *ref_1027
+          parentNode: *ref_1032
         elements:
           - type: pasal
             node:
@@ -14702,7 +14844,7 @@ babSet:
               parentNode: *ref_0
             version:
               type: pasalVersion
-              node: &ref_1028
+              node: &ref_1033
                 nodeType: pasalVersion
                 version: *ref_55
                 state: exists
@@ -14712,52 +14854,52 @@ babSet:
                   parentNode: *ref_0
               content:
                 type: ayatSet
-                node: &ref_1029
+                node: &ref_1034
                   nodeType: ayatSet
-                  parentPasalVersionNode: *ref_1028
+                  parentPasalVersionNode: *ref_1033
                 elements:
                   - type: ayat
-                    node: &ref_1030
+                    node: &ref_1035
                       nodeType: ayat
                       key: 1
-                      parentAyatSetNode: *ref_1029
+                      parentAyatSetNode: *ref_1034
                     content:
                       type: text
                       node:
                         nodeType: text
                         textName: text
-                        parentNode: *ref_1030
+                        parentNode: *ref_1035
                       textString: >-
                         Pemerintah melakukan pembinaan terhadap unsur-unsur dan kegiatan yang
                         berhubungan dengan ketena-gakerjaan.
                       references: []
                   - type: ayat
-                    node: &ref_1031
+                    node: &ref_1036
                       nodeType: ayat
                       key: 2
-                      parentAyatSetNode: *ref_1029
+                      parentAyatSetNode: *ref_1034
                     content:
                       type: text
                       node:
                         nodeType: text
                         textName: text
-                        parentNode: *ref_1031
+                        parentNode: *ref_1036
                       textString: >-
                         Pembinaan sebagaimana dimaksud dalam ayat (1), dapat mengikut- sertakan
                         organisasi pengusaha, seri-kat pekerja/serikat buruh, dan organisasi profesi
                         terkait.
                       references: []
                   - type: ayat
-                    node: &ref_1032
+                    node: &ref_1037
                       nodeType: ayat
                       key: 3
-                      parentAyatSetNode: *ref_1029
+                      parentAyatSetNode: *ref_1034
                     content:
                       type: text
                       node:
                         nodeType: text
                         textName: text
-                        parentNode: *ref_1032
+                        parentNode: *ref_1037
                       textString: >-
                         Pembinaan sebagaimana dimaksud dalam ayat (1), dan ayat (2), dilaksanakan
                         secara terpadu dan terko-ordinasi.
@@ -14769,7 +14911,7 @@ babSet:
               parentNode: *ref_0
             version:
               type: pasalVersion
-              node: &ref_1033
+              node: &ref_1038
                 nodeType: pasalVersion
                 version: *ref_55
                 state: exists
@@ -14782,7 +14924,7 @@ babSet:
                 node:
                   nodeType: text
                   textName: text
-                  parentNode: *ref_1033
+                  parentNode: *ref_1038
                 textString: >-
                   Dalam rangka pembinaan ketenagakerjaan, pemerintah, organisasi peng-usaha, serikat
                   pekerja/serikat buruh dan organisasi profesi terkait dapat melakukan kerja sama
@@ -14796,7 +14938,7 @@ babSet:
               parentNode: *ref_0
             version:
               type: pasalVersion
-              node: &ref_1034
+              node: &ref_1039
                 nodeType: pasalVersion
                 version: *ref_55
                 state: exists
@@ -14806,42 +14948,42 @@ babSet:
                   parentNode: *ref_0
               content:
                 type: ayatSet
-                node: &ref_1035
+                node: &ref_1040
                   nodeType: ayatSet
-                  parentPasalVersionNode: *ref_1034
+                  parentPasalVersionNode: *ref_1039
                 elements:
                   - type: ayat
-                    node: &ref_1036
+                    node: &ref_1041
                       nodeType: ayat
                       key: 1
-                      parentAyatSetNode: *ref_1035
+                      parentAyatSetNode: *ref_1040
                     content:
                       type: text
                       node:
                         nodeType: text
                         textName: text
-                        parentNode: *ref_1036
+                        parentNode: *ref_1041
                       textString: >-
                         Pemerintah dapat memberikan penghargaan kepada orang atau lembaga yang telah
                         berjasa dalam pem-binaan ketenagakerjaan.
                       references: []
                   - type: ayat
-                    node: &ref_1037
+                    node: &ref_1042
                       nodeType: ayat
                       key: 2
-                      parentAyatSetNode: *ref_1035
+                      parentAyatSetNode: *ref_1040
                     content:
                       type: text
                       node:
                         nodeType: text
                         textName: text
-                        parentNode: *ref_1037
+                        parentNode: *ref_1042
                       textString: >-
                         Penghargaan sebagaimana dimaksud dalam ayat (1) dapat diberikan dalam bentuk
                         piagam, uang, dan/atau bentuk lainnya.
                       references: []
     - type: bab
-      node: &ref_1038
+      node: &ref_1043
         nodeType: bab
         key: 14
         parentBabSetNode: *ref_10
@@ -14850,7 +14992,7 @@ babSet:
         type: pasalSet
         node:
           nodeType: pasalSet
-          parentNode: *ref_1038
+          parentNode: *ref_1043
         elements:
           - type: pasal
             node:
@@ -14859,7 +15001,7 @@ babSet:
               parentNode: *ref_0
             version:
               type: pasalVersion
-              node: &ref_1039
+              node: &ref_1044
                 nodeType: pasalVersion
                 version: *ref_55
                 state: exists
@@ -14872,7 +15014,7 @@ babSet:
                 node:
                   nodeType: text
                   textName: text
-                  parentNode: *ref_1039
+                  parentNode: *ref_1044
                 textString: >-
                   Pengawasan ketenagakerjaan dilakukan oleh pegawai pengawas ketenaga- kerjaan yang
                   mempunyai kompetensi dan independen guna menjamin pelaksanaan peraturan
@@ -14885,7 +15027,7 @@ babSet:
               parentNode: *ref_0
             version:
               type: pasalVersion
-              node: &ref_1040
+              node: &ref_1045
                 nodeType: pasalVersion
                 version: *ref_55
                 state: exists
@@ -14898,7 +15040,7 @@ babSet:
                 node:
                   nodeType: text
                   textName: text
-                  parentNode: *ref_1040
+                  parentNode: *ref_1045
                 textString: >-
                   Pegawai pengawas ketenagakerjaan sebagaimana dimaksud dalam Pasal 176 ditetapkan
                   oleh Menteri atau pejabat yang ditunjuk.
@@ -14910,7 +15052,7 @@ babSet:
               parentNode: *ref_0
             version:
               type: pasalVersion
-              node: &ref_1041
+              node: &ref_1046
                 nodeType: pasalVersion
                 version: *ref_55
                 state: exists
@@ -14920,37 +15062,37 @@ babSet:
                   parentNode: *ref_0
               content:
                 type: ayatSet
-                node: &ref_1042
+                node: &ref_1047
                   nodeType: ayatSet
-                  parentPasalVersionNode: *ref_1041
+                  parentPasalVersionNode: *ref_1046
                 elements:
                   - type: ayat
-                    node: &ref_1043
+                    node: &ref_1048
                       nodeType: ayat
                       key: 1
-                      parentAyatSetNode: *ref_1042
+                      parentAyatSetNode: *ref_1047
                     content:
                       type: text
                       node:
                         nodeType: text
                         textName: text
-                        parentNode: *ref_1043
+                        parentNode: *ref_1048
                       textString: >-
                         Pengawasan ketenagakerjaan dilaksanakan oleh unit kerja tersendiri pada
                         instansi yang lingkup tugas dan tanggung jawabnya di bidang ketenagakerjaan
                         pada pemerintah pusat, pemerintah provinsi, dan pemerintah kabupaten/kota.
                       references: []
                   - type: ayat
-                    node: &ref_1044
+                    node: &ref_1049
                       nodeType: ayat
                       key: 2
-                      parentAyatSetNode: *ref_1042
+                      parentAyatSetNode: *ref_1047
                     content:
                       type: text
                       node:
                         nodeType: text
                         textName: text
-                        parentNode: *ref_1044
+                        parentNode: *ref_1049
                       textString: >-
                         Pelaksanaan pengawasan ketenagakerjaan sebagaimana dimaksud dalam ayat (1)
                         diatur dengan Keputu-san Presiden.
@@ -14962,7 +15104,7 @@ babSet:
               parentNode: *ref_0
             version:
               type: pasalVersion
-              node: &ref_1045
+              node: &ref_1050
                 nodeType: pasalVersion
                 version: *ref_55
                 state: exists
@@ -14972,37 +15114,37 @@ babSet:
                   parentNode: *ref_0
               content:
                 type: ayatSet
-                node: &ref_1046
+                node: &ref_1051
                   nodeType: ayatSet
-                  parentPasalVersionNode: *ref_1045
+                  parentPasalVersionNode: *ref_1050
                 elements:
                   - type: ayat
-                    node: &ref_1047
+                    node: &ref_1052
                       nodeType: ayat
                       key: 1
-                      parentAyatSetNode: *ref_1046
+                      parentAyatSetNode: *ref_1051
                     content:
                       type: text
                       node:
                         nodeType: text
                         textName: text
-                        parentNode: *ref_1047
+                        parentNode: *ref_1052
                       textString: >-
                         Unit kerja pengawasan ketenagakerjaan sebagaimana dimaksud dalam Pasal 178
                         pada pemerintah provin-si dan pemerintah kabupaten/kota wajib menyampaikan
                         laporan pelaksanaan pengawasan ketenagakerjaan kepada Menteri.
                       references: []
                   - type: ayat
-                    node: &ref_1048
+                    node: &ref_1053
                       nodeType: ayat
                       key: 2
-                      parentAyatSetNode: *ref_1046
+                      parentAyatSetNode: *ref_1051
                     content:
                       type: text
                       node:
                         nodeType: text
                         textName: text
-                        parentNode: *ref_1048
+                        parentNode: *ref_1053
                       textString: >-
                         Tata cara penyampaian laporan sebagaimana dimaksud dalam ayat (1) ditetapkan
                         dengan Keputusan Ment-teri.
@@ -15014,7 +15156,7 @@ babSet:
               parentNode: *ref_0
             version:
               type: pasalVersion
-              node: &ref_1049
+              node: &ref_1054
                 nodeType: pasalVersion
                 version: *ref_55
                 state: exists
@@ -15027,7 +15169,7 @@ babSet:
                 node:
                   nodeType: text
                   textName: text
-                  parentNode: *ref_1049
+                  parentNode: *ref_1054
                 textString: >-
                   Ketentuan mengenai persyaratan penunjukan, hak dan kewajiban, serta wewenang
                   pegawai pengawas ketenagakerjaan sebagaimana dimaksud dalam Pasal 176 sesuai
@@ -15040,7 +15182,7 @@ babSet:
               parentNode: *ref_0
             version:
               type: pasalVersion
-              node: &ref_1050
+              node: &ref_1055
                 nodeType: pasalVersion
                 version: *ref_55
                 state: exists
@@ -15050,48 +15192,48 @@ babSet:
                   parentNode: *ref_0
               content:
                 type: pointSet
-                node: &ref_1051
+                node: &ref_1056
                   nodeType: pointSet
-                  parentNode: *ref_1050
+                  parentNode: *ref_1055
                 description:
                   type: text
                   node:
                     nodeType: text
                     textName: description
-                    parentNode: *ref_1051
+                    parentNode: *ref_1056
                   textString: >-
                     Pegawai pengawas ketenagakerjaan dalam melaksanakan tugasnya sebagai- mana
                     dimaksud dalam Pasal 176 wajib :
                   references: []
                 elements:
                   - type: point
-                    node: &ref_1052
+                    node: &ref_1057
                       nodeType: point
                       key: a
-                      parentPointSetNode: *ref_1051
+                      parentPointSetNode: *ref_1056
                     content:
                       type: text
                       node:
                         nodeType: text
                         textName: text
-                        parentNode: *ref_1052
+                        parentNode: *ref_1057
                       textString: — merahasiakan segala sesuatu yang menurut sifatnya patut dirahasiakan,
                       references: []
                   - type: point
-                    node: &ref_1053
+                    node: &ref_1058
                       nodeType: point
                       key: b
-                      parentPointSetNode: *ref_1051
+                      parentPointSetNode: *ref_1056
                     content:
                       type: text
                       node:
                         nodeType: text
                         textName: text
-                        parentNode: *ref_1053
+                        parentNode: *ref_1058
                       textString: tidak menyalahgunakan kewenangannya.
                       references: []
     - type: bab
-      node: &ref_1054
+      node: &ref_1059
         nodeType: bab
         key: 15
         parentBabSetNode: *ref_10
@@ -15100,7 +15242,7 @@ babSet:
         type: pasalSet
         node:
           nodeType: pasalSet
-          parentNode: *ref_1054
+          parentNode: *ref_1059
         elements:
           - type: pasal
             node:
@@ -15109,7 +15251,7 @@ babSet:
               parentNode: *ref_0
             version:
               type: pasalVersion
-              node: &ref_1055
+              node: &ref_1060
                 nodeType: pasalVersion
                 version: *ref_55
                 state: exists
@@ -15119,21 +15261,21 @@ babSet:
                   parentNode: *ref_0
               content:
                 type: ayatSet
-                node: &ref_1056
+                node: &ref_1061
                   nodeType: ayatSet
-                  parentPasalVersionNode: *ref_1055
+                  parentPasalVersionNode: *ref_1060
                 elements:
                   - type: ayat
-                    node: &ref_1057
+                    node: &ref_1062
                       nodeType: ayat
                       key: 1
-                      parentAyatSetNode: *ref_1056
+                      parentAyatSetNode: *ref_1061
                     content:
                       type: text
                       node:
                         nodeType: text
                         textName: text
-                        parentNode: *ref_1057
+                        parentNode: *ref_1062
                       textString: >-
                         Selain penyidik pejabat Polisi Negara Republik Indonesia, juga kepada
                         pegawai pengawas ketenagakerjaan dapat diberi wewenang khusus sebagai
@@ -15141,106 +15283,31 @@ babSet:
                         yang berlaku.
                       references: []
                   - type: ayat
-                    node: &ref_1058
+                    node: &ref_1063
                       nodeType: ayat
                       key: 2
-                      parentAyatSetNode: *ref_1056
+                      parentAyatSetNode: *ref_1061
                     content:
                       type: pointSet
-                      node: &ref_1059
+                      node: &ref_1064
                         nodeType: pointSet
-                        parentNode: *ref_1058
+                        parentNode: *ref_1063
                       description:
                         type: text
                         node:
                           nodeType: text
                           textName: description
-                          parentNode: *ref_1059
+                          parentNode: *ref_1064
                         textString: >-
                           Penyidik Pegawai Negeri Sipil sebagaimana dimaksud dalam ayat (1)
                           berwenang :
                         references: []
                       elements:
                         - type: point
-                          node: &ref_1060
-                            nodeType: point
-                            key: a
-                            parentPointSetNode: *ref_1059
-                          content:
-                            type: text
-                            node:
-                              nodeType: text
-                              textName: text
-                              parentNode: *ref_1060
-                            textString: >-
-                              melakukan pemeriksaan atas kebenaran laporan serta keterangan tentang
-                              tindak pidana di bidang ketenaga-kerjaan,
-                            references: []
-                        - type: point
-                          node: &ref_1061
-                            nodeType: point
-                            key: b
-                            parentPointSetNode: *ref_1059
-                          content:
-                            type: text
-                            node:
-                              nodeType: text
-                              textName: text
-                              parentNode: *ref_1061
-                            textString: >-
-                              melakukan pemeriksaan terhadap orang yang diduga melakukan tindak
-                              pidana di bidang ketenagakerjaan,
-                            references: []
-                        - type: point
-                          node: &ref_1062
-                            nodeType: point
-                            key: c
-                            parentPointSetNode: *ref_1059
-                          content:
-                            type: text
-                            node:
-                              nodeType: text
-                              textName: text
-                              parentNode: *ref_1062
-                            textString: >-
-                              meminta keterangan dan bahan bukti dari orang atau badan hukum
-                              sehubungan dengan tindak pidana di bidang ketenagakerjaan,
-                            references: []
-                        - type: point
-                          node: &ref_1063
-                            nodeType: point
-                            key: d
-                            parentPointSetNode: *ref_1059
-                          content:
-                            type: text
-                            node:
-                              nodeType: text
-                              textName: text
-                              parentNode: *ref_1063
-                            textString: >-
-                              melakukan pemeriksaan atau penyitaan bahan atau barang bukti dalam
-                              perkara tindak pidana di bidang ketenagakerjaan,
-                            references: []
-                        - type: point
-                          node: &ref_1064
-                            nodeType: point
-                            key: e
-                            parentPointSetNode: *ref_1059
-                          content:
-                            type: text
-                            node:
-                              nodeType: text
-                              textName: text
-                              parentNode: *ref_1064
-                            textString: >-
-                              melakukan pemeriksaan atas surat dan/atau dokumen lain tentang tindak
-                              pidana di bidang ketenagakerjaan,
-                            references: []
-                        - type: point
                           node: &ref_1065
                             nodeType: point
-                            key: f
-                            parentPointSetNode: *ref_1059
+                            key: a
+                            parentPointSetNode: *ref_1064
                           content:
                             type: text
                             node:
@@ -15248,14 +15315,14 @@ babSet:
                               textName: text
                               parentNode: *ref_1065
                             textString: >-
-                              meminta bantuan tenaga ahli dalam rangka pelaksanaan tugas penyidikan
-                              tindak pidana di bidang ketenagakerjaan, dan
+                              melakukan pemeriksaan atas kebenaran laporan serta keterangan tentang
+                              tindak pidana di bidang ketenaga-kerjaan,
                             references: []
                         - type: point
                           node: &ref_1066
                             nodeType: point
-                            key: g
-                            parentPointSetNode: *ref_1059
+                            key: b
+                            parentPointSetNode: *ref_1064
                           content:
                             type: text
                             node:
@@ -15263,26 +15330,101 @@ babSet:
                               textName: text
                               parentNode: *ref_1066
                             textString: >-
+                              melakukan pemeriksaan terhadap orang yang diduga melakukan tindak
+                              pidana di bidang ketenagakerjaan,
+                            references: []
+                        - type: point
+                          node: &ref_1067
+                            nodeType: point
+                            key: c
+                            parentPointSetNode: *ref_1064
+                          content:
+                            type: text
+                            node:
+                              nodeType: text
+                              textName: text
+                              parentNode: *ref_1067
+                            textString: >-
+                              meminta keterangan dan bahan bukti dari orang atau badan hukum
+                              sehubungan dengan tindak pidana di bidang ketenagakerjaan,
+                            references: []
+                        - type: point
+                          node: &ref_1068
+                            nodeType: point
+                            key: d
+                            parentPointSetNode: *ref_1064
+                          content:
+                            type: text
+                            node:
+                              nodeType: text
+                              textName: text
+                              parentNode: *ref_1068
+                            textString: >-
+                              melakukan pemeriksaan atau penyitaan bahan atau barang bukti dalam
+                              perkara tindak pidana di bidang ketenagakerjaan,
+                            references: []
+                        - type: point
+                          node: &ref_1069
+                            nodeType: point
+                            key: e
+                            parentPointSetNode: *ref_1064
+                          content:
+                            type: text
+                            node:
+                              nodeType: text
+                              textName: text
+                              parentNode: *ref_1069
+                            textString: >-
+                              melakukan pemeriksaan atas surat dan/atau dokumen lain tentang tindak
+                              pidana di bidang ketenagakerjaan,
+                            references: []
+                        - type: point
+                          node: &ref_1070
+                            nodeType: point
+                            key: f
+                            parentPointSetNode: *ref_1064
+                          content:
+                            type: text
+                            node:
+                              nodeType: text
+                              textName: text
+                              parentNode: *ref_1070
+                            textString: >-
+                              meminta bantuan tenaga ahli dalam rangka pelaksanaan tugas penyidikan
+                              tindak pidana di bidang ketenagakerjaan, dan
+                            references: []
+                        - type: point
+                          node: &ref_1071
+                            nodeType: point
+                            key: g
+                            parentPointSetNode: *ref_1064
+                          content:
+                            type: text
+                            node:
+                              nodeType: text
+                              textName: text
+                              parentNode: *ref_1071
+                            textString: >-
                               menghentikan penyidikan apabila tidak terdapat cukup bukti yang
                               membuktikan tentang adanya tindak pidana di bidang ketenagakerjaan.
                             references: []
                   - type: ayat
-                    node: &ref_1067
+                    node: &ref_1072
                       nodeType: ayat
                       key: 3
-                      parentAyatSetNode: *ref_1056
+                      parentAyatSetNode: *ref_1061
                     content:
                       type: text
                       node:
                         nodeType: text
                         textName: text
-                        parentNode: *ref_1067
+                        parentNode: *ref_1072
                       textString: >-
                         Kewenangan penyidik pegawai negeri sipil sebagaimana dimaksud dalam ayat (2)
                         dilaksanakan sesuai dengan peraturan perundang-undangan yang berlaku.
                       references: []
     - type: bab
-      node: &ref_1068
+      node: &ref_1073
         nodeType: bab
         key: 16
         parentBabSetNode: *ref_10
@@ -15291,21 +15433,21 @@ babSet:
         type: bagianSet
         node:
           nodeType: bagianSet
-          parentBabNode: *ref_1068
+          parentBabNode: *ref_1073
         elements:
           - type: bagian
-            node: &ref_1069
+            node: &ref_1074
               nodeType: bagian
               key: 1
               parentBagianSetNode:
                 nodeType: bagianSet
-                parentBabNode: *ref_1068
+                parentBabNode: *ref_1073
             title: Bagian Pertama Ketentuan Pidana
             content:
               type: pasalSet
               node:
                 nodeType: pasalSet
-                parentNode: *ref_1069
+                parentNode: *ref_1074
               elements:
                 - type: pasal
                   node:
@@ -15314,7 +15456,7 @@ babSet:
                     parentNode: *ref_0
                   version:
                     type: pasalVersion
-                    node: &ref_1070
+                    node: &ref_1075
                       nodeType: pasalVersion
                       version: *ref_55
                       state: exists
@@ -15324,21 +15466,21 @@ babSet:
                         parentNode: *ref_0
                     content:
                       type: ayatSet
-                      node: &ref_1071
+                      node: &ref_1076
                         nodeType: ayatSet
-                        parentPasalVersionNode: *ref_1070
+                        parentPasalVersionNode: *ref_1075
                       elements:
                         - type: ayat
-                          node: &ref_1072
+                          node: &ref_1077
                             nodeType: ayat
                             key: 1
-                            parentAyatSetNode: *ref_1071
+                            parentAyatSetNode: *ref_1076
                           content:
                             type: text
                             node:
                               nodeType: text
                               textName: text
-                              parentNode: *ref_1072
+                              parentNode: *ref_1077
                             textString: >-
                               Barang siapa melanggar ketentuan sebagaimana dimaksud dalam Pasal 74,
                               dikenakan sanksi pidana penjara paling singkat 2 (dua) tahun dan
@@ -15347,16 +15489,16 @@ babSet:
                               500.000.000,00 (lima ratus juta rupiah).
                             references: []
                         - type: ayat
-                          node: &ref_1073
+                          node: &ref_1078
                             nodeType: ayat
                             key: 2
-                            parentAyatSetNode: *ref_1071
+                            parentAyatSetNode: *ref_1076
                           content:
                             type: text
                             node:
                               nodeType: text
                               textName: text
-                              parentNode: *ref_1073
+                              parentNode: *ref_1078
                             textString: >-
                               Tindak pidana sebagaimana dimaksud dalam ayat (1) merupakan tindak
                               pidana kejahatan.
@@ -15368,7 +15510,7 @@ babSet:
                     parentNode: *ref_0
                   version:
                     type: pasalVersion
-                    node: &ref_1074
+                    node: &ref_1079
                       nodeType: pasalVersion
                       version: *ref_55
                       state: exists
@@ -15378,21 +15520,21 @@ babSet:
                         parentNode: *ref_0
                     content:
                       type: ayatSet
-                      node: &ref_1075
+                      node: &ref_1080
                         nodeType: ayatSet
-                        parentPasalVersionNode: *ref_1074
+                        parentPasalVersionNode: *ref_1079
                       elements:
                         - type: ayat
-                          node: &ref_1076
+                          node: &ref_1081
                             nodeType: ayat
                             key: 1
-                            parentAyatSetNode: *ref_1075
+                            parentAyatSetNode: *ref_1080
                           content:
                             type: text
                             node:
                               nodeType: text
                               textName: text
-                              parentNode: *ref_1076
+                              parentNode: *ref_1081
                             textString: >-
                               Barang siapa melanggar ketentuan sebagaimana dimaksud dalam Pasal 167
                               ayat (5), dikenakan sanksi pidana penjara paling singkat 1 (satu)
@@ -15401,16 +15543,16 @@ babSet:
                               500.000.000,00 (lima ratus juta rupiah).
                             references: []
                         - type: ayat
-                          node: &ref_1077
+                          node: &ref_1082
                             nodeType: ayat
                             key: 2
-                            parentAyatSetNode: *ref_1075
+                            parentAyatSetNode: *ref_1080
                           content:
                             type: text
                             node:
                               nodeType: text
                               textName: text
-                              parentNode: *ref_1077
+                              parentNode: *ref_1082
                             textString: >-
                               Tindak pidana sebagaimana dimaksud dalam ayat (1) merupakan tindak
                               pidana kejahatan.
@@ -15422,7 +15564,7 @@ babSet:
                     parentNode: *ref_0
                   version:
                     type: pasalVersion
-                    node: &ref_1078
+                    node: &ref_1083
                       nodeType: pasalVersion
                       version: *ref_55
                       state: exists
@@ -15432,21 +15574,21 @@ babSet:
                         parentNode: *ref_0
                     content:
                       type: ayatSet
-                      node: &ref_1079
+                      node: &ref_1084
                         nodeType: ayatSet
-                        parentPasalVersionNode: *ref_1078
+                        parentPasalVersionNode: *ref_1083
                       elements:
                         - type: ayat
-                          node: &ref_1080
+                          node: &ref_1085
                             nodeType: ayat
                             key: 1
-                            parentAyatSetNode: *ref_1079
+                            parentAyatSetNode: *ref_1084
                           content:
                             type: text
                             node:
                               nodeType: text
                               textName: text
-                              parentNode: *ref_1080
+                              parentNode: *ref_1085
                             textString: >-
                               Barang siapa melanggar ketentuan sebagaimana dimaksud dalam Pasal 42
                               ayat (1) dan ayat (2), Pasal 68, Pasal 69 ayat (2), Pasal 80, Pasal
@@ -15457,16 +15599,16 @@ babSet:
                               400.000.000,00 (empat ratus juta rupiah).
                             references: []
                         - type: ayat
-                          node: &ref_1081
+                          node: &ref_1086
                             nodeType: ayat
                             key: 2
-                            parentAyatSetNode: *ref_1079
+                            parentAyatSetNode: *ref_1084
                           content:
                             type: text
                             node:
                               nodeType: text
                               textName: text
-                              parentNode: *ref_1081
+                              parentNode: *ref_1086
                             textString: >-
                               Tindak pidana sebagaimana dimaksud dalam ayat (1) merupakan tindak
                               pidana kejahatan.
@@ -15478,7 +15620,7 @@ babSet:
                     parentNode: *ref_0
                   version:
                     type: pasalVersion
-                    node: &ref_1082
+                    node: &ref_1087
                       nodeType: pasalVersion
                       version: *ref_55
                       state: exists
@@ -15488,21 +15630,21 @@ babSet:
                         parentNode: *ref_0
                     content:
                       type: ayatSet
-                      node: &ref_1083
+                      node: &ref_1088
                         nodeType: ayatSet
-                        parentPasalVersionNode: *ref_1082
+                        parentPasalVersionNode: *ref_1087
                       elements:
                         - type: ayat
-                          node: &ref_1084
+                          node: &ref_1089
                             nodeType: ayat
                             key: 1
-                            parentAyatSetNode: *ref_1083
+                            parentAyatSetNode: *ref_1088
                           content:
                             type: text
                             node:
                               nodeType: text
                               textName: text
-                              parentNode: *ref_1084
+                              parentNode: *ref_1089
                             textString: >-
                               Barang siapa melanggar ketentuan sebagaimana dimaksud dalam Pasal 35
                               ayat (2) dan ayat (3), Pasal 93 ayat (2), Pasal 137, dan Pasal 138
@@ -15512,16 +15654,16 @@ babSet:
                               400.000.000,00 (empat ratus juta rupiah).
                             references: []
                         - type: ayat
-                          node: &ref_1085
+                          node: &ref_1090
                             nodeType: ayat
                             key: 2
-                            parentAyatSetNode: *ref_1083
+                            parentAyatSetNode: *ref_1088
                           content:
                             type: text
                             node:
                               nodeType: text
                               textName: text
-                              parentNode: *ref_1085
+                              parentNode: *ref_1090
                             textString: >-
                               Tindak pidana sebagaimana dimaksud dalam ayat (1) merupakan tindak
                               pidana pelanggaran.
@@ -15533,7 +15675,7 @@ babSet:
                     parentNode: *ref_0
                   version:
                     type: pasalVersion
-                    node: &ref_1086
+                    node: &ref_1091
                       nodeType: pasalVersion
                       version: *ref_55
                       state: exists
@@ -15543,21 +15685,21 @@ babSet:
                         parentNode: *ref_0
                     content:
                       type: ayatSet
-                      node: &ref_1087
+                      node: &ref_1092
                         nodeType: ayatSet
-                        parentPasalVersionNode: *ref_1086
+                        parentPasalVersionNode: *ref_1091
                       elements:
                         - type: ayat
-                          node: &ref_1088
+                          node: &ref_1093
                             nodeType: ayat
                             key: 1
-                            parentAyatSetNode: *ref_1087
+                            parentAyatSetNode: *ref_1092
                           content:
                             type: text
                             node:
                               nodeType: text
                               textName: text
-                              parentNode: *ref_1088
+                              parentNode: *ref_1093
                             textString: >-
                               Barang siapa melanggar ketentuan sebagaimana dimaksud dalam Pasal 37
                               ayat (2), Pasal 44 ayat (1), Pasal 45 ayat (1), Pasal 67 ayat (1),
@@ -15568,16 +15710,16 @@ babSet:
                               rupiah) dan paling banyak Rp 100.000.000,00 (seratus juta rupiah).
                             references: []
                         - type: ayat
-                          node: &ref_1089
+                          node: &ref_1094
                             nodeType: ayat
                             key: 2
-                            parentAyatSetNode: *ref_1087
+                            parentAyatSetNode: *ref_1092
                           content:
                             type: text
                             node:
                               nodeType: text
                               textName: text
-                              parentNode: *ref_1089
+                              parentNode: *ref_1094
                             textString: >-
                               Tindak pidana sebagaimana dimaksud dalam ayat (1) merupakan tindak
                               pidana pelanggaran.
@@ -15589,7 +15731,7 @@ babSet:
                     parentNode: *ref_0
                   version:
                     type: pasalVersion
-                    node: &ref_1090
+                    node: &ref_1095
                       nodeType: pasalVersion
                       version: *ref_55
                       state: exists
@@ -15599,21 +15741,21 @@ babSet:
                         parentNode: *ref_0
                     content:
                       type: ayatSet
-                      node: &ref_1091
+                      node: &ref_1096
                         nodeType: ayatSet
-                        parentPasalVersionNode: *ref_1090
+                        parentPasalVersionNode: *ref_1095
                       elements:
                         - type: ayat
-                          node: &ref_1092
+                          node: &ref_1097
                             nodeType: ayat
                             key: 1
-                            parentAyatSetNode: *ref_1091
+                            parentAyatSetNode: *ref_1096
                           content:
                             type: text
                             node:
                               nodeType: text
                               textName: text
-                              parentNode: *ref_1092
+                              parentNode: *ref_1097
                             textString: >-
                               Barang siapa melanggar ketentuan sebagaimana dimaksud dalam Pasal 14
                               ayat (2), Pasal 38 ayat (2), Pasal 63 ayat (1), Pasal 78 ayat (1),
@@ -15623,16 +15765,16 @@ babSet:
                               rupiah).
                             references: []
                         - type: ayat
-                          node: &ref_1093
+                          node: &ref_1098
                             nodeType: ayat
                             key: 2
-                            parentAyatSetNode: *ref_1091
+                            parentAyatSetNode: *ref_1096
                           content:
                             type: text
                             node:
                               nodeType: text
                               textName: text
-                              parentNode: *ref_1093
+                              parentNode: *ref_1098
                             textString: >-
                               Tindak pidana sebagaimana dimaksud dalam ayat (1) merupakan tindak
                               pidana pelanggaran.
@@ -15644,7 +15786,7 @@ babSet:
                     parentNode: *ref_0
                   version:
                     type: pasalVersion
-                    node: &ref_1094
+                    node: &ref_1099
                       nodeType: pasalVersion
                       version: *ref_55
                       state: exists
@@ -15657,25 +15799,25 @@ babSet:
                       node:
                         nodeType: text
                         textName: text
-                        parentNode: *ref_1094
+                        parentNode: *ref_1099
                       textString: >-
                         Sanksi pidana penjara, kurungan, dan/atau denda tidak menghilangkan
                         kewajiban pengusaha membayar hak-hak dan/atau ganti kerugian kepada tenaga
                         kerja atau pekerja/buruh.
                       references: []
           - type: bagian
-            node: &ref_1095
+            node: &ref_1100
               nodeType: bagian
               key: 2
               parentBagianSetNode:
                 nodeType: bagianSet
-                parentBabNode: *ref_1068
+                parentBabNode: *ref_1073
             title: Bagian Kedua Sanksi Administratif
             content:
               type: pasalSet
               node:
                 nodeType: pasalSet
-                parentNode: *ref_1095
+                parentNode: *ref_1100
               elements:
                 - type: pasal
                   node:
@@ -15684,7 +15826,7 @@ babSet:
                     parentNode: *ref_0
                   version:
                     type: pasalVersion
-                    node: &ref_1096
+                    node: &ref_1101
                       nodeType: pasalVersion
                       version: *ref_55
                       state: exists
@@ -15694,21 +15836,21 @@ babSet:
                         parentNode: *ref_0
                     content:
                       type: ayatSet
-                      node: &ref_1097
+                      node: &ref_1102
                         nodeType: ayatSet
-                        parentPasalVersionNode: *ref_1096
+                        parentPasalVersionNode: *ref_1101
                       elements:
                         - type: ayat
-                          node: &ref_1098
+                          node: &ref_1103
                             nodeType: ayat
                             key: 1
-                            parentAyatSetNode: *ref_1097
+                            parentAyatSetNode: *ref_1102
                           content:
                             type: text
                             node:
                               nodeType: text
                               textName: text
-                              parentNode: *ref_1098
+                              parentNode: *ref_1103
                             textString: >-
                               Menteri atau pejabat yang ditunjuk mengenakan sanksi administratif
                               atas pelanggaran ketentuan-ketentuan sebagaimana diatur dalam Pasal 5,
@@ -15718,145 +15860,145 @@ babSet:
                               pelaksanaannya.
                             references: []
                         - type: ayat
-                          node: &ref_1099
+                          node: &ref_1104
                             nodeType: ayat
                             key: 2
-                            parentAyatSetNode: *ref_1097
+                            parentAyatSetNode: *ref_1102
                           content:
                             type: pointSet
-                            node: &ref_1100
+                            node: &ref_1105
                               nodeType: pointSet
-                              parentNode: *ref_1099
+                              parentNode: *ref_1104
                             description:
                               type: text
                               node:
                                 nodeType: text
                                 textName: description
-                                parentNode: *ref_1100
+                                parentNode: *ref_1105
                               textString: 'Sanksi administratif sebagaimana dimaksud dalam ayat (1) berupa :'
                               references: []
                             elements:
                               - type: point
-                                node: &ref_1101
-                                  nodeType: point
-                                  key: a
-                                  parentPointSetNode: *ref_1100
-                                content:
-                                  type: text
-                                  node:
-                                    nodeType: text
-                                    textName: text
-                                    parentNode: *ref_1101
-                                  textString: teguran,
-                                  references: []
-                              - type: point
-                                node: &ref_1102
-                                  nodeType: point
-                                  key: b
-                                  parentPointSetNode: *ref_1100
-                                content:
-                                  type: text
-                                  node:
-                                    nodeType: text
-                                    textName: text
-                                    parentNode: *ref_1102
-                                  textString: peringatan tertulis,
-                                  references: []
-                              - type: point
-                                node: &ref_1103
-                                  nodeType: point
-                                  key: c
-                                  parentPointSetNode: *ref_1100
-                                content:
-                                  type: text
-                                  node:
-                                    nodeType: text
-                                    textName: text
-                                    parentNode: *ref_1103
-                                  textString: pembatasan kegiatan usaha,
-                                  references: []
-                              - type: point
-                                node: &ref_1104
-                                  nodeType: point
-                                  key: d
-                                  parentPointSetNode: *ref_1100
-                                content:
-                                  type: text
-                                  node:
-                                    nodeType: text
-                                    textName: text
-                                    parentNode: *ref_1104
-                                  textString: pembekuan kegiatan usaha,
-                                  references: []
-                              - type: point
-                                node: &ref_1105
-                                  nodeType: point
-                                  key: e
-                                  parentPointSetNode: *ref_1100
-                                content:
-                                  type: text
-                                  node:
-                                    nodeType: text
-                                    textName: text
-                                    parentNode: *ref_1105
-                                  textString: 'pembatalan persetujuan:'
-                                  references: []
-                              - type: point
                                 node: &ref_1106
                                   nodeType: point
-                                  key: f
-                                  parentPointSetNode: *ref_1100
+                                  key: a
+                                  parentPointSetNode: *ref_1105
                                 content:
                                   type: text
                                   node:
                                     nodeType: text
                                     textName: text
                                     parentNode: *ref_1106
-                                  textString: pembatalan pendaftaran,
+                                  textString: teguran,
                                   references: []
                               - type: point
                                 node: &ref_1107
                                   nodeType: point
-                                  key: g
-                                  parentPointSetNode: *ref_1100
+                                  key: b
+                                  parentPointSetNode: *ref_1105
                                 content:
                                   type: text
                                   node:
                                     nodeType: text
                                     textName: text
                                     parentNode: *ref_1107
-                                  textString: penghentian sementara sebagian atau seluruh alat produksi,
+                                  textString: peringatan tertulis,
                                   references: []
                               - type: point
                                 node: &ref_1108
                                   nodeType: point
-                                  key: h
-                                  parentPointSetNode: *ref_1100
+                                  key: c
+                                  parentPointSetNode: *ref_1105
                                 content:
                                   type: text
                                   node:
                                     nodeType: text
                                     textName: text
                                     parentNode: *ref_1108
+                                  textString: pembatasan kegiatan usaha,
+                                  references: []
+                              - type: point
+                                node: &ref_1109
+                                  nodeType: point
+                                  key: d
+                                  parentPointSetNode: *ref_1105
+                                content:
+                                  type: text
+                                  node:
+                                    nodeType: text
+                                    textName: text
+                                    parentNode: *ref_1109
+                                  textString: pembekuan kegiatan usaha,
+                                  references: []
+                              - type: point
+                                node: &ref_1110
+                                  nodeType: point
+                                  key: e
+                                  parentPointSetNode: *ref_1105
+                                content:
+                                  type: text
+                                  node:
+                                    nodeType: text
+                                    textName: text
+                                    parentNode: *ref_1110
+                                  textString: 'pembatalan persetujuan:'
+                                  references: []
+                              - type: point
+                                node: &ref_1111
+                                  nodeType: point
+                                  key: f
+                                  parentPointSetNode: *ref_1105
+                                content:
+                                  type: text
+                                  node:
+                                    nodeType: text
+                                    textName: text
+                                    parentNode: *ref_1111
+                                  textString: pembatalan pendaftaran,
+                                  references: []
+                              - type: point
+                                node: &ref_1112
+                                  nodeType: point
+                                  key: g
+                                  parentPointSetNode: *ref_1105
+                                content:
+                                  type: text
+                                  node:
+                                    nodeType: text
+                                    textName: text
+                                    parentNode: *ref_1112
+                                  textString: penghentian sementara sebagian atau seluruh alat produksi,
+                                  references: []
+                              - type: point
+                                node: &ref_1113
+                                  nodeType: point
+                                  key: h
+                                  parentPointSetNode: *ref_1105
+                                content:
+                                  type: text
+                                  node:
+                                    nodeType: text
+                                    textName: text
+                                    parentNode: *ref_1113
                                   textString: pencabutan ijin.
                                   references: []
                         - type: ayat
-                          node: &ref_1109
+                          node: &ref_1114
                             nodeType: ayat
                             key: 3
-                            parentAyatSetNode: *ref_1097
+                            parentAyatSetNode: *ref_1102
                           content:
                             type: text
                             node:
                               nodeType: text
                               textName: text
-                              parentNode: *ref_1109
+                              parentNode: *ref_1114
                             textString: >-
                               Ketentuan mengenai sanksi administratif sebagaimana dimaksud dalam
                               ayat (1) dan ayat (2) diatur lebih lanjut oleh Menteri.
                             references: []
     - type: bab
-      node: &ref_1110
+      node: &ref_1115
         nodeType: bab
         key: 17
         parentBabSetNode: *ref_10
@@ -15865,7 +16007,7 @@ babSet:
         type: pasalSet
         node:
           nodeType: pasalSet
-          parentNode: *ref_1110
+          parentNode: *ref_1115
         elements:
           - type: pasal
             node:
@@ -15874,7 +16016,7 @@ babSet:
               parentNode: *ref_0
             version:
               type: pasalVersion
-              node: &ref_1111
+              node: &ref_1116
                 nodeType: pasalVersion
                 version: *ref_55
                 state: exists
@@ -15887,14 +16029,14 @@ babSet:
                 node:
                   nodeType: text
                   textName: text
-                  parentNode: *ref_1111
+                  parentNode: *ref_1116
                 textString: >-
                   Semua peraturan pelaksanaan yang mengatur ketenagakerjaan tetap berlaku sepanjang
                   tidak bertentangan dan/atau belum diganti dengan peraturan yang baru berdasarkan
                   Undang undang ini.
                 references: []
     - type: bab
-      node: &ref_1112
+      node: &ref_1117
         nodeType: bab
         key: 18
         parentBabSetNode: *ref_10
@@ -15903,7 +16045,7 @@ babSet:
         type: pasalSet
         node:
           nodeType: pasalSet
-          parentNode: *ref_1112
+          parentNode: *ref_1117
         elements:
           - type: pasal
             node:
@@ -15912,7 +16054,7 @@ babSet:
               parentNode: *ref_0
             version:
               type: pasalVersion
-              node: &ref_1113
+              node: &ref_1118
                 nodeType: pasalVersion
                 version: *ref_55
                 state: exists
@@ -15922,98 +16064,23 @@ babSet:
                   parentNode: *ref_0
               content:
                 type: pointSet
-                node: &ref_1114
+                node: &ref_1119
                   nodeType: pointSet
-                  parentNode: *ref_1113
+                  parentNode: *ref_1118
                 description:
                   type: text
                   node:
                     nodeType: text
                     textName: description
-                    parentNode: *ref_1114
+                    parentNode: *ref_1119
                   textString: 'Pada saat mulai berlakunya Undang undang ini, maka :'
                   references: []
                 elements:
                   - type: point
-                    node: &ref_1115
-                      nodeType: point
-                      key: '1'
-                      parentPointSetNode: *ref_1114
-                    content:
-                      type: text
-                      node:
-                        nodeType: text
-                        textName: text
-                        parentNode: *ref_1115
-                      textString: >-
-                        Ordonansi tentang Pengerahan Orang Indonesia Untuk Melakukan Pekerjaan Di
-                        Luar Indonesia (Staatsblad Tahun 1887 Nomor 8),
-                      references: []
-                  - type: point
-                    node: &ref_1116
-                      nodeType: point
-                      key: '2'
-                      parentPointSetNode: *ref_1114
-                    content:
-                      type: text
-                      node:
-                        nodeType: text
-                        textName: text
-                        parentNode: *ref_1116
-                      textString: >-
-                        Ordonansi tanggal 17 Desember 1925 Peraturan tentang Pembatasan Kerja Anak
-                        Dan Kerja Malam Bagi Wanita (Staatsblad Tahun 1925 Nomor 647),
-                      references: []
-                  - type: point
-                    node: &ref_1117
-                      nodeType: point
-                      key: '3'
-                      parentPointSetNode: *ref_1114
-                    content:
-                      type: text
-                      node:
-                        nodeType: text
-                        textName: text
-                        parentNode: *ref_1117
-                      textString: >-
-                        Ordonansi Tahun 1926 Peraturan mengenai Kerja Anak anak Dan Orang Muda Di
-                        Atas Kapal (Staatsblad Tahun 1926 Nomor 87),
-                      references: []
-                  - type: point
-                    node: &ref_1118
-                      nodeType: point
-                      key: '4'
-                      parentPointSetNode: *ref_1114
-                    content:
-                      type: text
-                      node:
-                        nodeType: text
-                        textName: text
-                        parentNode: *ref_1118
-                      textString: >-
-                        Ordonansi tanggal 4 Mei 1936 tentang Ordonansi untuk Mengatur Kegiatan
-                        kegiatan Mencari Calon Pekerja (Staatsblad Tahun 1936 Nomor 208):
-                      references: []
-                  - type: point
-                    node: &ref_1119
-                      nodeType: point
-                      key: '5'
-                      parentPointSetNode: *ref_1114
-                    content:
-                      type: text
-                      node:
-                        nodeType: text
-                        textName: text
-                        parentNode: *ref_1119
-                      textString: >-
-                        5. Ordonansi tentang Pemulangan Buruh Yang Diterima Atau Dikerahkan Dari
-                        Luar Indonesia (Staatsblad Tahun 1939 Nomor 545),
-                      references: []
-                  - type: point
                     node: &ref_1120
                       nodeType: point
-                      key: '6'
-                      parentPointSetNode: *ref_1114
+                      key: '1'
+                      parentPointSetNode: *ref_1119
                     content:
                       type: text
                       node:
@@ -16021,14 +16088,14 @@ babSet:
                         textName: text
                         parentNode: *ref_1120
                       textString: >-
-                        Ordonansi Nomor 9 Tahun 1949 tentang Pembatasan Kerja Anak anak (Staatsblad
-                        Tahun 1949 Nomor 8),
+                        Ordonansi tentang Pengerahan Orang Indonesia Untuk Melakukan Pekerjaan Di
+                        Luar Indonesia (Staatsblad Tahun 1887 Nomor 8),
                       references: []
                   - type: point
                     node: &ref_1121
                       nodeType: point
-                      key: '7'
-                      parentPointSetNode: *ref_1114
+                      key: '2'
+                      parentPointSetNode: *ref_1119
                     content:
                       type: text
                       node:
@@ -16036,15 +16103,14 @@ babSet:
                         textName: text
                         parentNode: *ref_1121
                       textString: >-
-                        Undang undang Nomor 1 Tahun 1951 tentang Pernyataan Berlakunya Undang undang
-                        Kerja Tahun 1948 Nomor 12 Dari Republik Indonesia Untuk Seluruh Indonesia
-                        (Lembaran Negara Tahun 1951 Nomor 2),
+                        Ordonansi tanggal 17 Desember 1925 Peraturan tentang Pembatasan Kerja Anak
+                        Dan Kerja Malam Bagi Wanita (Staatsblad Tahun 1925 Nomor 647),
                       references: []
                   - type: point
                     node: &ref_1122
                       nodeType: point
-                      key: '8'
-                      parentPointSetNode: *ref_1114
+                      key: '3'
+                      parentPointSetNode: *ref_1119
                     content:
                       type: text
                       node:
@@ -16052,15 +16118,14 @@ babSet:
                         textName: text
                         parentNode: *ref_1122
                       textString: >-
-                        Undang undang Nomor 21 Tahun 1954 tentang Perjanjian Perburuhan Antara
-                        Serikat Buruh Dan Majikan (Lembaran Negara Tahun 1954 Nomor 69, Tambahan
-                        Lembaran Negara Nomor 598a),
+                        Ordonansi Tahun 1926 Peraturan mengenai Kerja Anak anak Dan Orang Muda Di
+                        Atas Kapal (Staatsblad Tahun 1926 Nomor 87),
                       references: []
                   - type: point
                     node: &ref_1123
                       nodeType: point
-                      key: '9'
-                      parentPointSetNode: *ref_1114
+                      key: '4'
+                      parentPointSetNode: *ref_1119
                     content:
                       type: text
                       node:
@@ -16068,14 +16133,14 @@ babSet:
                         textName: text
                         parentNode: *ref_1123
                       textString: >-
-                        Undang-undang Nomor 3 Tahun 1958 tentang Penempatan Tenaga Asing (Lembaran
-                        Negara Tahun 1958 Nomor 8 ),
+                        Ordonansi tanggal 4 Mei 1936 tentang Ordonansi untuk Mengatur Kegiatan
+                        kegiatan Mencari Calon Pekerja (Staatsblad Tahun 1936 Nomor 208):
                       references: []
                   - type: point
                     node: &ref_1124
                       nodeType: point
-                      key: '10'
-                      parentPointSetNode: *ref_1114
+                      key: '5'
+                      parentPointSetNode: *ref_1119
                     content:
                       type: text
                       node:
@@ -16083,14 +16148,14 @@ babSet:
                         textName: text
                         parentNode: *ref_1124
                       textString: >-
-                        Undang-undang Nomor 8 Tahun 1961 tentang Wajib Kerja Sarjana (Lembaran
-                        Negara Tahun 1961 Nomor 207, Tambahan Lembaran Negara Nomor 2270),
+                        5. Ordonansi tentang Pemulangan Buruh Yang Diterima Atau Dikerahkan Dari
+                        Luar Indonesia (Staatsblad Tahun 1939 Nomor 545),
                       references: []
                   - type: point
                     node: &ref_1125
                       nodeType: point
-                      key: '11'
-                      parentPointSetNode: *ref_1114
+                      key: '6'
+                      parentPointSetNode: *ref_1119
                     content:
                       type: text
                       node:
@@ -16098,15 +16163,14 @@ babSet:
                         textName: text
                         parentNode: *ref_1125
                       textString: >-
-                        Undang undang Nomor 7 Pnps Tahun 1963 tentang Pencegahan Pemogokan dan/atau
-                        Penutupan (Lock Out) Di Perusahaan, Jawatan, dan Badan Yang Vital (Lembaran
-                        Negara Tahun 1963 Nomor 67),
+                        Ordonansi Nomor 9 Tahun 1949 tentang Pembatasan Kerja Anak anak (Staatsblad
+                        Tahun 1949 Nomor 8),
                       references: []
                   - type: point
                     node: &ref_1126
                       nodeType: point
-                      key: '12'
-                      parentPointSetNode: *ref_1114
+                      key: '7'
+                      parentPointSetNode: *ref_1119
                     content:
                       type: text
                       node:
@@ -16114,15 +16178,15 @@ babSet:
                         textName: text
                         parentNode: *ref_1126
                       textString: >-
-                        Undang undang Nomor 14 Tahun 1969 tentang Ketentuan ketentuan Pokok Mengenai
-                        Tenaga Kerja (Lembaran Negara Tahun 1969 Nomor 55, Tambahan Lembaran Negara
-                        Nomor 2912),
+                        Undang undang Nomor 1 Tahun 1951 tentang Pernyataan Berlakunya Undang undang
+                        Kerja Tahun 1948 Nomor 12 Dari Republik Indonesia Untuk Seluruh Indonesia
+                        (Lembaran Negara Tahun 1951 Nomor 2),
                       references: []
                   - type: point
                     node: &ref_1127
                       nodeType: point
-                      key: '13'
-                      parentPointSetNode: *ref_1114
+                      key: '8'
+                      parentPointSetNode: *ref_1119
                     content:
                       type: text
                       node:
@@ -16130,14 +16194,15 @@ babSet:
                         textName: text
                         parentNode: *ref_1127
                       textString: >-
-                        Undang-undang Nomor 25 Tahun 1997 tentang Ketenagakerjaan (Lembaran Negara
-                        Tahun 1997 Nomor 73, Tambahan Lembaran Negara Nomor 3702),
+                        Undang undang Nomor 21 Tahun 1954 tentang Perjanjian Perburuhan Antara
+                        Serikat Buruh Dan Majikan (Lembaran Negara Tahun 1954 Nomor 69, Tambahan
+                        Lembaran Negara Nomor 598a),
                       references: []
                   - type: point
                     node: &ref_1128
                       nodeType: point
-                      key: '14'
-                      parentPointSetNode: *ref_1114
+                      key: '9'
+                      parentPointSetNode: *ref_1119
                     content:
                       type: text
                       node:
@@ -16145,21 +16210,98 @@ babSet:
                         textName: text
                         parentNode: *ref_1128
                       textString: >-
-                        Undang-undang Nomor 11 Tahun 1998 tentang Perubahan Berlakunya Undang-undang
-                        Nomor 25 Tahun 1997 tentang Ketenagakerjaan (Lembaran Negara Tahun 1998
-                        Nomor 184, Tambahan Lembaran Negara Nomor 3791),
+                        Undang-undang Nomor 3 Tahun 1958 tentang Penempatan Tenaga Asing (Lembaran
+                        Negara Tahun 1958 Nomor 8 ),
                       references: []
                   - type: point
                     node: &ref_1129
                       nodeType: point
-                      key: '15'
-                      parentPointSetNode: *ref_1114
+                      key: '10'
+                      parentPointSetNode: *ref_1119
                     content:
                       type: text
                       node:
                         nodeType: text
                         textName: text
                         parentNode: *ref_1129
+                      textString: >-
+                        Undang-undang Nomor 8 Tahun 1961 tentang Wajib Kerja Sarjana (Lembaran
+                        Negara Tahun 1961 Nomor 207, Tambahan Lembaran Negara Nomor 2270),
+                      references: []
+                  - type: point
+                    node: &ref_1130
+                      nodeType: point
+                      key: '11'
+                      parentPointSetNode: *ref_1119
+                    content:
+                      type: text
+                      node:
+                        nodeType: text
+                        textName: text
+                        parentNode: *ref_1130
+                      textString: >-
+                        Undang undang Nomor 7 Pnps Tahun 1963 tentang Pencegahan Pemogokan dan/atau
+                        Penutupan (Lock Out) Di Perusahaan, Jawatan, dan Badan Yang Vital (Lembaran
+                        Negara Tahun 1963 Nomor 67),
+                      references: []
+                  - type: point
+                    node: &ref_1131
+                      nodeType: point
+                      key: '12'
+                      parentPointSetNode: *ref_1119
+                    content:
+                      type: text
+                      node:
+                        nodeType: text
+                        textName: text
+                        parentNode: *ref_1131
+                      textString: >-
+                        Undang undang Nomor 14 Tahun 1969 tentang Ketentuan ketentuan Pokok Mengenai
+                        Tenaga Kerja (Lembaran Negara Tahun 1969 Nomor 55, Tambahan Lembaran Negara
+                        Nomor 2912),
+                      references: []
+                  - type: point
+                    node: &ref_1132
+                      nodeType: point
+                      key: '13'
+                      parentPointSetNode: *ref_1119
+                    content:
+                      type: text
+                      node:
+                        nodeType: text
+                        textName: text
+                        parentNode: *ref_1132
+                      textString: >-
+                        Undang-undang Nomor 25 Tahun 1997 tentang Ketenagakerjaan (Lembaran Negara
+                        Tahun 1997 Nomor 73, Tambahan Lembaran Negara Nomor 3702),
+                      references: []
+                  - type: point
+                    node: &ref_1133
+                      nodeType: point
+                      key: '14'
+                      parentPointSetNode: *ref_1119
+                    content:
+                      type: text
+                      node:
+                        nodeType: text
+                        textName: text
+                        parentNode: *ref_1133
+                      textString: >-
+                        Undang-undang Nomor 11 Tahun 1998 tentang Perubahan Berlakunya Undang-undang
+                        Nomor 25 Tahun 1997 tentang Ketenagakerjaan (Lembaran Negara Tahun 1998
+                        Nomor 184, Tambahan Lembaran Negara Nomor 3791),
+                      references: []
+                  - type: point
+                    node: &ref_1134
+                      nodeType: point
+                      key: '15'
+                      parentPointSetNode: *ref_1119
+                    content:
+                      type: text
+                      node:
+                        nodeType: text
+                        textName: text
+                        parentNode: *ref_1134
                       textString: >-
                         Undang-undang Nomor 28 Tahun 2000 tentang Penetapan Peraturan Pemerintah
                         Pengganti Undang-undang Nomor 3 Tahun 2000 tentang Perubahan Atas
@@ -16175,7 +16317,7 @@ babSet:
               parentNode: *ref_0
             version:
               type: pasalVersion
-              node: &ref_1130
+              node: &ref_1135
                 nodeType: pasalVersion
                 version: *ref_55
                 state: exists
@@ -16188,7 +16330,7 @@ babSet:
                 node:
                   nodeType: text
                   textName: text
-                  parentNode: *ref_1130
+                  parentNode: *ref_1135
                 textString: >-
                   Undang undang ini mulai berlaku pada tanggal diundangkan. Agar setiap orang
                   mengetahuinya, memerintahkan pengundangan undang undang ini dengan penempatannya
