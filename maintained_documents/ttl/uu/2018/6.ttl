@@ -255,6 +255,7 @@
 <http://example.org/legal/document/uu/2018/6/pasal/0005/version/20180807/ayat/0002> legal:ayatHasRawText "Dalam menyelenggarakan Kekarantinaan Kesehatan sebagaimana dimaksud pada ayat (1), Pemerintah Pusat dapat melibatkan Pemerintah Daerah." .
 <http://example.org/legal/document/uu/2018/6/pasal/0005/version/20180807/ayat/0002/text> legal:textHasTextString "Dalam menyelenggarakan Kekarantinaan Kesehatan sebagaimana dimaksud pada ayat (1), Pemerintah Pusat dapat melibatkan Pemerintah Daerah." .
 <http://example.org/legal/document/uu/2018/6/pasal/0005/version/20180807/ayat/0002> legal:ayatHasText <http://example.org/legal/document/uu/2018/6/pasal/0005/version/20180807/ayat/0002/text> .
+<http://example.org/legal/document/uu/2018/6/pasal/0005/version/20180807/ayat/0002/text> legal:textReferencesLegal <http://example.org/legal/document/uu/2018/6/pasal/0005/version/20180807/ayat/0001> .
 <http://example.org/legal/document/uu/2018/6/bab/0002/pasals> legal:pasalSetHasPasal <http://example.org/legal/document/uu/2018/6/pasal/0006> .
 <http://example.org/legal/document/uu/2018/6/pasal/0006> legal:pasalHasKey 6 .
 <http://example.org/legal/document/uu/2018/6/pasal/0006> legal:pasalHasPasalVersion <http://example.org/legal/document/uu/2018/6/pasal/0006/version/20180807> .
@@ -336,6 +337,8 @@
 <http://example.org/legal/document/uu/2018/6/pasal/0010/version/20180807/ayat/0004> legal:ayatHasRawText "Ketentuan lebih lanjut mengenai tata cara penetapan dan pencabutan sebagaimana dimaksud pada ayat (1) dan ayat (2) diatur dengan Peraturan Pemerintah." .
 <http://example.org/legal/document/uu/2018/6/pasal/0010/version/20180807/ayat/0004/text> legal:textHasTextString "Ketentuan lebih lanjut mengenai tata cara penetapan dan pencabutan sebagaimana dimaksud pada ayat (1) dan ayat (2) diatur dengan Peraturan Pemerintah." .
 <http://example.org/legal/document/uu/2018/6/pasal/0010/version/20180807/ayat/0004> legal:ayatHasText <http://example.org/legal/document/uu/2018/6/pasal/0010/version/20180807/ayat/0004/text> .
+<http://example.org/legal/document/uu/2018/6/pasal/0010/version/20180807/ayat/0004/text> legal:textReferencesLegal <http://example.org/legal/document/uu/2018/6/pasal/0010/version/20180807/ayat/0002> .
+<http://example.org/legal/document/uu/2018/6/pasal/0010/version/20180807/ayat/0004/text> legal:textReferencesLegal <http://example.org/legal/document/uu/2018/6/pasal/0010/version/20180807/ayat/0001> .
 <http://example.org/legal/document/uu/2018/6/bab/0004/pasals> legal:pasalSetHasPasal <http://example.org/legal/document/uu/2018/6/pasal/0011> .
 <http://example.org/legal/document/uu/2018/6/pasal/0011> legal:pasalHasKey 11 .
 <http://example.org/legal/document/uu/2018/6/pasal/0011> legal:pasalHasPasalVersion <http://example.org/legal/document/uu/2018/6/pasal/0011/version/20180807> .
@@ -354,6 +357,7 @@
 <http://example.org/legal/document/uu/2018/6/pasal/0011/version/20180807/ayat/0002> legal:ayatHasRawText "Penyelenggaraan Kekarantinaan Kesehatan sebagaimana dimaksud pada ayat (l) dapat berkoordinasi dan bekerja sama dengan dunia internasional." .
 <http://example.org/legal/document/uu/2018/6/pasal/0011/version/20180807/ayat/0002/text> legal:textHasTextString "Penyelenggaraan Kekarantinaan Kesehatan sebagaimana dimaksud pada ayat (l) dapat berkoordinasi dan bekerja sama dengan dunia internasional." .
 <http://example.org/legal/document/uu/2018/6/pasal/0011/version/20180807/ayat/0002> legal:ayatHasText <http://example.org/legal/document/uu/2018/6/pasal/0011/version/20180807/ayat/0002/text> .
+<http://example.org/legal/document/uu/2018/6/pasal/0011/version/20180807/ayat/0002/text> legal:textReferencesLegal <http://example.org/legal/document/uu/2018/6/pasal/0011/version/20180807/ayat/0001> .
 <http://example.org/legal/document/uu/2018/6/pasal/0011/version/20180807/ayat> legal:ayatSetHasAyat <http://example.org/legal/document/uu/2018/6/pasal/0011/version/20180807/ayat/0003> .
 <http://example.org/legal/document/uu/2018/6/pasal/0011/version/20180807/ayat/0003> legal:ayatHasKey 3 .
 <http://example.org/legal/document/uu/2018/6/pasal/0011/version/20180807/ayat/0003> legal:ayatHasRawText "Ketentuan lebih lanjut mengenai penanggulangan Kedaruratan Kesehatan Masyarakat diatur dengan Peraturan Pemerintah." .
@@ -386,6 +390,7 @@
 <http://example.org/legal/document/uu/2018/6/pasal/0013/version/20180807/ayat/0002> legal:ayatHasRawText "Komunikasi, koordinasi, dan kerja sama sebagaimana dimaksud pada ayat (1) dilakukan untuk mengidentifikasi penyebab, gejala dan tanda, faktor yang mempengaruhi, dan dampak yang ditimbulkan, serta tindakan yang harus dilakukan." .
 <http://example.org/legal/document/uu/2018/6/pasal/0013/version/20180807/ayat/0002/text> legal:textHasTextString "Komunikasi, koordinasi, dan kerja sama sebagaimana dimaksud pada ayat (1) dilakukan untuk mengidentifikasi penyebab, gejala dan tanda, faktor yang mempengaruhi, dan dampak yang ditimbulkan, serta tindakan yang harus dilakukan." .
 <http://example.org/legal/document/uu/2018/6/pasal/0013/version/20180807/ayat/0002> legal:ayatHasText <http://example.org/legal/document/uu/2018/6/pasal/0013/version/20180807/ayat/0002/text> .
+<http://example.org/legal/document/uu/2018/6/pasal/0013/version/20180807/ayat/0002/text> legal:textReferencesLegal <http://example.org/legal/document/uu/2018/6/pasal/0013/version/20180807/ayat/0001> .
 <http://example.org/legal/document/uu/2018/6/bab/0004/pasals> legal:pasalSetHasPasal <http://example.org/legal/document/uu/2018/6/pasal/0014> .
 <http://example.org/legal/document/uu/2018/6/pasal/0014> legal:pasalHasKey 14 .
 <http://example.org/legal/document/uu/2018/6/pasal/0014> legal:pasalHasPasalVersion <http://example.org/legal/document/uu/2018/6/pasal/0014/version/20180807> .
@@ -404,6 +409,7 @@
 <http://example.org/legal/document/uu/2018/6/pasal/0014/version/20180807/ayat/0002> legal:ayatHasRawText "Ketentuan lebih lanjut mengenai tata cara pelaksanaan Karantina Wilayah di Pintu Masuk sebagaimana dimaksud pada ayat (1) diatur dengan Peraturan Pemerintah." .
 <http://example.org/legal/document/uu/2018/6/pasal/0014/version/20180807/ayat/0002/text> legal:textHasTextString "Ketentuan lebih lanjut mengenai tata cara pelaksanaan Karantina Wilayah di Pintu Masuk sebagaimana dimaksud pada ayat (1) diatur dengan Peraturan Pemerintah." .
 <http://example.org/legal/document/uu/2018/6/pasal/0014/version/20180807/ayat/0002> legal:ayatHasText <http://example.org/legal/document/uu/2018/6/pasal/0014/version/20180807/ayat/0002/text> .
+<http://example.org/legal/document/uu/2018/6/pasal/0014/version/20180807/ayat/0002/text> legal:textReferencesLegal <http://example.org/legal/document/uu/2018/6/pasal/0014/version/20180807/ayat/0001> .
 <http://example.org/legal/document/uu/2018/6/bab> legal:babSetHasBab <http://example.org/legal/document/uu/2018/6/bab/0005> .
 <http://example.org/legal/document/uu/2018/6/bab/0005> legal:babHasKey 5 .
 <http://example.org/legal/document/uu/2018/6/bab/0005> legal:babHasTitle "KEKARANTINAAN KESEHATAN DI PINTU MASUK DAN DI WILAYAH" .
@@ -448,11 +454,14 @@
 <http://example.org/legal/document/uu/2018/6/pasal/0015/version/20180807/ayat/0003> legal:ayatHasRawText "Penyehatan, pengamanan, dan pengendalian terhadap media lingkungan sebagaimana dimaksud pada ayat (2) huruf d dilaksanakan sesuai dengan ketentuan peraturan perundang-undangan." .
 <http://example.org/legal/document/uu/2018/6/pasal/0015/version/20180807/ayat/0003/text> legal:textHasTextString "Penyehatan, pengamanan, dan pengendalian terhadap media lingkungan sebagaimana dimaksud pada ayat (2) huruf d dilaksanakan sesuai dengan ketentuan peraturan perundang-undangan." .
 <http://example.org/legal/document/uu/2018/6/pasal/0015/version/20180807/ayat/0003> legal:ayatHasText <http://example.org/legal/document/uu/2018/6/pasal/0015/version/20180807/ayat/0003/text> .
+<http://example.org/legal/document/uu/2018/6/pasal/0015/version/20180807/ayat/0003/text> legal:textReferencesLegal <http://example.org/legal/document/uu/2018/6/pasal/0015/version/20180807/ayat/0002> .
+<http://example.org/legal/document/uu/2018/6/pasal/0015/version/20180807/ayat/0003/text> legal:textReferencesLegal <http://example.org/legal/document/uu/2018/6/pasal/0015/version/20180807/point/d> .
 <http://example.org/legal/document/uu/2018/6/pasal/0015/version/20180807/ayat> legal:ayatSetHasAyat <http://example.org/legal/document/uu/2018/6/pasal/0015/version/20180807/ayat/0004> .
 <http://example.org/legal/document/uu/2018/6/pasal/0015/version/20180807/ayat/0004> legal:ayatHasKey 4 .
 <http://example.org/legal/document/uu/2018/6/pasal/0015/version/20180807/ayat/0004> legal:ayatHasRawText "Ketentuan lebih lanjut mengenai tindakan Kekarantinaan Kesehatan sebagaimana dimaksud pada ayat (2) diatur dengan Peraturan Menteri." .
 <http://example.org/legal/document/uu/2018/6/pasal/0015/version/20180807/ayat/0004/text> legal:textHasTextString "Ketentuan lebih lanjut mengenai tindakan Kekarantinaan Kesehatan sebagaimana dimaksud pada ayat (2) diatur dengan Peraturan Menteri." .
 <http://example.org/legal/document/uu/2018/6/pasal/0015/version/20180807/ayat/0004> legal:ayatHasText <http://example.org/legal/document/uu/2018/6/pasal/0015/version/20180807/ayat/0004/text> .
+<http://example.org/legal/document/uu/2018/6/pasal/0015/version/20180807/ayat/0004/text> legal:textReferencesLegal <http://example.org/legal/document/uu/2018/6/pasal/0015/version/20180807/ayat/0002> .
 <http://example.org/legal/document/uu/2018/6/bab/0005/pasals> legal:pasalSetHasPasal <http://example.org/legal/document/uu/2018/6/pasal/0016> .
 <http://example.org/legal/document/uu/2018/6/pasal/0016> legal:pasalHasKey 16 .
 <http://example.org/legal/document/uu/2018/6/pasal/0016> legal:pasalHasPasalVersion <http://example.org/legal/document/uu/2018/6/pasal/0016/version/20180807> .
@@ -471,6 +480,7 @@
 <http://example.org/legal/document/uu/2018/6/pasal/0016/version/20180807/ayat/0002> legal:ayatHasRawText "Tindakan Kekarantinaan Kesehatan sebagaimana dimaksud pada ayat (1) dilaksanakan oleh Pejabat Karantina Kesehatan." .
 <http://example.org/legal/document/uu/2018/6/pasal/0016/version/20180807/ayat/0002/text> legal:textHasTextString "Tindakan Kekarantinaan Kesehatan sebagaimana dimaksud pada ayat (1) dilaksanakan oleh Pejabat Karantina Kesehatan." .
 <http://example.org/legal/document/uu/2018/6/pasal/0016/version/20180807/ayat/0002> legal:ayatHasText <http://example.org/legal/document/uu/2018/6/pasal/0016/version/20180807/ayat/0002/text> .
+<http://example.org/legal/document/uu/2018/6/pasal/0016/version/20180807/ayat/0002/text> legal:textReferencesLegal <http://example.org/legal/document/uu/2018/6/pasal/0016/version/20180807/ayat/0001> .
 <http://example.org/legal/document/uu/2018/6/pasal/0016/version/20180807/ayat> legal:ayatSetHasAyat <http://example.org/legal/document/uu/2018/6/pasal/0016/version/20180807/ayat/0003> .
 <http://example.org/legal/document/uu/2018/6/pasal/0016/version/20180807/ayat/0003> legal:ayatHasKey 3 .
 <http://example.org/legal/document/uu/2018/6/pasal/0016/version/20180807/ayat/0003> legal:ayatHasRawText "Tindakan Kekarantinaan Kesehatan tertentu dapat dilakukan oleh badan usaha atau instansi yang ditetapkan oleh Menteri." .
@@ -481,11 +491,13 @@
 <http://example.org/legal/document/uu/2018/6/pasal/0016/version/20180807/ayat/0004> legal:ayatHasRawText "Dalam situasi Kedaruratan Kesehatan Masyarakat, tindakan Kekarantinaan Kesehatan sebagaimana dimaksud pada ayat (1) dilaksanakan oleh Pejabat Karantina Kesehatan." .
 <http://example.org/legal/document/uu/2018/6/pasal/0016/version/20180807/ayat/0004/text> legal:textHasTextString "Dalam situasi Kedaruratan Kesehatan Masyarakat, tindakan Kekarantinaan Kesehatan sebagaimana dimaksud pada ayat (1) dilaksanakan oleh Pejabat Karantina Kesehatan." .
 <http://example.org/legal/document/uu/2018/6/pasal/0016/version/20180807/ayat/0004> legal:ayatHasText <http://example.org/legal/document/uu/2018/6/pasal/0016/version/20180807/ayat/0004/text> .
+<http://example.org/legal/document/uu/2018/6/pasal/0016/version/20180807/ayat/0004/text> legal:textReferencesLegal <http://example.org/legal/document/uu/2018/6/pasal/0016/version/20180807/ayat/0001> .
 <http://example.org/legal/document/uu/2018/6/pasal/0016/version/20180807/ayat> legal:ayatSetHasAyat <http://example.org/legal/document/uu/2018/6/pasal/0016/version/20180807/ayat/0005> .
 <http://example.org/legal/document/uu/2018/6/pasal/0016/version/20180807/ayat/0005> legal:ayatHasKey 5 .
 <http://example.org/legal/document/uu/2018/6/pasal/0016/version/20180807/ayat/0005> legal:ayatHasRawText "Dalam pelaksanaan tindakan Kekarantinaan Kesehatan sebagaimana dimaksud pada ayat (4), Pejabat Karantina Kesehatan harus berkoordinasi dengan pihak yang terkait." .
 <http://example.org/legal/document/uu/2018/6/pasal/0016/version/20180807/ayat/0005/text> legal:textHasTextString "Dalam pelaksanaan tindakan Kekarantinaan Kesehatan sebagaimana dimaksud pada ayat (4), Pejabat Karantina Kesehatan harus berkoordinasi dengan pihak yang terkait." .
 <http://example.org/legal/document/uu/2018/6/pasal/0016/version/20180807/ayat/0005> legal:ayatHasText <http://example.org/legal/document/uu/2018/6/pasal/0016/version/20180807/ayat/0005/text> .
+<http://example.org/legal/document/uu/2018/6/pasal/0016/version/20180807/ayat/0005/text> legal:textReferencesLegal <http://example.org/legal/document/uu/2018/6/pasal/0016/version/20180807/ayat/0004> .
 <http://example.org/legal/document/uu/2018/6/bab/0005/pasals> legal:pasalSetHasPasal <http://example.org/legal/document/uu/2018/6/pasal/0017> .
 <http://example.org/legal/document/uu/2018/6/pasal/0017> legal:pasalHasKey 17 .
 <http://example.org/legal/document/uu/2018/6/pasal/0017> legal:pasalHasPasalVersion <http://example.org/legal/document/uu/2018/6/pasal/0017/version/20180807> .
@@ -513,6 +525,7 @@
 <http://example.org/legal/document/uu/2018/6/pasal/0018/version/20180807/ayat/0002> legal:ayatHasRawText "Penentuan tempat atau lokasi sebagaimana dimaksud pada ayat (1) didasarkan pada hasil penyelidikan epidemiologi dan/atau pengujian laboratorium." .
 <http://example.org/legal/document/uu/2018/6/pasal/0018/version/20180807/ayat/0002/text> legal:textHasTextString "Penentuan tempat atau lokasi sebagaimana dimaksud pada ayat (1) didasarkan pada hasil penyelidikan epidemiologi dan/atau pengujian laboratorium." .
 <http://example.org/legal/document/uu/2018/6/pasal/0018/version/20180807/ayat/0002> legal:ayatHasText <http://example.org/legal/document/uu/2018/6/pasal/0018/version/20180807/ayat/0002/text> .
+<http://example.org/legal/document/uu/2018/6/pasal/0018/version/20180807/ayat/0002/text> legal:textReferencesLegal <http://example.org/legal/document/uu/2018/6/pasal/0018/version/20180807/ayat/0001> .
 <http://example.org/legal/document/uu/2018/6/pasal/0018/version/20180807/ayat> legal:ayatSetHasAyat <http://example.org/legal/document/uu/2018/6/pasal/0018/version/20180807/ayat/0003> .
 <http://example.org/legal/document/uu/2018/6/pasal/0018/version/20180807/ayat/0003> legal:ayatHasKey 3 .
 <http://example.org/legal/document/uu/2018/6/pasal/0018/version/20180807/ayat/0003> legal:ayatHasRawText "Tempat atau lokasi penyelenggaraan Kekarantinaan Kesehatan di wilayah dapat berupa rumah, area, dan rumah sakit." .
@@ -561,16 +574,19 @@
 <http://example.org/legal/document/uu/2018/6/pasal/0019/version/20180807/ayat/0002> legal:ayatHasRawText "Nakhoda pada Kapal sebagaimana dimaksud pada ayat (1) wajib memberikan Deklarasi Kesehatan Maritim (Maritime Declaration of Healthh kepada Pejabat Karantina Kesehatan pada saat kedatangan Kapal." .
 <http://example.org/legal/document/uu/2018/6/pasal/0019/version/20180807/ayat/0002/text> legal:textHasTextString "Nakhoda pada Kapal sebagaimana dimaksud pada ayat (1) wajib memberikan Deklarasi Kesehatan Maritim (Maritime Declaration of Healthh kepada Pejabat Karantina Kesehatan pada saat kedatangan Kapal." .
 <http://example.org/legal/document/uu/2018/6/pasal/0019/version/20180807/ayat/0002> legal:ayatHasText <http://example.org/legal/document/uu/2018/6/pasal/0019/version/20180807/ayat/0002/text> .
+<http://example.org/legal/document/uu/2018/6/pasal/0019/version/20180807/ayat/0002/text> legal:textReferencesLegal <http://example.org/legal/document/uu/2018/6/pasal/0019/version/20180807/ayat/0001> .
 <http://example.org/legal/document/uu/2018/6/pasal/0019/version/20180807/ayat> legal:ayatSetHasAyat <http://example.org/legal/document/uu/2018/6/pasal/0019/version/20180807/ayat/0003> .
 <http://example.org/legal/document/uu/2018/6/pasal/0019/version/20180807/ayat/0003> legal:ayatHasKey 3 .
 <http://example.org/legal/document/uu/2018/6/pasal/0019/version/20180807/ayat/0003> legal:ayatHasRawText "Nakhoda pada Kapal sebagaimana dimaksud pada ayat (1) hanya dapat menurunkan atau menaikkan orang dan/atau Barang setelah dilakukan Pengawasan Kekarantinaan Kesehatan oleh Pejabat Karantina Kesehatan." .
 <http://example.org/legal/document/uu/2018/6/pasal/0019/version/20180807/ayat/0003/text> legal:textHasTextString "Nakhoda pada Kapal sebagaimana dimaksud pada ayat (1) hanya dapat menurunkan atau menaikkan orang dan/atau Barang setelah dilakukan Pengawasan Kekarantinaan Kesehatan oleh Pejabat Karantina Kesehatan." .
 <http://example.org/legal/document/uu/2018/6/pasal/0019/version/20180807/ayat/0003> legal:ayatHasText <http://example.org/legal/document/uu/2018/6/pasal/0019/version/20180807/ayat/0003/text> .
+<http://example.org/legal/document/uu/2018/6/pasal/0019/version/20180807/ayat/0003/text> legal:textReferencesLegal <http://example.org/legal/document/uu/2018/6/pasal/0019/version/20180807/ayat/0001> .
 <http://example.org/legal/document/uu/2018/6/pasal/0019/version/20180807/ayat> legal:ayatSetHasAyat <http://example.org/legal/document/uu/2018/6/pasal/0019/version/20180807/ayat/0004> .
 <http://example.org/legal/document/uu/2018/6/pasal/0019/version/20180807/ayat/0004> legal:ayatHasKey 4 .
 <http://example.org/legal/document/uu/2018/6/pasal/0019/version/20180807/ayat/0004> legal:ayatHasRawText "Pengawasan Kekarantinaan Kesehatan sebagaimana dimaksud pada ayat (3) dilakukan untuk memperoleh Persetujuan Karantina Kesehatan." .
 <http://example.org/legal/document/uu/2018/6/pasal/0019/version/20180807/ayat/0004/text> legal:textHasTextString "Pengawasan Kekarantinaan Kesehatan sebagaimana dimaksud pada ayat (3) dilakukan untuk memperoleh Persetujuan Karantina Kesehatan." .
 <http://example.org/legal/document/uu/2018/6/pasal/0019/version/20180807/ayat/0004> legal:ayatHasText <http://example.org/legal/document/uu/2018/6/pasal/0019/version/20180807/ayat/0004/text> .
+<http://example.org/legal/document/uu/2018/6/pasal/0019/version/20180807/ayat/0004/text> legal:textReferencesLegal <http://example.org/legal/document/uu/2018/6/pasal/0019/version/20180807/ayat/0003> .
 <http://example.org/legal/document/uu/2018/6/pasal/0019/version/20180807/ayat> legal:ayatSetHasAyat <http://example.org/legal/document/uu/2018/6/pasal/0019/version/20180807/ayat/0005> .
 <http://example.org/legal/document/uu/2018/6/pasal/0019/version/20180807/ayat/0005> legal:ayatHasKey 5 .
 <http://example.org/legal/document/uu/2018/6/pasal/0019/version/20180807/ayat/0005> legal:ayatHasRawText "Persetujuan Karantina Kesehatan sebagaimana dimaksud pada ayat (4) berupa:\na. persetujuan bebas karantina, dalam hal tidak ditemukan penyakit dan/atau faktor risiko yang berpotensi menimbulkan Kedaruratan Kesehatan Masyarakat dan/atau Dokumen Karantina Kesehatan dinyatakan lengkap dan berlaku, dan\nb. persetujuan karantina terbatas, dalam hal ditemukan penyakit dan/atau faktor risiko yang berpotensi menimbulkan Kedaruratan Kesehatan Masyarakat dan/atau Dokumen Karantina Kesehatan dinyatakan tidak lengkap dan tidak berlaku.\n" .
@@ -590,6 +606,7 @@
 <http://example.org/legal/document/uu/2018/6/pasal/0019/version/20180807/ayat/0006> legal:ayatHasRawText "Ketentuan lebih lanjut mengenai tata laksana Pengawasan Kekarantinaan Kesehatan di Pelabuhan sebagaimana dimaksud pada ayat (3) diatur dengan Peraturan Menteri." .
 <http://example.org/legal/document/uu/2018/6/pasal/0019/version/20180807/ayat/0006/text> legal:textHasTextString "Ketentuan lebih lanjut mengenai tata laksana Pengawasan Kekarantinaan Kesehatan di Pelabuhan sebagaimana dimaksud pada ayat (3) diatur dengan Peraturan Menteri." .
 <http://example.org/legal/document/uu/2018/6/pasal/0019/version/20180807/ayat/0006> legal:ayatHasText <http://example.org/legal/document/uu/2018/6/pasal/0019/version/20180807/ayat/0006/text> .
+<http://example.org/legal/document/uu/2018/6/pasal/0019/version/20180807/ayat/0006/text> legal:textReferencesLegal <http://example.org/legal/document/uu/2018/6/pasal/0019/version/20180807/ayat/0003> .
 <http://example.org/legal/document/uu/2018/6/bab/0006/bagian/0001/paragraf/0001/pasals> legal:pasalSetHasPasal <http://example.org/legal/document/uu/2018/6/pasal/0020> .
 <http://example.org/legal/document/uu/2018/6/pasal/0020> legal:pasalHasKey 20 .
 <http://example.org/legal/document/uu/2018/6/pasal/0020> legal:pasalHasPasalVersion <http://example.org/legal/document/uu/2018/6/pasal/0020/version/20180807> .
@@ -650,6 +667,7 @@
 <http://example.org/legal/document/uu/2018/6/pasal/0022/version/20180807/ayat/0002> legal:ayatHasRawText "Kapal yang Persetujuan Karantina Kesehatannya dicabut dan dinyatakan tidak berlaku sebagaimana dimaksud pada ayat (1) wajib menuju ke suatu Zona Karantina untuk mendapat tindakan Kekarantinaan Kesehatan." .
 <http://example.org/legal/document/uu/2018/6/pasal/0022/version/20180807/ayat/0002/text> legal:textHasTextString "Kapal yang Persetujuan Karantina Kesehatannya dicabut dan dinyatakan tidak berlaku sebagaimana dimaksud pada ayat (1) wajib menuju ke suatu Zona Karantina untuk mendapat tindakan Kekarantinaan Kesehatan." .
 <http://example.org/legal/document/uu/2018/6/pasal/0022/version/20180807/ayat/0002> legal:ayatHasText <http://example.org/legal/document/uu/2018/6/pasal/0022/version/20180807/ayat/0002/text> .
+<http://example.org/legal/document/uu/2018/6/pasal/0022/version/20180807/ayat/0002/text> legal:textReferencesLegal <http://example.org/legal/document/uu/2018/6/pasal/0022/version/20180807/ayat/0001> .
 <http://example.org/legal/document/uu/2018/6/bab/0006/bagian/0001/paragraf/0001/pasals> legal:pasalSetHasPasal <http://example.org/legal/document/uu/2018/6/pasal/0023> .
 <http://example.org/legal/document/uu/2018/6/pasal/0023> legal:pasalHasKey 23 .
 <http://example.org/legal/document/uu/2018/6/pasal/0023> legal:pasalHasPasalVersion <http://example.org/legal/document/uu/2018/6/pasal/0023/version/20180807> .
@@ -668,11 +686,13 @@
 <http://example.org/legal/document/uu/2018/6/pasal/0023/version/20180807/ayat/0002> legal:ayatHasRawText "Kapal sebagaimana dimaksud pada ayat (1) diperintahkan supaya berangkat lagi atas tanggungan sendiri dan tidak diberikan izin memasuki Pelabuhan lain di wilayah Indonesia." .
 <http://example.org/legal/document/uu/2018/6/pasal/0023/version/20180807/ayat/0002/text> legal:textHasTextString "Kapal sebagaimana dimaksud pada ayat (1) diperintahkan supaya berangkat lagi atas tanggungan sendiri dan tidak diberikan izin memasuki Pelabuhan lain di wilayah Indonesia." .
 <http://example.org/legal/document/uu/2018/6/pasal/0023/version/20180807/ayat/0002> legal:ayatHasText <http://example.org/legal/document/uu/2018/6/pasal/0023/version/20180807/ayat/0002/text> .
+<http://example.org/legal/document/uu/2018/6/pasal/0023/version/20180807/ayat/0002/text> legal:textReferencesLegal <http://example.org/legal/document/uu/2018/6/pasal/0023/version/20180807/ayat/0001> .
 <http://example.org/legal/document/uu/2018/6/pasal/0023/version/20180807/ayat> legal:ayatSetHasAyat <http://example.org/legal/document/uu/2018/6/pasal/0023/version/20180807/ayat/0003> .
 <http://example.org/legal/document/uu/2018/6/pasal/0023/version/20180807/ayat/0003> legal:ayatHasKey 3 .
 <http://example.org/legal/document/uu/2018/6/pasal/0023/version/20180807/ayat/0003> legal:ayatHasRawText "Kapal sebagaimana dimaksud pada ayat (1) diberikan izin untuk mengambil bahan bakar, air, dan bahan makanan di bawah pengawasan Pejabat Karantina Kesehatan." .
 <http://example.org/legal/document/uu/2018/6/pasal/0023/version/20180807/ayat/0003/text> legal:textHasTextString "Kapal sebagaimana dimaksud pada ayat (1) diberikan izin untuk mengambil bahan bakar, air, dan bahan makanan di bawah pengawasan Pejabat Karantina Kesehatan." .
 <http://example.org/legal/document/uu/2018/6/pasal/0023/version/20180807/ayat/0003> legal:ayatHasText <http://example.org/legal/document/uu/2018/6/pasal/0023/version/20180807/ayat/0003/text> .
+<http://example.org/legal/document/uu/2018/6/pasal/0023/version/20180807/ayat/0003/text> legal:textReferencesLegal <http://example.org/legal/document/uu/2018/6/pasal/0023/version/20180807/ayat/0001> .
 <http://example.org/legal/document/uu/2018/6/bab/0006/bagian/0001/paragraf/0001/pasals> legal:pasalSetHasPasal <http://example.org/legal/document/uu/2018/6/pasal/0024> .
 <http://example.org/legal/document/uu/2018/6/pasal/0024> legal:pasalHasKey 24 .
 <http://example.org/legal/document/uu/2018/6/pasal/0024> legal:pasalHasPasalVersion <http://example.org/legal/document/uu/2018/6/pasal/0024/version/20180807> .
@@ -704,11 +724,13 @@
 <http://example.org/legal/document/uu/2018/6/pasal/0025/version/20180807/ayat/0002> legal:ayatHasRawText "Setelah Dokumen Karantina Kesehatan sebagaimana dimaksud pada ayat (1) dinyatakan lengkap dan pada pemeriksaan oleh Pejabat Karantina Kesehatan tidak ditemukan indikasi Faktor Risiko Kesehatan Masyarakat maka kepada Nakhoda dapat diberikan Surat Persetujuan Berlayar Karantina Kesehatan (Port Health Ouarantine Clearance)." .
 <http://example.org/legal/document/uu/2018/6/pasal/0025/version/20180807/ayat/0002/text> legal:textHasTextString "Setelah Dokumen Karantina Kesehatan sebagaimana dimaksud pada ayat (1) dinyatakan lengkap dan pada pemeriksaan oleh Pejabat Karantina Kesehatan tidak ditemukan indikasi Faktor Risiko Kesehatan Masyarakat maka kepada Nakhoda dapat diberikan Surat Persetujuan Berlayar Karantina Kesehatan (Port Health Ouarantine Clearance)." .
 <http://example.org/legal/document/uu/2018/6/pasal/0025/version/20180807/ayat/0002> legal:ayatHasText <http://example.org/legal/document/uu/2018/6/pasal/0025/version/20180807/ayat/0002/text> .
+<http://example.org/legal/document/uu/2018/6/pasal/0025/version/20180807/ayat/0002/text> legal:textReferencesLegal <http://example.org/legal/document/uu/2018/6/pasal/0025/version/20180807/ayat/0001> .
 <http://example.org/legal/document/uu/2018/6/pasal/0025/version/20180807/ayat> legal:ayatSetHasAyat <http://example.org/legal/document/uu/2018/6/pasal/0025/version/20180807/ayat/0003> .
 <http://example.org/legal/document/uu/2018/6/pasal/0025/version/20180807/ayat/0003> legal:ayatHasKey 3 .
 <http://example.org/legal/document/uu/2018/6/pasal/0025/version/20180807/ayat/0003> legal:ayatHasRawText "Dalam hal Kapal yang akan berangkat tidak dilengkapi dengan Surat Persetujuan Berlayar Karantina Kesehatan (Port Health OGuarantine Clearance) sebagaimana dimaksud pada ayat (2), syahbandar dilarang menerbitkan surat persetujuan berlayar." .
 <http://example.org/legal/document/uu/2018/6/pasal/0025/version/20180807/ayat/0003/text> legal:textHasTextString "Dalam hal Kapal yang akan berangkat tidak dilengkapi dengan Surat Persetujuan Berlayar Karantina Kesehatan (Port Health OGuarantine Clearance) sebagaimana dimaksud pada ayat (2), syahbandar dilarang menerbitkan surat persetujuan berlayar." .
 <http://example.org/legal/document/uu/2018/6/pasal/0025/version/20180807/ayat/0003> legal:ayatHasText <http://example.org/legal/document/uu/2018/6/pasal/0025/version/20180807/ayat/0003/text> .
+<http://example.org/legal/document/uu/2018/6/pasal/0025/version/20180807/ayat/0003/text> legal:textReferencesLegal <http://example.org/legal/document/uu/2018/6/pasal/0025/version/20180807/ayat/0002> .
 <http://example.org/legal/document/uu/2018/6/bab/0006/bagian/0001/paragraf/0002/pasals> legal:pasalSetHasPasal <http://example.org/legal/document/uu/2018/6/pasal/0026> .
 <http://example.org/legal/document/uu/2018/6/pasal/0026> legal:pasalHasKey 26 .
 <http://example.org/legal/document/uu/2018/6/pasal/0026> legal:pasalHasPasalVersion <http://example.org/legal/document/uu/2018/6/pasal/0026/version/20180807> .
@@ -722,6 +744,7 @@
 <http://example.org/legal/document/uu/2018/6/pasal/0026/version/20180807/ayat/0001> legal:ayatHasRawText "Apabila pada saat keberangkatan Kapal ditemukan adanya Faktor Risiko Kesehatan Masyarakat maka terhadap Kapal tersebut dilakukan tindakan Kekarantinaan Kesehatan sebagaimana dimaksud dalam Pasal 15 ayat (2)." .
 <http://example.org/legal/document/uu/2018/6/pasal/0026/version/20180807/ayat/0001/text> legal:textHasTextString "Apabila pada saat keberangkatan Kapal ditemukan adanya Faktor Risiko Kesehatan Masyarakat maka terhadap Kapal tersebut dilakukan tindakan Kekarantinaan Kesehatan sebagaimana dimaksud dalam Pasal 15 ayat (2)." .
 <http://example.org/legal/document/uu/2018/6/pasal/0026/version/20180807/ayat/0001> legal:ayatHasText <http://example.org/legal/document/uu/2018/6/pasal/0026/version/20180807/ayat/0001/text> .
+<http://example.org/legal/document/uu/2018/6/pasal/0026/version/20180807/ayat/0001/text> legal:textReferencesLegal <http://example.org/legal/document/uu/2018/6/pasal/0026/version/20180807/ayat/0002> .
 <http://example.org/legal/document/uu/2018/6/pasal/0026/version/20180807/ayat> legal:ayatSetHasAyat <http://example.org/legal/document/uu/2018/6/pasal/0026/version/20180807/ayat/0002> .
 <http://example.org/legal/document/uu/2018/6/pasal/0026/version/20180807/ayat/0002> legal:ayatHasKey 2 .
 <http://example.org/legal/document/uu/2018/6/pasal/0026/version/20180807/ayat/0002> legal:ayatHasRawText "Untuk Pelabuhan yang tidak memungkinkan dilakukan tindakan Kekarantinaan Kesehatan maka harus dilakukan di Pelabuhan tujuan berikutnya." .
@@ -775,6 +798,7 @@
 <http://example.org/legal/document/uu/2018/6/pasal/0028/version/20180807/ayat/0002> legal:ayatHasRawText "Kapten Penerbang wajib segera melaporkan mengenai keadaan sebagaimana dimaksud pada ayat (1) kepada petugas lalu lintas udara untuk diteruskan kepada Pejabat Karantina Kesehatan di Bandar Udara tujuan dengan menggunakan teknologi telekomunikasi." .
 <http://example.org/legal/document/uu/2018/6/pasal/0028/version/20180807/ayat/0002/text> legal:textHasTextString "Kapten Penerbang wajib segera melaporkan mengenai keadaan sebagaimana dimaksud pada ayat (1) kepada petugas lalu lintas udara untuk diteruskan kepada Pejabat Karantina Kesehatan di Bandar Udara tujuan dengan menggunakan teknologi telekomunikasi." .
 <http://example.org/legal/document/uu/2018/6/pasal/0028/version/20180807/ayat/0002> legal:ayatHasText <http://example.org/legal/document/uu/2018/6/pasal/0028/version/20180807/ayat/0002/text> .
+<http://example.org/legal/document/uu/2018/6/pasal/0028/version/20180807/ayat/0002/text> legal:textReferencesLegal <http://example.org/legal/document/uu/2018/6/pasal/0028/version/20180807/ayat/0001> .
 <http://example.org/legal/document/uu/2018/6/bab/0006/bagian/0002/paragraf/0001/pasals> legal:pasalSetHasPasal <http://example.org/legal/document/uu/2018/6/pasal/0029> .
 <http://example.org/legal/document/uu/2018/6/pasal/0029> legal:pasalHasKey 29 .
 <http://example.org/legal/document/uu/2018/6/pasal/0029> legal:pasalHasPasalVersion <http://example.org/legal/document/uu/2018/6/pasal/0029/version/20180807> .
@@ -793,6 +817,7 @@
 <http://example.org/legal/document/uu/2018/6/pasal/0029/version/20180807/ayat/0002> legal:ayatHasRawText "Dalam hal kedatangan Pesawat Udara sebagaimana dimaksud dalam Pasal 28 ayat (1), Kapten Penerbang wajib secara langsung memberikan dokumen Deklarasi Kesehatan Penerbangan (Health Part of the Aircraft General Declaration) kepada Pejabat Karantina Kesehatan." .
 <http://example.org/legal/document/uu/2018/6/pasal/0029/version/20180807/ayat/0002/text> legal:textHasTextString "Dalam hal kedatangan Pesawat Udara sebagaimana dimaksud dalam Pasal 28 ayat (1), Kapten Penerbang wajib secara langsung memberikan dokumen Deklarasi Kesehatan Penerbangan (Health Part of the Aircraft General Declaration) kepada Pejabat Karantina Kesehatan." .
 <http://example.org/legal/document/uu/2018/6/pasal/0029/version/20180807/ayat/0002> legal:ayatHasText <http://example.org/legal/document/uu/2018/6/pasal/0029/version/20180807/ayat/0002/text> .
+<http://example.org/legal/document/uu/2018/6/pasal/0029/version/20180807/ayat/0002/text> legal:textReferencesLegal <http://example.org/legal/document/uu/2018/6/pasal/0029/version/20180807/ayat/0001> .
 <http://example.org/legal/document/uu/2018/6/bab/0006/bagian/0002/paragraf/0001/pasals> legal:pasalSetHasPasal <http://example.org/legal/document/uu/2018/6/pasal/0030> .
 <http://example.org/legal/document/uu/2018/6/pasal/0030> legal:pasalHasKey 30 .
 <http://example.org/legal/document/uu/2018/6/pasal/0030> legal:pasalHasPasalVersion <http://example.org/legal/document/uu/2018/6/pasal/0030/version/20180807> .
@@ -806,11 +831,14 @@
 <http://example.org/legal/document/uu/2018/6/pasal/0030/version/20180807/ayat/0001> legal:ayatHasRawText "Kapten Penerbang pada Pesawat Udara sebagaimana dimaksud dalam Pasal 27 dan Pasal 28 hanya dapat menurunkan atau menaikkan orang dan/atau Barang setelah dilakukan Pengawasan Kekarantinaan Kesehatan oleh Pejabat Karantina Kesehatan." .
 <http://example.org/legal/document/uu/2018/6/pasal/0030/version/20180807/ayat/0001/text> legal:textHasTextString "Kapten Penerbang pada Pesawat Udara sebagaimana dimaksud dalam Pasal 27 dan Pasal 28 hanya dapat menurunkan atau menaikkan orang dan/atau Barang setelah dilakukan Pengawasan Kekarantinaan Kesehatan oleh Pejabat Karantina Kesehatan." .
 <http://example.org/legal/document/uu/2018/6/pasal/0030/version/20180807/ayat/0001> legal:ayatHasText <http://example.org/legal/document/uu/2018/6/pasal/0030/version/20180807/ayat/0001/text> .
+<http://example.org/legal/document/uu/2018/6/pasal/0030/version/20180807/ayat/0001/text> legal:textReferencesLegal <http://example.org/legal/document/uu/2018/6/pasal/0028> .
+<http://example.org/legal/document/uu/2018/6/pasal/0030/version/20180807/ayat/0001/text> legal:textReferencesLegal <http://example.org/legal/document/uu/2018/6/pasal/0027> .
 <http://example.org/legal/document/uu/2018/6/pasal/0030/version/20180807/ayat> legal:ayatSetHasAyat <http://example.org/legal/document/uu/2018/6/pasal/0030/version/20180807/ayat/0002> .
 <http://example.org/legal/document/uu/2018/6/pasal/0030/version/20180807/ayat/0002> legal:ayatHasKey 2 .
 <http://example.org/legal/document/uu/2018/6/pasal/0030/version/20180807/ayat/0002> legal:ayatHasRawText "Pengawasan Kekarantinaan Kesehatan sebagaimana dimaksud pada ayat (1) dilakukan untuk memperoleh Persetujuan Karantina Kesehatan." .
 <http://example.org/legal/document/uu/2018/6/pasal/0030/version/20180807/ayat/0002/text> legal:textHasTextString "Pengawasan Kekarantinaan Kesehatan sebagaimana dimaksud pada ayat (1) dilakukan untuk memperoleh Persetujuan Karantina Kesehatan." .
 <http://example.org/legal/document/uu/2018/6/pasal/0030/version/20180807/ayat/0002> legal:ayatHasText <http://example.org/legal/document/uu/2018/6/pasal/0030/version/20180807/ayat/0002/text> .
+<http://example.org/legal/document/uu/2018/6/pasal/0030/version/20180807/ayat/0002/text> legal:textReferencesLegal <http://example.org/legal/document/uu/2018/6/pasal/0030/version/20180807/ayat/0001> .
 <http://example.org/legal/document/uu/2018/6/pasal/0030/version/20180807/ayat> legal:ayatSetHasAyat <http://example.org/legal/document/uu/2018/6/pasal/0030/version/20180807/ayat/0003> .
 <http://example.org/legal/document/uu/2018/6/pasal/0030/version/20180807/ayat/0003> legal:ayatHasKey 3 .
 <http://example.org/legal/document/uu/2018/6/pasal/0030/version/20180807/ayat/0003> legal:ayatHasRawText "Persetujuan Karantina Kesehatan sebagaimana dimaksud pada ayat (2) dapat berupa:\na. persetujuan bebas karantina, dalam hal tidak ditemukan penyakit dan/atau faktor risiko yang berpotensi menimbulkan Kedaruratan Kesehatan Masyarakat dan/atau Dokumen Karantina Kesehatan dinyatakan lengkap dan berlaku, dan\nb. persetujuan karantina terbatas, dalam hal ditemukan penyakit dan/atau faktor risiko yang berpotensi menimbulkan Kedaruratan Kesehatan Masyarakat dan/atau Dokumen Karantina Kesehatan dinyatakan tidak lengkap dan tidak berlaku.\n" .
@@ -912,21 +940,25 @@
 <http://example.org/legal/document/uu/2018/6/pasal/0035/version/20180807/ayat/0002> legal:ayatHasRawText "Kendaraan Darat sebagaimana dimaksud pada ayat (1) harus dilakukan Pengawasan Kekarantinaan Kesehatan sebelum menurunkan atau menaikkan orang dan/atau Barang." .
 <http://example.org/legal/document/uu/2018/6/pasal/0035/version/20180807/ayat/0002/text> legal:textHasTextString "Kendaraan Darat sebagaimana dimaksud pada ayat (1) harus dilakukan Pengawasan Kekarantinaan Kesehatan sebelum menurunkan atau menaikkan orang dan/atau Barang." .
 <http://example.org/legal/document/uu/2018/6/pasal/0035/version/20180807/ayat/0002> legal:ayatHasText <http://example.org/legal/document/uu/2018/6/pasal/0035/version/20180807/ayat/0002/text> .
+<http://example.org/legal/document/uu/2018/6/pasal/0035/version/20180807/ayat/0002/text> legal:textReferencesLegal <http://example.org/legal/document/uu/2018/6/pasal/0035/version/20180807/ayat/0001> .
 <http://example.org/legal/document/uu/2018/6/pasal/0035/version/20180807/ayat> legal:ayatSetHasAyat <http://example.org/legal/document/uu/2018/6/pasal/0035/version/20180807/ayat/0003> .
 <http://example.org/legal/document/uu/2018/6/pasal/0035/version/20180807/ayat/0003> legal:ayatHasKey 3 .
 <http://example.org/legal/document/uu/2018/6/pasal/0035/version/20180807/ayat/0003> legal:ayatHasRawText "Kendaraan Darat yang ditemukan Faktor Risiko Kesehatan Masyarakat pada Pengawasan Kekarantinaan Kesehatan sebagaimana dimaksud pada ayat (2) harus dilakukan tindakan Kekarantinaan Kesehatan." .
 <http://example.org/legal/document/uu/2018/6/pasal/0035/version/20180807/ayat/0003/text> legal:textHasTextString "Kendaraan Darat yang ditemukan Faktor Risiko Kesehatan Masyarakat pada Pengawasan Kekarantinaan Kesehatan sebagaimana dimaksud pada ayat (2) harus dilakukan tindakan Kekarantinaan Kesehatan." .
 <http://example.org/legal/document/uu/2018/6/pasal/0035/version/20180807/ayat/0003> legal:ayatHasText <http://example.org/legal/document/uu/2018/6/pasal/0035/version/20180807/ayat/0003/text> .
+<http://example.org/legal/document/uu/2018/6/pasal/0035/version/20180807/ayat/0003/text> legal:textReferencesLegal <http://example.org/legal/document/uu/2018/6/pasal/0035/version/20180807/ayat/0002> .
 <http://example.org/legal/document/uu/2018/6/pasal/0035/version/20180807/ayat> legal:ayatSetHasAyat <http://example.org/legal/document/uu/2018/6/pasal/0035/version/20180807/ayat/0004> .
 <http://example.org/legal/document/uu/2018/6/pasal/0035/version/20180807/ayat/0004> legal:ayatHasKey 4 .
 <http://example.org/legal/document/uu/2018/6/pasal/0035/version/20180807/ayat/0004> legal:ayatHasRawText "Setiap Kendaraan Darat di luar ketentuan sebagaimana dimaksud pada ayat (1) sewaktu-waktu dapat dilakukan pemeriksaan Faktor Risiko Kesehatan Masyarakat oleh Pejabat Karantina Kesehatan." .
 <http://example.org/legal/document/uu/2018/6/pasal/0035/version/20180807/ayat/0004/text> legal:textHasTextString "Setiap Kendaraan Darat di luar ketentuan sebagaimana dimaksud pada ayat (1) sewaktu-waktu dapat dilakukan pemeriksaan Faktor Risiko Kesehatan Masyarakat oleh Pejabat Karantina Kesehatan." .
 <http://example.org/legal/document/uu/2018/6/pasal/0035/version/20180807/ayat/0004> legal:ayatHasText <http://example.org/legal/document/uu/2018/6/pasal/0035/version/20180807/ayat/0004/text> .
+<http://example.org/legal/document/uu/2018/6/pasal/0035/version/20180807/ayat/0004/text> legal:textReferencesLegal <http://example.org/legal/document/uu/2018/6/pasal/0035/version/20180807/ayat/0001> .
 <http://example.org/legal/document/uu/2018/6/pasal/0035/version/20180807/ayat> legal:ayatSetHasAyat <http://example.org/legal/document/uu/2018/6/pasal/0035/version/20180807/ayat/0005> .
 <http://example.org/legal/document/uu/2018/6/pasal/0035/version/20180807/ayat/0005> legal:ayatHasKey 5 .
 <http://example.org/legal/document/uu/2018/6/pasal/0035/version/20180807/ayat/0005> legal:ayatHasRawText "Ketentuan lebih lanjut mengenai tindakan Kekarantinaan Kesehatan di Pos Lintas Batas Darat Negara sebagaimana dimaksud pada ayat (1) diatur dengan Peraturan Menteri." .
 <http://example.org/legal/document/uu/2018/6/pasal/0035/version/20180807/ayat/0005/text> legal:textHasTextString "Ketentuan lebih lanjut mengenai tindakan Kekarantinaan Kesehatan di Pos Lintas Batas Darat Negara sebagaimana dimaksud pada ayat (1) diatur dengan Peraturan Menteri." .
 <http://example.org/legal/document/uu/2018/6/pasal/0035/version/20180807/ayat/0005> legal:ayatHasText <http://example.org/legal/document/uu/2018/6/pasal/0035/version/20180807/ayat/0005/text> .
+<http://example.org/legal/document/uu/2018/6/pasal/0035/version/20180807/ayat/0005/text> legal:textReferencesLegal <http://example.org/legal/document/uu/2018/6/pasal/0035/version/20180807/ayat/0001> .
 <http://example.org/legal/document/uu/2018/6/bab/0006/bagian/0003/paragraf/0001/pasals> legal:pasalSetHasPasal <http://example.org/legal/document/uu/2018/6/pasal/0036> .
 <http://example.org/legal/document/uu/2018/6/pasal/0036> legal:pasalHasKey 36 .
 <http://example.org/legal/document/uu/2018/6/pasal/0036> legal:pasalHasPasalVersion <http://example.org/legal/document/uu/2018/6/pasal/0036/version/20180807> .
@@ -945,6 +977,7 @@
 <http://example.org/legal/document/uu/2018/6/pasal/0036/version/20180807/ayat/0002> legal:ayatHasRawText "Kendaraan Darat yang tidak ditemukan Faktor Risiko Kesehatan Masyarakat dan/atau dokumen Deklarasi Kesehatan Perlintasan Darat (Ground Crossing Declaration of Health) sebagaimana dimaksud pada ayat (1) dinyatakan lengkap diberikan Persetujuan Karantina Kesehatan oleh Pejabat Karantina Kesehatan." .
 <http://example.org/legal/document/uu/2018/6/pasal/0036/version/20180807/ayat/0002/text> legal:textHasTextString "Kendaraan Darat yang tidak ditemukan Faktor Risiko Kesehatan Masyarakat dan/atau dokumen Deklarasi Kesehatan Perlintasan Darat (Ground Crossing Declaration of Health) sebagaimana dimaksud pada ayat (1) dinyatakan lengkap diberikan Persetujuan Karantina Kesehatan oleh Pejabat Karantina Kesehatan." .
 <http://example.org/legal/document/uu/2018/6/pasal/0036/version/20180807/ayat/0002> legal:ayatHasText <http://example.org/legal/document/uu/2018/6/pasal/0036/version/20180807/ayat/0002/text> .
+<http://example.org/legal/document/uu/2018/6/pasal/0036/version/20180807/ayat/0002/text> legal:textReferencesLegal <http://example.org/legal/document/uu/2018/6/pasal/0036/version/20180807/ayat/0001> .
 <http://example.org/legal/document/uu/2018/6/bab/0006/bagian/0003/paragraf> legal:paragrafSetHasParagraf <http://example.org/legal/document/uu/2018/6/bab/0006/bagian/0003/paragraf/0002> .
 <http://example.org/legal/document/uu/2018/6/bab/0006/bagian/0003/paragraf/0002> legal:paragrafHasKey 2 .
 <http://example.org/legal/document/uu/2018/6/bab/0006/bagian/0003/paragraf/0002> legal:paragrafHasTitle "Paragraf 2 Keberangkatan Kendaraan Darat" .
@@ -967,11 +1000,13 @@
 <http://example.org/legal/document/uu/2018/6/pasal/0037/version/20180807/ayat/0002> legal:ayatHasRawText "Setelah Dokumen Karantina Kesehatan sebagaimana dimaksud pada ayat (1) dinyatakan lengkap dan tidak ditemukan indikasi Faktor Risiko Kesehatan Masyarakat maka kepada pengemudi dapat diberikan Persetujuan Karantina Kesehatan." .
 <http://example.org/legal/document/uu/2018/6/pasal/0037/version/20180807/ayat/0002/text> legal:textHasTextString "Setelah Dokumen Karantina Kesehatan sebagaimana dimaksud pada ayat (1) dinyatakan lengkap dan tidak ditemukan indikasi Faktor Risiko Kesehatan Masyarakat maka kepada pengemudi dapat diberikan Persetujuan Karantina Kesehatan." .
 <http://example.org/legal/document/uu/2018/6/pasal/0037/version/20180807/ayat/0002> legal:ayatHasText <http://example.org/legal/document/uu/2018/6/pasal/0037/version/20180807/ayat/0002/text> .
+<http://example.org/legal/document/uu/2018/6/pasal/0037/version/20180807/ayat/0002/text> legal:textReferencesLegal <http://example.org/legal/document/uu/2018/6/pasal/0037/version/20180807/ayat/0001> .
 <http://example.org/legal/document/uu/2018/6/pasal/0037/version/20180807/ayat> legal:ayatSetHasAyat <http://example.org/legal/document/uu/2018/6/pasal/0037/version/20180807/ayat/0003> .
 <http://example.org/legal/document/uu/2018/6/pasal/0037/version/20180807/ayat/0003> legal:ayatHasKey 3 .
 <http://example.org/legal/document/uu/2018/6/pasal/0037/version/20180807/ayat/0003> legal:ayatHasRawText "Kendaraan Darat yang ditemukan Faktor Risiko Kesehatan Masyarakat harus dilakukan tindakan Kekarantinaan Kesehatan sebagaimana dimaksud dalam Pasal 15 ayat (2)." .
 <http://example.org/legal/document/uu/2018/6/pasal/0037/version/20180807/ayat/0003/text> legal:textHasTextString "Kendaraan Darat yang ditemukan Faktor Risiko Kesehatan Masyarakat harus dilakukan tindakan Kekarantinaan Kesehatan sebagaimana dimaksud dalam Pasal 15 ayat (2)." .
 <http://example.org/legal/document/uu/2018/6/pasal/0037/version/20180807/ayat/0003> legal:ayatHasText <http://example.org/legal/document/uu/2018/6/pasal/0037/version/20180807/ayat/0003/text> .
+<http://example.org/legal/document/uu/2018/6/pasal/0037/version/20180807/ayat/0003/text> legal:textReferencesLegal <http://example.org/legal/document/uu/2018/6/pasal/0037/version/20180807/ayat/0002> .
 <http://example.org/legal/document/uu/2018/6/bab/0006/bagian> legal:bagianSetHasBagian <http://example.org/legal/document/uu/2018/6/bab/0006/bagian/0004> .
 <http://example.org/legal/document/uu/2018/6/bab/0006/bagian/0004> legal:bagianHasKey 4 .
 <http://example.org/legal/document/uu/2018/6/bab/0006/bagian/0004> legal:bagianHasTitle "Bagian Keempat Pengawasan Awak, Personel, dan Penumpang" .
@@ -1073,16 +1108,21 @@
 <http://example.org/legal/document/uu/2018/6/pasal/0041/version/20180807/ayat/0002> legal:ayatHasRawText "Setiap Awak, Personel, dan/atau penumpang sebagaimana dimaksud pada ayat (1) huruf a yang tidak memiliki sertifikat vaksinasi internasional dilakukan tindakan Kekarantinaan Kesehatan oleh Pejabat Karantina Kesehatan." .
 <http://example.org/legal/document/uu/2018/6/pasal/0041/version/20180807/ayat/0002/text> legal:textHasTextString "Setiap Awak, Personel, dan/atau penumpang sebagaimana dimaksud pada ayat (1) huruf a yang tidak memiliki sertifikat vaksinasi internasional dilakukan tindakan Kekarantinaan Kesehatan oleh Pejabat Karantina Kesehatan." .
 <http://example.org/legal/document/uu/2018/6/pasal/0041/version/20180807/ayat/0002> legal:ayatHasText <http://example.org/legal/document/uu/2018/6/pasal/0041/version/20180807/ayat/0002/text> .
+<http://example.org/legal/document/uu/2018/6/pasal/0041/version/20180807/ayat/0002/text> legal:textReferencesLegal <http://example.org/legal/document/uu/2018/6/pasal/0041/version/20180807/ayat/0001> .
+<http://example.org/legal/document/uu/2018/6/pasal/0041/version/20180807/ayat/0002/text> legal:textReferencesLegal <http://example.org/legal/document/uu/2018/6/pasal/0041/version/20180807/point/a> .
 <http://example.org/legal/document/uu/2018/6/pasal/0041/version/20180807/ayat> legal:ayatSetHasAyat <http://example.org/legal/document/uu/2018/6/pasal/0041/version/20180807/ayat/0003> .
 <http://example.org/legal/document/uu/2018/6/pasal/0041/version/20180807/ayat/0003> legal:ayatHasKey 3 .
 <http://example.org/legal/document/uu/2018/6/pasal/0041/version/20180807/ayat/0003> legal:ayatHasRawText "Setiap Awak, Personel, dan/atau penumpang sebagaimana dimaksud pada ayat (1) huruf b yang tidak memiliki sertifikat vaksinasi internasional, dilakukan penundaan keberangkatannya oleh Pejabat Karantina Kesehatan." .
 <http://example.org/legal/document/uu/2018/6/pasal/0041/version/20180807/ayat/0003/text> legal:textHasTextString "Setiap Awak, Personel, dan/atau penumpang sebagaimana dimaksud pada ayat (1) huruf b yang tidak memiliki sertifikat vaksinasi internasional, dilakukan penundaan keberangkatannya oleh Pejabat Karantina Kesehatan." .
 <http://example.org/legal/document/uu/2018/6/pasal/0041/version/20180807/ayat/0003> legal:ayatHasText <http://example.org/legal/document/uu/2018/6/pasal/0041/version/20180807/ayat/0003/text> .
+<http://example.org/legal/document/uu/2018/6/pasal/0041/version/20180807/ayat/0003/text> legal:textReferencesLegal <http://example.org/legal/document/uu/2018/6/pasal/0041/version/20180807/ayat/0001> .
+<http://example.org/legal/document/uu/2018/6/pasal/0041/version/20180807/ayat/0003/text> legal:textReferencesLegal <http://example.org/legal/document/uu/2018/6/pasal/0041/version/20180807/point/b> .
 <http://example.org/legal/document/uu/2018/6/pasal/0041/version/20180807/ayat> legal:ayatSetHasAyat <http://example.org/legal/document/uu/2018/6/pasal/0041/version/20180807/ayat/0004> .
 <http://example.org/legal/document/uu/2018/6/pasal/0041/version/20180807/ayat/0004> legal:ayatHasKey 4 .
 <http://example.org/legal/document/uu/2018/6/pasal/0041/version/20180807/ayat/0004> legal:ayatHasRawText "Terhadap Awak, Personel, dan/atau penumpang sebagaimana dimaksud pada ayat (3) harus diberikan vaksinasi sesuai persyaratan dan standar yang berlaku. (S5) Ketentuan .." .
 <http://example.org/legal/document/uu/2018/6/pasal/0041/version/20180807/ayat/0004/text> legal:textHasTextString "Terhadap Awak, Personel, dan/atau penumpang sebagaimana dimaksud pada ayat (3) harus diberikan vaksinasi sesuai persyaratan dan standar yang berlaku. (S5) Ketentuan .." .
 <http://example.org/legal/document/uu/2018/6/pasal/0041/version/20180807/ayat/0004> legal:ayatHasText <http://example.org/legal/document/uu/2018/6/pasal/0041/version/20180807/ayat/0004/text> .
+<http://example.org/legal/document/uu/2018/6/pasal/0041/version/20180807/ayat/0004/text> legal:textReferencesLegal <http://example.org/legal/document/uu/2018/6/pasal/0041/version/20180807/ayat/0003> .
 <http://example.org/legal/document/uu/2018/6/pasal/0041/version/20180807/ayat> legal:ayatSetHasAyat <http://example.org/legal/document/uu/2018/6/pasal/0041/version/20180807/ayat/0005> .
 <http://example.org/legal/document/uu/2018/6/pasal/0041/version/20180807/ayat/0005> legal:ayatHasKey 5 .
 <http://example.org/legal/document/uu/2018/6/pasal/0041/version/20180807/ayat/0005> legal:ayatHasRawText "Ketentuan mengenai tata laksana vaksinasi dan pemberian sertifikat vaksinasi internasional diatur dengan Peraturan Menteri." .
@@ -1093,6 +1133,7 @@
 <http://example.org/legal/document/uu/2018/6/pasal/0041/version/20180807/ayat/0006> legal:ayatHasRawText "Apabila Awak, Personel, dan/atau penumpang sebagaimana dimaksud pada ayat (3) menolak pemberian vaksin maka Pejabat Karantina Kesehatan berwenang mengeluarkan rekomendasi kepada pejabat imigrasi untuk dilakukan pembatalan pemberangkatan." .
 <http://example.org/legal/document/uu/2018/6/pasal/0041/version/20180807/ayat/0006/text> legal:textHasTextString "Apabila Awak, Personel, dan/atau penumpang sebagaimana dimaksud pada ayat (3) menolak pemberian vaksin maka Pejabat Karantina Kesehatan berwenang mengeluarkan rekomendasi kepada pejabat imigrasi untuk dilakukan pembatalan pemberangkatan." .
 <http://example.org/legal/document/uu/2018/6/pasal/0041/version/20180807/ayat/0006> legal:ayatHasText <http://example.org/legal/document/uu/2018/6/pasal/0041/version/20180807/ayat/0006/text> .
+<http://example.org/legal/document/uu/2018/6/pasal/0041/version/20180807/ayat/0006/text> legal:textReferencesLegal <http://example.org/legal/document/uu/2018/6/pasal/0041/version/20180807/ayat/0003> .
 <http://example.org/legal/document/uu/2018/6/bab/0006/bagian/0004/pasals> legal:pasalSetHasPasal <http://example.org/legal/document/uu/2018/6/pasal/0042> .
 <http://example.org/legal/document/uu/2018/6/pasal/0042> legal:pasalHasKey 42 .
 <http://example.org/legal/document/uu/2018/6/pasal/0042> legal:pasalHasPasalVersion <http://example.org/legal/document/uu/2018/6/pasal/0042/version/20180807> .
@@ -1111,11 +1152,13 @@
 <http://example.org/legal/document/uu/2018/6/pasal/0042/version/20180807/ayat/0002> legal:ayatHasRawText "Pada saat pengawasan sebagaimana dimaksud pada ayat (1) ditemukan Awak, Personel, dan/atau penumpang memiliki Faktor Risiko Kesehatan Masyarakat, Pejabat Karantina Kesehatan harus melakukan pemeriksaan medis." .
 <http://example.org/legal/document/uu/2018/6/pasal/0042/version/20180807/ayat/0002/text> legal:textHasTextString "Pada saat pengawasan sebagaimana dimaksud pada ayat (1) ditemukan Awak, Personel, dan/atau penumpang memiliki Faktor Risiko Kesehatan Masyarakat, Pejabat Karantina Kesehatan harus melakukan pemeriksaan medis." .
 <http://example.org/legal/document/uu/2018/6/pasal/0042/version/20180807/ayat/0002> legal:ayatHasText <http://example.org/legal/document/uu/2018/6/pasal/0042/version/20180807/ayat/0002/text> .
+<http://example.org/legal/document/uu/2018/6/pasal/0042/version/20180807/ayat/0002/text> legal:textReferencesLegal <http://example.org/legal/document/uu/2018/6/pasal/0042/version/20180807/ayat/0001> .
 <http://example.org/legal/document/uu/2018/6/pasal/0042/version/20180807/ayat> legal:ayatSetHasAyat <http://example.org/legal/document/uu/2018/6/pasal/0042/version/20180807/ayat/0003> .
 <http://example.org/legal/document/uu/2018/6/pasal/0042/version/20180807/ayat/0003> legal:ayatHasKey 3 .
 <http://example.org/legal/document/uu/2018/6/pasal/0042/version/20180807/ayat/0003> legal:ayatHasRawText "Jika hasil pemeriksaan medis sebagaimana dimaksud pada ayat (2), ditemukan penyakit yang berpotensi menimbulkan Kedaruratan Kesehatan Masyarakat, dan/atau tidak dipenuhi persyaratan kesehatan penerbangan atau pelayaran pada Awak, Personel, dan/atau penumpang, Pejabat Karantina Kesehatan harus merekomendasikan kepada maskapai penerbangan atau agen pelayaran untuk menunda keberangkatan Awak, Personel, dan/atau penumpang tersebut dan harus segera melakukan tindakan Kekarantinaan Kesehatan." .
 <http://example.org/legal/document/uu/2018/6/pasal/0042/version/20180807/ayat/0003/text> legal:textHasTextString "Jika hasil pemeriksaan medis sebagaimana dimaksud pada ayat (2), ditemukan penyakit yang berpotensi menimbulkan Kedaruratan Kesehatan Masyarakat, dan/atau tidak dipenuhi persyaratan kesehatan penerbangan atau pelayaran pada Awak, Personel, dan/atau penumpang, Pejabat Karantina Kesehatan harus merekomendasikan kepada maskapai penerbangan atau agen pelayaran untuk menunda keberangkatan Awak, Personel, dan/atau penumpang tersebut dan harus segera melakukan tindakan Kekarantinaan Kesehatan." .
 <http://example.org/legal/document/uu/2018/6/pasal/0042/version/20180807/ayat/0003> legal:ayatHasText <http://example.org/legal/document/uu/2018/6/pasal/0042/version/20180807/ayat/0003/text> .
+<http://example.org/legal/document/uu/2018/6/pasal/0042/version/20180807/ayat/0003/text> legal:textReferencesLegal <http://example.org/legal/document/uu/2018/6/pasal/0042/version/20180807/ayat/0002> .
 <http://example.org/legal/document/uu/2018/6/bab/0006/bagian/0004/pasals> legal:pasalSetHasPasal <http://example.org/legal/document/uu/2018/6/pasal/0043> .
 <http://example.org/legal/document/uu/2018/6/pasal/0043> legal:pasalHasKey 43 .
 <http://example.org/legal/document/uu/2018/6/pasal/0043> legal:pasalHasPasalVersion <http://example.org/legal/document/uu/2018/6/pasal/0043/version/20180807> .
@@ -1134,6 +1177,7 @@
 <http://example.org/legal/document/uu/2018/6/pasal/0043/version/20180807/ayat/0002> legal:ayatHasRawText "Terhadap orang sebagaimana dimaksud pada ayat (1) wajib diberikan penjelasan oleh Pejabat Karantina Kesehatan." .
 <http://example.org/legal/document/uu/2018/6/pasal/0043/version/20180807/ayat/0002/text> legal:textHasTextString "Terhadap orang sebagaimana dimaksud pada ayat (1) wajib diberikan penjelasan oleh Pejabat Karantina Kesehatan." .
 <http://example.org/legal/document/uu/2018/6/pasal/0043/version/20180807/ayat/0002> legal:ayatHasText <http://example.org/legal/document/uu/2018/6/pasal/0043/version/20180807/ayat/0002/text> .
+<http://example.org/legal/document/uu/2018/6/pasal/0043/version/20180807/ayat/0002/text> legal:textReferencesLegal <http://example.org/legal/document/uu/2018/6/pasal/0043/version/20180807/ayat/0001> .
 <http://example.org/legal/document/uu/2018/6/bab/0006/bagian> legal:bagianSetHasBagian <http://example.org/legal/document/uu/2018/6/bab/0006/bagian/0005> .
 <http://example.org/legal/document/uu/2018/6/bab/0006/bagian/0005> legal:bagianHasKey 5 .
 <http://example.org/legal/document/uu/2018/6/bab/0006/bagian/0005> legal:bagianHasTitle "Bagian Kelima Pengawasan Barang" .
@@ -1186,6 +1230,8 @@
 <http://example.org/legal/document/uu/2018/6/pasal/0045/version/20180807/ayat/0003> legal:ayatHasRawText "Jika hasil pemeriksaan tidak didapatkan Faktor Risiko Kesehatan Masyarakat atau setelah dilakukan tindakan Kekarantinaan Kesehatan sebagaimana dimaksud pada ayat (2) huruf c, Pejabat Karantina Kesehatan memberikan surat persetujuan keluar atau masuk jenazah dan/atau abu jenazah dari Pelabuhan, Bandar Udara, atau Pos Lintas Batas Darat Negara." .
 <http://example.org/legal/document/uu/2018/6/pasal/0045/version/20180807/ayat/0003/text> legal:textHasTextString "Jika hasil pemeriksaan tidak didapatkan Faktor Risiko Kesehatan Masyarakat atau setelah dilakukan tindakan Kekarantinaan Kesehatan sebagaimana dimaksud pada ayat (2) huruf c, Pejabat Karantina Kesehatan memberikan surat persetujuan keluar atau masuk jenazah dan/atau abu jenazah dari Pelabuhan, Bandar Udara, atau Pos Lintas Batas Darat Negara." .
 <http://example.org/legal/document/uu/2018/6/pasal/0045/version/20180807/ayat/0003> legal:ayatHasText <http://example.org/legal/document/uu/2018/6/pasal/0045/version/20180807/ayat/0003/text> .
+<http://example.org/legal/document/uu/2018/6/pasal/0045/version/20180807/ayat/0003/text> legal:textReferencesLegal <http://example.org/legal/document/uu/2018/6/pasal/0045/version/20180807/ayat/0002> .
+<http://example.org/legal/document/uu/2018/6/pasal/0045/version/20180807/ayat/0003/text> legal:textReferencesLegal <http://example.org/legal/document/uu/2018/6/pasal/0045/version/20180807/point/c> .
 <http://example.org/legal/document/uu/2018/6/bab/0006/bagian/0005/pasals> legal:pasalSetHasPasal <http://example.org/legal/document/uu/2018/6/pasal/0046> .
 <http://example.org/legal/document/uu/2018/6/pasal/0046> legal:pasalHasKey 46 .
 <http://example.org/legal/document/uu/2018/6/pasal/0046> legal:pasalHasPasalVersion <http://example.org/legal/document/uu/2018/6/pasal/0046/version/20180807> .
@@ -1204,11 +1250,13 @@
 <http://example.org/legal/document/uu/2018/6/pasal/0046/version/20180807/ayat/0002> legal:ayatHasRawText "Dalam hal penyebab kematian berdasarkan hasil pemeriksaan jenazah sebagaimana dimaksud pada ayat (1) merupakan penyakit yang memiliki risiko Kedaruratan Kesehatan Masyarakat maka dilakukan tindakan Kekarantinaan Kesehatan." .
 <http://example.org/legal/document/uu/2018/6/pasal/0046/version/20180807/ayat/0002/text> legal:textHasTextString "Dalam hal penyebab kematian berdasarkan hasil pemeriksaan jenazah sebagaimana dimaksud pada ayat (1) merupakan penyakit yang memiliki risiko Kedaruratan Kesehatan Masyarakat maka dilakukan tindakan Kekarantinaan Kesehatan." .
 <http://example.org/legal/document/uu/2018/6/pasal/0046/version/20180807/ayat/0002> legal:ayatHasText <http://example.org/legal/document/uu/2018/6/pasal/0046/version/20180807/ayat/0002/text> .
+<http://example.org/legal/document/uu/2018/6/pasal/0046/version/20180807/ayat/0002/text> legal:textReferencesLegal <http://example.org/legal/document/uu/2018/6/pasal/0046/version/20180807/ayat/0001> .
 <http://example.org/legal/document/uu/2018/6/pasal/0046/version/20180807/ayat> legal:ayatSetHasAyat <http://example.org/legal/document/uu/2018/6/pasal/0046/version/20180807/ayat/0003> .
 <http://example.org/legal/document/uu/2018/6/pasal/0046/version/20180807/ayat/0003> legal:ayatHasKey 3 .
 <http://example.org/legal/document/uu/2018/6/pasal/0046/version/20180807/ayat/0003> legal:ayatHasRawText "Terhadap jenazah sebagaimana dimaksud pada ayat (l) dikirim ke rumah sakit untuk dilakukan pemulasaraan jenazah." .
 <http://example.org/legal/document/uu/2018/6/pasal/0046/version/20180807/ayat/0003/text> legal:textHasTextString "Terhadap jenazah sebagaimana dimaksud pada ayat (l) dikirim ke rumah sakit untuk dilakukan pemulasaraan jenazah." .
 <http://example.org/legal/document/uu/2018/6/pasal/0046/version/20180807/ayat/0003> legal:ayatHasText <http://example.org/legal/document/uu/2018/6/pasal/0046/version/20180807/ayat/0003/text> .
+<http://example.org/legal/document/uu/2018/6/pasal/0046/version/20180807/ayat/0003/text> legal:textReferencesLegal <http://example.org/legal/document/uu/2018/6/pasal/0046/version/20180807/ayat/0001> .
 <http://example.org/legal/document/uu/2018/6/bab/0006/bagian/0005/pasals> legal:pasalSetHasPasal <http://example.org/legal/document/uu/2018/6/pasal/0047> .
 <http://example.org/legal/document/uu/2018/6/pasal/0047> legal:pasalHasKey 47 .
 <http://example.org/legal/document/uu/2018/6/pasal/0047> legal:pasalHasPasalVersion <http://example.org/legal/document/uu/2018/6/pasal/0047/version/20180807> .
@@ -1273,11 +1321,15 @@
 <http://example.org/legal/document/uu/2018/6/pasal/0048/version/20180807/ayat/0003> legal:ayatHasRawText "Setiap Nakhoda yang tidak melengkapi Dokumen Karantina Kesehatan sehingga dikeluarkan persetujuan karantina terbatas sebagaimana dimaksud dalam Pasal 19 ayat (5) huruf b dikenai denda administratif." .
 <http://example.org/legal/document/uu/2018/6/pasal/0048/version/20180807/ayat/0003/text> legal:textHasTextString "Setiap Nakhoda yang tidak melengkapi Dokumen Karantina Kesehatan sehingga dikeluarkan persetujuan karantina terbatas sebagaimana dimaksud dalam Pasal 19 ayat (5) huruf b dikenai denda administratif." .
 <http://example.org/legal/document/uu/2018/6/pasal/0048/version/20180807/ayat/0003> legal:ayatHasText <http://example.org/legal/document/uu/2018/6/pasal/0048/version/20180807/ayat/0003/text> .
+<http://example.org/legal/document/uu/2018/6/pasal/0048/version/20180807/ayat/0003/text> legal:textReferencesLegal <http://example.org/legal/document/uu/2018/6/pasal/0048/version/20180807/ayat/0005> .
+<http://example.org/legal/document/uu/2018/6/pasal/0048/version/20180807/ayat/0003/text> legal:textReferencesLegal <http://example.org/legal/document/uu/2018/6/pasal/0048/version/20180807/point/b> .
 <http://example.org/legal/document/uu/2018/6/pasal/0048/version/20180807/ayat> legal:ayatSetHasAyat <http://example.org/legal/document/uu/2018/6/pasal/0048/version/20180807/ayat/0004> .
 <http://example.org/legal/document/uu/2018/6/pasal/0048/version/20180807/ayat/0004> legal:ayatHasKey 4 .
 <http://example.org/legal/document/uu/2018/6/pasal/0048/version/20180807/ayat/0004> legal:ayatHasRawText "Setiap Kapten Penerbang yang tidak melengkapi Dokumen Karantina Kesehatan sehingga dikeluarkan persetujuan karantina terbatas sebagaimana dimaksud dalam Pasal 30 ayat (3) huruf b dikenai denda administratif." .
 <http://example.org/legal/document/uu/2018/6/pasal/0048/version/20180807/ayat/0004/text> legal:textHasTextString "Setiap Kapten Penerbang yang tidak melengkapi Dokumen Karantina Kesehatan sehingga dikeluarkan persetujuan karantina terbatas sebagaimana dimaksud dalam Pasal 30 ayat (3) huruf b dikenai denda administratif." .
 <http://example.org/legal/document/uu/2018/6/pasal/0048/version/20180807/ayat/0004> legal:ayatHasText <http://example.org/legal/document/uu/2018/6/pasal/0048/version/20180807/ayat/0004/text> .
+<http://example.org/legal/document/uu/2018/6/pasal/0048/version/20180807/ayat/0004/text> legal:textReferencesLegal <http://example.org/legal/document/uu/2018/6/pasal/0048/version/20180807/ayat/0003> .
+<http://example.org/legal/document/uu/2018/6/pasal/0048/version/20180807/ayat/0004/text> legal:textReferencesLegal <http://example.org/legal/document/uu/2018/6/pasal/0048/version/20180807/point/b> .
 <http://example.org/legal/document/uu/2018/6/pasal/0048/version/20180807/ayat> legal:ayatSetHasAyat <http://example.org/legal/document/uu/2018/6/pasal/0048/version/20180807/ayat/0005> .
 <http://example.org/legal/document/uu/2018/6/pasal/0048/version/20180807/ayat/0005> legal:ayatHasKey 5 .
 <http://example.org/legal/document/uu/2018/6/pasal/0048/version/20180807/ayat/0005> legal:ayatHasRawText "Setiap pengemudi atau penanggung jawab kendaraan darat yang tidak melengkapi Dokumen Karantina Kesehatan sehingga tidak diberikan Persetujuan Karantina Kesehatan sebagaimana dimaksud dalam Pasal 36 ayat (1) dikenai sanksi administratif berupa:\na. peringatan,\nb. denda administratif, dan/atau\nc. . pencabutan izin.\n" .
@@ -1301,6 +1353,8 @@
 <http://example.org/legal/document/uu/2018/6/pasal/0048/version/20180807/ayat/0006> legal:ayatHasRawText "Ketentuan lebih lanjut mengenai tata cara pengenaan sanksi administratif sebagaimana dimaksud pada ayat (1) sampai dengan ayat (5) diatur dengan Peraturan Pemerintah." .
 <http://example.org/legal/document/uu/2018/6/pasal/0048/version/20180807/ayat/0006/text> legal:textHasTextString "Ketentuan lebih lanjut mengenai tata cara pengenaan sanksi administratif sebagaimana dimaksud pada ayat (1) sampai dengan ayat (5) diatur dengan Peraturan Pemerintah." .
 <http://example.org/legal/document/uu/2018/6/pasal/0048/version/20180807/ayat/0006> legal:ayatHasText <http://example.org/legal/document/uu/2018/6/pasal/0048/version/20180807/ayat/0006/text> .
+<http://example.org/legal/document/uu/2018/6/pasal/0048/version/20180807/ayat/0006/text> legal:textReferencesLegal <http://example.org/legal/document/uu/2018/6/pasal/0048/version/20180807/ayat/0005> .
+<http://example.org/legal/document/uu/2018/6/pasal/0048/version/20180807/ayat/0006/text> legal:textReferencesLegal <http://example.org/legal/document/uu/2018/6/pasal/0048/version/20180807/ayat/0001> .
 <http://example.org/legal/document/uu/2018/6/bab> legal:babSetHasBab <http://example.org/legal/document/uu/2018/6/bab/0007> .
 <http://example.org/legal/document/uu/2018/6/bab/0007> legal:babHasKey 7 .
 <http://example.org/legal/document/uu/2018/6/bab/0007> legal:babHasTitle "PENYELENGGARAAN KEKARANTINAAN KESEHATAN DI WILAYAH" .
@@ -1327,11 +1381,13 @@
 <http://example.org/legal/document/uu/2018/6/pasal/0049/version/20180807/ayat/0002> legal:ayatHasRawText "Karantina Rumah, Karantina Wilayah, Karantina Rumah Sakit, atau Pembatasan Sosial Berskala Besar sebagaimana dimaksud pada ayat (1) harus didasarkan pada pertimbangan epidemiologis, besarnya ancaman, efektifitas, dukungan sumber daya, teknis operasional, pertimbangan ekonomi, sosial, budaya, dan keamanan." .
 <http://example.org/legal/document/uu/2018/6/pasal/0049/version/20180807/ayat/0002/text> legal:textHasTextString "Karantina Rumah, Karantina Wilayah, Karantina Rumah Sakit, atau Pembatasan Sosial Berskala Besar sebagaimana dimaksud pada ayat (1) harus didasarkan pada pertimbangan epidemiologis, besarnya ancaman, efektifitas, dukungan sumber daya, teknis operasional, pertimbangan ekonomi, sosial, budaya, dan keamanan." .
 <http://example.org/legal/document/uu/2018/6/pasal/0049/version/20180807/ayat/0002> legal:ayatHasText <http://example.org/legal/document/uu/2018/6/pasal/0049/version/20180807/ayat/0002/text> .
+<http://example.org/legal/document/uu/2018/6/pasal/0049/version/20180807/ayat/0002/text> legal:textReferencesLegal <http://example.org/legal/document/uu/2018/6/pasal/0049/version/20180807/ayat/0001> .
 <http://example.org/legal/document/uu/2018/6/pasal/0049/version/20180807/ayat> legal:ayatSetHasAyat <http://example.org/legal/document/uu/2018/6/pasal/0049/version/20180807/ayat/0003> .
 <http://example.org/legal/document/uu/2018/6/pasal/0049/version/20180807/ayat/0003> legal:ayatHasKey 3 .
 <http://example.org/legal/document/uu/2018/6/pasal/0049/version/20180807/ayat/0003> legal:ayatHasRawText "Karantina Wilayah dan Pembatasan Sosial Berskala Besar sebagaimana dimaksud pada ayat (1) ditetapkan oleh Menteri." .
 <http://example.org/legal/document/uu/2018/6/pasal/0049/version/20180807/ayat/0003/text> legal:textHasTextString "Karantina Wilayah dan Pembatasan Sosial Berskala Besar sebagaimana dimaksud pada ayat (1) ditetapkan oleh Menteri." .
 <http://example.org/legal/document/uu/2018/6/pasal/0049/version/20180807/ayat/0003> legal:ayatHasText <http://example.org/legal/document/uu/2018/6/pasal/0049/version/20180807/ayat/0003/text> .
+<http://example.org/legal/document/uu/2018/6/pasal/0049/version/20180807/ayat/0003/text> legal:textReferencesLegal <http://example.org/legal/document/uu/2018/6/pasal/0049/version/20180807/ayat/0001> .
 <http://example.org/legal/document/uu/2018/6/bab/0007/bagian> legal:bagianSetHasBagian <http://example.org/legal/document/uu/2018/6/bab/0007/bagian/0002> .
 <http://example.org/legal/document/uu/2018/6/bab/0007/bagian/0002> legal:bagianHasKey 2 .
 <http://example.org/legal/document/uu/2018/6/bab/0007/bagian/0002> legal:bagianHasTitle "Bagian Kedua Karantina Rumah" .
@@ -1354,11 +1410,13 @@
 <http://example.org/legal/document/uu/2018/6/pasal/0050/version/20180807/ayat/0002> legal:ayatHasRawText "Karantina Rumah sebagaimana dimaksud pada ayat (1) dilaksanakan terhadap seluruh orang dalam rumah, Barang, atau Alat Angkut yang terjadi kontak erat dengan kasus." .
 <http://example.org/legal/document/uu/2018/6/pasal/0050/version/20180807/ayat/0002/text> legal:textHasTextString "Karantina Rumah sebagaimana dimaksud pada ayat (1) dilaksanakan terhadap seluruh orang dalam rumah, Barang, atau Alat Angkut yang terjadi kontak erat dengan kasus." .
 <http://example.org/legal/document/uu/2018/6/pasal/0050/version/20180807/ayat/0002> legal:ayatHasText <http://example.org/legal/document/uu/2018/6/pasal/0050/version/20180807/ayat/0002/text> .
+<http://example.org/legal/document/uu/2018/6/pasal/0050/version/20180807/ayat/0002/text> legal:textReferencesLegal <http://example.org/legal/document/uu/2018/6/pasal/0050/version/20180807/ayat/0001> .
 <http://example.org/legal/document/uu/2018/6/pasal/0050/version/20180807/ayat> legal:ayatSetHasAyat <http://example.org/legal/document/uu/2018/6/pasal/0050/version/20180807/ayat/0003> .
 <http://example.org/legal/document/uu/2018/6/pasal/0050/version/20180807/ayat/0003> legal:ayatHasKey 3 .
 <http://example.org/legal/document/uu/2018/6/pasal/0050/version/20180807/ayat/0003> legal:ayatHasRawText "Terhadap kasus sebagaimana dimaksud pada ayat (1) dirujuk ke rumah sakit yang memiliki kemampuan menangani kasus." .
 <http://example.org/legal/document/uu/2018/6/pasal/0050/version/20180807/ayat/0003/text> legal:textHasTextString "Terhadap kasus sebagaimana dimaksud pada ayat (1) dirujuk ke rumah sakit yang memiliki kemampuan menangani kasus." .
 <http://example.org/legal/document/uu/2018/6/pasal/0050/version/20180807/ayat/0003> legal:ayatHasText <http://example.org/legal/document/uu/2018/6/pasal/0050/version/20180807/ayat/0003/text> .
+<http://example.org/legal/document/uu/2018/6/pasal/0050/version/20180807/ayat/0003/text> legal:textReferencesLegal <http://example.org/legal/document/uu/2018/6/pasal/0050/version/20180807/ayat/0001> .
 <http://example.org/legal/document/uu/2018/6/bab/0007/bagian/0002/pasals> legal:pasalSetHasPasal <http://example.org/legal/document/uu/2018/6/pasal/0051> .
 <http://example.org/legal/document/uu/2018/6/pasal/0051> legal:pasalHasKey 51 .
 <http://example.org/legal/document/uu/2018/6/pasal/0051> legal:pasalHasPasalVersion <http://example.org/legal/document/uu/2018/6/pasal/0051/version/20180807> .
@@ -1395,6 +1453,7 @@
 <http://example.org/legal/document/uu/2018/6/pasal/0052/version/20180807/ayat/0002> legal:ayatHasRawText "Tanggung jawab Pemerintah Pusat dalam penyelenggaraan Karantina Rumah sebagaimana dimaksud pada ayat (1) dilakukan dengan melibatkan Pemerintah Daerah dan pihak yang terkait." .
 <http://example.org/legal/document/uu/2018/6/pasal/0052/version/20180807/ayat/0002/text> legal:textHasTextString "Tanggung jawab Pemerintah Pusat dalam penyelenggaraan Karantina Rumah sebagaimana dimaksud pada ayat (1) dilakukan dengan melibatkan Pemerintah Daerah dan pihak yang terkait." .
 <http://example.org/legal/document/uu/2018/6/pasal/0052/version/20180807/ayat/0002> legal:ayatHasText <http://example.org/legal/document/uu/2018/6/pasal/0052/version/20180807/ayat/0002/text> .
+<http://example.org/legal/document/uu/2018/6/pasal/0052/version/20180807/ayat/0002/text> legal:textReferencesLegal <http://example.org/legal/document/uu/2018/6/pasal/0052/version/20180807/ayat/0001> .
 <http://example.org/legal/document/uu/2018/6/bab/0007/bagian> legal:bagianSetHasBagian <http://example.org/legal/document/uu/2018/6/bab/0007/bagian/0003> .
 <http://example.org/legal/document/uu/2018/6/bab/0007/bagian/0003> legal:bagianHasKey 3 .
 <http://example.org/legal/document/uu/2018/6/bab/0007/bagian/0003> legal:bagianHasTitle "Bagian Ketiga Karantina Wilayah" .
@@ -1417,6 +1476,7 @@
 <http://example.org/legal/document/uu/2018/6/pasal/0053/version/20180807/ayat/0002> legal:ayatHasRawText "Karantina Wilayah sebagaimana dimaksud pada ayat (1) dilaksanakan kepada seluruh anggota masyarakat di suatu wilayah apabila dari hasil konfirmasi laboratorium sudah terjadi penyebaran penyakit antar anggota masyarakat di wilayah tersebut." .
 <http://example.org/legal/document/uu/2018/6/pasal/0053/version/20180807/ayat/0002/text> legal:textHasTextString "Karantina Wilayah sebagaimana dimaksud pada ayat (1) dilaksanakan kepada seluruh anggota masyarakat di suatu wilayah apabila dari hasil konfirmasi laboratorium sudah terjadi penyebaran penyakit antar anggota masyarakat di wilayah tersebut." .
 <http://example.org/legal/document/uu/2018/6/pasal/0053/version/20180807/ayat/0002> legal:ayatHasText <http://example.org/legal/document/uu/2018/6/pasal/0053/version/20180807/ayat/0002/text> .
+<http://example.org/legal/document/uu/2018/6/pasal/0053/version/20180807/ayat/0002/text> legal:textReferencesLegal <http://example.org/legal/document/uu/2018/6/pasal/0053/version/20180807/ayat/0001> .
 <http://example.org/legal/document/uu/2018/6/bab/0007/bagian/0003/pasals> legal:pasalSetHasPasal <http://example.org/legal/document/uu/2018/6/pasal/0054> .
 <http://example.org/legal/document/uu/2018/6/pasal/0054> legal:pasalHasKey 54 .
 <http://example.org/legal/document/uu/2018/6/pasal/0054> legal:pasalHasPasalVersion <http://example.org/legal/document/uu/2018/6/pasal/0054/version/20180807> .
@@ -1463,6 +1523,7 @@
 <http://example.org/legal/document/uu/2018/6/pasal/0055/version/20180807/ayat/0002> legal:ayatHasRawText "Tanggung jawab Pemerintah Pusat dalam penyelenggaraan Karantina Wilayah sebagaimana dimaksud pada ayat (1) dilakukan dengan melibatkan Pemerintah Daerah dan pihak yang terkait." .
 <http://example.org/legal/document/uu/2018/6/pasal/0055/version/20180807/ayat/0002/text> legal:textHasTextString "Tanggung jawab Pemerintah Pusat dalam penyelenggaraan Karantina Wilayah sebagaimana dimaksud pada ayat (1) dilakukan dengan melibatkan Pemerintah Daerah dan pihak yang terkait." .
 <http://example.org/legal/document/uu/2018/6/pasal/0055/version/20180807/ayat/0002> legal:ayatHasText <http://example.org/legal/document/uu/2018/6/pasal/0055/version/20180807/ayat/0002/text> .
+<http://example.org/legal/document/uu/2018/6/pasal/0055/version/20180807/ayat/0002/text> legal:textReferencesLegal <http://example.org/legal/document/uu/2018/6/pasal/0055/version/20180807/ayat/0001> .
 <http://example.org/legal/document/uu/2018/6/bab/0007/bagian> legal:bagianSetHasBagian <http://example.org/legal/document/uu/2018/6/bab/0007/bagian/0004> .
 <http://example.org/legal/document/uu/2018/6/bab/0007/bagian/0004> legal:bagianHasKey 4 .
 <http://example.org/legal/document/uu/2018/6/bab/0007/bagian/0004> legal:bagianHasTitle "Bagian Keempat Karantina Rumah Sakit" .
@@ -1485,6 +1546,7 @@
 <http://example.org/legal/document/uu/2018/6/pasal/0056/version/20180807/ayat/0002> legal:ayatHasRawText "Karantina Rumah Sakit sebagaimana dimaksud pada ayat (1) dilaksanakan kepada seluruh orang yang berkunjung, orang yang bertugas, pasien dan Barang, serta apapun di suatu rumah sakit bila dibuktikan berdasarkan hasil konfirmasi laboratorium telah terjadi penularan penyakit yang ada di ruang isolasi keluar ruang isolasi." .
 <http://example.org/legal/document/uu/2018/6/pasal/0056/version/20180807/ayat/0002/text> legal:textHasTextString "Karantina Rumah Sakit sebagaimana dimaksud pada ayat (1) dilaksanakan kepada seluruh orang yang berkunjung, orang yang bertugas, pasien dan Barang, serta apapun di suatu rumah sakit bila dibuktikan berdasarkan hasil konfirmasi laboratorium telah terjadi penularan penyakit yang ada di ruang isolasi keluar ruang isolasi." .
 <http://example.org/legal/document/uu/2018/6/pasal/0056/version/20180807/ayat/0002> legal:ayatHasText <http://example.org/legal/document/uu/2018/6/pasal/0056/version/20180807/ayat/0002/text> .
+<http://example.org/legal/document/uu/2018/6/pasal/0056/version/20180807/ayat/0002/text> legal:textReferencesLegal <http://example.org/legal/document/uu/2018/6/pasal/0056/version/20180807/ayat/0001> .
 <http://example.org/legal/document/uu/2018/6/bab/0007/bagian/0004/pasals> legal:pasalSetHasPasal <http://example.org/legal/document/uu/2018/6/pasal/0057> .
 <http://example.org/legal/document/uu/2018/6/pasal/0057> legal:pasalHasKey 57 .
 <http://example.org/legal/document/uu/2018/6/pasal/0057> legal:pasalHasPasalVersion <http://example.org/legal/document/uu/2018/6/pasal/0057/version/20180807> .
@@ -1508,6 +1570,7 @@
 <http://example.org/legal/document/uu/2018/6/pasal/0057/version/20180807/ayat/0003> legal:ayatHasRawText "Seluruh orang, Barang, dan/atau hewan yang berada di rumah sakit yang dikarantina sebagaimana dimaksud pada ayat (2) tidak boleh keluar dan masuk rumah sakit." .
 <http://example.org/legal/document/uu/2018/6/pasal/0057/version/20180807/ayat/0003/text> legal:textHasTextString "Seluruh orang, Barang, dan/atau hewan yang berada di rumah sakit yang dikarantina sebagaimana dimaksud pada ayat (2) tidak boleh keluar dan masuk rumah sakit." .
 <http://example.org/legal/document/uu/2018/6/pasal/0057/version/20180807/ayat/0003> legal:ayatHasText <http://example.org/legal/document/uu/2018/6/pasal/0057/version/20180807/ayat/0003/text> .
+<http://example.org/legal/document/uu/2018/6/pasal/0057/version/20180807/ayat/0003/text> legal:textReferencesLegal <http://example.org/legal/document/uu/2018/6/pasal/0057/version/20180807/ayat/0002> .
 <http://example.org/legal/document/uu/2018/6/bab/0007/bagian/0004/pasals> legal:pasalSetHasPasal <http://example.org/legal/document/uu/2018/6/pasal/0058> .
 <http://example.org/legal/document/uu/2018/6/pasal/0058> legal:pasalHasKey 58 .
 <http://example.org/legal/document/uu/2018/6/pasal/0058> legal:pasalHasPasalVersion <http://example.org/legal/document/uu/2018/6/pasal/0058/version/20180807> .
@@ -1593,6 +1656,7 @@
 <http://example.org/legal/document/uu/2018/6/pasal/0061/version/20180807/ayat/0002> legal:ayatHasRawText "Dokumen Karantina Kesehatan sebagaimana dimaksud pada ayat (1) dimaksudkan sebagai alat pengawasan dan pencegahan masuk dan/atau keluarnya penyakit dan Faktor Risiko Kesehatan Masyarakat yang menjadi sumber penularan penyakit yang dapat menimbulkan Kedaruratan Kesehatan Masyarakat." .
 <http://example.org/legal/document/uu/2018/6/pasal/0061/version/20180807/ayat/0002/text> legal:textHasTextString "Dokumen Karantina Kesehatan sebagaimana dimaksud pada ayat (1) dimaksudkan sebagai alat pengawasan dan pencegahan masuk dan/atau keluarnya penyakit dan Faktor Risiko Kesehatan Masyarakat yang menjadi sumber penularan penyakit yang dapat menimbulkan Kedaruratan Kesehatan Masyarakat." .
 <http://example.org/legal/document/uu/2018/6/pasal/0061/version/20180807/ayat/0002> legal:ayatHasText <http://example.org/legal/document/uu/2018/6/pasal/0061/version/20180807/ayat/0002/text> .
+<http://example.org/legal/document/uu/2018/6/pasal/0061/version/20180807/ayat/0002/text> legal:textReferencesLegal <http://example.org/legal/document/uu/2018/6/pasal/0061/version/20180807/ayat/0001> .
 <http://example.org/legal/document/uu/2018/6/pasal/0061/version/20180807/ayat> legal:ayatSetHasAyat <http://example.org/legal/document/uu/2018/6/pasal/0061/version/20180807/ayat/0003> .
 <http://example.org/legal/document/uu/2018/6/pasal/0061/version/20180807/ayat/0003> legal:ayatHasKey 3 .
 <http://example.org/legal/document/uu/2018/6/pasal/0061/version/20180807/ayat/0003> legal:ayatHasRawText "Dokumen Karantina Kesehatan memuat penjelasan suatu keadaan yang diketahui secara pasti sebagai hasil Pengawasan Kekarantinaan Kesehatan." .
@@ -1663,6 +1727,7 @@
 <http://example.org/legal/document/uu/2018/6/pasal/0063/version/20180807/ayat/0002> legal:ayatHasRawText "Deklarasi kesehatan sebagaimana dimaksud pada ayat (1) harus diisi dan diberikan oleh Nakhoda, Kapten Penerbang, atau pengemudi Kendaraan Darat kepada Pejabat Karantina Kesehatan pada saat kedatangan Alat Angkut." .
 <http://example.org/legal/document/uu/2018/6/pasal/0063/version/20180807/ayat/0002/text> legal:textHasTextString "Deklarasi kesehatan sebagaimana dimaksud pada ayat (1) harus diisi dan diberikan oleh Nakhoda, Kapten Penerbang, atau pengemudi Kendaraan Darat kepada Pejabat Karantina Kesehatan pada saat kedatangan Alat Angkut." .
 <http://example.org/legal/document/uu/2018/6/pasal/0063/version/20180807/ayat/0002> legal:ayatHasText <http://example.org/legal/document/uu/2018/6/pasal/0063/version/20180807/ayat/0002/text> .
+<http://example.org/legal/document/uu/2018/6/pasal/0063/version/20180807/ayat/0002/text> legal:textReferencesLegal <http://example.org/legal/document/uu/2018/6/pasal/0063/version/20180807/ayat/0001> .
 <http://example.org/legal/document/uu/2018/6/bab/0008/pasals> legal:pasalSetHasPasal <http://example.org/legal/document/uu/2018/6/pasal/0064> .
 <http://example.org/legal/document/uu/2018/6/pasal/0064> legal:pasalHasKey 64 .
 <http://example.org/legal/document/uu/2018/6/pasal/0064> legal:pasalHasPasalVersion <http://example.org/legal/document/uu/2018/6/pasal/0064/version/20180807> .
@@ -1748,11 +1813,15 @@
 <http://example.org/legal/document/uu/2018/6/pasal/0068/version/20180807/ayat/0001> legal:ayatHasRawText "Menteri dapat menetapkan perubahan atau penambahan Dokumen Karantina Kesehatan selain dokumen sebagaimana dimaksud dalam Pasal 63, Pasal 64, dan Pasal 65 huruf a." .
 <http://example.org/legal/document/uu/2018/6/pasal/0068/version/20180807/ayat/0001/text> legal:textHasTextString "Menteri dapat menetapkan perubahan atau penambahan Dokumen Karantina Kesehatan selain dokumen sebagaimana dimaksud dalam Pasal 63, Pasal 64, dan Pasal 65 huruf a." .
 <http://example.org/legal/document/uu/2018/6/pasal/0068/version/20180807/ayat/0001> legal:ayatHasText <http://example.org/legal/document/uu/2018/6/pasal/0068/version/20180807/ayat/0001/text> .
+<http://example.org/legal/document/uu/2018/6/pasal/0068/version/20180807/ayat/0001/text> legal:textReferencesLegal <http://example.org/legal/document/uu/2018/6/pasal/0065> .
+<http://example.org/legal/document/uu/2018/6/pasal/0068/version/20180807/ayat/0001/text> legal:textReferencesLegal <http://example.org/legal/document/uu/2018/6/pasal/0064> .
+<http://example.org/legal/document/uu/2018/6/pasal/0068/version/20180807/ayat/0001/text> legal:textReferencesLegal <http://example.org/legal/document/uu/2018/6/pasal/0063> .
 <http://example.org/legal/document/uu/2018/6/pasal/0068/version/20180807/ayat> legal:ayatSetHasAyat <http://example.org/legal/document/uu/2018/6/pasal/0068/version/20180807/ayat/0002> .
 <http://example.org/legal/document/uu/2018/6/pasal/0068/version/20180807/ayat/0002> legal:ayatHasKey 2 .
 <http://example.org/legal/document/uu/2018/6/pasal/0068/version/20180807/ayat/0002> legal:ayatHasRawText "Menteri dalam menetapkan perubahan atau penambahan Dokumen Karantina Kesehatan sebagaimana dimaksud pada ayat (1) mempertimbangkan hasil pengawasan dan evaluasi serta masukan dari berbagai pemangku kepentingan kekarantinaan kesehatan masyarakat." .
 <http://example.org/legal/document/uu/2018/6/pasal/0068/version/20180807/ayat/0002/text> legal:textHasTextString "Menteri dalam menetapkan perubahan atau penambahan Dokumen Karantina Kesehatan sebagaimana dimaksud pada ayat (1) mempertimbangkan hasil pengawasan dan evaluasi serta masukan dari berbagai pemangku kepentingan kekarantinaan kesehatan masyarakat." .
 <http://example.org/legal/document/uu/2018/6/pasal/0068/version/20180807/ayat/0002> legal:ayatHasText <http://example.org/legal/document/uu/2018/6/pasal/0068/version/20180807/ayat/0002/text> .
+<http://example.org/legal/document/uu/2018/6/pasal/0068/version/20180807/ayat/0002/text> legal:textReferencesLegal <http://example.org/legal/document/uu/2018/6/pasal/0068/version/20180807/ayat/0001> .
 <http://example.org/legal/document/uu/2018/6/bab/0008/pasals> legal:pasalSetHasPasal <http://example.org/legal/document/uu/2018/6/pasal/0069> .
 <http://example.org/legal/document/uu/2018/6/pasal/0069> legal:pasalHasKey 69 .
 <http://example.org/legal/document/uu/2018/6/pasal/0069> legal:pasalHasPasalVersion <http://example.org/legal/document/uu/2018/6/pasal/0069/version/20180807> .
@@ -1885,6 +1954,7 @@
 <http://example.org/legal/document/uu/2018/6/pasal/0072/version/20180807/ayat/0002> legal:ayatHasRawText "Fasilitas sebagaimana dimaksud pada ayat (1) selain berfungsi dalam penyelenggaraan Kekarantinaan Kesehatan juga sebagai sarana pendidikan dan pelatihan serta pengembangan ilmu pengetahuan dan teknologi Kekarantinaan Kesehatan." .
 <http://example.org/legal/document/uu/2018/6/pasal/0072/version/20180807/ayat/0002/text> legal:textHasTextString "Fasilitas sebagaimana dimaksud pada ayat (1) selain berfungsi dalam penyelenggaraan Kekarantinaan Kesehatan juga sebagai sarana pendidikan dan pelatihan serta pengembangan ilmu pengetahuan dan teknologi Kekarantinaan Kesehatan." .
 <http://example.org/legal/document/uu/2018/6/pasal/0072/version/20180807/ayat/0002> legal:ayatHasText <http://example.org/legal/document/uu/2018/6/pasal/0072/version/20180807/ayat/0002/text> .
+<http://example.org/legal/document/uu/2018/6/pasal/0072/version/20180807/ayat/0002/text> legal:textReferencesLegal <http://example.org/legal/document/uu/2018/6/pasal/0072/version/20180807/ayat/0001> .
 <http://example.org/legal/document/uu/2018/6/pasal/0072/version/20180807/ayat> legal:ayatSetHasAyat <http://example.org/legal/document/uu/2018/6/pasal/0072/version/20180807/ayat/0003> .
 <http://example.org/legal/document/uu/2018/6/pasal/0072/version/20180807/ayat/0003> legal:ayatHasKey 3 .
 <http://example.org/legal/document/uu/2018/6/pasal/0072/version/20180807/ayat/0003> legal:ayatHasRawText "Perbekalan Kekarantinaan Kesehatan meliputi sediaan farmasi, alat kesehatan, dan perbekalan kesehatan lainnya yang diperlukan." .
@@ -1957,6 +2027,7 @@
 <http://example.org/legal/document/uu/2018/6/pasal/0075/version/20180807/ayat/0004> legal:ayatHasRawText "Ketentuan lebih lanjut mengenai tata cara pelaksanaan kewenangan sebagaimana dimaksud pada ayat (3) diatur dengan Peraturan Menteri." .
 <http://example.org/legal/document/uu/2018/6/pasal/0075/version/20180807/ayat/0004/text> legal:textHasTextString "Ketentuan lebih lanjut mengenai tata cara pelaksanaan kewenangan sebagaimana dimaksud pada ayat (3) diatur dengan Peraturan Menteri." .
 <http://example.org/legal/document/uu/2018/6/pasal/0075/version/20180807/ayat/0004> legal:ayatHasText <http://example.org/legal/document/uu/2018/6/pasal/0075/version/20180807/ayat/0004/text> .
+<http://example.org/legal/document/uu/2018/6/pasal/0075/version/20180807/ayat/0004/text> legal:textReferencesLegal <http://example.org/legal/document/uu/2018/6/pasal/0075/version/20180807/ayat/0003> .
 <http://example.org/legal/document/uu/2018/6/bab/0009/bagian/0003/pasals> legal:pasalSetHasPasal <http://example.org/legal/document/uu/2018/6/pasal/0076> .
 <http://example.org/legal/document/uu/2018/6/pasal/0076> legal:pasalHasKey 76 .
 <http://example.org/legal/document/uu/2018/6/pasal/0076> legal:pasalHasPasalVersion <http://example.org/legal/document/uu/2018/6/pasal/0076/version/20180807> .
@@ -2015,11 +2086,14 @@
 <http://example.org/legal/document/uu/2018/6/pasal/0077/version/20180807/ayat/0002> legal:ayatHasRawText "Penelitian dan pengembangan sebagaimana dimaksud pada ayat (1), dilaksanakan dengan memperhatikan kesehatan dan keselamatan masyarakat." .
 <http://example.org/legal/document/uu/2018/6/pasal/0077/version/20180807/ayat/0002/text> legal:textHasTextString "Penelitian dan pengembangan sebagaimana dimaksud pada ayat (1), dilaksanakan dengan memperhatikan kesehatan dan keselamatan masyarakat." .
 <http://example.org/legal/document/uu/2018/6/pasal/0077/version/20180807/ayat/0002> legal:ayatHasText <http://example.org/legal/document/uu/2018/6/pasal/0077/version/20180807/ayat/0002/text> .
+<http://example.org/legal/document/uu/2018/6/pasal/0077/version/20180807/ayat/0002/text> legal:textReferencesLegal <http://example.org/legal/document/uu/2018/6/pasal/0077/version/20180807/ayat/0001> .
 <http://example.org/legal/document/uu/2018/6/pasal/0077/version/20180807/ayat> legal:ayatSetHasAyat <http://example.org/legal/document/uu/2018/6/pasal/0077/version/20180807/ayat/0003> .
 <http://example.org/legal/document/uu/2018/6/pasal/0077/version/20180807/ayat/0003> legal:ayatHasKey 3 .
 <http://example.org/legal/document/uu/2018/6/pasal/0077/version/20180807/ayat/0003> legal:ayatHasRawText "Ketentuan mengenai penelitian dan pengembangan sebagaimana dimaksud pada ayat (1) dan ayat (2) diatur dengan Peraturan Menteri." .
 <http://example.org/legal/document/uu/2018/6/pasal/0077/version/20180807/ayat/0003/text> legal:textHasTextString "Ketentuan mengenai penelitian dan pengembangan sebagaimana dimaksud pada ayat (1) dan ayat (2) diatur dengan Peraturan Menteri." .
 <http://example.org/legal/document/uu/2018/6/pasal/0077/version/20180807/ayat/0003> legal:ayatHasText <http://example.org/legal/document/uu/2018/6/pasal/0077/version/20180807/ayat/0003/text> .
+<http://example.org/legal/document/uu/2018/6/pasal/0077/version/20180807/ayat/0003/text> legal:textReferencesLegal <http://example.org/legal/document/uu/2018/6/pasal/0077/version/20180807/ayat/0002> .
+<http://example.org/legal/document/uu/2018/6/pasal/0077/version/20180807/ayat/0003/text> legal:textReferencesLegal <http://example.org/legal/document/uu/2018/6/pasal/0077/version/20180807/ayat/0001> .
 <http://example.org/legal/document/uu/2018/6/bab/0009/bagian> legal:bagianSetHasBagian <http://example.org/legal/document/uu/2018/6/bab/0009/bagian/0005> .
 <http://example.org/legal/document/uu/2018/6/bab/0009/bagian/0005> legal:bagianHasKey 5 .
 <http://example.org/legal/document/uu/2018/6/bab/0009/bagian/0005> legal:bagianHasTitle "Bagian Kelima Pendanaan" .
@@ -2078,11 +2152,14 @@
 <http://example.org/legal/document/uu/2018/6/pasal/0080/version/20180807/ayat/0002> legal:ayatHasRawText "Penyelenggaraan informasi Kekarantinaan Kesehatan sebagaimana dimaksud pada ayat (1) dapat berkoordinasi dan bekerja sama dengan lembaga kesehatan, baik dalam negeri maupun luar negeri." .
 <http://example.org/legal/document/uu/2018/6/pasal/0080/version/20180807/ayat/0002/text> legal:textHasTextString "Penyelenggaraan informasi Kekarantinaan Kesehatan sebagaimana dimaksud pada ayat (1) dapat berkoordinasi dan bekerja sama dengan lembaga kesehatan, baik dalam negeri maupun luar negeri." .
 <http://example.org/legal/document/uu/2018/6/pasal/0080/version/20180807/ayat/0002> legal:ayatHasText <http://example.org/legal/document/uu/2018/6/pasal/0080/version/20180807/ayat/0002/text> .
+<http://example.org/legal/document/uu/2018/6/pasal/0080/version/20180807/ayat/0002/text> legal:textReferencesLegal <http://example.org/legal/document/uu/2018/6/pasal/0080/version/20180807/ayat/0001> .
 <http://example.org/legal/document/uu/2018/6/pasal/0080/version/20180807/ayat> legal:ayatSetHasAyat <http://example.org/legal/document/uu/2018/6/pasal/0080/version/20180807/ayat/0003> .
 <http://example.org/legal/document/uu/2018/6/pasal/0080/version/20180807/ayat/0003> legal:ayatHasKey 3 .
 <http://example.org/legal/document/uu/2018/6/pasal/0080/version/20180807/ayat/0003> legal:ayatHasRawText "Penyelenggaraan informasi Kekarantinaan Kesehatan sebagaimana dimaksud pada ayat (1) dan ayat (2) dilaksanakan sesuai dengan ketentuan peraturan perundang-undangan." .
 <http://example.org/legal/document/uu/2018/6/pasal/0080/version/20180807/ayat/0003/text> legal:textHasTextString "Penyelenggaraan informasi Kekarantinaan Kesehatan sebagaimana dimaksud pada ayat (1) dan ayat (2) dilaksanakan sesuai dengan ketentuan peraturan perundang-undangan." .
 <http://example.org/legal/document/uu/2018/6/pasal/0080/version/20180807/ayat/0003> legal:ayatHasText <http://example.org/legal/document/uu/2018/6/pasal/0080/version/20180807/ayat/0003/text> .
+<http://example.org/legal/document/uu/2018/6/pasal/0080/version/20180807/ayat/0003/text> legal:textReferencesLegal <http://example.org/legal/document/uu/2018/6/pasal/0080/version/20180807/ayat/0002> .
+<http://example.org/legal/document/uu/2018/6/pasal/0080/version/20180807/ayat/0003/text> legal:textReferencesLegal <http://example.org/legal/document/uu/2018/6/pasal/0080/version/20180807/ayat/0001> .
 <http://example.org/legal/document/uu/2018/6/bab/0010/pasals> legal:pasalSetHasPasal <http://example.org/legal/document/uu/2018/6/pasal/0081> .
 <http://example.org/legal/document/uu/2018/6/pasal/0081> legal:pasalHasKey 81 .
 <http://example.org/legal/document/uu/2018/6/pasal/0081> legal:pasalHasPasalVersion <http://example.org/legal/document/uu/2018/6/pasal/0081/version/20180807> .
@@ -2141,6 +2218,8 @@
 <http://example.org/legal/document/uu/2018/6/pasal/0082/version/20180807/ayat/0004> legal:ayatHasRawText "Ketentuan lebih lanjut mengenai pembinaan sebagaimana dimaksud pada ayat (1) dan ayat (2) diatur dengan Peraturan Menteri." .
 <http://example.org/legal/document/uu/2018/6/pasal/0082/version/20180807/ayat/0004/text> legal:textHasTextString "Ketentuan lebih lanjut mengenai pembinaan sebagaimana dimaksud pada ayat (1) dan ayat (2) diatur dengan Peraturan Menteri." .
 <http://example.org/legal/document/uu/2018/6/pasal/0082/version/20180807/ayat/0004> legal:ayatHasText <http://example.org/legal/document/uu/2018/6/pasal/0082/version/20180807/ayat/0004/text> .
+<http://example.org/legal/document/uu/2018/6/pasal/0082/version/20180807/ayat/0004/text> legal:textReferencesLegal <http://example.org/legal/document/uu/2018/6/pasal/0082/version/20180807/ayat/0002> .
+<http://example.org/legal/document/uu/2018/6/pasal/0082/version/20180807/ayat/0004/text> legal:textReferencesLegal <http://example.org/legal/document/uu/2018/6/pasal/0082/version/20180807/ayat/0001> .
 <http://example.org/legal/document/uu/2018/6/bab/0011/bagian> legal:bagianSetHasBagian <http://example.org/legal/document/uu/2018/6/bab/0011/bagian/0002> .
 <http://example.org/legal/document/uu/2018/6/bab/0011/bagian/0002> legal:bagianHasKey 2 .
 <http://example.org/legal/document/uu/2018/6/bab/0011/bagian/0002> legal:bagianHasTitle "Bagian Kedua Pengawasan" .
@@ -2168,6 +2247,7 @@
 <http://example.org/legal/document/uu/2018/6/pasal/0083/version/20180807/ayat/0003> legal:ayatHasRawText "Ketentuan lebih lanjut mengenai pengawasan sebagaimana dimaksud pada ayat (1) diatur dengan Peraturan Menteri." .
 <http://example.org/legal/document/uu/2018/6/pasal/0083/version/20180807/ayat/0003/text> legal:textHasTextString "Ketentuan lebih lanjut mengenai pengawasan sebagaimana dimaksud pada ayat (1) diatur dengan Peraturan Menteri." .
 <http://example.org/legal/document/uu/2018/6/pasal/0083/version/20180807/ayat/0003> legal:ayatHasText <http://example.org/legal/document/uu/2018/6/pasal/0083/version/20180807/ayat/0003/text> .
+<http://example.org/legal/document/uu/2018/6/pasal/0083/version/20180807/ayat/0003/text> legal:textReferencesLegal <http://example.org/legal/document/uu/2018/6/pasal/0083/version/20180807/ayat/0001> .
 <http://example.org/legal/document/uu/2018/6/bab> legal:babSetHasBab <http://example.org/legal/document/uu/2018/6/bab/0012> .
 <http://example.org/legal/document/uu/2018/6/bab/0012> legal:babHasKey 12 .
 <http://example.org/legal/document/uu/2018/6/bab/0012> legal:babHasTitle "PENYIDIKAN" .
@@ -2318,6 +2398,9 @@
 <http://example.org/legal/document/uu/2018/6/pasal/0094/version/20180807/ayat/0001> legal:ayatHasRawText "Dalam hal tindak pidana sebagaimana dimaksud dalam Pasal 90, Pasal 91, dan Pasal 92 dilakukan oleh korporasi pertanggungjawaban pidana dikenakan terhadap korporasi dan/atau pengurusnya." .
 <http://example.org/legal/document/uu/2018/6/pasal/0094/version/20180807/ayat/0001/text> legal:textHasTextString "Dalam hal tindak pidana sebagaimana dimaksud dalam Pasal 90, Pasal 91, dan Pasal 92 dilakukan oleh korporasi pertanggungjawaban pidana dikenakan terhadap korporasi dan/atau pengurusnya." .
 <http://example.org/legal/document/uu/2018/6/pasal/0094/version/20180807/ayat/0001> legal:ayatHasText <http://example.org/legal/document/uu/2018/6/pasal/0094/version/20180807/ayat/0001/text> .
+<http://example.org/legal/document/uu/2018/6/pasal/0094/version/20180807/ayat/0001/text> legal:textReferencesLegal <http://example.org/legal/document/uu/2018/6/pasal/0092> .
+<http://example.org/legal/document/uu/2018/6/pasal/0094/version/20180807/ayat/0001/text> legal:textReferencesLegal <http://example.org/legal/document/uu/2018/6/pasal/0091> .
+<http://example.org/legal/document/uu/2018/6/pasal/0094/version/20180807/ayat/0001/text> legal:textReferencesLegal <http://example.org/legal/document/uu/2018/6/pasal/0090> .
 <http://example.org/legal/document/uu/2018/6/pasal/0094/version/20180807/ayat> legal:ayatSetHasAyat <http://example.org/legal/document/uu/2018/6/pasal/0094/version/20180807/ayat/0002> .
 <http://example.org/legal/document/uu/2018/6/pasal/0094/version/20180807/ayat/0002> legal:ayatHasKey 2 .
 <http://example.org/legal/document/uu/2018/6/pasal/0094/version/20180807/ayat/0002> legal:ayatHasRawText "Korporasi dikenai pertanggungjawaban secara pidana terhadap suatu perbuatan yang dilakukan untuk dan/atau atas nama korporasi jika perbuatan tersebut termasuk dalam lingkup usahanya sebagaimana ditentukan dalam anggaran dasar atau ketentuan lain yang berlaku bagi korporasi yang bersangkutan." .
@@ -2350,6 +2433,8 @@
 <http://example.org/legal/document/uu/2018/6/pasal/0094/version/20180807/ayat/0004> legal:ayatHasRawText "Dalam hal tindak pidana dilakukan atau diperintahkan oleh personel pengendali korporasi sebagaimana dimaksud pada ayat (3) huruf a atau pengurus korporasi, pidana pokok yang dijatuhkan adalah pidana penjara maksimum dan pidana denda maksimum yang masing-masing ditambah dengan pidana pemberatan 2/3 (dua pertiga)." .
 <http://example.org/legal/document/uu/2018/6/pasal/0094/version/20180807/ayat/0004/text> legal:textHasTextString "Dalam hal tindak pidana dilakukan atau diperintahkan oleh personel pengendali korporasi sebagaimana dimaksud pada ayat (3) huruf a atau pengurus korporasi, pidana pokok yang dijatuhkan adalah pidana penjara maksimum dan pidana denda maksimum yang masing-masing ditambah dengan pidana pemberatan 2/3 (dua pertiga)." .
 <http://example.org/legal/document/uu/2018/6/pasal/0094/version/20180807/ayat/0004> legal:ayatHasText <http://example.org/legal/document/uu/2018/6/pasal/0094/version/20180807/ayat/0004/text> .
+<http://example.org/legal/document/uu/2018/6/pasal/0094/version/20180807/ayat/0004/text> legal:textReferencesLegal <http://example.org/legal/document/uu/2018/6/pasal/0094/version/20180807/ayat/0003> .
+<http://example.org/legal/document/uu/2018/6/pasal/0094/version/20180807/ayat/0004/text> legal:textReferencesLegal <http://example.org/legal/document/uu/2018/6/pasal/0094/version/20180807/point/a> .
 <http://example.org/legal/document/uu/2018/6/pasal/0094/version/20180807/ayat> legal:ayatSetHasAyat <http://example.org/legal/document/uu/2018/6/pasal/0094/version/20180807/ayat/0005> .
 <http://example.org/legal/document/uu/2018/6/pasal/0094/version/20180807/ayat/0005> legal:ayatHasKey 5 .
 <http://example.org/legal/document/uu/2018/6/pasal/0094/version/20180807/ayat/0005> legal:ayatHasRawText "Pidana pokok yang dijatuhkan terhadap korporasi adalah pidana denda maksimum ditambah dengan pidana pemberatan 2/3 (dua pertiga)." .

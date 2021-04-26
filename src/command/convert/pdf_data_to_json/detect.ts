@@ -1,5 +1,5 @@
 import { assertNever } from 'assert-never';
-import { AyatSetNode, PasalNode, PasalVersion } from './../../../legal/component';
+import { Ayat, AyatSetNode, PasalNode, PasalVersion } from './../../../legal/component';
 import { chain, compact, isUndefined } from 'lodash';
 import {
   Bagian,
@@ -62,39 +62,84 @@ function detectInBagian(bagian: Bagian): Bagian {
 }
 
 function detectInPasalVersion(pasalVersion: PasalVersion): PasalVersion {
-  const { content, node } = pasalVersion;
-  if (isUndefined(content)) return pasalVersion;
-  if (content.type === 'ayatSet') return { ...pasalVersion, content: { ...content } };
-  if (content.type === 'pointSet') return pasalVersion;
-  if (content.type === 'text') {
+  if (isUndefined(pasalVersion.content)) return pasalVersion;
+  if (pasalVersion.content.type === 'ayatSet')
     return {
       ...pasalVersion,
       content: {
-        ...content,
+        ...pasalVersion.content,
+        elements: pasalVersion.content.elements.map((ayat) => {
+          if (ayat.content.type === 'pointSet') return ayat;
+          if (ayat.content.type === 'text') {
+            const newAyat: Ayat = {
+              ...ayat,
+              content: {
+                ...ayat.content,
+                type: 'text',
+                references: _resolveConflictingReferences([
+                  ...detectHardCoded(ayat.content.textString),
+                  ...detectPasalX(
+                    ayat.content.textString,
+                    pasalVersion.node.parentPasalNode.parentNode
+                  ),
+                  ...detectHurufXYZ(ayat.content.textString, {
+                    nodeType: 'pointSet',
+                    parentNode: pasalVersion.node,
+                  }),
+                  ...detectAyatNHurufXYZ(ayat.content.textString, {
+                    nodeType: 'ayatSet',
+                    parentPasalVersionNode: pasalVersion.node,
+                  }),
+                  ...detectAyatX(ayat.content.textString, {
+                    nodeType: 'ayatSet',
+                    parentPasalVersionNode: pasalVersion.node,
+                  }),
+                  ...detectPasalXAyatX(ayat.content.textString, {
+                    nodeType: 'ayatSet',
+                    parentPasalVersionNode: pasalVersion.node,
+                  }),
+                ]),
+              },
+            };
+            return newAyat;
+          }
+          assertNever(ayat.content);
+        }),
+      },
+    };
+  if (pasalVersion.content.type === 'pointSet') return pasalVersion;
+  if (pasalVersion.content.type === 'text') {
+    return {
+      ...pasalVersion,
+      content: {
+        ...pasalVersion.content,
         references: _resolveConflictingReferences([
-          ...detectHardCoded(content.textString),
-          ...detectPasalX(content.textString, node.parentPasalNode.parentNode),
-          ...detectHurufXYZ(content.textString, {
+          ...detectHardCoded(pasalVersion.content.textString),
+          ...detectPasalX(
+            pasalVersion.content.textString,
+            pasalVersion.node.parentPasalNode.parentNode
+          ),
+          ...detectHurufXYZ(pasalVersion.content.textString, {
             nodeType: 'pointSet',
-            parentNode: node,
+            parentNode: pasalVersion.node,
           }),
-          ...detectAyatNHurufXYZ(content.textString, {
+          ...detectAyatNHurufXYZ(pasalVersion.content.textString, {
             nodeType: 'ayatSet',
-            parentPasalVersionNode: node,
+            parentPasalVersionNode: pasalVersion.node,
           }),
-          ...detectAyatX(content.textString, {
+          ...detectAyatX(pasalVersion.content.textString, {
             nodeType: 'ayatSet',
-            parentPasalVersionNode: node,
+            parentPasalVersionNode: pasalVersion.node,
           }),
-          ...detectPasalXAyatX(content.textString, {
+          ...detectPasalXAyatX(pasalVersion.content.textString, {
             nodeType: 'ayatSet',
-            parentPasalVersionNode: node,
+            parentPasalVersionNode: pasalVersion.node,
           }),
         ]),
       },
     };
   }
-  assertNever(content);
+  assertNever(pasalVersion.content);
 }
 
 function detectHardCoded(text: string): Reference[] {

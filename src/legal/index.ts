@@ -70,7 +70,6 @@ function padPasalIfNumber(x: string | number, arg?: { pad: number }): string {
     );
     const numberStr = x.slice(0, splitPoint.splitIdx + 1);
     const strStr = x.slice(splitPoint.splitIdx + 1);
-    console.log({ x, numberStr, strStr });
     return numberStr.padStart(arg?.pad ?? 4, '0') + strStr;
   }
   return `${x}`.padStart(arg?.pad ?? 4, '0');
