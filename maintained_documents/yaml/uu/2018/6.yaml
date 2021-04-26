@@ -8573,7 +8573,14 @@ babSet:
                         Undang-Undang Nomor 1 Tahun 1962 tentang Karantina Laut (Lembaran Negara
                         Republik Indonesia Tahun 1962 Nomor 2, Tambahan Lembaran Negara Republik
                         Indonesia Nomor 2373): dan
-                      references: []
+                      references:
+                        - start: 0
+                          end: 32
+                          node:
+                            nodeType: document
+                            docType: uu
+                            nomor: 1
+                            tahun: 1962
                   - type: point
                     node: &ref_540
                       nodeType: point
@@ -8589,7 +8596,14 @@ babSet:
                         Undang-Undang Nomor 2 Tahun 1962 tentang Karantina Udara (Lembaran Negara
                         Republik Indonesia Tahun 1962 Nomor 3, Tambahan Lembaran Negara Republik
                         Indonesia Nomor 2374), dicabut dan dinyatakan tidak berlaku.
-                      references: []
+                      references:
+                        - start: 0
+                          end: 32
+                          node:
+                            nodeType: document
+                            docType: uu
+                            nomor: 2
+                            tahun: 1962
           - type: pasal
             node:
               nodeType: pasal

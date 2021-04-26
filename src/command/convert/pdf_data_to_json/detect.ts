@@ -151,6 +151,7 @@ function detectBelowPasalVersion(
   pasalVersionNode: PasalVersionNode
 ): Reference[] {
   return [
+    ...detectUU(textString),
     ...detectHardCoded(textString),
     ...detectPasalX(textString, pasalVersionNode.parentPasalNode.parentNode),
     ...detectHurufXYZ(textString, {
@@ -193,6 +194,23 @@ function detectHardCoded(text: string): Reference[] {
   });
 
   return references;
+}
+
+function detectUU(text: string): Reference[] {
+  return chain([...text.matchAll(/Undang-Undang Nomor [0-9]+ Tahun [0-9]+/g)])
+    .map((match) => {
+      if (isUndefined(match.index)) throw Error();
+      const len = match[0]?.length;
+      if (isUndefined(len)) throw Error();
+      const [, , nomor, , tahun] = match[0]?.split(' ')?.map(safeParseInt) ?? [];
+      if (isUndefined(nomor)) throw Error();
+      if (isUndefined(tahun)) throw Error();
+      const start = match.index;
+      const end = match.index + len;
+      const node: DocumentNode = { nodeType: 'document', docType: 'uu', nomor, tahun };
+      return { start, end, node };
+    })
+    .value();
 }
 
 function detectPasalXAyatX(text: string, parentAyatSetNode: AyatSetNode): Reference[] {

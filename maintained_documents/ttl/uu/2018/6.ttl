@@ -2485,10 +2485,12 @@
 <http://example.org/legal/document/uu/2018/6/pasal/0097/version/20180807/point/0001> legal:pointHasKey "1" .
 <http://example.org/legal/document/uu/2018/6/pasal/0097/version/20180807/point/0001/text> legal:textHasTextString "Undang-Undang Nomor 1 Tahun 1962 tentang Karantina Laut (Lembaran Negara Republik Indonesia Tahun 1962 Nomor 2, Tambahan Lembaran Negara Republik Indonesia Nomor 2373): dan" .
 <http://example.org/legal/document/uu/2018/6/pasal/0097/version/20180807/point/0001> legal:pointHasText <http://example.org/legal/document/uu/2018/6/pasal/0097/version/20180807/point/0001/text> .
+<http://example.org/legal/document/uu/2018/6/pasal/0097/version/20180807/point/0001/text> legal:textReferencesLegal <http://example.org/legal/document/uu/1962/1> .
 <http://example.org/legal/document/uu/2018/6/pasal/0097/version/20180807/point> legal:pointSetHasPoint <http://example.org/legal/document/uu/2018/6/pasal/0097/version/20180807/point/0002> .
 <http://example.org/legal/document/uu/2018/6/pasal/0097/version/20180807/point/0002> legal:pointHasKey "2" .
 <http://example.org/legal/document/uu/2018/6/pasal/0097/version/20180807/point/0002/text> legal:textHasTextString "Undang-Undang Nomor 2 Tahun 1962 tentang Karantina Udara (Lembaran Negara Republik Indonesia Tahun 1962 Nomor 3, Tambahan Lembaran Negara Republik Indonesia Nomor 2374), dicabut dan dinyatakan tidak berlaku." .
 <http://example.org/legal/document/uu/2018/6/pasal/0097/version/20180807/point/0002> legal:pointHasText <http://example.org/legal/document/uu/2018/6/pasal/0097/version/20180807/point/0002/text> .
+<http://example.org/legal/document/uu/2018/6/pasal/0097/version/20180807/point/0002/text> legal:textReferencesLegal <http://example.org/legal/document/uu/1962/2> .
 <http://example.org/legal/document/uu/2018/6/bab/0014/pasals> legal:pasalSetHasPasal <http://example.org/legal/document/uu/2018/6/pasal/0098> .
 <http://example.org/legal/document/uu/2018/6/pasal/0098> legal:pasalHasKey 98 .
 <http://example.org/legal/document/uu/2018/6/pasal/0098> legal:pasalHasPasalVersion <http://example.org/legal/document/uu/2018/6/pasal/0098/version/20180807> .
