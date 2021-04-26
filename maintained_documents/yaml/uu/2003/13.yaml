@@ -2023,7 +2023,13 @@ babSet:
                             textString: >-
                               tidak sesuai dengan arah pelatihan kerja sebagaimana dimaksud dalam
                               Pasal 9: dan/atau
-                            references: []
+                            references:
+                              - start: 68
+                                end: 75
+                                node:
+                                  key: 9
+                                  parentNode: *ref_0
+                                  nodeType: pasal
                         - type: point
                           node: &ref_133
                             nodeType: point
@@ -2036,7 +2042,13 @@ babSet:
                               textName: text
                               parentNode: *ref_133
                             textString: tidak memenuhi persyaratan sebagaimana dimaksud dalam Pasal 15.
-                            references: []
+                            references:
+                              - start: 54
+                                end: 62
+                                node:
+                                  key: 15
+                                  parentNode: *ref_0
+                                  nodeType: pasal
                   - type: ayat
                     node: &ref_134
                       nodeType: ayat
@@ -4347,7 +4359,15 @@ babSet:
                               melaksanakan pendidikan dan pelatihan kerja bagi tenaga kerja
                               Indonesia sebagaimana dimaksud pada huruf a yang sesuai dengan
                               kualifikasi jabatan yang diduduki oleh tenaga kerja asing.
-                            references: []
+                            references:
+                              - start: 98
+                                end: 105
+                                node:
+                                  key: a
+                                  parentPointSetNode:
+                                    nodeType: pointSet
+                                    parentNode: *ref_272
+                                  nodeType: point
                   - type: ayat
                     node: &ref_278
                       nodeType: ayat
@@ -6356,7 +6376,21 @@ babSet:
                               yang memenuhi persyaratan sebagaimana dimaksud dalam Pasal 59 dan/atau
                               perjanjian kerja waktu tidak tertentu yang dibuat secara tertulis dan
                               ditandatangani oleh kedua belah pihak,
-                            references: []
+                            references:
+                              - start: 77
+                                end: 84
+                                node:
+                                  key: a
+                                  parentPointSetNode:
+                                    nodeType: pointSet
+                                    parentNode: *ref_401
+                                  nodeType: point
+                              - start: 183
+                                end: 191
+                                node:
+                                  key: 59
+                                  parentNode: *ref_0
+                                  nodeType: pasal
                         - type: point
                           node: &ref_408
                             nodeType: point
@@ -13843,7 +13877,13 @@ babSet:
                                         textString: >-
                                           pekerja/buruh atau serikat pekerja/serikat buruh melanggar
                                           prosedur mogok kerja sebagaimana dimaksud dalam Pasal 140,
-                                        references: []
+                                        references:
+                                          - start: 107
+                                            end: 116
+                                            node:
+                                              key: 140
+                                              parentNode: *ref_0
+                                              nodeType: pasal
                                     - type: point
                                       node: &ref_879
                                         nodeType: point

@@ -569,6 +569,8 @@
 <http://example.org/legal/document/uu/2018/6/pasal/0019/version/20180807/ayat/0001/point/c> legal:pointHasKey "c" .
 <http://example.org/legal/document/uu/2018/6/pasal/0019/version/20180807/ayat/0001/point/c/text> legal:textHasTextString ". mengambil orang dan/atau Barang dari Kapal sebagaimana dimaksud pada huruf a dan huruf b, berada dalam Status Karantina." .
 <http://example.org/legal/document/uu/2018/6/pasal/0019/version/20180807/ayat/0001/point/c> legal:pointHasText <http://example.org/legal/document/uu/2018/6/pasal/0019/version/20180807/ayat/0001/point/c/text> .
+<http://example.org/legal/document/uu/2018/6/pasal/0019/version/20180807/ayat/0001/point/c/text> legal:textReferencesLegal <http://example.org/legal/document/uu/2018/6/pasal/0019/version/20180807/point/b> .
+<http://example.org/legal/document/uu/2018/6/pasal/0019/version/20180807/ayat/0001/point/c/text> legal:textReferencesLegal <http://example.org/legal/document/uu/2018/6/pasal/0019/version/20180807/point/a> .
 <http://example.org/legal/document/uu/2018/6/pasal/0019/version/20180807/ayat> legal:ayatSetHasAyat <http://example.org/legal/document/uu/2018/6/pasal/0019/version/20180807/ayat/0002> .
 <http://example.org/legal/document/uu/2018/6/pasal/0019/version/20180807/ayat/0002> legal:ayatHasKey 2 .
 <http://example.org/legal/document/uu/2018/6/pasal/0019/version/20180807/ayat/0002> legal:ayatHasRawText "Nakhoda pada Kapal sebagaimana dimaksud pada ayat (1) wajib memberikan Deklarasi Kesehatan Maritim (Maritime Declaration of Healthh kepada Pejabat Karantina Kesehatan pada saat kedatangan Kapal." .
@@ -1714,14 +1716,17 @@
 <http://example.org/legal/document/uu/2018/6/pasal/0063/version/20180807/ayat/0001/point/a> legal:pointHasKey "a" .
 <http://example.org/legal/document/uu/2018/6/pasal/0063/version/20180807/ayat/0001/point/a/text> legal:textHasTextString "Deklarasi Kesehatan Maritim (Maritime Declaration of Health) untuk Kapal sebagaimana dimaksud dalam Pasal 19 ayat (2):" .
 <http://example.org/legal/document/uu/2018/6/pasal/0063/version/20180807/ayat/0001/point/a> legal:pointHasText <http://example.org/legal/document/uu/2018/6/pasal/0063/version/20180807/ayat/0001/point/a/text> .
+<http://example.org/legal/document/uu/2018/6/pasal/0063/version/20180807/ayat/0001/point/a/text> legal:textReferencesLegal <http://example.org/legal/document/uu/2018/6/pasal/0063/version/20180807/ayat/0002> .
 <http://example.org/legal/document/uu/2018/6/pasal/0063/version/20180807/ayat/0001/point> legal:pointSetHasPoint <http://example.org/legal/document/uu/2018/6/pasal/0063/version/20180807/ayat/0001/point/b> .
 <http://example.org/legal/document/uu/2018/6/pasal/0063/version/20180807/ayat/0001/point/b> legal:pointHasKey "b" .
 <http://example.org/legal/document/uu/2018/6/pasal/0063/version/20180807/ayat/0001/point/b/text> legal:textHasTextString "Deklarasi Kesehatan Penerbangan (Health Part of the Aircraft General Declaration) untuk Pesawat Udara sebagaimana dimaksud dalam Pasal 29, dan" .
 <http://example.org/legal/document/uu/2018/6/pasal/0063/version/20180807/ayat/0001/point/b> legal:pointHasText <http://example.org/legal/document/uu/2018/6/pasal/0063/version/20180807/ayat/0001/point/b/text> .
+<http://example.org/legal/document/uu/2018/6/pasal/0063/version/20180807/ayat/0001/point/b/text> legal:textReferencesLegal <http://example.org/legal/document/uu/2018/6/pasal/0029> .
 <http://example.org/legal/document/uu/2018/6/pasal/0063/version/20180807/ayat/0001/point> legal:pointSetHasPoint <http://example.org/legal/document/uu/2018/6/pasal/0063/version/20180807/ayat/0001/point/c> .
 <http://example.org/legal/document/uu/2018/6/pasal/0063/version/20180807/ayat/0001/point/c> legal:pointHasKey "c" .
 <http://example.org/legal/document/uu/2018/6/pasal/0063/version/20180807/ayat/0001/point/c/text> legal:textHasTextString "Deklarasi Kesehatan Pelintasan Darat (Ground Crossing Declaration of Health) untuk Kendaraan Darat sebagaimana dimaksud dalam Pasal 36." .
 <http://example.org/legal/document/uu/2018/6/pasal/0063/version/20180807/ayat/0001/point/c> legal:pointHasText <http://example.org/legal/document/uu/2018/6/pasal/0063/version/20180807/ayat/0001/point/c/text> .
+<http://example.org/legal/document/uu/2018/6/pasal/0063/version/20180807/ayat/0001/point/c/text> legal:textReferencesLegal <http://example.org/legal/document/uu/2018/6/pasal/0036> .
 <http://example.org/legal/document/uu/2018/6/pasal/0063/version/20180807/ayat> legal:ayatSetHasAyat <http://example.org/legal/document/uu/2018/6/pasal/0063/version/20180807/ayat/0002> .
 <http://example.org/legal/document/uu/2018/6/pasal/0063/version/20180807/ayat/0002> legal:ayatHasKey 2 .
 <http://example.org/legal/document/uu/2018/6/pasal/0063/version/20180807/ayat/0002> legal:ayatHasRawText "Deklarasi kesehatan sebagaimana dimaksud pada ayat (1) harus diisi dan diberikan oleh Nakhoda, Kapten Penerbang, atau pengemudi Kendaraan Darat kepada Pejabat Karantina Kesehatan pada saat kedatangan Alat Angkut." .
@@ -2010,6 +2015,7 @@
 <http://example.org/legal/document/uu/2018/6/pasal/0075/version/20180807/ayat/0003/point/a> legal:pointHasKey "a" .
 <http://example.org/legal/document/uu/2018/6/pasal/0075/version/20180807/ayat/0003/point/a/text> legal:textHasTextString "melakukan tindakan Kekarantinaan Kesehatan sebagaimana dimaksud dalam Pasal 15 ayat (2)," .
 <http://example.org/legal/document/uu/2018/6/pasal/0075/version/20180807/ayat/0003/point/a> legal:pointHasText <http://example.org/legal/document/uu/2018/6/pasal/0075/version/20180807/ayat/0003/point/a/text> .
+<http://example.org/legal/document/uu/2018/6/pasal/0075/version/20180807/ayat/0003/point/a/text> legal:textReferencesLegal <http://example.org/legal/document/uu/2018/6/pasal/0075/version/20180807/ayat/0002> .
 <http://example.org/legal/document/uu/2018/6/pasal/0075/version/20180807/ayat/0003/point> legal:pointSetHasPoint <http://example.org/legal/document/uu/2018/6/pasal/0075/version/20180807/ayat/0003/point/b> .
 <http://example.org/legal/document/uu/2018/6/pasal/0075/version/20180807/ayat/0003/point/b> legal:pointHasKey "b" .
 <http://example.org/legal/document/uu/2018/6/pasal/0075/version/20180807/ayat/0003/point/b/text> legal:textHasTextString "menetapkan tindakan Kekarantinaan Kesehatan:" .

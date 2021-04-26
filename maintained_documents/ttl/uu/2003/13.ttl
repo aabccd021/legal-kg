@@ -538,10 +538,12 @@
 <http://example.org/legal/document/uu/2003/13/pasal/0017/version/20030325/ayat/0001/point/a> legal:pointHasKey "a" .
 <http://example.org/legal/document/uu/2003/13/pasal/0017/version/20030325/ayat/0001/point/a/text> legal:textHasTextString "tidak sesuai dengan arah pelatihan kerja sebagaimana dimaksud dalam Pasal 9: dan/atau" .
 <http://example.org/legal/document/uu/2003/13/pasal/0017/version/20030325/ayat/0001/point/a> legal:pointHasText <http://example.org/legal/document/uu/2003/13/pasal/0017/version/20030325/ayat/0001/point/a/text> .
+<http://example.org/legal/document/uu/2003/13/pasal/0017/version/20030325/ayat/0001/point/a/text> legal:textReferencesLegal <http://example.org/legal/document/uu/2003/13/pasal/0009> .
 <http://example.org/legal/document/uu/2003/13/pasal/0017/version/20030325/ayat/0001/point> legal:pointSetHasPoint <http://example.org/legal/document/uu/2003/13/pasal/0017/version/20030325/ayat/0001/point/b> .
 <http://example.org/legal/document/uu/2003/13/pasal/0017/version/20030325/ayat/0001/point/b> legal:pointHasKey "b" .
 <http://example.org/legal/document/uu/2003/13/pasal/0017/version/20030325/ayat/0001/point/b/text> legal:textHasTextString "tidak memenuhi persyaratan sebagaimana dimaksud dalam Pasal 15." .
 <http://example.org/legal/document/uu/2003/13/pasal/0017/version/20030325/ayat/0001/point/b> legal:pointHasText <http://example.org/legal/document/uu/2003/13/pasal/0017/version/20030325/ayat/0001/point/b/text> .
+<http://example.org/legal/document/uu/2003/13/pasal/0017/version/20030325/ayat/0001/point/b/text> legal:textReferencesLegal <http://example.org/legal/document/uu/2003/13/pasal/0015> .
 <http://example.org/legal/document/uu/2003/13/pasal/0017/version/20030325/ayat> legal:ayatSetHasAyat <http://example.org/legal/document/uu/2003/13/pasal/0017/version/20030325/ayat/0002> .
 <http://example.org/legal/document/uu/2003/13/pasal/0017/version/20030325/ayat/0002> legal:ayatHasKey 2 .
 <http://example.org/legal/document/uu/2003/13/pasal/0017/version/20030325/ayat/0002> legal:ayatHasRawText "Penghentian sementara pelaksanaan penyelenggaraan pelatihan kerja sebagaimana dimaksud dalam ayat (1), disertai alasan dan saran perbaikan dan berlaku paling lama 6 (enam) bulan." .
@@ -1242,6 +1244,7 @@
 <http://example.org/legal/document/uu/2003/13/pasal/0045/version/20030325/ayat/0001/point/b> legal:pointHasKey "b" .
 <http://example.org/legal/document/uu/2003/13/pasal/0045/version/20030325/ayat/0001/point/b/text> legal:textHasTextString "melaksanakan pendidikan dan pelatihan kerja bagi tenaga kerja Indonesia sebagaimana dimaksud pada huruf a yang sesuai dengan kualifikasi jabatan yang diduduki oleh tenaga kerja asing." .
 <http://example.org/legal/document/uu/2003/13/pasal/0045/version/20030325/ayat/0001/point/b> legal:pointHasText <http://example.org/legal/document/uu/2003/13/pasal/0045/version/20030325/ayat/0001/point/b/text> .
+<http://example.org/legal/document/uu/2003/13/pasal/0045/version/20030325/ayat/0001/point/b/text> legal:textReferencesLegal <http://example.org/legal/document/uu/2003/13/pasal/0045/version/20030325/point/a> .
 <http://example.org/legal/document/uu/2003/13/pasal/0045/version/20030325/ayat> legal:ayatSetHasAyat <http://example.org/legal/document/uu/2003/13/pasal/0045/version/20030325/ayat/0002> .
 <http://example.org/legal/document/uu/2003/13/pasal/0045/version/20030325/ayat/0002> legal:ayatHasKey 2 .
 <http://example.org/legal/document/uu/2003/13/pasal/0045/version/20030325/ayat/0002> legal:ayatHasRawText "Ketentuan sebagaimana dimaksud dalam ayat (1) tidak berlaku bagi tenaga kerja asing yang menduduki ja batan direksi dan/atau komisaris." .
@@ -1840,6 +1843,8 @@
 <http://example.org/legal/document/uu/2003/13/pasal/0066/version/20030325/ayat/0002/point/b> legal:pointHasKey "b" .
 <http://example.org/legal/document/uu/2003/13/pasal/0066/version/20030325/ayat/0002/point/b/text> legal:textHasTextString "perjanjian kerja yang berlaku dalam hubungan kerja sebagaimana dimaksud pada huruf a adalah perjanjian kerja untuk waktu tertentu yang memenuhi persyaratan sebagaimana dimaksud dalam Pasal 59 dan/atau perjanjian kerja waktu tidak tertentu yang dibuat secara tertulis dan ditandatangani oleh kedua belah pihak," .
 <http://example.org/legal/document/uu/2003/13/pasal/0066/version/20030325/ayat/0002/point/b> legal:pointHasText <http://example.org/legal/document/uu/2003/13/pasal/0066/version/20030325/ayat/0002/point/b/text> .
+<http://example.org/legal/document/uu/2003/13/pasal/0066/version/20030325/ayat/0002/point/b/text> legal:textReferencesLegal <http://example.org/legal/document/uu/2003/13/pasal/0066/version/20030325/point/a> .
+<http://example.org/legal/document/uu/2003/13/pasal/0066/version/20030325/ayat/0002/point/b/text> legal:textReferencesLegal <http://example.org/legal/document/uu/2003/13/pasal/0059> .
 <http://example.org/legal/document/uu/2003/13/pasal/0066/version/20030325/ayat/0002/point> legal:pointSetHasPoint <http://example.org/legal/document/uu/2003/13/pasal/0066/version/20030325/ayat/0002/point/c> .
 <http://example.org/legal/document/uu/2003/13/pasal/0066/version/20030325/ayat/0002/point/c> legal:pointHasKey "c" .
 <http://example.org/legal/document/uu/2003/13/pasal/0066/version/20030325/ayat/0002/point/c/text> legal:textHasTextString "perlindungan upah dan kesejahteraan, syarat-syarat kerja, serta perselisihan yang timbul menjadi tanggung jawab perusahaan penyedia jasa pekerja/buruh, dan" .
@@ -4029,6 +4034,7 @@
 <http://example.org/legal/document/uu/2003/13/pasal/0149/version/20030325/ayat/0006/point/a> legal:pointHasKey "a" .
 <http://example.org/legal/document/uu/2003/13/pasal/0149/version/20030325/ayat/0006/point/a/text> legal:textHasTextString "pekerja/buruh atau serikat pekerja/serikat buruh melanggar prosedur mogok kerja sebagaimana dimaksud dalam Pasal 140," .
 <http://example.org/legal/document/uu/2003/13/pasal/0149/version/20030325/ayat/0006/point/a> legal:pointHasText <http://example.org/legal/document/uu/2003/13/pasal/0149/version/20030325/ayat/0006/point/a/text> .
+<http://example.org/legal/document/uu/2003/13/pasal/0149/version/20030325/ayat/0006/point/a/text> legal:textReferencesLegal <http://example.org/legal/document/uu/2003/13/pasal/0140> .
 <http://example.org/legal/document/uu/2003/13/pasal/0149/version/20030325/ayat/0006/point> legal:pointSetHasPoint <http://example.org/legal/document/uu/2003/13/pasal/0149/version/20030325/ayat/0006/point/b> .
 <http://example.org/legal/document/uu/2003/13/pasal/0149/version/20030325/ayat/0006/point/b> legal:pointHasKey "b" .
 <http://example.org/legal/document/uu/2003/13/pasal/0149/version/20030325/ayat/0006/point/b/text> legal:textHasTextString "pekerja/buruh atau serikat pekerja/serikat buruh melanggar ketentuan normatif yang ditentukan dalam perjanjian kerja, peraturan perusahaan, perjanjian kerja bersama, atau peraturan perundang-undangan yang berlaku." .

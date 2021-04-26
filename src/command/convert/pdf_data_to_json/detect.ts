@@ -154,7 +154,13 @@ function detectInPasalVersionContent(
     return {
       ...pasalVersionContent,
       elements: pasalVersionContent.elements.map((ayat) => {
-        if (ayat.content.type === 'pointSet') return ayat;
+        if (ayat.content.type === 'pointSet') {
+          const newAyat: Ayat = {
+            ...ayat,
+            content: detectInPointSetWhichBelowPasalVersoin(ayat.content, pasalVersionNode),
+          };
+          return newAyat;
+        }
         if (ayat.content.type === 'text') {
           const newAyat: Ayat = {
             ...ayat,
