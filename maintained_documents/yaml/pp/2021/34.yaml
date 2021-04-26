@@ -1,0 +1,2284 @@
+node: &ref_0
+  nodeType: document
+  docType: pp
+  tahun: 2021
+  nomor: 34
+metadata:
+  menimbang:
+    type: menimbang
+    node: &ref_1
+      nodeType: menimbang
+      parentNode: *ref_0
+    content:
+      type: text
+      node:
+        nodeType: text
+        textName: text
+        parentNode: *ref_1
+      textString: >-
+        bahwa untuk melaksanakan ketentuan Pasal 81 dan Pasal 185 huruf b Undang-Undang Nomor 11
+        Tahun 2020 tentang Cipta Kerja, perlu menetapkan Peraturan Pemerintah tentang Penggunaan
+        Tenaga Kerja Asing,
+      references:
+        - start: 66
+          end: 99
+          node:
+            nodeType: document
+            docType: uu
+            nomor: 11
+            tahun: 2020
+  mengingat:
+    type: mengingat
+    node: &ref_2
+      nodeType: mengingat
+      parentNode: *ref_0
+    content:
+      type: pointSet
+      node: &ref_3
+        nodeType: pointSet
+        parentNode: *ref_2
+      description:
+        type: text
+        node:
+          nodeType: text
+          textName: description
+          parentNode: *ref_3
+        textString: ''
+        references: []
+      elements:
+        - type: point
+          node: &ref_4
+            nodeType: point
+            key: '1'
+            parentPointSetNode: *ref_3
+          content:
+            type: text
+            node:
+              nodeType: text
+              textName: text
+              parentNode: *ref_4
+            textString: Pasal 5 ayat (2) Undang-Undang Dasar Negara Republik Indonesia Tahun 1945,
+            references:
+              - start: 17
+                end: 73
+                node:
+                  nodeType: document
+                  docType: uud
+        - type: point
+          node: &ref_5
+            nodeType: point
+            key: '2'
+            parentPointSetNode: *ref_3
+          content:
+            type: text
+            node:
+              nodeType: text
+              textName: text
+              parentNode: *ref_5
+            textString: >-
+              Undang-Undang Nomor 13 Tahun 2003 tentang Ketenagakerjaan (Lembaran Negara Republik
+              Indonesia Tahun 2003 Nomor 39, Tambahan Lembaran Negara Republik Indonesia Nomor
+              4279),
+            references:
+              - start: 0
+                end: 33
+                node:
+                  nodeType: document
+                  docType: uu
+                  nomor: 13
+                  tahun: 2003
+        - type: point
+          node: &ref_6
+            nodeType: point
+            key: '3'
+            parentPointSetNode: *ref_3
+          content:
+            type: text
+            node:
+              nodeType: text
+              textName: text
+              parentNode: *ref_6
+            textString: >-
+              Undang-Undang Nomor 11 Tahun 2020 tentang Cipta Kerja (Lembaran Negara Republik
+              Indonesia Tahun 2020 Nomor 245, Tambahan Lembaran Negara Republik Indonesia Nomor
+              6573), MEMUTUSKAN: Menetapkan : PERATURAN PEMERINTAH TENTANG PENGGUNAAN TENAGA KERJA
+              ASING. SK No 086152 A
+            references:
+              - start: 0
+                end: 33
+                node:
+                  nodeType: document
+                  docType: uu
+                  nomor: 11
+                  tahun: 2020
+  memutuskan: ''
+  denganPersetujuan: ''
+opText: |-
+  x
+  h3 SALINAN
+  PA
+  PERATURAN PEMERINTAH REPUBLIK INDONESIA
+  NOMOR 34 TAHUN 2021
+  TENTANG
+  PENGGUNAAN TENAGA KERJA ASING
+  DENGAN RAHMAT TUHAN YANG MAHA ESA
+  PRESIDEN REPUBLIK INDONESIA,
+  Menimbang : bahwa untuk melaksanakan ketentuan Pasal 81 dan
+  Pasal 185 huruf b Undang-Undang Nomor 11
+  Tahun 2020 tentang Cipta Kerja, perlu menetapkan
+  Peraturan Pemerintah tentang Penggunaan Tenaga
+  Kerja Asing,
+  Mengingat : 1. Pasal 5 ayat (2) Undang-Undang Dasar Negara
+  Republik Indonesia Tahun 1945,
+  2. Undang-Undang Nomor 13 Tahun 2003 tentang
+  Ketenagakerjaan (Lembaran Negara Republik
+  Indonesia Tahun 2003 Nomor 39, Tambahan
+  Lembaran Negara Republik Indonesia
+  Nomor 4279),
+  3. Undang-Undang Nomor 11 Tahun 2020 tentang
+  Cipta Kerja (Lembaran Negara Republik
+  Indonesia Tahun 2020 Nomor 245, Tambahan
+  Lembaran Negara Republik Indonesia
+  Nomor 6573),
+  MEMUTUSKAN:
+  Menetapkan : PERATURAN PEMERINTAH TENTANG PENGGUNAAN
+  TENAGA KERJA ASING.
+  SK No 086152 A
+babSet:
+  type: babSet
+  node: &ref_7
+    nodeType: babSet
+    parentDocumentNode: *ref_0
+  elements:
+    - type: bab
+      node: &ref_8
+        nodeType: bab
+        key: 1
+        parentBabSetNode: *ref_7
+      title: ''
+      content:
+        type: pasalSet
+        node:
+          nodeType: pasalSet
+          parentNode: *ref_8
+        elements:
+          - type: pasal
+            node:
+              nodeType: pasal
+              key: 1
+              parentNode: *ref_0
+            version:
+              type: pasalVersion
+              node: &ref_9
+                nodeType: pasalVersion
+                version: &ref_22
+                  nodeType: date
+                  month: 2
+                  date: 2
+                  year: 2021
+                state: exists
+                parentPasalNode:
+                  nodeType: pasal
+                  key: '1'
+                  parentNode: *ref_0
+              content:
+                type: pointSet
+                node: &ref_10
+                  nodeType: pointSet
+                  parentNode: *ref_9
+                description:
+                  type: text
+                  node:
+                    nodeType: text
+                    textName: description
+                    parentNode: *ref_10
+                  textString: 'Dalam Peraturan Pemerintah ini yang dimaksud dengan:'
+                  references: []
+                elements:
+                  - type: point
+                    node: &ref_11
+                      nodeType: point
+                      key: '1'
+                      parentPointSetNode: *ref_10
+                    content:
+                      type: text
+                      node:
+                        nodeType: text
+                        textName: text
+                        parentNode: *ref_11
+                      textString: >-
+                        Tenaga Kerja Asing yang selanjutnya disingkat TKA adalah warga negara asing
+                        pemegang visa dengan maksud bekerja di wilayah Indonesia.
+                      references: []
+                  - type: point
+                    node: &ref_12
+                      nodeType: point
+                      key: '2'
+                      parentPointSetNode: *ref_10
+                    content:
+                      type: text
+                      node:
+                        nodeType: text
+                        textName: text
+                        parentNode: *ref_12
+                      textString: >-
+                        Pemberi Kerja TKA adalah badan hukum yang didirikan berdasarkan hukum
+                        Indonesia atau badan lannya yang mempekerjakan TKA dengan membayar upah atau
+                        imbalan dalam bentuk lain.
+                      references: []
+                  - type: point
+                    node: &ref_13
+                      nodeType: point
+                      key: '3'
+                      parentPointSetNode: *ref_10
+                    content:
+                      type: text
+                      node:
+                        nodeType: text
+                        textName: text
+                        parentNode: *ref_13
+                      textString: >-
+                        Tenaga Kerja Pendamping TKA adalah tenaga kerja Indonesia yang ditunjuk oleh
+                        Pemberi Kerja TKA dan dipersiapkan sebagai pendamping TKA yang dipekerjakan
+                        dalam rangka alih teknologi dan alih keahlian.
+                      references: []
+                  - type: point
+                    node: &ref_14
+                      nodeType: point
+                      key: '4'
+                      parentPointSetNode: *ref_10
+                    content:
+                      type: text
+                      node:
+                        nodeType: text
+                        textName: text
+                        parentNode: *ref_14
+                      textString: >-
+                        Rencana Penggunaan Tenaga Kerja Asing yang selanjutnya disingkat RPTKA
+                        adalah rencana penggunaan TKA pada jabatan tertentu dan jangka waktu
+                        tertentu.
+                      references: []
+                  - type: point
+                    node: &ref_15
+                      nodeType: point
+                      key: '5'
+                      parentPointSetNode: *ref_10
+                    content:
+                      type: text
+                      node:
+                        nodeType: text
+                        textName: text
+                        parentNode: *ref_15
+                      textString: >-
+                        Pengesahan Rencana Penggunaan Tenaga Kerja Asing yang selanjutnya disebut
+                        Pengesahan RPTKA adalah persetujuan penggunaan TKA yang disahkan oleh
+                        menteri yang menyelenggarakan urusan pemerintahan di bidang ketenagakerjaan
+                        atau pejabat yang ditunjuk.
+                      references: []
+                  - type: point
+                    node: &ref_16
+                      nodeType: point
+                      key: '6'
+                      parentPointSetNode: *ref_10
+                    content:
+                      type: text
+                      node:
+                        nodeType: text
+                        textName: text
+                        parentNode: *ref_16
+                      textString: >-
+                        Kawasan Ekonomi Khusus yang selanjutnya disingkat KEK adalah kawasan dengan
+                        batas tertentu dalam wilayah hukum Negara Kesatuan Republik Indonesia yang
+                        ditetapkan untuk menyelenggarakan fungsi perekonomian dan memperoleh
+                        fasilitas tertentu.
+                      references: []
+                  - type: point
+                    node: &ref_17
+                      nodeType: point
+                      key: '7'
+                      parentPointSetNode: *ref_10
+                    content:
+                      type: text
+                      node:
+                        nodeType: text
+                        textName: text
+                        parentNode: *ref_17
+                      textString: >-
+                        Dana Kompensasi Penggunaan TKA yang selanjutnya disingkat DKPTKA adalah
+                        kompensasi yang harus dibayar oleh Pemberi Kerja TKA atas setiap TKA yang
+                        dipekerjakan sebagai penerimaan negara bukan pajak atau pendapatan daerah.
+                      references: []
+                  - type: point
+                    node: &ref_18
+                      nodeType: point
+                      key: '8'
+                      parentPointSetNode: *ref_10
+                    content:
+                      type: text
+                      node:
+                        nodeType: text
+                        textName: text
+                        parentNode: *ref_18
+                      textString: >-
+                        Pengawas Ketenagakerjaan adalah pegawai negeri sipil yang diberi tugas,
+                        tanggung jawab, wewenang, dan hak secara penuh oleh pejabat yang berwenang
+                        untuk melaksanakan kegiatan pembinaan, pemeriksaan, pengujian, penyidikan,
+                        dan pengembangan sistem pengawasan ketenagakerjaan sesuai dengan ketentuan
+                        peraturan perundang-undangan.
+                      references: []
+                  - type: point
+                    node: &ref_19
+                      nodeType: point
+                      key: '9'
+                      parentPointSetNode: *ref_10
+                    content:
+                      type: text
+                      node:
+                        nodeType: text
+                        textName: text
+                        parentNode: *ref_19
+                      textString: >-
+                        Menteri adalah menteri yang menyelenggarakan urusan pemerintahan di bidang
+                        ketenagakerjaan.
+                      references: []
+    - type: bab
+      node: &ref_20
+        nodeType: bab
+        key: 2
+        parentBabSetNode: *ref_7
+      title: KEWAJIBAN DAN LARANGAN BAGI PEMBERI KERJA TENAGA KERJA ASING
+      content:
+        type: bagianSet
+        node:
+          nodeType: bagianSet
+          parentBabNode: *ref_20
+        elements:
+          - type: bagian
+            node: &ref_21
+              nodeType: bagian
+              key: 1
+              parentBagianSetNode:
+                nodeType: bagianSet
+                parentBabNode: *ref_20
+            title: Bagian Kesatu Umum
+            content:
+              type: pasalSet
+              node:
+                nodeType: pasalSet
+                parentNode: *ref_21
+              elements:
+                - type: pasal
+                  node:
+                    nodeType: pasal
+                    key: 2
+                    parentNode: *ref_0
+                  version:
+                    type: pasalVersion
+                    node: &ref_23
+                      nodeType: pasalVersion
+                      version: *ref_22
+                      state: exists
+                      parentPasalNode:
+                        nodeType: pasal
+                        key: '2'
+                        parentNode: *ref_0
+                    content:
+                      type: ayatSet
+                      node: &ref_24
+                        nodeType: ayatSet
+                        parentPasalVersionNode: *ref_23
+                      elements:
+                        - type: ayat
+                          node: &ref_25
+                            nodeType: ayat
+                            key: 1
+                            parentAyatSetNode: *ref_24
+                          content:
+                            type: text
+                            node:
+                              nodeType: text
+                              textName: text
+                              parentNode: *ref_25
+                            textString: >-
+                              Setiap Pemberi Kerja TKA wajib mengutamakan penggunaan tenaga kerja
+                              Indonesia pada semua jenis jabatan yang tersedia.
+                            references: []
+                        - type: ayat
+                          node: &ref_26
+                            nodeType: ayat
+                            key: 2
+                            parentAyatSetNode: *ref_24
+                          content:
+                            type: text
+                            node:
+                              nodeType: text
+                              textName: text
+                              parentNode: *ref_26
+                            textString: >-
+                              Dalam hal jabatan sebagaimana dimaksud pada ayat (1) belum dapat
+                              diduduki oleh tenaga kerja Indonesia, jabatan tersebut dapat diduduki
+                              oleh TKA.
+                            references:
+                              - start: 44
+                                end: 52
+                                node:
+                                  key: 1
+                                  parentAyatSetNode:
+                                    nodeType: ayatSet
+                                    parentPasalVersionNode: *ref_23
+                                  nodeType: ayat
+                        - type: ayat
+                          node: &ref_27
+                            nodeType: ayat
+                            key: 3
+                            parentAyatSetNode: *ref_24
+                          content:
+                            type: text
+                            node:
+                              nodeType: text
+                              textName: text
+                              parentNode: *ref_27
+                            textString: >-
+                              Penggunaan TKA sebagaimana dimaksud pada ayat (2) dilakukan dengan
+                              memperhatikan kondisi pasar kerja dalam negeri.
+                            references:
+                              - start: 41
+                                end: 49
+                                node:
+                                  key: 2
+                                  parentAyatSetNode:
+                                    nodeType: ayatSet
+                                    parentPasalVersionNode: *ref_23
+                                  nodeType: ayat
+                - type: pasal
+                  node:
+                    nodeType: pasal
+                    key: 3
+                    parentNode: *ref_0
+                  version:
+                    type: pasalVersion
+                    node: &ref_28
+                      nodeType: pasalVersion
+                      version: *ref_22
+                      state: exists
+                      parentPasalNode:
+                        nodeType: pasal
+                        key: '3'
+                        parentNode: *ref_0
+                    content:
+                      type: ayatSet
+                      node: &ref_29
+                        nodeType: ayatSet
+                        parentPasalVersionNode: *ref_28
+                      elements:
+                        - type: ayat
+                          node: &ref_30
+                            nodeType: ayat
+                            key: 1
+                            parentAyatSetNode: *ref_29
+                          content:
+                            type: pointSet
+                            node: &ref_31
+                              nodeType: pointSet
+                              parentNode: *ref_30
+                            description:
+                              type: text
+                              node:
+                                nodeType: text
+                                textName: description
+                                parentNode: *ref_31
+                              textString: 'Pemberi Kerja TKA meliputi:'
+                              references: []
+                            elements:
+                              - type: point
+                                node: &ref_32
+                                  nodeType: point
+                                  key: a
+                                  parentPointSetNode: *ref_31
+                                content:
+                                  type: text
+                                  node:
+                                    nodeType: text
+                                    textName: text
+                                    parentNode: *ref_32
+                                  textString: >-
+                                    instansi Pemerintah, perwakilan negara asing, dan badan
+                                    internasional,
+                                  references: []
+                              - type: point
+                                node: &ref_33
+                                  nodeType: point
+                                  key: b
+                                  parentPointSetNode: *ref_31
+                                content:
+                                  type: text
+                                  node:
+                                    nodeType: text
+                                    textName: text
+                                    parentNode: *ref_33
+                                  textString: >-
+                                    kantor perwakilan dagang asing, kantor perwakilan perusahaan
+                                    asing, dan kantor berita asing yang melakukan kegiatan di
+                                    Indonesia,
+                                  references: []
+                              - type: point
+                                node: &ref_34
+                                  nodeType: point
+                                  key: c
+                                  parentPointSetNode: *ref_31
+                                content:
+                                  type: text
+                                  node:
+                                    nodeType: text
+                                    textName: text
+                                    parentNode: *ref_34
+                                  textString: perusahaan swasta asing yang berusaha di Indonesia,
+                                  references: []
+                              - type: point
+                                node: &ref_35
+                                  nodeType: point
+                                  key: d
+                                  parentPointSetNode: *ref_31
+                                content:
+                                  type: text
+                                  node:
+                                    nodeType: text
+                                    textName: text
+                                    parentNode: *ref_35
+                                  textString: >-
+                                    badan hukum dalam bentuk perseroan terbatas atau yayasan yang
+                                    didirikan berdasarkan hukum Indonesia atau badan usaha asing
+                                    yang terdaftar di instansi yang berwenang,
+                                  references: []
+                              - type: point
+                                node: &ref_36
+                                  nodeType: point
+                                  key: e
+                                  parentPointSetNode: *ref_31
+                                content:
+                                  type: text
+                                  node:
+                                    nodeType: text
+                                    textName: text
+                                    parentNode: *ref_36
+                                  textString: lembaga sosial, keagamaan, pendidikan, dan kebudayaan,
+                                  references: []
+                              - type: point
+                                node: &ref_37
+                                  nodeType: point
+                                  key: f
+                                  parentPointSetNode: *ref_31
+                                content:
+                                  type: text
+                                  node:
+                                    nodeType: text
+                                    textName: text
+                                    parentNode: *ref_37
+                                  textString: usaha jasa impresariat, dan
+                                  references: []
+                              - type: point
+                                node: &ref_38
+                                  nodeType: point
+                                  key: g
+                                  parentPointSetNode: *ref_31
+                                content:
+                                  type: text
+                                  node:
+                                    nodeType: text
+                                    textName: text
+                                    parentNode: *ref_38
+                                  textString: >-
+                                    badan usaha sepanjang diperbolehkan oleh undang-undang untuk
+                                    menggunakan TKA.
+                                  references: []
+                        - type: ayat
+                          node: &ref_39
+                            nodeType: ayat
+                            key: 2
+                            parentAyatSetNode: *ref_29
+                          content:
+                            type: text
+                            node:
+                              nodeType: text
+                              textName: text
+                              parentNode: *ref_39
+                            textString: >-
+                              Perseroan terbatas sebagaimana dimaksud pada ayat (l) huruf d
+                              dikecualikan untuk perseroan terbatas yang berbentuk badan hukum
+                              perorangan.
+                            references:
+                              - start: 45
+                                end: 53
+                                node:
+                                  key: 1
+                                  parentAyatSetNode:
+                                    nodeType: ayatSet
+                                    parentPasalVersionNode: *ref_28
+                                  nodeType: ayat
+                              - start: 54
+                                end: 61
+                                node:
+                                  key: d
+                                  parentPointSetNode:
+                                    nodeType: pointSet
+                                    parentNode: *ref_28
+                                  nodeType: point
+                - type: pasal
+                  node:
+                    nodeType: pasal
+                    key: 4
+                    parentNode: *ref_0
+                  version:
+                    type: pasalVersion
+                    node: &ref_40
+                      nodeType: pasalVersion
+                      version: *ref_22
+                      state: exists
+                      parentPasalNode:
+                        nodeType: pasal
+                        key: '4'
+                        parentNode: *ref_0
+                    content:
+                      type: ayatSet
+                      node: &ref_41
+                        nodeType: ayatSet
+                        parentPasalVersionNode: *ref_40
+                      elements:
+                        - type: ayat
+                          node: &ref_42
+                            nodeType: ayat
+                            key: 1
+                            parentAyatSetNode: *ref_41
+                          content:
+                            type: text
+                            node:
+                              nodeType: text
+                              textName: text
+                              parentNode: *ref_42
+                            textString: >-
+                              TKA hanya dapat dipekerjakan oleh Pemberi Kerja TKA dalam hubungan
+                              kerja untuk jabatan tertentu dan waktu tertentu, serta memiliki
+                              kompetensi sesuai dengan jabatan yang akan diduduki.
+                            references: []
+                        - type: ayat
+                          node: &ref_43
+                            nodeType: ayat
+                            key: 2
+                            parentAyatSetNode: *ref_41
+                          content:
+                            type: text
+                            node:
+                              nodeType: text
+                              textName: text
+                              parentNode: *ref_43
+                            textString: >-
+                              Jabatan tertentu yang dapat diduduki oleh TKA sebagaimana dimaksud
+                              pada ayat (1) ditetapkan oleh Menteri setelah mendapat masukan dari
+                              kementerian/lembaga terkait.
+                            references:
+                              - start: 72
+                                end: 80
+                                node:
+                                  key: 1
+                                  parentAyatSetNode:
+                                    nodeType: ayatSet
+                                    parentPasalVersionNode: *ref_40
+                                  nodeType: ayat
+                - type: pasal
+                  node:
+                    nodeType: pasal
+                    key: 5
+                    parentNode: *ref_0
+                  version:
+                    type: pasalVersion
+                    node: &ref_44
+                      nodeType: pasalVersion
+                      version: *ref_22
+                      state: exists
+                      parentPasalNode:
+                        nodeType: pasal
+                        key: '5'
+                        parentNode: *ref_0
+                    content:
+                      type: ayatSet
+                      node: &ref_45
+                        nodeType: ayatSet
+                        parentPasalVersionNode: *ref_44
+                      elements:
+                        - type: ayat
+                          node: &ref_46
+                            nodeType: ayat
+                            key: 1
+                            parentAyatSetNode: *ref_45
+                          content:
+                            type: pointSet
+                            node: &ref_47
+                              nodeType: pointSet
+                              parentNode: *ref_46
+                            description:
+                              type: text
+                              node:
+                                nodeType: text
+                                textName: description
+                                parentNode: *ref_47
+                              textString: >-
+                                Pemberi Kerja TKA dapat mempekerjakan TKA yang sedang dipekerjakan
+                                oleh Pemberi Kerja TKA lain untuk jabatan yang sama sebagai:
+                              references: []
+                            elements:
+                              - type: point
+                                node: &ref_48
+                                  nodeType: point
+                                  key: a
+                                  parentPointSetNode: *ref_47
+                                content:
+                                  type: text
+                                  node:
+                                    nodeType: text
+                                    textName: text
+                                    parentNode: *ref_48
+                                  textString: 'direksi atau komisaris: atau'
+                                  references: []
+                              - type: point
+                                node: &ref_49
+                                  nodeType: point
+                                  key: b
+                                  parentPointSetNode: *ref_47
+                                content:
+                                  type: text
+                                  node:
+                                    nodeType: text
+                                    textName: text
+                                    parentNode: *ref_49
+                                  textString: >-
+                                    TKA pada sektor pendidikan vokasi dan pelatihan vokasi, sektor
+                                    ekonomi digital, dan sektor migas bagi kontraktor kontrak kerja
+                                    sama.
+                                  references: []
+                        - type: ayat
+                          node: &ref_50
+                            nodeType: ayat
+                            key: 2
+                            parentAyatSetNode: *ref_45
+                          content:
+                            type: text
+                            node:
+                              nodeType: text
+                              textName: text
+                              parentNode: *ref_50
+                            textString: >-
+                              Dalam hal Pemberi Kerja TKA akan mempekerjakan TKA sebagaimana
+                              dimaksud pada ayat (1), TKA tersebut harus mendapatkan persetujuan
+                              dari Pemberi Kerja TKA pertama.
+                            references:
+                              - start: 77
+                                end: 85
+                                node:
+                                  key: 1
+                                  parentAyatSetNode:
+                                    nodeType: ayatSet
+                                    parentPasalVersionNode: *ref_44
+                                  nodeType: ayat
+                        - type: ayat
+                          node: &ref_51
+                            nodeType: ayat
+                            key: 3
+                            parentAyatSetNode: *ref_45
+                          content:
+                            type: text
+                            node:
+                              nodeType: text
+                              textName: text
+                              parentNode: *ref_51
+                            textString: >-
+                              TKA sebagaimana dimaksud pada ayat (1) dipekerjakan paling lama sampai
+                              dengan berakhirnya jangka waktu sebagaimana tercantum dalam Pengesahan
+                              RPTKA Pemberi Kerja TKA pertama.
+                            references:
+                              - start: 30
+                                end: 38
+                                node:
+                                  key: 1
+                                  parentAyatSetNode:
+                                    nodeType: ayatSet
+                                    parentPasalVersionNode: *ref_44
+                                  nodeType: ayat
+                        - type: ayat
+                          node: &ref_52
+                            nodeType: ayat
+                            key: 4
+                            parentAyatSetNode: *ref_45
+                          content:
+                            type: text
+                            node:
+                              nodeType: text
+                              textName: text
+                              parentNode: *ref_52
+                            textString: >-
+                              Jabatan tertentu pada sektor pendidikan vokasi dan pelatihan vokasi,
+                              sektor ekonomi digital, dan sektor migas bagi kontraktor kontrak kerja
+                              sama yang dapat dirangkap sebagaimana dimaksud pada ayat (1) huruf b
+                              ditetapkan oleh Menteri setelah mendapat masukan dari
+                              kementerian/lembaga terkait.
+                            references:
+                              - start: 192
+                                end: 200
+                                node:
+                                  key: 1
+                                  parentAyatSetNode:
+                                    nodeType: ayatSet
+                                    parentPasalVersionNode: *ref_44
+                                  nodeType: ayat
+                              - start: 201
+                                end: 208
+                                node:
+                                  key: b
+                                  parentPointSetNode:
+                                    nodeType: pointSet
+                                    parentNode: *ref_44
+                                  nodeType: point
+          - type: bagian
+            node: &ref_53
+              nodeType: bagian
+              key: 2
+              parentBagianSetNode:
+                nodeType: bagianSet
+                parentBabNode: *ref_20
+            title: Bagian Kedua Kewajiban
+            content:
+              type: pasalSet
+              node:
+                nodeType: pasalSet
+                parentNode: *ref_53
+              elements:
+                - type: pasal
+                  node:
+                    nodeType: pasal
+                    key: 6
+                    parentNode: *ref_0
+                  version:
+                    type: pasalVersion
+                    node: &ref_54
+                      nodeType: pasalVersion
+                      version: *ref_22
+                      state: exists
+                      parentPasalNode:
+                        nodeType: pasal
+                        key: '6'
+                        parentNode: *ref_0
+                    content:
+                      type: ayatSet
+                      node: &ref_55
+                        nodeType: ayatSet
+                        parentPasalVersionNode: *ref_54
+                      elements:
+                        - type: ayat
+                          node: &ref_56
+                            nodeType: ayat
+                            key: 1
+                            parentAyatSetNode: *ref_55
+                          content:
+                            type: text
+                            node:
+                              nodeType: text
+                              textName: text
+                              parentNode: *ref_56
+                            textString: >-
+                              Setiap Pemberi Kerja TKA yang mempekerjakan TKA wajib memiliki RPTKA
+                              yang disahkan oleh Menteri atau pejabat yang ditunjuk.
+                            references: []
+                        - type: ayat
+                          node: &ref_57
+                            nodeType: ayat
+                            key: 2
+                            parentAyatSetNode: *ref_55
+                          content:
+                            type: text
+                            node:
+                              nodeType: text
+                              textName: text
+                              parentNode: *ref_57
+                            textString: >-
+                              Dalam hal Pemberi Kerja TKA akan mempekerjakan TKA yang sedang
+                              dipekerjakan oleh Pemberi Kerja TKA lain, masing-masing Pemberi Kerja
+                              TKA wajib memiliki Pengesahan RPTKA.
+                            references: []
+                        - type: ayat
+                          node: &ref_58
+                            nodeType: ayat
+                            key: 3
+                            parentAyatSetNode: *ref_55
+                          content:
+                            type: text
+                            node:
+                              nodeType: text
+                              textName: text
+                              parentNode: *ref_58
+                            textString: >-
+                              Pemberi Kerja TKA sebagaimana dimaksud pada ayat (1) dan ayat (2)
+                              wajib mempekerjakan TKA sesuai dengan Pengesahan RPTKA.
+                            references:
+                              - start: 57
+                                end: 65
+                                node:
+                                  key: 2
+                                  parentAyatSetNode: &ref_59
+                                    nodeType: ayatSet
+                                    parentPasalVersionNode: *ref_54
+                                  nodeType: ayat
+                              - start: 44
+                                end: 52
+                                node:
+                                  key: 1
+                                  parentAyatSetNode: *ref_59
+                                  nodeType: ayat
+                - type: pasal
+                  node:
+                    nodeType: pasal
+                    key: 7
+                    parentNode: *ref_0
+                  version:
+                    type: pasalVersion
+                    node: &ref_60
+                      nodeType: pasalVersion
+                      version: *ref_22
+                      state: exists
+                      parentPasalNode:
+                        nodeType: pasal
+                        key: '7'
+                        parentNode: *ref_0
+                    content:
+                      type: ayatSet
+                      node: &ref_61
+                        nodeType: ayatSet
+                        parentPasalVersionNode: *ref_60
+                      elements:
+                        - type: ayat
+                          node: &ref_62
+                            nodeType: ayat
+                            key: 1
+                            parentAyatSetNode: *ref_61
+                          content:
+                            type: pointSet
+                            node: &ref_63
+                              nodeType: pointSet
+                              parentNode: *ref_62
+                            description:
+                              type: text
+                              node:
+                                nodeType: text
+                                textName: description
+                                parentNode: *ref_63
+                              textString: 'Pemberi Kerja TKA wajib:'
+                              references: []
+                            elements:
+                              - type: point
+                                node: &ref_64
+                                  nodeType: point
+                                  key: a
+                                  parentPointSetNode: *ref_63
+                                content:
+                                  type: text
+                                  node:
+                                    nodeType: text
+                                    textName: text
+                                    parentNode: *ref_64
+                                  textString: >-
+                                    menunjuk tenaga kerja warga negara Indonesia sebagai Tenaga
+                                    Kerja Pendamping TKA yang dipekerjakan untuk alih teknologi dan
+                                    alih keahlian dari TKA,
+                                  references: []
+                              - type: point
+                                node: &ref_65
+                                  nodeType: point
+                                  key: b
+                                  parentPointSetNode: *ref_63
+                                content:
+                                  type: text
+                                  node:
+                                    nodeType: text
+                                    textName: text
+                                    parentNode: *ref_65
+                                  textString: >-
+                                    melaksanakan pendidikan dan pelatihan kerja bagi Tenaga Kerja
+                                    Pendamping TKA sebagaimana dimaksud pada huruf a sesuai dengan
+                                    kualifikasi jabatan yang diduduki oleh TKA, dan
+                                  references:
+                                    - start: 103
+                                      end: 110
+                                      node:
+                                        key: a
+                                        parentPointSetNode:
+                                          nodeType: pointSet
+                                          parentNode: *ref_60
+                                        nodeType: point
+                              - type: point
+                                node: &ref_66
+                                  nodeType: point
+                                  key: c
+                                  parentPointSetNode: *ref_63
+                                content:
+                                  type: text
+                                  node:
+                                    nodeType: text
+                                    textName: text
+                                    parentNode: *ref_66
+                                  textString: >-
+                                    memulangkan TKA ke negara asalnya setelah perjanjian kerjanya
+                                    berakhir.
+                                  references: []
+                        - type: ayat
+                          node: &ref_67
+                            nodeType: ayat
+                            key: 2
+                            parentAyatSetNode: *ref_61
+                          content:
+                            type: text
+                            node:
+                              nodeType: text
+                              textName: text
+                              parentNode: *ref_67
+                            textString: >-
+                              Selain kewajiban Pemberi Kerja TKA sebagaimana dimaksud pada ayat (1),
+                              Pemberi Kerja TKA wajib memfasilitasi pendidikan dan pelatihan bahasa
+                              Indonesia kepada TKA.
+                            references:
+                              - start: 61
+                                end: 69
+                                node:
+                                  key: 1
+                                  parentAyatSetNode:
+                                    nodeType: ayatSet
+                                    parentPasalVersionNode: *ref_60
+                                  nodeType: ayat
+                        - type: ayat
+                          node: &ref_68
+                            nodeType: ayat
+                            key: 3
+                            parentAyatSetNode: *ref_61
+                          content:
+                            type: pointSet
+                            node: &ref_69
+                              nodeType: pointSet
+                              parentNode: *ref_68
+                            description:
+                              type: text
+                              node:
+                                nodeType: text
+                                textName: description
+                                parentNode: *ref_69
+                              textString: >-
+                                Ketentuan sebagaimana dimaksud pada ayat (1) huruf a, huruf b, dan
+                                ayat (2) tidak berlaku bagi:
+                              references: []
+                            elements:
+                              - type: point
+                                node: &ref_70
+                                  nodeType: point
+                                  key: a
+                                  parentPointSetNode: *ref_69
+                                content:
+                                  type: text
+                                  node:
+                                    nodeType: text
+                                    textName: text
+                                    parentNode: *ref_70
+                                  textString: direksi dan komisaris,
+                                  references: []
+                              - type: point
+                                node: &ref_71
+                                  nodeType: point
+                                  key: b
+                                  parentPointSetNode: *ref_69
+                                content:
+                                  type: text
+                                  node:
+                                    nodeType: text
+                                    textName: text
+                                    parentNode: *ref_71
+                                  textString: kepala kantor perwakilan,
+                                  references: []
+                              - type: point
+                                node: &ref_72
+                                  nodeType: point
+                                  key: c
+                                  parentPointSetNode: *ref_69
+                                content:
+                                  type: text
+                                  node:
+                                    nodeType: text
+                                    textName: text
+                                    parentNode: *ref_72
+                                  textString: . pembina, pengurus, dan pengawas yayasan, dan
+                                  references: []
+                              - type: point
+                                node: &ref_73
+                                  nodeType: point
+                                  key: d
+                                  parentPointSetNode: *ref_69
+                                content:
+                                  type: text
+                                  node:
+                                    nodeType: text
+                                    textName: text
+                                    parentNode: *ref_73
+                                  textString: TKA yang dipekerjakan untuk pekerjaan bersifat sementara.
+                                  references: []
+                - type: pasal
+                  node:
+                    nodeType: pasal
+                    key: 8
+                    parentNode: *ref_0
+                  version:
+                    type: pasalVersion
+                    node: &ref_74
+                      nodeType: pasalVersion
+                      version: *ref_22
+                      state: exists
+                      parentPasalNode:
+                        nodeType: pasal
+                        key: '8'
+                        parentNode: *ref_0
+                    content:
+                      type: ayatSet
+                      node: &ref_75
+                        nodeType: ayatSet
+                        parentPasalVersionNode: *ref_74
+                      elements:
+                        - type: ayat
+                          node: &ref_76
+                            nodeType: ayat
+                            key: 1
+                            parentAyatSetNode: *ref_75
+                          content:
+                            type: text
+                            node:
+                              nodeType: text
+                              textName: text
+                              parentNode: *ref_76
+                            textString: >-
+                              Pemberi Kerja TKA wajib mendaftarkan TKA dalam program jaminan sosial
+                              nasional bagi TKA yang bekerja lebih dari 6 (enam) bulan atau program
+                              asuransi pada perusahaan asuransi bagi TKA yang bekerja kurang dari 6
+                              (enam) bulan.
+                            references: []
+                        - type: ayat
+                          node: &ref_77
+                            nodeType: ayat
+                            key: 2
+                            parentAyatSetNode: *ref_75
+                          content:
+                            type: text
+                            node:
+                              nodeType: text
+                              textName: text
+                              parentNode: *ref_77
+                            textString: >-
+                              Program asuransi bagi TKA yang bekerja kurang dari 6 (enam) bulan
+                              sebagaimana dimaksud pada ayat (1) paling sedikit menjamin pelindungan
+                              untuk jenis risiko kecelakaan kerja.
+                            references:
+                              - start: 92
+                                end: 100
+                                node:
+                                  key: 1
+                                  parentAyatSetNode:
+                                    nodeType: ayatSet
+                                    parentPasalVersionNode: *ref_74
+                                  nodeType: ayat
+          - type: bagian
+            node: &ref_78
+              nodeType: bagian
+              key: 3
+              parentBagianSetNode:
+                nodeType: bagianSet
+                parentBabNode: *ref_20
+            title: Bagian Ketiga Larangan
+            content:
+              type: pasalSet
+              node:
+                nodeType: pasalSet
+                parentNode: *ref_78
+              elements:
+                - type: pasal
+                  node:
+                    nodeType: pasal
+                    key: 9
+                    parentNode: *ref_0
+                  version:
+                    type: pasalVersion
+                    node: &ref_79
+                      nodeType: pasalVersion
+                      version: *ref_22
+                      state: exists
+                      parentPasalNode:
+                        nodeType: pasal
+                        key: '9'
+                        parentNode: *ref_0
+                    content:
+                      type: text
+                      node:
+                        nodeType: text
+                        textName: text
+                        parentNode: *ref_79
+                      textString: Pemberi kerja orang perseorangan dilarang mempekerjakan TKA.
+                      references: []
+                - type: pasal
+                  node:
+                    nodeType: pasal
+                    key: 10
+                    parentNode: *ref_0
+                  version:
+                    type: pasalVersion
+                    node: &ref_80
+                      nodeType: pasalVersion
+                      version: *ref_22
+                      state: exists
+                      parentPasalNode:
+                        nodeType: pasal
+                        key: '10'
+                        parentNode: *ref_0
+                    content:
+                      type: text
+                      node:
+                        nodeType: text
+                        textName: text
+                        parentNode: *ref_80
+                      textString: >-
+                        Pemberi Kerja TKA dilarang mempekerjakan TKA rangkap jabatan dalam
+                        perusahaan yang sama.
+                      references: []
+                - type: pasal
+                  node:
+                    nodeType: pasal
+                    key: 11
+                    parentNode: *ref_0
+                  version:
+                    type: pasalVersion
+                    node: &ref_81
+                      nodeType: pasalVersion
+                      version: *ref_22
+                      state: exists
+                      parentPasalNode:
+                        nodeType: pasal
+                        key: '11'
+                        parentNode: *ref_0
+                    content:
+                      type: ayatSet
+                      node: &ref_82
+                        nodeType: ayatSet
+                        parentPasalVersionNode: *ref_81
+                      elements:
+                        - type: ayat
+                          node: &ref_83
+                            nodeType: ayat
+                            key: 1
+                            parentAyatSetNode: *ref_82
+                          content:
+                            type: text
+                            node:
+                              nodeType: text
+                              textName: text
+                              parentNode: *ref_83
+                            textString: >-
+                              Pemberi Kerja TKA dilarang mempekerjakan TKA pada jabatan yang
+                              mengurusi personalia.
+                            references: []
+                        - type: ayat
+                          node: &ref_84
+                            nodeType: ayat
+                            key: 2
+                            parentAyatSetNode: *ref_82
+                          content:
+                            type: text
+                            node:
+                              nodeType: text
+                              textName: text
+                              parentNode: *ref_84
+                            textString: >-
+                              Jabatan yang mengurusi personalia sebagaimana dimaksud pada ayat (1)
+                              ditetapkan oleh Menteri setelah mendapat masukan dari
+                              kementerian/lembaga terkait.
+                            references:
+                              - start: 60
+                                end: 68
+                                node:
+                                  key: 1
+                                  parentAyatSetNode:
+                                    nodeType: ayatSet
+                                    parentPasalVersionNode: *ref_81
+                                  nodeType: ayat
+    - type: bab
+      node: &ref_85
+        nodeType: bab
+        key: 3
+        parentBabSetNode: *ref_7
+      title: PENGESAHAN RENCANA PENGGUNAAN TENAGA KERJA ASING
+      content:
+        type: bagianSet
+        node:
+          nodeType: bagianSet
+          parentBabNode: *ref_85
+        elements:
+          - type: bagian
+            node: &ref_86
+              nodeType: bagian
+              key: 1
+              parentBagianSetNode:
+                nodeType: bagianSet
+                parentBabNode: *ref_85
+            title: Bagian Kesatu Tata Cara Permohonan Pengesahan Rencana Penggunaan Tenaga Kerja Asing
+            content:
+              type: pasalSet
+              node:
+                nodeType: pasalSet
+                parentNode: *ref_86
+              elements:
+                - type: pasal
+                  node:
+                    nodeType: pasal
+                    key: 12
+                    parentNode: *ref_0
+                  version:
+                    type: pasalVersion
+                    node: &ref_87
+                      nodeType: pasalVersion
+                      version: *ref_22
+                      state: exists
+                      parentPasalNode:
+                        nodeType: pasal
+                        key: '12'
+                        parentNode: *ref_0
+                    content:
+                      type: ayatSet
+                      node: &ref_88
+                        nodeType: ayatSet
+                        parentPasalVersionNode: *ref_87
+                      elements:
+                        - type: ayat
+                          node: &ref_89
+                            nodeType: ayat
+                            key: 1
+                            parentAyatSetNode: *ref_88
+                          content:
+                            type: text
+                            node:
+                              nodeType: text
+                              textName: text
+                              parentNode: *ref_89
+                            textString: >-
+                              Untuk mendapatkan Pengesahan RPTKA, Pemberi Kerja TKA harus mengajukan
+                              permohonan secara daring kepada Menteri atau pejabat yang ditunjuk.
+                            references: []
+                        - type: ayat
+                          node: &ref_90
+                            nodeType: ayat
+                            key: 2
+                            parentAyatSetNode: *ref_88
+                          content:
+                            type: pointSet
+                            node: &ref_91
+                              nodeType: pointSet
+                              parentNode: *ref_90
+                            description:
+                              type: text
+                              node:
+                                nodeType: text
+                                textName: description
+                                parentNode: *ref_91
+                              textString: >-
+                                Permohonan Pengesahan RPTKA sebagaimana dimaksud pada ayat (1)
+                                disampaikan oleh Pemberi Kerja TKA yang memuat paling sedikit:
+                              references: []
+                            elements:
+                              - type: point
+                                node: &ref_92
+                                  nodeType: point
+                                  key: a
+                                  parentPointSetNode: *ref_91
+                                content:
+                                  type: text
+                                  node:
+                                    nodeType: text
+                                    textName: text
+                                    parentNode: *ref_92
+                                  textString: identitas Pemberi Kerja TKA,
+                                  references: []
+                              - type: point
+                                node: &ref_93
+                                  nodeType: point
+                                  key: b
+                                  parentPointSetNode: *ref_91
+                                content:
+                                  type: text
+                                  node:
+                                    nodeType: text
+                                    textName: text
+                                    parentNode: *ref_93
+                                  textString: 'alasan penggunaan TKA:'
+                                  references: []
+                              - type: point
+                                node: &ref_94
+                                  nodeType: point
+                                  key: c
+                                  parentPointSetNode: *ref_91
+                                content:
+                                  type: text
+                                  node:
+                                    nodeType: text
+                                    textName: text
+                                    parentNode: *ref_94
+                                  textString: jabatan atau kedudukan TKA dalam struktur organisasi perusahaan,
+                                  references: []
+                              - type: point
+                                node: &ref_95
+                                  nodeType: point
+                                  key: d
+                                  parentPointSetNode: *ref_91
+                                content:
+                                  type: text
+                                  node:
+                                    nodeType: text
+                                    textName: text
+                                    parentNode: *ref_95
+                                  textString: jumlah TKA,
+                                  references: []
+                              - type: point
+                                node: &ref_96
+                                  nodeType: point
+                                  key: e
+                                  parentPointSetNode: *ref_91
+                                content:
+                                  type: text
+                                  node:
+                                    nodeType: text
+                                    textName: text
+                                    parentNode: *ref_96
+                                  textString: jangka waktu penggunaan TKA,
+                                  references: []
+                              - type: point
+                                node: &ref_97
+                                  nodeType: point
+                                  key: f
+                                  parentPointSetNode: *ref_91
+                                content:
+                                  type: text
+                                  node:
+                                    nodeType: text
+                                    textName: text
+                                    parentNode: *ref_97
+                                  textString: lokasi kerja TKA,
+                                  references: []
+                              - type: point
+                                node: &ref_98
+                                  nodeType: point
+                                  key: g
+                                  parentPointSetNode: *ref_91
+                                content:
+                                  type: text
+                                  node:
+                                    nodeType: text
+                                    textName: text
+                                    parentNode: *ref_98
+                                  textString: identitas Tenaga Kerja Pendamping TKA, dan
+                                  references: []
+                              - type: point
+                                node: &ref_99
+                                  nodeType: point
+                                  key: h
+                                  parentPointSetNode: *ref_91
+                                content:
+                                  type: text
+                                  node:
+                                    nodeType: text
+                                    textName: text
+                                    parentNode: *ref_99
+                                  textString: rencana penyerapan tenaga kerja Indonesia setiap tahun.
+                                  references: []
+                        - type: ayat
+                          node: &ref_100
+                            nodeType: ayat
+                            key: 3
+                            parentAyatSetNode: *ref_88
+                          content:
+                            type: pointSet
+                            node: &ref_101
+                              nodeType: pointSet
+                              parentNode: *ref_100
+                            description:
+                              type: text
+                              node:
+                                nodeType: text
+                                textName: description
+                                parentNode: *ref_101
+                              textString: >-
+                                Permohonan Pengesahan RPTKA sebagaimana dimaksud pada ayat (2)
+                                disampaikan oleh Pemberi Kerja TKA dengan melampirkan dokumen paling
+                                sedikit:
+                              references: []
+                            elements:
+                              - type: point
+                                node: &ref_102
+                                  nodeType: point
+                                  key: a
+                                  parentPointSetNode: *ref_101
+                                content:
+                                  type: text
+                                  node:
+                                    nodeType: text
+                                    textName: text
+                                    parentNode: *ref_102
+                                  textString: surat permohonan,
+                                  references: []
+                              - type: point
+                                node: &ref_103
+                                  nodeType: point
+                                  key: b
+                                  parentPointSetNode: *ref_101
+                                content:
+                                  type: text
+                                  node:
+                                    nodeType: text
+                                    textName: text
+                                    parentNode: *ref_103
+                                  textString: nomor induk berusaha dan/atau izin usaha Pemberi Kerja TKA,
+                                  references: []
+                              - type: point
+                                node: &ref_104
+                                  nodeType: point
+                                  key: c
+                                  parentPointSetNode: *ref_101
+                                content:
+                                  type: text
+                                  node:
+                                    nodeType: text
+                                    textName: text
+                                    parentNode: *ref_104
+                                  textString: >-
+                                    akta dan keputusan pengesahan pendirian dan/atau perubahan dari
+                                    instansi yang berwenang:
+                                  references: []
+                              - type: point
+                                node: &ref_105
+                                  nodeType: point
+                                  key: d
+                                  parentPointSetNode: *ref_101
+                                content:
+                                  type: text
+                                  node:
+                                    nodeType: text
+                                    textName: text
+                                    parentNode: *ref_105
+                                  textString: bukti wajib lapor ketenagakerjaan di perusahaan, |
+                                  references: []
+                              - type: point
+                                node: &ref_106
+                                  nodeType: point
+                                  key: e
+                                  parentPointSetNode: *ref_101
+                                content:
+                                  type: text
+                                  node:
+                                    nodeType: text
+                                    textName: text
+                                    parentNode: *ref_106
+                                  textString: rancangan perjanjian kerja atau perjanjian lain,
+                                  references: []
+                              - type: point
+                                node: &ref_107
+                                  nodeType: point
+                                  key: f
+                                  parentPointSetNode: *ref_101
+                                content:
+                                  type: text
+                                  node:
+                                    nodeType: text
+                                    textName: text
+                                    parentNode: *ref_107
+                                  textString: bagan struktur organisasi perusahaan,
+                                  references: []
+                              - type: point
+                                node: &ref_108
+                                  nodeType: point
+                                  key: g
+                                  parentPointSetNode: *ref_101
+                                content:
+                                  type: text
+                                  node:
+                                    nodeType: text
+                                    textName: text
+                                    parentNode: *ref_108
+                                  textString: surat pernyataan untuk penunjukan Tenaga Kerja Pendamping TKA,
+                                  references: []
+                              - type: point
+                                node: &ref_109
+                                  nodeType: point
+                                  key: h
+                                  parentPointSetNode: *ref_101
+                                content:
+                                  type: text
+                                  node:
+                                    nodeType: text
+                                    textName: text
+                                    parentNode: *ref_109
+                                  textString: >-
+                                    surat pernyataan untuk melaksanakan pendidikan dan pelatihan
+                                    kerja bagi tenaga kerja Indonesia sesuai dengan kualifikasi
+                                    jabatan yang diduduki oleh TKA, dan
+                                  references: []
+                              - type: point
+                                node: &ref_110
+                                  nodeType: point
+                                  key: i
+                                  parentPointSetNode: *ref_101
+                                content:
+                                  type: text
+                                  node:
+                                    nodeType: text
+                                    textName: text
+                                    parentNode: *ref_110
+                                  textString: >-
+                                    surat pernyataan untuk memfasilitasi pendidikan dan pelatihan
+                                    bahasa Indonesia kepada TKA.
+                                  references: []
+                        - type: ayat
+                          node: &ref_111
+                            nodeType: ayat
+                            key: 4
+                            parentAyatSetNode: *ref_88
+                          content:
+                            type: text
+                            node:
+                              nodeType: text
+                              textName: text
+                              parentNode: *ref_111
+                            textString: >-
+                              Dalam hal Pemberi Kerja TKA telah siap menyampaikan data calon TKA
+                              yang akan dipekerjakan maka penyampaian data calon TKA dapat dilakukan
+                              sekaligus pada saat permohonan Pengesahan RPTKA.
+                            references: []
+                - type: pasal
+                  node:
+                    nodeType: pasal
+                    key: 13
+                    parentNode: *ref_0
+                  version:
+                    type: pasalVersion
+                    node: &ref_112
+                      nodeType: pasalVersion
+                      version: *ref_22
+                      state: exists
+                      parentPasalNode:
+                        nodeType: pasal
+                        key: '13'
+                        parentNode: *ref_0
+                    content:
+                      type: ayatSet
+                      node: &ref_113
+                        nodeType: ayatSet
+                        parentPasalVersionNode: *ref_112
+                      elements:
+                        - type: ayat
+                          node: &ref_114
+                            nodeType: ayat
+                            key: 1
+                            parentAyatSetNode: *ref_113
+                          content:
+                            type: pointSet
+                            node: &ref_115
+                              nodeType: pointSet
+                              parentNode: *ref_114
+                            description:
+                              type: text
+                              node:
+                                nodeType: text
+                                textName: description
+                                parentNode: *ref_115
+                              textString: >-
+                                Pengesahan RPTKA sebagaimana dimaksud dalam Pasal 16 tidak berlaku
+                                bagi:
+                              references: []
+                            elements:
+                              - type: point
+                                node: &ref_116
+                                  nodeType: point
+                                  key: a
+                                  parentPointSetNode: *ref_115
+                                content:
+                                  type: text
+                                  node:
+                                    nodeType: text
+                                    textName: text
+                                    parentNode: *ref_116
+                                  textString: >-
+                                    direksi atau komisaris dengan kepemilikan saham tertentu, atau
+                                    pemegang saham sesuai dengan ketentuan peraturan perundang-
+                                    undangan,
+                                  references: []
+                              - type: point
+                                node: &ref_117
+                                  nodeType: point
+                                  key: b
+                                  parentPointSetNode: *ref_115
+                                content:
+                                  type: text
+                                  node:
+                                    nodeType: text
+                                    textName: text
+                                    parentNode: *ref_117
+                                  textString: >-
+                                    pegawai diplomatik dan konsuler pada kantor perwakilan negara
+                                    asing, atau
+                                  references: []
+                              - type: point
+                                node: &ref_118
+                                  nodeType: point
+                                  key: c
+                                  parentPointSetNode: *ref_115
+                                content:
+                                  type: text
+                                  node:
+                                    nodeType: text
+                                    textName: text
+                                    parentNode: *ref_118
+                                  textString: >-
+                                    TKA yang dibutuhkan oleh Pemberi Kerja TKA pada jenis kegiatan
+                                    produksi yang terhenti karena keadaan darurat, vokasi,
+                                    perusahaan rintisan (start-up) berbasis teknologi, kunjungan
+                                    bisnis, dan penelitian untuk jangka waktu tertentu.
+                                  references: []
+                        - type: ayat
+                          node: &ref_119
+                            nodeType: ayat
+                            key: 2
+                            parentAyatSetNode: *ref_113
+                          content:
+                            type: text
+                            node:
+                              nodeType: text
+                              textName: text
+                              parentNode: *ref_119
+                            textString: >-
+                              Untuk mempekerjakan TKA pada jenis kegiatan perusahaan rintisan
+                              (start-up) berbasis teknologi dan vokasi untuk jangka waktu tertentu
+                              sebagaimana dimaksud pada ayat (1) huruf c, Pemberi Kerja TKA harus
+                              menyampaikan data calon TKA secara daring kepada Menteri atau pejabat
+                              yang ditunjuk.
+                            references:
+                              - start: 159
+                                end: 167
+                                node:
+                                  key: 1
+                                  parentAyatSetNode:
+                                    nodeType: ayatSet
+                                    parentPasalVersionNode: *ref_112
+                                  nodeType: ayat
+                              - start: 168
+                                end: 175
+                                node:
+                                  key: c
+                                  parentPointSetNode:
+                                    nodeType: pointSet
+                                    parentNode: *ref_112
+                                  nodeType: point
+                        - type: ayat
+                          node: &ref_120
+                            nodeType: ayat
+                            key: 3
+                            parentAyatSetNode: *ref_113
+                          content:
+                            type: text
+                            node:
+                              nodeType: text
+                              textName: text
+                              parentNode: *ref_120
+                            textString: >-
+                              Jabatan pada kegiatan perusahaan rintisan (start- up) berbasis
+                              teknologi dan vokasi sebagaimana dimaksud pada ayat (2) ditetapkan
+                              oleh Menteri setelah mendapatkan masukan dari kementerian/lembaga
+                              terkait.
+                            references:
+                              - start: 110
+                                end: 118
+                                node:
+                                  key: 2
+                                  parentAyatSetNode:
+                                    nodeType: ayatSet
+                                    parentPasalVersionNode: *ref_112
+                                  nodeType: ayat
+                        - type: ayat
+                          node: &ref_121
+                            nodeType: ayat
+                            key: 4
+                            parentAyatSetNode: *ref_113
+                          content:
+                            type: text
+                            node:
+                              nodeType: text
+                              textName: text
+                              parentNode: *ref_121
+                            textString: >-
+                              Menteri atau pejabat yang ditunjuk sebagaimana dimaksud pada ayat (2)
+                              menyampaikan data calon TKA secara daring kepada menteri yang
+                              menyelenggarakan urusan pemerintahan di bidang hukum dan hak asasi
+                              manusia atau pejabat yang ditunjuk sebagai rekomendasi untuk
+                              mendapatkan visa dan izin tinggal dalam rangka bekerja.
+                            references:
+                              - start: 61
+                                end: 69
+                                node:
+                                  key: 2
+                                  parentAyatSetNode:
+                                    nodeType: ayatSet
+                                    parentPasalVersionNode: *ref_112
+                                  nodeType: ayat
+                        - type: ayat
+                          node: &ref_122
+                            nodeType: ayat
+                            key: 5
+                            parentAyatSetNode: *ref_113
+                          content:
+                            type: text
+                            node:
+                              nodeType: text
+                              textName: text
+                              parentNode: *ref_122
+                            textString: >-
+                              Jangka waktu bagi TKA yang bekerja pada jenis kegiatan perusahaan
+                              rintisan (start-up) berbasis teknologi dan vokasi sebagaimana dimaksud
+                              pada ayat (3) diberikan paling lama 3 (tiga) bulan.
+                            references:
+                              - start: 142
+                                end: 150
+                                node:
+                                  key: 3
+                                  parentAyatSetNode:
+                                    nodeType: ayatSet
+                                    parentPasalVersionNode: *ref_112
+                                  nodeType: ayat
+                        - type: ayat
+                          node: &ref_123
+                            nodeType: ayat
+                            key: 6
+                            parentAyatSetNode: *ref_113
+                          content:
+                            type: text
+                            node:
+                              nodeType: text
+                              textName: text
+                              parentNode: *ref_123
+                            textString: >-
+                              Pemberi Kerja TKA yang akan mempekerjakan TKA pada jenis kegiatan
+                              perusahaan rintisan (start-up) berbasis teknologi dan vokasi melebihi
+                              jangka waktu sebagaimana dimaksud pada ayat (5) wajib memiliki
+                              Pengesahan RPTKA.
+                            references:
+                              - start: 175
+                                end: 183
+                                node:
+                                  key: 5
+                                  parentAyatSetNode:
+                                    nodeType: ayatSet
+                                    parentPasalVersionNode: *ref_112
+                                  nodeType: ayat
+                        - type: ayat
+                          node: &ref_124
+                            nodeType: ayat
+                            key: 7
+                            parentAyatSetNode: *ref_113
+                          content:
+                            type: text
+                            node:
+                              nodeType: text
+                              textName: text
+                              parentNode: *ref_124
+                            textString: >-
+                              Dalam hal jangka waktu sebagaimana dimaksud pada ayat (5) telah
+                              berakhir dan Pemberi Kerja TKA tetap akan mempekerjakan TKA tersebut,
+                              Pemberi Kerja TKA harus mengajukan permohonan Pengesahan RPTKA.
+                            references:
+                              - start: 49
+                                end: 57
+                                node:
+                                  key: 5
+                                  parentAyatSetNode:
+                                    nodeType: ayatSet
+                                    parentPasalVersionNode: *ref_112
+                                  nodeType: ayat
+                        - type: ayat
+                          node: &ref_125
+                            nodeType: ayat
+                            key: 8
+                            parentAyatSetNode: *ref_113
+                          content:
+                            type: text
+                            node:
+                              nodeType: text
+                              textName: text
+                              parentNode: *ref_125
+                            textString: >-
+                              Permohonan Pengesahan RPTKA sebagaimana dimaksud pada ayat (7)
+                              diajukan paling lambat 2 (dua) minggu sebelum berakhirnya jangka waktu
+                              jabatan TKA sebagaimana dimaksud pada ayat (5). Pasal 20 TKA yang
+                              dibutuhkan oleh Pemberi Kerja TKA pada jenis kegiatan produksi yang
+                              terhenti karena keadaan darurat, kunjungan bisnis, dan penelitian
+                              sebagaimana dimaksud dalam Pasal 19 ayat (1) huruf c dapat masuk dan
+                              tinggal di wilayah Indonesia dengan menggunakan visa dan izin tinggal
+                              sesuai dengan ketentuan peraturan perundang-undangan di bidang
+                              keimigrasian.
+                            references:
+                              - start: 361
+                                end: 378
+                                node:
+                                  parentAyatSetNode:
+                                    nodeType: ayatSet
+                                    parentPasalVersionNode: *ref_112
+                                  key: 1
+                                  nodeType: ayat
+                              - start: 172
+                                end: 180
+                                node:
+                                  key: 5
+                                  parentAyatSetNode: &ref_126
+                                    nodeType: ayatSet
+                                    parentPasalVersionNode: *ref_112
+                                  nodeType: ayat
+                              - start: 54
+                                end: 62
+                                node:
+                                  key: 7
+                                  parentAyatSetNode: *ref_126
+                                  nodeType: ayat
+                              - start: 379
+                                end: 386
+                                node:
+                                  key: c
+                                  parentPointSetNode:
+                                    nodeType: pointSet
+                                    parentNode: *ref_112
+                                  nodeType: point
+                              - start: 182
+                                end: 190
+                                node:
+                                  key: 20
+                                  parentNode: *ref_0
+                                  nodeType: pasal
+          - type: bagian
+            node: &ref_127
+              nodeType: bagian
+              key: 2
+              parentBagianSetNode:
+                nodeType: bagianSet
+                parentBabNode: *ref_85
+            title: >-
+              Bagian Kedua Perpanjangan dan Perubahan Pengesahan Rencana Penggunaan Tenaga Kerja
+              Asing Pasal 21 (1) Permohonan perpanjangan Pengesahan RPTKA diajukan oleh Pemberi
+              Kerja TKA secara daring kepada Menteri atau pejabat yang ditunjuk. (2) Permohonan
+              perpanjangan Pengesahan RPTKA sebagaimana dimaksud pada ayat (1) diajukan paling
+              lambat 30 (tiga puluh) hari kerja sebelum jangka waktu berakhir. (3) Permohonan
+              perpanjangan Pengesahan RPTKA sebagaimana dimaksud pada ayat (1) disampaikan oleh
+              Pemberi Kerja TKA dengan memuat paling sedikit: a. identitas Pemberi Kerja TKA, b.
+              alasan... b. alasan perpanjangan Pengesahan RPTKA, c. jabatan atau kedudukan TKA dalam
+              struktur organisasi perusahaan, d. jumlah TKA, e. jangka waktu penggunaan TKA, f.
+              lokasi kerja TKA, g. identitas Tenaga Kerja Pendamping TKA, dan h. realisasi
+              penyerapan tenaga kerja Indonesia. (4) Permohonan perpanjangan Pengesahan RPTKA
+              sebagaimana dimaksud pada ayat (3) disampaikan oleh Pemberi Kerja TKA dengan
+              melampirkan dokumen paling sedikit: a. surat permohonan perpanjangan RPTKA, b.
+              Pengesahan RPTKA yang masih berlaku, Cc. perjanjian kerja atau perjanjian lain, d.
+              paspor TKA yang masih berlaku: e. kepesertaan program jaminan sosial, f. nomor pokok
+              wajib pajak TKA dan Pemberi Kerja TKA, dan g. laporan realisasi pelaksanaan pendidikan
+              dan pelatihan kerja bagi tenaga kerja Indonesia sesuai dengan kualifikasi jabatan yang
+              diduduki oleh TKA. (S5) Dalam hal permohonan perpanjangan Pengesahan RPTKA dinyatakan
+              lengkap dan benar, Menteri atau pejabat yang ditunjuk menerbitkan Pengesahan RPTKA
+              perpanjangan paling lama 2 (dua) hari kerja. (6) Jangka waktu setiap Pengesahan RPTKA
+              perpanjangan sebagaimana dimaksud pada ayat (5) diberikan paling lama 2 (dua) tahun
+              dan Pengesahan RPTKA perpanjangan di KEK diberikan paling lama 5 (lima) tahun. (7)
+              Pengesahan RPTKA perpanjangan digunakan sebagai rekomendasi untuk mendapatkan izin
+              tinggal dalam rangka bekerja bagi TKA. (8) Menteri atau pejabat yang ditunjuk
+              sebagaimana dimaksud pada ayat (5) menyampaikan data TKA yang akan dipekerjakan secara
+              daring kepada menteri yang menyelenggarakan urusan pemerintahan di bidang hukum dan
+              hak asasi manusia atau pejabat yang ditunjuk sebagai rekomendasi untuk mendapatkan
+              izin tinggal dalam rangka bekerja. Pasal 22 (1) Pemberi Kerja TKA dapat mengajukan
+              permohonan perubahan Pengesahan RPTKA secara daring kepada Menteri atau pejabat yang
+              ditunjuk mengenai: a. alamat Pemberi Kerja TKA, b. identitas TKA, c. lokasi kerja TKA:
+              dan/atau d. nama Tenaga Kerja Pendamping TKA yang dipekerjakan. (2) Perubahan
+              Pengesahan RPTKA sebagaimana dimaksud pada ayat (1) diterbitkan oleh Menteri atau
+              pejabat yang ditunjuk paling lama 2 (dua) hari kerja sejak permohonan dinyatakan
+              lengkap dan benar.
+            content:
+              type: pasalSet
+              node:
+                nodeType: pasalSet
+                parentNode: *ref_127
+              elements: []
+          - type: bagian
+            node: &ref_128
+              nodeType: bagian
+              key: 3
+              parentBagianSetNode:
+                nodeType: bagianSet
+                parentBabNode: *ref_85
+            title: >-
+              Bagian Ketiga Dana Kompensasi Penggunaan Tenaga Kerja Asing Pasal 23 (1) Pemberi Kerja
+              TKA wajib membayar DKPTKA atas setiap TKA yang dipekerjakan. (2) Pembayaran DKPTKA
+              dilakukan sesuai dengan jangka waktu TKA bekerja di wilayah Indonesia. (3) Pembayaran
+              DKPTKA sebagaimana dimaksud pada ayat (1) dibayarkan oleh Pemberi Kerja TKA setelah
+              menerima kode billing pembayaran DKPTKA dari Menteri atau pejabat yang ditunjuk. (4)
+              Kode billing pembayaran DKPTKA sebagaimana dimaksud pada ayat (3) disampaikan kepada
+              Pemberi Kerja TKA setelah data calon TKA dan dokumen dinyatakan lengkap oleh Menteri
+              atau pejabat yang ditunjuk. (S5) Pembayaran DKPTKA merupakan persyaratan Pengesahan
+              RPTKA. (6) Ketentuan mengenai besaran dan penggunaan DKPTKA sebagaimana dimaksud pada
+              ayat (1) dilaksanakan sesuai dengan ketentuan peraturan perundang-undangan. Pasal 24
+              (1) Pembayaran DKPTKA oleh Pemberi Kerja TKA merupakan penerimaan negara bukan pajak
+              atau pendapatan daerah berupa retribusi daerah. (2) DKPTKA sebagaimana dimaksud pada
+              ayat (1) menjadi: a. penerimaan negara bukan pajak untuk Pengesahan RPTKA baru,
+              Pengesahan RPTKA perpanjangan bagi TKA yang bekerja di lokasi lebih dari 1 (satu)
+              provinsi, dan Pengesahan RPTKA KEK, b. pendapatan daerah provinsi untuk Pengesahan
+              RPTKA perpanjangan bagi TKA yang bekerja di lokasi lebih dari 1 (satu) kabupaten/kota
+              dalam 1 (satu) provinsi, dan c. pendapatan daerah kabupaten/kota untuk Pengesahan
+              RPTKA perpanjangan bagi TKA yang bekerja di lokasi dalam 1 (satu) kabupaten/kota. (3)
+              Pembayaran DKPTKA sebagaimana dimaksud pada ayat (1) untuk penerimaan negara bukan
+              pajak dibayarkan melalui bank persepsi yang ditunjuk oleh Menteri dan untuk pendapatan
+              daerah dibayarkan melalui bank yang ditunjuk oleh Pemerintah Daerah. Pasal 25 (1)
+              Kewajiban membayar DKPTKA tidak berlaku bagi: a. instansi Pemerintah: b. perwakilan
+              negara asing, c. badan internasional: d. lembaga sosial, e. lembaga keagamaan, dan f.
+              jabatan tertentu di lembaga pendidikan. (2) Jabatan tertentu di lembaga pendidikan
+              yang dibebaskan pembayaran DKPTKA sebagaimana dimaksud pada ayat (1) huruf f
+              ditetapkan oleh Menteri setelah mendapatkan masukan dari kementerian yang
+              menyelenggarakan urusan pemerintahan di bidang pendidikan. Pasal 26 Ketentuan lebih
+              lanjut mengenai tata cara permohonan, perpanjangan, perubahan Pengesahan RPTKA, dan
+              pembayaran DKPTKA sebagaimana dimaksud dalam Pasal 12 sampai dengan Pasal 25 diatur
+              dengan Peraturan Menteri.
+            content:
+              type: pasalSet
+              node:
+                nodeType: pasalSet
+                parentNode: *ref_128
+              elements: []
+    - type: bab
+      node: &ref_129
+        nodeType: bab
+        key: 4
+        parentBabSetNode: *ref_7
+      title: >-
+        IZIN TINGGAL TENAGA KERJA ASING Pasal 27 (1) Setiap TKA yang dipekerjakan oleh Pemberi Kerja
+        TKA di Indonesia wajib memiliki izin tinggal. (2) Jenis dan tata cara pemberian izin tinggal
+        sebagaimana dimaksud pada ayat (1) sesuai dengan ketentuan peraturan perundang-undangan di
+        bidang keimigrasian.
+      content:
+        type: pasalSet
+        node:
+          nodeType: pasalSet
+          parentNode: *ref_129
+        elements: []
+    - type: bab
+      node: &ref_130
+        nodeType: bab
+        key: 5
+        parentBabSetNode: *ref_7
+      title: >-
+        PENDIDIKAN DAN PELATIHAN KERJA BAGI TENAGA KERJA PENDAMPING DAN TENAGA KERJA ASING Pasal 28
+        (1) Penunjukan tenaga kerja Indonesia sebagai Tenaga Kerja Pendamping TKA dilaksanakan untuk
+        alih teknologi dan alih keahlian. (2) Alih teknologi dan alih keahlian sebagaimana dimaksud
+        pada ayat (1) dilaksanakan melalui pendidikan dan/atau pelatihan kerja kepada Tenaga Kerja
+        Pendamping TKA sehingga memiliki kemampuan untuk mengimplementasikan teknologi yang
+        dipergunakan oleh TKA dalam melaksanakan pekerjaan. Pasal 29 (1) Pendidikan dan pelatihan
+        kerja bagi Tenaga Kerja Pendamping TKA dapat dilaksanakan di dalam dan/atau di luar negeri.
+        (2) Tenaga Kerja Pendamping TKA yang mengikuti pendidikan dan pelatihan kerja sebagaimana
+        dimaksud pada ayat (1) mendapat sertifikat pendidikan dan pelatihan kerja dan/atau
+        sertifikat kompetensi sesuai dengan ketentuan peraturan perundang-undangan. (3) Pelaksanaan
+        pendidikan dan pelatihan kerja bagi Tenaga Kerja Pendamping TKA di dalam negeri sebagaimana
+        dimaksud pada ayat (1) dilaksanakan sesuai dengan ketentuan peraturan perundang- undangan.
+        Pasal 30 Pendidikan dan pelatihan bahasa Indonesia kepada TKA dapat dilaksanakan oleh
+        Pemberi Kerja TKA atau bekerja sama dengan lembaga pendidikan atau lembaga pelatihan bahasa
+        Indonesia. Pasal 31 Ketentuan lebih lanjut mengenai pelaksanaan pendidikan dan pelatihan
+        kerja bagi Tenaga Kerja Pendamping TKA dan TKA sebagaimana dimaksud dalam Pasal 28 sampai
+        dengan Pasal 30 diatur dengan Peraturan Menteri.
+      content:
+        type: pasalSet
+        node:
+          nodeType: pasalSet
+          parentNode: *ref_130
+        elements: []
+    - type: bab
+      node: &ref_131
+        nodeType: bab
+        key: 6
+        parentBabSetNode: *ref_7
+      title: PELAPORAN, PEMBINAAN, DAN PENGAWASAN
+      content:
+        type: bagianSet
+        node:
+          nodeType: bagianSet
+          parentBabNode: *ref_131
+        elements:
+          - type: bagian
+            node: &ref_132
+              nodeType: bagian
+              key: 1
+              parentBagianSetNode:
+                nodeType: bagianSet
+                parentBabNode: *ref_131
+            title: >-
+              Bagian Kesatu Pelaporan Pasal 32 (1) Pemberi Kerja TKA wajib melaporkan setiap 1
+              (satu) tahun kepada Menteri atau pejabat yang ditunjuk untuk pelaksanaan: a.
+              penggunaan TKA, b. pendidikan dan pelatihan kerja bagi Tenaga Kerja Pendamping TKA,
+              dan c. alih teknologi dan alih keahlian dari TKA kepada Tenaga Kerja Pendamping TKA.
+              (2) Pemberi Kerja TKA untuk pekerjaan yang bersifat sementara wajib melaporkan
+              pelaksanaan penggunaan TKA sebagaimana dimaksud pada ayat (1) huruf a setelah
+              berakhirnya perjanjian kerja kepada Menteri atau pejabat yang ditunjuk. (3) Pemberi
+              Kerja TKA wajib melaporkan kepada Menteri atau pejabat yang ditunjuk untuk perjanjian
+              kerja TKA yang telah berakhir atau diakhiri sebelum jangka waktu perjanjian kerja
+              berakhir. Pasal 33 Menteri atau pejabat yang ditunjuk menyediakan data TKA yang
+              dipekerjakan oleh Pemberi Kerja TKA secara daring dan dapat diakses oleh dinas yang
+              menyelenggarakan urusan pemerintahan di bidang ketenagakerjaan provinsi dan
+              kabupaten/kota sesuai dengan lokasi kerja TKA melalui sistem informasi
+              ketenagakerjaan.
+            content:
+              type: pasalSet
+              node:
+                nodeType: pasalSet
+                parentNode: *ref_132
+              elements: []
+          - type: bagian
+            node: &ref_133
+              nodeType: bagian
+              key: 2
+              parentBagianSetNode:
+                nodeType: bagianSet
+                parentBabNode: *ref_131
+            title: >-
+              Bagian Kedua Pembinaan Pasal 34 Pembinaan penggunaan TKA dilakukan oleh kementerian
+              yang menyelenggarakan urusan pemerintahan di bidang ketenagakerjaan dan dinas yang
+              menyelenggarakan urusan pemerintahan di bidang ketenagakerjaan provinsi dan
+              kabupaten/kota sesuai dengan kewenangannya.
+            content:
+              type: pasalSet
+              node:
+                nodeType: pasalSet
+                parentNode: *ref_133
+              elements: []
+          - type: bagian
+            node: &ref_134
+              nodeType: bagian
+              key: 3
+              parentBagianSetNode:
+                nodeType: bagianSet
+                parentBabNode: *ref_131
+            title: >-
+              Bagian Ketiga Pengawasan Pasal 35 (1) Pengawasan penggunaan TKA dilaksanakan oleh: a.
+              Pengawas Ketenagakerjaan pada kementerian yang menyelenggarakan urusan pemerintahan di
+              bidang ketenagakerjaan dan/atau dinas yang menyelenggarakan urusan pemerintahan di
+              bidang ketenagakerjaan provinsi, dan/atau b. Pejabat imigrasi yang bertugas di bidang
+              pengawasan dan penindakan keimigrasian, secara terkoordinasi sesuai dengan lingkup
+              tugas dan kewenangan masing-masing. (2) Pengawas Ketenagakerjaan sebagaimana dimaksud
+              pada ayat (1) huruf a melakukan pengawasan pada norma penggunaan TKA sesuai dengan
+              ketentuan peraturan perundang-undangan di bidang ketenagakerjaan.
+            content:
+              type: pasalSet
+              node:
+                nodeType: pasalSet
+                parentNode: *ref_134
+              elements: []
+    - type: bab
+      node: &ref_135
+        nodeType: bab
+        key: 7
+        parentBabSetNode: *ref_7
+      title: >-
+        SANKSI ADMINISTRATIF Pasal 36 (1) Pemberi Kerja TKA yang melanggar ketentuan Pasal 6 ayat
+        (1), Pasal 6 ayat (2), Pasal 6 ayat (3), Pasal 7 ayat (2), Pasal 8 ayat (1), Pasal 10, Pasal
+        11 ayat (1), Pasal 19 ayat (6), Pasal 23 ayat (1), Pasal 32 ayat (1), Pasal 32 ayat (2),
+        dan/atau Pasal 32 ayat (3), dikenai sanksi administratif berupa: a. denda, b. penghentian
+        sementara proses permohonan Pengesahan RPTKA, dan/atau Cc. pencabutan Pengesahan RPTKA. (2)
+        Sanksi administratif sebagaimana dimaksud pada ayat (1) diberikan oleh Menteri atau pejabat
+        yang ditunjuk. (3) Menteri atau pejabat yang ditunjuk sebagaimana dimaksud pada ayat (2)
+        dalam mengenakan sanksi administratif berdasarkan surat pemberitahuan pengenaan sanksi
+        administratif dari Pengawas Ketenagakerjaan. Pasal 37 (1) Sanksi denda sebagaimana dimaksud
+        dalam Pasal 36 ayat (1) huruf a dikenakan kepada Pemberi Kerja TKA yang melanggar ketentuan
+        tidak memiliki Pengesahan RPTKA sebagaimana dimaksud dalam Pasal 6 ayat (1), Pasal 6 ayat
+        (2), dan Pasal 19 ayat (6). (2) Besaran sanksi denda sebagaimana dimaksud pada ayat (1)
+        dikenakan per jabatan per orang per bulan dengan ketentuan sebagai berikut: a. 1 (satu)
+        bulan dikenai sanksi denda sebesar Rp6.000.000,00 (enam juta rupiah): b. 2 (dua) bulan
+        dikenai sanksi denda sebesar Rp12.000.000,00 (dua belas juta rupiah): c. 3 (tiga) bulan
+        dikenai sanksi denda sebesar Rp18.000.000,00 (delapan belas juta rupiah), d. 4 (empat) bulan
+        dikenai sanksi denda sebesar Rp24.000.000,00 (dua puluh empat juta rupiah), e. 5 (lima)
+        bulan dikenai sanksi denda sebesar Rp30.000.000,00 (tiga puluh juta rupiah), atau f. 6
+        (enam) bulan dikenai sanksi denda sebesar Rp36.000.000,00 (tiga puluh enam juta rupiah). (3)
+        Penghitungan besaran sanksi denda sebagaimana dimaksud pada ayat (2) dikenakan kepada
+        Pemberi Kerja TKA dimulai sejak TKA memasuki wilayah Indonesia sampai dengan 6 (enam) bulan.
+        (4) Sanksi denda sebagaimana dimaksud pada ayat (2) dibayarkan ke kas negara. (5) Pembayaran
+        sanksi denda sebagaimana dimaksud pada ayat (2) dilakukan oleh Pemberi Kerja TKA paling lama
+        2 (dua) minggu sejak diterima atau diumumkan pengenaan sanksi denda. Pasal 38 (1) Pemberi
+        Kerja TKA yang tidak membayar sanksi denda dalam jangka waktu paling lama 2 (dua) minggu
+        sebagaimana dimaksud dalam Pasal 37 ayat (5) dikenakan sanksi penghentian sementara proses
+        permohonan Pengesahan RPTKA. (2) Pemberi Kerja TKA sebagaimana dimaksud pada ayat (l) tetap
+        berkewajiban untuk membayar sanksi denda dan denda keterlambatan sebesar 24» (dua persen)
+        per bulan dari jumlah sanksi denda yang harus dibayarkan. (3) Denda keterlambatan
+        sebagaimana dimaksud pada ayat (2) dikenakan paling lama 6 (enam) bulan. (4) Apabila dalam
+        jangka waktu 6 (enam) bulan sejak batas waktu pembayaran Pemberi Kerja TKA tidak membayar
+        sanksi denda dan denda keterlambatan, Menteri atau pejabat yang ditunjuk menyerahkan
+        penagihan kepada instansi yang berwenang mengurusi piutang negara untuk di proses lebih
+        lanjut. Pasal 39 (1) Sanksi penghentian sementara proses permohonan Pengesahan RPTKA
+        sebagaimana dimaksud dalam Pasal 36 ayat (1) huruf b dikenakan kepada Pemberi Kerja TKA yang
+        melanggar ketentuan: a. tidak memfasilitasi pendidikan dan pelatihan bahasa Indonesia kepada
+        TKA sebagaimana dimaksud dalam Pasal 7 ayat (2), b. tidak mendaftarkan TKA dalam program
+        jaminan sosial nasional bagi TKA yang bekerja lebih dari 6 (enam) bulan atau program
+        asuransi pada perusahaan asuransi bagi TKA yang bekerja kurang dari 6 (enam) bulan
+        sebagaimana dimaksud dalam Pasal 8 ayat (1): c. tidak melaporkan setiap 1 (satu) tahun
+        kepada Menteri atau pejabat yang ditunjuk untuk pelaksanaan penggunaan TKA, pelaksanaan
+        pendidikan dan pelatihan kerja bagi Tenaga Kerja Pendamping TKA, dan pelaksanaan alih
+        teknologi dan alih keahlian dari TKA kepada Tenaga Kerja Pendamping TKA sebagaimana dimaksud
+        dalam Pasal 32 ayat (1), d. tidak melaporkan pelaksanaan penggunaan TKA untuk pekerjaan yang
+        bersifat sementara setelah berakhirnya perjanjian kerja kepada Menteri atau pejabat yang
+        ditunjuk sebagaimana dimaksud dalam Pasal 32 ayat (2), dan/atau e. tidak melaporkan kepada
+        Menteri atau pejabat yang ditunjuk untuk perjanjian kerja TKA yang telah berakhir atau
+        diakhiri sebelum jangka waktu perjanjian kerja berakhir sebagaimana dimaksud dalam Pasal 32
+        ayat (3). (2) Sanksi penghentian sementara proses permohonan Pengesahan RPTKA sebagaimana
+        dimaksud pada ayat (1) diberikan untuk jangka waktu paling lama 3 (tiga) bulan. (3) Sanksi
+        penghentian sementara proses permohonan Pengesahan RPTKA sebagaimana dimaksud pada ayat (2)
+        memuat kewajiban yang harus dilaksanakan oleh Pemberi Kerja TKA terhadap pelanggaran yang
+        telah dilakukan. (4) Dalam hal Pemberi Kerja TKA tidak melaksanakan kewajiban sebagaimana
+        dimaksud pada ayat (3) akan dikenakan sanksi pencabutan Pengesahan RPTKA. Pasal 40 (1)
+        Sanksi pencabutan Pengesahan RPTKA sebagaimana dimaksud dalam Pasal 36 ayat (1) huruf c
+        dikenakan kepada Pemberi Kerja TKA yang melanggar ketentuan: a. mempekerjakan TKA tidak
+        sesuai dengan Pengesahan RPTKA sebagaimana dimaksud dalam Pasal 6 ayat (3), b. mempekerjakan
+        TKA rangkap jabatan dalam perusahaan yang sama sebagaimana dimaksud dalam Pasal 10: c.
+        mempekerjakan TKA pada jabatan yang mengurusi personalia sebagaimana dimaksud dalam Pasal 11
+        ayat (1): dan/atau d. tidak membayar DKPTKA atas setiap TKA yang dipekerjakan sebagaimana
+        dimaksud dalam Pasal 23 ayat (1). Pasal 41 Menteri atau pejabat yang ditunjuk menyampaikan
+        pencabutan Pengesahan RPTKA kepada menteri yang menyelenggarakan urusan pemerintahan di
+        bidang hukum dan hak asasi manusia atau pejabat yang ditunjuk untuk dilakukan tindakan
+        keimigrasian sesuai dengan ketentuan peraturan perundang- undangan di bidang keimigrasian.
+        Pasal 42 Ketentuan lebih lanjut mengenai tata cara pengenaan sanksi administratif
+        sebagaimana dimaksud dalam Pasal 36 sampai dengan Pasal 41 diatur dengan Peraturan Menteri.
+        BAB VIH PENDANAAN Pasal 43 Segala pendanaan yang diperlukan untuk pelaksanaan Peraturan
+        Pemerintah ini dibebankan pada Anggaran Pendapatan dan Belanja Negara, Anggaran Pendapatan
+        dan Belanja Daerah provinsi, serta sumber pendanaan lainnya yang sah sesuai dengan ketentuan
+        peraturan perundang-undangan. BAB IX KETENTUAN LAIN-LAIN Pasal 44 Proses penggunaan TKA
+        sebagaimana diatur dalam Peraturan Pemerintah ini dilakukan melalui penggunaan data secara
+        bersama dan terintegrasi secara daring. BAB X KETENTUAN PERALIHAN Pasal 45 Pada saat
+        Peraturan Pemerintah ini mulai berlaku: a. perizinan penggunaan TKA yang sudah terbit masih
+        tetap berlaku sampai dengan habis masa berlakunya, dan b. perizinan penggunaan TKA yang
+        sedang dalam proses permohonan disesuaikan dengan ketentuan dalam Peraturan Pemerintah ini.
+        BAB XI KETENTUAN PENUTUP Pasal 46 Pada saat Peraturan Pemerintah ini mulai berlaku,
+        Peraturan Presiden Nomor 20 Tahun 2018 tentang Penggunaan Tenaga Kerja Asing (Lembaran
+        Negara Republik Indonesia Tahun 20 18 Nomor 39), dicabut dan dinyatakan tidak berlaku. Pasal
+        47 Pada saat Peraturan Pemerintah ini mulai berlaku, Peraturan Daerah dan Peraturan Kepala
+        Daerah yang mengatur mengenai retribusi yang berasal dari perpanjangan izin mempekerjakan
+        TKA wajib menyesuaikan dengan ketentuan dalam Peraturan Pemerintah ini paling lambat 3
+        (tiga) bulan terhitung sejak Peraturan Pemerintah ini berlaku. Pasal 48 Peraturan Pemerintah
+        ini mulai berlaku pada tanggal 1 April 2021. Agar setiap orang mengetahuinya, memerintahkan
+        pengundangan Peraturan Pemerintah ini dengan penempatannya dalam Lembaran Negara Republik
+        Indonesia.
+      content:
+        type: pasalSet
+        node:
+          nodeType: pasalSet
+          parentNode: *ref_135
+        elements: []
+disahkan:
+  date: *ref_22
+  location: Jakarta
+  pengesah: JOKO WIDODO
+  jabatanPengesah: PRESIDEN REPUBLIK INDONESIA,

@@ -1,0 +1,982 @@
+@prefix legal: <http://example.org/legal/ontology/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://example.org/legal/document/pp/2021/34> legal:documentHasBabSet <http://example.org/legal/document/pp/2021/34/bab> .
+<http://example.org/legal/document/pp/2021/34/bab> legal:babSetHasBab <http://example.org/legal/document/pp/2021/34/bab/0001> .
+<http://example.org/legal/document/pp/2021/34/bab/0001> legal:babHasKey 1 .
+<http://example.org/legal/document/pp/2021/34/bab/0001> legal:babHasTitle "" .
+<http://example.org/legal/document/pp/2021/34/bab/0001> legal:babHasPasalSet <http://example.org/legal/document/pp/2021/34/bab/0001/pasals> .
+<http://example.org/legal/document/pp/2021/34/bab/0001/pasals> legal:pasalSetHasPasal <http://example.org/legal/document/pp/2021/34/pasal/0001> .
+<http://example.org/legal/document/pp/2021/34/pasal/0001> legal:pasalHasKey 1 .
+<http://example.org/legal/document/pp/2021/34/pasal/0001> legal:pasalHasPasalVersion <http://example.org/legal/document/pp/2021/34/pasal/0001/version/20210202> .
+<http://example.org/legal/document/pp/2021/34> legal:documentHasPasal <http://example.org/legal/document/pp/2021/34/pasal/0001> .
+<http://example.org/legal/document/pp/2021/34/pasal/0001/version/20210202> legal:pasalVersionHasState "exists" .
+<http://example.org/legal/document/pp/2021/34/pasal/0001/version/20210202> legal:pasalVersionHasVersionDate "2021-02-02"^^xsd:date .
+<http://example.org/legal/document/pp/2021/34/pasal/0001/version/20210202> legal:pasalVersionHasRawText "Dalam Peraturan Pemerintah ini yang dimaksud dengan:\n1. Tenaga Kerja Asing yang selanjutnya disingkat TKA adalah warga negara asing pemegang visa dengan maksud bekerja di wilayah Indonesia.\n2. Pemberi Kerja TKA adalah badan hukum yang didirikan berdasarkan hukum Indonesia atau badan lannya yang mempekerjakan TKA dengan membayar upah atau imbalan dalam bentuk lain.\n3. Tenaga Kerja Pendamping TKA adalah tenaga kerja Indonesia yang ditunjuk oleh Pemberi Kerja TKA dan dipersiapkan sebagai pendamping TKA yang dipekerjakan dalam rangka alih teknologi dan alih keahlian.\n4. Rencana Penggunaan Tenaga Kerja Asing yang selanjutnya disingkat RPTKA adalah rencana penggunaan TKA pada jabatan tertentu dan jangka waktu tertentu.\n5. Pengesahan Rencana Penggunaan Tenaga Kerja Asing yang selanjutnya disebut Pengesahan RPTKA adalah persetujuan penggunaan TKA yang disahkan oleh menteri yang menyelenggarakan urusan pemerintahan di bidang ketenagakerjaan atau pejabat yang ditunjuk.\n6. Kawasan Ekonomi Khusus yang selanjutnya disingkat KEK adalah kawasan dengan batas tertentu dalam wilayah hukum Negara Kesatuan Republik Indonesia yang ditetapkan untuk menyelenggarakan fungsi perekonomian dan memperoleh fasilitas tertentu.\n7. Dana Kompensasi Penggunaan TKA yang selanjutnya disingkat DKPTKA adalah kompensasi yang harus dibayar oleh Pemberi Kerja TKA atas setiap TKA yang dipekerjakan sebagai penerimaan negara bukan pajak atau pendapatan daerah.\n8. Pengawas Ketenagakerjaan adalah pegawai negeri sipil yang diberi tugas, tanggung jawab, wewenang, dan hak secara penuh oleh pejabat yang berwenang untuk melaksanakan kegiatan pembinaan, pemeriksaan, pengujian, penyidikan, dan pengembangan sistem pengawasan ketenagakerjaan sesuai dengan ketentuan peraturan perundang-undangan.\n9. Menteri adalah menteri yang menyelenggarakan urusan pemerintahan di bidang ketenagakerjaan.\n" .
+<http://example.org/legal/document/pp/2021/34/pasal/0001/version/20210202> legal:pasalVersionHasPointSet <http://example.org/legal/document/pp/2021/34/pasal/0001/version/20210202/point> .
+<http://example.org/legal/document/pp/2021/34/pasal/0001/version/20210202/point/description> legal:textHasTextString "Dalam Peraturan Pemerintah ini yang dimaksud dengan:" .
+<http://example.org/legal/document/pp/2021/34/pasal/0001/version/20210202/point> legal:pointSetHasDescription <http://example.org/legal/document/pp/2021/34/pasal/0001/version/20210202/point/description> .
+<http://example.org/legal/document/pp/2021/34/pasal/0001/version/20210202/point> legal:pointSetHasPoint <http://example.org/legal/document/pp/2021/34/pasal/0001/version/20210202/point/0001> .
+<http://example.org/legal/document/pp/2021/34/pasal/0001/version/20210202/point/0001> legal:pointHasKey "1" .
+<http://example.org/legal/document/pp/2021/34/pasal/0001/version/20210202/point/0001/text> legal:textHasTextString "Tenaga Kerja Asing yang selanjutnya disingkat TKA adalah warga negara asing pemegang visa dengan maksud bekerja di wilayah Indonesia." .
+<http://example.org/legal/document/pp/2021/34/pasal/0001/version/20210202/point/0001> legal:pointHasText <http://example.org/legal/document/pp/2021/34/pasal/0001/version/20210202/point/0001/text> .
+<http://example.org/legal/document/pp/2021/34/pasal/0001/version/20210202/point> legal:pointSetHasPoint <http://example.org/legal/document/pp/2021/34/pasal/0001/version/20210202/point/0002> .
+<http://example.org/legal/document/pp/2021/34/pasal/0001/version/20210202/point/0002> legal:pointHasKey "2" .
+<http://example.org/legal/document/pp/2021/34/pasal/0001/version/20210202/point/0002/text> legal:textHasTextString "Pemberi Kerja TKA adalah badan hukum yang didirikan berdasarkan hukum Indonesia atau badan lannya yang mempekerjakan TKA dengan membayar upah atau imbalan dalam bentuk lain." .
+<http://example.org/legal/document/pp/2021/34/pasal/0001/version/20210202/point/0002> legal:pointHasText <http://example.org/legal/document/pp/2021/34/pasal/0001/version/20210202/point/0002/text> .
+<http://example.org/legal/document/pp/2021/34/pasal/0001/version/20210202/point> legal:pointSetHasPoint <http://example.org/legal/document/pp/2021/34/pasal/0001/version/20210202/point/0003> .
+<http://example.org/legal/document/pp/2021/34/pasal/0001/version/20210202/point/0003> legal:pointHasKey "3" .
+<http://example.org/legal/document/pp/2021/34/pasal/0001/version/20210202/point/0003/text> legal:textHasTextString "Tenaga Kerja Pendamping TKA adalah tenaga kerja Indonesia yang ditunjuk oleh Pemberi Kerja TKA dan dipersiapkan sebagai pendamping TKA yang dipekerjakan dalam rangka alih teknologi dan alih keahlian." .
+<http://example.org/legal/document/pp/2021/34/pasal/0001/version/20210202/point/0003> legal:pointHasText <http://example.org/legal/document/pp/2021/34/pasal/0001/version/20210202/point/0003/text> .
+<http://example.org/legal/document/pp/2021/34/pasal/0001/version/20210202/point> legal:pointSetHasPoint <http://example.org/legal/document/pp/2021/34/pasal/0001/version/20210202/point/0004> .
+<http://example.org/legal/document/pp/2021/34/pasal/0001/version/20210202/point/0004> legal:pointHasKey "4" .
+<http://example.org/legal/document/pp/2021/34/pasal/0001/version/20210202/point/0004/text> legal:textHasTextString "Rencana Penggunaan Tenaga Kerja Asing yang selanjutnya disingkat RPTKA adalah rencana penggunaan TKA pada jabatan tertentu dan jangka waktu tertentu." .
+<http://example.org/legal/document/pp/2021/34/pasal/0001/version/20210202/point/0004> legal:pointHasText <http://example.org/legal/document/pp/2021/34/pasal/0001/version/20210202/point/0004/text> .
+<http://example.org/legal/document/pp/2021/34/pasal/0001/version/20210202/point> legal:pointSetHasPoint <http://example.org/legal/document/pp/2021/34/pasal/0001/version/20210202/point/0005> .
+<http://example.org/legal/document/pp/2021/34/pasal/0001/version/20210202/point/0005> legal:pointHasKey "5" .
+<http://example.org/legal/document/pp/2021/34/pasal/0001/version/20210202/point/0005/text> legal:textHasTextString "Pengesahan Rencana Penggunaan Tenaga Kerja Asing yang selanjutnya disebut Pengesahan RPTKA adalah persetujuan penggunaan TKA yang disahkan oleh menteri yang menyelenggarakan urusan pemerintahan di bidang ketenagakerjaan atau pejabat yang ditunjuk." .
+<http://example.org/legal/document/pp/2021/34/pasal/0001/version/20210202/point/0005> legal:pointHasText <http://example.org/legal/document/pp/2021/34/pasal/0001/version/20210202/point/0005/text> .
+<http://example.org/legal/document/pp/2021/34/pasal/0001/version/20210202/point> legal:pointSetHasPoint <http://example.org/legal/document/pp/2021/34/pasal/0001/version/20210202/point/0006> .
+<http://example.org/legal/document/pp/2021/34/pasal/0001/version/20210202/point/0006> legal:pointHasKey "6" .
+<http://example.org/legal/document/pp/2021/34/pasal/0001/version/20210202/point/0006/text> legal:textHasTextString "Kawasan Ekonomi Khusus yang selanjutnya disingkat KEK adalah kawasan dengan batas tertentu dalam wilayah hukum Negara Kesatuan Republik Indonesia yang ditetapkan untuk menyelenggarakan fungsi perekonomian dan memperoleh fasilitas tertentu." .
+<http://example.org/legal/document/pp/2021/34/pasal/0001/version/20210202/point/0006> legal:pointHasText <http://example.org/legal/document/pp/2021/34/pasal/0001/version/20210202/point/0006/text> .
+<http://example.org/legal/document/pp/2021/34/pasal/0001/version/20210202/point> legal:pointSetHasPoint <http://example.org/legal/document/pp/2021/34/pasal/0001/version/20210202/point/0007> .
+<http://example.org/legal/document/pp/2021/34/pasal/0001/version/20210202/point/0007> legal:pointHasKey "7" .
+<http://example.org/legal/document/pp/2021/34/pasal/0001/version/20210202/point/0007/text> legal:textHasTextString "Dana Kompensasi Penggunaan TKA yang selanjutnya disingkat DKPTKA adalah kompensasi yang harus dibayar oleh Pemberi Kerja TKA atas setiap TKA yang dipekerjakan sebagai penerimaan negara bukan pajak atau pendapatan daerah." .
+<http://example.org/legal/document/pp/2021/34/pasal/0001/version/20210202/point/0007> legal:pointHasText <http://example.org/legal/document/pp/2021/34/pasal/0001/version/20210202/point/0007/text> .
+<http://example.org/legal/document/pp/2021/34/pasal/0001/version/20210202/point> legal:pointSetHasPoint <http://example.org/legal/document/pp/2021/34/pasal/0001/version/20210202/point/0008> .
+<http://example.org/legal/document/pp/2021/34/pasal/0001/version/20210202/point/0008> legal:pointHasKey "8" .
+<http://example.org/legal/document/pp/2021/34/pasal/0001/version/20210202/point/0008/text> legal:textHasTextString "Pengawas Ketenagakerjaan adalah pegawai negeri sipil yang diberi tugas, tanggung jawab, wewenang, dan hak secara penuh oleh pejabat yang berwenang untuk melaksanakan kegiatan pembinaan, pemeriksaan, pengujian, penyidikan, dan pengembangan sistem pengawasan ketenagakerjaan sesuai dengan ketentuan peraturan perundang-undangan." .
+<http://example.org/legal/document/pp/2021/34/pasal/0001/version/20210202/point/0008> legal:pointHasText <http://example.org/legal/document/pp/2021/34/pasal/0001/version/20210202/point/0008/text> .
+<http://example.org/legal/document/pp/2021/34/pasal/0001/version/20210202/point> legal:pointSetHasPoint <http://example.org/legal/document/pp/2021/34/pasal/0001/version/20210202/point/0009> .
+<http://example.org/legal/document/pp/2021/34/pasal/0001/version/20210202/point/0009> legal:pointHasKey "9" .
+<http://example.org/legal/document/pp/2021/34/pasal/0001/version/20210202/point/0009/text> legal:textHasTextString "Menteri adalah menteri yang menyelenggarakan urusan pemerintahan di bidang ketenagakerjaan." .
+<http://example.org/legal/document/pp/2021/34/pasal/0001/version/20210202/point/0009> legal:pointHasText <http://example.org/legal/document/pp/2021/34/pasal/0001/version/20210202/point/0009/text> .
+<http://example.org/legal/document/pp/2021/34/bab> legal:babSetHasBab <http://example.org/legal/document/pp/2021/34/bab/0002> .
+<http://example.org/legal/document/pp/2021/34/bab/0002> legal:babHasKey 2 .
+<http://example.org/legal/document/pp/2021/34/bab/0002> legal:babHasTitle "KEWAJIBAN DAN LARANGAN BAGI PEMBERI KERJA TENAGA KERJA ASING" .
+<http://example.org/legal/document/pp/2021/34/bab/0002> legal:babHasBagianSet <http://example.org/legal/document/pp/2021/34/bab/0002/bagian> .
+<http://example.org/legal/document/pp/2021/34/bab/0002/bagian> legal:bagianSetHasBagian <http://example.org/legal/document/pp/2021/34/bab/0002/bagian/0001> .
+<http://example.org/legal/document/pp/2021/34/bab/0002/bagian/0001> legal:bagianHasKey 1 .
+<http://example.org/legal/document/pp/2021/34/bab/0002/bagian/0001> legal:bagianHasTitle "Bagian Kesatu Umum" .
+<http://example.org/legal/document/pp/2021/34/bab/0002/bagian/0001> legal:bagianHasPasalSet <http://example.org/legal/document/pp/2021/34/bab/0002/bagian/0001/pasals> .
+<http://example.org/legal/document/pp/2021/34/bab/0002/bagian/0001/pasals> legal:pasalSetHasPasal <http://example.org/legal/document/pp/2021/34/pasal/0002> .
+<http://example.org/legal/document/pp/2021/34/pasal/0002> legal:pasalHasKey 2 .
+<http://example.org/legal/document/pp/2021/34/pasal/0002> legal:pasalHasPasalVersion <http://example.org/legal/document/pp/2021/34/pasal/0002/version/20210202> .
+<http://example.org/legal/document/pp/2021/34> legal:documentHasPasal <http://example.org/legal/document/pp/2021/34/pasal/0002> .
+<http://example.org/legal/document/pp/2021/34/pasal/0002/version/20210202> legal:pasalVersionHasState "exists" .
+<http://example.org/legal/document/pp/2021/34/pasal/0002/version/20210202> legal:pasalVersionHasVersionDate "2021-02-02"^^xsd:date .
+<http://example.org/legal/document/pp/2021/34/pasal/0002/version/20210202> legal:pasalVersionHasRawText "(1). Setiap Pemberi Kerja TKA wajib mengutamakan penggunaan tenaga kerja Indonesia pada semua jenis jabatan yang tersedia.\n(2). Dalam hal jabatan sebagaimana dimaksud pada ayat (1) belum dapat diduduki oleh tenaga kerja Indonesia, jabatan tersebut dapat diduduki oleh TKA.\n(3). Penggunaan TKA sebagaimana dimaksud pada ayat (2) dilakukan dengan memperhatikan kondisi pasar kerja dalam negeri." .
+<http://example.org/legal/document/pp/2021/34/pasal/0002/version/20210202> legal:pasalVersionHasAyatSet <http://example.org/legal/document/pp/2021/34/pasal/0002/version/20210202/ayat> .
+<http://example.org/legal/document/pp/2021/34/pasal/0002/version/20210202/ayat> legal:ayatSetHasAyat <http://example.org/legal/document/pp/2021/34/pasal/0002/version/20210202/ayat/0001> .
+<http://example.org/legal/document/pp/2021/34/pasal/0002/version/20210202/ayat/0001> legal:ayatHasKey 1 .
+<http://example.org/legal/document/pp/2021/34/pasal/0002/version/20210202/ayat/0001> legal:ayatHasRawText "Setiap Pemberi Kerja TKA wajib mengutamakan penggunaan tenaga kerja Indonesia pada semua jenis jabatan yang tersedia." .
+<http://example.org/legal/document/pp/2021/34/pasal/0002/version/20210202/ayat/0001/text> legal:textHasTextString "Setiap Pemberi Kerja TKA wajib mengutamakan penggunaan tenaga kerja Indonesia pada semua jenis jabatan yang tersedia." .
+<http://example.org/legal/document/pp/2021/34/pasal/0002/version/20210202/ayat/0001> legal:ayatHasText <http://example.org/legal/document/pp/2021/34/pasal/0002/version/20210202/ayat/0001/text> .
+<http://example.org/legal/document/pp/2021/34/pasal/0002/version/20210202/ayat> legal:ayatSetHasAyat <http://example.org/legal/document/pp/2021/34/pasal/0002/version/20210202/ayat/0002> .
+<http://example.org/legal/document/pp/2021/34/pasal/0002/version/20210202/ayat/0002> legal:ayatHasKey 2 .
+<http://example.org/legal/document/pp/2021/34/pasal/0002/version/20210202/ayat/0002> legal:ayatHasRawText "Dalam hal jabatan sebagaimana dimaksud pada ayat (1) belum dapat diduduki oleh tenaga kerja Indonesia, jabatan tersebut dapat diduduki oleh TKA." .
+<http://example.org/legal/document/pp/2021/34/pasal/0002/version/20210202/ayat/0002/text> legal:textHasTextString "Dalam hal jabatan sebagaimana dimaksud pada ayat (1) belum dapat diduduki oleh tenaga kerja Indonesia, jabatan tersebut dapat diduduki oleh TKA." .
+<http://example.org/legal/document/pp/2021/34/pasal/0002/version/20210202/ayat/0002> legal:ayatHasText <http://example.org/legal/document/pp/2021/34/pasal/0002/version/20210202/ayat/0002/text> .
+<http://example.org/legal/document/pp/2021/34/pasal/0002/version/20210202/ayat/0002/text> legal:textReferencesLegal <http://example.org/legal/document/pp/2021/34/pasal/0002/version/20210202/ayat/0001> .
+<http://example.org/legal/document/pp/2021/34/pasal/0002/version/20210202/ayat> legal:ayatSetHasAyat <http://example.org/legal/document/pp/2021/34/pasal/0002/version/20210202/ayat/0003> .
+<http://example.org/legal/document/pp/2021/34/pasal/0002/version/20210202/ayat/0003> legal:ayatHasKey 3 .
+<http://example.org/legal/document/pp/2021/34/pasal/0002/version/20210202/ayat/0003> legal:ayatHasRawText "Penggunaan TKA sebagaimana dimaksud pada ayat (2) dilakukan dengan memperhatikan kondisi pasar kerja dalam negeri." .
+<http://example.org/legal/document/pp/2021/34/pasal/0002/version/20210202/ayat/0003/text> legal:textHasTextString "Penggunaan TKA sebagaimana dimaksud pada ayat (2) dilakukan dengan memperhatikan kondisi pasar kerja dalam negeri." .
+<http://example.org/legal/document/pp/2021/34/pasal/0002/version/20210202/ayat/0003> legal:ayatHasText <http://example.org/legal/document/pp/2021/34/pasal/0002/version/20210202/ayat/0003/text> .
+<http://example.org/legal/document/pp/2021/34/pasal/0002/version/20210202/ayat/0003/text> legal:textReferencesLegal <http://example.org/legal/document/pp/2021/34/pasal/0002/version/20210202/ayat/0002> .
+<http://example.org/legal/document/pp/2021/34/bab/0002/bagian/0001/pasals> legal:pasalSetHasPasal <http://example.org/legal/document/pp/2021/34/pasal/0003> .
+<http://example.org/legal/document/pp/2021/34/pasal/0003> legal:pasalHasKey 3 .
+<http://example.org/legal/document/pp/2021/34/pasal/0003> legal:pasalHasPasalVersion <http://example.org/legal/document/pp/2021/34/pasal/0003/version/20210202> .
+<http://example.org/legal/document/pp/2021/34> legal:documentHasPasal <http://example.org/legal/document/pp/2021/34/pasal/0003> .
+<http://example.org/legal/document/pp/2021/34/pasal/0003/version/20210202> legal:pasalVersionHasState "exists" .
+<http://example.org/legal/document/pp/2021/34/pasal/0003/version/20210202> legal:pasalVersionHasVersionDate "2021-02-02"^^xsd:date .
+<http://example.org/legal/document/pp/2021/34/pasal/0003/version/20210202> legal:pasalVersionHasRawText "(1). Pemberi Kerja TKA meliputi:\na. instansi Pemerintah, perwakilan negara asing, dan badan internasional,\nb. kantor perwakilan dagang asing, kantor perwakilan perusahaan asing, dan kantor berita asing yang melakukan kegiatan di Indonesia,\nc. perusahaan swasta asing yang berusaha di Indonesia,\nd. badan hukum dalam bentuk perseroan terbatas atau yayasan yang didirikan berdasarkan hukum Indonesia atau badan usaha asing yang terdaftar di instansi yang berwenang,\ne. lembaga sosial, keagamaan, pendidikan, dan kebudayaan,\nf. usaha jasa impresariat, dan\ng. badan usaha sepanjang diperbolehkan oleh undang-undang untuk menggunakan TKA.\n\n(2). Perseroan terbatas sebagaimana dimaksud pada ayat (l) huruf d dikecualikan untuk perseroan terbatas yang berbentuk badan hukum perorangan." .
+<http://example.org/legal/document/pp/2021/34/pasal/0003/version/20210202> legal:pasalVersionHasAyatSet <http://example.org/legal/document/pp/2021/34/pasal/0003/version/20210202/ayat> .
+<http://example.org/legal/document/pp/2021/34/pasal/0003/version/20210202/ayat> legal:ayatSetHasAyat <http://example.org/legal/document/pp/2021/34/pasal/0003/version/20210202/ayat/0001> .
+<http://example.org/legal/document/pp/2021/34/pasal/0003/version/20210202/ayat/0001> legal:ayatHasKey 1 .
+<http://example.org/legal/document/pp/2021/34/pasal/0003/version/20210202/ayat/0001> legal:ayatHasRawText "Pemberi Kerja TKA meliputi:\na. instansi Pemerintah, perwakilan negara asing, dan badan internasional,\nb. kantor perwakilan dagang asing, kantor perwakilan perusahaan asing, dan kantor berita asing yang melakukan kegiatan di Indonesia,\nc. perusahaan swasta asing yang berusaha di Indonesia,\nd. badan hukum dalam bentuk perseroan terbatas atau yayasan yang didirikan berdasarkan hukum Indonesia atau badan usaha asing yang terdaftar di instansi yang berwenang,\ne. lembaga sosial, keagamaan, pendidikan, dan kebudayaan,\nf. usaha jasa impresariat, dan\ng. badan usaha sepanjang diperbolehkan oleh undang-undang untuk menggunakan TKA.\n" .
+<http://example.org/legal/document/pp/2021/34/pasal/0003/version/20210202/ayat/0001> legal:ayatHasPointSet <http://example.org/legal/document/pp/2021/34/pasal/0003/version/20210202/ayat/0001/point> .
+<http://example.org/legal/document/pp/2021/34/pasal/0003/version/20210202/ayat/0001/point/description> legal:textHasTextString "Pemberi Kerja TKA meliputi:" .
+<http://example.org/legal/document/pp/2021/34/pasal/0003/version/20210202/ayat/0001/point> legal:pointSetHasDescription <http://example.org/legal/document/pp/2021/34/pasal/0003/version/20210202/ayat/0001/point/description> .
+<http://example.org/legal/document/pp/2021/34/pasal/0003/version/20210202/ayat/0001/point> legal:pointSetHasPoint <http://example.org/legal/document/pp/2021/34/pasal/0003/version/20210202/ayat/0001/point/a> .
+<http://example.org/legal/document/pp/2021/34/pasal/0003/version/20210202/ayat/0001/point/a> legal:pointHasKey "a" .
+<http://example.org/legal/document/pp/2021/34/pasal/0003/version/20210202/ayat/0001/point/a/text> legal:textHasTextString "instansi Pemerintah, perwakilan negara asing, dan badan internasional," .
+<http://example.org/legal/document/pp/2021/34/pasal/0003/version/20210202/ayat/0001/point/a> legal:pointHasText <http://example.org/legal/document/pp/2021/34/pasal/0003/version/20210202/ayat/0001/point/a/text> .
+<http://example.org/legal/document/pp/2021/34/pasal/0003/version/20210202/ayat/0001/point> legal:pointSetHasPoint <http://example.org/legal/document/pp/2021/34/pasal/0003/version/20210202/ayat/0001/point/b> .
+<http://example.org/legal/document/pp/2021/34/pasal/0003/version/20210202/ayat/0001/point/b> legal:pointHasKey "b" .
+<http://example.org/legal/document/pp/2021/34/pasal/0003/version/20210202/ayat/0001/point/b/text> legal:textHasTextString "kantor perwakilan dagang asing, kantor perwakilan perusahaan asing, dan kantor berita asing yang melakukan kegiatan di Indonesia," .
+<http://example.org/legal/document/pp/2021/34/pasal/0003/version/20210202/ayat/0001/point/b> legal:pointHasText <http://example.org/legal/document/pp/2021/34/pasal/0003/version/20210202/ayat/0001/point/b/text> .
+<http://example.org/legal/document/pp/2021/34/pasal/0003/version/20210202/ayat/0001/point> legal:pointSetHasPoint <http://example.org/legal/document/pp/2021/34/pasal/0003/version/20210202/ayat/0001/point/c> .
+<http://example.org/legal/document/pp/2021/34/pasal/0003/version/20210202/ayat/0001/point/c> legal:pointHasKey "c" .
+<http://example.org/legal/document/pp/2021/34/pasal/0003/version/20210202/ayat/0001/point/c/text> legal:textHasTextString "perusahaan swasta asing yang berusaha di Indonesia," .
+<http://example.org/legal/document/pp/2021/34/pasal/0003/version/20210202/ayat/0001/point/c> legal:pointHasText <http://example.org/legal/document/pp/2021/34/pasal/0003/version/20210202/ayat/0001/point/c/text> .
+<http://example.org/legal/document/pp/2021/34/pasal/0003/version/20210202/ayat/0001/point> legal:pointSetHasPoint <http://example.org/legal/document/pp/2021/34/pasal/0003/version/20210202/ayat/0001/point/d> .
+<http://example.org/legal/document/pp/2021/34/pasal/0003/version/20210202/ayat/0001/point/d> legal:pointHasKey "d" .
+<http://example.org/legal/document/pp/2021/34/pasal/0003/version/20210202/ayat/0001/point/d/text> legal:textHasTextString "badan hukum dalam bentuk perseroan terbatas atau yayasan yang didirikan berdasarkan hukum Indonesia atau badan usaha asing yang terdaftar di instansi yang berwenang," .
+<http://example.org/legal/document/pp/2021/34/pasal/0003/version/20210202/ayat/0001/point/d> legal:pointHasText <http://example.org/legal/document/pp/2021/34/pasal/0003/version/20210202/ayat/0001/point/d/text> .
+<http://example.org/legal/document/pp/2021/34/pasal/0003/version/20210202/ayat/0001/point> legal:pointSetHasPoint <http://example.org/legal/document/pp/2021/34/pasal/0003/version/20210202/ayat/0001/point/e> .
+<http://example.org/legal/document/pp/2021/34/pasal/0003/version/20210202/ayat/0001/point/e> legal:pointHasKey "e" .
+<http://example.org/legal/document/pp/2021/34/pasal/0003/version/20210202/ayat/0001/point/e/text> legal:textHasTextString "lembaga sosial, keagamaan, pendidikan, dan kebudayaan," .
+<http://example.org/legal/document/pp/2021/34/pasal/0003/version/20210202/ayat/0001/point/e> legal:pointHasText <http://example.org/legal/document/pp/2021/34/pasal/0003/version/20210202/ayat/0001/point/e/text> .
+<http://example.org/legal/document/pp/2021/34/pasal/0003/version/20210202/ayat/0001/point> legal:pointSetHasPoint <http://example.org/legal/document/pp/2021/34/pasal/0003/version/20210202/ayat/0001/point/f> .
+<http://example.org/legal/document/pp/2021/34/pasal/0003/version/20210202/ayat/0001/point/f> legal:pointHasKey "f" .
+<http://example.org/legal/document/pp/2021/34/pasal/0003/version/20210202/ayat/0001/point/f/text> legal:textHasTextString "usaha jasa impresariat, dan" .
+<http://example.org/legal/document/pp/2021/34/pasal/0003/version/20210202/ayat/0001/point/f> legal:pointHasText <http://example.org/legal/document/pp/2021/34/pasal/0003/version/20210202/ayat/0001/point/f/text> .
+<http://example.org/legal/document/pp/2021/34/pasal/0003/version/20210202/ayat/0001/point> legal:pointSetHasPoint <http://example.org/legal/document/pp/2021/34/pasal/0003/version/20210202/ayat/0001/point/g> .
+<http://example.org/legal/document/pp/2021/34/pasal/0003/version/20210202/ayat/0001/point/g> legal:pointHasKey "g" .
+<http://example.org/legal/document/pp/2021/34/pasal/0003/version/20210202/ayat/0001/point/g/text> legal:textHasTextString "badan usaha sepanjang diperbolehkan oleh undang-undang untuk menggunakan TKA." .
+<http://example.org/legal/document/pp/2021/34/pasal/0003/version/20210202/ayat/0001/point/g> legal:pointHasText <http://example.org/legal/document/pp/2021/34/pasal/0003/version/20210202/ayat/0001/point/g/text> .
+<http://example.org/legal/document/pp/2021/34/pasal/0003/version/20210202/ayat> legal:ayatSetHasAyat <http://example.org/legal/document/pp/2021/34/pasal/0003/version/20210202/ayat/0002> .
+<http://example.org/legal/document/pp/2021/34/pasal/0003/version/20210202/ayat/0002> legal:ayatHasKey 2 .
+<http://example.org/legal/document/pp/2021/34/pasal/0003/version/20210202/ayat/0002> legal:ayatHasRawText "Perseroan terbatas sebagaimana dimaksud pada ayat (l) huruf d dikecualikan untuk perseroan terbatas yang berbentuk badan hukum perorangan." .
+<http://example.org/legal/document/pp/2021/34/pasal/0003/version/20210202/ayat/0002/text> legal:textHasTextString "Perseroan terbatas sebagaimana dimaksud pada ayat (l) huruf d dikecualikan untuk perseroan terbatas yang berbentuk badan hukum perorangan." .
+<http://example.org/legal/document/pp/2021/34/pasal/0003/version/20210202/ayat/0002> legal:ayatHasText <http://example.org/legal/document/pp/2021/34/pasal/0003/version/20210202/ayat/0002/text> .
+<http://example.org/legal/document/pp/2021/34/pasal/0003/version/20210202/ayat/0002/text> legal:textReferencesLegal <http://example.org/legal/document/pp/2021/34/pasal/0003/version/20210202/ayat/0001> .
+<http://example.org/legal/document/pp/2021/34/pasal/0003/version/20210202/ayat/0002/text> legal:textReferencesLegal <http://example.org/legal/document/pp/2021/34/pasal/0003/version/20210202/point/d> .
+<http://example.org/legal/document/pp/2021/34/bab/0002/bagian/0001/pasals> legal:pasalSetHasPasal <http://example.org/legal/document/pp/2021/34/pasal/0004> .
+<http://example.org/legal/document/pp/2021/34/pasal/0004> legal:pasalHasKey 4 .
+<http://example.org/legal/document/pp/2021/34/pasal/0004> legal:pasalHasPasalVersion <http://example.org/legal/document/pp/2021/34/pasal/0004/version/20210202> .
+<http://example.org/legal/document/pp/2021/34> legal:documentHasPasal <http://example.org/legal/document/pp/2021/34/pasal/0004> .
+<http://example.org/legal/document/pp/2021/34/pasal/0004/version/20210202> legal:pasalVersionHasState "exists" .
+<http://example.org/legal/document/pp/2021/34/pasal/0004/version/20210202> legal:pasalVersionHasVersionDate "2021-02-02"^^xsd:date .
+<http://example.org/legal/document/pp/2021/34/pasal/0004/version/20210202> legal:pasalVersionHasRawText "(1). TKA hanya dapat dipekerjakan oleh Pemberi Kerja TKA dalam hubungan kerja untuk jabatan tertentu dan waktu tertentu, serta memiliki kompetensi sesuai dengan jabatan yang akan diduduki.\n(2). Jabatan tertentu yang dapat diduduki oleh TKA sebagaimana dimaksud pada ayat (1) ditetapkan oleh Menteri setelah mendapat masukan dari kementerian/lembaga terkait." .
+<http://example.org/legal/document/pp/2021/34/pasal/0004/version/20210202> legal:pasalVersionHasAyatSet <http://example.org/legal/document/pp/2021/34/pasal/0004/version/20210202/ayat> .
+<http://example.org/legal/document/pp/2021/34/pasal/0004/version/20210202/ayat> legal:ayatSetHasAyat <http://example.org/legal/document/pp/2021/34/pasal/0004/version/20210202/ayat/0001> .
+<http://example.org/legal/document/pp/2021/34/pasal/0004/version/20210202/ayat/0001> legal:ayatHasKey 1 .
+<http://example.org/legal/document/pp/2021/34/pasal/0004/version/20210202/ayat/0001> legal:ayatHasRawText "TKA hanya dapat dipekerjakan oleh Pemberi Kerja TKA dalam hubungan kerja untuk jabatan tertentu dan waktu tertentu, serta memiliki kompetensi sesuai dengan jabatan yang akan diduduki." .
+<http://example.org/legal/document/pp/2021/34/pasal/0004/version/20210202/ayat/0001/text> legal:textHasTextString "TKA hanya dapat dipekerjakan oleh Pemberi Kerja TKA dalam hubungan kerja untuk jabatan tertentu dan waktu tertentu, serta memiliki kompetensi sesuai dengan jabatan yang akan diduduki." .
+<http://example.org/legal/document/pp/2021/34/pasal/0004/version/20210202/ayat/0001> legal:ayatHasText <http://example.org/legal/document/pp/2021/34/pasal/0004/version/20210202/ayat/0001/text> .
+<http://example.org/legal/document/pp/2021/34/pasal/0004/version/20210202/ayat> legal:ayatSetHasAyat <http://example.org/legal/document/pp/2021/34/pasal/0004/version/20210202/ayat/0002> .
+<http://example.org/legal/document/pp/2021/34/pasal/0004/version/20210202/ayat/0002> legal:ayatHasKey 2 .
+<http://example.org/legal/document/pp/2021/34/pasal/0004/version/20210202/ayat/0002> legal:ayatHasRawText "Jabatan tertentu yang dapat diduduki oleh TKA sebagaimana dimaksud pada ayat (1) ditetapkan oleh Menteri setelah mendapat masukan dari kementerian/lembaga terkait." .
+<http://example.org/legal/document/pp/2021/34/pasal/0004/version/20210202/ayat/0002/text> legal:textHasTextString "Jabatan tertentu yang dapat diduduki oleh TKA sebagaimana dimaksud pada ayat (1) ditetapkan oleh Menteri setelah mendapat masukan dari kementerian/lembaga terkait." .
+<http://example.org/legal/document/pp/2021/34/pasal/0004/version/20210202/ayat/0002> legal:ayatHasText <http://example.org/legal/document/pp/2021/34/pasal/0004/version/20210202/ayat/0002/text> .
+<http://example.org/legal/document/pp/2021/34/pasal/0004/version/20210202/ayat/0002/text> legal:textReferencesLegal <http://example.org/legal/document/pp/2021/34/pasal/0004/version/20210202/ayat/0001> .
+<http://example.org/legal/document/pp/2021/34/bab/0002/bagian/0001/pasals> legal:pasalSetHasPasal <http://example.org/legal/document/pp/2021/34/pasal/0005> .
+<http://example.org/legal/document/pp/2021/34/pasal/0005> legal:pasalHasKey 5 .
+<http://example.org/legal/document/pp/2021/34/pasal/0005> legal:pasalHasPasalVersion <http://example.org/legal/document/pp/2021/34/pasal/0005/version/20210202> .
+<http://example.org/legal/document/pp/2021/34> legal:documentHasPasal <http://example.org/legal/document/pp/2021/34/pasal/0005> .
+<http://example.org/legal/document/pp/2021/34/pasal/0005/version/20210202> legal:pasalVersionHasState "exists" .
+<http://example.org/legal/document/pp/2021/34/pasal/0005/version/20210202> legal:pasalVersionHasVersionDate "2021-02-02"^^xsd:date .
+<http://example.org/legal/document/pp/2021/34/pasal/0005/version/20210202> legal:pasalVersionHasRawText "(1). Pemberi Kerja TKA dapat mempekerjakan TKA yang sedang dipekerjakan oleh Pemberi Kerja TKA lain untuk jabatan yang sama sebagai:\na. direksi atau komisaris: atau\nb. TKA pada sektor pendidikan vokasi dan pelatihan vokasi, sektor ekonomi digital, dan sektor migas bagi kontraktor kontrak kerja sama.\n\n(2). Dalam hal Pemberi Kerja TKA akan mempekerjakan TKA sebagaimana dimaksud pada ayat (1), TKA tersebut harus mendapatkan persetujuan dari Pemberi Kerja TKA pertama.\n(3). TKA sebagaimana dimaksud pada ayat (1) dipekerjakan paling lama sampai dengan berakhirnya jangka waktu sebagaimana tercantum dalam Pengesahan RPTKA Pemberi Kerja TKA pertama.\n(4). Jabatan tertentu pada sektor pendidikan vokasi dan pelatihan vokasi, sektor ekonomi digital, dan sektor migas bagi kontraktor kontrak kerja sama yang dapat dirangkap sebagaimana dimaksud pada ayat (1) huruf b ditetapkan oleh Menteri setelah mendapat masukan dari kementerian/lembaga terkait." .
+<http://example.org/legal/document/pp/2021/34/pasal/0005/version/20210202> legal:pasalVersionHasAyatSet <http://example.org/legal/document/pp/2021/34/pasal/0005/version/20210202/ayat> .
+<http://example.org/legal/document/pp/2021/34/pasal/0005/version/20210202/ayat> legal:ayatSetHasAyat <http://example.org/legal/document/pp/2021/34/pasal/0005/version/20210202/ayat/0001> .
+<http://example.org/legal/document/pp/2021/34/pasal/0005/version/20210202/ayat/0001> legal:ayatHasKey 1 .
+<http://example.org/legal/document/pp/2021/34/pasal/0005/version/20210202/ayat/0001> legal:ayatHasRawText "Pemberi Kerja TKA dapat mempekerjakan TKA yang sedang dipekerjakan oleh Pemberi Kerja TKA lain untuk jabatan yang sama sebagai:\na. direksi atau komisaris: atau\nb. TKA pada sektor pendidikan vokasi dan pelatihan vokasi, sektor ekonomi digital, dan sektor migas bagi kontraktor kontrak kerja sama.\n" .
+<http://example.org/legal/document/pp/2021/34/pasal/0005/version/20210202/ayat/0001> legal:ayatHasPointSet <http://example.org/legal/document/pp/2021/34/pasal/0005/version/20210202/ayat/0001/point> .
+<http://example.org/legal/document/pp/2021/34/pasal/0005/version/20210202/ayat/0001/point/description> legal:textHasTextString "Pemberi Kerja TKA dapat mempekerjakan TKA yang sedang dipekerjakan oleh Pemberi Kerja TKA lain untuk jabatan yang sama sebagai:" .
+<http://example.org/legal/document/pp/2021/34/pasal/0005/version/20210202/ayat/0001/point> legal:pointSetHasDescription <http://example.org/legal/document/pp/2021/34/pasal/0005/version/20210202/ayat/0001/point/description> .
+<http://example.org/legal/document/pp/2021/34/pasal/0005/version/20210202/ayat/0001/point> legal:pointSetHasPoint <http://example.org/legal/document/pp/2021/34/pasal/0005/version/20210202/ayat/0001/point/a> .
+<http://example.org/legal/document/pp/2021/34/pasal/0005/version/20210202/ayat/0001/point/a> legal:pointHasKey "a" .
+<http://example.org/legal/document/pp/2021/34/pasal/0005/version/20210202/ayat/0001/point/a/text> legal:textHasTextString "direksi atau komisaris: atau" .
+<http://example.org/legal/document/pp/2021/34/pasal/0005/version/20210202/ayat/0001/point/a> legal:pointHasText <http://example.org/legal/document/pp/2021/34/pasal/0005/version/20210202/ayat/0001/point/a/text> .
+<http://example.org/legal/document/pp/2021/34/pasal/0005/version/20210202/ayat/0001/point> legal:pointSetHasPoint <http://example.org/legal/document/pp/2021/34/pasal/0005/version/20210202/ayat/0001/point/b> .
+<http://example.org/legal/document/pp/2021/34/pasal/0005/version/20210202/ayat/0001/point/b> legal:pointHasKey "b" .
+<http://example.org/legal/document/pp/2021/34/pasal/0005/version/20210202/ayat/0001/point/b/text> legal:textHasTextString "TKA pada sektor pendidikan vokasi dan pelatihan vokasi, sektor ekonomi digital, dan sektor migas bagi kontraktor kontrak kerja sama." .
+<http://example.org/legal/document/pp/2021/34/pasal/0005/version/20210202/ayat/0001/point/b> legal:pointHasText <http://example.org/legal/document/pp/2021/34/pasal/0005/version/20210202/ayat/0001/point/b/text> .
+<http://example.org/legal/document/pp/2021/34/pasal/0005/version/20210202/ayat> legal:ayatSetHasAyat <http://example.org/legal/document/pp/2021/34/pasal/0005/version/20210202/ayat/0002> .
+<http://example.org/legal/document/pp/2021/34/pasal/0005/version/20210202/ayat/0002> legal:ayatHasKey 2 .
+<http://example.org/legal/document/pp/2021/34/pasal/0005/version/20210202/ayat/0002> legal:ayatHasRawText "Dalam hal Pemberi Kerja TKA akan mempekerjakan TKA sebagaimana dimaksud pada ayat (1), TKA tersebut harus mendapatkan persetujuan dari Pemberi Kerja TKA pertama." .
+<http://example.org/legal/document/pp/2021/34/pasal/0005/version/20210202/ayat/0002/text> legal:textHasTextString "Dalam hal Pemberi Kerja TKA akan mempekerjakan TKA sebagaimana dimaksud pada ayat (1), TKA tersebut harus mendapatkan persetujuan dari Pemberi Kerja TKA pertama." .
+<http://example.org/legal/document/pp/2021/34/pasal/0005/version/20210202/ayat/0002> legal:ayatHasText <http://example.org/legal/document/pp/2021/34/pasal/0005/version/20210202/ayat/0002/text> .
+<http://example.org/legal/document/pp/2021/34/pasal/0005/version/20210202/ayat/0002/text> legal:textReferencesLegal <http://example.org/legal/document/pp/2021/34/pasal/0005/version/20210202/ayat/0001> .
+<http://example.org/legal/document/pp/2021/34/pasal/0005/version/20210202/ayat> legal:ayatSetHasAyat <http://example.org/legal/document/pp/2021/34/pasal/0005/version/20210202/ayat/0003> .
+<http://example.org/legal/document/pp/2021/34/pasal/0005/version/20210202/ayat/0003> legal:ayatHasKey 3 .
+<http://example.org/legal/document/pp/2021/34/pasal/0005/version/20210202/ayat/0003> legal:ayatHasRawText "TKA sebagaimana dimaksud pada ayat (1) dipekerjakan paling lama sampai dengan berakhirnya jangka waktu sebagaimana tercantum dalam Pengesahan RPTKA Pemberi Kerja TKA pertama." .
+<http://example.org/legal/document/pp/2021/34/pasal/0005/version/20210202/ayat/0003/text> legal:textHasTextString "TKA sebagaimana dimaksud pada ayat (1) dipekerjakan paling lama sampai dengan berakhirnya jangka waktu sebagaimana tercantum dalam Pengesahan RPTKA Pemberi Kerja TKA pertama." .
+<http://example.org/legal/document/pp/2021/34/pasal/0005/version/20210202/ayat/0003> legal:ayatHasText <http://example.org/legal/document/pp/2021/34/pasal/0005/version/20210202/ayat/0003/text> .
+<http://example.org/legal/document/pp/2021/34/pasal/0005/version/20210202/ayat/0003/text> legal:textReferencesLegal <http://example.org/legal/document/pp/2021/34/pasal/0005/version/20210202/ayat/0001> .
+<http://example.org/legal/document/pp/2021/34/pasal/0005/version/20210202/ayat> legal:ayatSetHasAyat <http://example.org/legal/document/pp/2021/34/pasal/0005/version/20210202/ayat/0004> .
+<http://example.org/legal/document/pp/2021/34/pasal/0005/version/20210202/ayat/0004> legal:ayatHasKey 4 .
+<http://example.org/legal/document/pp/2021/34/pasal/0005/version/20210202/ayat/0004> legal:ayatHasRawText "Jabatan tertentu pada sektor pendidikan vokasi dan pelatihan vokasi, sektor ekonomi digital, dan sektor migas bagi kontraktor kontrak kerja sama yang dapat dirangkap sebagaimana dimaksud pada ayat (1) huruf b ditetapkan oleh Menteri setelah mendapat masukan dari kementerian/lembaga terkait." .
+<http://example.org/legal/document/pp/2021/34/pasal/0005/version/20210202/ayat/0004/text> legal:textHasTextString "Jabatan tertentu pada sektor pendidikan vokasi dan pelatihan vokasi, sektor ekonomi digital, dan sektor migas bagi kontraktor kontrak kerja sama yang dapat dirangkap sebagaimana dimaksud pada ayat (1) huruf b ditetapkan oleh Menteri setelah mendapat masukan dari kementerian/lembaga terkait." .
+<http://example.org/legal/document/pp/2021/34/pasal/0005/version/20210202/ayat/0004> legal:ayatHasText <http://example.org/legal/document/pp/2021/34/pasal/0005/version/20210202/ayat/0004/text> .
+<http://example.org/legal/document/pp/2021/34/pasal/0005/version/20210202/ayat/0004/text> legal:textReferencesLegal <http://example.org/legal/document/pp/2021/34/pasal/0005/version/20210202/ayat/0001> .
+<http://example.org/legal/document/pp/2021/34/pasal/0005/version/20210202/ayat/0004/text> legal:textReferencesLegal <http://example.org/legal/document/pp/2021/34/pasal/0005/version/20210202/point/b> .
+<http://example.org/legal/document/pp/2021/34/bab/0002/bagian> legal:bagianSetHasBagian <http://example.org/legal/document/pp/2021/34/bab/0002/bagian/0002> .
+<http://example.org/legal/document/pp/2021/34/bab/0002/bagian/0002> legal:bagianHasKey 2 .
+<http://example.org/legal/document/pp/2021/34/bab/0002/bagian/0002> legal:bagianHasTitle "Bagian Kedua Kewajiban" .
+<http://example.org/legal/document/pp/2021/34/bab/0002/bagian/0002> legal:bagianHasPasalSet <http://example.org/legal/document/pp/2021/34/bab/0002/bagian/0002/pasals> .
+<http://example.org/legal/document/pp/2021/34/bab/0002/bagian/0002/pasals> legal:pasalSetHasPasal <http://example.org/legal/document/pp/2021/34/pasal/0006> .
+<http://example.org/legal/document/pp/2021/34/pasal/0006> legal:pasalHasKey 6 .
+<http://example.org/legal/document/pp/2021/34/pasal/0006> legal:pasalHasPasalVersion <http://example.org/legal/document/pp/2021/34/pasal/0006/version/20210202> .
+<http://example.org/legal/document/pp/2021/34> legal:documentHasPasal <http://example.org/legal/document/pp/2021/34/pasal/0006> .
+<http://example.org/legal/document/pp/2021/34/pasal/0006/version/20210202> legal:pasalVersionHasState "exists" .
+<http://example.org/legal/document/pp/2021/34/pasal/0006/version/20210202> legal:pasalVersionHasVersionDate "2021-02-02"^^xsd:date .
+<http://example.org/legal/document/pp/2021/34/pasal/0006/version/20210202> legal:pasalVersionHasRawText "(1). Setiap Pemberi Kerja TKA yang mempekerjakan TKA wajib memiliki RPTKA yang disahkan oleh Menteri atau pejabat yang ditunjuk.\n(2). Dalam hal Pemberi Kerja TKA akan mempekerjakan TKA yang sedang dipekerjakan oleh Pemberi Kerja TKA lain, masing-masing Pemberi Kerja TKA wajib memiliki Pengesahan RPTKA.\n(3). Pemberi Kerja TKA sebagaimana dimaksud pada ayat (1) dan ayat (2) wajib mempekerjakan TKA sesuai dengan Pengesahan RPTKA." .
+<http://example.org/legal/document/pp/2021/34/pasal/0006/version/20210202> legal:pasalVersionHasAyatSet <http://example.org/legal/document/pp/2021/34/pasal/0006/version/20210202/ayat> .
+<http://example.org/legal/document/pp/2021/34/pasal/0006/version/20210202/ayat> legal:ayatSetHasAyat <http://example.org/legal/document/pp/2021/34/pasal/0006/version/20210202/ayat/0001> .
+<http://example.org/legal/document/pp/2021/34/pasal/0006/version/20210202/ayat/0001> legal:ayatHasKey 1 .
+<http://example.org/legal/document/pp/2021/34/pasal/0006/version/20210202/ayat/0001> legal:ayatHasRawText "Setiap Pemberi Kerja TKA yang mempekerjakan TKA wajib memiliki RPTKA yang disahkan oleh Menteri atau pejabat yang ditunjuk." .
+<http://example.org/legal/document/pp/2021/34/pasal/0006/version/20210202/ayat/0001/text> legal:textHasTextString "Setiap Pemberi Kerja TKA yang mempekerjakan TKA wajib memiliki RPTKA yang disahkan oleh Menteri atau pejabat yang ditunjuk." .
+<http://example.org/legal/document/pp/2021/34/pasal/0006/version/20210202/ayat/0001> legal:ayatHasText <http://example.org/legal/document/pp/2021/34/pasal/0006/version/20210202/ayat/0001/text> .
+<http://example.org/legal/document/pp/2021/34/pasal/0006/version/20210202/ayat> legal:ayatSetHasAyat <http://example.org/legal/document/pp/2021/34/pasal/0006/version/20210202/ayat/0002> .
+<http://example.org/legal/document/pp/2021/34/pasal/0006/version/20210202/ayat/0002> legal:ayatHasKey 2 .
+<http://example.org/legal/document/pp/2021/34/pasal/0006/version/20210202/ayat/0002> legal:ayatHasRawText "Dalam hal Pemberi Kerja TKA akan mempekerjakan TKA yang sedang dipekerjakan oleh Pemberi Kerja TKA lain, masing-masing Pemberi Kerja TKA wajib memiliki Pengesahan RPTKA." .
+<http://example.org/legal/document/pp/2021/34/pasal/0006/version/20210202/ayat/0002/text> legal:textHasTextString "Dalam hal Pemberi Kerja TKA akan mempekerjakan TKA yang sedang dipekerjakan oleh Pemberi Kerja TKA lain, masing-masing Pemberi Kerja TKA wajib memiliki Pengesahan RPTKA." .
+<http://example.org/legal/document/pp/2021/34/pasal/0006/version/20210202/ayat/0002> legal:ayatHasText <http://example.org/legal/document/pp/2021/34/pasal/0006/version/20210202/ayat/0002/text> .
+<http://example.org/legal/document/pp/2021/34/pasal/0006/version/20210202/ayat> legal:ayatSetHasAyat <http://example.org/legal/document/pp/2021/34/pasal/0006/version/20210202/ayat/0003> .
+<http://example.org/legal/document/pp/2021/34/pasal/0006/version/20210202/ayat/0003> legal:ayatHasKey 3 .
+<http://example.org/legal/document/pp/2021/34/pasal/0006/version/20210202/ayat/0003> legal:ayatHasRawText "Pemberi Kerja TKA sebagaimana dimaksud pada ayat (1) dan ayat (2) wajib mempekerjakan TKA sesuai dengan Pengesahan RPTKA." .
+<http://example.org/legal/document/pp/2021/34/pasal/0006/version/20210202/ayat/0003/text> legal:textHasTextString "Pemberi Kerja TKA sebagaimana dimaksud pada ayat (1) dan ayat (2) wajib mempekerjakan TKA sesuai dengan Pengesahan RPTKA." .
+<http://example.org/legal/document/pp/2021/34/pasal/0006/version/20210202/ayat/0003> legal:ayatHasText <http://example.org/legal/document/pp/2021/34/pasal/0006/version/20210202/ayat/0003/text> .
+<http://example.org/legal/document/pp/2021/34/pasal/0006/version/20210202/ayat/0003/text> legal:textReferencesLegal <http://example.org/legal/document/pp/2021/34/pasal/0006/version/20210202/ayat/0002> .
+<http://example.org/legal/document/pp/2021/34/pasal/0006/version/20210202/ayat/0003/text> legal:textReferencesLegal <http://example.org/legal/document/pp/2021/34/pasal/0006/version/20210202/ayat/0001> .
+<http://example.org/legal/document/pp/2021/34/bab/0002/bagian/0002/pasals> legal:pasalSetHasPasal <http://example.org/legal/document/pp/2021/34/pasal/0007> .
+<http://example.org/legal/document/pp/2021/34/pasal/0007> legal:pasalHasKey 7 .
+<http://example.org/legal/document/pp/2021/34/pasal/0007> legal:pasalHasPasalVersion <http://example.org/legal/document/pp/2021/34/pasal/0007/version/20210202> .
+<http://example.org/legal/document/pp/2021/34> legal:documentHasPasal <http://example.org/legal/document/pp/2021/34/pasal/0007> .
+<http://example.org/legal/document/pp/2021/34/pasal/0007/version/20210202> legal:pasalVersionHasState "exists" .
+<http://example.org/legal/document/pp/2021/34/pasal/0007/version/20210202> legal:pasalVersionHasVersionDate "2021-02-02"^^xsd:date .
+<http://example.org/legal/document/pp/2021/34/pasal/0007/version/20210202> legal:pasalVersionHasRawText "(1). Pemberi Kerja TKA wajib:\na. menunjuk tenaga kerja warga negara Indonesia sebagai Tenaga Kerja Pendamping TKA yang dipekerjakan untuk alih teknologi dan alih keahlian dari TKA,\nb. melaksanakan pendidikan dan pelatihan kerja bagi Tenaga Kerja Pendamping TKA sebagaimana dimaksud pada huruf a sesuai dengan kualifikasi jabatan yang diduduki oleh TKA, dan\nc. memulangkan TKA ke negara asalnya setelah perjanjian kerjanya berakhir.\n\n(2). Selain kewajiban Pemberi Kerja TKA sebagaimana dimaksud pada ayat (1), Pemberi Kerja TKA wajib memfasilitasi pendidikan dan pelatihan bahasa Indonesia kepada TKA.\n(3). Ketentuan sebagaimana dimaksud pada ayat (1) huruf a, huruf b, dan ayat (2) tidak berlaku bagi:\na. direksi dan komisaris,\nb. kepala kantor perwakilan,\nc. . pembina, pengurus, dan pengawas yayasan, dan\nd. TKA yang dipekerjakan untuk pekerjaan bersifat sementara.\n" .
+<http://example.org/legal/document/pp/2021/34/pasal/0007/version/20210202> legal:pasalVersionHasAyatSet <http://example.org/legal/document/pp/2021/34/pasal/0007/version/20210202/ayat> .
+<http://example.org/legal/document/pp/2021/34/pasal/0007/version/20210202/ayat> legal:ayatSetHasAyat <http://example.org/legal/document/pp/2021/34/pasal/0007/version/20210202/ayat/0001> .
+<http://example.org/legal/document/pp/2021/34/pasal/0007/version/20210202/ayat/0001> legal:ayatHasKey 1 .
+<http://example.org/legal/document/pp/2021/34/pasal/0007/version/20210202/ayat/0001> legal:ayatHasRawText "Pemberi Kerja TKA wajib:\na. menunjuk tenaga kerja warga negara Indonesia sebagai Tenaga Kerja Pendamping TKA yang dipekerjakan untuk alih teknologi dan alih keahlian dari TKA,\nb. melaksanakan pendidikan dan pelatihan kerja bagi Tenaga Kerja Pendamping TKA sebagaimana dimaksud pada huruf a sesuai dengan kualifikasi jabatan yang diduduki oleh TKA, dan\nc. memulangkan TKA ke negara asalnya setelah perjanjian kerjanya berakhir.\n" .
+<http://example.org/legal/document/pp/2021/34/pasal/0007/version/20210202/ayat/0001> legal:ayatHasPointSet <http://example.org/legal/document/pp/2021/34/pasal/0007/version/20210202/ayat/0001/point> .
+<http://example.org/legal/document/pp/2021/34/pasal/0007/version/20210202/ayat/0001/point/description> legal:textHasTextString "Pemberi Kerja TKA wajib:" .
+<http://example.org/legal/document/pp/2021/34/pasal/0007/version/20210202/ayat/0001/point> legal:pointSetHasDescription <http://example.org/legal/document/pp/2021/34/pasal/0007/version/20210202/ayat/0001/point/description> .
+<http://example.org/legal/document/pp/2021/34/pasal/0007/version/20210202/ayat/0001/point> legal:pointSetHasPoint <http://example.org/legal/document/pp/2021/34/pasal/0007/version/20210202/ayat/0001/point/a> .
+<http://example.org/legal/document/pp/2021/34/pasal/0007/version/20210202/ayat/0001/point/a> legal:pointHasKey "a" .
+<http://example.org/legal/document/pp/2021/34/pasal/0007/version/20210202/ayat/0001/point/a/text> legal:textHasTextString "menunjuk tenaga kerja warga negara Indonesia sebagai Tenaga Kerja Pendamping TKA yang dipekerjakan untuk alih teknologi dan alih keahlian dari TKA," .
+<http://example.org/legal/document/pp/2021/34/pasal/0007/version/20210202/ayat/0001/point/a> legal:pointHasText <http://example.org/legal/document/pp/2021/34/pasal/0007/version/20210202/ayat/0001/point/a/text> .
+<http://example.org/legal/document/pp/2021/34/pasal/0007/version/20210202/ayat/0001/point> legal:pointSetHasPoint <http://example.org/legal/document/pp/2021/34/pasal/0007/version/20210202/ayat/0001/point/b> .
+<http://example.org/legal/document/pp/2021/34/pasal/0007/version/20210202/ayat/0001/point/b> legal:pointHasKey "b" .
+<http://example.org/legal/document/pp/2021/34/pasal/0007/version/20210202/ayat/0001/point/b/text> legal:textHasTextString "melaksanakan pendidikan dan pelatihan kerja bagi Tenaga Kerja Pendamping TKA sebagaimana dimaksud pada huruf a sesuai dengan kualifikasi jabatan yang diduduki oleh TKA, dan" .
+<http://example.org/legal/document/pp/2021/34/pasal/0007/version/20210202/ayat/0001/point/b> legal:pointHasText <http://example.org/legal/document/pp/2021/34/pasal/0007/version/20210202/ayat/0001/point/b/text> .
+<http://example.org/legal/document/pp/2021/34/pasal/0007/version/20210202/ayat/0001/point/b/text> legal:textReferencesLegal <http://example.org/legal/document/pp/2021/34/pasal/0007/version/20210202/point/a> .
+<http://example.org/legal/document/pp/2021/34/pasal/0007/version/20210202/ayat/0001/point> legal:pointSetHasPoint <http://example.org/legal/document/pp/2021/34/pasal/0007/version/20210202/ayat/0001/point/c> .
+<http://example.org/legal/document/pp/2021/34/pasal/0007/version/20210202/ayat/0001/point/c> legal:pointHasKey "c" .
+<http://example.org/legal/document/pp/2021/34/pasal/0007/version/20210202/ayat/0001/point/c/text> legal:textHasTextString "memulangkan TKA ke negara asalnya setelah perjanjian kerjanya berakhir." .
+<http://example.org/legal/document/pp/2021/34/pasal/0007/version/20210202/ayat/0001/point/c> legal:pointHasText <http://example.org/legal/document/pp/2021/34/pasal/0007/version/20210202/ayat/0001/point/c/text> .
+<http://example.org/legal/document/pp/2021/34/pasal/0007/version/20210202/ayat> legal:ayatSetHasAyat <http://example.org/legal/document/pp/2021/34/pasal/0007/version/20210202/ayat/0002> .
+<http://example.org/legal/document/pp/2021/34/pasal/0007/version/20210202/ayat/0002> legal:ayatHasKey 2 .
+<http://example.org/legal/document/pp/2021/34/pasal/0007/version/20210202/ayat/0002> legal:ayatHasRawText "Selain kewajiban Pemberi Kerja TKA sebagaimana dimaksud pada ayat (1), Pemberi Kerja TKA wajib memfasilitasi pendidikan dan pelatihan bahasa Indonesia kepada TKA." .
+<http://example.org/legal/document/pp/2021/34/pasal/0007/version/20210202/ayat/0002/text> legal:textHasTextString "Selain kewajiban Pemberi Kerja TKA sebagaimana dimaksud pada ayat (1), Pemberi Kerja TKA wajib memfasilitasi pendidikan dan pelatihan bahasa Indonesia kepada TKA." .
+<http://example.org/legal/document/pp/2021/34/pasal/0007/version/20210202/ayat/0002> legal:ayatHasText <http://example.org/legal/document/pp/2021/34/pasal/0007/version/20210202/ayat/0002/text> .
+<http://example.org/legal/document/pp/2021/34/pasal/0007/version/20210202/ayat/0002/text> legal:textReferencesLegal <http://example.org/legal/document/pp/2021/34/pasal/0007/version/20210202/ayat/0001> .
+<http://example.org/legal/document/pp/2021/34/pasal/0007/version/20210202/ayat> legal:ayatSetHasAyat <http://example.org/legal/document/pp/2021/34/pasal/0007/version/20210202/ayat/0003> .
+<http://example.org/legal/document/pp/2021/34/pasal/0007/version/20210202/ayat/0003> legal:ayatHasKey 3 .
+<http://example.org/legal/document/pp/2021/34/pasal/0007/version/20210202/ayat/0003> legal:ayatHasRawText "Ketentuan sebagaimana dimaksud pada ayat (1) huruf a, huruf b, dan ayat (2) tidak berlaku bagi:\na. direksi dan komisaris,\nb. kepala kantor perwakilan,\nc. . pembina, pengurus, dan pengawas yayasan, dan\nd. TKA yang dipekerjakan untuk pekerjaan bersifat sementara.\n" .
+<http://example.org/legal/document/pp/2021/34/pasal/0007/version/20210202/ayat/0003> legal:ayatHasPointSet <http://example.org/legal/document/pp/2021/34/pasal/0007/version/20210202/ayat/0003/point> .
+<http://example.org/legal/document/pp/2021/34/pasal/0007/version/20210202/ayat/0003/point/description> legal:textHasTextString "Ketentuan sebagaimana dimaksud pada ayat (1) huruf a, huruf b, dan ayat (2) tidak berlaku bagi:" .
+<http://example.org/legal/document/pp/2021/34/pasal/0007/version/20210202/ayat/0003/point> legal:pointSetHasDescription <http://example.org/legal/document/pp/2021/34/pasal/0007/version/20210202/ayat/0003/point/description> .
+<http://example.org/legal/document/pp/2021/34/pasal/0007/version/20210202/ayat/0003/point> legal:pointSetHasPoint <http://example.org/legal/document/pp/2021/34/pasal/0007/version/20210202/ayat/0003/point/a> .
+<http://example.org/legal/document/pp/2021/34/pasal/0007/version/20210202/ayat/0003/point/a> legal:pointHasKey "a" .
+<http://example.org/legal/document/pp/2021/34/pasal/0007/version/20210202/ayat/0003/point/a/text> legal:textHasTextString "direksi dan komisaris," .
+<http://example.org/legal/document/pp/2021/34/pasal/0007/version/20210202/ayat/0003/point/a> legal:pointHasText <http://example.org/legal/document/pp/2021/34/pasal/0007/version/20210202/ayat/0003/point/a/text> .
+<http://example.org/legal/document/pp/2021/34/pasal/0007/version/20210202/ayat/0003/point> legal:pointSetHasPoint <http://example.org/legal/document/pp/2021/34/pasal/0007/version/20210202/ayat/0003/point/b> .
+<http://example.org/legal/document/pp/2021/34/pasal/0007/version/20210202/ayat/0003/point/b> legal:pointHasKey "b" .
+<http://example.org/legal/document/pp/2021/34/pasal/0007/version/20210202/ayat/0003/point/b/text> legal:textHasTextString "kepala kantor perwakilan," .
+<http://example.org/legal/document/pp/2021/34/pasal/0007/version/20210202/ayat/0003/point/b> legal:pointHasText <http://example.org/legal/document/pp/2021/34/pasal/0007/version/20210202/ayat/0003/point/b/text> .
+<http://example.org/legal/document/pp/2021/34/pasal/0007/version/20210202/ayat/0003/point> legal:pointSetHasPoint <http://example.org/legal/document/pp/2021/34/pasal/0007/version/20210202/ayat/0003/point/c> .
+<http://example.org/legal/document/pp/2021/34/pasal/0007/version/20210202/ayat/0003/point/c> legal:pointHasKey "c" .
+<http://example.org/legal/document/pp/2021/34/pasal/0007/version/20210202/ayat/0003/point/c/text> legal:textHasTextString ". pembina, pengurus, dan pengawas yayasan, dan" .
+<http://example.org/legal/document/pp/2021/34/pasal/0007/version/20210202/ayat/0003/point/c> legal:pointHasText <http://example.org/legal/document/pp/2021/34/pasal/0007/version/20210202/ayat/0003/point/c/text> .
+<http://example.org/legal/document/pp/2021/34/pasal/0007/version/20210202/ayat/0003/point> legal:pointSetHasPoint <http://example.org/legal/document/pp/2021/34/pasal/0007/version/20210202/ayat/0003/point/d> .
+<http://example.org/legal/document/pp/2021/34/pasal/0007/version/20210202/ayat/0003/point/d> legal:pointHasKey "d" .
+<http://example.org/legal/document/pp/2021/34/pasal/0007/version/20210202/ayat/0003/point/d/text> legal:textHasTextString "TKA yang dipekerjakan untuk pekerjaan bersifat sementara." .
+<http://example.org/legal/document/pp/2021/34/pasal/0007/version/20210202/ayat/0003/point/d> legal:pointHasText <http://example.org/legal/document/pp/2021/34/pasal/0007/version/20210202/ayat/0003/point/d/text> .
+<http://example.org/legal/document/pp/2021/34/bab/0002/bagian/0002/pasals> legal:pasalSetHasPasal <http://example.org/legal/document/pp/2021/34/pasal/0008> .
+<http://example.org/legal/document/pp/2021/34/pasal/0008> legal:pasalHasKey 8 .
+<http://example.org/legal/document/pp/2021/34/pasal/0008> legal:pasalHasPasalVersion <http://example.org/legal/document/pp/2021/34/pasal/0008/version/20210202> .
+<http://example.org/legal/document/pp/2021/34> legal:documentHasPasal <http://example.org/legal/document/pp/2021/34/pasal/0008> .
+<http://example.org/legal/document/pp/2021/34/pasal/0008/version/20210202> legal:pasalVersionHasState "exists" .
+<http://example.org/legal/document/pp/2021/34/pasal/0008/version/20210202> legal:pasalVersionHasVersionDate "2021-02-02"^^xsd:date .
+<http://example.org/legal/document/pp/2021/34/pasal/0008/version/20210202> legal:pasalVersionHasRawText "(1). Pemberi Kerja TKA wajib mendaftarkan TKA dalam program jaminan sosial nasional bagi TKA yang bekerja lebih dari 6 (enam) bulan atau program asuransi pada perusahaan asuransi bagi TKA yang bekerja kurang dari 6 (enam) bulan.\n(2). Program asuransi bagi TKA yang bekerja kurang dari 6 (enam) bulan sebagaimana dimaksud pada ayat (1) paling sedikit menjamin pelindungan untuk jenis risiko kecelakaan kerja." .
+<http://example.org/legal/document/pp/2021/34/pasal/0008/version/20210202> legal:pasalVersionHasAyatSet <http://example.org/legal/document/pp/2021/34/pasal/0008/version/20210202/ayat> .
+<http://example.org/legal/document/pp/2021/34/pasal/0008/version/20210202/ayat> legal:ayatSetHasAyat <http://example.org/legal/document/pp/2021/34/pasal/0008/version/20210202/ayat/0001> .
+<http://example.org/legal/document/pp/2021/34/pasal/0008/version/20210202/ayat/0001> legal:ayatHasKey 1 .
+<http://example.org/legal/document/pp/2021/34/pasal/0008/version/20210202/ayat/0001> legal:ayatHasRawText "Pemberi Kerja TKA wajib mendaftarkan TKA dalam program jaminan sosial nasional bagi TKA yang bekerja lebih dari 6 (enam) bulan atau program asuransi pada perusahaan asuransi bagi TKA yang bekerja kurang dari 6 (enam) bulan." .
+<http://example.org/legal/document/pp/2021/34/pasal/0008/version/20210202/ayat/0001/text> legal:textHasTextString "Pemberi Kerja TKA wajib mendaftarkan TKA dalam program jaminan sosial nasional bagi TKA yang bekerja lebih dari 6 (enam) bulan atau program asuransi pada perusahaan asuransi bagi TKA yang bekerja kurang dari 6 (enam) bulan." .
+<http://example.org/legal/document/pp/2021/34/pasal/0008/version/20210202/ayat/0001> legal:ayatHasText <http://example.org/legal/document/pp/2021/34/pasal/0008/version/20210202/ayat/0001/text> .
+<http://example.org/legal/document/pp/2021/34/pasal/0008/version/20210202/ayat> legal:ayatSetHasAyat <http://example.org/legal/document/pp/2021/34/pasal/0008/version/20210202/ayat/0002> .
+<http://example.org/legal/document/pp/2021/34/pasal/0008/version/20210202/ayat/0002> legal:ayatHasKey 2 .
+<http://example.org/legal/document/pp/2021/34/pasal/0008/version/20210202/ayat/0002> legal:ayatHasRawText "Program asuransi bagi TKA yang bekerja kurang dari 6 (enam) bulan sebagaimana dimaksud pada ayat (1) paling sedikit menjamin pelindungan untuk jenis risiko kecelakaan kerja." .
+<http://example.org/legal/document/pp/2021/34/pasal/0008/version/20210202/ayat/0002/text> legal:textHasTextString "Program asuransi bagi TKA yang bekerja kurang dari 6 (enam) bulan sebagaimana dimaksud pada ayat (1) paling sedikit menjamin pelindungan untuk jenis risiko kecelakaan kerja." .
+<http://example.org/legal/document/pp/2021/34/pasal/0008/version/20210202/ayat/0002> legal:ayatHasText <http://example.org/legal/document/pp/2021/34/pasal/0008/version/20210202/ayat/0002/text> .
+<http://example.org/legal/document/pp/2021/34/pasal/0008/version/20210202/ayat/0002/text> legal:textReferencesLegal <http://example.org/legal/document/pp/2021/34/pasal/0008/version/20210202/ayat/0001> .
+<http://example.org/legal/document/pp/2021/34/bab/0002/bagian> legal:bagianSetHasBagian <http://example.org/legal/document/pp/2021/34/bab/0002/bagian/0003> .
+<http://example.org/legal/document/pp/2021/34/bab/0002/bagian/0003> legal:bagianHasKey 3 .
+<http://example.org/legal/document/pp/2021/34/bab/0002/bagian/0003> legal:bagianHasTitle "Bagian Ketiga Larangan" .
+<http://example.org/legal/document/pp/2021/34/bab/0002/bagian/0003> legal:bagianHasPasalSet <http://example.org/legal/document/pp/2021/34/bab/0002/bagian/0003/pasals> .
+<http://example.org/legal/document/pp/2021/34/bab/0002/bagian/0003/pasals> legal:pasalSetHasPasal <http://example.org/legal/document/pp/2021/34/pasal/0009> .
+<http://example.org/legal/document/pp/2021/34/pasal/0009> legal:pasalHasKey 9 .
+<http://example.org/legal/document/pp/2021/34/pasal/0009> legal:pasalHasPasalVersion <http://example.org/legal/document/pp/2021/34/pasal/0009/version/20210202> .
+<http://example.org/legal/document/pp/2021/34> legal:documentHasPasal <http://example.org/legal/document/pp/2021/34/pasal/0009> .
+<http://example.org/legal/document/pp/2021/34/pasal/0009/version/20210202> legal:pasalVersionHasState "exists" .
+<http://example.org/legal/document/pp/2021/34/pasal/0009/version/20210202> legal:pasalVersionHasVersionDate "2021-02-02"^^xsd:date .
+<http://example.org/legal/document/pp/2021/34/pasal/0009/version/20210202> legal:pasalVersionHasRawText "Pemberi kerja orang perseorangan dilarang mempekerjakan TKA." .
+<http://example.org/legal/document/pp/2021/34/pasal/0009/version/20210202/text> legal:textHasTextString "Pemberi kerja orang perseorangan dilarang mempekerjakan TKA." .
+<http://example.org/legal/document/pp/2021/34/pasal/0009/version/20210202> legal:pasalVersionHasText <http://example.org/legal/document/pp/2021/34/pasal/0009/version/20210202/text> .
+<http://example.org/legal/document/pp/2021/34/bab/0002/bagian/0003/pasals> legal:pasalSetHasPasal <http://example.org/legal/document/pp/2021/34/pasal/0010> .
+<http://example.org/legal/document/pp/2021/34/pasal/0010> legal:pasalHasKey 10 .
+<http://example.org/legal/document/pp/2021/34/pasal/0010> legal:pasalHasPasalVersion <http://example.org/legal/document/pp/2021/34/pasal/0010/version/20210202> .
+<http://example.org/legal/document/pp/2021/34> legal:documentHasPasal <http://example.org/legal/document/pp/2021/34/pasal/0010> .
+<http://example.org/legal/document/pp/2021/34/pasal/0010/version/20210202> legal:pasalVersionHasState "exists" .
+<http://example.org/legal/document/pp/2021/34/pasal/0010/version/20210202> legal:pasalVersionHasVersionDate "2021-02-02"^^xsd:date .
+<http://example.org/legal/document/pp/2021/34/pasal/0010/version/20210202> legal:pasalVersionHasRawText "Pemberi Kerja TKA dilarang mempekerjakan TKA rangkap jabatan dalam perusahaan yang sama." .
+<http://example.org/legal/document/pp/2021/34/pasal/0010/version/20210202/text> legal:textHasTextString "Pemberi Kerja TKA dilarang mempekerjakan TKA rangkap jabatan dalam perusahaan yang sama." .
+<http://example.org/legal/document/pp/2021/34/pasal/0010/version/20210202> legal:pasalVersionHasText <http://example.org/legal/document/pp/2021/34/pasal/0010/version/20210202/text> .
+<http://example.org/legal/document/pp/2021/34/bab/0002/bagian/0003/pasals> legal:pasalSetHasPasal <http://example.org/legal/document/pp/2021/34/pasal/0011> .
+<http://example.org/legal/document/pp/2021/34/pasal/0011> legal:pasalHasKey 11 .
+<http://example.org/legal/document/pp/2021/34/pasal/0011> legal:pasalHasPasalVersion <http://example.org/legal/document/pp/2021/34/pasal/0011/version/20210202> .
+<http://example.org/legal/document/pp/2021/34> legal:documentHasPasal <http://example.org/legal/document/pp/2021/34/pasal/0011> .
+<http://example.org/legal/document/pp/2021/34/pasal/0011/version/20210202> legal:pasalVersionHasState "exists" .
+<http://example.org/legal/document/pp/2021/34/pasal/0011/version/20210202> legal:pasalVersionHasVersionDate "2021-02-02"^^xsd:date .
+<http://example.org/legal/document/pp/2021/34/pasal/0011/version/20210202> legal:pasalVersionHasRawText "(1). Pemberi Kerja TKA dilarang mempekerjakan TKA pada jabatan yang mengurusi personalia.\n(2). Jabatan yang mengurusi personalia sebagaimana dimaksud pada ayat (1) ditetapkan oleh Menteri setelah mendapat masukan dari kementerian/lembaga terkait." .
+<http://example.org/legal/document/pp/2021/34/pasal/0011/version/20210202> legal:pasalVersionHasAyatSet <http://example.org/legal/document/pp/2021/34/pasal/0011/version/20210202/ayat> .
+<http://example.org/legal/document/pp/2021/34/pasal/0011/version/20210202/ayat> legal:ayatSetHasAyat <http://example.org/legal/document/pp/2021/34/pasal/0011/version/20210202/ayat/0001> .
+<http://example.org/legal/document/pp/2021/34/pasal/0011/version/20210202/ayat/0001> legal:ayatHasKey 1 .
+<http://example.org/legal/document/pp/2021/34/pasal/0011/version/20210202/ayat/0001> legal:ayatHasRawText "Pemberi Kerja TKA dilarang mempekerjakan TKA pada jabatan yang mengurusi personalia." .
+<http://example.org/legal/document/pp/2021/34/pasal/0011/version/20210202/ayat/0001/text> legal:textHasTextString "Pemberi Kerja TKA dilarang mempekerjakan TKA pada jabatan yang mengurusi personalia." .
+<http://example.org/legal/document/pp/2021/34/pasal/0011/version/20210202/ayat/0001> legal:ayatHasText <http://example.org/legal/document/pp/2021/34/pasal/0011/version/20210202/ayat/0001/text> .
+<http://example.org/legal/document/pp/2021/34/pasal/0011/version/20210202/ayat> legal:ayatSetHasAyat <http://example.org/legal/document/pp/2021/34/pasal/0011/version/20210202/ayat/0002> .
+<http://example.org/legal/document/pp/2021/34/pasal/0011/version/20210202/ayat/0002> legal:ayatHasKey 2 .
+<http://example.org/legal/document/pp/2021/34/pasal/0011/version/20210202/ayat/0002> legal:ayatHasRawText "Jabatan yang mengurusi personalia sebagaimana dimaksud pada ayat (1) ditetapkan oleh Menteri setelah mendapat masukan dari kementerian/lembaga terkait." .
+<http://example.org/legal/document/pp/2021/34/pasal/0011/version/20210202/ayat/0002/text> legal:textHasTextString "Jabatan yang mengurusi personalia sebagaimana dimaksud pada ayat (1) ditetapkan oleh Menteri setelah mendapat masukan dari kementerian/lembaga terkait." .
+<http://example.org/legal/document/pp/2021/34/pasal/0011/version/20210202/ayat/0002> legal:ayatHasText <http://example.org/legal/document/pp/2021/34/pasal/0011/version/20210202/ayat/0002/text> .
+<http://example.org/legal/document/pp/2021/34/pasal/0011/version/20210202/ayat/0002/text> legal:textReferencesLegal <http://example.org/legal/document/pp/2021/34/pasal/0011/version/20210202/ayat/0001> .
+<http://example.org/legal/document/pp/2021/34/bab> legal:babSetHasBab <http://example.org/legal/document/pp/2021/34/bab/0003> .
+<http://example.org/legal/document/pp/2021/34/bab/0003> legal:babHasKey 3 .
+<http://example.org/legal/document/pp/2021/34/bab/0003> legal:babHasTitle "PENGESAHAN RENCANA PENGGUNAAN TENAGA KERJA ASING" .
+<http://example.org/legal/document/pp/2021/34/bab/0003> legal:babHasBagianSet <http://example.org/legal/document/pp/2021/34/bab/0003/bagian> .
+<http://example.org/legal/document/pp/2021/34/bab/0003/bagian> legal:bagianSetHasBagian <http://example.org/legal/document/pp/2021/34/bab/0003/bagian/0001> .
+<http://example.org/legal/document/pp/2021/34/bab/0003/bagian/0001> legal:bagianHasKey 1 .
+<http://example.org/legal/document/pp/2021/34/bab/0003/bagian/0001> legal:bagianHasTitle "Bagian Kesatu Tata Cara Permohonan Pengesahan Rencana Penggunaan Tenaga Kerja Asing" .
+<http://example.org/legal/document/pp/2021/34/bab/0003/bagian/0001> legal:bagianHasPasalSet <http://example.org/legal/document/pp/2021/34/bab/0003/bagian/0001/pasals> .
+<http://example.org/legal/document/pp/2021/34/bab/0003/bagian/0001/pasals> legal:pasalSetHasPasal <http://example.org/legal/document/pp/2021/34/pasal/0012> .
+<http://example.org/legal/document/pp/2021/34/pasal/0012> legal:pasalHasKey 12 .
+<http://example.org/legal/document/pp/2021/34/pasal/0012> legal:pasalHasPasalVersion <http://example.org/legal/document/pp/2021/34/pasal/0012/version/20210202> .
+<http://example.org/legal/document/pp/2021/34> legal:documentHasPasal <http://example.org/legal/document/pp/2021/34/pasal/0012> .
+<http://example.org/legal/document/pp/2021/34/pasal/0012/version/20210202> legal:pasalVersionHasState "exists" .
+<http://example.org/legal/document/pp/2021/34/pasal/0012/version/20210202> legal:pasalVersionHasVersionDate "2021-02-02"^^xsd:date .
+<http://example.org/legal/document/pp/2021/34/pasal/0012/version/20210202> legal:pasalVersionHasRawText "(1). Untuk mendapatkan Pengesahan RPTKA, Pemberi Kerja TKA harus mengajukan permohonan secara daring kepada Menteri atau pejabat yang ditunjuk.\n(2). Permohonan Pengesahan RPTKA sebagaimana dimaksud pada ayat (1) disampaikan oleh Pemberi Kerja TKA yang memuat paling sedikit:\na. identitas Pemberi Kerja TKA,\nb. alasan penggunaan TKA:\nc. jabatan atau kedudukan TKA dalam struktur organisasi perusahaan,\nd. jumlah TKA,\ne. jangka waktu penggunaan TKA,\nf. lokasi kerja TKA,\ng. identitas Tenaga Kerja Pendamping TKA, dan\nh. rencana penyerapan tenaga kerja Indonesia setiap tahun.\n\n(3). Permohonan Pengesahan RPTKA sebagaimana dimaksud pada ayat (2) disampaikan oleh Pemberi Kerja TKA dengan melampirkan dokumen paling sedikit:\na. surat permohonan,\nb. nomor induk berusaha dan/atau izin usaha Pemberi Kerja TKA,\nc. akta dan keputusan pengesahan pendirian dan/atau perubahan dari instansi yang berwenang:\nd. bukti wajib lapor ketenagakerjaan di perusahaan, |\ne. rancangan perjanjian kerja atau perjanjian lain,\nf. bagan struktur organisasi perusahaan,\ng. surat pernyataan untuk penunjukan Tenaga Kerja Pendamping TKA,\nh. surat pernyataan untuk melaksanakan pendidikan dan pelatihan kerja bagi tenaga kerja Indonesia sesuai dengan kualifikasi jabatan yang diduduki oleh TKA, dan\ni. surat pernyataan untuk memfasilitasi pendidikan dan pelatihan bahasa Indonesia kepada TKA.\n\n(4). Dalam hal Pemberi Kerja TKA telah siap menyampaikan data calon TKA yang akan dipekerjakan maka penyampaian data calon TKA dapat dilakukan sekaligus pada saat permohonan Pengesahan RPTKA." .
+<http://example.org/legal/document/pp/2021/34/pasal/0012/version/20210202> legal:pasalVersionHasAyatSet <http://example.org/legal/document/pp/2021/34/pasal/0012/version/20210202/ayat> .
+<http://example.org/legal/document/pp/2021/34/pasal/0012/version/20210202/ayat> legal:ayatSetHasAyat <http://example.org/legal/document/pp/2021/34/pasal/0012/version/20210202/ayat/0001> .
+<http://example.org/legal/document/pp/2021/34/pasal/0012/version/20210202/ayat/0001> legal:ayatHasKey 1 .
+<http://example.org/legal/document/pp/2021/34/pasal/0012/version/20210202/ayat/0001> legal:ayatHasRawText "Untuk mendapatkan Pengesahan RPTKA, Pemberi Kerja TKA harus mengajukan permohonan secara daring kepada Menteri atau pejabat yang ditunjuk." .
+<http://example.org/legal/document/pp/2021/34/pasal/0012/version/20210202/ayat/0001/text> legal:textHasTextString "Untuk mendapatkan Pengesahan RPTKA, Pemberi Kerja TKA harus mengajukan permohonan secara daring kepada Menteri atau pejabat yang ditunjuk." .
+<http://example.org/legal/document/pp/2021/34/pasal/0012/version/20210202/ayat/0001> legal:ayatHasText <http://example.org/legal/document/pp/2021/34/pasal/0012/version/20210202/ayat/0001/text> .
+<http://example.org/legal/document/pp/2021/34/pasal/0012/version/20210202/ayat> legal:ayatSetHasAyat <http://example.org/legal/document/pp/2021/34/pasal/0012/version/20210202/ayat/0002> .
+<http://example.org/legal/document/pp/2021/34/pasal/0012/version/20210202/ayat/0002> legal:ayatHasKey 2 .
+<http://example.org/legal/document/pp/2021/34/pasal/0012/version/20210202/ayat/0002> legal:ayatHasRawText "Permohonan Pengesahan RPTKA sebagaimana dimaksud pada ayat (1) disampaikan oleh Pemberi Kerja TKA yang memuat paling sedikit:\na. identitas Pemberi Kerja TKA,\nb. alasan penggunaan TKA:\nc. jabatan atau kedudukan TKA dalam struktur organisasi perusahaan,\nd. jumlah TKA,\ne. jangka waktu penggunaan TKA,\nf. lokasi kerja TKA,\ng. identitas Tenaga Kerja Pendamping TKA, dan\nh. rencana penyerapan tenaga kerja Indonesia setiap tahun.\n" .
+<http://example.org/legal/document/pp/2021/34/pasal/0012/version/20210202/ayat/0002> legal:ayatHasPointSet <http://example.org/legal/document/pp/2021/34/pasal/0012/version/20210202/ayat/0002/point> .
+<http://example.org/legal/document/pp/2021/34/pasal/0012/version/20210202/ayat/0002/point/description> legal:textHasTextString "Permohonan Pengesahan RPTKA sebagaimana dimaksud pada ayat (1) disampaikan oleh Pemberi Kerja TKA yang memuat paling sedikit:" .
+<http://example.org/legal/document/pp/2021/34/pasal/0012/version/20210202/ayat/0002/point> legal:pointSetHasDescription <http://example.org/legal/document/pp/2021/34/pasal/0012/version/20210202/ayat/0002/point/description> .
+<http://example.org/legal/document/pp/2021/34/pasal/0012/version/20210202/ayat/0002/point> legal:pointSetHasPoint <http://example.org/legal/document/pp/2021/34/pasal/0012/version/20210202/ayat/0002/point/a> .
+<http://example.org/legal/document/pp/2021/34/pasal/0012/version/20210202/ayat/0002/point/a> legal:pointHasKey "a" .
+<http://example.org/legal/document/pp/2021/34/pasal/0012/version/20210202/ayat/0002/point/a/text> legal:textHasTextString "identitas Pemberi Kerja TKA," .
+<http://example.org/legal/document/pp/2021/34/pasal/0012/version/20210202/ayat/0002/point/a> legal:pointHasText <http://example.org/legal/document/pp/2021/34/pasal/0012/version/20210202/ayat/0002/point/a/text> .
+<http://example.org/legal/document/pp/2021/34/pasal/0012/version/20210202/ayat/0002/point> legal:pointSetHasPoint <http://example.org/legal/document/pp/2021/34/pasal/0012/version/20210202/ayat/0002/point/b> .
+<http://example.org/legal/document/pp/2021/34/pasal/0012/version/20210202/ayat/0002/point/b> legal:pointHasKey "b" .
+<http://example.org/legal/document/pp/2021/34/pasal/0012/version/20210202/ayat/0002/point/b/text> legal:textHasTextString "alasan penggunaan TKA:" .
+<http://example.org/legal/document/pp/2021/34/pasal/0012/version/20210202/ayat/0002/point/b> legal:pointHasText <http://example.org/legal/document/pp/2021/34/pasal/0012/version/20210202/ayat/0002/point/b/text> .
+<http://example.org/legal/document/pp/2021/34/pasal/0012/version/20210202/ayat/0002/point> legal:pointSetHasPoint <http://example.org/legal/document/pp/2021/34/pasal/0012/version/20210202/ayat/0002/point/c> .
+<http://example.org/legal/document/pp/2021/34/pasal/0012/version/20210202/ayat/0002/point/c> legal:pointHasKey "c" .
+<http://example.org/legal/document/pp/2021/34/pasal/0012/version/20210202/ayat/0002/point/c/text> legal:textHasTextString "jabatan atau kedudukan TKA dalam struktur organisasi perusahaan," .
+<http://example.org/legal/document/pp/2021/34/pasal/0012/version/20210202/ayat/0002/point/c> legal:pointHasText <http://example.org/legal/document/pp/2021/34/pasal/0012/version/20210202/ayat/0002/point/c/text> .
+<http://example.org/legal/document/pp/2021/34/pasal/0012/version/20210202/ayat/0002/point> legal:pointSetHasPoint <http://example.org/legal/document/pp/2021/34/pasal/0012/version/20210202/ayat/0002/point/d> .
+<http://example.org/legal/document/pp/2021/34/pasal/0012/version/20210202/ayat/0002/point/d> legal:pointHasKey "d" .
+<http://example.org/legal/document/pp/2021/34/pasal/0012/version/20210202/ayat/0002/point/d/text> legal:textHasTextString "jumlah TKA," .
+<http://example.org/legal/document/pp/2021/34/pasal/0012/version/20210202/ayat/0002/point/d> legal:pointHasText <http://example.org/legal/document/pp/2021/34/pasal/0012/version/20210202/ayat/0002/point/d/text> .
+<http://example.org/legal/document/pp/2021/34/pasal/0012/version/20210202/ayat/0002/point> legal:pointSetHasPoint <http://example.org/legal/document/pp/2021/34/pasal/0012/version/20210202/ayat/0002/point/e> .
+<http://example.org/legal/document/pp/2021/34/pasal/0012/version/20210202/ayat/0002/point/e> legal:pointHasKey "e" .
+<http://example.org/legal/document/pp/2021/34/pasal/0012/version/20210202/ayat/0002/point/e/text> legal:textHasTextString "jangka waktu penggunaan TKA," .
+<http://example.org/legal/document/pp/2021/34/pasal/0012/version/20210202/ayat/0002/point/e> legal:pointHasText <http://example.org/legal/document/pp/2021/34/pasal/0012/version/20210202/ayat/0002/point/e/text> .
+<http://example.org/legal/document/pp/2021/34/pasal/0012/version/20210202/ayat/0002/point> legal:pointSetHasPoint <http://example.org/legal/document/pp/2021/34/pasal/0012/version/20210202/ayat/0002/point/f> .
+<http://example.org/legal/document/pp/2021/34/pasal/0012/version/20210202/ayat/0002/point/f> legal:pointHasKey "f" .
+<http://example.org/legal/document/pp/2021/34/pasal/0012/version/20210202/ayat/0002/point/f/text> legal:textHasTextString "lokasi kerja TKA," .
+<http://example.org/legal/document/pp/2021/34/pasal/0012/version/20210202/ayat/0002/point/f> legal:pointHasText <http://example.org/legal/document/pp/2021/34/pasal/0012/version/20210202/ayat/0002/point/f/text> .
+<http://example.org/legal/document/pp/2021/34/pasal/0012/version/20210202/ayat/0002/point> legal:pointSetHasPoint <http://example.org/legal/document/pp/2021/34/pasal/0012/version/20210202/ayat/0002/point/g> .
+<http://example.org/legal/document/pp/2021/34/pasal/0012/version/20210202/ayat/0002/point/g> legal:pointHasKey "g" .
+<http://example.org/legal/document/pp/2021/34/pasal/0012/version/20210202/ayat/0002/point/g/text> legal:textHasTextString "identitas Tenaga Kerja Pendamping TKA, dan" .
+<http://example.org/legal/document/pp/2021/34/pasal/0012/version/20210202/ayat/0002/point/g> legal:pointHasText <http://example.org/legal/document/pp/2021/34/pasal/0012/version/20210202/ayat/0002/point/g/text> .
+<http://example.org/legal/document/pp/2021/34/pasal/0012/version/20210202/ayat/0002/point> legal:pointSetHasPoint <http://example.org/legal/document/pp/2021/34/pasal/0012/version/20210202/ayat/0002/point/h> .
+<http://example.org/legal/document/pp/2021/34/pasal/0012/version/20210202/ayat/0002/point/h> legal:pointHasKey "h" .
+<http://example.org/legal/document/pp/2021/34/pasal/0012/version/20210202/ayat/0002/point/h/text> legal:textHasTextString "rencana penyerapan tenaga kerja Indonesia setiap tahun." .
+<http://example.org/legal/document/pp/2021/34/pasal/0012/version/20210202/ayat/0002/point/h> legal:pointHasText <http://example.org/legal/document/pp/2021/34/pasal/0012/version/20210202/ayat/0002/point/h/text> .
+<http://example.org/legal/document/pp/2021/34/pasal/0012/version/20210202/ayat> legal:ayatSetHasAyat <http://example.org/legal/document/pp/2021/34/pasal/0012/version/20210202/ayat/0003> .
+<http://example.org/legal/document/pp/2021/34/pasal/0012/version/20210202/ayat/0003> legal:ayatHasKey 3 .
+<http://example.org/legal/document/pp/2021/34/pasal/0012/version/20210202/ayat/0003> legal:ayatHasRawText "Permohonan Pengesahan RPTKA sebagaimana dimaksud pada ayat (2) disampaikan oleh Pemberi Kerja TKA dengan melampirkan dokumen paling sedikit:\na. surat permohonan,\nb. nomor induk berusaha dan/atau izin usaha Pemberi Kerja TKA,\nc. akta dan keputusan pengesahan pendirian dan/atau perubahan dari instansi yang berwenang:\nd. bukti wajib lapor ketenagakerjaan di perusahaan, |\ne. rancangan perjanjian kerja atau perjanjian lain,\nf. bagan struktur organisasi perusahaan,\ng. surat pernyataan untuk penunjukan Tenaga Kerja Pendamping TKA,\nh. surat pernyataan untuk melaksanakan pendidikan dan pelatihan kerja bagi tenaga kerja Indonesia sesuai dengan kualifikasi jabatan yang diduduki oleh TKA, dan\ni. surat pernyataan untuk memfasilitasi pendidikan dan pelatihan bahasa Indonesia kepada TKA.\n" .
+<http://example.org/legal/document/pp/2021/34/pasal/0012/version/20210202/ayat/0003> legal:ayatHasPointSet <http://example.org/legal/document/pp/2021/34/pasal/0012/version/20210202/ayat/0003/point> .
+<http://example.org/legal/document/pp/2021/34/pasal/0012/version/20210202/ayat/0003/point/description> legal:textHasTextString "Permohonan Pengesahan RPTKA sebagaimana dimaksud pada ayat (2) disampaikan oleh Pemberi Kerja TKA dengan melampirkan dokumen paling sedikit:" .
+<http://example.org/legal/document/pp/2021/34/pasal/0012/version/20210202/ayat/0003/point> legal:pointSetHasDescription <http://example.org/legal/document/pp/2021/34/pasal/0012/version/20210202/ayat/0003/point/description> .
+<http://example.org/legal/document/pp/2021/34/pasal/0012/version/20210202/ayat/0003/point> legal:pointSetHasPoint <http://example.org/legal/document/pp/2021/34/pasal/0012/version/20210202/ayat/0003/point/a> .
+<http://example.org/legal/document/pp/2021/34/pasal/0012/version/20210202/ayat/0003/point/a> legal:pointHasKey "a" .
+<http://example.org/legal/document/pp/2021/34/pasal/0012/version/20210202/ayat/0003/point/a/text> legal:textHasTextString "surat permohonan," .
+<http://example.org/legal/document/pp/2021/34/pasal/0012/version/20210202/ayat/0003/point/a> legal:pointHasText <http://example.org/legal/document/pp/2021/34/pasal/0012/version/20210202/ayat/0003/point/a/text> .
+<http://example.org/legal/document/pp/2021/34/pasal/0012/version/20210202/ayat/0003/point> legal:pointSetHasPoint <http://example.org/legal/document/pp/2021/34/pasal/0012/version/20210202/ayat/0003/point/b> .
+<http://example.org/legal/document/pp/2021/34/pasal/0012/version/20210202/ayat/0003/point/b> legal:pointHasKey "b" .
+<http://example.org/legal/document/pp/2021/34/pasal/0012/version/20210202/ayat/0003/point/b/text> legal:textHasTextString "nomor induk berusaha dan/atau izin usaha Pemberi Kerja TKA," .
+<http://example.org/legal/document/pp/2021/34/pasal/0012/version/20210202/ayat/0003/point/b> legal:pointHasText <http://example.org/legal/document/pp/2021/34/pasal/0012/version/20210202/ayat/0003/point/b/text> .
+<http://example.org/legal/document/pp/2021/34/pasal/0012/version/20210202/ayat/0003/point> legal:pointSetHasPoint <http://example.org/legal/document/pp/2021/34/pasal/0012/version/20210202/ayat/0003/point/c> .
+<http://example.org/legal/document/pp/2021/34/pasal/0012/version/20210202/ayat/0003/point/c> legal:pointHasKey "c" .
+<http://example.org/legal/document/pp/2021/34/pasal/0012/version/20210202/ayat/0003/point/c/text> legal:textHasTextString "akta dan keputusan pengesahan pendirian dan/atau perubahan dari instansi yang berwenang:" .
+<http://example.org/legal/document/pp/2021/34/pasal/0012/version/20210202/ayat/0003/point/c> legal:pointHasText <http://example.org/legal/document/pp/2021/34/pasal/0012/version/20210202/ayat/0003/point/c/text> .
+<http://example.org/legal/document/pp/2021/34/pasal/0012/version/20210202/ayat/0003/point> legal:pointSetHasPoint <http://example.org/legal/document/pp/2021/34/pasal/0012/version/20210202/ayat/0003/point/d> .
+<http://example.org/legal/document/pp/2021/34/pasal/0012/version/20210202/ayat/0003/point/d> legal:pointHasKey "d" .
+<http://example.org/legal/document/pp/2021/34/pasal/0012/version/20210202/ayat/0003/point/d/text> legal:textHasTextString "bukti wajib lapor ketenagakerjaan di perusahaan, |" .
+<http://example.org/legal/document/pp/2021/34/pasal/0012/version/20210202/ayat/0003/point/d> legal:pointHasText <http://example.org/legal/document/pp/2021/34/pasal/0012/version/20210202/ayat/0003/point/d/text> .
+<http://example.org/legal/document/pp/2021/34/pasal/0012/version/20210202/ayat/0003/point> legal:pointSetHasPoint <http://example.org/legal/document/pp/2021/34/pasal/0012/version/20210202/ayat/0003/point/e> .
+<http://example.org/legal/document/pp/2021/34/pasal/0012/version/20210202/ayat/0003/point/e> legal:pointHasKey "e" .
+<http://example.org/legal/document/pp/2021/34/pasal/0012/version/20210202/ayat/0003/point/e/text> legal:textHasTextString "rancangan perjanjian kerja atau perjanjian lain," .
+<http://example.org/legal/document/pp/2021/34/pasal/0012/version/20210202/ayat/0003/point/e> legal:pointHasText <http://example.org/legal/document/pp/2021/34/pasal/0012/version/20210202/ayat/0003/point/e/text> .
+<http://example.org/legal/document/pp/2021/34/pasal/0012/version/20210202/ayat/0003/point> legal:pointSetHasPoint <http://example.org/legal/document/pp/2021/34/pasal/0012/version/20210202/ayat/0003/point/f> .
+<http://example.org/legal/document/pp/2021/34/pasal/0012/version/20210202/ayat/0003/point/f> legal:pointHasKey "f" .
+<http://example.org/legal/document/pp/2021/34/pasal/0012/version/20210202/ayat/0003/point/f/text> legal:textHasTextString "bagan struktur organisasi perusahaan," .
+<http://example.org/legal/document/pp/2021/34/pasal/0012/version/20210202/ayat/0003/point/f> legal:pointHasText <http://example.org/legal/document/pp/2021/34/pasal/0012/version/20210202/ayat/0003/point/f/text> .
+<http://example.org/legal/document/pp/2021/34/pasal/0012/version/20210202/ayat/0003/point> legal:pointSetHasPoint <http://example.org/legal/document/pp/2021/34/pasal/0012/version/20210202/ayat/0003/point/g> .
+<http://example.org/legal/document/pp/2021/34/pasal/0012/version/20210202/ayat/0003/point/g> legal:pointHasKey "g" .
+<http://example.org/legal/document/pp/2021/34/pasal/0012/version/20210202/ayat/0003/point/g/text> legal:textHasTextString "surat pernyataan untuk penunjukan Tenaga Kerja Pendamping TKA," .
+<http://example.org/legal/document/pp/2021/34/pasal/0012/version/20210202/ayat/0003/point/g> legal:pointHasText <http://example.org/legal/document/pp/2021/34/pasal/0012/version/20210202/ayat/0003/point/g/text> .
+<http://example.org/legal/document/pp/2021/34/pasal/0012/version/20210202/ayat/0003/point> legal:pointSetHasPoint <http://example.org/legal/document/pp/2021/34/pasal/0012/version/20210202/ayat/0003/point/h> .
+<http://example.org/legal/document/pp/2021/34/pasal/0012/version/20210202/ayat/0003/point/h> legal:pointHasKey "h" .
+<http://example.org/legal/document/pp/2021/34/pasal/0012/version/20210202/ayat/0003/point/h/text> legal:textHasTextString "surat pernyataan untuk melaksanakan pendidikan dan pelatihan kerja bagi tenaga kerja Indonesia sesuai dengan kualifikasi jabatan yang diduduki oleh TKA, dan" .
+<http://example.org/legal/document/pp/2021/34/pasal/0012/version/20210202/ayat/0003/point/h> legal:pointHasText <http://example.org/legal/document/pp/2021/34/pasal/0012/version/20210202/ayat/0003/point/h/text> .
+<http://example.org/legal/document/pp/2021/34/pasal/0012/version/20210202/ayat/0003/point> legal:pointSetHasPoint <http://example.org/legal/document/pp/2021/34/pasal/0012/version/20210202/ayat/0003/point/i> .
+<http://example.org/legal/document/pp/2021/34/pasal/0012/version/20210202/ayat/0003/point/i> legal:pointHasKey "i" .
+<http://example.org/legal/document/pp/2021/34/pasal/0012/version/20210202/ayat/0003/point/i/text> legal:textHasTextString "surat pernyataan untuk memfasilitasi pendidikan dan pelatihan bahasa Indonesia kepada TKA." .
+<http://example.org/legal/document/pp/2021/34/pasal/0012/version/20210202/ayat/0003/point/i> legal:pointHasText <http://example.org/legal/document/pp/2021/34/pasal/0012/version/20210202/ayat/0003/point/i/text> .
+<http://example.org/legal/document/pp/2021/34/pasal/0012/version/20210202/ayat> legal:ayatSetHasAyat <http://example.org/legal/document/pp/2021/34/pasal/0012/version/20210202/ayat/0004> .
+<http://example.org/legal/document/pp/2021/34/pasal/0012/version/20210202/ayat/0004> legal:ayatHasKey 4 .
+<http://example.org/legal/document/pp/2021/34/pasal/0012/version/20210202/ayat/0004> legal:ayatHasRawText "Dalam hal Pemberi Kerja TKA telah siap menyampaikan data calon TKA yang akan dipekerjakan maka penyampaian data calon TKA dapat dilakukan sekaligus pada saat permohonan Pengesahan RPTKA." .
+<http://example.org/legal/document/pp/2021/34/pasal/0012/version/20210202/ayat/0004/text> legal:textHasTextString "Dalam hal Pemberi Kerja TKA telah siap menyampaikan data calon TKA yang akan dipekerjakan maka penyampaian data calon TKA dapat dilakukan sekaligus pada saat permohonan Pengesahan RPTKA." .
+<http://example.org/legal/document/pp/2021/34/pasal/0012/version/20210202/ayat/0004> legal:ayatHasText <http://example.org/legal/document/pp/2021/34/pasal/0012/version/20210202/ayat/0004/text> .
+<http://example.org/legal/document/pp/2021/34/bab/0003/bagian/0001/pasals> legal:pasalSetHasPasal <http://example.org/legal/document/pp/2021/34/pasal/0013> .
+<http://example.org/legal/document/pp/2021/34/pasal/0013> legal:pasalHasKey 13 .
+<http://example.org/legal/document/pp/2021/34/pasal/0013> legal:pasalHasPasalVersion <http://example.org/legal/document/pp/2021/34/pasal/0013/version/20210202> .
+<http://example.org/legal/document/pp/2021/34> legal:documentHasPasal <http://example.org/legal/document/pp/2021/34/pasal/0013> .
+<http://example.org/legal/document/pp/2021/34/pasal/0013/version/20210202> legal:pasalVersionHasState "exists" .
+<http://example.org/legal/document/pp/2021/34/pasal/0013/version/20210202> legal:pasalVersionHasVersionDate "2021-02-02"^^xsd:date .
+<http://example.org/legal/document/pp/2021/34/pasal/0013/version/20210202> legal:pasalVersionHasRawText "(1). Pengesahan RPTKA sebagaimana dimaksud dalam Pasal 16 tidak berlaku bagi:\na. direksi atau komisaris dengan kepemilikan saham tertentu, atau pemegang saham sesuai dengan ketentuan peraturan perundang- undangan,\nb. pegawai diplomatik dan konsuler pada kantor perwakilan negara asing, atau\nc. TKA yang dibutuhkan oleh Pemberi Kerja TKA pada jenis kegiatan produksi yang terhenti karena keadaan darurat, vokasi, perusahaan rintisan (start-up) berbasis teknologi, kunjungan bisnis, dan penelitian untuk jangka waktu tertentu.\n\n(2). Untuk mempekerjakan TKA pada jenis kegiatan perusahaan rintisan (start-up) berbasis teknologi dan vokasi untuk jangka waktu tertentu sebagaimana dimaksud pada ayat (1) huruf c, Pemberi Kerja TKA harus menyampaikan data calon TKA secara daring kepada Menteri atau pejabat yang ditunjuk.\n(3). Jabatan pada kegiatan perusahaan rintisan (start- up) berbasis teknologi dan vokasi sebagaimana dimaksud pada ayat (2) ditetapkan oleh Menteri setelah mendapatkan masukan dari kementerian/lembaga terkait.\n(4). Menteri atau pejabat yang ditunjuk sebagaimana dimaksud pada ayat (2) menyampaikan data calon TKA secara daring kepada menteri yang menyelenggarakan urusan pemerintahan di bidang hukum dan hak asasi manusia atau pejabat yang ditunjuk sebagai rekomendasi untuk mendapatkan visa dan izin tinggal dalam rangka bekerja.\n(5). Jangka waktu bagi TKA yang bekerja pada jenis kegiatan perusahaan rintisan (start-up) berbasis teknologi dan vokasi sebagaimana dimaksud pada ayat (3) diberikan paling lama 3 (tiga) bulan.\n(6). Pemberi Kerja TKA yang akan mempekerjakan TKA pada jenis kegiatan perusahaan rintisan (start-up) berbasis teknologi dan vokasi melebihi jangka waktu sebagaimana dimaksud pada ayat (5) wajib memiliki Pengesahan RPTKA.\n(7). Dalam hal jangka waktu sebagaimana dimaksud pada ayat (5) telah berakhir dan Pemberi Kerja TKA tetap akan mempekerjakan TKA tersebut, Pemberi Kerja TKA harus mengajukan permohonan Pengesahan RPTKA.\n(8). Permohonan Pengesahan RPTKA sebagaimana dimaksud pada ayat (7) diajukan paling lambat 2 (dua) minggu sebelum berakhirnya jangka waktu jabatan TKA sebagaimana dimaksud pada ayat (5). Pasal 20 TKA yang dibutuhkan oleh Pemberi Kerja TKA pada jenis kegiatan produksi yang terhenti karena keadaan darurat, kunjungan bisnis, dan penelitian sebagaimana dimaksud dalam Pasal 19 ayat (1) huruf c dapat masuk dan tinggal di wilayah Indonesia dengan menggunakan visa dan izin tinggal sesuai dengan ketentuan peraturan perundang-undangan di bidang keimigrasian." .
+<http://example.org/legal/document/pp/2021/34/pasal/0013/version/20210202> legal:pasalVersionHasAyatSet <http://example.org/legal/document/pp/2021/34/pasal/0013/version/20210202/ayat> .
+<http://example.org/legal/document/pp/2021/34/pasal/0013/version/20210202/ayat> legal:ayatSetHasAyat <http://example.org/legal/document/pp/2021/34/pasal/0013/version/20210202/ayat/0001> .
+<http://example.org/legal/document/pp/2021/34/pasal/0013/version/20210202/ayat/0001> legal:ayatHasKey 1 .
+<http://example.org/legal/document/pp/2021/34/pasal/0013/version/20210202/ayat/0001> legal:ayatHasRawText "Pengesahan RPTKA sebagaimana dimaksud dalam Pasal 16 tidak berlaku bagi:\na. direksi atau komisaris dengan kepemilikan saham tertentu, atau pemegang saham sesuai dengan ketentuan peraturan perundang- undangan,\nb. pegawai diplomatik dan konsuler pada kantor perwakilan negara asing, atau\nc. TKA yang dibutuhkan oleh Pemberi Kerja TKA pada jenis kegiatan produksi yang terhenti karena keadaan darurat, vokasi, perusahaan rintisan (start-up) berbasis teknologi, kunjungan bisnis, dan penelitian untuk jangka waktu tertentu.\n" .
+<http://example.org/legal/document/pp/2021/34/pasal/0013/version/20210202/ayat/0001> legal:ayatHasPointSet <http://example.org/legal/document/pp/2021/34/pasal/0013/version/20210202/ayat/0001/point> .
+<http://example.org/legal/document/pp/2021/34/pasal/0013/version/20210202/ayat/0001/point/description> legal:textHasTextString "Pengesahan RPTKA sebagaimana dimaksud dalam Pasal 16 tidak berlaku bagi:" .
+<http://example.org/legal/document/pp/2021/34/pasal/0013/version/20210202/ayat/0001/point> legal:pointSetHasDescription <http://example.org/legal/document/pp/2021/34/pasal/0013/version/20210202/ayat/0001/point/description> .
+<http://example.org/legal/document/pp/2021/34/pasal/0013/version/20210202/ayat/0001/point> legal:pointSetHasPoint <http://example.org/legal/document/pp/2021/34/pasal/0013/version/20210202/ayat/0001/point/a> .
+<http://example.org/legal/document/pp/2021/34/pasal/0013/version/20210202/ayat/0001/point/a> legal:pointHasKey "a" .
+<http://example.org/legal/document/pp/2021/34/pasal/0013/version/20210202/ayat/0001/point/a/text> legal:textHasTextString "direksi atau komisaris dengan kepemilikan saham tertentu, atau pemegang saham sesuai dengan ketentuan peraturan perundang- undangan," .
+<http://example.org/legal/document/pp/2021/34/pasal/0013/version/20210202/ayat/0001/point/a> legal:pointHasText <http://example.org/legal/document/pp/2021/34/pasal/0013/version/20210202/ayat/0001/point/a/text> .
+<http://example.org/legal/document/pp/2021/34/pasal/0013/version/20210202/ayat/0001/point> legal:pointSetHasPoint <http://example.org/legal/document/pp/2021/34/pasal/0013/version/20210202/ayat/0001/point/b> .
+<http://example.org/legal/document/pp/2021/34/pasal/0013/version/20210202/ayat/0001/point/b> legal:pointHasKey "b" .
+<http://example.org/legal/document/pp/2021/34/pasal/0013/version/20210202/ayat/0001/point/b/text> legal:textHasTextString "pegawai diplomatik dan konsuler pada kantor perwakilan negara asing, atau" .
+<http://example.org/legal/document/pp/2021/34/pasal/0013/version/20210202/ayat/0001/point/b> legal:pointHasText <http://example.org/legal/document/pp/2021/34/pasal/0013/version/20210202/ayat/0001/point/b/text> .
+<http://example.org/legal/document/pp/2021/34/pasal/0013/version/20210202/ayat/0001/point> legal:pointSetHasPoint <http://example.org/legal/document/pp/2021/34/pasal/0013/version/20210202/ayat/0001/point/c> .
+<http://example.org/legal/document/pp/2021/34/pasal/0013/version/20210202/ayat/0001/point/c> legal:pointHasKey "c" .
+<http://example.org/legal/document/pp/2021/34/pasal/0013/version/20210202/ayat/0001/point/c/text> legal:textHasTextString "TKA yang dibutuhkan oleh Pemberi Kerja TKA pada jenis kegiatan produksi yang terhenti karena keadaan darurat, vokasi, perusahaan rintisan (start-up) berbasis teknologi, kunjungan bisnis, dan penelitian untuk jangka waktu tertentu." .
+<http://example.org/legal/document/pp/2021/34/pasal/0013/version/20210202/ayat/0001/point/c> legal:pointHasText <http://example.org/legal/document/pp/2021/34/pasal/0013/version/20210202/ayat/0001/point/c/text> .
+<http://example.org/legal/document/pp/2021/34/pasal/0013/version/20210202/ayat> legal:ayatSetHasAyat <http://example.org/legal/document/pp/2021/34/pasal/0013/version/20210202/ayat/0002> .
+<http://example.org/legal/document/pp/2021/34/pasal/0013/version/20210202/ayat/0002> legal:ayatHasKey 2 .
+<http://example.org/legal/document/pp/2021/34/pasal/0013/version/20210202/ayat/0002> legal:ayatHasRawText "Untuk mempekerjakan TKA pada jenis kegiatan perusahaan rintisan (start-up) berbasis teknologi dan vokasi untuk jangka waktu tertentu sebagaimana dimaksud pada ayat (1) huruf c, Pemberi Kerja TKA harus menyampaikan data calon TKA secara daring kepada Menteri atau pejabat yang ditunjuk." .
+<http://example.org/legal/document/pp/2021/34/pasal/0013/version/20210202/ayat/0002/text> legal:textHasTextString "Untuk mempekerjakan TKA pada jenis kegiatan perusahaan rintisan (start-up) berbasis teknologi dan vokasi untuk jangka waktu tertentu sebagaimana dimaksud pada ayat (1) huruf c, Pemberi Kerja TKA harus menyampaikan data calon TKA secara daring kepada Menteri atau pejabat yang ditunjuk." .
+<http://example.org/legal/document/pp/2021/34/pasal/0013/version/20210202/ayat/0002> legal:ayatHasText <http://example.org/legal/document/pp/2021/34/pasal/0013/version/20210202/ayat/0002/text> .
+<http://example.org/legal/document/pp/2021/34/pasal/0013/version/20210202/ayat/0002/text> legal:textReferencesLegal <http://example.org/legal/document/pp/2021/34/pasal/0013/version/20210202/ayat/0001> .
+<http://example.org/legal/document/pp/2021/34/pasal/0013/version/20210202/ayat/0002/text> legal:textReferencesLegal <http://example.org/legal/document/pp/2021/34/pasal/0013/version/20210202/point/c> .
+<http://example.org/legal/document/pp/2021/34/pasal/0013/version/20210202/ayat> legal:ayatSetHasAyat <http://example.org/legal/document/pp/2021/34/pasal/0013/version/20210202/ayat/0003> .
+<http://example.org/legal/document/pp/2021/34/pasal/0013/version/20210202/ayat/0003> legal:ayatHasKey 3 .
+<http://example.org/legal/document/pp/2021/34/pasal/0013/version/20210202/ayat/0003> legal:ayatHasRawText "Jabatan pada kegiatan perusahaan rintisan (start- up) berbasis teknologi dan vokasi sebagaimana dimaksud pada ayat (2) ditetapkan oleh Menteri setelah mendapatkan masukan dari kementerian/lembaga terkait." .
+<http://example.org/legal/document/pp/2021/34/pasal/0013/version/20210202/ayat/0003/text> legal:textHasTextString "Jabatan pada kegiatan perusahaan rintisan (start- up) berbasis teknologi dan vokasi sebagaimana dimaksud pada ayat (2) ditetapkan oleh Menteri setelah mendapatkan masukan dari kementerian/lembaga terkait." .
+<http://example.org/legal/document/pp/2021/34/pasal/0013/version/20210202/ayat/0003> legal:ayatHasText <http://example.org/legal/document/pp/2021/34/pasal/0013/version/20210202/ayat/0003/text> .
+<http://example.org/legal/document/pp/2021/34/pasal/0013/version/20210202/ayat/0003/text> legal:textReferencesLegal <http://example.org/legal/document/pp/2021/34/pasal/0013/version/20210202/ayat/0002> .
+<http://example.org/legal/document/pp/2021/34/pasal/0013/version/20210202/ayat> legal:ayatSetHasAyat <http://example.org/legal/document/pp/2021/34/pasal/0013/version/20210202/ayat/0004> .
+<http://example.org/legal/document/pp/2021/34/pasal/0013/version/20210202/ayat/0004> legal:ayatHasKey 4 .
+<http://example.org/legal/document/pp/2021/34/pasal/0013/version/20210202/ayat/0004> legal:ayatHasRawText "Menteri atau pejabat yang ditunjuk sebagaimana dimaksud pada ayat (2) menyampaikan data calon TKA secara daring kepada menteri yang menyelenggarakan urusan pemerintahan di bidang hukum dan hak asasi manusia atau pejabat yang ditunjuk sebagai rekomendasi untuk mendapatkan visa dan izin tinggal dalam rangka bekerja." .
+<http://example.org/legal/document/pp/2021/34/pasal/0013/version/20210202/ayat/0004/text> legal:textHasTextString "Menteri atau pejabat yang ditunjuk sebagaimana dimaksud pada ayat (2) menyampaikan data calon TKA secara daring kepada menteri yang menyelenggarakan urusan pemerintahan di bidang hukum dan hak asasi manusia atau pejabat yang ditunjuk sebagai rekomendasi untuk mendapatkan visa dan izin tinggal dalam rangka bekerja." .
+<http://example.org/legal/document/pp/2021/34/pasal/0013/version/20210202/ayat/0004> legal:ayatHasText <http://example.org/legal/document/pp/2021/34/pasal/0013/version/20210202/ayat/0004/text> .
+<http://example.org/legal/document/pp/2021/34/pasal/0013/version/20210202/ayat/0004/text> legal:textReferencesLegal <http://example.org/legal/document/pp/2021/34/pasal/0013/version/20210202/ayat/0002> .
+<http://example.org/legal/document/pp/2021/34/pasal/0013/version/20210202/ayat> legal:ayatSetHasAyat <http://example.org/legal/document/pp/2021/34/pasal/0013/version/20210202/ayat/0005> .
+<http://example.org/legal/document/pp/2021/34/pasal/0013/version/20210202/ayat/0005> legal:ayatHasKey 5 .
+<http://example.org/legal/document/pp/2021/34/pasal/0013/version/20210202/ayat/0005> legal:ayatHasRawText "Jangka waktu bagi TKA yang bekerja pada jenis kegiatan perusahaan rintisan (start-up) berbasis teknologi dan vokasi sebagaimana dimaksud pada ayat (3) diberikan paling lama 3 (tiga) bulan." .
+<http://example.org/legal/document/pp/2021/34/pasal/0013/version/20210202/ayat/0005/text> legal:textHasTextString "Jangka waktu bagi TKA yang bekerja pada jenis kegiatan perusahaan rintisan (start-up) berbasis teknologi dan vokasi sebagaimana dimaksud pada ayat (3) diberikan paling lama 3 (tiga) bulan." .
+<http://example.org/legal/document/pp/2021/34/pasal/0013/version/20210202/ayat/0005> legal:ayatHasText <http://example.org/legal/document/pp/2021/34/pasal/0013/version/20210202/ayat/0005/text> .
+<http://example.org/legal/document/pp/2021/34/pasal/0013/version/20210202/ayat/0005/text> legal:textReferencesLegal <http://example.org/legal/document/pp/2021/34/pasal/0013/version/20210202/ayat/0003> .
+<http://example.org/legal/document/pp/2021/34/pasal/0013/version/20210202/ayat> legal:ayatSetHasAyat <http://example.org/legal/document/pp/2021/34/pasal/0013/version/20210202/ayat/0006> .
+<http://example.org/legal/document/pp/2021/34/pasal/0013/version/20210202/ayat/0006> legal:ayatHasKey 6 .
+<http://example.org/legal/document/pp/2021/34/pasal/0013/version/20210202/ayat/0006> legal:ayatHasRawText "Pemberi Kerja TKA yang akan mempekerjakan TKA pada jenis kegiatan perusahaan rintisan (start-up) berbasis teknologi dan vokasi melebihi jangka waktu sebagaimana dimaksud pada ayat (5) wajib memiliki Pengesahan RPTKA." .
+<http://example.org/legal/document/pp/2021/34/pasal/0013/version/20210202/ayat/0006/text> legal:textHasTextString "Pemberi Kerja TKA yang akan mempekerjakan TKA pada jenis kegiatan perusahaan rintisan (start-up) berbasis teknologi dan vokasi melebihi jangka waktu sebagaimana dimaksud pada ayat (5) wajib memiliki Pengesahan RPTKA." .
+<http://example.org/legal/document/pp/2021/34/pasal/0013/version/20210202/ayat/0006> legal:ayatHasText <http://example.org/legal/document/pp/2021/34/pasal/0013/version/20210202/ayat/0006/text> .
+<http://example.org/legal/document/pp/2021/34/pasal/0013/version/20210202/ayat/0006/text> legal:textReferencesLegal <http://example.org/legal/document/pp/2021/34/pasal/0013/version/20210202/ayat/0005> .
+<http://example.org/legal/document/pp/2021/34/pasal/0013/version/20210202/ayat> legal:ayatSetHasAyat <http://example.org/legal/document/pp/2021/34/pasal/0013/version/20210202/ayat/0007> .
+<http://example.org/legal/document/pp/2021/34/pasal/0013/version/20210202/ayat/0007> legal:ayatHasKey 7 .
+<http://example.org/legal/document/pp/2021/34/pasal/0013/version/20210202/ayat/0007> legal:ayatHasRawText "Dalam hal jangka waktu sebagaimana dimaksud pada ayat (5) telah berakhir dan Pemberi Kerja TKA tetap akan mempekerjakan TKA tersebut, Pemberi Kerja TKA harus mengajukan permohonan Pengesahan RPTKA." .
+<http://example.org/legal/document/pp/2021/34/pasal/0013/version/20210202/ayat/0007/text> legal:textHasTextString "Dalam hal jangka waktu sebagaimana dimaksud pada ayat (5) telah berakhir dan Pemberi Kerja TKA tetap akan mempekerjakan TKA tersebut, Pemberi Kerja TKA harus mengajukan permohonan Pengesahan RPTKA." .
+<http://example.org/legal/document/pp/2021/34/pasal/0013/version/20210202/ayat/0007> legal:ayatHasText <http://example.org/legal/document/pp/2021/34/pasal/0013/version/20210202/ayat/0007/text> .
+<http://example.org/legal/document/pp/2021/34/pasal/0013/version/20210202/ayat/0007/text> legal:textReferencesLegal <http://example.org/legal/document/pp/2021/34/pasal/0013/version/20210202/ayat/0005> .
+<http://example.org/legal/document/pp/2021/34/pasal/0013/version/20210202/ayat> legal:ayatSetHasAyat <http://example.org/legal/document/pp/2021/34/pasal/0013/version/20210202/ayat/0008> .
+<http://example.org/legal/document/pp/2021/34/pasal/0013/version/20210202/ayat/0008> legal:ayatHasKey 8 .
+<http://example.org/legal/document/pp/2021/34/pasal/0013/version/20210202/ayat/0008> legal:ayatHasRawText "Permohonan Pengesahan RPTKA sebagaimana dimaksud pada ayat (7) diajukan paling lambat 2 (dua) minggu sebelum berakhirnya jangka waktu jabatan TKA sebagaimana dimaksud pada ayat (5). Pasal 20 TKA yang dibutuhkan oleh Pemberi Kerja TKA pada jenis kegiatan produksi yang terhenti karena keadaan darurat, kunjungan bisnis, dan penelitian sebagaimana dimaksud dalam Pasal 19 ayat (1) huruf c dapat masuk dan tinggal di wilayah Indonesia dengan menggunakan visa dan izin tinggal sesuai dengan ketentuan peraturan perundang-undangan di bidang keimigrasian." .
+<http://example.org/legal/document/pp/2021/34/pasal/0013/version/20210202/ayat/0008/text> legal:textHasTextString "Permohonan Pengesahan RPTKA sebagaimana dimaksud pada ayat (7) diajukan paling lambat 2 (dua) minggu sebelum berakhirnya jangka waktu jabatan TKA sebagaimana dimaksud pada ayat (5). Pasal 20 TKA yang dibutuhkan oleh Pemberi Kerja TKA pada jenis kegiatan produksi yang terhenti karena keadaan darurat, kunjungan bisnis, dan penelitian sebagaimana dimaksud dalam Pasal 19 ayat (1) huruf c dapat masuk dan tinggal di wilayah Indonesia dengan menggunakan visa dan izin tinggal sesuai dengan ketentuan peraturan perundang-undangan di bidang keimigrasian." .
+<http://example.org/legal/document/pp/2021/34/pasal/0013/version/20210202/ayat/0008> legal:ayatHasText <http://example.org/legal/document/pp/2021/34/pasal/0013/version/20210202/ayat/0008/text> .
+<http://example.org/legal/document/pp/2021/34/pasal/0013/version/20210202/ayat/0008/text> legal:textReferencesLegal <http://example.org/legal/document/pp/2021/34/pasal/0013/version/20210202/ayat/0001> .
+<http://example.org/legal/document/pp/2021/34/pasal/0013/version/20210202/ayat/0008/text> legal:textReferencesLegal <http://example.org/legal/document/pp/2021/34/pasal/0013/version/20210202/ayat/0005> .
+<http://example.org/legal/document/pp/2021/34/pasal/0013/version/20210202/ayat/0008/text> legal:textReferencesLegal <http://example.org/legal/document/pp/2021/34/pasal/0013/version/20210202/ayat/0007> .
+<http://example.org/legal/document/pp/2021/34/pasal/0013/version/20210202/ayat/0008/text> legal:textReferencesLegal <http://example.org/legal/document/pp/2021/34/pasal/0013/version/20210202/point/c> .
+<http://example.org/legal/document/pp/2021/34/pasal/0013/version/20210202/ayat/0008/text> legal:textReferencesLegal <http://example.org/legal/document/pp/2021/34/pasal/0020> .
+<http://example.org/legal/document/pp/2021/34/bab/0003/bagian> legal:bagianSetHasBagian <http://example.org/legal/document/pp/2021/34/bab/0003/bagian/0002> .
+<http://example.org/legal/document/pp/2021/34/bab/0003/bagian/0002> legal:bagianHasKey 2 .
+<http://example.org/legal/document/pp/2021/34/bab/0003/bagian/0002> legal:bagianHasTitle "Bagian Kedua Perpanjangan dan Perubahan Pengesahan Rencana Penggunaan Tenaga Kerja Asing Pasal 21 (1) Permohonan perpanjangan Pengesahan RPTKA diajukan oleh Pemberi Kerja TKA secara daring kepada Menteri atau pejabat yang ditunjuk. (2) Permohonan perpanjangan Pengesahan RPTKA sebagaimana dimaksud pada ayat (1) diajukan paling lambat 30 (tiga puluh) hari kerja sebelum jangka waktu berakhir. (3) Permohonan perpanjangan Pengesahan RPTKA sebagaimana dimaksud pada ayat (1) disampaikan oleh Pemberi Kerja TKA dengan memuat paling sedikit: a. identitas Pemberi Kerja TKA, b. alasan... b. alasan perpanjangan Pengesahan RPTKA, c. jabatan atau kedudukan TKA dalam struktur organisasi perusahaan, d. jumlah TKA, e. jangka waktu penggunaan TKA, f. lokasi kerja TKA, g. identitas Tenaga Kerja Pendamping TKA, dan h. realisasi penyerapan tenaga kerja Indonesia. (4) Permohonan perpanjangan Pengesahan RPTKA sebagaimana dimaksud pada ayat (3) disampaikan oleh Pemberi Kerja TKA dengan melampirkan dokumen paling sedikit: a. surat permohonan perpanjangan RPTKA, b. Pengesahan RPTKA yang masih berlaku, Cc. perjanjian kerja atau perjanjian lain, d. paspor TKA yang masih berlaku: e. kepesertaan program jaminan sosial, f. nomor pokok wajib pajak TKA dan Pemberi Kerja TKA, dan g. laporan realisasi pelaksanaan pendidikan dan pelatihan kerja bagi tenaga kerja Indonesia sesuai dengan kualifikasi jabatan yang diduduki oleh TKA. (S5) Dalam hal permohonan perpanjangan Pengesahan RPTKA dinyatakan lengkap dan benar, Menteri atau pejabat yang ditunjuk menerbitkan Pengesahan RPTKA perpanjangan paling lama 2 (dua) hari kerja. (6) Jangka waktu setiap Pengesahan RPTKA perpanjangan sebagaimana dimaksud pada ayat (5) diberikan paling lama 2 (dua) tahun dan Pengesahan RPTKA perpanjangan di KEK diberikan paling lama 5 (lima) tahun. (7) Pengesahan RPTKA perpanjangan digunakan sebagai rekomendasi untuk mendapatkan izin tinggal dalam rangka bekerja bagi TKA. (8) Menteri atau pejabat yang ditunjuk sebagaimana dimaksud pada ayat (5) menyampaikan data TKA yang akan dipekerjakan secara daring kepada menteri yang menyelenggarakan urusan pemerintahan di bidang hukum dan hak asasi manusia atau pejabat yang ditunjuk sebagai rekomendasi untuk mendapatkan izin tinggal dalam rangka bekerja. Pasal 22 (1) Pemberi Kerja TKA dapat mengajukan permohonan perubahan Pengesahan RPTKA secara daring kepada Menteri atau pejabat yang ditunjuk mengenai: a. alamat Pemberi Kerja TKA, b. identitas TKA, c. lokasi kerja TKA: dan/atau d. nama Tenaga Kerja Pendamping TKA yang dipekerjakan. (2) Perubahan Pengesahan RPTKA sebagaimana dimaksud pada ayat (1) diterbitkan oleh Menteri atau pejabat yang ditunjuk paling lama 2 (dua) hari kerja sejak permohonan dinyatakan lengkap dan benar." .
+<http://example.org/legal/document/pp/2021/34/bab/0003/bagian/0002> legal:bagianHasPasalSet <http://example.org/legal/document/pp/2021/34/bab/0003/bagian/0002/pasals> .
+<http://example.org/legal/document/pp/2021/34/bab/0003/bagian> legal:bagianSetHasBagian <http://example.org/legal/document/pp/2021/34/bab/0003/bagian/0003> .
+<http://example.org/legal/document/pp/2021/34/bab/0003/bagian/0003> legal:bagianHasKey 3 .
+<http://example.org/legal/document/pp/2021/34/bab/0003/bagian/0003> legal:bagianHasTitle "Bagian Ketiga Dana Kompensasi Penggunaan Tenaga Kerja Asing Pasal 23 (1) Pemberi Kerja TKA wajib membayar DKPTKA atas setiap TKA yang dipekerjakan. (2) Pembayaran DKPTKA dilakukan sesuai dengan jangka waktu TKA bekerja di wilayah Indonesia. (3) Pembayaran DKPTKA sebagaimana dimaksud pada ayat (1) dibayarkan oleh Pemberi Kerja TKA setelah menerima kode billing pembayaran DKPTKA dari Menteri atau pejabat yang ditunjuk. (4) Kode billing pembayaran DKPTKA sebagaimana dimaksud pada ayat (3) disampaikan kepada Pemberi Kerja TKA setelah data calon TKA dan dokumen dinyatakan lengkap oleh Menteri atau pejabat yang ditunjuk. (S5) Pembayaran DKPTKA merupakan persyaratan Pengesahan RPTKA. (6) Ketentuan mengenai besaran dan penggunaan DKPTKA sebagaimana dimaksud pada ayat (1) dilaksanakan sesuai dengan ketentuan peraturan perundang-undangan. Pasal 24 (1) Pembayaran DKPTKA oleh Pemberi Kerja TKA merupakan penerimaan negara bukan pajak atau pendapatan daerah berupa retribusi daerah. (2) DKPTKA sebagaimana dimaksud pada ayat (1) menjadi: a. penerimaan negara bukan pajak untuk Pengesahan RPTKA baru, Pengesahan RPTKA perpanjangan bagi TKA yang bekerja di lokasi lebih dari 1 (satu) provinsi, dan Pengesahan RPTKA KEK, b. pendapatan daerah provinsi untuk Pengesahan RPTKA perpanjangan bagi TKA yang bekerja di lokasi lebih dari 1 (satu) kabupaten/kota dalam 1 (satu) provinsi, dan c. pendapatan daerah kabupaten/kota untuk Pengesahan RPTKA perpanjangan bagi TKA yang bekerja di lokasi dalam 1 (satu) kabupaten/kota. (3) Pembayaran DKPTKA sebagaimana dimaksud pada ayat (1) untuk penerimaan negara bukan pajak dibayarkan melalui bank persepsi yang ditunjuk oleh Menteri dan untuk pendapatan daerah dibayarkan melalui bank yang ditunjuk oleh Pemerintah Daerah. Pasal 25 (1) Kewajiban membayar DKPTKA tidak berlaku bagi: a. instansi Pemerintah: b. perwakilan negara asing, c. badan internasional: d. lembaga sosial, e. lembaga keagamaan, dan f. jabatan tertentu di lembaga pendidikan. (2) Jabatan tertentu di lembaga pendidikan yang dibebaskan pembayaran DKPTKA sebagaimana dimaksud pada ayat (1) huruf f ditetapkan oleh Menteri setelah mendapatkan masukan dari kementerian yang menyelenggarakan urusan pemerintahan di bidang pendidikan. Pasal 26 Ketentuan lebih lanjut mengenai tata cara permohonan, perpanjangan, perubahan Pengesahan RPTKA, dan pembayaran DKPTKA sebagaimana dimaksud dalam Pasal 12 sampai dengan Pasal 25 diatur dengan Peraturan Menteri." .
+<http://example.org/legal/document/pp/2021/34/bab/0003/bagian/0003> legal:bagianHasPasalSet <http://example.org/legal/document/pp/2021/34/bab/0003/bagian/0003/pasals> .
+<http://example.org/legal/document/pp/2021/34/bab> legal:babSetHasBab <http://example.org/legal/document/pp/2021/34/bab/0004> .
+<http://example.org/legal/document/pp/2021/34/bab/0004> legal:babHasKey 4 .
+<http://example.org/legal/document/pp/2021/34/bab/0004> legal:babHasTitle "IZIN TINGGAL TENAGA KERJA ASING Pasal 27 (1) Setiap TKA yang dipekerjakan oleh Pemberi Kerja TKA di Indonesia wajib memiliki izin tinggal. (2) Jenis dan tata cara pemberian izin tinggal sebagaimana dimaksud pada ayat (1) sesuai dengan ketentuan peraturan perundang-undangan di bidang keimigrasian." .
+<http://example.org/legal/document/pp/2021/34/bab/0004> legal:babHasPasalSet <http://example.org/legal/document/pp/2021/34/bab/0004/pasals> .
+<http://example.org/legal/document/pp/2021/34/bab> legal:babSetHasBab <http://example.org/legal/document/pp/2021/34/bab/0005> .
+<http://example.org/legal/document/pp/2021/34/bab/0005> legal:babHasKey 5 .
+<http://example.org/legal/document/pp/2021/34/bab/0005> legal:babHasTitle "PENDIDIKAN DAN PELATIHAN KERJA BAGI TENAGA KERJA PENDAMPING DAN TENAGA KERJA ASING Pasal 28 (1) Penunjukan tenaga kerja Indonesia sebagai Tenaga Kerja Pendamping TKA dilaksanakan untuk alih teknologi dan alih keahlian. (2) Alih teknologi dan alih keahlian sebagaimana dimaksud pada ayat (1) dilaksanakan melalui pendidikan dan/atau pelatihan kerja kepada Tenaga Kerja Pendamping TKA sehingga memiliki kemampuan untuk mengimplementasikan teknologi yang dipergunakan oleh TKA dalam melaksanakan pekerjaan. Pasal 29 (1) Pendidikan dan pelatihan kerja bagi Tenaga Kerja Pendamping TKA dapat dilaksanakan di dalam dan/atau di luar negeri. (2) Tenaga Kerja Pendamping TKA yang mengikuti pendidikan dan pelatihan kerja sebagaimana dimaksud pada ayat (1) mendapat sertifikat pendidikan dan pelatihan kerja dan/atau sertifikat kompetensi sesuai dengan ketentuan peraturan perundang-undangan. (3) Pelaksanaan pendidikan dan pelatihan kerja bagi Tenaga Kerja Pendamping TKA di dalam negeri sebagaimana dimaksud pada ayat (1) dilaksanakan sesuai dengan ketentuan peraturan perundang- undangan. Pasal 30 Pendidikan dan pelatihan bahasa Indonesia kepada TKA dapat dilaksanakan oleh Pemberi Kerja TKA atau bekerja sama dengan lembaga pendidikan atau lembaga pelatihan bahasa Indonesia. Pasal 31 Ketentuan lebih lanjut mengenai pelaksanaan pendidikan dan pelatihan kerja bagi Tenaga Kerja Pendamping TKA dan TKA sebagaimana dimaksud dalam Pasal 28 sampai dengan Pasal 30 diatur dengan Peraturan Menteri." .
+<http://example.org/legal/document/pp/2021/34/bab/0005> legal:babHasPasalSet <http://example.org/legal/document/pp/2021/34/bab/0005/pasals> .
+<http://example.org/legal/document/pp/2021/34/bab> legal:babSetHasBab <http://example.org/legal/document/pp/2021/34/bab/0006> .
+<http://example.org/legal/document/pp/2021/34/bab/0006> legal:babHasKey 6 .
+<http://example.org/legal/document/pp/2021/34/bab/0006> legal:babHasTitle "PELAPORAN, PEMBINAAN, DAN PENGAWASAN" .
+<http://example.org/legal/document/pp/2021/34/bab/0006> legal:babHasBagianSet <http://example.org/legal/document/pp/2021/34/bab/0006/bagian> .
+<http://example.org/legal/document/pp/2021/34/bab/0006/bagian> legal:bagianSetHasBagian <http://example.org/legal/document/pp/2021/34/bab/0006/bagian/0001> .
+<http://example.org/legal/document/pp/2021/34/bab/0006/bagian/0001> legal:bagianHasKey 1 .
+<http://example.org/legal/document/pp/2021/34/bab/0006/bagian/0001> legal:bagianHasTitle "Bagian Kesatu Pelaporan Pasal 32 (1) Pemberi Kerja TKA wajib melaporkan setiap 1 (satu) tahun kepada Menteri atau pejabat yang ditunjuk untuk pelaksanaan: a. penggunaan TKA, b. pendidikan dan pelatihan kerja bagi Tenaga Kerja Pendamping TKA, dan c. alih teknologi dan alih keahlian dari TKA kepada Tenaga Kerja Pendamping TKA. (2) Pemberi Kerja TKA untuk pekerjaan yang bersifat sementara wajib melaporkan pelaksanaan penggunaan TKA sebagaimana dimaksud pada ayat (1) huruf a setelah berakhirnya perjanjian kerja kepada Menteri atau pejabat yang ditunjuk. (3) Pemberi Kerja TKA wajib melaporkan kepada Menteri atau pejabat yang ditunjuk untuk perjanjian kerja TKA yang telah berakhir atau diakhiri sebelum jangka waktu perjanjian kerja berakhir. Pasal 33 Menteri atau pejabat yang ditunjuk menyediakan data TKA yang dipekerjakan oleh Pemberi Kerja TKA secara daring dan dapat diakses oleh dinas yang menyelenggarakan urusan pemerintahan di bidang ketenagakerjaan provinsi dan kabupaten/kota sesuai dengan lokasi kerja TKA melalui sistem informasi ketenagakerjaan." .
+<http://example.org/legal/document/pp/2021/34/bab/0006/bagian/0001> legal:bagianHasPasalSet <http://example.org/legal/document/pp/2021/34/bab/0006/bagian/0001/pasals> .
+<http://example.org/legal/document/pp/2021/34/bab/0006/bagian> legal:bagianSetHasBagian <http://example.org/legal/document/pp/2021/34/bab/0006/bagian/0002> .
+<http://example.org/legal/document/pp/2021/34/bab/0006/bagian/0002> legal:bagianHasKey 2 .
+<http://example.org/legal/document/pp/2021/34/bab/0006/bagian/0002> legal:bagianHasTitle "Bagian Kedua Pembinaan Pasal 34 Pembinaan penggunaan TKA dilakukan oleh kementerian yang menyelenggarakan urusan pemerintahan di bidang ketenagakerjaan dan dinas yang menyelenggarakan urusan pemerintahan di bidang ketenagakerjaan provinsi dan kabupaten/kota sesuai dengan kewenangannya." .
+<http://example.org/legal/document/pp/2021/34/bab/0006/bagian/0002> legal:bagianHasPasalSet <http://example.org/legal/document/pp/2021/34/bab/0006/bagian/0002/pasals> .
+<http://example.org/legal/document/pp/2021/34/bab/0006/bagian> legal:bagianSetHasBagian <http://example.org/legal/document/pp/2021/34/bab/0006/bagian/0003> .
+<http://example.org/legal/document/pp/2021/34/bab/0006/bagian/0003> legal:bagianHasKey 3 .
+<http://example.org/legal/document/pp/2021/34/bab/0006/bagian/0003> legal:bagianHasTitle "Bagian Ketiga Pengawasan Pasal 35 (1) Pengawasan penggunaan TKA dilaksanakan oleh: a. Pengawas Ketenagakerjaan pada kementerian yang menyelenggarakan urusan pemerintahan di bidang ketenagakerjaan dan/atau dinas yang menyelenggarakan urusan pemerintahan di bidang ketenagakerjaan provinsi, dan/atau b. Pejabat imigrasi yang bertugas di bidang pengawasan dan penindakan keimigrasian, secara terkoordinasi sesuai dengan lingkup tugas dan kewenangan masing-masing. (2) Pengawas Ketenagakerjaan sebagaimana dimaksud pada ayat (1) huruf a melakukan pengawasan pada norma penggunaan TKA sesuai dengan ketentuan peraturan perundang-undangan di bidang ketenagakerjaan." .
+<http://example.org/legal/document/pp/2021/34/bab/0006/bagian/0003> legal:bagianHasPasalSet <http://example.org/legal/document/pp/2021/34/bab/0006/bagian/0003/pasals> .
+<http://example.org/legal/document/pp/2021/34/bab> legal:babSetHasBab <http://example.org/legal/document/pp/2021/34/bab/0007> .
+<http://example.org/legal/document/pp/2021/34/bab/0007> legal:babHasKey 7 .
+<http://example.org/legal/document/pp/2021/34/bab/0007> legal:babHasTitle "SANKSI ADMINISTRATIF Pasal 36 (1) Pemberi Kerja TKA yang melanggar ketentuan Pasal 6 ayat (1), Pasal 6 ayat (2), Pasal 6 ayat (3), Pasal 7 ayat (2), Pasal 8 ayat (1), Pasal 10, Pasal 11 ayat (1), Pasal 19 ayat (6), Pasal 23 ayat (1), Pasal 32 ayat (1), Pasal 32 ayat (2), dan/atau Pasal 32 ayat (3), dikenai sanksi administratif berupa: a. denda, b. penghentian sementara proses permohonan Pengesahan RPTKA, dan/atau Cc. pencabutan Pengesahan RPTKA. (2) Sanksi administratif sebagaimana dimaksud pada ayat (1) diberikan oleh Menteri atau pejabat yang ditunjuk. (3) Menteri atau pejabat yang ditunjuk sebagaimana dimaksud pada ayat (2) dalam mengenakan sanksi administratif berdasarkan surat pemberitahuan pengenaan sanksi administratif dari Pengawas Ketenagakerjaan. Pasal 37 (1) Sanksi denda sebagaimana dimaksud dalam Pasal 36 ayat (1) huruf a dikenakan kepada Pemberi Kerja TKA yang melanggar ketentuan tidak memiliki Pengesahan RPTKA sebagaimana dimaksud dalam Pasal 6 ayat (1), Pasal 6 ayat (2), dan Pasal 19 ayat (6). (2) Besaran sanksi denda sebagaimana dimaksud pada ayat (1) dikenakan per jabatan per orang per bulan dengan ketentuan sebagai berikut: a. 1 (satu) bulan dikenai sanksi denda sebesar Rp6.000.000,00 (enam juta rupiah): b. 2 (dua) bulan dikenai sanksi denda sebesar Rp12.000.000,00 (dua belas juta rupiah): c. 3 (tiga) bulan dikenai sanksi denda sebesar Rp18.000.000,00 (delapan belas juta rupiah), d. 4 (empat) bulan dikenai sanksi denda sebesar Rp24.000.000,00 (dua puluh empat juta rupiah), e. 5 (lima) bulan dikenai sanksi denda sebesar Rp30.000.000,00 (tiga puluh juta rupiah), atau f. 6 (enam) bulan dikenai sanksi denda sebesar Rp36.000.000,00 (tiga puluh enam juta rupiah). (3) Penghitungan besaran sanksi denda sebagaimana dimaksud pada ayat (2) dikenakan kepada Pemberi Kerja TKA dimulai sejak TKA memasuki wilayah Indonesia sampai dengan 6 (enam) bulan. (4) Sanksi denda sebagaimana dimaksud pada ayat (2) dibayarkan ke kas negara. (5) Pembayaran sanksi denda sebagaimana dimaksud pada ayat (2) dilakukan oleh Pemberi Kerja TKA paling lama 2 (dua) minggu sejak diterima atau diumumkan pengenaan sanksi denda. Pasal 38 (1) Pemberi Kerja TKA yang tidak membayar sanksi denda dalam jangka waktu paling lama 2 (dua) minggu sebagaimana dimaksud dalam Pasal 37 ayat (5) dikenakan sanksi penghentian sementara proses permohonan Pengesahan RPTKA. (2) Pemberi Kerja TKA sebagaimana dimaksud pada ayat (l) tetap berkewajiban untuk membayar sanksi denda dan denda keterlambatan sebesar 24» (dua persen) per bulan dari jumlah sanksi denda yang harus dibayarkan. (3) Denda keterlambatan sebagaimana dimaksud pada ayat (2) dikenakan paling lama 6 (enam) bulan. (4) Apabila dalam jangka waktu 6 (enam) bulan sejak batas waktu pembayaran Pemberi Kerja TKA tidak membayar sanksi denda dan denda keterlambatan, Menteri atau pejabat yang ditunjuk menyerahkan penagihan kepada instansi yang berwenang mengurusi piutang negara untuk di proses lebih lanjut. Pasal 39 (1) Sanksi penghentian sementara proses permohonan Pengesahan RPTKA sebagaimana dimaksud dalam Pasal 36 ayat (1) huruf b dikenakan kepada Pemberi Kerja TKA yang melanggar ketentuan: a. tidak memfasilitasi pendidikan dan pelatihan bahasa Indonesia kepada TKA sebagaimana dimaksud dalam Pasal 7 ayat (2), b. tidak mendaftarkan TKA dalam program jaminan sosial nasional bagi TKA yang bekerja lebih dari 6 (enam) bulan atau program asuransi pada perusahaan asuransi bagi TKA yang bekerja kurang dari 6 (enam) bulan sebagaimana dimaksud dalam Pasal 8 ayat (1): c. tidak melaporkan setiap 1 (satu) tahun kepada Menteri atau pejabat yang ditunjuk untuk pelaksanaan penggunaan TKA, pelaksanaan pendidikan dan pelatihan kerja bagi Tenaga Kerja Pendamping TKA, dan pelaksanaan alih teknologi dan alih keahlian dari TKA kepada Tenaga Kerja Pendamping TKA sebagaimana dimaksud dalam Pasal 32 ayat (1), d. tidak melaporkan pelaksanaan penggunaan TKA untuk pekerjaan yang bersifat sementara setelah berakhirnya perjanjian kerja kepada Menteri atau pejabat yang ditunjuk sebagaimana dimaksud dalam Pasal 32 ayat (2), dan/atau e. tidak melaporkan kepada Menteri atau pejabat yang ditunjuk untuk perjanjian kerja TKA yang telah berakhir atau diakhiri sebelum jangka waktu perjanjian kerja berakhir sebagaimana dimaksud dalam Pasal 32 ayat (3). (2) Sanksi penghentian sementara proses permohonan Pengesahan RPTKA sebagaimana dimaksud pada ayat (1) diberikan untuk jangka waktu paling lama 3 (tiga) bulan. (3) Sanksi penghentian sementara proses permohonan Pengesahan RPTKA sebagaimana dimaksud pada ayat (2) memuat kewajiban yang harus dilaksanakan oleh Pemberi Kerja TKA terhadap pelanggaran yang telah dilakukan. (4) Dalam hal Pemberi Kerja TKA tidak melaksanakan kewajiban sebagaimana dimaksud pada ayat (3) akan dikenakan sanksi pencabutan Pengesahan RPTKA. Pasal 40 (1) Sanksi pencabutan Pengesahan RPTKA sebagaimana dimaksud dalam Pasal 36 ayat (1) huruf c dikenakan kepada Pemberi Kerja TKA yang melanggar ketentuan: a. mempekerjakan TKA tidak sesuai dengan Pengesahan RPTKA sebagaimana dimaksud dalam Pasal 6 ayat (3), b. mempekerjakan TKA rangkap jabatan dalam perusahaan yang sama sebagaimana dimaksud dalam Pasal 10: c. mempekerjakan TKA pada jabatan yang mengurusi personalia sebagaimana dimaksud dalam Pasal 11 ayat (1): dan/atau d. tidak membayar DKPTKA atas setiap TKA yang dipekerjakan sebagaimana dimaksud dalam Pasal 23 ayat (1). Pasal 41 Menteri atau pejabat yang ditunjuk menyampaikan pencabutan Pengesahan RPTKA kepada menteri yang menyelenggarakan urusan pemerintahan di bidang hukum dan hak asasi manusia atau pejabat yang ditunjuk untuk dilakukan tindakan keimigrasian sesuai dengan ketentuan peraturan perundang- undangan di bidang keimigrasian. Pasal 42 Ketentuan lebih lanjut mengenai tata cara pengenaan sanksi administratif sebagaimana dimaksud dalam Pasal 36 sampai dengan Pasal 41 diatur dengan Peraturan Menteri. BAB VIH PENDANAAN Pasal 43 Segala pendanaan yang diperlukan untuk pelaksanaan Peraturan Pemerintah ini dibebankan pada Anggaran Pendapatan dan Belanja Negara, Anggaran Pendapatan dan Belanja Daerah provinsi, serta sumber pendanaan lainnya yang sah sesuai dengan ketentuan peraturan perundang-undangan. BAB IX KETENTUAN LAIN-LAIN Pasal 44 Proses penggunaan TKA sebagaimana diatur dalam Peraturan Pemerintah ini dilakukan melalui penggunaan data secara bersama dan terintegrasi secara daring. BAB X KETENTUAN PERALIHAN Pasal 45 Pada saat Peraturan Pemerintah ini mulai berlaku: a. perizinan penggunaan TKA yang sudah terbit masih tetap berlaku sampai dengan habis masa berlakunya, dan b. perizinan penggunaan TKA yang sedang dalam proses permohonan disesuaikan dengan ketentuan dalam Peraturan Pemerintah ini. BAB XI KETENTUAN PENUTUP Pasal 46 Pada saat Peraturan Pemerintah ini mulai berlaku, Peraturan Presiden Nomor 20 Tahun 2018 tentang Penggunaan Tenaga Kerja Asing (Lembaran Negara Republik Indonesia Tahun 20 18 Nomor 39), dicabut dan dinyatakan tidak berlaku. Pasal 47 Pada saat Peraturan Pemerintah ini mulai berlaku, Peraturan Daerah dan Peraturan Kepala Daerah yang mengatur mengenai retribusi yang berasal dari perpanjangan izin mempekerjakan TKA wajib menyesuaikan dengan ketentuan dalam Peraturan Pemerintah ini paling lambat 3 (tiga) bulan terhitung sejak Peraturan Pemerintah ini berlaku. Pasal 48 Peraturan Pemerintah ini mulai berlaku pada tanggal 1 April 2021. Agar setiap orang mengetahuinya, memerintahkan pengundangan Peraturan Pemerintah ini dengan penempatannya dalam Lembaran Negara Republik Indonesia." .
+<http://example.org/legal/document/pp/2021/34/bab/0007> legal:babHasPasalSet <http://example.org/legal/document/pp/2021/34/bab/0007/pasals> .
+<http://example.org/legal/document/pp/2021/34> legal:documentHasDisahkanDate "2021-02-02"^^xsd:date .
+<http://example.org/legal/document/pp/2021/34> legal:documentHasDisahkanPengesah "JOKO WIDODO" .
+<http://example.org/legal/document/pp/2021/34> legal:documentHasDisahkanLocation "Jakarta" .
+<http://example.org/legal/document/pp/2021/34> legal:documentHasDisahkanJabatanPengesah "PRESIDEN REPUBLIK INDONESIA," .
+<http://example.org/legal/document/pp/2021/34> a legal:Document .
+<http://example.org/legal/document/pp/2021/34/bab> a legal:BabSet .
+<http://example.org/legal/document/pp/2021/34/bab/0001> a legal:Bab .
+<http://example.org/legal/document/pp/2021/34/bab/0001/pasals> a legal:PasalSet .
+<http://example.org/legal/document/pp/2021/34/pasal/0001> a legal:Pasal .
+<http://example.org/legal/document/pp/2021/34/pasal/0001/version/20210202> a legal:PasalVersion .
+<http://example.org/legal/document/pp/2021/34/pasal/0001/version/20210202/point/description> a legal:Text .
+<http://example.org/legal/document/pp/2021/34/pasal/0001/version/20210202/point> a legal:PointSet .
+<http://example.org/legal/document/pp/2021/34/pasal/0001/version/20210202/point/0001> a legal:Point .
+<http://example.org/legal/document/pp/2021/34/pasal/0001/version/20210202/point/0001/text> a legal:Text .
+<http://example.org/legal/document/pp/2021/34/pasal/0001/version/20210202/point/0002> a legal:Point .
+<http://example.org/legal/document/pp/2021/34/pasal/0001/version/20210202/point/0002/text> a legal:Text .
+<http://example.org/legal/document/pp/2021/34/pasal/0001/version/20210202/point/0003> a legal:Point .
+<http://example.org/legal/document/pp/2021/34/pasal/0001/version/20210202/point/0003/text> a legal:Text .
+<http://example.org/legal/document/pp/2021/34/pasal/0001/version/20210202/point/0004> a legal:Point .
+<http://example.org/legal/document/pp/2021/34/pasal/0001/version/20210202/point/0004/text> a legal:Text .
+<http://example.org/legal/document/pp/2021/34/pasal/0001/version/20210202/point/0005> a legal:Point .
+<http://example.org/legal/document/pp/2021/34/pasal/0001/version/20210202/point/0005/text> a legal:Text .
+<http://example.org/legal/document/pp/2021/34/pasal/0001/version/20210202/point/0006> a legal:Point .
+<http://example.org/legal/document/pp/2021/34/pasal/0001/version/20210202/point/0006/text> a legal:Text .
+<http://example.org/legal/document/pp/2021/34/pasal/0001/version/20210202/point/0007> a legal:Point .
+<http://example.org/legal/document/pp/2021/34/pasal/0001/version/20210202/point/0007/text> a legal:Text .
+<http://example.org/legal/document/pp/2021/34/pasal/0001/version/20210202/point/0008> a legal:Point .
+<http://example.org/legal/document/pp/2021/34/pasal/0001/version/20210202/point/0008/text> a legal:Text .
+<http://example.org/legal/document/pp/2021/34/pasal/0001/version/20210202/point/0009> a legal:Point .
+<http://example.org/legal/document/pp/2021/34/pasal/0001/version/20210202/point/0009/text> a legal:Text .
+<http://example.org/legal/document/pp/2021/34/bab/0002> a legal:Bab .
+<http://example.org/legal/document/pp/2021/34/bab/0002/bagian> a legal:BagianSet .
+<http://example.org/legal/document/pp/2021/34/bab/0002/bagian/0001> a legal:Bagian .
+<http://example.org/legal/document/pp/2021/34/bab/0002/bagian/0001/pasals> a legal:PasalSet .
+<http://example.org/legal/document/pp/2021/34/pasal/0002> a legal:Pasal .
+<http://example.org/legal/document/pp/2021/34/pasal/0002/version/20210202> a legal:PasalVersion .
+<http://example.org/legal/document/pp/2021/34/pasal/0002/version/20210202/ayat> a legal:AyatSet .
+<http://example.org/legal/document/pp/2021/34/pasal/0002/version/20210202/ayat/0001> a legal:Ayat .
+<http://example.org/legal/document/pp/2021/34/pasal/0002/version/20210202/ayat/0001/text> a legal:Text .
+<http://example.org/legal/document/pp/2021/34/pasal/0002/version/20210202/ayat/0002> a legal:Ayat .
+<http://example.org/legal/document/pp/2021/34/pasal/0002/version/20210202/ayat/0002/text> a legal:Text .
+<http://example.org/legal/document/pp/2021/34/pasal/0002/version/20210202/ayat/0003> a legal:Ayat .
+<http://example.org/legal/document/pp/2021/34/pasal/0002/version/20210202/ayat/0003/text> a legal:Text .
+<http://example.org/legal/document/pp/2021/34/pasal/0003> a legal:Pasal .
+<http://example.org/legal/document/pp/2021/34/pasal/0003/version/20210202> a legal:PasalVersion .
+<http://example.org/legal/document/pp/2021/34/pasal/0003/version/20210202/ayat> a legal:AyatSet .
+<http://example.org/legal/document/pp/2021/34/pasal/0003/version/20210202/ayat/0001> a legal:Ayat .
+<http://example.org/legal/document/pp/2021/34/pasal/0003/version/20210202/ayat/0001/point/description> a legal:Text .
+<http://example.org/legal/document/pp/2021/34/pasal/0003/version/20210202/ayat/0001/point> a legal:PointSet .
+<http://example.org/legal/document/pp/2021/34/pasal/0003/version/20210202/ayat/0001/point/a> a legal:Point .
+<http://example.org/legal/document/pp/2021/34/pasal/0003/version/20210202/ayat/0001/point/a/text> a legal:Text .
+<http://example.org/legal/document/pp/2021/34/pasal/0003/version/20210202/ayat/0001/point/b> a legal:Point .
+<http://example.org/legal/document/pp/2021/34/pasal/0003/version/20210202/ayat/0001/point/b/text> a legal:Text .
+<http://example.org/legal/document/pp/2021/34/pasal/0003/version/20210202/ayat/0001/point/c> a legal:Point .
+<http://example.org/legal/document/pp/2021/34/pasal/0003/version/20210202/ayat/0001/point/c/text> a legal:Text .
+<http://example.org/legal/document/pp/2021/34/pasal/0003/version/20210202/ayat/0001/point/d> a legal:Point .
+<http://example.org/legal/document/pp/2021/34/pasal/0003/version/20210202/ayat/0001/point/d/text> a legal:Text .
+<http://example.org/legal/document/pp/2021/34/pasal/0003/version/20210202/ayat/0001/point/e> a legal:Point .
+<http://example.org/legal/document/pp/2021/34/pasal/0003/version/20210202/ayat/0001/point/e/text> a legal:Text .
+<http://example.org/legal/document/pp/2021/34/pasal/0003/version/20210202/ayat/0001/point/f> a legal:Point .
+<http://example.org/legal/document/pp/2021/34/pasal/0003/version/20210202/ayat/0001/point/f/text> a legal:Text .
+<http://example.org/legal/document/pp/2021/34/pasal/0003/version/20210202/ayat/0001/point/g> a legal:Point .
+<http://example.org/legal/document/pp/2021/34/pasal/0003/version/20210202/ayat/0001/point/g/text> a legal:Text .
+<http://example.org/legal/document/pp/2021/34/pasal/0003/version/20210202/ayat/0002> a legal:Ayat .
+<http://example.org/legal/document/pp/2021/34/pasal/0003/version/20210202/ayat/0002/text> a legal:Text .
+<http://example.org/legal/document/pp/2021/34/pasal/0004> a legal:Pasal .
+<http://example.org/legal/document/pp/2021/34/pasal/0004/version/20210202> a legal:PasalVersion .
+<http://example.org/legal/document/pp/2021/34/pasal/0004/version/20210202/ayat> a legal:AyatSet .
+<http://example.org/legal/document/pp/2021/34/pasal/0004/version/20210202/ayat/0001> a legal:Ayat .
+<http://example.org/legal/document/pp/2021/34/pasal/0004/version/20210202/ayat/0001/text> a legal:Text .
+<http://example.org/legal/document/pp/2021/34/pasal/0004/version/20210202/ayat/0002> a legal:Ayat .
+<http://example.org/legal/document/pp/2021/34/pasal/0004/version/20210202/ayat/0002/text> a legal:Text .
+<http://example.org/legal/document/pp/2021/34/pasal/0005> a legal:Pasal .
+<http://example.org/legal/document/pp/2021/34/pasal/0005/version/20210202> a legal:PasalVersion .
+<http://example.org/legal/document/pp/2021/34/pasal/0005/version/20210202/ayat> a legal:AyatSet .
+<http://example.org/legal/document/pp/2021/34/pasal/0005/version/20210202/ayat/0001> a legal:Ayat .
+<http://example.org/legal/document/pp/2021/34/pasal/0005/version/20210202/ayat/0001/point/description> a legal:Text .
+<http://example.org/legal/document/pp/2021/34/pasal/0005/version/20210202/ayat/0001/point> a legal:PointSet .
+<http://example.org/legal/document/pp/2021/34/pasal/0005/version/20210202/ayat/0001/point/a> a legal:Point .
+<http://example.org/legal/document/pp/2021/34/pasal/0005/version/20210202/ayat/0001/point/a/text> a legal:Text .
+<http://example.org/legal/document/pp/2021/34/pasal/0005/version/20210202/ayat/0001/point/b> a legal:Point .
+<http://example.org/legal/document/pp/2021/34/pasal/0005/version/20210202/ayat/0001/point/b/text> a legal:Text .
+<http://example.org/legal/document/pp/2021/34/pasal/0005/version/20210202/ayat/0002> a legal:Ayat .
+<http://example.org/legal/document/pp/2021/34/pasal/0005/version/20210202/ayat/0002/text> a legal:Text .
+<http://example.org/legal/document/pp/2021/34/pasal/0005/version/20210202/ayat/0003> a legal:Ayat .
+<http://example.org/legal/document/pp/2021/34/pasal/0005/version/20210202/ayat/0003/text> a legal:Text .
+<http://example.org/legal/document/pp/2021/34/pasal/0005/version/20210202/ayat/0004> a legal:Ayat .
+<http://example.org/legal/document/pp/2021/34/pasal/0005/version/20210202/ayat/0004/text> a legal:Text .
+<http://example.org/legal/document/pp/2021/34/bab/0002/bagian/0002> a legal:Bagian .
+<http://example.org/legal/document/pp/2021/34/bab/0002/bagian/0002/pasals> a legal:PasalSet .
+<http://example.org/legal/document/pp/2021/34/pasal/0006> a legal:Pasal .
+<http://example.org/legal/document/pp/2021/34/pasal/0006/version/20210202> a legal:PasalVersion .
+<http://example.org/legal/document/pp/2021/34/pasal/0006/version/20210202/ayat> a legal:AyatSet .
+<http://example.org/legal/document/pp/2021/34/pasal/0006/version/20210202/ayat/0001> a legal:Ayat .
+<http://example.org/legal/document/pp/2021/34/pasal/0006/version/20210202/ayat/0001/text> a legal:Text .
+<http://example.org/legal/document/pp/2021/34/pasal/0006/version/20210202/ayat/0002> a legal:Ayat .
+<http://example.org/legal/document/pp/2021/34/pasal/0006/version/20210202/ayat/0002/text> a legal:Text .
+<http://example.org/legal/document/pp/2021/34/pasal/0006/version/20210202/ayat/0003> a legal:Ayat .
+<http://example.org/legal/document/pp/2021/34/pasal/0006/version/20210202/ayat/0003/text> a legal:Text .
+<http://example.org/legal/document/pp/2021/34/pasal/0007> a legal:Pasal .
+<http://example.org/legal/document/pp/2021/34/pasal/0007/version/20210202> a legal:PasalVersion .
+<http://example.org/legal/document/pp/2021/34/pasal/0007/version/20210202/ayat> a legal:AyatSet .
+<http://example.org/legal/document/pp/2021/34/pasal/0007/version/20210202/ayat/0001> a legal:Ayat .
+<http://example.org/legal/document/pp/2021/34/pasal/0007/version/20210202/ayat/0001/point/description> a legal:Text .
+<http://example.org/legal/document/pp/2021/34/pasal/0007/version/20210202/ayat/0001/point> a legal:PointSet .
+<http://example.org/legal/document/pp/2021/34/pasal/0007/version/20210202/ayat/0001/point/a> a legal:Point .
+<http://example.org/legal/document/pp/2021/34/pasal/0007/version/20210202/ayat/0001/point/a/text> a legal:Text .
+<http://example.org/legal/document/pp/2021/34/pasal/0007/version/20210202/ayat/0001/point/b> a legal:Point .
+<http://example.org/legal/document/pp/2021/34/pasal/0007/version/20210202/ayat/0001/point/b/text> a legal:Text .
+<http://example.org/legal/document/pp/2021/34/pasal/0007/version/20210202/ayat/0001/point/c> a legal:Point .
+<http://example.org/legal/document/pp/2021/34/pasal/0007/version/20210202/ayat/0001/point/c/text> a legal:Text .
+<http://example.org/legal/document/pp/2021/34/pasal/0007/version/20210202/ayat/0002> a legal:Ayat .
+<http://example.org/legal/document/pp/2021/34/pasal/0007/version/20210202/ayat/0002/text> a legal:Text .
+<http://example.org/legal/document/pp/2021/34/pasal/0007/version/20210202/ayat/0003> a legal:Ayat .
+<http://example.org/legal/document/pp/2021/34/pasal/0007/version/20210202/ayat/0003/point/description> a legal:Text .
+<http://example.org/legal/document/pp/2021/34/pasal/0007/version/20210202/ayat/0003/point> a legal:PointSet .
+<http://example.org/legal/document/pp/2021/34/pasal/0007/version/20210202/ayat/0003/point/a> a legal:Point .
+<http://example.org/legal/document/pp/2021/34/pasal/0007/version/20210202/ayat/0003/point/a/text> a legal:Text .
+<http://example.org/legal/document/pp/2021/34/pasal/0007/version/20210202/ayat/0003/point/b> a legal:Point .
+<http://example.org/legal/document/pp/2021/34/pasal/0007/version/20210202/ayat/0003/point/b/text> a legal:Text .
+<http://example.org/legal/document/pp/2021/34/pasal/0007/version/20210202/ayat/0003/point/c> a legal:Point .
+<http://example.org/legal/document/pp/2021/34/pasal/0007/version/20210202/ayat/0003/point/c/text> a legal:Text .
+<http://example.org/legal/document/pp/2021/34/pasal/0007/version/20210202/ayat/0003/point/d> a legal:Point .
+<http://example.org/legal/document/pp/2021/34/pasal/0007/version/20210202/ayat/0003/point/d/text> a legal:Text .
+<http://example.org/legal/document/pp/2021/34/pasal/0008> a legal:Pasal .
+<http://example.org/legal/document/pp/2021/34/pasal/0008/version/20210202> a legal:PasalVersion .
+<http://example.org/legal/document/pp/2021/34/pasal/0008/version/20210202/ayat> a legal:AyatSet .
+<http://example.org/legal/document/pp/2021/34/pasal/0008/version/20210202/ayat/0001> a legal:Ayat .
+<http://example.org/legal/document/pp/2021/34/pasal/0008/version/20210202/ayat/0001/text> a legal:Text .
+<http://example.org/legal/document/pp/2021/34/pasal/0008/version/20210202/ayat/0002> a legal:Ayat .
+<http://example.org/legal/document/pp/2021/34/pasal/0008/version/20210202/ayat/0002/text> a legal:Text .
+<http://example.org/legal/document/pp/2021/34/bab/0002/bagian/0003> a legal:Bagian .
+<http://example.org/legal/document/pp/2021/34/bab/0002/bagian/0003/pasals> a legal:PasalSet .
+<http://example.org/legal/document/pp/2021/34/pasal/0009> a legal:Pasal .
+<http://example.org/legal/document/pp/2021/34/pasal/0009/version/20210202> a legal:PasalVersion .
+<http://example.org/legal/document/pp/2021/34/pasal/0009/version/20210202/text> a legal:Text .
+<http://example.org/legal/document/pp/2021/34/pasal/0010> a legal:Pasal .
+<http://example.org/legal/document/pp/2021/34/pasal/0010/version/20210202> a legal:PasalVersion .
+<http://example.org/legal/document/pp/2021/34/pasal/0010/version/20210202/text> a legal:Text .
+<http://example.org/legal/document/pp/2021/34/pasal/0011> a legal:Pasal .
+<http://example.org/legal/document/pp/2021/34/pasal/0011/version/20210202> a legal:PasalVersion .
+<http://example.org/legal/document/pp/2021/34/pasal/0011/version/20210202/ayat> a legal:AyatSet .
+<http://example.org/legal/document/pp/2021/34/pasal/0011/version/20210202/ayat/0001> a legal:Ayat .
+<http://example.org/legal/document/pp/2021/34/pasal/0011/version/20210202/ayat/0001/text> a legal:Text .
+<http://example.org/legal/document/pp/2021/34/pasal/0011/version/20210202/ayat/0002> a legal:Ayat .
+<http://example.org/legal/document/pp/2021/34/pasal/0011/version/20210202/ayat/0002/text> a legal:Text .
+<http://example.org/legal/document/pp/2021/34/bab/0003> a legal:Bab .
+<http://example.org/legal/document/pp/2021/34/bab/0003/bagian> a legal:BagianSet .
+<http://example.org/legal/document/pp/2021/34/bab/0003/bagian/0001> a legal:Bagian .
+<http://example.org/legal/document/pp/2021/34/bab/0003/bagian/0001/pasals> a legal:PasalSet .
+<http://example.org/legal/document/pp/2021/34/pasal/0012> a legal:Pasal .
+<http://example.org/legal/document/pp/2021/34/pasal/0012/version/20210202> a legal:PasalVersion .
+<http://example.org/legal/document/pp/2021/34/pasal/0012/version/20210202/ayat> a legal:AyatSet .
+<http://example.org/legal/document/pp/2021/34/pasal/0012/version/20210202/ayat/0001> a legal:Ayat .
+<http://example.org/legal/document/pp/2021/34/pasal/0012/version/20210202/ayat/0001/text> a legal:Text .
+<http://example.org/legal/document/pp/2021/34/pasal/0012/version/20210202/ayat/0002> a legal:Ayat .
+<http://example.org/legal/document/pp/2021/34/pasal/0012/version/20210202/ayat/0002/point/description> a legal:Text .
+<http://example.org/legal/document/pp/2021/34/pasal/0012/version/20210202/ayat/0002/point> a legal:PointSet .
+<http://example.org/legal/document/pp/2021/34/pasal/0012/version/20210202/ayat/0002/point/a> a legal:Point .
+<http://example.org/legal/document/pp/2021/34/pasal/0012/version/20210202/ayat/0002/point/a/text> a legal:Text .
+<http://example.org/legal/document/pp/2021/34/pasal/0012/version/20210202/ayat/0002/point/b> a legal:Point .
+<http://example.org/legal/document/pp/2021/34/pasal/0012/version/20210202/ayat/0002/point/b/text> a legal:Text .
+<http://example.org/legal/document/pp/2021/34/pasal/0012/version/20210202/ayat/0002/point/c> a legal:Point .
+<http://example.org/legal/document/pp/2021/34/pasal/0012/version/20210202/ayat/0002/point/c/text> a legal:Text .
+<http://example.org/legal/document/pp/2021/34/pasal/0012/version/20210202/ayat/0002/point/d> a legal:Point .
+<http://example.org/legal/document/pp/2021/34/pasal/0012/version/20210202/ayat/0002/point/d/text> a legal:Text .
+<http://example.org/legal/document/pp/2021/34/pasal/0012/version/20210202/ayat/0002/point/e> a legal:Point .
+<http://example.org/legal/document/pp/2021/34/pasal/0012/version/20210202/ayat/0002/point/e/text> a legal:Text .
+<http://example.org/legal/document/pp/2021/34/pasal/0012/version/20210202/ayat/0002/point/f> a legal:Point .
+<http://example.org/legal/document/pp/2021/34/pasal/0012/version/20210202/ayat/0002/point/f/text> a legal:Text .
+<http://example.org/legal/document/pp/2021/34/pasal/0012/version/20210202/ayat/0002/point/g> a legal:Point .
+<http://example.org/legal/document/pp/2021/34/pasal/0012/version/20210202/ayat/0002/point/g/text> a legal:Text .
+<http://example.org/legal/document/pp/2021/34/pasal/0012/version/20210202/ayat/0002/point/h> a legal:Point .
+<http://example.org/legal/document/pp/2021/34/pasal/0012/version/20210202/ayat/0002/point/h/text> a legal:Text .
+<http://example.org/legal/document/pp/2021/34/pasal/0012/version/20210202/ayat/0003> a legal:Ayat .
+<http://example.org/legal/document/pp/2021/34/pasal/0012/version/20210202/ayat/0003/point/description> a legal:Text .
+<http://example.org/legal/document/pp/2021/34/pasal/0012/version/20210202/ayat/0003/point> a legal:PointSet .
+<http://example.org/legal/document/pp/2021/34/pasal/0012/version/20210202/ayat/0003/point/a> a legal:Point .
+<http://example.org/legal/document/pp/2021/34/pasal/0012/version/20210202/ayat/0003/point/a/text> a legal:Text .
+<http://example.org/legal/document/pp/2021/34/pasal/0012/version/20210202/ayat/0003/point/b> a legal:Point .
+<http://example.org/legal/document/pp/2021/34/pasal/0012/version/20210202/ayat/0003/point/b/text> a legal:Text .
+<http://example.org/legal/document/pp/2021/34/pasal/0012/version/20210202/ayat/0003/point/c> a legal:Point .
+<http://example.org/legal/document/pp/2021/34/pasal/0012/version/20210202/ayat/0003/point/c/text> a legal:Text .
+<http://example.org/legal/document/pp/2021/34/pasal/0012/version/20210202/ayat/0003/point/d> a legal:Point .
+<http://example.org/legal/document/pp/2021/34/pasal/0012/version/20210202/ayat/0003/point/d/text> a legal:Text .
+<http://example.org/legal/document/pp/2021/34/pasal/0012/version/20210202/ayat/0003/point/e> a legal:Point .
+<http://example.org/legal/document/pp/2021/34/pasal/0012/version/20210202/ayat/0003/point/e/text> a legal:Text .
+<http://example.org/legal/document/pp/2021/34/pasal/0012/version/20210202/ayat/0003/point/f> a legal:Point .
+<http://example.org/legal/document/pp/2021/34/pasal/0012/version/20210202/ayat/0003/point/f/text> a legal:Text .
+<http://example.org/legal/document/pp/2021/34/pasal/0012/version/20210202/ayat/0003/point/g> a legal:Point .
+<http://example.org/legal/document/pp/2021/34/pasal/0012/version/20210202/ayat/0003/point/g/text> a legal:Text .
+<http://example.org/legal/document/pp/2021/34/pasal/0012/version/20210202/ayat/0003/point/h> a legal:Point .
+<http://example.org/legal/document/pp/2021/34/pasal/0012/version/20210202/ayat/0003/point/h/text> a legal:Text .
+<http://example.org/legal/document/pp/2021/34/pasal/0012/version/20210202/ayat/0003/point/i> a legal:Point .
+<http://example.org/legal/document/pp/2021/34/pasal/0012/version/20210202/ayat/0003/point/i/text> a legal:Text .
+<http://example.org/legal/document/pp/2021/34/pasal/0012/version/20210202/ayat/0004> a legal:Ayat .
+<http://example.org/legal/document/pp/2021/34/pasal/0012/version/20210202/ayat/0004/text> a legal:Text .
+<http://example.org/legal/document/pp/2021/34/pasal/0013> a legal:Pasal .
+<http://example.org/legal/document/pp/2021/34/pasal/0013/version/20210202> a legal:PasalVersion .
+<http://example.org/legal/document/pp/2021/34/pasal/0013/version/20210202/ayat> a legal:AyatSet .
+<http://example.org/legal/document/pp/2021/34/pasal/0013/version/20210202/ayat/0001> a legal:Ayat .
+<http://example.org/legal/document/pp/2021/34/pasal/0013/version/20210202/ayat/0001/point/description> a legal:Text .
+<http://example.org/legal/document/pp/2021/34/pasal/0013/version/20210202/ayat/0001/point> a legal:PointSet .
+<http://example.org/legal/document/pp/2021/34/pasal/0013/version/20210202/ayat/0001/point/a> a legal:Point .
+<http://example.org/legal/document/pp/2021/34/pasal/0013/version/20210202/ayat/0001/point/a/text> a legal:Text .
+<http://example.org/legal/document/pp/2021/34/pasal/0013/version/20210202/ayat/0001/point/b> a legal:Point .
+<http://example.org/legal/document/pp/2021/34/pasal/0013/version/20210202/ayat/0001/point/b/text> a legal:Text .
+<http://example.org/legal/document/pp/2021/34/pasal/0013/version/20210202/ayat/0001/point/c> a legal:Point .
+<http://example.org/legal/document/pp/2021/34/pasal/0013/version/20210202/ayat/0001/point/c/text> a legal:Text .
+<http://example.org/legal/document/pp/2021/34/pasal/0013/version/20210202/ayat/0002> a legal:Ayat .
+<http://example.org/legal/document/pp/2021/34/pasal/0013/version/20210202/ayat/0002/text> a legal:Text .
+<http://example.org/legal/document/pp/2021/34/pasal/0013/version/20210202/ayat/0003> a legal:Ayat .
+<http://example.org/legal/document/pp/2021/34/pasal/0013/version/20210202/ayat/0003/text> a legal:Text .
+<http://example.org/legal/document/pp/2021/34/pasal/0013/version/20210202/ayat/0004> a legal:Ayat .
+<http://example.org/legal/document/pp/2021/34/pasal/0013/version/20210202/ayat/0004/text> a legal:Text .
+<http://example.org/legal/document/pp/2021/34/pasal/0013/version/20210202/ayat/0005> a legal:Ayat .
+<http://example.org/legal/document/pp/2021/34/pasal/0013/version/20210202/ayat/0005/text> a legal:Text .
+<http://example.org/legal/document/pp/2021/34/pasal/0013/version/20210202/ayat/0006> a legal:Ayat .
+<http://example.org/legal/document/pp/2021/34/pasal/0013/version/20210202/ayat/0006/text> a legal:Text .
+<http://example.org/legal/document/pp/2021/34/pasal/0013/version/20210202/ayat/0007> a legal:Ayat .
+<http://example.org/legal/document/pp/2021/34/pasal/0013/version/20210202/ayat/0007/text> a legal:Text .
+<http://example.org/legal/document/pp/2021/34/pasal/0013/version/20210202/ayat/0008> a legal:Ayat .
+<http://example.org/legal/document/pp/2021/34/pasal/0013/version/20210202/ayat/0008/text> a legal:Text .
+<http://example.org/legal/document/pp/2021/34/bab/0003/bagian/0002> a legal:Bagian .
+<http://example.org/legal/document/pp/2021/34/bab/0003/bagian/0003> a legal:Bagian .
+<http://example.org/legal/document/pp/2021/34/bab/0004> a legal:Bab .
+<http://example.org/legal/document/pp/2021/34/bab/0005> a legal:Bab .
+<http://example.org/legal/document/pp/2021/34/bab/0006> a legal:Bab .
+<http://example.org/legal/document/pp/2021/34/bab/0006/bagian> a legal:BagianSet .
+<http://example.org/legal/document/pp/2021/34/bab/0006/bagian/0001> a legal:Bagian .
+<http://example.org/legal/document/pp/2021/34/bab/0006/bagian/0002> a legal:Bagian .
+<http://example.org/legal/document/pp/2021/34/bab/0006/bagian/0003> a legal:Bagian .
+<http://example.org/legal/document/pp/2021/34/bab/0007> a legal:Bab .
+<http://example.org/legal/document/pp/2021/34/bab> legal:partOf <http://example.org/legal/document/pp/2021/34> .
+<http://example.org/legal/document/pp/2021/34/bab/0001> legal:partOf <http://example.org/legal/document/pp/2021/34/bab> .
+<http://example.org/legal/document/pp/2021/34/bab/0001/pasals> legal:partOf <http://example.org/legal/document/pp/2021/34/bab/0001> .
+<http://example.org/legal/document/pp/2021/34/pasal/0001> legal:partOf <http://example.org/legal/document/pp/2021/34/bab/0001/pasals> .
+<http://example.org/legal/document/pp/2021/34/pasal/0001/version/20210202> legal:partOf <http://example.org/legal/document/pp/2021/34/pasal/0001> .
+<http://example.org/legal/document/pp/2021/34/pasal/0001> legal:partOf <http://example.org/legal/document/pp/2021/34> .
+<http://example.org/legal/document/pp/2021/34/pasal/0001/version/20210202/point> legal:partOf <http://example.org/legal/document/pp/2021/34/pasal/0001/version/20210202> .
+<http://example.org/legal/document/pp/2021/34/pasal/0001/version/20210202/point/0001> legal:partOf <http://example.org/legal/document/pp/2021/34/pasal/0001/version/20210202/point> .
+<http://example.org/legal/document/pp/2021/34/pasal/0001/version/20210202/point/0002> legal:partOf <http://example.org/legal/document/pp/2021/34/pasal/0001/version/20210202/point> .
+<http://example.org/legal/document/pp/2021/34/pasal/0001/version/20210202/point/0003> legal:partOf <http://example.org/legal/document/pp/2021/34/pasal/0001/version/20210202/point> .
+<http://example.org/legal/document/pp/2021/34/pasal/0001/version/20210202/point/0004> legal:partOf <http://example.org/legal/document/pp/2021/34/pasal/0001/version/20210202/point> .
+<http://example.org/legal/document/pp/2021/34/pasal/0001/version/20210202/point/0005> legal:partOf <http://example.org/legal/document/pp/2021/34/pasal/0001/version/20210202/point> .
+<http://example.org/legal/document/pp/2021/34/pasal/0001/version/20210202/point/0006> legal:partOf <http://example.org/legal/document/pp/2021/34/pasal/0001/version/20210202/point> .
+<http://example.org/legal/document/pp/2021/34/pasal/0001/version/20210202/point/0007> legal:partOf <http://example.org/legal/document/pp/2021/34/pasal/0001/version/20210202/point> .
+<http://example.org/legal/document/pp/2021/34/pasal/0001/version/20210202/point/0008> legal:partOf <http://example.org/legal/document/pp/2021/34/pasal/0001/version/20210202/point> .
+<http://example.org/legal/document/pp/2021/34/pasal/0001/version/20210202/point/0009> legal:partOf <http://example.org/legal/document/pp/2021/34/pasal/0001/version/20210202/point> .
+<http://example.org/legal/document/pp/2021/34/bab/0002> legal:partOf <http://example.org/legal/document/pp/2021/34/bab> .
+<http://example.org/legal/document/pp/2021/34/bab/0002/bagian> legal:partOf <http://example.org/legal/document/pp/2021/34/bab/0002> .
+<http://example.org/legal/document/pp/2021/34/bab/0002/bagian/0001> legal:partOf <http://example.org/legal/document/pp/2021/34/bab/0002/bagian> .
+<http://example.org/legal/document/pp/2021/34/bab/0002/bagian/0001/pasals> legal:partOf <http://example.org/legal/document/pp/2021/34/bab/0002/bagian/0001> .
+<http://example.org/legal/document/pp/2021/34/pasal/0002> legal:partOf <http://example.org/legal/document/pp/2021/34/bab/0002/bagian/0001/pasals> .
+<http://example.org/legal/document/pp/2021/34/pasal/0002/version/20210202> legal:partOf <http://example.org/legal/document/pp/2021/34/pasal/0002> .
+<http://example.org/legal/document/pp/2021/34/pasal/0002> legal:partOf <http://example.org/legal/document/pp/2021/34> .
+<http://example.org/legal/document/pp/2021/34/pasal/0002/version/20210202/ayat> legal:partOf <http://example.org/legal/document/pp/2021/34/pasal/0002/version/20210202> .
+<http://example.org/legal/document/pp/2021/34/pasal/0002/version/20210202/ayat/0001> legal:partOf <http://example.org/legal/document/pp/2021/34/pasal/0002/version/20210202/ayat> .
+<http://example.org/legal/document/pp/2021/34/pasal/0002/version/20210202/ayat/0001/text> legal:partOf <http://example.org/legal/document/pp/2021/34/pasal/0002/version/20210202/ayat/0001> .
+<http://example.org/legal/document/pp/2021/34/pasal/0002/version/20210202/ayat/0002> legal:partOf <http://example.org/legal/document/pp/2021/34/pasal/0002/version/20210202/ayat> .
+<http://example.org/legal/document/pp/2021/34/pasal/0002/version/20210202/ayat/0002/text> legal:partOf <http://example.org/legal/document/pp/2021/34/pasal/0002/version/20210202/ayat/0002> .
+<http://example.org/legal/document/pp/2021/34/pasal/0002/version/20210202/ayat/0003> legal:partOf <http://example.org/legal/document/pp/2021/34/pasal/0002/version/20210202/ayat> .
+<http://example.org/legal/document/pp/2021/34/pasal/0002/version/20210202/ayat/0003/text> legal:partOf <http://example.org/legal/document/pp/2021/34/pasal/0002/version/20210202/ayat/0003> .
+<http://example.org/legal/document/pp/2021/34/pasal/0003> legal:partOf <http://example.org/legal/document/pp/2021/34/bab/0002/bagian/0001/pasals> .
+<http://example.org/legal/document/pp/2021/34/pasal/0003/version/20210202> legal:partOf <http://example.org/legal/document/pp/2021/34/pasal/0003> .
+<http://example.org/legal/document/pp/2021/34/pasal/0003> legal:partOf <http://example.org/legal/document/pp/2021/34> .
+<http://example.org/legal/document/pp/2021/34/pasal/0003/version/20210202/ayat> legal:partOf <http://example.org/legal/document/pp/2021/34/pasal/0003/version/20210202> .
+<http://example.org/legal/document/pp/2021/34/pasal/0003/version/20210202/ayat/0001> legal:partOf <http://example.org/legal/document/pp/2021/34/pasal/0003/version/20210202/ayat> .
+<http://example.org/legal/document/pp/2021/34/pasal/0003/version/20210202/ayat/0001/point> legal:partOf <http://example.org/legal/document/pp/2021/34/pasal/0003/version/20210202/ayat/0001> .
+<http://example.org/legal/document/pp/2021/34/pasal/0003/version/20210202/ayat/0001/point/a> legal:partOf <http://example.org/legal/document/pp/2021/34/pasal/0003/version/20210202/ayat/0001/point> .
+<http://example.org/legal/document/pp/2021/34/pasal/0003/version/20210202/ayat/0001/point/b> legal:partOf <http://example.org/legal/document/pp/2021/34/pasal/0003/version/20210202/ayat/0001/point> .
+<http://example.org/legal/document/pp/2021/34/pasal/0003/version/20210202/ayat/0001/point/c> legal:partOf <http://example.org/legal/document/pp/2021/34/pasal/0003/version/20210202/ayat/0001/point> .
+<http://example.org/legal/document/pp/2021/34/pasal/0003/version/20210202/ayat/0001/point/d> legal:partOf <http://example.org/legal/document/pp/2021/34/pasal/0003/version/20210202/ayat/0001/point> .
+<http://example.org/legal/document/pp/2021/34/pasal/0003/version/20210202/ayat/0001/point/e> legal:partOf <http://example.org/legal/document/pp/2021/34/pasal/0003/version/20210202/ayat/0001/point> .
+<http://example.org/legal/document/pp/2021/34/pasal/0003/version/20210202/ayat/0001/point/f> legal:partOf <http://example.org/legal/document/pp/2021/34/pasal/0003/version/20210202/ayat/0001/point> .
+<http://example.org/legal/document/pp/2021/34/pasal/0003/version/20210202/ayat/0001/point/g> legal:partOf <http://example.org/legal/document/pp/2021/34/pasal/0003/version/20210202/ayat/0001/point> .
+<http://example.org/legal/document/pp/2021/34/pasal/0003/version/20210202/ayat/0002> legal:partOf <http://example.org/legal/document/pp/2021/34/pasal/0003/version/20210202/ayat> .
+<http://example.org/legal/document/pp/2021/34/pasal/0003/version/20210202/ayat/0002/text> legal:partOf <http://example.org/legal/document/pp/2021/34/pasal/0003/version/20210202/ayat/0002> .
+<http://example.org/legal/document/pp/2021/34/pasal/0004> legal:partOf <http://example.org/legal/document/pp/2021/34/bab/0002/bagian/0001/pasals> .
+<http://example.org/legal/document/pp/2021/34/pasal/0004/version/20210202> legal:partOf <http://example.org/legal/document/pp/2021/34/pasal/0004> .
+<http://example.org/legal/document/pp/2021/34/pasal/0004> legal:partOf <http://example.org/legal/document/pp/2021/34> .
+<http://example.org/legal/document/pp/2021/34/pasal/0004/version/20210202/ayat> legal:partOf <http://example.org/legal/document/pp/2021/34/pasal/0004/version/20210202> .
+<http://example.org/legal/document/pp/2021/34/pasal/0004/version/20210202/ayat/0001> legal:partOf <http://example.org/legal/document/pp/2021/34/pasal/0004/version/20210202/ayat> .
+<http://example.org/legal/document/pp/2021/34/pasal/0004/version/20210202/ayat/0001/text> legal:partOf <http://example.org/legal/document/pp/2021/34/pasal/0004/version/20210202/ayat/0001> .
+<http://example.org/legal/document/pp/2021/34/pasal/0004/version/20210202/ayat/0002> legal:partOf <http://example.org/legal/document/pp/2021/34/pasal/0004/version/20210202/ayat> .
+<http://example.org/legal/document/pp/2021/34/pasal/0004/version/20210202/ayat/0002/text> legal:partOf <http://example.org/legal/document/pp/2021/34/pasal/0004/version/20210202/ayat/0002> .
+<http://example.org/legal/document/pp/2021/34/pasal/0005> legal:partOf <http://example.org/legal/document/pp/2021/34/bab/0002/bagian/0001/pasals> .
+<http://example.org/legal/document/pp/2021/34/pasal/0005/version/20210202> legal:partOf <http://example.org/legal/document/pp/2021/34/pasal/0005> .
+<http://example.org/legal/document/pp/2021/34/pasal/0005> legal:partOf <http://example.org/legal/document/pp/2021/34> .
+<http://example.org/legal/document/pp/2021/34/pasal/0005/version/20210202/ayat> legal:partOf <http://example.org/legal/document/pp/2021/34/pasal/0005/version/20210202> .
+<http://example.org/legal/document/pp/2021/34/pasal/0005/version/20210202/ayat/0001> legal:partOf <http://example.org/legal/document/pp/2021/34/pasal/0005/version/20210202/ayat> .
+<http://example.org/legal/document/pp/2021/34/pasal/0005/version/20210202/ayat/0001/point> legal:partOf <http://example.org/legal/document/pp/2021/34/pasal/0005/version/20210202/ayat/0001> .
+<http://example.org/legal/document/pp/2021/34/pasal/0005/version/20210202/ayat/0001/point/a> legal:partOf <http://example.org/legal/document/pp/2021/34/pasal/0005/version/20210202/ayat/0001/point> .
+<http://example.org/legal/document/pp/2021/34/pasal/0005/version/20210202/ayat/0001/point/b> legal:partOf <http://example.org/legal/document/pp/2021/34/pasal/0005/version/20210202/ayat/0001/point> .
+<http://example.org/legal/document/pp/2021/34/pasal/0005/version/20210202/ayat/0002> legal:partOf <http://example.org/legal/document/pp/2021/34/pasal/0005/version/20210202/ayat> .
+<http://example.org/legal/document/pp/2021/34/pasal/0005/version/20210202/ayat/0002/text> legal:partOf <http://example.org/legal/document/pp/2021/34/pasal/0005/version/20210202/ayat/0002> .
+<http://example.org/legal/document/pp/2021/34/pasal/0005/version/20210202/ayat/0003> legal:partOf <http://example.org/legal/document/pp/2021/34/pasal/0005/version/20210202/ayat> .
+<http://example.org/legal/document/pp/2021/34/pasal/0005/version/20210202/ayat/0003/text> legal:partOf <http://example.org/legal/document/pp/2021/34/pasal/0005/version/20210202/ayat/0003> .
+<http://example.org/legal/document/pp/2021/34/pasal/0005/version/20210202/ayat/0004> legal:partOf <http://example.org/legal/document/pp/2021/34/pasal/0005/version/20210202/ayat> .
+<http://example.org/legal/document/pp/2021/34/pasal/0005/version/20210202/ayat/0004/text> legal:partOf <http://example.org/legal/document/pp/2021/34/pasal/0005/version/20210202/ayat/0004> .
+<http://example.org/legal/document/pp/2021/34/bab/0002/bagian/0002> legal:partOf <http://example.org/legal/document/pp/2021/34/bab/0002/bagian> .
+<http://example.org/legal/document/pp/2021/34/bab/0002/bagian/0002/pasals> legal:partOf <http://example.org/legal/document/pp/2021/34/bab/0002/bagian/0002> .
+<http://example.org/legal/document/pp/2021/34/pasal/0006> legal:partOf <http://example.org/legal/document/pp/2021/34/bab/0002/bagian/0002/pasals> .
+<http://example.org/legal/document/pp/2021/34/pasal/0006/version/20210202> legal:partOf <http://example.org/legal/document/pp/2021/34/pasal/0006> .
+<http://example.org/legal/document/pp/2021/34/pasal/0006> legal:partOf <http://example.org/legal/document/pp/2021/34> .
+<http://example.org/legal/document/pp/2021/34/pasal/0006/version/20210202/ayat> legal:partOf <http://example.org/legal/document/pp/2021/34/pasal/0006/version/20210202> .
+<http://example.org/legal/document/pp/2021/34/pasal/0006/version/20210202/ayat/0001> legal:partOf <http://example.org/legal/document/pp/2021/34/pasal/0006/version/20210202/ayat> .
+<http://example.org/legal/document/pp/2021/34/pasal/0006/version/20210202/ayat/0001/text> legal:partOf <http://example.org/legal/document/pp/2021/34/pasal/0006/version/20210202/ayat/0001> .
+<http://example.org/legal/document/pp/2021/34/pasal/0006/version/20210202/ayat/0002> legal:partOf <http://example.org/legal/document/pp/2021/34/pasal/0006/version/20210202/ayat> .
+<http://example.org/legal/document/pp/2021/34/pasal/0006/version/20210202/ayat/0002/text> legal:partOf <http://example.org/legal/document/pp/2021/34/pasal/0006/version/20210202/ayat/0002> .
+<http://example.org/legal/document/pp/2021/34/pasal/0006/version/20210202/ayat/0003> legal:partOf <http://example.org/legal/document/pp/2021/34/pasal/0006/version/20210202/ayat> .
+<http://example.org/legal/document/pp/2021/34/pasal/0006/version/20210202/ayat/0003/text> legal:partOf <http://example.org/legal/document/pp/2021/34/pasal/0006/version/20210202/ayat/0003> .
+<http://example.org/legal/document/pp/2021/34/pasal/0007> legal:partOf <http://example.org/legal/document/pp/2021/34/bab/0002/bagian/0002/pasals> .
+<http://example.org/legal/document/pp/2021/34/pasal/0007/version/20210202> legal:partOf <http://example.org/legal/document/pp/2021/34/pasal/0007> .
+<http://example.org/legal/document/pp/2021/34/pasal/0007> legal:partOf <http://example.org/legal/document/pp/2021/34> .
+<http://example.org/legal/document/pp/2021/34/pasal/0007/version/20210202/ayat> legal:partOf <http://example.org/legal/document/pp/2021/34/pasal/0007/version/20210202> .
+<http://example.org/legal/document/pp/2021/34/pasal/0007/version/20210202/ayat/0001> legal:partOf <http://example.org/legal/document/pp/2021/34/pasal/0007/version/20210202/ayat> .
+<http://example.org/legal/document/pp/2021/34/pasal/0007/version/20210202/ayat/0001/point> legal:partOf <http://example.org/legal/document/pp/2021/34/pasal/0007/version/20210202/ayat/0001> .
+<http://example.org/legal/document/pp/2021/34/pasal/0007/version/20210202/ayat/0001/point/a> legal:partOf <http://example.org/legal/document/pp/2021/34/pasal/0007/version/20210202/ayat/0001/point> .
+<http://example.org/legal/document/pp/2021/34/pasal/0007/version/20210202/ayat/0001/point/b> legal:partOf <http://example.org/legal/document/pp/2021/34/pasal/0007/version/20210202/ayat/0001/point> .
+<http://example.org/legal/document/pp/2021/34/pasal/0007/version/20210202/ayat/0001/point/c> legal:partOf <http://example.org/legal/document/pp/2021/34/pasal/0007/version/20210202/ayat/0001/point> .
+<http://example.org/legal/document/pp/2021/34/pasal/0007/version/20210202/ayat/0002> legal:partOf <http://example.org/legal/document/pp/2021/34/pasal/0007/version/20210202/ayat> .
+<http://example.org/legal/document/pp/2021/34/pasal/0007/version/20210202/ayat/0002/text> legal:partOf <http://example.org/legal/document/pp/2021/34/pasal/0007/version/20210202/ayat/0002> .
+<http://example.org/legal/document/pp/2021/34/pasal/0007/version/20210202/ayat/0003> legal:partOf <http://example.org/legal/document/pp/2021/34/pasal/0007/version/20210202/ayat> .
+<http://example.org/legal/document/pp/2021/34/pasal/0007/version/20210202/ayat/0003/point> legal:partOf <http://example.org/legal/document/pp/2021/34/pasal/0007/version/20210202/ayat/0003> .
+<http://example.org/legal/document/pp/2021/34/pasal/0007/version/20210202/ayat/0003/point/a> legal:partOf <http://example.org/legal/document/pp/2021/34/pasal/0007/version/20210202/ayat/0003/point> .
+<http://example.org/legal/document/pp/2021/34/pasal/0007/version/20210202/ayat/0003/point/b> legal:partOf <http://example.org/legal/document/pp/2021/34/pasal/0007/version/20210202/ayat/0003/point> .
+<http://example.org/legal/document/pp/2021/34/pasal/0007/version/20210202/ayat/0003/point/c> legal:partOf <http://example.org/legal/document/pp/2021/34/pasal/0007/version/20210202/ayat/0003/point> .
+<http://example.org/legal/document/pp/2021/34/pasal/0007/version/20210202/ayat/0003/point/d> legal:partOf <http://example.org/legal/document/pp/2021/34/pasal/0007/version/20210202/ayat/0003/point> .
+<http://example.org/legal/document/pp/2021/34/pasal/0008> legal:partOf <http://example.org/legal/document/pp/2021/34/bab/0002/bagian/0002/pasals> .
+<http://example.org/legal/document/pp/2021/34/pasal/0008/version/20210202> legal:partOf <http://example.org/legal/document/pp/2021/34/pasal/0008> .
+<http://example.org/legal/document/pp/2021/34/pasal/0008> legal:partOf <http://example.org/legal/document/pp/2021/34> .
+<http://example.org/legal/document/pp/2021/34/pasal/0008/version/20210202/ayat> legal:partOf <http://example.org/legal/document/pp/2021/34/pasal/0008/version/20210202> .
+<http://example.org/legal/document/pp/2021/34/pasal/0008/version/20210202/ayat/0001> legal:partOf <http://example.org/legal/document/pp/2021/34/pasal/0008/version/20210202/ayat> .
+<http://example.org/legal/document/pp/2021/34/pasal/0008/version/20210202/ayat/0001/text> legal:partOf <http://example.org/legal/document/pp/2021/34/pasal/0008/version/20210202/ayat/0001> .
+<http://example.org/legal/document/pp/2021/34/pasal/0008/version/20210202/ayat/0002> legal:partOf <http://example.org/legal/document/pp/2021/34/pasal/0008/version/20210202/ayat> .
+<http://example.org/legal/document/pp/2021/34/pasal/0008/version/20210202/ayat/0002/text> legal:partOf <http://example.org/legal/document/pp/2021/34/pasal/0008/version/20210202/ayat/0002> .
+<http://example.org/legal/document/pp/2021/34/bab/0002/bagian/0003> legal:partOf <http://example.org/legal/document/pp/2021/34/bab/0002/bagian> .
+<http://example.org/legal/document/pp/2021/34/bab/0002/bagian/0003/pasals> legal:partOf <http://example.org/legal/document/pp/2021/34/bab/0002/bagian/0003> .
+<http://example.org/legal/document/pp/2021/34/pasal/0009> legal:partOf <http://example.org/legal/document/pp/2021/34/bab/0002/bagian/0003/pasals> .
+<http://example.org/legal/document/pp/2021/34/pasal/0009/version/20210202> legal:partOf <http://example.org/legal/document/pp/2021/34/pasal/0009> .
+<http://example.org/legal/document/pp/2021/34/pasal/0009> legal:partOf <http://example.org/legal/document/pp/2021/34> .
+<http://example.org/legal/document/pp/2021/34/pasal/0010> legal:partOf <http://example.org/legal/document/pp/2021/34/bab/0002/bagian/0003/pasals> .
+<http://example.org/legal/document/pp/2021/34/pasal/0010/version/20210202> legal:partOf <http://example.org/legal/document/pp/2021/34/pasal/0010> .
+<http://example.org/legal/document/pp/2021/34/pasal/0010> legal:partOf <http://example.org/legal/document/pp/2021/34> .
+<http://example.org/legal/document/pp/2021/34/pasal/0011> legal:partOf <http://example.org/legal/document/pp/2021/34/bab/0002/bagian/0003/pasals> .
+<http://example.org/legal/document/pp/2021/34/pasal/0011/version/20210202> legal:partOf <http://example.org/legal/document/pp/2021/34/pasal/0011> .
+<http://example.org/legal/document/pp/2021/34/pasal/0011> legal:partOf <http://example.org/legal/document/pp/2021/34> .
+<http://example.org/legal/document/pp/2021/34/pasal/0011/version/20210202/ayat> legal:partOf <http://example.org/legal/document/pp/2021/34/pasal/0011/version/20210202> .
+<http://example.org/legal/document/pp/2021/34/pasal/0011/version/20210202/ayat/0001> legal:partOf <http://example.org/legal/document/pp/2021/34/pasal/0011/version/20210202/ayat> .
+<http://example.org/legal/document/pp/2021/34/pasal/0011/version/20210202/ayat/0001/text> legal:partOf <http://example.org/legal/document/pp/2021/34/pasal/0011/version/20210202/ayat/0001> .
+<http://example.org/legal/document/pp/2021/34/pasal/0011/version/20210202/ayat/0002> legal:partOf <http://example.org/legal/document/pp/2021/34/pasal/0011/version/20210202/ayat> .
+<http://example.org/legal/document/pp/2021/34/pasal/0011/version/20210202/ayat/0002/text> legal:partOf <http://example.org/legal/document/pp/2021/34/pasal/0011/version/20210202/ayat/0002> .
+<http://example.org/legal/document/pp/2021/34/bab/0003> legal:partOf <http://example.org/legal/document/pp/2021/34/bab> .
+<http://example.org/legal/document/pp/2021/34/bab/0003/bagian> legal:partOf <http://example.org/legal/document/pp/2021/34/bab/0003> .
+<http://example.org/legal/document/pp/2021/34/bab/0003/bagian/0001> legal:partOf <http://example.org/legal/document/pp/2021/34/bab/0003/bagian> .
+<http://example.org/legal/document/pp/2021/34/bab/0003/bagian/0001/pasals> legal:partOf <http://example.org/legal/document/pp/2021/34/bab/0003/bagian/0001> .
+<http://example.org/legal/document/pp/2021/34/pasal/0012> legal:partOf <http://example.org/legal/document/pp/2021/34/bab/0003/bagian/0001/pasals> .
+<http://example.org/legal/document/pp/2021/34/pasal/0012/version/20210202> legal:partOf <http://example.org/legal/document/pp/2021/34/pasal/0012> .
+<http://example.org/legal/document/pp/2021/34/pasal/0012> legal:partOf <http://example.org/legal/document/pp/2021/34> .
+<http://example.org/legal/document/pp/2021/34/pasal/0012/version/20210202/ayat> legal:partOf <http://example.org/legal/document/pp/2021/34/pasal/0012/version/20210202> .
+<http://example.org/legal/document/pp/2021/34/pasal/0012/version/20210202/ayat/0001> legal:partOf <http://example.org/legal/document/pp/2021/34/pasal/0012/version/20210202/ayat> .
+<http://example.org/legal/document/pp/2021/34/pasal/0012/version/20210202/ayat/0001/text> legal:partOf <http://example.org/legal/document/pp/2021/34/pasal/0012/version/20210202/ayat/0001> .
+<http://example.org/legal/document/pp/2021/34/pasal/0012/version/20210202/ayat/0002> legal:partOf <http://example.org/legal/document/pp/2021/34/pasal/0012/version/20210202/ayat> .
+<http://example.org/legal/document/pp/2021/34/pasal/0012/version/20210202/ayat/0002/point> legal:partOf <http://example.org/legal/document/pp/2021/34/pasal/0012/version/20210202/ayat/0002> .
+<http://example.org/legal/document/pp/2021/34/pasal/0012/version/20210202/ayat/0002/point/a> legal:partOf <http://example.org/legal/document/pp/2021/34/pasal/0012/version/20210202/ayat/0002/point> .
+<http://example.org/legal/document/pp/2021/34/pasal/0012/version/20210202/ayat/0002/point/b> legal:partOf <http://example.org/legal/document/pp/2021/34/pasal/0012/version/20210202/ayat/0002/point> .
+<http://example.org/legal/document/pp/2021/34/pasal/0012/version/20210202/ayat/0002/point/c> legal:partOf <http://example.org/legal/document/pp/2021/34/pasal/0012/version/20210202/ayat/0002/point> .
+<http://example.org/legal/document/pp/2021/34/pasal/0012/version/20210202/ayat/0002/point/d> legal:partOf <http://example.org/legal/document/pp/2021/34/pasal/0012/version/20210202/ayat/0002/point> .
+<http://example.org/legal/document/pp/2021/34/pasal/0012/version/20210202/ayat/0002/point/e> legal:partOf <http://example.org/legal/document/pp/2021/34/pasal/0012/version/20210202/ayat/0002/point> .
+<http://example.org/legal/document/pp/2021/34/pasal/0012/version/20210202/ayat/0002/point/f> legal:partOf <http://example.org/legal/document/pp/2021/34/pasal/0012/version/20210202/ayat/0002/point> .
+<http://example.org/legal/document/pp/2021/34/pasal/0012/version/20210202/ayat/0002/point/g> legal:partOf <http://example.org/legal/document/pp/2021/34/pasal/0012/version/20210202/ayat/0002/point> .
+<http://example.org/legal/document/pp/2021/34/pasal/0012/version/20210202/ayat/0002/point/h> legal:partOf <http://example.org/legal/document/pp/2021/34/pasal/0012/version/20210202/ayat/0002/point> .
+<http://example.org/legal/document/pp/2021/34/pasal/0012/version/20210202/ayat/0003> legal:partOf <http://example.org/legal/document/pp/2021/34/pasal/0012/version/20210202/ayat> .
+<http://example.org/legal/document/pp/2021/34/pasal/0012/version/20210202/ayat/0003/point> legal:partOf <http://example.org/legal/document/pp/2021/34/pasal/0012/version/20210202/ayat/0003> .
+<http://example.org/legal/document/pp/2021/34/pasal/0012/version/20210202/ayat/0003/point/a> legal:partOf <http://example.org/legal/document/pp/2021/34/pasal/0012/version/20210202/ayat/0003/point> .
+<http://example.org/legal/document/pp/2021/34/pasal/0012/version/20210202/ayat/0003/point/b> legal:partOf <http://example.org/legal/document/pp/2021/34/pasal/0012/version/20210202/ayat/0003/point> .
+<http://example.org/legal/document/pp/2021/34/pasal/0012/version/20210202/ayat/0003/point/c> legal:partOf <http://example.org/legal/document/pp/2021/34/pasal/0012/version/20210202/ayat/0003/point> .
+<http://example.org/legal/document/pp/2021/34/pasal/0012/version/20210202/ayat/0003/point/d> legal:partOf <http://example.org/legal/document/pp/2021/34/pasal/0012/version/20210202/ayat/0003/point> .
+<http://example.org/legal/document/pp/2021/34/pasal/0012/version/20210202/ayat/0003/point/e> legal:partOf <http://example.org/legal/document/pp/2021/34/pasal/0012/version/20210202/ayat/0003/point> .
+<http://example.org/legal/document/pp/2021/34/pasal/0012/version/20210202/ayat/0003/point/f> legal:partOf <http://example.org/legal/document/pp/2021/34/pasal/0012/version/20210202/ayat/0003/point> .
+<http://example.org/legal/document/pp/2021/34/pasal/0012/version/20210202/ayat/0003/point/g> legal:partOf <http://example.org/legal/document/pp/2021/34/pasal/0012/version/20210202/ayat/0003/point> .
+<http://example.org/legal/document/pp/2021/34/pasal/0012/version/20210202/ayat/0003/point/h> legal:partOf <http://example.org/legal/document/pp/2021/34/pasal/0012/version/20210202/ayat/0003/point> .
+<http://example.org/legal/document/pp/2021/34/pasal/0012/version/20210202/ayat/0003/point/i> legal:partOf <http://example.org/legal/document/pp/2021/34/pasal/0012/version/20210202/ayat/0003/point> .
+<http://example.org/legal/document/pp/2021/34/pasal/0012/version/20210202/ayat/0004> legal:partOf <http://example.org/legal/document/pp/2021/34/pasal/0012/version/20210202/ayat> .
+<http://example.org/legal/document/pp/2021/34/pasal/0012/version/20210202/ayat/0004/text> legal:partOf <http://example.org/legal/document/pp/2021/34/pasal/0012/version/20210202/ayat/0004> .
+<http://example.org/legal/document/pp/2021/34/pasal/0013> legal:partOf <http://example.org/legal/document/pp/2021/34/bab/0003/bagian/0001/pasals> .
+<http://example.org/legal/document/pp/2021/34/pasal/0013/version/20210202> legal:partOf <http://example.org/legal/document/pp/2021/34/pasal/0013> .
+<http://example.org/legal/document/pp/2021/34/pasal/0013> legal:partOf <http://example.org/legal/document/pp/2021/34> .
+<http://example.org/legal/document/pp/2021/34/pasal/0013/version/20210202/ayat> legal:partOf <http://example.org/legal/document/pp/2021/34/pasal/0013/version/20210202> .
+<http://example.org/legal/document/pp/2021/34/pasal/0013/version/20210202/ayat/0001> legal:partOf <http://example.org/legal/document/pp/2021/34/pasal/0013/version/20210202/ayat> .
+<http://example.org/legal/document/pp/2021/34/pasal/0013/version/20210202/ayat/0001/point> legal:partOf <http://example.org/legal/document/pp/2021/34/pasal/0013/version/20210202/ayat/0001> .
+<http://example.org/legal/document/pp/2021/34/pasal/0013/version/20210202/ayat/0001/point/a> legal:partOf <http://example.org/legal/document/pp/2021/34/pasal/0013/version/20210202/ayat/0001/point> .
+<http://example.org/legal/document/pp/2021/34/pasal/0013/version/20210202/ayat/0001/point/b> legal:partOf <http://example.org/legal/document/pp/2021/34/pasal/0013/version/20210202/ayat/0001/point> .
+<http://example.org/legal/document/pp/2021/34/pasal/0013/version/20210202/ayat/0001/point/c> legal:partOf <http://example.org/legal/document/pp/2021/34/pasal/0013/version/20210202/ayat/0001/point> .
+<http://example.org/legal/document/pp/2021/34/pasal/0013/version/20210202/ayat/0002> legal:partOf <http://example.org/legal/document/pp/2021/34/pasal/0013/version/20210202/ayat> .
+<http://example.org/legal/document/pp/2021/34/pasal/0013/version/20210202/ayat/0002/text> legal:partOf <http://example.org/legal/document/pp/2021/34/pasal/0013/version/20210202/ayat/0002> .
+<http://example.org/legal/document/pp/2021/34/pasal/0013/version/20210202/ayat/0003> legal:partOf <http://example.org/legal/document/pp/2021/34/pasal/0013/version/20210202/ayat> .
+<http://example.org/legal/document/pp/2021/34/pasal/0013/version/20210202/ayat/0003/text> legal:partOf <http://example.org/legal/document/pp/2021/34/pasal/0013/version/20210202/ayat/0003> .
+<http://example.org/legal/document/pp/2021/34/pasal/0013/version/20210202/ayat/0004> legal:partOf <http://example.org/legal/document/pp/2021/34/pasal/0013/version/20210202/ayat> .
+<http://example.org/legal/document/pp/2021/34/pasal/0013/version/20210202/ayat/0004/text> legal:partOf <http://example.org/legal/document/pp/2021/34/pasal/0013/version/20210202/ayat/0004> .
+<http://example.org/legal/document/pp/2021/34/pasal/0013/version/20210202/ayat/0005> legal:partOf <http://example.org/legal/document/pp/2021/34/pasal/0013/version/20210202/ayat> .
+<http://example.org/legal/document/pp/2021/34/pasal/0013/version/20210202/ayat/0005/text> legal:partOf <http://example.org/legal/document/pp/2021/34/pasal/0013/version/20210202/ayat/0005> .
+<http://example.org/legal/document/pp/2021/34/pasal/0013/version/20210202/ayat/0006> legal:partOf <http://example.org/legal/document/pp/2021/34/pasal/0013/version/20210202/ayat> .
+<http://example.org/legal/document/pp/2021/34/pasal/0013/version/20210202/ayat/0006/text> legal:partOf <http://example.org/legal/document/pp/2021/34/pasal/0013/version/20210202/ayat/0006> .
+<http://example.org/legal/document/pp/2021/34/pasal/0013/version/20210202/ayat/0007> legal:partOf <http://example.org/legal/document/pp/2021/34/pasal/0013/version/20210202/ayat> .
+<http://example.org/legal/document/pp/2021/34/pasal/0013/version/20210202/ayat/0007/text> legal:partOf <http://example.org/legal/document/pp/2021/34/pasal/0013/version/20210202/ayat/0007> .
+<http://example.org/legal/document/pp/2021/34/pasal/0013/version/20210202/ayat/0008> legal:partOf <http://example.org/legal/document/pp/2021/34/pasal/0013/version/20210202/ayat> .
+<http://example.org/legal/document/pp/2021/34/pasal/0013/version/20210202/ayat/0008/text> legal:partOf <http://example.org/legal/document/pp/2021/34/pasal/0013/version/20210202/ayat/0008> .
+<http://example.org/legal/document/pp/2021/34/bab/0003/bagian/0002> legal:partOf <http://example.org/legal/document/pp/2021/34/bab/0003/bagian> .
+<http://example.org/legal/document/pp/2021/34/bab/0003/bagian/0002/pasals> legal:partOf <http://example.org/legal/document/pp/2021/34/bab/0003/bagian/0002> .
+<http://example.org/legal/document/pp/2021/34/bab/0003/bagian/0003> legal:partOf <http://example.org/legal/document/pp/2021/34/bab/0003/bagian> .
+<http://example.org/legal/document/pp/2021/34/bab/0003/bagian/0003/pasals> legal:partOf <http://example.org/legal/document/pp/2021/34/bab/0003/bagian/0003> .
+<http://example.org/legal/document/pp/2021/34/bab/0004> legal:partOf <http://example.org/legal/document/pp/2021/34/bab> .
+<http://example.org/legal/document/pp/2021/34/bab/0004/pasals> legal:partOf <http://example.org/legal/document/pp/2021/34/bab/0004> .
+<http://example.org/legal/document/pp/2021/34/bab/0005> legal:partOf <http://example.org/legal/document/pp/2021/34/bab> .
+<http://example.org/legal/document/pp/2021/34/bab/0005/pasals> legal:partOf <http://example.org/legal/document/pp/2021/34/bab/0005> .
+<http://example.org/legal/document/pp/2021/34/bab/0006> legal:partOf <http://example.org/legal/document/pp/2021/34/bab> .
+<http://example.org/legal/document/pp/2021/34/bab/0006/bagian> legal:partOf <http://example.org/legal/document/pp/2021/34/bab/0006> .
+<http://example.org/legal/document/pp/2021/34/bab/0006/bagian/0001> legal:partOf <http://example.org/legal/document/pp/2021/34/bab/0006/bagian> .
+<http://example.org/legal/document/pp/2021/34/bab/0006/bagian/0001/pasals> legal:partOf <http://example.org/legal/document/pp/2021/34/bab/0006/bagian/0001> .
+<http://example.org/legal/document/pp/2021/34/bab/0006/bagian/0002> legal:partOf <http://example.org/legal/document/pp/2021/34/bab/0006/bagian> .
+<http://example.org/legal/document/pp/2021/34/bab/0006/bagian/0002/pasals> legal:partOf <http://example.org/legal/document/pp/2021/34/bab/0006/bagian/0002> .
+<http://example.org/legal/document/pp/2021/34/bab/0006/bagian/0003> legal:partOf <http://example.org/legal/document/pp/2021/34/bab/0006/bagian> .
+<http://example.org/legal/document/pp/2021/34/bab/0006/bagian/0003/pasals> legal:partOf <http://example.org/legal/document/pp/2021/34/bab/0006/bagian/0003> .
+<http://example.org/legal/document/pp/2021/34/bab/0007> legal:partOf <http://example.org/legal/document/pp/2021/34/bab> .
+<http://example.org/legal/document/pp/2021/34/bab/0007/pasals> legal:partOf <http://example.org/legal/document/pp/2021/34/bab/0007> .

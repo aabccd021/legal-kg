@@ -1,5 +1,5 @@
 import { writeFileSync } from 'fs';
-import { curry, reduce, isUndefined, join } from 'lodash';
+import { reduce, isUndefined, join } from 'lodash';
 
 export function bothFilter<T>(
   arr: T[],
@@ -44,23 +44,6 @@ export function neverString(x?: string): string {
 export function neverUndefined<T>(x: T | undefined, msg?: unknown): T {
   if (!isUndefined(x)) return x;
   throw Error(JSON.stringify(msg));
-}
-
-export type Accumulator<T extends string> = { spans: SpanOf<T>; flag: T };
-export type SpanOf<T extends string> = { [P in T]: Span[] };
-
-export const toSpansWith = curry(toSpans);
-
-function toSpans<T extends string>(
-  reduceFlag: (oldFlag: T, span: Span) => T,
-  acc: Accumulator<T>,
-  span: Span
-): Accumulator<T> {
-  const { flag, spans } = acc;
-  const newFlag = reduceFlag(flag, span);
-  const newSpanArr = [...spans[newFlag], span];
-  const newSpanArrs = { ...spans, [newFlag]: newSpanArr };
-  return { ...acc, flag: newFlag, spans: newSpanArrs };
 }
 
 export function lastOf<T>(arr: T[]): T | undefined {

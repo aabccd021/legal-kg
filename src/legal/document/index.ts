@@ -5,6 +5,7 @@ import { UudNode, _uud } from './uud';
 import { DataType } from '../../data';
 import path from 'path';
 import * as fs from 'fs';
+import { PPNode, _pp } from './pp';
 
 export type ScrapableDocumentCategory = typeof SCRAPABLE_DOCUMENT_CATEGORY[number];
 export const SCRAPABLE_DOCUMENT_CATEGORY = ['uu'] as const;
@@ -17,8 +18,12 @@ export type ScrapableDocumentNode = UuNode & {
  * Convertable Document
  */
 export type ConvertableDocumentCategory = typeof CONVERTABLE_DOCUMENT_CATEGORY[number];
-export const CONVERTABLE_DOCUMENT_CATEGORY = [...SCRAPABLE_DOCUMENT_CATEGORY, 'perda'] as const;
-export type ConvertableDocumentNode = (ScrapableDocumentNode | PerdaNode) & {
+export const CONVERTABLE_DOCUMENT_CATEGORY = [
+  ...SCRAPABLE_DOCUMENT_CATEGORY,
+  'perda',
+  'pp',
+] as const;
+export type ConvertableDocumentNode = (ScrapableDocumentNode | PerdaNode | PPNode) & {
   docType: ConvertableDocumentCategory;
   nodeType: 'document';
 };
@@ -40,6 +45,7 @@ export function nodeToName(node: DocumentNode): string {
   if (node.docType === 'uu') return _uu.getName(node);
   if (node.docType === 'perda') return _perda.getName(node);
   if (node.docType === 'uud') return _uud.getName(node);
+  if (node.docType === 'pp') return _pp.getName(node);
   assertNever(node);
 }
 
@@ -54,6 +60,7 @@ function _getDocumentPath(node: DocumentNode): string {
   if (node.docType === 'uu') return _uu.getPath(node);
   if (node.docType === 'perda') return _perda.getPath(node);
   if (node.docType === 'uud') return '';
+  if (node.docType === 'pp') return _pp.getPath(node);
   assertNever(node);
 }
 
@@ -80,6 +87,7 @@ export function getConvertableDocumentFiles(
   if (!fs.existsSync(documentTypeDir)) return [];
   if (category === 'uu') return _uu.getFiles(documentTypeDir, dataType);
   if (category === 'perda') return _perda.getFiles(documentTypeDir, dataType);
+  if (category === 'pp') return _pp.getFiles(documentTypeDir, dataType);
   assertNever(category);
 }
 

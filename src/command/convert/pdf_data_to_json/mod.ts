@@ -1,9 +1,8 @@
-import { SpanOf } from '../../../util';
 import { getDocumentData, nodeToFile } from '../../../data';
 import { readFileSync, writeFileSync } from 'fs';
-import { Accumulator, Span, toSpansWith } from '../../../util';
+import { Span } from '../../../util';
 import { babsSpansToKeyIds } from './scan';
-import { chain, isUndefined } from 'lodash';
+import { chain, isUndefined, mapValues, reduce } from 'lodash';
 import { pasalKeyOfSpan, safeParseInt } from './parse_key_from_spans';
 import * as yaml from 'js-yaml';
 import { spansToBabSet, spansToMetadata, spansToStr } from './spans_to_component';
@@ -24,6 +23,7 @@ function writeToJson(documentNode: DocumentNode): void {
   const jsonFile = nodeToFile('yaml', documentNode);
   const pdfSpans: Span[] = JSON.parse(readFileSync(dataFile.path).toString());
   const documentSpans = documentSpansOf(pdfSpans);
+  console.log(mapValues(documentSpans, (v) => v.length));
   const hasAmendPasal = spansHasAmendPasal(documentSpans.babs);
   const keyIds = babsSpansToKeyIds(hasAmendPasal, documentSpans.babs);
   const disahkan = spansToDisahkan(documentSpans.disahkan);
@@ -42,15 +42,13 @@ function writeToJson(documentNode: DocumentNode): void {
   writeFileSync(jsonFile.path, yaml.dump(detectedDocument, { lineWidth: 100 }));
 }
 
-type DocumentExtractedKey = 'preBab' | 'babs' | 'penjelasan' | 'disahkan';
-
 function spansToDisahkan(spans: Span[]): Disahkan {
   const [, , location] = spans[0]?.str?.split(' ') ?? [];
   const [, , dateStr, monthStr, yearStr] = spans[1]?.str?.split(' ') ?? [];
   const date = safeParseInt(dateStr);
   const year = safeParseInt(yearStr);
   if (isUndefined(location) || isUndefined(date) || isUndefined(year)) {
-    throw Error(`${{ location, date, year }}`);
+    throw Error(`${JSON.stringify({ location, date, year })}`);
   }
   const jabatanPengesah = spans[2]?.str;
   const pengesah = spans[4]?.str;
@@ -83,31 +81,75 @@ function monthToNumber(monthStr: string | undefined): number {
   throw Error(`unknwon month ${monthStr}`);
 }
 
-function documentSpansOf(spans: Span[]): SpanOf<DocumentExtractedKey> {
-  const initialExtraction: Accumulator<DocumentExtractedKey> = {
-    spans: { babs: [], preBab: [], penjelasan: [], disahkan: [] },
-    flag: 'preBab',
+type DocumentSection = 'preBab' | 'babs' | 'penjelasan' | 'disahkan';
+type DocumentAcc = {
+  section: DocumentSection;
+  spans: {
+    [K in DocumentSection]: Span[];
   };
-  return spans.reduce(toSpansWith(reduceFlag), initialExtraction).spans;
+};
+
+function documentSpansOf(spans: Span[]): { [K in DocumentSection]: Span[] } {
+  const initialExtraction: DocumentAcc = {
+    spans: { babs: [], preBab: [], penjelasan: [], disahkan: [] },
+    section: 'preBab',
+  };
+  return reduce<Span, DocumentAcc>(
+    spans,
+    (acc, span) => {
+      const [newSection, newSpan] = getNewSection(acc.section, span);
+      return {
+        section: newSection,
+        spans: {
+          ...acc.spans,
+          [newSection]: [...acc.spans[newSection], ...newSpan],
+        },
+      };
+    },
+    initialExtraction
+  ).spans;
 }
 
-function reduceFlag(oldFlag: DocumentExtractedKey, span: Span): DocumentExtractedKey {
-  if (oldFlag === 'preBab' && isBabSpansStart(span)) return 'babs';
-  if (oldFlag === 'babs' && isDisahkanStart(span)) return 'disahkan';
-  if (oldFlag === 'disahkan' && isPenjelasanSpansStart(span)) return 'penjelasan';
-  return oldFlag;
+function getNewSection(prevSection: DocumentSection, span: Span): [DocumentSection, Span[]] {
+  if (prevSection === 'preBab' && span.str.replaceAll(' ', '') === 'BABI') {
+    return ['babs', [span]];
+  }
+  // handle if BAB I not detected, detect using KETENTUAN UMUM
+  if (prevSection === 'preBab' && span.str === 'KETENTUAN UMUM') {
+    const fakeSpan = { ...span, str: 'BAB I' };
+    return ['babs', [fakeSpan, span]];
+  }
+  if (
+    prevSection === 'babs' &&
+    (span.str.startsWith('Disahkan di') || span.str.startsWith('Ditetapkan di')) &&
+    span.xL > 300
+  ) {
+    return ['disahkan', [span]];
+  }
+  if (prevSection === 'disahkan' && span.str === 'PENJELASAN') {
+    return ['penjelasan', [span]];
+  }
+  return [prevSection, [span]];
 }
 
-function isBabSpansStart(span: Span): boolean {
-  return span.str.replaceAll(' ', '') === 'BABI';
-}
-function isPenjelasanSpansStart(span: Span): boolean {
-  return span.str.replaceAll('', '') === 'PENJELASAN';
-}
+// function reduceFlag(oldFlag: DocumentSection, span: Span): DocumentSection {
+//   if (oldFlag === 'preBab' && isBabSpansStart(span)) return 'babs';
+//   if (oldFlag === 'preBab' && span.str === 'KETENTUAN UMUM') return 'babs';
+//   if (oldFlag === 'babs' && isDisahkanStart(span)) return 'disahkan';
+//   if (oldFlag === 'disahkan' && isPenjelasanSpansStart(span)) return 'penjelasan';
+//   return oldFlag;
+// }
 
-function isDisahkanStart(span: Span): boolean {
-  return span.str.startsWith('Disahkan di') && span.xL > 300;
-}
+// function isBabSpansStart(span: Span): boolean {
+//   return span.str.replaceAll(' ', '') === 'BABI';
+// }
+// function isPenjelasanSpansStart(span: Span): boolean {
+//   return span.str.replaceAll('', '') === 'PENJELASAN';
+// }
+
+// function isDisahkanStart(span: Span): boolean {
+//   return span.str.startsWith('Disahkan di') && span.xL > 300;
+// }
 
 function spansHasAmendPasal(spans: Span[]): boolean {
   return chain(spans)

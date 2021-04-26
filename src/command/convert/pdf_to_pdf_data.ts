@@ -1,5 +1,5 @@
 import { UnindexedSpan } from '../../util';
-import { DocumentNode } from '../../legal/document/index';
+import { DocumentNode, nodeToName } from '../../legal/document/index';
 import { writeFileSync } from 'fs';
 import { PDFExtract, PDFExtractPage, PDFExtractText } from 'pdf.js-extract';
 import { getDocumentData, nodeToFile } from '../../data';
@@ -22,6 +22,11 @@ async function toPdfJson(node: DocumentNode): Promise<void> {
   const jsonFile = nodeToFile('pdf-data', node);
   const { pages } = await pdfExtract.extract(pdfFile.path);
   const { pages: normalizedPages } = await pdfExtract.extract(normalizedPdfFile.path);
+  writeFileSync(`temp_${nodeToName(node)}.json`, JSON.stringify(pages, undefined, 2));
+  writeFileSync(
+    `temp_${nodeToName(node)}_normalized.json`,
+    JSON.stringify(normalizedPages, undefined, 2)
+  );
   const mergedPages = chain(zip(pages, normalizedPages)).map(mergePage).compact().value();
   const cleanPages: Span[] = mergedPages
     .flatMap(toPageWithoutNoise)
@@ -36,9 +41,10 @@ function mergePage(
   if (isUndefined(page0) || isUndefined(page1)) return undefined;
   const candidates = page0.content.filter(
     (text0) =>
-      /^[0-9]+\.\s?$/.test(text0.str) &&
-      text0.str.split('.')[0] !== '1' &&
-      text0.x < 280 &&
+      // fill number
+      ((/^[0-9]+\.\s?$/.test(text0.str) && text0.str.split('.')[0] !== '1' && text0.x < 280) ||
+        // fill bab
+        text0.str.startsWith('BAB')) &&
       page1.content.every((text1) => !hasSamePos(text0, text1))
   );
   const newContent = [...page1.content, ...candidates];
@@ -84,7 +90,7 @@ function getGroupY(map: SpanMap, text: PDFExtractText): number | undefined {
     const firstTextInGroup = group.texts[0];
     return !isUndefined(firstTextInGroup) && Math.abs(firstTextInGroup.y - text.y) < 5;
   });
-  if (group.length > 1) throw Error(' too many group');
+  if (group.length > 1) console.log(` too many group`, group);
   return group[0]?.y;
 }
 
