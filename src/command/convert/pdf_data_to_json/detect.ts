@@ -252,16 +252,13 @@ function _resolveConflictingReferences(references: Reference[]): Reference[] {
   const sortedReferences = chain(references)
     .reverse()
     .sort((x) => x.end - x.start)
+    .reduce<Reference[]>(
+      (prev, reference) => (isReferenceCompatible(reference, prev) ? [...prev, reference] : prev),
+      []
+    )
     .value();
-  const resolvedReferences: Reference[] = [];
 
-  for (const reference of sortedReferences) {
-    if (isReferenceCompatible(reference, resolvedReferences)) {
-      resolvedReferences.push(reference);
-    }
-  }
-
-  return resolvedReferences;
+  return sortedReferences;
 }
 
 function isReferenceCompatible(newReference: Reference, references: Reference[]): boolean {
