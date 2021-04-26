@@ -1,10 +1,11 @@
 import { assertNever } from 'assert-never';
 import {
   Ayat,
+  AyatSet,
   AyatSetNode,
   PasalNode,
-  PasalVersion,
   PasalVersionNode,
+  PointSet,
 } from './../../../legal/component';
 import { chain, compact, isUndefined } from 'lodash';
 import {
@@ -15,6 +16,7 @@ import {
   PointSetNode,
   Reference,
   AyatNode,
+  Text,
 } from '../../../legal/component';
 import { neverNum, neverString } from '../../../util';
 import { safeParseInt } from './parse_key_from_spans';
@@ -46,7 +48,10 @@ function detectInPasalSet(pasalSet: PasalSet): PasalSet {
     ...pasalSet,
     elements: pasalSet.elements.map((pasal) => ({
       ...pasal,
-      version: detectInPasalVersion(pasal.version),
+      version: {
+        ...pasal.version,
+        content: detectInPasalVersionContent(pasal.version.content, pasal.version.node),
+      },
     })),
   };
 }
@@ -67,48 +72,81 @@ function detectInBagian(bagian: Bagian): Bagian {
   };
 }
 
-function detectInPasalVersion(pasalVersion: PasalVersion): PasalVersion {
-  if (isUndefined(pasalVersion.content)) return pasalVersion;
-  if (pasalVersion.content.type === 'ayatSet')
+function detectInPasalVersionContent(
+  pasalVersionContent: PointSet | Text | AyatSet | undefined,
+  pasalVersionNode: PasalVersionNode
+): PointSet | Text | AyatSet | undefined {
+  if (isUndefined(pasalVersionContent)) return undefined;
+  if (pasalVersionContent.type === 'ayatSet')
     return {
-      ...pasalVersion,
-      content: {
-        ...pasalVersion.content,
-        elements: pasalVersion.content.elements.map((ayat) => {
-          if (ayat.content.type === 'pointSet') return ayat;
-          if (ayat.content.type === 'text') {
-            const newAyat: Ayat = {
-              ...ayat,
-              content: {
-                ...ayat.content,
-                type: 'text',
-                references: _resolveConflictingReferences([
-                  ...detectAbovePasalVersion(ayat.content.textString, pasalVersion.node),
-                ]),
-              },
-            };
-            return newAyat;
-          }
-          assertNever(ayat.content);
-        }),
-      },
+      ...pasalVersionContent,
+      elements: pasalVersionContent.elements.map((ayat) => {
+        if (ayat.content.type === 'pointSet') return ayat;
+        if (ayat.content.type === 'text') {
+          const newAyat: Ayat = {
+            ...ayat,
+            content: {
+              ...ayat.content,
+              references: _resolveConflictingReferences([
+                ...detectBelowPasalVersion(ayat.content.textString, pasalVersionNode),
+              ]),
+            },
+          };
+          return newAyat;
+        }
+        assertNever(ayat.content);
+      }),
     };
-  if (pasalVersion.content.type === 'pointSet') return pasalVersion;
-  if (pasalVersion.content.type === 'text') {
+  if (pasalVersionContent.type === 'pointSet')
+    return detectInPointSetWhichBelowPasalVersoin(pasalVersionContent, pasalVersionNode);
+  if (pasalVersionContent.type === 'text') {
     return {
-      ...pasalVersion,
-      content: {
-        ...pasalVersion.content,
-        references: _resolveConflictingReferences(
-          detectAbovePasalVersion(pasalVersion.content.textString, pasalVersion.node)
-        ),
-      },
+      ...pasalVersionContent,
+      references: _resolveConflictingReferences(
+        detectBelowPasalVersion(pasalVersionContent.textString, pasalVersionNode)
+      ),
     };
   }
-  assertNever(pasalVersion.content);
+  assertNever(pasalVersionContent);
 }
 
-function detectAbovePasalVersion(
+// kalo point set dibawah pasal version, bukan menimbang / mengingat
+function detectInPointSetWhichBelowPasalVersoin(
+  pointSet: PointSet,
+  pasalVersionNode: PasalVersionNode
+): PointSet {
+  return {
+    ...pointSet,
+    elements: pointSet.elements.map((point) => {
+      if (point.type === 'point') {
+        if (point.content.type === 'text') {
+          return {
+            ...point,
+            content: {
+              ...point.content,
+              references: _resolveConflictingReferences([
+                ...detectBelowPasalVersion(point.content.textString, pasalVersionNode),
+              ]),
+            },
+          };
+        }
+        if (point.content.type === 'pointSet') {
+          return {
+            ...point,
+            content: detectInPointSetWhichBelowPasalVersoin(point.content, pasalVersionNode),
+          };
+        }
+        assertNever(point.content);
+      }
+      if (point.type === 'pasalDeleteAmenderPoint') return point;
+      if (point.type === 'pasalInsertAmenderPoint') return point;
+      if (point.type === 'pasalUpdateAmenderPoint') return point;
+      assertNever(point);
+    }),
+  };
+}
+
+function detectBelowPasalVersion(
   textString: string,
   pasalVersionNode: PasalVersionNode
 ): Reference[] {

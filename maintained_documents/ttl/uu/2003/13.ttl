@@ -49,6 +49,8 @@
 <http://example.org/legal/document/uu/2003/13/pasal/0001/version/20030325/point/0005/point/c> legal:pointHasKey "c" .
 <http://example.org/legal/document/uu/2003/13/pasal/0001/version/20030325/point/0005/point/c/text> legal:textHasTextString "orang perseorangan, persekutuan, atau badan hukum yang berada di Indonesia mewakili perusahaan sebagaimana dimaksud dalam huruf a dan b yang berkedudukan di luar wilayah Indonesia." .
 <http://example.org/legal/document/uu/2003/13/pasal/0001/version/20030325/point/0005/point/c> legal:pointHasText <http://example.org/legal/document/uu/2003/13/pasal/0001/version/20030325/point/0005/point/c/text> .
+<http://example.org/legal/document/uu/2003/13/pasal/0001/version/20030325/point/0005/point/c/text> legal:textReferencesLegal <http://example.org/legal/document/uu/2003/13/pasal/0001/version/20030325/point/b> .
+<http://example.org/legal/document/uu/2003/13/pasal/0001/version/20030325/point/0005/point/c/text> legal:textReferencesLegal <http://example.org/legal/document/uu/2003/13/pasal/0001/version/20030325/point/a> .
 <http://example.org/legal/document/uu/2003/13/pasal/0001/version/20030325/point> legal:pointSetHasPoint <http://example.org/legal/document/uu/2003/13/pasal/0001/version/20030325/point/0006> .
 <http://example.org/legal/document/uu/2003/13/pasal/0001/version/20030325/point/0006> legal:pointHasKey "6" .
 <http://example.org/legal/document/uu/2003/13/pasal/0001/version/20030325/point/0006> legal:pointHasPointSet <http://example.org/legal/document/uu/2003/13/pasal/0001/version/20030325/point/0006/point> .
@@ -102,6 +104,7 @@
 <http://example.org/legal/document/uu/2003/13/pasal/0001/version/20030325/point/0016> legal:pointHasKey "16" .
 <http://example.org/legal/document/uu/2003/13/pasal/0001/version/20030325/point/0016/text> legal:textHasTextString "Hubungan industrial adalah suatu sistem hubungan yang terbentuk antara para pelaku dalam proses produksi barang dan/atau jasa yang terdiri dari unsur pengusaha, pekerja/buruh, dan pemerintah yang didasarkan pada nilai nilai Pancasila dan Undang Undang Dasar Negara Republik Indonesia Tahun 1945. 5." .
 <http://example.org/legal/document/uu/2003/13/pasal/0001/version/20030325/point/0016> legal:pointHasText <http://example.org/legal/document/uu/2003/13/pasal/0001/version/20030325/point/0016/text> .
+<http://example.org/legal/document/uu/2003/13/pasal/0001/version/20030325/point/0016/text> legal:textReferencesLegal <http://example.org/legal/document/uud/> .
 <http://example.org/legal/document/uu/2003/13/pasal/0001/version/20030325/point> legal:pointSetHasPoint <http://example.org/legal/document/uu/2003/13/pasal/0001/version/20030325/point/0017> .
 <http://example.org/legal/document/uu/2003/13/pasal/0001/version/20030325/point/0017> legal:pointHasKey "17" .
 <http://example.org/legal/document/uu/2003/13/pasal/0001/version/20030325/point/0017/text> legal:textHasTextString "Serikat pekerja/serikat buruh adalah organisasi yang dibentuk dari, oleh, dan untuk pekerja/buruh baik di perusahaan maupun di luar perusahaan, yang bersifat bebas, terbuka, mandiri, demokratis, dan bertanggung jawab guna memperjuangkan, membela serta melindungi hak dan kepentingan pekerja/buruh serta meningkatkan kesejahteraan pekerja/buruh dan keluarganya." .
