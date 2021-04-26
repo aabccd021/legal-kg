@@ -2,14 +2,12 @@ import { assertNever } from 'assert-never';
 import { AyatSetNode, PasalNode, PasalVersion } from './../../../legal/component';
 import { chain, compact, isUndefined } from 'lodash';
 import {
-  Bab,
   Bagian,
   Document,
   PasalSet,
   PointNode,
   PointSetNode,
   Reference,
-  Pasal,
   AyatNode,
 } from '../../../legal/component';
 import { neverNum, neverString } from '../../../util';
@@ -23,28 +21,27 @@ export function detectInDocument(document: Document): Document {
     ...document,
     babSet: {
       ...babSet,
-      elements: babSet.elements.map(detectInBab),
+      elements: babSet.elements.map((bab) => ({
+        ...bab,
+        content:
+          bab.content.type === 'pasalSet'
+            ? detectInPasalSet(bab.content)
+            : {
+                ...bab.content,
+                elements: bab.content.elements.map(detectInBagian),
+              },
+      })),
     },
-  };
-}
-
-function detectInBab(bab: Bab): Bab {
-  return {
-    ...bab,
-    content:
-      bab.content.type === 'pasalSet'
-        ? detectInPasalSet(bab.content)
-        : {
-            ...bab.content,
-            elements: bab.content.elements.map(detectInBagian),
-          },
   };
 }
 
 function detectInPasalSet(pasalSet: PasalSet): PasalSet {
   return {
     ...pasalSet,
-    elements: pasalSet.elements.map(detectInPasal),
+    elements: pasalSet.elements.map((pasal) => ({
+      ...pasal,
+      version: detectInPasalVersion(pasal.version),
+    })),
   };
 }
 
@@ -62,10 +59,6 @@ function detectInBagian(bagian: Bagian): Bagian {
             })),
           },
   };
-}
-
-function detectInPasal(pasal: Pasal): Pasal {
-  return { ...pasal, version: detectInPasalVersion(pasal.version) };
 }
 
 function detectInPasalVersion(pasalVersion: PasalVersion): PasalVersion {
