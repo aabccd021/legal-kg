@@ -19,6 +19,21 @@ import {
 } from '../../../legal/component';
 import { DocumentNode } from '../../../legal/document';
 
+/**
+ * FooSet => Set/Collection of Foo, for easier triple generation.
+ *
+ * FooHasRawText => Foo has text as primitive string (RawText).
+ * RawText has no citation.
+ * RawText represents it's text and all of it's childrens texts.
+ * For example, if pasal has ayat as it's child,
+ * RawText contains all text of the pasal and the ayat.
+ *
+ * FooHasText => Foo has text as node (TextNode),
+ * TextNode contains citation.
+ * Text in TextNode only represents it's text, NOT including the childrens texts.
+ *
+ *
+ */
 export type LegalTriple = (
   | [AyatNode, 'ayatHasKey', number]
   | [AyatNode, 'ayatHasPointSet', PointSetNode]
@@ -63,6 +78,7 @@ export type LegalTriple = (
   | [PointNode, 'pointHasKey', string | number]
   | [PointNode, 'pointHasPointSet', PointSetNode]
   | [PointNode, 'pointHasText', TextNode]
+  // Represents Amendment
   | [
       PointNode,
       'pointUpdatePasalVersion' | 'pointDeletePasalVersion' | 'pointInsertPasalVersion',
@@ -73,4 +89,5 @@ export type LegalTriple = (
   | [TextNode, 'textHasTextString', string]
   | [TextNode, 'textReferencesLegal', LegalNode]
 ) &
+  // Nevermind of this, just to make sure Subject is LegalNode, and Object is as defined below.
   [LegalNode, string, string | number | LegalNode | DateNode];
