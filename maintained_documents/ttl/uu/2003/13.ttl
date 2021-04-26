@@ -5389,6 +5389,39 @@
 <http://example.org/legal/document/uu/2003/13/pasal/0193/version/20030325/text> legal:textHasTextString "Undang undang ini mulai berlaku pada tanggal diundangkan. Agar setiap orang mengetahuinya, memerintahkan pengundangan undang undang ini dengan penempatannya dalam Lembaran Negara Republik Indonesia." .
 <http://example.org/legal/document/uu/2003/13/pasal/0193/version/20030325> legal:pasalVersionHasText <http://example.org/legal/document/uu/2003/13/pasal/0193/version/20030325/text> .
 <http://example.org/legal/document/uu/2003/13> legal:documentHasDisahkanDate "2003-03-25"^^xsd:date .
+<http://example.org/legal/document/uu/2003/13> legal:documentMengingat <http://example.org/legal/document/uu/2003/13/mengingat> .
+<http://example.org/legal/document/uu/2003/13/mengingat/text> legal:textHasTextString "Pasal 5 ayat (1), Pasal 20 ayat (2), Pasal 27 ayat (2), Pasal 28, dan Pasal 33 ayat (1) Undang Undang Dasar Negara Republik Indonesia Tahun 1945," .
+<http://example.org/legal/document/uu/2003/13/mengingat> legal:mengingatHasText <http://example.org/legal/document/uu/2003/13/mengingat/text> .
+<http://example.org/legal/document/uu/2003/13/mengingat/text> legal:textReferencesLegal <http://example.org/legal/document/uud/> .
+<http://example.org/legal/document/uu/2003/13> legal:documentMenimbang <http://example.org/legal/document/uu/2003/13/menimbang> .
+<http://example.org/legal/document/uu/2003/13/menimbang> legal:menimbangHasPointSet <http://example.org/legal/document/uu/2003/13/menimbang/point> .
+<http://example.org/legal/document/uu/2003/13/menimbang/point/description> legal:textHasTextString "" .
+<http://example.org/legal/document/uu/2003/13/menimbang/point> legal:pointSetHasDescription <http://example.org/legal/document/uu/2003/13/menimbang/point/description> .
+<http://example.org/legal/document/uu/2003/13/menimbang/point> legal:pointSetHasPoint <http://example.org/legal/document/uu/2003/13/menimbang/point/a> .
+<http://example.org/legal/document/uu/2003/13/menimbang/point/a> legal:pointHasKey "a" .
+<http://example.org/legal/document/uu/2003/13/menimbang/point/a/text> legal:textHasTextString "bahwa pembangunan nasional dilaksanakan dalam rangka pembangunan manusia Indonesia seutuhnya dan pembangunan masyarakat Indonesia seluruhnya untuk mewujudkan masyarakat yang sejahtera, adil, makmur, yang merata, baik materiil maupun spiritual berdasarkan Pancasila dan Undang Undang Dasar Negara Republik Indonesia Tahun 1945," .
+<http://example.org/legal/document/uu/2003/13/menimbang/point/a> legal:pointHasText <http://example.org/legal/document/uu/2003/13/menimbang/point/a/text> .
+<http://example.org/legal/document/uu/2003/13/menimbang/point/a/text> legal:textReferencesLegal <http://example.org/legal/document/uud/> .
+<http://example.org/legal/document/uu/2003/13/menimbang/point> legal:pointSetHasPoint <http://example.org/legal/document/uu/2003/13/menimbang/point/b> .
+<http://example.org/legal/document/uu/2003/13/menimbang/point/b> legal:pointHasKey "b" .
+<http://example.org/legal/document/uu/2003/13/menimbang/point/b/text> legal:textHasTextString "bahwa dalam pelaksanaan pembangunan nasional, tenaga kerja mempunyai peranan dan kedudukan yang sangat penting sebagai pelaku dan tujuan pembangunan," .
+<http://example.org/legal/document/uu/2003/13/menimbang/point/b> legal:pointHasText <http://example.org/legal/document/uu/2003/13/menimbang/point/b/text> .
+<http://example.org/legal/document/uu/2003/13/menimbang/point> legal:pointSetHasPoint <http://example.org/legal/document/uu/2003/13/menimbang/point/c> .
+<http://example.org/legal/document/uu/2003/13/menimbang/point/c> legal:pointHasKey "c" .
+<http://example.org/legal/document/uu/2003/13/menimbang/point/c/text> legal:textHasTextString ". bahwa sesuai dengan peranan dan kedudukan tenaga kerja, diperlukan pembangunan ketenagakerjaan untuk meningkatkan kualitas tenaga kerja dan peransertanya dalam pembangunan serta peningkatan perlindungan tenaga kerja dan keluarganya sesuai dengan harkat dan martabat kemanusiaan:" .
+<http://example.org/legal/document/uu/2003/13/menimbang/point/c> legal:pointHasText <http://example.org/legal/document/uu/2003/13/menimbang/point/c/text> .
+<http://example.org/legal/document/uu/2003/13/menimbang/point> legal:pointSetHasPoint <http://example.org/legal/document/uu/2003/13/menimbang/point/d> .
+<http://example.org/legal/document/uu/2003/13/menimbang/point/d> legal:pointHasKey "d" .
+<http://example.org/legal/document/uu/2003/13/menimbang/point/d/text> legal:textHasTextString "bahwa perlindungan terhadap tenaga kerja dimaksudkan untuk menjamin hak hak dasar pekerja/buruh dan menjamin kesamaan kesempatan serta perlakuan tanpa diskriminasi atas dasar apapun untuk mewujudkan kesejahteraan pekerja/buruh dan keluarganya dengan tetap memperhatikan perkembangan kemajuan dunia usaha," .
+<http://example.org/legal/document/uu/2003/13/menimbang/point/d> legal:pointHasText <http://example.org/legal/document/uu/2003/13/menimbang/point/d/text> .
+<http://example.org/legal/document/uu/2003/13/menimbang/point> legal:pointSetHasPoint <http://example.org/legal/document/uu/2003/13/menimbang/point/e> .
+<http://example.org/legal/document/uu/2003/13/menimbang/point/e> legal:pointHasKey "e" .
+<http://example.org/legal/document/uu/2003/13/menimbang/point/e/text> legal:textHasTextString "bahwa beberapa undang undang di bidang ketenagakerjaan dipandang sudah tidak sesuai lagi dengan kebutuhan dan tuntutan pembangunan ketenagakerjaan, oleh karena itu perlu dicabut dan/atau ditarik kembali:" .
+<http://example.org/legal/document/uu/2003/13/menimbang/point/e> legal:pointHasText <http://example.org/legal/document/uu/2003/13/menimbang/point/e/text> .
+<http://example.org/legal/document/uu/2003/13/menimbang/point> legal:pointSetHasPoint <http://example.org/legal/document/uu/2003/13/menimbang/point/f> .
+<http://example.org/legal/document/uu/2003/13/menimbang/point/f> legal:pointHasKey "f" .
+<http://example.org/legal/document/uu/2003/13/menimbang/point/f/text> legal:textHasTextString "bahwa berdasarkan pertimbangan sebagaimana tersebut pada huruf a, b, c, d, dan e perlu membentuk Undang undang tentang Ketenagakerjaan," .
+<http://example.org/legal/document/uu/2003/13/menimbang/point/f> legal:pointHasText <http://example.org/legal/document/uu/2003/13/menimbang/point/f/text> .
 <http://example.org/legal/document/uu/2003/13> legal:documentHasDisahkanPengesah "MEGAWATI SOEKARNOPUTRI" .
 <http://example.org/legal/document/uu/2003/13> legal:documentHasDisahkanLocation "Jakarta" .
 <http://example.org/legal/document/uu/2003/13> legal:documentHasDisahkanJabatanPengesah "PRESIDEN REPUBLIK INDONESIA," .
@@ -7509,6 +7542,23 @@
 <http://example.org/legal/document/uu/2003/13/pasal/0193> a legal:Pasal .
 <http://example.org/legal/document/uu/2003/13/pasal/0193/version/20030325> a legal:PasalVersion .
 <http://example.org/legal/document/uu/2003/13/pasal/0193/version/20030325/text> a legal:Text .
+<http://example.org/legal/document/uu/2003/13/mengingat/text> a legal:Text .
+<http://example.org/legal/document/uu/2003/13/mengingat> a legal:Mengingat .
+<http://example.org/legal/document/uu/2003/13/menimbang> a legal:Menimbang .
+<http://example.org/legal/document/uu/2003/13/menimbang/point/description> a legal:Text .
+<http://example.org/legal/document/uu/2003/13/menimbang/point> a legal:PointSet .
+<http://example.org/legal/document/uu/2003/13/menimbang/point/a> a legal:Point .
+<http://example.org/legal/document/uu/2003/13/menimbang/point/a/text> a legal:Text .
+<http://example.org/legal/document/uu/2003/13/menimbang/point/b> a legal:Point .
+<http://example.org/legal/document/uu/2003/13/menimbang/point/b/text> a legal:Text .
+<http://example.org/legal/document/uu/2003/13/menimbang/point/c> a legal:Point .
+<http://example.org/legal/document/uu/2003/13/menimbang/point/c/text> a legal:Text .
+<http://example.org/legal/document/uu/2003/13/menimbang/point/d> a legal:Point .
+<http://example.org/legal/document/uu/2003/13/menimbang/point/d/text> a legal:Text .
+<http://example.org/legal/document/uu/2003/13/menimbang/point/e> a legal:Point .
+<http://example.org/legal/document/uu/2003/13/menimbang/point/e/text> a legal:Text .
+<http://example.org/legal/document/uu/2003/13/menimbang/point/f> a legal:Point .
+<http://example.org/legal/document/uu/2003/13/menimbang/point/f/text> a legal:Text .
 <http://example.org/legal/document/uu/2003/13/bab> legal:partOf <http://example.org/legal/document/uu/2003/13> .
 <http://example.org/legal/document/uu/2003/13/bab/0001> legal:partOf <http://example.org/legal/document/uu/2003/13/bab> .
 <http://example.org/legal/document/uu/2003/13/bab/0001/pasals> legal:partOf <http://example.org/legal/document/uu/2003/13/bab/0001> .
@@ -9407,3 +9457,9 @@
 <http://example.org/legal/document/uu/2003/13/pasal/0193> legal:partOf <http://example.org/legal/document/uu/2003/13/bab/0018/pasals> .
 <http://example.org/legal/document/uu/2003/13/pasal/0193/version/20030325> legal:partOf <http://example.org/legal/document/uu/2003/13/pasal/0193> .
 <http://example.org/legal/document/uu/2003/13/pasal/0193> legal:partOf <http://example.org/legal/document/uu/2003/13> .
+<http://example.org/legal/document/uu/2003/13/menimbang/point/a> legal:partOf <http://example.org/legal/document/uu/2003/13/menimbang/point> .
+<http://example.org/legal/document/uu/2003/13/menimbang/point/b> legal:partOf <http://example.org/legal/document/uu/2003/13/menimbang/point> .
+<http://example.org/legal/document/uu/2003/13/menimbang/point/c> legal:partOf <http://example.org/legal/document/uu/2003/13/menimbang/point> .
+<http://example.org/legal/document/uu/2003/13/menimbang/point/d> legal:partOf <http://example.org/legal/document/uu/2003/13/menimbang/point> .
+<http://example.org/legal/document/uu/2003/13/menimbang/point/e> legal:partOf <http://example.org/legal/document/uu/2003/13/menimbang/point> .
+<http://example.org/legal/document/uu/2003/13/menimbang/point/f> legal:partOf <http://example.org/legal/document/uu/2003/13/menimbang/point> .

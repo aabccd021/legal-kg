@@ -1567,6 +1567,29 @@
 <http://example.org/legal/document/pp/2021/34/pasal/0048/version/20210202/text> legal:textHasTextString "Peraturan Pemerintah ini mulai berlaku pada tanggal 1 April 2021. Agar setiap orang mengetahuinya, memerintahkan pengundangan Peraturan Pemerintah ini dengan penempatannya dalam Lembaran Negara Republik Indonesia." .
 <http://example.org/legal/document/pp/2021/34/pasal/0048/version/20210202> legal:pasalVersionHasText <http://example.org/legal/document/pp/2021/34/pasal/0048/version/20210202/text> .
 <http://example.org/legal/document/pp/2021/34> legal:documentHasDisahkanDate "2021-02-02"^^xsd:date .
+<http://example.org/legal/document/pp/2021/34> legal:documentMengingat <http://example.org/legal/document/pp/2021/34/mengingat> .
+<http://example.org/legal/document/pp/2021/34/mengingat> legal:mengingatHasPointSet <http://example.org/legal/document/pp/2021/34/mengingat/point> .
+<http://example.org/legal/document/pp/2021/34/mengingat/point/description> legal:textHasTextString "" .
+<http://example.org/legal/document/pp/2021/34/mengingat/point> legal:pointSetHasDescription <http://example.org/legal/document/pp/2021/34/mengingat/point/description> .
+<http://example.org/legal/document/pp/2021/34/mengingat/point> legal:pointSetHasPoint <http://example.org/legal/document/pp/2021/34/mengingat/point/0001> .
+<http://example.org/legal/document/pp/2021/34/mengingat/point/0001> legal:pointHasKey "1" .
+<http://example.org/legal/document/pp/2021/34/mengingat/point/0001/text> legal:textHasTextString "Pasal 5 ayat (2) Undang-Undang Dasar Negara Republik Indonesia Tahun 1945," .
+<http://example.org/legal/document/pp/2021/34/mengingat/point/0001> legal:pointHasText <http://example.org/legal/document/pp/2021/34/mengingat/point/0001/text> .
+<http://example.org/legal/document/pp/2021/34/mengingat/point/0001/text> legal:textReferencesLegal <http://example.org/legal/document/uud/> .
+<http://example.org/legal/document/pp/2021/34/mengingat/point> legal:pointSetHasPoint <http://example.org/legal/document/pp/2021/34/mengingat/point/0002> .
+<http://example.org/legal/document/pp/2021/34/mengingat/point/0002> legal:pointHasKey "2" .
+<http://example.org/legal/document/pp/2021/34/mengingat/point/0002/text> legal:textHasTextString "Undang-Undang Nomor 13 Tahun 2003 tentang Ketenagakerjaan (Lembaran Negara Republik Indonesia Tahun 2003 Nomor 39, Tambahan Lembaran Negara Republik Indonesia Nomor 4279)," .
+<http://example.org/legal/document/pp/2021/34/mengingat/point/0002> legal:pointHasText <http://example.org/legal/document/pp/2021/34/mengingat/point/0002/text> .
+<http://example.org/legal/document/pp/2021/34/mengingat/point/0002/text> legal:textReferencesLegal <http://example.org/legal/document/uu/2003/13> .
+<http://example.org/legal/document/pp/2021/34/mengingat/point> legal:pointSetHasPoint <http://example.org/legal/document/pp/2021/34/mengingat/point/0003> .
+<http://example.org/legal/document/pp/2021/34/mengingat/point/0003> legal:pointHasKey "3" .
+<http://example.org/legal/document/pp/2021/34/mengingat/point/0003/text> legal:textHasTextString "Undang-Undang Nomor 11 Tahun 2020 tentang Cipta Kerja (Lembaran Negara Republik Indonesia Tahun 2020 Nomor 245, Tambahan Lembaran Negara Republik Indonesia Nomor 6573), MEMUTUSKAN: Menetapkan : PERATURAN PEMERINTAH TENTANG PENGGUNAAN TENAGA KERJA ASING. SK No 086152 A" .
+<http://example.org/legal/document/pp/2021/34/mengingat/point/0003> legal:pointHasText <http://example.org/legal/document/pp/2021/34/mengingat/point/0003/text> .
+<http://example.org/legal/document/pp/2021/34/mengingat/point/0003/text> legal:textReferencesLegal <http://example.org/legal/document/uu/2020/11> .
+<http://example.org/legal/document/pp/2021/34> legal:documentMenimbang <http://example.org/legal/document/pp/2021/34/menimbang> .
+<http://example.org/legal/document/pp/2021/34/menimbang/text> legal:textHasTextString "bahwa untuk melaksanakan ketentuan Pasal 81 dan Pasal 185 huruf b Undang-Undang Nomor 11 Tahun 2020 tentang Cipta Kerja, perlu menetapkan Peraturan Pemerintah tentang Penggunaan Tenaga Kerja Asing," .
+<http://example.org/legal/document/pp/2021/34/menimbang> legal:menimbangHasText <http://example.org/legal/document/pp/2021/34/menimbang/text> .
+<http://example.org/legal/document/pp/2021/34/menimbang/text> legal:textReferencesLegal <http://example.org/legal/document/uu/2020/11> .
 <http://example.org/legal/document/pp/2021/34> legal:documentHasDisahkanPengesah "JOKO WIDODO" .
 <http://example.org/legal/document/pp/2021/34> legal:documentHasDisahkanLocation "Jakarta" .
 <http://example.org/legal/document/pp/2021/34> legal:documentHasDisahkanJabatanPengesah "PRESIDEN REPUBLIK INDONESIA," .
@@ -2217,6 +2240,17 @@
 <http://example.org/legal/document/pp/2021/34/pasal/0048> a legal:Pasal .
 <http://example.org/legal/document/pp/2021/34/pasal/0048/version/20210202> a legal:PasalVersion .
 <http://example.org/legal/document/pp/2021/34/pasal/0048/version/20210202/text> a legal:Text .
+<http://example.org/legal/document/pp/2021/34/mengingat> a legal:Mengingat .
+<http://example.org/legal/document/pp/2021/34/mengingat/point/description> a legal:Text .
+<http://example.org/legal/document/pp/2021/34/mengingat/point> a legal:PointSet .
+<http://example.org/legal/document/pp/2021/34/mengingat/point/0001> a legal:Point .
+<http://example.org/legal/document/pp/2021/34/mengingat/point/0001/text> a legal:Text .
+<http://example.org/legal/document/pp/2021/34/mengingat/point/0002> a legal:Point .
+<http://example.org/legal/document/pp/2021/34/mengingat/point/0002/text> a legal:Text .
+<http://example.org/legal/document/pp/2021/34/mengingat/point/0003> a legal:Point .
+<http://example.org/legal/document/pp/2021/34/mengingat/point/0003/text> a legal:Text .
+<http://example.org/legal/document/pp/2021/34/menimbang/text> a legal:Text .
+<http://example.org/legal/document/pp/2021/34/menimbang> a legal:Menimbang .
 <http://example.org/legal/document/pp/2021/34/bab> legal:partOf <http://example.org/legal/document/pp/2021/34> .
 <http://example.org/legal/document/pp/2021/34/bab/0001> legal:partOf <http://example.org/legal/document/pp/2021/34/bab> .
 <http://example.org/legal/document/pp/2021/34/bab/0001/pasals> legal:partOf <http://example.org/legal/document/pp/2021/34/bab/0001> .
@@ -2751,3 +2785,6 @@
 <http://example.org/legal/document/pp/2021/34/pasal/0048> legal:partOf <http://example.org/legal/document/pp/2021/34/bab/0007/pasals> .
 <http://example.org/legal/document/pp/2021/34/pasal/0048/version/20210202> legal:partOf <http://example.org/legal/document/pp/2021/34/pasal/0048> .
 <http://example.org/legal/document/pp/2021/34/pasal/0048> legal:partOf <http://example.org/legal/document/pp/2021/34> .
+<http://example.org/legal/document/pp/2021/34/mengingat/point/0001> legal:partOf <http://example.org/legal/document/pp/2021/34/mengingat/point> .
+<http://example.org/legal/document/pp/2021/34/mengingat/point/0002> legal:partOf <http://example.org/legal/document/pp/2021/34/mengingat/point> .
+<http://example.org/legal/document/pp/2021/34/mengingat/point/0003> legal:partOf <http://example.org/legal/document/pp/2021/34/mengingat/point> .

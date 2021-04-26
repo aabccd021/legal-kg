@@ -9,6 +9,8 @@ import {
   PasalVersion,
   MenimbangNode,
   MengingatNode,
+  Mengingat,
+  Menimbang,
 } from '../../../legal/component';
 import assertNever from 'assert-never';
 import { flatMap, curry, map, chain, isUndefined, compact } from 'lodash';
@@ -24,7 +26,6 @@ import {
   Text,
   AyatSet,
   Reference,
-  BabSet,
   BagianSet,
   ParagrafSet,
   ParagrafSetNode,
@@ -36,13 +37,20 @@ import {
   Document,
 } from '../../../legal/component';
 
-import { DocumentNode } from '../../../legal/document';
 import { LegalTriple } from './triple';
 
-export function yamlToTriples({ node, babSet, disahkan }: Document): LegalTriple[] {
+export function yamlToTriples({
+  node,
+  babSet,
+  disahkan,
+  metadata: { mengingat, menimbang },
+}: Document): LegalTriple[] {
   return compact([
-    ...babSetToTriple(node, babSet),
+    [node, 'documentHasBabSet', babSet.node],
+    ...flatMap(babSet.elements, babToTriple),
     [node, 'documentHasDisahkanDate', disahkan.date],
+    ...mengingatToTriple(mengingat),
+    ...menimbangToTriple(menimbang),
     disahkan.pengesah ? [node, 'documentHasDisahkanPengesah', disahkan.pengesah] : undefined,
     disahkan.location ? [node, 'documentHasDisahkanLocation', disahkan.location] : undefined,
     disahkan.jabatanPengesah
@@ -51,10 +59,23 @@ export function yamlToTriples({ node, babSet, disahkan }: Document): LegalTriple
   ]);
 }
 
-function babSetToTriple(parentDocumentNode: DocumentNode, babSet: BabSet): LegalTriple[] {
+function mengingatToTriple(mengingat?: Mengingat): LegalTriple[] {
+  if (isUndefined(mengingat)) return [];
   return [
-    [parentDocumentNode, 'documentHasBabSet', babSet.node],
-    ...flatMap(babSet.elements, babToTriple),
+    [mengingat.node.parentNode, 'documentMengingat', mengingat.node],
+    ...(mengingat.content.type === 'pointSet'
+      ? pointSetToTriple(mengingat.content)
+      : textToTriple(mengingat.content)),
+  ];
+}
+
+function menimbangToTriple(menimbang?: Menimbang): LegalTriple[] {
+  if (isUndefined(menimbang)) return [];
+  return [
+    [menimbang.node.parentNode, 'documentMenimbang', menimbang.node],
+    ...(menimbang.content.type === 'pointSet'
+      ? pointSetToTriple(menimbang.content)
+      : textToTriple(menimbang.content)),
   ];
 }
 

@@ -2507,6 +2507,36 @@
 <http://example.org/legal/document/uu/2018/6/pasal/0098/version/20180807/text> legal:textHasTextString "Undang-Undang ini mulai berlaku pada tanggal diundangkan. Agar... Agar setiap orang mengetahuinya, memerintahkan pengundangan Undang-Undang ini dengan penempatannya dalam Lembaran Negara Republik Indonesia." .
 <http://example.org/legal/document/uu/2018/6/pasal/0098/version/20180807> legal:pasalVersionHasText <http://example.org/legal/document/uu/2018/6/pasal/0098/version/20180807/text> .
 <http://example.org/legal/document/uu/2018/6> legal:documentHasDisahkanDate "2018-08-07"^^xsd:date .
+<http://example.org/legal/document/uu/2018/6> legal:documentMengingat <http://example.org/legal/document/uu/2018/6/mengingat> .
+<http://example.org/legal/document/uu/2018/6/mengingat/text> legal:textHasTextString "Pasal 5 ayat (1), Pasal 20, Pasal 28 H ayat (1), Pasal 34 ayat (3) Undang-Undang Dasar Negara Republik Indonesia Tahun 1945: Dengan Persetujuan Bersama DEWAN PERWAKILAN RAKYAT INDONESIA dan PRESIDEN REPUBLIK INDONESIA MEMUTUSKAN: Menetapkan : UNDANG-UNDANG TENTANG KEKARANTINAAN KESEHATAN." .
+<http://example.org/legal/document/uu/2018/6/mengingat> legal:mengingatHasText <http://example.org/legal/document/uu/2018/6/mengingat/text> .
+<http://example.org/legal/document/uu/2018/6/mengingat/text> legal:textReferencesLegal <http://example.org/legal/document/uud/> .
+<http://example.org/legal/document/uu/2018/6> legal:documentMenimbang <http://example.org/legal/document/uu/2018/6/menimbang> .
+<http://example.org/legal/document/uu/2018/6/menimbang> legal:menimbangHasPointSet <http://example.org/legal/document/uu/2018/6/menimbang/point> .
+<http://example.org/legal/document/uu/2018/6/menimbang/point/description> legal:textHasTextString "" .
+<http://example.org/legal/document/uu/2018/6/menimbang/point> legal:pointSetHasDescription <http://example.org/legal/document/uu/2018/6/menimbang/point/description> .
+<http://example.org/legal/document/uu/2018/6/menimbang/point> legal:pointSetHasPoint <http://example.org/legal/document/uu/2018/6/menimbang/point/a> .
+<http://example.org/legal/document/uu/2018/6/menimbang/point/a> legal:pointHasKey "a" .
+<http://example.org/legal/document/uu/2018/6/menimbang/point/a/text> legal:textHasTextString "bahwa dalam rangka pelaksanaan pembangunan manusia Indonesia seutuhnya diperlukan adanya pelindungan kesehatan bagi seluruh masyarakat Indonesia yang tersebar di berbagai pulau besar maupun kecil yang terletak pada posisi yang sangat strategis dan berada pada jalur perdagangan internasional, yang berperan penting dalam lalu lintas orang dan barang:" .
+<http://example.org/legal/document/uu/2018/6/menimbang/point/a> legal:pointHasText <http://example.org/legal/document/uu/2018/6/menimbang/point/a/text> .
+<http://example.org/legal/document/uu/2018/6/menimbang/point> legal:pointSetHasPoint <http://example.org/legal/document/uu/2018/6/menimbang/point/b> .
+<http://example.org/legal/document/uu/2018/6/menimbang/point/b> legal:pointHasKey "b" .
+<http://example.org/legal/document/uu/2018/6/menimbang/point/b/text> legal:textHasTextString "bahwa kemajuan teknologi transportasi dan era perdagangan bebas dapat berisiko menimbulkan gangguan kesehatan dan penyakit baru atau penyakit lama yang muncul kembali dengan penyebaran yang lebih cepat dan berpotensi menimbulkan kedaruratan kesehatan masyarakat, sehingga menuntut adanya upaya cegah tangkal penyakit dan faktor risiko kesehatan yang komprehensif dan terkoordinasi, serta membutuhkan sumber daya, peran serta masyarakat, dan kerja sama internasional," .
+<http://example.org/legal/document/uu/2018/6/menimbang/point/b> legal:pointHasText <http://example.org/legal/document/uu/2018/6/menimbang/point/b/text> .
+<http://example.org/legal/document/uu/2018/6/menimbang/point> legal:pointSetHasPoint <http://example.org/legal/document/uu/2018/6/menimbang/point/c> .
+<http://example.org/legal/document/uu/2018/6/menimbang/point/c> legal:pointHasKey "c" .
+<http://example.org/legal/document/uu/2018/6/menimbang/point/c/text> legal:textHasTextString "bahwa sebagai bagian dari masyarakat dunia, Indonesia berkomitmen melakukan upaya untuk mencegah terjadinya — kedaruratan kesehatan masyarakat yang meresahkan dunia sebagaimana yang diamanatkan dalam regulasi internasional di bidang kesehatan, dan dalam melaksanakan amanat ini Indonesia harus menghormati sepenuhnya martabat, hak asasi manusia, dasar-dasar kebebasan seseorang, dan penerapannya secara universal," .
+<http://example.org/legal/document/uu/2018/6/menimbang/point/c> legal:pointHasText <http://example.org/legal/document/uu/2018/6/menimbang/point/c/text> .
+<http://example.org/legal/document/uu/2018/6/menimbang/point> legal:pointSetHasPoint <http://example.org/legal/document/uu/2018/6/menimbang/point/d> .
+<http://example.org/legal/document/uu/2018/6/menimbang/point/d> legal:pointHasKey "d" .
+<http://example.org/legal/document/uu/2018/6/menimbang/point/d/text> legal:textHasTextString "bahwa Undang-Undang Nomor 1 Tahun 1962 tentang Karantina Laut dan Undang-Undang Nomor 2 Tahun 1962 tentang Karantina Udara sudah tidak sesuai lagi dengan perkembangan, tuntutan, dan kebutuhan hukum dalam masyarakat, sehingga perlu dicabut dan diganti dengan undang-undang yang baru mengenai kekarantinaan kesehatan," .
+<http://example.org/legal/document/uu/2018/6/menimbang/point/d> legal:pointHasText <http://example.org/legal/document/uu/2018/6/menimbang/point/d/text> .
+<http://example.org/legal/document/uu/2018/6/menimbang/point/d/text> legal:textReferencesLegal <http://example.org/legal/document/uu/1962/2> .
+<http://example.org/legal/document/uu/2018/6/menimbang/point/d/text> legal:textReferencesLegal <http://example.org/legal/document/uu/1962/1> .
+<http://example.org/legal/document/uu/2018/6/menimbang/point> legal:pointSetHasPoint <http://example.org/legal/document/uu/2018/6/menimbang/point/e> .
+<http://example.org/legal/document/uu/2018/6/menimbang/point/e> legal:pointHasKey "e" .
+<http://example.org/legal/document/uu/2018/6/menimbang/point/e/text> legal:textHasTextString "bahwa berdasarkan pertimbangan sebagaimana dimaksud dalam huruf a, huruf b, huruf c, dan huruf d, perlu membentuk Undang-Undang tentang Kekarantinaan Kesehatan," .
+<http://example.org/legal/document/uu/2018/6/menimbang/point/e> legal:pointHasText <http://example.org/legal/document/uu/2018/6/menimbang/point/e/text> .
 <http://example.org/legal/document/uu/2018/6> legal:documentHasDisahkanPengesah "JOKO WIDODO" .
 <http://example.org/legal/document/uu/2018/6> legal:documentHasDisahkanLocation "Jakarta" .
 <http://example.org/legal/document/uu/2018/6> legal:documentHasDisahkanJabatanPengesah "PRESIDEN REPUBLIK INDONESIA," .
@@ -3525,6 +3555,21 @@
 <http://example.org/legal/document/uu/2018/6/pasal/0098> a legal:Pasal .
 <http://example.org/legal/document/uu/2018/6/pasal/0098/version/20180807> a legal:PasalVersion .
 <http://example.org/legal/document/uu/2018/6/pasal/0098/version/20180807/text> a legal:Text .
+<http://example.org/legal/document/uu/2018/6/mengingat/text> a legal:Text .
+<http://example.org/legal/document/uu/2018/6/mengingat> a legal:Mengingat .
+<http://example.org/legal/document/uu/2018/6/menimbang> a legal:Menimbang .
+<http://example.org/legal/document/uu/2018/6/menimbang/point/description> a legal:Text .
+<http://example.org/legal/document/uu/2018/6/menimbang/point> a legal:PointSet .
+<http://example.org/legal/document/uu/2018/6/menimbang/point/a> a legal:Point .
+<http://example.org/legal/document/uu/2018/6/menimbang/point/a/text> a legal:Text .
+<http://example.org/legal/document/uu/2018/6/menimbang/point/b> a legal:Point .
+<http://example.org/legal/document/uu/2018/6/menimbang/point/b/text> a legal:Text .
+<http://example.org/legal/document/uu/2018/6/menimbang/point/c> a legal:Point .
+<http://example.org/legal/document/uu/2018/6/menimbang/point/c/text> a legal:Text .
+<http://example.org/legal/document/uu/2018/6/menimbang/point/d> a legal:Point .
+<http://example.org/legal/document/uu/2018/6/menimbang/point/d/text> a legal:Text .
+<http://example.org/legal/document/uu/2018/6/menimbang/point/e> a legal:Point .
+<http://example.org/legal/document/uu/2018/6/menimbang/point/e/text> a legal:Text .
 <http://example.org/legal/document/uu/2018/6/bab> legal:partOf <http://example.org/legal/document/uu/2018/6> .
 <http://example.org/legal/document/uu/2018/6/bab/0001> legal:partOf <http://example.org/legal/document/uu/2018/6/bab> .
 <http://example.org/legal/document/uu/2018/6/bab/0001/pasals> legal:partOf <http://example.org/legal/document/uu/2018/6/bab/0001> .
@@ -4427,3 +4472,8 @@
 <http://example.org/legal/document/uu/2018/6/pasal/0098> legal:partOf <http://example.org/legal/document/uu/2018/6/bab/0014/pasals> .
 <http://example.org/legal/document/uu/2018/6/pasal/0098/version/20180807> legal:partOf <http://example.org/legal/document/uu/2018/6/pasal/0098> .
 <http://example.org/legal/document/uu/2018/6/pasal/0098> legal:partOf <http://example.org/legal/document/uu/2018/6> .
+<http://example.org/legal/document/uu/2018/6/menimbang/point/a> legal:partOf <http://example.org/legal/document/uu/2018/6/menimbang/point> .
+<http://example.org/legal/document/uu/2018/6/menimbang/point/b> legal:partOf <http://example.org/legal/document/uu/2018/6/menimbang/point> .
+<http://example.org/legal/document/uu/2018/6/menimbang/point/c> legal:partOf <http://example.org/legal/document/uu/2018/6/menimbang/point> .
+<http://example.org/legal/document/uu/2018/6/menimbang/point/d> legal:partOf <http://example.org/legal/document/uu/2018/6/menimbang/point> .
+<http://example.org/legal/document/uu/2018/6/menimbang/point/e> legal:partOf <http://example.org/legal/document/uu/2018/6/menimbang/point> .
