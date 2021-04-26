@@ -33,7 +33,7 @@ export function removeHurufKey(span: Span): Span {
 
 export function pasalKeyOfSpan(span: Span): number | undefined {
   const { str } = span;
-  if (/^Pasal!? ?/.test(str)) return safeParseInt(str.replace(/^Pasal!? ?/, ''));
+  if (/^Pasa(l|i)!? ?/.test(str)) return safeParseInt(str.replace(/^Pasa(l|i)!? ?/, ''));
   return undefined;
 }
 
