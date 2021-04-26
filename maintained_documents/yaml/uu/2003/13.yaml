@@ -39,7 +39,12 @@ metadata:
               seutuhnya dan pembangunan masyarakat Indonesia seluruhnya untuk mewujudkan masyarakat
               yang sejahtera, adil, makmur, yang merata, baik materiil maupun spiritual berdasarkan
               Pancasila dan Undang Undang Dasar Negara Republik Indonesia Tahun 1945,
-            references: []
+            references:
+              - start: 269
+                end: 325
+                node:
+                  nodeType: document
+                  docType: uud
         - type: point
           node: &ref_4
             nodeType: point
@@ -134,7 +139,12 @@ metadata:
       textString: >-
         Pasal 5 ayat (1), Pasal 20 ayat (2), Pasal 27 ayat (2), Pasal 28, dan Pasal 33 ayat (1)
         Undang Undang Dasar Negara Republik Indonesia Tahun 1945,
-      references: []
+      references:
+        - start: 88
+          end: 144
+          node:
+            nodeType: document
+            docType: uud
   memutuskan: 'Menetapkan : UNDANG-UNDANG TENTANG KETENAGAKERJAAN.'
   denganPersetujuan: |-
     DEWAN PERWAKILAN RAKYAT REPUBLIK INDONESIA

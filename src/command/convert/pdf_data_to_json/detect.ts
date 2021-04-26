@@ -3,6 +3,8 @@ import {
   Ayat,
   AyatSet,
   AyatSetNode,
+  Mengingat,
+  Menimbang,
   PasalNode,
   PasalVersionNode,
   PointSet,
@@ -23,10 +25,15 @@ import { safeParseInt } from './parse_key_from_spans';
 import { DocumentNode } from '../../../legal/document';
 
 export function detectInDocument(document: Document): Document {
-  const { babSet } = document;
+  const { babSet, metadata } = document;
 
   return {
     ...document,
+    metadata: {
+      ...metadata,
+      menimbang: detectInMenimbang(metadata.menimbang),
+      mengingat: detectInMengingat(metadata.mengingat),
+    },
     babSet: {
       ...babSet,
       elements: babSet.elements.map((bab) => ({
@@ -40,6 +47,72 @@ export function detectInDocument(document: Document): Document {
               },
       })),
     },
+  };
+}
+
+function detectInMenimbang(menimbang: Menimbang | undefined): Menimbang | undefined {
+  if (isUndefined(menimbang)) return undefined;
+  if (menimbang.content.type === 'pointSet') {
+    return { ...menimbang, content: detectInPointSetWhichBelowMetadata(menimbang.content) };
+  }
+  if (menimbang.content.type === 'text') {
+    return {
+      ...menimbang,
+      content: {
+        ...menimbang.content,
+        references: detectBelowDocument(menimbang.content.textString),
+      },
+    };
+  }
+  assertNever(menimbang.content);
+}
+
+function detectInMengingat(mengingat: Mengingat | undefined): Mengingat | undefined {
+  if (isUndefined(mengingat)) return undefined;
+  if (mengingat.content.type === 'pointSet') {
+    return { ...mengingat, content: detectInPointSetWhichBelowMetadata(mengingat.content) };
+  }
+  if (mengingat.content.type === 'text') {
+    return {
+      ...mengingat,
+      content: {
+        ...mengingat.content,
+        references: detectBelowDocument(mengingat.content.textString),
+      },
+    };
+  }
+  assertNever(mengingat.content);
+}
+
+function detectInPointSetWhichBelowMetadata(pointSet: PointSet): PointSet {
+  return {
+    ...pointSet,
+    elements: pointSet.elements.map((point) => {
+      if (point.type === 'point') {
+        if (point.content.type === 'text') {
+          return {
+            ...point,
+            content: {
+              ...point.content,
+              references: _resolveConflictingReferences([
+                ...detectBelowDocument(point.content.textString),
+              ]),
+            },
+          };
+        }
+        if (point.content.type === 'pointSet') {
+          return {
+            ...point,
+            content: detectInPointSetWhichBelowMetadata(point.content),
+          };
+        }
+        assertNever(point.content);
+      }
+      if (point.type === 'pasalDeleteAmenderPoint') return point;
+      if (point.type === 'pasalInsertAmenderPoint') return point;
+      if (point.type === 'pasalUpdateAmenderPoint') return point;
+      assertNever(point);
+    }),
   };
 }
 
@@ -146,13 +219,16 @@ function detectInPointSetWhichBelowPasalVersoin(
   };
 }
 
+function detectBelowDocument(textString: string): Reference[] {
+  return [...detectUU(textString), ...detectHardCoded(textString)];
+}
+
 function detectBelowPasalVersion(
   textString: string,
   pasalVersionNode: PasalVersionNode
 ): Reference[] {
   return [
-    ...detectUU(textString),
-    ...detectHardCoded(textString),
+    ...detectBelowDocument(textString),
     ...detectPasalX(textString, pasalVersionNode.parentPasalNode.parentNode),
     ...detectHurufXYZ(textString, {
       nodeType: 'pointSet',
@@ -177,6 +253,10 @@ function detectHardCoded(text: string): Reference[] {
   const map: [string, DocumentNode][] = [
     [
       'Undang Undang Dasar Negara Republik Indonesia Tahun 1945',
+      { nodeType: 'document', docType: 'uud' },
+    ],
+    [
+      'Undang-Undang Dasar Negara Republik Indonesia Tahun 1945',
       { nodeType: 'document', docType: 'uud' },
     ],
   ];

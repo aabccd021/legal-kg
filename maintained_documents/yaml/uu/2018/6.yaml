@@ -94,7 +94,21 @@ metadata:
               2 Tahun 1962 tentang Karantina Udara sudah tidak sesuai lagi dengan perkembangan,
               tuntutan, dan kebutuhan hukum dalam masyarakat, sehingga perlu dicabut dan diganti
               dengan undang-undang yang baru mengenai kekarantinaan kesehatan,
-            references: []
+            references:
+              - start: 66
+                end: 98
+                node:
+                  nodeType: document
+                  docType: uu
+                  nomor: 2
+                  tahun: 1962
+              - start: 6
+                end: 38
+                node:
+                  nodeType: document
+                  docType: uu
+                  nomor: 1
+                  tahun: 1962
         - type: point
           node: &ref_7
             nodeType: point
@@ -126,7 +140,12 @@ metadata:
         Negara Republik Indonesia Tahun 1945: Dengan Persetujuan Bersama DEWAN PERWAKILAN RAKYAT
         INDONESIA dan PRESIDEN REPUBLIK INDONESIA MEMUTUSKAN: Menetapkan : UNDANG-UNDANG TENTANG
         KEKARANTINAAN KESEHATAN.
-      references: []
+      references:
+        - start: 67
+          end: 123
+          node:
+            nodeType: document
+            docType: uud
   memutuskan: ''
   denganPersetujuan: ''
 opText: |-
