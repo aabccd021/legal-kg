@@ -9,7 +9,7 @@ import * as yaml from 'js-yaml';
 import { spansToBabSet, spansToMetadata, spansToStr } from './spans_to_component';
 import { Disahkan, Document } from '../../../legal/component';
 import { DocumentNode } from '../../../legal/document';
-import { detectDocument } from './detect';
+import { detectInDocument } from './detect';
 
 function pdfDataToJson(): void {
   getDocumentData('pdf-data').forEach(writeToJson);
@@ -37,7 +37,7 @@ function writeToJson(documentNode: DocumentNode): void {
   };
   // const detectedDocument = rawJsonToJson(document);
   console.timeEnd(`TIME ${JSON.stringify(documentNode)} init`);
-  const detectedDocument: Document = detectDocument(document);
+  const detectedDocument: Document = detectInDocument(document);
 
   writeFileSync(jsonFile.path, yaml.dump(detectedDocument, { lineWidth: 100 }));
 }

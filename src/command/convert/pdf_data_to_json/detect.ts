@@ -17,67 +17,67 @@ import { neverNum, neverString } from '../../../util';
 import { safeParseInt } from './parse_key_from_spans';
 import { DocumentNode } from '../../../legal/document';
 
-export function detectDocument(document: Document): Document {
+export function detectInDocument(document: Document): Document {
   const { babSet } = document;
 
   return {
     ...document,
     babSet: {
       ...babSet,
-      elements: babSet.elements.map(detectBab),
+      elements: babSet.elements.map(detectInBab),
     },
   };
 }
 
-function detectBab(bab: Bab): Bab {
+function detectInBab(bab: Bab): Bab {
   return {
     ...bab,
     content:
       bab.content.type === 'pasalSet'
-        ? detectPasalSet(bab.content)
+        ? detectInPasalSet(bab.content)
         : {
             ...bab.content,
-            elements: bab.content.elements.map(detectBagian),
+            elements: bab.content.elements.map(detectInBagian),
           },
   };
 }
 
-function detectPasalSet(pasalSet: PasalSet): PasalSet {
+function detectInPasalSet(pasalSet: PasalSet): PasalSet {
   return {
     ...pasalSet,
-    elements: pasalSet.elements.map(detectPasal),
+    elements: pasalSet.elements.map(detectInPasal),
   };
 }
 
-function detectBagian(bagian: Bagian): Bagian {
+function detectInBagian(bagian: Bagian): Bagian {
   return {
     ...bagian,
     content:
       bagian.content.type === 'pasalSet'
-        ? detectPasalSet(bagian.content)
+        ? detectInPasalSet(bagian.content)
         : {
             ...bagian.content,
             elements: bagian.content.elements.map((paragraf) => ({
               ...paragraf,
-              pasalSet: detectPasalSet(paragraf.pasalSet),
+              pasalSet: detectInPasalSet(paragraf.pasalSet),
             })),
           },
   };
 }
 
-function detectPasal(pasal: Pasal): Pasal {
+function detectInPasal(pasal: Pasal): Pasal {
   if (pasal.version.content === undefined) return pasal;
   if (pasal.version.content?.type !== 'text') return pasal;
   return {
     ...pasal,
     version: {
       ...pasal.version,
-      content: detectPasalVersionText(pasal.version.content, pasal.version.node),
+      content: detectInPasalVersionText(pasal.version.content, pasal.version.node),
     },
   };
 }
 
-function detectPasalVersionText(text: Text, pasalVersionNode: PasalVersionNode): Text {
+function detectInPasalVersionText(text: Text, pasalVersionNode: PasalVersionNode): Text {
   const references: Reference[] = [
     ...detectHardCoded(text.textString),
     ...detectPasalX(text.textString, pasalVersionNode.parentPasalNode.parentNode),
