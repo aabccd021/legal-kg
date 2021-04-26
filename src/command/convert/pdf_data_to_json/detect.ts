@@ -1,5 +1,11 @@
 import { assertNever } from 'assert-never';
-import { Ayat, AyatSetNode, PasalNode, PasalVersion } from './../../../legal/component';
+import {
+  Ayat,
+  AyatSetNode,
+  PasalNode,
+  PasalVersion,
+  PasalVersionNode,
+} from './../../../legal/component';
 import { chain, compact, isUndefined } from 'lodash';
 import {
   Bagian,
@@ -77,27 +83,7 @@ function detectInPasalVersion(pasalVersion: PasalVersion): PasalVersion {
                 ...ayat.content,
                 type: 'text',
                 references: _resolveConflictingReferences([
-                  ...detectHardCoded(ayat.content.textString),
-                  ...detectPasalX(
-                    ayat.content.textString,
-                    pasalVersion.node.parentPasalNode.parentNode
-                  ),
-                  ...detectHurufXYZ(ayat.content.textString, {
-                    nodeType: 'pointSet',
-                    parentNode: pasalVersion.node,
-                  }),
-                  ...detectAyatNHurufXYZ(ayat.content.textString, {
-                    nodeType: 'ayatSet',
-                    parentPasalVersionNode: pasalVersion.node,
-                  }),
-                  ...detectAyatX(ayat.content.textString, {
-                    nodeType: 'ayatSet',
-                    parentPasalVersionNode: pasalVersion.node,
-                  }),
-                  ...detectPasalXAyatX(ayat.content.textString, {
-                    nodeType: 'ayatSet',
-                    parentPasalVersionNode: pasalVersion.node,
-                  }),
+                  ...detectAbovePasalVersion(ayat.content.textString, pasalVersion.node),
                 ]),
               },
             };
@@ -113,33 +99,39 @@ function detectInPasalVersion(pasalVersion: PasalVersion): PasalVersion {
       ...pasalVersion,
       content: {
         ...pasalVersion.content,
-        references: _resolveConflictingReferences([
-          ...detectHardCoded(pasalVersion.content.textString),
-          ...detectPasalX(
-            pasalVersion.content.textString,
-            pasalVersion.node.parentPasalNode.parentNode
-          ),
-          ...detectHurufXYZ(pasalVersion.content.textString, {
-            nodeType: 'pointSet',
-            parentNode: pasalVersion.node,
-          }),
-          ...detectAyatNHurufXYZ(pasalVersion.content.textString, {
-            nodeType: 'ayatSet',
-            parentPasalVersionNode: pasalVersion.node,
-          }),
-          ...detectAyatX(pasalVersion.content.textString, {
-            nodeType: 'ayatSet',
-            parentPasalVersionNode: pasalVersion.node,
-          }),
-          ...detectPasalXAyatX(pasalVersion.content.textString, {
-            nodeType: 'ayatSet',
-            parentPasalVersionNode: pasalVersion.node,
-          }),
-        ]),
+        references: _resolveConflictingReferences(
+          detectAbovePasalVersion(pasalVersion.content.textString, pasalVersion.node)
+        ),
       },
     };
   }
   assertNever(pasalVersion.content);
+}
+
+function detectAbovePasalVersion(
+  textString: string,
+  pasalVersionNode: PasalVersionNode
+): Reference[] {
+  return [
+    ...detectHardCoded(textString),
+    ...detectPasalX(textString, pasalVersionNode.parentPasalNode.parentNode),
+    ...detectHurufXYZ(textString, {
+      nodeType: 'pointSet',
+      parentNode: pasalVersionNode,
+    }),
+    ...detectAyatNHurufXYZ(textString, {
+      nodeType: 'ayatSet',
+      parentPasalVersionNode: pasalVersionNode,
+    }),
+    ...detectAyatX(textString, {
+      nodeType: 'ayatSet',
+      parentPasalVersionNode: pasalVersionNode,
+    }),
+    ...detectPasalXAyatX(textString, {
+      nodeType: 'ayatSet',
+      parentPasalVersionNode: pasalVersionNode,
+    }),
+  ];
 }
 
 function detectHardCoded(text: string): Reference[] {
