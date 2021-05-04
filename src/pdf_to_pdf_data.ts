@@ -1,10 +1,10 @@
-import { UnindexedSpan } from '../../util';
-import { DocumentNode, nodeToName } from '../../legal/document/index';
+import { UnindexedSpan } from './util';
+import { DocumentNode } from './legal/document/index';
 import { writeFileSync } from 'fs';
 import { PDFExtract, PDFExtractPage, PDFExtractText } from 'pdf.js-extract';
-import { getDocumentData, nodeToFile } from '../../data';
+import { getDocumentData, nodeToFile } from './data';
 import { chain, curry, isUndefined, isEmpty, filter, zip } from 'lodash';
-import { bothFilter, neverNum, Span } from '../../util';
+import { bothFilter, neverNum, Span } from './util';
 
 const pdfExtract = new PDFExtract();
 
@@ -20,13 +20,10 @@ async function toPdfJson(node: DocumentNode): Promise<void> {
   const pdfFile = nodeToFile('pdf', node);
   const normalizedPdfFile = nodeToFile('normalized-pdf', node);
   const jsonFile = nodeToFile('pdf-data', node);
+  const rawDetected = nodeToFile('pdf-detect', node);
   const { pages } = await pdfExtract.extract(pdfFile.path);
   const { pages: normalizedPages } = await pdfExtract.extract(normalizedPdfFile.path);
-  writeFileSync(`temp_${nodeToName(node)}.json`, JSON.stringify(pages, undefined, 2));
-  writeFileSync(
-    `temp_${nodeToName(node)}_normalized.json`,
-    JSON.stringify(normalizedPages, undefined, 2)
-  );
+  writeFileSync(rawDetected.path, JSON.stringify(pages, undefined, 2));
   const mergedPages = chain(zip(pages, normalizedPages)).map(mergePage).compact().value();
   const cleanPages: Span[] = mergedPages
     .flatMap(toPageWithoutNoise)
@@ -41,9 +38,9 @@ function mergePage(
   if (isUndefined(page0) || isUndefined(page1)) return undefined;
   const candidates = page0.content.filter(
     (text0) =>
-      // fill number
+      // fill number TODO: give example
       ((/^[0-9]+\.\s?$/.test(text0.str) && text0.str.split('.')[0] !== '1' && text0.x < 280) ||
-        // fill bab
+        // fill bab TODO: give example
         text0.str.startsWith('BAB')) &&
       page1.content.every((text1) => !hasSamePos(text0, text1))
   );
@@ -125,7 +122,7 @@ function groupToSpan(
     .map(({ str }) => str.trim())
     .join(' ')
     .trim()
-    .replace(/ {1,}/g, ' ');
+    .replace(/ {1,}/g, ' '); // TODO: show example
 
   const xL = sortedTexts[0]?.x ?? neverNum();
 
@@ -147,7 +144,7 @@ function isNotHeader(span: UnindexedSpan): boolean {
     if (
       str.length > 5 &&
       !['PRESIDEN', 'REPUBLIK INDONESIA'].includes(str.replaceAll(',', '')) &&
-      !/-? ?[0-9A-Z]+ ?-?/.test(str)
+      !/-? ?[0-9A-Z]+ ?-?/.test(str) // TODO: show example
     ) {
       console.log(`\n===REMOVED_IRREGULAR_HEADER===PAGE_${span.pageNum}===`);
       console.log(str);
@@ -167,7 +164,11 @@ function withoutLeftFooter(spans: UnindexedSpan[]): UnindexedSpan[] {
   const footer = right.slice(-1)[0];
 
   // debug
-  if (!isUndefined(footer) && !footer.str.startsWith('SK')) {
+  if (
+    !isUndefined(footer) &&
+    // TODO: show example
+    !footer.str.startsWith('SK')
+  ) {
     console.log(`\n===REMOVED_IRREGULAR_LEFT_FOOTER===PAGE_${footer.pageNum}===`);
     console.log(JSON.stringify(right, undefined, 2));
   }

@@ -315,6 +315,7 @@ function toKeys(
   // handle `Pasal DD2A` -> `Pasal 22A`
   // handle `Pasal S51A` -> `Pasal 51A`
   // handle `Pasal 3DA` -> `Pasal 32A`
+  // TODO: give example
   if (/^Pasal (S|DD)?[0-9]+[A-Z]{0,2}$/.test(span.str)) {
     if (
       !isUndefined(lastNomor) &&
@@ -351,6 +352,8 @@ function toKeys(
 
   if (!isUndefined(newAyatKey) && (newAyatKey === 1 || newAyatKey - 1 === lastAyatKey)) {
     const ayatXlsMean = mean(ayatXls);
+
+    // TODO: give example
     if (isEmpty(ayatXls) || span.xL < ayatXlsMean || span.xL - ayatXlsMean < 9) {
       return {
         ...acc,

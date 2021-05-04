@@ -6,6 +6,7 @@ export function nomorKeyOfSpan(span: Span): number | undefined {
   const { str } = span;
   // Handle S5 -> 5
   // if (str.startsWith('0.')) return 9;
+  // TODO: give example
   const numberStr = str
     ?.match(/^(l|S|(l|S)?[0-9]+)\s?\./)?.[0]
     ?.replace(' ', '')
@@ -19,10 +20,13 @@ export function removeNomorKey(span: Span): Span {
 }
 
 export function hurufKeyOfSpan(span: Span): number | undefined {
-  return span.str
-    ?.match(/^([A-Z]|[a-z]|Cc)[.)-]/)?.[0]
-    ?.toLowerCase()
-    ?.charCodeAt(0);
+  return (
+    span.str
+      // TODO: give example
+      ?.match(/^([A-Z]|[a-z]|Cc)[.)-]/)?.[0]
+      ?.toLowerCase()
+      ?.charCodeAt(0)
+  );
 }
 
 export function removeHurufKey(span: Span): Span {
@@ -33,6 +37,7 @@ export function removeHurufKey(span: Span): Span {
 
 export function pasalKeyOfSpan(span: Span): number | undefined {
   const { str } = span;
+  // TODO: give example
   if (/^Pasa(l|i)!? ?/.test(str)) return safeParseInt(str.replace(/^Pasa(l|i)!? ?/, ''));
   return undefined;
 }
@@ -82,11 +87,21 @@ export function safeParseInt(str: string | undefined): number | undefined {
   }
 }
 
+// TODO: give example
 export function ayatKeyOf(span: Span): number | undefined {
   const { str } = span;
-  if (str.startsWith('(l)')) return 1;
-  if (str.startsWith('(S)')) return 5;
-  if (str.startsWith('(44')) return 4;
+  if (str.startsWith('(l)')) {
+    console.count('(l)');
+    return 1;
+  }
+  if (str.startsWith('(S)')) {
+    console.count('(S)');
+    return 5;
+  }
+  if (str.startsWith('(44')) {
+    console.count('(44');
+    return 4;
+  }
   const firstMatch = str.match(/^\(?S?[0-9]+\)/)?.[0];
   if (!isUndefined(firstMatch)) {
     return safeParseInt(firstMatch?.split(')')?.[0]?.replace('(', '')?.replace('S', ''));
@@ -100,16 +115,30 @@ export function removeAyatKey(spans: Span[]): Span[] {
   return [newFirst, ...rest];
 }
 
+// TODO: give example
 function ayatFirstStrWithoutKeyOf(str: string): string {
   if (str.startsWith('(l)')) return str.slice('(l)'.length).trim();
   return str.split(')').slice(1).join(')').trim();
 }
 
+// TODO: give example
 function clean(str: string): string {
-  if (str === 'S5') return '5';
-  if (str === 'S1') return '51';
-  if (str === 'S') return '5';
-  if (str === 'l') return '1';
+  if (str === 'S5') {
+    console.count('S5');
+    return '5';
+  }
+  if (str === 'S1') {
+    console.count('S1');
+    return '51';
+  }
+  if (str === 'S') {
+    console.count('S');
+    return '5';
+  }
+  if (str === 'l') {
+    console.count('l');
+    return '1';
+  }
   if (str.includes('l')) return str.replace('l', '1');
   return str.trim();
 }

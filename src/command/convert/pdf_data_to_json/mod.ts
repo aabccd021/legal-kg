@@ -115,6 +115,7 @@ function getNewSection(prevSection: DocumentSection, span: Span): [DocumentSecti
     return ['babs', [span]];
   }
   // handle if BAB I not detected, detect using KETENTUAN UMUM
+  // TODO: handle
   if (prevSection === 'preBab' && span.str === 'KETENTUAN UMUM') {
     const fakeSpan = { ...span, str: 'BAB I' };
     return ['babs', [fakeSpan, span]];

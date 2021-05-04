@@ -300,6 +300,7 @@ function detectUU(text: string): Reference[] {
 }
 
 function detectPasalXAyatX(text: string, parentAyatSetNode: AyatSetNode): Reference[] {
+  // TODO: give example
   const regexp = /Pasal [0-9]+ ayat \((l|[0-9]+)\)/g;
   const matches = [...text.matchAll(regexp)];
   return chain(matches)
@@ -324,6 +325,7 @@ function detectPasalXAyatX(text: string, parentAyatSetNode: AyatSetNode): Refere
 }
 
 function detectHurufXYZ(text: string, parentPointSetNode: PointSetNode): Reference[] {
+  // TODO: give example
   const regexp = /huruf ?([a-z]?,? ?)+( [a-z]( |,))/g;
   const matches = [...text.matchAll(regexp)];
 
@@ -350,6 +352,7 @@ function detectHurufXYZ(text: string, parentPointSetNode: PointSetNode): Referen
 type Detector<T> = (text: string, node: T) => Reference[];
 
 const detectAyatNHurufXYZ: Detector<AyatSetNode> = (text, parentAyatSetNode) => {
+  // TODO: give example
   const regexp = /ayat \((l|[0-9]+)\) huruf ?([a-z]?,? ?)+( [a-z]( |,))/g;
 
   const matches = [...text.matchAll(regexp)];
@@ -379,6 +382,7 @@ const detectAyatNHurufXYZ: Detector<AyatSetNode> = (text, parentAyatSetNode) => 
 };
 
 const detectAyatX: Detector<AyatSetNode> = (text, parentAyatSetNode) => {
+  // TODO: give example
   const regexp = /ayat \((l|[0-9]+)\)/g;
   const matches = [...text.matchAll(regexp)];
 
