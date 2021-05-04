@@ -134,7 +134,7 @@ khusus.
 
 # BAB 4 IMPLEMENTASI
 
-## Re-OCR PDF
+## OCR Ulang Berkas PDF
 
 Dokumen Peraturan Perundang-undangan yang digunakan pada penelitian didapatkan
 dalam format berkas PDF. Penulis pada awalnya mencoba langsung mengekstraksi
@@ -156,11 +156,12 @@ dugaan. Pada berkas PDF, terdapat metadata dengan nama __Creator__, dimana pada
 dokumen-dokumen Peraturan Perudang-udangan yang didapatkan, tercantum nama-nama
 alat pencetak atau merk dari pencetak tersebut. Dari informasi tersebut penulis
 menduga bahwa terdapat sebagian Peraturan Perundang-undangan yang dibuat menjadi
-PDF dengan mencetaknya menjadi kertas terlebih dahulu, kemudian di pindai oleh
-pemindai. Data yang dipindai adalah berupa gambar, artinya teks yang terdapat
-pada berkas PDF adalah hasil OCR (_optical character recognition_) oleh pemindai
-tersebut. Berikut adalah salahsatu contoh dokumen beserta data yang tercantum
-sebagai __Creator__ dan contoh kesalahan pemindaiannya yang banyak terjadi.
+PDF dengan mencetaknya menjadi kertas terlebih dahulu kemudian di pindai oleh
+pemindai dan sebagian lainnya dikonversi langsung dari berkas _.docx_. Data yang
+dipindai adalah berupa gambar, artinya teks yang terdapat pada berkas PDF adalah
+hasil OCR (_optical character recognition_) oleh pemindai tersebut. Berikut
+adalah salahsatu contoh dokumen beserta data yang tercantum sebagai __Creator__
+dan contoh kesalahan pemindaiannya yang banyak terjadi.
 
 | Dokumen             | __Creator__            | Kesalahan pemindaian        |
 | ------------------- | ---------------------- | --------------------------- |
@@ -168,15 +169,20 @@ sebagai __Creator__ dan contoh kesalahan pemindaiannya yang banyak terjadi.
 | UU No.6 Tahun 2018  | Canon                  | `(2)` selalu dipindai `(21` |
 | PP No.34 Tahun 2021 | Fuji Xerox B9100       | data teks tidak terbaca     |
 
-Setiap dokumen Peraturan Perudang-undangan dibuat menjadi berkas PDF dengan metode yang berbeda-beda. Sehingga pa
-
-ocrmypdf tesseract why above technology?
-
-tessedit_pageseg_mode 4 why this option?
+Pemindaian berkas PDF dengan metode yang berbeda-beda memberikan kualitas hasil
+pemindaian yang berbeda-beda dan kesalahan pemindaian yang tidak konsisten.
+Untuk menyelesaikan masalah ini, penulis melakukan OCR ulang terhadap semua
+dokumen yang akan di konversi. Dengan melakukan OCR ulang menggunakan satu
+metode yang sama, penulis tidak hanya berhasil mendapatkan data hasil pemindaian
+berkas PDF dengan kualitas pemindaian yang konsisten untuk semua dokumen.
+Penulis memilih menggunakan Tesseract OCR [4] sebagai metode OCR karena sifatnya
+_open source_ dan mendukung Bahasa Indonesia sebagai bahasa yang dipindai.
 
 ## PDF to Data
 
-pdfExtract position and text TODO: show images
+TODO: show images
+
+pdfExtract position and text 
 
 merge 2 PDF why? => 0-9, BAB show image merge if has same pos
 
@@ -243,3 +249,4 @@ dokumen.
 [1]: http://luk.staff.ugm.ac.id/atur/UU12-2011Lengkap.pdf
 [2]: https://eur-lex.europa.eu/eli-register/about.html
 [3]: http://www.ksl.stanford.edu/people/dlm/papers/ontology101/ontology101-noy-mcguinness.html
+[4]: https://github.com/tesseract-ocr/tesseract
