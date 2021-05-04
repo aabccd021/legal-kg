@@ -1,1 +1,52 @@
-<mxfile host="app.diagrams.net" modified="2021-05-04T13:35:06.928Z" agent="5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.4430.93 Safari/537.36" etag="yDXkH-8fx9ra8xz4sX5F" version="14.6.9" type="github"><diagram id="bmnVY2jh7ur1HRDvhdAv" name="Page-1">7Vlbc6IwFP41PtYBIqCP1nZ3O7vd6W7r7PORBEgFYkPwsr9+AwQBxZHW0su2Pmj4knNOcm6fQA9NwvVXDgv/mmES9AwNr3voomcYlmnI7xTYKMCyc8DjFOeQXgK39C9RoKbQhGIS1xYKxgJBF3XQYVFEHFHDgHO2qi9zWVC3ugCP7AG3DgT76B+KhZ+jQ1Mr8W+Een5hWdfUTAjFYgXEPmC2qkDosocmnDGRj8L1hASp7wq/5HJfDsxuN8ZJJNoIjJbnnrPaOKMHU/OMhTs4+3VzprQsIUjUgXuGFUh955gu5dBLh9Pp7yu56Cfr60j+GpqGilXSXGVhg+yd3B1EnhT7TgSJwIM54fcAUWsNBTTju0hrUZdJF6U5EjCendJ6SFi+ABGwZpZVhXLZaxLRcJZtfWst16N0o7FU2e/3W+9GavRo5IF4vGhXa09x0PlYDrWrQ+5pu4UsLUSSJoQ2DZPwzfjkCfmmXHLVWuAHRBji9OwTKTiOIc5HOHPHXXKfPKJQ3mKSXNAY/Hl2GkwPpop2D3PgAlpvaQEYUiaQ5elB2uQMU35dy14ojjSorBOLTdHeOUsiTNIOqcnplU8FuV2Ak86uJJ9JzBdhIK/0rfSScEHWB5uwvm3tkhIJC4ngG7mkECjYQNGhMVDXq5JcdEthfoVYUCEIitC8re6y58uBavuPoADUhgLKbvgO294pMXdpEEy2GY+wSYZ4IPFYcDYnlZmhMUOyAp4lS9BOliC9ZZZYXSWJ1SZJ9hnhnbb+/7Old1gWrusajtNUFljygtlVWdgty0JHXdXFqE1d7JIghKk3o1mc/rwP6tuJN9FlI7Sb4j2ybAQdxdvUXrsNFn34Dd0vPSe5ARm6jVVsOUMyc7uJqmG+elQHn+z2yW6vzW7mLrs11YX5ouymN/3t23EsifA4fc4mr5wA4pg6vYabJoL3HrMd9Uvl3E3HLjBOAhB0WVff5Apl4YbR7D5Wud2wR/1R9VNvTnLWtMvJoV3XH7OEO0SprD5827GC9FOsCOAeEXtWsphuHXZCmO2PHmZZa32t+rG6CPMxK12HefjRwzxAgxeo5mNWug5z0z3Jhwqz2Rye543yESNPDrK8LN8J5cvLF2vo8h8=</diagram></mxfile>
+<mxfile host="app.diagrams.net" modified="2021-05-04T13:35:25.548Z" agent="5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.4430.93 Safari/537.36" etag="EC7LD68uCqhy4LNzhWD2" version="14.6.9" type="github">
+  <diagram id="bmnVY2jh7ur1HRDvhdAv" name="Page-1">
+    <mxGraphModel dx="782" dy="800" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="9vBgcwyc9q50g2pf4-QP-1" value="&lt;div&gt;UURI No.13 2003&lt;/div&gt;&lt;div&gt;Tentang Ketenagakerjaan&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;font color=&quot;#ea6b66&quot;&gt;Menimbang&lt;/font&gt;: ...&lt;/div&gt;&lt;div&gt;Mengingat: ...&lt;/div&gt;&lt;div&gt;...&lt;/div&gt;&lt;div&gt;...&lt;/div&gt;&lt;div&gt;&lt;font color=&quot;#ea6b66&quot;&gt;BAB I&lt;/font&gt;&lt;/div&gt;&lt;div&gt;Ketentuan Umum&lt;/div&gt;&lt;div&gt;...&lt;/div&gt;&lt;div&gt;...&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;BAB II&lt;/div&gt;&lt;div&gt;Landasan, Asas, dan Tujuan&lt;/div&gt;&lt;div&gt;...&lt;/div&gt;&lt;div&gt;...&lt;/div&gt;&lt;div&gt;&lt;font color=&quot;#ea6b66&quot;&gt;Disahkan di&lt;/font&gt; jakarta&lt;/div&gt;&lt;div&gt;pada tanggal 25 Maret 2003&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="120" y="240" width="160" height="320" as="geometry" />
+        </mxCell>
+        <mxCell id="9vBgcwyc9q50g2pf4-QP-3" value="&lt;div&gt;Menimbang: ...&lt;/div&gt;&lt;div&gt;Mengingat: ...&lt;/div&gt;&lt;div&gt;...&lt;/div&gt;&lt;div&gt;...&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;" parent="1" vertex="1">
+          <mxGeometry x="320" y="310" width="160" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="9vBgcwyc9q50g2pf4-QP-6" value="&lt;div&gt;BAB I&lt;/div&gt;&lt;div&gt;Ketentuan Umum&lt;/div&gt;&lt;div&gt;...&lt;/div&gt;&lt;div&gt;...&lt;/div&gt;&lt;div&gt;&lt;div&gt;BAB II&lt;/div&gt;&lt;div&gt;Landasan, Asas, dan Tujuan&lt;/div&gt;&lt;div&gt;...&lt;/div&gt;&lt;div&gt;...&lt;/div&gt;&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;" parent="1" vertex="1">
+          <mxGeometry x="320" y="370" width="160" height="130" as="geometry" />
+        </mxCell>
+        <mxCell id="9vBgcwyc9q50g2pf4-QP-9" value="&lt;div&gt;Disahkan di&amp;nbsp;jakarta&lt;/div&gt;&lt;div&gt;pada tanggal 25 Maret 2003&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;" parent="1" vertex="1">
+          <mxGeometry x="320" y="500" width="160" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="9vBgcwyc9q50g2pf4-QP-10" value="&lt;div&gt;UURI No.13 2003&lt;/div&gt;&lt;div&gt;Tentang Ketenagakerjaan&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" parent="1" vertex="1">
+          <mxGeometry x="320" y="250" width="160" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="9vBgcwyc9q50g2pf4-QP-14" value="&lt;div&gt;BAB I&lt;/div&gt;&lt;div&gt;Ketentuan Umum&lt;/div&gt;&lt;div&gt;...&lt;/div&gt;&lt;div&gt;...&lt;/div&gt;&lt;div&gt;&lt;div&gt;BAB II&lt;/div&gt;&lt;div&gt;Landasan, Asas, dan Tujuan&lt;/div&gt;&lt;div&gt;...&lt;/div&gt;&lt;div&gt;...&lt;/div&gt;&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;" parent="1" vertex="1">
+          <mxGeometry x="520" y="350" width="150" height="130" as="geometry" />
+        </mxCell>
+        <mxCell id="9vBgcwyc9q50g2pf4-QP-16" value="" style="endArrow=classic;html=1;" parent="1" edge="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="279.9999999999999" y="279.57999999999987" as="sourcePoint" />
+            <mxPoint x="319.9999999999999" y="279.57999999999987" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="9vBgcwyc9q50g2pf4-QP-17" value="" style="endArrow=classic;html=1;" parent="1" edge="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="279.9999999999999" y="350.00000000000006" as="sourcePoint" />
+            <mxPoint x="319.9999999999999" y="350.00000000000006" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="9vBgcwyc9q50g2pf4-QP-18" value="" style="endArrow=classic;html=1;" parent="1" edge="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="279.9999999999999" y="434.57999999999987" as="sourcePoint" />
+            <mxPoint x="319.9999999999999" y="434.57999999999987" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="9vBgcwyc9q50g2pf4-QP-19" value="" style="endArrow=classic;html=1;" parent="1" edge="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="279.9999999999999" y="519.9999999999999" as="sourcePoint" />
+            <mxPoint x="319.9999999999999" y="519.9999999999999" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
