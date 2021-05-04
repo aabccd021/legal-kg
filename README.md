@@ -92,7 +92,7 @@ Chatbot akan menampilkan hasil dari _query_ tersebut.
 
 ## Evaluasi Hasil Konversi
 
-Evaluasi akan dilakukan terhadap semua dokumen yang terdapat pada peraturan.go.id.
+Evaluasi akan dilakukan terhadap semua dokumen yang terdapat pada [peraturan.go.id].
 Selanjutnya dokumen-dokumen ini akan disebut dokument tes.
 
 ## Evaluasi Manual
