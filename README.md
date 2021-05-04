@@ -142,33 +142,33 @@ data dari PDF, tetapi penulis menemukan kesulitan. Salahsatu kesulitan yang
 penulis temui adalah terdapatnya salah pemindaian pada berkas PDF. Sebagai
 contoh, terdapat teks yang tertulis `Pasal` tetapi mengandung data `Pasai`.
 Selain itu, penulis juga menemukan bahwa setiap dokumen mengandung keslahan
-pemindaian yang bervariasi. Untuk suatu kasus, teks `5` selalu terdeteksi
-sebagai `S` pada suatu dokumen, tetapi tidak pada dokumen lainnya. Tetapi pada
-kasus lainnya, teks `(1)` selalu terdeteksi sebagai `(l)` pada suatu dokumen,
-tetapi tidak pada dokumen lainnya.
+pemindaian yang bervariasi. Untuk suatu kasus, teks `(2)` selalu terdeteksi
+sebagai `(21` pada suatu dokumen, tetapi tidak pada dokumen lainnya. Pada kasus
+lainnya terdapat dokumen yang hampir tidak memiliki kesalahan pemindaian dan
+juga terdapat dokumen yang teksnya tidak dapat dibaca samasekali.
 
-Walaupun dokumen-dokumen tersebut dipelihara
-oleh satu lembaga pada satu situs web, yaitu oleh Dewan Perwakilan Rakyat pada
-situs web dpr.go.id/jdih, masing-masing dokumen dibuat kedalam berkas PDF dengan
-cara yang berbeda-beda. Penulis tidak dapat mengetahui secara pasti metode apa
-yang digunakan, tetapi dari metadata yang didapatkan dari berkas PDF, penulis
-dapat membuat beberapa dugaan. Pada berkas PDF, terdapat metadata dengan nama
-__Creator__, dimana pada dokumen-dokumen Peraturan Perudang-udangan yang
-didapatkan, tercantum nama-nama alat pencetak atau merk dari pencetak tersebut.
-Dari informasi tersebut penulis menduga bahwa terdapat sebagian Peraturan
-Perundang-undangan yang dibuat menjadi PDF dengan mencetaknya menjadi kertas
-terlebih dahulu, kemudian di pindai oleh pemindai. Data yang dipindai adalah
-berupa gambar, artinya teks yang terdapat pada berkas PDF adalah hasil OCR
-(_optical character recognition_) oleh pemindai tersebut. Berikut adalah
-salahsatu contoh dokumen beserta data yang tercantum sebagai __Creator__.
+Walaupun dokumen-dokumen tersebut dipelihara oleh satu lembaga pada satu situs
+web, yaitu oleh Dewan Perwakilan Rakyat pada situs web dpr.go.id/jdih,
+masing-masing dokumen dibuat kedalam berkas PDF dengan cara yang berbeda-beda.
+Penulis tidak dapat mengetahui secara pasti metode apa yang digunakan, tetapi
+dari metadata yang didapatkan dari berkas PDF, penulis dapat membuat beberapa
+dugaan. Pada berkas PDF, terdapat metadata dengan nama __Creator__, dimana pada
+dokumen-dokumen Peraturan Perudang-udangan yang didapatkan, tercantum nama-nama
+alat pencetak atau merk dari pencetak tersebut. Dari informasi tersebut penulis
+menduga bahwa terdapat sebagian Peraturan Perundang-undangan yang dibuat menjadi
+PDF dengan mencetaknya menjadi kertas terlebih dahulu, kemudian di pindai oleh
+pemindai. Data yang dipindai adalah berupa gambar, artinya teks yang terdapat
+pada berkas PDF adalah hasil OCR (_optical character recognition_) oleh pemindai
+tersebut. Berikut adalah salahsatu contoh dokumen beserta data yang tercantum
+sebagai __Creator__ dan contoh kesalahan pemindaiannya yang banyak terjadi.
 
-| Dokumen             | __Creator__            |
-| ------------------- | ---------------------- |
-| UU No.13 Tahun 2003 | ScanSoft PDF Create! 4 |
-| UU No.6 Tahun 2018  | Canon                  |
-| PP No.34 Tahun 2021 | Fuji Xerox B9100       |
+| Dokumen             | __Creator__            | Kesalahan pemindaian        |
+| ------------------- | ---------------------- | --------------------------- |
+| UU No.13 Tahun 2003 | ScanSoft PDF Create! 4 | - (tidak ada)               |
+| UU No.6 Tahun 2018  | Canon                  | `(2)` selalu dipindai `(21` |
+| PP No.34 Tahun 2021 | Fuji Xerox B9100       | data teks tidak terbaca     |
 
- Setiap dokumen Peraturan Perudang-undangan dibuat menjadi berkas PDF dengan metode yang berbeda-beda. Sehingga pa
+Setiap dokumen Peraturan Perudang-undangan dibuat menjadi berkas PDF dengan metode yang berbeda-beda. Sehingga pa
 
 ocrmypdf tesseract why above technology?
 
