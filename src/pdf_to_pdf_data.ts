@@ -24,6 +24,7 @@ async function toPdfJson(node: DocumentNode): Promise<void> {
   const { pages } = await pdfExtract.extract(pdfFile.path);
   const { pages: normalizedPages } = await pdfExtract.extract(normalizedPdfFile.path);
   writeFileSync(rawDetected.path, JSON.stringify(pages, undefined, 2));
+  // TODO: able to select merge map
   const mergedPages = chain(zip(pages, normalizedPages)).map(mergePage).compact().value();
   const cleanPages: Span[] = mergedPages
     .flatMap(toPageWithoutNoise)

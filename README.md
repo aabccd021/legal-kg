@@ -178,17 +178,114 @@ berkas PDF dengan kualitas pemindaian yang konsisten untuk semua dokumen.
 Penulis memilih menggunakan Tesseract OCR [4] sebagai metode OCR karena sifatnya
 _open source_ dan mendukung Bahasa Indonesia sebagai bahasa yang dipindai.
 
-## PDF to Data
+## Konversi Berkas PDF menjadi Data _Span_
 
-TODO: show images
+### Data _Span_
 
-pdfExtract position and text 
+Agar dapat diproses oleh program, berkas PDF perlu diolah menjadi data berupa
+daftar teks dan posisinya yang selanjutnya akan disebut _span_. Sebuah _span_ mengandung satu baris teks. Berikut adalah data yang dimiliki oleh sebuah _span_:
 
-merge 2 PDF why? => 0-9, BAB show image merge if has same pos
+- `str`: teks yand dikandung
+- `xL`: koordinat titik terkiri dari _span_
+- `xR`: koordinat titik terkanan dari _span_
+- `y`: koordinat titik teratas dari _span_
+- `pageNum`: nomor halaman
+- `id`: _identifier_ unik untuk setiap span
 
-remove noise refex and position header footer
+Berikut adalah contoh gambaran berkas PDF dan hasil konversinya menjadi daftar _span_.
 
-## Data to component data
+![Gambar berkas PDF yang akan dikonversi](pictures/pdf_example.png)
+
+akan dipindai menjadi
+
+```json
+[
+  {
+    "xL": 197.52,
+    "xR": 442.79990000000004,
+    "y": 234.48000000000002,
+    "str": "UNDANG-UNDANG REPUBLIK INDONESIA",
+    "pageNum": 1,
+    "id": 0
+  },
+  {
+    "xL": 252.72,
+    "xR": 387.6002,
+    "y": 255.12,
+    "str": "NOMOR 13 TAHUN 2003",
+    "pageNum": 1,
+    "id": 1
+  },
+  {
+    "xL": 291.12,
+    "xR": 349.68048,
+    "y": 275.76,
+    "str": "TENTANG",
+    "pageNum": 1,
+    "id": 2
+  },
+  {
+    "xL": 257.28,
+    "xR": 383.28015999999997,
+    "y": 296.4,
+    "str": "KETENAGAKERJAAN",
+    "pageNum": 1,
+    "id": 3
+  }
+]
+```
+
+### Penggabungan Data PDF Asli dan Hasil OCR Ulang
+
+Pada proses konversi berkas PDF menjadi daftar _span_, penulis menemukan satu
+masalah yaitu data hasil OCR tidak konsisten dalam memindai angka. Seperti yang
+dapat dilihat pada gambar dibawah, angka 10 berhasil dipindai tetapi angka 9
+tidak berhasil. Untuk kasus dibawah, angka hanya tidak terpindai pada hasil OCR
+ulang, tetapi terpindai dengan benar pada berkas PDF aslinya. Untuk
+menyelesaikan masalah tersebut, penulis melakukan konversi data pada berkas PDF
+aslinya, kemudian menggabungkannya dengan data hasil pemindaian untuk melengkapi
+bagian yang tidak terpindai.
+
+![Nomor yang tidak terpindai](pictures/pdf_unscanned_number.png))
+
+Penulis hanya menggabungkan data dua berkas PDF untuk kasus angka seperti yang
+disebutkan diatas. Hal tersebut dikarenakan pada umumnya kita dapat mentolerir
+kesalahan pemindaian pada teks, tetapi karena kegagalan pemindaian pada angka
+tersebut akan mempengaruhi struktur dokumen, penulis memutuskan solusi diatas.
+Sebagai contoh, jika nomor 8 berhasil dipindai dan nomor 9 tidak berhasil, maka
+struktur akhir yang dihasilkan akan mengandung semua isi nomor 9 didalam nomor
+8, yang mana seharusnya adalah nomor yang terpisah. Berikut berturut-turut adalah contoh data yang dihasilkan jika nomor 9 tidak berhasil terpindai dan jika berhasil terpindai.
+
+Jika nomor 9 tidak berhasil terpindai:
+
+```json
+[
+  {
+    "type": "nomor",
+    "key": "8",
+    "text": "Informasi ketenagakerjaan adalah gabungan, rangkaian, dan analisis data yang berbentuk angka yang telah diolah, naskah dan dokumen yang mempunyai arti, nilai dan makna tertentu mengenai ketenagakerjaan. 9. Pelatihan kerja adalah keseluruhan kegiatan untuk memberi, memperoleh, meningkatkan, serta disiplin, dan sikap, mengembangkan etos kerja pada kompetensi kerja, produktivitas, tingkat keterampilan dan keahlian tertentu sesuai dengan jenjang dan kualifikasi jabatan atau pekerjaan."
+  }
+]
+```
+
+Jika nomor 9 berhasil terpindai:
+
+```json
+[
+  {
+    "type": "nomor",
+    "key": "8",
+    "text": "Informasi ketenagakerjaan adalah gabungan, rangkaian, dan analisis data yang berbentuk angka yang telah diolah, naskah dan dokumen yang mempunyai arti, nilai dan makna tertentu mengenai ketenagakerjaan."
+  }, 
+  {
+    "type": "nomor",
+    "key": "9",
+    "text": "Pelatihan kerja adalah keseluruhan kegiatan untuk memberi, memperoleh, meningkatkan, serta disiplin, dan sikap, mengembangkan etos kerja pada kompetensi kerja, produktivitas, tingkat keterampilan dan keahlian tertentu sesuai dengan jenjang dan kualifikasi jabatan atau pekerjaan."
+  }
+]
+```
+
+## Konversi Data PDF menjadi Data Struktur dan Komponen Peraturan
 
 detect dari bab ke pasal, dari pasal ke bawah gimana
 
