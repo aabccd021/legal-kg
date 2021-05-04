@@ -178,7 +178,7 @@ berkas PDF dengan kualitas pemindaian yang konsisten untuk semua dokumen.
 Penulis memilih menggunakan Tesseract OCR [4] sebagai metode OCR karena sifatnya
 _open source_ dan mendukung Bahasa Indonesia sebagai bahasa yang dipindai.
 
-## Konversi Berkas PDF menjadi Data _Span_
+## Ekstraksi Berkas PDF menjadi Data _Span_
 
 ### Data _Span_
 
@@ -192,9 +192,9 @@ daftar teks dan posisinya yang selanjutnya akan disebut _span_. Sebuah _span_ me
 - `pageNum`: nomor halaman
 - `id`: _identifier_ unik untuk setiap span
 
-Berikut adalah contoh gambaran berkas PDF dan hasil konversinya menjadi daftar _span_.
+Berikut adalah contoh gambaran berkas PDF dan hasil ekstraksinya menjadi daftar _span_.
 
-![Gambar berkas PDF yang akan dikonversi](pictures/pdf_example.png)
+![Gambar berkas PDF yang akan diekstraksi](pictures/pdf_example.png)
 
 akan dipindai menjadi
 
@@ -235,14 +235,31 @@ akan dipindai menjadi
 ]
 ```
 
-### Penggabungan Data PDF Asli dan Hasil OCR Ulang
+### Membersihkan _Noise_ dari Halaman
 
-Pada proses konversi berkas PDF menjadi daftar _span_, penulis menemukan satu
+Tidak jarang dokumen Peraturan Perudang-undangan mengandung data _noise_ yang
+tidak ingin kita ekstraksi seperti _header_ dan _footer_. Pada penelitian ini,
+penulis menggunakan dokumen dari sumber yang sama sehingga memiliki format yang
+sama, dan juga posisi _header_ dan _footer_ yang hampir sama pada setiap
+dokumen.
+
+![Contoh Header](pictures/pdf_header.png)
+
+Gambar diatas adalah contoh _header_ yang terdapat pada setiap halaman. Dapat
+dilihat bahwa _header_ selalu terdiri dari teks "PRESIDEN REPUBLIK INDONESIA"
+dan diikuti oleh nomor halaman, dan selalu terletak di posisi yang hampir sama.
+Oleh karena itu, penulis memeriksa teks menggunakan _regex_ dan posisi dari
+setiap _span_, kemudian menghapus _span_ tersebut jika terdeteksi sebagai
+header.
+
+### Penggabungan Data Berkas PDF Asli dan Hasil OCR Ulang
+
+Pada proses ekstraksi berkas PDF menjadi daftar _span_, penulis menemukan satu
 masalah yaitu data hasil OCR tidak konsisten dalam memindai angka. Seperti yang
 dapat dilihat pada gambar dibawah, angka 10 berhasil dipindai tetapi angka 9
 tidak berhasil. Untuk kasus dibawah, angka hanya tidak terpindai pada hasil OCR
 ulang, tetapi terpindai dengan benar pada berkas PDF aslinya. Untuk
-menyelesaikan masalah tersebut, penulis melakukan konversi data pada berkas PDF
+menyelesaikan masalah tersebut, penulis melakukan ekstraksi data pada berkas PDF
 aslinya, kemudian menggabungkannya dengan data hasil pemindaian untuk melengkapi
 bagian yang tidak terpindai.
 
@@ -254,35 +271,41 @@ kesalahan pemindaian pada teks, tetapi karena kegagalan pemindaian pada angka
 tersebut akan mempengaruhi struktur dokumen, penulis memutuskan solusi diatas.
 Sebagai contoh, jika nomor 8 berhasil dipindai dan nomor 9 tidak berhasil, maka
 struktur akhir yang dihasilkan akan mengandung semua isi nomor 9 didalam nomor
-8, yang mana seharusnya adalah nomor yang terpisah. Berikut berturut-turut adalah contoh data yang dihasilkan jika nomor 9 tidak berhasil terpindai dan jika berhasil terpindai.
+8, yang mana seharusnya adalah nomor yang terpisah. Berikut berturut-turut
+adalah contoh data yang dihasilkan jika nomor 9 tidak berhasil terpindai dan
+jika berhasil terpindai.
 
 Jika nomor 9 tidak berhasil terpindai:
 
-```json
-[
-  {
-    "type": "nomor",
-    "key": "8",
-    "text": "Informasi ketenagakerjaan adalah gabungan, rangkaian, dan analisis data yang berbentuk angka yang telah diolah, naskah dan dokumen yang mempunyai arti, nilai dan makna tertentu mengenai ketenagakerjaan. 9. Pelatihan kerja adalah keseluruhan kegiatan untuk memberi, memperoleh, meningkatkan, serta disiplin, dan sikap, mengembangkan etos kerja pada kompetensi kerja, produktivitas, tingkat keterampilan dan keahlian tertentu sesuai dengan jenjang dan kualifikasi jabatan atau pekerjaan."
-  }
-]
+```yaml
+- type: point
+  key: 8
+  text: >-
+    Informasi ketenagakerjaan adalah gabungan, rangkaian, dan analisis data yang
+    berbentuk angka yang telah diolah, naskah dan dokumen yang mempunyai arti,
+    nilai dan makna tertentu mengenai ketenagakerjaan.
+    9. Pelatihan kerja adalah keseluruhan kegiatan untuk memberi, memperoleh,
+    meningkatkan, serta mengembangkan kompetensi kerja, produktivitas, disiplin,
+    sikap, dan etos kerja pada tingkat keterampilan dan keahlian tertentu sesuai
+    dengan jenjang dan kualifikasi jabatan atau pekerjaan.
 ```
 
 Jika nomor 9 berhasil terpindai:
 
-```json
-[
-  {
-    "type": "nomor",
-    "key": "8",
-    "text": "Informasi ketenagakerjaan adalah gabungan, rangkaian, dan analisis data yang berbentuk angka yang telah diolah, naskah dan dokumen yang mempunyai arti, nilai dan makna tertentu mengenai ketenagakerjaan."
-  }, 
-  {
-    "type": "nomor",
-    "key": "9",
-    "text": "Pelatihan kerja adalah keseluruhan kegiatan untuk memberi, memperoleh, meningkatkan, serta disiplin, dan sikap, mengembangkan etos kerja pada kompetensi kerja, produktivitas, tingkat keterampilan dan keahlian tertentu sesuai dengan jenjang dan kualifikasi jabatan atau pekerjaan."
-  }
-]
+```yaml
+- type: point
+  key: 8
+  text: >-
+    Informasi ketenagakerjaan adalah gabungan, rangkaian, dan analisis data yang
+    berbentuk angka yang telah diolah, naskah dan dokumen yang mempunyai arti,
+    nilai dan makna tertentu mengenai ketenagakerjaan.
+- type: point
+  key: 9
+  text: >-
+    Pelatihan kerja adalah keseluruhan kegiatan untuk memberi, memperoleh,
+    meningkatkan, serta mengembangkan kompetensi kerja, produktivitas, disiplin,
+    sikap, dan etos kerja pada tingkat keterampilan dan keahlian tertentu sesuai
+    dengan jenjang dan kualifikasi jabatan atau pekerjaan.
 ```
 
 ## Konversi Data PDF menjadi Data Struktur dan Komponen Peraturan
