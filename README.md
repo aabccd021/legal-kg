@@ -5,7 +5,7 @@
 Peraturan   Perundang-undangan   adalah   peraturan tertulis  yang  memuat norma
 hukum  yang  mengikat secara  umum  dan  dibentuk  atau  ditetapkan  oleh
 lembaga negara atau pejabat yang berwenang melalui prosedur yang ditetapkan
-dalam Peraturan Perundang-undangan, sesuai yang dijelaskan dalam UU No.12 Tahun
+dalam Peraturan Perundang-undangan, sesuai yang dijelaskan dalam UU Nomor 12 Tahun
 2011 Pasal 1 Ayat 2 [1]. Peraturan perundang-undangan dapat digunakan untuk
 menjawab pertanyaan yang berkaitan dengan hukum, seperti:
 
@@ -68,15 +68,17 @@ akan dinotasikan dalam `teks monospace berwarna merah`.
 
 ![ilustrasi triple](pictures/ilustrasi_triple.png)
 
-# Turtle Syntax
+## Turtle Syntax
 
 TODO: konsep dan sintaks perlu dijelaskan ya di Bab 2
 
-## Jenis Peraturan Perundang-undangan
+## Peraturan Perundang-undangan
+
+### Jenis Peraturan Perundang-undangan
 
 Terdapat beberapa jenis peraturan perundang-undangan. Setiap dokumen peraturan
 perundang-undangan adalah resource, dan memiliki susunan URI yang berbeda.
-Menurut UU No.12 Tahun 2011 Pasal 7 Ayat 1 [1], terdapat 7 jenis Peraturan
+Menurut UU Nomor 12 Tahun 2011 Pasal 7 Ayat 1 [1], terdapat 7 jenis Peraturan
 Perundang-undangan yaitu:
 
 - Undang-Undang Dasar Negara Republik Indonesia Tahun 1945;
@@ -87,11 +89,9 @@ Perundang-undangan yaitu:
 - Peraturan Daerah Provinsi; dan
 - Peraturan Daerah Kabupaten/Kota.
 
-### Undang-Undang
+### Amandemen Peraturan Perundang-undangan
 
-### Peraturan Daerah
-
-### Pemodelan European Legislation Identifier (ELI)
+## Pemodelan European Legislation Identifier (ELI)
 
 ELI merupakan sistem untuk membuat peraturan perundang-undangan tersedia secara
 daring dalam format terstandardisasi, sehingga dapat diakses dan digunakan oleh
@@ -164,11 +164,11 @@ hasil OCR (_optical character recognition_) oleh pemindai tersebut. Berikut
 adalah salahsatu contoh dokumen beserta data yang tercantum sebagai __Creator__
 dan contoh kesalahan pemindaiannya yang banyak terjadi.
 
-| Dokumen             | __Creator__            | Kesalahan pemindaian        |
-| ------------------- | ---------------------- | --------------------------- |
-| UU No.13 Tahun 2003 | ScanSoft PDF Create! 4 | - (tidak ada)               |
-| UU No.6 Tahun 2018  | Canon                  | `(2)` selalu dipindai `(21` |
-| PP No.34 Tahun 2021 | Fuji Xerox B9100       | data teks tidak terbaca     |
+| Dokumen                | __Creator__            | Kesalahan pemindaian        |
+| ---------------------- | ---------------------- | --------------------------- |
+| UU Nomor 13 Tahun 2003 | ScanSoft PDF Create! 4 | - (tidak ada)               |
+| UU Nomor 6 Tahun 2018  | Canon                  | `(2)` selalu dipindai `(21` |
+| PP Nomor 34 Tahun 2021 | Fuji Xerox B9100       | data teks tidak terbaca     |
 
 Pemindaian berkas PDF dengan metode yang berbeda-beda memberikan kualitas hasil
 pemindaian yang berbeda-beda dan kesalahan pemindaian yang tidak konsisten.
@@ -352,9 +352,26 @@ dipatuhi, sehingga sebagai contoh apabila sebuah dokumen terdeteksi mengandung
 terdeteksi mengandung `pasal 196` maka akan dijamin mengandung semua pasal dari
 `pasal 1` sampai `pasal 195`.
 
-### Amended Data
+### Komponen Amandemen
 
-standard deviation
+Mengekstraksi _span_ pada bagian amandemen merupakan salahsatu tantangan pada
+penelitian ini. Dibawah adalah gambar amandemen pada Pasal 17 UU Nomor 11 Tahun
+2020 yang dilakukan terhadap Pasal 1 UU Nomor 26 Tahun 2007. Dapat dilihat bahwa
+kata `Pasal 17` dan `Pasal 1` yang digunakan sebagai pembatas antara komponen
+memiliki pola teks dan posisi yang hampir sama. Hal ini membuat pembedaan antara
+"Pasal biasa" dan "Pasal peng-amandemen" menjadi sulit dilakukan.
+
+![Contoh Amendemen pada UU Nomor 11 Tahun 2020](pictures/pdf_amendment.png)
+
+Untuk menyelesaikan masalah ini, penulis menggunakan koordinat `xL` _span_ tepat
+setelah _span_ yang bertuliskan "Pasal X". Pada contoh deteksi kompoonen
+amandemen di bawah, `xL` dari teks setelah pasal peng-amandemen (pasal biasa)
+ditandai dengan lingkaran merah, `xL` dari pasal yang diamandemen ditandai
+dengan lingkaran biru, dan garis hijau merepresentasikan batas pemeda `xL`
+antara pasal biasa dan pasal yang diamandemen. Pembedaan pasal biasa dan pasal
+amandemen hanya dilakukan jika dokumen memiliki komponen berupa amandemen.
+
+![Deteksi Komponen Amandemen](pictures/amendment_detection.svg)
 
 ## Citation detection
 
