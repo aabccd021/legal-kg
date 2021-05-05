@@ -395,7 +395,27 @@ adalah daftar pola sitasi yang berhasil dideteksi pada penelitian ini.
 | huruf {x} dan {y}                                        | huruf a dan b                                            | /uu/2003/13/pasal/1/point/5/point/a   |
 |                                                          |                                                          | /uu/2003/13/pasal/1/point/5/point/b   |
 
-Sitasi disimpan dalam bentuk
+Data sitasi mengandung data sebagai berikut:
+
+- `start`: _index_ karakter awal sitasi
+- `end`: _index_ karakter akhir sitasi
+- `uri`: URI dokumen dan
+
+Berikut adalah contoh teks pada Undang-Undang Nomor 13 Tahun 2003 Pasal 158 Ayat 4 beserta sitasi yang terdeteksi.
+
+```yaml
+textString: >-
+  Pekerja/buruh yang diputus hubungan kerjanya berdasarkan alasan sebagaimana
+  dimaksud dalam ayat (1), dapat memperoleh uang penggantian hak sebagaimana
+  dimaksud dalam Pasal 156 ayat (4).
+references:
+  - start: 91
+    end: 99
+    uri: /uu/2003/13/pasal/158/ayat/1
+  - start: 166
+    end: 184
+    uri: /uu/2003/13/pasal/156/ayat/4
+```
 
 ## Data To MD
 
