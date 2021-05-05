@@ -312,6 +312,8 @@ Jika nomor 9 berhasil terpindai:
 
 detect dari bab ke pasal, dari pasal ke bawah gimana
 
+![a](pictures/pdf_to_component.svg)
+
 ### Normal Component
 
 node assignment exception seperti ketentuan umum
