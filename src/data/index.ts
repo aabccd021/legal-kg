@@ -30,7 +30,7 @@ export function getDataTypeExtension(dataType: DataType): string {
 function getDataTypeExtensionStr(dataType: DataType): string {
   if (dataType === 'pdf') return 'pdf';
   if (dataType === 'normalized-pdf') return 'pdf';
-  if (dataType === 'pdf-data') return 'json';
+  if (dataType === 'pdf-data') return 'yaml';
   if (dataType === 'pdf-detect') return 'json';
   if (dataType === 'normalized-pdf-detect') return 'json';
   if (dataType === 'text') return 'txt';

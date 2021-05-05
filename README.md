@@ -198,41 +198,31 @@ Berikut adalah contoh gambaran berkas PDF dan hasil ekstraksinya menjadi daftar 
 
 akan dipindai menjadi
 
-```json
-[
-  {
-    "xL": 197.52,
-    "xR": 442.79990000000004,
-    "y": 234.48000000000002,
-    "str": "UNDANG-UNDANG REPUBLIK INDONESIA",
-    "pageNum": 1,
-    "id": 0
-  },
-  {
-    "xL": 252.72,
-    "xR": 387.6002,
-    "y": 255.12,
-    "str": "NOMOR 13 TAHUN 2003",
-    "pageNum": 1,
-    "id": 1
-  },
-  {
-    "xL": 291.12,
-    "xR": 349.68048,
-    "y": 275.76,
-    "str": "TENTANG",
-    "pageNum": 1,
-    "id": 2
-  },
-  {
-    "xL": 257.28,
-    "xR": 383.28015999999997,
-    "y": 296.4,
-    "str": "KETENAGAKERJAAN",
-    "pageNum": 1,
-    "id": 3
-  }
-]
+```yaml
+- xL: 197.52
+  xR: 442.79990000000004
+  'y': 234.48000000000002
+  str: UNDANG-UNDANG REPUBLIK INDONESIA
+  pageNum: 1
+  id: 0
+- xL: 252.72
+  xR: 387.6002
+  'y': 255.12
+  str: NOMOR 13 TAHUN 2003
+  pageNum: 1
+  id: 1
+- xL: 291.12
+  xR: 349.68048
+  'y': 275.76
+  str: TENTANG
+  pageNum: 1
+  id: 2
+- xL: 257.28
+  xR: 383.28015999999997
+  'y': 296.4
+  str: KETENAGAKERJAAN
+  pageNum: 1
+  id: 3
 ```
 
 ### Membersihkan _Noise_ dari Halaman

@@ -21,7 +21,7 @@ function writeToJson(documentNode: DocumentNode): void {
   console.time(`TIME ${JSON.stringify(documentNode)} init`);
   const dataFile = nodeToFile('pdf-data', documentNode);
   const jsonFile = nodeToFile('yaml', documentNode);
-  const pdfSpans: Span[] = JSON.parse(readFileSync(dataFile.path).toString());
+  const pdfSpans = yaml.load(readFileSync(dataFile.path, 'utf8')) as Span[];
   const documentSpans = documentSpansOf(pdfSpans);
   console.log(mapValues(documentSpans, (v) => v.length));
   const hasAmendPasal = spansHasAmendPasal(documentSpans.babs);

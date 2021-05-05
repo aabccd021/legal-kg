@@ -5,6 +5,7 @@ import { PDFExtract, PDFExtractPage, PDFExtractText } from 'pdf.js-extract';
 import { getDocumentData, nodeToFile } from './data';
 import { chain, curry, isUndefined, isEmpty, filter, zip } from 'lodash';
 import { bothFilter, neverNum, Span } from './util';
+import * as yaml from 'js-yaml';
 
 const pdfExtract = new PDFExtract();
 
@@ -20,16 +21,16 @@ async function toPdfJson(node: DocumentNode): Promise<void> {
   const pdfFile = nodeToFile('pdf', node);
   const normalizedPdfFile = nodeToFile('normalized-pdf', node);
   const jsonFile = nodeToFile('pdf-data', node);
-  const rawDetected = nodeToFile('pdf-detect', node);
+  // const rawDetected = nodeToFile('pdf-detect', node);
   const { pages } = await pdfExtract.extract(pdfFile.path);
   const { pages: normalizedPages } = await pdfExtract.extract(normalizedPdfFile.path);
-  writeFileSync(rawDetected.path, JSON.stringify(pages, undefined, 2));
+  // writeFileSync(rawDetected.path, JSON.stringify(pages, undefined, 2));
   // TODO: able to select merge map
   const mergedPages = chain(zip(pages, normalizedPages)).map(mergePage).compact().value();
   const cleanPages: Span[] = mergedPages
     .flatMap(toPageWithoutNoise)
     .map((span, index) => ({ ...span, id: index }));
-  writeFileSync(jsonFile.path, JSON.stringify(cleanPages, undefined, 2));
+  writeFileSync(jsonFile.path, yaml.dump(cleanPages, { lineWidth: 80 }));
 }
 
 function mergePage(
