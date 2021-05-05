@@ -402,7 +402,7 @@ Data sitasi mengandung data sebagai berikut:
 - `uri`: URI dokumen dan
 
 Berikut adalah contoh teks pada Undang-Undang Nomor 13 Tahun 2003 Pasal 158 Ayat
-4 beserta sitasi yang terdeteksi.
+(4) beserta sitasi yang terdeteksi.
 
 ```yaml
 textString: >-
@@ -421,7 +421,18 @@ references:
 Untuk melakukan deteksi, teks akan melalui fungsi yang masing-masing memiliki
 pola untuk dideteksi. Oleh karena itu, untuk _substring_ yang beririsan dapat
 memiliki lebih dari dua sitasi yang terdeteksi. Pada kasus tersebut akan diambil
-sitasi dengan _substring_ terpanjang.
+sitasi dengan _substring_ terpanjang. Sebagai contoh, teks "Pasal 156 Ayat (4)"
+pada UU No.13 Tahun 2003 Pasal 158 Ayat (4) akan terdeteksi sebagai 3 URI sitasi
+sebagai berikut.
+
+| Teks               | URI                            |
+| ------------------ | ------------------------------ |
+| Pasal 156 Ayat (4) | `/uu/2003/13/pasal/156/ayat/4` |
+| Pasal 156          | `/uu/2003/13/pasal/156`        |
+| Ayat (4)           | `/uu/2003/13/pasal/158/ayat/4` |
+
+Pada kasus ini, yang akan diambil adalah teks "Pasal 156 ayat (4)" karena
+merupakan teks terpanjang.
 
 ## Data To MD
 
