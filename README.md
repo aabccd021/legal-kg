@@ -107,7 +107,7 @@ ELI memberikan spesifikasi untuk hal-hal berikut:
 
 TODO: suatu KG construction dimulai dengan competency questions (requirements).
 Saran sy: coba baca serta rangkum (di Bab 2) dan terapkan ini:
-http://www.ksl.stanford.edu/people/dlm/papers/ontology-tutorial-noy-mcguinness-abstract.html
+www.ksl.stanford.edu/people/dlm/papers/ontology-tutorial-noy-mcguinness-abstract.html
 ???
 
 ## Komponen Dokumen Peraturan Perundang-undangan
@@ -373,7 +373,29 @@ amandemen hanya dilakukan jika dokumen memiliki komponen berupa amandemen.
 
 ![Deteksi Komponen Amandemen](pictures/amendment_detection.svg)
 
-## Citation detection
+## Deteksi Sitasi
+
+Setelah semua _span_ dikelompokan menjadi suatu komponen, dilakukan deteksi
+sitasi pada teks pada setiap komponen untuk mengetahui apakah komponen tersebut
+menyebut komponen atau dokumen peraturan perundang-undangan lainnya. Berikut
+adalah daftar pola sitasi yang berhasil dideteksi pada penelitian ini.
+
+| Pola                                                     | Contoh teks                                              | URI Terdeteksi                        |
+| -------------------------------------------------------- | -------------------------------------------------------- | ------------------------------------- |
+| Undang Undang Dasar Negara Republik Indonesia Tahun 1945 | Undang Undang Dasar Negara Republik Indonesia Tahun 1945 | /uud/                                 |
+| Undang-Undang Nomor {x} Tahun {y}                        | Undang-Undang Nomor 26 Tahun 2007                        | /uu/2007/26                           |
+| ayat ({x})                                               | ayat (1)                                                 | /uu/2003/13/pasal/169/ayat/1          |
+| Pasal {x}                                                | Pasal 156                                                | /uu/2003/13/pasal/156                 |
+| Pasal {x} ayat ({y})                                     | Pasal 156 ayat (2)                                       | /uu/2003/13/pasal/156/ayat/2          |
+| huruf {x}, {y}, ... dan {z}                              | huruf a, b, c, d, dan e                                  | /uu/2003/13/documentMenimbang/point/a |
+|                                                          |                                                          | /uu/2003/13/documentMenimbang/point/b |
+|                                                          |                                                          | /uu/2003/13/documentMenimbang/point/c |
+|                                                          |                                                          | /uu/2003/13/documentMenimbang/point/d |
+|                                                          |                                                          | /uu/2003/13/documentMenimbang/point/e |
+| huruf {x} dan {y}                                        | huruf a dan b                                            | /uu/2003/13/pasal/1/point/5/point/a   |
+|                                                          |                                                          | /uu/2003/13/pasal/1/point/5/point/b   |
+
+Sitasi disimpan dalam bentuk
 
 ## Data To MD
 
@@ -419,7 +441,7 @@ menghitung sebera pa banyak metadata yang berhasil diekstrak. Metadata hasil
 ekstraksi yang akan dihitung tidak perlu sesuai dengan yang terdapat di dalam
 dokumen.
 
-[1]: http://luk.staff.ugm.ac.id/atur/UU12-2011Lengkap.pdf
+[1]: luk.staff.ugm.ac.id/atur/UU12-2011Lengkap.pdf
 [2]: https://eur-lex.europa.eu/eli-register/about.html
-[3]: http://www.ksl.stanford.edu/people/dlm/papers/ontology101/ontology101-noy-mcguinness.html
+[3]: www.ksl.stanford.edu/people/dlm/papers/ontology101/ontology101-noy-mcguinness.html
 [4]: https://github.com/tesseract-ocr/tesseract
