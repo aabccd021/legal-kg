@@ -10,6 +10,8 @@
     "convert": "ts-node src/command/convert/pdf_data_to_json/mod.ts > temp_pdf_data_to_json && ts-node src/command/convert/json_to_md.ts > temp_json_to_md  && ts-node src/command/convert/json-to-ttl/mod.ts > temp_json_to_ttl",
     "query": "yarn cli query > temp_query",
     "generate-ttl": "ts-node src/command/convert/json-to-ttl/mod.ts > temp_json_to_ttl",
+    "ocr": "ocrmypdf -l ind --force-ocr --jobs 4 --tesseract-config tesseract-config.cfg",
+    "pdf": "ts-node src/pdf_to_span",
     "test:types": "tsc --noEmit"
   },
   "engines": {
