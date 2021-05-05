@@ -117,7 +117,8 @@ Dokumen terdiri dari komponen dokumen. Komponen dokumen diantaranya adalah
 dokumen merupakan resource, dan memiliki URI. URI sebuah komponen didahului oleh
 URI dokumennya. Berikut adalah relasi antara komponen dokumen yang disediakan.
 
-TODO: URI Scheme
+TODO: Relationship antara component
+TODO: URI Schema, contoh input text & output URI
 
 ## Amendemen
 
@@ -298,15 +299,58 @@ Jika nomor 9 berhasil terpindai:
     dengan jenjang dan kualifikasi jabatan atau pekerjaan.
 ```
 
-## Konversi Data PDF menjadi Data Struktur dan Komponen Peraturan
+## Pengelompokan _span_ menjadi Komponen
 
-detect dari bab ke pasal, dari pasal ke bawah gimana
+Teks yang membentuk suatu komponen terdiri dari satu atau lebih _span_, sehingga
+daftar _span_ yang didapatkan dari hasil ekstraksi berkas PDF harus
+dikelompokkan sehingga setiap kelompok merepresentasikan _span_ yang terdapat
+pada suatu komponen. Pengelompokan dilakukan dengan mendeteksi _span_ awal dan
+_span_ akhir dari sebuah komponen. Karena daftar _span_ hasil ekstraksi bersifat
+1 dimensi, hal ini bisa dilakukan dengan melakukan iterasi pada setiap _span_,
+kemudian menandai awal atau akhir dari sebuah kelompok apabila memenuhi suatu
+pola. Setelah ditandai, _span_ akan dikelompokkan sebagai daftar _span_ dari
+suatu komponen.
 
-![a](pictures/pdf_to_component.svg)
+Pengelompokan tidak langsund dilakukan dari daftar _list_ menjadi daftar
+komponen, melainkan dibuat pengelompokan _section_ untuk pembagian dokumen
+secara garis besar, kemudian baru dikelompokkan sebagai komponen dari
+masing-masing _section_ tersebut. Pada gambar dibawah _section_ ditandai dengan
+warna biru dan komponen ditandai dengan warna merah. Dapat dilihat bahwa daftar
+_span_ data awal dikelompokkan menjadi beberapa _section_ yaitu `judul`,
+`metadata`, `babset`, dan `disahkan`. Kemudian _span_ pada section `babset`
+dikelompokkan menjadi komponen bab yaitu `Bab 1`, `Bab 2`, dan `Bab 3`. Kemudian
+_span_ pada setiap komponen bab dikelompokkan menjadi komponen pasal.
+Pengelompokan bertingkat ini dilakukan agar fungsi untuk mendeteksi batas antara
+komponen tidak menjadi rumit.
 
-### Normal Component
+![Ilustrasi Ekstraksi Daftar Span menjadi Data Struktur Komponen](pictures/pdf_to_component.svg)
 
-node assignment exception seperti ketentuan umum
+Deteksi batas antara komponen atau _section_ dilakukan dengan melihat data pada
+_span_ seperti `str`, `xL`, `xR`, dan `y`. Pada gambar diatas, pola yang
+terdeteksi sebagai batas ditandai dengan huruf merah. Sebagai contoh, pada
+ekstraki paling kiri, dari daftar _span_ asli menjadi _section_, dilakukan
+iterasi _span_ dari atas dan akan dimasukkan ke dalam _section_ `judul` sampai
+menemukan _section_ yang diawali dengan kata __Menimbang__. Kemudian setiap
+_span_ setelah span __Menimbang__ tersebut akan dikelompokkan menjadi _section_
+`metadata` sampai menemukan section yang diawali kata __BAB I__.
+
+### Pengelompokan _span_ pada Komponen Terurut
+
+Beberapa komponen seperti `bab`, `bagian`, `paragraf`, `pasal`, `angka`, dan
+`huruf` memiliki sifat terurut. Dalam hal ini, yang termasuk terurut adalah:
+
+- Komponen yang mengawali suatu komponen terurut akan selalu sama.
+- Hanya terdapat satu komponen yang dapat mengikuti komponen terurut.
+
+Contoh dari sifat pertama adalah `bab`, `bagian`, `paragraf`, `pasal`, `angka`
+pasti dimulai dari komponen nomor 1 seperti `bab 1` dan `pasal 1`, dan `huruf`
+pasti dimulai dari komponen `huruf a`. Contoh dari sifat kedua adalah hanya
+`pasal 2` yang dapat mengikuti `pasal 1` dan hanya `huruf b` yang dapat
+mengikuti `huruf a`. Dalam implementasi, penulis memastikan sifat-sifat ini
+dipatuhi, sehingga sebagai contoh apabila sebuah dokumen terdeteksi mengandung
+`bab 12` maka akan dijamin mengandung semua `bab 1` sampai `bab 11` dan apabila
+terdeteksi mengandung `pasal 196` maka akan dijamin mengandung semua pasal dari
+`pasal 1` sampai `pasal 195`.
 
 ### Amended Data
 
