@@ -56,7 +56,7 @@ function writeToData(node: DocumentNode): void {
         triples,
       };
     } catch (e) {
-      console.warn(e);
+      console.log(e);
       return {
         document: undefined,
         triples: [],
@@ -163,6 +163,8 @@ function getNewSection(
     if (span.str.replaceAll(' ', '') === 'BABI')
       return { newSection: 'babs', newSpan: [span], rootOrganizer: 'bab' };
     if (span.str.replaceAll(' ', '') === 'Pasal1')
+      return { newSection: 'babs', newSpan: [span], rootOrganizer: 'pasal' };
+    if (span.str.replaceAll(' ', '') === 'PasalI')
       return { newSection: 'babs', newSpan: [span], rootOrganizer: 'pasal' };
     if (span.str === 'KETENTUAN UMUM') {
       const fakeSpan = { ...span, str: 'BAB I' };
