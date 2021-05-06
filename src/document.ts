@@ -46,7 +46,7 @@ export function nodeToName(node: DocumentNode): string {
   if (node.docType === 'uud') return 'UNDANG-UNDANG DASAR NEGARA REPUBLIK INDONESIA TAHUN 1945';
   if (node.docType === 'noTahun') {
     const tn = `TAHUN ${node.tahun} NOMOR ${node.nomor}`;
-    if (node.docCategory === 'uu') return `UNDANG-UNDANG ${tn}`;
+    if (node.docCategory === 'uu') return `UNDANG-UNDANG REPUBLIK INDONESIA ${tn}`;
     if (node.docCategory === 'perwali_malang') return `PERATURAN WALIKOTA MALANG ${tn}`;
     if (node.docCategory === 'perda_provinsi_dki_jakarta')
       return `PERATURAN DAERAH PROVINSI DAERAH KHUSUS IBUKOTA JAKARTA ${tn}`;
