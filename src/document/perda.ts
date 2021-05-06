@@ -7,7 +7,7 @@ import { DataType, getDataTypeExtension } from '../util';
 
 export type Daerah = typeof DAERAHS[number];
 
-export const DAERAHS = ['provinsi_dki_jakarta'] as const;
+export const DAERAHS = ['provinsi_dki_jakarta', 'kota_malang'] as const;
 
 function isDaerahString(str: string | undefined): str is Daerah {
   if (isUndefined(str)) return false;
@@ -56,6 +56,7 @@ function getName(node: PerdaNode): string {
 }
 function getPerdaDaerahName(daerah: Daerah): string {
   if (daerah === 'provinsi_dki_jakarta') return 'GUBERNUR DAERAH KHUSUS IBU KOTA JAKARTA';
+  if (daerah === 'kota_malang') return 'WALIKOTA MALANG';
   assertNever(daerah);
 }
 

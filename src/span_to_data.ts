@@ -128,7 +128,7 @@ function getNewSection(prevSection: DocumentSection, span: Span): [DocumentSecti
   if (
     prevSection === 'babs' &&
     (span.str.startsWith('Disahkan di') || span.str.startsWith('Ditetapkan di')) &&
-    span.xL > 300
+    span.xL > 250
   ) {
     return ['disahkan', [span]];
   }

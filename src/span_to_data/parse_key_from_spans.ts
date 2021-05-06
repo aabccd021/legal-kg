@@ -65,6 +65,9 @@ export function bagianKeyOfSpan(span: Span): number | undefined {
   if (keyStr === 'Kesembilan') return 9;
   if (keyStr === 'Kesepuluh') return 10;
   if (keyStr === 'Kesebelas') return 11;
+  if (keyStr === 'Keduabelas') return 12;
+  if (keyStr === 'Ketigabelas') return 13;
+  if (keyStr === 'Keempatbelas') return 14;
   throw Error(`Bagian key ${keyStr} is unknown on line: ${str}`);
 }
 
