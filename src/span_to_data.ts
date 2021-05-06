@@ -16,14 +16,12 @@ function spanToData(): void {
     ...getDocumentData('span-mixed'),
     ...getDocumentData('span-normalized'),
     ...getDocumentData('span-raw'),
-  ].forEach(writeTOData);
+  ].forEach(writeToData);
   console.log('\ndone');
 }
 
-function writeTOData(node: DocumentNode): void {
+function writeToData(node: DocumentNode): void {
   console.log('\nstart', node);
-
-  console.time(`TIME ${JSON.stringify(node)} init`);
 
   const dataFile = nodeToFile('data', node);
 
@@ -69,11 +67,11 @@ function writeTOData(node: DocumentNode): void {
     }
   });
 
+  console.log(docs.map((d) => d.triples.length));
+
   const choosen = maxBy(docs, ({ triples }) => triples.length);
 
   if (!choosen) throw Error();
-
-  console.timeEnd(`TIME ${JSON.stringify(node)} init`);
 
   writeFileSync(dataFile.path, yaml.dump(choosen.document, { lineWidth: 100 }));
   writeFileSync(ttlFile.path, triplesToTtl(choosen.triples));
@@ -81,7 +79,8 @@ function writeTOData(node: DocumentNode): void {
 
 function spansToDisahkan(spans: Span[]): Disahkan {
   const [, , location] = spans[0]?.str?.split(' ') ?? [];
-  const [, , dateStr, monthStr, yearStr] = spans[1]?.str?.split(' ') ?? [];
+  const [dateStr, monthStr, yearStr] =
+    spans[1]?.str?.replaceAll('pada', '')?.replaceAll('tanggal', '')?.trim().split(' ') ?? [];
   const date = safeParseInt(dateStr);
   const year = safeParseInt(yearStr);
   if (isUndefined(location) || isUndefined(date) || isUndefined(year)) {

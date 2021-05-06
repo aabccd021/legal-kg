@@ -1,0 +1,2426 @@
+node: &ref_0
+  nodeType: document
+  docType: noTahun
+  docCategory: pergub_dki_jakarta
+  tahun: 2021
+  nomor: 3
+metadata:
+  menimbang:
+    type: menimbang
+    node: &ref_1
+      nodeType: menimbang
+      parentNode: *ref_0
+    content:
+      type: text
+      node:
+        nodeType: text
+        textName: text
+        parentNode: *ref_1
+      textString: >-
+        bahwa untuk melaksanakan ketentuan Pasal 8 ayat (2), Pasal 9 ayat (S5), Pasal 11 ayat (4),
+        Pasal 12 ayat (4), Pasal 13 ayat (4), Pasal 14 ayat (7), Pasal 15 ayat (5), Pasal 16 ayat
+        (4), Pasal 17 ayat (4), Pasal 18 ayat (4), Pasal 19 ayat (4), Pasal 20 ayat (4), Pasal 22
+        ayat (3), Pasal 23 ayat (3), Pasal 24 ayat (4), Pasal 25 ayat (3), dan Pasal 26 ayat (5)
+        Peraturan Daerah Nomor 2 Tahun 2020 tentang Penanggulangan Corona Virus Disease 2019, perlu
+        menetapkan Peraturan Gubernur tentang Peraturan Pelaksanaan Peraturan Daerah Nomor 2 Tahun
+        2020 tentang Penanggulangan Corona Virus Disease 2019:
+      references: []
+  mengingat:
+    type: mengingat
+    node: &ref_2
+      nodeType: mengingat
+      parentNode: *ref_0
+    content:
+      type: pointSet
+      node: &ref_3
+        nodeType: pointSet
+        parentNode: *ref_2
+      description:
+        type: text
+        node:
+          nodeType: text
+          textName: description
+          parentNode: *ref_3
+        textString: ''
+        references: []
+      elements:
+        - type: point
+          node: &ref_4
+            nodeType: point
+            key: '1'
+            parentPointSetNode: *ref_3
+          content:
+            type: text
+            node:
+              nodeType: text
+              textName: text
+              parentNode: *ref_4
+            textString: >-
+              Undang-Undang Nomor 29 Tahun 2007 tentang Pemerintahan Provinsi Daerah Khusus Ibukota
+              Jakarta sebagai Ibukota Negara Kesatuan Republik Indonesia (Lembaran Negara Republik
+              Indonesia Tahun 2007 Nomor 93, Tambahan Lembaran Negara Republik Indonesia Nomor
+              4744),
+            references:
+              - start: 0
+                end: 33
+                node:
+                  nodeType: document
+                  docType: noTahun
+                  docCategory: uu
+                  nomor: 29
+                  tahun: 2007
+        - type: point
+          node: &ref_5
+            nodeType: point
+            key: '2'
+            parentPointSetNode: *ref_3
+          content:
+            type: text
+            node:
+              nodeType: text
+              textName: text
+              parentNode: *ref_5
+            textString: >-
+              Undang-Undang Nomor 23 Tahun 2014 tentang Pemerintahan Daerah (Lembaran Negara
+              Republik Indonesia Tahun 2014 Nomor 244, Tambahan Lembaran Negara Republik Indonesia
+              Nomor 5587), sebagaimana telah beberapa kali diubah terakhir dengan dengan
+              Undang-Undang Nomor 9 Tahun 2015 tentang Perubahan Kedua atas Undang-Undang Nomor 23
+              Tahun 2014 tentang Pemerintahan Daerah (Lembaran Negara Republik Indonesia Tahun 2015
+              Nomor 58, Tambahan Lembaran Negara Republik Indonesia Nomor 5679),
+            references:
+              - start: 301
+                end: 334
+                node:
+                  nodeType: document
+                  docType: noTahun
+                  docCategory: uu
+                  nomor: 23
+                  tahun: 2014
+              - start: 239
+                end: 271
+                node:
+                  nodeType: document
+                  docType: noTahun
+                  docCategory: uu
+                  nomor: 9
+                  tahun: 2015
+              - start: 0
+                end: 33
+                node:
+                  nodeType: document
+                  docType: noTahun
+                  docCategory: uu
+                  nomor: 23
+                  tahun: 2014
+        - type: point
+          node: &ref_6
+            nodeType: point
+            key: '3'
+            parentPointSetNode: *ref_3
+          content:
+            type: text
+            node:
+              nodeType: text
+              textName: text
+              parentNode: *ref_6
+            textString: >-
+              Peraturan Daerah Nomor 2 Tahun 2020 tentang Penanggulangan Corona Virus Disease 2019
+              (Lembaran Daerah Provinsi Daerah Khusus Ibukota Jakarta Tahun 2020 Nomor 201, Tambahan
+              Lembaran Daerah Provinsi Daerah Khusus Ibukota Jakarta Nomor 2008), MEMUTUSKAN:
+              Menetapkan : PERATURAN GUBERNUR TENTANG PERATURAN PELAKSANAAN PERATURAN DAERAH NOMOR 2
+              TAHUN 2020 TENTANG PENANGGULANGAN CORONA VIRUS DISEASE 2019.
+            references: []
+  memutuskan: ''
+  denganPersetujuan: ''
+opText: |-
+  SALINAN
+  PT :
+  SANA ARA TUGU 1»
+  LAIN
+  GUBERNUR DAERAH KHUSUS
+  IBUKOTA JAKARTA
+  PERATURAN GUBERNUR DAERAH KHUSUS
+  IBUKOTA JAKARTA
+  NOMOR 3 TAHUN 2021
+  TENTANG
+  PERATURAN PELAKSANAAN PERATURAN DAERAH NOMOR 2 TAHUN 2020
+  TENTANG PENANGGULANGAN CORONA VIRUS DISEASE 2019
+  DENGAN RAHMAT TUHAN YANG MAHA ESA
+  GUBERNUR DAERAH KHUSUS IBUKOTA JAKARTA,
+  Menimbang : bahwa untuk melaksanakan ketentuan Pasal 8 ayat (2), Pasal 9 ayat
+  (S5), Pasal 11 ayat (4), Pasal 12 ayat (4), Pasal 13 ayat (4), Pasal 14
+  ayat (7), Pasal 15 ayat (5), Pasal 16 ayat (4), Pasal 17 ayat (4), Pasal
+  18 ayat (4), Pasal 19 ayat (4), Pasal 20 ayat (4), Pasal 22 ayat (3),
+  Pasal 23 ayat (3), Pasal 24 ayat (4), Pasal 25 ayat (3), dan Pasal 26
+  ayat (5) Peraturan Daerah Nomor 2 Tahun 2020 tentang
+  Penanggulangan Corona Virus Disease 2019, perlu menetapkan
+  Peraturan Gubernur tentang Peraturan Pelaksanaan Peraturan
+  Daerah Nomor 2 Tahun 2020 tentang Penanggulangan Corona Virus
+  Disease 2019:
+  Mengingat : 1. Undang-Undang Nomor 29 Tahun 2007 tentang Pemerintahan
+  Provinsi Daerah Khusus Ibukota Jakarta sebagai Ibukota Negara
+  Kesatuan Republik Indonesia (Lembaran Negara Republik
+  Indonesia Tahun 2007 Nomor 93, Tambahan Lembaran Negara
+  Republik Indonesia Nomor 4744),
+  2. Undang-Undang Nomor 23 Tahun 2014 tentang Pemerintahan
+  Daerah (Lembaran Negara Republik Indonesia Tahun 2014
+  Nomor 244, Tambahan Lembaran Negara Republik Indonesia
+  Nomor 5587), sebagaimana telah beberapa kali diubah terakhir
+  dengan dengan Undang-Undang Nomor 9 Tahun 2015 tentang
+  Perubahan Kedua atas Undang-Undang Nomor 23 Tahun 2014
+  tentang Pemerintahan Daerah (Lembaran Negara Republik
+  Indonesia Tahun 2015 Nomor 58, Tambahan Lembaran Negara
+  Republik Indonesia Nomor 5679),
+  3. Peraturan Daerah Nomor 2 Tahun 2020 tentang
+  Penanggulangan Corona Virus Disease 2019 (Lembaran Daerah
+  Provinsi Daerah Khusus Ibukota Jakarta Tahun 2020 Nomor
+  201, Tambahan Lembaran Daerah Provinsi Daerah Khusus
+  Ibukota Jakarta Nomor 2008),
+  MEMUTUSKAN:
+  Menetapkan : PERATURAN GUBERNUR TENTANG PERATURAN PELAKSANAAN
+  PERATURAN DAERAH NOMOR 2 TAHUN 2020 TENTANG
+  PENANGGULANGAN CORONA VIRUS DISEASE 2019.
+babSet:
+  type: babSet
+  node: &ref_7
+    nodeType: babSet
+    parentDocumentNode: *ref_0
+  elements:
+    - type: bab
+      node: &ref_8
+        nodeType: bab
+        key: 1
+        parentBabSetNode: *ref_7
+      title: KETENTUAN UMUM
+      content:
+        type: pasalSet
+        node:
+          nodeType: pasalSet
+          parentNode: *ref_8
+        elements:
+          - type: pasal
+            node:
+              nodeType: pasal
+              key: 1
+              parentNode: *ref_0
+            version:
+              type: pasalVersion
+              node: &ref_9
+                nodeType: pasalVersion
+                version: &ref_103
+                  nodeType: date
+                  month: 1
+                  date: 7
+                  year: 2021
+                state: exists
+                parentPasalNode:
+                  nodeType: pasal
+                  key: '1'
+                  parentNode: *ref_0
+              content:
+                type: pointSet
+                node: &ref_10
+                  nodeType: pointSet
+                  parentNode: *ref_9
+                description:
+                  type: text
+                  node:
+                    nodeType: text
+                    textName: description
+                    parentNode: *ref_10
+                  textString: 'Dalam Peraturan Gubernur ini yang dimaksud dengan:'
+                  references: []
+                elements:
+                  - type: point
+                    node: &ref_11
+                      nodeType: point
+                      key: '1'
+                      parentPointSetNode: *ref_10
+                    content:
+                      type: text
+                      node:
+                        nodeType: text
+                        textName: text
+                        parentNode: *ref_11
+                      textString: >-
+                        Corona Virus Desease 2019 yang selanjutnya disingkat Covid-19 adalah
+                        penyakit infeksi saluran pernapasan akibat dari severe acute respiratory
+                        syndrome virus corona 2 (SARS-CoV-2) yang telah menjadi pandemi global
+                        berdasarkan penetapan dari World Health Organization (WHO) dan ditetapkan
+                        sebagai bencana non alam nasional berdasarkan Keputusan Presiden Nomor 12
+                        Tahun 2020 tentang Penetapan Bencana Non Alam Penyebaran Corona Virus
+                        Desease 2019 (Covid-19) sebagai Bencana Nasional.
+                      references: []
+                  - type: point
+                    node: &ref_12
+                      nodeType: point
+                      key: '2'
+                      parentPointSetNode: *ref_10
+                    content:
+                      type: text
+                      node:
+                        nodeType: text
+                        textName: text
+                        parentNode: *ref_12
+                      textString: >-
+                        Pembatasan Sosial Berskala Besar yang selanjutnya disingkat PSBB adalah
+                        pembatasan kegiatan tertentu penduduk dalam suatu wilayah yang diduga
+                        terinfeksi penyakit dan/atau terkontaminasi sedemikian rupa untuk mencegah
+                        kemungkinan penyebaran penyakit atau kontaminasi.
+                      references: []
+                  - type: point
+                    node: &ref_13
+                      nodeType: point
+                      key: '3'
+                      parentPointSetNode: *ref_10
+                    content:
+                      type: text
+                      node:
+                        nodeType: text
+                        textName: text
+                        parentNode: *ref_13
+                      textString: >-
+                        Isolasi adalah proses mengurangi resiko penularan melalui upaya memisahkan
+                        individu yang sakit baik yang sudah dikonfirmasi laboratorium atau memiliki
+                        gejala Covid-19 dengan masyarakat luas.
+                      references: []
+                  - type: point
+                    node: &ref_14
+                      nodeType: point
+                      key: '4'
+                      parentPointSetNode: *ref_10
+                    content:
+                      type: text
+                      node:
+                        nodeType: text
+                        textName: text
+                        parentNode: *ref_14
+                      textString: >-
+                        Perilaku Hidup Bersih dan Sehat di Masa Pandemi Covid-19 yang selanjutnya
+                        disebut PHBS pencegahan Covid-19 adalah sekumpulan perilaku yang
+                        dipraktikkan atas dasar kesadaran untuk mencegah terpaparnya diri dan
+                        lingkungan sekitar dari penyebaran Covid-19. 19.
+                      references: []
+                  - type: point
+                    node: &ref_15
+                      nodeType: point
+                      key: '5'
+                      parentPointSetNode: *ref_10
+                    content:
+                      type: text
+                      node:
+                        nodeType: text
+                        textName: text
+                        parentNode: *ref_15
+                      textString: >-
+                        Setiap orang adalah orang perseorangan atau badan usaha, baik yang berbadan
+                        hukum maupun yang tidak berbadan hukum.
+                      references: []
+                  - type: point
+                    node: &ref_16
+                      nodeType: point
+                      key: '6'
+                      parentPointSetNode: *ref_10
+                    content:
+                      type: pointSet
+                      node: &ref_17
+                        nodeType: pointSet
+                        parentNode: *ref_16
+                      description:
+                        type: text
+                        node:
+                          nodeType: text
+                          textName: description
+                          parentNode: *ref_17
+                        textString: 'Suspek adalah seseorang yang memiliki salah satu dari kriteria berikut:'
+                        references: []
+                      elements:
+                        - type: point
+                          node: &ref_18
+                            nodeType: point
+                            key: a
+                            parentPointSetNode: *ref_17
+                          content:
+                            type: text
+                            node:
+                              nodeType: text
+                              textName: text
+                              parentNode: *ref_18
+                            textString: >-
+                              Orang dengan Infeksi Saluran Pernapasan Akut dan pada 14 hari terakhir
+                              sebelum timbul gejala memiliki riwayat perjalanan atau tinggal di
+                              negara/wilayah Indonesia yang melaporkan transmisi lokal:
+                            references: []
+                        - type: point
+                          node: &ref_19
+                            nodeType: point
+                            key: b
+                            parentPointSetNode: *ref_17
+                          content:
+                            type: text
+                            node:
+                              nodeType: text
+                              textName: text
+                              parentNode: *ref_19
+                            textString: >-
+                              Orang dengan salah satu gejala/tanda Infeksi Saluran Pernapasan Akut
+                              dan pada 14 hari terakhir sebelum timbul gejala memiliki riwayat
+                              kontak dengan kasus konfirmasi/ probable Covid-19, atau
+                            references: []
+                        - type: point
+                          node: &ref_20
+                            nodeType: point
+                            key: c
+                            parentPointSetNode: *ref_17
+                          content:
+                            type: text
+                            node:
+                              nodeType: text
+                              textName: text
+                              parentNode: *ref_20
+                            textString: >-
+                              Orang dengan Infeksi Saluran Pernapasan Akut berat/pneumonia berat
+                              yang membutuhkan perawatan di rumah sakit dan tidak ada penyebab lain
+                              berdasarkan gambaran klinis yang meyakinkan.
+                            references: []
+                  - type: point
+                    node: &ref_21
+                      nodeType: point
+                      key: '7'
+                      parentPointSetNode: *ref_10
+                    content:
+                      type: text
+                      node:
+                        nodeType: text
+                        textName: text
+                        parentNode: *ref_21
+                      textString: >-
+                        . Probable adalah seseorang dengan Infeksi Saluran Pernapasan Akut
+                        Berat/acute respiratory distress syndrome/meninggal dengan gambaran klinis
+                        yang meyakinkan Covid -19 dan belum ada hasil pemeriksaan laboratorium
+                        Reverse Transcriptase Polymerase Chain Reaction.
+                      references: []
+                  - type: point
+                    node: &ref_22
+                      nodeType: point
+                      key: '8'
+                      parentPointSetNode: *ref_10
+                    content:
+                      type: text
+                      node:
+                        nodeType: text
+                        textName: text
+                        parentNode: *ref_22
+                      textString: >-
+                        . Konfirmasi adalah seseorang yang dinyatakan positif terinfeksi virus
+                        Covid-19 yang dibuktikan dengan pemeriksaan laboratorium Reverse
+                        Transcriptase Polymerase Chain Reaction.
+                      references: []
+                  - type: point
+                    node: &ref_23
+                      nodeType: point
+                      key: '9'
+                      parentPointSetNode: *ref_10
+                    content:
+                      type: text
+                      node:
+                        nodeType: text
+                        textName: text
+                        parentNode: *ref_23
+                      textString: >-
+                        . Kontak Erat adalah seseorang yang memiliki riwayat kontak dengan kasus
+                        probable atau konfirmasi Covid-19.
+                      references: []
+                  - type: point
+                    node: &ref_24
+                      nodeType: point
+                      key: '10'
+                      parentPointSetNode: *ref_10
+                    content:
+                      type: text
+                      node:
+                        nodeType: text
+                        textName: text
+                        parentNode: *ref_24
+                      textString: >-
+                        Masker adalah alat pelindung diri yang memenuhi standar sesuai dengan
+                        rekomendasi Kementerian Kesehatan.
+                      references: []
+                  - type: point
+                    node: &ref_25
+                      nodeType: point
+                      key: '11'
+                      parentPointSetNode: *ref_10
+                    content:
+                      type: text
+                      node:
+                        nodeType: text
+                        textName: text
+                        parentNode: *ref_25
+                      textString: >-
+                        Satuan Pendidikan adalah kelompok layanan pendidikan yang menyelenggarakan
+                        pendidikan pada jalur formal, nonformal, dan informal pada setiap jenis dan
+                        jenjang Pendidikan, termasuk perguruan tinggi.
+                      references: []
+                  - type: point
+                    node: &ref_26
+                      nodeType: point
+                      key: '12'
+                      parentPointSetNode: *ref_10
+                    content:
+                      type: text
+                      node:
+                        nodeType: text
+                        textName: text
+                        parentNode: *ref_26
+                      textString: >-
+                        Aplikasi Jakarta Kini yang selanjutnya disebut JAKI adalah sistem aplikasi
+                        terintegrasi milik Pemerintah Provinsi DKI Jakarta.
+                      references: []
+                  - type: point
+                    node: &ref_27
+                      nodeType: point
+                      key: '13'
+                      parentPointSetNode: *ref_10
+                    content:
+                      type: text
+                      node:
+                        nodeType: text
+                        textName: text
+                        parentNode: *ref_27
+                      textString: >-
+                        Provinsi Daerah Khusus Ibukota Jakarta yang selanjutnya disebut Provinsi DKI
+                        Jakarta adalah provinsi yang mempunyai kekhususan dalam penyelenggaraan
+                        pemerintahan daerah karena kedudukannya sebagai Ibukota Negara Kesatuan
+                        Republik Indonesia.
+                      references: []
+                  - type: point
+                    node: &ref_28
+                      nodeType: point
+                      key: '14'
+                      parentPointSetNode: *ref_10
+                    content:
+                      type: text
+                      node:
+                        nodeType: text
+                        textName: text
+                        parentNode: *ref_28
+                      textString: >-
+                        Pemerintah Provinsi DKI Jakarta adalah Gubernur dan Perangkat Daerah
+                        Provinsi DKI Jakarta sebagai unsur penyelenggara pemerintahan Provinsi DKI
+                        Jakarta.
+                      references: []
+                  - type: point
+                    node: &ref_29
+                      nodeType: point
+                      key: '15'
+                      parentPointSetNode: *ref_10
+                    content:
+                      type: text
+                      node:
+                        nodeType: text
+                        textName: text
+                        parentNode: *ref_29
+                      textString: >-
+                        Gubernur adalah Kepala Daerah Provinsi DKI Jakarta yang karena jabatannya
+                        berkedudukan juga sebagai wakil pemerintah di wilayah Provinsi DKI Jakarta.
+                      references: []
+                  - type: point
+                    node: &ref_30
+                      nodeType: point
+                      key: '16'
+                      parentPointSetNode: *ref_10
+                    content:
+                      type: text
+                      node:
+                        nodeType: text
+                        textName: text
+                        parentNode: *ref_30
+                      textString: >-
+                        Perangkat Daerah adalah unsur pembantu Gubernur dan Dewan Perwakilan Rakyat
+                        Daerah dalam penyelenggaraan urusan pemerintahan yang menjadi kewenangan
+                        Provinsi DKI Jakarta.
+                      references: []
+                  - type: point
+                    node: &ref_31
+                      nodeType: point
+                      key: '17'
+                      parentPointSetNode: *ref_10
+                    content:
+                      type: text
+                      node:
+                        nodeType: text
+                        textName: text
+                        parentNode: *ref_31
+                      textString: >-
+                        Satuan Polisi Pamong Praja yang selanjutnya disebut Satpol PP adalah Satuan
+                        Polisi Pamong Praja Provinsi DKI Jakarta.
+                      references: []
+                  - type: point
+                    node: &ref_32
+                      nodeType: point
+                      key: '18'
+                      parentPointSetNode: *ref_10
+                    content:
+                      type: text
+                      node:
+                        nodeType: text
+                        textName: text
+                        parentNode: *ref_32
+                      textString: Dinas Kesehatan adalah Dinas Kesehatan Provinsi DKI Jakarta.
+                      references: []
+                  - type: point
+                    node: &ref_33
+                      nodeType: point
+                      key: '19'
+                      parentPointSetNode: *ref_10
+                    content:
+                      type: text
+                      node:
+                        nodeType: text
+                        textName: text
+                        parentNode: *ref_33
+                      textString: Dinas Perhubungan adalah Dinas Perhubungan Provinsi DKI Jakarta.
+                      references: []
+                  - type: point
+                    node: &ref_34
+                      nodeType: point
+                      key: '20'
+                      parentPointSetNode: *ref_10
+                    content:
+                      type: text
+                      node:
+                        nodeType: text
+                        textName: text
+                        parentNode: *ref_34
+                      textString: >-
+                        Dinas Tenaga Kerja, Transmigrasi dan Energi adalah Dinas Tenaga Kerja,
+                        Transmigrasi dan Energi Provinsi DKI Jakarta.
+                      references: []
+                  - type: point
+                    node: &ref_35
+                      nodeType: point
+                      key: '21'
+                      parentPointSetNode: *ref_10
+                    content:
+                      type: text
+                      node:
+                        nodeType: text
+                        textName: text
+                        parentNode: *ref_35
+                      textString: >-
+                        Dinas Perindustrian, Perdagangan, Koperasi dan Usaha Kecil Menengah yang
+                        selanjutnya disebut Dinas Perindustrian, Perdagangan, KUKM adalah Dinas
+                        Perindustrian, Perdagangan, Koperasi, Usaha Kecil dan Menengah Provinsi DKI
+                        Jakarta.
+                      references: []
+                  - type: point
+                    node: &ref_36
+                      nodeType: point
+                      key: '22'
+                      parentPointSetNode: *ref_10
+                    content:
+                      type: text
+                      node:
+                        nodeType: text
+                        textName: text
+                        parentNode: *ref_36
+                      textString: >-
+                        Dinas Penanaman Modal dan Pelayanan Terpadu Satu Pintu yang selanjutnya
+                        disebut Dinas Penanaman Modal dan PTSP adalah Dinas Penanaman Modal dan
+                        Pelayanan Terpadu Satu Pintu Provinsi DKI Jakarta.
+                      references: []
+                  - type: point
+                    node: &ref_37
+                      nodeType: point
+                      key: '23'
+                      parentPointSetNode: *ref_10
+                    content:
+                      type: text
+                      node:
+                        nodeType: text
+                        textName: text
+                        parentNode: *ref_37
+                      textString: >-
+                        Dinas Pariwisata dan Ekonomi Kreatif adalah Dinas Pariwisata dan Ekonomi
+                        Kreatif Provinsi DKI Jakarta.
+                      references: []
+                  - type: point
+                    node: &ref_38
+                      nodeType: point
+                      key: '24'
+                      parentPointSetNode: *ref_10
+                    content:
+                      type: text
+                      node:
+                        nodeType: text
+                        textName: text
+                        parentNode: *ref_38
+                      textString: >-
+                        Dinas Komunikasi, Informatika dan Statistik adalah Dinas Komunikasi,
+                        Informatika dan Statistik Provinsi DKI Jakarta.
+                      references: []
+                  - type: point
+                    node: &ref_39
+                      nodeType: point
+                      key: '25'
+                      parentPointSetNode: *ref_10
+                    content:
+                      type: text
+                      node:
+                        nodeType: text
+                        textName: text
+                        parentNode: *ref_39
+                      textString: Dinas Sosial adalah Dinas Sosial Provinsi DKI Jakarta.
+                      references: []
+                  - type: point
+                    node: &ref_40
+                      nodeType: point
+                      key: '26'
+                      parentPointSetNode: *ref_10
+                    content:
+                      type: text
+                      node:
+                        nodeType: text
+                        textName: text
+                        parentNode: *ref_40
+                      textString: Dinas Pendidikan adalah Dinas Pendidikan Provinsi DKI Jakarta.
+                      references: []
+                  - type: point
+                    node: &ref_41
+                      nodeType: point
+                      key: '27'
+                      parentPointSetNode: *ref_10
+                    content:
+                      type: text
+                      node:
+                        nodeType: text
+                        textName: text
+                        parentNode: *ref_41
+                      textString: >-
+                        Tentara Nasional Indonesia yang selanjutnya disingkat TNI adalah Tentara
+                        Nasional Republik Indonesia.
+                      references: []
+                  - type: point
+                    node: &ref_42
+                      nodeType: point
+                      key: '28'
+                      parentPointSetNode: *ref_10
+                    content:
+                      type: text
+                      node:
+                        nodeType: text
+                        textName: text
+                        parentNode: *ref_42
+                      textString: Kepolisian adalah Kepolisian Negara Republik Indonesia.
+                      references: []
+                  - type: point
+                    node: &ref_43
+                      nodeType: point
+                      key: '29'
+                      parentPointSetNode: *ref_10
+                    content:
+                      type: pointSet
+                      node: &ref_44
+                        nodeType: pointSet
+                        parentNode: *ref_43
+                      description:
+                        type: text
+                        node:
+                          nodeType: text
+                          textName: description
+                          parentNode: *ref_44
+                        textString: >-
+                          Satuan Tugas Penanganan Covid-19 Tingkat Provinsi adalah Satuan Tugas
+                          Penanganan Covid-19 Provinsi DKI Jakarta. Pasal 2D Ruang lingkup Peraturan
+                          Gubernur ini meliputi:
+                        references: []
+                      elements:
+                        - type: point
+                          node: &ref_45
+                            nodeType: point
+                            key: a
+                            parentPointSetNode: *ref_44
+                          content:
+                            type: text
+                            node:
+                              nodeType: text
+                              textName: text
+                              parentNode: *ref_45
+                            textString: pelindungan kesehatan individu,
+                            references: []
+                        - type: point
+                          node: &ref_46
+                            nodeType: point
+                            key: b
+                            parentPointSetNode: *ref_44
+                          content:
+                            type: text
+                            node:
+                              nodeType: text
+                              textName: text
+                              parentNode: *ref_46
+                            textString: 'pelindungan kesehatan masyarakat:'
+                            references: []
+                        - type: point
+                          node: &ref_47
+                            nodeType: point
+                            key: c
+                            parentPointSetNode: *ref_44
+                          content:
+                            type: text
+                            node:
+                              nodeType: text
+                              textName: text
+                              parentNode: *ref_47
+                            textString: PSBB,
+                            references: []
+                        - type: point
+                          node: &ref_48
+                            nodeType: point
+                            key: d
+                            parentPointSetNode: *ref_44
+                          content:
+                            type: text
+                            node:
+                              nodeType: text
+                              textName: text
+                              parentNode: *ref_48
+                            textString: PSBB pada Masa Transisi,
+                            references: []
+                        - type: point
+                          node: &ref_49
+                            nodeType: point
+                            key: e
+                            parentPointSetNode: *ref_44
+                          content:
+                            type: text
+                            node:
+                              nodeType: text
+                              textName: text
+                              parentNode: *ref_49
+                            textString: penyelidikan epidemiologi,
+                            references: []
+                        - type: point
+                          node: &ref_50
+                            nodeType: point
+                            key: f
+                            parentPointSetNode: *ref_44
+                          content:
+                            type: text
+                            node:
+                              nodeType: text
+                              textName: text
+                              parentNode: *ref_50
+                            textString: surveilans epidemiologi informatika,
+                            references: []
+                        - type: point
+                          node: &ref_51
+                            nodeType: point
+                            key: g
+                            parentPointSetNode: *ref_44
+                          content:
+                            type: text
+                            node:
+                              nodeType: text
+                              textName: text
+                              parentNode: *ref_51
+                            textString: 'penyebarluasan informasi:'
+                            references: []
+                        - type: point
+                          node: &ref_52
+                            nodeType: point
+                            key: h
+                            parentPointSetNode: *ref_44
+                          content:
+                            type: pointSet
+                            node: &ref_53
+                              nodeType: pointSet
+                              parentNode: *ref_52
+                            description:
+                              type: text
+                              node:
+                                nodeType: text
+                                textName: description
+                                parentNode: *ref_53
+                              textString: 'kemitraan dan kolaborasi:'
+                              references: []
+                            elements:
+                              - type: point
+                                node: &ref_54
+                                  nodeType: point
+                                  key: '1'
+                                  parentPointSetNode: *ref_53
+                                content:
+                                  type: text
+                                  node:
+                                    nodeType: text
+                                    textName: text
+                                    parentNode: *ref_54
+                                  textString: Upaya pemulihan ekonomi, dan J. upaya pelindungan sosial.
+                                  references: []
+    - type: bab
+      node: &ref_55
+        nodeType: bab
+        key: 2
+        parentBabSetNode: *ref_7
+      title: PELINDUNGAN KESEHATAN INDIVIDU
+      content:
+        type: bagianSet
+        node:
+          nodeType: bagianSet
+          parentBabNode: *ref_55
+        elements:
+          - type: bagian
+            node: &ref_56
+              nodeType: bagian
+              key: 1
+              parentBagianSetNode:
+                nodeType: bagianSet
+                parentBabNode: *ref_55
+            title: >-
+              Bagian Kesatu Standar Masker Pasal 3 (1) Standar Masker terdiri atas: a. standar
+              Masker bedah, dan b. standar Masker kain. (2) Standar Masker bedah sebagaimana
+              dimaksud pada ayat (1) huruf a memiliki kriteria: a. Bacterial Fultration Efficency 2
+              98, b. Particle Filtration Effiency 2 98, dan c. Flud Resistance Minimal 120 mmHg. (3)
+              Standar Masker kain sebagaimana dimaksud pada ayat (1) huruf b memiliki kriteria: a.
+              menggunakan bahan katun dan memiliki lapisan paling sedikit 2 (dua) lapis, b.
+              menggunakan pengait telinga dengan tali elastis, atau tali non elastis yang panjang
+              untuk diikatkan kebelakang kepala sehingga Masker bisa pas di wajah dan tidak kendur,
+              c. kedua sisinya berbeda warna agar dapat diketahui mana bagian dalam dan bagian luar
+              d. mudah dibersihkan dan dicuci tanpa berubah bentuk dan ukuran, dan e. mampu menutupi
+              area hidung, mulut dan bawah dagu dengan baik.
+            content:
+              type: pasalSet
+              node:
+                nodeType: pasalSet
+                parentNode: *ref_56
+              elements: []
+          - type: bagian
+            node: &ref_57
+              nodeType: bagian
+              key: 2
+              parentBagianSetNode:
+                nodeType: bagianSet
+                parentBabNode: *ref_55
+            title: >-
+              Bagian Kedua Penerapan PHBS Pencegahan Covid-19 Pasal 4 Penerapan PHBS Pencegahan
+              Covid-19 pada tempat/fasilitas umum meliputi: a. menggunakan Masker di luar rumah: b.
+              membatasi aktivitas ke luar rumah hanya untuk kegiatan yang penting dan mendesak, c.
+              menjaga kesehatan diri dan tidak beraktivitas di luar rumah ketika merasa tidak sehat:
+              d. membatasi aktivitas di luar rumah bagi mereka yang memiliki risiko tinggi jika
+              terpapar Covid-19, e. menjaga jarak fisik dalam rentang paling sedikit 1 m (satu
+              meter) antara orang jika dalam berinteraksi kelompok, f. membatasi diri untuk tidak
+              berada dalam kerumunan orang: g. menghindari penggunaan alat pribadi secara bersama:
+              h. cuci tangan pakai sabun dan air mengalir sebelum dan/atau sesudah beraktivitas, i.
+              melakukan olahraga secara rutin, dan Jj. mengkonsumsi makanan yang sehat dan bergizi
+              seimbang.
+            content:
+              type: pasalSet
+              node:
+                nodeType: pasalSet
+                parentNode: *ref_57
+              elements: []
+          - type: bagian
+            node: &ref_58
+              nodeType: bagian
+              key: 3
+              parentBagianSetNode:
+                nodeType: bagianSet
+                parentBabNode: *ref_55
+            title: >-
+              Bagian Ketiga Pelaksanaan Isolasi Pasal 5 (1) Setiap Orang yang berada di Provinsi DKI
+              Jakarta dengan status konfirmasi Covid-19 berdasarkan rekomendasi dari Puskesmas,
+              rumah sakit, atau dokter wajib menjalankan Isolasi guna mencegah penularan Covid-19 di
+              masyarakat sesuai dengan pedoman pencegahan dan pengendalian Covid-19. (2) Setiap
+              Orang dengan status konfirmasi Covid-19 sebagaimana dimaksud pada ayat (1), sebelum
+              menjalankan Isolasi, wajib melaporkan kepada Puskesmas di wilayah tempat tinggal /
+              domisili. (3) Penetapan prosedur pemberian rekomendasi sebagaimana dimaksud pada ayat
+              (1) ditetapkan dengan Keputusan Kepala Dinas Kesehatan. (4) Penetapan lokasi Isolasi
+              dan standar operasional prosedur pengelolaan lokasi Isolasi ditetapkan dengan
+              Keputusan Ketua Satuan Tugas Penanganan COVID-19 tingkat Provinsi.
+            content:
+              type: pasalSet
+              node:
+                nodeType: pasalSet
+                parentNode: *ref_58
+              elements: []
+          - type: bagian
+            node: &ref_59
+              nodeType: bagian
+              key: 4
+              parentBagianSetNode:
+                nodeType: bagianSet
+                parentBabNode: *ref_55
+            title: Bagian Keempat Pengenaan Sanksi dan Upaya Paksa
+            content:
+              type: paragrafSet
+              node:
+                nodeType: paragrafSet
+                parentBagianNode: *ref_59
+              elements:
+                - type: paragraf
+                  node: &ref_60
+                    nodeType: paragraf
+                    key: 1
+                    parentParagrafSetNode:
+                      nodeType: paragrafSet
+                      parentBagianNode: *ref_59
+                  title: >-
+                    Paragraf 1 Pengenaan Sanksi Pasal 6 (1) Setiap Orang yang tidak menggunakan
+                    Masker sesuai dengan standar kesehatan yang menutupi hidung, mulut, dan dagu,
+                    ketika berada di luar rumah, saat berkendara, tempat kerja dan/atau tempat
+                    aktivitas lainnya dikenakan sanksi berupa: a. kerja sosial dengan membersihkan
+                    fasilitas umum, atau b. denda administratif paling banyak sebesar Rp250.000,00
+                    (dua ratus lima puluh ribu rupiah). (2) Pelaksanaan pengenaan sanksi sebagaimana
+                    dimaksud pada ayat (1) dilakukan oleh Satpol PP dengan pendampingan oleh
+                    Perangkat Daerah terkait, dan dapat didampingi oleh unsur Kepolisian dan/atau
+                    TNI. Pasal 7 (1) Fasilitas umum sebagaimana dimaksud dalam Pasal 6 ayat ayat (1)
+                    huruf a, antara lain: a. jalan, b. trotoar: c. saluran air, d. jembatan
+                    penyeberangan orang, e. taman, atau f. halte bus. (2)Alat untuk pelaksanaan
+                    sanksi kerja sosial dengan membersihkan fasilitas umum sebagaimana dimaksud
+                    dalam Pasal 6 ayat (1) huruf a terdiri atas: a. rompi, b. alat pembersih, antara
+                    lain sapu, lap, dan ember, dan c. Masker. (3) Alat untuk kerja sosial dengan
+                    membersihkan fasilitas umum sebagaimana dimaksud pada ayat (2) disediakan oleh
+                    Satpol PP. Pasal 8 (1) Denda administratif sebagaimana dimaksud dalam Pasal 6
+                    ayat (1) huruf b wajib disetorkan ke kas daerah. (2) Satpol PP menerbitkan Surat
+                    Ketetapan Denda Administratif berdasarkan bukti pelanggaran dan diberikan kepada
+                    pelanggar untuk disetorkan ke kas daerah melalui Bank DKI. (3) Foto kopi surat
+                    tanda setoran dari Bank DKI oleh pelanggar sebagaimana dimaksud pada ayat (2)
+                    diserahkan kepada kantor Satpol PP di wilayah penindakan pelanggaran terjadi.
+                  pasalSet:
+                    type: pasalSet
+                    node:
+                      nodeType: pasalSet
+                      parentNode: *ref_60
+                    elements: []
+                - type: paragraf
+                  node: &ref_61
+                    nodeType: paragraf
+                    key: 2
+                    parentParagrafSetNode:
+                      nodeType: paragrafSet
+                      parentBagianNode: *ref_59
+                  title: >-
+                    Paragraf 2 Upaya Paksa Pasal 9 (l) Setiap Orang terkonfirmasi positif Covid-19
+                    yang tidak melaksanakan Isolasi sesuai ketentuan dikenakan upaya paksa untuk
+                    ditempatkan pada lokasi Isolasi yang ditentukan oleh Satuan Tugas Penanganan
+                    Covid-19 Tingkat Provinsi. (2) Pengenaan upaya paksa sebagaimana dimaksud pada
+                    ayat (1) dilaksanakan oleh Satpol PP dengan mengikutsertakan tenaga kesehatan,
+                    dan dapat didampingi oleh unsur Kepolisian dan/atau TNI.
+                  pasalSet:
+                    type: pasalSet
+                    node:
+                      nodeType: pasalSet
+                      parentNode: *ref_61
+                    elements: []
+                - type: paragraf
+                  node: &ref_62
+                    nodeType: paragraf
+                    key: 3
+                    parentParagrafSetNode:
+                      nodeType: paragrafSet
+                      parentBagianNode: *ref_59
+                  title: >-
+                    Paragraf 3 Pendataan Pasal 10 (l) Setiap melakukan pengenaan sanksi dan upaya
+                    paksa sebagaimana dimaksud dalam Pasal 6 dan Pasal 9, Satpol PP mendata nama,
+                    alamat dan nomor induk kependudukan untuk dimasukan ke dalam sistem elektronik
+                    melalui aplikasi yang dibangun oleh Diskominfotik. (2) Dalam hal sistem
+                    elektronik sebagaimana dimaksud pada ayat (1) belum tersedia, Satpol PP dapat
+                    melakukan pendataan nama, alamat dan nomor induk kependudukan pelanggar secara
+                    manual.
+                  pasalSet:
+                    type: pasalSet
+                    node:
+                      nodeType: pasalSet
+                      parentNode: *ref_62
+                    elements: []
+    - type: bab
+      node: &ref_63
+        nodeType: bab
+        key: 3
+        parentBabSetNode: *ref_7
+      title: PELINDUNGAN KESEHATAN MASYARAKAT
+      content:
+        type: bagianSet
+        node:
+          nodeType: bagianSet
+          parentBabNode: *ref_63
+        elements:
+          - type: bagian
+            node: &ref_64
+              nodeType: bagian
+              key: 1
+              parentBagianSetNode:
+                nodeType: bagianSet
+                parentBabNode: *ref_63
+            title: >-
+              Bagian Kesatu Pelindungan Kesehatan Masyarakat pada Perkantoran / Tempat Kerja, Tempat
+              Usaha, Tempat Industri, Perhotelan / Penginapan lain yang sejenis, dan Tempat Wisata
+            content:
+              type: paragrafSet
+              node:
+                nodeType: paragrafSet
+                parentBagianNode: *ref_64
+              elements:
+                - type: paragraf
+                  node: &ref_65
+                    nodeType: paragraf
+                    key: 1
+                    parentParagrafSetNode:
+                      nodeType: paragrafSet
+                      parentBagianNode: *ref_64
+                  title: >-
+                    Paragraf 1 Perkantoran / Tempat Kerja Swasta, Badan Usaha Milik Negara, atau
+                    Badan Usaha Milik Daerah Pasal 11 (1) Pelaku usaha, pengelola, penyelenggara,
+                    atau penanggung jawab perkantoran/tempat kerja milik swasta, Badan Usaha Milik
+                    Negara, atau Badan Usaha Milik Daerah, dalam menyelenggarakan aktivitas bekerja
+                    wajib melaksanakan pelindungan kesehatan masyarakat, yang meliputi: a. melakukan
+                    edukasi dan protokol pencegahan Covid-19, dan b. melakukan pembatasan interaksi
+                    fisik pada setiap aktivitas kerja. (2) Edukasi dan protokol pencegahan Covid-19
+                    sebagaimana dimaksud pada ayat (1) huruf a, terdiri atas: a. menyediakan sarana
+                    cuci tangan dengan air mengalir dan sabun yang ditempatkan pada area
+                    keluar-masuk perkantoran, b. menyediakan hand sanitizer di setiap lantai, area
+                    lift, dan mesin absensi: c. melakukan pengukuran suhu kepada pekerja maupun tamu
+                    yang akan memasuki perkantoran, d. mewajibkan penggunaan Masker ditempat kerja,
+                    secara tertulis dalam bentuk poster atau banner, e. membentuk Tim Satuan Tugas
+                    Penanganan Covid-19 internal perusahaan dengan keputusan pimpinan perkantoran /
+                    tempat kerja: f. melakukan pembersihan pada peralatan yang sering digunakan
+                    secara bersama dengan cairan disinfektan setiap harinya, dan melakukan
+                    penyemprotan disinfektan ruangan secara berkala setiap bulannya, g. tidak
+                    melakukan pemutusan hubungan kerja kepada pekerja yang sedang menjalani Isolasi,
+                    h. memberikan sanksi bagi pekerja yang tidak melaksanakan protokol pencegahan
+                    Covid-19 yang diatur dalam peraturan perusahaan atau perjanjian kerja, i.
+                    membuat dan menempelkan Pakta Integritas pada area yang mudah dibaca pegawai
+                    maupun tamu, Jj. memanfaatkan penggunaan aplikasi JAKI atau aplikasi sejenis
+                    dalam penanggulangan Covid-19, k. dalam hal ditemukan pekerja terkonfirmasi
+                    Covid-19, dilakukan penutupan tempat kerja selama 3x24 (tiga kali dua puluh
+                    empat) jam dan melakukan disinfeksi ruangan secara menyeluruh, serta melaporkan
+                    kepada Dinas Tenaga Kerja, Transmigrasi dan Energi, l. dalam hal terjadi klaster
+                    penularan Covid-19, pengelola gedung melakukan penutupan 1 (satu) kesatuan
+                    area/gedung perkantoran selama 3x24 (tiga kali dua puluh empat) jam berdasarkan
+                    rekomendasi dari Dinas Kesehatan: dan m.memberikan keterangan yang
+                    sebenar-benarnya kepada petugas yang melakukan pemeriksaan. (3 Pembatasan
+                    interaksi fisik pada setiap aktivitas kerja sebagaimana dimaksud pada ayat (1)
+                    huruf b, terdiri atas: a. menerapkan sistem bekerja dirumah (work from home)
+                    secara bergilir dan membatasi kapasitas jumlah pekerja dalam waktu yang
+                    bersamaan, b. melakukan pembatasan kapasitas tamu dan pengaturan jarak tempat
+                    duduk paling sedikit 1 m (satu meter), dan Cc. meniadakan aktivitas yang dapat
+                    menyebabkan kerumunan antara lain rapat, seminar, apel, dan menggantinya dengan
+                    memanfaatkan teknologi untuk melaksanakan aktivitas tersebut secara virtual. 10
+                    Pasal 12 (1) Pelaku usaha, pengelola, penyelenggara, atau penanggung jawab
+                    perkantoran/tempat kerja milik swasta, Badan Usaha Milik Negara, atau Badan
+                    Usaha Milik Daerah yang tidak melaksanakan kewajiban pelindungan kesehatan
+                    masyarakat sebagaimana dimaksud dalam Pasal 11 dikenakan sanksi administratif
+                    berupa: a. teguran tertulis, b. penghentian sementara kegiatan, c. denda
+                    administratif, d. pembekuan sementara izin, dan/atau e. pencabutan izin. (2)
+                    Pelaksanaan pengenaan sanksi administratif kepada pelaku usaha, pengelola,
+                    penyelenggara, atau penanggung jawab perkantoran/tempat kerja milik swasta,
+                    Badan Usaha Milik Negara, atau Badan Usaha Milik Daerah sebagaimana dimaksud
+                    pada ayat (1) dilakukan dengan tahapan: a. jika ditemukan pelanggaran protokol
+                    pencegahan Covid-19 diberikan teguran tertulis, b. jika mengulangi pelanggaran
+                    protokol pencegahan Covid-19 setelah diberikan teguran tertulis sebagaimana
+                    dimaksud pada huruf a, maka dilakukan penghentian sementara kegiatan selama 3
+                    (tiga) hari dengan pemasangan segel pada pintu masuk perkantoran/tempat kerja,
+                    dan c. jika masih mengulangi pelanggaran protokol pencegahan Covid-19 setelah
+                    mendapatkan penghentian sementara kegiatan sebagaimana dimaksud pada huruf b,
+                    maka dikenakan denda administratif paling banyak Rp50.000.000,00 (lima puluh
+                    juta rupiah). (3) Bagi pelaku usaha, pengelola, penyelenggara, atau penanggung
+                    jawab perkantoran/tempat kerja milik swasta, Badan Usaha Milik Negara, atau
+                    Badan Usaha Milik Daerah yang tidak melaksanakan penghentian sementara kegiatan
+                    atau membayar denda administratif sebagaimana dimaksud pada ayat (2) huruf b dan
+                    huruf c, maka Dinas Penanaman Modal dan PTSP mengenakan sanksi administratif
+                    berupa pembekuan sementara izin atau pencabutan izin setelah mendapat
+                    rekomendasi dari Kepala Dinas Tenaga Kerja, Transmigrasi dan Energi atau pejabat
+                    yang berwenang. (4) Pelaksanaan pengenaan sanksi administratif kepada pelaku
+                    usaha, pengelola, penyelenggara, atau penanggung jawab perkantoran/tempat kerja
+                    milik swasta, Badan Usaha Milik Negara, atau Badan Usaha Milik Daerah, dilakukan
+                    oleh Dinas Tenaga Kerja, Transmigrasi dan Energi dan dapat didampingi oleh unsur
+                    Satpol PP, Kepolisian, dan/atau TNI. 11 (5) Petunjuk teknis mengenai tata cara
+                    pelaksanaan pengenaan sanksi administratif ditetapkan dengan Keputusan Kepala
+                    Dinas Tenaga Kerja, Transmigrasi dan Energi.
+                  pasalSet:
+                    type: pasalSet
+                    node:
+                      nodeType: pasalSet
+                      parentNode: *ref_65
+                    elements: []
+                - type: paragraf
+                  node: &ref_66
+                    nodeType: paragraf
+                    key: 2
+                    parentParagrafSetNode:
+                      nodeType: paragrafSet
+                      parentBagianNode: *ref_64
+                  title: >-
+                    Paragraf 2 Perkantoran / Tempat Kerja Instansi Pemerintah Pasal 13 (1)
+                    Penanggung jawab perkantoran/tempat kerja atau Kepala Unit Kerja pada Instansi
+                    Pemerintah dalam menyelenggarakan aktivitas wajib melaksanakan pelindungan
+                    kesehatan masyarakat yang meliputi: a. melakukan edukasi dan protokol pencegahan
+                    Covid-19, dan b. melakukan pembatasan interaksi fisik pada setiap aktivitas
+                    kerja. (2) Ketentuan mengenai pelaksanaan edukasi dan protokol pencegahan
+                    Covid-19 dan pembatasan interaksi fisik pada setiap aktivitas kerja sebagaimana
+                    dimaksud dalam Pasal 11, berlaku secara mutatis mutandis terhadap pelaksanaan
+                    edukasi dan protokol pencegahan Covid-19 dan pembatasan interaksi fisik pada
+                    perkantoran/tempat kerja atau Kepala Unit Kerja pada Instansi Pemerintah,
+                    kecuali pemberian sanksi disiplin bagi pegawai yang tidak melaksanakan protokol
+                    pencegahan Covid-19 mengacu pada ketentuan peraturan perundang-undangan mengenai
+                    kepegawaian. Pasal 14 (1) Penanggung jawab perkantoran/tempat kerja atau Kepala
+                    Unit Kerja pada Instansi Pemerintah yang tidak melaksanakan kewajiban
+                    pelindungan kesehatan masyarakat sebagaimana dimaksud dalam Pasal 11, dikenakan
+                    sanksi administratif berupa teguran tertulis. (2) Pelaksanaan pengenaan sanksi
+                    administratif sebagaimana dimaksud pada ayat (1), dilakukan oleh Satuan Tugas
+                    Penanganan Covid-19 tingkat Provinsi berdasarkan rekomendasi dari Dinas Tenaga
+                    Kerja, Transmigrasi dan Energi.
+                  pasalSet:
+                    type: pasalSet
+                    node:
+                      nodeType: pasalSet
+                      parentNode: *ref_66
+                    elements: []
+                - type: paragraf
+                  node: &ref_67
+                    nodeType: paragraf
+                    key: 3
+                    parentParagrafSetNode:
+                      nodeType: paragrafSet
+                      parentBagianNode: *ref_64
+                  title: >-
+                    Paragraf 3 Tempat Usaha dan/atau Tempat Industri Pasal 15 (1) Pelaku usaha,
+                    pengelola, penyelenggara, atau penanggung jawab tempat usaha dan/atau tempat
+                    industri, dalam menyelenggarakan aktivitas usaha wajib melaksanakan pelindungan
+                    kesehatan masyarakat, yang meliputi: a. melakukan edukasi dan protokol
+                    pencegahan Covid-19, dan 12 b. melakukan pembatasan interaksi fisik pada setiap
+                    aktivitas kerja. (2) Edukasi dan protokol pencegahan Covid-19 sebagaimana
+                    dimaksud pada ayat (1) huruf a, terdiri atas: a. menyediakan sarana cuci tangan
+                    dengan air mengalir dan sabun yang ditempatkan pada area keluar-masuk
+                    perkantoran, b. menyediakan hand sanitizer di setiap lantai, area lift, dan
+                    mesin absensi: c. melakukan pengukuran suhu kepada pekerja maupun tamu yang akan
+                    memasuki tempat usaha dan/atau tempat industri, d. mewajibkan penggunaan Masker
+                    di tempat usaha dan/atau industri, secara tertulis dalam bentuk poster atau
+                    banner, e. membentuk tim gugus Covid-19 internal perusahaan dengan keputusan
+                    pimpinan perkantoran /tempat kerja, f. melakukan pembersihan pada peralatan yang
+                    sering digunakan secara bersama dengan cairan disinfektan setiap harinya, dan
+                    melakukan penyemprotan disinfektan ruangan secara berkala setiap bulannya, g.
+                    tidak melakukan pemutusan hubungan kerja kepada pekerja yang sedang menjalani
+                    Isolasi, h. memberikan sanksi bagi pekerja yang tidak melaksanakan protokol
+                    pencegahan Covid-19 yang diatur dalam peraturan perusahaan atau perjanjian
+                    kerja, i. membuat dan menempelkan Pakta Integritas pada area yang mudah dibaca
+                    oleh para pekerja, tamu dan pengunjung: J. menerapkan kebijakan self assessment
+                    risiko COVID-19 untuk memastikan pekerja yang akan masuk kerja dalam kondisi
+                    tidak terkonfirmasi Covid-19: k. memasang media informasi untuk mengingatkan
+                    pekerja, pelaku usaha, konsumen /pengunjung dan pengunjung agar mengikuti
+                    ketentuan pembatasan jarak fisik dan mencuci tangan pakai sabun dengan air
+                    mengalir/ hand sanitizer serta menggunakan Masker, Il. mengoptimalkan desain dan
+                    fungsi ruang kerja dengan sirkulasi udara yang baik dan mendapatkan sinar
+                    matahari yang cukup: m.mengedukasi dan melatih pekerja mengenai protokol
+                    pencegahan Covid-19: n. memanfaatkan penggunaan aplikasi Jakarta Kini (JAKI)
+                    atau aplikasi sejenis dalam penanggulangan Covid-19, 13 o. dalam hal ditemukan
+                    pekerja terkonfirmasi Covid-19, dilakukan penutupan tempat kerja selama 3x24
+                    (tiga kali dua puluh empat) jam dan melakukan disinfeksi ruangan secara
+                    menyeluruh, serta melaporkan kepada Dinas Tenaga Kerja, Transmigrasi dan Energi,
+                    dan p. dalam hal terjadi klaster penularan Covid-19, pengelola gedung melakukan
+                    penutupan 1 (satu) kesatuan area/gedung perkantoran selama 3x24 (tiga kali dua
+                    puluh empat) jam berdasarkan rekomendasi dari Dinas Kesehatan. (3) Pembatasan
+                    interaksi fisik pada setiap aktivitas kerja sebagaimana dimaksud pada ayat (1)
+                    huruf b, terdiri atas: a. memaksimalkan pekerja yang berusia di bawah 45 (empat
+                    puluh lima) tahun, selain itu disarankan melakukan pengaturan penempatan dan
+                    waktu kerja bagi karyawan yang berusia lebih dari 45 (empat puluh lima) tahun
+                    atau memiliki penyakit bawaan untuk meminimalisir risiko penularan: b. mengatur
+                    waktu kerja tidak terlalu panjang (lembur) yang akan mengakibatkan pekerja
+                    kekurangan waktu untuk beristirahat yang dapat menyebabkan penurunan sistem
+                    kekebalan /imunitas tubuh, c. melakukan pembatasan jarak fisik paling sedikit 1
+                    m (satu meter): d. memberikan tanda khusus yang ditempatkan dilantai area padat
+                    pekerja/pengunjung seperti ruang ganti, lift, toilet, area kasir, area customer
+                    service dan area lain sebagai pembatas jarak antar pekerja dan tamu/pelanggan,
+                    e. pengaturan jumlah pekerja yang masuk agar memudahkan penerapan menjaga jarak,
+                    fI. pengaturan meja dan tempat duduk dengan jarak paling sedikit 1 m (satu
+                    meter): g. melakukan upaya untuk meminimalkan kontak dengan pelanggan, seperti:
+                    1. menggunakan pembatas/partisi di meja atau counter sebagai perlindungan
+                    tambahan untuk pekerja, dan 2. mendorong penggunaan metode pembayaran non tunai,
+                    jika masih menjalankan transaksi tunai maka pelaku usaha wajib menerapkan
+                    tindakan yang dianggap perlu untuk mencegah penularan Covid-19. h. mencegah
+                    kerumunan pelanggan, dengan cara: 1. menetapkan kuota dan mengontrol jumlah
+                    karyawan / pelanggan yang dapat masuk ke lokasi usaha untuk membatasi akses dan
+                    menghindari kerumunan, 14 2. menerapkan sistem antrian di pintu masuk dan
+                    menjaga jarak paling sedikit 1 m (satu meter): 3. menerima pesanan/reservasi
+                    secara daring atau melalui telepon untuk meminimalkan pertemuan langsung dengan
+                    pelanggan dan bagi usaha tertentu dapat menyediakan layanan pesan antar atau
+                    dibawa pulang, dan 4. melaksanakan jam layanan, sesuai dengan kebijakan yang
+                    ditetapkan oleh Pemerintah Provinsi DKI Jakarta. i. menugaskan orang atau tim
+                    khusus yang bertanggung jawab khusus untuk memastikan penerapan protokol
+                    pencegahan Covid-19 di tempat usaha dan/atau tempat industri, dan Jj.
+                    mendokumentasikan seluruh tindakan yang sudah dilaksanakan dalam rangka protokol
+                    pencegahan Covid-19 dan menyimpan dokumen serta rekaman paling sedikit selama 3
+                    (tiga) bulan untuk penelusuran. Pasal 16 (1) Pengelola, penyelenggara, atau
+                    penanggung jawab tempat usaha dan/atau tempat industri yang tidak melaksanakan
+                    kewajiban pelindungan kesehatan masyarakat sebagaimana dimaksud dalam Pasal 15
+                    dikenakan sanksi administratif berupa: a. teguran tertulis, b. penghentian
+                    sementara kegiatan, c. denda administratif, d. pembekuan sementara izin,
+                    dan/atau e. pencabutan izin. (2) Pelaksanaan pengenaan sanksi administratif
+                    kepada pengelola, penyelenggara, atau penanggung jawab tempat usaha dan/atau
+                    tempat industri sebagaimana dimaksud pada ayat (1) dilakukan dengan tahapan: a.
+                    jika ditemukan pelanggaran pelindungan kesehatan masyarakat diberikan teguran
+                    tertulis, b. jika mengulangi pelanggaran pelindungan kesehatan masyarakat
+                    setelah diberikan teguran tertulis sebagaimana dimaksud pada huruf a, maka
+                    dilakukan penghentian sementara kegiatan selama 3 (tiga) hari dengan pemasangan
+                    segel pada pintu masuk tempat usaha dan/atau tempat industri, dan Cc. jika masih
+                    mengulangi pelanggaran pelindungan kesehatan masyarakat setelah mendapatkan
+                    penghentian sementara kegiatan sebagaimana dimaksud pada huruf b, maka dikenakan
+                    denda administratif paling banyak Rp50.000.000,00 (lima puluh juta rupiah). 15
+                    (3) Bagi pengelola, penyelenggara, atau penanggung jawab tempat usaha dan/atau
+                    tempat industri yang tidak melaksanakan penghentian sementara kegiatan atau
+                    membayar denda administratif sebagaimana dimaksud pada ayat (2) huruf b dan
+                    huruf c, maka Dinas Penanaman Modal dan PTSP mengenakan sanksi administratif
+                    berupa pembekuan sementara izin atau pencabutan izin setelah mendapat
+                    rekomendasi dari Kepala Dinas Perindustrian, Perdagangan, KUKM atau pejabat yang
+                    berwenang. (4) Pelaksanaan pengenaan sanksi administratif kepada Pengelola,
+                    penyelenggara, atau penanggung jawab tempat usaha dan/atau tempat industri,
+                    dilakukan oleh Dinas Perindustrian, Perdagangan, KUKM dan dapat didampingi oleh
+                    unsur Satpol PP, Kepolisian, dan/atau TNI. (5) Terhadap tempat usaha bidang
+                    pariwisata, rekomendasi pembekuan sementara izin atau pencabutan izin dan
+                    pelaksanaan pengenaan sanksi administratif dilakukan oleh Kepala Dinas
+                    Pariwisata dan Ekonomi Kreatif. Pasal 17 (l) Petunjuk teknis mengenai tata cara
+                    pelaksanaan pengenaan sanksi administratif untuk tempat usaha dan/atau tempat
+                    industri ditetapkan dengan Keputusan Kepala Dinas Perindustrian, Perdagangan,
+                    KUKM. (2) Petunjuk teknis mengenai tata cara pelaksanaan pengenaan sanksi
+                    administratif untuk tempat usaha bidang pariwisata ditetapkan dengan Keputusan
+                    Kepala Dinas Pariwisata dan Ekonomi Kreatif.
+                  pasalSet:
+                    type: pasalSet
+                    node:
+                      nodeType: pasalSet
+                      parentNode: *ref_67
+                    elements: []
+                - type: paragraf
+                  node: &ref_68
+                    nodeType: paragraf
+                    key: 4
+                    parentParagrafSetNode:
+                      nodeType: paragrafSet
+                      parentBagianNode: *ref_64
+                  title: >-
+                    Paragraf 4 Perhotelan / Penginapan Lain yang Sejenis dan Tempat Wisata Pasal 18
+                    (1) Penanggung jawab perhotelan /penginapan lain yang sejenis dan tempat wisata
+                    dalam menyelenggarakan aktivitas usaha wajib melaksanakan pelindungan kesehatan
+                    masyarakat, yang meliputi: a. melakukan edukasi dan protokol pencegahan
+                    Covid-19, dan b. melakukan pembatasan interaksi fisik. (2) Edukasi dan protokol
+                    pencegahan Covid-19 sebagaimana dimaksud pada ayat (1) huruf a, meliputi: a.
+                    menerapkan protokol kesehatan terhadap perhotelan/ penginapan lain yang sejenis
+                    dan tempat wisata, 16 b. mewajibkan pengunjung menggunakan Masker, kecuali saat
+                    makan dan minum, c. menerapkan pemeriksaan suhu tubuh, d. mematuhi jam
+                    operasional usaha yang telah ditentukan, e. mewajibkan memasang informasi jumlah
+                    kapasitas pengunjung: f. melakukan pendataan pengunjung, dan g. membuat dan
+                    mengumumkan pakta integritas dan protokol kesehatan pencegahan Covid-19. (3)
+                    Pembatasan interaksi fisik sebagaimana dimaksud pada ayat (1) huruf b, meliputi:
+                    a. melakukan pembatasan kapasitas tamu paling banyak 50Y6 (lima puluh persen),
+                    dan b. pengaturan jarak tamu paling sedikit 1 m (satu meter). (4) Ketentuan
+                    lebih lanjut mengenai protokol pencegahan Covid-19 dan pembatasan interaksi
+                    fisik pada perhotelan /penginapan lain yang sejenis dan tempat wisata
+                    sebagaimana dimaksud pada ayat (1) ditetapkan dengan Keputusan Kepala Dinas
+                    Pariwisata dan Ekonomi Kreatif. Pasal 19 (1) Penanggung jawab perhotelan
+                    /penginapan lain yang sejenis dan tempat wisata yang tidak melaksanakan
+                    kewajiban pelindungan kesehatan masyarakat sebagaimana dimaksud dalam Pasal 18
+                    dikenakan sanksi administratif berupa: a. teguran tertulis, b. penghentian
+                    sementara kegiatan, c. denda administratif, d. pembekuan sementara izin,
+                    dan/atau e. pencabutan izin. (2) Pelaksanaan pengenaan sanksi administratif
+                    kepada penanggung jawab perhotelan/penginapan lain yang sejenis dan tempat
+                    wisata sebagaimana dimaksud pada ayat (1) dilakukan dengan tahapan: a. jika
+                    ditemukan pelanggaran pelindungan kesehatan masyarakat diberikan teguran
+                    tertulis, b. jika mengulangi pelanggaran pelindungan kesehatan masyarakat
+                    setelah diberikan teguran tertulis sebagaimana dimaksud pada huruf a, maka
+                    dilakukan penghentian sementara kegiatan selama 3 (tiga) hari dengan pemasangan
+                    segel pada pintu masuk perhotelan/penginapan lain yang sejenis dan tempat
+                    wisata, dan 17 Cc. jika masih mengulangi pelanggaran pelindungan kesehatan
+                    masyarakat setelah mendapatkan penghentian sementara kegiatan sebagaimana
+                    dimaksud pada huruf b, maka dikenakan denda administratif paling banyak
+                    Rp50.000.000,00 (lima puluh juta rupiah). (3) Bagi penanggung jawab perhotelan
+                    /penginapan lain yang sejenis dan tempat wisata yang tidak melaksanakan
+                    penghentian sementara kegiatan atau membayar denda administratif sebagaimana
+                    dimaksud pada ayat (2) huruf b dan huruf c, maka Dinas Penanaman Modal dan PTSP
+                    mengenakan sanksi administratif berupa pembekuan sementara izin atau pencabutan
+                    izin setelah mendapat rekomendasi dari Kepala Dinas Pariwisata dan Ekonomi
+                    Kreatif. (4) Pelaksanaan pengenaan sanksi administratif kepada penanggung jawab
+                    perhotelan/penginapan lain yang sejenis dan tempat wisata, dilakukan oleh Dinas
+                    Pariwisata dan Ekonomi Kreatif dan dapat didampingi oleh unsur Satpol PP,
+                    Kepolisian, dan/atau TNI.
+                  pasalSet:
+                    type: pasalSet
+                    node:
+                      nodeType: pasalSet
+                      parentNode: *ref_68
+                    elements: []
+          - type: bagian
+            node: &ref_69
+              nodeType: bagian
+              key: 2
+              parentBagianSetNode:
+                nodeType: bagianSet
+                parentBabNode: *ref_63
+            title: >-
+              Bagian Kedua Pelindungan Kesehatan Masyarakat pada Satuan Pendidikan Pasal 20 (1)
+              Pengelola, penyelenggara, atau penanggung jawab Satuan Pendidikan dalam
+              menyelenggarakan aktivitas pembelajaran wajib melaksanakan pelindungan kesehatan
+              masyarakat, yang meliputi: a. melakukan edukasi dan protokol pencegahan Covid-19, dan
+              b. melakukan pembatasan interaksi fisik pada setiap aktivitas pembelajaran. (2)
+              Edukasi dan protokol pencegahan Covid-19 sebagaimana dimaksud pada ayat (1) huruf a,
+              meliputi: a. menerapkan protokol kesehatan pembelajaran tatap muka, b. mewajibkan
+              penggunaan Masker pada area Satuan Pendidikan: Cc. membuat prosedur pemantauan dan
+              pelaporan kesehatan warga Satuan Pendidikan, d. memberikan pengumuman di seluruh area
+              Satuan Pendidikan secara berulang dan intensif terkait penerapan protokol kesehatan,
+              dan e. menyiapkan ruang khusus untuk warga Satuan Pendidikan yang terdeteksi mengalami
+              gejala umum Covid-19. 18 (3) Pembatasan interaksi fisik pada setiap aktivitas
+              pembelajaran sebagaimana dimaksud pada ayat (1) huruf b, meliputi: a. menerapkan jaga
+              jarak paling sedikit 1,5 m (satu setengah meter): b. peserta didik tidak perlu cium
+              tangan pendidik cukup ucapkan salam dengan jarak paling sedikit 1,5 m (satu setengah
+              meter), C. peserta didik menempati tempat duduk di kelas yang diatur 1 (satu) kursi
+              untuk 1 (satu) orang dan menjaga jarak duduk antar siswa paling sedikit 1,5 m (satu
+              setengah meter), d. tidak diperbolehkan saling meminjamkan alat tulis/ perlengkapan
+              sekolah, e. membawa perlengkapan pribadi, seperti: perlengkapan sekolah, olahraga, dan
+              ibadah, f. saat istirahat untuk kebutuhan makan dan minum tetap berada di dalam kelas:
+              g. selesai jam pelajaran terakhir, warga sekolah dan institusi pendidikan lainnya
+              keluar ruangan kelas dengan berbaris sambil menerapkan jaga jarak dan langsung pulang
+              ke rumah masing-masing: h. penjemput peserta didik menunggu di lokasi yang sudah
+              disediakan dan melakukan jaga jarak sesuai dengan tempat duduk dan/atau jarak antri
+              yang sudah ditandai, dan 1. pengantaran peserta didik dilakukan di lokasi yang telah
+              ditentukan. (4) Ketentuan lebih lanjut mengenai protokol pencegahan Covid-19
+              pembelajaran tatap muka sebagaimana dimaksud pada ayat (2) huruf a ditetapkan dengan
+              Keputusan Kepala Dinas Pendidikan. Pasal D1 (1) Pengelola, penyelenggara, atau
+              penanggung jawab Satuan Pendidikan yang tidak melaksanakan kewajiban pelindungan
+              kesehatan masyarakat sebagaimana dimaksud dalam Pasal 20 dikenakan sanksi
+              administratif berupa: a. teguran tertulis. b. denda administratif, dan / atau C.
+              penghentian sementara kegiatan. (2) Pelaksanaan pengenaan sanksi administratif kepada
+              penanggung jawab pengelola, penyelenggara, atau penanggung jawab Satuan Pendidikan
+              sebagaimana dimaksud pada ayat (1) dilakukan dengan tahapan: 19 a. jika ditemukan
+              pelanggaran pelindungan kesehatan masyarakat diberikan teguran tertulis, b. jika
+              mengulangi pelanggaran pelindungan kesehatan masyarakat setelah diberikan teguran
+              tertulis sebagaimana dimaksud pada huruf a, maka dikenakan denda administratif paling
+              banyak Rp50.000.000,00 (lima puluh juta rupiah): dan c. jika masih mengulangi
+              pelanggaran pelindungan kesehatan masyarakat setelah dikenakan denda administratif
+              sebagaimana dimaksud pada huruf b, maka dikenakan penghentian sementara kegiatan
+              selama 3 (tiga) hari dengan pemasangan segel pada pintu masuk Satuan Pendidikan. (3)
+              Pelaksanaan pengenaan sanksi administratif sebagaimana dimaksud pada ayat (1)
+              dilaksanakan oleh Dinas Pendidikan dan dapat didampingi oleh Perangkat Daerah terkait.
+              (4) Petunjuk teknis mengenai tata cara pelaksanaan pengenaan sanksi administratif
+              untuk Satuan Pendidikan ditetapkan dengan Keputusan Kepala Dinas Pendidikan.
+            content:
+              type: pasalSet
+              node:
+                nodeType: pasalSet
+                parentNode: *ref_69
+              elements: []
+          - type: bagian
+            node: &ref_70
+              nodeType: bagian
+              key: 3
+              parentBagianSetNode:
+                nodeType: bagianSet
+                parentBabNode: *ref_63
+            title: >-
+              Bagian Ketiga Pelindungan Kesehatan Masyarakat pada Tempat Ibadah Pasal 22 (1)
+              Pengelola, penyelenggara, atau penanggung jawab tempat ibadah dalam menyelenggarakan
+              aktivitas kegiatan keagamaan wajib melaksanakan pelindungan kesehatan masyarakat, yang
+              meliputi: a. melaksanakan edukasi dan protokol pencegahan Covid-19 di lingkungan
+              tempat ibadah, b. melakukan pembatasan interaksi fisik antar pengguna tempat ibadah:
+              dan Cc. mengikuti kebijakan yang ditetapkan oleh organisasi keagamaan. (2) Edukasi dan
+              protokol pencegahan Covid-19 sebagaimana dimaksud pada ayat (1) huruf a, meliputi: a.
+              membatasi jumlah pengguna tempat ibadah paling banyak 50Y6 (lima puluh persen) dari
+              kapasitas tempat ibadah, b. menerapkan protokol pencegahan Covid-19 di lingkungan
+              tempat ibadah, c. melakukan pengukuran suhu tubuh bagi seluruh pengguna tempat ibadah,
+              d. memberitahukan setiap pengguna tempat ibadah untuk membawa sendiri perlengkapan
+              ibadah, 20 e. membersihkan tempat ibadah dan lingkungan sekitar, f. melakukan
+              disinfeksi pada lantai, dinding, dan perangkat bangunan tempat ibadah sebelum dan
+              setelah kegiatan ibadah: g. khusus untuk tempat ibadah raya harus melaksanakan
+              pencatatan pengunjung, baik buku tamu atau dengan sistem teknologi, h. mengikuti
+              kebijakan yang ditetapkan oleh organisasi keagamaan, dan i. membuat prosedur
+              pelaksanaan sebelum, saat, dan sesudah kegiatan keagamaan. (3) Pembatasan interaksi
+              fisik pada setiap aktivitas pembelajaran sebagaimana dimaksud pada ayat (1) huruf b,
+              dilakukan dengan membatasi interaksi fisik dengan rentang jarak paling sedikit 1 m
+              (satu meter) antar pengguna tempat ibadah. Pasal 23 (1) Pengelola, penyelenggara, atau
+              penanggung jawab tempat ibadah yang tidak melaksanakan kewajiban pelindungan kesehatan
+              masyarakat sebagaimana dimaksud dalam Pasal 22 dikenakan sanksi administratif berupa
+              teguran tertulis. (2) Pelaksanaan pengenaan sanksi administratif berupa teguran
+              tertulis sebagaimana dimaksud pada ayat (1) dilakukan oleh Walikota/Bupati
+              Administrasi dan dapat didampingi oleh Perangkat Daerah terkait.
+            content:
+              type: pasalSet
+              node:
+                nodeType: pasalSet
+                parentNode: *ref_70
+              elements: []
+          - type: bagian
+            node: &ref_71
+              nodeType: bagian
+              key: 4
+              parentBagianSetNode:
+                nodeType: bagianSet
+                parentBabNode: *ref_63
+            title: >-
+              Bagian Keempat Pelindungan Kesehatan Masyarakat pada Transportasi Umum Pasal 24 (1)
+              Pelaku usaha, pengelola, penyelenggara, atau penanggung jawab transportasi umum
+              termasuk perusahaan aplikasi transportasi daring, wajib melaksanakan pelindungan
+              kesehatan masyarakat, yang meliputi: a. melaksanakan edukasi dan protokol pencegahan
+              Covid-19, b. pembatasan kapasitas angkut sarana transportasi, C. pembatasan waktu
+              operasional, dan d. manajemen kebutuhan lalu lintas. (2) Edukasi dan protokol
+              pencegahan Covid-19 sebagaimana dimaksud pada ayat (1) huruf a, meliputi: 21 a.
+              menerapkan protokol pencegahan Covid-19 terhadap sarana transportasi umum, b.
+              mewajibkan penggunaan Masker pada sarana transportasi umum, Cc. membuat prosedur
+              pemantauan dan pelaporan kesehatan pada sarana transportasi umum, dan d. memberikan
+              pengumuman di seluruh sarana transportasi umum secara intensif terkait penerapan
+              protokol pencegahan Covid-19. (3) Terhadap ojek online dan ojek pangkalan, pelaksanaan
+              edukasi dan protokol pencegahan Covid-19 meliputi: a. diperbolehkan mengangkut
+              penumpang dan wajib menerapkan protokol pencegahan Covid-19, b. dilarang berkerumum
+              lebih dari 5 (lima) orang, C. wajib menjaga jarak antar pengemudi dan parkir antar
+              sepeda motor paling sedikit 1 m (satu meter), dan d. terhadap perusahaan aplikasi ojek
+              online wajib menerapkan teknologi informasi geofencing agar pengemudi tidak berkerumum
+              dan menerapkan sanksi terhadap pengemudi yang melanggar. (4) Pembatasan kapasitas
+              angkut sarana transportasi sebagaimana dimaksud pada ayat (1) huruf b, dilakukan
+              terhadap sarana transportasi umum dan sarana transportasi perseorangan yang meliputi:
+              a. kapasitas angkut mobil penumpang, mobil bus, angkutan perairan, angkutan
+              perkeretaapian paling banyak 50”Yo (lima puluh persen) dari kapasitas angkut, dan b.
+              kapasitas angkut penumpang pada mobil barang paling banyak untuk 2 (dua) orang per
+              baris kursi. (5) Pembatasan waktu operasional sebagaimana dimaksud pada ayat (1) huruf
+              c, dilakukan terhadap sarana dan prasarana transportasi umum didasarkan pada indikator
+              kajian dan penilaian yang dilakukan oleh Satuan Tugas Penanganan Covid-19 tingkat
+              Provinsi. (6) Manajemen kebutuhan lalu lintas sebagaimana dimaksud pada ayat (1) huruf
+              d, meliputi: a. meningkatkan efisiensi dan efektivitas penggunaan ruang lalu lintas:
+              dan b. mengendalikan pergerakan lalu lintas. 22 (7 Petunjuk teknis mengenai edukasi
+              dan protokol pencegahan Covid-19 pelaksanaan pembatasan kapasitas angkut sarana
+              transportasi umum, pembatasan waktu operasional, dan manajemen kebutuhan lalu lintas
+              sebagaiman dimaksud pada ayat (3), ayat (4), dan ayat (5), ditetapkan dengan Keputusan
+              Kepala Dinas Perhubungan. Pasal 25 (1) Pelaku usaha, pengelola, penyelenggara, atau
+              penanggung jawab transportasi umum, termasuk perusahaan aplikasi transportasi daring,
+              yang tidak melaksanakan kewajiban pelindungan kesehatan masyarakat sebagaimana
+              dimaksud dalam Pasal 24 dikenakan sanksi administratif berupa: a. denda administratif,
+              b. pembekuan sementara izin, dan Cc. pencabutan izin. (2) Pelaksanaan pengenaan sanksi
+              administratif kepada penanggung jawab pengelola, penyelenggara, atau penanggung jawab
+              transportasi umum sebagaimana dimaksud pada ayat (1) dilakukan dengan tahapan: a. jika
+              ditemukan pelanggaran pelindungan kesehatan masyarakat diberikan denda administratif
+              paling banyak Rp50.000.000,00 (lima puluh juta rupiah), b. jika mengulangi pelanggaran
+              pelindungan kesehatan masyarakat setelah diberikan denda administratif sebagaimana
+              dimaksud pada huruf a, maka dikenakan pembekuan sementara izin: dan c. jika masih
+              mengulangi pelanggaran pelindungan kesehatan masyarakat setelah dikenakan pembekuan
+              sementara izin sebagaimana dimaksud pada huruf b, maka dikenakan pencabutan izin. (3)
+              Pembekuan sementara izin dan pencabutan izin sebagaimana dimaksud pada ayat (2) huruf
+              b dan huruf c dilakukan oleh Dinas Penanaman Modal dan PTSP setelah mendapat
+              rekomendasi dari Kepala Dinas Perhubungan. (4) Pelaksanaan pengenaan sanksi
+              administratif kepada penanggung jawab pengelola, penyelenggara, atau penanggung jawab
+              transportasi umum dilakukan oleh Dinas Perhubungan. (5) Petunjuk teknis mengenai tata
+              cara pelaksanaan pengenaan sanksi administratif untuk transportasi umum ditetapkan
+              dengan Keputusan Kepala Dinas Perhubungan. 23
+            content:
+              type: pasalSet
+              node:
+                nodeType: pasalSet
+                parentNode: *ref_71
+              elements: []
+          - type: bagian
+            node: &ref_72
+              nodeType: bagian
+              key: 5
+              parentBagianSetNode:
+                nodeType: bagianSet
+                parentBabNode: *ref_63
+            title: >-
+              Bagian Kelima Pelindungan Kesehatan Masyarakat pada Warung Makan, Rumah Makan, Kafe,
+              atau Restoran Pasal 26 (1) Penanggung jawab/pemilik warung makan, rumah makan, kafe
+              atau restoran dalam menyelenggarakan aktivitas usaha wajib melaksanakan pelindungan
+              kesehatan masyarakat, yang meliputi: a. melakukan edukasi dan protokol pencegahan
+              Covid-19, dan b. melakukan pembatasan jumlah pengunjung. (2) Edukasi dan protokol
+              pencegahan Covid-19 sebagaimana dimaksud pada ayat (1) huruf a, meliputi: a.
+              mewajibkan pengunjung menggunakan Masker, kecuali saat makan dan minum, b. menerapkan
+              pemeriksaan suhu tubuh, c. melakukan pembatasan interaksi fisik dengan rentang jarak
+              paling sedikit 1 m (satu meter) antar pengunjung, d. menyediakan hand sanitizer, e.
+              tidak menggunakan alat makan atau alat minum yang mengharuskan pengunjung berbagi alat
+              dalam mengkonsumsinya, antara lain shisha dan menu sejenisnya, f. mewajibkan memasang
+              informasi jumlah kapasitas pengunjung: g. melakukan pendataan pengunjung di warung
+              makan, rumah makan, cafe, atau restoran guna kebutuhan penyelidikan epidemiologi
+              apabila ditemukan kasus terkonfirmasi Covid-19, dan h. membuat dan mengumumkan pakta
+              integritas dan protokol pencegahan Covid-19. (3) Pembatasan jumlah pengunjung
+              sebagaimana dimaksud pada ayat (1) huruf b, dilakukan dengan membatasi jumlah
+              pengunjung paling banyak 500 (lima puluh persen) dari kapasitas warung makan, rumah
+              makan, kafe, atau restoran. Pasal 27 (l) Pelaku usaha warung makan yang tidak
+              melaksanakan kewajiban pelindungan kesehatan masyarakat dikenakan sanksi administratif
+              berupa: a. teguran tertulis, 24 b. pembubaran kegiatan, dan/atau Cc. penghentian
+              sementara kegiatan. (2) Pelaksanaan pengenaan sanksi administratif kepada pelaku usaha
+              warung makan sebagaimana dimaksud pada ayat (1) dilakukan dengan tahapan: a. jika
+              ditemukan pelanggaran pelindungan kesehatan masyarakat diberikan sanksi berupa teguran
+              tertulis: b. Jika mengulangi pelanggaran pelindungan kesehatan masyarakat setelah
+              diberikan teguran tertulis sebagaimana dimaksud pada huruf a, maka dikenakan
+              pembubaran kegiatan: dan c. Jika masih mengulangi pelanggaran pelindungan kesehatan
+              masyarakat setelah dikenakan pembubaran kegiatan sebagaimana dimaksud pada huruf b,
+              maka dikenakan penghentian sementara kegiatan. (3) Pelaksanaan pengenaan sanksi
+              administratif kepada pelaku usaha warung makan dilakukan oleh Satpol PP dengan
+              pendampingan oleh unsur Perangkat Daerah terkait, dan dapat didampingi Kepolisian
+              dan/atau TNI. (4) Petunjuk teknis mengenai tata cara pelaksanaan pengenaan sanksi
+              administratif untuk pelaku usaha warung makan ditetapkan dengan Keputusan Kepala
+              Satpol PP. Pasal 28 (1) Pelaku usaha, pengelola, penyelenggara, atau penanggung jawab
+              rumah makan, kafe, atau restoran yang tidak melaksanakan kewajiban pelindungan
+              kesehatan masyarakat dikenakan sanksi administratif berupa: a. teguran tertulis, b.
+              denda administratif, Cc. pembubaran kegiatan, d. penghentian sementara kegiatan, e.
+              pembekuan sementara izin, dan/atau f. pencabutan izin. (2) Pelaksanaan pengenaan
+              sanksi administratif kepada Pelaku usaha, pengelola, penyelenggara, atau penanggung
+              jawab rumah makan, kafe, atau restoran sebagaimana dimaksud pada ayat (1) dilakukan
+              dengan tahapan: a. jika ditemukan pelanggaran pelindungan kesehatan masyarakat
+              diberikan sanksi berupa teguran tertulis, 25 b. jika mengulangi pelanggaran
+              pelindungan kesehatan masyarakat setelah diberikan teguran tertulis sebagaimana
+              dimaksud pada huruf a, maka dikenakan denda administratif paling banyak
+              Rp50.000.000,00 (lima puluh juta rupiah), Cc. jika masih mengulangi pelanggaran
+              pelindungan kesehatan masyarakat setelah dikenakan denda administratif sebagaimana
+              dimaksud pada huruf b, maka dikenakan pembubaran kegiatan, d. jika mengulangi
+              pelanggaran pelindungan kesehatan setelah dikenakan pembubaran kegiatan sebagaimana
+              dimaksud pada huruf c, maka dikenakan penghentian sementara kegiatan: e. jika
+              mengulangi pelanggaran pelindungan kesehatan setelah dikenakan penghentian sementara
+              kegiatan sebagaimana dimaksud pada huruf d, maka dikenakan pembekuan sementara izin:
+              dan f. jika mengulangi pelanggaran pelindungan kesehatan setelah dikenakan pembekuan
+              sementara izin sebagaimana dimaksud pada huruf e, maka dikenakan pencabutan izin. (3
+              Pembekuan sementara izin dan pencabutan izin sebagaimana dimaksud pada ayat (2) huruf
+              e dan huruf f dilakukan oleh Dinas Penanaman Modal dan PTSP setelah mendapat
+              rekomendasi dari Kepala Satpol PP. (4) Pelaksanaan pengenaan sanksi administratif
+              kepada pelaku usaha, pengelola, penyelenggara, atau penanggung jawab rumah makan,
+              kafe, atau restoran dilakukan oleh Satpol PP. (5) Petunjuk teknis mengenai tata cara
+              pelaksanaan pengenaan sanksi administratif pelaku usaha, pengelola, penyelenggara,
+              atau penanggung jawab rumah makan, kafe, atau restoran ditetapkan dengan Keputusan
+              Kepala Satpol PP.
+            content:
+              type: pasalSet
+              node:
+                nodeType: pasalSet
+                parentNode: *ref_72
+              elements: []
+          - type: bagian
+            node: &ref_73
+              nodeType: bagian
+              key: 6
+              parentBagianSetNode:
+                nodeType: bagianSet
+                parentBabNode: *ref_63
+            title: >-
+              Bagian Keenam Pelindungan Kesehatan Masyarakat pada Pedagang Kaki Lima/ Lapak Jajanan
+              Pasal 29 (1) Pedagang kaki lima/lapak jajanan pada lokasi binaan dan lokasi sementara,
+              serta lokasi tertentu lainnya wajib melaksanakan pelindungan kesehatan masyarakat,
+              yang meliputi: a. melaksanakan edukasi dan protokol pencegahan Covid-19: dan b.
+              melakukan pembatasan interaksi fisik antar pengunjung. (2) Edukasi dan protokol
+              pencegahan Covid-19 sebagaimana dimaksud pada ayat (1) huruf a, meliputi: 26 a.
+              menggunakan Masker dan sarung tangan pada setiap aktivitas usaha, b. menyediakan hand
+              sanitizer, C. mematuhi jam operasional usaha yang telah ditentukan, dan d. menjamin
+              kebersihan area. (3) Pembatasan interaksi fisik antar pengunjung sebagaimana dimaksud
+              pada ayat (1) huruf b, dilakukan dengan membatasi interaksi fisik dengan rentang jarak
+              paling sedikit 1 m (satu meter) antar pengunjung. Pasal 30 (1) Pedagang kaki
+              lima/lapak jajanan pada lokasi binaan dan lokasi sementara serta lokasi tertentu
+              lainnya yang tidak melaksanakan kewajiban pelindungan kesehatan masyarakat sebagaimana
+              dimaksud dalam Pasal 29 ayat (1) dikenakan sanksi administratif berupa teguran
+              tertulis dan pembubaran kegiatan. (2) Pelaksanaan pengenaan sanksi administratif
+              berupa teguran tertulis dan pembubaran kegiatan sebagaimana dimaksud pada ayat (1)
+              dilakukan dengan ketentuan: a. terhadap pedagang kaki lima/lapak jajanan pada lokasi
+              binaan, lokasi sementara dilakukan oleh Dinas Perindustrian, Perdagangan, KUKM, dan b.
+              terhadap pedagang kaki lima/lapak jajanan pada lokasi tertentu lainnya dilakukan oleh
+              Satpol PP.
+            content:
+              type: pasalSet
+              node:
+                nodeType: pasalSet
+                parentNode: *ref_73
+              elements: []
+          - type: bagian
+            node: &ref_74
+              nodeType: bagian
+              key: 7
+              parentBagianSetNode:
+                nodeType: bagianSet
+                parentBabNode: *ref_63
+            title: >-
+              Bagian Ketujuh Pelindungan Kesehatan Masyarakat pada Tempat Penyelenggaraan Fasilitas
+              Pelayanan Kesehatan Pasal 31 (1) Pengelola, penyelenggara, atau penanggung jawab
+              tempat penyelenggaraan — fasilitas pelayanan kesehatan dalam menyelenggarakan kegiatan
+              pelayanan kesehatan wajib melaksanakan pelindungan kesehatan masyarakat, yang
+              meliputi: a. melaksanakan edukasi dan protokol pencegahan Covid- 19 saat pelaksanaan
+              kegiatan pelayanan kesehatan sesuai kebijakan yang ditetapkan oleh instansi yang
+              berwenang, b. melakukan pembatasan interaksi fisik antar pengunjung, dan c. melaporkan
+              hasil pemeriksaan terkait Covid-19 kepada Dinas Kesehatan. 27 (2) Edukasi dan protokol
+              pencegahan Covid-19 sebagaimana dimaksud pada ayat (1) huruf a, meliputi: a.
+              menerapkan kaidah umum pelndungan kesehatan masyarakat melalui penerapan protokol
+              pencegahan Covid-19 dengan mengutamakan prinsip pencegahan dan pengendalian infeksi
+              serta kebijakan perlindungan petugas kesehatan di fasilitas pelayanan kesehatan, dan
+              b. mengikuti aturan tentang ditundanya pelaksanaan sebagian pelayanan medis di
+              masing-masing fasilitas pelayanan kesehatan selama masa PSBB. (3) Pembatasan interaksi
+              fisik sebagaimana dimaksud pada ayat (1) huruf b dengan melakukan pembatasan kapasitas
+              tamu dan pengaturan jarak tamu paling sedikit 1 m (satu meter). (4) Melaporkan kepada
+              Dinas Kesehatan jika menemukan pasien terkonfirmasi positif Covid-19 atau menjadi
+              Kontak Erat. (5) Ketentuan lebih lanjut mengenai pelaksanaan edukasi dan protokol
+              pencegahan Covid-19 dan pembatasan interaksi fisik antar pengunjung sebagaimana
+              dimaksud pada ayat (1) ditetapkan dengan Keputusan Kepala Dinas Kesehatan. Pasal 32
+              (1) Pengelola, penyelenggara, atau penanggung jawab tempat penyelenggaraan kegiatan
+              pelayanan kesehatan yang tidak melaksanakan kewajiban pelindungan kesehatan masyarakat
+              sebagaimana dimaksud dalam Pasal 31 dikenakan sanksi administratif berupa teguran
+              tertulis. (2) Pelaksanaan pengenaan sanksi administratif berupa teguran tertulis
+              sebagaimana dimaksud pada ayat (1) dilakukan oleh Dinas Kesehatan.
+            content:
+              type: pasalSet
+              node:
+                nodeType: pasalSet
+                parentNode: *ref_74
+              elements: []
+          - type: bagian
+            node: &ref_75
+              nodeType: bagian
+              key: 8
+              parentBagianSetNode:
+                nodeType: bagianSet
+                parentBabNode: *ref_63
+            title: >-
+              Bagian Kedelapan Pelindungan Kesehatan Masyarakat pada Area Publik dan Tempat lainnya
+              yang dapat Menimbulkan Kerumunan Orang Pasal 33 (1) Pengelola, penyelenggara, atau
+              penanggung jawab area publik dan tempat lainnya yang dapat menimbulkan kerumunan orang
+              dalam menyelenggarakan kegiatan wajib melaksanakan pelindungan kesehatan masyarakat,
+              yang meliputi: a. melaksanakan edukasi dan menerapkan protokol penceghan Covid-19: dan
+              b. melakukan pembatasan interaksi fisik antar pengunjung. 28 (2) Edukasi dan protokol
+              pencegahan Covid-19 saat pelaksanaan kegiatan pelayanan kesehatan sebagaimana dimaksud
+              pada ayat (1) meliputi: a. memiliki izin keramaian sesuai dengan ketentuan peraturan
+              perundang-undangan, b. membatasi jumlah pengunjung paling banyak 50Yo (lima puluh
+              persen) dari kapasitas area publik atau tempat lainnya yang dapat menimbulkan
+              kerumunan orang, c. mewajibkan pengunjung menggunakan Masker: d. menyediakan sarana
+              cuci tangan dengan air mengalir dan sabun, e. mengatur waktu kunjungan, fI. menjaga
+              kebersihan area publik atau tempat lainnya yang dapat menimbulkan kerumunan orang, dan
+              g. melakukan pembersihan dan disinfeksi area publik atau tempat lainnya yang dapat
+              menimbulkan kerumunan orang. (3 Pembatasan interaksi fisik antar pengunjung
+              sebagaimana dimaksud pada ayat (1) huruf b, dilakukan dengan membatasi interaksi fisik
+              dengan rentang jarak paling sedikit 1 m (satu meter) antar pengunjung. Pasal 34 (1)
+              Pengelola, penyelenggara, atau penanggung jawab area publik dan tempat lainnya yang
+              dapat menimbulkan kerumunan orang yang tidak melaksanakan kewajiban pelindungan
+              kesehatan masyarakat sebagaimana dimaksud dalam Pasal 33 dikenakan sanksi
+              administratif berupa teguran tertulis dan pembubaran kegiatan. (2) Pelaksanaan
+              pengenaan sanksi berupa teguran tertulis dan pembubaran kegiatan sebagaimana dimaksud
+              pada ayat (1) dilakukan oleh Satpol PP dan dapat didampingi oleh unsur Perangkat
+              Daerah terkait, Kepolisian dan/atau TNI.
+            content:
+              type: pasalSet
+              node:
+                nodeType: pasalSet
+                parentNode: *ref_75
+              elements: []
+    - type: bab
+      node: &ref_76
+        nodeType: bab
+        key: 4
+        parentBabSetNode: *ref_7
+      title: >-
+        PSBB Pasal 35 (1) Dalam upaya pencegahan penyebaran Covid-19, Gubernur dapat memberlakukan
+        PSBB di Provinsi DKI Jakarta. (2) PSBB sebagaimana dimaksud pada ayat (1) dilakukan dalam
+        bentuk pembatasan aktivitas luar rumah yang dilakukan oleh 29 setiap orang yang berdomisili
+        dan/atau berkegiatan di Provinsi DKI Jakarta. (3) Selama pemberlakuan PSBB, setiap orang
+        yang berdomisili dan/atau berkegiatan di Provinsi DKI Jakarta wajib mematuhi Penerapan PHBS
+        Pencegahan Covid-19 sebagaimana dimaksud dalam Pasal 4. (4) Pelanggaran terhadap kewajiban
+        mematuhi Penerapan PHBS Pencegahan Covid-19 dikenakan sanksi sebagaimana dimaksud dalam
+        Pasal 6. (5) Pemberlakuan, jangka waktu dan pembatasan aktivitas luar rumah PSBB ditetapkan
+        dengan Keputusan Gubernur. Pasal 36 (1) Pembatasan aktivitas luar rumah dalam pelaksanaan
+        PSBB meliputi: a. perkantoran/tempat kerja, tempat usaha, tempat industri, perhotelan
+        /penginapan lain yang sejenis dan tempat wisata, b. Satuan Pendidikan: Cc. tempat ibadah, d.
+        moda transportasi, e. warung makan, rumah makan, kafe, dan restoran, f. pedagang kaki
+        lima/lapak jajanan pada lokasi binaan dan lokasi sementara, g. fasilitas pelayanan
+        kesehatan, dan h. area publik dan tempat lainnya yang dapat menimbulkan kerumunan massa. (2)
+        Selama pemberlakuan PSBB, aktivitas luar rumah sebagaimana dimaksud pada ayat (1) dilakukan
+        penghentian sementara, kecuali aktivitas luar rumah yang diperbolehkan dibuka berdasarkan
+        Keputusan Gubernur mengenai pemberlakuan PSBB. (3) Bagi pengelola, penyelenggara dan
+        penanggung jawab, aktivitas luar rumah yang diperbolehkan dibuka, wajib mematuhi ketentuan
+        mengenai pelindungan kesehatan masyarakat sebagaimana dimaksud dalam Peraturan Gubernur ini.
+        Pasal 37 (1) Bagi setiap aktivitas yang dilaksanakan tidak sesuai dengan pemberlakuan
+        pembatasan kegiatan / aktivitas PSBB, dikenakan sanksi administratif berupa penutupan
+        sementara tempat kegiatan/aktivitas sampai dengan masa tahapan aktifitas kegiatan PSBB
+        berakhir. 30 (2) Jika masih mengulangi pelanggaran setelah dikenakan sanksi administratif
+        berupa penutupan sementara tempat kegiatan/ aktivitas sebagaimana dimaksud pada ayat (1),
+        maka dikenakan sanksi berupa pembekuan sementara izin. (3) Pembekuan sementara izin dan
+        pencabutan izin sebagaimana dimaksud pada ayat (2) dilakukan oleh Dinas Penanaman Modal dan
+        PTSP setelah mendapat rekomendasi dari Kepala Satpol PP dan/atau Perangkat Daerah terkait.
+        (4) Pelaksanaan pengenaan sanksi sebagaimana dimaksud pada ayat (1) dilakukan oleh Satpol PP
+        selaku Ketua Bidang Penegakan Hukum dan Kedisiplinan Satuan Tugas Penanganan Covid-19
+        Tingkat Provinsi dan dapat didampingi oleh unsur Perangkat Daerah terkait, Kepolisian
+        dan/atau TNI. (5) Ketentuan mengenai tata cara pengenaan sanksi administratif pelanggaran
+        pemberlakuan pembatasan kegiatan /aktivitas PSBB, ditetapkan dengan Keputusan Kepala Satpol
+        PP. Pasal 38 Koordinasi, pengerahan sumber daya dan operasional pelaksanaan PSBB dilakukan
+        oleh Satuan Tugas Penanganan Covid-19 tingkat Provinsi.
+      content:
+        type: pasalSet
+        node:
+          nodeType: pasalSet
+          parentNode: *ref_76
+        elements: []
+    - type: bab
+      node: &ref_77
+        nodeType: bab
+        key: 5
+        parentBabSetNode: *ref_7
+      title: PSBB PADA MASA TRANSISI
+      content:
+        type: bagianSet
+        node:
+          nodeType: bagianSet
+          parentBabNode: *ref_77
+        elements:
+          - type: bagian
+            node: &ref_78
+              nodeType: bagian
+              key: 1
+              parentBagianSetNode:
+                nodeType: bagianSet
+                parentBabNode: *ref_77
+            title: >-
+              Bagian Kesatu Masa Transisi Pasal 39 (l) Dalam upaya menuju masyarakat yang aman,
+              sehat, dan produktif, diberlakukan Masa Transisi. (2) Dalam pemberlakuan Masa Transisi
+              sebagaimana dimaksud pada ayat (1), dilaksanakan: a. penerapan pelindungan kesehatan
+              individu dan pelindungan kesehatan masyarakat sebagaimana dimaksud dalam Peraturan
+              Gubernur ini: b. pentahapan kegiatan / aktivitas masyarakat, dan Cc. pengendalian moda
+              transportasi. 31 (3) Pemberlakuan Masa Transisi sebagaimana dimaksud pada ayat (1)
+              didasarkan pada indikator kajian dan penilaian yang dilakukan oleh Satuan Tugas
+              Penanganan Covid-19 tingkat Provinsi dengan melibatkan pemangku kepentingan meliputi:
+              a. kajian epidemiologi, b. penilaian kondisi kesehatan publik: dan Cc. penilaian
+              kesiapan fasilitas kesehatan. (4) Pemberlakuan Masa Transisi sebagaimana dimaksud pada
+              ayat (1), dilaksanakan secara bertahap terhadap kegiatan/ aktivitas pada tempat
+              /fasilitas umum meliputi: a. perkantoran/tempat kerja, tempat usaha, tempat industri,
+              perhotelan /penginapan lain yang sejenis dan tempat wisata, b. Satuan Pendidikan: Cc.
+              tempat ibadah, d. moda transportasi, e. warung makan, rumah makan, kafe, dan restoran,
+              f. pedagang kaki lima/lapak jajanan pada lokasi binaan dan lokasi sementara, g.
+              fasilitas pelayanan kesehatan, dan h. area publik dan tempat lainnya yang dapat
+              menimbulkan kerumunan massa. (5) Pemberlakuan pada Masa Transisi ditetapkan dengan
+              Keputusan Gubernur. (6) Penentuan tahapan dan pelaksanaan kegiatan/aktivitas pada Masa
+              Transisi ditetapkan dengan: a. Keputusan Kepala Dinas Tenaga Kerja, Transmigrasi dan
+              Energi untuk perkantoran/tempat kerja, b. Kepala Dinas Pendidikan untuk Satuan
+              Pendidikan: c. Keputusan Sekretaris Daerah untuk tempat ibadah, d. Kepala Dinas
+              Perhubungan untuk moda transportasi, e. Kepala Dinas Perindustrian, Perdagangan, KUKM
+              untuk tempat industri, pedagang kaki lima/lapak jajanan pada lokasi binaan dan lokasi
+              sementara, dan warung makan, f. Kepala Dinas Kesehatan untuk fasilitas pelayanan
+              kesehatan, g. Kepala Dinas Pariwisata dan Ekonomi Kreatif untuk tempat usaha,
+              perhotelan/penginapan lain yang sejenis, tempat wisata, rumah makan, kafe, dan
+              restoran: dan h. Keputusan Kepala Dinas Kebudayaan, Keputusan Kepala Dinas Pemuda dan
+              Olahraga atau Keputusan Kepala Dinas terkait sesuai kewenangannya, untuk area publik
+              dan tempat lainnya yang dapat menimbulkan kerumunan massa. 32 Pasal 40 (1) Bagi setiap
+              kegiatan/aktivitas yang dilaksanakan tidak sesuai dengan pemberlakuan, penentuan
+              tahapan, dan pelaksanaan kegiatan / aktivitas pada Masa Transisi sebagaimana dimaksud
+              dalam Pasal 39 ayat (5) dan ayat (6), dikenakan sanksi administratif berupa penutupan
+              sementara tempat kegiatan/ aktivitas sesuai masa tahapan aktifitas kegiatan pada masa
+              transisi. (2) Pelaksanaan pengenaan sanksi sebagaimana dimaksud pada ayat (1)
+              dilakukan oleh: a. Satpol PP pada perkantoran milik pemerintah, warung makan, rumah
+              makan, kafe, restoran, area publik dan tempat lainnya yang dapat menimbulkan kerumunan
+              orang, b. Dinas Tenaga Kerja, Transmigrasi dan Energi pada perkantoran milik swasta
+              dan tempat kerja, c. Dinas Pariwisata dan Ekonomi Kreatif pada perhotelan/penginapan
+              lainnya yang sejenis, tempat wisata dan tempat usaha sesuai lingkup kewenangan: d.
+              Dinas Perindustrian, Perdagangan, KUKM pada tempat industri dan tempat usaha sesuai
+              lingkup kewenangan, pedagang kaki lima/lapak jajanan pada lokasi binaan dan lokasi
+              sementara, e. Dinas Pendidikan pada Satuan Pendidikan, f. Dinas Kesehatan pada
+              fasilitas pelayanan kesehatan, dan g. Walikota/Bupati Administrasi pada tempat ibadah,
+              dan dapat didampingi unsur Kepolisian dan/atau TNI.
+            content:
+              type: pasalSet
+              node:
+                nodeType: pasalSet
+                parentNode: *ref_78
+              elements: []
+          - type: bagian
+            node: &ref_79
+              nodeType: bagian
+              key: 2
+              parentBagianSetNode:
+                nodeType: bagianSet
+                parentBabNode: *ref_77
+            title: >-
+              Bagian Kedua Penghentian Sementara Masa Transisi Pasal 41 (l) Dalam hal terjadi
+              peningkatan kasus baru Covid-19 secara signifikan selama Masa Transisi berdasarkan
+              hasil pemantauan dan evaluasi Satuan Tugas Penanganan Covid-19 Provinsi dilakukan
+              penghentian sementara pemberlakuan Masa Transisi. (2) Penetapan penghentian sementara
+              pelaksanaan Masa Transisi sebagaimana dimaksud pada ayat (1) berdasarkan pada
+              tingkatan wilayah dengan ketentuan sebagai berikut: a. untuk tingkat rukun warga,
+              kelurahan, kecamatan, dan kota/kabupaten administrasi ditetapkan dengan Keputusan
+              Walikota / Bupati Administrasi, dan 33 b. untuk tingkat provinsi ditetapkan dengan
+              Keputusan Gubernur. (3) Dalam hal penghentian sementara pelaksanaan Masa Transisi
+              sebagaimana dimaksud pada ayat (2) huruf a, diberlakukan pengendalian ketat berskala
+              lokal. 4) Dalam hal penghentian sementara pelaksanaan Masa Transisi sebagaimana
+              dimaksud pada ayat (2) huruf b, diberlakukan PSBB. Pasal 42 (1) Pelaksanaan
+              pengendalian ketat berskala lokal sebagaimana dimaksud dalam Pasal 41 ayat (3)
+              meliputi: a. penyiapan lokasi Isolasi, b. pemantauan dan pengawasan wilayah rukun
+              warga/ kelurahan / kecamatan /kota/kabupaten administrasi yang ditetapkan sebagai
+              wilayah pengendalian ketat, C. pemetaan terhadap wilayah yang memiliki kasus Covid-19
+              dengan angka Incident Rate (IR) tinggi dan kecepatan Ineident Rate (IR), d.
+              pelaksanaan skrining Covid-19, e. pemantauan terhadap warga dengan kondisi Kontak
+              Erat, Suspek, Probable, kasus konfirmasi Covid-19, dan pelaku perjalanan: f.
+              penelusuran Kontak Erat: g. pendataan jumlah warga miskin dan warga terdampak, h.
+              pelibatan unsur rukun tetangga/rukun warga, Lembaga Masyarakat Kelurahan, Pemberdayaan
+              Kesejahteraan Keluarga dan Karang Taruna serta elemen masyarakat lainnya: i.
+              pemberlakuan sanksi sosial terhadap warga yang melanggar Isolasi yang sesuai dengan
+              kearifan lokal dan kesepakatan warga, dan J. pelaporan pelaksanaan pengendalian ketat
+              berskala lokal kepada Satuan Tugas Penanganan Covid-19 Provinsi. (2) Ketentuan lebih
+              lanjut mengenai pelaksanaan pengendalian ketat berskala lokal sebagaimana dimaksud
+              pada ayat (1) ditetapkan dengan Keputusan Walikota/ Bupati Administrasi. 34
+            content:
+              type: pasalSet
+              node:
+                nodeType: pasalSet
+                parentNode: *ref_79
+              elements: []
+    - type: bab
+      node: &ref_80
+        nodeType: bab
+        key: 6
+        parentBabSetNode: *ref_7
+      title: >-
+        PENYELIDIKAN EPIDEMIOLOGI Pasal 43 (l) Setiap orang yang berada di Provinsi DKI Jakarta yang
+        melakukan kontak dengan kasus Suspek/ Probable/ konfirmasi Covid-19 wajib mengikuti kegiatan
+        penelusuran Kontak Erat sebagai bagian dari kegiatan penyelidikan epidemiologi yang
+        dilakukan oleh Dinas Kesehatan. (2) Dinas Kesehatan melaporkan hasil penyelidikan
+        epidemiologi sebagaimana dimaksud pada ayat (1) secara berkala atau sesuai kebutuhan kepada
+        Ketua Satuan Tugas Penanganan Covid-19 tingkat Provinsi.
+      content:
+        type: pasalSet
+        node:
+          nodeType: pasalSet
+          parentNode: *ref_80
+        elements: []
+    - type: bab
+      node: &ref_81
+        nodeType: bab
+        key: 7
+        parentBabSetNode: *ref_7
+      title: >-
+        SURVEILANS EPIDEMIOLOGI INFORMATIKA Pasal 44 Pelaksanaan surveilans epidemiologi informatika
+        mengacu pada Peraturan Gubernur mengenai Pemanfaatan Teknologi Informasi Dalam Surveilans
+        Epidemiologi di Provinsi DKI Jakarta.
+      content:
+        type: pasalSet
+        node:
+          nodeType: pasalSet
+          parentNode: *ref_81
+        elements: []
+    - type: bab
+      node: &ref_82
+        nodeType: bab
+        key: 8
+        parentBabSetNode: *ref_7
+      title: >-
+        PENYEBARLUASAN INFORMASI Pasal 45 (1) Penyebarluasan Informasi dilakukan melalui saluran
+        komunikasi publik seperti: a. konferensi pers, b. website resmi Pemerintah Provinsi DKI
+        Jakarta: c. media massa, d. media sosial: e. media luar ruang, dan f. komunikasi tatap muka.
+        (2) Penyebarluasan informasi melalui komunikasi tatap muka sebagaimana dimaksud pada ayat
+        (1) huruf f dilakukan dengan menjalankan protokol pencegahan Covid-19. 35
+      content:
+        type: pasalSet
+        node:
+          nodeType: pasalSet
+          parentNode: *ref_82
+        elements: []
+    - type: bab
+      node: &ref_83
+        nodeType: bab
+        key: 9
+        parentBabSetNode: *ref_7
+      title: >-
+        KEMITRAAN DAN KOLABORASI Pasal 46 (l) Bentuk kemitraan dan kolaborasi penanggulangan
+        Covid-19 antara Pemerintah Provinsi DKI Jakarta dengan kementerian dan lembaga negara,
+        dilaksanakan melalui: a. koordinasi dan fasilitasi: b. mekanisme hibah dan/atau bantuan
+        sosial sesuai dengan ketentuan peraturan perundang-undangan, Cc. pelaksanaan sinergi
+        perencanaan yang dapat dituangkan dalam dokumen kerja sama sesuai dengan ketentuan
+        perundang-undangan, dan d. dukungan program dalam bentuk lainya. (2) Bentuk kemitraan dan
+        kolaborasi penanggulangan Covid-19 antara Pemerintah Provinsi DKI Jakarta dengan pemerintah
+        daerah lain, dilakukan melalui: a. koordinasi dan fasilitasi: dan b. pelaksanaan sinergi
+        program atau kegiatan yang dapat dituangkan dalam dokumen kerja sama sesuai dengan ketentuan
+        peraturan perundang-undangan. (3) Bentuk kemitraan dan kolaborasi penanggulangan Covid-19
+        antara Pemerintah Provinsi DKI Jakarta dengan pihak ketiga, dilakukan melalui: a. penerimaan
+        bantuan atau sumbangan dalam bentuk barang, b. mekanisme hibah sesuai dengan ketentuan
+        perundang- undangan, dan c. bentuk kemitraan dan kolaborasi lainnya yang dapat dituangkan
+        dalam dokumen kerja sama sesuai dengan ketentuan peraturan perundang-undangan. 4) Bentuk
+        kemitraan dan kolaborasi penanggulangan Covid-19 antara Pemerintah Provinsi DKI Jakarta
+        dengan pemerintah daerah lain dan lembaga di luar negeri, dilakukan melalui: a. penerimaan
+        bantuan atau sumbangan dalam bentuk barang, b. mekanisme hibah sesuai dengan ketentuan
+        perundang- undangan, dan 36 c. bentuk kemitraan dan kolaborasi lainnya yang dapat dituangkan
+        dalam dokumen kerja sama sesuai dengan ketentuan peraturan perundang-undangan. (5) Kemitraan
+        dan kolaborasi yang melibatkan elemen masyarakat antara lain Dewan Kota/Kabupaten, Lembaga
+        Musyawarah Kelurahan, Forum Kewaspadaan Dini Masyarakat, Rukun Warga, Rukun Tetangga, dan
+        Pemberdayaan Kesejahteraan Keluarga, Karang Taruna, dan Dasawisma, dilaksanakan melalui
+        koordinasi Perangkat Daerah terkait sesuai dengan lingkup tugas dan fungsinya berdasarkan
+        ketentuan peraturan perundang- undangan. (6) Dalam melaksanakan kemitraan dan kolaborasi
+        penanggulangan Covid-19, Pemerintah Provinsi DKI Jakarta dapat menggunakan platform
+        kolaborasi dan ko-kreasi yang dilaksanakan sesuai dengan ketentuan perundang-undangan.
+      content:
+        type: pasalSet
+        node:
+          nodeType: pasalSet
+          parentNode: *ref_83
+        elements: []
+    - type: bab
+      node: &ref_84
+        nodeType: bab
+        key: 10
+        parentBabSetNode: *ref_7
+      title: UPAYA PEMULIHAN EKONOMI
+      content:
+        type: bagianSet
+        node:
+          nodeType: bagianSet
+          parentBabNode: *ref_84
+        elements:
+          - type: bagian
+            node: &ref_85
+              nodeType: bagian
+              key: 1
+              parentBagianSetNode:
+                nodeType: bagianSet
+                parentBabNode: *ref_84
+            title: >-
+              Bagian Kesatu Umum Pasal 47 Upaya pemulihan ekonomi, dilaksanakan dengan cara: a.
+              menyelamatkan dan mengembangkan usaha mikro, kecil dan menengah, ekonomi kreatif dan
+              koperasi, b. mengembangkan ekonomi digital, Cc. mengembangkan ekonomi inovatif
+              perkotaan, d. mempercepat perizinan terkait investasi dan/atau penanaman modal: e.
+              memberikan insentif fiskal dan nonfiskal: f. melakukan sinergi program Pemulihan
+              Ekonomi Nasional dengan kementerian /lembaga terkait serta pihak lainnya, dan atau g.
+              mengembangkan Ekonomi Kreatif.
+            content:
+              type: pasalSet
+              node:
+                nodeType: pasalSet
+                parentNode: *ref_85
+              elements: []
+          - type: bagian
+            node: &ref_86
+              nodeType: bagian
+              key: 2
+              parentBagianSetNode:
+                nodeType: bagianSet
+                parentBabNode: *ref_84
+            title: >-
+              Bagian Kedua Penyelamatan dan Pengembangan Usaha Mikro, Kecil, dan Menengah, Ekonomi
+              Kreatif, dan Koperasi Pasal 48 (1) Upaya penyelamatan dan dan pengembangan usaha
+              mikro, kecil dan menengah, ekonomi kreatif dan koperasi meliputi: a. menyediakan ruang
+              pemasaran termasuk penyediaan kios di sisi jalan utama dan pengembangan kawasan/sentra
+              usaha mikro, kecil dan menengah, 37 b. mempermudah proses penerbitan perizinan
+              berusaha sesuai dengan ketentuan peraturan perundang-undangan, Cc. memfasilitasi
+              kegiatan pelatihan peningkatan kapasitas usaha baik secara tatap muka maupun daring:
+              d. memberikan akses kepada fasilitas permodalan dari pemerintah pusat, Pemerintah
+              Provinsi DKI Jakarta, maupun lembaga lainnya termasuk pinjaman yang bersumber dari
+              dana pemulihan ekonomi nasional: e. memfasilitasi kegiatan pemasaran baik secara tatap
+              muka maupun daring, termasuk pelaksanaan acara produk kreatif, fI. memberikan akses
+              bahan baku murah melalui kerja sama dengan Badan Usaha Milik Daerah yang bergerak di
+              bidang pangan, g. mendorong kemitraan usaha mikro, kecil dan menengah dengan pelaku
+              usaha besar, h. memberi kemudahan pemberian akta koperasi untuk kampung prioritas, dan
+              i. melakukan upaya lain yang dibutuhkan sesuai dengan ketentuan peraturan
+              perundang-undangan. (2) Dalam melaksanakan upaya penyelamatan usaha mikro, kecil dan
+              menengah, ekonomi kreatif dan koperasi sebagaimana dimaksud pada ayat (1), Pemerintah
+              Provinsi DKI Jakarta dapat bekerja sama dengan perusahaan swasta, Badan Usaha Milik
+              Negara, Badan Usaha Milik Daerah, perguruan tinggi, lembaga non profit, dan lembaga
+              pemerintah.
+            content:
+              type: pasalSet
+              node:
+                nodeType: pasalSet
+                parentNode: *ref_86
+              elements: []
+          - type: bagian
+            node: &ref_87
+              nodeType: bagian
+              key: 3
+              parentBagianSetNode:
+                nodeType: bagianSet
+                parentBabNode: *ref_84
+            title: >-
+              Bagian Ketiga Pengembangan Ekonomi Digital Pasal 49 Upaya pengembangan ekonomi digital
+              meliputi: a. riset dan edukasi, b. percepatan penerapan elektronifikasi transaksi
+              melalui pengembangan infrastruktur fisik, dan teknologi informasi dan komunikasi, C.
+              pemberian akses permodalan perbankan dan non perbankan, d. pemasaran dalam negeri dan
+              luar negeri, dan e. fasilitasi kekayaan intelektual dan regulasi.
+            content:
+              type: pasalSet
+              node:
+                nodeType: pasalSet
+                parentNode: *ref_87
+              elements: []
+          - type: bagian
+            node: &ref_88
+              nodeType: bagian
+              key: 4
+              parentBagianSetNode:
+                nodeType: bagianSet
+                parentBabNode: *ref_84
+            title: >-
+              Bagian Keempat Pengembangan Ekonomi Inovatif Perkotaan Pasal 50 Upaya pengembangan
+              ekonomi inovatif perkotaan meliputi sektor: a. kesehatan: 38 b. logistik, Cc. future
+              income, dan d. penanaman modal.
+            content:
+              type: pasalSet
+              node:
+                nodeType: pasalSet
+                parentNode: *ref_88
+              elements: []
+          - type: bagian
+            node: &ref_89
+              nodeType: bagian
+              key: 5
+              parentBagianSetNode:
+                nodeType: bagianSet
+                parentBabNode: *ref_84
+            title: >-
+              Bagian Kelima Percepatan Perizinan Investasi dan/atau Penanaman Modal Pasal 51 (1)
+              Percepatan perizinan investasi dan/atau penanaman modal dilakukan dalam bentuk: Aa.
+              penyediaan data dan informasi perizinan investasi dan/atau penanaman modal, b.
+              fasilitas “Antar Jemput Izin Bermotor”: C. fasilitasi perizinan oleh “Jakarta
+              Investment Center”, d. penyederhanaan dan fleksibilitas perizinan melalui pelayanan
+              terpadu satu pintu, dan €. pemberian insentif dan kemudahan investasi dengan kriteria
+              yang sesuai dengan ketentuan peraturan perundang-undangan. (2) Percepatan perizinan
+              invesatasi dan/atau penanaman modal sebagaimana dimaksud pada ayat (1) dilaksanakan
+              oleh Kepala Dinas Penanaman Modal dan PTSP.
+            content:
+              type: pasalSet
+              node:
+                nodeType: pasalSet
+                parentNode: *ref_89
+              elements: []
+          - type: bagian
+            node: &ref_90
+              nodeType: bagian
+              key: 6
+              parentBagianSetNode:
+                nodeType: bagianSet
+                parentBabNode: *ref_84
+            title: >-
+              Bagian Keenam Pemberian Insentif Fiskal dan Non Fiskal Pasal 52 (1) Insentif fiskal
+              dan non fiskal dapat diberikan kepada masyarakat yang terdampak Covid-19 untuk
+              meringankan beban ekonomi dan memberikan stimulus sesuai dengan ketentuan peraturan
+              perundang-undangan. (2) Insentif fiskal dan non fiskal dapat diberikan kepada dunia
+              usaha yang terdampak Covid-19 untuk menjaga aktifitas produksi, menggerakkan roda
+              perekonomian, dan mengurangi beban usaha. (3) Insentif fiskal dapat berupa keringanan
+              pajak dan retribusi daerah meliputi penghapusan bunga keterlambatan, pemberian
+              keringanan retribusi daerah, dan penghapusan sanksi administratif. 39 4) Insentif non
+              fiskal dapat berupa percepatan dan kemudahan proses perizinan bagi usaha mikro, kecil
+              dan menengah, pendirian koperasi di kampung prioritas, kolaborasi dengan pemangku
+              kepentingan terkait. (S5) Kolaborasi dengan pemangku kepentingan terkait sebagaimana
+              dimaksud pada ayat (4), meliputi pengembangan program: a. kolaborasi sosial berskala
+              besar usaha mikro, kecil dan menengah, b. kolaborasi sosial berskala besar pangan, dan
+              c. kolaborasi sosial berskala besar tenaga kerja.
+            content:
+              type: pasalSet
+              node:
+                nodeType: pasalSet
+                parentNode: *ref_90
+              elements: []
+          - type: bagian
+            node: &ref_91
+              nodeType: bagian
+              key: 7
+              parentBagianSetNode:
+                nodeType: bagianSet
+                parentBabNode: *ref_84
+            title: >-
+              Bagian Ketujuh Sinergi Program Pemulihan Ekonomi Nasional Pasal 53 (1) Sinergi program
+              pemulihan ekonomi nasional dilakukan bersama Pemerintah Pusat, Badan Usaha Milik
+              Negara, Badan Usaha Milik Daerah, dan pihak lainnya sesuai dengan ketentuan peraturan
+              perundang-undangan. (2) Bentuk sinergi program pemulihan ekonomi nasional meliputi: a.
+              mendata, memutakhiran, dan mengusulkan data penerima manfaat kepada
+              kementerian/lembaga terkait secara berkala, b. melakukan sosialisasi kepada dunia
+              usaha terkait program pemulihan ekonomi nasional, Cc. mengajukan usulan pinjaman
+              pemulihan ekonomi nasional daerah kepada pemerintah pusat untuk proyek infrastruktur
+              daerah: dan d. menyalurkan kredit kepada usaha mikro kecil dan menengah, pedagang
+              pasar dan pelaku usaha lainnya melalui Bank DKI. (3) Sinergi program pemulihan ekonomi
+              nasional dilaksanakan oleh Tim Pemulihan Ekonomi Nasional Provinsi DKI Jakarta yang
+              ditetapkan dengan Keputusan Gubernur.
+            content:
+              type: pasalSet
+              node:
+                nodeType: pasalSet
+                parentNode: *ref_91
+              elements: []
+          - type: bagian
+            node: &ref_92
+              nodeType: bagian
+              key: 8
+              parentBagianSetNode:
+                nodeType: bagianSet
+                parentBabNode: *ref_84
+            title: >-
+              Bagian Kedelapan Pengembangan Ekonomi Kreatif Pasal 54 (1) Pembinaan dan pelatihan
+              dilaksanakan untuk mengembangkan dan meningkatkan kualitas pelaku ekonomi kreatif. (2)
+              Pemerintah Provinsi DKI Jakarta dapat memfasilitasi pencatatan atas hak cipta,
+              pendaftaran hak kekayaan industri pelaku ekonomi kreatif dan pengembangan pemasaran
+              produk ekonomi kreatif berbasis kekayaan intelektual, sesuai dengan ketentuan
+              peraturan perundang-undangan. 40 (3) Pengembangan jejaring pelaku ekonomi kreatif
+              dilaksanakan melalui kerjasama atau kolaborasi antara pemerintah, pelaku usaha,
+              komunitas dan institusi pendidikan.
+            content:
+              type: pasalSet
+              node:
+                nodeType: pasalSet
+                parentNode: *ref_92
+              elements: []
+    - type: bab
+      node: &ref_93
+        nodeType: bab
+        key: 11
+        parentBabSetNode: *ref_7
+      title: UPAYA PELINDUNGAN SOSIAL
+      content:
+        type: bagianSet
+        node:
+          nodeType: bagianSet
+          parentBabNode: *ref_93
+        elements:
+          - type: bagian
+            node: &ref_94
+              nodeType: bagian
+              key: 1
+              parentBagianSetNode:
+                nodeType: bagianSet
+                parentBabNode: *ref_93
+            title: >-
+              Bagian Kesatu Penerima Manfaat Pasal 55 (1) Bantuan sosial tunai dan/atau bantuan
+              sosial non tunai diberikan bagi masyarakat terdampak Covid-19 yaitu: a. masyarakat
+              miskin dan rentan miskin yang berpendapatan harian dan terdampak ekonomi akibat
+              Covid-19, dan b. masyarakat lainnya yang terdampak ekonomi akibat Covid-19. (2)
+              Masyarakat terdampak Covid-19 sebagaimana dimaksud pada ayat (1), dengan kriteria
+              sebagai berikut: a. belum mendapatkan bantuan sosial tunai dan/atau bantuan sosial non
+              tunai dalam rangka penanganan Covid-19 dari Pemerintah Pusat: b. masuk dalam kategori
+              miskin berdasarkan data terpadu kesejahteraan sosial, c. kehilangan pekerjaan karena
+              pemutusan hubungan kerja, kehilangan usaha dan/atau penghasilan yang berkurang secara
+              signifikan, berpenghasilan tidak tetap, atau dirumahkan tanpa dibayar/pemotongan gaji,
+              dan d. dalam hal kepala keluarga yang memenuhi kriteria penerima bantuan sosial
+              meninggal dunia, maka ahli waris dalam satu kartu keluarga berhak mendapatkan bantuan
+              sosial. (3) Warga terkonfirmasi Covid-19 yang melakukan Isolasi di Provinsi DKI
+              Jakarta melalui mekanisme sesuai dengan ketentuan peraturan perundang-undangan yang
+              memenuhi kriteria yaitu: a. berdomisili di Provinsi DKI Jakarta, dan b. terkonfirmasi
+              positif berdasarkan surat keterangan dari fasilitas kesehatan dan lurah setempat,
+              termasuk anggota keluarga yang tinggal satu rumah. 41
+            content:
+              type: pasalSet
+              node:
+                nodeType: pasalSet
+                parentNode: *ref_94
+              elements: []
+          - type: bagian
+            node: &ref_95
+              nodeType: bagian
+              key: 2
+              parentBagianSetNode:
+                nodeType: bagianSet
+                parentBabNode: *ref_93
+            title: >-
+              Bagian Kedua Pendataan dan Penetapan Pasal 56 (1) Dinas Sosial bersama dengan Unit
+              Kerja pada Perangkat Daerah terkait melakukan pengumpulan dan verifikasi data calon
+              penerima bantuan sosial tunai dan/atau bantuan sosial non tunai bagi masyarakat
+              terdampak Covid-19. (2) Berdasarkan hasil pengumpulan dan verifikasi sebagaimana
+              dimaksud pada ayat (1), Dinas Sosial melakukan pengolahan data calon penerima bantuan
+              sosial tunai dan/atau bantuan sosial non tunai bagi masyarakat terdampak Covid-19. (3)
+              Data Calon penerima bantuan sosial tunai dan/atau bantuan sosial non tunai bagi
+              masyarakat terdampak Covid-19 yang telah diolah sebagaimana dimaksud pada ayat (2)
+              kemudian ditindaklanjuti oleh Dinas Sosial untuk dilakukan pemadanan dengan: a. data
+              kependudukan oleh Dinas Kependudukan dan Catatan Sipil, b. data pajak oleh Badan
+              Pendapatan Daerah, dan c. data keluarga oleh Dinas Pemberdayaan, Perlindungan dan
+              Pengendalian Penduduk. (4) Hasil pemadanan data penerima bantuan sosial tunai dan/atau
+              bantuan sosial non tunai bagi masyarakat terdampak Covid-19 sebagaimana dimaksud pada
+              ayat (3) disampaikan kepada Kepala Dinas Sosial sebagai bahan rekomendasi penerima
+              bantuan sosial tunai dan/atau bantuan sosial tunai bagi masyarakat terdampak Covid-19.
+              (5) Rekomendasi sebagaimana dimaksud pada ayat (4) disampaikan oleh Kepala Dinas
+              Sosial kepada: a. Gubernur melalui Tim Anggaran Pemerintah Daerah dengan tembusan
+              kepala Badan Pengelolaan Keuangan Daerah Provinsi DKI Jakarta selaku Pejabat Pengelola
+              Keuangan Daerah dan Kepala Badan Perencanaan Pembangunan Daerah Provinsi DKI Jakarta,
+              b. Kepala Dinas Komunikasi, Informatika dan Statistik untuk diintegrasikan ke dalam
+              sistem, dan c. Kepala Biro Kesejahteraan sosial sebagai dasar penyusunan kebijakan
+              Keputusan Gubernur. Pasal 57 Penetapan penerima bantuan sosial tunai dan/atau bantuan
+              sosial non tunai bagi masyarakat terdampak Covid-19 ditetapkan dalam Keputusan
+              Gubernur. 142 Pasal 58 Masyarakat dapat berperan serta dalam pelaksanaan dan
+              penyaluran bantuan sosial tunai dan/atau bantuan sosial non tunai bagi masyarakat
+              terdampak Covid-19 dengan menginformasikan masyarakat yang layak dan tidak layak
+              menerima bantuan sosial tunai dan/atau bantuan sosial non tunai bagi masyarakat
+              terdampak Covid-19 melalui perangkat rukun tetangga dan/atau rukun warga.
+            content:
+              type: pasalSet
+              node:
+                nodeType: pasalSet
+                parentNode: *ref_95
+              elements: []
+          - type: bagian
+            node: &ref_96
+              nodeType: bagian
+              key: 3
+              parentBagianSetNode:
+                nodeType: bagianSet
+                parentBabNode: *ref_93
+            title: >-
+              Bagian Ketiga Pemberian Bantuan Sosial Tunai Pasal 59 (1) Besaran bantuan sosial tunai
+              ditetapkan dalam Keputusan Gubernur. (2) Pendanaan bantuan sosial tunai bersumber dari
+              Anggaran Pendapatan dan Belanja Daerah, yang penatausahaannya dilaksanakan sesuai
+              ketentuan peraturan perundang-undangan. Pasal 60 Pencairan bantuan sosial tunai
+              dilaksanakan sesuai ketentuan peraturan perundang-undangan.
+            content:
+              type: pasalSet
+              node:
+                nodeType: pasalSet
+                parentNode: *ref_96
+              elements: []
+          - type: bagian
+            node: &ref_97
+              nodeType: bagian
+              key: 4
+              parentBagianSetNode:
+                nodeType: bagianSet
+                parentBabNode: *ref_93
+            title: >-
+              Bagian Keempat Pemberian Bantuan Sosial Non Tunai Pasal 61 (1) Jenis bantuan sosial
+              non tunai disesuaikan dengan ketersediaan jenis barang kebutuhan pokok, penting, dan
+              barang lainnya di lapangan. (2) Nilai bantuan sosial non tunai ditetapkan dalam
+              Keputusan Gubernur. (3) Pendanaan bantuan sosial non tunai bersumber dari Anggaran
+              Pendapatan dan Belanja Daerah, yang penatausahaannya dilaksanakan sesuai ketentuan
+              peraturan perundang-undangan.
+            content:
+              type: pasalSet
+              node:
+                nodeType: pasalSet
+                parentNode: *ref_97
+              elements: []
+          - type: bagian
+            node: &ref_98
+              nodeType: bagian
+              key: 5
+              parentBagianSetNode:
+                nodeType: bagianSet
+                parentBabNode: *ref_93
+            title: >-
+              Bagian Kelima Pengawasan dan Pelaporan Pasal 62 (1) Kepala Suku Dinas Sosial dan
+              Kepala Unit Kerja Teknis I pada Kabupaten Administrasi melaksanakan pengawasan dan
+              pelaporan terhadap penerima Bantuan Sosial Tunai dan/atau Bantuan Sosial Non Tunai
+              bagi Masyarakat Terdampak Covid-19. (2) Pelaksanaan pengawasan dan pelaporan
+              sebagaimana dimaksud pada ayat (1) dilaksanakan secara berjenjang dan berkala, serta
+              dilaksanakan sesuai dengan ketentuan peraturan perundang- undangan. 43 Pasal 63 (1)
+              Hasil pengawasan dan pelaporan sebagaimana dimaksud dalam Pasal 62 disampaikan kepada
+              Kepala Dinas Sosial setiap bulan pada awal bulan berikutnya. (2) Kepala Dinas Sosial
+              untuk selanjutnya melaporkan hasil pengawasan dan pelaporan sebagaimana dimaksud pada
+              ayat (1) kepada Gubernur melalui Sekretaris Daerah.
+            content:
+              type: pasalSet
+              node:
+                nodeType: pasalSet
+                parentNode: *ref_98
+              elements: []
+          - type: bagian
+            node: &ref_99
+              nodeType: bagian
+              key: 6
+              parentBagianSetNode:
+                nodeType: bagianSet
+                parentBabNode: *ref_93
+            title: >-
+              Bagian Keenam Pemantauan dan Evaluasi Pasal 64 (1) Kepala Dinas Sosial melaksanakan
+              pemantauan dan evaluasi pelaksanaan bantuan sosial tunai dan/atau bantuan sosial non
+              tunai bagi masyarakat terdampak Covid-19. (2) Kepala Biro Kesejahteraan Sosial
+              melaksanakan pemantauan dan evaluasi terhadap kebijakan pemberian bantuan sosial tunai
+              dan/atau bantuan sosial non tunai bagi masyarakat terdampak Covid-19. 19. (3)
+              Pemantauan dan evaluasi sebagaimana dimaksud pada ayat (1) dan ayat (2) dilaksanakan
+              paling sedikit 3 (tiga) kali dalam 1 (satu) tahun. (4) Kepala Dinas Sosial melaporkan
+              hasil pelaksanaan pemantauan dan evaluasi sebagaimana dimaksud pada ayat (1) kepada
+              Gubernur melalui Sekretaris Daerah dengan tembusan kepada Kepala Badan Pengelolaan
+              Keuangan Daerah Provinsi DKI Jakarta. (5) Kepala Biro Kesejahteraan Sosial melaporkan
+              hasil pelaksanaan pemantauan dan evaluasi kepada Sekretaris Daerah melalui Asisten
+              Kesejahteraan Rakyat dengan tembusan kepada Kepala Dinas Sosial dan Perangkat
+              Daerah/Unit Kerja pada Perangkat Daerah terkait. Pasal 65 (1) Dalam melaksanakan
+              pemantauan dan evaluasi sebagaimana dimaksud dalam Pasal 64 ayat (2), Biro
+              Kesejahteraan Sosial melibatkan Perangkat Daerah/ Unit Kerja pada Perangkat Daerah
+              terkait. (2) Perangkat Daerah/Unit Kerja pada Perangkat Daerah terkait sebagaimana
+              dimaksud pada ayat (1) meliputi Perangkat Daerah/Unit Kerja pada Perangkat Daerah yang
+              memiliki tugas dalam pelaksanaan pengelolaan keuangan dan Aset Daerah, pelaksanaan
+              pembinaan dan pengelolaan Aparatur Sipil Negara dan/atau Perangkat Daerah/Unit kerja
+              pada Perangkat Daerah lain yang terkait. 44 Pasal 66 (1) Aparat Pengawas Intern
+              Pemerintah melaksanakan pembinaan, pengawasan, pemantauan dan evaluasi terhadap
+              pelaksanaan pemberian bantuan sosial tunai dan/atau bantuan sosial non tunai bagi
+              masyarakat terdampak Covid-19 sesuai dengan lingkup tugas dan kewenangan serta
+              dilaksanakan sesuai dengan ketentuan peraturan perundang-undangan. (2) Pelaksanaan
+              pembinaan, pengawasan, pemantauan dan evaluasi sebagaimana dimaksud pada ayat (1)
+              dilaksanakan paling sedikit 1 (satu) kali dalam 1 (satu) bulan.
+            content:
+              type: pasalSet
+              node:
+                nodeType: pasalSet
+                parentNode: *ref_99
+              elements: []
+          - type: bagian
+            node: &ref_100
+              nodeType: bagian
+              key: 7
+              parentBagianSetNode:
+                nodeType: bagianSet
+                parentBabNode: *ref_93
+            title: >-
+              Bagian Ketujuh Penghentian Penerimaan Bantuan Sosial Tunai dan/atau Bantuan Sosial Non
+              Tunai Pasal 67 (1) Penghentian bantuan sosial tunai dan/atau bantuan sosial non tunai
+              bagi masyarakat terdampak Covid-19 dilakukan dalam hal penerima bantuan memenuhi
+              kriteria: a. meninggal dunia dan tidak ada ahli waris, b. pindah tempat tinggal ke
+              luar Provinsi DKI Jakarta, dan/atau c. tidak lagi memenuhi kriteria sebagaimana
+              dimaksud dalam Pasal 55. (2) Apabila terdapat penerima bantuan sosial tunai dan/atau
+              bantuan sosial non tunai bagi masyarakat terdampak Covid-19 yang memenuhi salah satu
+              kriteria penghentian sebagaimana dimaksud pada ayat (1) maka rukun tetangga dan/atau
+              rukun warga melaporkan kepada Kepala Dinas Sosial melalui forum musyawarah kelurahan.
+              (3) Terhadap pelaporan rukun tetangga dan/atau rukun warga sebagaimana dimaksud pada
+              ayat (2) dilakukan verifikasi oleh Dinas Sosial untuk dilakukan penghentian bantuan
+              sosial tunai dan/atau bantuan sosial non tunai bagi masyarakat terdampak Covid-19. 19.
+              (4) Kepala Dinas Sosial melaksanakan proses penghentian bantuan sosial tunai dan/atau
+              bantuan sosial non tunai bagi masyarakat te£$dampak Covid-19 paling lambat 1 (satu)
+              bulan setelah menerima hasil verifikasi dan dilaksanakan sesuai dengan ketentuan
+              peraturan perundang-undangan.
+            content:
+              type: pasalSet
+              node:
+                nodeType: pasalSet
+                parentNode: *ref_100
+              elements: []
+    - type: bab
+      node: &ref_101
+        nodeType: bab
+        key: 12
+        parentBabSetNode: *ref_7
+      title: >-
+        PELAKSANAAN VAKSINASI COVID-19 Pasal 68 (1) Pelaksanaan Vaksinasi Covid-19 dilakukan secara
+        bertahap sesuai dengan ketersediaan Vaksin Covid-19. 45 (2) Kriteria penerima Vaksin
+        Covid-19 disesuaikan dengan indikasi Vaksin Covid-19 yang tersedia sesuai dengan ketentuan
+        peraturan perundang-undangan. (3) Pelaksanaan pengenaan sanksi sebagaimana dimaksud pada
+        ayat (2) dilakukan sesuai dengan ketentuan peraturan perundang-undangan.
+      content:
+        type: pasalSet
+        node:
+          nodeType: pasalSet
+          parentNode: *ref_101
+        elements: []
+    - type: bab
+      node: &ref_102
+        nodeType: bab
+        key: 13
+        parentBabSetNode: *ref_7
+      title: >-
+        KETENTUAN PENUTUP Pasal 69 Pada saat Peraturan Gubernur ini mulai berlaku, Peraturan
+        Gubernur: a. Nomor 33 Tahun 2020 tentang Pelaksanaan Pembatasan Sosial Berskala Besar Dalam
+        Penanganan Corona Virus Disease 2019 (COVID-19) di Provinsi Daerah Khusus Ibukota Jakarta
+        (Berita Daerah Provinsi Daerah Khusus Ibukota Jakarta Tahun 2020 Nomor 55003): b. Nomor 41
+        Tahun 2020 tentang Pengenaan Sanksi Terhadap Pelanggaran Pelaksanaan Pembatasan Sosial
+        Berskala Besar dalam Penanganan Corona Virus Disease 2019 (Covid-19) di Provinsi Daerah
+        Khusus Ibukota Jakarta (Berita Daerah Provinsi Daerah Khusus Ibukota Jakarta Tahun 2020
+        Nomor 72010), c. Nomor 79 Tahun 2020 tentang Penerapan Disiplin dan Penegakan Hukum Protokol
+        Kesehatan Sebagai Upaya Pencegahan dan Pengendalian Corona Virus Disease 2019 (Berita Daerah
+        Provinsi Daerah Khusus Ibukota Jakarta Tahun 2020 Nomor 72023), d. Nomor 80 Tahun 2020
+        tentang Pelaksanaan Pembatasan Sosial Berskala Besar pada Masa Transisi Menuju Masyarakat
+        Sehat, Aman, dan Produktif (Berita Daerah Provinsi Daerah Khusus Ibukota Jakarta Tahun 2020
+        Nomor 72024), e. Nomor 84 Tahun 2020 tentang Perubahan Atas Peraturan Gubernur Nomor 80
+        Tahun 2020 tentang Pelaksanaan Pembatasan Sosial Berskala Besar pada Masa Transisi Menuju
+        Masyarakat Sehat, Aman, dan Produktif (Berita Daerah Provinsi Daerah Khusus Ibukota Jakarta
+        Tahun 2020 Nomor 72027): f. Nomor 88 Tahun 2020 tentang Perubahan Atas Peraturan Gubernur
+        Nomor 33 Tahun 2020 tentang Pelaksanaan Pembatasan Sosial Berskala Besar Dalam Penanganan
+        Corona Virus Disease 2019 (COVID-19) di Provinsi Daerah Khusus Ibukota Jakarta (Berita
+        Daerah Provinsi Daerah Khusus Ibukota Jakarta Tahun 2020 Nomor 75012), dan g. Nomor 101
+        Tahun 2020 tentang Perubahan atas Peraturan Gubernur Nomor 79 Tahun 2020 tentang Penerapan
+        Disiplin dan Penegakan Hukum Protokol Kesehatan Sebagai Upaya Pencegahan dan Pengendalian
+        Corona Virus Disease 2019 (Berita Daerah Provinsi Daerah Khusus Ibukota Jakarta Tahun 2020
+        Nomor 72031), dicabut dan dinyatakan tidak berlaku. 46 Pasal 70 Peraturan Gubernur ini mulai
+        berlaku pada tanggal diundangkan Agar setiap orang mengetahuinya, memerintahkan pengundangan
+        Peraturan Gubernur ini dengan penempatannya dalam Berita Daerah Provinsi Daerah Khusus
+        Ibukota Jakarta.
+      content:
+        type: pasalSet
+        node:
+          nodeType: pasalSet
+          parentNode: *ref_102
+        elements: []
+disahkan:
+  date: *ref_103
+  location: Jakarta
+  pengesah: ttd
+  jabatanPengesah: GUBERNUR DAERAH KHUSUS
