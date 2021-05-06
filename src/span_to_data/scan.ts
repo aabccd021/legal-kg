@@ -41,7 +41,11 @@ export type KeyIds = {
 
 export type SpanIdToComponentKeyMap<T> = { [id: number]: T };
 
-export function babsSpansToKeyIds(hasAmendPasal: boolean, spans: Span[]): KeyIds {
+export function babsSpansToKeyIds(
+  hasAmendPasal: boolean,
+  rootOrganizer: 'bab' | 'pasal',
+  spans: Span[]
+): KeyIds {
   const initialAcc: KeyIds = {
     spanIdToBabKeyMap: {},
     spanIdToBagianKeyMap: {},
@@ -62,13 +66,14 @@ export function babsSpansToKeyIds(hasAmendPasal: boolean, spans: Span[]): KeyIds
     afterAbovePasal: false,
     afterTruePasal: false,
   };
-  return spans.reduce(toKeysWith(hasAmendPasal), initialAcc);
+  return spans.reduce(toKeysWith(hasAmendPasal, rootOrganizer), initialAcc);
 }
 
 const toKeysWith = curry(toKeys);
 
 function toKeys(
   hasAmendPasal: boolean,
+  rootOrganizer: 'bab' | 'pasal',
   acc: KeyIds,
   span: Span,
   idx: number,
@@ -103,18 +108,20 @@ function toKeys(
     lastAmendAyatKey,
   } = acc;
 
-  const newBabKey = babKeyOfSpan(span);
-  if (isUndefined(lastBabKey)) {
-    if (newBabKey !== 1) throw Error('impossible');
-    return { ...acc, spanIdToBabKeyMap: { [span.id]: newBabKey }, lastBabKey: newBabKey };
-  }
-  if (newBabKey === lastBabKey + 1) {
-    return {
-      ...acc,
-      afterAbovePasal: true,
-      spanIdToBabKeyMap: { ...spanIdToBabKeyMap, [span.id]: newBabKey },
-      lastBabKey: newBabKey,
-    };
+  if (rootOrganizer === 'bab') {
+    const newBabKey = babKeyOfSpan(span);
+    if (isUndefined(lastBabKey)) {
+      if (newBabKey !== 1) throw Error('impossible');
+      return { ...acc, spanIdToBabKeyMap: { [span.id]: newBabKey }, lastBabKey: newBabKey };
+    }
+    if (newBabKey === lastBabKey + 1) {
+      return {
+        ...acc,
+        afterAbovePasal: true,
+        spanIdToBabKeyMap: { ...spanIdToBabKeyMap, [span.id]: newBabKey },
+        lastBabKey: newBabKey,
+      };
+    }
   }
 
   const newBagianKey = bagianKeyOfSpan(span);
