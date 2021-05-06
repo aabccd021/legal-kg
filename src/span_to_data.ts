@@ -71,7 +71,10 @@ function writeToData(node: DocumentNode): void {
 
   const choosen = maxBy(docs, ({ triples }) => triples.length);
 
-  if (!choosen) throw Error();
+  if (!choosen || !choosen.document) {
+    console.log(`${node} can't be converted to data`);
+    return;
+  }
 
   writeFileSync(dataFile.path, yaml.dump(choosen.document, { lineWidth: 100 }));
   writeFileSync(ttlFile.path, triplesToTtl(choosen.triples));
