@@ -84,10 +84,12 @@ export function shouldOverwrite(): boolean {
 export type DataType =
   | 'pdf'
   | 'normalized-pdf'
-  | 'span'
+  | 'span-raw'
+  | 'span-normalized'
+  | 'span-mixed'
+  | 'data'
   | 'pdf-scan'
   | 'normalized-pdf-scan'
-  | 'yaml'
   | 'md'
   | 'query_result'
   | 'ttl';
@@ -98,11 +100,13 @@ export function getDataTypeExtension(dataType: DataType): string {
 function getDataTypeExtensionStr(dataType: DataType): string {
   if (dataType === 'pdf') return 'pdf';
   if (dataType === 'normalized-pdf') return 'pdf';
-  if (dataType === 'yaml') return 'yaml';
+  if (dataType === 'data') return 'yaml';
   if (dataType === 'md') return 'md';
   if (dataType === 'ttl') return 'ttl';
   if (dataType === 'query_result') return 'md';
-  if (dataType === 'span') return 'yaml';
+  if (dataType === 'span-raw') return 'yaml';
+  if (dataType === 'span-normalized') return 'yaml';
+  if (dataType === 'span-mixed') return 'yaml';
   if (dataType === 'normalized-pdf-scan') return 'yaml';
   if (dataType === 'pdf-scan') return 'yaml';
   assertNever(dataType);

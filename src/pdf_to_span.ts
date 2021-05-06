@@ -20,23 +20,39 @@ async function toPdfJson(node: DocumentNode): Promise<void> {
 
   const pdfFile = nodeToFile('pdf', node);
   const normalizedPdfFile = nodeToFile('normalized-pdf', node);
-  const spanFile = nodeToFile('span', node);
+  const spanRawFile = nodeToFile('span-raw', node);
+  const spanNormalizedFile = nodeToFile('span-normalized', node);
+  const spanMixedFile = nodeToFile('span-mixed', node);
 
-  if (!shouldOverwrite() && spanFile.exists) {
+  if (
+    !shouldOverwrite() &&
+    spanRawFile.exists &&
+    spanNormalizedFile.exists &&
+    spanMixedFile.exists
+  ) {
     console.log('skipped because exists');
     return;
   }
-  // const rawDetected = nodeToFile('pdf-detect', node);
-  const { pages } = await pdfExtract.extract(pdfFile.path);
+  const { pages: rawPages } = await pdfExtract.extract(pdfFile.path);
   const { pages: normalizedPages } = await pdfExtract.extract(normalizedPdfFile.path);
-  // writeFileSync(rawDetected.path, JSON.stringify(pages, undefined, 2));
+  writeFileSync(nodeToFile('pdf-scan', node).path, yaml.dump(rawPages));
+  writeFileSync(nodeToFile('normalized-pdf-scan', node).path, yaml.dump(normalizedPages));
   // TODO: able to select merge map
-  const mergedPages = chain(zip(pages, normalizedPages)).map(mergePage).compact().value();
-  const hasHeader = getHasHeader(mergedPages);
-  const cleanPages: Span[] = mergedPages
-    .flatMap((page, pageidx) => toPageWithoutNoise(page, pageidx, hasHeader))
-    .map((span, index) => ({ ...span, id: index }));
-  writeFileSync(spanFile.path, yaml.dump(cleanPages, { lineWidth: 80 }));
+  const mixedPages = chain(zip(rawPages, normalizedPages)).map(mergePage).compact().value();
+
+  const pages: [string, PDFExtractPage[]][] = [
+    [spanRawFile.path, rawPages],
+    [spanNormalizedFile.path, normalizedPages],
+    [spanMixedFile.path, mixedPages],
+  ];
+
+  pages.forEach(([path, pages]) => {
+    const hasHeader = getHasHeader(mixedPages);
+    const cleanPages: Span[] = pages
+      .flatMap((page, pageidx) => toPageWithoutNoise(page, pageidx, hasHeader))
+      .map((span, index) => ({ ...span, id: index }));
+    writeFileSync(path, yaml.dump(cleanPages, { lineWidth: 80 }));
+  });
 }
 
 function mergePage(

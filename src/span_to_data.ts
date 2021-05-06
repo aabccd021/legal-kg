@@ -1,50 +1,82 @@
 import { readFileSync, writeFileSync } from 'fs';
 import { getDocumentData, nodeToFile, shouldOverwrite, Span } from './util';
 import { babsSpansToKeyIds } from './span_to_data/scan';
-import { chain, isUndefined, mapValues, reduce } from 'lodash';
+import { chain, isUndefined, mapValues, maxBy, reduce } from 'lodash';
 import { pasalKeyOfSpan, safeParseInt } from './span_to_data/parse_key_from_spans';
 import * as yaml from 'js-yaml';
 import { spansToBabSet, spansToMetadata, spansToStr } from './span_to_data/spans_to_component';
 import { Disahkan, Document } from './component';
 import { DocumentNode } from './document';
 import { detectInDocument } from './span_to_data/detect';
+import { yamlToTriples } from './data_to_ttl/data-to-triples';
+import { triplesToTtl } from './data_to_ttl/triples-to-ttl';
 
 function spanToData(): void {
-  getDocumentData('span').forEach(writeTOData);
+  [
+    ...getDocumentData('span-mixed'),
+    ...getDocumentData('span-normalized'),
+    ...getDocumentData('span-raw'),
+  ].forEach(writeTOData);
   console.log('\ndone');
 }
 
-function writeTOData(documentNode: DocumentNode): void {
-  console.log('\nstart', documentNode);
+function writeTOData(node: DocumentNode): void {
+  console.log('\nstart', node);
 
-  console.time(`TIME ${JSON.stringify(documentNode)} init`);
-  const spanFile = nodeToFile('span', documentNode);
-  const dataFile = nodeToFile('yaml', documentNode);
+  console.time(`TIME ${JSON.stringify(node)} init`);
 
-  if (!shouldOverwrite() && dataFile.exists) {
+  const dataFile = nodeToFile('data', node);
+
+  const spanRawFile = nodeToFile('span-raw', node);
+  const spanNormalizedFile = nodeToFile('span-normalized', node);
+  const spanMixedFile = nodeToFile('span-mixed', node);
+  const ttlFile = nodeToFile('ttl', node);
+
+  if (!shouldOverwrite() && dataFile.exists && ttlFile.exists) {
     console.log('skipped because exists');
     return;
   }
 
-  const pdfSpans = yaml.load(readFileSync(spanFile.path, 'utf8')) as Span[];
-  const documentSpans = documentSpansOf(pdfSpans);
-  console.log(mapValues(documentSpans, (v) => v.length));
-  const hasAmendPasal = spansHasAmendPasal(documentSpans.babs);
-  const keyIds = babsSpansToKeyIds(hasAmendPasal, documentSpans.babs);
-  const disahkan = spansToDisahkan(documentSpans.disahkan);
-  const context = { hasAmendPasal, keyIds, documentNode, disahkan };
-  const document: Document = {
-    node: documentNode,
-    metadata: spansToMetadata(context, documentSpans.preBab),
-    opText: spansToStr(documentSpans.preBab),
-    babSet: spansToBabSet(context, documentSpans.babs),
-    disahkan,
-  };
-  // const detectedDocument = rawJsonToJson(document);
-  console.timeEnd(`TIME ${JSON.stringify(documentNode)} init`);
-  const detectedDocument: Document = detectInDocument(document);
+  // select docs with most nodes
+  const docs = [spanRawFile, spanNormalizedFile, spanMixedFile].map((file) => {
+    try {
+      const pdfSpans = yaml.load(readFileSync(file.path, 'utf8')) as Span[];
+      const documentSpans = documentSpansOf(pdfSpans);
+      console.log(mapValues(documentSpans, (v) => v.length));
+      const hasAmendPasal = spansHasAmendPasal(documentSpans.babs);
+      const keyIds = babsSpansToKeyIds(hasAmendPasal, documentSpans.babs);
+      const disahkan = spansToDisahkan(documentSpans.disahkan);
+      const context = { hasAmendPasal, keyIds, documentNode: node, disahkan };
+      const document: Document = {
+        node: node,
+        metadata: spansToMetadata(context, documentSpans.preBab),
+        opText: spansToStr(documentSpans.preBab),
+        babSet: spansToBabSet(context, documentSpans.babs),
+        disahkan,
+      };
+      const detectedDocument: Document = detectInDocument(document);
+      const triples = yamlToTriples(detectedDocument);
+      return {
+        document: detectedDocument,
+        triples,
+      };
+    } catch (e) {
+      console.warn(e);
+      return {
+        document: undefined,
+        triples: [],
+      };
+    }
+  });
 
-  writeFileSync(dataFile.path, yaml.dump(detectedDocument, { lineWidth: 100 }));
+  const choosen = maxBy(docs, ({ triples }) => triples.length);
+
+  if (!choosen) throw Error();
+
+  console.timeEnd(`TIME ${JSON.stringify(node)} init`);
+
+  writeFileSync(dataFile.path, yaml.dump(choosen.document, { lineWidth: 100 }));
+  writeFileSync(ttlFile.path, triplesToTtl(choosen.triples));
 }
 
 function spansToDisahkan(spans: Span[]): Disahkan {

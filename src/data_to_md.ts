@@ -19,14 +19,14 @@ import { getDocumentData, nodeToFile, shouldOverwrite } from './util';
 import { nodeToUri } from './uri';
 
 export function jsonToMd(): void {
-  const jsonNodes = getDocumentData('yaml');
+  const jsonNodes = getDocumentData('data');
   jsonNodes.forEach(handleJson);
 }
 
 function handleJson(node: DocumentNode): void {
   console.log('\nstart', node);
 
-  const jsonFile = nodeToFile('yaml', node);
+  const jsonFile = nodeToFile('data', node);
   const mdFile = nodeToFile('md', node);
 
   if (!shouldOverwrite() && mdFile.exists) {
