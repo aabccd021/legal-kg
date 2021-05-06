@@ -1,6 +1,6 @@
-import { Component } from '../../../legal/component';
+import { Component } from '../component';
 import { chain, curry, isUndefined, map, min } from 'lodash';
-import { Span, neverNum, lastOf } from '../../../util';
+import { Span, neverNum, lastOf } from '../util';
 import { SpanIdToComponentKeyMap } from './scan';
 import { Context, KeySpans } from './spans_to_component';
 

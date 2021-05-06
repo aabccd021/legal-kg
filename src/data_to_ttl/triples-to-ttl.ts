@@ -2,13 +2,7 @@ import { isNil, isNumber, isString, toPairs, compact, upperFirst, chain } from '
 import * as n3 from 'n3';
 import { LegalTriple } from './triple';
 import _ from 'lodash';
-import {
-  LegalNode,
-  getOntologyBaseUri,
-  nodeToUri,
-  DateNode,
-  padStartIfNumber,
-} from '../../../legal';
+import { LegalNode, nodeToUri, getOntologyBaseUri, DateNode, padStartIfNumber } from '../uri';
 
 const { triple, namedNode, literal } = n3.DataFactory;
 

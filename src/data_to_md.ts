@@ -1,4 +1,4 @@
-import { Mengingat } from './../../legal/component';
+import { Mengingat } from './component';
 import {
   Menimbang,
   PasalDeleteAmenderPoint,
@@ -7,35 +7,34 @@ import {
   PasalVersion,
   Point,
   PointSet,
-} from '../../legal/component';
+} from './component';
 import assertNever from 'assert-never';
 import * as yaml from 'js-yaml';
 import { compact, curry, chain, repeat, isNil, flatMap, isUndefined } from 'lodash';
 import { readFileSync, writeFileSync } from 'fs';
 import { toRoman } from 'roman-numerals';
-import { getDocumentData, nodeToFile } from '../../data';
-import { nodeToUri } from '../../legal';
-import { Bab, Bagian, Paragraf, Pasal, Ayat, Text, Document, BabSet } from '../../legal/component';
-import { DocumentNode, nodeToName } from '../../legal/document';
+import { Bab, Bagian, Paragraf, Pasal, Ayat, Text, Document, BabSet } from './component';
+import { DocumentNode, nodeToName } from './document';
+import { getDocumentData, nodeToFile, shouldOverwrite } from './util';
+import { nodeToUri } from './uri';
 
-type Option = { overwrite: boolean };
-export function jsonToMd(option: Option): void {
+export function jsonToMd(): void {
   const jsonNodes = getDocumentData('yaml');
-  jsonNodes.forEach(handleJsonWith(option));
+  jsonNodes.forEach(handleJson);
 }
 
-const handleJsonWith = curry(handleJson);
-function handleJson(option: Option, node: DocumentNode): void {
-  const { overwrite } = option;
+function handleJson(node: DocumentNode): void {
+  console.log('\nstart', node);
+
   const jsonFile = nodeToFile('yaml', node);
   const mdFile = nodeToFile('mdv2', node);
 
-  try {
-    if (!overwrite && mdFile.exists) {
-      console.log(`Skipped json-to-md ${mdFile.path}`);
-      return;
-    }
+  if (!shouldOverwrite() && mdFile.exists) {
+    console.log('skipped because exists');
+    return;
+  }
 
+  try {
     const json = yaml.load(readFileSync(jsonFile.path, 'utf8')) as Document;
     const md = _jsonToMd(json);
 
@@ -257,4 +256,4 @@ function getPrefixByIndex(index: number, uris: string[]): string {
   return `](${uri})`;
 }
 
-jsonToMd({ overwrite: true });
+jsonToMd();

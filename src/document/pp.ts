@@ -1,8 +1,8 @@
 import { isNumber } from 'lodash';
-import { DataType, getDataTypeExtension } from '../../data';
 import { _ConvertableDocumentHandler } from './_utils';
 import * as fs from 'fs';
 import path from 'path';
+import { DataType, getDataTypeExtension } from '../util';
 
 export type PPNode = {
   nodeType: 'document';

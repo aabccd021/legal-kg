@@ -1,14 +1,13 @@
-import { getDocumentData, nodeToFile } from '../../../data';
 import { readFileSync, writeFileSync } from 'fs';
-import { Span } from '../../../util';
-import { babsSpansToKeyIds } from './scan';
+import { getDocumentData, nodeToFile, shouldOverwrite, Span } from './util';
+import { babsSpansToKeyIds } from './span_to_data/scan';
 import { chain, isUndefined, mapValues, reduce } from 'lodash';
-import { pasalKeyOfSpan, safeParseInt } from './parse_key_from_spans';
+import { pasalKeyOfSpan, safeParseInt } from './span_to_data/parse_key_from_spans';
 import * as yaml from 'js-yaml';
-import { spansToBabSet, spansToMetadata, spansToStr } from './spans_to_component';
-import { Disahkan, Document } from '../../../legal/component';
-import { DocumentNode } from '../../../legal/document';
-import { detectInDocument } from './detect';
+import { spansToBabSet, spansToMetadata, spansToStr } from './span_to_data/spans_to_component';
+import { Disahkan, Document } from './component';
+import { DocumentNode } from './document';
+import { detectInDocument } from './span_to_data/detect';
 
 function pdfDataToJson(): void {
   getDocumentData('pdf-data').forEach(writeToJson);
@@ -19,9 +18,15 @@ function writeToJson(documentNode: DocumentNode): void {
   console.log('\nstart', documentNode);
 
   console.time(`TIME ${JSON.stringify(documentNode)} init`);
-  const dataFile = nodeToFile('pdf-data', documentNode);
-  const jsonFile = nodeToFile('yaml', documentNode);
-  const pdfSpans = yaml.load(readFileSync(dataFile.path, 'utf8')) as Span[];
+  const pdfDataFile = nodeToFile('pdf-data', documentNode);
+  const dataFile = nodeToFile('yaml', documentNode);
+
+  if (!shouldOverwrite() && dataFile.exists) {
+    console.log('skipped because exists');
+    return;
+  }
+
+  const pdfSpans = yaml.load(readFileSync(pdfDataFile.path, 'utf8')) as Span[];
   const documentSpans = documentSpansOf(pdfSpans);
   console.log(mapValues(documentSpans, (v) => v.length));
   const hasAmendPasal = spansHasAmendPasal(documentSpans.babs);
@@ -39,7 +44,7 @@ function writeToJson(documentNode: DocumentNode): void {
   console.timeEnd(`TIME ${JSON.stringify(documentNode)} init`);
   const detectedDocument: Document = detectInDocument(document);
 
-  writeFileSync(jsonFile.path, yaml.dump(detectedDocument, { lineWidth: 100 }));
+  writeFileSync(dataFile.path, yaml.dump(detectedDocument, { lineWidth: 100 }));
 }
 
 function spansToDisahkan(spans: Span[]): Disahkan {

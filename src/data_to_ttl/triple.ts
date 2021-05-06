@@ -1,4 +1,3 @@
-import { DateNode, LegalNode } from '../../../legal';
 import {
   AyatNode,
   PasalNode,
@@ -16,8 +15,9 @@ import {
   BabSetNode,
   MenimbangNode,
   MengingatNode,
-} from '../../../legal/component';
-import { DocumentNode } from '../../../legal/document';
+} from '../component';
+import { DocumentNode } from '../document';
+import { DateNode, LegalNode } from '../uri';
 
 /**
  * FooSet => Set/Collection of Foo, for easier triple generation.

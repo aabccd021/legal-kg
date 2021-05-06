@@ -5,7 +5,7 @@ import {
   compareConvertableDocument,
   ConvertableDocumentNode,
   DocumentNode,
-} from './legal/document';
+} from './document';
 
 export type DocumentLog = ConvertDocumentLog | ErrorDocumentLog;
 

@@ -1,7 +1,7 @@
 import * as fs from 'fs';
 import { chain, isNil, parseInt, isNumber } from 'lodash';
 import path from 'path';
-import { DataType, getDataTypeExtension } from '../../data';
+import { DataType, getDataTypeExtension } from '../util';
 import { _ScrapableDocumentHandler } from './_utils';
 
 export type UuNode = {

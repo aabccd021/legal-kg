@@ -2,8 +2,8 @@ import assertNever from 'assert-never';
 import path from 'path';
 import { _ConvertableDocumentHandler } from './_utils';
 import * as fs from 'fs';
-import { DataType, getDataTypeExtension } from '../../data';
 import { isNumber, isUndefined } from 'lodash';
+import { DataType, getDataTypeExtension } from '../util';
 
 export type Daerah = typeof DAERAHS[number];
 

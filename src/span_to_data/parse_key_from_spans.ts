@@ -1,6 +1,6 @@
 import { isUndefined } from 'lodash';
 import { toArabic } from 'roman-numerals';
-import { neverString, Span } from '../../../util';
+import { neverString, Span } from '../util';
 
 export function nomorKeyOfSpan(span: Span): number | undefined {
   const { str } = span;
@@ -90,18 +90,12 @@ export function safeParseInt(str: string | undefined): number | undefined {
 // TODO: give example
 export function ayatKeyOf(span: Span): number | undefined {
   const { str } = span;
-  if (str.startsWith('(l)')) {
-    console.count('(l)');
-    return 1;
-  }
-  if (str.startsWith('(S)')) {
-    console.count('(S)');
-    return 5;
-  }
-  if (str.startsWith('(44')) {
-    console.count('(44');
-    return 4;
-  }
+  if (str.startsWith('(l)')) return 1;
+
+  if (str.startsWith('(S)')) return 5;
+
+  if (str.startsWith('(44')) return 4;
+
   const firstMatch = str.match(/^\(?S?[0-9]+\)/)?.[0];
   if (!isUndefined(firstMatch)) {
     return safeParseInt(firstMatch?.split(')')?.[0]?.replace('(', '')?.replace('S', ''));
@@ -123,22 +117,14 @@ function ayatFirstStrWithoutKeyOf(str: string): string {
 
 // TODO: give example
 function clean(str: string): string {
-  if (str === 'S5') {
-    console.count('S5');
-    return '5';
-  }
-  if (str === 'S1') {
-    console.count('S1');
-    return '51';
-  }
-  if (str === 'S') {
-    console.count('S');
-    return '5';
-  }
-  if (str === 'l') {
-    console.count('l');
-    return '1';
-  }
+  if (str === 'S5') return '5';
+
+  if (str === 'S1') return '51';
+
+  if (str === 'S') return '5';
+
+  if (str === 'l') return '1';
+
   if (str.includes('l')) return str.replace('l', '1');
   return str.trim();
 }

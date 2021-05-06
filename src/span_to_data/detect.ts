@@ -8,7 +8,7 @@ import {
   PasalNode,
   PasalVersionNode,
   PointSet,
-} from './../../../legal/component';
+} from '../component';
 import { chain, compact, isUndefined } from 'lodash';
 import {
   Bagian,
@@ -19,10 +19,10 @@ import {
   Reference,
   AyatNode,
   Text,
-} from '../../../legal/component';
-import { neverNum, neverString } from '../../../util';
+} from '../component';
+import { neverNum, neverString } from '../util';
 import { safeParseInt } from './parse_key_from_spans';
-import { DocumentNode } from '../../../legal/document';
+import { DocumentNode } from '../document';
 
 export function detectInDocument(document: Document): Document {
   const { babSet, metadata } = document;

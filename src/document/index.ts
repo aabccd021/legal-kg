@@ -2,10 +2,10 @@ import assertNever from 'assert-never';
 import { PerdaNode, _perda } from './perda';
 import { UuNode, _uu } from './uu';
 import { UudNode, _uud } from './uud';
-import { DataType } from '../../data';
 import path from 'path';
 import * as fs from 'fs';
 import { PPNode, _pp } from './pp';
+import { DataType } from '../util';
 
 export type ScrapableDocumentCategory = typeof SCRAPABLE_DOCUMENT_CATEGORY[number];
 export const SCRAPABLE_DOCUMENT_CATEGORY = ['uu'] as const;

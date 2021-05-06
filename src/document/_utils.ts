@@ -1,6 +1,6 @@
 import { ConvertableDocumentNode } from './index';
 import { DocumentNode, ScrapableDocumentNode } from '.';
-import { DataType } from '../../data';
+import { DataType } from '../util';
 
 export type _DocumentHandler<T extends DocumentNode> = {
   getPath: (node: T) => string;

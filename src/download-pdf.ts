@@ -3,15 +3,9 @@ import _, { compact } from 'lodash';
 import fetch from 'node-fetch';
 import { pipeline } from 'stream';
 import * as util from 'util';
-import { nodeToFile } from '../../data';
-import { nodeToName } from '../../legal/document';
-import {
-  ConvertDocumentLog,
-  DocumentLog,
-  readLogs,
-  toConvertDocumentLog,
-  writeLogs,
-} from '../../log';
+import { nodeToName } from './document';
+import { ConvertDocumentLog, DocumentLog, readLogs, toConvertDocumentLog, writeLogs } from './log';
+import { nodeToFile } from './util';
 
 const streamPipeline = util.promisify(pipeline);
 

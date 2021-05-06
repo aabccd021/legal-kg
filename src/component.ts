@@ -1,4 +1,4 @@
-import { DateNode, LegalNode } from '.';
+import { DateNode, LegalNode } from './uri';
 import { DocumentNode } from './document';
 
 /**

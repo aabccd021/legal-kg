@@ -1,14 +1,14 @@
-import {
-  getNodeOfScrappableDocumentName,
-  scrapableDocumentHtmlToPdfUrl,
-  ScrapableDocumentCategory,
-  SCRAPABLE_DOCUMENT_CATEGORY,
-  getScrapableDocumentLastPage,
-} from '../../legal/document';
 import { isNil, range } from 'lodash';
 import { Tabletojson } from 'tabletojson';
 import striptags from 'striptags';
-import { DocumentLog, writeLogs } from '../../log';
+import {
+  SCRAPABLE_DOCUMENT_CATEGORY,
+  ScrapableDocumentCategory,
+  getScrapableDocumentLastPage,
+  getNodeOfScrappableDocumentName,
+  scrapableDocumentHtmlToPdfUrl,
+} from './document';
+import { writeLogs, DocumentLog } from './log';
 
 export async function updateIndex(): Promise<void> {
   console.log('Start update index');

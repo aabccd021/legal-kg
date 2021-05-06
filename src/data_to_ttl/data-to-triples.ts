@@ -11,7 +11,7 @@ import {
   MengingatNode,
   Mengingat,
   Menimbang,
-} from '../../../legal/component';
+} from '../component';
 import assertNever from 'assert-never';
 import { flatMap, curry, map, chain, isUndefined, compact } from 'lodash';
 import {
@@ -35,7 +35,7 @@ import {
   AyatNode,
   TextNode,
   Document,
-} from '../../../legal/component';
+} from '../component';
 
 import { LegalTriple } from './triple';
 

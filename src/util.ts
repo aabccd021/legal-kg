@@ -1,5 +1,14 @@
-import { writeFileSync } from 'fs';
-import { reduce, isUndefined, join } from 'lodash';
+import { assertNever } from 'assert-never';
+import { existsSync, mkdirSync, writeFileSync } from 'fs';
+import { reduce, isUndefined, join, curry } from 'lodash';
+import path from 'path';
+import { getConfig } from './config';
+import {
+  DocumentNode,
+  getDocumentPath,
+  CONVERTABLE_DOCUMENT_CATEGORY,
+  getConvertableDocumentFiles,
+} from './document';
 
 export function bothFilter<T>(
   arr: T[],
@@ -66,4 +75,83 @@ export function joinWith(joiner: string) {
   return function _join(strArr: string[]): string {
     return join(strArr, joiner);
   };
+}
+
+export function shouldOverwrite(): boolean {
+  return process.argv.includes('--overwrite');
+}
+
+export type DataType =
+  | 'pdf'
+  | 'normalized-pdf'
+  | 'pdf-data'
+  | 'pdf-detect'
+  | 'normalized-pdf-detect'
+  | 'text'
+  | 'json'
+  | 'yaml'
+  | 'md'
+  | 'mdv2'
+  | 'query_result'
+  | 'ttl';
+export function getDataTypeExtension(dataType: DataType): string {
+  const extension = getDataTypeExtensionStr(dataType);
+  return `.${extension}`;
+}
+function getDataTypeExtensionStr(dataType: DataType): string {
+  if (dataType === 'pdf') return 'pdf';
+  if (dataType === 'normalized-pdf') return 'pdf';
+  if (dataType === 'pdf-data') return 'yaml';
+  if (dataType === 'pdf-detect') return 'json';
+  if (dataType === 'normalized-pdf-detect') return 'json';
+  if (dataType === 'text') return 'txt';
+  if (dataType === 'json') return 'json';
+  if (dataType === 'yaml') return 'yaml';
+  if (dataType === 'md') return 'md';
+  if (dataType === 'mdv2') return 'md';
+  if (dataType === 'ttl') return 'ttl';
+  if (dataType === 'query_result') return 'md';
+  assertNever(dataType);
+}
+
+export const nodeToFileWith = curry(nodeToFile);
+export function nodeToFile(
+  dataType: DataType,
+  node: DocumentNode
+): { path: string; exists: boolean } {
+  const { dataDir } = getConfig();
+  const extension = getDataTypeExtension(dataType);
+  const docPath = getDocumentPath(node);
+  const filePath = `${dataDir}/${dataType}/${docPath}${extension}`;
+
+  const fileDir = path.dirname(filePath);
+  mkdirSync(fileDir, { recursive: true });
+
+  const exists = existsSync(filePath);
+
+  return { path: filePath, exists };
+}
+
+export function getTempFilePath(
+  node: DocumentNode,
+  name: string,
+  extension: string
+): { path: string; exists: boolean } {
+  const { dataDir } = getConfig();
+  const docPath = getDocumentPath(node);
+  const filePath = `${dataDir}/temp/${name}/${docPath}${extension}`;
+
+  const fileDir = path.dirname(filePath);
+  mkdirSync(fileDir, { recursive: true });
+
+  const exists = existsSync(filePath);
+
+  return { path: filePath, exists };
+}
+
+export function getDocumentData(dataType: DataType): DocumentNode[] {
+  const { dataDir } = getConfig();
+  return CONVERTABLE_DOCUMENT_CATEGORY.flatMap((docType) =>
+    getConvertableDocumentFiles(docType, dataDir, dataType)
+  );
 }

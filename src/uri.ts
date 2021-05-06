@@ -1,9 +1,9 @@
 import { assertNever } from 'assert-never';
-import { getConfig } from '../config';
 import { DocumentNode, getDocumentPath } from './document';
 import { ComponentNode } from './component';
 import { isString, reduce, isUndefined } from 'lodash';
-import { safeParseInt } from '../command/convert/pdf_data_to_json/parse_key_from_spans';
+import { getConfig } from './config';
+import { safeParseInt } from './span_to_data/parse_key_from_spans';
 
 export type LegalNode = DocumentNode | ComponentNode;
 

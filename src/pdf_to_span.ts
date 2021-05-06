@@ -1,8 +1,7 @@
-import { UnindexedSpan } from './util';
-import { DocumentNode } from './legal/document/index';
+import { getDocumentData, nodeToFile, shouldOverwrite, UnindexedSpan } from './util';
+import { DocumentNode } from './document/index';
 import { writeFileSync } from 'fs';
 import { PDFExtract, PDFExtractPage, PDFExtractText } from 'pdf.js-extract';
-import { getDocumentData, nodeToFile } from './data';
 import { chain, curry, isUndefined, isEmpty, filter, zip } from 'lodash';
 import { bothFilter, neverNum, Span } from './util';
 import * as yaml from 'js-yaml';
@@ -18,9 +17,15 @@ async function normalizedPdfToPdfData(): Promise<void> {
 
 async function toPdfJson(node: DocumentNode): Promise<void> {
   console.log('start', node);
+
   const pdfFile = nodeToFile('pdf', node);
   const normalizedPdfFile = nodeToFile('normalized-pdf', node);
-  const jsonFile = nodeToFile('pdf-data', node);
+  const pdfDataFile = nodeToFile('pdf-data', node);
+
+  if (!shouldOverwrite() && pdfDataFile.exists) {
+    console.log('skipped because exists');
+    return;
+  }
   // const rawDetected = nodeToFile('pdf-detect', node);
   const { pages } = await pdfExtract.extract(pdfFile.path);
   const { pages: normalizedPages } = await pdfExtract.extract(normalizedPdfFile.path);
@@ -30,7 +35,7 @@ async function toPdfJson(node: DocumentNode): Promise<void> {
   const cleanPages: Span[] = mergedPages
     .flatMap(toPageWithoutNoise)
     .map((span, index) => ({ ...span, id: index }));
-  writeFileSync(jsonFile.path, yaml.dump(cleanPages, { lineWidth: 80 }));
+  writeFileSync(pdfDataFile.path, yaml.dump(cleanPages, { lineWidth: 80 }));
 }
 
 function mergePage(

@@ -2,8 +2,8 @@ import { newEngine } from '@comunica/actor-init-sparql-file';
 import { compact, curry, isUndefined, isEmpty } from 'lodash';
 import * as fs from 'fs';
 import path from 'path';
-import { getDocumentData, nodeToFile } from './data';
-import { DocumentNode, nodeToName } from './legal/document';
+import { DocumentNode, nodeToName } from './document';
+import { getDocumentData, nodeToFile } from './util';
 
 export async function query(args: { legalDocPath?: string }): Promise<void> {
   const sparqlFileDirPath = 'example_queries';
@@ -53,4 +53,5 @@ async function _getQueryResult(query: Query, sources: string[]): Promise<string>
   }
   throw Error('unknown result type');
 }
+
 // TODO: query using fuseki

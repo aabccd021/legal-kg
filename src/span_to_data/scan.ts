@@ -1,5 +1,5 @@
 import { curry, mean, isUndefined, isEmpty } from 'lodash';
-import { lastOf, neverNum, neverString, Span } from '../../../util';
+import { lastOf, neverNum, neverString, Span } from '../util';
 import {
   ayatKeyOf,
   babKeyOfSpan,

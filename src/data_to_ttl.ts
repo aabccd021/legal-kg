@@ -1,10 +1,10 @@
 import * as fs from 'fs';
-import { DocumentNode, nodeToName } from '../../../legal/document/index';
-import { Document } from '../../../legal/component';
-import { getDocumentData, nodeToFile } from '../../../data';
+import { DocumentNode, nodeToName } from './document/index';
+import { Document } from './component';
 import * as yaml from 'js-yaml';
-import { yamlToTriples } from './json-to-triples';
-import { triplesToTtl } from './triples-to-ttl';
+import { yamlToTriples } from './data_to_ttl/data-to-triples';
+import { triplesToTtl } from './data_to_ttl/triples-to-ttl';
+import { getDocumentData, nodeToFile, shouldOverwrite } from './util';
 
 export function yamlToTtl(): void {
   const jsonNodes = getDocumentData('yaml');
@@ -12,15 +12,20 @@ export function yamlToTtl(): void {
 }
 
 function handleJson(node: DocumentNode): void {
-  console.log(`Start json-to-ttl ${nodeToName(node)}`);
+  console.log('\nstart', node);
   const yamlFile = nodeToFile('yaml', node);
-  const { path: ttlPath } = nodeToFile('ttl', node);
+  const ttlFile = nodeToFile('ttl', node);
+
+  if (!shouldOverwrite() && ttlFile.exists) {
+    console.log('skipped because exists');
+    return;
+  }
 
   const yamlContent = yaml.load(fs.readFileSync(yamlFile.path, 'utf8')) as Document;
   const triples = yamlToTriples(yamlContent);
   const ttl = triplesToTtl(triples);
 
-  fs.writeFileSync(ttlPath, ttl);
+  fs.writeFileSync(ttlFile.path, ttl);
 
   console.log(`Finished json-to-ttl ${nodeToName(node)}`);
 }
