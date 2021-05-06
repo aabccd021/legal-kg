@@ -9,16 +9,16 @@ import { Disahkan, Document } from './component';
 import { DocumentNode } from './document';
 import { detectInDocument } from './span_to_data/detect';
 
-function pdfDataToJson(): void {
-  getDocumentData('pdf-data').forEach(writeToJson);
+function spanToData(): void {
+  getDocumentData('span').forEach(writeTOData);
   console.log('\ndone');
 }
 
-function writeToJson(documentNode: DocumentNode): void {
+function writeTOData(documentNode: DocumentNode): void {
   console.log('\nstart', documentNode);
 
   console.time(`TIME ${JSON.stringify(documentNode)} init`);
-  const pdfDataFile = nodeToFile('pdf-data', documentNode);
+  const spanFile = nodeToFile('span', documentNode);
   const dataFile = nodeToFile('yaml', documentNode);
 
   if (!shouldOverwrite() && dataFile.exists) {
@@ -26,7 +26,7 @@ function writeToJson(documentNode: DocumentNode): void {
     return;
   }
 
-  const pdfSpans = yaml.load(readFileSync(pdfDataFile.path, 'utf8')) as Span[];
+  const pdfSpans = yaml.load(readFileSync(spanFile.path, 'utf8')) as Span[];
   const documentSpans = documentSpansOf(pdfSpans);
   console.log(mapValues(documentSpans, (v) => v.length));
   const hasAmendPasal = spansHasAmendPasal(documentSpans.babs);
@@ -176,4 +176,4 @@ function getStandardDeviation(array: number[]): number {
   return Math.sqrt(array.map((x) => Math.pow(x - mean, 2)).reduce((a, b) => a + b) / n);
 }
 
-pdfDataToJson();
+spanToData();

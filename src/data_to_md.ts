@@ -27,7 +27,7 @@ function handleJson(node: DocumentNode): void {
   console.log('\nstart', node);
 
   const jsonFile = nodeToFile('yaml', node);
-  const mdFile = nodeToFile('mdv2', node);
+  const mdFile = nodeToFile('md', node);
 
   if (!shouldOverwrite() && mdFile.exists) {
     console.log('skipped because exists');

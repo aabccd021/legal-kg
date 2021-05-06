@@ -20,9 +20,9 @@ async function toPdfJson(node: DocumentNode): Promise<void> {
 
   const pdfFile = nodeToFile('pdf', node);
   const normalizedPdfFile = nodeToFile('normalized-pdf', node);
-  const pdfDataFile = nodeToFile('pdf-data', node);
+  const spanFile = nodeToFile('span', node);
 
-  if (!shouldOverwrite() && pdfDataFile.exists) {
+  if (!shouldOverwrite() && spanFile.exists) {
     console.log('skipped because exists');
     return;
   }
@@ -36,7 +36,7 @@ async function toPdfJson(node: DocumentNode): Promise<void> {
   const cleanPages: Span[] = mergedPages
     .flatMap((page, pageidx) => toPageWithoutNoise(page, pageidx, hasHeader))
     .map((span, index) => ({ ...span, id: index }));
-  writeFileSync(pdfDataFile.path, yaml.dump(cleanPages, { lineWidth: 80 }));
+  writeFileSync(spanFile.path, yaml.dump(cleanPages, { lineWidth: 80 }));
 }
 
 function mergePage(
