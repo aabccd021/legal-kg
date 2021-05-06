@@ -1,5 +1,5 @@
 {
-  "dataDir": "maintained_documents",
+  "dataDir": "scraped_document",
   "uriBase": "http://example.org/legal",
   "indexFile": "legal_index.json"
 }
