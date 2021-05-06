@@ -4,100 +4,13 @@
     {
       "type": "pwa-node",
       "request": "launch",
-      "name": "Convert : PDF to Text",
+      "name": "Debug",
       "runtimeArgs": [
         "-r",
         "ts-node/register"
       ],
       "args": [
-        "${workspaceFolder}/src/cli.ts",
-        "convert:pdf-to-text",
-      ],
-      "skipFiles": [
-        "${workspaceFolder}/node_modules/**",
-        "<node_internals>/**"
-      ]
-    },
-    {
-      "type": "pwa-node",
-      "request": "launch",
-      "name": "PDF Data to JSON",
-      "runtimeArgs": [
-        "-r",
-        "ts-node/register"
-      ],
-      "args": [
-        "${workspaceFolder}/src/pdf_data_to_json/mod.ts"
-      ],
-      "skipFiles": [
-        "${workspaceFolder}/node_modules/**",
-        "<node_internals>/**"
-      ]
-    },
-    {
-      "type": "pwa-node",
-      "request": "launch",
-      "name": "Convert : PDF to Text (Overwrite)",
-      "runtimeArgs": [
-        "-r",
-        "ts-node/register"
-      ],
-      "args": [
-        "${workspaceFolder}/src/cli.ts",
-        "convert:pdf-to-text",
-        "--overwrite",
-      ],
-      "skipFiles": [
-        "${workspaceFolder}/node_modules/**",
-        "<node_internals>/**"
-      ]
-    },
-    {
-      "type": "pwa-node",
-      "request": "launch",
-      "name": "Convert : Text to JSON",
-      "runtimeArgs": [
-        "-r",
-        "ts-node/register"
-      ],
-      "args": [
-        "${workspaceFolder}/src/cli.ts",
-        "convert:text-to-json",
-      ],
-      "skipFiles": [
-        "${workspaceFolder}/node_modules/**",
-        "<node_internals>/**"
-      ]
-    },
-    {
-      "type": "pwa-node",
-      "request": "launch",
-      "name": "Convert : Text to JSON (Overwrite)",
-      "runtimeArgs": [
-        "-r",
-        "ts-node/register"
-      ],
-      "args": [
-        "${workspaceFolder}/src/cli.ts",
-        "convert:text-to-json",
-        "--overwrite",
-      ],
-      "skipFiles": [
-        "${workspaceFolder}/node_modules/**",
-        "<node_internals>/**"
-      ]
-    },
-    {
-      "type": "pwa-node",
-      "request": "launch",
-      "name": "Convert : JSON to Markdown",
-      "runtimeArgs": [
-        "-r",
-        "ts-node/register"
-      ],
-      "args": [
-        "${workspaceFolder}/src/cli.ts",
-        "convert:json-to-md",
+        "${workspaceFolder}/src/span_to_data.ts",
       ],
       "skipFiles": [
         "${workspaceFolder}/node_modules/**",

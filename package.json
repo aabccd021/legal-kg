@@ -7,10 +7,10 @@
     "lint": "eslint '**/*.ts'",
     "query": "yarn cli query > temp_query",
     "generate:ocr": "ts-node src/ocr.ts",
-    "generate:span": "ts-node src/pdf_to_span",
-    "generate:data": "ts-node src/span_to_data",
-    "generate:md": "ts-node src/data_to_md",
-    "generate:ttl": "ts-node src/data_to_ttl",
+    "generate:span": "ts-node src/pdf_to_span.ts",
+    "generate:data": "ts-node src/span_to_data.ts",
+    "generate:md": "ts-node src/data_to_md.ts",
+    "generate:ttl": "ts-node src/data_to_ttl.ts",
     "test:types": "tsc --noEmit"
   },
   "engines": {
