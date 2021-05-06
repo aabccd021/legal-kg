@@ -128,6 +128,10 @@ function clean(str: string): string {
 
   if (str === 'l') return '1';
 
+  if (str === '2D') return '2';
+
+  if (str === 'D1') return '21';
+
   if (str.includes('l')) return str.replace('l', '1');
   return str.trim();
 }
