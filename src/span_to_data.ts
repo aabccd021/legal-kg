@@ -12,11 +12,7 @@ import { yamlToTriples } from './data_to_ttl/data-to-triples';
 import { triplesToTtl } from './data_to_ttl/triples-to-ttl';
 
 function spanToData(): void {
-  [
-    ...getDocumentData('span-mixed'),
-    ...getDocumentData('span-normalized'),
-    ...getDocumentData('span-raw'),
-  ].forEach(writeToData);
+  getDocumentData('span-raw').forEach(writeToData);
   console.log('\ndone');
 }
 
@@ -39,10 +35,11 @@ function writeToData(node: DocumentNode): void {
   const docs = [spanRawFile, spanNormalizedFile, spanMixedFile].map((file) => {
     try {
       const pdfSpans = yaml.load(readFileSync(file.path, 'utf8')) as Span[];
-      const documentSpans = documentSpansOf(pdfSpans);
+      const { spans: documentSpans, rootOrganizer } = documentSpansOf(pdfSpans);
       console.log(mapValues(documentSpans, (v) => v.length));
+      console.log({ rootOrganizer });
       const hasAmendPasal = spansHasAmendPasal(documentSpans.babs);
-      const keyIds = babsSpansToKeyIds(hasAmendPasal, documentSpans.babs);
+      const keyIds = babsSpansToKeyIds(hasAmendPasal, rootOrganizer, documentSpans.babs);
       const disahkan = spansToDisahkan(documentSpans.disahkan);
       const context = { hasAmendPasal, keyIds, documentNode: node, disahkan };
       const document: Document = {
@@ -122,54 +119,67 @@ function monthToNumber(monthStr: string | undefined): number {
 
 type DocumentSection = 'preBab' | 'babs' | 'penjelasan' | 'disahkan';
 type DocumentAcc = {
+  rootOrganizer?: 'bab' | 'pasal';
   section: DocumentSection;
   spans: {
     [K in DocumentSection]: Span[];
   };
 };
 
-function documentSpansOf(spans: Span[]): { [K in DocumentSection]: Span[] } {
+function documentSpansOf(
+  spans: Span[]
+): { spans: { [K in DocumentSection]: Span[] }; rootOrganizer: 'bab' | 'pasal' } {
   const initialExtraction: DocumentAcc = {
     spans: { babs: [], preBab: [], penjelasan: [], disahkan: [] },
     section: 'preBab',
   };
-  return reduce<Span, DocumentAcc>(
+  const { spans: newSpans, rootOrganizer } = reduce<Span, DocumentAcc>(
     spans,
     (acc, span) => {
-      const [newSection, newSpan] = getNewSection(acc.section, span);
+      const { newSection, newSpan, rootOrganizer } = getNewSection(acc.section, span);
       return {
         section: newSection,
         spans: {
           ...acc.spans,
           [newSection]: [...acc.spans[newSection], ...newSpan],
         },
+        rootOrganizer: acc.rootOrganizer ?? rootOrganizer,
       };
     },
     initialExtraction
-  ).spans;
+  );
+  if (!rootOrganizer) throw Error();
+  return {
+    spans: newSpans,
+    rootOrganizer,
+  };
 }
 
-function getNewSection(prevSection: DocumentSection, span: Span): [DocumentSection, Span[]] {
-  if (prevSection === 'preBab' && span.str.replaceAll(' ', '') === 'BABI') {
-    return ['babs', [span]];
-  }
-  // handle if BAB I not detected, detect using KETENTUAN UMUM
-  // TODO: handle
-  if (prevSection === 'preBab' && span.str === 'KETENTUAN UMUM') {
-    const fakeSpan = { ...span, str: 'BAB I' };
-    return ['babs', [fakeSpan, span]];
+function getNewSection(
+  prevSection: DocumentSection,
+  span: Span
+): { newSection: DocumentSection; newSpan: Span[]; rootOrganizer?: 'pasal' | 'bab' } {
+  if (prevSection === 'preBab') {
+    if (span.str.replaceAll(' ', '') === 'BABI')
+      return { newSection: 'babs', newSpan: [span], rootOrganizer: 'bab' };
+    if (span.str.replaceAll(' ', '') === 'Pasal1')
+      return { newSection: 'babs', newSpan: [span], rootOrganizer: 'pasal' };
+    if (span.str === 'KETENTUAN UMUM') {
+      const fakeSpan = { ...span, str: 'BAB I' };
+      return { newSection: 'babs', newSpan: [fakeSpan, span], rootOrganizer: 'bab' };
+    }
   }
   if (
     prevSection === 'babs' &&
     (span.str.startsWith('Disahkan di') || span.str.startsWith('Ditetapkan di')) &&
     span.xL > 250
   ) {
-    return ['disahkan', [span]];
+    return { newSection: 'disahkan', newSpan: [span] };
   }
   if (prevSection === 'disahkan' && span.str === 'PENJELASAN') {
-    return ['penjelasan', [span]];
+    return { newSection: 'penjelasan', newSpan: [span] };
   }
-  return [prevSection, [span]];
+  return { newSection: prevSection, newSpan: [span] };
 }
 
 // function reduceFlag(oldFlag: DocumentSection, span: Span): DocumentSection {

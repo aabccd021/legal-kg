@@ -1,0 +1,270 @@
+node: &ref_0
+  nodeType: document
+  docType: noTahun
+  docCategory: uu
+  tahun: 1997
+  nomor: 12
+metadata:
+  menimbang:
+    type: menimbang
+    node: &ref_1
+      nodeType: menimbang
+      parentNode: *ref_0
+    content:
+      type: pointSet
+      node: &ref_2
+        nodeType: pointSet
+        parentNode: *ref_1
+      description:
+        type: text
+        node:
+          nodeType: text
+          textName: description
+          parentNode: *ref_2
+        textString: ''
+        references: []
+      elements:
+        - type: point
+          node: &ref_3
+            nodeType: point
+            key: a
+            parentPointSetNode: *ref_2
+          content:
+            type: text
+            node:
+              nodeType: text
+              textName: text
+              parentNode: *ref_3
+            textString: >-
+              bahwa dengan adanya perkembangan kehidupan yang berlangsung cepat, terutama di bidang
+              perekonomian baik di tingkat nasional maupun internasional, pemberian perlindungan
+              hukum yang semakin efektif terhadap Hak Atas Kekayaan Intelektual, khususnya di bidang
+              Hak Cipta perlu lebih ditingkatkan dalam rangka mewujudkan iklim yang lebih baik bagi
+              tumbuh dan berkembangnya semangat mencipta di bidang ilmu pengetahuan, seni dan
+              sastra, yang sangat diperlukan dalam pelaksanaan pembangunan nasional yang bertujuan
+              terc iptanya masyarakat Indonesia yang adil dan makmur, maju, dan mandiri berdasarkan
+              Pancasila dan Undang - Undang Dasar 1945;
+            references: []
+        - type: point
+          node: &ref_4
+            nodeType: point
+            key: b
+            parentPointSetNode: *ref_2
+          content:
+            type: text
+            node:
+              nodeType: text
+              textName: text
+              parentNode: *ref_4
+            textString: >-
+              bahwa dengan penerimaan dan keikutsertaan Indonesia dalam Persetujuan tentang Aspek -
+              aspek Dagang Hak Atas Kekayaan Intelektual (Ag reement on Trade Related Aspects of
+              Intellectual Property Rights, Including Trade in Counterfeit Goods/TRIPs) yang
+              merupakan bagian dari Persetujuan Pembentukan Organisasi Perdagangan Dunia (Agreement
+              Establishing the World Trade Organization) sebagaimana telah disahkan dengan Undang -
+              undang, berlanjut dengan melaksanakan kewajiban untuk menyesuaikan peraturan perundang
+              - undangan nasional di bidang Hak Atas Kekayaan Intelektual termasuk Hak Cipta
+              terhadap persetujuan internasional tersebut; PRESIDEN REPUBLIK INDONESIA - 2 -
+            references: []
+        - type: point
+          node: &ref_5
+            nodeType: point
+            key: c
+            parentPointSetNode: *ref_2
+          content:
+            type: text
+            node:
+              nodeType: text
+              textName: text
+              parentNode: *ref_5
+            textString: >-
+              bahwa berdasarkan pertimbangan sebagaimana tersebut dalam huruf a dan b, serta
+              memperhatikan penilaian terhadap segala pengalaman, khususnya kekurangan selama
+              pelaksanaan Undang - undang tentang Hak Cipta, dipandang perlu untuk mengubah dan
+              menyempurnakan beberapa ketentuan Undang - undang Nomor 6 Tahun 1982 tentang Hak Cipta
+              sebagaimana telah diubah dengan Undang - undang Nomor 7 Tahun 1987 dengan Undang -
+              undang;
+            references: []
+  mengingat:
+    type: mengingat
+    node: &ref_6
+      nodeType: mengingat
+      parentNode: *ref_0
+    content:
+      type: pointSet
+      node: &ref_7
+        nodeType: pointSet
+        parentNode: *ref_6
+      description:
+        type: text
+        node:
+          nodeType: text
+          textName: description
+          parentNode: *ref_7
+        textString: ''
+        references: []
+      elements:
+        - type: point
+          node: &ref_8
+            nodeType: point
+            key: '1'
+            parentPointSetNode: *ref_7
+          content:
+            type: text
+            node:
+              nodeType: text
+              textName: text
+              parentNode: *ref_8
+            textString: Pasal 5 ayat (1), Pasal 20 ayat (1), dan Pasal 33 Undang - Undang Dasar 1945.
+            references: []
+        - type: point
+          node: &ref_9
+            nodeType: point
+            key: '2'
+            parentPointSetNode: *ref_7
+          content:
+            type: text
+            node:
+              nodeType: text
+              textName: text
+              parentNode: *ref_9
+            textString: >-
+              U ndang - undang Nomor 6 Tahun 1982 tentang Hak Cipta (Lembaran Negara Tahun 1982
+              Nomor 15, Tambahan Lembaran Negara Nomor 3217) sebagaimana telah diubah dengan Undang
+              - undang Nomor 7 Tahun 1987 (Lembaran Negara Tahun 1987 Nomor 42, Tambahan Lembaran
+              Negara Nom or 3362);
+            references: []
+        - type: point
+          node: &ref_10
+            nodeType: point
+            key: '3'
+            parentPointSetNode: *ref_7
+          content:
+            type: pointSet
+            node: &ref_11
+              nodeType: pointSet
+              parentNode: *ref_10
+            description:
+              type: text
+              node:
+                nodeType: text
+                textName: description
+                parentNode: *ref_11
+              textString: >-
+                Undang - undang Nomor 7 Tahun 1994 tentang Pengesahan Agreement Establishing The
+                World Trade Organization (Persetujuan Pembentukan Organisasi Perdagangan Dunia)
+                (Lembaran Negara Tahun 1994 Nomor 57, Tambahan Lembaran Negara Nomor 3564); Denga n
+                persetujuan DEWAN PERWAKILAN RAKYAT REPUBLIK INDONESIA MEMUTUSKAN: MENETAPKAN :
+                UNDANG - UNDANG TENTANG PERUBAHAN ATAS UNDANG - UNDANG NOMOR 6 TAHUN 1982 TENTANG
+                HAK CIPTA SEBAGAIMANA TELAH DIUBAH DENGAN UNDANG - UNDANG NOMOR 7 TAHUN 1987. Pasal
+                I Beberapa ketentuan dalam Undang - undang Nomor 6 Tahun 1982 tentang Hak Cipta
+                sebagaimana telah diubah dengan Undang - undang Nomor 7 Tahun 1987, diubah sebagai
+                berikut:
+              references: []
+            elements:
+              - type: point
+                node: &ref_12
+                  nodeType: point
+                  key: '1'
+                  parentPointSetNode: *ref_11
+                content:
+                  type: text
+                  node:
+                    nodeType: text
+                    textName: text
+                    parentNode: *ref_12
+                  textString: >-
+                    Ketentuan Pasal 1 huruf c diubah dan ditambah empat ketentuan baru yang
+                    dijadikan angk a 8, 9, 10 dan 11, sehingga keseluruhan Pasal 1 berbunyi sebagai
+                    berikut: PRESIDEN REPUBLIK INDONESIA - 3 -
+                  references: []
+  memutuskan: ''
+  denganPersetujuan: ''
+opText: |-
+  PRESIDEN
+  REPUBLIK INDONESIA
+  UNDANG - UNDANG REPUBLIK INDONESIA
+  NOMOR 12 TAHUN 1997
+  TENTANG
+  PERUBAHAN ATAS UNDANG - UNDANG
+  NOMOR 6 TAHUN 1982
+  TENTANG
+  HAK CIPTA
+  SEBAGAIMANA TELAH DIUBAH DENGAN
+  UNDANG - UNDANG NOMOR 7 TAHUN 1987
+  DENGAN RAHMAT TUHAN YANG MAHA ESA
+  PRESIDEN REPUBLIK INDONESIA
+  Menimbang : a. bahwa dengan adanya perkembangan kehidupan yang berlangsung
+  cepat, terutama di bidang perekonomian baik di tingkat nasional
+  maupun internasional, pemberian perlindungan hukum yang semakin
+  efektif terhadap Hak Atas Kekayaan Intelektual, khususnya di bidang
+  Hak Cipta perlu lebih ditingkatkan dalam rangka mewujudkan iklim
+  yang lebih baik bagi tumbuh dan berkembangnya semangat mencipta
+  di bidang ilmu pengetahuan, seni dan sastra, yang sangat diperlukan
+  dalam pelaksanaan pembangunan nasional yang bertujuan terc iptanya
+  masyarakat Indonesia yang adil dan makmur, maju, dan mandiri
+  berdasarkan Pancasila dan Undang - Undang Dasar 1945;
+  b. bahwa dengan penerimaan dan keikutsertaan Indonesia dalam
+  Persetujuan tentang Aspek - aspek Dagang Hak Atas Kekayaan
+  Intelektual (Ag reement on Trade Related Aspects of Intellectual
+  Property Rights, Including Trade in Counterfeit Goods/TRIPs) yang
+  merupakan bagian dari Persetujuan Pembentukan Organisasi
+  Perdagangan Dunia (Agreement Establishing the World Trade
+  Organization) sebagaimana telah disahkan dengan Undang - undang,
+  berlanjut dengan melaksanakan kewajiban untuk menyesuaikan
+  peraturan perundang - undangan nasional di bidang Hak Atas Kekayaan
+  Intelektual termasuk Hak Cipta terhadap persetujuan internasional
+  tersebut;
+  PRESIDEN
+  REPUBLIK INDONESIA
+  - 2 -
+  c. bahwa berdasarkan pertimbangan sebagaimana tersebut dalam huruf a
+  dan b, serta memperhatikan penilaian terhadap segala pengalaman,
+  khususnya kekurangan selama pelaksanaan Undang - undang tentang
+  Hak Cipta, dipandang perlu untuk mengubah dan menyempurnakan
+  beberapa ketentuan Undang - undang Nomor 6 Tahun 1982 tentang Hak
+  Cipta sebagaimana telah diubah dengan Undang - undang Nomor 7
+  Tahun 1987 dengan Undang - undang;
+  Mengingat : 1. Pasal 5 ayat (1), Pasal 20 ayat (1), dan Pasal 33 Undang - Undang Dasar
+  1945.
+  2. U ndang - undang Nomor 6 Tahun 1982 tentang Hak Cipta (Lembaran
+  Negara Tahun 1982 Nomor 15, Tambahan Lembaran Negara Nomor
+  3217) sebagaimana telah diubah dengan Undang - undang Nomor 7
+  Tahun 1987 (Lembaran Negara Tahun 1987 Nomor 42, Tambahan
+  Lembaran Negara Nom or 3362);
+  3. Undang - undang Nomor 7 Tahun 1994 tentang Pengesahan Agreement
+  Establishing The World Trade Organization (Persetujuan
+  Pembentukan Organisasi Perdagangan Dunia) (Lembaran Negara
+  Tahun 1994 Nomor 57, Tambahan Lembaran Negara Nomor 3564);
+  Denga n persetujuan
+  DEWAN PERWAKILAN RAKYAT REPUBLIK INDONESIA
+  MEMUTUSKAN:
+  MENETAPKAN : UNDANG - UNDANG TENTANG PERUBAHAN ATAS
+  UNDANG - UNDANG NOMOR 6 TAHUN 1982 TENTANG HAK
+  CIPTA SEBAGAIMANA TELAH DIUBAH DENGAN
+  UNDANG - UNDANG NOMOR 7 TAHUN 1987.
+  Pasal I
+  Beberapa ketentuan dalam Undang - undang Nomor 6 Tahun 1982 tentang
+  Hak Cipta sebagaimana telah diubah dengan Undang - undang Nomor 7
+  Tahun 1987, diubah sebagai berikut:
+  1. Ketentuan Pasal 1 huruf c diubah dan ditambah empat ketentuan
+  baru yang dijadikan angk a 8, 9, 10 dan 11, sehingga keseluruhan
+  Pasal 1 berbunyi sebagai berikut:
+  PRESIDEN
+  REPUBLIK INDONESIA
+  - 3 -
+babSet:
+  type: babSet
+  node:
+    nodeType: babSet
+    parentDocumentNode: *ref_0
+  elements: []
+disahkan:
+  date:
+    nodeType: date
+    month: 5
+    date: 7
+    year: 1997
+  location: Jakarta
+  pengesah: SOEHARTO
+  jabatanPengesah: PRESIDEN REPUBLIK INDONESIA
