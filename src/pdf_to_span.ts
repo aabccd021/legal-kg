@@ -2,7 +2,7 @@ import { getDocumentData, nodeToFile, shouldOverwrite, UnindexedSpan } from './u
 import { DocumentNode } from './document';
 import { writeFileSync } from 'fs';
 import { PDFExtract, PDFExtractPage, PDFExtractText } from 'pdf.js-extract';
-import { chain, curry, isUndefined, isEmpty, filter, zip, countBy, maxBy, toPairs } from 'lodash';
+import { chain, curry, isUndefined, isEmpty, filter, zip, countBy, maxBy, toPairs, compact } from 'lodash';
 import { bothFilter, neverNum, Span } from './util';
 import * as yaml from 'js-yaml';
 
@@ -33,21 +33,27 @@ async function toPdfJson(node: DocumentNode): Promise<void> {
     console.log('skipped because exists');
     return;
   }
+  if (pdfFile.exists) {
+    const { pages: rawPages } = await pdfExtract.extract(pdfFile.path);
+    writeFileSync(nodeToFile('pdf-scan', node).path, yaml.dump(rawPages));
+  }
+  if (normalizedPdfFile.exists) {
+    const { pages: normalizedPages } = await pdfExtract.extract(normalizedPdfFile.path);
+    writeFileSync(nodeToFile('normalized-pdf-scan', node).path, yaml.dump(normalizedPages));
+  }
+  // TODO: able to select merge map
   const { pages: rawPages } = await pdfExtract.extract(pdfFile.path);
   const { pages: normalizedPages } = await pdfExtract.extract(normalizedPdfFile.path);
-  writeFileSync(nodeToFile('pdf-scan', node).path, yaml.dump(rawPages));
-  writeFileSync(nodeToFile('normalized-pdf-scan', node).path, yaml.dump(normalizedPages));
-  // TODO: able to select merge map
-  const mixedPages = chain(zip(rawPages, normalizedPages)).map(mergePage).compact().value();
+  const mixedPages =pdfFile.exists && normalizedPdfFile.exists ?  chain(zip(rawPages, normalizedPages)).map(mergePage).compact().value(): undefined;
 
-  const pages: [string, PDFExtractPage[]][] = [
-    [spanRawFile.path, rawPages],
-    [spanNormalizedFile.path, normalizedPages],
-    [spanMixedFile.path, mixedPages],
-  ];
+  const pages: [string, PDFExtractPage[]][] = compact([
+    pdfFile.exists ?  [spanRawFile.path, rawPages]: undefined,
+    normalizedPdfFile.exists ? [spanNormalizedFile.path, normalizedPages]: undefined,
+    mixedPages ?[spanMixedFile.path, mixedPages]: undefined,
+  ]);
 
   pages.forEach(([path, pages]) => {
-    const hasHeader = getHasHeader(mixedPages);
+    const hasHeader = getHasHeader(pages);
     const cleanPages: Span[] = pages
       .flatMap((page, pageidx) => toPageWithoutNoise(page, pageidx, hasHeader))
       .map((span, index) => ({ ...span, id: index }));
