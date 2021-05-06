@@ -2,7 +2,7 @@ import { getDocumentData, nodeToFile, shouldOverwrite, UnindexedSpan } from './u
 import { DocumentNode } from './document/index';
 import { writeFileSync } from 'fs';
 import { PDFExtract, PDFExtractPage, PDFExtractText } from 'pdf.js-extract';
-import { chain, curry, isUndefined, isEmpty, filter, zip } from 'lodash';
+import { chain, curry, isUndefined, isEmpty, filter, zip, countBy, maxBy, toPairs } from 'lodash';
 import { bothFilter, neverNum, Span } from './util';
 import * as yaml from 'js-yaml';
 
@@ -32,8 +32,9 @@ async function toPdfJson(node: DocumentNode): Promise<void> {
   // writeFileSync(rawDetected.path, JSON.stringify(pages, undefined, 2));
   // TODO: able to select merge map
   const mergedPages = chain(zip(pages, normalizedPages)).map(mergePage).compact().value();
+  const hasHeader = getHasHeader(mergedPages);
   const cleanPages: Span[] = mergedPages
-    .flatMap(toPageWithoutNoise)
+    .flatMap((page, pageidx) => toPageWithoutNoise(page, pageidx, hasHeader))
     .map((span, index) => ({ ...span, id: index }));
   writeFileSync(pdfDataFile.path, yaml.dump(cleanPages, { lineWidth: 80 }));
 }
@@ -62,14 +63,18 @@ function hasSamePos(text1: PDFExtractText, text2: PDFExtractText): boolean {
 /**
  * Remove noise
  */
-function toPageWithoutNoise(page: PDFExtractPage, _pageIdx: number): UnindexedSpan[] {
-  return chain(page.content)
+function toPageWithoutNoise(
+  page: PDFExtractPage,
+  _pageIdx: number,
+  hasHeader: boolean
+): UnindexedSpan[] {
+  const spans = chain(page.content)
     .reduce<SpanMap>(toSpanMap, {})
     .thru(toSpansWith(_pageIdx + 1))
-    .filter(isNotHeader)
-    .thru(withoutLeftFooter)
-    .thru(withoutRightFooter)
     .value();
+
+  const spansAfterHeader = hasHeader ? spans.filter(isNotHeader) : spans;
+  return chain(spansAfterHeader).thru(withoutLeftFooter).thru(withoutRightFooter).value();
 }
 
 /**
@@ -214,6 +219,15 @@ function isRightFooter(span: UnindexedSpan): boolean {
  */
 function byY(a: UnindexedSpan, b: UnindexedSpan): number {
   return a.y - b.y;
+}
+
+function getHasHeader(pages: PDFExtractPage[]): boolean {
+  const firstStrs = pages.map((page) => page.content[0]?.str);
+  const counted = countBy(firstStrs);
+  const maxHeader = maxBy(toPairs(counted), ([, count]) => count) ?? [undefined, 0];
+  const sameHeaderRatio = maxHeader[1] / pages.length;
+  console.log(`header proposition: ${sameHeaderRatio}`);
+  return sameHeaderRatio > 0.1;
 }
 
 normalizedPdfToPdfData();
