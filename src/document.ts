@@ -6,9 +6,9 @@ import { DataType, getDataTypeExtension } from './util';
 // Node
 export const NO_TAHUN_DOC_CAT = [
   'uu',
-  'perda_kota_malang',
   'perda_provinsi_dki_jakarta',
   'pergub_dki_jakarta',
+  'perwali_malang',
   'pp',
 ] as const;
 export type NoTahunDocCat = typeof NO_TAHUN_DOC_CAT[number];
@@ -47,7 +47,7 @@ export function nodeToName(node: DocumentNode): string {
   if (node.docType === 'noTahun') {
     const tn = `TAHUN ${node.tahun} NOMOR ${node.nomor}`;
     if (node.docCategory === 'uu') return `UNDANG-UNDANG ${tn}`;
-    if (node.docCategory === 'perda_kota_malang') return `PERATURAN DAERAH KOTA MALANG ${tn}`;
+    if (node.docCategory === 'perwali_malang') return `PERATURAN WALIKOTA MALANG ${tn}`;
     if (node.docCategory === 'perda_provinsi_dki_jakarta')
       return `PERATURAN DAERAH PROVINSI DAERAH KHUSUS IBUKOTA JAKARTA ${tn}`;
     if (node.docCategory === 'pergub_dki_jakarta') return `PERATURAN GUBERNUR ${tn}`;
