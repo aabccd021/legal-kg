@@ -5,12 +5,8 @@
   "scripts": {
     "build": "tsc",
     "lint": "eslint '**/*.ts'",
-    "lint:fix": "eslint --fix '**/*.ts'",
-    "cli": "ts-node src/cli.ts",
-    "convert": "ts-node src/command/convert/pdf_data_to_json/mod.ts > temp_pdf_data_to_json && ts-node src/command/convert/json_to_md.ts > temp_json_to_md  && ts-node src/command/convert/json-to-ttl/mod.ts > temp_json_to_ttl",
     "query": "yarn cli query > temp_query",
-    "generate-ttl": "ts-node src/command/convert/json-to-ttl/mod.ts > temp_json_to_ttl",
-    "ocr": "ocrmypdf -l ind --force-ocr --jobs 4 --tesseract-config tesseract-config.cfg",
+    "generate:ocr": "ts-node src/ocr.ts",
     "generate:span": "ts-node src/pdf_to_span",
     "generate:data": "ts-node src/span_to_data",
     "generate:md": "ts-node src/data_to_md",
