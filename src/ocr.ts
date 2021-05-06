@@ -26,7 +26,11 @@ async function ocr(): Promise<void> {
         ` --tesseract-config tesseract-config.cfg` +
         ` ${rawPdfFile.path} ${normalizedPdfFile.path}`
     );
+<<<<<<< HEAD
   };
+=======
+  }
+>>>>>>> db0e9ce6f357fa5ec7668e33734c955cf1c83419
 }
 
 ocr();
