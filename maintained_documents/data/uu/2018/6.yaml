@@ -78,6 +78,7 @@ metadata:
               sebagaimana yang diamanatkan dalam regulasi internasional di bidang kesehatan, dan
               dalam melaksanakan amanat ini Indonesia harus menghormati sepenuhnya martabat, hak
               asasi manusia, dasar-dasar kebebasan seseorang, dan penerapannya secara universal,
+              PRESIDEN REPUBLIK INDONESIA -9-
             references: []
         - type: point
           node: &ref_6
@@ -142,7 +143,7 @@ metadata:
         Pasal 5 ayat (1), Pasal 20, Pasal 28 H ayat (1), Pasal 34 ayat (3) Undang-Undang Dasar
         Negara Republik Indonesia Tahun 1945: Dengan Persetujuan Bersama DEWAN PERWAKILAN RAKYAT
         INDONESIA dan PRESIDEN REPUBLIK INDONESIA MEMUTUSKAN: Menetapkan : UNDANG-UNDANG TENTANG
-        KEKARANTINAAN KESEHATAN.
+        KEKARANTINAAN KESEHATAN. Ja £ P0 & 3, 29. PRESIDEN REPUBLIK INDONESIA -3-
       references:
         - start: 67
           end: 123
@@ -152,7 +153,13 @@ metadata:
   memutuskan: ''
   denganPersetujuan: ''
 opText: |-
+  Tki
+  £
+  1
   SALINAN
+  “9 2
+  PRESIDEN
+  REPUBLIK INDONESIA
   UNDANG-UNDANG REPUBLIK INDONESIA
   NOMOR 6 TAHUN 2018
   TENTANG
@@ -186,6 +193,9 @@ opText: |-
   ini Indonesia harus menghormati sepenuhnya
   martabat, hak asasi manusia, dasar-dasar kebebasan
   seseorang, dan penerapannya secara universal,
+  PRESIDEN
+  REPUBLIK INDONESIA
+  -9-
   d. bahwa Undang-Undang Nomor 1 Tahun 1962 tentang
   Karantina Laut dan Undang-Undang Nomor 2 Tahun
   1962 tentang Karantina Udara sudah tidak sesuai lagi
@@ -207,6 +217,15 @@ opText: |-
   MEMUTUSKAN:
   Menetapkan : UNDANG-UNDANG TENTANG KEKARANTINAAN
   KESEHATAN.
+  Ja
+  £
+  P0
+  &
+  3,
+  29.
+  PRESIDEN
+  REPUBLIK INDONESIA
+  -3-
 babSet:
   type: babSet
   node: &ref_9
@@ -338,7 +357,7 @@ babSet:
                       textString: >-
                         Barang adalah produk nyata, hewan, tumbuhan, dan jenazah atau abu jenazah
                         yang dibawa dan/atau dikirim melalui perjalanan, termasuk benda/alat yang
-                        digunakan dalam Alat Angkut.
+                        digunakan dalam Alat Angkut. sa 2 Y Evi Ra PRESIDEN REPUBLIK INDONESIA -4-
                       references: []
                   - type: point
                     node: &ref_18
@@ -439,7 +458,7 @@ babSet:
                         Pembatasan Sosial Berskala Besar adalah pembatasan kegiatan tertentu
                         penduduk dalam suatu wilayah yang diduga terinfeksi penyakit dan/atau
                         terkontaminasi sedemikian rupa untuk mencegah kemungkinan penyebaran
-                        penyakit atau kontaminasi.
+                        penyakit atau kontaminasi. sat Fa 1 Tg “2. PRESIDEN REPUBLIK INDONESIA -5-
                       references: []
                   - type: point
                     node: &ref_24
@@ -551,7 +570,7 @@ babSet:
                         Awak Kapal yang selanjutnya disebut Awak adalah orang yang bekerja atau
                         dipekerjakan di atas Kapal oleh pemilik atau operator Kapal untuk melakukan
                         tugas di atas Kapal sesuai dengan jabatannya yang tercantum dalam buku
-                        sijil.
+                        sijil. Psi £ Hg & “9. L PRESIDEN REPUBLIK INDONESIA -6-
                       references: []
                   - type: point
                     node: &ref_31
@@ -639,7 +658,7 @@ babSet:
                         landas, naik turun penumpang, bongkar muat Barang, dan tempat perpindahan
                         intra dan antarmoda transportasi, yang dilengkapi dengan fasilitas
                         keselamatan dan keamanan penerbangan, serta fasilitas pokok dan fasilitas
-                        penunjang lainnya.
+                        penunjang lainnya. Ps £ “ & F1 2 ae R9, PRESIDEN REPUBLIK INDONESIA -7-
                       references: []
                   - type: point
                     node: &ref_36
@@ -766,7 +785,8 @@ babSet:
                         parentNode: *ref_43
                       textString: >-
                         Setiap Orang adalah orang perseorangan dan/atau badan, baik yang berbentuk
-                        badan hukum maupun tidak berbadan hukum.
+                        badan hukum maupun tidak berbadan hukum. ja - Tg Le il 9. PRESIDEN REPUBLIK
+                        INDONESIA -8-
                       references: []
                   - type: point
                     node: &ref_44
@@ -964,7 +984,9 @@ babSet:
                         nodeType: text
                         textName: text
                         parentNode: *ref_58
-                      textString: kesadaran hukumj, dan kedaulatan negara.
+                      textString: >-
+                        kesadaran hukumj, dan kedaulatan negara. Ps g £ Do, PRESIDEN REPUBLIK
+                        INDONESIA -9 -
                       references: []
           - type: pasal
             node:
@@ -1126,7 +1148,8 @@ babSet:
                         parentNode: *ref_69
                       textString: >-
                         Pemerintah Pusat bertanggung jawab menyelenggarakan Kekarantinaan Kesehatan
-                        di Pintu Masuk dan di wilayah secara terpadu.
+                        di Pintu Masuk dan di wilayah secara terpadu. ta Ng £ 4 SN: tL PRESIDEN
+                        REPUBLIK INDONESIA -10-
                       references: []
                   - type: ayat
                     node: &ref_70
@@ -1286,7 +1309,7 @@ babSet:
                         parentNode: *ref_78
                       textString: >-
                         Setiap Orang berkewajiban ikut serta dalam penyelenggaraan Kekarantinaan
-                        Kesehatan.
+                        Kesehatan. at 8 cb 1G PRESIDEN REPUBLIK INDONESIA -11-
                       references: []
     - type: bab
       node: &ref_79
@@ -1447,7 +1470,8 @@ babSet:
                         parentNode: *ref_90
                       textString: >-
                         Penyelenggaraan Kekarantinaan Kesehatan sebagaimana dimaksud pada ayat (l)
-                        dapat berkoordinasi dan bekerja sama dengan dunia internasional.
+                        dapat berkoordinasi dan bekerja sama dengan dunia internasional. Kg H mm &
+                        L) “te aa PRESIDEN REPUBLIK INDONESIA -12 -
                       references:
                         - start: 66
                           end: 74
@@ -1610,7 +1634,7 @@ babSet:
                       textString: >-
                         Ketentuan lebih lanjut mengenai tata cara pelaksanaan Karantina Wilayah di
                         Pintu Masuk sebagaimana dimaksud pada ayat (1) diatur dengan Peraturan
-                        Pemerintah.
+                        Pemerintah. at SA Hey AA PRESIDEN REPUBLIK INDONESIA -13 -
                       references:
                         - start: 113
                           end: 121
@@ -1793,7 +1817,8 @@ babSet:
                         parentNode: *ref_112
                       textString: >-
                         Ketentuan lebih lanjut mengenai tindakan Kekarantinaan Kesehatan sebagaimana
-                        dimaksud pada ayat (2) diatur dengan Peraturan Menteri.
+                        dimaksud pada ayat (2) diatur dengan Peraturan Menteri. aa a va ED “ Te LE
+                        PRESIDEN REPUBLIK INDONESIA -14-
                       references:
                         - start: 91
                           end: 99
@@ -1986,7 +2011,7 @@ babSet:
                         Kekarantinaan Kesehatan di wilayah diselenggarakan di tempat atau lokasi
                         yang diduga Terjangkit penyakit menular dan/atau Terpapar Faktor Risiko
                         Kesehatan Masyarakat yang dapat menimbulkan Kedaruratan Kesehatan
-                        Masyarakat.
+                        Masyarakat. HT N 2 “ Y 15, - Oo, PRESIDEN REPUBLIK INDONESIA -15-
                       references: []
                   - type: ayat
                     node: &ref_124
@@ -2204,7 +2229,8 @@ babSet:
                                     Nakhoda pada Kapal sebagaimana dimaksud pada ayat (1) hanya
                                     dapat menurunkan atau menaikkan orang dan/atau Barang setelah
                                     dilakukan Pengawasan Kekarantinaan Kesehatan oleh Pejabat
-                                    Karantina Kesehatan.
+                                    Karantina Kesehatan. aa s PO d9 L PRESIDEN REPUBLIK INDONESIA
+                                    -16 -
                                   references:
                                     - start: 45
                                       end: 53
@@ -2344,7 +2370,8 @@ babSet:
                               Kapal yang memperoleh persetujuan karantina terbatas sebagaimana
                               dimaksud dalam Pasal 19 ayat (S5) huruf b harus dilakukan tindakan
                               Kekarantinaan Kesehatan dan/atau penerbitan atau pembaruan Dokumen
-                              Karantina Kesehatan.
+                              Karantina Kesehatan. AT OS S “ 1g A, He Ne PRESIDEN REPUBLIK INDONESIA
+                              -17 -
                             references:
                               - start: 99
                                 end: 106
@@ -2525,7 +2552,8 @@ babSet:
                                     Kapal yang Persetujuan Karantina Kesehatannya dicabut dan
                                     dinyatakan tidak berlaku sebagaimana dimaksud pada ayat (1)
                                     wajib menuju ke suatu Zona Karantina untuk mendapat tindakan
-                                    Kekarantinaan Kesehatan.
+                                    Kekarantinaan Kesehatan. Ha 8 “ 1g X5 Do, LP PRESIDEN REPUBLIK
+                                    INDONESIA -18 -
                                   references:
                                     - start: 109
                                       end: 117
@@ -2712,7 +2740,7 @@ babSet:
                                     Karantina Kesehatan tidak ditemukan indikasi Faktor Risiko
                                     Kesehatan Masyarakat maka kepada Nakhoda dapat diberikan Surat
                                     Persetujuan Berlayar Karantina Kesehatan (Port Health Ouarantine
-                                    Clearance).
+                                    Clearance). Aa Ng & 4 TT e Oo. PRESIDEN REPUBLIK INDONESIA -19 -
                                   references:
                                     - start: 62
                                       end: 70
@@ -2913,7 +2941,9 @@ babSet:
                                           nodeType: text
                                           textName: text
                                           parentNode: *ref_181
-                                        textString: 'datang dari Bandar Udara wilayah yang Terjangkit:'
+                                        textString: >-
+                                          datang dari Bandar Udara wilayah yang Terjangkit: Had g g
+                                          Lg Tw 2 PRESIDEN REPUBLIK INDONESIA - 20 -
                                         references: []
                                     - type: point
                                       node: &ref_182
@@ -3070,7 +3100,8 @@ babSet:
                                     Kapten Penerbang pada Pesawat Udara sebagaimana dimaksud dalam
                                     Pasal 27 dan Pasal 28 hanya dapat menurunkan atau menaikkan
                                     orang dan/atau Barang setelah dilakukan Pengawasan Kekarantinaan
-                                    Kesehatan oleh Pejabat Karantina Kesehatan.
+                                    Kesehatan oleh Pejabat Karantina Kesehatan. Ta 2 “ & : D9.
+                                    PRESIDEN REPUBLIK INDONESIA - A1 -
                                   references:
                                     - start: 76
                                       end: 84
@@ -3248,7 +3279,8 @@ babSet:
                             textString: >-
                               Kekarantinaan Kesehatan terhadap pesawat udara perang, pesawat udara
                               negara, dan pesawat udara tamu negara diatur dengan Peraturan Menteri
-                              berkoordinasi dengan menteri atau lembaga terkait.
+                              berkoordinasi dengan menteri atau lembaga terkait. NY a 1 1 S1) 9,
+                              PRESIDEN REPUBLIK INDONESIA - 22 -
                             references: []
                 - type: paragraf
                   node: &ref_200
@@ -3432,7 +3464,8 @@ babSet:
                                           parentNode: *ref_211
                                         textString: >-
                                           . terdapat orang atau Barang diduga Terpapar di dalam
-                                          Kendaraan Darat, berada dalam Status Karantina.
+                                          Kendaraan Darat, berada dalam Status Karantina. PRESIDEN
+                                          REPUBLIK INDONESIA -23 -
                                         references: []
                               - type: ayat
                                 node: &ref_212
@@ -3584,7 +3617,8 @@ babSet:
                                     Masyarakat dan/atau dokumen Deklarasi Kesehatan Perlintasan
                                     Darat (Ground Crossing Declaration of Health) sebagaimana
                                     dimaksud pada ayat (1) dinyatakan lengkap diberikan Persetujuan
-                                    Karantina Kesehatan oleh Pejabat Karantina Kesehatan.
+                                    Karantina Kesehatan oleh Pejabat Karantina Kesehatan. AN Es £ &
+                                    “Hu SG PRESIDEN REPUBLIK INDONESIA - 24 -
                                   references:
                                     - start: 193
                                       end: 201
@@ -3758,7 +3792,8 @@ babSet:
                               parentNode: *ref_230
                             textString: >-
                               Awak, Personel, dan/atau penumpang yang Terjangkit dilakukan tindakan
-                              Kekarantinaan Kesehatan sesuai indikasi.
+                              Kekarantinaan Kesehatan sesuai indikasi. aa ON £ S.S 5 No PRESIDEN
+                              REPUBLIK INDONESIA - 25 -
                             references: []
                         - type: ayat
                           node: &ref_231
@@ -3919,7 +3954,8 @@ babSet:
                             textString: >-
                               Apabila hasil penapisan terhadap orang ditemukan gejala klinis sesuai
                               dengan jenis penyakit Kedaruratan Kesehatan Masyarakat yang meresahkan
-                              dunia, Pejabat Karantina Kesehatan melakukan rujukan dan Isolasi.
+                              dunia, Pejabat Karantina Kesehatan melakukan rujukan dan Isolasi. RSI
+                              # “ 1G 1) To PRESIDEN REPUBLIK INDONESIA - 26 -
                             references: []
                 - type: pasal
                   node:
@@ -4079,7 +4115,8 @@ babSet:
                             textString: >-
                               Terhadap Awak, Personel, dan/atau penumpang sebagaimana dimaksud pada
                               ayat (3) harus diberikan vaksinasi sesuai persyaratan dan standar yang
-                              berlaku. (S5) Ketentuan ..
+                              berlaku. (S5) Ketentuan .. Ps KK k 1 £ 15) Tg PRESIDEN REPUBLIK
+                              INDONESIA - 27 -
                             references:
                               - start: 70
                                 end: 78
@@ -4209,7 +4246,8 @@ babSet:
                               Karantina Kesehatan harus merekomendasikan kepada maskapai penerbangan
                               atau agen pelayaran untuk menunda keberangkatan Awak, Personel,
                               dan/atau penumpang tersebut dan harus segera melakukan tindakan
-                              Kekarantinaan Kesehatan.
+                              Kekarantinaan Kesehatan. NN X & 1 3 8 PRESIDEN REPUBLIK INDONESIA -28
+                              -
                             references:
                               - start: 55
                                 end: 63
@@ -4420,7 +4458,8 @@ babSet:
                                     parentNode: *ref_268
                                   textString: >-
                                     dokumen tidak lengkap maka penanggung jawab Alat Angkut harus
-                                    melengkapi dokumen sesuai dengan persyaratan yang berlaku:
+                                    melengkapi dokumen sesuai dengan persyaratan yang berlaku: ag S
+                                    PRESIDEN REPUBLIK INDONESIA -29 -
                                   references: []
                               - type: point
                                 node: &ref_269
@@ -4563,7 +4602,8 @@ babSet:
                               parentNode: *ref_276
                             textString: >-
                               Terhadap jenazah sebagaimana dimaksud pada ayat (l) dikirim ke rumah
-                              sakit untuk dilakukan pemulasaraan jenazah.
+                              sakit untuk dilakukan pemulasaraan jenazah. ai Ng 14 FI 17 Hp.
+                              PRESIDEN REPUBLIK INDONESIA - 30 -
                             references:
                               - start: 43
                                 end: 51
@@ -4814,7 +4854,7 @@ babSet:
                               Setiap Kapten Penerbang yang tidak melengkapi Dokumen Karantina
                               Kesehatan sehingga dikeluarkan persetujuan karantina terbatas
                               sebagaimana dimaksud dalam Pasal 30 ayat (3) huruf b dikenai denda
-                              administratif.
+                              administratif. REI g Y g 18 k DT PRESIDEN REPUBLIK INDONESIA - 31 -
                             references:
                               - start: 153
                                 end: 170
@@ -5004,7 +5044,8 @@ babSet:
                               Pembatasan Sosial Berskala Besar sebagaimana dimaksud pada ayat (1)
                               harus didasarkan pada pertimbangan epidemiologis, besarnya ancaman,
                               efektifitas, dukungan sumber daya, teknis operasional, pertimbangan
-                              ekonomi, sosial, budaya, dan keamanan.
+                              ekonomi, sosial, budaya, dan keamanan. aa x PI $ 11) Do, PRESIDEN
+                              REPUBLIK INDONESIA - 32 -
                             references:
                               - start: 123
                                 end: 131
@@ -5184,7 +5225,8 @@ babSet:
                               parentNode: *ref_316
                             textString: >-
                               Penghuni rumah yang dikarantina selain kasus, dilarang keluar rumah
-                              selama waktu yang telah ditetapkan oleh Pejabat Karantina Kesehatan.
+                              selama waktu yang telah ditetapkan oleh Pejabat Karantina Kesehatan. £
+                              & Teh PRESIDEN REPUBLIK INDONESIA - 33 -
                             references: []
                 - type: pasal
                   node:
@@ -5372,7 +5414,8 @@ babSet:
                             textString: >-
                               Wilayah yang dikarantina diberi garis karantina dan dijaga terus
                               menerus oleh Pejabat Karantina Kesehatan dan Kepolisian Negara
-                              Republik Indonesia yang berada di luar wilayah karantina.
+                              Republik Indonesia yang berada di luar wilayah karantina. PRESIDEN
+                              REPUBLIK INDONESIA - 34 -
                             references: []
                         - type: ayat
                           node: &ref_330
@@ -5533,7 +5576,8 @@ babSet:
                               kepada seluruh orang yang berkunjung, orang yang bertugas, pasien dan
                               Barang, serta apapun di suatu rumah sakit bila dibuktikan berdasarkan
                               hasil konfirmasi laboratorium telah terjadi penularan penyakit yang
-                              ada di ruang isolasi keluar ruang isolasi.
+                              ada di ruang isolasi keluar ruang isolasi. NN Y £ Tg Ha aa PRESIDEN
+                              REPUBLIK INDONESIA . 35 -
                             references:
                               - start: 48
                                 end: 56
@@ -5710,7 +5754,8 @@ babSet:
                             textString: >-
                               Pembatasan Sosial Berskala Besar bertujuan mencegah meluasnya
                               penyebaran penyakit Kedaruratan Kesehatan Masyarakat yang sedang
-                              terjadi antar orang di suatu wilayah tertentu.
+                              terjadi antar orang di suatu wilayah tertentu. aa Nan s ' PD a, d9.
+                              PRESIDEN REPUBLIK INDONESIA - 36 -
                             references: []
                         - type: ayat
                           node: &ref_352
@@ -5878,7 +5923,8 @@ babSet:
                         Dokumen Karantina Kesehatan sebagaimana dimaksud pada ayat (1) dimaksudkan
                         sebagai alat pengawasan dan pencegahan masuk dan/atau keluarnya penyakit dan
                         Faktor Risiko Kesehatan Masyarakat yang menjadi sumber penularan penyakit
-                        yang dapat menimbulkan Kedaruratan Kesehatan Masyarakat.
+                        yang dapat menimbulkan Kedaruratan Kesehatan Masyarakat. Pas S ya N $ 2 Ry,
+                        LP PRESIDEN REPUBLIK INDONESIA - 37 -
                       references:
                         - start: 54
                           end: 62
@@ -6110,7 +6156,8 @@ babSet:
                               parentNode: *ref_379
                             textString: >-
                               Deklarasi Kesehatan Pelintasan Darat (Ground Crossing Declaration of
-                              Health) untuk Kendaraan Darat sebagaimana dimaksud dalam Pasal 36.
+                              Health) untuk Kendaraan Darat sebagaimana dimaksud dalam Pasal 36. Pa
+                              — Fa £ ED ai “Te 3 PRESIDEN REPUBLIK INDONESIA - 38 -
                             references:
                               - start: 126
                                 end: 134
@@ -6313,7 +6360,8 @@ babSet:
                               parentNode: *ref_393
                             textString: >-
                               surat izin pengangkutan jenazah atau abu jenazah dari Pelabuhan atau
-                              Bandar Udara (Human Remains Transport Certificate): dan
+                              Bandar Udara (Human Remains Transport Certificate): dan ta K “ TG 19
+                              9. PRESIDEN REPUBLIK INDONESIA - 39 -
                             references: []
                         - type: point
                           node: &ref_394
@@ -6517,7 +6565,9 @@ babSet:
                         nodeType: text
                         textName: text
                         parentNode: *ref_405
-                      textString: '. berganti bendera untuk Kapal:'
+                      textString: >-
+                        . berganti bendera untuk Kapal: Ts Hg mn 8 a, Ad PRESIDEN REPUBLIK INDONESIA
+                        - 40 -
                       references: []
                   - type: point
                     node: &ref_406
@@ -6755,7 +6805,9 @@ babSet:
                                     nodeType: text
                                     textName: text
                                     parentNode: *ref_423
-                                  textString: 'peralatan deteksi dan respons cepat:'
+                                  textString: >-
+                                    peralatan deteksi dan respons cepat: aa FN & 1 Dp. PRESIDEN
+                                    REPUBLIK INDONESIA - 41 -
                                   references: []
                               - type: point
                                 node: &ref_424
@@ -6953,7 +7005,7 @@ babSet:
                       textString: >-
                         Perekrutan Pejabat Karantina Kesehatan dalam penyelenggaraan Kekarantinaan
                         Kesehatan diselenggarakan melalui pendidikan dan pelatihan yang dilaksanakan
-                        oleh Pemerintah Pusat.
+                        oleh Pemerintah Pusat. Ha NN £ S & ) 29, PRESIDEN REPUBLIK INDONESIA - 42 -
                       references: []
                 - type: pasal
                   node:
@@ -7211,7 +7263,8 @@ babSet:
                             textString: >-
                               Setiap Pejabat Karantina Kesehatan yang melakukan kelalaian dalam
                               melaksanakan tugasnya dikenakan sanksi sesuai dengan ketentuan
-                              peraturan perundang-undangan.
+                              peraturan perundang-undangan. ja Ng & 1g A, / “Tn 2 PRESIDEN REPUBLIK
+                              INDONESIA - 43 -
                             references: []
                         - type: ayat
                           node: &ref_455
@@ -7399,6 +7452,7 @@ babSet:
                               Pendanaan kegiatan penyelenggaraan Kekarantinaan Kesehatan di Pintu
                               Masuk pada Alat Angkut di luar situasi Kedaruratan Kesehatan
                               Masyarakat yang meresahkan dunia dibebankan pada pemilik Alat Angkut.
+                              RSI S £ tg / Ht Re PRESIDEN REPUBLIK INDONESIA -44-
                             references: []
                         - type: ayat
                           node: &ref_468
@@ -7569,7 +7623,7 @@ babSet:
                   Dalam rangka penyelenggaraan informasi Kekarantinaan Kesehatan, Pemerintah Pusat
                   memberi wewenang kepada Pejabat Karantina Kesehatan untuk berkoordinasi dan
                   bekerja sama dengan badan/lembaga kesehatan, baik dari dalam negeri maupun luar
-                  negeri.
+                  negeri. KT NN g 14 “ Tp, PRESIDEN REPUBLIK INDONESIA - 45 -
                 references: []
     - type: bab
       node: &ref_478
@@ -7732,7 +7786,8 @@ babSet:
                               parentNode: *ref_489
                             textString: >-
                               Ketentuan lebih lanjut mengenai pembinaan sebagaimana dimaksud pada
-                              ayat (1) dan ayat (2) diatur dengan Peraturan Menteri.
+                              ayat (1) dan ayat (2) diatur dengan Peraturan Menteri. Ts £ 14 5 ra
+                              Ser Pig PRESIDEN REPUBLIK INDONESIA - 46 -
                             references:
                               - start: 81
                                 end: 89
@@ -7875,7 +7930,8 @@ babSet:
                   negeri sipil tertentu di lingkungan kementerian yang menyelenggarakan urusan
                   pemerintahan di bidang kesehatan diberi wewenang khusus sebagai penyidik
                   sebagaimana dimaksud dalam Undang-Undang yang mengatur mengenai hukum acara pidana
-                  untuk melakukan penyidikan tindak pidana di bidang Kekarantinaan Kesehatan.
+                  untuk melakukan penyidikan tindak pidana di bidang Kekarantinaan Kesehatan. Psi
+                  Lah, Hg 1g A Te se PRESIDEN REPUBLIK INDONESIA - 47 -
                 references: []
           - type: pasal
             node:
@@ -8008,7 +8064,8 @@ babSet:
                               masyarakat atau sumber yang berkompeten: n. menghentikan penyidikan
                               apabila tidak terdapat cukup bukti yang membuktikan adanya tindak
                               pidana di bidang Kekarantinaan Kesehatan: dan /atau Oo. mengadakan
-                              tindakan lain menurut hukum.
+                              tindakan lain menurut hukum. Lah AG £ va NN “ 3, 29. PRESIDEN REPUBLIK
+                              INDONESIA -48 -
                             references: []
           - type: pasal
             node:
@@ -8147,7 +8204,8 @@ babSet:
                   Dalam melakukan penyidikan, PPNS Kekarantinaan Kesehatan berkoordinasi dan bekerja
                   sama dengan penyidik di lingkungan Kepolisian Negara Republik Indonesia dan dapat
                   berkoordinasi dan bekerja sama dengan penyidik di lingkungan Tentara Nasional
-                  Indonesia sesuai dengan ketentuan peraturan perundang-undangan.
+                  Indonesia sesuai dengan ketentuan peraturan perundang-undangan. at Na s Z ap.
+                  PRESIDEN REPUBLIK INDONESIA - 49 -
                 references: []
     - type: bab
       node: &ref_515
@@ -8225,7 +8283,8 @@ babSet:
                   Kekarantinaan Kesehatan sebagaimana dimaksud dalam Pasal 30 ayat (1) dengan maksud
                   menyebarkan penyakit dan/atau faktor risiko kesehatan yang menimbulkan Kedaruratan
                   Kesehatan Masyarakat dipidana dengan pidana penjara paling lama 10 (sepuluh) tahun
-                  atau denda paling banyak Rp15.000.000.000,00 (lima belas miliar rupiah).
+                  atau denda paling banyak Rp15.000.000.000,00 (lima belas miliar rupiah). Jak a 1g
+                  1g Tn 26 PRESIDEN REPUBLIK INDONESIA -50 -
                 references:
                   - start: 201
                     end: 218
@@ -8378,7 +8437,8 @@ babSet:
                         Korporasi dikenai pertanggungjawaban secara pidana terhadap suatu perbuatan
                         yang dilakukan untuk dan/atau atas nama korporasi jika perbuatan tersebut
                         termasuk dalam lingkup usahanya sebagaimana ditentukan dalam anggaran dasar
-                        atau ketentuan lain yang berlaku bagi korporasi yang bersangkutan.
+                        atau ketentuan lain yang berlaku bagi korporasi yang bersangkutan. Ras S £
+                        4G To PRESIDEN REPUBLIK INDONESIA -51-
                       references: []
                   - type: ayat
                     node: &ref_524
@@ -8539,7 +8599,7 @@ babSet:
                   Pada saat Undang-Undang ini mulai berlaku, semua peraturan pelaksanaan yang
                   mengatur karantina udara dan karantina laut tetap berlaku sepanjang tidak
                   bertentangan dan/atau belum diganti dengan peraturan yang baru berdasarkan
-                  Undang-Undang ini.
+                  Undang-Undang ini. KAT AN £ H4 4 / He Pa PRESIDEN REPUBLIK INDONESIA -.52 -
                 references: []
           - type: pasal
             node:
@@ -8692,9 +8752,10 @@ babSet:
                   textName: text
                   parentNode: *ref_542
                 textString: >-
-                  Undang-Undang ini mulai berlaku pada tanggal diundangkan. Agar... Agar setiap
-                  orang mengetahuinya, memerintahkan pengundangan Undang-Undang ini dengan
-                  penempatannya dalam Lembaran Negara Republik Indonesia.
+                  Undang-Undang ini mulai berlaku pada tanggal diundangkan. Agar... Aa Fi . s3 “to
+                  PRESIDEN REPUBLIK INDONESIA - 53 - Agar setiap orang mengetahuinya, memerintahkan
+                  pengundangan Undang-Undang ini dengan penempatannya dalam Lembaran Negara Republik
+                  Indonesia.
                 references: []
 disahkan:
   date: *ref_48

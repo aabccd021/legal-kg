@@ -105,7 +105,7 @@ metadata:
               Undang-Undang Nomor 11 Tahun 2020 tentang Cipta Kerja (Lembaran Negara Republik
               Indonesia Tahun 2020 Nomor 245, Tambahan Lembaran Negara Republik Indonesia Nomor
               6573), MEMUTUSKAN: Menetapkan : PERATURAN PEMERINTAH TENTANG PENGGUNAAN TENAGA KERJA
-              ASING. SK No 086152 A
+              ASING. SK No 086152 A PRESIDEN REPUBLIK INDONESIA
             references:
               - start: 0
                 end: 33
@@ -118,9 +118,14 @@ metadata:
   memutuskan: ''
   denganPersetujuan: ''
 opText: |-
+  Pes
   x
+  &
   h3 SALINAN
   PA
+  ag
+  PRESIDEN
+  REPUBLIK INDONESIA
   PERATURAN PEMERINTAH REPUBLIK INDONESIA
   NOMOR 34 TAHUN 2021
   TENTANG
@@ -148,6 +153,8 @@ opText: |-
   Menetapkan : PERATURAN PEMERINTAH TENTANG PENGGUNAAN
   TENAGA KERJA ASING.
   SK No 086152 A
+  PRESIDEN
+  REPUBLIK INDONESIA
 babSet:
   type: babSet
   node: &ref_7
@@ -294,7 +301,7 @@ babSet:
                         Kawasan Ekonomi Khusus yang selanjutnya disingkat KEK adalah kawasan dengan
                         batas tertentu dalam wilayah hukum Negara Kesatuan Republik Indonesia yang
                         ditetapkan untuk menyelenggarakan fungsi perekonomian dan memperoleh
-                        fasilitas tertentu.
+                        fasilitas tertentu. PRESIDEN REPUBLIK INDONESIA - 3 -
                       references: []
                   - type: point
                     node: &ref_17
@@ -444,7 +451,8 @@ babSet:
                               parentNode: *ref_27
                             textString: >-
                               Penggunaan TKA sebagaimana dimaksud pada ayat (2) dilakukan dengan
-                              memperhatikan kondisi pasar kerja dalam negeri.
+                              memperhatikan kondisi pasar kerja dalam negeri. PRESIDEN REPUBLIK
+                              INDONESIA -4-
                             references:
                               - start: 41
                                 end: 49
@@ -678,7 +686,7 @@ babSet:
                             textString: >-
                               Jabatan tertentu yang dapat diduduki oleh TKA sebagaimana dimaksud
                               pada ayat (1) ditetapkan oleh Menteri setelah mendapat masukan dari
-                              kementerian/lembaga terkait.
+                              kementerian/lembaga terkait. PRESIDEN REPIBLIK INDONESIA - 5 -
                             references:
                               - start: 72
                                 end: 80
@@ -905,7 +913,7 @@ babSet:
                             textString: >-
                               Dalam hal Pemberi Kerja TKA akan mempekerjakan TKA yang sedang
                               dipekerjakan oleh Pemberi Kerja TKA lain, masing-masing Pemberi Kerja
-                              TKA wajib memiliki Pengesahan RPTKA.
+                              TKA wajib memiliki Pengesahan RPTKA. PRESIDEN REPUBLIK INDONESIA -6-
                             references: []
                         - type: ayat
                           node: &ref_58
@@ -1164,7 +1172,7 @@ babSet:
                               Pemberi Kerja TKA wajib mendaftarkan TKA dalam program jaminan sosial
                               nasional bagi TKA yang bekerja lebih dari 6 (enam) bulan atau program
                               asuransi pada perusahaan asuransi bagi TKA yang bekerja kurang dari 6
-                              (enam) bulan.
+                              (enam) bulan. PRESIDEN REPUBLIK INDONESIA -.7-
                             references: []
                         - type: ayat
                           node: &ref_77
@@ -1373,6 +1381,7 @@ babSet:
                             textString: >-
                               Untuk mendapatkan Pengesahan RPTKA, Pemberi Kerja TKA harus mengajukan
                               permohonan secara daring kepada Menteri atau pejabat yang ditunjuk.
+                              PRESIDEN REPUBLIK INDONESIA - 8 -
                             references: []
                         - type: ayat
                           node: &ref_90
@@ -1643,7 +1652,7 @@ babSet:
                                     parentNode: *ref_110
                                   textString: >-
                                     surat pernyataan untuk memfasilitasi pendidikan dan pelatihan
-                                    bahasa Indonesia kepada TKA.
+                                    bahasa Indonesia kepada TKA. PRESIDEN REPUBLIK INDONESIA -9 -
                                   references: []
                         - type: ayat
                           node: &ref_111
@@ -1873,7 +1882,7 @@ babSet:
                                     nodeType: text
                                     textName: text
                                     parentNode: *ref_127
-                                  textString: ijazah pendidikan,
+                                  textString: ijazah pendidikan, PRESIDEN REPUBLIK INDONESIA - 10 -
                                   references: []
                               - type: point
                                 node: &ref_128
@@ -2058,7 +2067,7 @@ babSet:
                               Permohonan Pengesahan RPTKA yang diajukan oleh instansi Pemerintah,
                               perwakilan negara asing, dan badan internasional dikecualikan dari
                               penilaian kelayakan Pengesahan RPTKA sebagaimana dimaksud dalam Pasal
-                              13.
+                              13. PRESIDEN REPUBLIK INDONESIA -11-
                             references:
                               - start: 199
                                 end: 207
@@ -2272,7 +2281,7 @@ babSet:
                               kepada menteri yang menyelenggarakan urusan pemerintahan di bidang
                               hukum dan hak asasi manusia atau pejabat yang ditunjuk sebagai
                               rekomendasi untuk mendapatkan visa dan izin tinggal dalam rangka
-                              bekerja.
+                              bekerja. PRESIDEN REPUBLIK INDONESIA -12 -
                             references:
                               - start: 61
                                 end: 69
@@ -2528,7 +2537,7 @@ babSet:
                                   textString: >-
                                     direksi atau komisaris dengan kepemilikan saham tertentu, atau
                                     pemegang saham sesuai dengan ketentuan peraturan perundang-
-                                    undangan,
+                                    undangan, PRESIDEN REPUBLIK INDONESIA -13-
                                   references: []
                               - type: point
                                 node: &ref_173
@@ -2686,7 +2695,7 @@ babSet:
                               Pemberi Kerja TKA yang akan mempekerjakan TKA pada jenis kegiatan
                               perusahaan rintisan (start-up) berbasis teknologi dan vokasi melebihi
                               jangka waktu sebagaimana dimaksud pada ayat (5) wajib memiliki
-                              Pengesahan RPTKA.
+                              Pengesahan RPTKA. PRESIDEN REPUBLIK INDONESIA -14 -
                             references:
                               - start: 175
                                 end: 183
@@ -2916,7 +2925,9 @@ babSet:
                                     nodeType: text
                                     textName: text
                                     parentNode: *ref_192
-                                  textString: alasan... b. alasan perpanjangan Pengesahan RPTKA,
+                                  textString: >-
+                                    alasan... PRESIDEN REPUBLIK INDONESIA -15- b. alasan
+                                    perpanjangan Pengesahan RPTKA,
                                   references: []
                               - type: point
                                 node: &ref_193
@@ -3165,7 +3176,8 @@ babSet:
                               parentNode: *ref_210
                             textString: >-
                               Pengesahan RPTKA perpanjangan digunakan sebagai rekomendasi untuk
-                              mendapatkan izin tinggal dalam rangka bekerja bagi TKA.
+                              mendapatkan izin tinggal dalam rangka bekerja bagi TKA. PRESIDEN
+                              REPUBLIK INDONESIA -16-
                             references: []
                         - type: ayat
                           node: &ref_211
@@ -3375,7 +3387,7 @@ babSet:
                               parentNode: *ref_225
                             textString: >-
                               Pembayaran DKPTKA dilakukan sesuai dengan jangka waktu TKA bekerja di
-                              wilayah Indonesia.
+                              wilayah Indonesia. — PRESIDEN REPUBLIK INDONESIA 17 -
                             references: []
                         - type: ayat
                           node: &ref_226
@@ -3563,7 +3575,7 @@ babSet:
                                   textString: >-
                                     pendapatan daerah kabupaten/kota untuk Pengesahan RPTKA
                                     perpanjangan bagi TKA yang bekerja di lokasi dalam 1 (satu)
-                                    kabupaten/kota.
+                                    kabupaten/kota. PRESIDEN REPUBLIK INDONESIA -18 -
                                   references: []
                         - type: ayat
                           node: &ref_238
@@ -3825,7 +3837,7 @@ babSet:
                         parentNode: *ref_254
                       textString: >-
                         Setiap TKA yang dipekerjakan oleh Pemberi Kerja TKA di Indonesia wajib
-                        memiliki izin tinggal.
+                        memiliki izin tinggal. PRESIDEN REPUBLIK INDONESIA -19 -
                       references: []
                   - type: ayat
                     node: &ref_255
@@ -3999,7 +4011,8 @@ babSet:
                       textString: >-
                         Pelaksanaan pendidikan dan pelatihan kerja bagi Tenaga Kerja Pendamping TKA
                         di dalam negeri sebagaimana dimaksud pada ayat (1) dilaksanakan sesuai
-                        dengan ketentuan peraturan perundang- undangan.
+                        dengan ketentuan peraturan perundang- undangan. PRESIDEN REPUBLIK INDONESIA
+                        -.20 -
                       references:
                         - start: 118
                           end: 126
@@ -4199,7 +4212,7 @@ babSet:
                               Pemberi Kerja TKA untuk pekerjaan yang bersifat sementara wajib
                               melaporkan pelaksanaan penggunaan TKA sebagaimana dimaksud pada ayat
                               (1) huruf a setelah berakhirnya perjanjian kerja kepada Menteri atau
-                              pejabat yang ditunjuk.
+                              pejabat yang ditunjuk. PRESIDEN REPUBLIK INDONESIA - 21 -
                             references:
                               - start: 128
                                 end: 136
@@ -4387,7 +4400,8 @@ babSet:
                                   textString: >-
                                     Pejabat imigrasi yang bertugas di bidang pengawasan dan
                                     penindakan keimigrasian, secara terkoordinasi sesuai dengan
-                                    lingkup tugas dan kewenangan masing-masing.
+                                    lingkup tugas dan kewenangan masing-masing. PRESIDEN REPUBLIK
+                                    INDONESIA - 29 -
                                   references: []
                         - type: ayat
                           node: &ref_289
@@ -4600,7 +4614,7 @@ babSet:
                         Sanksi denda sebagaimana dimaksud dalam Pasal 36 ayat (1) huruf a dikenakan
                         kepada Pemberi Kerja TKA yang melanggar ketentuan tidak memiliki Pengesahan
                         RPTKA sebagaimana dimaksud dalam Pasal 6 ayat (1), Pasal 6 ayat (2), dan
-                        Pasal 19 ayat (6).
+                        Pasal 19 ayat (6). PRESIDEN REPUBLIK INDONESIA -23 -
                       references:
                         - start: 225
                           end: 242
@@ -4875,7 +4889,8 @@ babSet:
                       textString: >-
                         Pemberi Kerja TKA sebagaimana dimaksud pada ayat (l) tetap berkewajiban
                         untuk membayar sanksi denda dan denda keterlambatan sebesar 24» (dua persen)
-                        per bulan dari jumlah sanksi denda yang harus dibayarkan.
+                        per bulan dari jumlah sanksi denda yang harus dibayarkan. PRESIDEN REPUBLIK
+                        INDONESIA - 24 -
                       references:
                         - start: 44
                           end: 52
@@ -5057,7 +5072,7 @@ babSet:
                               tidak melaporkan pelaksanaan penggunaan TKA untuk pekerjaan yang
                               bersifat sementara setelah berakhirnya perjanjian kerja kepada Menteri
                               atau pejabat yang ditunjuk sebagaimana dimaksud dalam Pasal 32 ayat
-                              (2), dan/atau
+                              (2), dan/atau PRESIDEN REPUBLIK INDONESIA - 25 -
                             references:
                               - start: 190
                                 end: 207
@@ -5286,7 +5301,7 @@ babSet:
                               parentNode: *ref_340
                             textString: >-
                               tidak membayar DKPTKA atas setiap TKA yang dipekerjakan sebagaimana
-                              dimaksud dalam Pasal 23 ayat (1).
+                              dimaksud dalam Pasal 23 ayat (1). PRESIDEN REPUBLIK INDONESIA - 26 -
                             references:
                               - start: 83
                                 end: 100
@@ -5411,8 +5426,8 @@ babSet:
                   parentNode: *ref_344
                 textString: >-
                   Proses penggunaan TKA sebagaimana diatur dalam Peraturan Pemerintah ini dilakukan
-                  melalui penggunaan data secara bersama dan terintegrasi secara daring. BAB X
-                  KETENTUAN PERALIHAN
+                  melalui penggunaan data secara bersama dan terintegrasi secara daring. PRESIDEN
+                  REPUBLIK INDONESIA - 27 - BAB X KETENTUAN PERALIHAN
                 references: []
           - type: pasal
             node:
@@ -5548,9 +5563,10 @@ babSet:
                   textName: text
                   parentNode: *ref_351
                 textString: >-
-                  Peraturan Pemerintah ini mulai berlaku pada tanggal 1 April 2021. Agar setiap
-                  orang mengetahuinya, memerintahkan pengundangan Peraturan Pemerintah ini dengan
-                  penempatannya dalam Lembaran Negara Republik Indonesia.
+                  Peraturan Pemerintah ini mulai berlaku pada tanggal 1 April 2021. PRESIDEN
+                  REPUBLIK INDONESIA - 28 - Agar setiap orang mengetahuinya, memerintahkan
+                  pengundangan Peraturan Pemerintah ini dengan penempatannya dalam Lembaran Negara
+                  Republik Indonesia.
                 references: []
 disahkan:
   date: *ref_22

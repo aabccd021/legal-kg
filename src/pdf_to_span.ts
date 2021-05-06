@@ -2,7 +2,18 @@ import { getDocumentData, nodeToFile, shouldOverwrite, UnindexedSpan } from './u
 import { DocumentNode } from './document';
 import { writeFileSync } from 'fs';
 import { PDFExtract, PDFExtractPage, PDFExtractText } from 'pdf.js-extract';
-import { chain, curry, isUndefined, isEmpty, filter, zip, countBy, maxBy, toPairs, compact } from 'lodash';
+import {
+  chain,
+  curry,
+  isUndefined,
+  isEmpty,
+  filter,
+  zip,
+  countBy,
+  maxBy,
+  toPairs,
+  compact,
+} from 'lodash';
 import { bothFilter, neverNum, Span } from './util';
 import * as yaml from 'js-yaml';
 
@@ -44,12 +55,15 @@ async function toPdfJson(node: DocumentNode): Promise<void> {
   // TODO: able to select merge map
   const { pages: rawPages } = await pdfExtract.extract(pdfFile.path);
   const { pages: normalizedPages } = await pdfExtract.extract(normalizedPdfFile.path);
-  const mixedPages =pdfFile.exists && normalizedPdfFile.exists ?  chain(zip(rawPages, normalizedPages)).map(mergePage).compact().value(): undefined;
+  const mixedPages =
+    pdfFile.exists && normalizedPdfFile.exists
+      ? chain(zip(rawPages, normalizedPages)).map(mergePage).compact().value()
+      : undefined;
 
   const pages: [string, PDFExtractPage[]][] = compact([
-    pdfFile.exists ?  [spanRawFile.path, rawPages]: undefined,
-    normalizedPdfFile.exists ? [spanNormalizedFile.path, normalizedPages]: undefined,
-    mixedPages ?[spanMixedFile.path, mixedPages]: undefined,
+    pdfFile.exists ? [spanRawFile.path, rawPages] : undefined,
+    normalizedPdfFile.exists ? [spanNormalizedFile.path, normalizedPages] : undefined,
+    mixedPages ? [spanMixedFile.path, mixedPages] : undefined,
   ]);
 
   pages.forEach(([path, pages]) => {
@@ -88,15 +102,16 @@ function hasSamePos(text1: PDFExtractText, text2: PDFExtractText): boolean {
 function toPageWithoutNoise(
   page: PDFExtractPage,
   _pageIdx: number,
-  hasHeader: boolean
+  _hasHeader: boolean
 ): UnindexedSpan[] {
   const spans = chain(page.content)
     .reduce<SpanMap>(toSpanMap, {})
     .thru(toSpansWith(_pageIdx + 1))
     .value();
 
-  const spansAfterHeader = hasHeader ? spans.filter(isNotHeader) : spans;
-  return chain(spansAfterHeader).thru(withoutLeftFooter).thru(withoutRightFooter).value();
+  // const spansAfterHeader = hasHeader ? spans.filter(isNotHeader) : spans;
+  return chain(spans).thru(withoutLeftFooter).thru(withoutRightFooter).value();
+  // return spans;
 }
 
 /**
@@ -169,7 +184,7 @@ function groupToSpan(
 /**
  * Filter Header
  */
-function isNotHeader(span: UnindexedSpan): boolean {
+export function isNotHeader(span: UnindexedSpan): boolean {
   const { xL, xR, y, str } = span;
 
   // is header
@@ -191,7 +206,7 @@ function isNotHeader(span: UnindexedSpan): boolean {
 /**
  * Left Footer
  */
-function withoutLeftFooter(spans: UnindexedSpan[]): UnindexedSpan[] {
+export function withoutLeftFooter(spans: UnindexedSpan[]): UnindexedSpan[] {
   const { left, right } = bothFilter(spans, isLeftFooter);
 
   // only choose last candidate as footer
@@ -217,7 +232,7 @@ function isLeftFooter(span: UnindexedSpan): boolean {
 /**
  * Right Footer
  */
-function withoutRightFooter(spans: UnindexedSpan[]): UnindexedSpan[] {
+export function withoutRightFooter(spans: UnindexedSpan[]): UnindexedSpan[] {
   const { left, right } = bothFilter(spans, isRightFooter);
 
   // only choose last candidate as footer

@@ -96,6 +96,8 @@ metadata:
   denganPersetujuan: ''
 opText: |-
   SALINAN
+  PRESIDEN
+  REPUBLIK INDONESIA
   PERATURAN PEMERINTAH REPUBLIK INDONESIA
   NOMOR 74 TAHUN 2020
   TENTANG
@@ -182,7 +184,7 @@ babSet:
                         Investasi Pemerintah Pusat yang selanjutnya disebut Investasi adalah
                         pengelolaan aset berupa uang atau barang milik atau untuk kepentingan
                         Pemerintah Pusat yang bertujuan untuk mendapatkan keuntungan, manfaat
-                        ekonomi, dan manfaat lainnya.
+                        ekonomi, dan manfaat lainnya. 3 $ wa PRESIDEN REPUBLIK INDONESIA -2-
                       references: []
                   - type: point
                     node: &ref_11
@@ -349,7 +351,8 @@ babSet:
                         parentNode: *ref_20
                       textString: >-
                         Peraturan Dewan Direktur adalah peraturan yang ditetapkan oleh Dewan
-                        Direktur dalam rangka melaksanakan tugas dan kewenangan Dewan Direktur.
+                        Direktur dalam rangka melaksanakan tugas dan kewenangan Dewan Direktur. 8 |
+                        21 : 50 PRESIDEN REPUBLIK INDONESIA -3-
                       references: []
     - type: bab
       node: &ref_21
@@ -623,7 +626,8 @@ babSet:
                         parentNode: *ref_43
                       textString: >-
                         Modal LPI sebagaimana dimaksud pada ayat (3) dapat dilakukan penambahan
-                        melalui penyertaan modal negara dan/atau sumber lainnya.
+                        melalui penyertaan modal negara dan/atau sumber lainnya. at e A & 3 3
+                        PRESIDEN REPUBLIK INDONESIA -4-
                       references:
                         - start: 36
                           end: 44
@@ -905,7 +909,7 @@ babSet:
                         Dalam menjalankan kewenangan sebagaimana dimaksud pada ayat (1), LPI dapat
                         melakukan kerja sama dengan mitra Investasi, Manajer Investasi, BUMN, badan
                         atau lembaga pemerintah, dan/atau entitas lainnya baik di dalam negeri
-                        maupun di luar negeri.
+                        maupun di luar negeri. PI PRESIDEN REPUBLIK INDONESIA -5-
                       references:
                         - start: 55
                           end: 63
@@ -1166,7 +1170,8 @@ babSet:
                                     Anggota Dewan Pengawas dari unsur profesional sebagaimana
                                     dimaksud pada ayat (1) huruf c, diangkat untuk masa jabatan 5
                                     (lima) tahun dan hanya dapat diangkat kembali untuk 1 (satu)
-                                    kali masa jabatan berikutnya.
+                                    kali masa jabatan berikutnya. ant 2 PRESIDEN REPUBLIK INDONESIA
+                                    -6-
                                   references:
                                     - start: 72
                                       end: 80
@@ -1424,7 +1429,8 @@ babSet:
                                         textString: >-
                                           tidak dinyatakan sebagai orang perseorangan yang tercela
                                           di bidang investasi dan bidang lainnya berdasarkan
-                                          ketentuan peraturan perundang- undangan.
+                                          ketentuan peraturan perundang- undangan. $ Je Tg 9)
+                                          PRESIDEN REPUBLIK INDONESIA -7-
                                         references: []
                               - type: ayat
                                 node: &ref_101
@@ -1733,8 +1739,9 @@ babSet:
                                         textString: >-
                                           tidak menjalankan tugasnya sebagai anggota Dewan Pengawas
                                           lebih dari 6 (enam) bulan meskipun dengan alasan yang
-                                          dapat dipertimbangkan. (3 Dalam hal anggota Dewan Pengawas
-                                          dari unsur profesional diberhentikan sebelum akhir masa
+                                          dapat dipertimbangkan. PN $ Je 3 PRESIDEN REPUBLIK
+                                          INDONESIA -8- (3 Dalam hal anggota Dewan Pengawas dari
+                                          unsur profesional diberhentikan sebelum akhir masa
                                           jabatan, Presiden menunjuk anggota Dewan Pengawas lain
                                           dari unsur profesional untuk menjabat sebagai pelaksana
                                           tugas anggota Dewan Pengawas yang diberhentikan pada
@@ -1750,16 +1757,16 @@ babSet:
                                           dimaksud pada ayat (3) diatur dengan Peraturan Dewan
                                           Pengawas.
                                         references:
-                                          - start: 904
-                                            end: 912
+                                          - start: 946
+                                            end: 954
                                             node:
                                               key: 3
                                               parentAyatSetNode: &ref_123
                                                 nodeType: ayatSet
                                                 parentPasalVersionNode: *ref_105
                                               nodeType: ayat
-                                          - start: 697
-                                            end: 705
+                                          - start: 739
+                                            end: 747
                                             node:
                                               key: 3
                                               parentAyatSetNode: *ref_123
@@ -1909,7 +1916,7 @@ babSet:
                                           parentNode: *ref_134
                                         textString: >-
                                           menetapkan dan mengangkat serta memberhentikan anggota
-                                          Dewan Penasihat,
+                                          Dewan Penasihat, 2 PRESIDEN REPUBLIK INDONESIA -9 -
                                         references: []
                                     - type: point
                                       node: &ref_135
@@ -2146,7 +2153,8 @@ babSet:
                                         textString: >-
                                           paling lama 14 (empat belas) hari kerja terhitung sejak
                                           laporan adanya kekosongan jabatan anggota Dewan Pengawas
-                                          dari unsur profesional diterima oleh Presiden.
+                                          dari unsur profesional diterima oleh Presiden. 3 3)
+                                          PRESIDEN REPUBLIK INDONESIA -10-
                                         references: []
                               - type: ayat
                                 node: &ref_151
@@ -2428,7 +2436,8 @@ babSet:
                                     parentNode: *ref_170
                                   textString: >-
                                     memeriksa persyaratan dan melakukan uji kelayakan dan kepatutan
-                                    calon anggota Dewan Pengawas dari unsur profesional,
+                                    calon anggota Dewan Pengawas dari unsur profesional, ai PRESIDEN
+                                    REPUBLIK INDONESIA -11-
                                   references: []
                               - type: point
                                 node: &ref_171
@@ -2703,7 +2712,7 @@ babSet:
                                       kontak informasi pendaftaran yang dapat dihubungi. Cc. Setiap
                                       orang dapat mendaftarkan diri menjadi calon kepada panitia
                                       seleksi secara langsung atau daring melalui media elektronik
-                                      dengan cara:
+                                      dengan cara: 8 Fe 9) Tg PRESIDEN REPUBLIK INDONESIA -12 -
                                     references: []
                                   elements:
                                     - type: point
@@ -2969,7 +2978,8 @@ babSet:
                                         textString: >-
                                           panitia seleksi mengusulkan nama calon kepada Presiden
                                           paling lama 5 (lima) hari kerja terhitung sejak penentuan
-                                          nama calon sebagaimana dimaksud dalam huruf a.
+                                          nama calon sebagaimana dimaksud dalam huruf a. 3 £ 3 kk &
+                                          PRESIDEN REPUBLIK INDONESIA -.13 -
                                         references: []
                               - type: ayat
                                 node: &ref_209
@@ -3282,7 +3292,7 @@ babSet:
                                   textString: >-
                                     Tugas dan tanggung jawab komite sebagaimana dimaksud pada ayat
                                     (1) huruf b ditetapkan dalam piagam komite yang ditentukan oleh
-                                    Dewan Pengawas.
+                                    Dewan Pengawas. ag £ Tg PRESIDEN REPUBLIK INDONESIA - 14 -
                                   references:
                                     - start: 58
                                       end: 66
@@ -3556,7 +3566,8 @@ babSet:
                                   textString: >-
                                     Ketentuan lebih lanjut mengenai tata cara pengambilan keputusan
                                     melalui rapat Dewan Pengawas sebagaimana dimaksud pada ayat (1)
-                                    diatur dengan Peraturan Dewan Pengawas.
+                                    diatur dengan Peraturan Dewan Pengawas. ag Fa PRESIDEN REPUBLIK
+                                    INDONESIA -15-
                                   references:
                                     - start: 119
                                       end: 127
@@ -3846,7 +3857,8 @@ babSet:
                                           parentNode: *ref_268
                                         textString: >-
                                           berusia paling tinggi 65 (enam puluh lima) tahun pada saat
-                                          pengangkatan pertama,
+                                          pengangkatan pertama, 3 5 & PRESIDEN REPUBLIK INDONESIA
+                                          -16-
                                         references: []
                                     - type: point
                                       node: &ref_269
@@ -4146,7 +4158,8 @@ babSet:
                                           parentNode: *ref_291
                                         textString: >-
                                           melakukan tindakan yang melanggar etika dan/atau kepatutan
-                                          yang seharusnya dihormati oleh Dewan Direktur,
+                                          yang seharusnya dihormati oleh Dewan Direktur, 33 3
+                                          PRESIDEN REPUBLIK INDONESIA -17 -
                                         references: []
                                     - type: point
                                       node: &ref_292
@@ -4325,7 +4338,8 @@ babSet:
                               Ketentuan lebih lanjut mengenai tata cara pengangkatan dan
                               pemberhentian Dewan Direktur sebagaimana dimaksud dalam Pasal 26 ayat
                               (2) dan tata cara pemberhentian sementara sebagaimana dimaksud dalam
-                              Pasal 28 ayat (4) diatur dengan Peraturan Dewan Pengawas.
+                              Pasal 28 ayat (4) diatur dengan Peraturan Dewan Pengawas. 3 Z2 £ Hn
+                              PRESIDEN REPUBLIK INDONESIA -18 -
                             references:
                               - start: 198
                                 end: 215
@@ -4568,7 +4582,8 @@ babSet:
                               parentNode: *ref_317
                             textString: >-
                               Dewan Direktur menetapkan pembidangan setiap anggota Dewan Direktur
-                              dengan persetujuan Dewan Pengawas.
+                              dengan persetujuan Dewan Pengawas. ag £ Tg PRESIDEN REPUBLIK INDONESIA
+                              -19 -
                             references: []
                       - type: pasal
                         node:
@@ -4804,6 +4819,7 @@ babSet:
                               Rapat Dewan Direktur diselenggarakan dalam rangka termasuk namun tidak
                               terbatas pada pengambilan keputusan, penetapan kebijakan, pemberian
                               arahan, evaluasi mengenai investasi dan/atau mengenai operasional LPI.
+                              an & A TT 3 3 PRESIDEN REPUBLIK INDONESIA - 20 -
                             references: []
                       - type: pasal
                         node:
@@ -5043,7 +5059,8 @@ babSet:
                                   textString: >-
                                     Keputusan rapat Dewan Direktur sebagaimana dimaksud pada ayat
                                     (6) atau ayat (7) berlaku setelah ditetapkan dalam rapat dan
-                                    mengikat seluruh anggota Dewan Direktur.
+                                    mengikat seluruh anggota Dewan Direktur. na £ Es PRESIDEN
+                                    REPUBLIK INDONESIA - 21 -
                                   references:
                                     - start: 71
                                       end: 79
@@ -5238,7 +5255,7 @@ babSet:
                               parentNode: *ref_361
                             textString: >-
                               Anggota Dewan Penasihat diangkat dan diberhentikan oleh Dewan
-                              Pengawas.
+                              Pengawas. 3 £ & ke sa PRESIDEN REPUBLIK INDONESIA - D2 -
                             references: []
                         - type: ayat
                           node: &ref_362
@@ -5485,7 +5502,7 @@ babSet:
                                     nodeType: text
                                     textName: text
                                     parentNode: *ref_379
-                                  textString: sumber lain yang sah.
+                                  textString: sumber lain yang sah. 3 $ jk 3 PRESIDEN REPUBLIK INDONESIA -23 -
                                   references: []
                         - type: ayat
                           node: &ref_380
@@ -5709,7 +5726,7 @@ babSet:
                               Dalam hal kerja sama dilakukan dengan membentuk perusahaan patungan
                               sebagaimana dimaksud pada ayat (3) huruf b, aset LPI dapat
                               dipindahtangankan untuk dijadikan penyertaan modal dalam perusahaan
-                              patungan.
+                              patungan. $ je Ta 9) PRESIDEN REPUBLIK INDONESIA - 24 -
                             references:
                               - start: 94
                                 end: 102
@@ -5973,7 +5990,8 @@ babSet:
                               parentNode: *ref_413
                             textString: >-
                               Ketentuan mengenai prinsip tata kelola yang baik sebagaimana dimaksud
-                              pada ayat (1) diatur dengan Peraturan Dewan Direktur.
+                              pada ayat (1) diatur dengan Peraturan Dewan Direktur. Ti g A hg & 3)
+                              PRESIDEN REPUBLIK INDONESIA - 25 -
                             references:
                               - start: 75
                                 end: 83
@@ -6233,7 +6251,8 @@ babSet:
                                     parentNode: *ref_431
                                   textString: >-
                                     . jumlah saham atau unit penyertaan yang diterbitkan dan jangka
-                                    waktu pengembalian investasi,
+                                    waktu pengembalian investasi, 3 & Sa PRESIDEN REPUBLIK INDONESIA
+                                    - 26 -
                                   references: []
                               - type: point
                                 node: &ref_432
@@ -6492,7 +6511,7 @@ babSet:
                               nodeType: text
                               textName: text
                               parentNode: *ref_450
-                            textString: hama pengurus.
+                            textString: hama pengurus. 33 8 Je 3) PRESIDEN REPUBLIK INDONESIA - 27 -
                             references: []
                 - type: pasal
                   node:
@@ -6729,7 +6748,9 @@ babSet:
                                     nodeType: text
                                     textName: text
                                     parentNode: *ref_468
-                                  textString: 'kebijakan investasi dan tata cara pengembalian hasil investasi:'
+                                  textString: >-
+                                    kebijakan investasi dan tata cara pengembalian hasil investasi:
+                                    3) PRESIDEN REPUBLIK INDONESIA - 28 -
                                   references: []
                               - type: point
                                 node: &ref_469
@@ -6968,7 +6989,7 @@ babSet:
                             textString: >-
                               Laporan tahunan Dana Kelolaan Investasi (Fund) sebagaimana dimaksud
                               pada ayat (1) paling sedikit memuat laporan keuangan yang diaudit oleh
-                              kantor akuntan publik.
+                              kantor akuntan publik. £ jk Ha 5 PRESIDEN REPUBLIK INDONESIA -29 -
                             references:
                               - start: 73
                                 end: 81
@@ -7243,7 +7264,7 @@ babSet:
                             textString: >-
                               Pembagian laba untuk pemerintah sebagaimana dimaksud pada ayat (7)
                               dapat melebihi 3076 (tiga puluh persen) dari laba berdasarkan
-                              keputusan Menteri Keuangan.
+                              keputusan Menteri Keuangan. 9 PRESIDEN REPUBLIK INDONESIA -30 -
                             references:
                               - start: 58
                                 end: 66
@@ -7485,7 +7506,7 @@ babSet:
                             textString: >-
                               LPI wajib menyusun laporan tahunan yang berakhir pada tanggal 31
                               Desember yang sekaligus menjadi laporan pertanggungjawaban Dewan
-                              Direktur.
+                              Direktur. 23 & ik Sa PRESIDEN REPUBLIK INDONESIA - 31 -
                             references: []
                         - type: ayat
                           node: &ref_515
@@ -7706,7 +7727,7 @@ babSet:
                             textString: >-
                               Laporan tahunan sebagaimana dimaksud dalam Pasal 52 ayat (1)
                               disampaikan kepada Dewan Pengawas oleh Dewan Direktur untuk mendapat
-                              persetujuan.
+                              persetujuan. 2 & ik s4, PRESIDEN REPUBLIK INDONESIA - 32 -
                             references:
                               - start: 43
                                 end: 60
@@ -7913,7 +7934,8 @@ babSet:
                                     parentNode: *ref_539
                                   textString: >-
                                     Aset BUMN dapat dipindahtangankan kepada perusahaan patungan
-                                    yang dibentuk oleh LPI.
+                                    yang dibentuk oleh LPI. 2 £ Ea PRESIDEN REPUBLIK INDONESIA - 33
+                                    -
                                   references: []
                 - type: paragraf
                   node: &ref_540
@@ -8138,7 +8160,9 @@ babSet:
                                           nodeType: text
                                           textName: text
                                           parentNode: *ref_554
-                                        textString: cara lain yang sah.
+                                        textString: >-
+                                          cara lain yang sah. 3 & & ke si PRESIDEN REPUBLIK
+                                          INDONESIA - 34 -
                                         references: []
                               - type: ayat
                                 node: &ref_555
@@ -8382,7 +8406,8 @@ babSet:
                                     patungan sebagaimana dimaksud pada ayat (1) merupakan aset yang
                                     tidak dalam sengketa, tidak sedang dilakukan sita pidana atau
                                     perdata, dan tidak terdapat kepemilikan atas hak istimewa pihak
-                                    manapun kecuali disepakati oleh pemilik hak.
+                                    manapun kecuali disepakati oleh pemilik hak. an » A R 2 : 3
+                                    PRESIDEN REPUBLIK INDONESIA - 35 -
                                   references:
                                     - start: 92
                                       end: 100
@@ -8642,7 +8667,8 @@ babSet:
                                     parentNode: *ref_588
                                   textString: >-
                                     Konversi aset LPI sebagaimana dimaksud pada ayat (1) dilakukan
-                                    sesuai dengan nilai wajar.
+                                    sesuai dengan nilai wajar. 3 3) PRESIDEN REPUBLIK INDONESIA - 36
+                                    -
                                   references:
                                     - start: 44
                                       end: 52
@@ -8879,7 +8905,8 @@ babSet:
                               parentNode: *ref_602
                             textString: >-
                               Dalam pengelolaan LPI, Dewan Direktur harus memastikan pelaksanaan
-                              penerapan tata kelola yang baik di lingkungan LPI.
+                              penerapan tata kelola yang baik di lingkungan LPI. 3 | $ je 3)
+                              PRESIDEN REPUBLIK INDONESIA - 37 -
                             references: []
                         - type: ayat
                           node: &ref_603
@@ -9166,7 +9193,8 @@ babSet:
                         parentNode: *ref_621
                       textString: >-
                         LPI memastikan kebijakan investasi dilaksanakan dengan memperhatikan
-                        tanggung jawab sosial dan lingkungan.
+                        tanggung jawab sosial dan lingkungan. IG £ A3 PRESIDEN REPUBLIK INDONESIA -
+                        38 -
                       references: []
           - type: bagian
             node: &ref_622
@@ -9373,7 +9401,7 @@ babSet:
                               mempunyai kepentingan pribadi, baik langsung maupun tidak langsung,
                               yang dapat menimbulkan benturan kepentingan dengan objek yang akan
                               diputuskan, yang bersangkutan harus mengungkapkan benturan kepentingan
-                              tersebut.
+                              tersebut. HN & Je 3) PRESIDEN REPUBLIK INDONESIA - 39 -
                             references: []
                         - type: ayat
                           node: &ref_636
@@ -9563,7 +9591,8 @@ babSet:
                               parentNode: *ref_648
                             textString: >-
                               Ketentuan lebih lanjut mengenai bantuan hukum sebagaimana dimaksud
-                              pada ayat (1) diatur dalam Peraturan Dewan Direktur.
+                              pada ayat (1) diatur dalam Peraturan Dewan Direktur. 23 PRESIDEN
+                              REPUBLIK INDONESIA - 40 -
                             references:
                               - start: 72
                                 end: 80
@@ -9794,9 +9823,10 @@ babSet:
                   textName: text
                   parentNode: *ref_662
                 textString: >-
-                  Peraturan Pemerintah ini mulai berlaku pada tanggal diundangkan. Agar setiap orang
-                  mengetahuinya, memerintahkan pengundangan Peraturan Pemerintah ini dengan
-                  penempatannya dalam Lembaran Negara Republik Indonesia.
+                  Peraturan Pemerintah ini mulai berlaku pada tanggal diundangkan. 59 PRESIDEN
+                  REPUBLIK INDONESIA - 41 - Agar setiap orang mengetahuinya, memerintahkan
+                  pengundangan Peraturan Pemerintah ini dengan penempatannya dalam Lembaran Negara
+                  Republik Indonesia.
                 references: []
 disahkan:
   date: *ref_22
