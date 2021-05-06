@@ -6,7 +6,7 @@ import { getConfig } from './config';
 import {
   DocumentNode,
   getDocumentPath,
-  CONVERTABLE_DOCUMENT_CATEGORY,
+  CONVERTABLE_DOCUMENT_TYPE,
   getConvertableDocumentFiles,
 } from './document';
 
@@ -130,26 +130,9 @@ export function nodeToFile(
   return { path: filePath, exists };
 }
 
-export function getTempFilePath(
-  node: DocumentNode,
-  name: string,
-  extension: string
-): { path: string; exists: boolean } {
-  const { dataDir } = getConfig();
-  const docPath = getDocumentPath(node);
-  const filePath = `${dataDir}/temp/${name}/${docPath}${extension}`;
-
-  const fileDir = path.dirname(filePath);
-  mkdirSync(fileDir, { recursive: true });
-
-  const exists = existsSync(filePath);
-
-  return { path: filePath, exists };
-}
-
 export function getDocumentData(dataType: DataType): DocumentNode[] {
   const { dataDir } = getConfig();
-  return CONVERTABLE_DOCUMENT_CATEGORY.flatMap((docType) =>
+  return CONVERTABLE_DOCUMENT_TYPE.flatMap((docType) =>
     getConvertableDocumentFiles(docType, dataDir, dataType)
   );
 }

@@ -2510,7 +2510,7 @@
 <http://example.org/legal/document/uu/2018/6> legal:documentMengingat <http://example.org/legal/document/uu/2018/6/mengingat> .
 <http://example.org/legal/document/uu/2018/6/mengingat/text> legal:textHasTextString "Pasal 5 ayat (1), Pasal 20, Pasal 28 H ayat (1), Pasal 34 ayat (3) Undang-Undang Dasar Negara Republik Indonesia Tahun 1945: Dengan Persetujuan Bersama DEWAN PERWAKILAN RAKYAT INDONESIA dan PRESIDEN REPUBLIK INDONESIA MEMUTUSKAN: Menetapkan : UNDANG-UNDANG TENTANG KEKARANTINAAN KESEHATAN." .
 <http://example.org/legal/document/uu/2018/6/mengingat> legal:mengingatHasText <http://example.org/legal/document/uu/2018/6/mengingat/text> .
-<http://example.org/legal/document/uu/2018/6/mengingat/text> legal:textReferencesLegal <http://example.org/legal/document/uud/> .
+<http://example.org/legal/document/uu/2018/6/mengingat/text> legal:textReferencesLegal <http://example.org/legal/document/uu> .
 <http://example.org/legal/document/uu/2018/6> legal:documentMenimbang <http://example.org/legal/document/uu/2018/6/menimbang> .
 <http://example.org/legal/document/uu/2018/6/menimbang> legal:menimbangHasPointSet <http://example.org/legal/document/uu/2018/6/menimbang/point> .
 <http://example.org/legal/document/uu/2018/6/menimbang/point/description> legal:textHasTextString "" .

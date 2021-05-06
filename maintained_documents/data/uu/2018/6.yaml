@@ -1,6 +1,7 @@
 node: &ref_0
   nodeType: document
-  docType: uu
+  docType: noTahun
+  docCategory: uu
   tahun: 2018
   nomor: 6
 metadata:
@@ -99,14 +100,16 @@ metadata:
                 end: 98
                 node:
                   nodeType: document
-                  docType: uu
+                  docType: noTahun
+                  docCategory: uu
                   nomor: 2
                   tahun: 1962
               - start: 6
                 end: 38
                 node:
                   nodeType: document
-                  docType: uu
+                  docType: noTahun
+                  docCategory: uu
                   nomor: 1
                   tahun: 1962
         - type: point
@@ -8639,7 +8642,8 @@ babSet:
                           end: 32
                           node:
                             nodeType: document
-                            docType: uu
+                            docType: noTahun
+                            docCategory: uu
                             nomor: 1
                             tahun: 1962
                   - type: point
@@ -8662,7 +8666,8 @@ babSet:
                           end: 32
                           node:
                             nodeType: document
-                            docType: uu
+                            docType: noTahun
+                            docCategory: uu
                             nomor: 2
                             tahun: 1962
           - type: pasal

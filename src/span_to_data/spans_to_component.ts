@@ -351,7 +351,7 @@ function spansToAmendedDocumentNode(spans: Span[]): DocumentNode | undefined {
   const nomor = safeParseInt(_nomor);
   const tahun = safeParseInt(_tahun);
   if (isUndefined(nomor) || isUndefined(tahun)) return undefined;
-  return { nodeType: 'document', docType: 'uu', nomor, tahun };
+  return { nodeType: 'document', docType: 'noTahun', docCategory: 'uu', nomor, tahun };
 }
 
 type SpansExtractResult = {

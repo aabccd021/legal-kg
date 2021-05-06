@@ -104,7 +104,7 @@
 <http://example.org/legal/document/uu/2003/13/pasal/0001/version/20030325/point/0016> legal:pointHasKey "16" .
 <http://example.org/legal/document/uu/2003/13/pasal/0001/version/20030325/point/0016/text> legal:textHasTextString "Hubungan industrial adalah suatu sistem hubungan yang terbentuk antara para pelaku dalam proses produksi barang dan/atau jasa yang terdiri dari unsur pengusaha, pekerja/buruh, dan pemerintah yang didasarkan pada nilai nilai Pancasila dan Undang Undang Dasar Negara Republik Indonesia Tahun 1945. 5." .
 <http://example.org/legal/document/uu/2003/13/pasal/0001/version/20030325/point/0016> legal:pointHasText <http://example.org/legal/document/uu/2003/13/pasal/0001/version/20030325/point/0016/text> .
-<http://example.org/legal/document/uu/2003/13/pasal/0001/version/20030325/point/0016/text> legal:textReferencesLegal <http://example.org/legal/document/uud/> .
+<http://example.org/legal/document/uu/2003/13/pasal/0001/version/20030325/point/0016/text> legal:textReferencesLegal <http://example.org/legal/document/uu> .
 <http://example.org/legal/document/uu/2003/13/pasal/0001/version/20030325/point> legal:pointSetHasPoint <http://example.org/legal/document/uu/2003/13/pasal/0001/version/20030325/point/0017> .
 <http://example.org/legal/document/uu/2003/13/pasal/0001/version/20030325/point/0017> legal:pointHasKey "17" .
 <http://example.org/legal/document/uu/2003/13/pasal/0001/version/20030325/point/0017/text> legal:textHasTextString "Serikat pekerja/serikat buruh adalah organisasi yang dibentuk dari, oleh, dan untuk pekerja/buruh baik di perusahaan maupun di luar perusahaan, yang bersifat bebas, terbuka, mandiri, demokratis, dan bertanggung jawab guna memperjuangkan, membela serta melindungi hak dan kepentingan pekerja/buruh serta meningkatkan kesejahteraan pekerja/buruh dan keluarganya." .
@@ -186,7 +186,7 @@
 <http://example.org/legal/document/uu/2003/13/pasal/0002/version/20030325> legal:pasalVersionHasRawText "Pembangunan ketenagakerjaan berlandaskan Pancasila dan Undang Undang Dasar Negara Republik Indonesia Tahun 1945." .
 <http://example.org/legal/document/uu/2003/13/pasal/0002/version/20030325/text> legal:textHasTextString "Pembangunan ketenagakerjaan berlandaskan Pancasila dan Undang Undang Dasar Negara Republik Indonesia Tahun 1945." .
 <http://example.org/legal/document/uu/2003/13/pasal/0002/version/20030325> legal:pasalVersionHasText <http://example.org/legal/document/uu/2003/13/pasal/0002/version/20030325/text> .
-<http://example.org/legal/document/uu/2003/13/pasal/0002/version/20030325/text> legal:textReferencesLegal <http://example.org/legal/document/uud/> .
+<http://example.org/legal/document/uu/2003/13/pasal/0002/version/20030325/text> legal:textReferencesLegal <http://example.org/legal/document/uu> .
 <http://example.org/legal/document/uu/2003/13/bab/0002/pasals> legal:pasalSetHasPasal <http://example.org/legal/document/uu/2003/13/pasal/0003> .
 <http://example.org/legal/document/uu/2003/13/pasal/0003> legal:pasalHasKey 3 .
 <http://example.org/legal/document/uu/2003/13/pasal/0003> legal:pasalHasPasalVersion <http://example.org/legal/document/uu/2003/13/pasal/0003/version/20030325> .
@@ -5392,7 +5392,7 @@
 <http://example.org/legal/document/uu/2003/13> legal:documentMengingat <http://example.org/legal/document/uu/2003/13/mengingat> .
 <http://example.org/legal/document/uu/2003/13/mengingat/text> legal:textHasTextString "Pasal 5 ayat (1), Pasal 20 ayat (2), Pasal 27 ayat (2), Pasal 28, dan Pasal 33 ayat (1) Undang Undang Dasar Negara Republik Indonesia Tahun 1945," .
 <http://example.org/legal/document/uu/2003/13/mengingat> legal:mengingatHasText <http://example.org/legal/document/uu/2003/13/mengingat/text> .
-<http://example.org/legal/document/uu/2003/13/mengingat/text> legal:textReferencesLegal <http://example.org/legal/document/uud/> .
+<http://example.org/legal/document/uu/2003/13/mengingat/text> legal:textReferencesLegal <http://example.org/legal/document/uu> .
 <http://example.org/legal/document/uu/2003/13> legal:documentMenimbang <http://example.org/legal/document/uu/2003/13/menimbang> .
 <http://example.org/legal/document/uu/2003/13/menimbang> legal:menimbangHasPointSet <http://example.org/legal/document/uu/2003/13/menimbang/point> .
 <http://example.org/legal/document/uu/2003/13/menimbang/point/description> legal:textHasTextString "" .
@@ -5401,7 +5401,7 @@
 <http://example.org/legal/document/uu/2003/13/menimbang/point/a> legal:pointHasKey "a" .
 <http://example.org/legal/document/uu/2003/13/menimbang/point/a/text> legal:textHasTextString "bahwa pembangunan nasional dilaksanakan dalam rangka pembangunan manusia Indonesia seutuhnya dan pembangunan masyarakat Indonesia seluruhnya untuk mewujudkan masyarakat yang sejahtera, adil, makmur, yang merata, baik materiil maupun spiritual berdasarkan Pancasila dan Undang Undang Dasar Negara Republik Indonesia Tahun 1945," .
 <http://example.org/legal/document/uu/2003/13/menimbang/point/a> legal:pointHasText <http://example.org/legal/document/uu/2003/13/menimbang/point/a/text> .
-<http://example.org/legal/document/uu/2003/13/menimbang/point/a/text> legal:textReferencesLegal <http://example.org/legal/document/uud/> .
+<http://example.org/legal/document/uu/2003/13/menimbang/point/a/text> legal:textReferencesLegal <http://example.org/legal/document/uu> .
 <http://example.org/legal/document/uu/2003/13/menimbang/point> legal:pointSetHasPoint <http://example.org/legal/document/uu/2003/13/menimbang/point/b> .
 <http://example.org/legal/document/uu/2003/13/menimbang/point/b> legal:pointHasKey "b" .
 <http://example.org/legal/document/uu/2003/13/menimbang/point/b/text> legal:textHasTextString "bahwa dalam pelaksanaan pembangunan nasional, tenaga kerja mempunyai peranan dan kedudukan yang sangat penting sebagai pelaku dan tujuan pembangunan," .

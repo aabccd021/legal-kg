@@ -2839,7 +2839,7 @@
 <http://example.org/legal/document/pp/2020/74/mengingat/point/0001> legal:pointHasKey "1" .
 <http://example.org/legal/document/pp/2020/74/mengingat/point/0001/text> legal:textHasTextString "Pasal 5 ayat (2) Undang-Undang Dasar Negara Republik Indonesia Tahun 1945," .
 <http://example.org/legal/document/pp/2020/74/mengingat/point/0001> legal:pointHasText <http://example.org/legal/document/pp/2020/74/mengingat/point/0001/text> .
-<http://example.org/legal/document/pp/2020/74/mengingat/point/0001/text> legal:textReferencesLegal <http://example.org/legal/document/uud/> .
+<http://example.org/legal/document/pp/2020/74/mengingat/point/0001/text> legal:textReferencesLegal <http://example.org/legal/document/uu> .
 <http://example.org/legal/document/pp/2020/74/mengingat/point> legal:pointSetHasPoint <http://example.org/legal/document/pp/2020/74/mengingat/point/0002> .
 <http://example.org/legal/document/pp/2020/74/mengingat/point/0002> legal:pointHasKey "2" .
 <http://example.org/legal/document/pp/2020/74/mengingat/point/0002/text> legal:textHasTextString "Undang-Undang Nomor 11 Tahun 2020 tentang Cipta Kerja (Lembaran Negara Republik Indonesia Tahun 2020 Nomor 245, Tambahan Lembaran Negara Republik Indonesia Nomor 6573), MEMUTUSKAN: Menetapkan : PERATURAN PEMERINTAH TENTANG LEMBAGA PENGELOLA INVESTASI." .

@@ -1,6 +1,7 @@
 node: &ref_0
   nodeType: document
-  docType: pp
+  docType: noTahun
+  docCategory: pp
   tahun: 2020
   nomor: 74
 metadata:
@@ -25,7 +26,8 @@ metadata:
           end: 192
           node:
             nodeType: document
-            docType: uu
+            docType: noTahun
+            docCategory: uu
             nomor: 11
             tahun: 2020
   mengingat:
@@ -86,7 +88,8 @@ metadata:
                 end: 33
                 node:
                   nodeType: document
-                  docType: uu
+                  docType: noTahun
+                  docCategory: uu
                   nomor: 11
                   tahun: 2020
   memutuskan: ''
@@ -202,7 +205,8 @@ babSet:
                           end: 230
                           node:
                             nodeType: document
-                            docType: uu
+                            docType: noTahun
+                            docCategory: uu
                             nomor: 11
                             tahun: 2020
                   - type: point

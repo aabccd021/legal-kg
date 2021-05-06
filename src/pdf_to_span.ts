@@ -1,5 +1,5 @@
 import { getDocumentData, nodeToFile, shouldOverwrite, UnindexedSpan } from './util';
-import { DocumentNode } from './document/index';
+import { DocumentNode } from './document';
 import { writeFileSync } from 'fs';
 import { PDFExtract, PDFExtractPage, PDFExtractText } from 'pdf.js-extract';
 import { chain, curry, isUndefined, isEmpty, filter, zip, countBy, maxBy, toPairs } from 'lodash';

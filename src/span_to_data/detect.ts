@@ -293,7 +293,13 @@ function detectUU(text: string): Reference[] {
       if (isUndefined(tahun)) throw Error();
       const start = match.index;
       const end = match.index + len;
-      const node: DocumentNode = { nodeType: 'document', docType: 'uu', nomor, tahun };
+      const node: DocumentNode = {
+        nodeType: 'document',
+        docType: 'noTahun',
+        docCategory: 'uu',
+        nomor,
+        tahun,
+      };
       return { start, end, node };
     })
     .value();

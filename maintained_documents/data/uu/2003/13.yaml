@@ -1,6 +1,7 @@
 node: &ref_0
   nodeType: document
-  docType: uu
+  docType: noTahun
+  docCategory: uu
   tahun: 2003
   nomor: 13
 metadata:

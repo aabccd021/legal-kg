@@ -4,7 +4,6 @@ import fetch from 'node-fetch';
 import { pipeline } from 'stream';
 import * as util from 'util';
 import { nodeToName } from './document';
-import { ConvertDocumentLog, DocumentLog, readLogs, toConvertDocumentLog, writeLogs } from './log';
 import { nodeToFile } from './util';
 
 const streamPipeline = util.promisify(pipeline);
