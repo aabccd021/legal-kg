@@ -52,7 +52,7 @@ export function babKeyOfSpan(span: Span): number | undefined {
 
 export function bagianKeyOfSpan(span: Span): number | undefined {
   const { str } = span;
-  if (!/^Bagian /.test(str)) return undefined;
+  if (!/^Bagian Ke/.test(str)) return undefined;
   const keyStr = str.replace(/^Bagian /, '');
   if (keyStr === 'Kesatu' || keyStr === 'Pertama') return 1;
   if (keyStr === 'Kedua') return 2;

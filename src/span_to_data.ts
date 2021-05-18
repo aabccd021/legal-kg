@@ -12,7 +12,17 @@ import { yamlToTriples } from './data_to_ttl/data-to-triples';
 import { triplesToTtl } from './data_to_ttl/triples-to-ttl';
 
 function spanToData(): void {
-  getDocumentData('span-raw').forEach(writeToData);
+  // yarn generate:data { \"nodeType\": \"document\", \"docType\": \"noTahun\", \"docCategory\": \"uu\", \"tahun\": 1947, \"nomor\": 36 }
+  const [, , ...args] = process.argv;
+  const argStr = args.join(' ')
+  console.log(`'${argStr}'`)
+  if (argStr) {
+    const parsed = JSON.parse(argStr);
+    console.log(parsed)
+    writeToData(parsed)
+  } else {
+    getDocumentData('span-raw').forEach(writeToData);
+  }
   console.log('\ndone');
 }
 
