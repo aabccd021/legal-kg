@@ -53,21 +53,21 @@ export function babKeyOfSpan(span: Span): number | undefined {
 export function bagianKeyOfSpan(span: Span): number | undefined {
   const { str } = span;
   if (!/^Bagian Ke/.test(str)) return undefined;
-  const keyStr = str.replace(/^Bagian /, '');
-  if (keyStr === 'Kesatu' || keyStr === 'Pertama') return 1;
-  if (keyStr === 'Kedua') return 2;
-  if (keyStr === 'Ketiga') return 3;
-  if (keyStr === 'Keempat') return 4;
-  if (keyStr === 'Kelima') return 5;
-  if (keyStr === 'Keenam') return 6;
-  if (keyStr === 'Ketujuh') return 7;
-  if (keyStr === 'Kedelapan') return 8;
-  if (keyStr === 'Kesembilan') return 9;
-  if (keyStr === 'Kesepuluh') return 10;
-  if (keyStr === 'Kesebelas') return 11;
-  if (keyStr === 'Keduabelas') return 12;
-  if (keyStr === 'Ketigabelas') return 13;
-  if (keyStr === 'Keempatbelas') return 14;
+  const keyStr = str.replace(/^Bagian /, '').toLowerCase();
+  if (keyStr === 'kesatu' || keyStr === 'Pertama') return 1;
+  if (/^kedua/.test(keyStr)) return 2;
+  if (/^ketiga/.test(keyStr)) return 3;
+  if (/^keempat/.test(keyStr)) return 4;
+  if (/^kelima/.test(keyStr)) return 5;
+  if (/^keenam/.test(keyStr)) return 6;
+  if (/^ketujuh/.test(keyStr)) return 7;
+  if (/^kedelapan/.test(keyStr)) return 8;
+  if (/^kesembilan/.test(keyStr)) return 9;
+  if (/^kesepuluh/.test(keyStr)) return 10;
+  if (/^kesebelas/.test(keyStr)) return 11;
+  if (/^kedua ?belas/.test(keyStr)) return 12;
+  if (/^ketiga ?belas/.test(keyStr)) return 13;
+  if (/^keempat ?belas/.test(keyStr)) return 14;
   throw Error(`Bagian key ${keyStr} is unknown on line: ${str}`);
 }
 

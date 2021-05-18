@@ -90,11 +90,11 @@ function writeToData(node: DocumentNode): void {
 function spansToDisahkan(spans: Span[]): Disahkan {
   const [, , location] = spans[0]?.str?.split(' ') ?? [];
   const [dateStr, monthStr, yearStr] =
-    spans[1]?.str?.replaceAll('pada', '')?.replaceAll('tanggal', '')?.trim().split(' ') ?? [];
+    spans[1]?.str?.toLocaleLowerCase().replaceAll('pada', '')?.replaceAll('tanggal', '')?.trim().split(' ') ?? [];
   const date = safeParseInt(dateStr);
   const year = safeParseInt(yearStr);
   if (isUndefined(location) || isUndefined(date) || isUndefined(year)) {
-    throw Error(`${JSON.stringify({ location, date, year })}`);
+    throw Error(`${JSON.stringify({ location, date, year, spans0: spans[0], spans1: spans[1] })}`);
   }
   const jabatanPengesah = spans[2]?.str;
   const pengesah = spans[4]?.str;
@@ -112,18 +112,18 @@ function spansToDisahkan(spans: Span[]): Disahkan {
 }
 
 function monthToNumber(monthStr: string | undefined): number {
-  if (monthStr === 'Januari') return 1;
-  if (monthStr === 'Februari') return 2;
-  if (monthStr === 'Maret') return 3;
-  if (monthStr === 'April') return 4;
-  if (monthStr === 'Mei') return 5;
-  if (monthStr === 'Juni') return 6;
-  if (monthStr === 'Juli') return 7;
-  if (monthStr === 'Agustus') return 8;
-  if (monthStr === 'September') return 9;
-  if (monthStr === 'Oktober') return 10;
-  if (monthStr === 'November') return 11;
-  if (monthStr === 'Desember') return 12;
+  if (monthStr === 'januari') return 1;
+  if (monthStr === 'februari') return 2;
+  if (monthStr === 'maret') return 3;
+  if (monthStr === 'april') return 4;
+  if (monthStr === 'mei') return 5;
+  if (monthStr === 'juni') return 6;
+  if (monthStr === 'juli') return 7;
+  if (monthStr === 'agustus') return 8;
+  if (monthStr === 'september') return 9;
+  if (monthStr === 'oktober') return 10;
+  if (monthStr === 'november') return 11;
+  if (monthStr === 'desember') return 12;
   throw Error(`unknwon month ${monthStr}`);
 }
 
