@@ -94,7 +94,7 @@ function spansToDisahkan(spans: Span[]): Disahkan {
   const date = safeParseInt(dateStr);
   const year = safeParseInt(yearStr);
   if (isUndefined(location) || isUndefined(date) || isUndefined(year)) {
-    throw Error(`${JSON.stringify({ location, date, year, spans0: spans[0], spans1: spans[1] })}`);
+    throw Error(`${JSON.stringify({ location, date, year, spans0: spans[0], spans1: spans[1], arr: [dateStr, monthStr, yearStr] })}`);
   }
   const jabatanPengesah = spans[2]?.str;
   const pengesah = spans[4]?.str;

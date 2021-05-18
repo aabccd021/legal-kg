@@ -261,7 +261,7 @@ function toKeys(
 
     if (isUndefined(lastPasalKey)) {
       if (newPasalKey === 1) return newAcc;
-      throw Error('Impossible');
+      throw Error(`Impossible ${JSON.stringify({newPasalKey, lastPasalKey, span})}`);
     } else {
       if (newPasalKey === lastPasalKey + 1) {
         if (
