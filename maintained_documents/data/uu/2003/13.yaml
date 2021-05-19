@@ -17724,953 +17724,923 @@ babSet:
         nodeType: bab
         key: 16
         parentBabSetNode: *ref_10
-      title: KETENTUAN PIDANA DAN SANKSI ADMINISTRATIF
+      title: >-
+        KETENTUAN PIDANA DAN SANKSI ADMINISTRATIF Bagian Pertama Ketentuan Pidana PRESIDEN REPUBLIK
+        INDONESIA - 75 -
       content:
-        type: bagianSet
+        type: pasalSet
         node:
-          nodeType: bagianSet
-          parentBabNode: *ref_1111
+          nodeType: pasalSet
+          parentNode: *ref_1111
         elements:
-          - type: bagian
-            node: &ref_1112
-              nodeType: bagian
-              key: 1
-              parentBagianSetNode:
-                nodeType: bagianSet
-                parentBabNode: *ref_1111
-            title: Bagian Pertama Ketentuan Pidana PRESIDEN REPUBLIK INDONESIA - 75 -
-            content:
-              type: pasalSet
-              node:
-                nodeType: pasalSet
-                parentNode: *ref_1112
-              elements:
-                - type: pasal
-                  node:
-                    nodeType: pasal
-                    key: 183
-                    parentNode: *ref_0
-                  version:
-                    type: pasalVersion
-                    node: &ref_1113
-                      nodeType: pasalVersion
-                      version: *ref_56
-                      state: exists
-                      parentPasalNode:
-                        nodeType: pasal
-                        key: '183'
-                        parentNode: *ref_0
-                    content:
-                      type: ayatSet
-                      node: &ref_1114
-                        nodeType: ayatSet
-                        parentPasalVersionNode: *ref_1113
-                      elements:
-                        - type: ayat
-                          node: &ref_1115
-                            nodeType: ayat
-                            key: 1
-                            parentAyatSetNode: *ref_1114
-                          content:
-                            type: text
-                            node:
-                              nodeType: text
-                              textName: text
-                              parentNode: *ref_1115
-                            textString: >-
-                              Barang siapa melanggar ketentuan sebagaimana dimaksud dalam Pasal 74,
-                              dikenakan sanksi pidana penjara paling singkat 2 (dua) tahun dan
-                              paling lama 5 (lima) tahun dan/atau denda paling sedikit Rp
-                              200.000.000,00 (dua ratus juta rupiah) dan paling banyak Rp
-                              500.000.000,00 (lima ratus juta rupiah).
-                            references:
-                              - start: 60
-                                end: 68
-                                node:
-                                  key: 74
-                                  parentNode: *ref_0
-                                  nodeType: pasal
-                        - type: ayat
-                          node: &ref_1116
-                            nodeType: ayat
-                            key: 2
-                            parentAyatSetNode: *ref_1114
-                          content:
-                            type: text
-                            node:
-                              nodeType: text
-                              textName: text
-                              parentNode: *ref_1116
-                            textString: >-
-                              Tindak pidana sebagaimana dimaksud dalam ayat (1) merupakan tindak
-                              pidana kejahatan.
-                            references:
-                              - start: 41
-                                end: 49
-                                node:
-                                  key: 1
-                                  parentAyatSetNode:
-                                    nodeType: ayatSet
-                                    parentPasalVersionNode: *ref_1113
-                                  nodeType: ayat
-                - type: pasal
-                  node:
-                    nodeType: pasal
-                    key: 184
-                    parentNode: *ref_0
-                  version:
-                    type: pasalVersion
-                    node: &ref_1117
-                      nodeType: pasalVersion
-                      version: *ref_56
-                      state: exists
-                      parentPasalNode:
-                        nodeType: pasal
-                        key: '184'
-                        parentNode: *ref_0
-                    content:
-                      type: ayatSet
-                      node: &ref_1118
-                        nodeType: ayatSet
-                        parentPasalVersionNode: *ref_1117
-                      elements:
-                        - type: ayat
-                          node: &ref_1119
-                            nodeType: ayat
-                            key: 1
-                            parentAyatSetNode: *ref_1118
-                          content:
-                            type: text
-                            node:
-                              nodeType: text
-                              textName: text
-                              parentNode: *ref_1119
-                            textString: >-
-                              Barang siapa melanggar ketentuan sebagaimana dimaksud dalam Pasal 167
-                              ayat (5), dikenakan sanksi pidana penjara paling singkat 1 (satu)
-                              tahun dan paling lama 5 (lima) tahun dan/atau denda paling sedikit Rp
-                              100.000.000,00 (seratus juta rupiah) dan paling banyak Rp
-                              500.000.000,00 (lima ratus juta rupiah).
-                            references:
-                              - start: 60
-                                end: 78
-                                node:
-                                  parentAyatSetNode:
-                                    nodeType: ayatSet
-                                    parentPasalVersionNode: *ref_1117
-                                  key: 5
-                                  nodeType: ayat
-                        - type: ayat
-                          node: &ref_1120
-                            nodeType: ayat
-                            key: 2
-                            parentAyatSetNode: *ref_1118
-                          content:
-                            type: text
-                            node:
-                              nodeType: text
-                              textName: text
-                              parentNode: *ref_1120
-                            textString: >-
-                              Tindak pidana sebagaimana dimaksud dalam ayat (1) merupakan tindak
-                              pidana kejahatan.
-                            references:
-                              - start: 41
-                                end: 49
-                                node:
-                                  key: 1
-                                  parentAyatSetNode:
-                                    nodeType: ayatSet
-                                    parentPasalVersionNode: *ref_1117
-                                  nodeType: ayat
-                - type: pasal
-                  node:
-                    nodeType: pasal
-                    key: 185
-                    parentNode: *ref_0
-                  version:
-                    type: pasalVersion
-                    node: &ref_1121
-                      nodeType: pasalVersion
-                      version: *ref_56
-                      state: exists
-                      parentPasalNode:
-                        nodeType: pasal
-                        key: '185'
-                        parentNode: *ref_0
-                    content:
-                      type: ayatSet
-                      node: &ref_1122
-                        nodeType: ayatSet
-                        parentPasalVersionNode: *ref_1121
-                      elements:
-                        - type: ayat
-                          node: &ref_1123
-                            nodeType: ayat
-                            key: 1
-                            parentAyatSetNode: *ref_1122
-                          content:
-                            type: text
-                            node:
-                              nodeType: text
-                              textName: text
-                              parentNode: *ref_1123
-                            textString: >-
-                              Barang siapa melanggar ketentuan sebagaimana dimaksud dalam Pasal 42
-                              ayat (1) dan ayat (2), Pasal 68, Pasal 69 ayat (2), Pasal 80, Pasal
-                              82, Pasal 90 ayat (1), Pasal 143, dan Pasal 160 ayat (4) dan ayat (7),
-                              dikenakan sanksi pidana penjara paling singkat 1 (satu) tahun dan
-                              paling lama 4 (empat) tahun dan/atau denda paling sedikit Rp
-                              100.000.000,00 (seratus juta rupiah) dan paling banyak Rp
-                              400.000.000,00 (empat ratus juta rupiah).
-                            references:
-                              - start: 175
-                                end: 193
-                                node:
-                                  parentAyatSetNode: &ref_1124
-                                    nodeType: ayatSet
-                                    parentPasalVersionNode: *ref_1121
-                                  key: 4
-                                  nodeType: ayat
-                              - start: 141
-                                end: 158
-                                node:
-                                  parentAyatSetNode: *ref_1124
-                                  key: 1
-                                  nodeType: ayat
-                              - start: 102
-                                end: 119
-                                node:
-                                  parentAyatSetNode: *ref_1124
-                                  key: 2
-                                  nodeType: ayat
-                              - start: 60
-                                end: 77
-                                node:
-                                  parentAyatSetNode: *ref_1124
-                                  key: 1
-                                  nodeType: ayat
-                              - start: 198
-                                end: 206
-                                node:
-                                  key: 7
-                                  parentAyatSetNode: &ref_1125
-                                    nodeType: ayatSet
-                                    parentPasalVersionNode: *ref_1121
-                                  nodeType: ayat
-                              - start: 82
-                                end: 90
-                                node:
-                                  key: 2
-                                  parentAyatSetNode: *ref_1125
-                                  nodeType: ayat
-                              - start: 160
-                                end: 169
-                                node:
-                                  key: 143
-                                  parentNode: *ref_0
-                                  nodeType: pasal
-                              - start: 131
-                                end: 139
-                                node:
-                                  key: 82
-                                  parentNode: *ref_0
-                                  nodeType: pasal
-                              - start: 121
-                                end: 129
-                                node:
-                                  key: 80
-                                  parentNode: *ref_0
-                                  nodeType: pasal
-                              - start: 92
-                                end: 100
-                                node:
-                                  key: 68
-                                  parentNode: *ref_0
-                                  nodeType: pasal
-                        - type: ayat
-                          node: &ref_1126
-                            nodeType: ayat
-                            key: 2
-                            parentAyatSetNode: *ref_1122
-                          content:
-                            type: text
-                            node:
-                              nodeType: text
-                              textName: text
-                              parentNode: *ref_1126
-                            textString: >-
-                              Tindak pidana sebagaimana dimaksud dalam ayat (1) merupakan tindak
-                              pidana kejahatan. PRESIDEN REPUBLIK INDONESIA - 76 -
-                            references:
-                              - start: 41
-                                end: 49
-                                node:
-                                  key: 1
-                                  parentAyatSetNode:
-                                    nodeType: ayatSet
-                                    parentPasalVersionNode: *ref_1121
-                                  nodeType: ayat
-                - type: pasal
-                  node:
-                    nodeType: pasal
-                    key: 186
-                    parentNode: *ref_0
-                  version:
-                    type: pasalVersion
-                    node: &ref_1127
-                      nodeType: pasalVersion
-                      version: *ref_56
-                      state: exists
-                      parentPasalNode:
-                        nodeType: pasal
-                        key: '186'
-                        parentNode: *ref_0
-                    content:
-                      type: ayatSet
-                      node: &ref_1128
-                        nodeType: ayatSet
-                        parentPasalVersionNode: *ref_1127
-                      elements:
-                        - type: ayat
-                          node: &ref_1129
-                            nodeType: ayat
-                            key: 1
-                            parentAyatSetNode: *ref_1128
-                          content:
-                            type: text
-                            node:
-                              nodeType: text
-                              textName: text
-                              parentNode: *ref_1129
-                            textString: >-
-                              Barang siapa melanggar ketentuan sebagaimana dimaksud dalam Pasal 35
-                              ayat (2) dan ayat (3), Pasal 93 ayat (2), Pasal 137, dan Pasal 138
-                              ayat (1), dikenakan sanksi pidana penjara paling singkat 1 (satu)
-                              bulan dan paling lama 4 (empat) tahun dan/atau denda paling sedikit Rp
-                              10.000.000,00 (sepuluh juta rupiah) dan paling banyak Rp
-                              400.000.000,00 (empat ratus juta rupiah).
-                            references:
-                              - start: 126
-                                end: 144
-                                node:
-                                  parentAyatSetNode: &ref_1130
-                                    nodeType: ayatSet
-                                    parentPasalVersionNode: *ref_1127
-                                  key: 1
-                                  nodeType: ayat
-                              - start: 92
-                                end: 109
-                                node:
-                                  parentAyatSetNode: *ref_1130
-                                  key: 2
-                                  nodeType: ayat
-                              - start: 60
-                                end: 77
-                                node:
-                                  parentAyatSetNode: *ref_1130
-                                  key: 2
-                                  nodeType: ayat
-                              - start: 82
-                                end: 90
-                                node:
-                                  key: 3
-                                  parentAyatSetNode:
-                                    nodeType: ayatSet
-                                    parentPasalVersionNode: *ref_1127
-                                  nodeType: ayat
-                              - start: 111
-                                end: 120
-                                node:
-                                  key: 137
-                                  parentNode: *ref_0
-                                  nodeType: pasal
-                        - type: ayat
-                          node: &ref_1131
-                            nodeType: ayat
-                            key: 2
-                            parentAyatSetNode: *ref_1128
-                          content:
-                            type: text
-                            node:
-                              nodeType: text
-                              textName: text
-                              parentNode: *ref_1131
-                            textString: >-
-                              Tindak pidana sebagaimana dimaksud dalam ayat (1) merupakan tindak
-                              pidana pelanggaran.
-                            references:
-                              - start: 41
-                                end: 49
-                                node:
-                                  key: 1
-                                  parentAyatSetNode:
-                                    nodeType: ayatSet
-                                    parentPasalVersionNode: *ref_1127
-                                  nodeType: ayat
-                - type: pasal
-                  node:
-                    nodeType: pasal
-                    key: 187
-                    parentNode: *ref_0
-                  version:
-                    type: pasalVersion
-                    node: &ref_1132
-                      nodeType: pasalVersion
-                      version: *ref_56
-                      state: exists
-                      parentPasalNode:
-                        nodeType: pasal
-                        key: '187'
-                        parentNode: *ref_0
-                    content:
-                      type: ayatSet
-                      node: &ref_1133
-                        nodeType: ayatSet
-                        parentPasalVersionNode: *ref_1132
-                      elements:
-                        - type: ayat
-                          node: &ref_1134
-                            nodeType: ayat
-                            key: 1
-                            parentAyatSetNode: *ref_1133
-                          content:
-                            type: text
-                            node:
-                              nodeType: text
-                              textName: text
-                              parentNode: *ref_1134
-                            textString: >-
-                              Barang siapa melanggar ketentuan sebagaimana dimaksud dalam Pasal 37
-                              ayat (2), Pasal 44 ayat (1), Pasal 45 ayat (1), Pasal 67 ayat (1),
-                              Pasal 71 ayat (2), Pasal 76, Pasal 78 ayat (2), Pasal 79 ayat (1), dan
-                              ayat (2), Pasal 85 ayat (3), dan Pasal 144, dikenakan sanksi pidana
-                              kurungan paling singkat 1 (satu) bulan dan paling lama 12 (dua belas)
-                              bulan dan/atau denda paling sedikit Rp 10.000.000,00 (sepuluh juta
-                              rupiah) dan paling banyak Rp 100.000.000,00 (seratus juta rupiah).
-                            references:
-                              - start: 217
-                                end: 234
-                                node:
-                                  parentAyatSetNode: &ref_1135
-                                    nodeType: ayatSet
-                                    parentPasalVersionNode: *ref_1132
-                                  key: 3
-                                  nodeType: ayat
-                              - start: 184
-                                end: 201
-                                node:
-                                  parentAyatSetNode: *ref_1135
-                                  key: 1
-                                  nodeType: ayat
-                              - start: 165
-                                end: 182
-                                node:
-                                  parentAyatSetNode: *ref_1135
-                                  key: 2
-                                  nodeType: ayat
-                              - start: 136
-                                end: 153
-                                node:
-                                  parentAyatSetNode: *ref_1135
-                                  key: 2
-                                  nodeType: ayat
-                              - start: 117
-                                end: 134
-                                node:
-                                  parentAyatSetNode: *ref_1135
-                                  key: 1
-                                  nodeType: ayat
-                              - start: 98
-                                end: 115
-                                node:
-                                  parentAyatSetNode: *ref_1135
-                                  key: 1
-                                  nodeType: ayat
-                              - start: 79
-                                end: 96
-                                node:
-                                  parentAyatSetNode: *ref_1135
-                                  key: 1
-                                  nodeType: ayat
-                              - start: 60
-                                end: 77
-                                node:
-                                  parentAyatSetNode: *ref_1135
-                                  key: 2
-                                  nodeType: ayat
-                              - start: 207
-                                end: 215
-                                node:
-                                  key: 2
-                                  parentAyatSetNode:
-                                    nodeType: ayatSet
-                                    parentPasalVersionNode: *ref_1132
-                                  nodeType: ayat
-                              - start: 240
-                                end: 249
-                                node:
-                                  key: 144
-                                  parentNode: *ref_0
-                                  nodeType: pasal
-                              - start: 155
-                                end: 163
-                                node:
-                                  key: 76
-                                  parentNode: *ref_0
-                                  nodeType: pasal
-                        - type: ayat
-                          node: &ref_1136
-                            nodeType: ayat
-                            key: 2
-                            parentAyatSetNode: *ref_1133
-                          content:
-                            type: text
-                            node:
-                              nodeType: text
-                              textName: text
-                              parentNode: *ref_1136
-                            textString: >-
-                              Tindak pidana sebagaimana dimaksud dalam ayat (1) merupakan tindak
-                              pidana pelanggaran.
-                            references:
-                              - start: 41
-                                end: 49
-                                node:
-                                  key: 1
-                                  parentAyatSetNode:
-                                    nodeType: ayatSet
-                                    parentPasalVersionNode: *ref_1132
-                                  nodeType: ayat
-                - type: pasal
-                  node:
-                    nodeType: pasal
-                    key: 188
-                    parentNode: *ref_0
-                  version:
-                    type: pasalVersion
-                    node: &ref_1137
-                      nodeType: pasalVersion
-                      version: *ref_56
-                      state: exists
-                      parentPasalNode:
-                        nodeType: pasal
-                        key: '188'
-                        parentNode: *ref_0
-                    content:
-                      type: ayatSet
-                      node: &ref_1138
-                        nodeType: ayatSet
-                        parentPasalVersionNode: *ref_1137
-                      elements:
-                        - type: ayat
-                          node: &ref_1139
-                            nodeType: ayat
-                            key: 1
-                            parentAyatSetNode: *ref_1138
-                          content:
-                            type: text
-                            node:
-                              nodeType: text
-                              textName: text
-                              parentNode: *ref_1139
-                            textString: >-
-                              Barang siapa melanggar ketentuan sebagaimana dimaksud dalam Pasal 14
-                              ayat (2), Pasal 38 ayat (2), Pasal 63 ayat (1), Pasal 78 ayat (1),
-                              Pasal 108 ayat (1), Pasal 111 ayat (3), Pasal 114, dan Pasal 148,
-                              dikenakan sanksi pidana denda paling sedikit Rp 5.000.000,00 (lima
-                              juta rupiah) dan paling banyak Rp 50.000.000,00 (lima puluh juta
-                              rupiah).
-                            references:
-                              - start: 156
-                                end: 174
-                                node:
-                                  parentAyatSetNode: &ref_1140
-                                    nodeType: ayatSet
-                                    parentPasalVersionNode: *ref_1137
-                                  key: 3
-                                  nodeType: ayat
-                              - start: 136
-                                end: 154
-                                node:
-                                  parentAyatSetNode: *ref_1140
-                                  key: 1
-                                  nodeType: ayat
-                              - start: 117
-                                end: 134
-                                node:
-                                  parentAyatSetNode: *ref_1140
-                                  key: 1
-                                  nodeType: ayat
-                              - start: 98
-                                end: 115
-                                node:
-                                  parentAyatSetNode: *ref_1140
-                                  key: 1
-                                  nodeType: ayat
-                              - start: 79
-                                end: 96
-                                node:
-                                  parentAyatSetNode: *ref_1140
-                                  key: 2
-                                  nodeType: ayat
-                              - start: 60
-                                end: 77
-                                node:
-                                  parentAyatSetNode: *ref_1140
-                                  key: 2
-                                  nodeType: ayat
-                              - start: 191
-                                end: 200
-                                node:
-                                  key: 148
-                                  parentNode: *ref_0
-                                  nodeType: pasal
-                              - start: 176
-                                end: 185
-                                node:
-                                  key: 114
-                                  parentNode: *ref_0
-                                  nodeType: pasal
-                        - type: ayat
-                          node: &ref_1141
-                            nodeType: ayat
-                            key: 2
-                            parentAyatSetNode: *ref_1138
-                          content:
-                            type: text
-                            node:
-                              nodeType: text
-                              textName: text
-                              parentNode: *ref_1141
-                            textString: >-
-                              Tindak pidana sebagaimana dimaksud dalam ayat (1) merupakan tindak
-                              pidana pelanggaran.
-                            references:
-                              - start: 41
-                                end: 49
-                                node:
-                                  key: 1
-                                  parentAyatSetNode:
-                                    nodeType: ayatSet
-                                    parentPasalVersionNode: *ref_1137
-                                  nodeType: ayat
-                - type: pasal
-                  node:
-                    nodeType: pasal
-                    key: 189
-                    parentNode: *ref_0
-                  version:
-                    type: pasalVersion
-                    node: &ref_1142
-                      nodeType: pasalVersion
-                      version: *ref_56
-                      state: exists
-                      parentPasalNode:
-                        nodeType: pasal
-                        key: '189'
-                        parentNode: *ref_0
+          - type: pasal
+            node:
+              nodeType: pasal
+              key: 183
+              parentNode: *ref_0
+            version:
+              type: pasalVersion
+              node: &ref_1112
+                nodeType: pasalVersion
+                version: *ref_56
+                state: exists
+                parentPasalNode:
+                  nodeType: pasal
+                  key: '183'
+                  parentNode: *ref_0
+              content:
+                type: ayatSet
+                node: &ref_1113
+                  nodeType: ayatSet
+                  parentPasalVersionNode: *ref_1112
+                elements:
+                  - type: ayat
+                    node: &ref_1114
+                      nodeType: ayat
+                      key: 1
+                      parentAyatSetNode: *ref_1113
                     content:
                       type: text
                       node:
                         nodeType: text
                         textName: text
-                        parentNode: *ref_1142
+                        parentNode: *ref_1114
                       textString: >-
-                        Sanksi pidana penjara, kurungan, dan/atau denda tidak menghilangkan
-                        kewajiban pengusaha membayar hak-hak dan/atau ganti kerugian kepada tenaga
-                        kerja atau pekerja/buruh. PRESIDEN REPUBLIK INDONESIA - TI -
-                      references: []
-          - type: bagian
-            node: &ref_1143
-              nodeType: bagian
-              key: 2
-              parentBagianSetNode:
-                nodeType: bagianSet
-                parentBabNode: *ref_1111
-            title: Bagian Kedua Sanksi Administratif
-            content:
-              type: pasalSet
-              node:
-                nodeType: pasalSet
-                parentNode: *ref_1143
-              elements:
-                - type: pasal
-                  node:
-                    nodeType: pasal
-                    key: 190
-                    parentNode: *ref_0
-                  version:
-                    type: pasalVersion
-                    node: &ref_1144
-                      nodeType: pasalVersion
-                      version: *ref_56
-                      state: exists
-                      parentPasalNode:
-                        nodeType: pasal
-                        key: '190'
-                        parentNode: *ref_0
+                        Barang siapa melanggar ketentuan sebagaimana dimaksud dalam Pasal 74,
+                        dikenakan sanksi pidana penjara paling singkat 2 (dua) tahun dan paling lama
+                        5 (lima) tahun dan/atau denda paling sedikit Rp 200.000.000,00 (dua ratus
+                        juta rupiah) dan paling banyak Rp 500.000.000,00 (lima ratus juta rupiah).
+                      references:
+                        - start: 60
+                          end: 68
+                          node:
+                            key: 74
+                            parentNode: *ref_0
+                            nodeType: pasal
+                  - type: ayat
+                    node: &ref_1115
+                      nodeType: ayat
+                      key: 2
+                      parentAyatSetNode: *ref_1113
                     content:
-                      type: ayatSet
-                      node: &ref_1145
-                        nodeType: ayatSet
-                        parentPasalVersionNode: *ref_1144
-                      elements:
-                        - type: ayat
-                          node: &ref_1146
-                            nodeType: ayat
+                      type: text
+                      node:
+                        nodeType: text
+                        textName: text
+                        parentNode: *ref_1115
+                      textString: >-
+                        Tindak pidana sebagaimana dimaksud dalam ayat (1) merupakan tindak pidana
+                        kejahatan.
+                      references:
+                        - start: 41
+                          end: 49
+                          node:
                             key: 1
-                            parentAyatSetNode: *ref_1145
-                          content:
-                            type: text
-                            node:
-                              nodeType: text
-                              textName: text
-                              parentNode: *ref_1146
-                            textString: >-
-                              Menteri atau pejabat yang ditunjuk mengenakan sanksi administratif
-                              atas pelanggaran ketentuan-ketentuan sebagaimana diatur dalam Pasal 5,
-                              Pasal 6, Pasal 15, Pasal 25, Pasal 38 ayat (2), Pasal 45 ayat (1),
-                              Pasal 47 ayat (1), Pasal 48, Pasal 87, Pasal 106, Pasal 126 ayat (3),
-                              dan Pasal 160 ayat (1) dan ayat (2) Undang-undang ini serta peraturan
-                              pelaksanaannya.
-                            references:
-                              - start: 279
-                                end: 297
-                                node:
-                                  parentAyatSetNode: &ref_1147
-                                    nodeType: ayatSet
-                                    parentPasalVersionNode: *ref_1144
-                                  key: 1
-                                  nodeType: ayat
-                              - start: 255
-                                end: 273
-                                node:
-                                  parentAyatSetNode: *ref_1147
-                                  key: 3
-                                  nodeType: ayat
-                              - start: 205
-                                end: 222
-                                node:
-                                  parentAyatSetNode: *ref_1147
-                                  key: 1
-                                  nodeType: ayat
-                              - start: 186
-                                end: 203
-                                node:
-                                  parentAyatSetNode: *ref_1147
-                                  key: 1
-                                  nodeType: ayat
-                              - start: 167
-                                end: 184
-                                node:
-                                  parentAyatSetNode: *ref_1147
-                                  key: 2
-                                  nodeType: ayat
-                              - start: 302
-                                end: 310
-                                node:
-                                  key: 2
-                                  parentAyatSetNode:
-                                    nodeType: ayatSet
-                                    parentPasalVersionNode: *ref_1144
-                                  nodeType: ayat
-                              - start: 244
-                                end: 253
-                                node:
-                                  key: 106
-                                  parentNode: *ref_0
-                                  nodeType: pasal
-                              - start: 234
-                                end: 242
-                                node:
-                                  key: 87
-                                  parentNode: *ref_0
-                                  nodeType: pasal
-                              - start: 224
-                                end: 232
-                                node:
-                                  key: 48
-                                  parentNode: *ref_0
-                                  nodeType: pasal
-                              - start: 157
-                                end: 165
-                                node:
-                                  key: 25
-                                  parentNode: *ref_0
-                                  nodeType: pasal
-                              - start: 147
-                                end: 155
-                                node:
-                                  key: 15
-                                  parentNode: *ref_0
-                                  nodeType: pasal
-                              - start: 138
-                                end: 145
-                                node:
-                                  key: 6
-                                  parentNode: *ref_0
-                                  nodeType: pasal
-                              - start: 129
-                                end: 136
-                                node:
-                                  key: 5
-                                  parentNode: *ref_0
-                                  nodeType: pasal
-                        - type: ayat
-                          node: &ref_1148
+                            parentAyatSetNode:
+                              nodeType: ayatSet
+                              parentPasalVersionNode: *ref_1112
                             nodeType: ayat
+          - type: pasal
+            node:
+              nodeType: pasal
+              key: 184
+              parentNode: *ref_0
+            version:
+              type: pasalVersion
+              node: &ref_1116
+                nodeType: pasalVersion
+                version: *ref_56
+                state: exists
+                parentPasalNode:
+                  nodeType: pasal
+                  key: '184'
+                  parentNode: *ref_0
+              content:
+                type: ayatSet
+                node: &ref_1117
+                  nodeType: ayatSet
+                  parentPasalVersionNode: *ref_1116
+                elements:
+                  - type: ayat
+                    node: &ref_1118
+                      nodeType: ayat
+                      key: 1
+                      parentAyatSetNode: *ref_1117
+                    content:
+                      type: text
+                      node:
+                        nodeType: text
+                        textName: text
+                        parentNode: *ref_1118
+                      textString: >-
+                        Barang siapa melanggar ketentuan sebagaimana dimaksud dalam Pasal 167 ayat
+                        (5), dikenakan sanksi pidana penjara paling singkat 1 (satu) tahun dan
+                        paling lama 5 (lima) tahun dan/atau denda paling sedikit Rp 100.000.000,00
+                        (seratus juta rupiah) dan paling banyak Rp 500.000.000,00 (lima ratus juta
+                        rupiah).
+                      references:
+                        - start: 60
+                          end: 78
+                          node:
+                            parentAyatSetNode:
+                              nodeType: ayatSet
+                              parentPasalVersionNode: *ref_1116
+                            key: 5
+                            nodeType: ayat
+                  - type: ayat
+                    node: &ref_1119
+                      nodeType: ayat
+                      key: 2
+                      parentAyatSetNode: *ref_1117
+                    content:
+                      type: text
+                      node:
+                        nodeType: text
+                        textName: text
+                        parentNode: *ref_1119
+                      textString: >-
+                        Tindak pidana sebagaimana dimaksud dalam ayat (1) merupakan tindak pidana
+                        kejahatan.
+                      references:
+                        - start: 41
+                          end: 49
+                          node:
+                            key: 1
+                            parentAyatSetNode:
+                              nodeType: ayatSet
+                              parentPasalVersionNode: *ref_1116
+                            nodeType: ayat
+          - type: pasal
+            node:
+              nodeType: pasal
+              key: 185
+              parentNode: *ref_0
+            version:
+              type: pasalVersion
+              node: &ref_1120
+                nodeType: pasalVersion
+                version: *ref_56
+                state: exists
+                parentPasalNode:
+                  nodeType: pasal
+                  key: '185'
+                  parentNode: *ref_0
+              content:
+                type: ayatSet
+                node: &ref_1121
+                  nodeType: ayatSet
+                  parentPasalVersionNode: *ref_1120
+                elements:
+                  - type: ayat
+                    node: &ref_1122
+                      nodeType: ayat
+                      key: 1
+                      parentAyatSetNode: *ref_1121
+                    content:
+                      type: text
+                      node:
+                        nodeType: text
+                        textName: text
+                        parentNode: *ref_1122
+                      textString: >-
+                        Barang siapa melanggar ketentuan sebagaimana dimaksud dalam Pasal 42 ayat
+                        (1) dan ayat (2), Pasal 68, Pasal 69 ayat (2), Pasal 80, Pasal 82, Pasal 90
+                        ayat (1), Pasal 143, dan Pasal 160 ayat (4) dan ayat (7), dikenakan sanksi
+                        pidana penjara paling singkat 1 (satu) tahun dan paling lama 4 (empat) tahun
+                        dan/atau denda paling sedikit Rp 100.000.000,00 (seratus juta rupiah) dan
+                        paling banyak Rp 400.000.000,00 (empat ratus juta rupiah).
+                      references:
+                        - start: 175
+                          end: 193
+                          node:
+                            parentAyatSetNode: &ref_1123
+                              nodeType: ayatSet
+                              parentPasalVersionNode: *ref_1120
+                            key: 4
+                            nodeType: ayat
+                        - start: 141
+                          end: 158
+                          node:
+                            parentAyatSetNode: *ref_1123
+                            key: 1
+                            nodeType: ayat
+                        - start: 102
+                          end: 119
+                          node:
+                            parentAyatSetNode: *ref_1123
                             key: 2
-                            parentAyatSetNode: *ref_1145
-                          content:
-                            type: pointSet
-                            node: &ref_1149
-                              nodeType: pointSet
-                              parentNode: *ref_1148
-                            description:
-                              type: text
-                              node:
-                                nodeType: text
-                                textName: description
-                                parentNode: *ref_1149
-                              textString: 'Sanksi administratif sebagaimana dimaksud dalam ayat (1) berupa :'
-                              references: []
-                            elements:
-                              - type: point
-                                node: &ref_1150
-                                  nodeType: point
-                                  key: a
-                                  parentPointSetNode: *ref_1149
-                                content:
-                                  type: text
-                                  node:
-                                    nodeType: text
-                                    textName: text
-                                    parentNode: *ref_1150
-                                  textString: teguran,
-                                  references: []
-                              - type: point
-                                node: &ref_1151
-                                  nodeType: point
-                                  key: b
-                                  parentPointSetNode: *ref_1149
-                                content:
-                                  type: text
-                                  node:
-                                    nodeType: text
-                                    textName: text
-                                    parentNode: *ref_1151
-                                  textString: peringatan tertulis,
-                                  references: []
-                              - type: point
-                                node: &ref_1152
-                                  nodeType: point
-                                  key: c
-                                  parentPointSetNode: *ref_1149
-                                content:
-                                  type: text
-                                  node:
-                                    nodeType: text
-                                    textName: text
-                                    parentNode: *ref_1152
-                                  textString: pembatasan kegiatan usaha,
-                                  references: []
-                              - type: point
-                                node: &ref_1153
-                                  nodeType: point
-                                  key: d
-                                  parentPointSetNode: *ref_1149
-                                content:
-                                  type: text
-                                  node:
-                                    nodeType: text
-                                    textName: text
-                                    parentNode: *ref_1153
-                                  textString: pembekuan kegiatan usaha,
-                                  references: []
-                              - type: point
-                                node: &ref_1154
-                                  nodeType: point
-                                  key: e
-                                  parentPointSetNode: *ref_1149
-                                content:
-                                  type: text
-                                  node:
-                                    nodeType: text
-                                    textName: text
-                                    parentNode: *ref_1154
-                                  textString: 'pembatalan persetujuan:'
-                                  references: []
-                              - type: point
-                                node: &ref_1155
-                                  nodeType: point
-                                  key: f
-                                  parentPointSetNode: *ref_1149
-                                content:
-                                  type: text
-                                  node:
-                                    nodeType: text
-                                    textName: text
-                                    parentNode: *ref_1155
-                                  textString: pembatalan pendaftaran,
-                                  references: []
-                              - type: point
-                                node: &ref_1156
-                                  nodeType: point
-                                  key: g
-                                  parentPointSetNode: *ref_1149
-                                content:
-                                  type: text
-                                  node:
-                                    nodeType: text
-                                    textName: text
-                                    parentNode: *ref_1156
-                                  textString: penghentian sementara sebagian atau seluruh alat produksi,
-                                  references: []
-                              - type: point
-                                node: &ref_1157
-                                  nodeType: point
-                                  key: h
-                                  parentPointSetNode: *ref_1149
-                                content:
-                                  type: text
-                                  node:
-                                    nodeType: text
-                                    textName: text
-                                    parentNode: *ref_1157
-                                  textString: pencabutan ijin.
-                                  references: []
-                        - type: ayat
-                          node: &ref_1158
                             nodeType: ayat
+                        - start: 60
+                          end: 77
+                          node:
+                            parentAyatSetNode: *ref_1123
+                            key: 1
+                            nodeType: ayat
+                        - start: 198
+                          end: 206
+                          node:
+                            key: 7
+                            parentAyatSetNode: &ref_1124
+                              nodeType: ayatSet
+                              parentPasalVersionNode: *ref_1120
+                            nodeType: ayat
+                        - start: 82
+                          end: 90
+                          node:
+                            key: 2
+                            parentAyatSetNode: *ref_1124
+                            nodeType: ayat
+                        - start: 160
+                          end: 169
+                          node:
+                            key: 143
+                            parentNode: *ref_0
+                            nodeType: pasal
+                        - start: 131
+                          end: 139
+                          node:
+                            key: 82
+                            parentNode: *ref_0
+                            nodeType: pasal
+                        - start: 121
+                          end: 129
+                          node:
+                            key: 80
+                            parentNode: *ref_0
+                            nodeType: pasal
+                        - start: 92
+                          end: 100
+                          node:
+                            key: 68
+                            parentNode: *ref_0
+                            nodeType: pasal
+                  - type: ayat
+                    node: &ref_1125
+                      nodeType: ayat
+                      key: 2
+                      parentAyatSetNode: *ref_1121
+                    content:
+                      type: text
+                      node:
+                        nodeType: text
+                        textName: text
+                        parentNode: *ref_1125
+                      textString: >-
+                        Tindak pidana sebagaimana dimaksud dalam ayat (1) merupakan tindak pidana
+                        kejahatan. PRESIDEN REPUBLIK INDONESIA - 76 -
+                      references:
+                        - start: 41
+                          end: 49
+                          node:
+                            key: 1
+                            parentAyatSetNode:
+                              nodeType: ayatSet
+                              parentPasalVersionNode: *ref_1120
+                            nodeType: ayat
+          - type: pasal
+            node:
+              nodeType: pasal
+              key: 186
+              parentNode: *ref_0
+            version:
+              type: pasalVersion
+              node: &ref_1126
+                nodeType: pasalVersion
+                version: *ref_56
+                state: exists
+                parentPasalNode:
+                  nodeType: pasal
+                  key: '186'
+                  parentNode: *ref_0
+              content:
+                type: ayatSet
+                node: &ref_1127
+                  nodeType: ayatSet
+                  parentPasalVersionNode: *ref_1126
+                elements:
+                  - type: ayat
+                    node: &ref_1128
+                      nodeType: ayat
+                      key: 1
+                      parentAyatSetNode: *ref_1127
+                    content:
+                      type: text
+                      node:
+                        nodeType: text
+                        textName: text
+                        parentNode: *ref_1128
+                      textString: >-
+                        Barang siapa melanggar ketentuan sebagaimana dimaksud dalam Pasal 35 ayat
+                        (2) dan ayat (3), Pasal 93 ayat (2), Pasal 137, dan Pasal 138 ayat (1),
+                        dikenakan sanksi pidana penjara paling singkat 1 (satu) bulan dan paling
+                        lama 4 (empat) tahun dan/atau denda paling sedikit Rp 10.000.000,00 (sepuluh
+                        juta rupiah) dan paling banyak Rp 400.000.000,00 (empat ratus juta rupiah).
+                      references:
+                        - start: 126
+                          end: 144
+                          node:
+                            parentAyatSetNode: &ref_1129
+                              nodeType: ayatSet
+                              parentPasalVersionNode: *ref_1126
+                            key: 1
+                            nodeType: ayat
+                        - start: 92
+                          end: 109
+                          node:
+                            parentAyatSetNode: *ref_1129
+                            key: 2
+                            nodeType: ayat
+                        - start: 60
+                          end: 77
+                          node:
+                            parentAyatSetNode: *ref_1129
+                            key: 2
+                            nodeType: ayat
+                        - start: 82
+                          end: 90
+                          node:
                             key: 3
+                            parentAyatSetNode:
+                              nodeType: ayatSet
+                              parentPasalVersionNode: *ref_1126
+                            nodeType: ayat
+                        - start: 111
+                          end: 120
+                          node:
+                            key: 137
+                            parentNode: *ref_0
+                            nodeType: pasal
+                  - type: ayat
+                    node: &ref_1130
+                      nodeType: ayat
+                      key: 2
+                      parentAyatSetNode: *ref_1127
+                    content:
+                      type: text
+                      node:
+                        nodeType: text
+                        textName: text
+                        parentNode: *ref_1130
+                      textString: >-
+                        Tindak pidana sebagaimana dimaksud dalam ayat (1) merupakan tindak pidana
+                        pelanggaran.
+                      references:
+                        - start: 41
+                          end: 49
+                          node:
+                            key: 1
+                            parentAyatSetNode:
+                              nodeType: ayatSet
+                              parentPasalVersionNode: *ref_1126
+                            nodeType: ayat
+          - type: pasal
+            node:
+              nodeType: pasal
+              key: 187
+              parentNode: *ref_0
+            version:
+              type: pasalVersion
+              node: &ref_1131
+                nodeType: pasalVersion
+                version: *ref_56
+                state: exists
+                parentPasalNode:
+                  nodeType: pasal
+                  key: '187'
+                  parentNode: *ref_0
+              content:
+                type: ayatSet
+                node: &ref_1132
+                  nodeType: ayatSet
+                  parentPasalVersionNode: *ref_1131
+                elements:
+                  - type: ayat
+                    node: &ref_1133
+                      nodeType: ayat
+                      key: 1
+                      parentAyatSetNode: *ref_1132
+                    content:
+                      type: text
+                      node:
+                        nodeType: text
+                        textName: text
+                        parentNode: *ref_1133
+                      textString: >-
+                        Barang siapa melanggar ketentuan sebagaimana dimaksud dalam Pasal 37 ayat
+                        (2), Pasal 44 ayat (1), Pasal 45 ayat (1), Pasal 67 ayat (1), Pasal 71 ayat
+                        (2), Pasal 76, Pasal 78 ayat (2), Pasal 79 ayat (1), dan ayat (2), Pasal 85
+                        ayat (3), dan Pasal 144, dikenakan sanksi pidana kurungan paling singkat 1
+                        (satu) bulan dan paling lama 12 (dua belas) bulan dan/atau denda paling
+                        sedikit Rp 10.000.000,00 (sepuluh juta rupiah) dan paling banyak Rp
+                        100.000.000,00 (seratus juta rupiah).
+                      references:
+                        - start: 217
+                          end: 234
+                          node:
+                            parentAyatSetNode: &ref_1134
+                              nodeType: ayatSet
+                              parentPasalVersionNode: *ref_1131
+                            key: 3
+                            nodeType: ayat
+                        - start: 184
+                          end: 201
+                          node:
+                            parentAyatSetNode: *ref_1134
+                            key: 1
+                            nodeType: ayat
+                        - start: 165
+                          end: 182
+                          node:
+                            parentAyatSetNode: *ref_1134
+                            key: 2
+                            nodeType: ayat
+                        - start: 136
+                          end: 153
+                          node:
+                            parentAyatSetNode: *ref_1134
+                            key: 2
+                            nodeType: ayat
+                        - start: 117
+                          end: 134
+                          node:
+                            parentAyatSetNode: *ref_1134
+                            key: 1
+                            nodeType: ayat
+                        - start: 98
+                          end: 115
+                          node:
+                            parentAyatSetNode: *ref_1134
+                            key: 1
+                            nodeType: ayat
+                        - start: 79
+                          end: 96
+                          node:
+                            parentAyatSetNode: *ref_1134
+                            key: 1
+                            nodeType: ayat
+                        - start: 60
+                          end: 77
+                          node:
+                            parentAyatSetNode: *ref_1134
+                            key: 2
+                            nodeType: ayat
+                        - start: 207
+                          end: 215
+                          node:
+                            key: 2
+                            parentAyatSetNode:
+                              nodeType: ayatSet
+                              parentPasalVersionNode: *ref_1131
+                            nodeType: ayat
+                        - start: 240
+                          end: 249
+                          node:
+                            key: 144
+                            parentNode: *ref_0
+                            nodeType: pasal
+                        - start: 155
+                          end: 163
+                          node:
+                            key: 76
+                            parentNode: *ref_0
+                            nodeType: pasal
+                  - type: ayat
+                    node: &ref_1135
+                      nodeType: ayat
+                      key: 2
+                      parentAyatSetNode: *ref_1132
+                    content:
+                      type: text
+                      node:
+                        nodeType: text
+                        textName: text
+                        parentNode: *ref_1135
+                      textString: >-
+                        Tindak pidana sebagaimana dimaksud dalam ayat (1) merupakan tindak pidana
+                        pelanggaran.
+                      references:
+                        - start: 41
+                          end: 49
+                          node:
+                            key: 1
+                            parentAyatSetNode:
+                              nodeType: ayatSet
+                              parentPasalVersionNode: *ref_1131
+                            nodeType: ayat
+          - type: pasal
+            node:
+              nodeType: pasal
+              key: 188
+              parentNode: *ref_0
+            version:
+              type: pasalVersion
+              node: &ref_1136
+                nodeType: pasalVersion
+                version: *ref_56
+                state: exists
+                parentPasalNode:
+                  nodeType: pasal
+                  key: '188'
+                  parentNode: *ref_0
+              content:
+                type: ayatSet
+                node: &ref_1137
+                  nodeType: ayatSet
+                  parentPasalVersionNode: *ref_1136
+                elements:
+                  - type: ayat
+                    node: &ref_1138
+                      nodeType: ayat
+                      key: 1
+                      parentAyatSetNode: *ref_1137
+                    content:
+                      type: text
+                      node:
+                        nodeType: text
+                        textName: text
+                        parentNode: *ref_1138
+                      textString: >-
+                        Barang siapa melanggar ketentuan sebagaimana dimaksud dalam Pasal 14 ayat
+                        (2), Pasal 38 ayat (2), Pasal 63 ayat (1), Pasal 78 ayat (1), Pasal 108 ayat
+                        (1), Pasal 111 ayat (3), Pasal 114, dan Pasal 148, dikenakan sanksi pidana
+                        denda paling sedikit Rp 5.000.000,00 (lima juta rupiah) dan paling banyak Rp
+                        50.000.000,00 (lima puluh juta rupiah).
+                      references:
+                        - start: 156
+                          end: 174
+                          node:
+                            parentAyatSetNode: &ref_1139
+                              nodeType: ayatSet
+                              parentPasalVersionNode: *ref_1136
+                            key: 3
+                            nodeType: ayat
+                        - start: 136
+                          end: 154
+                          node:
+                            parentAyatSetNode: *ref_1139
+                            key: 1
+                            nodeType: ayat
+                        - start: 117
+                          end: 134
+                          node:
+                            parentAyatSetNode: *ref_1139
+                            key: 1
+                            nodeType: ayat
+                        - start: 98
+                          end: 115
+                          node:
+                            parentAyatSetNode: *ref_1139
+                            key: 1
+                            nodeType: ayat
+                        - start: 79
+                          end: 96
+                          node:
+                            parentAyatSetNode: *ref_1139
+                            key: 2
+                            nodeType: ayat
+                        - start: 60
+                          end: 77
+                          node:
+                            parentAyatSetNode: *ref_1139
+                            key: 2
+                            nodeType: ayat
+                        - start: 191
+                          end: 200
+                          node:
+                            key: 148
+                            parentNode: *ref_0
+                            nodeType: pasal
+                        - start: 176
+                          end: 185
+                          node:
+                            key: 114
+                            parentNode: *ref_0
+                            nodeType: pasal
+                  - type: ayat
+                    node: &ref_1140
+                      nodeType: ayat
+                      key: 2
+                      parentAyatSetNode: *ref_1137
+                    content:
+                      type: text
+                      node:
+                        nodeType: text
+                        textName: text
+                        parentNode: *ref_1140
+                      textString: >-
+                        Tindak pidana sebagaimana dimaksud dalam ayat (1) merupakan tindak pidana
+                        pelanggaran.
+                      references:
+                        - start: 41
+                          end: 49
+                          node:
+                            key: 1
+                            parentAyatSetNode:
+                              nodeType: ayatSet
+                              parentPasalVersionNode: *ref_1136
+                            nodeType: ayat
+          - type: pasal
+            node:
+              nodeType: pasal
+              key: 189
+              parentNode: *ref_0
+            version:
+              type: pasalVersion
+              node: &ref_1141
+                nodeType: pasalVersion
+                version: *ref_56
+                state: exists
+                parentPasalNode:
+                  nodeType: pasal
+                  key: '189'
+                  parentNode: *ref_0
+              content:
+                type: text
+                node:
+                  nodeType: text
+                  textName: text
+                  parentNode: *ref_1141
+                textString: >-
+                  Sanksi pidana penjara, kurungan, dan/atau denda tidak menghilangkan kewajiban
+                  pengusaha membayar hak-hak dan/atau ganti kerugian kepada tenaga kerja atau
+                  pekerja/buruh. PRESIDEN REPUBLIK INDONESIA - TI - Bagian Kedua Sanksi
+                  Administratif
+                references: []
+          - type: pasal
+            node:
+              nodeType: pasal
+              key: 190
+              parentNode: *ref_0
+            version:
+              type: pasalVersion
+              node: &ref_1142
+                nodeType: pasalVersion
+                version: *ref_56
+                state: exists
+                parentPasalNode:
+                  nodeType: pasal
+                  key: '190'
+                  parentNode: *ref_0
+              content:
+                type: ayatSet
+                node: &ref_1143
+                  nodeType: ayatSet
+                  parentPasalVersionNode: *ref_1142
+                elements:
+                  - type: ayat
+                    node: &ref_1144
+                      nodeType: ayat
+                      key: 1
+                      parentAyatSetNode: *ref_1143
+                    content:
+                      type: text
+                      node:
+                        nodeType: text
+                        textName: text
+                        parentNode: *ref_1144
+                      textString: >-
+                        Menteri atau pejabat yang ditunjuk mengenakan sanksi administratif atas
+                        pelanggaran ketentuan-ketentuan sebagaimana diatur dalam Pasal 5, Pasal 6,
+                        Pasal 15, Pasal 25, Pasal 38 ayat (2), Pasal 45 ayat (1), Pasal 47 ayat (1),
+                        Pasal 48, Pasal 87, Pasal 106, Pasal 126 ayat (3), dan Pasal 160 ayat (1)
+                        dan ayat (2) Undang-undang ini serta peraturan pelaksanaannya.
+                      references:
+                        - start: 279
+                          end: 297
+                          node:
+                            parentAyatSetNode: &ref_1145
+                              nodeType: ayatSet
+                              parentPasalVersionNode: *ref_1142
+                            key: 1
+                            nodeType: ayat
+                        - start: 255
+                          end: 273
+                          node:
                             parentAyatSetNode: *ref_1145
+                            key: 3
+                            nodeType: ayat
+                        - start: 205
+                          end: 222
+                          node:
+                            parentAyatSetNode: *ref_1145
+                            key: 1
+                            nodeType: ayat
+                        - start: 186
+                          end: 203
+                          node:
+                            parentAyatSetNode: *ref_1145
+                            key: 1
+                            nodeType: ayat
+                        - start: 167
+                          end: 184
+                          node:
+                            parentAyatSetNode: *ref_1145
+                            key: 2
+                            nodeType: ayat
+                        - start: 302
+                          end: 310
+                          node:
+                            key: 2
+                            parentAyatSetNode:
+                              nodeType: ayatSet
+                              parentPasalVersionNode: *ref_1142
+                            nodeType: ayat
+                        - start: 244
+                          end: 253
+                          node:
+                            key: 106
+                            parentNode: *ref_0
+                            nodeType: pasal
+                        - start: 234
+                          end: 242
+                          node:
+                            key: 87
+                            parentNode: *ref_0
+                            nodeType: pasal
+                        - start: 224
+                          end: 232
+                          node:
+                            key: 48
+                            parentNode: *ref_0
+                            nodeType: pasal
+                        - start: 157
+                          end: 165
+                          node:
+                            key: 25
+                            parentNode: *ref_0
+                            nodeType: pasal
+                        - start: 147
+                          end: 155
+                          node:
+                            key: 15
+                            parentNode: *ref_0
+                            nodeType: pasal
+                        - start: 138
+                          end: 145
+                          node:
+                            key: 6
+                            parentNode: *ref_0
+                            nodeType: pasal
+                        - start: 129
+                          end: 136
+                          node:
+                            key: 5
+                            parentNode: *ref_0
+                            nodeType: pasal
+                  - type: ayat
+                    node: &ref_1146
+                      nodeType: ayat
+                      key: 2
+                      parentAyatSetNode: *ref_1143
+                    content:
+                      type: pointSet
+                      node: &ref_1147
+                        nodeType: pointSet
+                        parentNode: *ref_1146
+                      description:
+                        type: text
+                        node:
+                          nodeType: text
+                          textName: description
+                          parentNode: *ref_1147
+                        textString: 'Sanksi administratif sebagaimana dimaksud dalam ayat (1) berupa :'
+                        references: []
+                      elements:
+                        - type: point
+                          node: &ref_1148
+                            nodeType: point
+                            key: a
+                            parentPointSetNode: *ref_1147
                           content:
                             type: text
                             node:
                               nodeType: text
                               textName: text
-                              parentNode: *ref_1158
-                            textString: >-
-                              Ketentuan mengenai sanksi administratif sebagaimana dimaksud dalam
-                              ayat (1) dan ayat (2) diatur lebih lanjut oleh Menteri.
-                            references:
-                              - start: 80
-                                end: 88
-                                node:
-                                  key: 2
-                                  parentAyatSetNode: &ref_1159
-                                    nodeType: ayatSet
-                                    parentPasalVersionNode: *ref_1144
-                                  nodeType: ayat
-                              - start: 67
-                                end: 75
-                                node:
-                                  key: 1
-                                  parentAyatSetNode: *ref_1159
-                                  nodeType: ayat
+                              parentNode: *ref_1148
+                            textString: teguran,
+                            references: []
+                        - type: point
+                          node: &ref_1149
+                            nodeType: point
+                            key: b
+                            parentPointSetNode: *ref_1147
+                          content:
+                            type: text
+                            node:
+                              nodeType: text
+                              textName: text
+                              parentNode: *ref_1149
+                            textString: peringatan tertulis,
+                            references: []
+                        - type: point
+                          node: &ref_1150
+                            nodeType: point
+                            key: c
+                            parentPointSetNode: *ref_1147
+                          content:
+                            type: text
+                            node:
+                              nodeType: text
+                              textName: text
+                              parentNode: *ref_1150
+                            textString: pembatasan kegiatan usaha,
+                            references: []
+                        - type: point
+                          node: &ref_1151
+                            nodeType: point
+                            key: d
+                            parentPointSetNode: *ref_1147
+                          content:
+                            type: text
+                            node:
+                              nodeType: text
+                              textName: text
+                              parentNode: *ref_1151
+                            textString: pembekuan kegiatan usaha,
+                            references: []
+                        - type: point
+                          node: &ref_1152
+                            nodeType: point
+                            key: e
+                            parentPointSetNode: *ref_1147
+                          content:
+                            type: text
+                            node:
+                              nodeType: text
+                              textName: text
+                              parentNode: *ref_1152
+                            textString: 'pembatalan persetujuan:'
+                            references: []
+                        - type: point
+                          node: &ref_1153
+                            nodeType: point
+                            key: f
+                            parentPointSetNode: *ref_1147
+                          content:
+                            type: text
+                            node:
+                              nodeType: text
+                              textName: text
+                              parentNode: *ref_1153
+                            textString: pembatalan pendaftaran,
+                            references: []
+                        - type: point
+                          node: &ref_1154
+                            nodeType: point
+                            key: g
+                            parentPointSetNode: *ref_1147
+                          content:
+                            type: text
+                            node:
+                              nodeType: text
+                              textName: text
+                              parentNode: *ref_1154
+                            textString: penghentian sementara sebagian atau seluruh alat produksi,
+                            references: []
+                        - type: point
+                          node: &ref_1155
+                            nodeType: point
+                            key: h
+                            parentPointSetNode: *ref_1147
+                          content:
+                            type: text
+                            node:
+                              nodeType: text
+                              textName: text
+                              parentNode: *ref_1155
+                            textString: pencabutan ijin.
+                            references: []
+                  - type: ayat
+                    node: &ref_1156
+                      nodeType: ayat
+                      key: 3
+                      parentAyatSetNode: *ref_1143
+                    content:
+                      type: text
+                      node:
+                        nodeType: text
+                        textName: text
+                        parentNode: *ref_1156
+                      textString: >-
+                        Ketentuan mengenai sanksi administratif sebagaimana dimaksud dalam ayat (1)
+                        dan ayat (2) diatur lebih lanjut oleh Menteri.
+                      references:
+                        - start: 80
+                          end: 88
+                          node:
+                            key: 2
+                            parentAyatSetNode: &ref_1157
+                              nodeType: ayatSet
+                              parentPasalVersionNode: *ref_1142
+                            nodeType: ayat
+                        - start: 67
+                          end: 75
+                          node:
+                            key: 1
+                            parentAyatSetNode: *ref_1157
+                            nodeType: ayat
     - type: bab
-      node: &ref_1160
+      node: &ref_1158
         nodeType: bab
         key: 17
         parentBabSetNode: *ref_10
@@ -18679,7 +18649,7 @@ babSet:
         type: pasalSet
         node:
           nodeType: pasalSet
-          parentNode: *ref_1160
+          parentNode: *ref_1158
         elements:
           - type: pasal
             node:
@@ -18688,7 +18658,7 @@ babSet:
               parentNode: *ref_0
             version:
               type: pasalVersion
-              node: &ref_1161
+              node: &ref_1159
                 nodeType: pasalVersion
                 version: *ref_56
                 state: exists
@@ -18701,14 +18671,14 @@ babSet:
                 node:
                   nodeType: text
                   textName: text
-                  parentNode: *ref_1161
+                  parentNode: *ref_1159
                 textString: >-
                   Semua peraturan pelaksanaan yang mengatur ketenagakerjaan tetap berlaku sepanjang
                   tidak bertentangan dan/atau belum diganti dengan peraturan yang baru berdasarkan
                   Undang undang ini. PRESIDEN REPUBLIK INDONESIA - 78 -
                 references: []
     - type: bab
-      node: &ref_1162
+      node: &ref_1160
         nodeType: bab
         key: 18
         parentBabSetNode: *ref_10
@@ -18717,7 +18687,7 @@ babSet:
         type: pasalSet
         node:
           nodeType: pasalSet
-          parentNode: *ref_1162
+          parentNode: *ref_1160
         elements:
           - type: pasal
             node:
@@ -18726,7 +18696,7 @@ babSet:
               parentNode: *ref_0
             version:
               type: pasalVersion
-              node: &ref_1163
+              node: &ref_1161
                 nodeType: pasalVersion
                 version: *ref_56
                 state: exists
@@ -18736,23 +18706,53 @@ babSet:
                   parentNode: *ref_0
               content:
                 type: pointSet
-                node: &ref_1164
+                node: &ref_1162
                   nodeType: pointSet
-                  parentNode: *ref_1163
+                  parentNode: *ref_1161
                 description:
                   type: text
                   node:
                     nodeType: text
                     textName: description
-                    parentNode: *ref_1164
+                    parentNode: *ref_1162
                   textString: 'Pada saat mulai berlakunya Undang undang ini, maka :'
                   references: []
                 elements:
                   - type: point
-                    node: &ref_1165
+                    node: &ref_1163
                       nodeType: point
                       key: '1'
-                      parentPointSetNode: *ref_1164
+                      parentPointSetNode: *ref_1162
+                    content:
+                      type: text
+                      node:
+                        nodeType: text
+                        textName: text
+                        parentNode: *ref_1163
+                      textString: >-
+                        Ordonansi tentang Pengerahan Orang Indonesia Untuk Melakukan Pekerjaan Di
+                        Luar Indonesia (Staatsblad Tahun 1887 Nomor 8),
+                      references: []
+                  - type: point
+                    node: &ref_1164
+                      nodeType: point
+                      key: '2'
+                      parentPointSetNode: *ref_1162
+                    content:
+                      type: text
+                      node:
+                        nodeType: text
+                        textName: text
+                        parentNode: *ref_1164
+                      textString: >-
+                        Ordonansi tanggal 17 Desember 1925 Peraturan tentang Pembatasan Kerja Anak
+                        Dan Kerja Malam Bagi Wanita (Staatsblad Tahun 1925 Nomor 647),
+                      references: []
+                  - type: point
+                    node: &ref_1165
+                      nodeType: point
+                      key: '3'
+                      parentPointSetNode: *ref_1162
                     content:
                       type: text
                       node:
@@ -18760,14 +18760,14 @@ babSet:
                         textName: text
                         parentNode: *ref_1165
                       textString: >-
-                        Ordonansi tentang Pengerahan Orang Indonesia Untuk Melakukan Pekerjaan Di
-                        Luar Indonesia (Staatsblad Tahun 1887 Nomor 8),
+                        Ordonansi Tahun 1926 Peraturan mengenai Kerja Anak anak Dan Orang Muda Di
+                        Atas Kapal (Staatsblad Tahun 1926 Nomor 87),
                       references: []
                   - type: point
                     node: &ref_1166
                       nodeType: point
-                      key: '2'
-                      parentPointSetNode: *ref_1164
+                      key: '4'
+                      parentPointSetNode: *ref_1162
                     content:
                       type: text
                       node:
@@ -18775,14 +18775,14 @@ babSet:
                         textName: text
                         parentNode: *ref_1166
                       textString: >-
-                        Ordonansi tanggal 17 Desember 1925 Peraturan tentang Pembatasan Kerja Anak
-                        Dan Kerja Malam Bagi Wanita (Staatsblad Tahun 1925 Nomor 647),
+                        Ordonansi tanggal 4 Mei 1936 tentang Ordonansi untuk Mengatur Kegiatan
+                        kegiatan Mencari Calon Pekerja (Staatsblad Tahun 1936 Nomor 208):
                       references: []
                   - type: point
                     node: &ref_1167
                       nodeType: point
-                      key: '3'
-                      parentPointSetNode: *ref_1164
+                      key: '5'
+                      parentPointSetNode: *ref_1162
                     content:
                       type: text
                       node:
@@ -18790,14 +18790,14 @@ babSet:
                         textName: text
                         parentNode: *ref_1167
                       textString: >-
-                        Ordonansi Tahun 1926 Peraturan mengenai Kerja Anak anak Dan Orang Muda Di
-                        Atas Kapal (Staatsblad Tahun 1926 Nomor 87),
+                        5. Ordonansi tentang Pemulangan Buruh Yang Diterima Atau Dikerahkan Dari
+                        Luar Indonesia (Staatsblad Tahun 1939 Nomor 545),
                       references: []
                   - type: point
                     node: &ref_1168
                       nodeType: point
-                      key: '4'
-                      parentPointSetNode: *ref_1164
+                      key: '6'
+                      parentPointSetNode: *ref_1162
                     content:
                       type: text
                       node:
@@ -18805,14 +18805,14 @@ babSet:
                         textName: text
                         parentNode: *ref_1168
                       textString: >-
-                        Ordonansi tanggal 4 Mei 1936 tentang Ordonansi untuk Mengatur Kegiatan
-                        kegiatan Mencari Calon Pekerja (Staatsblad Tahun 1936 Nomor 208):
+                        Ordonansi Nomor 9 Tahun 1949 tentang Pembatasan Kerja Anak anak (Staatsblad
+                        Tahun 1949 Nomor 8),
                       references: []
                   - type: point
                     node: &ref_1169
                       nodeType: point
-                      key: '5'
-                      parentPointSetNode: *ref_1164
+                      key: '7'
+                      parentPointSetNode: *ref_1162
                     content:
                       type: text
                       node:
@@ -18820,14 +18820,15 @@ babSet:
                         textName: text
                         parentNode: *ref_1169
                       textString: >-
-                        5. Ordonansi tentang Pemulangan Buruh Yang Diterima Atau Dikerahkan Dari
-                        Luar Indonesia (Staatsblad Tahun 1939 Nomor 545),
+                        Undang undang Nomor 1 Tahun 1951 tentang Pernyataan Berlakunya Undang undang
+                        Kerja Tahun 1948 Nomor 12 Dari Republik Indonesia Untuk Seluruh Indonesia
+                        (Lembaran Negara Tahun 1951 Nomor 2),
                       references: []
                   - type: point
                     node: &ref_1170
                       nodeType: point
-                      key: '6'
-                      parentPointSetNode: *ref_1164
+                      key: '8'
+                      parentPointSetNode: *ref_1162
                     content:
                       type: text
                       node:
@@ -18835,14 +18836,15 @@ babSet:
                         textName: text
                         parentNode: *ref_1170
                       textString: >-
-                        Ordonansi Nomor 9 Tahun 1949 tentang Pembatasan Kerja Anak anak (Staatsblad
-                        Tahun 1949 Nomor 8),
+                        Undang undang Nomor 21 Tahun 1954 tentang Perjanjian Perburuhan Antara
+                        Serikat Buruh Dan Majikan (Lembaran Negara Tahun 1954 Nomor 69, Tambahan
+                        Lembaran Negara Nomor 598a),
                       references: []
                   - type: point
                     node: &ref_1171
                       nodeType: point
-                      key: '7'
-                      parentPointSetNode: *ref_1164
+                      key: '9'
+                      parentPointSetNode: *ref_1162
                     content:
                       type: text
                       node:
@@ -18850,15 +18852,14 @@ babSet:
                         textName: text
                         parentNode: *ref_1171
                       textString: >-
-                        Undang undang Nomor 1 Tahun 1951 tentang Pernyataan Berlakunya Undang undang
-                        Kerja Tahun 1948 Nomor 12 Dari Republik Indonesia Untuk Seluruh Indonesia
-                        (Lembaran Negara Tahun 1951 Nomor 2),
+                        Undang-undang Nomor 3 Tahun 1958 tentang Penempatan Tenaga Asing (Lembaran
+                        Negara Tahun 1958 Nomor 8 ),
                       references: []
                   - type: point
                     node: &ref_1172
                       nodeType: point
-                      key: '8'
-                      parentPointSetNode: *ref_1164
+                      key: '10'
+                      parentPointSetNode: *ref_1162
                     content:
                       type: text
                       node:
@@ -18866,15 +18867,14 @@ babSet:
                         textName: text
                         parentNode: *ref_1172
                       textString: >-
-                        Undang undang Nomor 21 Tahun 1954 tentang Perjanjian Perburuhan Antara
-                        Serikat Buruh Dan Majikan (Lembaran Negara Tahun 1954 Nomor 69, Tambahan
-                        Lembaran Negara Nomor 598a),
+                        Undang-undang Nomor 8 Tahun 1961 tentang Wajib Kerja Sarjana (Lembaran
+                        Negara Tahun 1961 Nomor 207, Tambahan Lembaran Negara Nomor 2270),
                       references: []
                   - type: point
                     node: &ref_1173
                       nodeType: point
-                      key: '9'
-                      parentPointSetNode: *ref_1164
+                      key: '11'
+                      parentPointSetNode: *ref_1162
                     content:
                       type: text
                       node:
@@ -18882,14 +18882,15 @@ babSet:
                         textName: text
                         parentNode: *ref_1173
                       textString: >-
-                        Undang-undang Nomor 3 Tahun 1958 tentang Penempatan Tenaga Asing (Lembaran
-                        Negara Tahun 1958 Nomor 8 ),
+                        Undang undang Nomor 7 Pnps Tahun 1963 tentang Pencegahan Pemogokan dan/atau
+                        Penutupan (Lock Out) Di Perusahaan, Jawatan, dan Badan Yang Vital (Lembaran
+                        Negara Tahun 1963 Nomor 67), PRESIDEN REPUBLIK INDONESIA - 79 -
                       references: []
                   - type: point
                     node: &ref_1174
                       nodeType: point
-                      key: '10'
-                      parentPointSetNode: *ref_1164
+                      key: '12'
+                      parentPointSetNode: *ref_1162
                     content:
                       type: text
                       node:
@@ -18897,14 +18898,15 @@ babSet:
                         textName: text
                         parentNode: *ref_1174
                       textString: >-
-                        Undang-undang Nomor 8 Tahun 1961 tentang Wajib Kerja Sarjana (Lembaran
-                        Negara Tahun 1961 Nomor 207, Tambahan Lembaran Negara Nomor 2270),
+                        Undang undang Nomor 14 Tahun 1969 tentang Ketentuan ketentuan Pokok Mengenai
+                        Tenaga Kerja (Lembaran Negara Tahun 1969 Nomor 55, Tambahan Lembaran Negara
+                        Nomor 2912),
                       references: []
                   - type: point
                     node: &ref_1175
                       nodeType: point
-                      key: '11'
-                      parentPointSetNode: *ref_1164
+                      key: '13'
+                      parentPointSetNode: *ref_1162
                     content:
                       type: text
                       node:
@@ -18912,15 +18914,14 @@ babSet:
                         textName: text
                         parentNode: *ref_1175
                       textString: >-
-                        Undang undang Nomor 7 Pnps Tahun 1963 tentang Pencegahan Pemogokan dan/atau
-                        Penutupan (Lock Out) Di Perusahaan, Jawatan, dan Badan Yang Vital (Lembaran
-                        Negara Tahun 1963 Nomor 67), PRESIDEN REPUBLIK INDONESIA - 79 -
+                        Undang-undang Nomor 25 Tahun 1997 tentang Ketenagakerjaan (Lembaran Negara
+                        Tahun 1997 Nomor 73, Tambahan Lembaran Negara Nomor 3702),
                       references: []
                   - type: point
                     node: &ref_1176
                       nodeType: point
-                      key: '12'
-                      parentPointSetNode: *ref_1164
+                      key: '14'
+                      parentPointSetNode: *ref_1162
                     content:
                       type: text
                       node:
@@ -18928,52 +18929,21 @@ babSet:
                         textName: text
                         parentNode: *ref_1176
                       textString: >-
-                        Undang undang Nomor 14 Tahun 1969 tentang Ketentuan ketentuan Pokok Mengenai
-                        Tenaga Kerja (Lembaran Negara Tahun 1969 Nomor 55, Tambahan Lembaran Negara
-                        Nomor 2912),
+                        Undang-undang Nomor 11 Tahun 1998 tentang Perubahan Berlakunya Undang-undang
+                        Nomor 25 Tahun 1997 tentang Ketenagakerjaan (Lembaran Negara Tahun 1998
+                        Nomor 184, Tambahan Lembaran Negara Nomor 3791),
                       references: []
                   - type: point
                     node: &ref_1177
                       nodeType: point
-                      key: '13'
-                      parentPointSetNode: *ref_1164
+                      key: '15'
+                      parentPointSetNode: *ref_1162
                     content:
                       type: text
                       node:
                         nodeType: text
                         textName: text
                         parentNode: *ref_1177
-                      textString: >-
-                        Undang-undang Nomor 25 Tahun 1997 tentang Ketenagakerjaan (Lembaran Negara
-                        Tahun 1997 Nomor 73, Tambahan Lembaran Negara Nomor 3702),
-                      references: []
-                  - type: point
-                    node: &ref_1178
-                      nodeType: point
-                      key: '14'
-                      parentPointSetNode: *ref_1164
-                    content:
-                      type: text
-                      node:
-                        nodeType: text
-                        textName: text
-                        parentNode: *ref_1178
-                      textString: >-
-                        Undang-undang Nomor 11 Tahun 1998 tentang Perubahan Berlakunya Undang-undang
-                        Nomor 25 Tahun 1997 tentang Ketenagakerjaan (Lembaran Negara Tahun 1998
-                        Nomor 184, Tambahan Lembaran Negara Nomor 3791),
-                      references: []
-                  - type: point
-                    node: &ref_1179
-                      nodeType: point
-                      key: '15'
-                      parentPointSetNode: *ref_1164
-                    content:
-                      type: text
-                      node:
-                        nodeType: text
-                        textName: text
-                        parentNode: *ref_1179
                       textString: >-
                         Undang-undang Nomor 28 Tahun 2000 tentang Penetapan Peraturan Pemerintah
                         Pengganti Undang-undang Nomor 3 Tahun 2000 tentang Perubahan Atas
@@ -18989,7 +18959,7 @@ babSet:
               parentNode: *ref_0
             version:
               type: pasalVersion
-              node: &ref_1180
+              node: &ref_1178
                 nodeType: pasalVersion
                 version: *ref_56
                 state: exists
@@ -19002,7 +18972,7 @@ babSet:
                 node:
                   nodeType: text
                   textName: text
-                  parentNode: *ref_1180
+                  parentNode: *ref_1178
                 textString: >-
                   Undang undang ini mulai berlaku pada tanggal diundangkan. Agar setiap orang
                   mengetahuinya, memerintahkan pengundangan undang undang ini dengan penempatannya

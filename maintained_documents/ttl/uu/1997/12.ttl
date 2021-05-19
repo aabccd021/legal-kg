@@ -17,13 +17,8 @@
 <http://example.org/legal/document/uu/1997/12/mengingat/point/0002> legal:pointHasText <http://example.org/legal/document/uu/1997/12/mengingat/point/0002/text> .
 <http://example.org/legal/document/uu/1997/12/mengingat/point> legal:pointSetHasPoint <http://example.org/legal/document/uu/1997/12/mengingat/point/0003> .
 <http://example.org/legal/document/uu/1997/12/mengingat/point/0003> legal:pointHasKey "3" .
-<http://example.org/legal/document/uu/1997/12/mengingat/point/0003> legal:pointHasPointSet <http://example.org/legal/document/uu/1997/12/mengingat/point/0003/point> .
-<http://example.org/legal/document/uu/1997/12/mengingat/point/0003/point/description> legal:textHasTextString "Undang - undang Nomor 7 Tahun 1994 tentang Pengesahan Agreement Establishing The World Trade Organization (Persetujuan Pembentukan Organisasi Perdagangan Dunia) (Lembaran Negara Tahun 1994 Nomor 57, Tambahan Lembaran Negara Nomor 3564); Denga n persetujuan DEWAN PERWAKILAN RAKYAT REPUBLIK INDONESIA MEMUTUSKAN: MENETAPKAN : UNDANG - UNDANG TENTANG PERUBAHAN ATAS UNDANG - UNDANG NOMOR 6 TAHUN 1982 TENTANG HAK CIPTA SEBAGAIMANA TELAH DIUBAH DENGAN UNDANG - UNDANG NOMOR 7 TAHUN 1987. Pasal I Beberapa ketentuan dalam Undang - undang Nomor 6 Tahun 1982 tentang Hak Cipta sebagaimana telah diubah dengan Undang - undang Nomor 7 Tahun 1987, diubah sebagai berikut:" .
-<http://example.org/legal/document/uu/1997/12/mengingat/point/0003/point> legal:pointSetHasDescription <http://example.org/legal/document/uu/1997/12/mengingat/point/0003/point/description> .
-<http://example.org/legal/document/uu/1997/12/mengingat/point/0003/point> legal:pointSetHasPoint <http://example.org/legal/document/uu/1997/12/mengingat/point/0003/point/0001> .
-<http://example.org/legal/document/uu/1997/12/mengingat/point/0003/point/0001> legal:pointHasKey "1" .
-<http://example.org/legal/document/uu/1997/12/mengingat/point/0003/point/0001/text> legal:textHasTextString "Ketentuan Pasal 1 huruf c diubah dan ditambah empat ketentuan baru yang dijadikan angk a 8, 9, 10 dan 11, sehingga keseluruhan Pasal 1 berbunyi sebagai berikut: PRESIDEN REPUBLIK INDONESIA - 3 -" .
-<http://example.org/legal/document/uu/1997/12/mengingat/point/0003/point/0001> legal:pointHasText <http://example.org/legal/document/uu/1997/12/mengingat/point/0003/point/0001/text> .
+<http://example.org/legal/document/uu/1997/12/mengingat/point/0003/text> legal:textHasTextString "Undang - undang Nomor 7 Tahun 1994 tentang Pengesahan Agreement Establishing The World Trade Organization (Persetujuan Pembentukan Organisasi Perdagangan Dunia) (Lembaran Negara Tahun 1994 Nomor 57, Tambahan Lembaran Negara Nomor 3564); Denga n persetujuan DEWAN PERWAKILAN RAKYAT REPUBLIK INDONESIA MEMUTUSKAN: MENETAPKAN : UNDANG - UNDANG TENTANG PERUBAHAN ATAS UNDANG - UNDANG NOMOR 6 TAHUN 1982 TENTANG HAK CIPTA SEBAGAIMANA TELAH DIUBAH DENGAN UNDANG - UNDANG NOMOR 7 TAHUN 1987." .
+<http://example.org/legal/document/uu/1997/12/mengingat/point/0003> legal:pointHasText <http://example.org/legal/document/uu/1997/12/mengingat/point/0003/text> .
 <http://example.org/legal/document/uu/1997/12> legal:documentMenimbang <http://example.org/legal/document/uu/1997/12/menimbang> .
 <http://example.org/legal/document/uu/1997/12/menimbang> legal:menimbangHasPointSet <http://example.org/legal/document/uu/1997/12/menimbang/point> .
 <http://example.org/legal/document/uu/1997/12/menimbang/point/description> legal:textHasTextString "" .
@@ -52,10 +47,7 @@
 <http://example.org/legal/document/uu/1997/12/mengingat/point/0002> a legal:Point .
 <http://example.org/legal/document/uu/1997/12/mengingat/point/0002/text> a legal:Text .
 <http://example.org/legal/document/uu/1997/12/mengingat/point/0003> a legal:Point .
-<http://example.org/legal/document/uu/1997/12/mengingat/point/0003/point/description> a legal:Text .
-<http://example.org/legal/document/uu/1997/12/mengingat/point/0003/point> a legal:PointSet .
-<http://example.org/legal/document/uu/1997/12/mengingat/point/0003/point/0001> a legal:Point .
-<http://example.org/legal/document/uu/1997/12/mengingat/point/0003/point/0001/text> a legal:Text .
+<http://example.org/legal/document/uu/1997/12/mengingat/point/0003/text> a legal:Text .
 <http://example.org/legal/document/uu/1997/12/menimbang> a legal:Menimbang .
 <http://example.org/legal/document/uu/1997/12/menimbang/point/description> a legal:Text .
 <http://example.org/legal/document/uu/1997/12/menimbang/point> a legal:PointSet .
@@ -69,8 +61,6 @@
 <http://example.org/legal/document/uu/1997/12/mengingat/point/0001> legal:partOf <http://example.org/legal/document/uu/1997/12/mengingat/point> .
 <http://example.org/legal/document/uu/1997/12/mengingat/point/0002> legal:partOf <http://example.org/legal/document/uu/1997/12/mengingat/point> .
 <http://example.org/legal/document/uu/1997/12/mengingat/point/0003> legal:partOf <http://example.org/legal/document/uu/1997/12/mengingat/point> .
-<http://example.org/legal/document/uu/1997/12/mengingat/point/0003/point> legal:partOf <http://example.org/legal/document/uu/1997/12/mengingat/point/0003> .
-<http://example.org/legal/document/uu/1997/12/mengingat/point/0003/point/0001> legal:partOf <http://example.org/legal/document/uu/1997/12/mengingat/point/0003/point> .
 <http://example.org/legal/document/uu/1997/12/menimbang/point/a> legal:partOf <http://example.org/legal/document/uu/1997/12/menimbang/point> .
 <http://example.org/legal/document/uu/1997/12/menimbang/point/b> legal:partOf <http://example.org/legal/document/uu/1997/12/menimbang/point> .
 <http://example.org/legal/document/uu/1997/12/menimbang/point/c> legal:partOf <http://example.org/legal/document/uu/1997/12/menimbang/point> .

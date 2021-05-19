@@ -6561,7 +6561,8 @@ babSet:
                               Hotel dan/atau usaha penyediaan akomodasi lainnya seperti guest house,
                               tempat penginapan dan sejenisnya, yang tidak dapat memenuhi ketentuan
                               sebagaimana dimaksud pada ayat (1), dilarang untuk beroperasi sampai
-                              dengan terpenuhinya ketentuan tersebut.
+                              dengan terpenuhinya ketentuan tersebut. Bagian Keduabelas Pedoman
+                              Kegiatan di Konstruksi
                             references:
                               - start: 167
                                 end: 175
@@ -6571,20 +6572,6 @@ babSet:
                                     nodeType: ayatSet
                                     parentPasalVersionNode: *ref_402
                                   nodeType: ayat
-          - type: bagian
-            node: &ref_412
-              nodeType: bagian
-              key: 12
-              parentBagianSetNode:
-                nodeType: bagianSet
-                parentBabNode: *ref_114
-            title: Bagian Keduabelas Pedoman Kegiatan di Konstruksi
-            content:
-              type: pasalSet
-              node:
-                nodeType: pasalSet
-                parentNode: *ref_412
-              elements:
                 - type: pasal
                   node:
                     nodeType: pasal
@@ -6592,7 +6579,7 @@ babSet:
                     parentNode: *ref_0
                   version:
                     type: pasalVersion
-                    node: &ref_413
+                    node: &ref_412
                       nodeType: pasalVersion
                       version: *ref_27
                       state: exists
@@ -6602,36 +6589,51 @@ babSet:
                         parentNode: *ref_0
                     content:
                       type: ayatSet
-                      node: &ref_414
+                      node: &ref_413
                         nodeType: ayatSet
-                        parentPasalVersionNode: *ref_413
+                        parentPasalVersionNode: *ref_412
                       elements:
                         - type: ayat
-                          node: &ref_415
+                          node: &ref_414
                             nodeType: ayat
                             key: 1
-                            parentAyatSetNode: *ref_414
+                            parentAyatSetNode: *ref_413
                           content:
                             type: pointSet
-                            node: &ref_416
+                            node: &ref_415
                               nodeType: pointSet
-                              parentNode: *ref_415
+                              parentNode: *ref_414
                             description:
                               type: text
                               node:
                                 nodeType: text
                                 textName: description
-                                parentNode: *ref_416
+                                parentNode: *ref_415
                               textString: >-
                                 Dalam masa pandemi COVID-19, kegiatan konstruksi dan sejenisnya
                                 mengikuti ketentuan protokol kesehatan sebagai berikut:
                               references: []
                             elements:
                               - type: point
-                                node: &ref_417
+                                node: &ref_416
                                   nodeType: point
                                   key: a
-                                  parentPointSetNode: *ref_416
+                                  parentPointSetNode: *ref_415
+                                content:
+                                  type: text
+                                  node:
+                                    nodeType: text
+                                    textName: text
+                                    parentNode: *ref_416
+                                  textString: >-
+                                    menunjuk penanggung jawab dalam pelaksanaan pencegahan COVID-19
+                                    di lokasi proyek, 133
+                                  references: []
+                              - type: point
+                                node: &ref_417
+                                  nodeType: point
+                                  key: b
+                                  parentPointSetNode: *ref_415
                                 content:
                                   type: text
                                   node:
@@ -6639,14 +6641,14 @@ babSet:
                                     textName: text
                                     parentNode: *ref_417
                                   textString: >-
-                                    menunjuk penanggung jawab dalam pelaksanaan pencegahan COVID-19
-                                    di lokasi proyek, 133
+                                    membatasi kegiatan dan interaksi pekerja hanya dilakukan di
+                                    dalam kawasan proyek,
                                   references: []
                               - type: point
                                 node: &ref_418
                                   nodeType: point
-                                  key: b
-                                  parentPointSetNode: *ref_416
+                                  key: c
+                                  parentPointSetNode: *ref_415
                                 content:
                                   type: text
                                   node:
@@ -6654,14 +6656,14 @@ babSet:
                                     textName: text
                                     parentNode: *ref_418
                                   textString: >-
-                                    membatasi kegiatan dan interaksi pekerja hanya dilakukan di
-                                    dalam kawasan proyek,
+                                    menyediakan tempat tinggal dan kebutuhan hidup sehari-hari
+                                    seluruh pekerja selama berada di kawasan proyek,
                                   references: []
                               - type: point
                                 node: &ref_419
                                   nodeType: point
-                                  key: c
-                                  parentPointSetNode: *ref_416
+                                  key: d
+                                  parentPointSetNode: *ref_415
                                 content:
                                   type: text
                                   node:
@@ -6669,14 +6671,14 @@ babSet:
                                     textName: text
                                     parentNode: *ref_419
                                   textString: >-
-                                    menyediakan tempat tinggal dan kebutuhan hidup sehari-hari
-                                    seluruh pekerja selama berada di kawasan proyek,
+                                    menyediakan ruang kesehatan di tempat kerja yang dilengkapi
+                                    dengan sarana kesehatan yang memadai,
                                   references: []
                               - type: point
                                 node: &ref_420
                                   nodeType: point
-                                  key: d
-                                  parentPointSetNode: *ref_416
+                                  key: e
+                                  parentPointSetNode: *ref_415
                                 content:
                                   type: text
                                   node:
@@ -6684,14 +6686,14 @@ babSet:
                                     textName: text
                                     parentNode: *ref_420
                                   textString: >-
-                                    menyediakan ruang kesehatan di tempat kerja yang dilengkapi
-                                    dengan sarana kesehatan yang memadai,
+                                    mengharuskan pekerja menggunakan masker, sarung tangan dan
+                                    pakaian kerja sesuai pedoman keselamatan dan Kesehatan kerja,
                                   references: []
                               - type: point
                                 node: &ref_421
                                   nodeType: point
-                                  key: e
-                                  parentPointSetNode: *ref_416
+                                  key: f
+                                  parentPointSetNode: *ref_415
                                 content:
                                   type: text
                                   node:
@@ -6699,14 +6701,15 @@ babSet:
                                     textName: text
                                     parentNode: *ref_421
                                   textString: >-
-                                    mengharuskan pekerja menggunakan masker, sarung tangan dan
-                                    pakaian kerja sesuai pedoman keselamatan dan Kesehatan kerja,
+                                    mengharuskan cuci tangan dengan sabun dan/atau pembersih tangan
+                                    (hand sanitizer) termasuk menyediakan fasilitas cuci tangan yang
+                                    memadai dan mudah di akses pada tempat kerja,
                                   references: []
                               - type: point
                                 node: &ref_422
                                   nodeType: point
-                                  key: f
-                                  parentPointSetNode: *ref_416
+                                  key: g
+                                  parentPointSetNode: *ref_415
                                 content:
                                   type: text
                                   node:
@@ -6714,37 +6717,21 @@ babSet:
                                     textName: text
                                     parentNode: *ref_422
                                   textString: >-
-                                    mengharuskan cuci tangan dengan sabun dan/atau pembersih tangan
-                                    (hand sanitizer) termasuk menyediakan fasilitas cuci tangan yang
-                                    memadai dan mudah di akses pada tempat kerja,
+                                    melarang setiap orang, baik pekerja maupun pihak lainnya, yang
+                                    memiliki suhu badan 37,30C ke atas untuk berada di dalam lokasi
+                                    kerja,
                                   references: []
                               - type: point
                                 node: &ref_423
                                   nodeType: point
-                                  key: g
-                                  parentPointSetNode: *ref_416
+                                  key: h
+                                  parentPointSetNode: *ref_415
                                 content:
                                   type: text
                                   node:
                                     nodeType: text
                                     textName: text
                                     parentNode: *ref_423
-                                  textString: >-
-                                    melarang setiap orang, baik pekerja maupun pihak lainnya, yang
-                                    memiliki suhu badan 37,30C ke atas untuk berada di dalam lokasi
-                                    kerja,
-                                  references: []
-                              - type: point
-                                node: &ref_424
-                                  nodeType: point
-                                  key: h
-                                  parentPointSetNode: *ref_416
-                                content:
-                                  type: text
-                                  node:
-                                    nodeType: text
-                                    textName: text
-                                    parentNode: *ref_424
                                   textString: >-
                                     dalam hal terdapat indikasi sebagaimana dimaksud pada huruf g,
                                     maka pemilik dan/atau penyedia jasa pekerjaan konstruksi
@@ -6757,26 +6744,42 @@ babSet:
                                         key: g
                                         parentPointSetNode:
                                           nodeType: pointSet
-                                          parentNode: *ref_413
+                                          parentNode: *ref_412
                                         nodeType: point
+                              - type: point
+                                node: &ref_424
+                                  nodeType: point
+                                  key: i
+                                  parentPointSetNode: *ref_415
+                                content:
+                                  type: text
+                                  node:
+                                    nodeType: text
+                                    textName: text
+                                    parentNode: *ref_424
+                                  textString: menyediakan protokol kesehatan dalam bentuk tertulis,
+                                  references: []
                               - type: point
                                 node: &ref_425
                                   nodeType: point
-                                  key: i
-                                  parentPointSetNode: *ref_416
+                                  key: j
+                                  parentPointSetNode: *ref_415
                                 content:
                                   type: text
                                   node:
                                     nodeType: text
                                     textName: text
                                     parentNode: *ref_425
-                                  textString: menyediakan protokol kesehatan dalam bentuk tertulis,
+                                  textString: >-
+                                    menyampaikan penjelasan, anjuran, kampanye dan promosi teknik
+                                    pencegahan COVID-19 dalam setiap kegiatan penyuluhan keselamatan
+                                    dan kesehatan kerja pagi hari atau safety morning talk, dan
                                   references: []
                               - type: point
                                 node: &ref_426
                                   nodeType: point
-                                  key: j
-                                  parentPointSetNode: *ref_416
+                                  key: k
+                                  parentPointSetNode: *ref_415
                                 content:
                                   type: text
                                   node:
@@ -6784,40 +6787,25 @@ babSet:
                                     textName: text
                                     parentNode: *ref_426
                                   textString: >-
-                                    menyampaikan penjelasan, anjuran, kampanye dan promosi teknik
-                                    pencegahan COVID-19 dalam setiap kegiatan penyuluhan keselamatan
-                                    dan kesehatan kerja pagi hari atau safety morning talk, dan
-                                  references: []
-                              - type: point
-                                node: &ref_427
-                                  nodeType: point
-                                  key: k
-                                  parentPointSetNode: *ref_416
-                                content:
-                                  type: text
-                                  node:
-                                    nodeType: text
-                                    textName: text
-                                    parentNode: *ref_427
-                                  textString: >-
                                     melakukan pemantauan kesehatan pekerja selama berada di kawasan
                                     proyek secara berkala.
                                   references: []
                         - type: ayat
-                          node: &ref_428
+                          node: &ref_427
                             nodeType: ayat
                             key: 2
-                            parentAyatSetNode: *ref_414
+                            parentAyatSetNode: *ref_413
                           content:
                             type: text
                             node:
                               nodeType: text
                               textName: text
-                              parentNode: *ref_428
+                              parentNode: *ref_427
                             textString: >-
                               Kegiatan konstruksi yang tidak dapat memenuhi ketentuan sebagaimana
                               dimaksud pada ayat (1), dilarang untuk beroperasi sampai dengan
-                              terpenuhinya ketentuan tersebut.
+                              terpenuhinya ketentuan tersebut. Bagian Ketigabelas Pedoman Kegiatan
+                              di Usaha Pariwisata
                             references:
                               - start: 82
                                 end: 90
@@ -6825,22 +6813,8 @@ babSet:
                                   key: 1
                                   parentAyatSetNode:
                                     nodeType: ayatSet
-                                    parentPasalVersionNode: *ref_413
+                                    parentPasalVersionNode: *ref_412
                                   nodeType: ayat
-          - type: bagian
-            node: &ref_429
-              nodeType: bagian
-              key: 13
-              parentBagianSetNode:
-                nodeType: bagianSet
-                parentBabNode: *ref_114
-            title: Bagian Ketigabelas Pedoman Kegiatan di Usaha Pariwisata
-            content:
-              type: pasalSet
-              node:
-                nodeType: pasalSet
-                parentNode: *ref_429
-              elements:
                 - type: pasal
                   node:
                     nodeType: pasal
@@ -6848,7 +6822,7 @@ babSet:
                     parentNode: *ref_0
                   version:
                     type: pasalVersion
-                    node: &ref_430
+                    node: &ref_428
                       nodeType: pasalVersion
                       version: *ref_27
                       state: exists
@@ -6858,92 +6832,92 @@ babSet:
                         parentNode: *ref_0
                     content:
                       type: ayatSet
-                      node: &ref_431
+                      node: &ref_429
                         nodeType: ayatSet
-                        parentPasalVersionNode: *ref_430
+                        parentPasalVersionNode: *ref_428
                       elements:
                         - type: ayat
-                          node: &ref_432
+                          node: &ref_430
                             nodeType: ayat
                             key: 1
-                            parentAyatSetNode: *ref_431
+                            parentAyatSetNode: *ref_429
                           content:
                             type: pointSet
-                            node: &ref_433
+                            node: &ref_431
                               nodeType: pointSet
-                              parentNode: *ref_432
+                              parentNode: *ref_430
                             description:
                               type: text
                               node:
                                 nodeType: text
                                 textName: description
-                                parentNode: *ref_433
+                                parentNode: *ref_431
                               textString: 'Pedoman Kegiatan untuk Usaha Pariwisata, terdiri dari: HA'
                               references: []
                             elements:
                               - type: point
-                                node: &ref_434
+                                node: &ref_432
                                   nodeType: point
                                   key: a
-                                  parentPointSetNode: *ref_433
+                                  parentPointSetNode: *ref_431
+                                content:
+                                  type: text
+                                  node:
+                                    nodeType: text
+                                    textName: text
+                                    parentNode: *ref_432
+                                  textString: pedoman kesehatan operasional,
+                                  references: []
+                              - type: point
+                                node: &ref_433
+                                  nodeType: point
+                                  key: b
+                                  parentPointSetNode: *ref_431
+                                content:
+                                  type: text
+                                  node:
+                                    nodeType: text
+                                    textName: text
+                                    parentNode: *ref_433
+                                  textString: pedoman kesehatan staf dan/atau pegawai,
+                                  references: []
+                              - type: point
+                                node: &ref_434
+                                  nodeType: point
+                                  key: c
+                                  parentPointSetNode: *ref_431
                                 content:
                                   type: text
                                   node:
                                     nodeType: text
                                     textName: text
                                     parentNode: *ref_434
-                                  textString: pedoman kesehatan operasional,
+                                  textString: pedoman kesehatan pengunjung, dan
                                   references: []
                               - type: point
                                 node: &ref_435
                                   nodeType: point
-                                  key: b
-                                  parentPointSetNode: *ref_433
+                                  key: d
+                                  parentPointSetNode: *ref_431
                                 content:
                                   type: text
                                   node:
                                     nodeType: text
                                     textName: text
                                     parentNode: *ref_435
-                                  textString: pedoman kesehatan staf dan/atau pegawai,
-                                  references: []
-                              - type: point
-                                node: &ref_436
-                                  nodeType: point
-                                  key: c
-                                  parentPointSetNode: *ref_433
-                                content:
-                                  type: text
-                                  node:
-                                    nodeType: text
-                                    textName: text
-                                    parentNode: *ref_436
-                                  textString: pedoman kesehatan pengunjung, dan
-                                  references: []
-                              - type: point
-                                node: &ref_437
-                                  nodeType: point
-                                  key: d
-                                  parentPointSetNode: *ref_433
-                                content:
-                                  type: text
-                                  node:
-                                    nodeType: text
-                                    textName: text
-                                    parentNode: *ref_437
                                   textString: pedoman kesehatan pedagang.
                                   references: []
                         - type: ayat
-                          node: &ref_438
+                          node: &ref_436
                             nodeType: ayat
                             key: 2
-                            parentAyatSetNode: *ref_431
+                            parentAyatSetNode: *ref_429
                           content:
                             type: text
                             node:
                               nodeType: text
                               textName: text
-                              parentNode: *ref_438
+                              parentNode: *ref_436
                             textString: >-
                               Ketentuan lebih lanjut terkait pedoman kegiatan untuk usaha pariwisata
                               sebagaimana dimaksud pada ayat (1), tercantum dalam Lampiran II yang
@@ -6955,19 +6929,19 @@ babSet:
                                   key: 1
                                   parentAyatSetNode:
                                     nodeType: ayatSet
-                                    parentPasalVersionNode: *ref_430
+                                    parentPasalVersionNode: *ref_428
                                   nodeType: ayat
                         - type: ayat
-                          node: &ref_439
+                          node: &ref_437
                             nodeType: ayat
                             key: 3
-                            parentAyatSetNode: *ref_431
+                            parentAyatSetNode: *ref_429
                           content:
                             type: text
                             node:
                               nodeType: text
                               textName: text
-                              parentNode: *ref_439
+                              parentNode: *ref_437
                             textString: >-
                               Dikecualikan dari ketentuan sebagaimana dimaksud pada ayat (1),
                               Terhadap kegiatan penyediaan tempat hiburan, seperti panti pijat,
@@ -6981,49 +6955,80 @@ babSet:
                                   key: 1
                                   parentAyatSetNode:
                                     nodeType: ayatSet
-                                    parentPasalVersionNode: *ref_430
+                                    parentPasalVersionNode: *ref_428
                                   nodeType: ayat
                         - type: ayat
-                          node: &ref_440
+                          node: &ref_438
                             nodeType: ayat
                             key: 4
-                            parentAyatSetNode: *ref_431
+                            parentAyatSetNode: *ref_429
                           content:
                             type: text
                             node:
                               nodeType: text
                               textName: text
-                              parentNode: *ref_440
+                              parentNode: *ref_438
                             textString: >-
                               Penyediaan tempat hiburan bioskop dan permainan ketangkasan, dapat
                               beroperasi dengan memperhatikan protokol kesehatan.
                             references: []
                         - type: ayat
-                          node: &ref_441
+                          node: &ref_439
                             nodeType: ayat
                             key: 5
-                            parentAyatSetNode: *ref_431
+                            parentAyatSetNode: *ref_429
                           content:
                             type: pointSet
-                            node: &ref_442
+                            node: &ref_440
                               nodeType: pointSet
-                              parentNode: *ref_441
+                              parentNode: *ref_439
                             description:
                               type: text
                               node:
                                 nodeType: text
                                 textName: description
-                                parentNode: *ref_442
+                                parentNode: *ref_440
                               textString: >-
                                 Protokol kesehatan untuk bioskop dan permainan ketangkasan
                                 sebagaimana dimaksud pada ayat (4), sebagai berikut:
                               references: []
                             elements:
                               - type: point
-                                node: &ref_443
+                                node: &ref_441
                                   nodeType: point
                                   key: a
-                                  parentPointSetNode: *ref_442
+                                  parentPointSetNode: *ref_440
+                                content:
+                                  type: text
+                                  node:
+                                    nodeType: text
+                                    textName: text
+                                    parentNode: *ref_441
+                                  textString: >-
+                                    Melakukan pembatasan jam operasional antara pukul 07.00 WIB
+                                    sampai dengan 21.00 WIB,
+                                  references: []
+                              - type: point
+                                node: &ref_442
+                                  nodeType: point
+                                  key: b
+                                  parentPointSetNode: *ref_440
+                                content:
+                                  type: text
+                                  node:
+                                    nodeType: text
+                                    textName: text
+                                    parentNode: *ref_442
+                                  textString: >-
+                                    Membatasi jumlah pengunjung paling banyak 5076 (lima puluh
+                                    persen) dari total kapasitas studio dan/atau tempat permainan
+                                    ketangkasan.
+                                  references: []
+                              - type: point
+                                node: &ref_443
+                                  nodeType: point
+                                  key: c
+                                  parentPointSetNode: *ref_440
                                 content:
                                   type: text
                                   node:
@@ -7031,14 +7036,15 @@ babSet:
                                     textName: text
                                     parentNode: *ref_443
                                   textString: >-
-                                    Melakukan pembatasan jam operasional antara pukul 07.00 WIB
-                                    sampai dengan 21.00 WIB,
+                                    menyediakan peralatan untuk perlindungan diri berupa masker,
+                                    pembersih tangan (hand sanitizer), menyediakan fasilitas cuci
+                                    tangan yang memadai dan mudah di akses, dan thermal gun,
                                   references: []
                               - type: point
                                 node: &ref_444
                                   nodeType: point
-                                  key: b
-                                  parentPointSetNode: *ref_442
+                                  key: d
+                                  parentPointSetNode: *ref_440
                                 content:
                                   type: text
                                   node:
@@ -7046,52 +7052,20 @@ babSet:
                                     textName: text
                                     parentNode: *ref_444
                                   textString: >-
-                                    Membatasi jumlah pengunjung paling banyak 5076 (lima puluh
-                                    persen) dari total kapasitas studio dan/atau tempat permainan
-                                    ketangkasan.
+                                    melaksanakan protokol kesehatan bagi penonton/ pengunjung dan
+                                    karyawan,
                                   references: []
                               - type: point
                                 node: &ref_445
                                   nodeType: point
-                                  key: c
-                                  parentPointSetNode: *ref_442
+                                  key: e
+                                  parentPointSetNode: *ref_440
                                 content:
                                   type: text
                                   node:
                                     nodeType: text
                                     textName: text
                                     parentNode: *ref_445
-                                  textString: >-
-                                    menyediakan peralatan untuk perlindungan diri berupa masker,
-                                    pembersih tangan (hand sanitizer), menyediakan fasilitas cuci
-                                    tangan yang memadai dan mudah di akses, dan thermal gun,
-                                  references: []
-                              - type: point
-                                node: &ref_446
-                                  nodeType: point
-                                  key: d
-                                  parentPointSetNode: *ref_442
-                                content:
-                                  type: text
-                                  node:
-                                    nodeType: text
-                                    textName: text
-                                    parentNode: *ref_446
-                                  textString: >-
-                                    melaksanakan protokol kesehatan bagi penonton/ pengunjung dan
-                                    karyawan,
-                                  references: []
-                              - type: point
-                                node: &ref_447
-                                  nodeType: point
-                                  key: e
-                                  parentPointSetNode: *ref_442
-                                content:
-                                  type: text
-                                  node:
-                                    nodeType: text
-                                    textName: text
-                                    parentNode: *ref_447
                                   textString: >-
                                     melarang penonton/pengunjung yang sakit atau menunjukkan gejala
                                     infeksi saluran nafas yaitu suhu tubuh 37,30C ke atas, demam,
@@ -7141,123 +7115,123 @@ babSet:
                                       end: 2449
                                       node:
                                         key: j
-                                        parentPointSetNode: &ref_448
+                                        parentPointSetNode: &ref_446
                                           nodeType: pointSet
-                                          parentNode: *ref_430
+                                          parentNode: *ref_428
                                         nodeType: point
                                     - start: 2441
                                       end: 2442
                                       node:
                                         key: i
-                                        parentPointSetNode: *ref_448
+                                        parentPointSetNode: *ref_446
                                         nodeType: point
                                     - start: 2438
                                       end: 2439
                                       node:
                                         key: pada
-                                        parentPointSetNode: *ref_448
+                                        parentPointSetNode: *ref_446
                                         nodeType: point
                                     - start: 2435
                                       end: 2436
                                       node:
                                         key: dimaksud
-                                        parentPointSetNode: *ref_448
+                                        parentPointSetNode: *ref_446
                                         nodeType: point
                                     - start: 2432
                                       end: 2433
                                       node:
                                         key: sebagaimana
-                                        parentPointSetNode: *ref_448
+                                        parentPointSetNode: *ref_446
                                         nodeType: point
                                     - start: 2429
                                       end: 2430
                                       node:
                                         key: karyawan
-                                        parentPointSetNode: *ref_448
+                                        parentPointSetNode: *ref_446
                                         nodeType: point
                                     - start: 2426
                                       end: 2427
                                       node:
                                         key: terhadap
-                                        parentPointSetNode: *ref_448
+                                        parentPointSetNode: *ref_446
                                         nodeType: point
                                     - start: 2423
                                       end: 2424
                                       node:
                                         key: perawatan
-                                        parentPointSetNode: *ref_448
+                                        parentPointSetNode: *ref_446
                                         nodeType: point
                                     - start: 2420
                                       end: 2421
                                       node:
                                         key: biaya
-                                        parentPointSetNode: *ref_448
+                                        parentPointSetNode: *ref_446
                                         nodeType: point
                                     - start: 2417
                                       end: 2418
                                       node:
                                         key: termasuk
-                                        parentPointSetNode: *ref_448
+                                        parentPointSetNode: *ref_446
                                         nodeType: point
                                     - start: 2408
                                       end: 2415
                                       node:
                                         key: j
-                                        parentPointSetNode: *ref_448
+                                        parentPointSetNode: *ref_446
                                         nodeType: point
                                     - start: 2360
                                       end: 2367
                                       node:
                                         key: i
-                                        parentPointSetNode: *ref_448
+                                        parentPointSetNode: *ref_446
                                         nodeType: point
                                     - start: 2130
                                       end: 2131
                                       node:
                                         key: h
-                                        parentPointSetNode: *ref_448
+                                        parentPointSetNode: *ref_446
                                         nodeType: point
                                     - start: 2118
                                       end: 2125
                                       node:
                                         key: e
-                                        parentPointSetNode: *ref_448
+                                        parentPointSetNode: *ref_446
                                         nodeType: point
                                     - start: 1632
                                       end: 1639
                                       node:
                                         key: j
-                                        parentPointSetNode: *ref_448
+                                        parentPointSetNode: *ref_446
                                         nodeType: point
                                     - start: 1481
                                       end: 1488
                                       node:
                                         key: j
-                                        parentPointSetNode: *ref_448
+                                        parentPointSetNode: *ref_446
                                         nodeType: point
                                     - start: 1100
                                       end: 1107
                                       node:
                                         key: i
-                                        parentPointSetNode: *ref_448
+                                        parentPointSetNode: *ref_446
                                         nodeType: point
                                     - start: 924
                                       end: 931
                                       node:
                                         key: h
-                                        parentPointSetNode: *ref_448
+                                        parentPointSetNode: *ref_446
                                         nodeType: point
                         - type: ayat
-                          node: &ref_449
+                          node: &ref_447
                             nodeType: ayat
                             key: 6
-                            parentAyatSetNode: *ref_431
+                            parentAyatSetNode: *ref_429
                           content:
                             type: text
                             node:
                               nodeType: text
                               textName: text
-                              parentNode: *ref_449
+                              parentNode: *ref_447
                             textString: >-
                               Bioskop dan permainan ketangkasan sebagaimana dimaksud pada ayat (3),
                               sebelum mulai beroperasi harus melapor kepada Pemerintah Daerah
@@ -7269,19 +7243,19 @@ babSet:
                                   key: 3
                                   parentAyatSetNode:
                                     nodeType: ayatSet
-                                    parentPasalVersionNode: *ref_430
+                                    parentPasalVersionNode: *ref_428
                                   nodeType: ayat
                         - type: ayat
-                          node: &ref_450
+                          node: &ref_448
                             nodeType: ayat
                             key: 7
-                            parentAyatSetNode: *ref_431
+                            parentAyatSetNode: *ref_429
                           content:
                             type: text
                             node:
                               nodeType: text
                               textName: text
-                              parentNode: *ref_450
+                              parentNode: *ref_448
                             textString: >-
                               Usaha Pariwisata yang tidak dapat memenuhi pedoman sebagaimana
                               dimaksud pada ayat (1), dilarang peroperasi sampai terpenuhinya
@@ -7293,23 +7267,24 @@ babSet:
                                   key: 1
                                   parentAyatSetNode:
                                     nodeType: ayatSet
-                                    parentPasalVersionNode: *ref_430
+                                    parentPasalVersionNode: *ref_428
                                   nodeType: ayat
                         - type: ayat
-                          node: &ref_451
+                          node: &ref_449
                             nodeType: ayat
                             key: 8
-                            parentAyatSetNode: *ref_431
+                            parentAyatSetNode: *ref_429
                           content:
                             type: text
                             node:
                               nodeType: text
                               textName: text
-                              parentNode: *ref_451
+                              parentNode: *ref_449
                             textString: >-
                               Bioskop dan permainan ketangkasan yang tidak dapat memenuhi protokol
                               kesehatan sebagaimana dimaksud pada ayat (5), dilarang beroperasi
-                              sampai terpenuhinya ketentuan tersebut.
+                              sampai terpenuhinya ketentuan tersebut. Bagian Keempatbelas Pedoman
+                              Kegiatan di Toko Obat/Farmasi dan/atau Fasilitas Kesehatan
                             references:
                               - start: 105
                                 end: 113
@@ -7317,22 +7292,8 @@ babSet:
                                   key: 5
                                   parentAyatSetNode:
                                     nodeType: ayatSet
-                                    parentPasalVersionNode: *ref_430
+                                    parentPasalVersionNode: *ref_428
                                   nodeType: ayat
-          - type: bagian
-            node: &ref_452
-              nodeType: bagian
-              key: 14
-              parentBagianSetNode:
-                nodeType: bagianSet
-                parentBabNode: *ref_114
-            title: Bagian Keempatbelas Pedoman Kegiatan di Toko Obat/Farmasi dan/atau Fasilitas Kesehatan
-            content:
-              type: pasalSet
-              node:
-                nodeType: pasalSet
-                parentNode: *ref_452
-              elements:
                 - type: pasal
                   node:
                     nodeType: pasal
@@ -7340,7 +7301,7 @@ babSet:
                     parentNode: *ref_0
                   version:
                     type: pasalVersion
-                    node: &ref_453
+                    node: &ref_450
                       nodeType: pasalVersion
                       version: *ref_27
                       state: exists
@@ -7350,42 +7311,42 @@ babSet:
                         parentNode: *ref_0
                     content:
                       type: ayatSet
-                      node: &ref_454
+                      node: &ref_451
                         nodeType: ayatSet
-                        parentPasalVersionNode: *ref_453
+                        parentPasalVersionNode: *ref_450
                       elements:
                         - type: ayat
-                          node: &ref_455
+                          node: &ref_452
                             nodeType: ayat
                             key: 1
-                            parentAyatSetNode: *ref_454
+                            parentAyatSetNode: *ref_451
                           content:
                             type: pointSet
-                            node: &ref_456
+                            node: &ref_453
                               nodeType: pointSet
-                              parentNode: *ref_455
+                              parentNode: *ref_452
                             description:
                               type: text
                               node:
                                 nodeType: text
                                 textName: description
-                                parentNode: *ref_456
+                                parentNode: *ref_453
                               textString: >-
                                 Toko Obat/Farmasi dan/atau Fasilitas Kesehatan pada saat beroperasi
                                 wajib menerapkan protokol kesehatan yang ketat, antara lain:
                               references: []
                             elements:
                               - type: point
-                                node: &ref_457
+                                node: &ref_454
                                   nodeType: point
                                   key: a
-                                  parentPointSetNode: *ref_456
+                                  parentPointSetNode: *ref_453
                                 content:
                                   type: text
                                   node:
                                     nodeType: text
                                     textName: text
-                                    parentNode: *ref_457
+                                    parentNode: *ref_454
                                   textString: >-
                                     menerapkan pengaturan sirkulasi dan Batasan waktu kunjungan
                                     serta jumlah pengunjung maksimal 406 dari jumlah kunjungan pada
@@ -7424,42 +7385,42 @@ babSet:
                                     Masyarakat (Puskesmas) dan/atau Rumah Sakit Rujukan COVID-19.
                                   references: []
                         - type: ayat
-                          node: &ref_458
+                          node: &ref_455
                             nodeType: ayat
                             key: 2
-                            parentAyatSetNode: *ref_454
+                            parentAyatSetNode: *ref_451
                           content:
                             type: pointSet
-                            node: &ref_459
+                            node: &ref_456
                               nodeType: pointSet
-                              parentNode: *ref_458
+                              parentNode: *ref_455
                             description:
                               type: text
                               node:
                                 nodeType: text
                                 textName: description
-                                parentNode: *ref_459
+                                parentNode: *ref_456
                               textString: >-
                                 Fasilitas Kesehatan sebagaimana dimaksud pada ayat (1), juga harus
                                 mengikuti protokol kesehatan sebagai berikut:
                               references: []
                             elements:
                               - type: point
-                                node: &ref_460
+                                node: &ref_457
                                   nodeType: point
                                   key: a
-                                  parentPointSetNode: *ref_459
+                                  parentPointSetNode: *ref_456
                                 content:
                                   type: pointSet
-                                  node: &ref_461
+                                  node: &ref_458
                                     nodeType: pointSet
-                                    parentNode: *ref_460
+                                    parentNode: *ref_457
                                   description:
                                     type: text
                                     node:
                                       nodeType: text
                                       textName: description
-                                      parentNode: *ref_461
+                                      parentNode: *ref_458
                                     textString: >-
                                       Pengelola Pelayanan Primer/Rujukan wajib untuk membentuk
                                       Satuan Kerja Pencegahan dan Pengendalian COVID-19 di
@@ -7468,37 +7429,37 @@ babSet:
                                     references: []
                                   elements:
                                     - type: point
-                                      node: &ref_462
+                                      node: &ref_459
                                         nodeType: point
                                         key: '1'
-                                        parentPointSetNode: *ref_461
+                                        parentPointSetNode: *ref_458
                                       content:
                                         type: pointSet
-                                        node: &ref_463
+                                        node: &ref_460
                                           nodeType: pointSet
-                                          parentNode: *ref_462
+                                          parentNode: *ref_459
                                         description:
                                           type: text
                                           node:
                                             nodeType: text
                                             textName: description
-                                            parentNode: *ref_463
+                                            parentNode: *ref_460
                                           textString: >-
                                             Melakukan penilaian resiko (Risk Assessmeni) terhadap
                                             pekerja dengan klasifikasi pekerjaan sebagai berikut:
                                           references: []
                                         elements:
                                           - type: point
-                                            node: &ref_464
+                                            node: &ref_461
                                               nodeType: point
                                               key: a
-                                              parentPointSetNode: *ref_463
+                                              parentPointSetNode: *ref_460
                                             content:
                                               type: text
                                               node:
                                                 nodeType: text
                                                 textName: text
-                                                parentNode: *ref_464
+                                                parentNode: *ref_461
                                               textString: >-
                                                 risiko pajanan rendah-pekerjaan yang aktifitas
                                                 kerjanya tidak sering berhubungan/kontak dengan
@@ -7506,37 +7467,37 @@ babSet:
                                                 rekan kerja lainnya.
                                               references: []
                               - type: point
-                                node: &ref_465
+                                node: &ref_462
                                   nodeType: point
                                   key: b
-                                  parentPointSetNode: *ref_459
+                                  parentPointSetNode: *ref_456
                                 content:
                                   type: text
                                   node:
                                     nodeType: text
                                     textName: text
-                                    parentNode: *ref_465
+                                    parentNode: *ref_462
                                   textString: >-
                                     risiko pajanan sedang-pekerjaan yang sering berhubungan/kontak
                                     dengan masyarakat umum, atau rekan kerja lainnya, pengunjung,
                                     klien atau pelanggan, atau kontraktor.
                                   references: []
                               - type: point
-                                node: &ref_466
+                                node: &ref_463
                                   nodeType: point
                                   key: c
-                                  parentPointSetNode: *ref_459
+                                  parentPointSetNode: *ref_456
                                 content:
                                   type: pointSet
-                                  node: &ref_467
+                                  node: &ref_464
                                     nodeType: pointSet
-                                    parentNode: *ref_466
+                                    parentNode: *ref_463
                                   description:
                                     type: text
                                     node:
                                       nodeType: text
                                       textName: description
-                                      parentNode: *ref_467
+                                      parentNode: *ref_464
                                     textString: >-
                                       risiko pajanan tinggi-pekerjaan atau tugas kerja yang
                                       berpotensi tinggi untuk kontak dekat dengan orang-orang yang
@@ -7553,64 +7514,64 @@ babSet:
                                     references: []
                                   elements:
                                     - type: point
-                                      node: &ref_468
+                                      node: &ref_465
                                         nodeType: point
                                         key: a
-                                        parentPointSetNode: *ref_467
+                                        parentPointSetNode: *ref_464
                                       content:
                                         type: text
                                         node:
                                           nodeType: text
                                           textName: text
-                                          parentNode: *ref_468
+                                          parentNode: *ref_465
                                         textString: Pekerja berusia 45 tahun ke atas.
                                         references: []
                                     - type: point
-                                      node: &ref_469
+                                      node: &ref_466
                                         nodeType: point
                                         key: b
-                                        parentPointSetNode: *ref_467
+                                        parentPointSetNode: *ref_464
                                       content:
                                         type: text
                                         node:
                                           nodeType: text
                                           textName: text
-                                          parentNode: *ref_469
+                                          parentNode: *ref_466
                                         textString: Pekerja yang sedang hamil
                                         references: []
                                     - type: point
-                                      node: &ref_470
+                                      node: &ref_467
                                         nodeType: point
                                         key: c
-                                        parentPointSetNode: *ref_467
+                                        parentPointSetNode: *ref_464
                                       content:
                                         type: text
                                         node:
                                           nodeType: text
                                           textName: text
-                                          parentNode: *ref_470
+                                          parentNode: *ref_467
                                         textString: >-
                                           Pekerja memiliki riwayat penyakit kronis seperti
                                           hipertensi, jantung dan penyakit yang melemahkan sistem
                                           kekebalan tubuh lain.
                                         references: []
                               - type: point
-                                node: &ref_471
+                                node: &ref_468
                                   nodeType: point
                                   key: d
-                                  parentPointSetNode: *ref_459
+                                  parentPointSetNode: *ref_456
                                 content:
                                   type: text
                                   node:
                                     nodeType: text
                                     textName: text
-                                    parentNode: *ref_471
+                                    parentNode: *ref_468
                                   textString: >-
                                     Pekerja yang dapat harus melaksanakan pekerjaannya di kantor dan
                                     yang dapat melaksanakan pekerjaannya dari rumah.
                                   references: []
     - type: bab
-      node: &ref_472
+      node: &ref_469
         nodeType: bab
         key: 6
         parentBabSetNode: *ref_7
@@ -7619,7 +7580,7 @@ babSet:
         type: pasalSet
         node:
           nodeType: pasalSet
-          parentNode: *ref_472
+          parentNode: *ref_469
         elements:
           - type: pasal
             node:
@@ -7628,7 +7589,7 @@ babSet:
               parentNode: *ref_0
             version:
               type: pasalVersion
-              node: &ref_473
+              node: &ref_470
                 nodeType: pasalVersion
                 version: *ref_27
                 state: exists
@@ -7638,42 +7599,42 @@ babSet:
                   parentNode: *ref_0
               content:
                 type: pointSet
-                node: &ref_474
+                node: &ref_471
                   nodeType: pointSet
-                  parentNode: *ref_473
+                  parentNode: *ref_470
                 description:
                   type: text
                   node:
                     nodeType: text
                     textName: description
-                    parentNode: *ref_474
+                    parentNode: *ref_471
                   textString: 'Pencegahan dan/atau penanganan COVID-19 di Dearah dilakukan dengan cara:'
                   references: []
                 elements:
                   - type: point
-                    node: &ref_475
+                    node: &ref_472
                       nodeType: point
                       key: a
-                      parentPointSetNode: *ref_474
+                      parentPointSetNode: *ref_471
                     content:
                       type: text
                       node:
                         nodeType: text
                         textName: text
-                        parentNode: *ref_475
+                        parentNode: *ref_472
                       textString: deteksi dini, dan
                       references: []
                   - type: point
-                    node: &ref_476
+                    node: &ref_473
                       nodeType: point
                       key: b
-                      parentPointSetNode: *ref_474
+                      parentPointSetNode: *ref_471
                     content:
                       type: text
                       node:
                         nodeType: text
                         textName: text
-                        parentNode: *ref_476
+                        parentNode: *ref_473
                       textString: isolasi. Bagian Kesatu Deteksi Dini
                       references: []
           - type: pasal
@@ -7683,7 +7644,7 @@ babSet:
               parentNode: *ref_0
             version:
               type: pasalVersion
-              node: &ref_477
+              node: &ref_474
                 nodeType: pasalVersion
                 version: *ref_27
                 state: exists
@@ -7693,169 +7654,169 @@ babSet:
                   parentNode: *ref_0
               content:
                 type: ayatSet
-                node: &ref_478
+                node: &ref_475
                   nodeType: ayatSet
-                  parentPasalVersionNode: *ref_477
+                  parentPasalVersionNode: *ref_474
                 elements:
                   - type: ayat
-                    node: &ref_479
+                    node: &ref_476
                       nodeType: ayat
                       key: 1
-                      parentAyatSetNode: *ref_478
+                      parentAyatSetNode: *ref_475
                     content:
                       type: pointSet
-                      node: &ref_480
+                      node: &ref_477
                         nodeType: pointSet
-                        parentNode: *ref_479
+                        parentNode: *ref_476
                       description:
                         type: text
                         node:
                           nodeType: text
                           textName: description
-                          parentNode: *ref_480
+                          parentNode: *ref_477
                         textString: >-
                           Deteksi dini sebagaimana dimaksud dalam Pasal 32 ayat (1) huruf a
                           dilakukan dengan:
                         references: []
                       elements:
                         - type: point
-                          node: &ref_481
+                          node: &ref_478
                             nodeType: point
                             key: a
-                            parentPointSetNode: *ref_480
+                            parentPointSetNode: *ref_477
                           content:
                             type: text
                             node:
                               nodeType: text
                               textName: text
-                              parentNode: *ref_481
+                              parentNode: *ref_478
                             textString: deteksi pasif, dan
                             references: []
                         - type: point
-                          node: &ref_482
+                          node: &ref_479
                             nodeType: point
                             key: b
-                            parentPointSetNode: *ref_480
+                            parentPointSetNode: *ref_477
                           content:
                             type: text
                             node:
                               nodeType: text
                               textName: text
-                              parentNode: *ref_482
+                              parentNode: *ref_479
                             textString: deteksi aktif.
                             references: []
                   - type: ayat
-                    node: &ref_483
+                    node: &ref_480
                       nodeType: ayat
                       key: 2
-                      parentAyatSetNode: *ref_478
+                      parentAyatSetNode: *ref_475
                     content:
                       type: text
                       node:
                         nodeType: text
                         textName: text
-                        parentNode: *ref_483
+                        parentNode: *ref_480
                       textString: >-
                         Deteksi pasif merupakan pengumpulan data yang diperoleh dari Fasilitas
                         Pelayanan Kesehatan.
                       references: []
                   - type: ayat
-                    node: &ref_484
+                    node: &ref_481
                       nodeType: ayat
                       key: 3
-                      parentAyatSetNode: *ref_478
+                      parentAyatSetNode: *ref_475
                     content:
                       type: text
                       node:
                         nodeType: text
                         textName: text
-                        parentNode: *ref_484
+                        parentNode: *ref_481
                       textString: >-
                         Deteksi aktif merupakan pengumpulan data yang diperoleh langsung dari
                         masyarakat atau sumber data lainnya.
                       references: []
                   - type: ayat
-                    node: &ref_485
+                    node: &ref_482
                       nodeType: ayat
                       key: 4
-                      parentAyatSetNode: *ref_478
+                      parentAyatSetNode: *ref_475
                     content:
                       type: pointSet
-                      node: &ref_486
+                      node: &ref_483
                         nodeType: pointSet
-                        parentNode: *ref_485
+                        parentNode: *ref_482
                       description:
                         type: text
                         node:
                           nodeType: text
                           textName: description
-                          parentNode: *ref_486
+                          parentNode: *ref_483
                         textString: 'Deteksi aktif sebagaimana dimaksud pada ayat (3), dilakukan melalui:'
                         references: []
                       elements:
                         - type: point
-                          node: &ref_487
+                          node: &ref_484
                             nodeType: point
                             key: a
-                            parentPointSetNode: *ref_486
+                            parentPointSetNode: *ref_483
+                          content:
+                            type: text
+                            node:
+                              nodeType: text
+                              textName: text
+                              parentNode: *ref_484
+                            textString: pemeriksaan di akses keluar masuk Daerah, -40-
+                            references: []
+                        - type: point
+                          node: &ref_485
+                            nodeType: point
+                            key: b
+                            parentPointSetNode: *ref_483
+                          content:
+                            type: text
+                            node:
+                              nodeType: text
+                              textName: text
+                              parentNode: *ref_485
+                            textString: pemantauan yang dilakukan oleh Lurah,
+                            references: []
+                        - type: point
+                          node: &ref_486
+                            nodeType: point
+                            key: c
+                            parentPointSetNode: *ref_483
+                          content:
+                            type: text
+                            node:
+                              nodeType: text
+                              textName: text
+                              parentNode: *ref_486
+                            textString: pemantauan yang dilakukan oleh Perguruan Tinggi, dan/atau
+                            references: []
+                        - type: point
+                          node: &ref_487
+                            nodeType: point
+                            key: d
+                            parentPointSetNode: *ref_483
                           content:
                             type: text
                             node:
                               nodeType: text
                               textName: text
                               parentNode: *ref_487
-                            textString: pemeriksaan di akses keluar masuk Daerah, -40-
-                            references: []
-                        - type: point
-                          node: &ref_488
-                            nodeType: point
-                            key: b
-                            parentPointSetNode: *ref_486
-                          content:
-                            type: text
-                            node:
-                              nodeType: text
-                              textName: text
-                              parentNode: *ref_488
-                            textString: pemantauan yang dilakukan oleh Lurah,
-                            references: []
-                        - type: point
-                          node: &ref_489
-                            nodeType: point
-                            key: c
-                            parentPointSetNode: *ref_486
-                          content:
-                            type: text
-                            node:
-                              nodeType: text
-                              textName: text
-                              parentNode: *ref_489
-                            textString: pemantauan yang dilakukan oleh Perguruan Tinggi, dan/atau
-                            references: []
-                        - type: point
-                          node: &ref_490
-                            nodeType: point
-                            key: d
-                            parentPointSetNode: *ref_486
-                          content:
-                            type: text
-                            node:
-                              nodeType: text
-                              textName: text
-                              parentNode: *ref_490
                             textString: pelaporan secara mandiri.
                             references: []
                   - type: ayat
-                    node: &ref_491
+                    node: &ref_488
                       nodeType: ayat
                       key: 5
-                      parentAyatSetNode: *ref_478
+                      parentAyatSetNode: *ref_475
                     content:
                       type: text
                       node:
                         nodeType: text
                         textName: text
-                        parentNode: *ref_491
+                        parentNode: *ref_488
                       textString: >-
                         Pelaporan secara mandiri sebagaimana dimaksud pada ayat (4) huruf d
                         dilaksanakan oleh setiap orang yang datang dari luar Daerah. Paragraf 1
@@ -7867,7 +7828,7 @@ babSet:
                             key: 4
                             parentAyatSetNode:
                               nodeType: ayatSet
-                              parentPasalVersionNode: *ref_477
+                              parentPasalVersionNode: *ref_474
                             nodeType: ayat
                         - start: 60
                           end: 67
@@ -7875,7 +7836,7 @@ babSet:
                             key: d
                             parentPointSetNode:
                               nodeType: pointSet
-                              parentNode: *ref_477
+                              parentNode: *ref_474
                             nodeType: point
           - type: pasal
             node:
@@ -7884,7 +7845,7 @@ babSet:
               parentNode: *ref_0
             version:
               type: pasalVersion
-              node: &ref_492
+              node: &ref_489
                 nodeType: pasalVersion
                 version: *ref_27
                 state: exists
@@ -7894,36 +7855,36 @@ babSet:
                   parentNode: *ref_0
               content:
                 type: ayatSet
-                node: &ref_493
+                node: &ref_490
                   nodeType: ayatSet
-                  parentPasalVersionNode: *ref_492
+                  parentPasalVersionNode: *ref_489
                 elements:
                   - type: ayat
-                    node: &ref_494
+                    node: &ref_491
                       nodeType: ayat
                       key: 1
-                      parentAyatSetNode: *ref_493
+                      parentAyatSetNode: *ref_490
                     content:
                       type: text
                       node:
                         nodeType: text
                         textName: text
-                        parentNode: *ref_494
+                        parentNode: *ref_491
                       textString: >-
                         Setiap orang yang datang dari luar Daerah dapat diperiksa di akses keluar
                         masuk Daerah.
                       references: []
                   - type: ayat
-                    node: &ref_495
+                    node: &ref_492
                       nodeType: ayat
                       key: 2
-                      parentAyatSetNode: *ref_493
+                      parentAyatSetNode: *ref_490
                     content:
                       type: text
                       node:
                         nodeType: text
                         textName: text
-                        parentNode: *ref_495
+                        parentNode: *ref_492
                       textString: >-
                         Pemeriksaan sebagaimana dimaksud pada ayat (1) dilaksanakan untuk mendeteksi
                         dini gejala COVID-19 sesuai dengan pedoman pemeriksaan kesehatan yang
@@ -7935,19 +7896,19 @@ babSet:
                             key: 1
                             parentAyatSetNode:
                               nodeType: ayatSet
-                              parentPasalVersionNode: *ref_492
+                              parentPasalVersionNode: *ref_489
                             nodeType: ayat
                   - type: ayat
-                    node: &ref_496
+                    node: &ref_493
                       nodeType: ayat
                       key: 3
-                      parentAyatSetNode: *ref_493
+                      parentAyatSetNode: *ref_490
                     content:
                       type: text
                       node:
                         nodeType: text
                         textName: text
-                        parentNode: *ref_496
+                        parentNode: *ref_493
                       textString: >-
                         Setiap orang yang telah dilakukan pemeriksaan sebagaimana dimaksud pada ayat
                         (2), diberi surat keterangan status kesehatan.
@@ -7958,19 +7919,19 @@ babSet:
                             key: 2
                             parentAyatSetNode:
                               nodeType: ayatSet
-                              parentPasalVersionNode: *ref_492
+                              parentPasalVersionNode: *ref_489
                             nodeType: ayat
                   - type: ayat
-                    node: &ref_497
+                    node: &ref_494
                       nodeType: ayat
                       key: 4
-                      parentAyatSetNode: *ref_493
+                      parentAyatSetNode: *ref_490
                     content:
                       type: text
                       node:
                         nodeType: text
                         textName: text
-                        parentNode: *ref_497
+                        parentNode: *ref_494
                       textString: >-
                         Setiap orang yang tidak beridentitas Kota Malang, apabila hasil pemeriksaaan
                         sebagaimana dimaksud pada ayat (2), menandakan gejala COVID-19, dilarang
@@ -7982,19 +7943,19 @@ babSet:
                             key: 2
                             parentAyatSetNode:
                               nodeType: ayatSet
-                              parentPasalVersionNode: *ref_492
+                              parentPasalVersionNode: *ref_489
                             nodeType: ayat
                   - type: ayat
-                    node: &ref_498
+                    node: &ref_495
                       nodeType: ayat
                       key: 5
-                      parentAyatSetNode: *ref_493
+                      parentAyatSetNode: *ref_490
                     content:
                       type: text
                       node:
                         nodeType: text
                         textName: text
-                        parentNode: *ref_498
+                        parentNode: *ref_495
                       textString: >-
                         Petugas pemeriksaan wajib melakukan pencatatan terhadap hasil pemeriksaan
                         sebagaimana dimaksud pada ayat (2). Paragraf 2 Pemantauan Yang Dilakukan
@@ -8006,7 +7967,7 @@ babSet:
                             key: 2
                             parentAyatSetNode:
                               nodeType: ayatSet
-                              parentPasalVersionNode: *ref_492
+                              parentPasalVersionNode: *ref_489
                             nodeType: ayat
           - type: pasal
             node:
@@ -8015,7 +7976,7 @@ babSet:
               parentNode: *ref_0
             version:
               type: pasalVersion
-              node: &ref_499
+              node: &ref_496
                 nodeType: pasalVersion
                 version: *ref_27
                 state: exists
@@ -8025,37 +7986,37 @@ babSet:
                   parentNode: *ref_0
               content:
                 type: ayatSet
-                node: &ref_500
+                node: &ref_497
                   nodeType: ayatSet
-                  parentPasalVersionNode: *ref_499
+                  parentPasalVersionNode: *ref_496
                 elements:
                   - type: ayat
-                    node: &ref_501
+                    node: &ref_498
                       nodeType: ayat
                       key: 1
-                      parentAyatSetNode: *ref_500
+                      parentAyatSetNode: *ref_497
                     content:
                       type: text
                       node:
                         nodeType: text
                         textName: text
-                        parentNode: *ref_501
+                        parentNode: *ref_498
                       textString: >-
                         Lurah wajib melakukan pemantauan terhadap warga yang datang dari luar
                         Daerah, ke luar Daerah, dan/atau warga yang bekerja di luar Daerah yang
                         tidak dapat dilakukan secara daring/ online. -41-
                       references: []
                   - type: ayat
-                    node: &ref_502
+                    node: &ref_499
                       nodeType: ayat
                       key: 2
-                      parentAyatSetNode: *ref_500
+                      parentAyatSetNode: *ref_497
                     content:
                       type: text
                       node:
                         nodeType: text
                         textName: text
-                        parentNode: *ref_502
+                        parentNode: *ref_499
                       textString: >-
                         Hasil pemantauan sebagaimana dimaksud pada ayat (1) dilaporkan kepada Gugus
                         Tugas COVID-19 Kecamatan secara berkala setiap 3 (tiga) hari sekali.
@@ -8066,19 +8027,19 @@ babSet:
                             key: 1
                             parentAyatSetNode:
                               nodeType: ayatSet
-                              parentPasalVersionNode: *ref_499
+                              parentPasalVersionNode: *ref_496
                             nodeType: ayat
                   - type: ayat
-                    node: &ref_503
+                    node: &ref_500
                       nodeType: ayat
                       key: 3
-                      parentAyatSetNode: *ref_500
+                      parentAyatSetNode: *ref_497
                     content:
                       type: text
                       node:
                         nodeType: text
                         textName: text
-                        parentNode: *ref_503
+                        parentNode: *ref_500
                       textString: >-
                         Gugus Tugas COVID-19 Kecamatan melakukan pelaporan hasil pemantauan
                         sebagaimana dimaksud pada ayat (2) kepada Gugus Tugas COVID-19 Daerah secara
@@ -8090,19 +8051,19 @@ babSet:
                             key: 2
                             parentAyatSetNode:
                               nodeType: ayatSet
-                              parentPasalVersionNode: *ref_499
+                              parentPasalVersionNode: *ref_496
                             nodeType: ayat
                   - type: ayat
-                    node: &ref_504
+                    node: &ref_501
                       nodeType: ayat
                       key: 4
-                      parentAyatSetNode: *ref_500
+                      parentAyatSetNode: *ref_497
                     content:
                       type: text
                       node:
                         nodeType: text
                         textName: text
-                        parentNode: *ref_504
+                        parentNode: *ref_501
                       textString: >-
                         Pemantauan yang dilakukan oleh Lurah sebagaimana dimaksud pada ayat (1)
                         dilaksanakan dengan melibatkan RT dan/atau RW setempat.
@@ -8113,19 +8074,19 @@ babSet:
                             key: 1
                             parentAyatSetNode:
                               nodeType: ayatSet
-                              parentPasalVersionNode: *ref_499
+                              parentPasalVersionNode: *ref_496
                             nodeType: ayat
                   - type: ayat
-                    node: &ref_505
+                    node: &ref_502
                       nodeType: ayat
                       key: 5
-                      parentAyatSetNode: *ref_500
+                      parentAyatSetNode: *ref_497
                     content:
                       type: text
                       node:
                         nodeType: text
                         textName: text
-                        parentNode: *ref_505
+                        parentNode: *ref_502
                       textString: >-
                         Dalam melakukan pemantauan Ketua RT dan/atau Ketua RW wajib melakukan
                         pencatatan terhadap warga yang datang dari luar Daerah, ke luar Daerah,
@@ -8133,115 +8094,115 @@ babSet:
                         daring/ online.
                       references: []
                   - type: ayat
-                    node: &ref_506
+                    node: &ref_503
                       nodeType: ayat
                       key: 6
-                      parentAyatSetNode: *ref_500
+                      parentAyatSetNode: *ref_497
                     content:
                       type: pointSet
-                      node: &ref_507
+                      node: &ref_504
                         nodeType: pointSet
-                        parentNode: *ref_506
+                        parentNode: *ref_503
                       description:
                         type: text
                         node:
                           nodeType: text
                           textName: description
-                          parentNode: *ref_507
+                          parentNode: *ref_504
                         textString: 'Pencatatan sebagaimana dimaksud pada ayat (5), paling sedikit meliputi:'
                         references: []
                       elements:
                         - type: point
-                          node: &ref_508
+                          node: &ref_505
                             nodeType: point
                             key: a
-                            parentPointSetNode: *ref_507
+                            parentPointSetNode: *ref_504
+                          content:
+                            type: text
+                            node:
+                              nodeType: text
+                              textName: text
+                              parentNode: *ref_505
+                            textString: >-
+                              identitas pribadi yang meliputi: nama, tempat tanggal lahir, NIK, dan
+                              alamat asal,
+                            references: []
+                        - type: point
+                          node: &ref_506
+                            nodeType: point
+                            key: b
+                            parentPointSetNode: *ref_504
+                          content:
+                            type: text
+                            node:
+                              nodeType: text
+                              textName: text
+                              parentNode: *ref_506
+                            textString: tanggal kedatangan,
+                            references: []
+                        - type: point
+                          node: &ref_507
+                            nodeType: point
+                            key: c
+                            parentPointSetNode: *ref_504
+                          content:
+                            type: text
+                            node:
+                              nodeType: text
+                              textName: text
+                              parentNode: *ref_507
+                            textString: alamat tujuan,
+                            references: []
+                        - type: point
+                          node: &ref_508
+                            nodeType: point
+                            key: d
+                            parentPointSetNode: *ref_504
                           content:
                             type: text
                             node:
                               nodeType: text
                               textName: text
                               parentNode: *ref_508
-                            textString: >-
-                              identitas pribadi yang meliputi: nama, tempat tanggal lahir, NIK, dan
-                              alamat asal,
+                            textString: nomor Handphone dan/atau telepon,
                             references: []
                         - type: point
                           node: &ref_509
                             nodeType: point
-                            key: b
-                            parentPointSetNode: *ref_507
+                            key: e
+                            parentPointSetNode: *ref_504
                           content:
                             type: text
                             node:
                               nodeType: text
                               textName: text
                               parentNode: *ref_509
-                            textString: tanggal kedatangan,
+                            textString: keperluan, dan
                             references: []
                         - type: point
                           node: &ref_510
                             nodeType: point
-                            key: c
-                            parentPointSetNode: *ref_507
+                            key: f
+                            parentPointSetNode: *ref_504
                           content:
                             type: text
                             node:
                               nodeType: text
                               textName: text
                               parentNode: *ref_510
-                            textString: alamat tujuan,
-                            references: []
-                        - type: point
-                          node: &ref_511
-                            nodeType: point
-                            key: d
-                            parentPointSetNode: *ref_507
-                          content:
-                            type: text
-                            node:
-                              nodeType: text
-                              textName: text
-                              parentNode: *ref_511
-                            textString: nomor Handphone dan/atau telepon,
-                            references: []
-                        - type: point
-                          node: &ref_512
-                            nodeType: point
-                            key: e
-                            parentPointSetNode: *ref_507
-                          content:
-                            type: text
-                            node:
-                              nodeType: text
-                              textName: text
-                              parentNode: *ref_512
-                            textString: keperluan, dan
-                            references: []
-                        - type: point
-                          node: &ref_513
-                            nodeType: point
-                            key: f
-                            parentPointSetNode: *ref_507
-                          content:
-                            type: text
-                            node:
-                              nodeType: text
-                              textName: text
-                              parentNode: *ref_513
                             textString: riwayat perjalanan.
                             references: []
                   - type: ayat
-                    node: &ref_514
+                    node: &ref_511
                       nodeType: ayat
                       key: 7
-                      parentAyatSetNode: *ref_500
+                      parentAyatSetNode: *ref_497
                     content:
                       type: text
                       node:
                         nodeType: text
                         textName: text
-                        parentNode: *ref_514
+                        parentNode: *ref_511
                       textString: >-
                         Hasil pencatatan sebagaimana dimaksud pada ayat (6) dilaporkan kepada Lurah
                         setiap hari.
@@ -8252,35 +8213,35 @@ babSet:
                             key: 6
                             parentAyatSetNode:
                               nodeType: ayatSet
-                              parentPasalVersionNode: *ref_499
+                              parentPasalVersionNode: *ref_496
                             nodeType: ayat
                   - type: ayat
-                    node: &ref_515
+                    node: &ref_512
                       nodeType: ayat
                       key: 8
-                      parentAyatSetNode: *ref_500
+                      parentAyatSetNode: *ref_497
                     content:
                       type: text
                       node:
                         nodeType: text
                         textName: text
-                        parentNode: *ref_515
+                        parentNode: *ref_512
                       textString: >-
                         Dalam pelaksanaan pemantauan, Lurah membuat jejaring komunikasi dan
                         informasi dengan ketua RT dan ketua RW setempat dengan memanfaatkan
                         teknologi informasi dan komunikasi.
                       references: []
                   - type: ayat
-                    node: &ref_516
+                    node: &ref_513
                       nodeType: ayat
                       key: 9
-                      parentAyatSetNode: *ref_500
+                      parentAyatSetNode: *ref_497
                     content:
                       type: text
                       node:
                         nodeType: text
                         textName: text
-                        parentNode: *ref_516
+                        parentNode: *ref_513
                       textString: >-
                         Dalam hal ditemukan indikasi gejala COVID-19 yang dialami oleh warga maka
                         Lurah wajib untuk segera melaporkan kepada Gugus Tugas COVID-19 Daerah. 42-
@@ -8293,7 +8254,7 @@ babSet:
               parentNode: *ref_0
             version:
               type: pasalVersion
-              node: &ref_517
+              node: &ref_514
                 nodeType: pasalVersion
                 version: *ref_27
                 state: exists
@@ -8306,7 +8267,7 @@ babSet:
                 node:
                   nodeType: text
                   textName: text
-                  parentNode: *ref_517
+                  parentNode: *ref_514
                 textString: >-
                   Dalam rangka mewujudkan masyarakat produktif dan aman COVID-19, Pemerintah Daerah
                   berkoordinasi dengan Pimpinan Perguruan Tinggi guna membentuk protokol kesehatan
@@ -8319,7 +8280,7 @@ babSet:
               parentNode: *ref_0
             version:
               type: pasalVersion
-              node: &ref_518
+              node: &ref_515
                 nodeType: pasalVersion
                 version: *ref_27
                 state: exists
@@ -8329,36 +8290,36 @@ babSet:
                   parentNode: *ref_0
               content:
                 type: ayatSet
-                node: &ref_519
+                node: &ref_516
                   nodeType: ayatSet
-                  parentPasalVersionNode: *ref_518
+                  parentPasalVersionNode: *ref_515
                 elements:
                   - type: ayat
-                    node: &ref_520
+                    node: &ref_517
                       nodeType: ayat
                       key: 1
-                      parentAyatSetNode: *ref_519
+                      parentAyatSetNode: *ref_516
                     content:
                       type: text
                       node:
                         nodeType: text
                         textName: text
-                        parentNode: *ref_520
+                        parentNode: *ref_517
                       textString: >-
                         Pimpinan Perguruan Tinggi wajib melakukan pemantauan terhadap arus keluar
                         masuk mahasiswa di Kota Malang.
                       references: []
                   - type: ayat
-                    node: &ref_521
+                    node: &ref_518
                       nodeType: ayat
                       key: 2
-                      parentAyatSetNode: *ref_519
+                      parentAyatSetNode: *ref_516
                     content:
                       type: text
                       node:
                         nodeType: text
                         textName: text
-                        parentNode: *ref_521
+                        parentNode: *ref_518
                       textString: >-
                         Hasil pemantauan sebagaimana dimaksud pada ayat (1) dilaporkan kepada Gugus
                         Tugas COVID-19 Daerah secara berkala setiap 15 (lima belas) hari sekali.
@@ -8369,19 +8330,19 @@ babSet:
                             key: 1
                             parentAyatSetNode:
                               nodeType: ayatSet
-                              parentPasalVersionNode: *ref_518
+                              parentPasalVersionNode: *ref_515
                             nodeType: ayat
                   - type: ayat
-                    node: &ref_522
+                    node: &ref_519
                       nodeType: ayat
                       key: 3
-                      parentAyatSetNode: *ref_519
+                      parentAyatSetNode: *ref_516
                     content:
                       type: text
                       node:
                         nodeType: text
                         textName: text
-                        parentNode: *ref_522
+                        parentNode: *ref_519
                       textString: >-
                         Pemantauan yang dilakukan oleh Pimpinan Perguruan Tinggi sebagaimana
                         dimaksud pada ayat (1) dilaksanakan sesuai dengan kebijakan masing-masing
@@ -8393,105 +8354,105 @@ babSet:
                             key: 1
                             parentAyatSetNode:
                               nodeType: ayatSet
-                              parentPasalVersionNode: *ref_518
+                              parentPasalVersionNode: *ref_515
                             nodeType: ayat
                   - type: ayat
-                    node: &ref_523
+                    node: &ref_520
                       nodeType: ayat
                       key: 4
-                      parentAyatSetNode: *ref_519
+                      parentAyatSetNode: *ref_516
                     content:
                       type: pointSet
-                      node: &ref_524
+                      node: &ref_521
                         nodeType: pointSet
-                        parentNode: *ref_523
+                        parentNode: *ref_520
                       description:
                         type: text
                         node:
                           nodeType: text
                           textName: description
-                          parentNode: *ref_524
+                          parentNode: *ref_521
                         textString: 'Pelaporan sebagaimana dimaksud pada ayat (2), paling sedikit meliputi:'
                         references: []
                       elements:
                         - type: point
-                          node: &ref_525
+                          node: &ref_522
                             nodeType: point
                             key: a
-                            parentPointSetNode: *ref_524
+                            parentPointSetNode: *ref_521
+                          content:
+                            type: text
+                            node:
+                              nodeType: text
+                              textName: text
+                              parentNode: *ref_522
+                            textString: >-
+                              identitas pribadi yang meliputi: nama, tempat tanggal lahir, NIK, dan
+                              alamat asal,
+                            references: []
+                        - type: point
+                          node: &ref_523
+                            nodeType: point
+                            key: b
+                            parentPointSetNode: *ref_521
+                          content:
+                            type: text
+                            node:
+                              nodeType: text
+                              textName: text
+                              parentNode: *ref_523
+                            textString: 'tanggal kedatangan atau tanggal keberangkatan:'
+                            references: []
+                        - type: point
+                          node: &ref_524
+                            nodeType: point
+                            key: c
+                            parentPointSetNode: *ref_521
+                          content:
+                            type: text
+                            node:
+                              nodeType: text
+                              textName: text
+                              parentNode: *ref_524
+                            textString: 'alamat di Kota Malang (Kos, kontrakan, dan sejenisnya):'
+                            references: []
+                        - type: point
+                          node: &ref_525
+                            nodeType: point
+                            key: d
+                            parentPointSetNode: *ref_521
                           content:
                             type: text
                             node:
                               nodeType: text
                               textName: text
                               parentNode: *ref_525
-                            textString: >-
-                              identitas pribadi yang meliputi: nama, tempat tanggal lahir, NIK, dan
-                              alamat asal,
+                            textString: nomor Handphone dan/atau telepon, dan
                             references: []
                         - type: point
                           node: &ref_526
                             nodeType: point
-                            key: b
-                            parentPointSetNode: *ref_524
+                            key: e
+                            parentPointSetNode: *ref_521
                           content:
                             type: text
                             node:
                               nodeType: text
                               textName: text
                               parentNode: *ref_526
-                            textString: 'tanggal kedatangan atau tanggal keberangkatan:'
-                            references: []
-                        - type: point
-                          node: &ref_527
-                            nodeType: point
-                            key: c
-                            parentPointSetNode: *ref_524
-                          content:
-                            type: text
-                            node:
-                              nodeType: text
-                              textName: text
-                              parentNode: *ref_527
-                            textString: 'alamat di Kota Malang (Kos, kontrakan, dan sejenisnya):'
-                            references: []
-                        - type: point
-                          node: &ref_528
-                            nodeType: point
-                            key: d
-                            parentPointSetNode: *ref_524
-                          content:
-                            type: text
-                            node:
-                              nodeType: text
-                              textName: text
-                              parentNode: *ref_528
-                            textString: nomor Handphone dan/atau telepon, dan
-                            references: []
-                        - type: point
-                          node: &ref_529
-                            nodeType: point
-                            key: e
-                            parentPointSetNode: *ref_524
-                          content:
-                            type: text
-                            node:
-                              nodeType: text
-                              textName: text
-                              parentNode: *ref_529
                             textString: riwayat perjalanan.
                             references: []
                   - type: ayat
-                    node: &ref_530
+                    node: &ref_527
                       nodeType: ayat
                       key: 5
-                      parentAyatSetNode: *ref_519
+                      parentAyatSetNode: *ref_516
                     content:
                       type: text
                       node:
                         nodeType: text
                         textName: text
-                        parentNode: *ref_530
+                        parentNode: *ref_527
                       textString: >-
                         Dalam hal ditemukan indikasi gejala COVID-19 yang dialami oleh mahasiswa
                         maka Pimpinan Perguruan Tinggi wajib untuk segera melaporkan kepada Gugus
@@ -8504,7 +8465,7 @@ babSet:
               parentNode: *ref_0
             version:
               type: pasalVersion
-              node: &ref_531
+              node: &ref_528
                 nodeType: pasalVersion
                 version: *ref_27
                 state: exists
@@ -8514,34 +8475,34 @@ babSet:
                   parentNode: *ref_0
               content:
                 type: ayatSet
-                node: &ref_532
+                node: &ref_529
                   nodeType: ayatSet
-                  parentPasalVersionNode: *ref_531
+                  parentPasalVersionNode: *ref_528
                 elements:
                   - type: ayat
-                    node: &ref_533
+                    node: &ref_530
                       nodeType: ayat
                       key: 1
-                      parentAyatSetNode: *ref_532
+                      parentAyatSetNode: *ref_529
                     content:
                       type: text
                       node:
                         nodeType: text
                         textName: text
-                        parentNode: *ref_533
+                        parentNode: *ref_530
                       textString: Perguruan tinggi wajib mengatur kedatangan mahasiswa.
                       references: []
                   - type: ayat
-                    node: &ref_534
+                    node: &ref_531
                       nodeType: ayat
                       key: 2
-                      parentAyatSetNode: *ref_532
+                      parentAyatSetNode: *ref_529
                     content:
                       type: text
                       node:
                         nodeType: text
                         textName: text
-                        parentNode: *ref_534
+                        parentNode: *ref_531
                       textString: >-
                         Seluruh mahasiswa dari luar daerah yang akan masuk ke Kota Malang, wajib
                         memiliki hasil negatif COVID-19 berdasarkan Polymerase Chain Reaction (PCR)
@@ -8549,16 +8510,16 @@ babSet:
                         sakit/puskesmas/klinik Kesehatan di daerah asal.
                       references: []
                   - type: ayat
-                    node: &ref_535
+                    node: &ref_532
                       nodeType: ayat
                       key: 3
-                      parentAyatSetNode: *ref_532
+                      parentAyatSetNode: *ref_529
                     content:
                       type: text
                       node:
                         nodeType: text
                         textName: text
-                        parentNode: *ref_535
+                        parentNode: *ref_532
                       textString: >-
                         Kedatangan mahasiswa sebagaimana dimaksud pada ayat (1) paling lambat 2
                         (dua) minggu sebelum awal perkuliahan dimulai.
@@ -8569,19 +8530,19 @@ babSet:
                             key: 1
                             parentAyatSetNode:
                               nodeType: ayatSet
-                              parentPasalVersionNode: *ref_531
+                              parentPasalVersionNode: *ref_528
                             nodeType: ayat
                   - type: ayat
-                    node: &ref_536
+                    node: &ref_533
                       nodeType: ayat
                       key: 4
-                      parentAyatSetNode: *ref_532
+                      parentAyatSetNode: *ref_529
                     content:
                       type: text
                       node:
                         nodeType: text
                         textName: text
-                        parentNode: *ref_536
+                        parentNode: *ref_533
                       textString: >-
                         Pimpinan Perguruan Tinggi wajib memastikan seluruh mahasiswa yang datang
                         dari luar Daerah melakukan isolasi secara mandiri di kos/kontrakan, dan/atau
@@ -8589,16 +8550,16 @@ babSet:
                         kesehatan dan dapat diperpanjang sesuai dengan kondisi kesehatan.
                       references: []
                   - type: ayat
-                    node: &ref_537
+                    node: &ref_534
                       nodeType: ayat
                       key: 5
-                      parentAyatSetNode: *ref_532
+                      parentAyatSetNode: *ref_529
                     content:
                       type: text
                       node:
                         nodeType: text
                         textName: text
-                        parentNode: *ref_537
+                        parentNode: *ref_534
                       textString: >-
                         Dalam menunjang pelaksanaan isolasi secara mandiri mahasiswa sebagaimana
                         dimaksud pada ayat (4), perguruan tinggi dapat menyediakan rumah isolasi
@@ -8610,19 +8571,19 @@ babSet:
                             key: 4
                             parentAyatSetNode:
                               nodeType: ayatSet
-                              parentPasalVersionNode: *ref_531
+                              parentPasalVersionNode: *ref_528
                             nodeType: ayat
                   - type: ayat
-                    node: &ref_538
+                    node: &ref_535
                       nodeType: ayat
                       key: 6
-                      parentAyatSetNode: *ref_532
+                      parentAyatSetNode: *ref_529
                     content:
                       type: text
                       node:
                         nodeType: text
                         textName: text
-                        parentNode: *ref_538
+                        parentNode: *ref_535
                       textString: >-
                         Pengelolaan rumah isolasi sebagaimana dimaksud pada ayat (5) dilakukan oleh
                         perguruan tinggi dengan berkoordinasi dengan Gugus Tugas COVID-19 Daerah,
@@ -8634,19 +8595,19 @@ babSet:
                             key: 5
                             parentAyatSetNode:
                               nodeType: ayatSet
-                              parentPasalVersionNode: *ref_531
+                              parentPasalVersionNode: *ref_528
                             nodeType: ayat
                   - type: ayat
-                    node: &ref_539
+                    node: &ref_536
                       nodeType: ayat
                       key: 7
-                      parentAyatSetNode: *ref_532
+                      parentAyatSetNode: *ref_529
                     content:
                       type: text
                       node:
                         nodeType: text
                         textName: text
-                        parentNode: *ref_539
+                        parentNode: *ref_536
                       textString: >-
                         Ketentuan mengenai kedatangan mahasiswa sebagaimana dimaksud pada ayat (1),
                         tercantum dalam Lampiran II yang merupakan bagian tidak terpisahkan dari
@@ -8658,7 +8619,7 @@ babSet:
                             key: 1
                             parentAyatSetNode:
                               nodeType: ayatSet
-                              parentPasalVersionNode: *ref_531
+                              parentPasalVersionNode: *ref_528
                             nodeType: ayat
           - type: pasal
             node:
@@ -8667,7 +8628,7 @@ babSet:
               parentNode: *ref_0
             version:
               type: pasalVersion
-              node: &ref_540
+              node: &ref_537
                 nodeType: pasalVersion
                 version: *ref_27
                 state: exists
@@ -8677,36 +8638,36 @@ babSet:
                   parentNode: *ref_0
               content:
                 type: ayatSet
-                node: &ref_541
+                node: &ref_538
                   nodeType: ayatSet
-                  parentPasalVersionNode: *ref_540
+                  parentPasalVersionNode: *ref_537
                 elements:
                   - type: ayat
-                    node: &ref_542
+                    node: &ref_539
                       nodeType: ayat
                       key: 1
-                      parentAyatSetNode: *ref_541
+                      parentAyatSetNode: *ref_538
                     content:
                       type: text
                       node:
                         nodeType: text
                         textName: text
-                        parentNode: *ref_542
+                        parentNode: *ref_539
                       textString: >-
                         Setiap orang yang datang dari luar Daerah wajib melaporkan diri kepada ketua
                         RT atau RW setempat.
                       references: []
                   - type: ayat
-                    node: &ref_543
+                    node: &ref_540
                       nodeType: ayat
                       key: 2
-                      parentAyatSetNode: *ref_541
+                      parentAyatSetNode: *ref_538
                     content:
                       type: text
                       node:
                         nodeType: text
                         textName: text
-                        parentNode: *ref_543
+                        parentNode: *ref_540
                       textString: >-
                         Setiap orang yang akan ke luar daerah, dan/atau warga yang bekerja di luar
                         Daerah yang tidak dapat dilakukan secara daring/ online wajib melaporkan
@@ -8719,7 +8680,7 @@ babSet:
               parentNode: *ref_0
             version:
               type: pasalVersion
-              node: &ref_544
+              node: &ref_541
                 nodeType: pasalVersion
                 version: *ref_27
                 state: exists
@@ -8729,66 +8690,66 @@ babSet:
                   parentNode: *ref_0
               content:
                 type: ayatSet
-                node: &ref_545
+                node: &ref_542
                   nodeType: ayatSet
-                  parentPasalVersionNode: *ref_544
+                  parentPasalVersionNode: *ref_541
                 elements:
                   - type: ayat
-                    node: &ref_546
+                    node: &ref_543
                       nodeType: ayat
                       key: 1
-                      parentAyatSetNode: *ref_545
+                      parentAyatSetNode: *ref_542
                     content:
                       type: pointSet
-                      node: &ref_547
+                      node: &ref_544
                         nodeType: pointSet
-                        parentNode: *ref_546
+                        parentNode: *ref_543
                       description:
                         type: text
                         node:
                           nodeType: text
                           textName: description
-                          parentNode: *ref_547
+                          parentNode: *ref_544
                         textString: 'Isolasi sebagaimana dimaksud dalam Pasal 32 ayat (1) huruf b dilakukan di:'
                         references: []
                       elements:
                         - type: point
-                          node: &ref_548
+                          node: &ref_545
                             nodeType: point
                             key: a
-                            parentPointSetNode: *ref_547
+                            parentPointSetNode: *ref_544
                           content:
                             type: text
                             node:
                               nodeType: text
                               textName: text
-                              parentNode: *ref_548
+                              parentNode: *ref_545
                             textString: tingkat Kota, dan
                             references: []
                         - type: point
-                          node: &ref_549
+                          node: &ref_546
                             nodeType: point
                             key: b
-                            parentPointSetNode: *ref_547
+                            parentPointSetNode: *ref_544
                           content:
                             type: text
                             node:
                               nodeType: text
                               textName: text
-                              parentNode: *ref_549
+                              parentNode: *ref_546
                             textString: isolasi mandiri.
                             references: []
                   - type: ayat
-                    node: &ref_550
+                    node: &ref_547
                       nodeType: ayat
                       key: 2
-                      parentAyatSetNode: *ref_545
+                      parentAyatSetNode: *ref_542
                     content:
                       type: text
                       node:
                         nodeType: text
                         textName: text
-                        parentNode: *ref_550
+                        parentNode: *ref_547
                       textString: >-
                         Isolasi sebagaimana dimaksud pada ayat (1) dilakukan selama 14 (empat belas)
                         hari dan dapat diperpanjang berdasarkan rekomendasi dari petugas pemeriksaan
@@ -8800,7 +8761,7 @@ babSet:
                             key: 1
                             parentAyatSetNode:
                               nodeType: ayatSet
-                              parentPasalVersionNode: *ref_544
+                              parentPasalVersionNode: *ref_541
                             nodeType: ayat
           - type: pasal
             node:
@@ -8809,7 +8770,7 @@ babSet:
               parentNode: *ref_0
             version:
               type: pasalVersion
-              node: &ref_551
+              node: &ref_548
                 nodeType: pasalVersion
                 version: *ref_27
                 state: exists
@@ -8819,21 +8780,21 @@ babSet:
                   parentNode: *ref_0
               content:
                 type: ayatSet
-                node: &ref_552
+                node: &ref_549
                   nodeType: ayatSet
-                  parentPasalVersionNode: *ref_551
+                  parentPasalVersionNode: *ref_548
                 elements:
                   - type: ayat
-                    node: &ref_553
+                    node: &ref_550
                       nodeType: ayat
                       key: 1
-                      parentAyatSetNode: *ref_552
+                      parentAyatSetNode: *ref_549
                     content:
                       type: text
                       node:
                         nodeType: text
                         textName: text
-                        parentNode: *ref_553
+                        parentNode: *ref_550
                       textString: >-
                         Setiap orang yang datang dari luar Daerah dan telah dilakukan pemeriksaan
                         sebagaimana dimaksud dalam Pasal 34 ayat (1), Orang Tanpa Gejala (OTG),
@@ -8845,20 +8806,20 @@ babSet:
                           node:
                             parentAyatSetNode:
                               nodeType: ayatSet
-                              parentPasalVersionNode: *ref_551
+                              parentPasalVersionNode: *ref_548
                             key: 1
                             nodeType: ayat
                   - type: ayat
-                    node: &ref_554
+                    node: &ref_551
                       nodeType: ayat
                       key: 2
-                      parentAyatSetNode: *ref_552
+                      parentAyatSetNode: *ref_549
                     content:
                       type: text
                       node:
                         nodeType: text
                         textName: text
-                        parentNode: *ref_554
+                        parentNode: *ref_551
                       textString: >-
                         Penentuan tempat isolasi sebagaimana dimaksud pada ayat (1), ditentukan
                         berdasarkan rekomendasi dari petugas kesehatan dengan mempertimbangkan
@@ -8870,7 +8831,7 @@ babSet:
                             key: 1
                             parentAyatSetNode:
                               nodeType: ayatSet
-                              parentPasalVersionNode: *ref_551
+                              parentPasalVersionNode: *ref_548
                             nodeType: ayat
           - type: pasal
             node:
@@ -8879,7 +8840,7 @@ babSet:
               parentNode: *ref_0
             version:
               type: pasalVersion
-              node: &ref_555
+              node: &ref_552
                 nodeType: pasalVersion
                 version: *ref_27
                 state: exists
@@ -8889,70 +8850,70 @@ babSet:
                   parentNode: *ref_0
               content:
                 type: ayatSet
-                node: &ref_556
+                node: &ref_553
                   nodeType: ayatSet
-                  parentPasalVersionNode: *ref_555
+                  parentPasalVersionNode: *ref_552
                 elements:
                   - type: ayat
-                    node: &ref_557
+                    node: &ref_554
                       nodeType: ayat
                       key: 1
-                      parentAyatSetNode: *ref_556
+                      parentAyatSetNode: *ref_553
                     content:
                       type: pointSet
-                      node: &ref_558
+                      node: &ref_555
                         nodeType: pointSet
-                        parentNode: *ref_557
+                        parentNode: *ref_554
                       description:
                         type: text
                         node:
                           nodeType: text
                           textName: description
-                          parentNode: *ref_558
+                          parentNode: *ref_555
                         textString: >-
                           Dikecualikan dari ketentuan sebagaimana dimaksud dalam Pasal 41 ayat (1),
                           bagi setiap orang yang jenis pekerjaannya:
                         references: []
                       elements:
                         - type: point
-                          node: &ref_559
+                          node: &ref_556
                             nodeType: point
                             key: a
-                            parentPointSetNode: *ref_558
+                            parentPointSetNode: *ref_555
                           content:
                             type: text
                             node:
                               nodeType: text
                               textName: text
-                              parentNode: *ref_559
+                              parentNode: *ref_556
                             textString: 'tidak dapat dilakukan di rumah secara daring/ online: dan/atau'
                             references: []
                         - type: point
-                          node: &ref_560
+                          node: &ref_557
                             nodeType: point
                             key: b
-                            parentPointSetNode: *ref_558
+                            parentPointSetNode: *ref_555
                           content:
                             type: text
                             node:
                               nodeType: text
                               textName: text
-                              parentNode: *ref_560
+                              parentNode: *ref_557
                             textString: >-
                               bekerja di perusahaan dan/atau instansi yang menerapkan kebijakan
                               bekerja di rumah secara bergantian.
                             references: []
                   - type: ayat
-                    node: &ref_561
+                    node: &ref_558
                       nodeType: ayat
                       key: 2
-                      parentAyatSetNode: *ref_556
+                      parentAyatSetNode: *ref_553
                     content:
                       type: text
                       node:
                         nodeType: text
                         textName: text
-                        parentNode: *ref_561
+                        parentNode: *ref_558
                       textString: >-
                         Setiap orang sebagaimana dimaksud pada ayat (1) huruf a wajib memiliki surat
                         keterangan dari instansi tempat bekerja yang menyatakan bahwa pekerjaan
@@ -8964,7 +8925,7 @@ babSet:
                             key: 1
                             parentAyatSetNode:
                               nodeType: ayatSet
-                              parentPasalVersionNode: *ref_555
+                              parentPasalVersionNode: *ref_552
                             nodeType: ayat
                         - start: 48
                           end: 55
@@ -8972,19 +8933,19 @@ babSet:
                             key: a
                             parentPointSetNode:
                               nodeType: pointSet
-                              parentNode: *ref_555
+                              parentNode: *ref_552
                             nodeType: point
                   - type: ayat
-                    node: &ref_562
+                    node: &ref_559
                       nodeType: ayat
                       key: 3
-                      parentAyatSetNode: *ref_556
+                      parentAyatSetNode: *ref_553
                     content:
                       type: text
                       node:
                         nodeType: text
                         textName: text
-                        parentNode: *ref_562
+                        parentNode: *ref_559
                       textString: >-
                         Setiap orang sebagaimana dimaksud pada ayat (1) huruf b wajib memiliki surat
                         keterangan dari instansi tempat bekerja yang menyatakan bahwa perusahaan
@@ -8996,7 +8957,7 @@ babSet:
                             key: 1
                             parentAyatSetNode:
                               nodeType: ayatSet
-                              parentPasalVersionNode: *ref_555
+                              parentPasalVersionNode: *ref_552
                             nodeType: ayat
                         - start: 48
                           end: 55
@@ -9004,19 +8965,19 @@ babSet:
                             key: b
                             parentPointSetNode:
                               nodeType: pointSet
-                              parentNode: *ref_555
+                              parentNode: *ref_552
                             nodeType: point
                   - type: ayat
-                    node: &ref_563
+                    node: &ref_560
                       nodeType: ayat
                       key: 4
-                      parentAyatSetNode: *ref_556
+                      parentAyatSetNode: *ref_553
                     content:
                       type: text
                       node:
                         nodeType: text
                         textName: text
-                        parentNode: *ref_563
+                        parentNode: *ref_560
                       textString: >-
                         Surat keterangan sebagaimana dimaksud pada ayat (3) disertai dengan jadwal
                         yang ditentukan oleh perusahaan dan/atau instansi masing-masing.
@@ -9027,7 +8988,7 @@ babSet:
                             key: 3
                             parentAyatSetNode:
                               nodeType: ayatSet
-                              parentPasalVersionNode: *ref_555
+                              parentPasalVersionNode: *ref_552
                             nodeType: ayat
           - type: pasal
             node:
@@ -9036,7 +8997,7 @@ babSet:
               parentNode: *ref_0
             version:
               type: pasalVersion
-              node: &ref_564
+              node: &ref_561
                 nodeType: pasalVersion
                 version: *ref_27
                 state: exists
@@ -9046,21 +9007,21 @@ babSet:
                   parentNode: *ref_0
               content:
                 type: ayatSet
-                node: &ref_565
+                node: &ref_562
                   nodeType: ayatSet
-                  parentPasalVersionNode: *ref_564
+                  parentPasalVersionNode: *ref_561
                 elements:
                   - type: ayat
-                    node: &ref_566
+                    node: &ref_563
                       nodeType: ayat
                       key: 1
-                      parentAyatSetNode: *ref_565
+                      parentAyatSetNode: *ref_562
                     content:
                       type: text
                       node:
                         nodeType: text
                         textName: text
-                        parentNode: *ref_566
+                        parentNode: *ref_563
                       textString: >-
                         Segala biaya yang muncul selama pelaksanaan isolasi di tingkat kota
                         sebagaimana dimaksud dalam Pasal 40 ayat (1) huruf a dibebankan kepada
@@ -9072,7 +9033,7 @@ babSet:
                           node:
                             parentAyatSetNode:
                               nodeType: ayatSet
-                              parentPasalVersionNode: *ref_564
+                              parentPasalVersionNode: *ref_561
                             key: 1
                             nodeType: ayat
                         - start: 113
@@ -9081,19 +9042,19 @@ babSet:
                             key: a
                             parentPointSetNode:
                               nodeType: pointSet
-                              parentNode: *ref_564
+                              parentNode: *ref_561
                             nodeType: point
                   - type: ayat
-                    node: &ref_567
+                    node: &ref_564
                       nodeType: ayat
                       key: 2
-                      parentAyatSetNode: *ref_565
+                      parentAyatSetNode: *ref_562
                     content:
                       type: text
                       node:
                         nodeType: text
                         textName: text
-                        parentNode: *ref_567
+                        parentNode: *ref_564
                       textString: >-
                         Segala biaya yang muncul selama pelaksanaan isolasi mandiri sebagaimana
                         dimaksud dalam Pasal 40 ayat (1) huruf b dibebankan kepada masing-masing
@@ -9104,7 +9065,7 @@ babSet:
                           node:
                             parentAyatSetNode:
                               nodeType: ayatSet
-                              parentPasalVersionNode: *ref_564
+                              parentPasalVersionNode: *ref_561
                             key: 1
                             nodeType: ayat
                         - start: 105
@@ -9113,7 +9074,7 @@ babSet:
                             key: b
                             parentPointSetNode:
                               nodeType: pointSet
-                              parentNode: *ref_564
+                              parentNode: *ref_561
                             nodeType: point
           - type: pasal
             node:
@@ -9122,7 +9083,7 @@ babSet:
               parentNode: *ref_0
             version:
               type: pasalVersion
-              node: &ref_568
+              node: &ref_565
                 nodeType: pasalVersion
                 version: *ref_27
                 state: exists
@@ -9132,21 +9093,21 @@ babSet:
                   parentNode: *ref_0
               content:
                 type: ayatSet
-                node: &ref_569
+                node: &ref_566
                   nodeType: ayatSet
-                  parentPasalVersionNode: *ref_568
+                  parentPasalVersionNode: *ref_565
                 elements:
                   - type: ayat
-                    node: &ref_570
+                    node: &ref_567
                       nodeType: ayat
                       key: 1
-                      parentAyatSetNode: *ref_569
+                      parentAyatSetNode: *ref_566
                     content:
                       type: text
                       node:
                         nodeType: text
                         textName: text
-                        parentNode: *ref_570
+                        parentNode: *ref_567
                       textString: >-
                         Penentuan lokasi isolasi di tingkat Kota sebagaimana dimaksud dalam Pasal 40
                         ayat (1) huruf a, dilaksanakan setelah melaksanakan koordinasi dengan
@@ -9157,7 +9118,7 @@ babSet:
                           node:
                             parentAyatSetNode:
                               nodeType: ayatSet
-                              parentPasalVersionNode: *ref_568
+                              parentPasalVersionNode: *ref_565
                             key: 1
                             nodeType: ayat
                         - start: 86
@@ -9166,19 +9127,19 @@ babSet:
                             key: a
                             parentPointSetNode:
                               nodeType: pointSet
-                              parentNode: *ref_568
+                              parentNode: *ref_565
                             nodeType: point
                   - type: ayat
-                    node: &ref_571
+                    node: &ref_568
                       nodeType: ayat
                       key: 2
-                      parentAyatSetNode: *ref_569
+                      parentAyatSetNode: *ref_566
                     content:
                       type: text
                       node:
                         nodeType: text
                         textName: text
-                        parentNode: *ref_571
+                        parentNode: *ref_568
                       textString: >-
                         Lokasi isolasi sebagaimana dimaksud pada ayat (1), dilakukan pemantauan dan
                         evaluasi secara berkala.
@@ -9189,19 +9150,19 @@ babSet:
                             key: 1
                             parentAyatSetNode:
                               nodeType: ayatSet
-                              parentPasalVersionNode: *ref_568
+                              parentPasalVersionNode: *ref_565
                             nodeType: ayat
                   - type: ayat
-                    node: &ref_572
+                    node: &ref_569
                       nodeType: ayat
                       key: 3
-                      parentAyatSetNode: *ref_569
+                      parentAyatSetNode: *ref_566
                     content:
                       type: text
                       node:
                         nodeType: text
                         textName: text
-                        parentNode: *ref_572
+                        parentNode: *ref_569
                       textString: >-
                         Berdasarkan hasil pemantauan dan evaluasi sebagaimana dimaksud pada ayat
                         (2), Walikota dapat mengurangi dan/atau menambahkan lokasi isolasi melalui
@@ -9213,7 +9174,7 @@ babSet:
                             key: 2
                             parentAyatSetNode:
                               nodeType: ayatSet
-                              parentPasalVersionNode: *ref_568
+                              parentPasalVersionNode: *ref_565
                             nodeType: ayat
           - type: pasal
             node:
@@ -9222,7 +9183,7 @@ babSet:
               parentNode: *ref_0
             version:
               type: pasalVersion
-              node: &ref_573
+              node: &ref_570
                 nodeType: pasalVersion
                 version: *ref_27
                 state: exists
@@ -9235,13 +9196,13 @@ babSet:
                 node:
                   nodeType: text
                   textName: text
-                  parentNode: *ref_573
+                  parentNode: *ref_570
                 textString: >-
                   Ketentuan mengenai pelaksanaan deteksi dini dan isolasi tercantum dalam Lampiran
                   III yang merupakan bagian tidak terpisahkan dari Peraturan Walikota ini. -46-
                 references: []
     - type: bab
-      node: &ref_574
+      node: &ref_571
         nodeType: bab
         key: 7
         parentBabSetNode: *ref_7
@@ -9250,7 +9211,7 @@ babSet:
         type: pasalSet
         node:
           nodeType: pasalSet
-          parentNode: *ref_574
+          parentNode: *ref_571
         elements:
           - type: pasal
             node:
@@ -9259,7 +9220,7 @@ babSet:
               parentNode: *ref_0
             version:
               type: pasalVersion
-              node: &ref_575
+              node: &ref_572
                 nodeType: pasalVersion
                 version: *ref_27
                 state: exists
@@ -9269,36 +9230,36 @@ babSet:
                   parentNode: *ref_0
               content:
                 type: ayatSet
-                node: &ref_576
+                node: &ref_573
                   nodeType: ayatSet
-                  parentPasalVersionNode: *ref_575
+                  parentPasalVersionNode: *ref_572
                 elements:
                   - type: ayat
-                    node: &ref_577
+                    node: &ref_574
                       nodeType: ayat
                       key: 1
-                      parentAyatSetNode: *ref_576
+                      parentAyatSetNode: *ref_573
                     content:
                       type: text
                       node:
                         nodeType: text
                         textName: text
-                        parentNode: *ref_577
+                        parentNode: *ref_574
                       textString: >-
                         Masyarakat dapat berperan serta dalam usaha penerapan masyarakat produktif
                         dan aman COVID-19.
                       references: []
                   - type: ayat
-                    node: &ref_578
+                    node: &ref_575
                       nodeType: ayat
                       key: 2
-                      parentAyatSetNode: *ref_576
+                      parentAyatSetNode: *ref_573
                     content:
                       type: text
                       node:
                         nodeType: text
                         textName: text
-                        parentNode: *ref_578
+                        parentNode: *ref_575
                       textString: >-
                         Bentuk peran serta masyarakat sebagaimana dimaksud pada ayat (1),
                         dilaksanakan secara terkoordinir dengan Gugus Tugas COVID-19 Kecamatan
@@ -9310,19 +9271,19 @@ babSet:
                             key: 1
                             parentAyatSetNode:
                               nodeType: ayatSet
-                              parentPasalVersionNode: *ref_575
+                              parentPasalVersionNode: *ref_572
                             nodeType: ayat
                   - type: ayat
-                    node: &ref_579
+                    node: &ref_576
                       nodeType: ayat
                       key: 3
-                      parentAyatSetNode: *ref_576
+                      parentAyatSetNode: *ref_573
                     content:
                       type: text
                       node:
                         nodeType: text
                         textName: text
-                        parentNode: *ref_579
+                        parentNode: *ref_576
                       textString: >-
                         Peran serta masyarakat sebagaimana dimaksud pada ayat (1), dapat
                         dilaksanakan dalam bentuk Kampung Tangguh.
@@ -9333,107 +9294,107 @@ babSet:
                             key: 1
                             parentAyatSetNode:
                               nodeType: ayatSet
-                              parentPasalVersionNode: *ref_575
+                              parentPasalVersionNode: *ref_572
                             nodeType: ayat
                   - type: ayat
-                    node: &ref_580
+                    node: &ref_577
                       nodeType: ayat
                       key: 4
-                      parentAyatSetNode: *ref_576
+                      parentAyatSetNode: *ref_573
                     content:
                       type: pointSet
-                      node: &ref_581
+                      node: &ref_578
                         nodeType: pointSet
-                        parentNode: *ref_580
+                        parentNode: *ref_577
                       description:
                         type: text
                         node:
                           nodeType: text
                           textName: description
-                          parentNode: *ref_581
+                          parentNode: *ref_578
                         textString: 'Kampung Tangguh sebagaimana dimaksud pada ayat (3), terdiri dari:'
                         references: []
                       elements:
                         - type: point
-                          node: &ref_582
+                          node: &ref_579
                             nodeType: point
                             key: a
-                            parentPointSetNode: *ref_581
+                            parentPointSetNode: *ref_578
+                          content:
+                            type: text
+                            node:
+                              nodeType: text
+                              textName: text
+                              parentNode: *ref_579
+                            textString: ketangguhan pangan,
+                            references: []
+                        - type: point
+                          node: &ref_580
+                            nodeType: point
+                            key: b
+                            parentPointSetNode: *ref_578
+                          content:
+                            type: text
+                            node:
+                              nodeType: text
+                              textName: text
+                              parentNode: *ref_580
+                            textString: ketangguhan Kesehatan,
+                            references: []
+                        - type: point
+                          node: &ref_581
+                            nodeType: point
+                            key: c
+                            parentPointSetNode: *ref_578
+                          content:
+                            type: text
+                            node:
+                              nodeType: text
+                              textName: text
+                              parentNode: *ref_581
+                            textString: ketangguhan ketertiban dan keamanan,
+                            references: []
+                        - type: point
+                          node: &ref_582
+                            nodeType: point
+                            key: d
+                            parentPointSetNode: *ref_578
                           content:
                             type: text
                             node:
                               nodeType: text
                               textName: text
                               parentNode: *ref_582
-                            textString: ketangguhan pangan,
+                            textString: ketangguhan informasi,
                             references: []
                         - type: point
                           node: &ref_583
                             nodeType: point
-                            key: b
-                            parentPointSetNode: *ref_581
+                            key: e
+                            parentPointSetNode: *ref_578
                           content:
                             type: text
                             node:
                               nodeType: text
                               textName: text
                               parentNode: *ref_583
-                            textString: ketangguhan Kesehatan,
+                            textString: ketangguhan psikologi, dan
                             references: []
                         - type: point
                           node: &ref_584
                             nodeType: point
-                            key: c
-                            parentPointSetNode: *ref_581
+                            key: f
+                            parentPointSetNode: *ref_578
                           content:
                             type: text
                             node:
                               nodeType: text
                               textName: text
                               parentNode: *ref_584
-                            textString: ketangguhan ketertiban dan keamanan,
-                            references: []
-                        - type: point
-                          node: &ref_585
-                            nodeType: point
-                            key: d
-                            parentPointSetNode: *ref_581
-                          content:
-                            type: text
-                            node:
-                              nodeType: text
-                              textName: text
-                              parentNode: *ref_585
-                            textString: ketangguhan informasi,
-                            references: []
-                        - type: point
-                          node: &ref_586
-                            nodeType: point
-                            key: e
-                            parentPointSetNode: *ref_581
-                          content:
-                            type: text
-                            node:
-                              nodeType: text
-                              textName: text
-                              parentNode: *ref_586
-                            textString: ketangguhan psikologi, dan
-                            references: []
-                        - type: point
-                          node: &ref_587
-                            nodeType: point
-                            key: f
-                            parentPointSetNode: *ref_581
-                          content:
-                            type: text
-                            node:
-                              nodeType: text
-                              textName: text
-                              parentNode: *ref_587
                             textString: ketangguhan budaya.
                             references: []
     - type: bab
-      node: &ref_588
+      node: &ref_585
         nodeType: bab
         key: 8
         parentBabSetNode: *ref_7
@@ -9442,7 +9403,7 @@ babSet:
         type: pasalSet
         node:
           nodeType: pasalSet
-          parentNode: *ref_588
+          parentNode: *ref_585
         elements:
           - type: pasal
             node:
@@ -9451,7 +9412,7 @@ babSet:
               parentNode: *ref_0
             version:
               type: pasalVersion
-              node: &ref_589
+              node: &ref_586
                 nodeType: pasalVersion
                 version: *ref_27
                 state: exists
@@ -9461,76 +9422,76 @@ babSet:
                   parentNode: *ref_0
               content:
                 type: pointSet
-                node: &ref_590
+                node: &ref_587
                   nodeType: pointSet
-                  parentNode: *ref_589
+                  parentNode: *ref_586
                 description:
                   type: text
                   node:
                     nodeType: text
                     textName: description
-                    parentNode: *ref_590
+                    parentNode: *ref_587
                   textString: >-
                     Pendanaan pelaksanaan penerapan masyarakat produktif dan aman COVID-19 bersumber
                     dari:
                   references: []
                 elements:
                   - type: point
-                    node: &ref_591
+                    node: &ref_588
                       nodeType: point
                       key: a
-                      parentPointSetNode: *ref_590
+                      parentPointSetNode: *ref_587
+                    content:
+                      type: text
+                      node:
+                        nodeType: text
+                        textName: text
+                        parentNode: *ref_588
+                      textString: Anggaran Pendapatan dan Belanja Negara,
+                      references: []
+                  - type: point
+                    node: &ref_589
+                      nodeType: point
+                      key: b
+                      parentPointSetNode: *ref_587
+                    content:
+                      type: text
+                      node:
+                        nodeType: text
+                        textName: text
+                        parentNode: *ref_589
+                      textString: Anggaran Pendapatan dan Belanja Daerah Provinsi,
+                      references: []
+                  - type: point
+                    node: &ref_590
+                      nodeType: point
+                      key: c
+                      parentPointSetNode: *ref_587
+                    content:
+                      type: text
+                      node:
+                        nodeType: text
+                        textName: text
+                        parentNode: *ref_590
+                      textString: . Anggaran Pendapatan dan Belanja Daerah Kota, dan/atau
+                      references: []
+                  - type: point
+                    node: &ref_591
+                      nodeType: point
+                      key: d
+                      parentPointSetNode: *ref_587
                     content:
                       type: text
                       node:
                         nodeType: text
                         textName: text
                         parentNode: *ref_591
-                      textString: Anggaran Pendapatan dan Belanja Negara,
-                      references: []
-                  - type: point
-                    node: &ref_592
-                      nodeType: point
-                      key: b
-                      parentPointSetNode: *ref_590
-                    content:
-                      type: text
-                      node:
-                        nodeType: text
-                        textName: text
-                        parentNode: *ref_592
-                      textString: Anggaran Pendapatan dan Belanja Daerah Provinsi,
-                      references: []
-                  - type: point
-                    node: &ref_593
-                      nodeType: point
-                      key: c
-                      parentPointSetNode: *ref_590
-                    content:
-                      type: text
-                      node:
-                        nodeType: text
-                        textName: text
-                        parentNode: *ref_593
-                      textString: . Anggaran Pendapatan dan Belanja Daerah Kota, dan/atau
-                      references: []
-                  - type: point
-                    node: &ref_594
-                      nodeType: point
-                      key: d
-                      parentPointSetNode: *ref_590
-                    content:
-                      type: text
-                      node:
-                        nodeType: text
-                        textName: text
-                        parentNode: *ref_594
                       textString: >-
                         sumber lain yang sah dan tidak mengikat sesuai dengan ketentuan Peraturan
                         Perundang-undangan. aja
                       references: []
     - type: bab
-      node: &ref_595
+      node: &ref_592
         nodeType: bab
         key: 9
         parentBabSetNode: *ref_7
@@ -9539,7 +9500,7 @@ babSet:
         type: pasalSet
         node:
           nodeType: pasalSet
-          parentNode: *ref_595
+          parentNode: *ref_592
         elements:
           - type: pasal
             node:
@@ -9548,7 +9509,7 @@ babSet:
               parentNode: *ref_0
             version:
               type: pasalVersion
-              node: &ref_596
+              node: &ref_593
                 nodeType: pasalVersion
                 version: *ref_27
                 state: exists
@@ -9558,94 +9519,94 @@ babSet:
                   parentNode: *ref_0
               content:
                 type: ayatSet
-                node: &ref_597
+                node: &ref_594
                   nodeType: ayatSet
-                  parentPasalVersionNode: *ref_596
+                  parentPasalVersionNode: *ref_593
                 elements:
                   - type: ayat
-                    node: &ref_598
+                    node: &ref_595
                       nodeType: ayat
                       key: 1
-                      parentAyatSetNode: *ref_597
+                      parentAyatSetNode: *ref_594
                     content:
                       type: pointSet
-                      node: &ref_599
+                      node: &ref_596
                         nodeType: pointSet
-                        parentNode: *ref_598
+                        parentNode: *ref_595
                       description:
                         type: text
                         node:
                           nodeType: text
                           textName: description
-                          parentNode: *ref_599
+                          parentNode: *ref_596
                         textString: >-
                           Pelangggaran terhadap ketentuan sebagaimana dimaksud pada 13 huruf a,
                           huruf b, huruf c, dan Pasal 18 ayat (4), dikenakan sanksi berupa:
                         references: []
                       elements:
                         - type: point
-                          node: &ref_600
+                          node: &ref_597
                             nodeType: point
                             key: a
-                            parentPointSetNode: *ref_599
+                            parentPointSetNode: *ref_596
+                          content:
+                            type: text
+                            node:
+                              nodeType: text
+                              textName: text
+                              parentNode: *ref_597
+                            textString: teguran lisan,
+                            references: []
+                        - type: point
+                          node: &ref_598
+                            nodeType: point
+                            key: b
+                            parentPointSetNode: *ref_596
+                          content:
+                            type: text
+                            node:
+                              nodeType: text
+                              textName: text
+                              parentNode: *ref_598
+                            textString: teguran tertulis,
+                            references: []
+                        - type: point
+                          node: &ref_599
+                            nodeType: point
+                            key: c
+                            parentPointSetNode: *ref_596
+                          content:
+                            type: text
+                            node:
+                              nodeType: text
+                              textName: text
+                              parentNode: *ref_599
+                            textString: pembubaran massa, dan/atau
+                            references: []
+                        - type: point
+                          node: &ref_600
+                            nodeType: point
+                            key: d
+                            parentPointSetNode: *ref_596
                           content:
                             type: text
                             node:
                               nodeType: text
                               textName: text
                               parentNode: *ref_600
-                            textString: teguran lisan,
-                            references: []
-                        - type: point
-                          node: &ref_601
-                            nodeType: point
-                            key: b
-                            parentPointSetNode: *ref_599
-                          content:
-                            type: text
-                            node:
-                              nodeType: text
-                              textName: text
-                              parentNode: *ref_601
-                            textString: teguran tertulis,
-                            references: []
-                        - type: point
-                          node: &ref_602
-                            nodeType: point
-                            key: c
-                            parentPointSetNode: *ref_599
-                          content:
-                            type: text
-                            node:
-                              nodeType: text
-                              textName: text
-                              parentNode: *ref_602
-                            textString: pembubaran massa, dan/atau
-                            references: []
-                        - type: point
-                          node: &ref_603
-                            nodeType: point
-                            key: d
-                            parentPointSetNode: *ref_599
-                          content:
-                            type: text
-                            node:
-                              nodeType: text
-                              textName: text
-                              parentNode: *ref_603
                             textString: penyitaan kartu tanda penduduk (KTP).
                             references: []
                   - type: ayat
-                    node: &ref_604
+                    node: &ref_601
                       nodeType: ayat
                       key: 2
-                      parentAyatSetNode: *ref_597
+                      parentAyatSetNode: *ref_594
                     content:
                       type: text
                       node:
                         nodeType: text
                         textName: text
-                        parentNode: *ref_604
+                        parentNode: *ref_601
                       textString: >-
                         Pelanggaran terhadap ketentuan sebagaimana dimaksud pada ketentuan Pasal 13
                         huruf d dikenakan sanksi berupa tindakan pemerintahan membawa orang tersebut
@@ -9657,7 +9618,7 @@ babSet:
                             key: d
                             parentPointSetNode:
                               nodeType: pointSet
-                              parentNode: *ref_596
+                              parentNode: *ref_593
                             nodeType: point
                         - start: 67
                           end: 75
@@ -9666,21 +9627,21 @@ babSet:
                             parentNode: *ref_0
                             nodeType: pasal
                   - type: ayat
-                    node: &ref_605
+                    node: &ref_602
                       nodeType: ayat
                       key: 3
-                      parentAyatSetNode: *ref_597
+                      parentAyatSetNode: *ref_594
                     content:
                       type: pointSet
-                      node: &ref_606
+                      node: &ref_603
                         nodeType: pointSet
-                        parentNode: *ref_605
+                        parentNode: *ref_602
                       description:
                         type: text
                         node:
                           nodeType: text
                           textName: description
-                          parentNode: *ref_606
+                          parentNode: *ref_603
                         textString: >-
                           Pelanggaran terhadap ketentuan protokol kesehatan sebagaimana dimaksud
                           dalam Pasal 14 ayat (6), Pasal 17, Pasal 18 ayat (1), Pasal 18 ayat (2),
@@ -9691,70 +9652,70 @@ babSet:
                         references: []
                       elements:
                         - type: point
-                          node: &ref_607
+                          node: &ref_604
                             nodeType: point
                             key: a
-                            parentPointSetNode: *ref_606
+                            parentPointSetNode: *ref_603
+                          content:
+                            type: text
+                            node:
+                              nodeType: text
+                              textName: text
+                              parentNode: *ref_604
+                            textString: teguran lisan,
+                            references: []
+                        - type: point
+                          node: &ref_605
+                            nodeType: point
+                            key: b
+                            parentPointSetNode: *ref_603
+                          content:
+                            type: text
+                            node:
+                              nodeType: text
+                              textName: text
+                              parentNode: *ref_605
+                            textString: teguran tertulis,
+                            references: []
+                        - type: point
+                          node: &ref_606
+                            nodeType: point
+                            key: c
+                            parentPointSetNode: *ref_603
+                          content:
+                            type: text
+                            node:
+                              nodeType: text
+                              textName: text
+                              parentNode: *ref_606
+                            textString: penyitaan Kartu Tanda Penduduk,
+                            references: []
+                        - type: point
+                          node: &ref_607
+                            nodeType: point
+                            key: d
+                            parentPointSetNode: *ref_603
                           content:
                             type: text
                             node:
                               nodeType: text
                               textName: text
                               parentNode: *ref_607
-                            textString: teguran lisan,
+                            textString: >-
+                              penutupan lembaga dan/atau instansi selama 14 (empat belas) hari,
+                              dan/atau
                             references: []
                         - type: point
                           node: &ref_608
                             nodeType: point
-                            key: b
-                            parentPointSetNode: *ref_606
+                            key: e
+                            parentPointSetNode: *ref_603
                           content:
                             type: text
                             node:
                               nodeType: text
                               textName: text
                               parentNode: *ref_608
-                            textString: teguran tertulis,
-                            references: []
-                        - type: point
-                          node: &ref_609
-                            nodeType: point
-                            key: c
-                            parentPointSetNode: *ref_606
-                          content:
-                            type: text
-                            node:
-                              nodeType: text
-                              textName: text
-                              parentNode: *ref_609
-                            textString: penyitaan Kartu Tanda Penduduk,
-                            references: []
-                        - type: point
-                          node: &ref_610
-                            nodeType: point
-                            key: d
-                            parentPointSetNode: *ref_606
-                          content:
-                            type: text
-                            node:
-                              nodeType: text
-                              textName: text
-                              parentNode: *ref_610
-                            textString: >-
-                              penutupan lembaga dan/atau instansi selama 14 (empat belas) hari,
-                              dan/atau
-                            references: []
-                        - type: point
-                          node: &ref_611
-                            nodeType: point
-                            key: e
-                            parentPointSetNode: *ref_606
-                          content:
-                            type: text
-                            node:
-                              nodeType: text
-                              textName: text
-                              parentNode: *ref_611
                             textString: pencabutan izin sesuai dengan kewenangannya.
                             references: []
           - type: pasal
@@ -9764,7 +9725,7 @@ babSet:
               parentNode: *ref_0
             version:
               type: pasalVersion
-              node: &ref_612
+              node: &ref_609
                 nodeType: pasalVersion
                 version: *ref_27
                 state: exists
@@ -9774,70 +9735,70 @@ babSet:
                   parentNode: *ref_0
               content:
                 type: pointSet
-                node: &ref_613
+                node: &ref_610
                   nodeType: pointSet
-                  parentNode: *ref_612
+                  parentNode: *ref_609
                 description:
                   type: text
                   node:
                     nodeType: text
                     textName: description
-                    parentNode: *ref_613
+                    parentNode: *ref_610
                   textString: >-
                     Pelanggaran terhadap ketentuan Protokol Kesehatan sebagaimana dimaksud dalam dan
                     Pasal 25 ayat (2) dikenakan sanksi berupa:
                   references: []
                 elements:
                   - type: point
-                    node: &ref_614
+                    node: &ref_611
                       nodeType: point
                       key: a
-                      parentPointSetNode: *ref_613
+                      parentPointSetNode: *ref_610
+                    content:
+                      type: text
+                      node:
+                        nodeType: text
+                        textName: text
+                        parentNode: *ref_611
+                      textString: teguran lisan,
+                      references: []
+                  - type: point
+                    node: &ref_612
+                      nodeType: point
+                      key: b
+                      parentPointSetNode: *ref_610
+                    content:
+                      type: text
+                      node:
+                        nodeType: text
+                        textName: text
+                        parentNode: *ref_612
+                      textString: teguran tertulis,
+                      references: []
+                  - type: point
+                    node: &ref_613
+                      nodeType: point
+                      key: c
+                      parentPointSetNode: *ref_610
+                    content:
+                      type: text
+                      node:
+                        nodeType: text
+                        textName: text
+                        parentNode: *ref_613
+                      textString: pembubaran massa, dan/atau
+                      references: []
+                  - type: point
+                    node: &ref_614
+                      nodeType: point
+                      key: d
+                      parentPointSetNode: *ref_610
                     content:
                       type: text
                       node:
                         nodeType: text
                         textName: text
                         parentNode: *ref_614
-                      textString: teguran lisan,
-                      references: []
-                  - type: point
-                    node: &ref_615
-                      nodeType: point
-                      key: b
-                      parentPointSetNode: *ref_613
-                    content:
-                      type: text
-                      node:
-                        nodeType: text
-                        textName: text
-                        parentNode: *ref_615
-                      textString: teguran tertulis,
-                      references: []
-                  - type: point
-                    node: &ref_616
-                      nodeType: point
-                      key: c
-                      parentPointSetNode: *ref_613
-                    content:
-                      type: text
-                      node:
-                        nodeType: text
-                        textName: text
-                        parentNode: *ref_616
-                      textString: pembubaran massa, dan/atau
-                      references: []
-                  - type: point
-                    node: &ref_617
-                      nodeType: point
-                      key: d
-                      parentPointSetNode: *ref_613
-                    content:
-                      type: text
-                      node:
-                        nodeType: text
-                        textName: text
-                        parentNode: *ref_617
                       textString: penyitaan Kartu Tanda Penduduk. -48-
                       references: []
           - type: pasal
@@ -9847,7 +9808,7 @@ babSet:
               parentNode: *ref_0
             version:
               type: pasalVersion
-              node: &ref_618
+              node: &ref_615
                 nodeType: pasalVersion
                 version: *ref_27
                 state: exists
@@ -9857,57 +9818,57 @@ babSet:
                   parentNode: *ref_0
               content:
                 type: pointSet
-                node: &ref_619
+                node: &ref_616
                   nodeType: pointSet
-                  parentNode: *ref_618
+                  parentNode: *ref_615
                 description:
                   type: text
                   node:
                     nodeType: text
                     textName: description
-                    parentNode: *ref_619
+                    parentNode: *ref_616
                   textString: >-
                     Setiap orang yang melanggar ketentuan protokol kesehatan sebagaimana dimaksud
                     dalam Pasal 26 huruf a, huruf b, huruf c, dan huruf d, dikenakan sanksi berupa:
                   references: []
                 elements:
                   - type: point
-                    node: &ref_620
+                    node: &ref_617
                       nodeType: point
                       key: a
-                      parentPointSetNode: *ref_619
+                      parentPointSetNode: *ref_616
                     content:
                       type: text
                       node:
                         nodeType: text
                         textName: text
-                        parentNode: *ref_620
+                        parentNode: *ref_617
                       textString: teguran lisan,
                       references: []
                   - type: point
-                    node: &ref_621
+                    node: &ref_618
                       nodeType: point
                       key: b
-                      parentPointSetNode: *ref_619
+                      parentPointSetNode: *ref_616
                     content:
                       type: text
                       node:
                         nodeType: text
                         textName: text
-                        parentNode: *ref_621
+                        parentNode: *ref_618
                       textString: teguran tertulis, dan/atau
                       references: []
                   - type: point
-                    node: &ref_622
+                    node: &ref_619
                       nodeType: point
                       key: c
-                      parentPointSetNode: *ref_619
+                      parentPointSetNode: *ref_616
                     content:
                       type: text
                       node:
                         nodeType: text
                         textName: text
-                        parentNode: *ref_622
+                        parentNode: *ref_619
                       textString: penyitaan Kartu Tanda Penduduk.
                       references: []
           - type: pasal
@@ -9917,7 +9878,7 @@ babSet:
               parentNode: *ref_0
             version:
               type: pasalVersion
-              node: &ref_623
+              node: &ref_620
                 nodeType: pasalVersion
                 version: *ref_27
                 state: exists
@@ -9930,7 +9891,7 @@ babSet:
                 node:
                   nodeType: text
                   textName: text
-                  parentNode: *ref_623
+                  parentNode: *ref_620
                 textString: >-
                   Selain penerapan sanksi administratif sebagaimana dimaksud dalam Pasal 48, Pasal
                   49, dan Pasal 50 Penegak Hukum dapat menerapkan kewenangannya sesuai dengan
@@ -9955,7 +9916,7 @@ babSet:
                       parentNode: *ref_0
                       nodeType: pasal
     - type: bab
-      node: &ref_624
+      node: &ref_621
         nodeType: bab
         key: 10
         parentBabSetNode: *ref_7
@@ -9964,7 +9925,7 @@ babSet:
         type: pasalSet
         node:
           nodeType: pasalSet
-          parentNode: *ref_624
+          parentNode: *ref_621
         elements:
           - type: pasal
             node:
@@ -9973,7 +9934,7 @@ babSet:
               parentNode: *ref_0
             version:
               type: pasalVersion
-              node: &ref_625
+              node: &ref_622
                 nodeType: pasalVersion
                 version: *ref_27
                 state: exists
@@ -9986,7 +9947,7 @@ babSet:
                 node:
                   nodeType: text
                   textName: text
-                  parentNode: *ref_625
+                  parentNode: *ref_622
                 textString: >-
                   Pada saat Peraturan Walikota ini berlaku, Peraturan Walikota Malang Nomor 17 Tahun
                   2020 tentang Pedoman Pembatasan Sosial Berskala Besar Dalam Rangka Percepatan
@@ -9999,7 +9960,7 @@ babSet:
               parentNode: *ref_0
             version:
               type: pasalVersion
-              node: &ref_626
+              node: &ref_623
                 nodeType: pasalVersion
                 version: *ref_27
                 state: exists
@@ -10012,7 +9973,7 @@ babSet:
                 node:
                   nodeType: text
                   textName: text
-                  parentNode: *ref_626
+                  parentNode: *ref_623
                 textString: >-
                   Peraturan Walikota ini mulai berlaku pada tanggal 31 Mei 2020 Agar setiap orang
                   mengetahuinya, memerintahkan pengundangan Peraturan Walikota ini dengan

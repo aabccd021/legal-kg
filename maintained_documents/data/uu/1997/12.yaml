@@ -140,44 +140,19 @@ metadata:
             key: '3'
             parentPointSetNode: *ref_7
           content:
-            type: pointSet
-            node: &ref_11
-              nodeType: pointSet
+            type: text
+            node:
+              nodeType: text
+              textName: text
               parentNode: *ref_10
-            description:
-              type: text
-              node:
-                nodeType: text
-                textName: description
-                parentNode: *ref_11
-              textString: >-
-                Undang - undang Nomor 7 Tahun 1994 tentang Pengesahan Agreement Establishing The
-                World Trade Organization (Persetujuan Pembentukan Organisasi Perdagangan Dunia)
-                (Lembaran Negara Tahun 1994 Nomor 57, Tambahan Lembaran Negara Nomor 3564); Denga n
-                persetujuan DEWAN PERWAKILAN RAKYAT REPUBLIK INDONESIA MEMUTUSKAN: MENETAPKAN :
-                UNDANG - UNDANG TENTANG PERUBAHAN ATAS UNDANG - UNDANG NOMOR 6 TAHUN 1982 TENTANG
-                HAK CIPTA SEBAGAIMANA TELAH DIUBAH DENGAN UNDANG - UNDANG NOMOR 7 TAHUN 1987. Pasal
-                I Beberapa ketentuan dalam Undang - undang Nomor 6 Tahun 1982 tentang Hak Cipta
-                sebagaimana telah diubah dengan Undang - undang Nomor 7 Tahun 1987, diubah sebagai
-                berikut:
-              references: []
-            elements:
-              - type: point
-                node: &ref_12
-                  nodeType: point
-                  key: '1'
-                  parentPointSetNode: *ref_11
-                content:
-                  type: text
-                  node:
-                    nodeType: text
-                    textName: text
-                    parentNode: *ref_12
-                  textString: >-
-                    Ketentuan Pasal 1 huruf c diubah dan ditambah empat ketentuan baru yang
-                    dijadikan angk a 8, 9, 10 dan 11, sehingga keseluruhan Pasal 1 berbunyi sebagai
-                    berikut: PRESIDEN REPUBLIK INDONESIA - 3 -
-                  references: []
+            textString: >-
+              Undang - undang Nomor 7 Tahun 1994 tentang Pengesahan Agreement Establishing The World
+              Trade Organization (Persetujuan Pembentukan Organisasi Perdagangan Dunia) (Lembaran
+              Negara Tahun 1994 Nomor 57, Tambahan Lembaran Negara Nomor 3564); Denga n persetujuan
+              DEWAN PERWAKILAN RAKYAT REPUBLIK INDONESIA MEMUTUSKAN: MENETAPKAN : UNDANG - UNDANG
+              TENTANG PERUBAHAN ATAS UNDANG - UNDANG NOMOR 6 TAHUN 1982 TENTANG HAK CIPTA
+              SEBAGAIMANA TELAH DIUBAH DENGAN UNDANG - UNDANG NOMOR 7 TAHUN 1987.
+            references: []
   memutuskan: ''
   denganPersetujuan: ''
 opText: |-
@@ -243,16 +218,6 @@ opText: |-
   UNDANG - UNDANG NOMOR 6 TAHUN 1982 TENTANG HAK
   CIPTA SEBAGAIMANA TELAH DIUBAH DENGAN
   UNDANG - UNDANG NOMOR 7 TAHUN 1987.
-  Pasal I
-  Beberapa ketentuan dalam Undang - undang Nomor 6 Tahun 1982 tentang
-  Hak Cipta sebagaimana telah diubah dengan Undang - undang Nomor 7
-  Tahun 1987, diubah sebagai berikut:
-  1. Ketentuan Pasal 1 huruf c diubah dan ditambah empat ketentuan
-  baru yang dijadikan angk a 8, 9, 10 dan 11, sehingga keseluruhan
-  Pasal 1 berbunyi sebagai berikut:
-  PRESIDEN
-  REPUBLIK INDONESIA
-  - 3 -
 babSet:
   type: babSet
   node:
