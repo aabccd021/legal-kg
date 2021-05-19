@@ -2,12 +2,12 @@
 
 ## Latar Belakang
 
-Peraturan   Perundang-undangan   adalah   peraturan tertulis  yang  memuat norma
+Peraturan   perundang-undangan   adalah   peraturan tertulis  yang  memuat norma
 hukum  yang  mengikat secara  umum  dan  dibentuk  atau  ditetapkan  oleh
 lembaga negara atau pejabat yang berwenang melalui prosedur yang ditetapkan
-dalam Peraturan Perundang-undangan, sesuai yang dijelaskan dalam UU Nomor 12 Tahun
-2011 Pasal 1 Ayat 2 [1]. Peraturan perundang-undangan dapat digunakan untuk
-menjawab pertanyaan yang berkaitan dengan hukum, seperti:
+dalam peraturan perundang-undangan, sesuai yang dijelaskan dalam UU Nomor 12
+Tahun 2011 Pasal 1 Ayat 2 [1]. Peraturan perundang-undangan dapat digunakan
+untuk menjawab pertanyaan yang berkaitan dengan hukum, seperti:
 
 - Peraturan apa saja yang berlaku pada suatu daerah?
 - Apa hubungan suatu peraturan dengan peraturan lain?
@@ -79,7 +79,7 @@ TODO: konsep dan sintaks perlu dijelaskan ya di Bab 2
 Terdapat beberapa jenis peraturan perundang-undangan. Setiap dokumen peraturan
 perundang-undangan adalah resource, dan memiliki susunan URI yang berbeda.
 Menurut UU Nomor 12 Tahun 2011 Pasal 7 Ayat 1 [1], terdapat 7 jenis Peraturan
-Perundang-undangan yaitu:
+perundang-undangan yaitu:
 
 - Undang-Undang Dasar Negara Republik Indonesia Tahun 1945;
 - Ketetapan Majelis Permusyawaratan Rakyat;
@@ -117,8 +117,8 @@ Dokumen terdiri dari komponen dokumen. Komponen dokumen diantaranya adalah
 dokumen merupakan resource, dan memiliki URI. URI sebuah komponen didahului oleh
 URI dokumennya. Berikut adalah relasi antara komponen dokumen yang disediakan.
 
-TODO: Relationship antara component
-TODO: URI Schema, contoh input text & output URI
+TODO: Relationship antara component TODO: URI Schema, contoh input text & output
+URI
 
 ## Amendemen
 
@@ -137,7 +137,7 @@ khusus.
 
 ## OCR Ulang Berkas PDF
 
-Dokumen Peraturan Perundang-undangan yang digunakan pada penelitian didapatkan
+Dokumen peraturan perundang-undangan yang digunakan pada penelitian didapatkan
 dalam format berkas PDF. Penulis pada awalnya mencoba langsung mengekstraksi
 data dari PDF, tetapi penulis menemukan kesulitan. Salahsatu kesulitan yang
 penulis temui adalah terdapatnya salah pemindaian pada berkas PDF. Sebagai
@@ -154,9 +154,9 @@ masing-masing dokumen dibuat kedalam berkas PDF dengan cara yang berbeda-beda.
 Penulis tidak dapat mengetahui secara pasti metode apa yang digunakan, tetapi
 dari metadata yang didapatkan dari berkas PDF, penulis dapat membuat beberapa
 dugaan. Pada berkas PDF, terdapat metadata dengan nama __Creator__, dimana pada
-dokumen-dokumen Peraturan Perudang-udangan yang didapatkan, tercantum nama-nama
+dokumen-dokumen peraturan Perudang-udangan yang didapatkan, tercantum nama-nama
 alat pencetak atau merk dari pencetak tersebut. Dari informasi tersebut penulis
-menduga bahwa terdapat sebagian Peraturan Perundang-undangan yang dibuat menjadi
+menduga bahwa terdapat sebagian peraturan perundang-undangan yang dibuat menjadi
 PDF dengan mencetaknya menjadi kertas terlebih dahulu kemudian di pindai oleh
 pemindai dan sebagian lainnya dikonversi langsung dari berkas _.docx_. Data yang
 dipindai adalah berupa gambar, artinya teks yang terdapat pada berkas PDF adalah
@@ -184,7 +184,9 @@ _open source_ dan mendukung Bahasa Indonesia sebagai bahasa yang dipindai.
 ### Data _Span_
 
 Agar dapat diproses oleh program, berkas PDF perlu diolah menjadi data berupa
-daftar teks dan posisinya yang selanjutnya akan disebut _span_. Sebuah _span_ mengandung satu baris teks. Berikut adalah data yang dimiliki oleh sebuah _span_:
+daftar teks dan posisinya yang selanjutnya akan disebut _span_. Sebuah _span_
+mengandung satu baris teks. Berikut adalah data yang dimiliki oleh sebuah
+_span_:
 
 - `str`: teks yand dikandung
 - `xL`: koordinat titik terkiri dari _span_
@@ -193,7 +195,8 @@ daftar teks dan posisinya yang selanjutnya akan disebut _span_. Sebuah _span_ me
 - `pageNum`: nomor halaman
 - `id`: _identifier_ unik untuk setiap span
 
-Berikut adalah contoh gambaran berkas PDF dan hasil ekstraksinya menjadi daftar _span_.
+Berikut adalah contoh gambaran berkas PDF dan hasil ekstraksinya menjadi daftar
+_span_.
 
 ![Gambar berkas PDF yang akan diekstraksi](pictures/pdf_example.png)
 
@@ -228,7 +231,7 @@ akan dipindai menjadi
 
 ### Membersihkan _Noise_ dari Halaman
 
-Tidak jarang dokumen Peraturan Perudang-undangan mengandung data _noise_ yang
+Tidak jarang dokumen peraturan Perudang-undangan mengandung data _noise_ yang
 tidak ingin kita ekstraksi seperti _header_ dan _footer_. Pada penelitian ini,
 penulis menggunakan dokumen dari sumber yang sama sehingga memiliki format yang
 sama, dan juga posisi _header_ dan _footer_ yang hampir sama pada setiap
@@ -323,7 +326,8 @@ _span_ pada setiap komponen bab dikelompokkan menjadi komponen pasal.
 Pengelompokan bertingkat ini dilakukan agar fungsi untuk mendeteksi batas antara
 komponen tidak menjadi rumit.
 
-![Ilustrasi Ekstraksi Daftar Span menjadi Data Struktur Komponen](pictures/pdf_to_component.svg)
+![Ilustrasi Ekstraksi Daftar Span menjadi Data Struktur
+Komponen](pictures/pdf_to_component.svg)
 
 Deteksi batas antara komponen atau _section_ dilakukan dengan melihat data pada
 _span_ seperti `str`, `xL`, `xR`, dan `y`. Pada gambar diatas, pola yang
