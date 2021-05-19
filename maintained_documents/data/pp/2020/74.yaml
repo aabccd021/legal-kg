@@ -118,7 +118,7 @@ opText: |-
   MEMUTUSKAN:
   Menetapkan : PERATURAN PEMERINTAH TENTANG LEMBAGA PENGELOLA
   INVESTASI.
-babSet:
+content:
   type: babSet
   node: &ref_6
     nodeType: babSet

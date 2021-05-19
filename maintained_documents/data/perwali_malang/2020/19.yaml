@@ -308,7 +308,7 @@ opText: |-
   Menetapkan: PERATURAN WALIKOTA TENTANG PEDOMAN PENERAPAN
   MASYARAKAT PRODUKTIF DAN AMAN CORONA VIRUS DISEASE
   2019.
-babSet:
+content:
   type: babSet
   node: &ref_7
     nodeType: babSet

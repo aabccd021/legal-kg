@@ -41,13 +41,16 @@ import { LegalTriple } from './triple';
 
 export function yamlToTriples({
   node,
-  babSet,
+  content,
   disahkan,
   metadata: { mengingat, menimbang },
 }: Document): LegalTriple[] {
+  const contentTriples: LegalTriple[] =
+    content.type === 'babSet'
+      ? [[node, 'documentHasBabSet', content.node], ...flatMap(content.elements, babToTriple)]
+      : content.elements.map((pasal) => [node, 'documentHasPasal', pasal.node]);
   return compact([
-    [node, 'documentHasBabSet', babSet.node],
-    ...flatMap(babSet.elements, babToTriple),
+    ...contentTriples,
     [node, 'documentHasDisahkanDate', disahkan.date],
     ...mengingatToTriple(mengingat),
     ...menimbangToTriple(menimbang),

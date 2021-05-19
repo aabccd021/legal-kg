@@ -155,7 +155,7 @@ opText: |-
   SK No 086152 A
   PRESIDEN
   REPUBLIK INDONESIA
-babSet:
+content:
   type: babSet
   node: &ref_7
     nodeType: babSet

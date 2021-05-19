@@ -1,0 +1,76 @@
+@prefix legal: <http://example.org/legal/ontology/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://example.org/legal/document/uu/2020/1> legal:documentHasBabSet <http://example.org/legal/document/uu/2020/1/bab> .
+<http://example.org/legal/document/uu/2020/1> legal:documentHasDisahkanDate "2020-02-28"^^xsd:date .
+<http://example.org/legal/document/uu/2020/1> legal:documentMengingat <http://example.org/legal/document/uu/2020/1/mengingat> .
+<http://example.org/legal/document/uu/2020/1/mengingat> legal:mengingatHasPointSet <http://example.org/legal/document/uu/2020/1/mengingat/point> .
+<http://example.org/legal/document/uu/2020/1/mengingat/point/description> legal:textHasTextString "" .
+<http://example.org/legal/document/uu/2020/1/mengingat/point> legal:pointSetHasDescription <http://example.org/legal/document/uu/2020/1/mengingat/point/description> .
+<http://example.org/legal/document/uu/2020/1/mengingat/point> legal:pointSetHasPoint <http://example.org/legal/document/uu/2020/1/mengingat/point/0001> .
+<http://example.org/legal/document/uu/2020/1/mengingat/point/0001> legal:pointHasKey "1" .
+<http://example.org/legal/document/uu/2020/1/mengingat/point/0001/text> legal:textHasTextString "Pasal 5 ayat (1), Pasal li, dan Pasal 20 Undang-Undang Dasar Negara Republik Indonesia Tahun 1945," .
+<http://example.org/legal/document/uu/2020/1/mengingat/point/0001> legal:pointHasText <http://example.org/legal/document/uu/2020/1/mengingat/point/0001/text> .
+<http://example.org/legal/document/uu/2020/1/mengingat/point/0001/text> legal:textReferencesLegal <http://example.org/legal/document/uu> .
+<http://example.org/legal/document/uu/2020/1/mengingat/point> legal:pointSetHasPoint <http://example.org/legal/document/uu/2020/1/mengingat/point/0002> .
+<http://example.org/legal/document/uu/2020/1/mengingat/point/0002> legal:pointHasKey "2" .
+<http://example.org/legal/document/uu/2020/1/mengingat/point/0002/text> legal:textHasTextString "Undang-Undang Nomor 24 Tahun 2000 tentang Perjanjian Internasional (Lembaran Negara Republik Indonesia Tahun 2000 Nomor 185, Tambahan Lerntaran Negara Republik Indonesia Nomor 4012):" .
+<http://example.org/legal/document/uu/2020/1/mengingat/point/0002> legal:pointHasText <http://example.org/legal/document/uu/2020/1/mengingat/point/0002/text> .
+<http://example.org/legal/document/uu/2020/1/mengingat/point/0002/text> legal:textReferencesLegal <http://example.org/legal/document/uu/2000/24> .
+<http://example.org/legal/document/uu/2020/1/mengingat/point> legal:pointSetHasPoint <http://example.org/legal/document/uu/2020/1/mengingat/point/0003> .
+<http://example.org/legal/document/uu/2020/1/mengingat/point/0003> legal:pointHasKey "3" .
+<http://example.org/legal/document/uu/2020/1/mengingat/point/0003/text> legal:textHasTextString "Undang-Undang Nomor 7 Tahun 2014 tentang Perdagangan (Lembaran Negara Republik Indonesia Tahun 2014 Nomor 45, Tambahan Lembaran Negara Republik Indonesia Nomor 5512), PRESIDEN REPUBLIK INDONESIA 3 - Dengan Persetujuan Bersama DEWAN PERWAKILAN RAKYAT REPUBLIK INDONESIA dan PRESIDEN REPUBLIK INDONESIA MEMUTUSKAN: Menetapkan : UNDANG-UNDANG TENTANG PENGESAHAN PERSETUJUAN KEMITRAAN EKONOMI KOMPREHENSIF INDONESIA- AUSTRALIA (INDONESIA-AUSTRALIA COMPREHENSIVE ECONOMIC PARTNERSHIP AGREEMENI)." .
+<http://example.org/legal/document/uu/2020/1/mengingat/point/0003> legal:pointHasText <http://example.org/legal/document/uu/2020/1/mengingat/point/0003/text> .
+<http://example.org/legal/document/uu/2020/1/mengingat/point/0003/text> legal:textReferencesLegal <http://example.org/legal/document/uu/2014/7> .
+<http://example.org/legal/document/uu/2020/1> legal:documentMenimbang <http://example.org/legal/document/uu/2020/1/menimbang> .
+<http://example.org/legal/document/uu/2020/1/menimbang> legal:menimbangHasPointSet <http://example.org/legal/document/uu/2020/1/menimbang/point> .
+<http://example.org/legal/document/uu/2020/1/menimbang/point/description> legal:textHasTextString "" .
+<http://example.org/legal/document/uu/2020/1/menimbang/point> legal:pointSetHasDescription <http://example.org/legal/document/uu/2020/1/menimbang/point/description> .
+<http://example.org/legal/document/uu/2020/1/menimbang/point> legal:pointSetHasPoint <http://example.org/legal/document/uu/2020/1/menimbang/point/a> .
+<http://example.org/legal/document/uu/2020/1/menimbang/point/a> legal:pointHasKey "a" .
+<http://example.org/legal/document/uu/2020/1/menimbang/point/a/text> legal:textHasTextString "bahwa kegiatan perdagangan merupakan salah satu sektor utama penggerak perekonomian nasional yang dapat dilakukan melalui kerja sama perdagangan internasional untuk mendukung program pembangunan nasional di bidang ekonomi dalam rangka memajukan kesejahteraan Umum sebagaimana tercantum dalam Pembukaan Undang- Undang Dasar Negara Republik Indonesia Tahun 1945:" .
+<http://example.org/legal/document/uu/2020/1/menimbang/point/a> legal:pointHasText <http://example.org/legal/document/uu/2020/1/menimbang/point/a/text> .
+<http://example.org/legal/document/uu/2020/1/menimbang/point> legal:pointSetHasPoint <http://example.org/legal/document/uu/2020/1/menimbang/point/b> .
+<http://example.org/legal/document/uu/2020/1/menimbang/point/b> legal:pointHasKey "b" .
+<http://example.org/legal/document/uu/2020/1/menimbang/point/b/text> legal:textHasTextString "bahwa untuk meningkatkan kerja sama ekonomi secara komprehensif antara Indonesia dan Australia, Pemerintah Republik Indonesia dan Pemerintah Australia telah menandatangani Persetujuan Kemitraan Ekonomi Komprehensif — Indonesia-Australia Indonesia-Australia Comprehensive Economic Partnership Agreement) pada tanggal 4 Maret 2019 di Jakarta, Indonesia: SK No 020047 A PRESIDEN REPUBLIK INDONESIA D2 -" .
+<http://example.org/legal/document/uu/2020/1/menimbang/point/b> legal:pointHasText <http://example.org/legal/document/uu/2020/1/menimbang/point/b/text> .
+<http://example.org/legal/document/uu/2020/1/menimbang/point> legal:pointSetHasPoint <http://example.org/legal/document/uu/2020/1/menimbang/point/c> .
+<http://example.org/legal/document/uu/2020/1/menimbang/point/c> legal:pointHasKey "c" .
+<http://example.org/legal/document/uu/2020/1/menimbang/point/c/text> legal:textHasTextString "bahwa untuk melaksanakan Persetujuan Kemitraan Ekonom! Komprehensif Indonesia-Australia (Indonesia— Australia Comprehensive Economic Partnership Agreement), perlu mengesahkan Persetujuan Kemitraan Ekonomi Komprehensif — Indonesia-Australia (Indonesia-Australia Comprehensive Economic Partnership Agreement):" .
+<http://example.org/legal/document/uu/2020/1/menimbang/point/c> legal:pointHasText <http://example.org/legal/document/uu/2020/1/menimbang/point/c/text> .
+<http://example.org/legal/document/uu/2020/1/menimbang/point> legal:pointSetHasPoint <http://example.org/legal/document/uu/2020/1/menimbang/point/d> .
+<http://example.org/legal/document/uu/2020/1/menimbang/point/d> legal:pointHasKey "d" .
+<http://example.org/legal/document/uu/2020/1/menimbang/point/d/text> legal:textHasTextString "bahwa berdasarkan pertimbangan sebagaimana dimaksud dalam huruf a, huruf b, dan huruf c, perlu membentuk Undang-Undang tentang Pengesahan Persetujuan Kemitraan Ekonomi Komprehensif Indonesia-ANustralia (Indonesia- Australia Comprehensive Economic Partnership Agreement):" .
+<http://example.org/legal/document/uu/2020/1/menimbang/point/d> legal:pointHasText <http://example.org/legal/document/uu/2020/1/menimbang/point/d/text> .
+<http://example.org/legal/document/uu/2020/1> legal:documentHasDisahkanPengesah "JOKO WIDODO" .
+<http://example.org/legal/document/uu/2020/1> legal:documentHasDisahkanLocation "Jakarta" .
+<http://example.org/legal/document/uu/2020/1> legal:documentHasDisahkanJabatanPengesah "PRESIDEN REPUBLIK INDONESIA," .
+<http://example.org/legal/document/uu/2020/1> a legal:Document .
+<http://example.org/legal/document/uu/2020/1/mengingat> a legal:Mengingat .
+<http://example.org/legal/document/uu/2020/1/mengingat/point/description> a legal:Text .
+<http://example.org/legal/document/uu/2020/1/mengingat/point> a legal:PointSet .
+<http://example.org/legal/document/uu/2020/1/mengingat/point/0001> a legal:Point .
+<http://example.org/legal/document/uu/2020/1/mengingat/point/0001/text> a legal:Text .
+<http://example.org/legal/document/uu/2020/1/mengingat/point/0002> a legal:Point .
+<http://example.org/legal/document/uu/2020/1/mengingat/point/0002/text> a legal:Text .
+<http://example.org/legal/document/uu/2020/1/mengingat/point/0003> a legal:Point .
+<http://example.org/legal/document/uu/2020/1/mengingat/point/0003/text> a legal:Text .
+<http://example.org/legal/document/uu/2020/1/menimbang> a legal:Menimbang .
+<http://example.org/legal/document/uu/2020/1/menimbang/point/description> a legal:Text .
+<http://example.org/legal/document/uu/2020/1/menimbang/point> a legal:PointSet .
+<http://example.org/legal/document/uu/2020/1/menimbang/point/a> a legal:Point .
+<http://example.org/legal/document/uu/2020/1/menimbang/point/a/text> a legal:Text .
+<http://example.org/legal/document/uu/2020/1/menimbang/point/b> a legal:Point .
+<http://example.org/legal/document/uu/2020/1/menimbang/point/b/text> a legal:Text .
+<http://example.org/legal/document/uu/2020/1/menimbang/point/c> a legal:Point .
+<http://example.org/legal/document/uu/2020/1/menimbang/point/c/text> a legal:Text .
+<http://example.org/legal/document/uu/2020/1/menimbang/point/d> a legal:Point .
+<http://example.org/legal/document/uu/2020/1/menimbang/point/d/text> a legal:Text .
+<http://example.org/legal/document/uu/2020/1/bab> legal:partOf <http://example.org/legal/document/uu/2020/1> .
+<http://example.org/legal/document/uu/2020/1/mengingat/point/0001> legal:partOf <http://example.org/legal/document/uu/2020/1/mengingat/point> .
+<http://example.org/legal/document/uu/2020/1/mengingat/point/0002> legal:partOf <http://example.org/legal/document/uu/2020/1/mengingat/point> .
+<http://example.org/legal/document/uu/2020/1/mengingat/point/0003> legal:partOf <http://example.org/legal/document/uu/2020/1/mengingat/point> .
+<http://example.org/legal/document/uu/2020/1/menimbang/point/a> legal:partOf <http://example.org/legal/document/uu/2020/1/menimbang/point> .
+<http://example.org/legal/document/uu/2020/1/menimbang/point/b> legal:partOf <http://example.org/legal/document/uu/2020/1/menimbang/point> .
+<http://example.org/legal/document/uu/2020/1/menimbang/point/c> legal:partOf <http://example.org/legal/document/uu/2020/1/menimbang/point> .
+<http://example.org/legal/document/uu/2020/1/menimbang/point/d> legal:partOf <http://example.org/legal/document/uu/2020/1/menimbang/point> .

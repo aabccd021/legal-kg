@@ -65,7 +65,7 @@ function _jsonToMd(doc: Document): string {
       menimbang,
     },
     node: _node,
-    babSet,
+    content,
   } = doc;
   const uri = nodeToUri(_node);
   const name = nodeToName(_node);
@@ -97,7 +97,9 @@ function _jsonToMd(doc: Document): string {
     mengingatToMd(mengingat),
     // mengimbangToMd('Mengingat', mengingat, 'documentMengingat', _node),
     // ...flatten(babSet?.map((b) => babToMd(b, _node))),
-    ...babSetToMd(babSet),
+    ...(content.type === 'babSet'
+      ? babSetToMd(content)
+      : content.elements.map(pasalToMd).join('\n')),
   ];
 
   return compact(lines).join('\n');

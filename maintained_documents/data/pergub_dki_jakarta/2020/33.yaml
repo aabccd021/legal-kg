@@ -291,7 +291,7 @@ opText: |-
   SOSIAL BERSKALA BESAR DALAM PENANGANAN CORONA
   VIRUS DISEASE 2019 (COVID-19) DI PROVINSI DAERAH KHUSUS
   IBUKOTA JAKARTA.
-babSet:
+content:
   type: babSet
   node: &ref_13
     nodeType: babSet

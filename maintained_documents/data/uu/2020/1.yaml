@@ -1,0 +1,267 @@
+node: &ref_0
+  nodeType: document
+  docType: noTahun
+  docCategory: uu
+  tahun: 2020
+  nomor: 1
+metadata:
+  menimbang:
+    type: menimbang
+    node: &ref_1
+      nodeType: menimbang
+      parentNode: *ref_0
+    content:
+      type: pointSet
+      node: &ref_2
+        nodeType: pointSet
+        parentNode: *ref_1
+      description:
+        type: text
+        node:
+          nodeType: text
+          textName: description
+          parentNode: *ref_2
+        textString: ''
+        references: []
+      elements:
+        - type: point
+          node: &ref_3
+            nodeType: point
+            key: a
+            parentPointSetNode: *ref_2
+          content:
+            type: text
+            node:
+              nodeType: text
+              textName: text
+              parentNode: *ref_3
+            textString: >-
+              bahwa kegiatan perdagangan merupakan salah satu sektor utama penggerak perekonomian
+              nasional yang dapat dilakukan melalui kerja sama perdagangan internasional untuk
+              mendukung program pembangunan nasional di bidang ekonomi dalam rangka memajukan
+              kesejahteraan Umum sebagaimana tercantum dalam Pembukaan Undang- Undang Dasar Negara
+              Republik Indonesia Tahun 1945:
+            references: []
+        - type: point
+          node: &ref_4
+            nodeType: point
+            key: b
+            parentPointSetNode: *ref_2
+          content:
+            type: text
+            node:
+              nodeType: text
+              textName: text
+              parentNode: *ref_4
+            textString: >-
+              bahwa untuk meningkatkan kerja sama ekonomi secara komprehensif antara Indonesia dan
+              Australia, Pemerintah Republik Indonesia dan Pemerintah Australia telah menandatangani
+              Persetujuan Kemitraan Ekonomi Komprehensif — Indonesia-Australia Indonesia-Australia
+              Comprehensive Economic Partnership Agreement) pada tanggal 4 Maret 2019 di Jakarta,
+              Indonesia: SK No 020047 A PRESIDEN REPUBLIK INDONESIA D2 -
+            references: []
+        - type: point
+          node: &ref_5
+            nodeType: point
+            key: c
+            parentPointSetNode: *ref_2
+          content:
+            type: text
+            node:
+              nodeType: text
+              textName: text
+              parentNode: *ref_5
+            textString: >-
+              bahwa untuk melaksanakan Persetujuan Kemitraan Ekonom! Komprehensif
+              Indonesia-Australia (Indonesia— Australia Comprehensive Economic Partnership
+              Agreement), perlu mengesahkan Persetujuan Kemitraan Ekonomi Komprehensif —
+              Indonesia-Australia (Indonesia-Australia Comprehensive Economic Partnership
+              Agreement):
+            references: []
+        - type: point
+          node: &ref_6
+            nodeType: point
+            key: d
+            parentPointSetNode: *ref_2
+          content:
+            type: text
+            node:
+              nodeType: text
+              textName: text
+              parentNode: *ref_6
+            textString: >-
+              bahwa berdasarkan pertimbangan sebagaimana dimaksud dalam huruf a, huruf b, dan huruf
+              c, perlu membentuk Undang-Undang tentang Pengesahan Persetujuan Kemitraan Ekonomi
+              Komprehensif Indonesia-ANustralia (Indonesia- Australia Comprehensive Economic
+              Partnership Agreement):
+            references: []
+  mengingat:
+    type: mengingat
+    node: &ref_7
+      nodeType: mengingat
+      parentNode: *ref_0
+    content:
+      type: pointSet
+      node: &ref_8
+        nodeType: pointSet
+        parentNode: *ref_7
+      description:
+        type: text
+        node:
+          nodeType: text
+          textName: description
+          parentNode: *ref_8
+        textString: ''
+        references: []
+      elements:
+        - type: point
+          node: &ref_9
+            nodeType: point
+            key: '1'
+            parentPointSetNode: *ref_8
+          content:
+            type: text
+            node:
+              nodeType: text
+              textName: text
+              parentNode: *ref_9
+            textString: >-
+              Pasal 5 ayat (1), Pasal li, dan Pasal 20 Undang-Undang Dasar Negara Republik Indonesia
+              Tahun 1945,
+            references:
+              - start: 41
+                end: 97
+                node:
+                  nodeType: document
+                  docType: uud
+        - type: point
+          node: &ref_10
+            nodeType: point
+            key: '2'
+            parentPointSetNode: *ref_8
+          content:
+            type: text
+            node:
+              nodeType: text
+              textName: text
+              parentNode: *ref_10
+            textString: >-
+              Undang-Undang Nomor 24 Tahun 2000 tentang Perjanjian Internasional (Lembaran Negara
+              Republik Indonesia Tahun 2000 Nomor 185, Tambahan Lerntaran Negara Republik Indonesia
+              Nomor 4012):
+            references:
+              - start: 0
+                end: 33
+                node:
+                  nodeType: document
+                  docType: noTahun
+                  docCategory: uu
+                  nomor: 24
+                  tahun: 2000
+        - type: point
+          node: &ref_11
+            nodeType: point
+            key: '3'
+            parentPointSetNode: *ref_8
+          content:
+            type: text
+            node:
+              nodeType: text
+              textName: text
+              parentNode: *ref_11
+            textString: >-
+              Undang-Undang Nomor 7 Tahun 2014 tentang Perdagangan (Lembaran Negara Republik
+              Indonesia Tahun 2014 Nomor 45, Tambahan Lembaran Negara Republik Indonesia Nomor
+              5512), PRESIDEN REPUBLIK INDONESIA 3 - Dengan Persetujuan Bersama DEWAN PERWAKILAN
+              RAKYAT REPUBLIK INDONESIA dan PRESIDEN REPUBLIK INDONESIA MEMUTUSKAN: Menetapkan :
+              UNDANG-UNDANG TENTANG PENGESAHAN PERSETUJUAN KEMITRAAN EKONOMI KOMPREHENSIF INDONESIA-
+              AUSTRALIA (INDONESIA-AUSTRALIA COMPREHENSIVE ECONOMIC PARTNERSHIP AGREEMENI).
+            references:
+              - start: 0
+                end: 32
+                node:
+                  nodeType: document
+                  docType: noTahun
+                  docCategory: uu
+                  nomor: 7
+                  tahun: 2014
+  memutuskan: ''
+  denganPersetujuan: ''
+opText: |-
+  SALINAN |
+  PRESIDEN
+  REPUBLIK INDONESIA
+  UNDANG-UNDANG REPUBLIK INDONESIA
+  NOMOR 1 TAHUN 2020
+  TENTANG
+  PENGESAHAN PERSETUJUAN KEMITRAAN EKONOMI KOMPREHENSIF
+  INDONESIA-AUSTRALIA (#NDONESIA-AUSTRALIA COMPREHENSIVE ECONOMIC
+  PARTNERSHIP AGREEMENT)
+  DENGAN RAHMAT TUHAN YANG MAHA ESA
+  PRESIDEN REPUBLIK INDONESIA,
+  Menimbang : a. bahwa kegiatan perdagangan merupakan salah satu sektor
+  utama penggerak perekonomian nasional yang dapat
+  dilakukan melalui kerja sama perdagangan internasional
+  untuk mendukung program pembangunan nasional di
+  bidang ekonomi dalam rangka memajukan kesejahteraan
+  Umum sebagaimana tercantum dalam Pembukaan Undang-
+  Undang Dasar Negara Republik Indonesia Tahun 1945:
+  b. bahwa untuk meningkatkan kerja sama ekonomi secara
+  komprehensif antara Indonesia dan Australia, Pemerintah
+  Republik Indonesia dan Pemerintah Australia telah
+  menandatangani Persetujuan Kemitraan Ekonomi
+  Komprehensif — Indonesia-Australia Indonesia-Australia
+  Comprehensive Economic Partnership Agreement) pada
+  tanggal 4 Maret 2019 di Jakarta, Indonesia:
+  SK No 020047 A
+  PRESIDEN
+  REPUBLIK INDONESIA
+  D2 -
+  c. bahwa untuk melaksanakan Persetujuan Kemitraan
+  Ekonom! Komprehensif Indonesia-Australia (Indonesia—
+  Australia Comprehensive Economic Partnership Agreement),
+  perlu mengesahkan Persetujuan Kemitraan Ekonomi
+  Komprehensif — Indonesia-Australia (Indonesia-Australia
+  Comprehensive Economic Partnership Agreement):
+  d. bahwa berdasarkan pertimbangan sebagaimana dimaksud
+  dalam huruf a, huruf b, dan huruf c, perlu membentuk
+  Undang-Undang tentang Pengesahan Persetujuan Kemitraan
+  Ekonomi Komprehensif Indonesia-ANustralia (Indonesia-
+  Australia Comprehensive Economic Partnership Agreement):
+  Mengingat : 1. Pasal 5 ayat (1), Pasal li, dan Pasal 20 Undang-Undang
+  Dasar Negara Republik Indonesia Tahun 1945,
+  2. Undang-Undang Nomor 24 Tahun 2000 tentang Perjanjian
+  Internasional (Lembaran Negara Republik Indonesia
+  Tahun 2000 Nomor 185, Tambahan Lerntaran Negara
+  Republik Indonesia Nomor 4012):
+  3. Undang-Undang Nomor 7 Tahun 2014 tentang Perdagangan
+  (Lembaran Negara Republik Indonesia Tahun 2014
+  Nomor 45, Tambahan Lembaran Negara Republik Indonesia
+  Nomor 5512),
+  PRESIDEN
+  REPUBLIK INDONESIA
+  3 -
+  Dengan Persetujuan Bersama
+  DEWAN PERWAKILAN RAKYAT REPUBLIK INDONESIA
+  dan
+  PRESIDEN REPUBLIK INDONESIA
+  MEMUTUSKAN:
+  Menetapkan : UNDANG-UNDANG TENTANG PENGESAHAN PERSETUJUAN
+  KEMITRAAN EKONOMI KOMPREHENSIF INDONESIA-
+  AUSTRALIA (INDONESIA-AUSTRALIA COMPREHENSIVE
+  ECONOMIC PARTNERSHIP AGREEMENI).
+content:
+  type: babSet
+  node:
+    nodeType: babSet
+    parentDocumentNode: *ref_0
+  elements: []
+disahkan:
+  date:
+    nodeType: date
+    month: 2
+    date: 28
+    year: 2020
+  location: Jakarta
+  pengesah: JOKO WIDODO
+  jabatanPengesah: PRESIDEN REPUBLIK INDONESIA,

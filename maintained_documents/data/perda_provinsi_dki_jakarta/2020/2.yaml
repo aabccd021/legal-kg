@@ -607,7 +607,7 @@ opText: |-
   MEMUTUSKAN:
   Menetapkan : PERATURAN DAERAH TENTANG PENANGGULANGAN CORONA
   VIRUS DISEASE 2019.
-babSet:
+content:
   type: babSet
   node: &ref_24
     nodeType: babSet

@@ -218,7 +218,7 @@ opText: |-
   UNDANG - UNDANG NOMOR 6 TAHUN 1982 TENTANG HAK
   CIPTA SEBAGAIMANA TELAH DIUBAH DENGAN
   UNDANG - UNDANG NOMOR 7 TAHUN 1987.
-babSet:
+content:
   type: babSet
   node:
     nodeType: babSet

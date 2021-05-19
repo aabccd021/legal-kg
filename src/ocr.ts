@@ -7,7 +7,7 @@ const awaitExec = promisify(exec);
 async function ocr(): Promise<void> {
   const jsonNodes = getDocumentData('pdf');
 
-  for (const node of jsonNodes){
+  for (const node of jsonNodes) {
     console.log('\nstart', node);
 
     const rawPdfFile = nodeToFile('pdf', node);
@@ -19,19 +19,19 @@ async function ocr(): Promise<void> {
     }
 
     try {
-    await awaitExec(
-      `ocrmypdf` +
-        ` -l ind` +
-        ` --force-ocr` +
-        ` --jobs 4` +
-        ` --tesseract-config tesseract-config.cfg` +
-        ` ${rawPdfFile.path} ${normalizedPdfFile.path}`
-    );
+      await awaitExec(
+        `ocrmypdf` +
+          ` -l ind` +
+          ` --force-ocr` +
+          ` --jobs 4` +
+          ` --tesseract-config tesseract-config.cfg` +
+          ` ${rawPdfFile.path} ${normalizedPdfFile.path}`
+      );
     } catch (e) {
-      console.log(e)
-      continue
+      console.log(e);
+      continue;
     }
-  };
+  }
 }
 
 ocr();

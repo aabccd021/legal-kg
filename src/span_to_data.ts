@@ -13,13 +13,14 @@ import { triplesToTtl } from './data_to_ttl/triples-to-ttl';
 
 function spanToData(): void {
   // yarn generate:data { \"nodeType\": \"document\", \"docType\": \"noTahun\", \"docCategory\": \"uu\", \"tahun\": 1947, \"nomor\": 36 }
+  // yarn generate:data { \"nodeType\": \"document\", \"docType\": \"noTahun\", \"docCategory\": \"uu\", \"tahun\": 2020, \"nomor\": 1 }
   const [, , ...args] = process.argv;
-  const argStr = args.join(' ')
-  console.log(`'${argStr}'`)
+  const argStr = args.join(' ');
+  console.log(`'${argStr}'`);
   if (argStr) {
     const parsed = JSON.parse(argStr);
-    console.log(parsed)
-    writeToData(parsed)
+    console.log(parsed);
+    writeToData(parsed);
   } else {
     getDocumentData('span-raw').forEach(writeToData);
   }
@@ -50,13 +51,14 @@ function writeToData(node: DocumentNode): void {
       console.log({ rootOrganizer });
       const hasAmendPasal = spansHasAmendPasal(documentSpans.babs);
       const keyIds = babsSpansToKeyIds(hasAmendPasal, rootOrganizer, documentSpans.babs);
+      // console.log(keyIds);
       const disahkan = spansToDisahkan(documentSpans.disahkan);
       const context = { hasAmendPasal, keyIds, documentNode: node, disahkan };
       const document: Document = {
         node: node,
         metadata: spansToMetadata(context, documentSpans.preBab),
         opText: spansToStr(documentSpans.preBab),
-        babSet: spansToBabSet(context, documentSpans.babs),
+        content: spansToBabSet(context, documentSpans.babs),
         disahkan,
       };
       const detectedDocument: Document = detectInDocument(document);
@@ -90,11 +92,25 @@ function writeToData(node: DocumentNode): void {
 function spansToDisahkan(spans: Span[]): Disahkan {
   const [, , location] = spans[0]?.str?.split(' ') ?? [];
   const [dateStr, monthStr, yearStr] =
-    spans[1]?.str?.toLocaleLowerCase().replaceAll('pada', '')?.replaceAll('tanggal', '')?.trim().split(' ') ?? [];
+    spans[1]?.str
+      ?.toLocaleLowerCase()
+      .replaceAll('pada', '')
+      ?.replaceAll('tanggal', '')
+      ?.trim()
+      .split(' ') ?? [];
   const date = safeParseInt(dateStr);
   const year = safeParseInt(yearStr);
   if (isUndefined(location) || isUndefined(date) || isUndefined(year)) {
-    throw Error(`${JSON.stringify({ location, date, year, spans0: spans[0], spans1: spans[1], arr: [dateStr, monthStr, yearStr] })}`);
+    throw Error(
+      `${JSON.stringify({
+        location,
+        date,
+        year,
+        spans0: spans[0],
+        spans1: spans[1],
+        arr: [dateStr, monthStr, yearStr],
+      })}`
+    );
   }
   const jabatanPengesah = spans[2]?.str;
   const pengesah = spans[4]?.str;

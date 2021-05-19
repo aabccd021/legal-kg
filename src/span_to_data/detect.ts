@@ -25,7 +25,7 @@ import { safeParseInt } from './parse_key_from_spans';
 import { DocumentNode } from '../document';
 
 export function detectInDocument(document: Document): Document {
-  const { babSet, metadata } = document;
+  const { content, metadata } = document;
 
   return {
     ...document,
@@ -34,19 +34,22 @@ export function detectInDocument(document: Document): Document {
       menimbang: detectInMenimbang(metadata.menimbang),
       mengingat: detectInMengingat(metadata.mengingat),
     },
-    babSet: {
-      ...babSet,
-      elements: babSet.elements.map((bab) => ({
-        ...bab,
-        content:
-          bab.content.type === 'pasalSet'
-            ? detectInPasalSet(bab.content)
-            : {
-                ...bab.content,
-                elements: bab.content.elements.map(detectInBagian),
-              },
-      })),
-    },
+    content:
+      content.type === 'babSet'
+        ? {
+            ...content,
+            elements: content.elements.map((bab) => ({
+              ...bab,
+              content:
+                bab.content.type === 'pasalSet'
+                  ? detectInPasalSet(bab.content)
+                  : {
+                      ...bab.content,
+                      elements: bab.content.elements.map(detectInBagian),
+                    },
+            })),
+          }
+        : detectInPasalSet(content),
   };
 }
 

@@ -8,7 +8,7 @@ export type Document = {
   node: DocumentNode;
   penjelasan?: string[];
   opText?: string;
-  babSet: BabSet;
+  content: BabSet | PasalSet;
   disahkan: Disahkan;
   metadata: DocumentMetadata;
 };
