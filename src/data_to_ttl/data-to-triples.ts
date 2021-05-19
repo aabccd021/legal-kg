@@ -38,6 +38,7 @@ import {
 } from '../component';
 
 import { LegalTriple } from './triple';
+import { DocumentNode } from '../document';
 
 export function yamlToTriples({
   node,
@@ -48,7 +49,7 @@ export function yamlToTriples({
   const contentTriples: LegalTriple[] =
     content.type === 'babSet'
       ? [[node, 'documentHasBabSet', content.node], ...flatMap(content.elements, babToTriple)]
-      : content.elements.map((pasal) => [node, 'documentHasPasal', pasal.node]);
+      : pasalSetToTriple(node, content);
   return compact([
     ...contentTriples,
     [node, 'documentHasDisahkanDate', disahkan.date],
@@ -132,7 +133,7 @@ function paragrafToTriple(paragraf: Paragraf): LegalTriple[] {
 }
 
 function pasalSetToTriple(
-  parentNode: BabNode | BagianNode | ParagrafNode,
+  parentNode: DocumentNode | BabNode | BagianNode | ParagrafNode,
   pasalSet: PasalSet
 ): LegalTriple[] {
   const pasalSetNode: PasalSetNode = { nodeType: 'pasalSet', parentNode };
@@ -143,12 +144,13 @@ function pasalSetToTriple(
 }
 
 function _pasalSetToTriple(
-  parentNode: BabNode | BagianNode | ParagrafNode,
+  parentNode: DocumentNode | BabNode | BagianNode | ParagrafNode,
   pasalSetNode: PasalSetNode
 ): LegalTriple {
   if (parentNode.nodeType === 'bab') return [parentNode, 'babHasPasalSet', pasalSetNode];
   if (parentNode.nodeType === 'bagian') return [parentNode, 'bagianHasPasalSet', pasalSetNode];
   if (parentNode.nodeType === 'paragraf') return [parentNode, 'paragrafHasPasalSet', pasalSetNode];
+  if (parentNode.nodeType === 'document') return [parentNode, 'documentHasPasalSet', pasalSetNode];
   assertNever(parentNode);
 }
 

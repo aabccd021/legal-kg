@@ -251,17 +251,80 @@ opText: |-
   AUSTRALIA (INDONESIA-AUSTRALIA COMPREHENSIVE
   ECONOMIC PARTNERSHIP AGREEMENI).
 content:
-  type: babSet
+  type: pasalSet
   node:
-    nodeType: babSet
-    parentDocumentNode: *ref_0
-  elements: []
+    nodeType: pasalSet
+    parentNode: *ref_0
+  elements:
+    - type: pasal
+      node:
+        nodeType: pasal
+        key: 1
+        parentNode: *ref_0
+      version:
+        type: pasalVersion
+        node: &ref_12
+          nodeType: pasalVersion
+          version: &ref_16
+            nodeType: date
+            month: 2
+            date: 28
+            year: 2020
+          state: exists
+          parentPasalNode:
+            nodeType: pasal
+            key: '1'
+            parentNode: *ref_0
+        content:
+          type: ayatSet
+          node: &ref_13
+            nodeType: ayatSet
+            parentPasalVersionNode: *ref_12
+          elements:
+            - type: ayat
+              node: &ref_14
+                nodeType: ayat
+                key: 1
+                parentAyatSetNode: *ref_13
+              content:
+                type: text
+                node:
+                  nodeType: text
+                  textName: text
+                  parentNode: *ref_14
+                textString: >-
+                  Mengesahkan Persetujuan Kemitraan Ekonomi Komprehensif Indonesia—-Australia
+                  (Indonesia-—Australia Co.nprehensive Economic Partnership Agreement) yang telah
+                  ditandatangani pada tanggal 4 Maret 2019 di Jakarta, Indonesia.
+                references: []
+            - type: ayat
+              node: &ref_15
+                nodeType: ayat
+                key: 2
+                parentAyatSetNode: *ref_13
+              content:
+                type: text
+                node:
+                  nodeType: text
+                  textName: text
+                  parentNode: *ref_15
+                textString: >-
+                  Salinan naskah asli Persetujuan Kemitraan Ekonomi Komprehensif Indonesia-Australia
+                  UIndonesia-Australia Comprehensive Economic Partnership Agreement) dalam bahasa
+                  Indonesia dan bahasa Inggris sebagaimana terlampir dan merupakan bagian yang tidak
+                  terpisahkan dari Undang-Undang ini. Pasal 2 Undang-Undang ini inulai berlaku pada
+                  tanggal diundangkan. PRESIDEN REPUBLIK INDONESIA -4- Agar setiap orang
+                  mengetahuinya, memerintahkan pengundangan Undang-Undang ini dengan penempatannya
+                  dalam Lembaran Negara Republik Indonesia.
+                references:
+                  - start: 282
+                    end: 289
+                    node:
+                      key: 2
+                      parentNode: *ref_0
+                      nodeType: pasal
 disahkan:
-  date:
-    nodeType: date
-    month: 2
-    date: 28
-    year: 2020
+  date: *ref_16
   location: Jakarta
   pengesah: JOKO WIDODO
   jabatanPengesah: PRESIDEN REPUBLIK INDONESIA,

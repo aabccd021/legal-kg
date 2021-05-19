@@ -97,9 +97,7 @@ function _jsonToMd(doc: Document): string {
     mengingatToMd(mengingat),
     // mengimbangToMd('Mengingat', mengingat, 'documentMengingat', _node),
     // ...flatten(babSet?.map((b) => babToMd(b, _node))),
-    ...(content.type === 'babSet'
-      ? babSetToMd(content)
-      : content.elements.map(pasalToMd).join('\n')),
+    ...(content.type === 'babSet' ? babSetToMd(content) : content.elements.map(pasalToMd)),
   ];
 
   return compact(lines).join('\n');

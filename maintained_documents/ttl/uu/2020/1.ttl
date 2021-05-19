@@ -1,7 +1,26 @@
 @prefix legal: <http://example.org/legal/ontology/> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
-<http://example.org/legal/document/uu/2020/1> legal:documentHasBabSet <http://example.org/legal/document/uu/2020/1/bab> .
+<http://example.org/legal/document/uu/2020/1> legal:documentHasPasalSet <http://example.org/legal/document/uu/2020/1/pasals> .
+<http://example.org/legal/document/uu/2020/1/pasals> legal:pasalSetHasPasal <http://example.org/legal/document/uu/2020/1/pasal/0001> .
+<http://example.org/legal/document/uu/2020/1/pasal/0001> legal:pasalHasKey 1 .
+<http://example.org/legal/document/uu/2020/1/pasal/0001> legal:pasalHasPasalVersion <http://example.org/legal/document/uu/2020/1/pasal/0001/version/20200228> .
+<http://example.org/legal/document/uu/2020/1> legal:documentHasPasal <http://example.org/legal/document/uu/2020/1/pasal/0001> .
+<http://example.org/legal/document/uu/2020/1/pasal/0001/version/20200228> legal:pasalVersionHasState "exists" .
+<http://example.org/legal/document/uu/2020/1/pasal/0001/version/20200228> legal:pasalVersionHasVersionDate "2020-02-28"^^xsd:date .
+<http://example.org/legal/document/uu/2020/1/pasal/0001/version/20200228> legal:pasalVersionHasRawText "(1). Mengesahkan Persetujuan Kemitraan Ekonomi Komprehensif Indonesia—-Australia (Indonesia-—Australia Co.nprehensive Economic Partnership Agreement) yang telah ditandatangani pada tanggal 4 Maret 2019 di Jakarta, Indonesia.\n(2). Salinan naskah asli Persetujuan Kemitraan Ekonomi Komprehensif Indonesia-Australia UIndonesia-Australia Comprehensive Economic Partnership Agreement) dalam bahasa Indonesia dan bahasa Inggris sebagaimana terlampir dan merupakan bagian yang tidak terpisahkan dari Undang-Undang ini. Pasal 2 Undang-Undang ini inulai berlaku pada tanggal diundangkan. PRESIDEN REPUBLIK INDONESIA -4- Agar setiap orang mengetahuinya, memerintahkan pengundangan Undang-Undang ini dengan penempatannya dalam Lembaran Negara Republik Indonesia." .
+<http://example.org/legal/document/uu/2020/1/pasal/0001/version/20200228> legal:pasalVersionHasAyatSet <http://example.org/legal/document/uu/2020/1/pasal/0001/version/20200228/ayat> .
+<http://example.org/legal/document/uu/2020/1/pasal/0001/version/20200228/ayat> legal:ayatSetHasAyat <http://example.org/legal/document/uu/2020/1/pasal/0001/version/20200228/ayat/0001> .
+<http://example.org/legal/document/uu/2020/1/pasal/0001/version/20200228/ayat/0001> legal:ayatHasKey 1 .
+<http://example.org/legal/document/uu/2020/1/pasal/0001/version/20200228/ayat/0001> legal:ayatHasRawText "Mengesahkan Persetujuan Kemitraan Ekonomi Komprehensif Indonesia—-Australia (Indonesia-—Australia Co.nprehensive Economic Partnership Agreement) yang telah ditandatangani pada tanggal 4 Maret 2019 di Jakarta, Indonesia." .
+<http://example.org/legal/document/uu/2020/1/pasal/0001/version/20200228/ayat/0001/text> legal:textHasTextString "Mengesahkan Persetujuan Kemitraan Ekonomi Komprehensif Indonesia—-Australia (Indonesia-—Australia Co.nprehensive Economic Partnership Agreement) yang telah ditandatangani pada tanggal 4 Maret 2019 di Jakarta, Indonesia." .
+<http://example.org/legal/document/uu/2020/1/pasal/0001/version/20200228/ayat/0001> legal:ayatHasText <http://example.org/legal/document/uu/2020/1/pasal/0001/version/20200228/ayat/0001/text> .
+<http://example.org/legal/document/uu/2020/1/pasal/0001/version/20200228/ayat> legal:ayatSetHasAyat <http://example.org/legal/document/uu/2020/1/pasal/0001/version/20200228/ayat/0002> .
+<http://example.org/legal/document/uu/2020/1/pasal/0001/version/20200228/ayat/0002> legal:ayatHasKey 2 .
+<http://example.org/legal/document/uu/2020/1/pasal/0001/version/20200228/ayat/0002> legal:ayatHasRawText "Salinan naskah asli Persetujuan Kemitraan Ekonomi Komprehensif Indonesia-Australia UIndonesia-Australia Comprehensive Economic Partnership Agreement) dalam bahasa Indonesia dan bahasa Inggris sebagaimana terlampir dan merupakan bagian yang tidak terpisahkan dari Undang-Undang ini. Pasal 2 Undang-Undang ini inulai berlaku pada tanggal diundangkan. PRESIDEN REPUBLIK INDONESIA -4- Agar setiap orang mengetahuinya, memerintahkan pengundangan Undang-Undang ini dengan penempatannya dalam Lembaran Negara Republik Indonesia." .
+<http://example.org/legal/document/uu/2020/1/pasal/0001/version/20200228/ayat/0002/text> legal:textHasTextString "Salinan naskah asli Persetujuan Kemitraan Ekonomi Komprehensif Indonesia-Australia UIndonesia-Australia Comprehensive Economic Partnership Agreement) dalam bahasa Indonesia dan bahasa Inggris sebagaimana terlampir dan merupakan bagian yang tidak terpisahkan dari Undang-Undang ini. Pasal 2 Undang-Undang ini inulai berlaku pada tanggal diundangkan. PRESIDEN REPUBLIK INDONESIA -4- Agar setiap orang mengetahuinya, memerintahkan pengundangan Undang-Undang ini dengan penempatannya dalam Lembaran Negara Republik Indonesia." .
+<http://example.org/legal/document/uu/2020/1/pasal/0001/version/20200228/ayat/0002> legal:ayatHasText <http://example.org/legal/document/uu/2020/1/pasal/0001/version/20200228/ayat/0002/text> .
+<http://example.org/legal/document/uu/2020/1/pasal/0001/version/20200228/ayat/0002/text> legal:textReferencesLegal <http://example.org/legal/document/uu/2020/1/pasal/0002> .
 <http://example.org/legal/document/uu/2020/1> legal:documentHasDisahkanDate "2020-02-28"^^xsd:date .
 <http://example.org/legal/document/uu/2020/1> legal:documentMengingat <http://example.org/legal/document/uu/2020/1/mengingat> .
 <http://example.org/legal/document/uu/2020/1/mengingat> legal:mengingatHasPointSet <http://example.org/legal/document/uu/2020/1/mengingat/point> .
@@ -46,6 +65,14 @@
 <http://example.org/legal/document/uu/2020/1> legal:documentHasDisahkanLocation "Jakarta" .
 <http://example.org/legal/document/uu/2020/1> legal:documentHasDisahkanJabatanPengesah "PRESIDEN REPUBLIK INDONESIA," .
 <http://example.org/legal/document/uu/2020/1> a legal:Document .
+<http://example.org/legal/document/uu/2020/1/pasals> a legal:PasalSet .
+<http://example.org/legal/document/uu/2020/1/pasal/0001> a legal:Pasal .
+<http://example.org/legal/document/uu/2020/1/pasal/0001/version/20200228> a legal:PasalVersion .
+<http://example.org/legal/document/uu/2020/1/pasal/0001/version/20200228/ayat> a legal:AyatSet .
+<http://example.org/legal/document/uu/2020/1/pasal/0001/version/20200228/ayat/0001> a legal:Ayat .
+<http://example.org/legal/document/uu/2020/1/pasal/0001/version/20200228/ayat/0001/text> a legal:Text .
+<http://example.org/legal/document/uu/2020/1/pasal/0001/version/20200228/ayat/0002> a legal:Ayat .
+<http://example.org/legal/document/uu/2020/1/pasal/0001/version/20200228/ayat/0002/text> a legal:Text .
 <http://example.org/legal/document/uu/2020/1/mengingat> a legal:Mengingat .
 <http://example.org/legal/document/uu/2020/1/mengingat/point/description> a legal:Text .
 <http://example.org/legal/document/uu/2020/1/mengingat/point> a legal:PointSet .
@@ -66,7 +93,14 @@
 <http://example.org/legal/document/uu/2020/1/menimbang/point/c/text> a legal:Text .
 <http://example.org/legal/document/uu/2020/1/menimbang/point/d> a legal:Point .
 <http://example.org/legal/document/uu/2020/1/menimbang/point/d/text> a legal:Text .
-<http://example.org/legal/document/uu/2020/1/bab> legal:partOf <http://example.org/legal/document/uu/2020/1> .
+<http://example.org/legal/document/uu/2020/1/pasal/0001> legal:partOf <http://example.org/legal/document/uu/2020/1/pasals> .
+<http://example.org/legal/document/uu/2020/1/pasal/0001/version/20200228> legal:partOf <http://example.org/legal/document/uu/2020/1/pasal/0001> .
+<http://example.org/legal/document/uu/2020/1/pasal/0001> legal:partOf <http://example.org/legal/document/uu/2020/1> .
+<http://example.org/legal/document/uu/2020/1/pasal/0001/version/20200228/ayat> legal:partOf <http://example.org/legal/document/uu/2020/1/pasal/0001/version/20200228> .
+<http://example.org/legal/document/uu/2020/1/pasal/0001/version/20200228/ayat/0001> legal:partOf <http://example.org/legal/document/uu/2020/1/pasal/0001/version/20200228/ayat> .
+<http://example.org/legal/document/uu/2020/1/pasal/0001/version/20200228/ayat/0001/text> legal:partOf <http://example.org/legal/document/uu/2020/1/pasal/0001/version/20200228/ayat/0001> .
+<http://example.org/legal/document/uu/2020/1/pasal/0001/version/20200228/ayat/0002> legal:partOf <http://example.org/legal/document/uu/2020/1/pasal/0001/version/20200228/ayat> .
+<http://example.org/legal/document/uu/2020/1/pasal/0001/version/20200228/ayat/0002/text> legal:partOf <http://example.org/legal/document/uu/2020/1/pasal/0001/version/20200228/ayat/0002> .
 <http://example.org/legal/document/uu/2020/1/mengingat/point/0001> legal:partOf <http://example.org/legal/document/uu/2020/1/mengingat/point> .
 <http://example.org/legal/document/uu/2020/1/mengingat/point/0002> legal:partOf <http://example.org/legal/document/uu/2020/1/mengingat/point> .
 <http://example.org/legal/document/uu/2020/1/mengingat/point/0003> legal:partOf <http://example.org/legal/document/uu/2020/1/mengingat/point> .

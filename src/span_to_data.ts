@@ -4,7 +4,7 @@ import { babsSpansToKeyIds } from './span_to_data/scan';
 import { chain, isUndefined, mapValues, maxBy, reduce } from 'lodash';
 import { pasalKeyOfSpan, safeParseInt } from './span_to_data/parse_key_from_spans';
 import * as yaml from 'js-yaml';
-import { spansToBabSet, spansToMetadata, spansToStr } from './span_to_data/spans_to_component';
+import { spansToContent, spansToMetadata, spansToStr } from './span_to_data/spans_to_component';
 import { Disahkan, Document } from './component';
 import { DocumentNode } from './document';
 import { detectInDocument } from './span_to_data/detect';
@@ -53,12 +53,12 @@ function writeToData(node: DocumentNode): void {
       const keyIds = babsSpansToKeyIds(hasAmendPasal, rootOrganizer, documentSpans.babs);
       // console.log(keyIds);
       const disahkan = spansToDisahkan(documentSpans.disahkan);
-      const context = { hasAmendPasal, keyIds, documentNode: node, disahkan };
+      const context = { hasAmendPasal, keyIds, documentNode: node, disahkan, rootOrganizer };
       const document: Document = {
         node: node,
         metadata: spansToMetadata(context, documentSpans.preBab),
         opText: spansToStr(documentSpans.preBab),
-        content: spansToBabSet(context, documentSpans.babs),
+        content: spansToContent(context, documentSpans.babs),
         disahkan,
       };
       const detectedDocument: Document = detectInDocument(document);

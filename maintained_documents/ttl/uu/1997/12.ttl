@@ -1,7 +1,131 @@
 @prefix legal: <http://example.org/legal/ontology/> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
-<http://example.org/legal/document/uu/1997/12> legal:documentHasBabSet <http://example.org/legal/document/uu/1997/12/bab> .
+<http://example.org/legal/document/uu/1997/12> legal:documentHasPasalSet <http://example.org/legal/document/uu/1997/12/pasals> .
+<http://example.org/legal/document/uu/1997/12/pasals> legal:pasalSetHasPasal <http://example.org/legal/document/uu/1997/12/pasal/0001> .
+<http://example.org/legal/document/uu/1997/12/pasal/0001> legal:pasalHasKey 1 .
+<http://example.org/legal/document/uu/1997/12/pasal/0001> legal:pasalHasPasalVersion <http://example.org/legal/document/uu/1997/12/pasal/0001/version/19970507> .
+<http://example.org/legal/document/uu/1997/12> legal:documentHasPasal <http://example.org/legal/document/uu/1997/12/pasal/0001> .
+<http://example.org/legal/document/uu/1997/12/pasal/0001/version/19970507> legal:pasalVersionHasState "exists" .
+<http://example.org/legal/document/uu/1997/12/pasal/0001/version/19970507> legal:pasalVersionHasVersionDate "1997-05-07"^^xsd:date .
+<http://example.org/legal/document/uu/1997/12/pasal/0001/version/19970507> legal:pasalVersionHasRawText "\n1. Pencipta adalah seorang atau beberapa orang secara bersama - sama yang atas inspirasinya lahir suatu ciptaan berdasarkan kemampuan pikiran, imajinasi, kecek atan, keterampilan atau keahlian yang dituangkan dalam bentuk yang khas dan bersifat pribadi.\n2. Ciptaan adalah hasil setiap karya Pencipta dalam bentuk khas dan menunjukkan keasliannya dalam lapangan ilmu pengetahuan, seni dan sastra.\n3. Pemegang Hak Cipta adalah Pencipta sebagai Pemilik Hak Cipta, atau orang yang menerima hak tersebut dari Pencipta, atau orang lain yang menerima lebih lanjut hak dari orang tersebut di atas.\n4. Pengumuman adalah pembacaan, penyuaraan, penyiaran atau penye baran sesuatu ciptaan, dengan menggunakan alat apapun dan dengan cara sedemikian rupa sehingga suatu ciptaan dapat dibaca, didengar atau dilihat oleh orang lain.\n5. Perbanyakan adalah menambah jumlah sesuatu ciptaan, dengan pembuatan yang sama, hampir sam a atau menyerupai ciptaan tersebut dengan mempergunakan bahan - bahan yang sama maupun tidak sama, termasuk mengalihwujudkan sesuatu ciptaan.\n6. Potret adalah gambaran dengan cara dan alat apapun dari wajah orang yang digambarkan baik bersama bagian tubuh l ainnya maupun tidak.\n7. Program Komputer adalah program yang diciptakan secara khusus sehingga memungkinkan komputer melakukan fungsi tertentu.\n8. Pelaku adalah aktor, penyanyi, pemusik, penari atau mereka yang menampilkan, memperagakan, mempertunjukkan, menyanyikan, menyampaikan, mendeklamasikan, atau memainkan suatu karya musik, drama, tari, sastra dan karya seni lainnya.\n9. Produser rekaman suara adalah orang atau badan hukum yang pertama kali merekam atau memiliki prakarsa untuk membiayai kegiatan pe rekaman suara atau bunyi baik dari suatu pertunjukan maupun suara atau bunyi lainnya.\n10. Lembaga penyiaran adalah organisasi penyelenggara siaran, baik Lembaga Penyaiaran Pemerintah maupun Lembaga Penyiaran Swasta yang berbentuk badan hukum yang melakuka n penyiaran atas suatu karya siaran dengan menggunakan transmisi dengan atau tanpa kabel atau melalui sistem elektromagnetik lainnya. PRESIDEN REPUBLIK INDONESIA - 4 -\n11. Kantor Hak Cipta adalah satuan organisasi di lingkungan departemen yang melaksanakan tugas dan kewenan gan di bidang Hak Cipta. 2. Ketentuan Pasal 2 diubah, dengan menambah dua ketentuan baru yang dijadikan ayat (2) dan ayat (3) sehingga keseluruhan Pasal 2 berbunyi sebagai berikut:\n" .
+<http://example.org/legal/document/uu/1997/12/pasal/0001/version/19970507> legal:pasalVersionHasPointSet <http://example.org/legal/document/uu/1997/12/pasal/0001/version/19970507/point> .
+<http://example.org/legal/document/uu/1997/12/pasal/0001/version/19970507/point/description> legal:textHasTextString "" .
+<http://example.org/legal/document/uu/1997/12/pasal/0001/version/19970507/point> legal:pointSetHasDescription <http://example.org/legal/document/uu/1997/12/pasal/0001/version/19970507/point/description> .
+<http://example.org/legal/document/uu/1997/12/pasal/0001/version/19970507/point> legal:pointSetHasPoint <http://example.org/legal/document/uu/1997/12/pasal/0001/version/19970507/point/0001> .
+<http://example.org/legal/document/uu/1997/12/pasal/0001/version/19970507/point/0001> legal:pointHasKey "1" .
+<http://example.org/legal/document/uu/1997/12/pasal/0001/version/19970507/point/0001/text> legal:textHasTextString "Pencipta adalah seorang atau beberapa orang secara bersama - sama yang atas inspirasinya lahir suatu ciptaan berdasarkan kemampuan pikiran, imajinasi, kecek atan, keterampilan atau keahlian yang dituangkan dalam bentuk yang khas dan bersifat pribadi." .
+<http://example.org/legal/document/uu/1997/12/pasal/0001/version/19970507/point/0001> legal:pointHasText <http://example.org/legal/document/uu/1997/12/pasal/0001/version/19970507/point/0001/text> .
+<http://example.org/legal/document/uu/1997/12/pasal/0001/version/19970507/point> legal:pointSetHasPoint <http://example.org/legal/document/uu/1997/12/pasal/0001/version/19970507/point/0002> .
+<http://example.org/legal/document/uu/1997/12/pasal/0001/version/19970507/point/0002> legal:pointHasKey "2" .
+<http://example.org/legal/document/uu/1997/12/pasal/0001/version/19970507/point/0002/text> legal:textHasTextString "Ciptaan adalah hasil setiap karya Pencipta dalam bentuk khas dan menunjukkan keasliannya dalam lapangan ilmu pengetahuan, seni dan sastra." .
+<http://example.org/legal/document/uu/1997/12/pasal/0001/version/19970507/point/0002> legal:pointHasText <http://example.org/legal/document/uu/1997/12/pasal/0001/version/19970507/point/0002/text> .
+<http://example.org/legal/document/uu/1997/12/pasal/0001/version/19970507/point> legal:pointSetHasPoint <http://example.org/legal/document/uu/1997/12/pasal/0001/version/19970507/point/0003> .
+<http://example.org/legal/document/uu/1997/12/pasal/0001/version/19970507/point/0003> legal:pointHasKey "3" .
+<http://example.org/legal/document/uu/1997/12/pasal/0001/version/19970507/point/0003/text> legal:textHasTextString "Pemegang Hak Cipta adalah Pencipta sebagai Pemilik Hak Cipta, atau orang yang menerima hak tersebut dari Pencipta, atau orang lain yang menerima lebih lanjut hak dari orang tersebut di atas." .
+<http://example.org/legal/document/uu/1997/12/pasal/0001/version/19970507/point/0003> legal:pointHasText <http://example.org/legal/document/uu/1997/12/pasal/0001/version/19970507/point/0003/text> .
+<http://example.org/legal/document/uu/1997/12/pasal/0001/version/19970507/point> legal:pointSetHasPoint <http://example.org/legal/document/uu/1997/12/pasal/0001/version/19970507/point/0004> .
+<http://example.org/legal/document/uu/1997/12/pasal/0001/version/19970507/point/0004> legal:pointHasKey "4" .
+<http://example.org/legal/document/uu/1997/12/pasal/0001/version/19970507/point/0004/text> legal:textHasTextString "Pengumuman adalah pembacaan, penyuaraan, penyiaran atau penye baran sesuatu ciptaan, dengan menggunakan alat apapun dan dengan cara sedemikian rupa sehingga suatu ciptaan dapat dibaca, didengar atau dilihat oleh orang lain." .
+<http://example.org/legal/document/uu/1997/12/pasal/0001/version/19970507/point/0004> legal:pointHasText <http://example.org/legal/document/uu/1997/12/pasal/0001/version/19970507/point/0004/text> .
+<http://example.org/legal/document/uu/1997/12/pasal/0001/version/19970507/point> legal:pointSetHasPoint <http://example.org/legal/document/uu/1997/12/pasal/0001/version/19970507/point/0005> .
+<http://example.org/legal/document/uu/1997/12/pasal/0001/version/19970507/point/0005> legal:pointHasKey "5" .
+<http://example.org/legal/document/uu/1997/12/pasal/0001/version/19970507/point/0005/text> legal:textHasTextString "Perbanyakan adalah menambah jumlah sesuatu ciptaan, dengan pembuatan yang sama, hampir sam a atau menyerupai ciptaan tersebut dengan mempergunakan bahan - bahan yang sama maupun tidak sama, termasuk mengalihwujudkan sesuatu ciptaan." .
+<http://example.org/legal/document/uu/1997/12/pasal/0001/version/19970507/point/0005> legal:pointHasText <http://example.org/legal/document/uu/1997/12/pasal/0001/version/19970507/point/0005/text> .
+<http://example.org/legal/document/uu/1997/12/pasal/0001/version/19970507/point> legal:pointSetHasPoint <http://example.org/legal/document/uu/1997/12/pasal/0001/version/19970507/point/0006> .
+<http://example.org/legal/document/uu/1997/12/pasal/0001/version/19970507/point/0006> legal:pointHasKey "6" .
+<http://example.org/legal/document/uu/1997/12/pasal/0001/version/19970507/point/0006/text> legal:textHasTextString "Potret adalah gambaran dengan cara dan alat apapun dari wajah orang yang digambarkan baik bersama bagian tubuh l ainnya maupun tidak." .
+<http://example.org/legal/document/uu/1997/12/pasal/0001/version/19970507/point/0006> legal:pointHasText <http://example.org/legal/document/uu/1997/12/pasal/0001/version/19970507/point/0006/text> .
+<http://example.org/legal/document/uu/1997/12/pasal/0001/version/19970507/point> legal:pointSetHasPoint <http://example.org/legal/document/uu/1997/12/pasal/0001/version/19970507/point/0007> .
+<http://example.org/legal/document/uu/1997/12/pasal/0001/version/19970507/point/0007> legal:pointHasKey "7" .
+<http://example.org/legal/document/uu/1997/12/pasal/0001/version/19970507/point/0007/text> legal:textHasTextString "Program Komputer adalah program yang diciptakan secara khusus sehingga memungkinkan komputer melakukan fungsi tertentu." .
+<http://example.org/legal/document/uu/1997/12/pasal/0001/version/19970507/point/0007> legal:pointHasText <http://example.org/legal/document/uu/1997/12/pasal/0001/version/19970507/point/0007/text> .
+<http://example.org/legal/document/uu/1997/12/pasal/0001/version/19970507/point> legal:pointSetHasPoint <http://example.org/legal/document/uu/1997/12/pasal/0001/version/19970507/point/0008> .
+<http://example.org/legal/document/uu/1997/12/pasal/0001/version/19970507/point/0008> legal:pointHasKey "8" .
+<http://example.org/legal/document/uu/1997/12/pasal/0001/version/19970507/point/0008/text> legal:textHasTextString "Pelaku adalah aktor, penyanyi, pemusik, penari atau mereka yang menampilkan, memperagakan, mempertunjukkan, menyanyikan, menyampaikan, mendeklamasikan, atau memainkan suatu karya musik, drama, tari, sastra dan karya seni lainnya." .
+<http://example.org/legal/document/uu/1997/12/pasal/0001/version/19970507/point/0008> legal:pointHasText <http://example.org/legal/document/uu/1997/12/pasal/0001/version/19970507/point/0008/text> .
+<http://example.org/legal/document/uu/1997/12/pasal/0001/version/19970507/point> legal:pointSetHasPoint <http://example.org/legal/document/uu/1997/12/pasal/0001/version/19970507/point/0009> .
+<http://example.org/legal/document/uu/1997/12/pasal/0001/version/19970507/point/0009> legal:pointHasKey "9" .
+<http://example.org/legal/document/uu/1997/12/pasal/0001/version/19970507/point/0009/text> legal:textHasTextString "Produser rekaman suara adalah orang atau badan hukum yang pertama kali merekam atau memiliki prakarsa untuk membiayai kegiatan pe rekaman suara atau bunyi baik dari suatu pertunjukan maupun suara atau bunyi lainnya." .
+<http://example.org/legal/document/uu/1997/12/pasal/0001/version/19970507/point/0009> legal:pointHasText <http://example.org/legal/document/uu/1997/12/pasal/0001/version/19970507/point/0009/text> .
+<http://example.org/legal/document/uu/1997/12/pasal/0001/version/19970507/point> legal:pointSetHasPoint <http://example.org/legal/document/uu/1997/12/pasal/0001/version/19970507/point/0010> .
+<http://example.org/legal/document/uu/1997/12/pasal/0001/version/19970507/point/0010> legal:pointHasKey "10" .
+<http://example.org/legal/document/uu/1997/12/pasal/0001/version/19970507/point/0010/text> legal:textHasTextString "Lembaga penyiaran adalah organisasi penyelenggara siaran, baik Lembaga Penyaiaran Pemerintah maupun Lembaga Penyiaran Swasta yang berbentuk badan hukum yang melakuka n penyiaran atas suatu karya siaran dengan menggunakan transmisi dengan atau tanpa kabel atau melalui sistem elektromagnetik lainnya. PRESIDEN REPUBLIK INDONESIA - 4 -" .
+<http://example.org/legal/document/uu/1997/12/pasal/0001/version/19970507/point/0010> legal:pointHasText <http://example.org/legal/document/uu/1997/12/pasal/0001/version/19970507/point/0010/text> .
+<http://example.org/legal/document/uu/1997/12/pasal/0001/version/19970507/point> legal:pointSetHasPoint <http://example.org/legal/document/uu/1997/12/pasal/0001/version/19970507/point/0011> .
+<http://example.org/legal/document/uu/1997/12/pasal/0001/version/19970507/point/0011> legal:pointHasKey "11" .
+<http://example.org/legal/document/uu/1997/12/pasal/0001/version/19970507/point/0011/text> legal:textHasTextString "Kantor Hak Cipta adalah satuan organisasi di lingkungan departemen yang melaksanakan tugas dan kewenan gan di bidang Hak Cipta. 2. Ketentuan Pasal 2 diubah, dengan menambah dua ketentuan baru yang dijadikan ayat (2) dan ayat (3) sehingga keseluruhan Pasal 2 berbunyi sebagai berikut:" .
+<http://example.org/legal/document/uu/1997/12/pasal/0001/version/19970507/point/0011> legal:pointHasText <http://example.org/legal/document/uu/1997/12/pasal/0001/version/19970507/point/0011/text> .
+<http://example.org/legal/document/uu/1997/12/pasal/0001/version/19970507/point/0011/text> legal:textReferencesLegal <http://example.org/legal/document/uu/1997/12/pasal/0001/version/19970507/ayat/0003> .
+<http://example.org/legal/document/uu/1997/12/pasal/0001/version/19970507/point/0011/text> legal:textReferencesLegal <http://example.org/legal/document/uu/1997/12/pasal/0001/version/19970507/ayat/0002> .
+<http://example.org/legal/document/uu/1997/12/pasal/0001/version/19970507/point/0011/text> legal:textReferencesLegal <http://example.org/legal/document/uu/1997/12/pasal/0002> .
+<http://example.org/legal/document/uu/1997/12/pasals> legal:pasalSetHasPasal <http://example.org/legal/document/uu/1997/12/pasal/0002> .
+<http://example.org/legal/document/uu/1997/12/pasal/0002> legal:pasalHasKey 2 .
+<http://example.org/legal/document/uu/1997/12/pasal/0002> legal:pasalHasPasalVersion <http://example.org/legal/document/uu/1997/12/pasal/0002/version/19970507> .
+<http://example.org/legal/document/uu/1997/12> legal:documentHasPasal <http://example.org/legal/document/uu/1997/12/pasal/0002> .
+<http://example.org/legal/document/uu/1997/12/pasal/0002/version/19970507> legal:pasalVersionHasState "exists" .
+<http://example.org/legal/document/uu/1997/12/pasal/0002/version/19970507> legal:pasalVersionHasVersionDate "1997-05-07"^^xsd:date .
+<http://example.org/legal/document/uu/1997/12/pasal/0002/version/19970507> legal:pasalVersionHasRawText "(1). Selain Penyidik Pejabat Polisi Neg ara Republik Indonesia, juga Pejabat Pegawai Negeri Sipil tertentu di lingkungan departemen yang lingkup tugas dan tanggung jawabnya meliputi pembinaan Hak Cipta, diberi wewenang khusus sebagai Penyidik sebagaimana dimaksud dalam Undang - undang Nomor 8 Tahu n 1981 tentang Hukum Acara Pidana, untuk melakukan penyidikan tindak pidana di bidang Hak Cipta.\n(2). Penyidik Pejabat Pegawai Negeri Sipil sebagaimana dimaksud PRESIDEN REPUBLIK INDONESIA - 14 - dalam ayat (1) berwenang:\na. melakukan penelitian atas kebenaran laporan ata u keterangan berkenaan dengan tindak pidana di bidang Hak Cipta.\nb. melakukan penelitian terhadap orang atau badan hukum yang diduga melakukan tindak pidana di bidang Hak Cipta;\nc. meminta keterangan dan bahan bukti dari orang atau badan hukum sehubu ngan dengan tindak pidana di bidang Hak Cipta;\nd. melakukan pemeriksaan atas pembukuan, pencatatan dan dokumen lainnya yang berkenaan dengan tindak pidana di bidang Hak Cipta;\ne. melakukan pemeriksaan di tempat tertentu yang diduga terdapat bahan buk ti pembukuan, pencatatan dan dokumen lain serta melakukan penyitaan terhadap bahan dan barang hasil pelanggaran yang dapat dijadikan bukti dalam perkara tindak pidana di bidang Hak Cipta;\nf. meminta bantuan ahli dalam rangka pelaksanaan tugas penyidikan tindak pidana di bidang Hak Cipta.\n\n(3). Penyidik Pejabat Pegawai Negeri Sipil sebagaimana dimaksud dalam ayat (1) memberitahukan dimulainya penyidikan dan hasil penyidikannya kepada Penyidik Pejabat Polisi Negara Repub lik Indonesia.\n(4). Penyidik Pejabat Pegawai Negeri Sipil sebagaimana dimaksud dalam ayat (1) menyampaikan hasil penyidikannya kepada Penuntut Umum melalui Penyidik Pejabat Polisi Negara Republik Indonesia dengan mengingat ketentuan Pasal 107 Undang - undan g Nomor 8 Tahun 1981 tentang Hukum Acara Pidana.\" 16. Ketentuan Pasal 48 diubah, sehingga Pasal 48 berbunyi sebagai berikut: PRESIDEN REPUBLIK INDONESIA - 15 - Pasal 48 Undang - undang ini berlaku terhadap semua ciptaan dan Hak - hak Yang Berkaitan dengan Hak Cip ta:\na. Warga negara, penduduk, dan badan hukum Indonesia;\nb. Bukan warga negara Indonesia, bukan penduduk Indonesia dan bukan badan hukum Indonesia yang untuk pertama kali diumumkan di Indonesia atau diumumkan di Indonesia dalam jangka waktu 30 (tiga puluh) hari sejak ciptaan itu diumumkan untuk pertama kali di luar Indonesia;\nc. Bukan warga negara Indonesia, bukan penduduk Indonesia dan bukan badan hukum Indonesia, dengan ketentuan: 1) Negaranya mempunyai perjanjian bilateral mengenai perlindungan Hak Cipta dan Hak - hak Yang Berkaitan dengan Hak Cipta dengan Negara Republik Indonesia; 2) Negaranya dan Negara Republik Indonesia merupakan pihak atau peserta dalam suatu pe rjanjian multilateral yang sama mengenai perlindungan Hak Cipta dan Hak - hak Yang Berkaitan degan Hak Cipta. Pasal II Undang - undang ini mulai berlaku pada tanggal diundangkan. Agar setiap orang mengetahuinya, memerintahkan pengundangan Undang - undang ini dengan penempatannya dalam Lembaran Negara PRESIDEN REPUBLIK INDONESIA - 16 - Republik Indonesia.\n" .
+<http://example.org/legal/document/uu/1997/12/pasal/0002/version/19970507> legal:pasalVersionHasAyatSet <http://example.org/legal/document/uu/1997/12/pasal/0002/version/19970507/ayat> .
+<http://example.org/legal/document/uu/1997/12/pasal/0002/version/19970507/ayat> legal:ayatSetHasAyat <http://example.org/legal/document/uu/1997/12/pasal/0002/version/19970507/ayat/0001> .
+<http://example.org/legal/document/uu/1997/12/pasal/0002/version/19970507/ayat/0001> legal:ayatHasKey 1 .
+<http://example.org/legal/document/uu/1997/12/pasal/0002/version/19970507/ayat/0001> legal:ayatHasRawText "Selain Penyidik Pejabat Polisi Neg ara Republik Indonesia, juga Pejabat Pegawai Negeri Sipil tertentu di lingkungan departemen yang lingkup tugas dan tanggung jawabnya meliputi pembinaan Hak Cipta, diberi wewenang khusus sebagai Penyidik sebagaimana dimaksud dalam Undang - undang Nomor 8 Tahu n 1981 tentang Hukum Acara Pidana, untuk melakukan penyidikan tindak pidana di bidang Hak Cipta." .
+<http://example.org/legal/document/uu/1997/12/pasal/0002/version/19970507/ayat/0001/text> legal:textHasTextString "Selain Penyidik Pejabat Polisi Neg ara Republik Indonesia, juga Pejabat Pegawai Negeri Sipil tertentu di lingkungan departemen yang lingkup tugas dan tanggung jawabnya meliputi pembinaan Hak Cipta, diberi wewenang khusus sebagai Penyidik sebagaimana dimaksud dalam Undang - undang Nomor 8 Tahu n 1981 tentang Hukum Acara Pidana, untuk melakukan penyidikan tindak pidana di bidang Hak Cipta." .
+<http://example.org/legal/document/uu/1997/12/pasal/0002/version/19970507/ayat/0001> legal:ayatHasText <http://example.org/legal/document/uu/1997/12/pasal/0002/version/19970507/ayat/0001/text> .
+<http://example.org/legal/document/uu/1997/12/pasal/0002/version/19970507/ayat> legal:ayatSetHasAyat <http://example.org/legal/document/uu/1997/12/pasal/0002/version/19970507/ayat/0002> .
+<http://example.org/legal/document/uu/1997/12/pasal/0002/version/19970507/ayat/0002> legal:ayatHasKey 2 .
+<http://example.org/legal/document/uu/1997/12/pasal/0002/version/19970507/ayat/0002> legal:ayatHasRawText "Penyidik Pejabat Pegawai Negeri Sipil sebagaimana dimaksud PRESIDEN REPUBLIK INDONESIA - 14 - dalam ayat (1) berwenang:\na. melakukan penelitian atas kebenaran laporan ata u keterangan berkenaan dengan tindak pidana di bidang Hak Cipta.\nb. melakukan penelitian terhadap orang atau badan hukum yang diduga melakukan tindak pidana di bidang Hak Cipta;\nc. meminta keterangan dan bahan bukti dari orang atau badan hukum sehubu ngan dengan tindak pidana di bidang Hak Cipta;\nd. melakukan pemeriksaan atas pembukuan, pencatatan dan dokumen lainnya yang berkenaan dengan tindak pidana di bidang Hak Cipta;\ne. melakukan pemeriksaan di tempat tertentu yang diduga terdapat bahan buk ti pembukuan, pencatatan dan dokumen lain serta melakukan penyitaan terhadap bahan dan barang hasil pelanggaran yang dapat dijadikan bukti dalam perkara tindak pidana di bidang Hak Cipta;\nf. meminta bantuan ahli dalam rangka pelaksanaan tugas penyidikan tindak pidana di bidang Hak Cipta.\n" .
+<http://example.org/legal/document/uu/1997/12/pasal/0002/version/19970507/ayat/0002> legal:ayatHasPointSet <http://example.org/legal/document/uu/1997/12/pasal/0002/version/19970507/ayat/0002/point> .
+<http://example.org/legal/document/uu/1997/12/pasal/0002/version/19970507/ayat/0002/point/description> legal:textHasTextString "Penyidik Pejabat Pegawai Negeri Sipil sebagaimana dimaksud PRESIDEN REPUBLIK INDONESIA - 14 - dalam ayat (1) berwenang:" .
+<http://example.org/legal/document/uu/1997/12/pasal/0002/version/19970507/ayat/0002/point> legal:pointSetHasDescription <http://example.org/legal/document/uu/1997/12/pasal/0002/version/19970507/ayat/0002/point/description> .
+<http://example.org/legal/document/uu/1997/12/pasal/0002/version/19970507/ayat/0002/point> legal:pointSetHasPoint <http://example.org/legal/document/uu/1997/12/pasal/0002/version/19970507/ayat/0002/point/a> .
+<http://example.org/legal/document/uu/1997/12/pasal/0002/version/19970507/ayat/0002/point/a> legal:pointHasKey "a" .
+<http://example.org/legal/document/uu/1997/12/pasal/0002/version/19970507/ayat/0002/point/a/text> legal:textHasTextString "melakukan penelitian atas kebenaran laporan ata u keterangan berkenaan dengan tindak pidana di bidang Hak Cipta." .
+<http://example.org/legal/document/uu/1997/12/pasal/0002/version/19970507/ayat/0002/point/a> legal:pointHasText <http://example.org/legal/document/uu/1997/12/pasal/0002/version/19970507/ayat/0002/point/a/text> .
+<http://example.org/legal/document/uu/1997/12/pasal/0002/version/19970507/ayat/0002/point> legal:pointSetHasPoint <http://example.org/legal/document/uu/1997/12/pasal/0002/version/19970507/ayat/0002/point/b> .
+<http://example.org/legal/document/uu/1997/12/pasal/0002/version/19970507/ayat/0002/point/b> legal:pointHasKey "b" .
+<http://example.org/legal/document/uu/1997/12/pasal/0002/version/19970507/ayat/0002/point/b/text> legal:textHasTextString "melakukan penelitian terhadap orang atau badan hukum yang diduga melakukan tindak pidana di bidang Hak Cipta;" .
+<http://example.org/legal/document/uu/1997/12/pasal/0002/version/19970507/ayat/0002/point/b> legal:pointHasText <http://example.org/legal/document/uu/1997/12/pasal/0002/version/19970507/ayat/0002/point/b/text> .
+<http://example.org/legal/document/uu/1997/12/pasal/0002/version/19970507/ayat/0002/point> legal:pointSetHasPoint <http://example.org/legal/document/uu/1997/12/pasal/0002/version/19970507/ayat/0002/point/c> .
+<http://example.org/legal/document/uu/1997/12/pasal/0002/version/19970507/ayat/0002/point/c> legal:pointHasKey "c" .
+<http://example.org/legal/document/uu/1997/12/pasal/0002/version/19970507/ayat/0002/point/c/text> legal:textHasTextString "meminta keterangan dan bahan bukti dari orang atau badan hukum sehubu ngan dengan tindak pidana di bidang Hak Cipta;" .
+<http://example.org/legal/document/uu/1997/12/pasal/0002/version/19970507/ayat/0002/point/c> legal:pointHasText <http://example.org/legal/document/uu/1997/12/pasal/0002/version/19970507/ayat/0002/point/c/text> .
+<http://example.org/legal/document/uu/1997/12/pasal/0002/version/19970507/ayat/0002/point> legal:pointSetHasPoint <http://example.org/legal/document/uu/1997/12/pasal/0002/version/19970507/ayat/0002/point/d> .
+<http://example.org/legal/document/uu/1997/12/pasal/0002/version/19970507/ayat/0002/point/d> legal:pointHasKey "d" .
+<http://example.org/legal/document/uu/1997/12/pasal/0002/version/19970507/ayat/0002/point/d/text> legal:textHasTextString "melakukan pemeriksaan atas pembukuan, pencatatan dan dokumen lainnya yang berkenaan dengan tindak pidana di bidang Hak Cipta;" .
+<http://example.org/legal/document/uu/1997/12/pasal/0002/version/19970507/ayat/0002/point/d> legal:pointHasText <http://example.org/legal/document/uu/1997/12/pasal/0002/version/19970507/ayat/0002/point/d/text> .
+<http://example.org/legal/document/uu/1997/12/pasal/0002/version/19970507/ayat/0002/point> legal:pointSetHasPoint <http://example.org/legal/document/uu/1997/12/pasal/0002/version/19970507/ayat/0002/point/e> .
+<http://example.org/legal/document/uu/1997/12/pasal/0002/version/19970507/ayat/0002/point/e> legal:pointHasKey "e" .
+<http://example.org/legal/document/uu/1997/12/pasal/0002/version/19970507/ayat/0002/point/e/text> legal:textHasTextString "melakukan pemeriksaan di tempat tertentu yang diduga terdapat bahan buk ti pembukuan, pencatatan dan dokumen lain serta melakukan penyitaan terhadap bahan dan barang hasil pelanggaran yang dapat dijadikan bukti dalam perkara tindak pidana di bidang Hak Cipta;" .
+<http://example.org/legal/document/uu/1997/12/pasal/0002/version/19970507/ayat/0002/point/e> legal:pointHasText <http://example.org/legal/document/uu/1997/12/pasal/0002/version/19970507/ayat/0002/point/e/text> .
+<http://example.org/legal/document/uu/1997/12/pasal/0002/version/19970507/ayat/0002/point> legal:pointSetHasPoint <http://example.org/legal/document/uu/1997/12/pasal/0002/version/19970507/ayat/0002/point/f> .
+<http://example.org/legal/document/uu/1997/12/pasal/0002/version/19970507/ayat/0002/point/f> legal:pointHasKey "f" .
+<http://example.org/legal/document/uu/1997/12/pasal/0002/version/19970507/ayat/0002/point/f/text> legal:textHasTextString "meminta bantuan ahli dalam rangka pelaksanaan tugas penyidikan tindak pidana di bidang Hak Cipta." .
+<http://example.org/legal/document/uu/1997/12/pasal/0002/version/19970507/ayat/0002/point/f> legal:pointHasText <http://example.org/legal/document/uu/1997/12/pasal/0002/version/19970507/ayat/0002/point/f/text> .
+<http://example.org/legal/document/uu/1997/12/pasal/0002/version/19970507/ayat> legal:ayatSetHasAyat <http://example.org/legal/document/uu/1997/12/pasal/0002/version/19970507/ayat/0003> .
+<http://example.org/legal/document/uu/1997/12/pasal/0002/version/19970507/ayat/0003> legal:ayatHasKey 3 .
+<http://example.org/legal/document/uu/1997/12/pasal/0002/version/19970507/ayat/0003> legal:ayatHasRawText "Penyidik Pejabat Pegawai Negeri Sipil sebagaimana dimaksud dalam ayat (1) memberitahukan dimulainya penyidikan dan hasil penyidikannya kepada Penyidik Pejabat Polisi Negara Repub lik Indonesia." .
+<http://example.org/legal/document/uu/1997/12/pasal/0002/version/19970507/ayat/0003/text> legal:textHasTextString "Penyidik Pejabat Pegawai Negeri Sipil sebagaimana dimaksud dalam ayat (1) memberitahukan dimulainya penyidikan dan hasil penyidikannya kepada Penyidik Pejabat Polisi Negara Repub lik Indonesia." .
+<http://example.org/legal/document/uu/1997/12/pasal/0002/version/19970507/ayat/0003> legal:ayatHasText <http://example.org/legal/document/uu/1997/12/pasal/0002/version/19970507/ayat/0003/text> .
+<http://example.org/legal/document/uu/1997/12/pasal/0002/version/19970507/ayat/0003/text> legal:textReferencesLegal <http://example.org/legal/document/uu/1997/12/pasal/0002/version/19970507/ayat/0001> .
+<http://example.org/legal/document/uu/1997/12/pasal/0002/version/19970507/ayat> legal:ayatSetHasAyat <http://example.org/legal/document/uu/1997/12/pasal/0002/version/19970507/ayat/0004> .
+<http://example.org/legal/document/uu/1997/12/pasal/0002/version/19970507/ayat/0004> legal:ayatHasKey 4 .
+<http://example.org/legal/document/uu/1997/12/pasal/0002/version/19970507/ayat/0004> legal:ayatHasRawText "Penyidik Pejabat Pegawai Negeri Sipil sebagaimana dimaksud dalam ayat (1) menyampaikan hasil penyidikannya kepada Penuntut Umum melalui Penyidik Pejabat Polisi Negara Republik Indonesia dengan mengingat ketentuan Pasal 107 Undang - undan g Nomor 8 Tahun 1981 tentang Hukum Acara Pidana.\" 16. Ketentuan Pasal 48 diubah, sehingga Pasal 48 berbunyi sebagai berikut: PRESIDEN REPUBLIK INDONESIA - 15 - Pasal 48 Undang - undang ini berlaku terhadap semua ciptaan dan Hak - hak Yang Berkaitan dengan Hak Cip ta:\na. Warga negara, penduduk, dan badan hukum Indonesia;\nb. Bukan warga negara Indonesia, bukan penduduk Indonesia dan bukan badan hukum Indonesia yang untuk pertama kali diumumkan di Indonesia atau diumumkan di Indonesia dalam jangka waktu 30 (tiga puluh) hari sejak ciptaan itu diumumkan untuk pertama kali di luar Indonesia;\nc. Bukan warga negara Indonesia, bukan penduduk Indonesia dan bukan badan hukum Indonesia, dengan ketentuan: 1) Negaranya mempunyai perjanjian bilateral mengenai perlindungan Hak Cipta dan Hak - hak Yang Berkaitan dengan Hak Cipta dengan Negara Republik Indonesia; 2) Negaranya dan Negara Republik Indonesia merupakan pihak atau peserta dalam suatu pe rjanjian multilateral yang sama mengenai perlindungan Hak Cipta dan Hak - hak Yang Berkaitan degan Hak Cipta. Pasal II Undang - undang ini mulai berlaku pada tanggal diundangkan. Agar setiap orang mengetahuinya, memerintahkan pengundangan Undang - undang ini dengan penempatannya dalam Lembaran Negara PRESIDEN REPUBLIK INDONESIA - 16 - Republik Indonesia.\n" .
+<http://example.org/legal/document/uu/1997/12/pasal/0002/version/19970507/ayat/0004> legal:ayatHasPointSet <http://example.org/legal/document/uu/1997/12/pasal/0002/version/19970507/ayat/0004/point> .
+<http://example.org/legal/document/uu/1997/12/pasal/0002/version/19970507/ayat/0004/point/description> legal:textHasTextString "Penyidik Pejabat Pegawai Negeri Sipil sebagaimana dimaksud dalam ayat (1) menyampaikan hasil penyidikannya kepada Penuntut Umum melalui Penyidik Pejabat Polisi Negara Republik Indonesia dengan mengingat ketentuan Pasal 107 Undang - undan g Nomor 8 Tahun 1981 tentang Hukum Acara Pidana.\" 16. Ketentuan Pasal 48 diubah, sehingga Pasal 48 berbunyi sebagai berikut: PRESIDEN REPUBLIK INDONESIA - 15 - Pasal 48 Undang - undang ini berlaku terhadap semua ciptaan dan Hak - hak Yang Berkaitan dengan Hak Cip ta:" .
+<http://example.org/legal/document/uu/1997/12/pasal/0002/version/19970507/ayat/0004/point> legal:pointSetHasDescription <http://example.org/legal/document/uu/1997/12/pasal/0002/version/19970507/ayat/0004/point/description> .
+<http://example.org/legal/document/uu/1997/12/pasal/0002/version/19970507/ayat/0004/point> legal:pointSetHasPoint <http://example.org/legal/document/uu/1997/12/pasal/0002/version/19970507/ayat/0004/point/a> .
+<http://example.org/legal/document/uu/1997/12/pasal/0002/version/19970507/ayat/0004/point/a> legal:pointHasKey "a" .
+<http://example.org/legal/document/uu/1997/12/pasal/0002/version/19970507/ayat/0004/point/a/text> legal:textHasTextString "Warga negara, penduduk, dan badan hukum Indonesia;" .
+<http://example.org/legal/document/uu/1997/12/pasal/0002/version/19970507/ayat/0004/point/a> legal:pointHasText <http://example.org/legal/document/uu/1997/12/pasal/0002/version/19970507/ayat/0004/point/a/text> .
+<http://example.org/legal/document/uu/1997/12/pasal/0002/version/19970507/ayat/0004/point> legal:pointSetHasPoint <http://example.org/legal/document/uu/1997/12/pasal/0002/version/19970507/ayat/0004/point/b> .
+<http://example.org/legal/document/uu/1997/12/pasal/0002/version/19970507/ayat/0004/point/b> legal:pointHasKey "b" .
+<http://example.org/legal/document/uu/1997/12/pasal/0002/version/19970507/ayat/0004/point/b/text> legal:textHasTextString "Bukan warga negara Indonesia, bukan penduduk Indonesia dan bukan badan hukum Indonesia yang untuk pertama kali diumumkan di Indonesia atau diumumkan di Indonesia dalam jangka waktu 30 (tiga puluh) hari sejak ciptaan itu diumumkan untuk pertama kali di luar Indonesia;" .
+<http://example.org/legal/document/uu/1997/12/pasal/0002/version/19970507/ayat/0004/point/b> legal:pointHasText <http://example.org/legal/document/uu/1997/12/pasal/0002/version/19970507/ayat/0004/point/b/text> .
+<http://example.org/legal/document/uu/1997/12/pasal/0002/version/19970507/ayat/0004/point> legal:pointSetHasPoint <http://example.org/legal/document/uu/1997/12/pasal/0002/version/19970507/ayat/0004/point/c> .
+<http://example.org/legal/document/uu/1997/12/pasal/0002/version/19970507/ayat/0004/point/c> legal:pointHasKey "c" .
+<http://example.org/legal/document/uu/1997/12/pasal/0002/version/19970507/ayat/0004/point/c/text> legal:textHasTextString "Bukan warga negara Indonesia, bukan penduduk Indonesia dan bukan badan hukum Indonesia, dengan ketentuan: 1) Negaranya mempunyai perjanjian bilateral mengenai perlindungan Hak Cipta dan Hak - hak Yang Berkaitan dengan Hak Cipta dengan Negara Republik Indonesia; 2) Negaranya dan Negara Republik Indonesia merupakan pihak atau peserta dalam suatu pe rjanjian multilateral yang sama mengenai perlindungan Hak Cipta dan Hak - hak Yang Berkaitan degan Hak Cipta. Pasal II Undang - undang ini mulai berlaku pada tanggal diundangkan. Agar setiap orang mengetahuinya, memerintahkan pengundangan Undang - undang ini dengan penempatannya dalam Lembaran Negara PRESIDEN REPUBLIK INDONESIA - 16 - Republik Indonesia." .
+<http://example.org/legal/document/uu/1997/12/pasal/0002/version/19970507/ayat/0004/point/c> legal:pointHasText <http://example.org/legal/document/uu/1997/12/pasal/0002/version/19970507/ayat/0004/point/c/text> .
 <http://example.org/legal/document/uu/1997/12> legal:documentHasDisahkanDate "1997-05-07"^^xsd:date .
 <http://example.org/legal/document/uu/1997/12> legal:documentMengingat <http://example.org/legal/document/uu/1997/12/mengingat> .
 <http://example.org/legal/document/uu/1997/12/mengingat> legal:mengingatHasPointSet <http://example.org/legal/document/uu/1997/12/mengingat/point> .
@@ -39,6 +163,64 @@
 <http://example.org/legal/document/uu/1997/12> legal:documentHasDisahkanLocation "Jakarta" .
 <http://example.org/legal/document/uu/1997/12> legal:documentHasDisahkanJabatanPengesah "PRESIDEN REPUBLIK INDONESIA" .
 <http://example.org/legal/document/uu/1997/12> a legal:Document .
+<http://example.org/legal/document/uu/1997/12/pasals> a legal:PasalSet .
+<http://example.org/legal/document/uu/1997/12/pasal/0001> a legal:Pasal .
+<http://example.org/legal/document/uu/1997/12/pasal/0001/version/19970507> a legal:PasalVersion .
+<http://example.org/legal/document/uu/1997/12/pasal/0001/version/19970507/point/description> a legal:Text .
+<http://example.org/legal/document/uu/1997/12/pasal/0001/version/19970507/point> a legal:PointSet .
+<http://example.org/legal/document/uu/1997/12/pasal/0001/version/19970507/point/0001> a legal:Point .
+<http://example.org/legal/document/uu/1997/12/pasal/0001/version/19970507/point/0001/text> a legal:Text .
+<http://example.org/legal/document/uu/1997/12/pasal/0001/version/19970507/point/0002> a legal:Point .
+<http://example.org/legal/document/uu/1997/12/pasal/0001/version/19970507/point/0002/text> a legal:Text .
+<http://example.org/legal/document/uu/1997/12/pasal/0001/version/19970507/point/0003> a legal:Point .
+<http://example.org/legal/document/uu/1997/12/pasal/0001/version/19970507/point/0003/text> a legal:Text .
+<http://example.org/legal/document/uu/1997/12/pasal/0001/version/19970507/point/0004> a legal:Point .
+<http://example.org/legal/document/uu/1997/12/pasal/0001/version/19970507/point/0004/text> a legal:Text .
+<http://example.org/legal/document/uu/1997/12/pasal/0001/version/19970507/point/0005> a legal:Point .
+<http://example.org/legal/document/uu/1997/12/pasal/0001/version/19970507/point/0005/text> a legal:Text .
+<http://example.org/legal/document/uu/1997/12/pasal/0001/version/19970507/point/0006> a legal:Point .
+<http://example.org/legal/document/uu/1997/12/pasal/0001/version/19970507/point/0006/text> a legal:Text .
+<http://example.org/legal/document/uu/1997/12/pasal/0001/version/19970507/point/0007> a legal:Point .
+<http://example.org/legal/document/uu/1997/12/pasal/0001/version/19970507/point/0007/text> a legal:Text .
+<http://example.org/legal/document/uu/1997/12/pasal/0001/version/19970507/point/0008> a legal:Point .
+<http://example.org/legal/document/uu/1997/12/pasal/0001/version/19970507/point/0008/text> a legal:Text .
+<http://example.org/legal/document/uu/1997/12/pasal/0001/version/19970507/point/0009> a legal:Point .
+<http://example.org/legal/document/uu/1997/12/pasal/0001/version/19970507/point/0009/text> a legal:Text .
+<http://example.org/legal/document/uu/1997/12/pasal/0001/version/19970507/point/0010> a legal:Point .
+<http://example.org/legal/document/uu/1997/12/pasal/0001/version/19970507/point/0010/text> a legal:Text .
+<http://example.org/legal/document/uu/1997/12/pasal/0001/version/19970507/point/0011> a legal:Point .
+<http://example.org/legal/document/uu/1997/12/pasal/0001/version/19970507/point/0011/text> a legal:Text .
+<http://example.org/legal/document/uu/1997/12/pasal/0002> a legal:Pasal .
+<http://example.org/legal/document/uu/1997/12/pasal/0002/version/19970507> a legal:PasalVersion .
+<http://example.org/legal/document/uu/1997/12/pasal/0002/version/19970507/ayat> a legal:AyatSet .
+<http://example.org/legal/document/uu/1997/12/pasal/0002/version/19970507/ayat/0001> a legal:Ayat .
+<http://example.org/legal/document/uu/1997/12/pasal/0002/version/19970507/ayat/0001/text> a legal:Text .
+<http://example.org/legal/document/uu/1997/12/pasal/0002/version/19970507/ayat/0002> a legal:Ayat .
+<http://example.org/legal/document/uu/1997/12/pasal/0002/version/19970507/ayat/0002/point/description> a legal:Text .
+<http://example.org/legal/document/uu/1997/12/pasal/0002/version/19970507/ayat/0002/point> a legal:PointSet .
+<http://example.org/legal/document/uu/1997/12/pasal/0002/version/19970507/ayat/0002/point/a> a legal:Point .
+<http://example.org/legal/document/uu/1997/12/pasal/0002/version/19970507/ayat/0002/point/a/text> a legal:Text .
+<http://example.org/legal/document/uu/1997/12/pasal/0002/version/19970507/ayat/0002/point/b> a legal:Point .
+<http://example.org/legal/document/uu/1997/12/pasal/0002/version/19970507/ayat/0002/point/b/text> a legal:Text .
+<http://example.org/legal/document/uu/1997/12/pasal/0002/version/19970507/ayat/0002/point/c> a legal:Point .
+<http://example.org/legal/document/uu/1997/12/pasal/0002/version/19970507/ayat/0002/point/c/text> a legal:Text .
+<http://example.org/legal/document/uu/1997/12/pasal/0002/version/19970507/ayat/0002/point/d> a legal:Point .
+<http://example.org/legal/document/uu/1997/12/pasal/0002/version/19970507/ayat/0002/point/d/text> a legal:Text .
+<http://example.org/legal/document/uu/1997/12/pasal/0002/version/19970507/ayat/0002/point/e> a legal:Point .
+<http://example.org/legal/document/uu/1997/12/pasal/0002/version/19970507/ayat/0002/point/e/text> a legal:Text .
+<http://example.org/legal/document/uu/1997/12/pasal/0002/version/19970507/ayat/0002/point/f> a legal:Point .
+<http://example.org/legal/document/uu/1997/12/pasal/0002/version/19970507/ayat/0002/point/f/text> a legal:Text .
+<http://example.org/legal/document/uu/1997/12/pasal/0002/version/19970507/ayat/0003> a legal:Ayat .
+<http://example.org/legal/document/uu/1997/12/pasal/0002/version/19970507/ayat/0003/text> a legal:Text .
+<http://example.org/legal/document/uu/1997/12/pasal/0002/version/19970507/ayat/0004> a legal:Ayat .
+<http://example.org/legal/document/uu/1997/12/pasal/0002/version/19970507/ayat/0004/point/description> a legal:Text .
+<http://example.org/legal/document/uu/1997/12/pasal/0002/version/19970507/ayat/0004/point> a legal:PointSet .
+<http://example.org/legal/document/uu/1997/12/pasal/0002/version/19970507/ayat/0004/point/a> a legal:Point .
+<http://example.org/legal/document/uu/1997/12/pasal/0002/version/19970507/ayat/0004/point/a/text> a legal:Text .
+<http://example.org/legal/document/uu/1997/12/pasal/0002/version/19970507/ayat/0004/point/b> a legal:Point .
+<http://example.org/legal/document/uu/1997/12/pasal/0002/version/19970507/ayat/0004/point/b/text> a legal:Text .
+<http://example.org/legal/document/uu/1997/12/pasal/0002/version/19970507/ayat/0004/point/c> a legal:Point .
+<http://example.org/legal/document/uu/1997/12/pasal/0002/version/19970507/ayat/0004/point/c/text> a legal:Text .
 <http://example.org/legal/document/uu/1997/12/mengingat> a legal:Mengingat .
 <http://example.org/legal/document/uu/1997/12/mengingat/point/description> a legal:Text .
 <http://example.org/legal/document/uu/1997/12/mengingat/point> a legal:PointSet .
@@ -57,7 +239,42 @@
 <http://example.org/legal/document/uu/1997/12/menimbang/point/b/text> a legal:Text .
 <http://example.org/legal/document/uu/1997/12/menimbang/point/c> a legal:Point .
 <http://example.org/legal/document/uu/1997/12/menimbang/point/c/text> a legal:Text .
-<http://example.org/legal/document/uu/1997/12/bab> legal:partOf <http://example.org/legal/document/uu/1997/12> .
+<http://example.org/legal/document/uu/1997/12/pasal/0001> legal:partOf <http://example.org/legal/document/uu/1997/12/pasals> .
+<http://example.org/legal/document/uu/1997/12/pasal/0001/version/19970507> legal:partOf <http://example.org/legal/document/uu/1997/12/pasal/0001> .
+<http://example.org/legal/document/uu/1997/12/pasal/0001> legal:partOf <http://example.org/legal/document/uu/1997/12> .
+<http://example.org/legal/document/uu/1997/12/pasal/0001/version/19970507/point> legal:partOf <http://example.org/legal/document/uu/1997/12/pasal/0001/version/19970507> .
+<http://example.org/legal/document/uu/1997/12/pasal/0001/version/19970507/point/0001> legal:partOf <http://example.org/legal/document/uu/1997/12/pasal/0001/version/19970507/point> .
+<http://example.org/legal/document/uu/1997/12/pasal/0001/version/19970507/point/0002> legal:partOf <http://example.org/legal/document/uu/1997/12/pasal/0001/version/19970507/point> .
+<http://example.org/legal/document/uu/1997/12/pasal/0001/version/19970507/point/0003> legal:partOf <http://example.org/legal/document/uu/1997/12/pasal/0001/version/19970507/point> .
+<http://example.org/legal/document/uu/1997/12/pasal/0001/version/19970507/point/0004> legal:partOf <http://example.org/legal/document/uu/1997/12/pasal/0001/version/19970507/point> .
+<http://example.org/legal/document/uu/1997/12/pasal/0001/version/19970507/point/0005> legal:partOf <http://example.org/legal/document/uu/1997/12/pasal/0001/version/19970507/point> .
+<http://example.org/legal/document/uu/1997/12/pasal/0001/version/19970507/point/0006> legal:partOf <http://example.org/legal/document/uu/1997/12/pasal/0001/version/19970507/point> .
+<http://example.org/legal/document/uu/1997/12/pasal/0001/version/19970507/point/0007> legal:partOf <http://example.org/legal/document/uu/1997/12/pasal/0001/version/19970507/point> .
+<http://example.org/legal/document/uu/1997/12/pasal/0001/version/19970507/point/0008> legal:partOf <http://example.org/legal/document/uu/1997/12/pasal/0001/version/19970507/point> .
+<http://example.org/legal/document/uu/1997/12/pasal/0001/version/19970507/point/0009> legal:partOf <http://example.org/legal/document/uu/1997/12/pasal/0001/version/19970507/point> .
+<http://example.org/legal/document/uu/1997/12/pasal/0001/version/19970507/point/0010> legal:partOf <http://example.org/legal/document/uu/1997/12/pasal/0001/version/19970507/point> .
+<http://example.org/legal/document/uu/1997/12/pasal/0001/version/19970507/point/0011> legal:partOf <http://example.org/legal/document/uu/1997/12/pasal/0001/version/19970507/point> .
+<http://example.org/legal/document/uu/1997/12/pasal/0002> legal:partOf <http://example.org/legal/document/uu/1997/12/pasals> .
+<http://example.org/legal/document/uu/1997/12/pasal/0002/version/19970507> legal:partOf <http://example.org/legal/document/uu/1997/12/pasal/0002> .
+<http://example.org/legal/document/uu/1997/12/pasal/0002> legal:partOf <http://example.org/legal/document/uu/1997/12> .
+<http://example.org/legal/document/uu/1997/12/pasal/0002/version/19970507/ayat> legal:partOf <http://example.org/legal/document/uu/1997/12/pasal/0002/version/19970507> .
+<http://example.org/legal/document/uu/1997/12/pasal/0002/version/19970507/ayat/0001> legal:partOf <http://example.org/legal/document/uu/1997/12/pasal/0002/version/19970507/ayat> .
+<http://example.org/legal/document/uu/1997/12/pasal/0002/version/19970507/ayat/0001/text> legal:partOf <http://example.org/legal/document/uu/1997/12/pasal/0002/version/19970507/ayat/0001> .
+<http://example.org/legal/document/uu/1997/12/pasal/0002/version/19970507/ayat/0002> legal:partOf <http://example.org/legal/document/uu/1997/12/pasal/0002/version/19970507/ayat> .
+<http://example.org/legal/document/uu/1997/12/pasal/0002/version/19970507/ayat/0002/point> legal:partOf <http://example.org/legal/document/uu/1997/12/pasal/0002/version/19970507/ayat/0002> .
+<http://example.org/legal/document/uu/1997/12/pasal/0002/version/19970507/ayat/0002/point/a> legal:partOf <http://example.org/legal/document/uu/1997/12/pasal/0002/version/19970507/ayat/0002/point> .
+<http://example.org/legal/document/uu/1997/12/pasal/0002/version/19970507/ayat/0002/point/b> legal:partOf <http://example.org/legal/document/uu/1997/12/pasal/0002/version/19970507/ayat/0002/point> .
+<http://example.org/legal/document/uu/1997/12/pasal/0002/version/19970507/ayat/0002/point/c> legal:partOf <http://example.org/legal/document/uu/1997/12/pasal/0002/version/19970507/ayat/0002/point> .
+<http://example.org/legal/document/uu/1997/12/pasal/0002/version/19970507/ayat/0002/point/d> legal:partOf <http://example.org/legal/document/uu/1997/12/pasal/0002/version/19970507/ayat/0002/point> .
+<http://example.org/legal/document/uu/1997/12/pasal/0002/version/19970507/ayat/0002/point/e> legal:partOf <http://example.org/legal/document/uu/1997/12/pasal/0002/version/19970507/ayat/0002/point> .
+<http://example.org/legal/document/uu/1997/12/pasal/0002/version/19970507/ayat/0002/point/f> legal:partOf <http://example.org/legal/document/uu/1997/12/pasal/0002/version/19970507/ayat/0002/point> .
+<http://example.org/legal/document/uu/1997/12/pasal/0002/version/19970507/ayat/0003> legal:partOf <http://example.org/legal/document/uu/1997/12/pasal/0002/version/19970507/ayat> .
+<http://example.org/legal/document/uu/1997/12/pasal/0002/version/19970507/ayat/0003/text> legal:partOf <http://example.org/legal/document/uu/1997/12/pasal/0002/version/19970507/ayat/0003> .
+<http://example.org/legal/document/uu/1997/12/pasal/0002/version/19970507/ayat/0004> legal:partOf <http://example.org/legal/document/uu/1997/12/pasal/0002/version/19970507/ayat> .
+<http://example.org/legal/document/uu/1997/12/pasal/0002/version/19970507/ayat/0004/point> legal:partOf <http://example.org/legal/document/uu/1997/12/pasal/0002/version/19970507/ayat/0004> .
+<http://example.org/legal/document/uu/1997/12/pasal/0002/version/19970507/ayat/0004/point/a> legal:partOf <http://example.org/legal/document/uu/1997/12/pasal/0002/version/19970507/ayat/0004/point> .
+<http://example.org/legal/document/uu/1997/12/pasal/0002/version/19970507/ayat/0004/point/b> legal:partOf <http://example.org/legal/document/uu/1997/12/pasal/0002/version/19970507/ayat/0004/point> .
+<http://example.org/legal/document/uu/1997/12/pasal/0002/version/19970507/ayat/0004/point/c> legal:partOf <http://example.org/legal/document/uu/1997/12/pasal/0002/version/19970507/ayat/0004/point> .
 <http://example.org/legal/document/uu/1997/12/mengingat/point/0001> legal:partOf <http://example.org/legal/document/uu/1997/12/mengingat/point> .
 <http://example.org/legal/document/uu/1997/12/mengingat/point/0002> legal:partOf <http://example.org/legal/document/uu/1997/12/mengingat/point> .
 <http://example.org/legal/document/uu/1997/12/mengingat/point/0003> legal:partOf <http://example.org/legal/document/uu/1997/12/mengingat/point> .

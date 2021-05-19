@@ -1,4 +1,10 @@
-import { Disahkan, DocumentMetadata, MengingatNode, MenimbangNode } from '../component';
+import {
+  Disahkan,
+  DocumentMetadata,
+  MengingatNode,
+  MenimbangNode,
+  PasalSetNode,
+} from '../component';
 import assertNever from 'assert-never';
 import { chain, curry, isEmpty, isUndefined, keys, map, parseInt, reduce } from 'lodash';
 import {
@@ -43,11 +49,14 @@ import {
 import { KeyIds } from './scan';
 import { extractSpans, extractSpansWith, spanIdKeyMapOf, spansInRange } from './util';
 
+export type RootOrganizer = 'bab' | 'pasal';
+
 export type Context = {
   documentNode: DocumentNode;
   disahkan: Disahkan;
   hasAmendPasal: boolean;
   keyIds: KeyIds;
+  rootOrganizer: RootOrganizer;
 };
 
 export function spansToStr(spans: Span[]): string {
@@ -118,13 +127,22 @@ function getNewSection(prevSection: MetadataSection, span: Span): [MetadataSecti
   return [prevSection, span];
 }
 
-export function spansToBabSet(context: Context, spans: Span[]): BabSet {
-  const babSetNode: BabSetNode = { nodeType: 'babSet', parentDocumentNode: context.documentNode };
-  const { keyToSpanMap } = extractSpans(context.keyIds.spanIdToBabKeyMap, spans);
+export function spansToContent(context: Context, spans: Span[]): BabSet | PasalSet {
+  if (context.rootOrganizer === 'bab') {
+    const babSetNode: BabSetNode = { nodeType: 'babSet', parentDocumentNode: context.documentNode };
+    const { keyToSpanMap } = extractSpans(context.keyIds.spanIdToBabKeyMap, spans);
+    return {
+      type: 'babSet',
+      node: babSetNode,
+      elements: map(keyToSpanMap, spansToBabWith(context, babSetNode)),
+    };
+  }
+  const pasalSetNode: PasalSetNode = { nodeType: 'pasalSet', parentNode: context.documentNode };
+  const { keyToSpanMap } = extractSpans(context.keyIds.spanIdToPasalKeyMap, spans);
   return {
-    type: 'babSet',
-    node: babSetNode,
-    elements: map(keyToSpanMap, spansToBabWith(context, babSetNode)),
+    type: 'pasalSet',
+    node: pasalSetNode,
+    elements: map(keyToSpanMap, spansToPasalWith(context)),
   };
 }
 

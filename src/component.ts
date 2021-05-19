@@ -106,7 +106,7 @@ export type ParagrafSetNode = {
 
 export type PasalSetNode = {
   nodeType: 'pasalSet';
-  parentNode: BabNode | BagianNode | ParagrafNode;
+  parentNode: BabNode | BagianNode | ParagrafNode | DocumentNode;
 };
 
 export type PasalNode = {
