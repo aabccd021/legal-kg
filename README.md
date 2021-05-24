@@ -102,6 +102,8 @@ akan dinotasikan dalam `teks monospace berwarna merah`.
 
 ![ilustrasi triple](pictures/ilustrasi_triple.png)
 
+// TODO: saran, sekalian aja dikasih contoh ilustrasi knowledge graph yg cukup eye-catchy (tapi juga mudah dipahami), bs ambil dari sumber2 di Web (tentu dgn menyertakan credits)
+
 ## Turtle Syntax
 
 TODO: konsep dan sintaks perlu dijelaskan ya di Bab 2
