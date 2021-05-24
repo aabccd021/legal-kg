@@ -28,12 +28,10 @@ terstruktur yaitu teks bahasa manusia.
 
 ![Hasil Parsing Data Terstruktur dan Tidak Terstruktur dari Dokumen](pictures/terstruktur_parsed.svg)
 
-
 // TODO: ".. tetapi penulisan peraturan sendiri dalam bentuk data tidak
 terstruktur yaitu teks bahasa manusia." -> Stlh paragraf ini, kasih gambar
 snippet isi dari suatu peraturan perundang-undangan (bs yg UU Cipta Kerja), dan
 utk gambar tsb bs dijelaskan gmn manual effort (by humans) utk memprosesnya.
-
 
 Dengan melakukan ekstraksi data dari data tidak terstruktur pada dokumen,
 digabung dengan data yang sudah terstruktur, peraturan perundang-undangan dapat
@@ -89,7 +87,6 @@ hukumnya masih manual bgt utk bikin+cara memanfaatkan produk hukumnya.
 // TODO: ELI jg msh simpel. Bs dijelaskan motivasi ELI, serta apa contoh konsep2
 yg sdh ada di ELI ontology, serta yg belum ada.
 
-
 ## Knowledge Graph
 
 _Triple_ merupakan tuple dengan yang terdiri dari tiga elemen yaitu subject,
@@ -102,7 +99,9 @@ akan dinotasikan dalam `teks monospace berwarna merah`.
 
 ![ilustrasi triple](pictures/ilustrasi_triple.png)
 
-// TODO: saran, sekalian aja dikasih contoh ilustrasi knowledge graph yg cukup eye-catchy (tapi juga mudah dipahami), bs ambil dari sumber2 di Web (tentu dgn menyertakan credits)
+// TODO: saran, sekalian aja dikasih contoh ilustrasi knowledge graph yg cukup
+eye-catchy (tapi juga mudah dipahami), bs ambil dari sumber2 di Web (tentu dgn
+menyertakan credits)
 
 ## Turtle Syntax
 
@@ -144,6 +143,7 @@ Eropa, bukan di Indonesia. Misal, gak ada namanya Peraturan Pemerintah, atau
 Pergub di ELI :)
 
 # BAB 3 METODOLOGI
+
 // TODO: Utk yg metodologi, sbnrnya standar aja, dimulai dari pertanyaan riset,
 lalu pengembangan ontology (URI scheming masuk ke pengembagan ontology),
 pengembangan sistem konversi, baru lalu use case evaluation (ini yg legal KG
@@ -163,7 +163,7 @@ Dokumen terdiri dari komponen dokumen. Komponen dokumen diantaranya adalah
 dokumen merupakan resource, dan memiliki URI. URI sebuah komponen didahului oleh
 URI dokumennya. Berikut adalah relasi antara komponen dokumen yang disediakan.
 
-TODO: Relationship antara component 
+TODO: Relationship antara component
 
 TODO: URI Schema, contoh input text & output URI
 
@@ -181,7 +181,6 @@ khusus.
 ### Konversi PDF menjadi
 
 # BAB 4 IMPLEMENTASI
-
 
 ## OCR Ulang Berkas PDF
 
@@ -213,7 +212,7 @@ adalah salahsatu contoh dokumen beserta data yang tercantum sebagai __Creator__
 dan contoh kesalahan pemindaiannya yang banyak terjadi.
 
 | Dokumen                | __Creator__            | Kesalahan pemindaian        |
-| ---------------------- | ---------------------- | --------------------------- |
+|------------------------|------------------------|-----------------------------|
 | UU Nomor 13 Tahun 2003 | ScanSoft PDF Create! 4 | - (tidak ada)               |
 | UU Nomor 6 Tahun 2018  | Canon                  | `(2)` selalu dipindai `(21` |
 | PP Nomor 34 Tahun 2021 | Fuji Xerox B9100       | data teks tidak terbaca     |
@@ -433,7 +432,7 @@ menyebut komponen atau dokumen peraturan perundang-undangan lainnya. Berikut
 adalah daftar pola sitasi yang berhasil dideteksi pada penelitian ini.
 
 | Pola                                                     | Contoh teks                                              | URI Terdeteksi                        |
-| -------------------------------------------------------- | -------------------------------------------------------- | ------------------------------------- |
+|----------------------------------------------------------|----------------------------------------------------------|---------------------------------------|
 | Undang Undang Dasar Negara Republik Indonesia Tahun 1945 | Undang Undang Dasar Negara Republik Indonesia Tahun 1945 | /uud/                                 |
 | Undang-Undang Nomor {x} Tahun {y}                        | Undang-Undang Nomor 26 Tahun 2007                        | /uu/2007/26                           |
 | ayat ({x})                                               | ayat (1)                                                 | /uu/2003/13/pasal/169/ayat/1          |
@@ -478,7 +477,7 @@ pada UU No.13 Tahun 2003 Pasal 158 Ayat (4) akan terdeteksi sebagai 3 URI sitasi
 sebagai berikut.
 
 | Teks               | URI                            |
-| ------------------ | ------------------------------ |
+|--------------------|--------------------------------|
 | Pasal 156 Ayat (4) | `/uu/2003/13/pasal/156/ayat/4` |
 | Pasal 156          | `/uu/2003/13/pasal/156`        |
 | Ayat (4)           | `/uu/2003/13/pasal/158/ayat/4` |
