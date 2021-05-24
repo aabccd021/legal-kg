@@ -24,7 +24,7 @@ terstruktur seperti aturan penomoran dan aturan struktur (seperti bab, pasal,
 dan ayat), tetapi penulisan peraturan sendiri dalam bentuk data tidak
 terstruktur yaitu teks bahasa manusia.
 
-![](pictures/terstruktur.svg)
+![Data Terstruktur dan Tidak Terstruktur dari Dokumen](pictures/terstruktur.svg)
 
 
 // TODO: ".. tetapi penulisan peraturan sendiri dalam bentuk data tidak
