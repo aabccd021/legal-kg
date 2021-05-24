@@ -24,6 +24,9 @@ terstruktur seperti aturan penomoran dan aturan struktur (seperti bab, pasal,
 dan ayat), tetapi penulisan peraturan sendiri dalam bentuk data tidak
 terstruktur yaitu teks bahasa manusia.
 
+![](pictures/terstruktur.svg)
+
+
 // TODO: ".. tetapi penulisan peraturan sendiri dalam bentuk data tidak
 terstruktur yaitu teks bahasa manusia." -> Stlh paragraf ini, kasih gambar
 snippet isi dari suatu peraturan perundang-undangan (bs yg UU Cipta Kerja), dan
@@ -71,21 +74,18 @@ ujung ke ujung, yakni dari PDF ke populasi legal ontology tsb.
 
 # BAB 2 TINJAUAN PUSTAKA
 
-// TODO:
-- Tinjauan pustaka masih agak minimalis ya :) Dijelasin dong knowledge graph in
-  general itu apa dan kenapa, RDF (serta Turtle) itu gmn konsepnya, SPARQL itu
-  gmn, dsb. Jgn pelit2 jg kasih contoh gambar agar lbh mudah dipahami.
+// TODO: Tinjauan pustaka masih agak minimalis ya :) Dijelasin dong knowledge
+graph in general itu apa dan kenapa, RDF (serta Turtle) itu gmn konsepnya,
+SPARQL itu gmn, dsb. Jgn pelit2 jg kasih contoh gambar agar lbh mudah dipahami.
 
-// TODO:
-- Yg tinjauan pustaka tentang hukum (peraturan perundang-undangan) jg agak
-  minimalis. Bs tlg dijelaskan bener2 dari basic kyk, hukum itu apa dan untuk
-  apa? Apa pentingnya ada hukum? Bgmn jenis-jenis hukum? Bgmn struktur hukum
-  scara umum? Serta bgmn hukum bs terkait satu sama lain? Yg terpenting,
-  tekankan bhw hukumnya masih manual bgt utk bikin+cara memanfaatkan produk
-  hukumnya.
+// TODO: Yg tinjauan pustaka tentang hukum (peraturan perundang-undangan) jg
+agak minimalis. Bs tlg dijelaskan bener2 dari basic kyk, hukum itu apa dan untuk
+apa? Apa pentingnya ada hukum? Bgmn jenis-jenis hukum? Bgmn struktur hukum scara
+umum? Serta bgmn hukum bs terkait satu sama lain? Yg terpenting, tekankan bhw
+hukumnya masih manual bgt utk bikin+cara memanfaatkan produk hukumnya.
 
-// TODO:
-- ELI jg msh simpel. Bs dijelaskan motivasi ELI, serta apa contoh konsep2 yg sdh ada di ELI ontology, serta yg belum ada.
+// TODO: ELI jg msh simpel. Bs dijelaskan motivasi ELI, serta apa contoh konsep2
+yg sdh ada di ELI ontology, serta yg belum ada.
 
 
 ## Knowledge Graph
@@ -140,13 +140,12 @@ Eropa, bukan di Indonesia. Misal, gak ada namanya Peraturan Pemerintah, atau
 Pergub di ELI :)
 
 # BAB 3 METODOLOGI
-// TODO:
-- Utk yg metodologi, sbnrnya standar aja, dimulai dari pertanyaan riset, lalu
-  pengembangan ontology (URI scheming masuk ke pengembagan ontology),
-  pengembangan sistem konversi, baru lalu use case evaluation (ini yg legal KG
-  advanced querying, legal KG chatbot, legal KG visualization) baru large scale
-  eval (ini yg coba konversi peraturan dlm jumlah besar dan kita sampling utk
-  evaluasi correctnessnya)
+// TODO: Utk yg metodologi, sbnrnya standar aja, dimulai dari pertanyaan riset,
+lalu pengembangan ontology (URI scheming masuk ke pengembagan ontology),
+pengembangan sistem konversi, baru lalu use case evaluation (ini yg legal KG
+advanced querying, legal KG chatbot, legal KG visualization) baru large scale
+eval (ini yg coba konversi peraturan dlm jumlah besar dan kita sampling utk
+evaluasi correctnessnya)
 
 TODO: suatu KG construction dimulai dengan competency questions (requirements).
 Saran sy: coba baca serta rangkum (di Bab 2) dan terapkan ini:
@@ -160,8 +159,9 @@ Dokumen terdiri dari komponen dokumen. Komponen dokumen diantaranya adalah
 dokumen merupakan resource, dan memiliki URI. URI sebuah komponen didahului oleh
 URI dokumennya. Berikut adalah relasi antara komponen dokumen yang disediakan.
 
-TODO: Relationship antara component TODO: URI Schema, contoh input text & output
-URI
+TODO: Relationship antara component 
+
+TODO: URI Schema, contoh input text & output URI
 
 ## Amendemen
 
@@ -178,7 +178,6 @@ khusus.
 
 # BAB 4 IMPLEMENTASI
 
-// TODO: 
 
 ## OCR Ulang Berkas PDF
 
