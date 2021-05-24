@@ -28,10 +28,19 @@ terstruktur yaitu teks bahasa manusia.
 
 ![Hasil Parsing Data Terstruktur dan Tidak Terstruktur dari Dokumen](pictures/terstruktur_parsed.svg)
 
-// TODO: ".. tetapi penulisan peraturan sendiri dalam bentuk data tidak
-terstruktur yaitu teks bahasa manusia." -> Stlh paragraf ini, kasih gambar
-snippet isi dari suatu peraturan perundang-undangan (bs yg UU Cipta Kerja), dan
-utk gambar tsb bs dijelaskan gmn manual effort (by humans) utk memprosesnya.
+Gambar diatas merupakan salah satu contoh ekstraksi informasi dari UU No.11
+Tahun 2020 tentang Ketenagakerjaan. Pada gambar diatas, dapat dilihat bahwa
+sebagian informasi dapat diekstraksi dari sifat terstruktur dokumen peraturan
+perundang-undangan (ditandai dengan warna merah), dan sebagian informasi lainnya
+dapat diekstraksi dari data tidak terstruktur beruba teks (ditandai dengan warna
+biru). Untuk melakukan ekstraksi informasi tidak terstruktur seperti pada gambar
+yaitu "UU No.11 Tahun 2020 Pasal 6 menyebut UU No.11 Tahun 2020 Pasal 5 ayat(1)
+huruf a", manusia pertama-tama perlu membaca dari awal kalimat sampai menemukan
+pola _string_ yang merujuk kepada suatu komponen dokumen peraturan
+perundang-undangan, kemudian meng-_infer_ informasi lengkap dari komponen
+tersebut. Proses konversi _string_ "Pasal 5 ayat (1) huruf a" menjadi informasi
+lengkap "UU No.11 Tahun 2020 Pasal 5 ayat (1) huruf a" perlu dilakukan secara
+manual oleh manusia.
 
 Dengan melakukan ekstraksi data dari data tidak terstruktur pada dokumen,
 digabung dengan data yang sudah terstruktur, peraturan perundang-undangan dapat
