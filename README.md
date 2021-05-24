@@ -52,10 +52,7 @@ peraturan perundang-undangan menjadi data terstruktur dalam bentuk _knowledge
 graph_, dan memberikan contoh pengaplikasian dari _knowledge graph_ peraturan
 perundang-undangan tersebut.
 
-// TODO: Ini bagus bgt kalau bs ada ilustrasinya/diagramnya. Jd gmn bener2 dari
-bottom up (dokumen legal dlm format PDF), terus diubah ke KG (dengan support
-legal ontology), serta aplikasi-aplikasi apa yg bs dibuat on top of the
-constructed KG.
+![Outline](pictures/outline.svg)
 
 Beberapa usaha telah dilakukan untuk membuat _vocabulary_ untuk _knowledge
 graph_ peraturan perundang-undangan seperti _European Legislation Identifier_
