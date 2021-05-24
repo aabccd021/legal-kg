@@ -65,12 +65,10 @@ peraturan perundan-undangan.
 
 Berikut ini adalah rumusan permasalahan dari penelitian yang dilakukan:
 
-// TODO: - Utk rumusan permasalahan sdh OK, cm yg sblm konversi, ditambahkan,
-bgmn membuat legal ontology. Jd ntar konversinya (atau construction) bs jelas
-ujung ke ujung, yakni dari PDF ke populasi legal ontology tsb.
-
-- Bagaimana konversi dokumen peraturan perudang-undangan menjadi knowledge graph
-  dapat dilakukan secara otomatis?
+- Bagaimana cara membuat _legal ontology_ untuk memperjelas _requirement_ dan
+  mempermudah konversi dokumen PDF menjadi _knowledge graph_?
+- Bagaimana konversi dokumen peraturan perudang-undangan menjadi _knowledge
+  graph_ dapat dilakukan secara otomatis?
 - Apa saja contoh aplikasi dari knowledge graph peraturan perundang-undangan
   tersebut?
 
@@ -95,19 +93,33 @@ yg sdh ada di ELI ontology, serta yg belum ada.
 
 ## Knowledge Graph
 
-_Triple_ merupakan tuple dengan yang terdiri dari tiga elemen yaitu subject,
-object, dan predikat. Terdapat dua representasi elemen dari _triple_, yaitu URI
-dan literal. Resource merupakan URI yang dapat digunakan sebagai subject dan
-object. Property merupakan URI yang dapat digunakan sebagai predikat. Literal
-hanya dapat digunakan sebagai object. _Knowledge graph_ dibangun dari _triple_.
-_resource_ akan dinotasikan dalam `teks monospace berwarna biru` dan _predicate_
-akan dinotasikan dalam `teks monospace berwarna merah`.
+_Knowledge graph_ merupakan model data berbasis _graph_ yang menggambarkan
+entitas dunia nyata dan hubungan antara entitas-entitas tersebut [5]. Sebagai
+contoh, pada gambar dibawah dapat dilihat terpadat entitas-entitas yang ditandai
+dengan bentuk lingkaran, dan hubungan antara entitas-entitas ditandai dengan
+bentuk anak panah. Dapat dilihat pada gambar dibawah bahwa terdapat entitas
+"James" dan "Louvre" dan predikat "has visited" yang mengarah dari "James" ke
+"Louvre". Relasi tersebut dapat kita anggap sebagai sebuah pengetahuan yang
+dalam bahasa manusia dapat dituliskan sebagai "James pernah mengunjungi Louvre".
+Model data seperti ini cocok untuk menyimpan data dengan banyak jenis relasi
+antara entitas seperti pengetahuan umum, dibandingkan dengan _relational
+database_ yang cocok untuk menyimpan data dengan relasi antar entitas yang sudah
+diketahui dan terbatas.
 
-![ilustrasi triple](pictures/ilustrasi_triple.png)
+![Knowledge Graph](pictures/knowledge_graph.jpg)
+_source_:<https://yashuseth.files.wordpress.com/2019/10/knowledge-graph.jpg>
 
-// TODO: saran, sekalian aja dikasih contoh ilustrasi knowledge graph yg cukup
-eye-catchy (tapi juga mudah dipahami), bs ambil dari sumber2 di Web (tentu dgn
-menyertakan credits)
+_Knowledge graph_ terdiri dari kumpulan _triple_. _Triple_ merupakan tuple
+dengan yang terdiri dari tiga elemen yaitu subjek, objek, dan predikat. Subyek
+dan predikat direpresentasikan sebagai Uniform Resource Identifier (URI),
+sedangkan objek dapat direpresentasikan dengan URI atau _string literal_. Pada
+gambar dibawah, dapat dilihat terdapat dua _triple_. Pada triple 1 subjek,
+predikat, dan objek berturut-turut adalah
+`https://example.org/james`,`https://example.org/has_visited`,`https://example.org/louvre`
+yang mana semuanya berbentuk URI. Sedangkan pada triple 2 objeknya adalah berupa
+_string literal_ yaitu "James".
+
+![Triple](pictures/triple.svg)
 
 ## Turtle Syntax
 
@@ -118,7 +130,7 @@ TODO: konsep dan sintaks perlu dijelaskan ya di Bab 2
 ### Jenis Peraturan Perundang-undangan
 
 Terdapat beberapa jenis peraturan perundang-undangan. Setiap dokumen peraturan
-perundang-undangan adalah resource, dan memiliki susunan URI yang berbeda.
+perundang-undangan adalah entitas, dan memiliki susunan URI yang berbeda.
 Menurut UU Nomor 12 Tahun 2011 Pasal 7 Ayat 1 [1], terdapat 7 jenis Peraturan
 perundang-undangan yaitu:
 
@@ -166,7 +178,7 @@ www.ksl.stanford.edu/people/dlm/papers/ontology-tutorial-noy-mcguinness-abstract
 
 Dokumen terdiri dari komponen dokumen. Komponen dokumen diantaranya adalah
 `bab`, `bagian`, `paragraf`, `pasal`, `ayat`, dan `point`. Setiap komponen
-dokumen merupakan resource, dan memiliki URI. URI sebuah komponen didahului oleh
+dokumen merupakan entitas, dan memiliki URI. URI sebuah komponen didahului oleh
 URI dokumennya. Berikut adalah relasi antara komponen dokumen yang disediakan.
 
 TODO: Relationship antara component
@@ -539,3 +551,4 @@ dokumen.
 [2]: https://eur-lex.europa.eu/eli-register/about.html
 [3]: www.ksl.stanford.edu/people/dlm/papers/ontology101/ontology101-noy-mcguinness.html
 [4]: https://github.com/tesseract-ocr/tesseract
+[5]: https://yashuseth.blog/2019/10/08/introduction-question-answering-knowledge-graphs-kgqa/
