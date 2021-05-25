@@ -79,15 +79,6 @@ Berikut ini adalah rumusan permasalahan dari penelitian yang dilakukan:
 
 # BAB 2 TINJAUAN PUSTAKA
 
-// TODO: Yg tinjauan pustaka tentang hukum (peraturan perundang-undangan) jg
-agak minimalis. Bs tlg dijelaskan bener2 dari basic kyk, hukum itu apa dan untuk
-apa? Apa pentingnya ada hukum? Bgmn jenis-jenis hukum? Bgmn struktur hukum scara
-umum? Serta bgmn hukum bs terkait satu sama lain? Yg terpenting, tekankan bhw
-hukumnya masih manual bgt utk bikin+cara memanfaatkan produk hukumnya.
-
-// TODO: ELI jg msh simpel. Bs dijelaskan motivasi ELI, serta apa contoh konsep2
-yg sdh ada di ELI ontology, serta yg belum ada.
-
 ## Knowledge Graph
 
 _Knowledge graph_ merupakan model data berbasis _graph_ yang menggambarkan
@@ -239,26 +230,79 @@ Output dari _query_ tersebut adalah sebagai berikut.
 
 | ?visited_place |
 |----------------|
-| ex:louvre |
+| ex:louvre      |
 
 ## Peraturan Perundang-undangan
 
-### Jenis Peraturan Perundang-undangan
+??? boleh ngequote sebanyak apa?
 
-Terdapat beberapa jenis peraturan perundang-undangan. Setiap dokumen peraturan
-perundang-undangan adalah entitas, dan memiliki susunan URI yang berbeda.
-Menurut UU Nomor 12 Tahun 2011 Pasal 7 Ayat 1 [1], terdapat 7 jenis Peraturan
-perundang-undangan yaitu:
+Menurut Undang-Undang Nomor 10 Tahun 2004 Pasal 7 Ayat 1, peraturan
+perundang-undangan adalah peraturan tertulis yang dibentuk oleh lembaga negara
+atau pejabat yang berwenang dan mengikat secara umum. Jenis dan hierarki
+peraturan perundang-undangan terdiri atas:
 
-- Undang-Undang Dasar Negara Republik Indonesia Tahun 1945;
-- Ketetapan Majelis Permusyawaratan Rakyat;
-- Undang-Undang/Peraturan Pemerintah Pengganti
-- Peraturan Pemerintah;
-- Peraturan Presiden;
-- Peraturan Daerah Provinsi; dan
-- Peraturan Daerah Kabupaten/Kota.
+- Undang-Undang Dasar Negara Republik Indonesia Tahun 1945
+- Undang-Undang/Peraturan Pemerintah Pengganti Undang-Undang
+- Peraturan Pemerintah
+- Peraturan Presiden
+- Peraturan Daerah
 
-### Amandemen Peraturan Perundang-undangan
+Berikut adalah beberapa peranan perundang-undangan untuk Indonesia [1]:
+
+- Peraturan perundang-undangan merupakan kaidah hukum yang mudah dikenal
+  (diidentifikasi), mudah diketemukan kembali, dan mudah ditelusuri. Sebagai
+  kaidah hukum tertulis, bentuk, jenis,dan tempatnya jelas. Begitu pula
+  pembuatnya.
+- Peraturan perundang-undangan memberikan kepastian hukum yang lebih nyata karena
+  kaidah-kaidahnya mudah diidentifikasi dan mudah diketemukan kembali.
+- Struktur dan sistematika peraturan perundang-undangan lebih jelas sehingga
+  memungkinkan untuk diperiksa kembali dan diuji baik segi-segi formal maupun
+  materi muatannya.
+- Pembentukan dan pengembangan peraturan perundang-undangan dapat direncanakan.
+  Faktor ini sangat penting bagi negara-negara yang sedang membangun termasuk
+  membangun sistem hukum baru yang sesuai dengan kebutuhan dan perkembangan
+  masyarakat.
+
+Menurut lampiran Undang-Undang Nomor 10 Tahun 2004, struktur peraturan
+perundang–undangan terdiri atas:
+
+- Judul
+- Pembukaan
+- Batang Tubuh
+- Penutup
+- Penjelasan (jika diperlukan)
+- Lampiran (jika diperlukan)
+
+Bagian judul, pembukaan, dan penutup memuat metadata dari peraturan
+perundang-undangan tersebut seperti jenis, nomor, tahun pengundangan atau
+penetapan, nama, jabatan pembentuk, konsiderans, kasar Hukum, peraturan
+perundang-undangan. Konsiderans memuat uraian singkat mengenai pokok–pokok
+pikiran yang menjadi latar belakang dan alasan pembuatan peraturan
+perundang–undangan. Dasar Hukum memuat dasar kewenangan pembuatan peraturan
+perundang-undangan dan peraturan perundang–undangan yang memerintahkan pembuatan
+peraturan perundang–undangan tersebut. Oleh karena itu, kita dapat melihat
+keterkaitan antara peraturan perundang-undangan dengan melihat konsiderans dan
+dasar hukum dari peraturan tersebut.
+
+Batang tubuh peraturan perundang-undangan memuat semua substansi peraturan
+perundang-undangan yang dirumuskan dalam pasal. Pengelompokkan materi peraturan
+perundang-undangan dapat disusun secara sistematis dalam buku, bab, bagian, dan
+paragraf atas dasar kesamaan materi. Pasal dapat dirinci ke dalam beberapa ayat.
+Pasal dan ayat dapat dibuat dalam bentuk kalimat maupun tabulasi rincian. Dalam
+bentuk tabulasi rincian, setiap rincian harus dapat dibaca sebagai satu
+rangkaian kesatuan dengan frase pembuka dan setiap rincian diawali dengan huruf
+(abjad) kecil dan diberi tanda baca titik. Suatu rincian dapat dibagi lagi ke
+unsur rincian yang lebih kecil.
+
+Saat ini pembuatan dan pemanfaatan peraturan perundang-undangan masih dilakukan
+secara manual oleh manusia. Pembuatan peraturan perundang-undangan dilakukan
+dengan mengetikkan konten peraturan tersebut dengan format yang telah
+ditentukan. Metode pembuatan tersebut tidak masalah jika hanya akan dibaca oleh
+manusia karena manusia secara tidak sadar dapat melihat hirarki visual dari
+dokumen tersebut dan membuat data yang dilihatnya terstruktur di dalam otak.
+Metode ini membuat pemanfaatan peraturan perundang-undangan oleh mesin menjadi
+kurang efisien karena mesin perlu melakukan proses tambahan yaitu mengkonversi
+gambar menjadi data terstruktur.
 
 ## Pemodelan European Legislation Identifier (ELI)
 
@@ -271,6 +315,9 @@ ELI memberikan spesifikasi untuk hal-hal berikut:
 - Metadata yang mendeskripsikan informasi peraturan perundang-undangan. TODO:
   terlalu singkat, ksh konsepnya gmn dan contoh pemodelan ELI utk suatu
   peraturan
+
+// TODO: ELI jg msh simpel. Bs dijelaskan motivasi ELI, serta apa contoh konsep2
+yg sdh ada di ELI ontology, serta yg belum ada.
 
 // TODO: - ELI kekurangan lainnya ya lbh condong ke pemodelan peraturan di
 Eropa, bukan di Indonesia. Misal, gak ada namanya Peraturan Pemerintah, atau
@@ -663,7 +710,7 @@ menghitung sebera pa banyak metadata yang berhasil diekstrak. Metadata hasil
 ekstraksi yang akan dihitung tidak perlu sesuai dengan yang terdapat di dalam
 dokumen.
 
-[1]: luk.staff.ugm.ac.id/atur/UU12-2011Lengkap.pdf
+[1]: https://www.pustaka.ut.ac.id/lib/wp-content/uploads/pdfmk/HKUM4403-M1.pdf
 
 [2]: https://eur-lex.europa.eu/eli-register/about.html
 
