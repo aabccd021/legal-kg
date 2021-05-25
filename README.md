@@ -253,8 +253,8 @@ Berikut adalah beberapa peranan perundang-undangan untuk Indonesia [1]:
   (diidentifikasi), mudah diketemukan kembali, dan mudah ditelusuri. Sebagai
   kaidah hukum tertulis, bentuk, jenis,dan tempatnya jelas. Begitu pula
   pembuatnya.
-- Peraturan perundang-undangan memberikan kepastian hukum yang lebih nyata karena
-  kaidah-kaidahnya mudah diidentifikasi dan mudah diketemukan kembali.
+- Peraturan perundang-undangan memberikan kepastian hukum yang lebih nyata
+  karena kaidah-kaidahnya mudah diidentifikasi dan mudah diketemukan kembali.
 - Struktur dan sistematika peraturan perundang-undangan lebih jelas sehingga
   memungkinkan untuk diperiksa kembali dan diuji baik segi-segi formal maupun
   materi muatannya.
