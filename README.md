@@ -109,17 +109,57 @@ diketahui dan terbatas.
 ![Knowledge Graph](pictures/knowledge_graph.jpg)
 _source_:<https://yashuseth.files.wordpress.com/2019/10/knowledge-graph.jpg>
 
-_Knowledge graph_ terdiri dari kumpulan _triple_. _Triple_ merupakan tuple
-dengan yang terdiri dari tiga elemen yaitu subjek, objek, dan predikat. Subyek
-dan predikat direpresentasikan sebagai Uniform Resource Identifier (URI),
-sedangkan objek dapat direpresentasikan dengan URI atau _string literal_. Pada
-gambar dibawah, dapat dilihat terdapat dua _triple_. Pada triple 1 subjek,
-predikat, dan objek berturut-turut adalah
+## Resource Description Framework
+
+Resource Description Framework (RDF) merupkan model data yang memberikan
+pernyataan tentang suatu _resource_ dalam bentuk subjek-predikat-objek, atau
+sering disebut _triple_. Sebuah _knowledge graph_ dapat direpresentasikan
+sebagai kumpulan _triple_. Subyek dan predikat dalam _triple_ direpresentasikan
+sebagai Uniform Resource Identifier (URI), sedangkan objek dapat
+direpresentasikan dengan URI atau _string literal_. Pada gambar dibawah, dapat
+dilihat terdapat dua _triple_. Pada triple 1 subjek, predikat, dan objek
+berturut-turut adalah
 `https://example.org/james`,`https://example.org/has_visited`,`https://example.org/louvre`
-yang mana semuanya berbentuk URI. Sedangkan pada triple 2 objeknya adalah berupa
-_string literal_ yaitu "James".
+yang mana semuanya berbentuk URI. Sedangkan pada triple 2 subjek, predikat, dan
+objek berturut-turut adalah
+`https://example.org/james`,`https://example.org/has_name`, "james" .
+`https://example.org/james`, `https://example.org/louvre` berturut-turut
+merupakan notasi untuk _resource_ entitas James dan Louvre,
+`https://example.org/has_visited` dan `https://example.org/has_name` merupakan
+predikat yang menjelaskan hubungan antara subjek dan objek, dan "james" adalah
+_string literal_ yang menunjukan nilai dari nama James.
 
 ![Triple](pictures/triple.svg)
+
+Terdapat beberapa format berkas dan sintaks untuk mengekspresikan RDF. Pada
+penelitian ini, penulis menggunakan format Terse RDF Triple Language (Turtle).
+Sebagai contoh, dua _triple_ diatas dapat dituliskan dalam format Turtle sebagai
+berikut.
+
+```ttl
+<https://example.org/james> <https://example.org/has_visited> <https://example.org/louvre> .
+<https://example.org/james> <https://example.org/has_name> "james" .
+```
+
+Dengan fitur format Turtle, dua _triple_ diatas dapat ditulis lebih singkat
+dengan mengganti prefix URI yang sama menjadi teks yang lebih singkat, dan
+menggabungkan penulisan beberapa _triple_ dengan subjek yang sama sehingga
+subjek hanya perlu dituliskan sekali saja. Sebagai contoh, karena sebagaian
+besar URI memiliki prefix `https://example.org/`, kita dapat menggantinya dengan
+_string_ `ex` dengan mendeklarasikan `@prefix ex: <https://example.org/> .`.
+Kedua _triple_ juga memiliki subjek yang sama yaitu `https://example.org/james`,
+oleh karena itu, penulisan kedua turtle bisa digabung dengan hanya menuliskan
+subjek sebanyak satu kali, kemudian menuliskan predikat dan objek dipisah dengan
+tanda titik koma . Berikut adalah contoh penulisan dua _triple_ diatas dalam
+bentuk yang lebih singkat dan lebih mudah dibaca oleh manusia.
+
+```ttl
+@prefix ex: <https://example.org/> .
+
+ex:james 
+  ex:has_visited ex:louvre ;
+  ex:has_name "james" .
+```
 
 ## Turtle Syntax
 
