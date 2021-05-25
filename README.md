@@ -117,7 +117,7 @@ sering disebut _triple_. Sebuah _knowledge graph_ dapat direpresentasikan
 sebagai kumpulan _triple_. Subyek dan predikat dalam _triple_ direpresentasikan
 sebagai Uniform Resource Identifier (URI), sedangkan objek dapat
 direpresentasikan dengan URI atau _string literal_. Pada gambar dibawah, dapat
-dilihat terdapat dua _triple_. Pada triple 1 subjek, predikat, dan objek
+dilihat terdapat _knowledge graph_ dengan dua _triple_. Pada triple 1 subjek, predikat, dan objek
 berturut-turut adalah
 `https://example.org/james`,`https://example.org/has_visited`,`https://example.org/louvre`
 yang mana semuanya berbentuk URI. Sedangkan pada triple 2 subjek, predikat, dan
@@ -133,7 +133,7 @@ _string literal_ yang menunjukan nilai dari nama James.
 
 Terdapat beberapa format berkas dan sintaks untuk mengekspresikan RDF. Pada
 penelitian ini, penulis menggunakan format Terse RDF Triple Language (Turtle).
-Sebagai contoh, dua _triple_ diatas dapat dituliskan dalam format Turtle sebagai
+Sebagai contoh, _knowledge graph_ diatas dapat dituliskan dalam format Turtle sebagai
 berikut.
 
 ```ttl
@@ -161,9 +161,88 @@ ex:james
   ex:has_name "james" .
 ```
 
-## Turtle Syntax
+## SPARQL
 
-TODO: konsep dan sintaks perlu dijelaskan ya di Bab 2
+SPARQL merupakan salahsatu RDF _query language_ yaitu bahasa yang mampu
+mengambil atau mengubah data yang disimpan dalam format RDF. Sintaks SPARQL
+memiliki beberapa kesamaan dengan SQL, contohnya sebuah variabel diawali dengan
+tanda tanya seperti `?name`. Berikut adalah penjelasan sintaks SPARQL.
+
+- `PREFIX`: Mendeklarasikan pemetaan prefix URI menjadi _string_ yang lebih
+  singkat. Hal ini dilakukan agar _query_ lebih mudah dibaca oleh manusia
+  seperti sintaks `@prefix` pada Turtle.
+- `SELECT`: Menyatakan variabel yang akan ditampilkan sebagai output dari
+  _query_.
+- `WHERE`: Menyatakan kondisi _triple_ yang akan ditampilkan pada output.
+
+Berikut adalah contoh-contoh _query_ SPARQL yang dilakukan pada contoh
+_knowledge graph_ pada subbab sebelumnya.
+
+### Contoh Query 1
+
+_Query_ ini bertujuan untuk menampilkan semua _triple_ yang terdapat pada
+_knowledge graph_.
+
+```sparql
+PREFIX ex: <https://example.org/>
+SELECT ?s 
+       ?p
+       ?o
+WHERE
+  {
+    ?s ?p ?o
+  }
+```
+
+Output dari _query_ tersebut adalah sebagai berikut.
+
+| ?s       | ?p             | ?o        |
+|----------|----------------|-----------|
+| ex:james | ex:has_visited | ex:louvre |
+| ex:james | ex:has_name    | "james"   |
+
+### Contoh Query 2
+
+_Query_ ini bertujuan untuk menampilkan semua predikat dan objek pada _triple_
+dengan subjek `https://example.org/james`.
+
+```sparql
+PREFIX ex: <https://example.org/>
+SELECT ?p
+       ?o
+WHERE
+  {
+    ex:james ?p ?o
+  }
+```
+
+Output dari _query_ tersebut adalah sebagai berikut.
+
+| ?p             | ?o        |
+|----------------|-----------|
+| ex:has_visited | ex:louvre |
+| ex:has_name    | "james"   |
+
+### Contoh Query 3
+
+_Query_ ini bertujuan untuk menampilkan semua objek pada _triple_ dengan subjek
+`https://example.org/james` dan predikat `https://example.org/has_visited`.
+Artinya, _query_ ini menampilkan semua tempat yang pernah dikunjungi james.
+
+```sparql
+PREFIX ex: <https://example.org/>
+SELECT ?visited_place
+WHERE
+  {
+    ex:james ex:has_visited ?visited_place
+  }
+```
+
+Output dari _query_ tersebut adalah sebagai berikut.
+
+| ?visited_place |
+|----------------|
+| ex:louvre |
 
 ## Peraturan Perundang-undangan
 
