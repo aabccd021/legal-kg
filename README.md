@@ -17,16 +17,17 @@ Pertanyaan-pertanyaan tersebut umumnya dapat dijawab oleh seorang ahli hukum,
 artinya penerapan peraturan perundang-undangan ini hanya dapat dilakukan dalam
 skala kecil dan biaya relatif mahal. Komputer dapat menjadi alternatif untuk
 aplikasi tersebut dalam skala lebih besar dan biaya lebih murah, jika peraturan
-perundang-undangan berupa data terstruktur yang dapat diolah oleh
-komputer. Sayangnya, data peraturan perundang-undangan umumnya dibuat dalam
-bentuk data semi-terstruktur, yaitu berupa dokumen yang memiliki data
-terstruktur seperti aturan penomoran dan aturan struktur (seperti bab, pasal,
-dan ayat), tetapi penulisan peraturan sendiri dalam bentuk data tidak
-terstruktur yaitu teks bahasa manusia.
+perundang-undangan berupa data terstruktur yang dapat diolah oleh komputer.
+Sayangnya, data peraturan perundang-undangan umumnya dibuat dalam bentuk data
+semi-terstruktur, yaitu berupa dokumen yang memiliki data terstruktur seperti
+aturan penomoran dan aturan struktur (seperti bab, pasal, dan ayat), tetapi
+penulisan peraturan sendiri dalam bentuk data tidak terstruktur yaitu teks
+bahasa manusia.
 
 ![Data Terstruktur dan Tidak Terstruktur dari Dokumen](pictures/terstruktur.png)
 
-![Hasil Parsing Data Terstruktur dan Tidak Terstruktur dari Dokumen](pictures/terstruktur_parsed.svg)
+![Hasil Parsing Data Terstruktur dan Tidak Terstruktur dari
+Dokumen](pictures/terstruktur_parsed.svg)
 
 Gambar diatas merupakan salah satu contoh ekstraksi informasi dari UU No.11
 Tahun 2020 tentang Ketenagakerjaan. Pada gambar diatas, dapat dilihat bahwa
@@ -78,10 +79,6 @@ Berikut ini adalah rumusan permasalahan dari penelitian yang dilakukan:
 
 # BAB 2 TINJAUAN PUSTAKA
 
-// TODO: Tinjauan pustaka masih agak minimalis ya :) Dijelasin dong knowledge
-graph in general itu apa dan kenapa, RDF (serta Turtle) itu gmn konsepnya,
-SPARQL itu gmn, dsb. Jgn pelit2 jg kasih contoh gambar agar lbh mudah dipahami.
-
 // TODO: Yg tinjauan pustaka tentang hukum (peraturan perundang-undangan) jg
 agak minimalis. Bs tlg dijelaskan bener2 dari basic kyk, hukum itu apa dan untuk
 apa? Apa pentingnya ada hukum? Bgmn jenis-jenis hukum? Bgmn struktur hukum scara
@@ -117,8 +114,8 @@ sering disebut _triple_. Sebuah _knowledge graph_ dapat direpresentasikan
 sebagai kumpulan _triple_. Subyek dan predikat dalam _triple_ direpresentasikan
 sebagai Uniform Resource Identifier (URI), sedangkan objek dapat
 direpresentasikan dengan URI atau _string literal_. Pada gambar dibawah, dapat
-dilihat terdapat _knowledge graph_ dengan dua _triple_. Pada triple 1 subjek, predikat, dan objek
-berturut-turut adalah
+dilihat terdapat _knowledge graph_ dengan dua _triple_. Pada triple 1 subjek,
+predikat, dan objek berturut-turut adalah
 `https://example.org/james`,`https://example.org/has_visited`,`https://example.org/louvre`
 yang mana semuanya berbentuk URI. Sedangkan pada triple 2 subjek, predikat, dan
 objek berturut-turut adalah
@@ -133,8 +130,8 @@ _string literal_ yang menunjukan nilai dari nama James.
 
 Terdapat beberapa format berkas dan sintaks untuk mengekspresikan RDF. Pada
 penelitian ini, penulis menggunakan format Terse RDF Triple Language (Turtle).
-Sebagai contoh, _knowledge graph_ diatas dapat dituliskan dalam format Turtle sebagai
-berikut.
+Sebagai contoh, _knowledge graph_ diatas dapat dituliskan dalam format Turtle
+sebagai berikut.
 
 ```ttl
 <https://example.org/james> <https://example.org/has_visited> <https://example.org/louvre> .
@@ -667,7 +664,11 @@ ekstraksi yang akan dihitung tidak perlu sesuai dengan yang terdapat di dalam
 dokumen.
 
 [1]: luk.staff.ugm.ac.id/atur/UU12-2011Lengkap.pdf
+
 [2]: https://eur-lex.europa.eu/eli-register/about.html
+
 [3]: www.ksl.stanford.edu/people/dlm/papers/ontology101/ontology101-noy-mcguinness.html
+
 [4]: https://github.com/tesseract-ocr/tesseract
+
 [5]: https://yashuseth.blog/2019/10/08/introduction-question-answering-knowledge-graphs-kgqa/
