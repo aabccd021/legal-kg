@@ -308,12 +308,15 @@ gambar menjadi data terstruktur.
 
 ELI merupakan sistem untuk membuat peraturan perundang-undangan tersedia secara
 daring dalam format terstandardisasi, sehingga dapat diakses dan digunakan oleh
-berbagai instansi. ELI dibangun berdasarkan persetujuan antara negara-negara EU.
-ELI memberikan spesifikasi untuk hal-hal berikut:
+berbagai instansi. ELI bertujuan untuk untuk memfasilitasi akses, berbagi dan
+interkoneksi informasi hukum yang diterbitkan melalui nasional, Eropa dan sistem
+informasi hukum global [6]. ELI dibangun berdasarkan persetujuan antara
+negara-negara EU. Spesifikasi yang terdapat pada ELI antara lain:
 
 - URI untuk informasi peraturan perundang-undangan.
-- Metadata yang mendeskripsikan informasi peraturan perundang-undangan. TODO:
-  terlalu singkat, ksh konsepnya gmn dan contoh pemodelan ELI utk suatu
+- Metadata yang mendeskripsikan informasi peraturan perundang-undangan.
+
+// TODO: terlalu singkat, ksh konsepnya gmn dan contoh pemodelan ELI utk suatu
   peraturan
 
 // TODO: ELI jg msh simpel. Bs dijelaskan motivasi ELI, serta apa contoh konsep2
@@ -719,3 +722,5 @@ dokumen.
 [4]: https://github.com/tesseract-ocr/tesseract
 
 [5]: https://yashuseth.blog/2019/10/08/introduction-question-answering-knowledge-graphs-kgqa/
+
+[6]: https://op.europa.eu/en/publication-detail/-/publication/514875b4-5efd-11e8-ab9c-01aa75ed71a1
