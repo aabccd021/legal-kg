@@ -825,3 +825,374 @@ result:
 |numOfUpdates|90|
 |pasal|http://example.org/legal/document/uu/2009/1/pasal/0003|
 |latestPasalVersion|http://example.org/legal/document/uu/2009/1/pasal/0003/version/20090112|
+
+# Query_018
+description:
+
+tampilkan semua triple
+
+
+query:
+
+```sparql
+PREFIX legal: <http://example.org/legal/ontology/>
+
+SELECT * 
+WHERE {
+  ?s ?p ?o .
+} 
+ORDER BY ?s ?p ?o
+LIMIT 3
+```
+
+result:
+|0||
+|-|-|
+|s|http://example.org/legal/document/uu/1950/1|
+|p|http://example.org/legal/ontology/documentHasDisahkanDate|
+|o|1950-05-06|
+
+|1||
+|-|-|
+|s|http://example.org/legal/document/uu/1950/1|
+|p|http://example.org/legal/ontology/documentHasDisahkanJabatanPengesah|
+|o|PRESIDEN REPUBLIK-|
+
+|2||
+|-|-|
+|s|http://example.org/legal/document/uu/1950/1|
+|p|http://example.org/legal/ontology/documentHasDisahkanLocation|
+|o|Jakarta|
+
+# Query_019
+description:
+
+tampilkan 10 legal doc pertama
+
+query:
+
+```sparql
+PREFIX legal: <http://example.org/legal/ontology/>
+
+SELECT * 
+WHERE {
+  ?legalDoc a legal:Document
+} 
+ORDER BY ?legalDoc
+LIMIT 10
+```
+
+result:
+|0||
+|-|-|
+|legalDoc|http://example.org/legal/document/uu/1950/1|
+
+|1||
+|-|-|
+|legalDoc|http://example.org/legal/document/uu/1950/14|
+
+|2||
+|-|-|
+|legalDoc|http://example.org/legal/document/uu/1950/15|
+
+|3||
+|-|-|
+|legalDoc|http://example.org/legal/document/uu/1950/2|
+
+|4||
+|-|-|
+|legalDoc|http://example.org/legal/document/uu/1950/3|
+
+|5||
+|-|-|
+|legalDoc|http://example.org/legal/document/uu/1950/4|
+
+|6||
+|-|-|
+|legalDoc|http://example.org/legal/document/uu/1950/5|
+
+|7||
+|-|-|
+|legalDoc|http://example.org/legal/document/uu/1950/6|
+
+|8||
+|-|-|
+|legalDoc|http://example.org/legal/document/uu/1953/10|
+
+|9||
+|-|-|
+|legalDoc|http://example.org/legal/document/uu/1953/18|
+
+# Query_020
+description:
+
+tampilkan semua UU yang disahkan setelah 10 Oktober 2019
+
+
+query:
+
+```sparql
+PREFIX legal: <http://example.org/legal/ontology/>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+
+SELECT *
+WHERE {
+  ?legalDoc legal:documentHasDisahkanDate ?date .
+  FILTER ( ?date >= "2019-10-10"^^xsd:date )
+}
+ORDER BY ?legalDoc
+
+```
+
+result:
+|0||
+|-|-|
+|legalDoc|http://example.org/legal/document/uu/2019/17|
+|date|2019-10-15|
+
+|1||
+|-|-|
+|legalDoc|http://example.org/legal/document/uu/2019/18|
+|date|2019-10-15|
+
+|2||
+|-|-|
+|legalDoc|http://example.org/legal/document/uu/2019/20|
+|date|2019-10-18|
+
+|3||
+|-|-|
+|legalDoc|http://example.org/legal/document/uu/2019/21|
+|date|2019-10-18|
+
+|4||
+|-|-|
+|legalDoc|http://example.org/legal/document/uu/2019/22|
+|date|2019-10-18|
+
+|5||
+|-|-|
+|legalDoc|http://example.org/legal/document/uu/2019/23|
+|date|2019-10-24|
+
+|6||
+|-|-|
+|legalDoc|http://example.org/legal/document/uu/2019/24|
+|date|2019-10-24|
+
+|7||
+|-|-|
+|legalDoc|http://example.org/legal/document/uu/2020/1|
+|date|2020-02-28|
+
+|8||
+|-|-|
+|legalDoc|http://example.org/legal/document/uu/2020/10|
+|date|2020-10-26|
+
+|9||
+|-|-|
+|legalDoc|http://example.org/legal/document/uu/2020/11|
+|date|2020-11-02|
+
+|10||
+|-|-|
+|legalDoc|http://example.org/legal/document/uu/2020/12|
+|date|2020-11-02|
+
+|11||
+|-|-|
+|legalDoc|http://example.org/legal/document/uu/2020/13|
+|date|2020-11-02|
+
+|12||
+|-|-|
+|legalDoc|http://example.org/legal/document/uu/2020/2|
+|date|2020-05-16|
+
+|13||
+|-|-|
+|legalDoc|http://example.org/legal/document/uu/2020/4|
+|date|2020-08-05|
+
+|14||
+|-|-|
+|legalDoc|http://example.org/legal/document/uu/2020/5|
+|date|2020-08-05|
+
+|15||
+|-|-|
+|legalDoc|http://example.org/legal/document/uu/2020/6|
+|date|2020-08-11|
+
+|16||
+|-|-|
+|legalDoc|http://example.org/legal/document/uu/2020/8|
+|date|2020-10-13|
+
+|17||
+|-|-|
+|legalDoc|http://example.org/legal/document/uu/2020/9|
+|date|2020-10-26|
+
+# Query_021
+description:
+
+tampilkan legal document beserta yang ditimbangnya (menimbang)
+
+
+query:
+
+```sparql
+PREFIX legal: <http://example.org/legal/ontology/>
+
+SELECT ?doc ?menimbangDoc
+WHERE {
+  ?doc legal:documentMenimbang ?menimbang .
+  ?menimbang legal:menimbangHasPointSet ?menimbangPointSet .
+  ?menimbangPointSet legal:pointSetHasPoint ?menimbangPoint .
+  ?menimbangPoint legal:pointHasText ?menimbangText .
+  ?menimbangText legal:textReferencesLegal ?menimbangDoc .
+  ?menimbangDoc a legal:Document
+}
+ORDER BY ?doc
+LIMIT 10
+
+```
+
+result:
+|0||
+|-|-|
+|doc|http://example.org/legal/document/uu/2004/11|
+|menimbangDoc|http://example.org/legal/document/uu/1986/2|
+
+|1||
+|-|-|
+|doc|http://example.org/legal/document/uu/2004/12|
+|menimbangDoc|http://example.org/legal/document/uu/1986/2|
+
+|2||
+|-|-|
+|doc|http://example.org/legal/document/uu/2004/13|
+|menimbangDoc|http://example.org/legal/document/uu/1986/2|
+
+|3||
+|-|-|
+|doc|http://example.org/legal/document/uu/2004/14|
+|menimbangDoc|http://example.org/legal/document/uu/1986/2|
+
+|4||
+|-|-|
+|doc|http://example.org/legal/document/uu/2004/16|
+|menimbangDoc|http://example.org/legal/document/uu/1991/5|
+
+|5||
+|-|-|
+|doc|http://example.org/legal/document/uu/2004/31|
+|menimbangDoc|http://example.org/legal/document/uu/1985/9|
+
+|6||
+|-|-|
+|doc|http://example.org/legal/document/uu/2004/31|
+|menimbangDoc|http://example.org/legal/document/uu/1985/9|
+
+|7||
+|-|-|
+|doc|http://example.org/legal/document/uu/2004/37|
+|menimbangDoc|http://example.org/legal/document/uu/1998/4|
+
+|8||
+|-|-|
+|doc|http://example.org/legal/document/uu/2004/5|
+|menimbangDoc|http://example.org/legal/document/uu/1985/14|
+
+|9||
+|-|-|
+|doc|http://example.org/legal/document/uu/2005/10|
+|menimbangDoc|http://example.org/legal/document/uu/2005/2|
+
+# Query_022
+description:
+
+select 10 legal document dengan pasal terbanyak
+
+
+query:
+
+```sparql
+PREFIX legal: <http://example.org/legal/ontology/>
+
+SELECT ?doc (COUNT(?pasal) as ?pasalCount)
+WHERE {
+  ?doc a legal:Document .
+  ?pasal legal:partOf ?doc .
+  ?pasal a legal:Pasal .
+}
+GROUP BY ?doc
+ORDER BY DESC(?pasalCount)
+LIMIT 10
+
+```
+
+result:
+|0||
+|-|-|
+|doc|http://example.org/legal/document/uu/2009/1|
+|pasalCount|466|
+
+|1||
+|-|-|
+|doc|http://example.org/legal/document/uu/2014/17|
+|pasalCount|377|
+
+|2||
+|-|-|
+|doc|http://example.org/legal/document/uu/2008/17|
+|pasalCount|356|
+
+|3||
+|-|-|
+|doc|http://example.org/legal/document/uu/2012/8|
+|pasalCount|328|
+
+|4||
+|-|-|
+|doc|http://example.org/legal/document/uu/2004/37|
+|pasalCount|308|
+
+|5||
+|-|-|
+|doc|http://example.org/legal/document/uu/1981/8|
+|pasalCount|286|
+
+|6||
+|-|-|
+|doc|http://example.org/legal/document/uu/2006/11|
+|pasalCount|230|
+
+|7||
+|-|-|
+|doc|http://example.org/legal/document/uu/2009/22|
+|pasalCount|223|
+
+|8||
+|-|-|
+|doc|http://example.org/legal/document/uu/2003/13|
+|pasalCount|206|
+
+|9||
+|-|-|
+|doc|http://example.org/legal/document/uu/2009/36|
+|pasalCount|205|
+
+{}
+
+{}
+
+{}
+
+{}
+
+{}
+
+{}

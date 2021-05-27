@@ -107,7 +107,12 @@ function getAlternativeVocabQuads(triples: LegalTriple[]): n3.Quad[] {
         p === 'pasalSetHasPasal' ||
         p === 'pointSetHasPoint' ||
         p === 'pasalVersionHasPointSet' ||
-        p === 'pasalVersionHasAyatSet'
+        p === 'pasalVersionHasAyatSet' ||
+        p === 'pointHasText' ||
+        p === 'menimbangHasPointSet' ||
+        p === 'menimbangHasText' ||
+        p === 'mengingatHasPointSet' ||
+        p === 'mengingatHasText'
       ) {
         return triple(legalNodeToN3(o), onto('partOf'), legalNodeToN3(s));
       }

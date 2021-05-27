@@ -32,7 +32,6 @@ async function query(): Promise<void> {
       let idx = 0;
       const end = [];
       for await (const chunk of bindingsStream) {
-        console.log(chunk);
         end.push(
           `|${idx}||\n|-|-|\n` +
             Object.entries((chunk as any) as Row)

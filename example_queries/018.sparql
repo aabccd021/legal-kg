@@ -1,0 +1,8 @@
+PREFIX legal: <http://example.org/legal/ontology/>
+
+SELECT * 
+WHERE {
+  ?s ?p ?o .
+} 
+ORDER BY ?s ?p ?o
+LIMIT 3

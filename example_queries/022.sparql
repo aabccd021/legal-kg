@@ -1,0 +1,11 @@
+PREFIX legal: <http://example.org/legal/ontology/>
+
+SELECT ?doc (COUNT(?pasal) as ?pasalCount)
+WHERE {
+  ?doc a legal:Document .
+  ?pasal legal:partOf ?doc .
+  ?pasal a legal:Pasal .
+}
+GROUP BY ?doc
+ORDER BY DESC(?pasalCount)
+LIMIT 10

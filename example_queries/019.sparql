@@ -1,0 +1,8 @@
+PREFIX legal: <http://example.org/legal/ontology/>
+
+SELECT * 
+WHERE {
+  ?legalDoc a legal:Document
+} 
+ORDER BY ?legalDoc
+LIMIT 10
