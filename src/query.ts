@@ -1,5 +1,4 @@
-import { newEngine } from '@comunica/actor-init-sparql-file';
-import { compact, curry, isUndefined, isEmpty } from 'lodash';
+import { curry, isUndefined } from 'lodash';
 import * as fs from 'fs';
 import path from 'path';
 import { DocumentNode, nodeToName } from './document';
@@ -11,7 +10,7 @@ export async function query(args: { legalDocPath?: string }): Promise<void> {
   if (!isUndefined(args.legalDocPath)) throw Error('TODO');
   for (const node of getDocumentData('ttl')) {
     console.log(`Querying ${nodeToName(node)}`);
-    await queryNodeWith(queryArr, node);
+    await queryNode(queryArr, node);
   }
 }
 
@@ -25,7 +24,6 @@ function fileNameToQuery(sparqlFileDirPath: string, fileName: string): Query {
   return { str, name };
 }
 
-const queryNodeWith = curry(queryNode);
 async function queryNode(queryArr: Query[], node: DocumentNode): Promise<void> {
   let results: string[] = [];
   for (const query of queryArr) {
@@ -41,17 +39,18 @@ function toQueryResult(node: DocumentNode, query: Query): Promise<string> {
 }
 
 async function _getQueryResult(query: Query, sources: string[]): Promise<string> {
-  const result = await newEngine().query(query.str, { sources });
-  if (result.type == 'bindings') {
-    const bindings = await result.bindings();
-    const content = compact(bindings)
-      .map((y) => result.variables.map((x) => `| |${x}| ${y.get(x)?.value}|`).join('\n'))
-      .map((resultStr, idx) => `| ${idx} | | |\n${resultStr}`)
-      .join('\n');
-    const contentTable = isEmpty(content) ? 'empty result' : `\n| | | |\n|-|-|-|\n${content}`;
-    return `\n# ${query.name}\n${contentTable}`;
-  }
-  throw Error('unknown result type');
+  return 'result';
+  // const result = await newEngine().query(query.str, { sources });
+  // if (result.type == 'bindings') {
+  //   const bindings = await result.bindings();
+  //   const content = compact(bindings)
+  //     .map((y) => result.variables.map((x) => `| |${x}| ${y.get(x)?.value}|`).join('\n'))
+  //     .map((resultStr, idx) => `| ${idx} | | |\n${resultStr}`)
+  //     .join('\n');
+  //   const contentTable = isEmpty(content) ? 'empty result' : `\n| | | |\n|-|-|-|\n${content}`;
+  //   return `\n# ${query.name}\n${contentTable}`;
+  // }
+  // throw Error('unknown result type');
 }
 
 // TODO: query using fuseki

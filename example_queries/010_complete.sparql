@@ -34,3 +34,4 @@ SELECT ?type (COUNT(*) AS ?jumlah) WHERE {
     BIND("mengubah" AS ?type)
   }
 } GROUP BY ?type
+LIMIT 3

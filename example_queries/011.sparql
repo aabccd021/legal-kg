@@ -8,3 +8,4 @@ SELECT ?latestPasalVersion WHERE {
     } GROUP BY ?pasal
   }
 }
+LIMIT 3

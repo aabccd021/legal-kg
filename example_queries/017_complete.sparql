@@ -23,3 +23,4 @@ SELECT ?law ?numOfUpdates ?pasal (MAX(?pasalVersion) as ?latestPasalVersion) WHE
 }
 GROUP BY ?law ?numOfUpdates ?pasal
 ORDER BY DESC (?numOfUpdates)
+LIMIT 3

@@ -6,4 +6,4 @@ SELECT ?x ?text WHERE {
   ?x legal:partOf* ?pasal .
   ?x legal:ayatHasKey 1 .
   ?x legal:ayatHasRawText ?text .
-}
+} LIMIT 3

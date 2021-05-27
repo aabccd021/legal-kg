@@ -11,3 +11,4 @@ SELECT DISTINCT ?pasalVersion ?text WHERE {
     UNION { ?point legal:pointDeletePasalVersion ?amendedPasalVersion }
   }
 }
+LIMIT 3

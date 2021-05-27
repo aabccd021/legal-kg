@@ -6,4 +6,4 @@ SELECT ?pasal ?text WHERE {
   ?pasal legal:partOf+ ?bab .
   ?pasal legal:pasalHasPasalVersion ?pasalVersion .
   ?pasalVersion legal:pasalVersionHasRawText ?text
-}
+} LIMIT 3

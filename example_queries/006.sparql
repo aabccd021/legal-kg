@@ -6,3 +6,4 @@ SELECT ?insertingPoint ?insertedPasalVersion ?text WHERE {
   ?insertedPasalVersion legal:partOf+ <http://example.org/legal/document/uu/2003/13> .
   ?insertedPasalVersion legal:pasalVersionHasRawText ?text .
 }
+LIMIT 3

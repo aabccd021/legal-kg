@@ -7,3 +7,4 @@ SELECT DISTINCT ?pasalVersion WHERE {
   ?document legal:documentHasYear ?year
   FILTER(?year > 2001)
 }
+LIMIT 3

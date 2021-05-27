@@ -4,4 +4,4 @@ SELECT ?pasalVersion ?text WHERE {
   <http://example.org/legal/document/uu/2020/11> legal:documentHasPasal ?pasal .
   ?pasal legal:pasalHasPasalVersion ?pasalVersion .
   ?pasalVersion legal:pasalVersionHasRawText ?text .
-}
+} LIMIT 3

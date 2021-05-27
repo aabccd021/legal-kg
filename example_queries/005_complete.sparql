@@ -13,4 +13,4 @@ SELECT ?ayat ?text WHERE {
   ?ayat legal:ayatHasRawText ?text
   FILTER REGEX(str(?text), "kompensasi")
   FILTER REGEX(str(?text), "buruh")
-}
+} LIMIT 3

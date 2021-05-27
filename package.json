@@ -97,6 +97,7 @@
     "@types/p-timeout": "^1.2.2",
     "@types/yargs": "^16.0.0",
     "add": "^2.0.6",
+    "fetch-sparql-endpoint": "^2.0.1",
     "io-ts": "^2.2.16",
     "js-yaml": "^4.0.0",
     "p-timeout": "^4.1.0",

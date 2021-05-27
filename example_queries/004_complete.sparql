@@ -10,4 +10,4 @@ SELECT ?pasal ?text WHERE {
     } GROUP BY ?pasal
   }
   ?latestPasalVersion legal:pasalVersionHasRawText ?text
-}
+} LIMIT 3

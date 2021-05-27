@@ -11,4 +11,4 @@ SELECT ?x ?text WHERE {
   ?x legal:partOf* ?latestPasalVersion .
   ?x legal:ayatHasKey 1 .
   ?x legal:ayatHasRawText ?text .
-}
+} LIMIT 3

@@ -8,3 +8,4 @@ SELECT ?ayat ?text ?citation WHERE {
   ?ayat legal:ayatHasText ?textRef .
   OPTIONAL {?textRef legal:textReferencesLegal ?citation}
 }
+LIMIT 3
