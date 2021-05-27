@@ -34,7 +34,7 @@ async function query(): Promise<void> {
       for await (const chunk of bindingsStream) {
         end.push(
           `|${idx}||\n|-|-|\n` +
-            Object.entries((chunk as any) as Row)
+            Object.entries((chunk as unknown) as Row)
               .map(([key, val]) => `|${key}|${val.value.replaceAll('\n', '\\n')}|`)
               .join('\n')
         );

@@ -9,6 +9,7 @@
     "generate:ocr": "ts-node src/ocr.ts",
     "generate:span": "ts-node src/pdf_to_span.ts",
     "generate:data": "ts-node src/span_to_data.ts",
+    "generate:ttl": "ts-node src/data_to_ttl.ts",
     "generate:md": "ts-node src/data_to_md.ts",
     "scrape": "ts-node src/scrape.ts"
   },
