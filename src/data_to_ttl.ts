@@ -6,9 +6,13 @@ import { triplesToTtl } from './data_to_ttl/triples-to-ttl';
 import { Document } from './component';
 
 getDocumentData('data').forEach((node) => {
-  const dataFile = nodeToFile('data', node);
-  const ttlFile = nodeToFile('ttl', node);
-  const document = yaml.load(readFileSync(dataFile.path, 'utf8')) as Document;
-  const triples = triplesToTtl(yamlToTriples(document));
-  writeFileSync(ttlFile.path, triples);
+  try {
+    const dataFile = nodeToFile('data', node);
+    const ttlFile = nodeToFile('ttl', node);
+    const document = yaml.load(readFileSync(dataFile.path, 'utf8')) as Document;
+    const triples = triplesToTtl(yamlToTriples(document));
+    writeFileSync(ttlFile.path, triples);
+  } catch (e) {
+    console.log(e);
+  }
 });
