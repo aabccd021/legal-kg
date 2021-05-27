@@ -142,13 +142,13 @@ function bagianToMd(bagian: Bagian): string {
       ? bagian.content.elements.map(pasalToMd)
       : bagian.content.elements.map(paragrafToMd);
   const uri = nodeToUri(bagian.node);
-  return `\n## [Bagian ${bagian.node.key}](${uri})\n${contentStr}\n`;
+  return `\n## [${bagian.title}](${uri})\n${contentStr}\n`;
 }
 
 function paragrafToMd(paragraf: Paragraf): string {
   const contentStr = paragraf.pasalSet.elements.map(pasalToMd);
   const uri = nodeToUri(paragraf.node);
-  return `\n## [Paragraf ${paragraf.node.key}](${uri})\n${contentStr}\n`;
+  return `\n## [${paragraf.title}](${uri})\n${contentStr}\n`;
 }
 
 function pasalToMd(pasal: Pasal): string {
