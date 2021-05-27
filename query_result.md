@@ -1185,14 +1185,321 @@ result:
 |doc|http://example.org/legal/document/uu/2009/36|
 |pasalCount|205|
 
-{}
+# Query_023
+description:
 
-{}
+tampilkan 10 dokumen yang pernah diamandemen
 
-{}
 
-{}
+query:
 
-{}
+```sparql
+PREFIX legal: <http://example.org/legal/ontology/>
 
-{}
+SELECT DISTINCT ?doc ?amenderDoc
+WHERE {
+  ?doc a legal:Document .
+  ?pasal legal:partOf ?doc .
+  ?pasal legal:pasalHasPasalVersion ?pasalVersion .
+  ?amender legal:pointUpdatePasalVersion ?pasalVersion .
+  ?amender legal:partOf* ?amenderDoc .
+  ?amenderDoc a legal:Document
+}
+LIMIT 10
+```
+
+result:
+|0||
+|-|-|
+|doc|http://example.org/legal/document/uu/2014/7|
+|amenderDoc|http://example.org/legal/document/uu/2020/11|
+
+|1||
+|-|-|
+|doc|http://example.org/legal/document/uu/2000/36|
+|amenderDoc|http://example.org/legal/document/uu/2020/11|
+
+|2||
+|-|-|
+|doc|http://example.org/legal/document/uu/2009/39|
+|amenderDoc|http://example.org/legal/document/uu/2020/11|
+
+|3||
+|-|-|
+|doc|http://example.org/legal/document/uu/2009/41|
+|amenderDoc|http://example.org/legal/document/uu/2020/11|
+
+|4||
+|-|-|
+|doc|http://example.org/legal/document/uu/2012/2|
+|amenderDoc|http://example.org/legal/document/uu/2020/11|
+
+|5||
+|-|-|
+|doc|http://example.org/legal/document/uu/2003/19|
+|amenderDoc|http://example.org/legal/document/uu/2020/11|
+
+|6||
+|-|-|
+|doc|http://example.org/legal/document/uu/1999/5|
+|amenderDoc|http://example.org/legal/document/uu/2020/11|
+
+|7||
+|-|-|
+|doc|http://example.org/legal/document/uu/2016/7|
+|amenderDoc|http://example.org/legal/document/uu/2020/11|
+
+|8||
+|-|-|
+|doc|http://example.org/legal/document/uu/2009/28|
+|amenderDoc|http://example.org/legal/document/uu/2020/11|
+
+|9||
+|-|-|
+|doc|http://example.org/legal/document/uu/1983/6|
+|amenderDoc|http://example.org/legal/document/uu/2020/11|
+
+# Query_024
+description:
+
+tampilkan 10 tempat disahkan paling banyak
+
+
+query:
+
+```sparql
+PREFIX legal: <http://example.org/legal/ontology/>
+
+SELECT ?location (COUNT(?doc) as ?docCount)
+WHERE {
+  ?doc legal:documentHasDisahkanLocation ?location
+}
+GROUP BY ?location
+ORDER BY DESC (?docCount)
+```
+
+result:
+|0||
+|-|-|
+|location|Jakarta|
+|docCount|767|
+
+|1||
+|-|-|
+|location|Jakarta,|
+|docCount|6|
+
+|2||
+|-|-|
+|location|Jakar|
+|docCount|2|
+
+|3||
+|-|-|
+|location|Jogjakarta|
+|docCount|2|
+
+|4||
+|-|-|
+|location|D|
+|docCount|1|
+
+|5||
+|-|-|
+|location|Djakarta|
+|docCount|1|
+
+|6||
+|-|-|
+|location|Jakart|
+|docCount|1|
+
+# Query_025
+description:
+
+tampilkan 10 dokumen paling banyak ditimbang
+
+
+query:
+
+```sparql
+PREFIX legal: <http://example.org/legal/ontology/>
+
+SELECT ?menimbangDoc (COUNT(?doc) as ?penimbangDocCount)
+WHERE {
+  ?doc legal:documentMenimbang ?menimbang .
+  ?menimbang legal:menimbangHasPointSet ?menimbangPointSet .
+  ?menimbangPointSet legal:pointSetHasPoint ?menimbangPoint .
+  ?menimbangPoint legal:pointHasText ?menimbangText .
+  ?menimbangText legal:textReferencesLegal ?menimbangDoc .
+  ?menimbangDoc a legal:Document
+}
+GROUP BY ?menimbangDoc
+ORDER BY DESC (?penimbangDocCount)
+LIMIT 10
+
+```
+
+result:
+|0||
+|-|-|
+|menimbangDoc|http://example.org/legal/document/uu/2004/15|
+|penimbangDocCount|20|
+
+|1||
+|-|-|
+|menimbangDoc|http://example.org/legal/document/uu/2000/24|
+|penimbangDocCount|9|
+
+|2||
+|-|-|
+|menimbangDoc|http://example.org/legal/document/uu/1986/2|
+|penimbangDocCount|6|
+
+|3||
+|-|-|
+|menimbangDoc|http://example.org/legal/document/uu/2009/47|
+|penimbangDocCount|5|
+
+|4||
+|-|-|
+|menimbangDoc|http://example.org/legal/document/uu/2010/10|
+|penimbangDocCount|5|
+
+|5||
+|-|-|
+|menimbangDoc|http://example.org/legal/document/uu/2013/23|
+|penimbangDocCount|5|
+
+|6||
+|-|-|
+|menimbangDoc|http://example.org/legal/document/uu/1983/6|
+|penimbangDocCount|4|
+
+|7||
+|-|-|
+|menimbangDoc|http://example.org/legal/document/uu/2003/12|
+|penimbangDocCount|4|
+
+|8||
+|-|-|
+|menimbangDoc|http://example.org/legal/document/uu/2004/32|
+|penimbangDocCount|4|
+
+|9||
+|-|-|
+|menimbangDoc|http://example.org/legal/document/uu/1985/17|
+|penimbangDocCount|3|
+
+# Query_026
+description:
+
+tampilkan semua document yang melakukan amendment, dan banyaknya pasal yang diamendment oleh dokumen tersebut.
+
+
+query:
+
+```sparql
+PREFIX legal: <http://example.org/legal/ontology/>
+
+SELECT ?doc (COUNT(?point) as ?amendmentCount)
+WHERE {
+  ?doc a legal:Document .
+  ?point legal:partOf* ?doc .
+  ?point legal:pointUpdatePasalVersion|legal:pointInsertPasalVersion|legal:pointDeletePasalVersion ?pasalVersion .
+}
+GROUP BY (?doc)
+ORDER BY DESC(?amendmentCount)
+LIMIT 10
+```
+
+result:
+|0||
+|-|-|
+|doc|http://example.org/legal/document/uu/2020/11|
+|amendmentCount|1221|
+
+|1||
+|-|-|
+|doc|http://example.org/legal/document/uu/2011/8|
+|amendmentCount|20|
+
+|2||
+|-|-|
+|doc|http://example.org/legal/document/uu/2009/26|
+|amendmentCount|11|
+
+# Query_027
+description:
+
+tampilkan 10 bab dengan substring "Kerja"
+
+
+query:
+
+```sparql
+
+PREFIX legal: <http://example.org/legal/ontology/>
+
+SELECT ?bab ?title
+WHERE {
+  ?doc a legal:Document .
+  ?bab legal:partOf* ?doc .
+  ?bab a legal:Bab .
+  ?bab legal:babHasTitle ?title.
+  FILTER REGEX(str(?title), "KERJA")
+}
+LIMIT 10
+
+```
+
+result:
+|0||
+|-|-|
+|bab|http://example.org/legal/document/uu/2014/7/bab/0012|
+|title|KERJA SAMA PERDAGANGAN INTERNASIONAL|
+
+|1||
+|-|-|
+|bab|http://example.org/legal/document/uu/2020/11/bab/0011|
+|title|PELAKSANAAN ADMINISTRASI PEMERINTAHAN UNTUK MENDUKUNG CIPTA KERJA|
+
+|2||
+|-|-|
+|bab|http://example.org/legal/document/uu/2020/11/bab/0004|
+|title|KETENAGAKERJAAN|
+
+|3||
+|-|-|
+|bab|http://example.org/legal/document/uu/2007/40/bab/0004|
+|title|RENCANA KERJA, LAPORAN TAHUNAN, DAN PENGGUNAAN LABA|
+
+|4||
+|-|-|
+|bab|http://example.org/legal/document/uu/2014/6/bab/0011|
+|title|KERJA SAMA DESA Pasal 91 Desa dapat mengadakan kerja sama dengan Desa lain dan/atau kerja sama dengan pihak ketiga.|
+
+|5||
+|-|-|
+|bab|http://example.org/legal/document/uu/2017/18/bab/0007|
+|title|PELAKSANA PENEMPATAN PEKERJA MIGRAN INDONESIA|
+
+|6||
+|-|-|
+|bab|http://example.org/legal/document/uu/2017/18/bab/0004|
+|title|LAYANAN TERPADU SATU ATAP PENEMPATAN DAN PELINDUNGAN PEKERJA MIGRAN INDONESIA|
+
+|7||
+|-|-|
+|bab|http://example.org/legal/document/uu/2017/18/bab/0003|
+|title|PELINDUNGAN PEKERJA MIGRAN INDONESIA|
+
+|8||
+|-|-|
+|bab|http://example.org/legal/document/uu/2017/18/bab/0002|
+|title|PEKERJA MIGRAN INDONESIA|
+
+|9||
+|-|-|
+|bab|http://example.org/legal/document/uu/2003/13/bab/0012|
+|title|PEMUTUSAN HUBUNGAN KERJA|

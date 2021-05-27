@@ -1,0 +1,12 @@
+PREFIX legal: <http://example.org/legal/ontology/>
+
+SELECT DISTINCT ?doc ?amenderDoc
+WHERE {
+  ?doc a legal:Document .
+  ?pasal legal:partOf ?doc .
+  ?pasal legal:pasalHasPasalVersion ?pasalVersion .
+  ?amender legal:pointUpdatePasalVersion ?pasalVersion .
+  ?amender legal:partOf* ?amenderDoc .
+  ?amenderDoc a legal:Document
+}
+LIMIT 10
