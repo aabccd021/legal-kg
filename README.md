@@ -17,12 +17,31 @@ Pertanyaan-pertanyaan tersebut umumnya dapat dijawab oleh seorang ahli hukum,
 artinya penerapan peraturan perundang-undangan ini hanya dapat dilakukan dalam
 skala kecil dan biaya relatif mahal. Komputer dapat menjadi alternatif untuk
 aplikasi tersebut dalam skala lebih besar dan biaya lebih murah, jika peraturan
-perundang-undangan adalah berupa data terstruktur yang dapat diolah oleh
-komputer. Sayangnya, data peraturan perundang-undangan umumnya dibuat dalam
-bentuk data semi-terstruktur, yaitu berupa dokumen yang memiliki data
-terstruktur seperti aturan penomoran dan aturan struktur (seperti bab, pasal,
-dan ayat), tetapi penulisan peraturan sendiri dalam bentuk data tidak
-terstruktur yaitu teks bahasa manusia.
+perundang-undangan berupa data terstruktur yang dapat diolah oleh komputer.
+Sayangnya, data peraturan perundang-undangan umumnya dibuat dalam bentuk data
+semi-terstruktur, yaitu berupa dokumen yang memiliki data terstruktur seperti
+aturan penomoran dan aturan struktur (seperti bab, pasal, dan ayat), tetapi
+penulisan peraturan sendiri dalam bentuk data tidak terstruktur yaitu teks
+bahasa manusia.
+
+![Data Terstruktur dan Tidak Terstruktur dari Dokumen](pictures/terstruktur.png)
+
+![Hasil Parsing Data Terstruktur dan Tidak Terstruktur dari
+Dokumen](pictures/terstruktur_parsed.svg)
+
+Gambar diatas merupakan salah satu contoh ekstraksi informasi dari UU No.11
+Tahun 2020 tentang Ketenagakerjaan. Pada gambar diatas, dapat dilihat bahwa
+sebagian informasi dapat diekstraksi dari sifat terstruktur dokumen peraturan
+perundang-undangan (ditandai dengan warna merah), dan sebagian informasi lainnya
+dapat diekstraksi dari data tidak terstruktur beruba teks (ditandai dengan warna
+biru). Untuk melakukan ekstraksi informasi tidak terstruktur seperti pada gambar
+yaitu "UU No.11 Tahun 2020 Pasal 6 menyebut UU No.11 Tahun 2020 Pasal 5 ayat(1)
+huruf a", manusia pertama-tama perlu membaca dari awal kalimat sampai menemukan
+pola _string_ yang merujuk kepada suatu komponen dokumen peraturan
+perundang-undangan, kemudian meng-_infer_ informasi lengkap dari komponen
+tersebut. Proses konversi _string_ "Pasal 5 ayat (1) huruf a" menjadi informasi
+lengkap "UU No.11 Tahun 2020 Pasal 5 ayat (1) huruf a" perlu dilakukan secara
+manual oleh manusia.
 
 Dengan melakukan ekstraksi data dari data tidak terstruktur pada dokumen,
 digabung dengan data yang sudah terstruktur, peraturan perundang-undangan dapat
@@ -33,6 +52,8 @@ melakukan _reasoning_. Pada skripsi ini, akan dilakukan konversi dokumen
 peraturan perundang-undangan menjadi data terstruktur dalam bentuk _knowledge
 graph_, dan memberikan contoh pengaplikasian dari _knowledge graph_ peraturan
 perundang-undangan tersebut.
+
+![Outline](pictures/outline.svg)
 
 Beberapa usaha telah dilakukan untuk membuat _vocabulary_ untuk _knowledge
 graph_ peraturan perundang-undangan seperti _European Legislation Identifier_
@@ -45,8 +66,10 @@ peraturan perundan-undangan.
 
 Berikut ini adalah rumusan permasalahan dari penelitian yang dilakukan:
 
-- Bagaimana konversi dokumen peraturan perudang-undangan menjadi knowledge graph
-  dapat dilakukan secara otomatis?
+- Bagaimana cara membuat _legal ontology_ untuk memperjelas _requirement_ dan
+  mempermudah konversi dokumen PDF menjadi _knowledge graph_?
+- Bagaimana konversi dokumen peraturan perudang-undangan menjadi _knowledge
+  graph_ dapat dilakukan secara otomatis?
 - Apa saja contoh aplikasi dari knowledge graph peraturan perundang-undangan
   tersebut?
 
@@ -58,52 +81,259 @@ Berikut ini adalah rumusan permasalahan dari penelitian yang dilakukan:
 
 ## Knowledge Graph
 
-_Triple_ merupakan tuple dengan yang terdiri dari tiga elemen yaitu subject,
-object, dan predikat. Terdapat dua representasi elemen dari _triple_, yaitu URI
-dan literal. Resource merupakan URI yang dapat digunakan sebagai subject dan
-object. Property merupakan URI yang dapat digunakan sebagai predikat. Literal
-hanya dapat digunakan sebagai object. _Knowledge graph_ dibangun dari _triple_.
-_resource_ akan dinotasikan dalam `teks monospace berwarna biru` dan _predicate_
-akan dinotasikan dalam `teks monospace berwarna merah`.
+_Knowledge graph_ merupakan model data berbasis _graph_ yang menggambarkan
+entitas dunia nyata dan hubungan antara entitas-entitas tersebut [5]. Sebagai
+contoh, pada gambar dibawah dapat dilihat terpadat entitas-entitas yang ditandai
+dengan bentuk lingkaran, dan hubungan antara entitas-entitas ditandai dengan
+bentuk anak panah. Dapat dilihat pada gambar dibawah bahwa terdapat entitas
+"James" dan "Louvre" dan predikat "has visited" yang mengarah dari "James" ke
+"Louvre". Relasi tersebut dapat kita anggap sebagai sebuah pengetahuan yang
+dalam bahasa manusia dapat dituliskan sebagai "James pernah mengunjungi Louvre".
+Model data seperti ini cocok untuk menyimpan data dengan banyak jenis relasi
+antara entitas seperti pengetahuan umum, dibandingkan dengan _relational
+database_ yang cocok untuk menyimpan data dengan relasi antar entitas yang sudah
+diketahui dan terbatas.
 
-![ilustrasi triple](pictures/ilustrasi_triple.png)
+![Knowledge Graph](pictures/knowledge_graph.jpg)
+_source_:<https://yashuseth.files.wordpress.com/2019/10/knowledge-graph.jpg>
 
-## Turtle Syntax
+## Resource Description Framework
 
-TODO: konsep dan sintaks perlu dijelaskan ya di Bab 2
+Resource Description Framework (RDF) merupkan model data yang memberikan
+pernyataan tentang suatu _resource_ dalam bentuk subjek-predikat-objek, atau
+sering disebut _triple_. Sebuah _knowledge graph_ dapat direpresentasikan
+sebagai kumpulan _triple_. Subyek dan predikat dalam _triple_ direpresentasikan
+sebagai Uniform Resource Identifier (URI), sedangkan objek dapat
+direpresentasikan dengan URI atau _string literal_. Pada gambar dibawah, dapat
+dilihat terdapat _knowledge graph_ dengan dua _triple_. Pada triple 1 subjek,
+predikat, dan objek berturut-turut adalah
+`https://example.org/james`,`https://example.org/has_visited`,`https://example.org/louvre`
+yang mana semuanya berbentuk URI. Sedangkan pada triple 2 subjek, predikat, dan
+objek berturut-turut adalah
+`https://example.org/james`,`https://example.org/has_name`, "james" .
+`https://example.org/james`, `https://example.org/louvre` berturut-turut
+merupakan notasi untuk _resource_ entitas James dan Louvre,
+`https://example.org/has_visited` dan `https://example.org/has_name` merupakan
+predikat yang menjelaskan hubungan antara subjek dan objek, dan "james" adalah
+_string literal_ yang menunjukan nilai dari nama James.
+
+![Triple](pictures/triple.svg)
+
+Terdapat beberapa format berkas dan sintaks untuk mengekspresikan RDF. Pada
+penelitian ini, penulis menggunakan format Terse RDF Triple Language (Turtle).
+Sebagai contoh, _knowledge graph_ diatas dapat dituliskan dalam format Turtle
+sebagai berikut.
+
+```ttl
+<https://example.org/james> <https://example.org/has_visited> <https://example.org/louvre> .
+<https://example.org/james> <https://example.org/has_name> "james" .
+```
+
+Dengan fitur format Turtle, dua _triple_ diatas dapat ditulis lebih singkat
+dengan mengganti prefix URI yang sama menjadi teks yang lebih singkat, dan
+menggabungkan penulisan beberapa _triple_ dengan subjek yang sama sehingga
+subjek hanya perlu dituliskan sekali saja. Sebagai contoh, karena sebagaian
+besar URI memiliki prefix `https://example.org/`, kita dapat menggantinya dengan
+_string_ `ex` dengan mendeklarasikan `@prefix ex: <https://example.org/> .`.
+Kedua _triple_ juga memiliki subjek yang sama yaitu `https://example.org/james`,
+oleh karena itu, penulisan kedua turtle bisa digabung dengan hanya menuliskan
+subjek sebanyak satu kali, kemudian menuliskan predikat dan objek dipisah dengan
+tanda titik koma . Berikut adalah contoh penulisan dua _triple_ diatas dalam
+bentuk yang lebih singkat dan lebih mudah dibaca oleh manusia.
+
+```ttl
+@prefix ex: <https://example.org/> .
+
+ex:james 
+  ex:has_visited ex:louvre ;
+  ex:has_name "james" .
+```
+
+## SPARQL
+
+SPARQL merupakan salahsatu RDF _query language_ yaitu bahasa yang mampu
+mengambil atau mengubah data yang disimpan dalam format RDF. Sintaks SPARQL
+memiliki beberapa kesamaan dengan SQL, contohnya sebuah variabel diawali dengan
+tanda tanya seperti `?name`. Berikut adalah penjelasan sintaks SPARQL.
+
+- `PREFIX`: Mendeklarasikan pemetaan prefix URI menjadi _string_ yang lebih
+  singkat. Hal ini dilakukan agar _query_ lebih mudah dibaca oleh manusia
+  seperti sintaks `@prefix` pada Turtle.
+- `SELECT`: Menyatakan variabel yang akan ditampilkan sebagai output dari
+  _query_.
+- `WHERE`: Menyatakan kondisi _triple_ yang akan ditampilkan pada output.
+
+Berikut adalah contoh-contoh _query_ SPARQL yang dilakukan pada contoh
+_knowledge graph_ pada subbab sebelumnya.
+
+### Contoh Query 1
+
+_Query_ ini bertujuan untuk menampilkan semua _triple_ yang terdapat pada
+_knowledge graph_.
+
+```sparql
+PREFIX ex: <https://example.org/>
+SELECT ?s 
+       ?p
+       ?o
+WHERE
+  {
+    ?s ?p ?o
+  }
+```
+
+Output dari _query_ tersebut adalah sebagai berikut.
+
+| ?s       | ?p             | ?o        |
+|----------|----------------|-----------|
+| ex:james | ex:has_visited | ex:louvre |
+| ex:james | ex:has_name    | "james"   |
+
+### Contoh Query 2
+
+_Query_ ini bertujuan untuk menampilkan semua predikat dan objek pada _triple_
+dengan subjek `https://example.org/james`.
+
+```sparql
+PREFIX ex: <https://example.org/>
+SELECT ?p
+       ?o
+WHERE
+  {
+    ex:james ?p ?o
+  }
+```
+
+Output dari _query_ tersebut adalah sebagai berikut.
+
+| ?p             | ?o        |
+|----------------|-----------|
+| ex:has_visited | ex:louvre |
+| ex:has_name    | "james"   |
+
+### Contoh Query 3
+
+_Query_ ini bertujuan untuk menampilkan semua objek pada _triple_ dengan subjek
+`https://example.org/james` dan predikat `https://example.org/has_visited`.
+Artinya, _query_ ini menampilkan semua tempat yang pernah dikunjungi james.
+
+```sparql
+PREFIX ex: <https://example.org/>
+SELECT ?visited_place
+WHERE
+  {
+    ex:james ex:has_visited ?visited_place
+  }
+```
+
+Output dari _query_ tersebut adalah sebagai berikut.
+
+| ?visited_place |
+|----------------|
+| ex:louvre      |
 
 ## Peraturan Perundang-undangan
 
-### Jenis Peraturan Perundang-undangan
+??? boleh ngequote sebanyak apa?
 
-Terdapat beberapa jenis peraturan perundang-undangan. Setiap dokumen peraturan
-perundang-undangan adalah resource, dan memiliki susunan URI yang berbeda.
-Menurut UU Nomor 12 Tahun 2011 Pasal 7 Ayat 1 [1], terdapat 7 jenis Peraturan
-perundang-undangan yaitu:
+Menurut Undang-Undang Nomor 10 Tahun 2004 Pasal 7 Ayat 1, peraturan
+perundang-undangan adalah peraturan tertulis yang dibentuk oleh lembaga negara
+atau pejabat yang berwenang dan mengikat secara umum. Jenis dan hierarki
+peraturan perundang-undangan terdiri atas:
 
-- Undang-Undang Dasar Negara Republik Indonesia Tahun 1945;
-- Ketetapan Majelis Permusyawaratan Rakyat;
-- Undang-Undang/Peraturan Pemerintah Pengganti
-- Peraturan Pemerintah;
-- Peraturan Presiden;
-- Peraturan Daerah Provinsi; dan
-- Peraturan Daerah Kabupaten/Kota.
+- Undang-Undang Dasar Negara Republik Indonesia Tahun 1945
+- Undang-Undang/Peraturan Pemerintah Pengganti Undang-Undang
+- Peraturan Pemerintah
+- Peraturan Presiden
+- Peraturan Daerah
 
-### Amandemen Peraturan Perundang-undangan
+Berikut adalah beberapa peranan perundang-undangan untuk Indonesia [1]:
+
+- Peraturan perundang-undangan merupakan kaidah hukum yang mudah dikenal
+  (diidentifikasi), mudah diketemukan kembali, dan mudah ditelusuri. Sebagai
+  kaidah hukum tertulis, bentuk, jenis,dan tempatnya jelas. Begitu pula
+  pembuatnya.
+- Peraturan perundang-undangan memberikan kepastian hukum yang lebih nyata
+  karena kaidah-kaidahnya mudah diidentifikasi dan mudah diketemukan kembali.
+- Struktur dan sistematika peraturan perundang-undangan lebih jelas sehingga
+  memungkinkan untuk diperiksa kembali dan diuji baik segi-segi formal maupun
+  materi muatannya.
+- Pembentukan dan pengembangan peraturan perundang-undangan dapat direncanakan.
+  Faktor ini sangat penting bagi negara-negara yang sedang membangun termasuk
+  membangun sistem hukum baru yang sesuai dengan kebutuhan dan perkembangan
+  masyarakat.
+
+Menurut lampiran Undang-Undang Nomor 10 Tahun 2004, struktur peraturan
+perundang–undangan terdiri atas:
+
+- Judul
+- Pembukaan
+- Batang Tubuh
+- Penutup
+- Penjelasan (jika diperlukan)
+- Lampiran (jika diperlukan)
+
+Bagian judul, pembukaan, dan penutup memuat metadata dari peraturan
+perundang-undangan tersebut seperti jenis, nomor, tahun pengundangan atau
+penetapan, nama, jabatan pembentuk, konsiderans, kasar Hukum, peraturan
+perundang-undangan. Konsiderans memuat uraian singkat mengenai pokok–pokok
+pikiran yang menjadi latar belakang dan alasan pembuatan peraturan
+perundang–undangan. Dasar Hukum memuat dasar kewenangan pembuatan peraturan
+perundang-undangan dan peraturan perundang–undangan yang memerintahkan pembuatan
+peraturan perundang–undangan tersebut. Oleh karena itu, kita dapat melihat
+keterkaitan antara peraturan perundang-undangan dengan melihat konsiderans dan
+dasar hukum dari peraturan tersebut.
+
+Batang tubuh peraturan perundang-undangan memuat semua substansi peraturan
+perundang-undangan yang dirumuskan dalam pasal. Pengelompokkan materi peraturan
+perundang-undangan dapat disusun secara sistematis dalam buku, bab, bagian, dan
+paragraf atas dasar kesamaan materi. Pasal dapat dirinci ke dalam beberapa ayat.
+Pasal dan ayat dapat dibuat dalam bentuk kalimat maupun tabulasi rincian. Dalam
+bentuk tabulasi rincian, setiap rincian harus dapat dibaca sebagai satu
+rangkaian kesatuan dengan frase pembuka dan setiap rincian diawali dengan huruf
+(abjad) kecil dan diberi tanda baca titik. Suatu rincian dapat dibagi lagi ke
+unsur rincian yang lebih kecil.
+
+Saat ini pembuatan dan pemanfaatan peraturan perundang-undangan masih dilakukan
+secara manual oleh manusia. Pembuatan peraturan perundang-undangan dilakukan
+dengan mengetikkan konten peraturan tersebut dengan format yang telah
+ditentukan. Metode pembuatan tersebut tidak masalah jika hanya akan dibaca oleh
+manusia karena manusia secara tidak sadar dapat melihat hirarki visual dari
+dokumen tersebut dan membuat data yang dilihatnya terstruktur di dalam otak.
+Metode ini membuat pemanfaatan peraturan perundang-undangan oleh mesin menjadi
+kurang efisien karena mesin perlu melakukan proses tambahan yaitu mengkonversi
+gambar menjadi data terstruktur.
 
 ## Pemodelan European Legislation Identifier (ELI)
 
 ELI merupakan sistem untuk membuat peraturan perundang-undangan tersedia secara
 daring dalam format terstandardisasi, sehingga dapat diakses dan digunakan oleh
-berbagai instansi. ELI dibangun berdasarkan persetujuan antara negara-negara EU.
-ELI memberikan spesifikasi untuk hal-hal berikut:
+berbagai instansi. ELI bertujuan untuk untuk memfasilitasi akses, berbagi dan
+interkoneksi informasi hukum yang diterbitkan melalui nasional, Eropa dan sistem
+informasi hukum global [6]. ELI dibangun berdasarkan persetujuan antara
+negara-negara EU. Spesifikasi yang terdapat pada ELI antara lain:
 
 - URI untuk informasi peraturan perundang-undangan.
-- Metadata yang mendeskripsikan informasi peraturan perundang-undangan. TODO:
-  terlalu singkat, ksh konsepnya gmn dan contoh pemodelan ELI utk suatu
+- Metadata yang mendeskripsikan informasi peraturan perundang-undangan.
+
+// TODO: terlalu singkat, ksh konsepnya gmn dan contoh pemodelan ELI utk suatu
   peraturan
 
+// TODO: ELI jg msh simpel. Bs dijelaskan motivasi ELI, serta apa contoh konsep2
+yg sdh ada di ELI ontology, serta yg belum ada.
+
+// TODO: - ELI kekurangan lainnya ya lbh condong ke pemodelan peraturan di
+Eropa, bukan di Indonesia. Misal, gak ada namanya Peraturan Pemerintah, atau
+Pergub di ELI :)
+
 # BAB 3 METODOLOGI
+
+// TODO: Utk yg metodologi, sbnrnya standar aja, dimulai dari pertanyaan riset,
+lalu pengembangan ontology (URI scheming masuk ke pengembagan ontology),
+pengembangan sistem konversi, baru lalu use case evaluation (ini yg legal KG
+advanced querying, legal KG chatbot, legal KG visualization) baru large scale
+eval (ini yg coba konversi peraturan dlm jumlah besar dan kita sampling utk
+evaluasi correctnessnya)
 
 TODO: suatu KG construction dimulai dengan competency questions (requirements).
 Saran sy: coba baca serta rangkum (di Bab 2) dan terapkan ini:
@@ -114,11 +344,12 @@ www.ksl.stanford.edu/people/dlm/papers/ontology-tutorial-noy-mcguinness-abstract
 
 Dokumen terdiri dari komponen dokumen. Komponen dokumen diantaranya adalah
 `bab`, `bagian`, `paragraf`, `pasal`, `ayat`, dan `point`. Setiap komponen
-dokumen merupakan resource, dan memiliki URI. URI sebuah komponen didahului oleh
+dokumen merupakan entitas, dan memiliki URI. URI sebuah komponen didahului oleh
 URI dokumennya. Berikut adalah relasi antara komponen dokumen yang disediakan.
 
-TODO: Relationship antara component TODO: URI Schema, contoh input text & output
-URI
+TODO: Relationship antara component
+
+TODO: URI Schema, contoh input text & output URI
 
 ## Amendemen
 
@@ -165,7 +396,7 @@ adalah salahsatu contoh dokumen beserta data yang tercantum sebagai __Creator__
 dan contoh kesalahan pemindaiannya yang banyak terjadi.
 
 | Dokumen                | __Creator__            | Kesalahan pemindaian        |
-| ---------------------- | ---------------------- | --------------------------- |
+|------------------------|------------------------|-----------------------------|
 | UU Nomor 13 Tahun 2003 | ScanSoft PDF Create! 4 | - (tidak ada)               |
 | UU Nomor 6 Tahun 2018  | Canon                  | `(2)` selalu dipindai `(21` |
 | PP Nomor 34 Tahun 2021 | Fuji Xerox B9100       | data teks tidak terbaca     |
@@ -385,7 +616,7 @@ menyebut komponen atau dokumen peraturan perundang-undangan lainnya. Berikut
 adalah daftar pola sitasi yang berhasil dideteksi pada penelitian ini.
 
 | Pola                                                     | Contoh teks                                              | URI Terdeteksi                        |
-| -------------------------------------------------------- | -------------------------------------------------------- | ------------------------------------- |
+|----------------------------------------------------------|----------------------------------------------------------|---------------------------------------|
 | Undang Undang Dasar Negara Republik Indonesia Tahun 1945 | Undang Undang Dasar Negara Republik Indonesia Tahun 1945 | /uud/                                 |
 | Undang-Undang Nomor {x} Tahun {y}                        | Undang-Undang Nomor 26 Tahun 2007                        | /uu/2007/26                           |
 | ayat ({x})                                               | ayat (1)                                                 | /uu/2003/13/pasal/169/ayat/1          |
@@ -430,7 +661,7 @@ pada UU No.13 Tahun 2003 Pasal 158 Ayat (4) akan terdeteksi sebagai 3 URI sitasi
 sebagai berikut.
 
 | Teks               | URI                            |
-| ------------------ | ------------------------------ |
+|--------------------|--------------------------------|
 | Pasal 156 Ayat (4) | `/uu/2003/13/pasal/156/ayat/4` |
 | Pasal 156          | `/uu/2003/13/pasal/156`        |
 | Ayat (4)           | `/uu/2003/13/pasal/158/ayat/4` |
@@ -482,7 +713,14 @@ menghitung sebera pa banyak metadata yang berhasil diekstrak. Metadata hasil
 ekstraksi yang akan dihitung tidak perlu sesuai dengan yang terdapat di dalam
 dokumen.
 
-[1]: luk.staff.ugm.ac.id/atur/UU12-2011Lengkap.pdf
+[1]: https://www.pustaka.ut.ac.id/lib/wp-content/uploads/pdfmk/HKUM4403-M1.pdf
+
 [2]: https://eur-lex.europa.eu/eli-register/about.html
+
 [3]: www.ksl.stanford.edu/people/dlm/papers/ontology101/ontology101-noy-mcguinness.html
+
 [4]: https://github.com/tesseract-ocr/tesseract
+
+[5]: https://yashuseth.blog/2019/10/08/introduction-question-answering-knowledge-graphs-kgqa/
+
+[6]: https://op.europa.eu/en/publication-detail/-/publication/514875b4-5efd-11e8-ab9c-01aa75ed71a1
