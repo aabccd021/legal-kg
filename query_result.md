@@ -1049,9 +1049,7 @@ PREFIX legal: <http://example.org/legal/ontology/>
 SELECT ?doc ?menimbangDoc
 WHERE {
   ?doc legal:documentMenimbang ?menimbang .
-  ?menimbang legal:menimbangHasPointSet ?menimbangPointSet .
-  ?menimbangPointSet legal:pointSetHasPoint ?menimbangPoint .
-  ?menimbangPoint legal:pointHasText ?menimbangText .
+  ?menimbangText legal:partOf* ?menimbang .
   ?menimbangText legal:textReferencesLegal ?menimbangDoc .
   ?menimbangDoc a legal:Document
 }
@@ -1088,28 +1086,28 @@ result:
 
 |5||
 |-|-|
-|doc|http://example.org/legal/document/uu/2004/31|
-|menimbangDoc|http://example.org/legal/document/uu/1985/9|
+|doc|http://example.org/legal/document/uu/2004/21|
+|menimbangDoc|http://example.org/legal/document/uu/1994/5|
 
 |6||
-|-|-|
-|doc|http://example.org/legal/document/uu/2004/31|
-|menimbangDoc|http://example.org/legal/document/uu/1985/9|
-
-|7||
-|-|-|
-|doc|http://example.org/legal/document/uu/2004/37|
-|menimbangDoc|http://example.org/legal/document/uu/1998/4|
-
-|8||
 |-|-|
 |doc|http://example.org/legal/document/uu/2004/5|
 |menimbangDoc|http://example.org/legal/document/uu/1985/14|
 
-|9||
+|7||
 |-|-|
 |doc|http://example.org/legal/document/uu/2005/10|
 |menimbangDoc|http://example.org/legal/document/uu/2005/2|
+
+|8||
+|-|-|
+|doc|http://example.org/legal/document/uu/2005/10|
+|menimbangDoc|http://example.org/legal/document/uu/2005/2|
+
+|9||
+|-|-|
+|doc|http://example.org/legal/document/uu/2005/2|
+|menimbangDoc|http://example.org/legal/document/uu/2004/2|
 
 # Query_022
 description:

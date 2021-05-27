@@ -5,7 +5,7 @@
   "scripts": {
     "build": "tsc",
     "lint": "eslint '**/*.ts'",
-    "query": "yarn cli query > temp_query",
+    "query": "ts-node src/query2.ts",
     "generate:ocr": "ts-node src/ocr.ts",
     "generate:span": "ts-node src/pdf_to_span.ts",
     "generate:data": "ts-node src/span_to_data.ts",

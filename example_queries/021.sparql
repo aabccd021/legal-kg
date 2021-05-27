@@ -3,9 +3,7 @@ PREFIX legal: <http://example.org/legal/ontology/>
 SELECT ?doc ?menimbangDoc
 WHERE {
   ?doc legal:documentMenimbang ?menimbang .
-  ?menimbang legal:menimbangHasPointSet ?menimbangPointSet .
-  ?menimbangPointSet legal:pointSetHasPoint ?menimbangPoint .
-  ?menimbangPoint legal:pointHasText ?menimbangText .
+  ?menimbangText legal:partOf* ?menimbang .
   ?menimbangText legal:textReferencesLegal ?menimbangDoc .
   ?menimbangDoc a legal:Document
 }
