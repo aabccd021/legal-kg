@@ -1,5 +1,5 @@
-# 001
-
+# Query_001
+query:
 ```sparql
 PREFIX legal: <http://example.org/legal/ontology/>
 
@@ -7,7 +7,7 @@ SELECT * WHERE {
   <http://example.org/legal/document/uu/2020/11> ?p ?o .
 } LIMIT 3
 ```
-
+result:
 
 |0||
 |-|-|
@@ -26,8 +26,8 @@ SELECT * WHERE {
 |p|http://example.org/legal/ontology/documentMengingat|
 |o|http://example.org/legal/document/uu/2020/11/mengingat|
 
-# 002
-
+# Query_002
+query:
 ```sparql
 PREFIX legal: <http://example.org/legal/ontology/>
 
@@ -37,7 +37,7 @@ SELECT ?pasalVersion ?text WHERE {
   ?pasalVersion legal:pasalVersionHasRawText ?text .
 } LIMIT 3
 ```
-
+result:
 
 |0||
 |-|-|
@@ -56,8 +56,8 @@ SELECT ?pasalVersion ?text WHERE {
 |pasalVersion|http://example.org/legal/document/uu/2020/11/pasal/0184/version/20201102|
 |text|Pada saat Undang-Undang ini mulai berlaku:\na. Perizinan Berusaha atau izin sektor yang sudah terbit masih tetap berlaku sampai dengan berakhirnya Perizinan Berusaha,\nb. Perizinan Berusaha dan/atau izin sektor yang sudah terbit sebelum berlakunya Undang-Undang ini dapat berlaku sesuai dengan Undang-Undang ini, dan\nc. Perizinan Berusaha yang sedang dalam proses permohonan disesuaikan dengan ketentuan dalam Undang-Undang ini.\n|
 
-# 002_complete
-
+# Query_002_complete
+query:
 ```sparql
 PREFIX legal: <http://example.org/legal/ontology/>
 
@@ -71,7 +71,7 @@ SELECT ?pasal ?text WHERE {
   ?latestPasalVersion legal:pasalVersionHasRawText ?text
 } LIMIT 3
 ```
-
+result:
 
 |0||
 |-|-|
@@ -90,8 +90,8 @@ SELECT ?pasal ?text WHERE {
 |pasal|http://example.org/legal/document/uu/2020/11/pasal/0022|
 |text|Pasal 22 Beberapa ketentuan dalam Undang-Undang Nomor 32 Tahun 2009 tentang Perlindungan dan Pengelolaan Lingkungan Hidup (Lembaran Negara Republik Indonesia Tahun 2009 Nomor 140, Tambahan Lembaran Negara Republik Indonesia Nomor 5059) diubah sebagai berikut:\n1. Ketentuan Pasal 1 angka 11, angka 12, angka 35, angka 36, angka 37, dan angka 38 diubah sehingga Pasal 1 berbunyi sebagai berikut:\nDalam Undang-Undang ini yang dimaksud dengan:\n1. Lingkungan hidup adalah kesatuan ruang dengan semua benda, daya, keadaan, dan makhluk hidup, termasuk manusia dan perilakunya, yang mempengaruhi alam itu sendiri, kelangsungan perikehidupan, dan kesejahteraan manusia serta makhluk hidup lain.\n2. Perlindungan dan pengelolaan lingkungan hidup adalah upaya sistematis dan terpadu yang dilakukan untuk melestarikan fungsi lingkungan hidup dan mencegah terjadinya pencemaran dan/atau kerusakan lingkungan hidup yang meliputi perencanaan, pemanfaatan, pengendalian, pemeliharaan, pengawasan, dan penegakan hukum. . R PRESIDEN REPUBLIK INDONESIA -74 -\n3. Pembangunan berkelanjutan adalah upaya sadar dan terencana yang memadukan aspek lingkungan hidup, sosial, dan ekonomi ke dalam strategi pembangunan untuk menjamin keutuhan lingkungan hidup serta keselamatan, kemampuan, kesejahteraan, dan mutu hidup generasi masa kini dan generasi masa depan.\n4. Rencana perlindungan dan pengelolaan lingkungan hidup yang selanjutnya disingkat RPPLH adalah perencanaan tertulis yang memuat potensi, masalah lingkungan hidup, serta upaya perlindungan dan pengelolaannya dalam kurun waktu tertentu.\n5. Ekosistem adalah tatanan unsur lingkungan hidup yang merupakan kesatuan utuh-menyeluruh dan saling mempengaruhi dalam membentuk keseimbangan, stabilitas, dan produktivitas lingkungan hidup.\n6. Pelestarian fungsi lingkungan hidup adalah rangkaian upaya untuk memelihara kelangsungan daya dukung dan daya tampung lingkungan hidup.\n7. Daya dukung lingkungan hidup adalah kemampuan lingkungan hidup untuk mendukung perikehidupan manusia, makhluk hidup lain, dan keseimbangan antarkeduanya.\n8. Daya tampung lingkungan hidup adalah kemampuan lngkungan hidup untuk menyerap zat, energi, dan/atau komponen lain yang masuk atau dimasukkan ke dalamnya.\n9. Sumber daya alam adalah unsur lingkungan hidup yang terdiri atas sumber daya hayati dan nonhayati yang secara keseluruhan membentuk kesatuan ekosistem.\n10. Kajian lingkungan hidup strategis yang selanjutnya disingkat KLHS adalah rangkaian analisis yang sistematis, menyeluruh, dan partisipatif untuk memastikan bahwa prinsip pembangunan berkelanjutan telah menjadi dasar dan terintegrasi dalam pembangunan suatu wilayah dan/atau kebijakan, rencana, dan/atau program. a & PRESIDEN REPUBLIK INDONESIA - 75 -\n11. Analisis mengenai dampak lingkungan hidup yang selanjutnya disebut Amdal adalah Kajian mengenai dampak penting pada lingkungan hidup dari suatu usaha dan/atau kegiatan yang direncanakan, untuk digunakan sebagai prasyarat pengambilan keputusan tentang penyelenggaraan usaha dan/atau kegiatan serta termuat dalam Perizinan Berusaha, atau persetujuan Pemerintah Pusat atau Pemerintah Daerah.\n12. Upaya pengelolaan lingkungan hidup dan upaya pemantauan lingkungan hidup yang selanjutnya disebut UKL-UPL adalah rangkaian proses pengelolaan dan pemantauan lingkungan hidup yang dituangkan dalam bentuk standar untuk digunakan sebagai prasyarat pengambilan keputusan serta termuat dalam Perizinan Berusaha, atau persetujuan Pemerintah Pusat atau Pemerintah Daerah.\n13. Baku mutu lingkungan hidup adalah ukuran batas atau kadar makhluk hidup, zat, energi, atau komponen yang ada atau harus ada dan/atau unsur pencemar yang ditenggang keberadaannya dalam suatu sumber daya tertentu sebagai unsur lingkungan hidup.\n14. Pencemaran lingkungan hidup adalah masuk atau dimasukkannya makhluk hidup, zat, energi, dan/atau komponen lain ke dalam lingkungan hidup oleh kegiatan manusia sehingga melampaui baku mutu lingkungan hidup yang telah ditetapkan.\n15. Kriteria baku kerusakan lingkungan hidup adalah ukuran batas perubahan sifat fisik, kimia, dan/atau hayati lingkungan hidup yang dapat ditenggang oleh llngkungan hidup untuk dapat tetap melestarikan fungsinya.\n16. Perusakan lingkungan hidup adalah tindakan orang yang menimbulkan perubahan langsung atau tidak langsung terhadap sifat fisik, kimia, dan/atau hayati lingkungan hidup sehingga melampaui kriteria baku kerusakan lingkungan hidup. PRESIDEN REPUBLIK INDONESIA - 76 -\n17. Kerusakan lingkungan hidup adalah perubahan langsung dan/atau tidak langsung terhadap sifat fisik, kimia, dan/atau hayati lingkungan hidup yang melampaui kriteria baku kerusakan lingkungan hidup.\n18. Konservasi sumber daya alam adalah pengelolaan sumber daya alam untuk menjamin pemanfaatannya secara bijaksana serta kesinambungan ketersediaannya dengan tetap memelihara dan meningkatkan kualitas nilai serta keanekaragamannya.\n19. Perubahan iklim adalah berubahnya iklim yang diakibatkan langsung atau tidak langsung oleh aktivitas manusia sehingga menyebabkan perubahan komposisi atmosfir secara global dan selain itu juga berupa perubahan variabilitas iklim alamiah yang teramati pada kurun waktu yang dapat dibandingkan.\n20. Limbah adalah sisa suatu usaha dan/atau kegiatan.\n21. Bahan berbahaya dan beracun yang selanjutnya disingkat B3 adalah zat, energi, dan/atau komponen lan yang karena sifat, konsentrasi, dan/atau jumlahnya, baik secara langsung maupun tidak langsung, dapat mencemarkan dan/atau merusak lingkungan hidup, dan/atau membahayakan lingkungan hidup, kesehatan, serta kelangsungan hidup manusia dan makhluk hidup lain.\n22. Limbah bahan berbahaya dan beracun yang selanjutnya disebut Limbah B3 adalah sisa suatu usaha dan/atau kegiatan yang mengandung B3.\n23. Pengelolaan limbah B3 adalah kegiatan yang meliputi pengurangan, penyimpanan, pengumpulan, pengangkutan, pemanfaatan, pengolahan, dan/atau penimbunan.\n24. Dumping (pembuangan) adalah kegiatan membuang, menempatkan, dan/atau memasukkan limbah dan/atau bahan dalam jumlah, konsentrasi, waktu, dan lokasi tertentu dengan persyaratan tertentu ke media lingkungan hidup tertentu. .. & PRESIDEN REPUBLIK INDONESIA - 77 -\n25. Sengketa lingkungan hidup adalah perselisihan antara dua pihak atau lebih yang timbul dari kegiatan yang berpotensi dan/atau telah berdampak pada lingkungan hidup.\n26. Dampak lingkungan hidup adalah pengaruh perubahan pada lingkungan hidup yang diakibatkan oleh suatu usaha dan/atau kegiatan.\n27. Organisasi lingkungan hidup adalah kelompok orang yang terorganisasi dan terbentuk atas kehendak sendiri yang tujuan dan kegiatannya berkaitan dengan lingkungan hidup.\n28. Audit lingkungan hidup adalah evaluasi yang dilakukan untuk menilai ketaatan penanggung jawab usaha dan/atau kegiatan terhadap persyaratan hukum dan kebijakan yang ditetapkan oleh pemerintah.\n29. Ekoregion adalah wilayah geografis yang memiliki kesamaan ciri iklim, tanah, air, flora, dan fauna asli, serta pola interaksi manusia dengan alam yang menggambarkan integritas sistem alam dan lingkungan hidup.\n30. Kearifan lokal adalah nilai-nilai luhur yang berlaku dalam tata kehidupan masyarakat untuk antara lain melindungi dan mengelola lingkungan hidup secara lestari.\n31. Masyarakat hukum adat adalah kelompok masyarakat yang secara turun temurun bermukim di wilayah geografis tertentu karena adanya ikatan pada asal usul leluhur, adanya hubungan yang kuat dengan lingkungan hidup, serta adanya sistem nilai yang menentukan pranata ekonomi, politik, sosial, dan hukum.\n32. Setiap orang adalah orang perseorangan atau badan usaha, baik yang berbadan hukum maupun yang tidak berbadan hukum.\n33. Instrumen ekonomi lingkungan hidup adalah seperangkat kebijakan ekonomi untuk mendorong Pemerintah, pemerintah daerah, atau setiap orang ke arah pelestarian fungsi lingkungan hidup. PRESIDEN REPUBLIK INDONESIA -78 -\n34. Ancaman serius adalah ancaman yang berdampak luas terhadap lingkungan hidup dan menimbulkan keresahan masyarakat.\n35. Persetujuan Lingkungan adalah Keputusan Kelayakan Lingkungan Hidup atau Pernyataan Kesanggupan Pengelolaan Lingkungan Hidup yang telah mendapatkan persetujuan dari Pemerintah Pusat atau Pemerintah Daerah.\n36. Pemerintah Pusat adalah Presiden Republik Indonesia yang memegang kekuasaan pemerintahan negara Republik Indonesia yang dibantu oleh Wakil Presiden dan menteri sebagaimana dimaksud dalam Undang- Undang Dasar Negara Republik Indonesia Tahun 1945.\n37. Pemerintah Daerah adalah kepala daerah sebagai unsur penyelenggara Pemerintahan Daerah yang memimpin pelaksanaan urusan pemerintahan yang menjadi kewenangan daerah otonom.\n38. Menteri adalah menteri yang menyelenggarakan urusan pemerintahan di bidang perlindungan dan pengelolaan lingkungan hidup.\n\n2. Ketentuan Pasal 20 diubah sehingga berbunyi sebagai berikut:\n(1). Penentuan terjadinya pencemaran lingkungan hidup diukur melalui baku mutu lingkungan hidup.\n(2). Baku mutu lingkungan hidup meliputi:\na. baku mutu air,\nb. baku mutu air limbah,\nc. baku mutu air laut:\nd. baku mutu udara ambien:\ne. baku mutu emisi:\nf. ' baku mutu gangguan: dan\ng. baku mutu lain sesuai dengan perkembangan ilmu pengetahuan dan teknologi. yA 8 & PRESIDEN REPUBLIK INDONESIA -79 -\n\n(3). Setiap orang diperbolehkan untuk membuang limbah ke media lingkungan hidup dengan persyaratan:\na. memenuhi baku mutu lingkungan hidup: dan\nb. mendapat persetujuan dari Pemerintah Pusat atau Pemerintah Daerah.\n\n(4). Ketentuan lebih lanjut mengenai baku mutu lingkungan hidup sebagaimana dimaksud pada ayat (2) diatur dalam Peraturan Pemerintah.\n3. Ketentuan Pasal 24 diubah sehingga berbunyi sebagai berikut:\n(1). Dokumen Amdal merupakan dasar uji kelayakan lingkungan hidup untuk rencana usaha dan/atau kegiatan.\n(2). Uji kelayakan lingkungan hidup sebagaimana dimaksud pada ayat (1) dilakukan oleh tim uji kelayakan lingkungan hidup yang dibentuk oleh lembaga uji kelayakan lingkungan hidup Pemerintah Pusat.\n(3). Tim uji kelayakan lingkungan hidup sebagaimana dimaksud pada ayat (2) terdiri atas unsur Pemerintah Pusat, Pemerintah Daerah, dan ahli bersertifikat.\n(4). Pemerintah Pusat atau Pemerintah Daerah menetapkan Keputusan Kelayakan Lingkungan Hidup berdasarkan hasil uji kelayakan lingkungan hidup.\n(5). Keputusan Kelayakan Lingkungan Hidup sebagaimana dimaksud pada ayat (4) digunakan sebagai persyaratan penerbitan Perizinan Berusaha, atau persetujuan Pemerintah Pusat atau Pemerintah Daerah.\n(6). Ketentuan lebih lanjut mengenai tata laksana uji kelayakan lingkungan hidup diatur dalam Peraturan Pemerintah.\n4. Ketentuan Pasal 25 diubah sehingga berbunyi sebagai berikut: . 0 PRESIDEN REPUBLIK INDONESIA - 80 -\nDokumen Amdal memuat:\na. pengkajian mengenai dampak rencana usaha dan/atau kegiatan:\nb. evaluasi kegiatan di sekitar lokasi rencana usaha dan/atau kegiatan:\nc. saran masukan serta tanggapan masyarakat terkena dampak langsung yang relevan terhadap rencana usaha dan/atau kegiatan:\nd. prakiraan terhadap besaran dampak serta sifat penting dampak yang terjadi jika rencana usaha dan/atau kegiatan tersebut dilaksanakan:\ne. evaluasi secara holistik terhadap dampak yang terjadi untuk menentukan kelayakan atau ketidaklayakan lingkungan hidup, dan\nf. rencana pengelolaan dan pemantauan lingkungan hidup.\n\n5. Ketentuan Pasal 26 diubah sehingga berbunyi sebagai berikut:\n(1). Dokumen Amdal sebagaimana dimaksud dalam Pasal 22 disusun oleh pemrakarsa dengan melibatkan masyarakat.\n(2). Penyusunan dokumen Amdal dilakukan dengan melibatkan masyarakat yang terkena dampak langsung terhadap rencana usaha dan/atau kegiatan.\n(3). Ketentuan lebih lanjut mengenai proses pelibatan masyarakat sebagaimana dimaksud pada ayat (2) diatur dalam Peraturan Pemerintah.\n6. Ketentuan Pasal 27 diubah sehingga berbunyi sebagai berikut: pa 2 2 PRESIDEN REPUBLIK INDONESIA -81 -\nPasal 27 Dalam menyusun dokumen Amdal, pemrakarsa sebagaimana dimaksud dalam Pasal 26 ayat (1) dapat menunjuk pihak lain.\n7. Ketentuan Pasal 28 diubah sehingga berbunyi sebagai berikut:\n(1). Penyusun Amdal sebagaimana dimaksud dalam Pasal 26 ayat (1) dan Pasal 27 wajib memiliki sertifikat kompetensi penyusun Amdal.\n(2). Ketentuan lebih lanjut mengenai sertifikasi dan kriteria kompetensi penyusun Amdal diatur dalam Peraturan Pemerintah.\n8. Pasal 29 dihapus.\n9. Pasal 30 dihapus.\n10. Pasal 31 dihapus.\n11. Ketentuan Pasal 32 diubah sehingga berbunyi sebagai berikut:\n(1). Pemerintah Pusat dan Pemerintah Daerah membantu penyusunan Amdal bagi usaha dan/atau kegiatan Usaha Mikro dan Kecil yang berdampak penting terhadap lingkungan hidup.\n(2). Bantuan penyusunan Amdal sebagaimana dimaksud pada ayat (1) berupa fasilitasi, biaya, dan/atau penyusunan Amdal. PRESIDEN REPUBLIK INDONESIA - 82 -\n(3). Penentuan mengenai usaha dan/atau kegiatan Usaha Mikro dan Kecil sebagaimana dimaksud pada ayat (1) dilakukan berdasarkan kriteria sesuai dengan ketentuan peraturan perundang-undangan.\n12. Ketentuan Pasal 34 diubah sehingga berbunyi sebagai berikut:\n(1). Setiap usaha dan/atau kegiatan yang tidak berdampak penting terhadap Lingkungan Hidup wajib memenuhi standar UKL-UPL.\n(2). Pemenuhan standar UKL-UPL sebagaimana dimaksud pada ayat (1) dinyatakan dalam Pernyataan Kesanggupan Pengelolaan Lingkungan Hidup.\n(3). Berdasarkan Pernyataan Kesanggupan Pengelolaan Lingkungan Hidup sebagaimana dimaksud pada ayat (2), Pemerintah Pusat atau Pemerintah Daerah menerbitkan Perizinan Berusaha, atau persetujuan Pemerintah Pusat atau Pemerintah Daerah.\n(4). Pemerintah Pusat menetapkan jenis usaha dan/atau kegiatan yang wajib dilengkapi UKL-UPL.\n(5). Ketentuan lebih lanjut mengenai UKL-UPL diatur dalam Peraturan Pemerintah.\n13. Ketentuan Pasal 35 diubah sehingga berbunyi sebagai berikut:\n(1). Usaha dan/atau kegiatan yang tidak wajib dilengkapi UKL-UPL sebagaimana dimaksud dalam Pasal 34 ayat (4) wajib membuat surat pernyataan kesanggupan pengelolaan dan pemantauan lingkungan hidup yang diintegrasikan ke dalam Nomor Induk Berusaha.\n(2). Penetapan jenis usaha dan/atau kegiatan sebagaimana dimaksud pada ayat (1) dilakukan terhadap kegiatan yang termasuk dalam kategori berisiko rendah. PRESIDEN REPUBLIK INDONESIA - 83 -\n(3). Ketentuan lebih lanjut mengenai surat pernyataan kesanggupan pengelolaan dan pemantauan lingkungan hidup diatur dalam Peraturan Pemerintah.\n14. Pasal 36 dihapus.\n15. Ketentuan Pasal 37 diubah sehingga berbunyi sebagai berikut:\nPerizinan Berusaha dapat dibatalkan apabila:\na. persyaratan yang diajukan dalam permohonan Perizinan Berusaha mengandung cacat hukum, kekeliruan, penyalahgunaan, serta ketidakbenaran dan/atau pemalsuan data, dokumen, dan/atau informasi,\nb. penerbitannya tanpa memenuhi syarat sebagaimana tercantum dalam Keputusan Kelayakan Lingkungan Hidup atau Pernyataan Kesanggupan Pengelolaan Lingkungan Hidup, atau\nc. kewajiban yang ditetapkan dalam dokumen Amdal atau UKL-UPL tidak dilaksanakan oleh penanggung jawab usaha dan/atau kegiatan.\n\n16. Pasal 38 dihapus.\n17. Ketentuan Pasal 39 diubah sehingga berbunyi sebagai berikut:\n(1). Keputusan Kelayakan Lingkungan Hidup diumumkan kepada masyarakat.\n(2). Pengumuman sebagaimana dimaksud pada ayat (1) dilakukan melalui sistem elektronik dan/atau cara lain yang ditetapkan oleh Pemerintah Pusat. PRESIDEN REPUBLIK INDONESIA -84 -\n18. Pasal 40 dihapus.\n19. Ketentuan Pasal 55 diubah sehingga berbunyi sebagai berikut:\n(1). Pemegang Persetujuan Lingkungan wajib menyediakan dana penjaminan untuk pemulihan fungsi lingkungan hidup.\n(2). Dana penjaminan disimpan di bank pemerintah yang ditunjuk oleh Pemerintah Pusat.\n(3). Pemerintah Pusat dapat menetapkan pihak ketiga untuk melakukan pemulihan fungsi lingkungan hidup dengan menggunakan dana penjaminan.\n(4). Ketentuan lebih lanjut mengenai dana penjaminan sebagaimana dimaksud pada ayat (1), ayat (2), dan ayat (3) diatur dalam Peraturan Pemerintah.\n20. Ketentuan Pasal 59 diubah sehingga berbunyi sebagai berikut:\n(1). Setiap orang yang menghasilkan Limbah B3 wajib melakukan Pengelolaan Limbah B3 yang dihasilkannya.\n(2). Dalam hal B3 sebagaimana dimaksud dalam Pasal 58 ayat (1) telah kedaluwarsa, pengelolaannya mengikuti ketentuan Pengelolaan Limbah B3.\n(3). Dalam hal setiap orang sebagaimana dimaksud pada ayat (1) tidak mampu melakukan sendiri Pengelolaan Limbah B3, pengelolaannya diserahkan kepada pihak lain.\n(4). Pengelolaan Limbah B3 wajib mendapat Perizinan Berusaha, atau persetujuan Pemerintah Pusat atau Pemerintah Daerah. an 3 PRESIDEN REPUBLIK INDONESIA - 85 -\n(5). Pemerintah Pusat atau Pemerintah Daerah wajib mencantumkan persyaratan lingkungan hidup yang harus dipenuhi dan kewajiban yang harus dipatuhi pengelola limbah B3 dalam Perizinan Berusaha, atau persetujuan Pemerintah Pusat atau Pemerintah Daerah.\n(6). Keputusan pemberian Perizinan Berusaha wajib diumumkan.\n(7). Ketentuan lebih lanjut mengenai Pengelolaan Limbah B3 diatur dalam Peraturan Pemerintah.\n21. Ketentuan Pasal 61 diubah sehingga berbunyi sebagai berikut:\n(1). Dumping sebagaimana dimaksud dalam Pasal 60 hanya dapat dilakukan dengan persetujuan dari Pemerintah Pusat.\n(2). Dumping sebagaimana dimaksud pada ayat (1) hanya dapat dilakukan di lokasi yang telah ditentukan.\n(3). Ketentuan lebih lanjut mengenai tata cara dan persyaratan dumping limbah atau bahan diatur dalam Peraturan Pemerintah.\n22. Di antara Pasal 61 dan Pasal 62 disisipkan 1 (satu) pasal, yakni Pasal 61A sehingga berbunyi sebagai berikut:\n\na. menghasilkan, mengangkut, mengedarkan, menyimpan, memanfaatkan, dan/atau mengolah B3:\nb. menghasilkan, mengangkut, menyimpan, mengumpulkan, memanfaatkan, mengolah, dan/atau menimbun Limbah B3:\nc. . melakukan pembuangan air limbah ke laut:\nd. melakukan pembuangan air limbah ke sumber air: PRESIDEN REPUBLIK INDONESIA - 86 -\ne. membuang emisi ke udara: dan/atau i. — memanfaatkan air limbah untuk aplikasi ke tanah: yang merupakan bagian dari kegiatan usaha, pengelolaan tersebut dinyatakan dalam Amdal atau UKL-UPL.\n\n23. Ketentuan Pasal 63 diubah sehingga berbunyi sebagai berikut:\n(1). Dalam pelindungan dan pengelolaan lingkungan hidup, Pemerintah Pusat bertugas dan berwenang:\na. menetapkan kebijakan nasional,\nb. menetapkan norma, standar, prosedur, dan kriteria:\nc. menetapkan dan melaksanakan kebijakan mengenai RPPLH nasional:\nd. menetapkan dan melaksanakan kebijakan mengenai KLHS,\ne. menetapkan dan melaksanakan kebijakan mengenai amdal dan UKL-UPL:\nf. ' menyelenggarakan inventarisasi sumber daya alam nasional dan emisi gas rumah kaca:\ng. mengembangkan standar kerja sama,\nh. mengoordinasikan dan melaksanakan pengendalian pencemaran dan/atau kerusakan lingkungan hidup:\ni. menetapkan dan melaksanakan kebijakan mengenai sumber daya alam hayati dan nonhayati, keanekaragaman hayati, sumber daya genetik, dan keamanan hayati produk rekayasa genetik,\nj. menetapkan dan melaksanakan kebijakan mengenai pengendalian dampak perubahan iklim dan perlindungan lapisan ozon:\nk. menetapkan dan melaksanakan kebijakan mengenai B3, limbah, serta limbah B3: PRESIDEN REPUBLIK INDONESIA - 87 - Il. | menetapkan dan melaksanakan kebijakan mengenai perlindungan lingkungan laut: m. menetapkan dan melaksanakan kebijakan mengenai pencemaran dan/atau kerusakan lingkungan hidup lintas batas negara: n. melakukan pembinaan dan pengawasan terhadap pelaksanaan kebijakan tingkat nasional dan kebijakan tingkat provinsi: O. melakukan pembinaan dan pengawasan ketaatan penanggung jawab usaha dan/atau kegiatan terhadap ketentuan Persetujuan Lingkungan dan peraturan perundang- undangan, p. mengembangkan dan menerapkan instrumen lingkungan hidup: g. mengoordinasikan dan memfasilitasi kerja sama dan penyelesaian perselisihan antardaerah serta penyelesaian sengketa: r. mengembangkan dan melaksanakan kebijakan pengelolaan pengaduan masyarakat: S. menetapkan standar pelayanan minimal: t. ' menetapkan kebijakan mengenai tata cara pengakuan keberadaan masyarakat hukum adat, kearifan lokal, dan hak masyarakat hukum adat yang terkait dengan perlindungan dan pengelolaan lingkungan hidup: U. mengelola informasi lingkungan hidup nasional: V. mengoordinasikan, mengembangkan, dan menyosialisasikan pemanfaatan teknologi ramah lingkungan hidup: w. memberikan pendidikan, pelatihan, pembinaan, dan penghargaan, xXx. mengembangkan sarana dan standar laboratorium lingkungan hidup: y. menerbitkan Perizinan Berusaha atau persetujuan Pemerintah Pusat: Zz. menetapkan wilayah ekoregion: dan aa. melakukan penegakan hukum lingkungan hidup. . PRESIDEN REPUBLIK INDONESIA - 88 -\n\n(2). Dalam pelindungan dan pengelolaan lingkungan hidup, pemerintah provinsi sesuai dengan norma, standar, prosedur, dan kriteria yang ditetapkan oleh Pemerintah Pusat bertugas dan berwenang:\na. menetapkan kebijakan tingkat provinsi:\nb. menetapkan dan melaksanakan KLHS tingkat provinsi:\nc. . menetapkan dan melaksanakan kebijakan mengenai RPPLH provinsi:\nd. melaksanakan kebijakan mengenai Amdal dan UKL-UPL,\ne. menyelenggarakan inventarisasi sumber daya alam dan emisi gas rumah kaca pada tingkat provinsi:\nf. ' mengembangkan dan melaksanakan kerja sama dan kemitraan:\ng. mengoordinasikan dan melaksanakan pengendalian pencemaran dan/atau kerusakan lingkungan hidup lintas kabupaten/kota:\nh. melakukan pembinaan dan pengawasan terhadap pelaksanaan kebijakan tingkat kabupaten/kota:\ni. | melakukan pembinaan dan pengawasan ketaatan penanggung jawab usaha dan/atau kegiatan sesuai ketentuan peraturan perundang- undangan,\nj. mengembangkan dan menerapkan instrumen lingkungan hidup:\nk. mengoordinasikan dan memfasilitasi kerja sama dan penyelesaian perselisihan antarkabupaten/antarkota serta penyelesaian sengketa:\nl. melakukan pembinaan, bantuan teknis, dan pengawasan kepada kabupaten/kota di bidang program dan kegiatan:\nm. melaksanakan standar pelayanan minimal: ap PRESIDEN REPUBLIK INDONESIA - 89 -\nn. menetapkan kebijakan mengenai tata cara pengakuan keberadaan masyarakat hukum adat, kearifan lokal, dan hak masyarakat hukum adat yang terkait dengan perlindungan dan pengelolaan lingkungan hidup pada tingkat provinsi: Oo. mengelola informasi lingkungan hidup tingkat provinsi, p. mengembangkan dan menyosialisasikan pemanfaatan teknologi ramah lingkungan hidup: g. memberikan pendidikan, pelatihan, pembinaan, dan penghargaan: r. ' menerbitkan Perizinan Berusaha atau persetujuan Pemerintah Daerah pada tingkat provinsi, dan Ss. melakukan penegakan hukum lingkungan hidup pada tingkat provinsi.\n\n(3). Dalam pelindungan dan pengelolaan lingkungan hidup, pemerintah kabupaten/kota sesuai dengan norma, standar, prosedur, dan kriteria yang ditetapkan oleh Pemerintah Pusat bertugas dan berwenang:\na. menetapkan kebijakan tingkat kabupaten/kota:\nb. menetapkan dan melaksanakan KLHS tingkat kabupaten/kota,\nc. . menetapkan dan melaksanakan kebijakan mengenai RPPLH tingkat kabupaten/kota:\nd. melaksanakan kebijakan mengenai Amdal dan UKL-UPL,\ne. menyelenggarakan inventarisasi sumber daya alam dan emisi gas rumah kaca pada tingkat kabupaten/kota,\nf. mengembangkan dan melaksanakan kerja sama dan kemitraan:\ng. mengembangkan dan menerapkan instrumen lingkungan hidup,\nh. memfasilitasi penyelesaian sengketa, . PRESIDEN REPUBLIK INDONESIA -90 -\ni. melakukan pembinaan dan pengawasan ketaatan penanggung jawab usaha dan/atau kegiatan sesuai ketentuan peraturan perundang- undangan,\nj. melaksanakan standar pelayanan minimal:\nk. melaksanakan kebijakan mengenai tata cara pengakuan keberadaan masyarakat hukum adat, kearifan lokal, dan hak masyarakat hukum adat yang terkait dengan perlindungan dan pengelolaan lingkungan hidup pada tingkat kabupaten/kota,\nl. mengelola informasi lingkungan hidup tingkat kabupaten/kota,\nm. mengembangkan dan melaksanakan kebijakan sistem informasi lingkungan hidup tingkat kabupaten/kota:\nn. memberikan pendidikan, pelatihan, pembinaan, dan penghargaan,\no. menerbitkan Perizinan Berusaha atau persetujuan Pemerintah Daerah pada tingkat kabupaten/kota: dan\np. melakukan penegakan hukum lingkungan hidup pada tingkat kabupaten/kota.\n\n24. Ketentuan Pasal 69 diubah sehingga berbunyi sebagai berikut:\n(1). Setiap orang dilarang:\na. melakukan perbuatan yang mengakibatkan pencemaran dan/atau perusakan lingkungan hidup,\nb. memasukkan B3 yang dilarang menurut peraturan perundang-undangan ke dalam wilayah Negara Kesatuan Republik Indonesia: PRESIDEN REPUBLIK INDONESIA -91-\nc. . memasukkan limbah yang berasal dari luar wilayah Negara Kesatuan Republik Indonesia ke media lingkungan hidup Negara Kesatuan Republik Indonesia,\nd. memasukkan limbah B3 ke dalam wilayah Negara Kesatuan Republik Indonesia:\ne. membuang limbah ke media lingkungan hidup: i. membuang B3 dan limbah B3 ke media lingkungan hidup: g. melepaskan produk rekayasa genetik ke media llngkungan hidup yang bertentangan dengan peraturan perundang-undangan atau persetujuan lingkungan: h. melakukan pembukaan lahan dengan cara membakar: i. menyusun Amdal tanpa memiliki sertifikat kompetensi penyusun Amdal, dan/atau j. memberikan informasi palsu, menyesatkan, menghilangkan informasi, merusak informasi, atau memberikan keterangan yang tidak benar.\n\n(2). Ketentuan sebagaimana dimaksud pada ayat (1) huruf h dikecualikan bagi masyarakat yang melakukan kegiatan dimaksud dengan memperhatikan sungguh-sungguh kearifan lokal di daerah masing-masing.\n25. Ketentuan Pasal 71 diubah sehingga berbunyi sebagai berikut:\n(1). Pemerintah Pusat atau Pemerintah Daerah melakukan pengawasan terhadap ketaatan penanggung jawab usaha dan/atau kegiatan atas ketentuan yang ditetapkan dalam peraturan perundang-undangan di bidang pelindungan dan pengelolaan lingkungan hidup. Hn 3 PRESIDEN REPUBLIK INDONESIA -92 -\n(2). Pemerintah Pusat atau Pemerintah Daerah dapat mendelegasikan kewenangannya dalam melakukan pengawasan kepada pejabat/instansi teknis yang bertanggung jawab di bidang perlindungan dan pengelolaan lingkungan hidup.\n(3). Dalam melaksanakan pengawasan, Pemerintah Pusat atau Pemerintah Daerah menetapkan pejabat pengawas lingkungan hidup yang merupakan pejabat fungsional.\n(4). Ketentuan lebih lanjut mengenai pejabat pengawas lingkungan hidup diatur dalam Peraturan Pemerintah.\n26. Ketentuan Pasal 72 diubah sehingga berbunyi sebagai berikut:\nPasal 72 Pemerintah Pusat atau Pemerintah Daerah sesuai dengan kewenangannya berdasarkan norma, standar, prosedur, dan kriteria yang ditetapkan oleh Pemerintah Pusat wajib melakukan pengawasan ketaatan penanggung jawab usaha dan/atau kegiatan terhadap Perizinan Berusaha, atau persetujuan Pemerintah Pusat atau Pemerintah Daerah.\n27. Ketentuan Pasal 73 diubah sehingga berbunyi sebagai berikut:\nPasal 73 Menteri dapat melakukan pengawasan terhadap ketaatan penanggung jawab usaha dan/atau kegiatan yang Perizinan Berusaha atau persetujuan Pemerintah Daerah diterbitkan oleh Pemerintah Daerah jika Menteri menganggap terjadi pelanggaran yang serius di bidang pelindungan dan pengelolaan lingkungan hidup berdasarkan norma, standar, prosedur, dan kriteria yang ditetapkan oleh Pemerintah Pusat. Ha 90 PRESIDEN REPUBLIK INDONESIA -93 -\n28. Ketentuan Pasal 76 diubah sehingga berbunyi sebagai berikut:\n(1). Pemerintah Pusat atau Pemerintah Daerah menerapkan sanksi administratif kepada penanggung jawab usaha dan/atau kegiatan jika dalam pengawasan ditemukan pelanggaran terhadap Perizinan Berusaha, atau persetujuan Pemerintah Pusat atau Pemerintah Daerah.\n(2). Ketentuan lebih lanjut mengenai tata cara pengenaan sanksi diatur dalam Peraturan Pemerintah.\n29. Ketentuan Pasal 77 diubah sehingga berbunyi sebagai berikut:\nPasal 77 Menteri dapat menerapkan sanksi administratif terhadap penanggung jawab usaha dan/atau kegiatan dalam hal Menteri menganggap Pemerintah Daerah secara sengaja tidak menerapkan sanksi administratif terhadap pelanggaran yang serius di bidang pelindungan dan pengelolaan lingkungan hidup.\n30. Pasal 79 dihapus.\n31. Ketentuan Pasal 82 diubah sehingga berbunyi sebagai berikut:\n(1). Pemerintah Pusat berwenang untuk memaksa penanggung jawab usaha dan/atau kegiatan untuk melakukan pemulihan lingkungan hidup akibat pencemaran dan/atau perusakan lingkungan hidup yang dilakukannya. aa PRESIDEN REPUBLIK INDONESIA -94 -\n(2). Pemerintah Pusat berwenang atau dapat menunjuk pihak ketiga untuk melakukan pemulihan lingkungan hidup akibat pencemaran dan/atau perusakan lingkungan hidup yang dilakukannya atas beban biaya penanggung jawab usaha dan/atau kegiatan.\n32. Di antara Pasal 82 dan Pasal 83 disisipkan 3 (tiga) pasal, yakni Pasal 82A, Pasal 82B, dan Pasal 82C sehingga berbunyi sebagai berikut:\n(1). Sanksi administratif sebagaimana dimaksud dalam Pasal 82A dan Pasal 82B ayat (1), ayat (2), dan ayat (3) berupa:\na. teguran tertulis:\nb. paksaan pemerintah:\nc. denda administratif:\nd. pembekuan Perizinan Berusaha, dan/atau\ne. pencabutan Perizinan Berusaha. PRESIDEN REPUBLIK INDONESIA - 96 -\n\n(2). Ketentuan lebih lanjut mengenai kriteria, jenis, besaran denda, dan tata cara pengenaan sanksi administratif sebagaimana dimaksud pada ayat (1) diatur dalam Peraturan Pemerintah.\n(3). huruf b: dikenai sanksi administratif.\n(1). Setiap orang yang melakukan usaha dan/atau kegiatan yang memiliki:\na. Perizinan Berusaha, atau persetujuan Pemerintah Pusat atau Pemerintah Daerah sebagaimana dimaksud dalam Pasal 24 ayat (5), Pasal 34 ayat (3), Pasal 59 ayat (1), atau Pasal 59 ayat (4),\nb. persetujuan dari Pemerintah Pusat atau Pemerintah Daerah sebagaimana dimaksud dalam Pasal 20 ayat (3) huruf b: atau\nc. . persetujuan dari Pemerintah Pusat sebagaimana dimaksud dalam Pasal 61 ayat (1): si PRESIDEN REPUBLIK INDONESIA - 95 - yang tidak sesuai dengan kewajiban dalam Perizinan Berusaha, atau persetujuan Pemerintah Pusat atau Pemerintah Daerah, dan/atau melanggar ketentuan peraturan perundang-undangan di bidang perlindungan dan pengelolaan lingkungan hidup, dikenai sanksi administratif.\n\n(2). Setiap orang yang melakukan pelanggaran larangan sebagaimana dimaksud dalam Pasal 69, yaitu:\na. melakukan perbuatan yang mengakibatkan pencemaran dan/atau perusakan lingkungan hidup sebagaimana dimaksud dalam Pasal 69 huruf a, dimana perbuatan tersebut dilakukan karena kelalaian dan tidak mengakibatkan bahaya kesehatan manusia dan/atau luka dan/atau luka berat, dan/atau matinya orang dikenai sanksi administratif dan mewajibkan kepada Penanggung Jawab perbuatan itu untuk melakukan pemulihan fungsi lingkungan hidup dan/atau tindakan lain yang diperlukan, atau\nb. menyusun Amdal tanpa memiliki sertifikat kompetensi penyusun Amdal sebagaimana dimaksud dalam Pasal 69 huruf i dikenai sanksi administratif.\n\n(3). Setiap orang yang karena kelalaiannya melakukan perbuatan yang mengakibatkan dilampauinya baku mutu udara ambien, baku mutu air, baku mutu air laut, atau kriteria baku kerusakan lingkungan hidup yang tidak sesuai dengan Perizinan Berusaha yang dimilikinya dikenai sanksi administratif.\n33. Ketentuan Pasal 88 diubah sehingga berbunyi sebagai berikut:\nPasal 88 Setiap orang yang tindakannya, usahanya, dan/atau kegiatannya menggunakan B3, menghasilkan dan/atau mengelola limbah B3, dan/atau yang menimbulkan ancaman serius terhadap lingkungan hidup bertanggung jawab mutlak atas kerugian yang terjadi dari usaha dan/atau kegiatannya.\n34. Pasal 93 dihapus.\n35. Pasal 102 dihapus.\n36. Ketentuan Pasal 109 diubah sehingga berbunyi sebagai berikut:\n(3). huruf b: atau C. persetujuan dari Pemerintah Pusat sebagaimana dimaksud dalam Pasal 61 ayat (1): PRESIDEN REPUBLIK INDONESIA -97 - yang mengakibatkan timbulnya korban/kerusakan terhadap kesehatan, keselamatan, dan/atau lingkungan, dipidana dengan pidana penjara paling singkat 1 (satu) tahun dan paling lama 3 (tiga) tahun dan denda paling sedikit Rp1.000.000.000,00 (satu miliar rupiah) dan paling banyak Rp3.000.000.000,00 (tiga miliar rupiah).\n37. Pasal 110 dihapus.\n38. Ketentuan Pasal 111 diubah sehingga berbunyi sebagai berikut:\nPasal 111 Pejabat pemberi persetujuan lingkungan yang menerbitkan persetujuan lingkungan tanpa dilengkapi dengan Amdal atau UKL-UPL sebagaimana dimaksud dalam Pasal 37 dipidana dengan pidana penjara paling lama 3 (tiga) tahun dan denda paling banyak Rp3.000.000.000,00 (tiga miliar rupiah).\n39. Ketentuan Pasal 112 diubah sehingga berbunyi sebagai berikut:\nPasal 112 Setiap pejabat berwenang yang dengan sengaja tidak melakukan pengawasan terhadap ketaatan penanggung jawab usaha dan/atau kegiatan terhadap peraturan perundang-undangan dan Perizinan Berusaha, atau persetujuan Pemerintah Pusat atau Pemerintah Daerah sebagaimana dimaksud dalam Pasal 71 yang mengakibatkan terjadinya pencemaran dan/atau kerusakan lingkungan yang mengakibatkan hilangnya nyawa manusia dipidana dengan pidana penjara paling lama 1 (satu) tahun atau denda paling banyak Rp500.000.000,00 (lima ratus juta rupiah). PRESIDEN REPUBLIK INDONESIA -98 -\n|
 
-# 003
-
+# Query_003
+query:
 ```sparql
 PREFIX legal: <http://example.org/legal/ontology/>
 
@@ -103,15 +103,15 @@ SELECT ?x ?text WHERE {
   ?x legal:ayatHasRawText ?text .
 } LIMIT 3
 ```
-
+result:
 
 |0||
 |-|-|
 |x|http://example.org/legal/document/uu/2020/11/pasal/0002/version/20201102/ayat/0001|
 |text|Undang-Undang ini diselenggarakan berdasarkan asas:\na. pemerataan hak,\nb. kepastian hukum:\nc. kemudahan berusaha:\nd. kebersamaan: dan\ne. kemandirian.\n|
 
-# 003_complete
-
+# Query_003_complete
+query:
 ```sparql
 PREFIX legal: <http://example.org/legal/ontology/>
 
@@ -128,15 +128,15 @@ SELECT ?x ?text WHERE {
   ?x legal:ayatHasRawText ?text .
 } LIMIT 3
 ```
-
+result:
 
 |0||
 |-|-|
 |x|http://example.org/legal/document/uu/2020/11/pasal/0002/version/20201102/ayat/0001|
 |text|Undang-Undang ini diselenggarakan berdasarkan asas:\na. pemerataan hak,\nb. kepastian hukum:\nc. kemudahan berusaha:\nd. kebersamaan: dan\ne. kemandirian.\n|
 
-# 004
-
+# Query_004
+query:
 ```sparql
 PREFIX legal: <http://example.org/legal/ontology/>
 
@@ -148,7 +148,7 @@ SELECT ?pasal ?text WHERE {
   ?pasalVersion legal:pasalVersionHasRawText ?text
 } LIMIT 3
 ```
-
+result:
 
 |0||
 |-|-|
@@ -167,8 +167,8 @@ SELECT ?pasal ?text WHERE {
 |pasal|http://example.org/legal/document/uu/2020/11/pasal/0003|
 |text|Undang-Undang ini dibentuk dengan tujuan untuk:\na. menciptakan dan meningkatkan lapangan kerja dengan memberikan kemudahan, pelindungan, dan pemberdayaan terhadap koperasi dan UMK-M serta industri dan perdagangan nasional sebagai upaya untuk dapat menyerap tenaga kerja Indonesia yang seluas-luasnya dengan tetap memperhatikan keseimbangan dan kemajuan antardaerah dalam kesatuan ekonomi nasional,\nb. menjamin setiap warga negara memperoleh pekerjaan, serta mendapat imbalan dan perlakuan yang adil dan layak dalam hubungan kerja,\nc. melakukan penyesuaian berbagai aspek pengaturan yang berkaitan dengan keberpihakan, penguatan, dan perlindungan bagi koperasi dan UMK-M serta industri nasional: dan\nd. melakukan penyesuaian berbagai aspek pengaturan yang berkaitan dengan peningkatan ekosistem investasi, kemudahan dan percepatan proyek strategis nasional yang berorientasi pada kepentingan nasional yang berlandaskan pada ilmu pengetahuan dan teknologi nasional dengan berpedoman pada haluan ideologi Pancasila.\n|
 
-# 004_complete
-
+# Query_004_complete
+query:
 ```sparql
 PREFIX legal: <http://example.org/legal/ontology/>
 
@@ -184,7 +184,7 @@ SELECT ?pasal ?text WHERE {
   ?latestPasalVersion legal:pasalVersionHasRawText ?text
 } LIMIT 3
 ```
-
+result:
 
 |0||
 |-|-|
@@ -203,8 +203,8 @@ SELECT ?pasal ?text WHERE {
 |pasal|http://example.org/legal/document/uu/2020/11/pasal/0004|
 |text|Dalam rangka mencapai tujuan sebagaimana dimaksud dalam Pasal 3, ruang lingkup Undang-Undang ini mengatur kebijakan strategis Cipta Kerja yang meliputi:\na. peningkatan ekosistem investasi dan kegiatan berusaha,\nb. ketenagakerjaan,\nc. kemudahan, pelindungan, serta pemberdayaan koperasi dan UMK-M,\nd. kemudahan berusaha:\ne. dukungan riset dan inovasi,\nf. pengadaan tanah,\ng. kawasan ekonomi:\nh. investasi Pemerintah Pusat dan percepatan proyek strategis nasional, IX R PRESIDEN REPUBLIK INDONESIA -6- Ii. pelaksanaan administrasi pemerintahan: dan J. pengenaan sanksi.\n|
 
-# 005
-
+# Query_005
+query:
 ```sparql
 PREFIX legal: <http://example.org/legal/ontology/>
 
@@ -217,7 +217,7 @@ SELECT ?ayat ?text WHERE {
   FILTER REGEX(str(?text), "buruh")
 } LIMIT 3
 ```
-
+result:
 
 |0||
 |-|-|
@@ -230,8 +230,8 @@ SELECT ?ayat ?text WHERE {
 |ayat|http://example.org/legal/document/uu/2003/13/pasal/0061A/version/20201102/ayat/0001|
 |text|Dalam hal perjanjian kerja waktu tertentu berakhir sebagaimana dimaksud dalam Pasal 61 ayat (1) huruf b dan huruf c, pengusaha wajib memberikan uang kompensasi kepada pekerja/ buruh.|
 
-# 005_complete
-
+# Query_005_complete
+query:
 ```sparql
 PREFIX legal: <http://example.org/legal/ontology/>
 
@@ -251,7 +251,7 @@ SELECT ?ayat ?text WHERE {
 } LIMIT 3
 
 ```
-
+result:
 
 |0||
 |-|-|
@@ -264,8 +264,8 @@ SELECT ?ayat ?text WHERE {
 |ayat|http://example.org/legal/document/uu/2003/13/pasal/0061A/version/20201102/ayat/0001|
 |text|Dalam hal perjanjian kerja waktu tertentu berakhir sebagaimana dimaksud dalam Pasal 61 ayat (1) huruf b dan huruf c, pengusaha wajib memberikan uang kompensasi kepada pekerja/ buruh.|
 
-# 006
-
+# Query_006
+query:
 ```sparql
 PREFIX legal: <http://example.org/legal/ontology/>
 
@@ -278,7 +278,7 @@ SELECT ?insertingPoint ?insertedPasalVersion ?text WHERE {
 LIMIT 3
 
 ```
-
+result:
 
 |0||
 |-|-|
@@ -300,8 +300,8 @@ LIMIT 3
 |insertedPasalVersion|http://example.org/legal/document/uu/2003/13/pasal/0154A/version/20201102|
 |text|(1). Pemutusan hubungan kerja dapat terjadi karena alasan:\na. perusahaan melakukan penggabungan, peleburan, pengambilalihan, atau pemisahan perusahaan dan pekerja/buruh tidak bersedia melanjutkan hubungan kerja atau pengusaha tidak bersedia menerima pekerja/ buruh,\nb. perusahaan melakukan efisiensi diikuti dengan penutupan perusahaan atau tidak diikuti dengan penutupan perusahaan yang disebabkan perusahaan mengalami kerugian,\nc. perusahaan tutup yang disebabkan karena perusahaan mengalami kerugian secara terus menerus selama 2 (dua) tahun,\nd. perusahaan tutup yang disebabkan keadaan memaksa (force majeur).\ne. perusahaan dalam keadaan penundaan kewajiban pembayaran utang,\nf. perusahaan pailit,\ng. adanya permohonan pemutusan hubungan kerja yang diajukan oleh pekerja/buruh dengan alasan pengusaha melakukan perbuatan sebagai berikut:\n1. menganiaya, menghina secara kasar atau mengancam pekerja/ buruh, PRESIDEN REPUBLIK INDONESIA .554 -\n2. membujuk dan/atau menyuruh pekerja/buruh untuk melakukan perbuatan yang bertentangan dengan peraturan perundang-undangan,\n3. tidak membayar upah tepat pada waktu yang telah ditentukan selama 3 (tiga) bulan berturut-turut atau lebih, meskipun pengusaha membayar upah secara tepat waktu sesudah itu:\n4. tidak melakukan kewajiban yang telah dijanjikan kepada pekerja/ buruh,\n5. memerintahkan pekerja/ buruh untuk melaksanakan pekerjaan di luar yang diperjanjikan, atau\n6. memberikan pekerjaan yang membahayakan jiwa, keselamatan, kesehatan, dan kesusilaan pekerja/buruh sedangkan pekerjaan tersebut tidak dicantumkan pada perjanjian kerja,\n\nh. adanya putusan lembaga penyelesaian perselisihan hubungan industrial yang menyatakan pengusaha tidak melakukan perbuatan sebagaimana dimaksud pada huruf g terhadap permohonan yang diajukan oleh pekerja/buruh dan pengusaha memutuskan untuk melakukan pemutusan hubungan kerja, 1 pekerja/buruh mengundurkan diri atas kemauan sendiri dan harus memenuhi syarat:\n1. mengajukan permohonan pengunduran diri secara tertulis selambat-lambatnya 30 (tiga puluh) hari sebelum tanggal mulai pengunduran diri,\n2. tidak terikat dalam ikatan dinas, dan\n3. tetap melaksanakan kewajibannya sampai tanggal mulai pengunduran diri, PRESIDEN » REPUBLIK INDONESIA - 555 - j. pekerja/buruh mangkir selama 5 (lima) hari kerja atau lebih berturut-turut tanpa keterangan secara tertulis yang dilengkapi dengan bukti yang sah dan telah dipanggil oleh pengusaha 2 (dua) kali secara patut dan tertulis, k. pekerja/buruh melakukan pelanggaran ketentuan yang diatur dalam perjanjian kerja, peraturan perusahaan, atau perjanjian kerja bersama dan sebelumnya telah diberikan surat peringatan pertama, kedua, dan ketiga secara berturut-turut masing-masing berlaku untuk paling lama 6 (enam) bulan kecuali ditetapkan lain dalam perjanjian kerja, peraturan perusahaan, atau perjanjian kerja bersama,\n1. pekerja/buruh tidak dapat melakukan pekerjaan selama 6 (enam) bulan akibat ditahan pihak yang berwajib karena diduga melakukan tindak pidana, m. pekerja/buruh mengalami sakit berkepanjangan atau cacat akibat kecelakaan kerja dan tidak dapat melakukan pekerjaannya setelah melampaui batas 12 (dua belas) bulan, n. pekerja/buruh memasuki usia pensiun, atau Oo. pekerja/buruh meninggal dunia.\n\n\n\n(2). Selain alasan pemutusan hubungan kerja sebagaimana dimaksud pada ayat (1), dapat ditetapkan alasan pemutusan hubungan kerja lainnya dalam perjanjian kerja, peraturan perusahaan, atau perjanjian kerja bersama sebagaimana dimaksud dalam Pasal 61 ayat (1).\n(3). Ketentuan lebih lanjut mengenai tata cara pemutusan hubungan kerja diatur dalam Peraturan Pemerintah.|
 
-# 006_complete
-
+# Query_006_complete
+query:
 ```sparql
 PREFIX legal: <http://example.org/legal/ontology/>
 
@@ -320,7 +320,7 @@ SELECT ?insertingPoint ?insertedPasalVersion ?text WHERE {
 LIMIT 3
 
 ```
-
+result:
 
 |0||
 |-|-|
@@ -342,8 +342,8 @@ LIMIT 3
 |insertedPasalVersion|http://example.org/legal/document/uu/2003/13/pasal/0154A/version/20201102|
 |text|(1). Pemutusan hubungan kerja dapat terjadi karena alasan:\na. perusahaan melakukan penggabungan, peleburan, pengambilalihan, atau pemisahan perusahaan dan pekerja/buruh tidak bersedia melanjutkan hubungan kerja atau pengusaha tidak bersedia menerima pekerja/ buruh,\nb. perusahaan melakukan efisiensi diikuti dengan penutupan perusahaan atau tidak diikuti dengan penutupan perusahaan yang disebabkan perusahaan mengalami kerugian,\nc. perusahaan tutup yang disebabkan karena perusahaan mengalami kerugian secara terus menerus selama 2 (dua) tahun,\nd. perusahaan tutup yang disebabkan keadaan memaksa (force majeur).\ne. perusahaan dalam keadaan penundaan kewajiban pembayaran utang,\nf. perusahaan pailit,\ng. adanya permohonan pemutusan hubungan kerja yang diajukan oleh pekerja/buruh dengan alasan pengusaha melakukan perbuatan sebagai berikut:\n1. menganiaya, menghina secara kasar atau mengancam pekerja/ buruh, PRESIDEN REPUBLIK INDONESIA .554 -\n2. membujuk dan/atau menyuruh pekerja/buruh untuk melakukan perbuatan yang bertentangan dengan peraturan perundang-undangan,\n3. tidak membayar upah tepat pada waktu yang telah ditentukan selama 3 (tiga) bulan berturut-turut atau lebih, meskipun pengusaha membayar upah secara tepat waktu sesudah itu:\n4. tidak melakukan kewajiban yang telah dijanjikan kepada pekerja/ buruh,\n5. memerintahkan pekerja/ buruh untuk melaksanakan pekerjaan di luar yang diperjanjikan, atau\n6. memberikan pekerjaan yang membahayakan jiwa, keselamatan, kesehatan, dan kesusilaan pekerja/buruh sedangkan pekerjaan tersebut tidak dicantumkan pada perjanjian kerja,\n\nh. adanya putusan lembaga penyelesaian perselisihan hubungan industrial yang menyatakan pengusaha tidak melakukan perbuatan sebagaimana dimaksud pada huruf g terhadap permohonan yang diajukan oleh pekerja/buruh dan pengusaha memutuskan untuk melakukan pemutusan hubungan kerja, 1 pekerja/buruh mengundurkan diri atas kemauan sendiri dan harus memenuhi syarat:\n1. mengajukan permohonan pengunduran diri secara tertulis selambat-lambatnya 30 (tiga puluh) hari sebelum tanggal mulai pengunduran diri,\n2. tidak terikat dalam ikatan dinas, dan\n3. tetap melaksanakan kewajibannya sampai tanggal mulai pengunduran diri, PRESIDEN » REPUBLIK INDONESIA - 555 - j. pekerja/buruh mangkir selama 5 (lima) hari kerja atau lebih berturut-turut tanpa keterangan secara tertulis yang dilengkapi dengan bukti yang sah dan telah dipanggil oleh pengusaha 2 (dua) kali secara patut dan tertulis, k. pekerja/buruh melakukan pelanggaran ketentuan yang diatur dalam perjanjian kerja, peraturan perusahaan, atau perjanjian kerja bersama dan sebelumnya telah diberikan surat peringatan pertama, kedua, dan ketiga secara berturut-turut masing-masing berlaku untuk paling lama 6 (enam) bulan kecuali ditetapkan lain dalam perjanjian kerja, peraturan perusahaan, atau perjanjian kerja bersama,\n1. pekerja/buruh tidak dapat melakukan pekerjaan selama 6 (enam) bulan akibat ditahan pihak yang berwajib karena diduga melakukan tindak pidana, m. pekerja/buruh mengalami sakit berkepanjangan atau cacat akibat kecelakaan kerja dan tidak dapat melakukan pekerjaannya setelah melampaui batas 12 (dua belas) bulan, n. pekerja/buruh memasuki usia pensiun, atau Oo. pekerja/buruh meninggal dunia.\n\n\n\n(2). Selain alasan pemutusan hubungan kerja sebagaimana dimaksud pada ayat (1), dapat ditetapkan alasan pemutusan hubungan kerja lainnya dalam perjanjian kerja, peraturan perusahaan, atau perjanjian kerja bersama sebagaimana dimaksud dalam Pasal 61 ayat (1).\n(3). Ketentuan lebih lanjut mengenai tata cara pemutusan hubungan kerja diatur dalam Peraturan Pemerintah.|
 
-# 007
-
+# Query_007
+query:
 ```sparql
 PREFIX legal: <http://example.org/legal/ontology/>
 
@@ -359,11 +359,11 @@ SELECT ?insertingPoint ?insertedPasal ?version ?text WHERE {
 LIMIT 3
 
 ```
+result:
 
 
-
-# 007_complete
-
+# Query_007_complete
+query:
 ```sparql
 PREFIX legal: <http://example.org/legal/ontology/>
 
@@ -385,11 +385,11 @@ SELECT ?insertingPoint ?insertedPasal ?version ?text WHERE {
 LIMIT 3
 
 ```
+result:
 
 
-
-# 008
-
+# Query_008
+query:
 ```sparql
 PREFIX legal: <http://example.org/legal/ontology/>
 
@@ -405,11 +405,11 @@ SELECT ?deletingPoint ?deletedPasal ?version ?text WHERE {
 LIMIT 3
 
 ```
+result:
 
 
-
-# 008_complete
-
+# Query_008_complete
+query:
 ```sparql
 PREFIX legal: <http://example.org/legal/ontology/>
 
@@ -431,11 +431,11 @@ SELECT ?deletingPoint ?deletedPasal ?version ?text WHERE {
 LIMIT 3
 
 ```
+result:
 
 
-
-# 010
-
+# Query_010
+query:
 ```sparql
 PREFIX legal: <http://example.org/legal/ontology/>
 
@@ -457,7 +457,7 @@ SELECT ?type (COUNT(*) AS ?jumlah) WHERE {
 LIMIT 3
 
 ```
-
+result:
 
 |0||
 |-|-|
@@ -476,8 +476,8 @@ LIMIT 3
 |type|mengubah|
 |jumlah|930|
 
-# 010_complete
-
+# Query_010_complete
+query:
 ```sparql
 PREFIX legal: <http://example.org/legal/ontology/>
 
@@ -518,7 +518,7 @@ SELECT ?type (COUNT(*) AS ?jumlah) WHERE {
 LIMIT 3
 
 ```
-
+result:
 
 |0||
 |-|-|
@@ -537,8 +537,8 @@ LIMIT 3
 |type|mengubah|
 |jumlah|930|
 
-# 011
-
+# Query_011
+query:
 ```sparql
 PREFIX legal: <http://example.org/legal/ontology/>
 
@@ -552,7 +552,7 @@ SELECT ?latestPasalVersion WHERE {
 }
 LIMIT 3
 ```
-
+result:
 
 |0||
 |-|-|
@@ -568,8 +568,8 @@ LIMIT 3
 |-|-|
 |latestPasalVersion|http://example.org/legal/document/uu/2003/13/pasal/0078/version/20201102|
 
-# 012
-
+# Query_012
+query:
 ```sparql
 PREFIX legal: <http://example.org/legal/ontology/>
 
@@ -586,7 +586,7 @@ SELECT DISTINCT ?pasalVersion ?text WHERE {
 }
 LIMIT 3
 ```
-
+result:
 
 |0||
 |-|-|
@@ -605,8 +605,8 @@ LIMIT 3
 |pasalVersion|http://example.org/legal/document/uu/2020/11/pasal/0184/version/20201102|
 |text|Pada saat Undang-Undang ini mulai berlaku:\na. Perizinan Berusaha atau izin sektor yang sudah terbit masih tetap berlaku sampai dengan berakhirnya Perizinan Berusaha,\nb. Perizinan Berusaha dan/atau izin sektor yang sudah terbit sebelum berlakunya Undang-Undang ini dapat berlaku sesuai dengan Undang-Undang ini, dan\nc. Perizinan Berusaha yang sedang dalam proses permohonan disesuaikan dengan ketentuan dalam Undang-Undang ini.\n|
 
-# 012_complete
-
+# Query_012_complete
+query:
 ```sparql
 PREFIX legal: <http://example.org/legal/ontology/>
 
@@ -624,7 +624,7 @@ SELECT DISTINCT ?pasalVersion ?text WHERE {
 LIMIT 3
 
 ```
-
+result:
 
 |0||
 |-|-|
@@ -643,8 +643,8 @@ LIMIT 3
 |pasalVersion|http://example.org/legal/document/uu/2020/11/pasal/0184/version/20201102|
 |text|Pada saat Undang-Undang ini mulai berlaku:\na. Perizinan Berusaha atau izin sektor yang sudah terbit masih tetap berlaku sampai dengan berakhirnya Perizinan Berusaha,\nb. Perizinan Berusaha dan/atau izin sektor yang sudah terbit sebelum berlakunya Undang-Undang ini dapat berlaku sesuai dengan Undang-Undang ini, dan\nc. Perizinan Berusaha yang sedang dalam proses permohonan disesuaikan dengan ketentuan dalam Undang-Undang ini.\n|
 
-# 013
-
+# Query_013
+query:
 ```sparql
 PREFIX legal: <http://example.org/legal/ontology/>
 
@@ -658,11 +658,11 @@ SELECT DISTINCT ?pasalVersion WHERE {
 LIMIT 3
 
 ```
+result:
 
 
-
-# 014
-
+# Query_014
+query:
 ```sparql
 PREFIX legal: <http://example.org/legal/ontology/>
 
@@ -676,7 +676,7 @@ SELECT ?ayat ?text ?citation WHERE {
 }
 LIMIT 3
 ```
-
+result:
 
 |0||
 |-|-|
@@ -695,8 +695,8 @@ LIMIT 3
 |ayat|http://example.org/legal/document/uu/2014/30/pasal/0039A/version/20201102/ayat/0003|
 |text|Ketentuan mengenai jenis, bentuk, dan mekanisme pembinaan dan pengawasan atas Izin, Standar, Dispensasi, dan/atau Konsesi yang dapat dilakukan oleh profesi sebagaimana dimaksud pada ayat (2) diatur dalam Peraturan Presiden.|
 
-# 017
-
+# Query_017
+query:
 ```sparql
 PREFIX legal: <http://example.org/legal/ontology/>
 PREFIX owl: <http://www.w3.org/2002/07/owl#>
@@ -720,7 +720,7 @@ ORDER BY DESC (?numOfUpdates)
 LIMIT 3
 
 ```
-
+result:
 
 |0||
 |-|-|
@@ -745,8 +745,8 @@ LIMIT 3
 |pasal|http://example.org/legal/document/uu/2009/1/pasal/0003|
 |latestPasalVersion|http://example.org/legal/document/uu/2009/1/pasal/0003/version/20090112|
 
-# 017_complete
-
+# Query_017_complete
+query:
 ```sparql
 PREFIX legal: <http://example.org/legal/ontology/>
 PREFIX owl: <http://www.w3.org/2002/07/owl#>
@@ -776,7 +776,7 @@ ORDER BY DESC (?numOfUpdates)
 LIMIT 3
 
 ```
-
+result:
 
 |0||
 |-|-|

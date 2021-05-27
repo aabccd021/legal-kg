@@ -16,6 +16,7 @@ async function query(): Promise<void> {
   const results: string[] = [];
   for (const fileName of readdirSync(sparqlFileDirPath)) {
     try {
+      const baseName = path.basename(fileName, '.sparql');
       const queryStr = readFileSync(path.join(sparqlFileDirPath, fileName), {
         encoding: 'utf-8',
       });
@@ -35,7 +36,7 @@ async function query(): Promise<void> {
         idx += 1;
       }
       results.push(
-        `# ${path.basename(fileName, '.sparql')}\n\n\`\`\`sparql\n${queryStr}\n\`\`\`\n\n${end.join(
+        `# Query_${baseName}\nquery:\n\`\`\`sparql\n${queryStr}\n\`\`\`\nresult:\n${end.join(
           '\n\n'
         )}`
       );
