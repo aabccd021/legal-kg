@@ -109,7 +109,7 @@ metadata:
             textString: >-
               bahwa beberapa undang undang di bidang ketenagakerjaan dipandang sudah tidak sesuai
               lagi dengan kebutuhan dan tuntutan pembangunan ketenagakerjaan, oleh karena itu perlu
-              dicabut dan/atau ditarik kembali: PRESIDEN REPUBLIK INDONESIA 2
+              dicabut dan/atau ditarik kembali: 2
             references: []
         - type: point
           node: &ref_8
@@ -152,8 +152,6 @@ metadata:
     DAN
     PRESIDEN REPUBLIK INDONESIA
 opText: |-
-  PRESIDEN
-  REPUBLIK INDONESIA
   UNDANG-UNDANG REPUBLIK INDONESIA
   NOMOR 13 TAHUN 2003
   TENTANG
@@ -183,8 +181,6 @@ opText: |-
   sudah tidak sesuai lagi dengan kebutuhan dan tuntutan pembangunan
   ketenagakerjaan, oleh karena itu perlu dicabut dan/atau ditarik
   kembali:
-  PRESIDEN
-  REPUBLIK INDONESIA
   2
   f. bahwa berdasarkan pertimbangan sebagaimana tersebut pada huruf a,
   b, c, d, dan e perlu membentuk Undang undang tentang
@@ -342,7 +338,7 @@ content:
                               parentNode: *ref_20
                             textString: >-
                               orang perseorangan, persekutuan, atau badan hukum yang menjalankan
-                              suatu perusahaan milik sendiri, PRESIDEN REPUBLIK INDONESIA -3-
+                              suatu perusahaan milik sendiri,
                             references: []
                         - type: point
                           node: &ref_21
@@ -523,8 +519,7 @@ content:
                         secara terpadu antara pelatihan di lembaga pelatihan dengan bekerja secara
                         langsung di bawah bimbingan dan pengawasan instruktur atau pekerja/buruh
                         yang lebih berpengalaman, dalam proses produksi barang dan/atau jasa di
-                        perusahaan, dalam rangka menguasai keterampilan atau keahlian tertentu.
-                        PRESIDEN REPUBLIK INDONESIA 4
+                        perusahaan, dalam rangka menguasai keterampilan atau keahlian tertentu. 4
                       references: []
                   - type: point
                     node: &ref_33
@@ -663,7 +658,7 @@ content:
                         Lembaga kerja sama tripartit adalah forum komunikasi, konsultasi dan
                         musyawarah tentang masalah ketenagakerjaan yang anggotanya terdiri dari
                         unsur organisasi pengusaha, serikat pekerja/serikat buruh, dan pemerintah.
-                        PRESIDEN REPUBLIK INDONESIA -.5-
+                        -.5-
                       references: []
                   - type: point
                     node: &ref_41
@@ -834,7 +829,7 @@ content:
                         ditetapkan dan dibayarkan menurut suatu perjanjian kerja, kesepakatan, atau
                         peraturan perundang undangan, termasuk tunjangan bagi pekerja/buruh dan
                         keluarganya atas suatu pekerjaan dan/atau jasa yang telah atau akan
-                        dilakukan. PRESIDEN REPUBLIK INDONESIA -G-
+                        dilakukan. -G-
                       references: []
                   - type: point
                     node: &ref_52
@@ -1031,9 +1026,7 @@ content:
                         nodeType: text
                         textName: text
                         parentNode: *ref_64
-                      textString: >-
-                        meningkatkan kesejahteraan tenaga kerja dan keluarganya. PRESIDEN REPUBLIK
-                        INDONESIA -7-
+                      textString: meningkatkan kesejahteraan tenaga kerja dan keluarganya.
                       references: []
     - type: bab
       node: &ref_65
@@ -1306,7 +1299,7 @@ content:
                               nodeType: text
                               textName: text
                               parentNode: *ref_84
-                            textString: produktivitas tenaga kerja, PRESIDEN REPUBLIK INDONESIA -8-
+                            textString: produktivitas tenaga kerja,
                             references: []
                         - type: point
                           node: &ref_85
@@ -1556,7 +1549,7 @@ content:
                 textString: >-
                   Setiap tenaga kerja berhak untuk memperoleh dan/atau meningkatkan dan/atau
                   mengembangkan kompetensi kerja sesuai dengan bakat, minat, dan kemampuannya
-                  melalui pelatihan kerja. PRESIDEN REPUBLIK INDONESIA -9-
+                  melalui pelatihan kerja.
                 references: []
           - type: pasal
             node:
@@ -1795,7 +1788,7 @@ content:
                       textString: >-
                         Ketentuan mengenai tata cara perizinan dan pendaftaran lembaga pelatihan
                         kerja sebagaimana dimaksud dalam ayat (2) dan ayat (3) diatur dengan
-                        Keputusan Menteri. PRESIDEN REPUBLIK INDONESIA -10-
+                        Keputusan Menteri.
                       references:
                         - start: 119
                           end: 127
@@ -2097,7 +2090,7 @@ content:
                       textString: >-
                         Penghentian sementara pelaksanaan penyelenggaraan pelatihan kerja hanya
                         dikenakan terhadap program pelatihan yang tidak memenuhi syarat sebagaimana
-                        dimaksud dalam Pasal 9 dan Pasal 15. PRESIDEN REPUBLIK INDONESIA -11-
+                        dimaksud dalam Pasal 9 dan Pasal 15.
                       references:
                         - start: 175
                           end: 183
@@ -2358,7 +2351,6 @@ content:
                         Untuk mendukung peningkatan pelatihan kerja dalam rangka pembangunan
                         ketenagakerjaan, dikembang kan satu sistem pelatihan kerja nasional yang
                         merupakan acuan pelaksanaan pelatihan kerja di semua bidang dan/atau sektor.
-                        PRESIDEN REPUBLIK INDONESIA -12-
                       references: []
                   - type: ayat
                     node: &ref_150
@@ -2592,7 +2584,7 @@ content:
                       textString: >-
                         Untuk memperoleh izin sebagaimana dimaksud dalam ayat (1), penyelenggara
                         pemagangan harus ber bentuk badan hukum Indonesia sesuai dengan peraturan
-                        perundang-undangan yang berlaku. PRESIDEN REPUBLIK INDONESIA -13-
+                        perundang-undangan yang berlaku.
                       references:
                         - start: 49
                           end: 57
@@ -2838,8 +2830,7 @@ content:
                         parentNode: *ref_180
                       textString: >-
                         Pembentukan, keanggotaan, dan tata kerja lembaga koordinasi pelatihan kerja
-                        sebagaimana dimaksud da lam ayat (1), diatur dengan Keputusan Presiden.
-                        PRESIDEN REPUBLIK INDONESIA 14 -
+                        sebagaimana dimaksud da lam ayat (1), diatur dengan Keputusan Presiden. 14 -
                       references:
                         - start: 104
                           end: 112
@@ -3088,8 +3079,7 @@ content:
                         parentNode: *ref_195
                       textString: >-
                         Penempatan tenaga kerja dilaksanakan berdasarkan asas terbuka, bebas,
-                        obyektif, serta adil, dan setara tanpa diskriminasi. PRESIDEN REPUBLIK
-                        INDONESIA -15-
+                        obyektif, serta adil, dan setara tanpa diskriminasi.
                       references: []
                   - type: ayat
                     node: &ref_196
@@ -3336,7 +3326,6 @@ content:
                       textString: >-
                         Penempatan tenaga kerja oleh pelaksana sebagaimana dimaksud dalam Pasal 35
                         ayat (1) dilakukan dengan memberikan pelayanan penempatan tenaga kerja.
-                        PRESIDEN REPUBLIK INDONESIA -16-
                       references:
                         - start: 66
                           end: 83
@@ -3658,7 +3647,7 @@ content:
                         parentNode: *ref_230
                       textString: >-
                         Golongan dan jabatan sebagaimana dimaksud dalam ayat (2) ditetapkan dengan
-                        Keputusan Menteri. PRESIDEN REPUBLIK INDONESIA -17 -
+                        Keputusan Menteri.
                       references:
                         - start: 48
                           end: 56
@@ -3875,7 +3864,7 @@ content:
                         parentNode: *ref_245
                       textString: >-
                         Pemerintah dan masyarakat bersama-sama mengawasi pelaksanaan kebijakan
-                        sebagaimana dimaksud dalam ayat (1). PRESIDEN REPUBLIK INDONESIA -18-
+                        sebagaimana dimaksud dalam ayat (1).
                       references:
                         - start: 98
                           end: 106
@@ -4160,7 +4149,7 @@ content:
                               nodeType: text
                               textName: text
                               parentNode: *ref_262
-                            textString: alasan penggunaan tenaga kerja asing, PRESIDEN REPUBLIK INDONESIA -19-
+                            textString: alasan penggunaan tenaga kerja asing,
                             references: []
                         - type: point
                           node: &ref_263
@@ -4454,7 +4443,7 @@ content:
                         parentNode: *ref_282
                       textString: >-
                         Jabatan-jabatan tertentu sebagaimana dimaksud dalam ayat (1) diatur dengan
-                        Keputusan Menteri PRESIDEN REPUBLIK INDONESIA -20-
+                        Keputusan Menteri
                       references:
                         - start: 52
                           end: 60
@@ -4697,8 +4686,7 @@ content:
                         parentNode: *ref_296
                       textString: >-
                         Perjanjian kerja yang dipersyaratkan secara tertulis dilaksanakan sesuai
-                        dengan peraturan perundang undangan yang berlaku. PRESIDEN REPUBLIK
-                        INDONESIA - A1 -
+                        dengan peraturan perundang undangan yang berlaku. - A1 -
                       references: []
           - type: pasal
             node:
@@ -5071,8 +5059,7 @@ content:
                       textString: >-
                         Ketentuan dalam perjanjian kerja sebagaimana dimaksud dalam ayat (1) huruf e
                         dan f, tidak boleh ber-tentangan dengan peraturan perusahaan, perjanjian
-                        kerja bersama, dan peraturan perundang undangan yang berlaku. PRESIDEN
-                        REPUBLIK INDONESIA - 22 -
+                        kerja bersama, dan peraturan perundang undangan yang berlaku.
                       references:
                         - start: 60
                           end: 68
@@ -5355,7 +5342,7 @@ content:
                       textString: >-
                         Dalam hal disyaratkan masa percobaan kerja dalam perjanjian kerja
                         sebagaimana dimaksud dalam ayat (1), masa percobaan kerja yang disyaratkan
-                        batal demi hukum. PRESIDEN REPUBLIK INDONESIA -23 -
+                        batal demi hukum.
                       references:
                         - start: 93
                           end: 101
@@ -5639,8 +5626,7 @@ content:
                         parentNode: *ref_358
                       textString: >-
                         Perjanjian kerja untuk waktu tidak tertentu dapat mensyaratkan masa
-                        percobaan kerja paling lama 3 (tiga) bulan. PRESIDEN REPUBLIK INDONESIA “24
-                        -
+                        percobaan kerja paling lama 3 (tiga) bulan. “24 -
                       references: []
                   - type: ayat
                     node: &ref_359
@@ -5826,7 +5812,7 @@ content:
                         Dalam hal pekerja/buruh meninggal dunia, ahli waris pekerja/ buruh berhak
                         mendapatkan hak haknya se-suai dengan peraturan perundang- undangan yang
                         berlaku atau hak hak yang telah diatur dalam perjanjian kerja, peraturan
-                        perusahaan, atau perjanjian kerja bersama. PRESIDEN REPUBLIK INDONESIA -25 -
+                        perusahaan, atau perjanjian kerja bersama.
                       references: []
           - type: pasal
             node:
@@ -6085,7 +6071,7 @@ content:
                               parentNode: *ref_389
                             textString: >-
                               dilakukan dengan perintah langsung atau tidak langsung dari pemberi
-                              pekerjaan, PRESIDEN REPUBLIK INDONESIA -26 -
+                              pekerjaan,
                             references: []
                         - type: point
                           node: &ref_390
@@ -6337,7 +6323,7 @@ content:
                         digunakan oleh pemberi kerja untuk melaksanakan kegiatan pokok atau kegiatan
                         yang berhubungan langsung dengan proses produksi, kecuali untuk kegiatan
                         jasa penunjang atau kegiatan yang tidak berhubungan langsung dengan proses
-                        produksi. PRESIDEN REPUBLIK INDONESIA -2T -
+                        produksi. -2T -
                       references: []
                   - type: ayat
                     node: &ref_404
@@ -6555,7 +6541,7 @@ content:
                     parentParagrafSetNode:
                       nodeType: paragrafSet
                       parentBagianNode: *ref_415
-                  title: Paragraf 1 Penyandang Cacat PRESIDEN REPUBLIK INDONESIA -28 -
+                  title: Paragraf 1 Penyandang Cacat
                   pasalSet:
                     type: pasalSet
                     node:
@@ -6913,7 +6899,7 @@ content:
                                   textString: >-
                                     Anak dapat melakukan pekerjaan di tempat kerja yang merupakan
                                     bagian dari kurikulum pendidikan atau pelatihan yang disahkan
-                                    oleh pejabat yang berwenang. PRESIDEN REPUBLIK INDONESIA -29 -
+                                    oleh pejabat yang berwenang.
                                   references: []
                               - type: ayat
                                 node: &ref_440
@@ -7201,8 +7187,7 @@ content:
                                     parentNode: *ref_459
                                   textString: >-
                                     Siapapun dilarang mempekerjakan dan melibatkan anak pada
-                                    pekerjaan- pekerjaan yang terburuk. PRESIDEN REPUBLIK INDONESIA
-                                    - 30 -
+                                    pekerjaan- pekerjaan yang terburuk.
                                   references: []
                               - type: ayat
                                 node: &ref_460
@@ -7443,8 +7428,7 @@ content:
                                     Pengusaha dilarang mempekerjakan pekerja/buruh perempuan hamil
                                     yang menurut keterangan dokter berbahaya bagi kesehatan dan
                                     keselamatan kandungannya maupun dirinya apabila bekerja antara
-                                    pukul 23.00 sampai dengan pukul 07.00. PRESIDEN REPUBLIK
-                                    INDONESIA -31-
+                                    pukul 23.00 sampai dengan pukul 07.00.
                                   references: []
                               - type: ayat
                                 node: &ref_476
@@ -7770,7 +7754,7 @@ content:
                                   textString: >-
                                     Pengusaha yang mempekerjakan pekerja/buruh melebihi waktu kerja
                                     sebagaimana dimaksud dalam ayat (1) wajib membayar upah kerja
-                                    lembur. PRESIDEN REPUBLIK INDONESIA -32 -
+                                    lembur.
                                   references:
                                     - start: 91
                                       end: 99
@@ -8044,7 +8028,7 @@ content:
                                     parentNode: *ref_514
                                   textString: >-
                                     Perusahaan tertentu sebagaimana dimaksud dalam ayat (4) diatur
-                                    dengan Keputusan Menteri. PRESIDEN REPUBLIK INDONESIA - 33 -
+                                    dengan Keputusan Menteri.
                                   references:
                                     - start: 47
                                       end: 55
@@ -8331,9 +8315,7 @@ content:
                                     nodeType: text
                                     textName: text
                                     parentNode: *ref_529
-                                  textString: >-
-                                    Pekerja/buruh tidak wajib bekerja pada hari-hari libur resmi.
-                                    PRESIDEN REPUBLIK INDONESIA - 34 -
+                                  textString: Pekerja/buruh tidak wajib bekerja pada hari-hari libur resmi.
                                   references: []
                               - type: ayat
                                 node: &ref_530
@@ -8594,7 +8576,7 @@ content:
                                   textString: >-
                                     Ketentuan mengenai penerapan sistem manajemen keselamatan dan
                                     kesehatan kerja sebagaimana dimaksud dalam ayat (1) diatur
-                                    dengan Peraturan Pemerintah. PRESIDEN REPUBLIK INDONESIA - 35 -
+                                    dengan Peraturan Pemerintah.
                                   references:
                                     - start: 105
                                       end: 113
@@ -8908,7 +8890,7 @@ content:
                                     parentNode: *ref_569
                                   textString: >-
                                     upah minimum berdasarkan sektor pada wilayah provinsi atau
-                                    kabupaten/kota. PRESIDEN REPUBLIK INDONESIA - 36 -
+                                    kabupaten/kota.
                                   references: []
                         - type: ayat
                           node: &ref_570
@@ -9178,8 +9160,7 @@ content:
                               parentNode: *ref_585
                             textString: >-
                               Pengusaha melakukan peninjauan upah secara berkala dengan mem-
-                              perhatikan kemampuan perusahaan dan produktivitas. PRESIDEN REPUBLIK
-                              INDONESIA - 37 -
+                              perhatikan kemampuan perusahaan dan produktivitas.
                             references: []
                         - type: ayat
                           node: &ref_586
@@ -9450,7 +9431,7 @@ content:
                                     parentNode: *ref_605
                                   textString: >-
                                     untuk 4 (empat) bulan kedua, dibayar 7590 (tujuh puluh lima
-                                    perseratus) dari upah: PRESIDEN REPUBLIK INDONESIA - 38 -
+                                    perseratus) dari upah:
                                   references: []
                               - type: point
                                 node: &ref_606
@@ -9716,8 +9697,7 @@ content:
                               parentNode: *ref_623
                             textString: >-
                               Pemerintah mengatur pengenaan denda kepada pengusaha dan/atau
-                              pekerja/buruh, dalam pembayaran upah. PRESIDEN REPUBLIK INDONESIA - 39
-                              -
+                              pekerja/buruh, dalam pembayaran upah.
                             references: []
                         - type: ayat
                           node: &ref_624
@@ -9918,8 +9898,7 @@ content:
                               Ketentuan mengenai tata cara pembentukan, komposisi keanggotaan, tata
                               cara pengangkatan dan pemberhentian keanggotaan, serta tugas dan tata
                               kerja Dewan Pengupahan sebagaimana dimaksud dalam ayat (1) dan ayat
-                              (2), diatur dengan Keputusan Presiden. PRESIDEN REPUBLIK INDONESIA -
-                              A0 -
+                              (2), diatur dengan Keputusan Presiden. - A0 -
                             references:
                               - start: 203
                                 end: 211
@@ -10196,7 +10175,7 @@ content:
                             textString: >-
                               Upaya-upaya untuk menumbuhkembangkan koperasi pekerja/buruh
                               sebagaimana dimaksud dalam ayat (2), diatur dengan Peraturan
-                              Pemerintah. PRESIDEN REPUBLIK INDONESIA 41 -
+                              Pemerintah. 41 -
                             references:
                               - start: 87
                                 end: 95
@@ -10437,9 +10416,7 @@ content:
                               nodeType: text
                               textName: text
                               parentNode: *ref_668
-                            textString: >-
-                              lembaga penyelesaian perselisihan hubungan industrial. PRESIDEN
-                              REPUBLIK INDONESIA 42 -
+                            textString: lembaga penyelesaian perselisihan hubungan industrial. 42 -
                             references: []
           - type: bagian
             node: &ref_669
@@ -10667,7 +10644,7 @@ content:
                             textString: >-
                               Lembaga kerja sama bipartit sebagaimana dimaksud dalam ayat (1)
                               berfungsi sebagai forum komunikasi, dan konsultasi mengenai hal
-                              ketenagakerjaan di perusahaan. PRESIDEN REPUBLIK INDONESIA - 43 -
+                              ketenagakerjaan di perusahaan.
                             references:
                               - start: 55
                                 end: 63
@@ -10922,8 +10899,7 @@ content:
                             textString: >-
                               Pengusaha yang mempekerjakan pekerja/buruh sekurang-kurangnya 10
                               (sepuluh) orang wajib membuat peraturan perusahaan yang mulai berlaku
-                              setelah disahkan oleh Menteri atau pejabat yang ditunjuk. PRESIDEN
-                              REPUBLIK INDONESIA 44 -
+                              setelah disahkan oleh Menteri atau pejabat yang ditunjuk. 44 -
                             references: []
                         - type: ayat
                           node: &ref_702
@@ -11193,8 +11169,7 @@ content:
                               parentNode: *ref_719
                             textString: >-
                               Masa berlaku peraturan perusahaan paling lama 2 (dua) tahun dan wajib
-                              diperbaharui setelah habis masa berlakunya. PRESIDEN REPUBLIK
-                              INDONESIA - 45 -
+                              diperbaharui setelah habis masa berlakunya.
                             references: []
                         - type: ayat
                           node: &ref_720
@@ -11432,7 +11407,7 @@ content:
                             textString: >-
                               Peraturan perusahaan hasil perubahan sebagaimana dimaksud dalam ayat
                               (1) harus mendapat pengesa-han dari Menteri atau pejabat yang
-                              ditunjuk. PRESIDEN REPUBLIK INDONESIA - AG -
+                              ditunjuk. - AG -
                             references:
                               - start: 64
                                 end: 72
@@ -11641,8 +11616,7 @@ content:
                       textString: >-
                         Dalam hal musyawarah sebagaimana dimaksud dalam Pasal 116 ayat (2) tidak
                         mencapai kesepakatan, maka penyelesaiannya dilakukan melalui prosedur
-                        penyelesaian perselisihan hubungan industrial. PRESIDEN REPUBLIK INDONESIA
-                        47 -
+                        penyelesaian perselisihan hubungan industrial. 47 -
                       references:
                         - start: 48
                           end: 66
@@ -11817,8 +11791,7 @@ content:
                               pekerja/serikat buruh maka yang berhak mewakili pekerja/buruh
                               melakukan perundingan dengan pengusaha yang jumlah keanggotaannya
                               lebih dari 5046 (lima puluh perseratus) dari seluruh jumlah
-                              pekerja/buruh di perusahaan tersebut. PRESIDEN REPUBLIK INDONESIA - 48
-                              -
+                              pekerja/buruh di perusahaan tersebut.
                             references: []
                         - type: ayat
                           node: &ref_753
@@ -12039,8 +12012,7 @@ content:
                             textString: >-
                               Dalam hal perundingan sebagaimana dimaksud dalam ayat (3) tidak
                               mencapai kesepakatan maka perjan-jian kerja bersama yang sedang
-                              berlaku, tetap berlaku untuk paling lama 1 (satu) tahun. PRESIDEN
-                              REPUBLIK INDONESIA - A9 -
+                              berlaku, tetap berlaku untuk paling lama 1 (satu) tahun. - A9 -
                             references:
                               - start: 49
                                 end: 57
@@ -12313,8 +12285,7 @@ content:
                               parentNode: *ref_782
                             textString: >-
                               Perjanjian kerja yang dibuat oleh pengusaha dan pekerja/buruh tidak
-                              boleh bertentangan dengan perjanjian kerja bersama. PRESIDEN REPUBLIK
-                              INDONESIA - 50 -
+                              boleh bertentangan dengan perjanjian kerja bersama.
                             references: []
                         - type: ayat
                           node: &ref_783
@@ -12488,7 +12459,7 @@ content:
                               perseratus) dari jumlah seluruh pekerja/buruh di perusahaan
                               bersama-sama dengan serikat pekerja/serikat buruh yang membuat
                               perjanjian kerja bersama terdahulu dengan membentuk tim perunding
-                              secara proporsional. PRESIDEN REPUBLIK INDONESIA -51-
+                              secara proporsional.
                             references:
                               - start: 278
                                 end: 296
@@ -12688,7 +12659,7 @@ content:
                       textString: >-
                         Ketentuan mengenai persyaratan serta tata cara pembuatan, perpanjangan,
                         perubahan, dan pendaftaran perjanjian kerja bersama diatur dengan Keputusan
-                        Menteri. PRESIDEN REPUBLIK INDONESIA - 52 -
+                        Menteri.
                       references: []
                 - type: pasal
                   node:
@@ -12872,7 +12843,7 @@ content:
                             textString: >-
                               Mogok kerja sebagai hak dasar pekerja/buruh dan serikat
                               pekerja/serikat buruh dilakukan secara sah, tertib, dan damai sebagai
-                              akibat gagalnya perundingan. PRESIDEN REPUBLIK INDONESIA - 53 -
+                              akibat gagalnya perundingan.
                             references: []
                       - type: pasal
                         node:
@@ -13098,8 +13069,7 @@ content:
                                     tidak menjadi anggota serikat pekerja/ serikat buruh, maka
                                     pemberitahuan sebagaimana dimaksud dalam ayat (2) ditandatangani
                                     oleh perwakilan pekerja/buruh yang ditunjuk sebagai koordinator
-                                    dan/atau penanggung jawab mogok kerja. PRESIDEN REPUBLIK
-                                    INDONESIA - 54 -
+                                    dan/atau penanggung jawab mogok kerja.
                                   references:
                                     - start: 161
                                       end: 169
@@ -13291,8 +13261,7 @@ content:
                                     dimaksud dalam ayat (4), maka atas dasar perundingan antara
                                     pengusaha dengan serikat pekerja/serikat buruh atau penanggung
                                     jawab mogok kerja, mogok kerja dapat diteruskan atau dihentikan
-                                    untuk sementara atau dihentikan sama sekali. PRESIDEN REPUBLIK
-                                    INDONESIA - 55 -
+                                    untuk sementara atau dihentikan sama sekali.
                                   references:
                                     - start: 80
                                       end: 88
@@ -13508,8 +13477,7 @@ content:
                             textString: >-
                               Dalam hal pekerja/buruh yang melakukan mogok kerja secara sah dalam
                               melakukan tuntutan hak normatif yang sungguh-sungguh dilanggar oleh
-                              pengusaha, pekerja/buruh berhak mendapatkan upah. PRESIDEN REPUBLIK
-                              INDONESIA - 56 -
+                              pengusaha, pekerja/buruh berhak mendapatkan upah.
                             references: []
                 - type: paragraf
                   node: &ref_854
@@ -13726,7 +13694,6 @@ content:
                                   textString: >-
                                     Pemberitahuan sebagaimana dimaksud dalam ayat (1) ditandatangani
                                     oleh pengusaha dan/atau pimpinan perusahaan yang bersangkutan.
-                                    PRESIDEN REPUBLIK INDONESIA - 57 -
                                   references:
                                     - start: 41
                                       end: 49
@@ -13935,8 +13902,7 @@ content:
                                           pekerja/buruh atau serikat pekerja/serikat buruh melanggar
                                           ketentuan normatif yang ditentukan dalam perjanjian kerja,
                                           peraturan perusahaan, perjanjian kerja bersama, atau
-                                          peraturan perundang-undangan yang berlaku. PRESIDEN
-                                          REPUBLIK INDONESIA - 58 -
+                                          peraturan perundang-undangan yang berlaku.
                                         references: []
     - type: bab
       node: &ref_880
@@ -14110,8 +14076,7 @@ content:
                       textString: >-
                         Permohonan penetapan sebagaimana dimaksud dalam ayat (1) dapat diterima oleh
                         lembaga penyelesaian perselisihan hubungan industrial apabila telah
-                        dirundangkan sebagaimana dimaksud dalam Pasal 151 ayat 2). PRESIDEN REPUBLIK
-                        INDONESIA - 59 -
+                        dirundangkan sebagaimana dimaksud dalam Pasal 151 ayat 2).
                       references:
                         - start: 48
                           end: 56
@@ -14321,7 +14286,6 @@ content:
                             textString: >-
                               karena perbedaan paham, agama, aliran politik, suku, warna kulit,
                               golongan, jenis kelamin, kondisi fisik, atau status perkawinan,
-                              PRESIDEN REPUBLIK INDONESIA - 60 -
                             references: []
                         - type: point
                           node: &ref_905
@@ -14530,8 +14494,7 @@ content:
                         Pengusaha dapat melakukan penyimpangan terhadap ketentuan sebagaimana
                         dimaksud dalam ayat (2) berupa tindakan skorsing kepada pekerja/buruh yang
                         sedang dalam proses pemutusan hubungan kerja dengan tetap wajib membayar
-                        upah beserta hak-hak lainnya yang biasa diterima pekerja/buruh. PRESIDEN
-                        REPUBLIK INDONESIA -61-
+                        upah beserta hak-hak lainnya yang biasa diterima pekerja/buruh.
                       references:
                         - start: 85
                           end: 93
@@ -14817,7 +14780,7 @@ content:
                               parentNode: *ref_938
                             textString: >-
                               masa kerja 12 (dua belas) tahun atau lebih tetapi kurang dari 15 lima
-                              belas) tahun, 5 (lima) bulan upah, PRESIDEN REPUBLIK INDONESIA “62 -
+                              belas) tahun, 5 (lima) bulan upah, “62 -
                             references: []
                         - type: point
                           node: &ref_939
@@ -15068,7 +15031,7 @@ content:
                               catu yang diberikan kepada pekerja/buruh secara cuma-cuma, yang
                               apabila catu harus dibayar pekerja/buruh dengan subsidi, maka sebagai
                               upah dianggap selisih antara harga pembelian dengan harga yang harus
-                              dibayar oleh pekerja/buruh. PRESIDEN REPUBLIK INDONESIA - 63 -
+                              dibayar oleh pekerja/buruh.
                             references: []
                   - type: ayat
                     node: &ref_957
@@ -15280,8 +15243,7 @@ content:
                               parentNode: *ref_971
                             textString: >-
                               dengan ceroboh atau sengaja membiarkan teman sekerja atau pengusaha
-                              dalam keadaan bahaya di tempat kerja, PRESIDEN REPUBLIK INDONESIA - 64
-                              -
+                              dalam keadaan bahaya di tempat kerja,
                             references: []
                         - type: point
                           node: &ref_972
@@ -15518,7 +15480,7 @@ content:
                           melakukan tindak pidana bukan atas pengaduan pengusaha, maka pengusaha
                           tidak wajib membayar upah tetapi wajib memberikan bantuan kepada keluarga
                           pekerja/buruh yang menjadi tanggungannya dengan ketentuan sebagai berikut
-                          : PRESIDEN REPUBLIK INDONESIA - 65 -
+                          :
                         references: []
                       elements:
                         - type: point
@@ -15715,8 +15677,7 @@ content:
                         Pengusaha wajib membayar kepada pekerja/buruh yang mengalami pemutusan
                         hubungan kerja sebagai-mana dimaksud dalam ayat (3) dan ayat (5), uang
                         penghargaan masa kerja 1 (satu) kali ketentuan Pasal 156 ayat (3) dan uang
-                        penggantian hak sesuai ketentuan dalam Pasal 156 ayat 4. PRESIDEN REPUBLIK
-                        INDONESIA - 66 -
+                        penggantian hak sesuai ketentuan dalam Pasal 156 ayat 4.
                       references:
                         - start: 189
                           end: 207
@@ -15985,9 +15946,7 @@ content:
                               nodeType: text
                               textName: text
                               parentNode: *ref_1012
-                            textString: >-
-                              tetap melaksanakan kewajibannya sampai tanggal mulai pengunduran diri.
-                              PRESIDEN REPUBLIK INDONESIA - 67 -
+                            textString: tetap melaksanakan kewajibannya sampai tanggal mulai pengunduran diri.
                             references: []
                   - type: ayat
                     node: &ref_1013
@@ -16181,7 +16140,7 @@ content:
                       textString: >-
                         Kerugian perusahaan sebagaimana dimaksud dalam ayat (1) harus dibuktikan
                         dengan laporan keuangan 2 (dua) tahun terakhir yang telah diaudit oleh
-                        akuntan publik. PRESIDEN REPUBLIK INDONESIA - 68 -
+                        akuntan publik.
                       references:
                         - start: 47
                           end: 55
@@ -16366,7 +16325,7 @@ content:
                         pengusaha, maka pekerja/buruh tidak berhak mendapatkan uang pesangon sesuai
                         ketentuan Pasal 156 ayat (2), uang penghargaan masa kerja sesuai ketentuan
                         Pasal 156 ayat (3), tetapi tetap berhak atas uang penggantian hak sesuai
-                        ketentuan Pasal 156 ayat (4). PRESIDEN REPUBLIK INDONESIA - 69 -
+                        ketentuan Pasal 156 ayat (4).
                       references:
                         - start: 445
                           end: 463
@@ -16623,7 +16582,7 @@ content:
                       textString: >-
                         Keterangan tertulis dengan bukti yang sah sebagaimana dimaksud dalam ayat
                         (1) harus diserahkan paling lambat pada hari pertama pekerja/buruh masuk
-                        bekerja. PRESIDEN REPUBLIK INDONESIA -70-
+                        bekerja.
                       references:
                         - start: 69
                           end: 77
@@ -16812,8 +16771,7 @@ content:
                         Pemutusan hubungan kerja dengan alasan sebagaimana dimaksud dalam ayat (1)
                         pekerja/buruh berhak mendapat uang pesangon 2 (dua) kali ketentuan Pasal 156
                         ayat (2), uang penghargaan masa kerja 1 (satu) kali ketentuan Pasal 156 ayat
-                        (3), dan uang penggantian hak sesuai ketentuan Pasal 156 ayat (4). PRESIDEN
-                        REPUBLIK INDONESIA - 71 -
+                        (3), dan uang penggantian hak sesuai ketentuan Pasal 156 ayat (4).
                       references:
                         - start: 276
                           end: 294
@@ -17027,7 +16985,7 @@ content:
                   (dua belas) bulan dapat mengajukan pemutusan hubungan kerja dan diberikan uang
                   pesangon 2 (dua) kali ketentuan Pasal 156 ayat (2), uang penghargaan masa kerja 2
                   (dua) kali ketentuan Pasal 156 ayat (3), dan uang pengganti hak 1 (satu) kali
-                  ketentuan Pasal 156 ayat (4). PRESIDEN REPUBLIK INDONESIA - 72 -
+                  ketentuan Pasal 156 ayat (4).
                 references:
                   - start: 406
                     end: 424
@@ -17272,7 +17230,7 @@ content:
                 textString: >-
                   Pengawasan ketenagakerjaan dilakukan oleh pegawai pengawas ketenaga- kerjaan yang
                   mempunyai kompetensi dan independen guna menjamin pelaksanaan peraturan
-                  perundang-undangan ketenagakerjaan. PRESIDEN REPUBLIK INDONESIA - 73 -
+                  perundang-undangan ketenagakerjaan.
                 references: []
           - type: pasal
             node:
@@ -17518,7 +17476,7 @@ content:
                         nodeType: text
                         textName: text
                         parentNode: *ref_1096
-                      textString: tidak menyalahgunakan kewenangannya. PRESIDEN REPUBLIK INDONESIA - 74 -
+                      textString: tidak menyalahgunakan kewenangannya.
                       references: []
     - type: bab
       node: &ref_1097
@@ -17724,9 +17682,7 @@ content:
         nodeType: bab
         key: 16
         parentBabSetNode: *ref_10
-      title: >-
-        KETENTUAN PIDANA DAN SANKSI ADMINISTRATIF Bagian Pertama Ketentuan Pidana PRESIDEN REPUBLIK
-        INDONESIA - 75 -
+      title: KETENTUAN PIDANA DAN SANKSI ADMINISTRATIF Bagian Pertama Ketentuan Pidana
       content:
         type: pasalSet
         node:
@@ -17987,7 +17943,7 @@ content:
                         parentNode: *ref_1125
                       textString: >-
                         Tindak pidana sebagaimana dimaksud dalam ayat (1) merupakan tindak pidana
-                        kejahatan. PRESIDEN REPUBLIK INDONESIA - 76 -
+                        kejahatan.
                       references:
                         - start: 41
                           end: 49
@@ -18363,8 +18319,7 @@ content:
                 textString: >-
                   Sanksi pidana penjara, kurungan, dan/atau denda tidak menghilangkan kewajiban
                   pengusaha membayar hak-hak dan/atau ganti kerugian kepada tenaga kerja atau
-                  pekerja/buruh. PRESIDEN REPUBLIK INDONESIA - TI - Bagian Kedua Sanksi
-                  Administratif
+                  pekerja/buruh. - TI - Bagian Kedua Sanksi Administratif
                 references: []
           - type: pasal
             node:
@@ -18675,7 +18630,7 @@ content:
                 textString: >-
                   Semua peraturan pelaksanaan yang mengatur ketenagakerjaan tetap berlaku sepanjang
                   tidak bertentangan dan/atau belum diganti dengan peraturan yang baru berdasarkan
-                  Undang undang ini. PRESIDEN REPUBLIK INDONESIA - 78 -
+                  Undang undang ini.
                 references: []
     - type: bab
       node: &ref_1160
@@ -18884,7 +18839,7 @@ content:
                       textString: >-
                         Undang undang Nomor 7 Pnps Tahun 1963 tentang Pencegahan Pemogokan dan/atau
                         Penutupan (Lock Out) Di Perusahaan, Jawatan, dan Badan Yang Vital (Lembaran
-                        Negara Tahun 1963 Nomor 67), PRESIDEN REPUBLIK INDONESIA - 79 -
+                        Negara Tahun 1963 Nomor 67),
                       references: []
                   - type: point
                     node: &ref_1174

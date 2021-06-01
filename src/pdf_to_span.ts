@@ -67,9 +67,9 @@ async function toPdfJson(node: DocumentNode): Promise<void> {
   ]);
 
   pages.forEach(([path, pages]) => {
-    const hasHeader = getHasHeader(pages);
+    // const hasHeader = getHasHeader(pages);
     const cleanPages: Span[] = pages
-      .flatMap((page, pageidx) => toPageWithoutNoise(page, pageidx, hasHeader))
+      .flatMap((page, pageidx) => toPageWithoutNoise(page, pageidx))
       .map((span, index) => ({ ...span, id: index }));
     writeFileSync(path, yaml.dump(cleanPages, { lineWidth: 80 }));
   });
@@ -99,18 +99,13 @@ function hasSamePos(text1: PDFExtractText, text2: PDFExtractText): boolean {
 /**
  * Remove noise
  */
-function toPageWithoutNoise(
-  page: PDFExtractPage,
-  _pageIdx: number,
-  _hasHeader: boolean
-): UnindexedSpan[] {
+function toPageWithoutNoise(page: PDFExtractPage, _pageIdx: number): UnindexedSpan[] {
   const spans = chain(page.content)
     .reduce<SpanMap>(toSpanMap, {})
     .thru(toSpansWith(_pageIdx + 1))
     .value();
 
-  // const spansAfterHeader = hasHeader ? spans.filter(isNotHeader) : spans;
-  return chain(spans).thru(withoutLeftFooter).thru(withoutRightFooter).value();
+  return chain(spans).filter(isNotHeader).thru(withoutLeftFooter).thru(withoutRightFooter).value();
   // return spans;
 }
 
@@ -184,23 +179,13 @@ function groupToSpan(
 /**
  * Filter Header
  */
-export function isNotHeader(span: UnindexedSpan): boolean {
+function isNotHeader(span: UnindexedSpan): boolean {
   const { xL, xR, y, str } = span;
 
   // is header
-  if (y < 220 && xL > 200 && xR < 450 && str !== 'PENJELASAN') {
-    // debug
-    if (
-      str.length > 5 &&
-      !['PRESIDEN', 'REPUBLIK INDONESIA'].includes(str.replaceAll(',', '')) &&
-      !/-? ?[0-9A-Z]+ ?-?/.test(str) // TODO: show example
-    ) {
-      console.log(`\n===REMOVED_IRREGULAR_HEADER===PAGE_${span.pageNum}===`);
-      console.log(str);
-    }
-    return false;
-  }
-  return true;
+  const isHeader =
+    y < 220 && (['PRESIDEN', 'REPUBLIK INDONESIA'].includes(str) || /- ?[0-9]+ ?-/.test(str));
+  return !isHeader;
 }
 
 /**

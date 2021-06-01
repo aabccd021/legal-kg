@@ -64,7 +64,7 @@ metadata:
               Establishing the World Trade Organization) sebagaimana telah disahkan dengan Undang -
               undang, berlanjut dengan melaksanakan kewajiban untuk menyesuaikan peraturan perundang
               - undangan nasional di bidang Hak Atas Kekayaan Intelektual termasuk Hak Cipta
-              terhadap persetujuan internasional tersebut; PRESIDEN REPUBLIK INDONESIA - 2 -
+              terhadap persetujuan internasional tersebut;
             references: []
         - type: point
           node: &ref_5
@@ -156,8 +156,6 @@ metadata:
   memutuskan: ''
   denganPersetujuan: ''
 opText: |-
-  PRESIDEN
-  REPUBLIK INDONESIA
   UNDANG - UNDANG REPUBLIK INDONESIA
   NOMOR 12 TAHUN 1997
   TENTANG
@@ -190,9 +188,6 @@ opText: |-
   peraturan perundang - undangan nasional di bidang Hak Atas Kekayaan
   Intelektual termasuk Hak Cipta terhadap persetujuan internasional
   tersebut;
-  PRESIDEN
-  REPUBLIK INDONESIA
-  - 2 -
   c. bahwa berdasarkan pertimbangan sebagaimana tersebut dalam huruf a
   dan b, serta memperhatikan penilaian terhadap segala pengalaman,
   khususnya kekurangan selama pelaksanaan Undang - undang tentang
@@ -414,8 +409,7 @@ content:
                   Lembaga penyiaran adalah organisasi penyelenggara siaran, baik Lembaga Penyaiaran
                   Pemerintah maupun Lembaga Penyiaran Swasta yang berbentuk badan hukum yang
                   melakuka n penyiaran atas suatu karya siaran dengan menggunakan transmisi dengan
-                  atau tanpa kabel atau melalui sistem elektromagnetik lainnya. PRESIDEN REPUBLIK
-                  INDONESIA - 4 -
+                  atau tanpa kabel atau melalui sistem elektromagnetik lainnya.
                 references: []
             - type: point
               node: &ref_23
@@ -516,8 +510,8 @@ content:
                     textName: description
                     parentNode: *ref_30
                   textString: >-
-                    Penyidik Pejabat Pegawai Negeri Sipil sebagaimana dimaksud PRESIDEN REPUBLIK
-                    INDONESIA - 14 - dalam ayat (1) berwenang:
+                    Penyidik Pejabat Pegawai Negeri Sipil sebagaimana dimaksud dalam ayat (1)
+                    berwenang:
                   references: []
                 elements:
                   - type: point
@@ -657,9 +651,8 @@ content:
                     menyampaikan hasil penyidikannya kepada Penuntut Umum melalui Penyidik Pejabat
                     Polisi Negara Republik Indonesia dengan mengingat ketentuan Pasal 107 Undang -
                     undan g Nomor 8 Tahun 1981 tentang Hukum Acara Pidana." 16. Ketentuan Pasal 48
-                    diubah, sehingga Pasal 48 berbunyi sebagai berikut: PRESIDEN REPUBLIK INDONESIA
-                    - 15 - Pasal 48 Undang - undang ini berlaku terhadap semua ciptaan dan Hak - hak
-                    Yang Berkaitan dengan Hak Cip ta:
+                    diubah, sehingga Pasal 48 berbunyi sebagai berikut: Pasal 48 Undang - undang ini
+                    berlaku terhadap semua ciptaan dan Hak - hak Yang Berkaitan dengan Hak Cip ta:
                   references: []
                 elements:
                   - type: point
@@ -712,8 +705,8 @@ content:
                         yang sama mengenai perlindungan Hak Cipta dan Hak - hak Yang Berkaitan degan
                         Hak Cipta. Pasal II Undang - undang ini mulai berlaku pada tanggal
                         diundangkan. Agar setiap orang mengetahuinya, memerintahkan pengundangan
-                        Undang - undang ini dengan penempatannya dalam Lembaran Negara PRESIDEN
-                        REPUBLIK INDONESIA - 16 - Republik Indonesia.
+                        Undang - undang ini dengan penempatannya dalam Lembaran Negara Republik
+                        Indonesia.
                       references: []
 disahkan:
   date: *ref_25
