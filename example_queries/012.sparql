@@ -1,3 +1,4 @@
+# Get articles of Omnibus Law that are not about updating (= insertions/amendments/removals) other laws
 PREFIX legal: <http://example.org/legal/ontology/>
 
 SELECT DISTINCT ?pasalVersion ?text WHERE {

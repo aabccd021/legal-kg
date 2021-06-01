@@ -1,3 +1,4 @@
+# Describe Omnibus Law (UU Cipta Kerja)
 PREFIX legal: <http://example.org/legal/ontology/>
 
 SELECT * WHERE {

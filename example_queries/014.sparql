@@ -1,3 +1,4 @@
+# Retrieve all subsections inserted by Omnibus Law into other laws and *optionally* the citations occurring in those subsections
 PREFIX legal: <http://example.org/legal/ontology/>
 
 SELECT ?ayat ?text ?citation WHERE {

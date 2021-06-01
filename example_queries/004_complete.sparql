@@ -1,3 +1,4 @@
+# Which are the articles of Chapter 2 (Bab 2) of Omnibus Law?
 PREFIX legal: <http://example.org/legal/ontology/>
 
 SELECT ?pasal ?text WHERE {

@@ -1,3 +1,4 @@
+# tampilkan semua document yang melakukan amendment, dan banyaknya pasal yang diamendment oleh dokumen tersebut.
 PREFIX legal: <http://example.org/legal/ontology/>
 
 SELECT ?doc (COUNT(?point) as ?amendmentCount)

@@ -1,0 +1,7 @@
+# show raw text of UU 2007 No.26 Pasal 1 version 20201102
+PREFIX legal: <http://example.org/legal/ontology/>
+
+SELECT *
+WHERE {
+  <http://example.org/legal/document/uu/2007/26/pasal/0001/version/20201102> <http://example.org/legal/ontology/pasalVersionHasRawText> ?o
+}

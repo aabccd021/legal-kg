@@ -1,3 +1,4 @@
+# What is the textual content of Article (or Pasal) 2 Subsection (or Ayat) 1 of Omnibus Law?
 PREFIX legal: <http://example.org/legal/ontology/>
 
 SELECT ?x ?text WHERE {

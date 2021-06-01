@@ -1,3 +1,4 @@
+# How many are insertions, amendments, and removals of other laws in Omnibus Law?
 PREFIX legal: <http://example.org/legal/ontology/>
 
 SELECT ?type (COUNT(*) AS ?jumlah) WHERE {

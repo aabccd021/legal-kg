@@ -1,56 +1,49 @@
-import { curry, isUndefined } from 'lodash';
-import * as fs from 'fs';
+import { readdirSync, readFileSync, unlinkSync, existsSync, writeFileSync } from 'fs';
 import path from 'path';
-import { DocumentNode, nodeToName } from './document';
-import { getDocumentData, nodeToFile } from './util';
 
-export async function query(args: { legalDocPath?: string }): Promise<void> {
+import { SparqlEndpointFetcher } from 'fetch-sparql-endpoint';
+
+const fetcher = new SparqlEndpointFetcher();
+
+type Row = Record<string, { value: string; termType: 'Literal' | 'NamedNode' }>;
+
+async function query(): Promise<void> {
   const sparqlFileDirPath = 'example_queries';
-  const queryArr = fs.readdirSync(sparqlFileDirPath).map(fileNameToQueryWith(sparqlFileDirPath));
-  if (!isUndefined(args.legalDocPath)) throw Error('TODO');
-  for (const node of getDocumentData('ttl')) {
-    console.log(`Querying ${nodeToName(node)}`);
-    await queryNode(queryArr, node);
+  const queryResultFilePath = 'query_result.md';
+  if (existsSync(queryResultFilePath)) {
+    unlinkSync(queryResultFilePath);
   }
-}
-
-type Query = { str: string; name: string };
-
-const fileNameToQueryWith = curry(fileNameToQuery);
-function fileNameToQuery(sparqlFileDirPath: string, fileName: string): Query {
-  const sparqlFilePath = path.join(sparqlFileDirPath, fileName);
-  const str = fs.readFileSync(sparqlFilePath, { encoding: 'utf-8' });
-  const name = path.basename(fileName, '.sparql');
-  return { str, name };
-}
-
-async function queryNode(queryArr: Query[], node: DocumentNode): Promise<void> {
-  let results: string[] = [];
-  for (const query of queryArr) {
-    console.time(`    ${query.name}`);
-    results = [...results, await toQueryResult(node, query)];
-    console.timeEnd(`    ${query.name}`);
+  const results: string[] = [];
+  for (const fileName of readdirSync(sparqlFileDirPath)) {
+    if (!fileName.endsWith('.sparql')) {
+      continue;
+    }
+    try {
+      const baseName = path.basename(fileName, '.sparql');
+      const queryStr = readFileSync(path.join(sparqlFileDirPath, fileName), 'utf-8');
+      const bindingsStream = await fetcher.fetchBindings(
+        'http://127.0.0.1:3030/tdb0601/sparql',
+        queryStr
+      );
+      let idx = 0;
+      const end = [];
+      for await (const chunk of bindingsStream) {
+        end.push(
+          `|${idx}||\n|-|-|\n` +
+            Object.entries((chunk as unknown) as Row)
+              .map(([key, val]) => `|${key}|${val.value.replaceAll('\n', '\\n')}|`)
+              .join('\n')
+        );
+        idx += 1;
+      }
+      results.push(
+        `# Query_${baseName}\n\n` +
+          `query:\n\n\`\`\`sparql\n${queryStr}\n\`\`\`\n\nresult:\n${end.join('\n\n')}`
+      );
+    } catch (e) {
+      results.push(JSON.stringify(e));
+    }
   }
-  fs.writeFileSync(nodeToFile('query_result', node).path, results.join('\n'));
+  writeFileSync(queryResultFilePath, results.join('\n\n'));
 }
-
-function toQueryResult(node: DocumentNode, query: Query): Promise<string> {
-  return _getQueryResult(query, [nodeToFile('ttl', node).path]);
-}
-
-async function _getQueryResult(query: Query, sources: string[]): Promise<string> {
-  return 'result';
-  // const result = await newEngine().query(query.str, { sources });
-  // if (result.type == 'bindings') {
-  //   const bindings = await result.bindings();
-  //   const content = compact(bindings)
-  //     .map((y) => result.variables.map((x) => `| |${x}| ${y.get(x)?.value}|`).join('\n'))
-  //     .map((resultStr, idx) => `| ${idx} | | |\n${resultStr}`)
-  //     .join('\n');
-  //   const contentTable = isEmpty(content) ? 'empty result' : `\n| | | |\n|-|-|-|\n${content}`;
-  //   return `\n# ${query.name}\n${contentTable}`;
-  // }
-  // throw Error('unknown result type');
-}
-
-// TODO: query using fuseki
+query();

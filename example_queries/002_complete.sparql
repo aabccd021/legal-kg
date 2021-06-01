@@ -1,3 +1,4 @@
+# Retrieve all articles (= pasal) of Omnibus Law
 PREFIX legal: <http://example.org/legal/ontology/>
 
 SELECT ?pasal ?text WHERE {

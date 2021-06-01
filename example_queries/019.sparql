@@ -1,3 +1,4 @@
+# tampilkan 10 legal doc pertama
 PREFIX legal: <http://example.org/legal/ontology/>
 
 SELECT * 

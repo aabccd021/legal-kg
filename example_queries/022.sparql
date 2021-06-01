@@ -1,3 +1,4 @@
+# select 10 legal document dengan pasal terbanyak
 PREFIX legal: <http://example.org/legal/ontology/>
 
 SELECT ?doc (COUNT(?pasal) as ?pasalCount)

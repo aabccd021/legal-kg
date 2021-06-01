@@ -1,3 +1,4 @@
+# Which law has the most number of updates (= insertions/amendments/removals) by Omnibus Law? For that law, show the most recent version taking into account the updates by Omnibus Law!
 PREFIX legal: <http://example.org/legal/ontology/>
 PREFIX owl: <http://www.w3.org/2002/07/owl#>
 

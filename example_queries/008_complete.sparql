@@ -1,3 +1,4 @@
+# Give me components of Omnibus Law that remove (= menghapus) articles in Labor Law and show the textual content of the removed articles
 PREFIX legal: <http://example.org/legal/ontology/>
 
 SELECT ?deletingPoint ?deletedPasal ?version ?text WHERE {

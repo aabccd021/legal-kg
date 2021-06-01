@@ -1,3 +1,4 @@
+# tampilkan semua triple
 PREFIX legal: <http://example.org/legal/ontology/>
 
 SELECT * 

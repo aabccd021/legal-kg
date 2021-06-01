@@ -1,3 +1,4 @@
+# tampilkan 10 dokumen paling banyak ditimbang
 PREFIX legal: <http://example.org/legal/ontology/>
 
 SELECT ?menimbangDoc (COUNT(?doc) as ?penimbangDocCount)

@@ -1,3 +1,4 @@
+# Get articles of Labor Law (UU Ketenagakerjaan) taking into account updates (= insertions/amendments/removals) from Omnibus Law (UU Cipta Kerja)
 PREFIX legal: <http://example.org/legal/ontology/>
 
 SELECT ?latestPasalVersion WHERE {
