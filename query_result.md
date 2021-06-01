@@ -1594,7 +1594,7 @@ PREFIX legal: <http://example.org/legal/ontology/>
 
 SELECT *
 WHERE {
-  <http://example.org/legal/document/uu/2007/26/pasal/0001/version/20201102> <http://example.org/legal/ontology/pasalVersionHasRawText> ?o
+  <http://example.org/legal/document/uu/2007/26/pasal/0001/version/20201102> legal:pasalVersionHasRawText ?o
 }
 ```
 
