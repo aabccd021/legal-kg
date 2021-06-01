@@ -8,6 +8,6 @@ SELECT ?deletingPoint ?deletedPasal ?version ?text WHERE {
   <http://example.org/legal/document/uu/2003/13> legal:documentHasPasal ?deletedPasal .
   ?deletedPasal legal:pasalHasPasalVersion ?allPasalVersion .
   ?allPasalVersion legal:pasalVersionHasRawText ?text .
-  ?allPasalVersion legal:pasalVersionHasCreatedTimeEpoch ?version .
+  ?allPasalVersion legal:pasalVersionHasVersionDate ?version .
 }
 LIMIT 3

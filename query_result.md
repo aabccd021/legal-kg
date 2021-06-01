@@ -364,29 +364,57 @@ result:
 query:
 
 ```sparql
+# Get components of Omnibus Law that amend (= mengubah) articles in Labor Law and compare the textual content of the old vs. new articles
 PREFIX legal: <http://example.org/legal/ontology/>
 
-SELECT ?insertingPoint ?insertedPasal ?version ?text WHERE {
-  ?insertingPoint legal:partOf+ <http://example.org/legal/document/uu/2020/11>.
-  ?insertingPoint legal:pointInsertPasalVersion ?insertedPasalVersion .
-  ?insertedPasalVersion legal:partOf+ <http://example.org/legal/document/uu/2003/13> .
-  ?insertedPasal legal:pasalHasPasalVersion ?insertedPasalVersion .
-  ?insertedPasal legal:pasalHasPasalVersion ?allPasalVersion .
+SELECT ?updatingPointt ?updatedPasal ?text ?version
+WHERE {
+  {
+    SELECT ?pasal (MAX(?pasalVersion) as ?latestPasalVersion) WHERE {
+      ?pasal legal:partOf+ <http://example.org/legal/document/uu/2020/11>.
+      ?pasal legal:pasalHasPasalVersion ?pasalVersion .
+    } GROUP BY ?pasal
+  }
+  ?updatingPointt legal:partOf+ <http://example.org/legal/document/uu/2020/11>.
+  ?updatingPointt legal:pointUpdatePasalVersion ?updatedPasalVersion .
+  ?updatedPasal legal:pasalHasPasalVersion ?updatedPasalVersion .
+  <http://example.org/legal/document/uu/2003/13> legal:documentHasPasal ?updatedPasal .
+  ?updatedPasal legal:pasalHasPasalVersion ?allPasalVersion .
   ?allPasalVersion legal:pasalVersionHasRawText ?text .
-  ?allPasalVersion legal:pasalVersionHasCreatedTimeEpoch ?version .
+  ?allPasalVersion legal:pasalVersionHasVersionDate ?version .
 }
 LIMIT 3
 
 ```
 
 result:
+|0||
+|-|-|
+|updatingPointt|http://example.org/legal/document/uu/2020/11/pasal/0081/version/20201102/point/0067|
+|updatedPasal|http://example.org/legal/document/uu/2003/13/pasal/0190|
+|text|(1). Pemerintah Pusat atau Pemerintah Daerah sesuai kewenangannya mengenakan sanksi administratif atas pelanggaran ketentuan-ketentuan sebagaimana diatur dalam Pasal 5, Pasal 6, Pasal 14 ayat (1), Pasal 15, Pasal 25, Pasal 37 ayat (2), Pasal 38 ayat (2), Pasal 42 ayat (1), Pasal 47 ayat (1), Pasal 61A, Pasal 66 ayat (4), Pasal 87, Pasal 92, Pasal 106, Pasal 126 ayat (3), atau Pasal 160 ayat (1) atau ayat (2) undang-undang ini serta peraturan pelaksanaannya.\n(2). Ketentuan lebih lanjut mengenai sanksi administratif sebagaimana dimaksud pada ayat (1) diatur dalam Peraturan Pemerintah.|
+|version|2020-11-02|
 
+|1||
+|-|-|
+|updatingPointt|http://example.org/legal/document/uu/2020/11/pasal/0081/version/20201102/point/0067|
+|updatedPasal|http://example.org/legal/document/uu/2003/13/pasal/0190|
+|text|(1). Menteri atau pejabat yang ditunjuk mengenakan sanksi administratif atas pelanggaran ketentuan-ketentuan sebagaimana diatur dalam Pasal 5, Pasal 6, Pasal 15, Pasal 25, Pasal 38 ayat (2), Pasal 45 ayat (1), Pasal 47 ayat (1), Pasal 48, Pasal 87, Pasal 106, Pasal 126 ayat (3), dan Pasal 160 ayat (1) dan ayat (2) Undang-undang ini serta peraturan pelaksanaannya.\n(2). Sanksi administratif sebagaimana dimaksud dalam ayat (1) berupa :\na. teguran,\nb. peringatan tertulis,\nc. pembatasan kegiatan usaha,\nd. pembekuan kegiatan usaha,\ne. pembatalan persetujuan:\nf. pembatalan pendaftaran,\ng. penghentian sementara sebagian atau seluruh alat produksi,\nh. pencabutan ijin.\n\n(3). Ketentuan mengenai sanksi administratif sebagaimana dimaksud dalam ayat (1) dan ayat (2) diatur lebih lanjut oleh Menteri.|
+|version|2003-03-25|
+
+|2||
+|-|-|
+|updatingPointt|http://example.org/legal/document/uu/2020/11/pasal/0081/version/20201102/point/0066|
+|updatedPasal|http://example.org/legal/document/uu/2003/13/pasal/0188|
+|text|(1). Barang siapa melanggar ketentuan sebagaimana dimaksud dalam Pasal 38 ayat (2), Pasal 63 ayat (1), Pasal 78 ayat (1), Pasal 108 ayat (1), Pasal 111 ayat (3), Pasal 114, atau Pasal 148 dikenai sanksi pidana denda paling sedikit Rp5.000.000,00 (lima juta rupiah) dan paling banyak Rp50.000.000,00 (lima puluh juta rupiah).\n(2). Tindak pidana sebagaimana dimaksud pada ayat (1) merupakan tindak pidana pelanggaran.|
+|version|2020-11-02|
 
 # Query_007_complete
 
 query:
 
 ```sparql
+# Get components of Omnibus Law that amend (= mengubah) articles in Labor Law and compare the textual content of the old vs. new articles
 PREFIX legal: <http://example.org/legal/ontology/>
 
 SELECT ?insertingPoint ?insertedPasal ?version ?text WHERE {
@@ -402,14 +430,33 @@ SELECT ?insertingPoint ?insertedPasal ?version ?text WHERE {
   ?insertedPasal legal:pasalHasPasalVersion ?insertedPasalVersion .
   ?insertedPasal legal:pasalHasPasalVersion ?allPasalVersion .
   ?allPasalVersion legal:pasalVersionHasRawText ?text .
-  ?allPasalVersion legal:pasalVersionHasCreatedTimeEpoch ?version .
+  ?allPasalVersion legal:pasalVersionHasVersionDate ?version .
 }
 LIMIT 3
 
 ```
 
 result:
+|0||
+|-|-|
+|insertingPoint|http://example.org/legal/document/uu/2020/11/pasal/0081/version/20201102/point/0068|
+|insertedPasal|http://example.org/legal/document/uu/2003/13/pasal/0191A|
+|version|2020-11-02|
+|text|\na. untuk pertama kali upah minimum yang berlaku, yaitu upah minimum yang telah ditetapkan berdasarkan peraturan pelaksanaan Undang-Undang Nomor 13 Tahun 2003 tentang Ketenagakerjaan yang mengatur mengenai pengupahan.\nb. bagi perusahaan yang telah memberikan upah lebih tinggi dari upah minimum yang ditetapkan sebelum Undang-Undang ini, pengusaha dilarang mengurangi atau menurunkan upah.\n|
 
+|1||
+|-|-|
+|insertingPoint|http://example.org/legal/document/uu/2020/11/pasal/0081/version/20201102/point/0046|
+|insertedPasal|http://example.org/legal/document/uu/2003/13/pasal/0157A|
+|version|2020-11-02|
+|text|(1). Selama penyelesaian perselisihan hubungan industrial, pengusaha dan pekerja/ buruh harus tetap melaksanakan kewajibannya.\n(2). Pengusaha dapat melakukan tindakan skorsing kepada pekerja/buruh yang sedang dalam proses pemutusan hubungan kerja dengan tetap membayar upah beserta hak lainnya yang biasa diterima pekerja/ buruh.\n(3). Pelaksanaan kewajiban sebagaimana dimaksud pada ayat (l) dilakukan sampai dengan selesainya proses penyelesaian perselisihan hubungan industrial sesuai tingkatannya. an » 8 RA|
+
+|2||
+|-|-|
+|insertingPoint|http://example.org/legal/document/uu/2020/11/pasal/0081/version/20201102/point/0042|
+|insertedPasal|http://example.org/legal/document/uu/2003/13/pasal/0154A|
+|version|2020-11-02|
+|text|(1). Pemutusan hubungan kerja dapat terjadi karena alasan:\na. perusahaan melakukan penggabungan, peleburan, pengambilalihan, atau pemisahan perusahaan dan pekerja/buruh tidak bersedia melanjutkan hubungan kerja atau pengusaha tidak bersedia menerima pekerja/ buruh,\nb. perusahaan melakukan efisiensi diikuti dengan penutupan perusahaan atau tidak diikuti dengan penutupan perusahaan yang disebabkan perusahaan mengalami kerugian,\nc. perusahaan tutup yang disebabkan karena perusahaan mengalami kerugian secara terus menerus selama 2 (dua) tahun,\nd. perusahaan tutup yang disebabkan keadaan memaksa (force majeur).\ne. perusahaan dalam keadaan penundaan kewajiban pembayaran utang,\nf. perusahaan pailit,\ng. adanya permohonan pemutusan hubungan kerja yang diajukan oleh pekerja/buruh dengan alasan pengusaha melakukan perbuatan sebagai berikut:\n1. menganiaya, menghina secara kasar atau mengancam pekerja/ buruh, .554 -\n2. membujuk dan/atau menyuruh pekerja/buruh untuk melakukan perbuatan yang bertentangan dengan peraturan perundang-undangan,\n3. tidak membayar upah tepat pada waktu yang telah ditentukan selama 3 (tiga) bulan berturut-turut atau lebih, meskipun pengusaha membayar upah secara tepat waktu sesudah itu:\n4. tidak melakukan kewajiban yang telah dijanjikan kepada pekerja/ buruh,\n5. memerintahkan pekerja/ buruh untuk melaksanakan pekerjaan di luar yang diperjanjikan, atau\n6. memberikan pekerjaan yang membahayakan jiwa, keselamatan, kesehatan, dan kesusilaan pekerja/buruh sedangkan pekerjaan tersebut tidak dicantumkan pada perjanjian kerja,\n\nh. adanya putusan lembaga penyelesaian perselisihan hubungan industrial yang menyatakan pengusaha tidak melakukan perbuatan sebagaimana dimaksud pada huruf g terhadap permohonan yang diajukan oleh pekerja/buruh dan pengusaha memutuskan untuk melakukan pemutusan hubungan kerja, 1 pekerja/buruh mengundurkan diri atas kemauan sendiri dan harus memenuhi syarat:\n1. mengajukan permohonan pengunduran diri secara tertulis selambat-lambatnya 30 (tiga puluh) hari sebelum tanggal mulai pengunduran diri,\n2. tidak terikat dalam ikatan dinas, dan\n3. tetap melaksanakan kewajibannya sampai tanggal mulai pengunduran diri, » REPUBLIK INDONESIA j. pekerja/buruh mangkir selama 5 (lima) hari kerja atau lebih berturut-turut tanpa keterangan secara tertulis yang dilengkapi dengan bukti yang sah dan telah dipanggil oleh pengusaha 2 (dua) kali secara patut dan tertulis, k. pekerja/buruh melakukan pelanggaran ketentuan yang diatur dalam perjanjian kerja, peraturan perusahaan, atau perjanjian kerja bersama dan sebelumnya telah diberikan surat peringatan pertama, kedua, dan ketiga secara berturut-turut masing-masing berlaku untuk paling lama 6 (enam) bulan kecuali ditetapkan lain dalam perjanjian kerja, peraturan perusahaan, atau perjanjian kerja bersama,\n1. pekerja/buruh tidak dapat melakukan pekerjaan selama 6 (enam) bulan akibat ditahan pihak yang berwajib karena diduga melakukan tindak pidana, m. pekerja/buruh mengalami sakit berkepanjangan atau cacat akibat kecelakaan kerja dan tidak dapat melakukan pekerjaannya setelah melampaui batas 12 (dua belas) bulan, n. pekerja/buruh memasuki usia pensiun, atau Oo. pekerja/buruh meninggal dunia.\n\n\n\n(2). Selain alasan pemutusan hubungan kerja sebagaimana dimaksud pada ayat (1), dapat ditetapkan alasan pemutusan hubungan kerja lainnya dalam perjanjian kerja, peraturan perusahaan, atau perjanjian kerja bersama sebagaimana dimaksud dalam Pasal 61 ayat (1).\n(3). Ketentuan lebih lanjut mengenai tata cara pemutusan hubungan kerja diatur dalam Peraturan Pemerintah.|
 
 # Query_008
 
@@ -426,14 +473,33 @@ SELECT ?deletingPoint ?deletedPasal ?version ?text WHERE {
   <http://example.org/legal/document/uu/2003/13> legal:documentHasPasal ?deletedPasal .
   ?deletedPasal legal:pasalHasPasalVersion ?allPasalVersion .
   ?allPasalVersion legal:pasalVersionHasRawText ?text .
-  ?allPasalVersion legal:pasalVersionHasCreatedTimeEpoch ?version .
+  ?allPasalVersion legal:pasalVersionHasVersionDate ?version .
 }
 LIMIT 3
 
 ```
 
 result:
+|0||
+|-|-|
+|deletingPoint|http://example.org/legal/document/uu/2020/11/pasal/0081/version/20201102/point/0062|
+|deletedPasal|http://example.org/legal/document/uu/2003/13/pasal/0184|
+|version|2020-11-02|
+|text||
 
+|1||
+|-|-|
+|deletingPoint|http://example.org/legal/document/uu/2020/11/pasal/0081/version/20201102/point/0062|
+|deletedPasal|http://example.org/legal/document/uu/2003/13/pasal/0184|
+|version|2003-03-25|
+|text|(1). Barang siapa melanggar ketentuan sebagaimana dimaksud dalam Pasal 167 ayat (5), dikenakan sanksi pidana penjara paling singkat 1 (satu) tahun dan paling lama 5 (lima) tahun dan/atau denda paling sedikit Rp 100.000.000,00 (seratus juta rupiah) dan paling banyak Rp 500.000.000,00 (lima ratus juta rupiah).\n(2). Tindak pidana sebagaimana dimaksud dalam ayat (1) merupakan tindak pidana kejahatan.|
+
+|2||
+|-|-|
+|deletingPoint|http://example.org/legal/document/uu/2020/11/pasal/0081/version/20201102/point/0061|
+|deletedPasal|http://example.org/legal/document/uu/2003/13/pasal/0172|
+|version|2020-11-02|
+|text||
 
 # Query_008_complete
 
@@ -456,14 +522,33 @@ SELECT ?deletingPoint ?deletedPasal ?version ?text WHERE {
   <http://example.org/legal/document/uu/2003/13> legal:documentHasPasal ?deletedPasal .
   ?deletedPasal legal:pasalHasPasalVersion ?allPasalVersion .
   ?allPasalVersion legal:pasalVersionHasRawText ?text .
-  ?allPasalVersion legal:pasalVersionHasCreatedTimeEpoch ?version .
+  ?allPasalVersion legal:pasalVersionHasVersionDate ?version .
 }
 LIMIT 3
 
 ```
 
 result:
+|0||
+|-|-|
+|deletingPoint|http://example.org/legal/document/uu/2020/11/pasal/0081/version/20201102/point/0062|
+|deletedPasal|http://example.org/legal/document/uu/2003/13/pasal/0184|
+|version|2020-11-02|
+|text||
 
+|1||
+|-|-|
+|deletingPoint|http://example.org/legal/document/uu/2020/11/pasal/0081/version/20201102/point/0062|
+|deletedPasal|http://example.org/legal/document/uu/2003/13/pasal/0184|
+|version|2003-03-25|
+|text|(1). Barang siapa melanggar ketentuan sebagaimana dimaksud dalam Pasal 167 ayat (5), dikenakan sanksi pidana penjara paling singkat 1 (satu) tahun dan paling lama 5 (lima) tahun dan/atau denda paling sedikit Rp 100.000.000,00 (seratus juta rupiah) dan paling banyak Rp 500.000.000,00 (lima ratus juta rupiah).\n(2). Tindak pidana sebagaimana dimaksud dalam ayat (1) merupakan tindak pidana kejahatan.|
+
+|2||
+|-|-|
+|deletingPoint|http://example.org/legal/document/uu/2020/11/pasal/0081/version/20201102/point/0061|
+|deletedPasal|http://example.org/legal/document/uu/2003/13/pasal/0172|
+|version|2020-11-02|
+|text||
 
 # Query_010
 

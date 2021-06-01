@@ -1,3 +1,4 @@
+# Get components of Omnibus Law that amend (= mengubah) articles in Labor Law and compare the textual content of the old vs. new articles
 PREFIX legal: <http://example.org/legal/ontology/>
 
 SELECT ?insertingPoint ?insertedPasal ?version ?text WHERE {
@@ -13,6 +14,6 @@ SELECT ?insertingPoint ?insertedPasal ?version ?text WHERE {
   ?insertedPasal legal:pasalHasPasalVersion ?insertedPasalVersion .
   ?insertedPasal legal:pasalHasPasalVersion ?allPasalVersion .
   ?allPasalVersion legal:pasalVersionHasRawText ?text .
-  ?allPasalVersion legal:pasalVersionHasCreatedTimeEpoch ?version .
+  ?allPasalVersion legal:pasalVersionHasVersionDate ?version .
 }
 LIMIT 3

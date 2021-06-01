@@ -1,12 +1,20 @@
+# Get components of Omnibus Law that amend (= mengubah) articles in Labor Law and compare the textual content of the old vs. new articles
 PREFIX legal: <http://example.org/legal/ontology/>
 
-SELECT ?insertingPoint ?insertedPasal ?version ?text WHERE {
-  ?insertingPoint legal:partOf+ <http://example.org/legal/document/uu/2020/11>.
-  ?insertingPoint legal:pointInsertPasalVersion ?insertedPasalVersion .
-  ?insertedPasalVersion legal:partOf+ <http://example.org/legal/document/uu/2003/13> .
-  ?insertedPasal legal:pasalHasPasalVersion ?insertedPasalVersion .
-  ?insertedPasal legal:pasalHasPasalVersion ?allPasalVersion .
+SELECT ?updatingPointt ?updatedPasal ?text ?version
+WHERE {
+  {
+    SELECT ?pasal (MAX(?pasalVersion) as ?latestPasalVersion) WHERE {
+      ?pasal legal:partOf+ <http://example.org/legal/document/uu/2020/11>.
+      ?pasal legal:pasalHasPasalVersion ?pasalVersion .
+    } GROUP BY ?pasal
+  }
+  ?updatingPointt legal:partOf+ <http://example.org/legal/document/uu/2020/11>.
+  ?updatingPointt legal:pointUpdatePasalVersion ?updatedPasalVersion .
+  ?updatedPasal legal:pasalHasPasalVersion ?updatedPasalVersion .
+  <http://example.org/legal/document/uu/2003/13> legal:documentHasPasal ?updatedPasal .
+  ?updatedPasal legal:pasalHasPasalVersion ?allPasalVersion .
   ?allPasalVersion legal:pasalVersionHasRawText ?text .
-  ?allPasalVersion legal:pasalVersionHasCreatedTimeEpoch ?version .
+  ?allPasalVersion legal:pasalVersionHasVersionDate ?version .
 }
 LIMIT 3
