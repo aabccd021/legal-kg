@@ -1,7 +1,7 @@
 # Give me articles (= pasal) of Omnibus Law removing articles of laws legalized later than the year 2001
 PREFIX legal: <http://example.org/legal/ontology/>
 
-SELECT DISTINCT * WHERE {
+SELECT DISTINCT ?pasalVersion WHERE {
   ?point legal:partOf+ <http://example.org/legal/document/uu/2020/11>.
   ?point legal:pointDeletePasalVersion ?pasalVersion .
   ?pasalVersion legal:partOf+ ?document .

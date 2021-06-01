@@ -776,15 +776,24 @@ SELECT DISTINCT ?pasalVersion WHERE {
   ?point legal:partOf+ <http://example.org/legal/document/uu/2020/11>.
   ?point legal:pointDeletePasalVersion ?pasalVersion .
   ?pasalVersion legal:partOf+ ?document .
-  ?document legal:documentHasYear ?year
-  FILTER(?year > 2001)
+  ?document legal:documentHasDisahkanDate ?legalizedDate
+  FILTER(year(?legalizedDate) > 2001)
 }
 LIMIT 3
-
 ```
 
 result:
+|0||
+|-|-|
+|pasalVersion|http://example.org/legal/document/uu/2009/39/pasal/0045/version/20201102|
 
+|1||
+|-|-|
+|pasalVersion|http://example.org/legal/document/uu/2009/39/pasal/0044/version/20201102|
+
+|2||
+|-|-|
+|pasalVersion|http://example.org/legal/document/uu/2009/39/pasal/0031/version/20201102|
 
 # Query_014
 
