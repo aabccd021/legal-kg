@@ -63,7 +63,14 @@ export function spansToStr(spans: Span[]): string {
   return spans.map(spanToStr).join('\n');
 }
 
-type MetadataSection = 'menimbang' | 'mengingat' | 'init' | 'memutuskan' | 'denganPersetujuan';
+type MetadataSection =
+  | 'menimbang'
+  | 'mengingat'
+  | 'init'
+  | 'memutuskan'
+  | 'denganPersetujuan'
+  | 'denganRahmat'
+  | 'tentang';
 type MetadataAcc = {
   section: MetadataSection;
   spans: {
@@ -85,7 +92,15 @@ export function spansToMetadata(context: Context, spans: Span[]): DocumentMetada
       };
     },
     {
-      spans: { denganPersetujuan: [], memutuskan: [], mengingat: [], menimbang: [], init: [] },
+      spans: {
+        denganPersetujuan: [],
+        memutuskan: [],
+        mengingat: [],
+        menimbang: [],
+        init: [],
+        denganRahmat: [],
+        tentang: [],
+      },
       section: 'init',
     }
   );
@@ -108,11 +123,18 @@ export function spansToMetadata(context: Context, spans: Span[]): DocumentMetada
     },
     memutuskan: res.spans.memutuskan.map(spanToStr).join('\n').trim(),
     denganPersetujuan: res.spans.denganPersetujuan.map(spanToStr).join('\n').trim(),
+    tentang: res.spans.tentang.map(spanToStr).join(' '),
   };
 }
 
 function getNewSection(prevSection: MetadataSection, span: Span): [MetadataSection, Span] {
-  if (prevSection === 'init' && span.str.startsWith('Menimbang')) {
+  if (prevSection === 'init' && span.str.startsWith('TENTANG')) {
+    return ['tentang', { ...span, str: '' }];
+  }
+  if (prevSection === 'tentang' && span.str.startsWith('DENGAN RAHMAT')) {
+    return ['denganRahmat', { ...span, str: '' }];
+  }
+  if (prevSection === 'denganRahmat' && span.str.startsWith('Menimbang')) {
     return ['menimbang', { ...span, str: span.str.split(':').slice(1).join(':').trim() }];
   }
   if (prevSection === 'menimbang' && span.str.startsWith('Mengingat')) {

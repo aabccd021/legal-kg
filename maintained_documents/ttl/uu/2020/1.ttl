@@ -22,6 +22,7 @@
 <http://example.org/legal/document/uu/2020/1/pasal/0001/version/20200228/ayat/0002> legal:ayatHasText <http://example.org/legal/document/uu/2020/1/pasal/0001/version/20200228/ayat/0002/text> .
 <http://example.org/legal/document/uu/2020/1/pasal/0001/version/20200228/ayat/0002/text> legal:textReferencesLegal <http://example.org/legal/document/uu/2020/1/pasal/0002> .
 <http://example.org/legal/document/uu/2020/1> legal:documentHasDisahkanDate "2020-02-28"^^xsd:date .
+<http://example.org/legal/document/uu/2020/1> legal:documentTentang " PENGESAHAN PERSETUJUAN KEMITRAAN EKONOMI KOMPREHENSIF INDONESIA-AUSTRALIA (#NDONESIA-AUSTRALIA COMPREHENSIVE ECONOMIC PARTNERSHIP AGREEMENT)" .
 <http://example.org/legal/document/uu/2020/1> legal:documentMengingat <http://example.org/legal/document/uu/2020/1/mengingat> .
 <http://example.org/legal/document/uu/2020/1/mengingat> legal:mengingatHasPointSet <http://example.org/legal/document/uu/2020/1/mengingat/point> .
 <http://example.org/legal/document/uu/2020/1/mengingat/point/description> legal:textHasTextString "" .

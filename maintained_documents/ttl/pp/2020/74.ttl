@@ -2831,6 +2831,7 @@
 <http://example.org/legal/document/pp/2020/74/pasal/0075/version/20201214/text> legal:textHasTextString "Peraturan Pemerintah ini mulai berlaku pada tanggal diundangkan. 59 Agar setiap orang mengetahuinya, memerintahkan pengundangan Peraturan Pemerintah ini dengan penempatannya dalam Lembaran Negara Republik Indonesia." .
 <http://example.org/legal/document/pp/2020/74/pasal/0075/version/20201214> legal:pasalVersionHasText <http://example.org/legal/document/pp/2020/74/pasal/0075/version/20201214/text> .
 <http://example.org/legal/document/pp/2020/74> legal:documentHasDisahkanDate "2020-12-14"^^xsd:date .
+<http://example.org/legal/document/pp/2020/74> legal:documentTentang " LEMBAGA PENGELOLA INVESTASI" .
 <http://example.org/legal/document/pp/2020/74> legal:documentMengingat <http://example.org/legal/document/pp/2020/74/mengingat> .
 <http://example.org/legal/document/pp/2020/74/mengingat> legal:mengingatHasPointSet <http://example.org/legal/document/pp/2020/74/mengingat/point> .
 <http://example.org/legal/document/pp/2020/74/mengingat/point/description> legal:textHasTextString "" .

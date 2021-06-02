@@ -44,7 +44,7 @@ export function yamlToTriples({
   node,
   content,
   disahkan,
-  metadata: { mengingat, menimbang },
+  metadata: { mengingat, menimbang, tentang },
 }: Document): LegalTriple[] {
   const contentTriples: LegalTriple[] =
     content.type === 'babSet'
@@ -53,6 +53,7 @@ export function yamlToTriples({
   return compact([
     ...contentTriples,
     [node, 'documentHasDisahkanDate', disahkan.date],
+    tentang ? [node, 'documentTentang', tentang] : undefined,
     ...mengingatToTriple(mengingat),
     ...menimbangToTriple(menimbang),
     disahkan.pengesah ? [node, 'documentHasDisahkanPengesah', disahkan.pengesah] : undefined,

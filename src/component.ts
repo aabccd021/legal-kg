@@ -7,7 +7,6 @@ import { DocumentNode } from './document';
 export type Document = {
   node: DocumentNode;
   penjelasan?: string[];
-  opText?: string;
   content: BabSet | PasalSet;
   disahkan: Disahkan;
   metadata: DocumentMetadata;

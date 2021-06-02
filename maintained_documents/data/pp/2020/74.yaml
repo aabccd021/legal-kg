@@ -94,28 +94,7 @@ metadata:
                   tahun: 2020
   memutuskan: ''
   denganPersetujuan: ''
-opText: |-
-  SALINAN
-  PERATURAN PEMERINTAH REPUBLIK INDONESIA
-  NOMOR 74 TAHUN 2020
-  TENTANG
-  LEMBAGA PENGELOLA INVESTASI
-  DENGAN RAHMAT TUHAN YANG MAHA ESA
-  PRESIDEN REPUBLIK INDONESIA,
-  Menimbang : bahwa untuk melaksanakan ketentuan Pasal 157 ayat (8),
-  Pasal 158 ayat (7), Pasal 159 ayat (6), Pasal 164 ayat (1), Pasal
-  166 ayat (10), dan Pasal 171 ayat (3) Undang-Undang Nomor
-  11 Tahun 2020 tentang Cipta Kerja, perlu menetapkan
-  Peraturan Pemerintah tentang Lembaga Pengelola Investasi,
-  Mengingat : 1. Pasal 5 ayat (2) Undang-Undang Dasar Negara Republik
-  Indonesia Tahun 1945,
-  2. Undang-Undang Nomor 11 Tahun 2020 tentang Cipta
-  Kerja (Lembaran Negara Republik Indonesia Tahun 2020
-  Nomor 245, Tambahan Lembaran Negara Republik
-  Indonesia Nomor 6573),
-  MEMUTUSKAN:
-  Menetapkan : PERATURAN PEMERINTAH TENTANG LEMBAGA PENGELOLA
-  INVESTASI.
+  tentang: ' LEMBAGA PENGELOLA INVESTASI'
 content:
   type: babSet
   node: &ref_6

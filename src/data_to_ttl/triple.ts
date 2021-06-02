@@ -59,6 +59,7 @@ export type LegalTriple = (
   | [DocumentNode, 'documentHasPasalSet', PasalSetNode]
   | [DocumentNode, 'documentMengingat', MengingatNode]
   | [DocumentNode, 'documentMenimbang', MenimbangNode]
+  | [DocumentNode, 'documentTentang', string]
   | [MenimbangNode, 'menimbangHasPointSet', PointSetNode]
   | [MenimbangNode, 'menimbangHasText', TextNode]
   | [MengingatNode, 'mengingatHasPointSet', PointSetNode]

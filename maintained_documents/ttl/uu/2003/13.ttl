@@ -5381,6 +5381,7 @@
 <http://example.org/legal/document/uu/2003/13/pasal/0193/version/20030325/text> legal:textHasTextString "Undang undang ini mulai berlaku pada tanggal diundangkan. Agar setiap orang mengetahuinya, memerintahkan pengundangan undang undang ini dengan penempatannya dalam Lembaran Negara Republik Indonesia." .
 <http://example.org/legal/document/uu/2003/13/pasal/0193/version/20030325> legal:pasalVersionHasText <http://example.org/legal/document/uu/2003/13/pasal/0193/version/20030325/text> .
 <http://example.org/legal/document/uu/2003/13> legal:documentHasDisahkanDate "2003-03-25"^^xsd:date .
+<http://example.org/legal/document/uu/2003/13> legal:documentTentang " KETENAGAKERJAAN" .
 <http://example.org/legal/document/uu/2003/13> legal:documentMengingat <http://example.org/legal/document/uu/2003/13/mengingat> .
 <http://example.org/legal/document/uu/2003/13/mengingat/text> legal:textHasTextString "Pasal 5 ayat (1), Pasal 20 ayat (2), Pasal 27 ayat (2), Pasal 28, dan Pasal 33 ayat (1) Undang Undang Dasar Negara Republik Indonesia Tahun 1945," .
 <http://example.org/legal/document/uu/2003/13/mengingat> legal:mengingatHasText <http://example.org/legal/document/uu/2003/13/mengingat/text> .

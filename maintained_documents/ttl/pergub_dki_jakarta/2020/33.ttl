@@ -1490,6 +1490,7 @@
 <http://example.org/legal/document/pergub_dki_jakarta/2020/33/pasal/0028/version/20200409/text> legal:textHasTextString "Peraturan Gubernur ini mulai berlaku pada tanggal diundangkan. Agar setiap orang mengetahuinya, memerintahkan pengundangan Peraturan Gubernur ini dengan penempatannya dalam Berita Daerah Provinsi Daerah Khusus Ibukota Jakarta." .
 <http://example.org/legal/document/pergub_dki_jakarta/2020/33/pasal/0028/version/20200409> legal:pasalVersionHasText <http://example.org/legal/document/pergub_dki_jakarta/2020/33/pasal/0028/version/20200409/text> .
 <http://example.org/legal/document/pergub_dki_jakarta/2020/33> legal:documentHasDisahkanDate "2020-04-09"^^xsd:date .
+<http://example.org/legal/document/pergub_dki_jakarta/2020/33> legal:documentTentang " PELAKSANAAN PEMBATASAN SOSIAL BERSKALA BESAR DALAM PENANGANAN CORONA VIRUS DISEASE 2019 (COVID-19) DI PROVINSI DAERAH KHUSUS IBUKOTA JAKARTA" .
 <http://example.org/legal/document/pergub_dki_jakarta/2020/33> legal:documentMengingat <http://example.org/legal/document/pergub_dki_jakarta/2020/33/mengingat> .
 <http://example.org/legal/document/pergub_dki_jakarta/2020/33/mengingat> legal:mengingatHasPointSet <http://example.org/legal/document/pergub_dki_jakarta/2020/33/mengingat/point> .
 <http://example.org/legal/document/pergub_dki_jakarta/2020/33/mengingat/point/description> legal:textHasTextString "" .

@@ -57,7 +57,6 @@ function writeToData(node: DocumentNode): void {
       const document: Document = {
         node: node,
         metadata: spansToMetadata(context, documentSpans.preBab),
-        opText: spansToStr(documentSpans.preBab),
         content: spansToContent(context, documentSpans.babs),
         disahkan,
       };

@@ -1567,6 +1567,7 @@
 <http://example.org/legal/document/pp/2021/34/pasal/0048/version/20210202/text> legal:textHasTextString "Peraturan Pemerintah ini mulai berlaku pada tanggal 1 April 2021. Agar setiap orang mengetahuinya, memerintahkan pengundangan Peraturan Pemerintah ini dengan penempatannya dalam Lembaran Negara Republik Indonesia." .
 <http://example.org/legal/document/pp/2021/34/pasal/0048/version/20210202> legal:pasalVersionHasText <http://example.org/legal/document/pp/2021/34/pasal/0048/version/20210202/text> .
 <http://example.org/legal/document/pp/2021/34> legal:documentHasDisahkanDate "2021-02-02"^^xsd:date .
+<http://example.org/legal/document/pp/2021/34> legal:documentTentang " PENGGUNAAN TENAGA KERJA ASING" .
 <http://example.org/legal/document/pp/2021/34> legal:documentMengingat <http://example.org/legal/document/pp/2021/34/mengingat> .
 <http://example.org/legal/document/pp/2021/34/mengingat> legal:mengingatHasPointSet <http://example.org/legal/document/pp/2021/34/mengingat/point> .
 <http://example.org/legal/document/pp/2021/34/mengingat/point/description> legal:textHasTextString "" .
