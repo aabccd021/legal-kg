@@ -1,5 +1,5 @@
 {
   "dataDir": "maintained_documents",
-  "uriBase": "http://example.org/legal",
-  "indexFile": "legal_index.json"
+  "unclassifiedPdfDir": "unclassified_pdf",
+  "uriBase": "http://example.org/legal"
 }

@@ -11,6 +11,7 @@
     "generate:data": "ts-node src/span_to_data.ts",
     "generate:ttl": "ts-node src/data_to_ttl.ts",
     "generate:md": "ts-node src/data_to_md.ts",
+    "classify": "ts-node src/classify.ts",
     "scrape": "ts-node src/scrape.ts"
   },
   "engines": {

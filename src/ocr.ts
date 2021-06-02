@@ -1,8 +1,5 @@
-import { exec } from 'child_process';
-import { promisify } from 'util';
+import { execOCR } from './exec_ocr';
 import { getDocumentData, nodeToFile, shouldOverwrite } from './util';
-
-const awaitExec = promisify(exec);
 
 async function ocr(): Promise<void> {
   const jsonNodes = getDocumentData('pdf');
@@ -18,19 +15,7 @@ async function ocr(): Promise<void> {
       continue;
     }
 
-    try {
-      await awaitExec(
-        `ocrmypdf` +
-          ` -l ind` +
-          ` --force-ocr` +
-          ` --jobs 4` +
-          ` --tesseract-config tesseract-config.cfg` +
-          ` ${rawPdfFile.path} ${normalizedPdfFile.path}`
-      );
-    } catch (e) {
-      console.log(e);
-      continue;
-    }
+    await execOCR(rawPdfFile.path, normalizedPdfFile.path);
   }
 }
 
