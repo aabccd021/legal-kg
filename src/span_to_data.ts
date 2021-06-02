@@ -4,7 +4,7 @@ import { babsSpansToKeyIds } from './span_to_data/scan';
 import { chain, isUndefined, mapValues, maxBy, reduce } from 'lodash';
 import { pasalKeyOfSpan, safeParseInt } from './span_to_data/parse_key_from_spans';
 import * as yaml from 'js-yaml';
-import { spansToContent, spansToMetadata, spansToStr } from './span_to_data/spans_to_component';
+import { spansToContent, spansToMetadata } from './span_to_data/spans_to_component';
 import { Disahkan, Document } from './component';
 import { DocumentNode } from './document';
 import { detectInDocument } from './span_to_data/detect';

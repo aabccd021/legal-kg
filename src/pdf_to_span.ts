@@ -2,18 +2,7 @@ import { getDocumentData, nodeToFile, shouldOverwrite, UnindexedSpan } from './u
 import { DocumentNode } from './document';
 import { writeFileSync } from 'fs';
 import { PDFExtract, PDFExtractPage, PDFExtractText } from 'pdf.js-extract';
-import {
-  chain,
-  curry,
-  isUndefined,
-  isEmpty,
-  filter,
-  zip,
-  countBy,
-  maxBy,
-  toPairs,
-  compact,
-} from 'lodash';
+import { chain, curry, isUndefined, isEmpty, filter, zip, compact } from 'lodash';
 import { bothFilter, neverNum, Span } from './util';
 import * as yaml from 'js-yaml';
 
@@ -180,7 +169,7 @@ function groupToSpan(
  * Filter Header
  */
 function isNotHeader(span: UnindexedSpan): boolean {
-  const { xL, xR, y, str } = span;
+  const { y, str } = span;
 
   // is header
   const isHeader =
@@ -243,13 +232,13 @@ function byY(a: UnindexedSpan, b: UnindexedSpan): number {
   return a.y - b.y;
 }
 
-function getHasHeader(pages: PDFExtractPage[]): boolean {
-  const firstStrs = pages.map((page) => page.content[0]?.str);
-  const counted = countBy(firstStrs);
-  const maxHeader = maxBy(toPairs(counted), ([, count]) => count) ?? [undefined, 0];
-  const sameHeaderRatio = maxHeader[1] / pages.length;
-  console.log(`header proposition: ${sameHeaderRatio}`);
-  return sameHeaderRatio > 0.1;
-}
+// function getHasHeader(pages: PDFExtractPage[]): boolean {
+//   const firstStrs = pages.map((page) => page.content[0]?.str);
+//   const counted = countBy(firstStrs);
+//   const maxHeader = maxBy(toPairs(counted), ([, count]) => count) ?? [undefined, 0];
+//   const sameHeaderRatio = maxHeader[1] / pages.length;
+//   console.log(`header proposition: ${sameHeaderRatio}`);
+//   return sameHeaderRatio > 0.1;
+// }
 
 normalizedPdfToPdfData();
