@@ -410,6 +410,38 @@ berkas PDF dengan kualitas pemindaian yang konsisten untuk semua dokumen.
 Penulis memilih menggunakan Tesseract OCR [4] sebagai metode OCR karena sifatnya
 _open source_ dan mendukung Bahasa Indonesia sebagai bahasa yang dipindai.
 
+Untuk melakukan OCR ulang perlu dilakukan instalasi program yang dibutuhkan yang
+dapat dilakukan dengan _command_ berikut pada sistem operasi Ubuntu 20.04.
+`ocrmypdf` merupakan _wrapper_ untuk Tesseract OCR dan `tesseract-ocr-ind`
+adalah program tambahan untuk dapat melakukan OCR menjadi teks Bahasa Indonesia.
+
+```bash
+sudo apt update
+sudo apt install ocrmypdf tesseract-ocr-ind -y
+```
+
+Setelah program diinstall, OCR dapat dilakukan dengan menjalankan _command_
+dibawah. Pada contoh dibawah dilakukan konversi `UU-2021-34.pdf` yang sudah ada
+menjadi `UU-2021-34_OCR.pdf` hasil OCR. Opsi `--force-ocr` diperlukan untuk
+melakukan OCR ulang pada berkas PDF yang sudah memiliki teks hasil OCR untuk di
+_overwrite_. Opsi `--jobs 4` menjalankan _command_ dengan 4 _core_ CPU, bilangan
+pada opsi ini dapat diganti sesuai kebutuhan. Opsi `--tesseract-config
+tesseract-config.cfg` menjalankan _command_ dengan konfigurasi yang diberikan.
+
+```bash
+ocrmypdf -l ind --force-ocr --jobs 4 --tesseract-config tesseract-config.cfg UU-2021-34.pdf UU-2021-34_OCR.pdf
+```
+
+Konfigurasi Tesseract OCR yang digunakan adalah `tessedit_pageseg_mode 4`
+seperti yang terlihat pada isi file konfigurasi dibawah. `tessedit_pageseg_mode
+4` digunakan agar Tesseract OCR mendeteksi teks sebagai _block_, bukan _word_
+atau _character_.
+
+```cfg
+# tesseract-config.cfg
+tessedit_pageseg_mode 4
+```
+
 ## Ekstraksi Berkas PDF menjadi Data _Span_
 
 ### Data _Span_
