@@ -2,10 +2,10 @@
 PREFIX legal: <http://example.org/legal/ontology/>
 
 SELECT DISTINCT ?pasalVersion ?text WHERE {
-  ?pasalVersion legal:partOf+ <http://example.org/legal/document/uu/2020/11>.
-  ?pasalVersion legal:pasalVersionHasRawText ?text .
+  ?pasalVersion legal:bagianDari+ <http://example.org/legal/peraturan/uu/2020/11>.
+  ?pasalVersion legal:teks ?text .
   FILTER NOT EXISTS {
-    ?point legal:partOf+ ?pasalVersion . 
+    ?point legal:bagianDari+ ?pasalVersion . 
     ?point a legal:Point .
     { ?point legal:mengubah ?amendedPasalVersion }
     UNION { ?point legal:menyisipkan ?amendedPasalVersion } 

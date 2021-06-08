@@ -2,9 +2,9 @@
 PREFIX legal: <http://example.org/legal/ontology/>
 
 SELECT ?ayat ?text WHERE {
-  ?insertingPoint legal:partOf+ <http://example.org/legal/document/uu/2020/11> .
+  ?insertingPoint legal:bagianDari+ <http://example.org/legal/peraturan/uu/2020/11> .
   ?insertingPoint legal:menyisipkan ?insertedPasalVersion .
-  ?ayat legal:partOf+ ?insertedPasalVersion .
+  ?ayat legal:bagianDari+ ?insertedPasalVersion .
   ?ayat legal:teks ?text
   FILTER REGEX(str(?text), "kompensasi")
   FILTER REGEX(str(?text), "buruh")

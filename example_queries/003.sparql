@@ -2,9 +2,9 @@
 PREFIX legal: <http://example.org/legal/ontology/>
 
 SELECT ?x ?text WHERE {
-  ?pasal legal:partOf+ <http://example.org/legal/document/uu/2020/11>.
+  ?pasal legal:bagianDari+ <http://example.org/legal/peraturan/uu/2020/11>.
   ?pasal legal:nomor 2 .
-  ?x legal:partOf* ?pasal .
+  ?x legal:bagianDari* ?pasal .
   ?x legal:nomor 1 .
   ?x legal:teks ?text .
 } LIMIT 3

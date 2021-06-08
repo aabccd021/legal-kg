@@ -2,9 +2,9 @@
 PREFIX legal: <http://example.org/legal/ontology/>
 
 SELECT ?insertingPoint ?insertedPasalVersion ?text WHERE {
-  ?insertingPoint legal:partOf+ <http://example.org/legal/document/uu/2020/11>.
+  ?insertingPoint legal:bagianDari+ <http://example.org/legal/peraturan/uu/2020/11>.
   ?insertingPoint legal:menyisipkan ?insertedPasalVersion .
-  ?insertedPasalVersion legal:partOf+ <http://example.org/legal/document/uu/2003/13> .
-  ?insertedPasalVersion legal:pasalVersionHasRawText ?text .
+  ?insertedPasalVersion legal:bagianDari+ <http://example.org/legal/peraturan/uu/2003/13> .
+  ?insertedPasalVersion legal:teks ?text .
 }
 LIMIT 3

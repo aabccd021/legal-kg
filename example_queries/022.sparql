@@ -3,8 +3,8 @@ PREFIX legal: <http://example.org/legal/ontology/>
 
 SELECT ?doc (COUNT(?pasal) as ?pasalCount)
 WHERE {
-  ?doc a legal:Document .
-  ?pasal legal:partOf ?doc .
+  ?doc a legal:Peraturan .
+  ?pasal legal:bagianDari ?doc .
   ?pasal a legal:Pasal .
 }
 GROUP BY ?doc

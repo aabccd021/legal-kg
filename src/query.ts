@@ -22,7 +22,7 @@ async function query(): Promise<void> {
       const baseName = path.basename(fileName, '.sparql');
       const queryStr = readFileSync(path.join(sparqlFileDirPath, fileName), 'utf-8');
       const bindingsStream = await fetcher.fetchBindings(
-        'http://127.0.0.1:3030/tdb0601/sparql',
+        'http://127.0.0.1:3030/legal/sparql',
         queryStr
       );
       let idx = 0;

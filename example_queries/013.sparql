@@ -2,9 +2,9 @@
 PREFIX legal: <http://example.org/legal/ontology/>
 
 SELECT DISTINCT ?pasalVersion WHERE {
-  ?point legal:partOf+ <http://example.org/legal/document/uu/2020/11>.
+  ?point legal:bagianDari+ <http://example.org/legal/peraturan/uu/2020/11>.
   ?point legal:menghapus ?pasalVersion .
-  ?pasalVersion legal:partOf+ ?document .
+  ?pasalVersion legal:bagianDari+ ?document .
   ?document legal:disahkanPada ?legalizedDate
   FILTER(year(?legalizedDate) > 2001)
 }

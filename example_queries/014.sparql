@@ -2,9 +2,9 @@
 PREFIX legal: <http://example.org/legal/ontology/>
 
 SELECT ?ayat ?text ?citation WHERE {
-  ?insertingPoint legal:partOf+ <http://example.org/legal/document/uu/2020/11>.
+  ?insertingPoint legal:bagianDari+ <http://example.org/legal/peraturan/uu/2020/11>.
   ?insertingPoint legal:menyisipkan ?insertedPasalVersion .
-  ?ayat legal:partOf+ ?insertedPasalVersion .
+  ?ayat legal:bagianDari+ ?insertedPasalVersion .
   ?ayat legal:teks ?text .
   ?ayat legal:teks ?textRef .
   OPTIONAL {?textRef legal:merujuk ?citation}

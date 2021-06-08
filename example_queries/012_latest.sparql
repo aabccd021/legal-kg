@@ -1,0 +1,15 @@
+# Get articles of Omnibus Law that are not about updating (= insertions/amendments/removals) other laws
+PREFIX legal: <http://example.org/legal/ontology/>
+
+SELECT DISTINCT ?pasalVersion ?text WHERE {
+  ?pasalVersion legal:bagianDari+ <http://example.org/legal/peraturan/uu/2020/11>.
+  ?pasalVersion legal:teks ?text .
+  FILTER NOT EXISTS {
+    ?point legal:bagianDari+ ?pasalVersion . 
+    ?point a legal:Point .
+    { ?point legal:mengubah ?amendedPasalVersion }
+    UNION { ?point legal:menyisipkan ?amendedPasalVersion } 
+    UNION { ?point legal:menghapus ?amendedPasalVersion }
+  }
+}
+LIMIT 3

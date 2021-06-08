@@ -12,7 +12,7 @@ PREFIX catapa: <https://catapa.com/ns#>
 
 SELECT ?pasal ?text WHERE {
   ?pasal a catapa:Pasal .
-  ?pasal catapa:partOf catapa:UUCiptaKerja .
+  ?pasal catapa:bagianDari catapa:UUCiptaKerja .
   ?pasal catapa:text ?text
 }
 
@@ -24,7 +24,7 @@ SELECT * WHERE {
   ?x a catapa:Ayat .
   ?x catapa:noPasal 5 .
   ?x catapa:noAyat 1 .
-  ?x catapa:partOf+ catapa:UUCiptaKerja .
+  ?x catapa:bagianDari+ catapa:UUCiptaKerja .
   ?x catapa:text ?text .
 }
 
@@ -34,10 +34,10 @@ PREFIX catapa: <https://catapa.com/ns#>
 
 SELECT ?pasal ?text WHERE {
   ?bab a catapa:Bab .
-  ?bab catapa:partOf catapa:UUCiptaKerja .
+  ?bab catapa:bagianDari catapa:UUCiptaKerja .
   ?bab catapa:noBab 2 .
   ?pasal a catapa:Pasal .
-  ?pasal catapa:partOf ?bab .
+  ?pasal catapa:bagianDari ?bab .
   ?pasal catapa:text ?text .
 }
 
@@ -46,9 +46,9 @@ SELECT ?pasal ?text WHERE {
 PREFIX catapa: <https://catapa.com/ns#>
 
 SELECT ?ayat ?text WHERE {
-  ?komponenUU catapa:partOf+ catapa:UUCiptaKerja .
+  ?komponenUU catapa:bagianDari+ catapa:UUCiptaKerja .
   ?komponenUU catapa:hasilPenyisipan ?pasalYangDisisipkan .
-  ?ayat catapa:partOf ?pasalYangDisisipkan .
+  ?ayat catapa:bagianDari ?pasalYangDisisipkan .
   ?ayat catapa:text ?text .
   FILTER REGEX(str(?text), "kompensasi")
   FILTER REGEX(str(?text), "buruh")
@@ -59,7 +59,7 @@ SELECT ?ayat ?text WHERE {
 PREFIX catapa: <https://catapa.com/ns#>
 
 SELECT ?x ?pasalYangDisisipkan ?text WHERE {
-  ?x catapa:partOf+ catapa:UUCiptaKerja .
+  ?x catapa:bagianDari+ catapa:UUCiptaKerja .
   ?x catapa:menyisipkan catapa:UU-No-13-2003 .
   ?x catapa:hasilPenyisipan ?pasalYangDisisipkan .
   ?pasalYangDisisipkan catapa:text ?text .
@@ -70,9 +70,9 @@ SELECT ?x ?pasalYangDisisipkan ?text WHERE {
 PREFIX catapa: <https://catapa.com/ns#>
 
 SELECT ?x ?oldArticle ?oldText ?newArticle ?newText WHERE {
-  ?x catapa:partOf+ catapa:UUCiptaKerja .
+  ?x catapa:bagianDari+ catapa:UUCiptaKerja .
   ?x catapa:mengubah ?oldArticle .
-  ?oldArticle catapa:partOf catapa:UU-No-13-2003 .
+  ?oldArticle catapa:bagianDari catapa:UU-No-13-2003 .
   ?oldArticle catapa:text ?oldText .
   ?x catapa:hasilPengubahan ?newArticle .
   ?newArticle catapa:text ?newText .
@@ -83,9 +83,9 @@ SELECT ?x ?oldArticle ?oldText ?newArticle ?newText WHERE {
 PREFIX catapa: <https://catapa.com/ns#>
 
 SELECT * WHERE {
-  ?x catapa:partOf+ catapa:UUCiptaKerja .
+  ?x catapa:bagianDari+ catapa:UUCiptaKerja .
   ?x catapa:menghapus ?pasalYgDihapus .
-  ?pasalYgDihapus catapa:partOf catapa:UU-No-13-2003 .
+  ?pasalYgDihapus catapa:bagianDari catapa:UU-No-13-2003 .
   ?pasalYgDihapus catapa:text ?text .
 }
 
@@ -94,10 +94,10 @@ SELECT * WHERE {
 PREFIX catapa: <https://catapa.com/ns#>
 
 SELECT * WHERE {
-  ?x catapa:partOf+ catapa:UUCiptaKerja .
+  ?x catapa:bagianDari+ catapa:UUCiptaKerja .
   ?x catapa:menghapus ?pasalYgDihapus .
-  ?pasalYgDihapus catapa:partOf catapa:UU-No-13-2003 .
-  ?ayatPasalYgDihapus catapa:partOf ?pasalYgDihapus .
+  ?pasalYgDihapus catapa:bagianDari catapa:UU-No-13-2003 .
+  ?ayatPasalYgDihapus catapa:bagianDari ?pasalYgDihapus .
   ?peraturanPelaksana catapa:melaksanakanAyat ?ayatPasalYgDihapus .
 }
 
@@ -107,21 +107,21 @@ PREFIX catapa: <https://catapa.com/ns#>
 
 SELECT ?type (COUNT(*) AS ?jumlah) WHERE {
   {
-    ?x catapa:partOf+ catapa:UUCiptaKerja .
+    ?x catapa:bagianDari+ catapa:UUCiptaKerja .
     ?x catapa:menyisipkan ?y .
     ?x a catapa:Angka .
     BIND("menyisipkan" AS ?type)
   }
   UNION
   {
-    ?x catapa:partOf+ catapa:UUCiptaKerja .
+    ?x catapa:bagianDari+ catapa:UUCiptaKerja .
     ?x catapa:mengubah ?y .
     ?x a catapa:Angka .
     BIND("mengubah" AS ?type)
   }
   UNION
   {
-    ?x catapa:partOf+ catapa:UUCiptaKerja .
+    ?x catapa:bagianDari+ catapa:UUCiptaKerja .
     ?x catapa:menghapus ?y .
     ?x a catapa:Angka .
     BIND("menghapus" AS ?type)
@@ -133,7 +133,7 @@ SELECT ?type (COUNT(*) AS ?jumlah) WHERE {
 PREFIX catapa: <https://catapa.com/ns#>
 
 SELECT ?pasal WHERE {
-  ?pasal catapa:partOf catapa:UU-No-13-2003 .
+  ?pasal catapa:bagianDari catapa:UU-No-13-2003 .
   ?pasal a catapa:Pasal .
   FILTER NOT EXISTS { ?pasalPenghapus catapa:menghapus ?pasal }
   FILTER NOT EXISTS { ?pasalPengubah catapa:mengubah ?pasal }
@@ -145,11 +145,11 @@ PREFIX catapa: <https://catapa.com/ns#>
 
 SELECT ?pasal ?text WHERE {
   ?pasal a catapa:Pasal .
-  ?pasal catapa:partOf catapa:UUCiptaKerja .
+  ?pasal catapa:bagianDari catapa:UUCiptaKerja .
   ?pasal catapa:text ?text .
   FILTER NOT EXISTS { ?pasal catapa:mengubah ?y }
   FILTER NOT EXISTS {
-    ?angka catapa:partOf ?pasal .
+    ?angka catapa:bagianDari ?pasal .
     { {?angka catapa:menyisipkan ?y} UNION {?angka catapa:mengubah ?y} UNION {?angka catapa:menghapus ?y} }
   }
 }
@@ -160,10 +160,10 @@ PREFIX catapa: <https://catapa.com/ns#>
 
 SELECT DISTINCT ?pasal WHERE {
   ?pasal a catapa:Pasal .
-  ?pasal catapa:partOf catapa:UUCiptaKerja .
-  ?angka catapa:partOf ?pasal .
+  ?pasal catapa:bagianDari catapa:UUCiptaKerja .
+  ?angka catapa:bagianDari ?pasal .
   ?angka catapa:menghapus ?pasalDihapus .
-  ?pasalDihapus catapa:partOf+ ?perundangan .
+  ?pasalDihapus catapa:bagianDari+ ?perundangan .
   ?perundangan a catapa:UndangUndang .
   ?perundangan catapa:year ?year .
   FILTER(?year > 2001)
@@ -175,9 +175,9 @@ PREFIX catapa: <https://catapa.com/ns#>
 PREFIX eli: <http://data.europa.eu/eli/ontology#>
 
 SELECT ?ayat ?text ?citation WHERE {
-  ?komponenUU catapa:partOf+ catapa:UUCiptaKerja .
+  ?komponenUU catapa:bagianDari+ catapa:UUCiptaKerja .
   ?komponenUU catapa:hasilPenyisipan ?pasalYangDisisipkan .
-  ?ayat catapa:partOf ?pasalYangDisisipkan .
+  ?ayat catapa:bagianDari ?pasalYangDisisipkan .
   ?ayat catapa:text ?text .
   OPTIONAL {?ayat eli:cites ?citation}
 }
@@ -189,10 +189,10 @@ PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
 
 SELECT * WHERE {
   ?pasal a catapa:Pasal .
-  ?pasal catapa:partOf catapa:UUCiptaKerja .
-  ?angka catapa:partOf ?pasal .
+  ?pasal catapa:bagianDari catapa:UUCiptaKerja .
+  ?angka catapa:bagianDari ?pasal .
   ?angka catapa:mengubah ?pasalDiubah .
-  ?pasalDiubah catapa:partOf+ ?perundanganYgPasalnyaDiubah .
+  ?pasalDiubah catapa:bagianDari+ ?perundanganYgPasalnyaDiubah .
   ?perundanganYgPasalnyaDiubah a catapa:UndangUndang .
   ?peraturanPelaksana catapa:melaksanakan ?perundanganYgPasalnyaDiubah .
   ?peraturanPelaksana catapa:subject/(skos:broader|skos:exactMatch)* catapa:TKA .
@@ -204,15 +204,15 @@ PREFIX catapa: <https://catapa.com/ns#>
 PREFIX eli: <http://data.europa.eu/eli/ontology#>
 
 SELECT ?ayatPengutip ?yangDikutip WHERE {
-  ?angka catapa:partOf+ catapa:UUCiptaKerja .
+  ?angka catapa:bagianDari+ catapa:UUCiptaKerja .
   ?angka catapa:hasilPenyisipan ?pasalYangDisisipkan .
-  ?ayatPengutip catapa:partOf ?pasalYangDisisipkan .
+  ?ayatPengutip catapa:bagianDari ?pasalYangDisisipkan .
   ?ayatPengutip eli:cites ?yangDikutip .
-  ?yangDikutip catapa:partOf+ catapa:UU-No-13-2003 .
+  ?yangDikutip catapa:bagianDari+ catapa:UU-No-13-2003 .
   FILTER NOT EXISTS {
-    ?yangDikutip catapa:partOf+ ?pasalYangDikutip .
+    ?yangDikutip catapa:bagianDari+ ?pasalYangDikutip .
     ?pasalYangDikutip a catapa:Pasal .
-    ?angka catapa:partOf+ catapa:UUCiptaKerja .
+    ?angka catapa:bagianDari+ catapa:UUCiptaKerja .
     {{?angka catapa:hasilPenyisipan ?pasalYangDikutip} UNION {?angka catapa:hasilPengubahan ?pasalYangDikutip} UNION {?angka catapa:menghapus ?pasalYangDikutip}}
   }
 }
@@ -225,15 +225,15 @@ SELECT ?law ?pasal WHERE {
 
 	{
 		SELECT ?law (COUNT(*) AS ?numOfUpdates) WHERE {
-			?x catapa:partOf+ catapa:UUCiptaKerja .
+			?x catapa:bagianDari+ catapa:UUCiptaKerja .
 			{ {?x catapa:hasilPenyisipan ?y} UNION {?x catapa:mengubah ?y} UNION {?x catapa:menghapus ?y} }
 			?x a catapa:Angka .
 			?y a catapa:Pasal .
-			?y catapa:partOf ?law .
+			?y catapa:bagianDari ?law .
 		} GROUP BY ?law ORDER BY DESC(?numOfUpdates) LIMIT 1
 	}
 
-	?pasal catapa:partOf ?law .
+	?pasal catapa:bagianDari ?law .
 	?pasal a catapa:Pasal .
 	FILTER NOT EXISTS { ?pasalPenghapus catapa:menghapus ?pasal }
 	FILTER NOT EXISTS { ?pasalPengubah catapa:mengubah ?pasal }

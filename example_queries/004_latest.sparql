@@ -1,0 +1,14 @@
+# Which are the articles of Chapter 2 (Bab 2) of Omnibus Law?
+PREFIX legal: <http://example.org/legal/ontology/>
+
+SELECT ?pasal ?text WHERE {
+  {
+    SELECT ?pasal (MAX(?pasalVersion) as ?latestPasalVersion) WHERE {
+      ?bab legal:bagianDari+ <http://example.org/legal/peraturan/uu/2020/11>.
+      ?bab legal:nomor 2 .
+      ?pasal legal:bagianDari+ ?bab .
+      ?pasal legal:versi ?pasalVersion .
+    } GROUP BY ?pasal
+  }
+  ?latestPasalVersion legal:teks ?text
+} LIMIT 3

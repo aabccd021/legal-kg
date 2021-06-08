@@ -3,7 +3,7 @@ PREFIX legal: <http://example.org/legal/ontology/>
 
 SELECT * 
 WHERE {
-  ?legalDoc a legal:Document
+  ?legalDoc a legal:Peraturan
 } 
 ORDER BY ?legalDoc
 LIMIT 10

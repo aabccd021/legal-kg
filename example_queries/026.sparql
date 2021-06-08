@@ -3,8 +3,8 @@ PREFIX legal: <http://example.org/legal/ontology/>
 
 SELECT ?doc (COUNT(?point) as ?amendmentCount)
 WHERE {
-  ?doc a legal:Document .
-  ?point legal:partOf* ?doc .
+  ?doc a legal:Peraturan .
+  ?point legal:bagianDari* ?doc .
   ?point legal:mengubah|legal:menyisipkan|legal:menghapus ?pasalVersion .
 }
 GROUP BY (?doc)

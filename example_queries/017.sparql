@@ -5,15 +5,15 @@ PREFIX owl: <http://www.w3.org/2002/07/owl#>
 SELECT ?law ?numOfUpdates ?pasal (MAX(?pasalVersion) as ?latestPasalVersion) WHERE {
   {
     SELECT ?law (COUNT(*) AS ?numOfUpdates) WHERE {
-      ?point legal:partOf+ <http://example.org/legal/document/uu/2020/11> .
+      ?point legal:bagianDari+ <http://example.org/legal/peraturan/uu/2020/11> .
       { ?point legal:mengubah ?amendedPasalVersion }
       UNION { ?point legal:menyisipkan ?amendedPasalVersion }
       UNION { ?point legal:menghapus ?amendedPasalVersion }
-      ?amendedPasalVersion legal:partOf+ ?law .
-      ?law a legal:Document .
+      ?amendedPasalVersion legal:bagianDari+ ?law .
+      ?law a legal:Peraturan .
     } GROUP BY ?law
   }
-  ?pasal legal:partOf+ ?law .
+  ?pasal legal:bagianDari+ ?law .
   ?pasal legal:versi ?pasalVersion .
 }
 GROUP BY ?law ?numOfUpdates ?pasal

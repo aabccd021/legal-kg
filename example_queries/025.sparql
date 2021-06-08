@@ -8,7 +8,7 @@ WHERE {
   ?menimbangPointSet legal:huruf ?menimbangPoint .
   ?menimbangPoint legal:segmen ?menimbangText .
   ?menimbangText legal:merujuk ?menimbangDoc .
-  ?menimbangDoc a legal:Document
+  ?menimbangDoc a legal:Peraturan
 }
 GROUP BY ?menimbangDoc
 ORDER BY DESC (?penimbangDocCount)

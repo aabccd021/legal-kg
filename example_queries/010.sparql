@@ -3,15 +3,15 @@ PREFIX legal: <http://example.org/legal/ontology/>
 
 SELECT ?type (COUNT(*) AS ?jumlah) WHERE {
   {
-    ?point legal:partOf+ <http://example.org/legal/document/uu/2020/11> .
+    ?point legal:bagianDari+ <http://example.org/legal/peraturan/uu/2020/11> .
     ?point legal:menghapus ?pasal .
     BIND("menghapus" AS ?type)
   } UNION {
-    ?point legal:partOf+ <http://example.org/legal/document/uu/2020/11> .
+    ?point legal:bagianDari+ <http://example.org/legal/peraturan/uu/2020/11> .
     ?point legal:menyisipkan ?pasal .
     BIND("menyisipkan" AS ?type)
   } UNION {
-    ?point legal:partOf+ <http://example.org/legal/document/uu/2020/11> .
+    ?point legal:bagianDari+ <http://example.org/legal/peraturan/uu/2020/11> .
     ?point legal:mengubah ?pasal .
     BIND("mengubah" AS ?type)
   }

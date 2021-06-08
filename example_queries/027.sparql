@@ -3,8 +3,8 @@ PREFIX legal: <http://example.org/legal/ontology/>
 
 SELECT ?bab ?title
 WHERE {
-  ?doc a legal:Document .
-  ?bab legal:partOf* ?doc .
+  ?doc a legal:Peraturan .
+  ?bab legal:bagianDari* ?doc .
   ?bab a legal:Bab .
   ?bab legal:judul ?title.
   FILTER REGEX(str(?title), "KERJA")

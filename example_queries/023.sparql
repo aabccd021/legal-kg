@@ -3,11 +3,11 @@ PREFIX legal: <http://example.org/legal/ontology/>
 
 SELECT DISTINCT ?doc ?amenderDoc
 WHERE {
-  ?doc a legal:Document .
-  ?pasal legal:partOf ?doc .
+  ?doc a legal:Peraturan .
+  ?pasal legal:bagianDari ?doc .
   ?pasal legal:versi ?pasalVersion .
   ?amender legal:mengubah ?pasalVersion .
-  ?amender legal:partOf* ?amenderDoc .
-  ?amenderDoc a legal:Document
+  ?amender legal:bagianDari* ?amenderDoc .
+  ?amenderDoc a legal:Peraturan
 }
 LIMIT 10
