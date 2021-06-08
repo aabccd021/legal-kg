@@ -74,7 +74,7 @@ Berikut ini adalah rumusan permasalahan dari penelitian yang dilakukan:
   graph_ dapat dilakukan secara otomatis?
 - Apa saja contoh aplikasi dari knowledge graph peraturan perundang-undangan
   tersebut?
-  
+
 // TODO: bagaimana melakukan proof of concept untuk yang udah dibuat, detail
 untuk maintain, general large scale, evaluasi konversi
 
@@ -372,8 +372,9 @@ selanjutnya disebut _peraturanPrefix_, dan semua resource lainnya menggunakan
 ## Perancangan URI Class
 
 URI Class adalah URI yang menjelaskan _class_ dari entitas tersebut. Semua URI
-Class mengikuti pola `{ontoPrefix}/{className}` dimana `className` adalah nama _class_ tersebut. Berikut adalah semua _class_ komponen beserta URI
-dan deskripsinya.
+Class mengikuti pola `{ontoPrefix}/{className}` dimana `className` adalah nama
+_class_ tersebut. Berikut adalah semua _class_ komponen beserta URI dan
+deskripsinya.
 
 | Nama Class       | Deskripsi                                                                                       |
 |------------------|-------------------------------------------------------------------------------------------------|
@@ -400,9 +401,9 @@ dan deskripsinya.
 URI peraturan perundang-undangan diawali oleh _peraturanPrefix_, kemudian
 diikuti oleh string yang mengidentifikasi peraturan tersebut. URI peraturan ini
 akan digunakan oleh entitas sebagai prefix yang selanjutnya akan disebut
-_docURI_. Berikut adalah jenis peraturan perundang-undangan yang
-diimplementasi pada penelitian ini beserta pola URI nya. Variabel akan dikurung
-dengan kurung kurawal `{}`.
+_docURI_. Berikut adalah jenis peraturan perundang-undangan yang diimplementasi
+pada penelitian ini beserta pola URI nya. Variabel akan dikurung dengan kurung
+kurawal `{}`.
 
 | Jenis Peraturan                       | Pola URI                                                       | Penjelasan variabel      |
 |---------------------------------------|----------------------------------------------------------------|--------------------------|
@@ -454,37 +455,37 @@ jenis komponen peraturan perundang-undangan beserta pola URI nya.
 Subjek adalah berupa URI komponen, objek adalah berupa URI komponen, string,
 _number_ (bilangan), atau _date_ (tanggal).
 
-| URI                      | Subjek                                                                   | Objek                                                 | Deskripsi                                         |
-|--------------------------|--------------------------------------------------------------------------|-------------------------------------------------------|---------------------------------------------------|
-| `{onto}/nomor`           | `Bab`, `Bagian`, `Paragraf`, `Pasal`, `Ayat`, `Huruf`                    | string, number                                        | Nomor atau huruf _identifier_ dari komponen       |
-| `{onto}/teks`            | `Ayat`, `VersiPasal`, `Segmen`                                           | string                                                | teks dari komponen                                |
-| `{onto}/bab`             | `DaftarBab`                                                              | `Bab`                                                 | Bab                                               |
-| `{onto}/bagian`          | `DaftarBagian`                                                           | `Bagian`                                              | Bagian                                            |
-| `{onto}/paragraf`        | `DaftarParagraf`                                                         | `Paragraf`                                            | Paragraf                                          |
-| `{onto}/pasal`           | `DaftarPasal`                                                            | `Pasal`                                               | Pasal                                             |
-| `{onto}/ayat`            | `DaftarAyat`                                                             | `Ayat`                                                | Ayat                                              |
-| `{onto}/huruf`           | `DaftarHuruf`                                                            | `Huruf`                                               | Huruf                                             |
-| `{onto}/segmen`          | `Mengigat`,`Menimbang`, `Paragraf`, `VersiPasal`, `Huruf`, `DaftarHuruf` | `Segmen`                                              | Segmen                                            |
-| `{onto}/daftarBab`       | `Peraturan`                                                              | `DaftarBab`                                           | DaftarBab                                         |
-| `{onto}/daftarBagian`    | `Bab`                                                                    | `Daftarbagian`                                        | DaftarBagian                                      |
-| `{onto}/daftarParagraf`  | `Bagian`                                                                 | `DaftarParagraf`                                      | DaftarParagraf                                    |
-| `{onto}/daftarPasal`     | `Peraturan`,`Bab`, `Paragraf`, `Bagian`                                  | `DaftarPasal`                                         | DaftarPasal                                       |
-| `{onto}/daftarAyat`      | `Pasal`                                                                  | `DaftarAyat`                                          | DaftarAyat                                        |
-| `{onto}/daftarHuruf`     | `VersiPasal`,`Ayat`,`Huruf`,`Menimbang`,`Mengingat`                      | `DaftarHuruf`                                         | DaftarHuruf                                       |
-| `{onto}/merujuk`         | `Segmen`                                                                 | entitas apapun                                        | Teks merujuk suatu entitas                        |
-| `{onto}/mengubah`        | `Huruf`                                                                  | `VersiPasal`                                          | Pengubahan pasal                                  |
-| `{onto}/menghapus`       | `Huruf`                                                                  | `VersiPasal`                                          | Penghapusan pasal                                 |
-| `{onto}/menyisipkan`     | `Huruf`                                                                  | `VersiPasal`                                          | Penyisipan pasal                                  |
-| `{onto}/tanggal`         | `VersiPasal`                                                             | date                                                  | Tanggal                                           |
-| `{onto}/jenisVersi`      | `VersiPasal`                                                             | 'orisinal', 'penyisipan', 'pengubahan', 'penghapusan' | Jenis versi                                       |
-| `{onto}/versi`           | `Pasal`                                                                  | `VersiPasal`                                          | Versi suatu komponen                              |
-| `{onto}/tentang`         | `Peraturan`                                                              | string                                                | Peraturan tentang                                 |
-| `{onto}/menimbang`       | `Peraturan`                                                              | `Menimbang`                                           | Peraturan menimbang                               |
-| `{onto}/mengingat`       | `Peraturan`                                                              | `Mengingat`                                           | Peraturan mengingat                               |
-| `{onto}/disahkanPada`    | `Peraturan`                                                              | date                                                  | Peraturan disahkan pada tanggal                   |
-| `{onto}/disahkanDi`      | `Peraturan`                                                              | string                                                | Peraturan disahkan di lokasi                      |
-| `{onto}/disahkanOleh`    | `Peraturan`                                                              | string                                                | Peraturan disahkan oleh                           |
-| `{onto}/jabatanPengesah` | `Peraturan`                                                              | string                                                | Jabatan pengesah peraturan                        |
+| URI                      | Subjek                                                                   | Objek                                                 | Deskripsi                                   |
+|--------------------------|--------------------------------------------------------------------------|-------------------------------------------------------|---------------------------------------------|
+| `{onto}/nomor`           | `Bab`, `Bagian`, `Paragraf`, `Pasal`, `Ayat`, `Huruf`                    | string, number                                        | Nomor atau huruf _identifier_ dari komponen |
+| `{onto}/teks`            | `Ayat`, `VersiPasal`, `Segmen`                                           | string                                                | teks dari komponen                          |
+| `{onto}/bab`             | `DaftarBab`                                                              | `Bab`                                                 | Bab                                         |
+| `{onto}/bagian`          | `DaftarBagian`                                                           | `Bagian`                                              | Bagian                                      |
+| `{onto}/paragraf`        | `DaftarParagraf`                                                         | `Paragraf`                                            | Paragraf                                    |
+| `{onto}/pasal`           | `DaftarPasal`                                                            | `Pasal`                                               | Pasal                                       |
+| `{onto}/ayat`            | `DaftarAyat`                                                             | `Ayat`                                                | Ayat                                        |
+| `{onto}/huruf`           | `DaftarHuruf`                                                            | `Huruf`                                               | Huruf                                       |
+| `{onto}/segmen`          | `Mengigat`,`Menimbang`, `Paragraf`, `VersiPasal`, `Huruf`, `DaftarHuruf` | `Segmen`                                              | Segmen                                      |
+| `{onto}/daftarBab`       | `Peraturan`                                                              | `DaftarBab`                                           | DaftarBab                                   |
+| `{onto}/daftarBagian`    | `Bab`                                                                    | `Daftarbagian`                                        | DaftarBagian                                |
+| `{onto}/daftarParagraf`  | `Bagian`                                                                 | `DaftarParagraf`                                      | DaftarParagraf                              |
+| `{onto}/daftarPasal`     | `Peraturan`,`Bab`, `Paragraf`, `Bagian`                                  | `DaftarPasal`                                         | DaftarPasal                                 |
+| `{onto}/daftarAyat`      | `Pasal`                                                                  | `DaftarAyat`                                          | DaftarAyat                                  |
+| `{onto}/daftarHuruf`     | `VersiPasal`,`Ayat`,`Huruf`,`Menimbang`,`Mengingat`                      | `DaftarHuruf`                                         | DaftarHuruf                                 |
+| `{onto}/merujuk`         | `Segmen`                                                                 | entitas apapun                                        | Teks merujuk suatu entitas                  |
+| `{onto}/mengubah`        | `Huruf`                                                                  | `VersiPasal`                                          | Pengubahan pasal                            |
+| `{onto}/menghapus`       | `Huruf`                                                                  | `VersiPasal`                                          | Penghapusan pasal                           |
+| `{onto}/menyisipkan`     | `Huruf`                                                                  | `VersiPasal`                                          | Penyisipan pasal                            |
+| `{onto}/tanggal`         | `VersiPasal`                                                             | date                                                  | Tanggal                                     |
+| `{onto}/jenisVersi`      | `VersiPasal`                                                             | 'orisinal', 'penyisipan', 'pengubahan', 'penghapusan' | Jenis versi                                 |
+| `{onto}/versi`           | `Pasal`                                                                  | `VersiPasal`                                          | Versi suatu komponen                        |
+| `{onto}/tentang`         | `Peraturan`                                                              | string                                                | Peraturan tentang                           |
+| `{onto}/menimbang`       | `Peraturan`                                                              | `Menimbang`                                           | Peraturan menimbang                         |
+| `{onto}/mengingat`       | `Peraturan`                                                              | `Mengingat`                                           | Peraturan mengingat                         |
+| `{onto}/disahkanPada`    | `Peraturan`                                                              | date                                                  | Peraturan disahkan pada tanggal             |
+| `{onto}/disahkanDi`      | `Peraturan`                                                              | string                                                | Peraturan disahkan di lokasi                |
+| `{onto}/disahkanOleh`    | `Peraturan`                                                              | string                                                | Peraturan disahkan oleh                     |
+| `{onto}/jabatanPengesah` | `Peraturan`                                                              | string                                                | Jabatan pengesah peraturan                                            |
 | `{onto}/bagianDari`      | komponen apapun                                                          | komponen apapun                                       | Komponen subjek adalah bagian dari komponen objek |
 
 # BAB 5 IMPLEMENTASI
