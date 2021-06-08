@@ -37,7 +37,7 @@ function writeToData(node: DocumentNode): void {
   const spanMixedFile = nodeToFile('span-mixed', node);
   const ttlFile = nodeToFile('ttl', node);
 
-  if (!shouldOverwrite() && dataFile.exists && ttlFile.exists) {
+  if (dataFile.exists) {
     console.log('skipped because exists');
     return;
   }
