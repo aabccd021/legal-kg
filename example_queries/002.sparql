@@ -5,4 +5,6 @@ SELECT ?pasalVersion ?text WHERE {
   <http://example.org/legal/peraturan/uu/2020/11> legal:pasal ?pasal .
   ?pasal legal:versi ?pasalVersion .
   ?pasalVersion legal:teks ?text .
-} LIMIT 3
+} 
+ORDER BY ?pasal ?text
+LIMIT 3

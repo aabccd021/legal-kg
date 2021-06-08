@@ -9,4 +9,6 @@ SELECT ?pasal ?text WHERE {
     } GROUP BY ?pasal 
   }
   ?latestPasalVersion legal:teks ?text
-} LIMIT 3
+} 
+ORDER BY ?pasal ?text
+LIMIT 3

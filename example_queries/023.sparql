@@ -10,4 +10,5 @@ WHERE {
   ?amender legal:bagianDari* ?amenderDoc .
   ?amenderDoc a legal:Peraturan
 }
+ORDER BY ?doc ?amenderDoc
 LIMIT 10

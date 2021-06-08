@@ -9,4 +9,5 @@ SELECT ?ayat ?text ?citation WHERE {
   ?ayat legal:teks ?textRef .
   OPTIONAL {?textRef legal:merujuk ?citation}
 }
+ORDER BY ?ayat ?text ?citation
 LIMIT 3

@@ -3,4 +3,6 @@ PREFIX legal: <http://example.org/legal/ontology/>
 
 SELECT * WHERE {
   <http://example.org/legal/peraturan/uu/2020/11> ?p ?o .
-} LIMIT 3
+} 
+ORDER BY ?p ?o
+LIMIT 3

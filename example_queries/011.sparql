@@ -9,4 +9,5 @@ SELECT ?latestPasalVersion WHERE {
     } GROUP BY ?pasal
   }
 }
+ORDER BY ?latestPasalVersion
 LIMIT 3

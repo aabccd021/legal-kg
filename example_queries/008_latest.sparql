@@ -16,4 +16,5 @@ SELECT ?deletingPoint ?deletedPasal ?version ?text WHERE {
   ?allPasalVersion legal:teks ?text .
   ?allPasalVersion legal:tanggal ?version .
 }
+ORDER BY ?deletingPoint ?deletedPasal ?version ?text
 LIMIT 3

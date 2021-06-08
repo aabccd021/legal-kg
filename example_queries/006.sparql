@@ -7,4 +7,5 @@ SELECT ?insertingPoint ?insertedPasalVersion ?text WHERE {
   ?insertedPasalVersion legal:bagianDari+ <http://example.org/legal/peraturan/uu/2003/13> .
   ?insertedPasalVersion legal:teks ?text .
 }
+ORDER BY ?insertingPoint ?insertedPasalVersion
 LIMIT 3

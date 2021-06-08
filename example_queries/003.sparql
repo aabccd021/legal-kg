@@ -7,4 +7,6 @@ SELECT ?x ?text WHERE {
   ?x legal:bagianDari* ?pasal .
   ?x legal:nomor 1 .
   ?x legal:teks ?text .
-} LIMIT 3
+}
+ORDER BY ?x ?text
+LIMIT 3

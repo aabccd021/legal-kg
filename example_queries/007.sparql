@@ -17,4 +17,5 @@ WHERE {
   ?allPasalVersion legal:teks ?text .
   ?allPasalVersion legal:tanggal ?version .
 }
+ORDER BY ?insertingPoint ?insertedPasal ?version ?text
 LIMIT 3

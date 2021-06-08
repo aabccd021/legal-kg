@@ -8,4 +8,5 @@ SELECT DISTINCT ?pasalVersion WHERE {
   ?document legal:disahkanPada ?legalizedDate
   FILTER(year(?legalizedDate) > 2001)
 }
+ORDER BY ?pasalVersion
 LIMIT 3

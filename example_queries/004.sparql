@@ -7,4 +7,6 @@ SELECT ?pasal ?text WHERE {
   ?pasal legal:bagianDari+ ?bab .
   ?pasal legal:versi ?pasalVersion .
   ?pasalVersion legal:teks ?text
-} LIMIT 3
+} 
+ORDER BY ?pasal ?text
+LIMIT 3

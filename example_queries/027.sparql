@@ -9,4 +9,5 @@ WHERE {
   ?bab legal:judul ?title.
   FILTER REGEX(str(?title), "KERJA")
 }
+ORDER BY ?bab ?title
 LIMIT 10

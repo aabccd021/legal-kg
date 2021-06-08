@@ -12,4 +12,5 @@ SELECT DISTINCT ?pasalVersion ?text WHERE {
     UNION { ?point legal:menghapus ?amendedPasalVersion }
   }
 }
+ORDER BY ?pasalVersion ?text
 LIMIT 3

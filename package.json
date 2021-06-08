@@ -5,6 +5,7 @@
   "scripts": {
     "build": "tsc",
     "lint": "eslint '**/*.ts'",
+    "fuseki": "cd fuseki && java -jar fuseki-server.jar --file=../uuri.ttl /legal",
     "query": "ts-node src/query.ts",
     "generate:ocr": "ts-node src/ocr.ts",
     "generate:span": "ts-node src/pdf_to_span.ts",

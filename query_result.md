@@ -8,24 +8,26 @@ PREFIX legal: <http://example.org/legal/ontology/>
 
 SELECT * WHERE {
   <http://example.org/legal/peraturan/uu/2020/11> ?p ?o .
-} LIMIT 3
+} 
+ORDER BY ?p ?o
+LIMIT 3
 ```
 
 result:
 |0||
 |-|-|
-|p|http://www.w3.org/1999/02/22-rdf-syntax-ns#type|
-|o|http://example.org/legal/ontology/Peraturan|
+|p|http://example.org/legal/ontology/daftarBab|
+|o|http://example.org/legal/peraturan/uu/2020/11/bab|
 
 |1||
 |-|-|
-|p|http://example.org/legal/ontology/tentang|
-|o| CIPTA KERJA|
+|p|http://example.org/legal/ontology/disahkanDi|
+|o|Jakarta|
 
 |2||
 |-|-|
-|p|http://example.org/legal/ontology/pasal|
-|o|http://example.org/legal/peraturan/uu/2020/11/pasal/0186|
+|p|http://example.org/legal/ontology/disahkanOleh|
+|o|JOKO WIDODO|
 
 # Query_002
 
@@ -39,24 +41,26 @@ SELECT ?pasalVersion ?text WHERE {
   <http://example.org/legal/peraturan/uu/2020/11> legal:pasal ?pasal .
   ?pasal legal:versi ?pasalVersion .
   ?pasalVersion legal:teks ?text .
-} LIMIT 3
+} 
+ORDER BY ?pasal ?text
+LIMIT 3
 ```
 
 result:
 |0||
 |-|-|
-|pasalVersion|http://example.org/legal/peraturan/uu/2020/11/pasal/0186/versi/20201102|
-|text|Undang-Undang ini mulai berlaku pada tanggal diundangkan. Agar setiap orang mengetahuinya, memerintahkan pengundangan Undang-Undang ini dengan penempatannya dalam Lembaran Negara Republik Indonesia.|
+|pasalVersion|http://example.org/legal/peraturan/uu/2020/11/pasal/0001/versi/20201102|
+|text|Dalam Undang-Undang ini yang dimaksud dengan:\n1. Cipta Kerja adalah upaya penciptaan kerja melalui usaha kemudahan, perlindungan, dan pemberdayaan koperasi dan usaha mikro, kecil, dan menengah, peningkatan ekosistem investasi dan kemudahan berusaha, dan investasi Pemerintah Pusat dan percepatan proyek strategis nasional.\n2. Koperasi adalah koperasi sebagaimana dimaksud dalam Undang-Undang tentang Perkoperasian.\n3. Usaha Mikro, Kecil, dan Menengah yang selanjutnya disingkat UMK-M adalah usaha mikro, usaha kecil, dan usaha menengah sebagaimana dimaksud dalam Undang- Undang tentang Usaha Mikro, Kecil, dan Menengah.\n4. Perizinan Berusaha adalah legalitas yang diberikan kepada Pelaku Usaha untuk memulai dan menjalankan usaha dan/atau kegiatannya.\n5. Pemerintah Pusat adalah Presiden Republik Indonesia yang memegang kekuasaan pemerintahan negara Republik Indonesia yang dibantu oleh Wakil Presiden dan menteri sebagaimana dimaksud dalam Undang-Undang Dasar Negara Republik Indonesia Tahun 1945.\n6. Pemerintahan Daerah adalah penyelenggaraan urusan pemerintahan oleh Pemerintah Daerah dan dewan perwakilan rakyat daerah menurut asas otonomi dan tugas pembantuan dengan prinsip otonomi seluas-luasnya dalam sistem dan prinsip Negara Kesatuan Republik Indonesia sebagaimana dimaksud dalam Undang-Undang Dasar Negara Republik Indonesia Tahun 1945.\n7. Pemerintah Daerah adalah kepala daerah sebagai unsur penyelenggara Pemerintahan Daerah yang memimpin pelaksanaan urusan pemerintahan yang menjadi kewenangan daerah otonom.\n8. Pelaku Usaha adalah orang perseorangan atau badan usaha yang melakukan usaha dan/atau kegiatan pada bidang tertentu. an\n9. Badan Usaha adalah badan usaha berbentuk badan hukum atau tidak berbentuk badan hukum yang didirikan di wilayah Negara Kesatuan Republik Indonesia dan melakukan usaha dan/atau kegiatan pada bidang tertentu.\n10. Rencana Detail Tata Ruang yang selanjutnya disingkat RDTR adalah rencana secara terperinci tentang tata ruang wilayah kabupaten/kota yang dilengkapi dengan peraturan zonasi kabupaten/kota.\n11. Persetujuan Bangunan Gedung adalah perizinan yang diberikan kepada pemilik bangunan gedung untuk membangun baru, mengubah, memperluas, mengurangi, dan/atau merawat bangunan gedung sesuai dengan standar teknis Bangunan Gedung.\n12. Hari adalah hari kerja sesuai dengan yang ditetapkan oleh Pemerintah Pusat.\n|
 
 |1||
 |-|-|
-|pasalVersion|http://example.org/legal/peraturan/uu/2020/11/pasal/0185/versi/20201102|
-|text|Pada saat Undang-Undang ini mulai berlaku:\na. Peraturan pelaksanaan dari Undang-Undang ini wajib ditetapkan paling lama 3 (tiga) bulan, dan\nb. Semua peraturan pelaksanaan dari Undang-Undang yang telah diubah oleh Undang-Undang ini dinyatakan tetap berlaku sepanjang tidak bertentangan dengan Undang- Undang ini dan wajib disesuaikan paling lama 3 (tiga) bulan.\n|
+|pasalVersion|http://example.org/legal/peraturan/uu/2020/11/pasal/0002/versi/20201102|
+|text|(1). Undang-Undang ini diselenggarakan berdasarkan asas:\na. pemerataan hak,\nb. kepastian hukum:\nc. kemudahan berusaha:\nd. kebersamaan: dan\ne. kemandirian.\n\n(2). Selain berdasarkan asas sebagaimana dimaksud pada ayat (1), penyelenggaraan Cipta Kerja dilaksanakan berdasarkan asas lain sesuai dengan bidang hukum yang diatur dalam undang-undang yang bersangkutan. . R|
 
 |2||
 |-|-|
-|pasalVersion|http://example.org/legal/peraturan/uu/2020/11/pasal/0184/versi/20201102|
-|text|Pada saat Undang-Undang ini mulai berlaku:\na. Perizinan Berusaha atau izin sektor yang sudah terbit masih tetap berlaku sampai dengan berakhirnya Perizinan Berusaha,\nb. Perizinan Berusaha dan/atau izin sektor yang sudah terbit sebelum berlakunya Undang-Undang ini dapat berlaku sesuai dengan Undang-Undang ini, dan\nc. Perizinan Berusaha yang sedang dalam proses permohonan disesuaikan dengan ketentuan dalam Undang-Undang ini.\n|
+|pasalVersion|http://example.org/legal/peraturan/uu/2020/11/pasal/0003/versi/20201102|
+|text|Undang-Undang ini dibentuk dengan tujuan untuk:\na. menciptakan dan meningkatkan lapangan kerja dengan memberikan kemudahan, pelindungan, dan pemberdayaan terhadap koperasi dan UMK-M serta industri dan perdagangan nasional sebagai upaya untuk dapat menyerap tenaga kerja Indonesia yang seluas-luasnya dengan tetap memperhatikan keseimbangan dan kemajuan antardaerah dalam kesatuan ekonomi nasional,\nb. menjamin setiap warga negara memperoleh pekerjaan, serta mendapat imbalan dan perlakuan yang adil dan layak dalam hubungan kerja,\nc. melakukan penyesuaian berbagai aspek pengaturan yang berkaitan dengan keberpihakan, penguatan, dan perlindungan bagi koperasi dan UMK-M serta industri nasional: dan\nd. melakukan penyesuaian berbagai aspek pengaturan yang berkaitan dengan peningkatan ekosistem investasi, kemudahan dan percepatan proyek strategis nasional yang berorientasi pada kepentingan nasional yang berlandaskan pada ilmu pengetahuan dan teknologi nasional dengan berpedoman pada haluan ideologi Pancasila.\n|
 
 # Query_002_latest
 
@@ -74,24 +78,26 @@ SELECT ?pasal ?text WHERE {
     } GROUP BY ?pasal 
   }
   ?latestPasalVersion legal:teks ?text
-} LIMIT 3
+} 
+ORDER BY ?pasal ?text
+LIMIT 3
 ```
 
 result:
 |0||
 |-|-|
-|pasal|http://example.org/legal/peraturan/uu/2020/11/pasal/0072|
-|text|Pasal 72 Beberapa ketentuan dalam Undang-Undang Nomor 32 Tahun 2002 tentang Penyiaran (Lembaran Negara Republik Indonesia Tahun 2002 Nomor 139, Tambahan Lembaran Negara Republik Indonesia Nomor 4252) diubah sebagai berikut:\n1. Ketentuan Pasal 16 diubah sehingga berbunyi sebagai berikut:\n(1). Lembaga Penyiaran Swasta sebagaimana dimaksud dalam Pasal 13 ayat (2) huruf b adalah lembaga penyiaran yang bersifat komersial berbentuk badan hukum Indonesia yang bidang usahanya menyelenggarakan jasa penyiaran radio atau televisi.\n(2). Warga negara asing dapat menjadi pengurus Lembaga Penyiaran Swasta sebagaimana dimaksud pada ayat (1) hanya untuk bidang keuangan dan bidang teknik.\n2. Ketentuan Pasal 25 diubah sehingga berbunyi sebagai berikut:\n(1). Lembaga Penyiaran Berlangganan sebagaimana dimaksud dalam Pasal 13 ayat (2) huruf d merupakan lembaga penyiaran berbentuk badan hukum Indonesia yang bidang usahanya menyelenggarakan jasa penyiaran berlangganan dan wajib terlebih dahulu memperoleh izin penyelenggaraan penyiaran berlangganan.\n(2). Lembaga Penyiaran Berlangganan sebagaimana dimaksud pada ayat (1) memancarluaskan atau menyalurkan materi siarannya secara khusus kepada pelanggan melalui radio, televisi, multi- media, atau media informasi lainnya.\n3. Ketentuan Pasal 33 diubah sehingga berbunyi sebagai berikut:\n(1). Penyelenggaraan penyiaran dapat diselenggarakan setelah memenuhi Perizinan Berusaha dari Pemerintah Pusat.\n(2). Lembaga penyiaran wajib membayar biaya Perizinan Berusaha sebagaimana dimaksud pada ayat (1) diatur berdasarkan zona/daerah penyelenggaraan penyiaran yang ditetapkan dengan parameter tingkat ekonomi setiap zona/ daerah.\n(3). Ketentuan lebih lanjut mengenai Perizinan Berusaha sebagaimana dimaksud pada ayat (1) diatur dalam Peraturan Pemerintah dengan cakupan wilayah siaran penyelenggaraan penyiaran dapat meliputi seluruh Indonesia.\n4. Pasal 34 dihapus.\n5. Ketentuan Pasal 55 diubah sehingga berbunyi sebagai berikut:\n(1). Setiap orang yang melanggar ketentuan sebagaimana dimaksud dalam Pasal 15 ayat (2), Pasal 17 ayat (3), Pasal 18 ayat (1), Pasal 18 ayat (2), Pasal 20, Pasal 23, Pasal 24, Pasal 26 ayat (2), Pasal 27, Pasal 28, Pasal 33 ayat (1), Pasal 33 ayat (2), Pasal 36 ayat (2), Pasal 36 ayat (3), Pasal 36 ayat (4), Pasal 39 ayat (1), Pasal 43 ayat (2), Pasal 44 ayat (1), Pasal 45 ayat (1), Pasal 46 ayat (3), Pasal 46 ayat (6), Pasal 46 ayat (7), Pasal 46 ayat (8), Pasal 46 ayat (9), Pasal 46 ayat (10), atau Pasal 46 ayat (11) dikenai sanksi administratif.\n(2). Sanksi administratif sebagaimana dimaksud pada ayat (1) dapat berupa:\na. Teguran tertulis,\nb. Penghentian sementara mata acara yang bermasalah setelah melalui tahap tertentu,\nc. Pembatasan durasi dan waktu siaran,\nd. Denda administratif,\ne. Pembekuan kegiatan siaran untuk waktu tertentu:\nf. ' Tidak diberi perpanjangan Perizinan Berusaha penyelenggaraan penyiaran, dan/atau\ng. Pencabutan Perizinan Berusaha penyelenggaraan penyiaran.\n\n(3). Ketentuan lebih lanjut mengenai kriteria, jenis, besaran denda, dan tata cara pengenaan sanksi administratif sebagaimana dimaksud pada ayat (2) diatur dalam Peraturan Pemerintah.\n6. Ketentuan Pasal 57 diubah sehingga berbunyi sebagai berikut:\n(1). Setiap orang yang melanggar ketentuan sebagaimana dimaksud dalam Pasal 30 ayat (1), Pasal 36 ayat (5), atau Pasal 36 ayat (6) yang dilakukan untuk penyiaran radio dipidana dengan dengan pidana penjara paling lama 5 (lima) tahun atau denda paling banyak Rp1.500.000.000,00 (satu miliar lima ratus juta rupiah).\n(2). Setiap orang yang melanggar ketentuan sebagaimana dimaksud dalam Pasal 30 ayat (1), Pasal 36 ayat (5), atau Pasal 36 ayat (6) yang dilakukan untuk penyiaran televisi dipidana dengan pidana penjara paling lama 5 (lima) tahun atau denda paling banyak Rp10.000.000.000,00 (sepuluh miliar rupiah).\n7. Ketentuan Pasal 58 diubah sehingga berbunyi sebagai berikut:\n(1). Setiap Orang yang melanggar ketentuan sebagaimana dimaksud dalam Pasal 33 ayat (1) untuk penyiaran radio dipidana dengan pidana penjara paling lama 2 (dua) tahun dan/atau denda paling banyak Rp500.000.000,00 (lima ratus juta rupiah).\n(2). Setiap Orang yang melanggar ketentuan sebagaimana dimaksud dalam Pasal 33 ayat (1) untuk penyiaran televisi dipidana dengan pidana penjara paling lama 2 (dua) tahun dan/atau denda paling banyak Rp5.000.000.000,00 (lima miliar rupiah).\n8. Di antara Pasal 60 dan Pasal 61 disisipkan 1 (satu) pasal, yakni Pasal 60A sehingga berbunyi sebagai berikut:\n(1). Penyelenggaraan penyiaran dilaksanakan dengan mengikuti perkembangan teknologi, termasuk migrasi penyiaran dari teknologi analog ke teknologi digital.\n(2). Migrasi penyiaran televisi terestrial dari teknologi analog ke teknologi digital sebagaimana dimaksud pada ayat (1) dan penghentian siaran analog (analog switch offj diselesaikan paling lambat 2 (dua) tahun sejak mulai berlakunya Undang-Undang ini.\n(3). Ketentuan lebih lanjut mengenai migrasi penyiaran dari teknologi analog ke teknologi digital sebagaimana dimaksud pada ayat (1) dan ayat (2) diatur dalam Peraturan Pemerintah.\n|
+|pasal|http://example.org/legal/peraturan/uu/2020/11/pasal/0001|
+|text|Dalam Undang-Undang ini yang dimaksud dengan:\n1. Cipta Kerja adalah upaya penciptaan kerja melalui usaha kemudahan, perlindungan, dan pemberdayaan koperasi dan usaha mikro, kecil, dan menengah, peningkatan ekosistem investasi dan kemudahan berusaha, dan investasi Pemerintah Pusat dan percepatan proyek strategis nasional.\n2. Koperasi adalah koperasi sebagaimana dimaksud dalam Undang-Undang tentang Perkoperasian.\n3. Usaha Mikro, Kecil, dan Menengah yang selanjutnya disingkat UMK-M adalah usaha mikro, usaha kecil, dan usaha menengah sebagaimana dimaksud dalam Undang- Undang tentang Usaha Mikro, Kecil, dan Menengah.\n4. Perizinan Berusaha adalah legalitas yang diberikan kepada Pelaku Usaha untuk memulai dan menjalankan usaha dan/atau kegiatannya.\n5. Pemerintah Pusat adalah Presiden Republik Indonesia yang memegang kekuasaan pemerintahan negara Republik Indonesia yang dibantu oleh Wakil Presiden dan menteri sebagaimana dimaksud dalam Undang-Undang Dasar Negara Republik Indonesia Tahun 1945.\n6. Pemerintahan Daerah adalah penyelenggaraan urusan pemerintahan oleh Pemerintah Daerah dan dewan perwakilan rakyat daerah menurut asas otonomi dan tugas pembantuan dengan prinsip otonomi seluas-luasnya dalam sistem dan prinsip Negara Kesatuan Republik Indonesia sebagaimana dimaksud dalam Undang-Undang Dasar Negara Republik Indonesia Tahun 1945.\n7. Pemerintah Daerah adalah kepala daerah sebagai unsur penyelenggara Pemerintahan Daerah yang memimpin pelaksanaan urusan pemerintahan yang menjadi kewenangan daerah otonom.\n8. Pelaku Usaha adalah orang perseorangan atau badan usaha yang melakukan usaha dan/atau kegiatan pada bidang tertentu. an\n9. Badan Usaha adalah badan usaha berbentuk badan hukum atau tidak berbentuk badan hukum yang didirikan di wilayah Negara Kesatuan Republik Indonesia dan melakukan usaha dan/atau kegiatan pada bidang tertentu.\n10. Rencana Detail Tata Ruang yang selanjutnya disingkat RDTR adalah rencana secara terperinci tentang tata ruang wilayah kabupaten/kota yang dilengkapi dengan peraturan zonasi kabupaten/kota.\n11. Persetujuan Bangunan Gedung adalah perizinan yang diberikan kepada pemilik bangunan gedung untuk membangun baru, mengubah, memperluas, mengurangi, dan/atau merawat bangunan gedung sesuai dengan standar teknis Bangunan Gedung.\n12. Hari adalah hari kerja sesuai dengan yang ditetapkan oleh Pemerintah Pusat.\n|
 
 |1||
 |-|-|
-|pasal|http://example.org/legal/peraturan/uu/2020/11/pasal/0181|
-|text|(1). Pada saat berlakunya Undang-Undang ini, setiap peraturan perundang-undangan di bawah Undang- Undang yang berlaku dan bertentangan dengan ketentuan Undang-Undang ini atau bertentangan dengan peraturan perundang-undangan yang lebih tinggi, atau bertentangan dengan putusan pengadilan harus dilakukan harmonisasi dan sinkronisasi yang dikoordinasikan oleh kementerian atau lembaga yang menyelenggarakan urusan pemerintahan di bidang pembentukan peraturan perundang-undangan.\n(2). Harmonisasi dan sinkronisasi yang berkaitan dengan peraturan daerah dan/atau peraturan kepala daerah, dilaksanakan oleh kementerian atau lembaga yang menyelenggarakan urusan pemerintahan di bidang pembentukan peraturan perundang-undangan bersama dengan kementerian yang menyelenggarakan urusan pemerintahan dalam negeri.\n(3). Ketentuan lebih lanjut mengenai harmonisasi dan sinkronisasi sebagaimana dimaksud pada ayat (1) dan ayat (2) diatur dalam Peraturan Pemerintah.|
+|pasal|http://example.org/legal/peraturan/uu/2020/11/pasal/0002|
+|text|(1). Undang-Undang ini diselenggarakan berdasarkan asas:\na. pemerataan hak,\nb. kepastian hukum:\nc. kemudahan berusaha:\nd. kebersamaan: dan\ne. kemandirian.\n\n(2). Selain berdasarkan asas sebagaimana dimaksud pada ayat (1), penyelenggaraan Cipta Kerja dilaksanakan berdasarkan asas lain sesuai dengan bidang hukum yang diatur dalam undang-undang yang bersangkutan. . R|
 
 |2||
 |-|-|
-|pasal|http://example.org/legal/peraturan/uu/2020/11/pasal/0060|
-|text|Pasal 60 Beberapa ketentuan dalam Undang-Undang Nomor 36 Tahun 2009 tentang Kesehatan (Lembaran Negara Republik Indonesia Tahun 2009 Nomor 144, Tambahan Lembaran Negara Republik Indonesia Nomor 5063) diubah sebagai berikut.\n1. Ketentuan Pasal 30 diubah sehingga berbunyi sebagai berikut:\n(1). Fasilitas pelayanan kesehatan menurut jenis pelayanannya terdiri atas:\na. pelayanan kesehatan perseorangan, dan\nb. pelayanan kesehatan masyarakat.\n\n(2). Fasilitas pelayanan kesehatan sebagaimana dimaksud pada ayat (1) meliputi:\na. pelayanan kesehatan tingkat pertama,\nb. pelayanan kesehatan tingkat kedua, dan\nc. . pelayanan kesehatan tingkat ketiga.\n\n(3). Fasilitas pelayanan kesehatan sebagaimana dimaksud pada ayat (1) dilaksanakan oleh pihak Pemerintah Pusat, Pemerintah Daerah, dan swasta.\n(4). Setiap fasilitas pelayanan kesehatan wajib memenuhi Perizinan Berusaha dari Pemerintah Pusat atau Pemerintah Daerah sesuai dengan kewenangannya berdasarkan norma, standar, prosedur, dan kriteria yang ditetapkan oleh Pemerintah Pusat.\n2. Ketentuan Pasal 35 diubah sehingga berbunyi sebagai berikut:\nPasal 35 Ketentuan lebih lanjut mengenai fasilitas pelayanan kesehatan dan Perizinan Berusaha diatur dalam Peraturan Pemerintah.\n3. Ketentuan Pasal 60 diubah sehingga berbunyi sebagai berikut:\n(1). Setiap orang yang melakukan pelayanan kesehatan tradisional yang menggunakan alat dan teknologi wajib memenuhi Perizinan Berusaha dari Pemerintah Pusat atau Pemerintah Daerah sesuai dengan kewenangannya berdasarkan norma, standar, prosedur, dan kriteria yang ditetapkan oleh Pemerintah Pusat.\n(2). Ketentuan lebih lanjut mengenai Perizinan Berusaha sebagaimana dimaksud pada ayat (1) diatur dalam Peraturan Pemerintah.\n4. Ketentuan Pasal 106 diubah sehingga berbunyi sebagai berikut: .\n(1). Setiap orang yang memproduksi dan/atau mengedarkan sediaan farmasi dan alat kesehatan harus memenuhi Perizinan Berusaha dari Pemerintah Pusat atau Pemerintah Daerah sesuai dengan kewenangannya berdasarkan norma, standar, prosedur, dan kriteria yang ditetapkan oleh Pemerintah Pusat.\n(2). Sediaan farmasi dan alat kesehatan hanya dapat diedarkan setelah memenuhi Perizinan Berusaha dari Pemerintah Pusat atau Pemerintah Daerah sesuai dengan kewenangannya berdasarkan norma, standar, prosedur, dan kriteria yang ditetapkan oleh Pemerintah Pusat.\n(3). Pemerintah Pusat atau Pemerintah Daerah sesuai dengan kewenangannya berdasarkan norma, standar, prosedur, dan kriteria yang ditetapkan oleh Pemerintah Pusat berwenang mencabut Perizinan Berusaha dan memerintahkan penarikan dari peredaran sediaan farmasi dan alat kesehatan yang telah memperoleh Perizinan Berusaha, yang terbukti tidak memenuhi persyaratan mutu dan/atau keamanan dan/atau kemanfaatan, dan alat kesehatan tersebut dapat disita dan dimusnahkan sesuai dengan ketentuan peraturan perundang-undangan.\n(4). Ketentuan lebih lanjut mengenai Perizinan Berusaha terkait sediaan farmasi dan alat kesehatan sebagaimana dimaksud pada ayat (1) dan ayat (2) diatur dalam Peraturan Pemerintah.\n5. Ketentuan Pasal 111 diubah sehingga berbunyi sebagai berikut:\n(1). Makanan dan minuman yang dipergunakan untuk masyarakat harus didasarkan pada standar dan/atau persyaratan kesehatan. api\n(2). Makanan dan minuman hanya dapat diedarkan setelah memenuhi Perizinan Berusaha dari Pemerintah Pusat atau Pemerintah Daerah sesuai dengan kewenangannya berdasarkan norma, standar, prosedur, dan kriteria yang ditetapkan oleh Pemerintah Pusat.\n(3). Makanan dan minuman yang tidak memenuhi ketentuan standar, persyaratan kesehatan, dan/atau membahayakan kesehatan sebagaimana dimaksud pada ayat (1) dilarang untuk diedarkan, serta harus ditarik dari peredaran, dicabut Perizinan Berusaha, dan diamankan/ disita untuk dimusnahkan sesuai dengan ketentuan peraturan perundang-undangan.\n(4). Ketentuan lebih lanjut mengenai Perizinan Berusaha terkait makanan dan minuman sebagaimana dimaksud pada ayat (2) dan ayat (3) diatur dalam Peraturan Pemerintah.\n6. Ketentuan Pasal 182 diubah sehingga berbunyi sebagai berikut:\n(1). Pemerintah Pusat atau Pemerintah Daerah sesuai dengan kewenangannya melakukan pengawasan terhadap masyarakat dan setiap penyelenggara kegiatan yang berhubungan dengan sumber daya di bidang kesehatan dan upaya kesehatan berdasarkan norma, standar, prosedur, dan kriteria yang ditetapkan oleh Pemerintah Pusat.\n(2). Pemerintah Pusat atau Pemerintah Daerah sesuai dengan kewenangannya dalam melakukan pengawasan dapat memberikan Perizinan Berusaha terhadap setiap penyelenggaraan upaya kesehatan berdasarkan norma, standar, prosedur, dan kriteria yang ditetapkan oleh Pemerintah Pusat.\n(3). Pemerintah Pusat dalam melaksanakan pengawasan dapat mendelegasikan pengawasan kepada Pemerintah Daerah dan mengikutsertakan masyarakat. SK No 050954 A So\n7. Ketentuan Pasal 183 diubah sehingga berbunyi sebagai berikut:\nPasal 183 Pemerintah Pusat atau Pemerintah Daerah sesuai dengan kewenangan sebagaimana dimaksud dalam Pasal 182 dalam melaksanakan tugasnya dapat mengangkat tenaga pengawas dengan tugas pokok untuk melakukan pengawasan terhadap segala sesuatu yang berhubungan dengan sumber daya di bidang kesehatan dan upaya kesehatan.\n8. Ketentuan Pasal 187 diubah sehingga berbunyi sebagai berikut:\nPasal 187 Ketentuan lebih lanjut mengenai pengawasan dalam penyelenggaraan upaya di bidang kesehatan diatur dalam Peraturan Pemerintah.\n9. Ketentuan Pasal 188 diubah sehingga berbunyi sebagai berikut:\nPasal 188 Pemerintah Pusat atau Pemerintah Daerah sesuai dengan kewenangannya berdasarkan norma, standar, prosedur, dan kriteria yang ditetapkan oleh Pemerintah Pusat dapat mengambil tindakan administratif terhadap tenaga kesehatan dan fasilitas pelayanan kesehatan yang melanggar ketentuan sebagaimana diatur dalam Undang-Undang ini.\n10. Ketentuan Pasal 197 diubah sehingga berbunyi sebagai berikut:\nPasal 197 Setiap Orang yang dengan sengaja memproduksi atau mengedarkan sediaan farmasi dan/atau alat kesehatan yang tidak memiliki Perizinan Berusaha sebagaimana dimaksud dalam Pasal 106 ayat (1), dan ayat (2), dipidana dengan pidana penjara paling lama 15 (lima belas) tahun dan denda paling banyak Rp1.500.000.000,00 (satu miliar lima ratus juta rupiah).\n|
+|pasal|http://example.org/legal/peraturan/uu/2020/11/pasal/0003|
+|text|Undang-Undang ini dibentuk dengan tujuan untuk:\na. menciptakan dan meningkatkan lapangan kerja dengan memberikan kemudahan, pelindungan, dan pemberdayaan terhadap koperasi dan UMK-M serta industri dan perdagangan nasional sebagai upaya untuk dapat menyerap tenaga kerja Indonesia yang seluas-luasnya dengan tetap memperhatikan keseimbangan dan kemajuan antardaerah dalam kesatuan ekonomi nasional,\nb. menjamin setiap warga negara memperoleh pekerjaan, serta mendapat imbalan dan perlakuan yang adil dan layak dalam hubungan kerja,\nc. melakukan penyesuaian berbagai aspek pengaturan yang berkaitan dengan keberpihakan, penguatan, dan perlindungan bagi koperasi dan UMK-M serta industri nasional: dan\nd. melakukan penyesuaian berbagai aspek pengaturan yang berkaitan dengan peningkatan ekosistem investasi, kemudahan dan percepatan proyek strategis nasional yang berorientasi pada kepentingan nasional yang berlandaskan pada ilmu pengetahuan dan teknologi nasional dengan berpedoman pada haluan ideologi Pancasila.\n|
 
 # Query_003
 
@@ -107,7 +113,9 @@ SELECT ?x ?text WHERE {
   ?x legal:bagianDari* ?pasal .
   ?x legal:nomor 1 .
   ?x legal:teks ?text .
-} LIMIT 3
+}
+ORDER BY ?x ?text
+LIMIT 3
 ```
 
 result:
@@ -118,13 +126,13 @@ result:
 
 |1||
 |-|-|
-|x|http://example.org/legal/peraturan/uu/2020/11/pasal/0173/versi/20201102/ayat/0001|
-|text|Pemerintah Pusat atau Pemerintah Daerah sesuai dengan kewenangannya berdasarkan norma, standar, prosedur, dan kriteria yang ditetapkan oleh Pemerintah Pusat bertanggung jawab dalam menyediakan lahan dan Perizinan Berusaha bagi proyek strategis nasional dari Pemerintah Pusat, Pemerintah Daerah, Badan Usaha Milik Negara, atau Badan Usaha Milik Daerah.|
+|x|http://example.org/legal/peraturan/uu/2020/11/pasal/0002/versi/20201102/ayat/0001|
+|text|Undang-Undang ini diselenggarakan berdasarkan asas:\na. pemerataan hak,\nb. kepastian hukum:\nc. kemudahan berusaha:\nd. kebersamaan: dan\ne. kemandirian.\n|
 
 |2||
 |-|-|
-|x|http://example.org/legal/peraturan/uu/2020/11/pasal/0172/versi/20201102/ayat/0001|
-|text|Lembaga Pengelola Investasi dapat melakukan transaksi baik langsung maupun tidak langsung dengan entitas yang dimilikinya.|
+|x|http://example.org/legal/peraturan/uu/2020/11/pasal/0007/versi/20201102/ayat/0001|
+|text|Perizinan Berusaha berbasis risiko sebagaimana dimaksud dalam Pasal 6 huruf a dilakukan berdasarkan penetapan tingkat risiko dan peringkat skala usaha kegiatan usaha.|
 
 # Query_003_latest
 
@@ -145,7 +153,9 @@ SELECT ?x ?text WHERE {
   ?x legal:bagianDari* ?latestPasalVersion .
   ?x legal:nomor 1 .
   ?x legal:teks ?text .
-} LIMIT 3
+} 
+ORDER BY ?x ?text
+LIMIT 3
 ```
 
 result:
@@ -168,24 +178,26 @@ SELECT ?pasal ?text WHERE {
   ?pasal legal:bagianDari+ ?bab .
   ?pasal legal:versi ?pasalVersion .
   ?pasalVersion legal:teks ?text
-} LIMIT 3
+} 
+ORDER BY ?pasal ?text
+LIMIT 3
 ```
 
 result:
 |0||
 |-|-|
-|pasal|http://example.org/legal/peraturan/uu/2020/11/pasal/0175|
-|text|Pasal 175 Beberapa ketentuan dalam Undang-Undang Nomor 30 Tahun 2014 tentang Administrasi Pemerintahan (Lembaran Negara Republik Indonesia Tahun 2014 Nomor 292, Tambahan Lembaran Negara Republik Indonesia Nomor 5601) diubah menjadi sebagai berikut:\n1. Di antara Pasal 1 angka 19 dan Pasal 1 angka 20 disisipkan 1 (satu) angka baru, yakni angka 19a sehingga berbunyi:\n\n1. Administrasi Pemerintahan adalah tata laksana dalam pengambilan keputusan dan/atau tindakan oleh badan dan/atau pejabat pemerintahan.\n2. Fungsi Pemerintahan adalah fungsi dalam melaksanakan Administrasi Pemerintahan yang meliputi fungsi pengaturan, pelayanan, pembangunan, pemberdayaan, dan pelindungan.\n3. Badan dan/atau Pejabat Pemerintahan adalah unsur yang melaksanakan Fungsi Pemerintahan, baik di lingkungan pemerintah maupun penyelenggara negara lainnya.\n4. Atasan Pejabat adalah atasan pejabat langsung yang mempunyai kedudukan dalam organisasi atau strata pemerintahan yang lebih tinggi.\n5. Wewenang adalah hak yang dimiliki oleh Badan dan/atau Pejabat Pemerintahan atau penyelenggara negara lainnya untuk mengambil keputusan dan/atau tindakan dalam penyelenggaraan pemerintahan.\n6. Kewenangan Pemerintahan yang selanjutnya disebut Kewenangan adalah kekuasaan Badan dan/atau Pejabat Pemerintahan atau penyelenggara negara lainnya untuk bertindak dalam ranah hukum publik.\n7. Keputusan Administrasi Pemerintahan yang juga disebut Keputusan Tata Usaha Negara atau Keputusan Administrasi Negara yang selanjutnya disebut Keputusan adalah ketetapan tertulis yang dikeluarkan oleh Badan dan/atau Pejabat Pemerintahan dalam penyelenggaraan pemerintahan. | 3 — PRESIDEN\n8. Tindakan Administrasi Pemerintahan yang selanjutnya disebut Tindakan adalah perbuatan Pejabat Pemerintahan atau penyelenggara negara lannya untuk melakukan dan/atau tidak melakukan perbuatan konkret dalam rangka penyelenggaraan pemerintahan.\n9. Diskresi adalah Keputusan dan/atau Tindakan yang ditetapkan dan/atau dilakukan oleh Pejabat Pemerintahan untuk mengatasi persoalan konkret yang dihadapi dalam penyelenggaraan pemerintahan dalam hal peraturan perundang-undangan yang memberikan pilihan, tidak mengatur, tidak lengkap atau tidak jelas, dan/atau adanya stagnasi pemerintahan.\n10. Bantuan Kedinasan adalah kerja sama antara Badan dan/atau Pejabat Pemerintahan guna kelancaran pelayanan Administrasi Pemerintahan di suatu instansi pemerintahan yang membutuhkan.\n11. Keputusan Berbentuk Elektronis adalah Keputusan yang dibuat atau disampaikan dengan menggunakan atau memanfaatkan media elektronik.\n12. Legalisasi adalah pernyataan Badan dan/atau Pejabat Pemerintahan mengenai keabsahan suatu Salinan surat atau dokumen Administrasi Pemerintahan yang dinyatakan sesuai dengan aslinya.\n13. Sengketa Kewenangan adalah klaim penggunaan Wewenang yang dilakukan oleh 2 (dua) Pejabat Pemerintahan atau lebih yang disebabkan oleh tumpang tindih atau tidak jelasnya Pejabat Pemerintahan yang berwenang menangani suatu urusan pemerintahan.\n14. Konflik Kepentingan adalah kondisi Pejabat Pemerintahan yang memiliki kepentingan pribadi untuk menguntungkan diri sendiri dan/atau orang lain dalam penggunaan Wewenang sehingga dapat mempengaruhi netralitas dan kualitas Keputusan dan/atau Tindakan yang dibuat dan/atau dilakukannya. 5\n15. Warga Masyarakat adalah seseorang atau badan hukum perdata yang terkait dengan Keputusan dan/atau Tindakan.\n16. Upaya Administratif adalah penyelesaian sengketa yang dilakukan dalam lingkungan Administrasi Pemerintahan sebagai akibat dikeluarkannya Keputusan dan/atau Tindakan yang merugikan.\n17. Asas-asas Umum Pemerintahan yang Baik yang selanjutnya disingkat AUPB adalah prinsip yang digunakan sebagai acuan penggunaan Wewenang bagi Pejabat Pemerintahan dalam mengeluarkan Keputusan dan/atau Tindakan dalam penyelenggaraan pemerintahan.\n18. Pengadilan adalah Pengadilan Tata Usaha Negara.\n19. Izin adalah Keputusan Pejabat Pemerintahan yang berwenang sebagai wujud persetujuan atas permohonan Warga Masyarakat sesuai dengan ketentuan peraturan perundang-undangan. 19a. Standar adalah Keputusan Pejabat Pemerintahan yang berwenang atau Lembaga yang diakui oleh Pemerintah Pusat sebagai wujud persetujuan atas pernyataan untuk pemenuhan seluruh persyaratan yang ditetapkan sesuai dengan ketentuan peraturan perundang-undangan.\n20. Konsesi adalah Keputusan Pejabat Pemerintahan yang berwenang sebagai wujud persetujuan dari kesepakatan Badan dan/atau Pejabat Pemerintahan dengan selain Badan dan/atau Pejabat Pemerintahan dalam pengelolaan fasilitas umum dan/atau sumber daya alam dan pengelolaan lainnya sesuai dengan ketentuan peraturan perundang-undangan.\n21. Dispensasi adalah Keputusan Pejabat Pemerintahan yang berwenang sebagai wujud persetujuan atas permohonan Warga Masyarakat yang merupakan pengecualian terhadap suatu larangan atau perintah sesuai dengan ketentuan peraturan perundang- undangan. -\n22. Atribusi adalah pemberian Kewenangan kepada Badan dan/atau Pejabat Pemerintahan oleh Undang-Undang Dasar Negara Republik Indonesia Tahun 1945 atau Undang-Undang.\n23. Delegasi adalah pelimpahan Kewenangan dari Badan dan/atau Pejabat Pemerintahan yang lebih tinggi kepada Badan dan/atau Pejabat Pemerintahan yang lebih rendah dengan tanggung jawab dan tanggung gugat beralih sepenuhnya kepada penerima delegasi.\n24. Mandat adalah pelimpahan Kewenangan dari Badan dan/atau Pejabat Pemerintahan yang lebih tinggi kepada Badan dan/atau Pejabat Pemerintahan yang lebih rendah dengan tanggung jawab dan tanggung gugat tetap berada pada pemberi mandat.\n25. Menteri adalah menteri yang menyelenggarakan urusan pemerintahan di bidang pendayagunaan aparatur negara.\n\n2. Ketentuan Pasal 24 diubah sehingga berbunyi sebagai berikut:\nPejabat Pemerintahan yang menggunakan Diskresi harus memenuhi syarat:\na. sesuai dengan tujuan Diskresi sebagaimana dimaksud dalam Pasal 22 ayat (2):\nb. sesuai dengan AUPB,\nc. berdasarkan alasan-alasan yang objektif:\nd. tidak menimbulkan Konflik Kepentingan: dan\ne. dilakukan dengan iktikad baik.\n\n3. Ketentuan Pasal 38 diubah sehingga berbunyi sebagai berikut: — PRESIDEN\n(1). Pejabat dan/atau Badan Pemerintahan dapat membuat Keputusan Berbentuk Elektronis.\n(2). Keputusan Berbentuk Elektronis wajib dibuat atau disampaikan terhadap Keputusan yang diproses oleh sistem elektronik yang ditetapkan Pemerintah Pusat.\n(3). Keputusan Berbentuk Elektronis berkekuatan hukum sama dengan Keputusan yang tertulis dan berlaku sejak diterimanya Keputusan tersebut oleh pihak yang bersangkutan.\n(4). Dalam hal Keputusan dibuat dalam bentuk elektronis, tidak dibuat Keputusan dalam bentuk tertulis.\n5. Di antara Pasal 39 dan Pasal 40 disisipkan 1 (satu) pasal, yakni Pasal 39A yang berbunyi sebagai berikut:\n(1). Badan dan/atau Pejabat Pemerintahan wajib melakukan pembinaan dan pengawasan atas pelaksanaan Izin, Standar, Dispensasi, dan/atau Konsesi.\n(2). Pembinaan dan pengawasan terhadap Izin, Standar, Dispensasi, dan/atau Konsesi sebagaimana dimaksud pada ayat (1) dapat dikerjasamakan dengan atau dilakukan oleh profesi yang memiliki sertifikat keahlian sesuai dengan bidang pengawasan.\n(3). Ketentuan mengenai jenis, bentuk, dan mekanisme pembinaan dan pengawasan atas Izin, Standar, Dispensasi, dan/atau Konsesi yang dapat dilakukan oleh profesi sebagaimana dimaksud pada ayat (2) diatur dalam Peraturan Presiden.\n6. Ketentuan Pasal 53 diubah sehingga berbunyi sebagai berikut:\n(1). Batas waktu kewajiban untuk menetapkan dan/atau melakukan Keputusan dan/atau Tindakan diberikan sesuai dengan ketentuan peraturan perundang- undangan.\n(2). Jika ketentuan peraturan perundang-undangan tidak menentukan batas waktu kewajiban sebagaimana dimaksud pada ayat (1), Badan dan/atau Pejabat Pemerintahan wajib menetapkan dan/atau melakukan Keputusan dan/atau Tindakan dalam waktu paling lama 5 (lima) hari kerja setelah permohonan diterima secara lengkap oleh Badan dan/atau Pejabat Pemerintahan.\n(3). Dalam hal permohonan diproses melalui sistem elektronik dan seluruh persyaratan dalam sistem elektronik telah terpenuhi, sistem elektronik menetapkan Keputusan dan/atau Tindakan sebagai Keputusan atau Tindakan Badan atau Pejabat Pemerintahan yang berwenang.\n(4). Apabila dalam batas waktu sebagaimana dimaksud pada ayat (2), Badan dan/atau Pejabat Pemerintahan tidak menetapkan dan/atau melakukan Keputusan dan/atau Tindakan, permohonan dianggap dikabulkan secara hukum.\n(5). Ketentuan lebih lanjut mengenai bentuk penetapan Keputusan dan/atau Tindakan yang dianggap dikabulkan secara hukum sebagaimana dimaksud pada ayat (3) diatur dalam Peraturan Presiden.\n|
+|pasal|http://example.org/legal/peraturan/uu/2020/11/pasal/0002|
+|text|(1). Undang-Undang ini diselenggarakan berdasarkan asas:\na. pemerataan hak,\nb. kepastian hukum:\nc. kemudahan berusaha:\nd. kebersamaan: dan\ne. kemandirian.\n\n(2). Selain berdasarkan asas sebagaimana dimaksud pada ayat (1), penyelenggaraan Cipta Kerja dilaksanakan berdasarkan asas lain sesuai dengan bidang hukum yang diatur dalam undang-undang yang bersangkutan. . R|
 
 |1||
 |-|-|
-|pasal|http://example.org/legal/peraturan/uu/2020/11/pasal/0173|
-|text|(1). Pemerintah Pusat atau Pemerintah Daerah sesuai dengan kewenangannya berdasarkan norma, standar, prosedur, dan kriteria yang ditetapkan oleh Pemerintah Pusat bertanggung jawab dalam menyediakan lahan dan Perizinan Berusaha bagi proyek strategis nasional dari Pemerintah Pusat, Pemerintah Daerah, Badan Usaha Milik Negara, atau Badan Usaha Milik Daerah.\n(2). Dalam hal pengadaan tanah belum dapat dilaksanakan oleh Pemerintah Pusat atau Pemerintah Daerah sesuai dengan kewenangannya berdasarkan norma, standar, prosedur, dan kriteria yang ditetapkan oleh Pemerintah Pusat, pengadaan tanah untuk proyek strategis nasional dapat dilakukan oleh badan usaha. “ PRESIDEN\n(3). Pengadaan tanah untuk proyek strategis nasional sebagaimana dimaksud pada ayat (1) dan ayat (2) dilaksanakan dengan mempertimbangkan prinsip kemampuan keuangan negara dan kesinambungan fiskal.\n(4). Dalam hal pengadaan tanah sebagaimana dimaksud pada ayat (2) dilakukan oleh badan usaha, mekanisme pengadaan tanah dilaksanakan sesuai dengan ketentuan peraturan perundang-undangan mengenai pengadaan tanah untuk kepentingan umum.\n(5). Ketentuan lebih lanjut mengenai pengadaan tanah dan Perizinan Berusaha bagi proyek strategis nasional diatur dalam Peraturan Pemerintah.|
+|pasal|http://example.org/legal/peraturan/uu/2020/11/pasal/0003|
+|text|Undang-Undang ini dibentuk dengan tujuan untuk:\na. menciptakan dan meningkatkan lapangan kerja dengan memberikan kemudahan, pelindungan, dan pemberdayaan terhadap koperasi dan UMK-M serta industri dan perdagangan nasional sebagai upaya untuk dapat menyerap tenaga kerja Indonesia yang seluas-luasnya dengan tetap memperhatikan keseimbangan dan kemajuan antardaerah dalam kesatuan ekonomi nasional,\nb. menjamin setiap warga negara memperoleh pekerjaan, serta mendapat imbalan dan perlakuan yang adil dan layak dalam hubungan kerja,\nc. melakukan penyesuaian berbagai aspek pengaturan yang berkaitan dengan keberpihakan, penguatan, dan perlindungan bagi koperasi dan UMK-M serta industri nasional: dan\nd. melakukan penyesuaian berbagai aspek pengaturan yang berkaitan dengan peningkatan ekosistem investasi, kemudahan dan percepatan proyek strategis nasional yang berorientasi pada kepentingan nasional yang berlandaskan pada ilmu pengetahuan dan teknologi nasional dengan berpedoman pada haluan ideologi Pancasila.\n|
 
 |2||
 |-|-|
-|pasal|http://example.org/legal/peraturan/uu/2020/11/pasal/0172|
-|text|(1). Lembaga Pengelola Investasi dapat melakukan transaksi baik langsung maupun tidak langsung dengan entitas yang dimilikinya.\n(2). Perlakuan perpajakan atas transaksi yang melibatkan Lembaga Pengelola Investasi dan/atau entitas yang dimilikinya, termasuk transaksi sebagaimana dimaksud pada ayat (1), diatur dengan atau berdasarkan Peraturan Pemerintah.|
+|pasal|http://example.org/legal/peraturan/uu/2020/11/pasal/0004|
+|text|Dalam rangka mencapai tujuan sebagaimana dimaksud dalam Pasal 3, ruang lingkup Undang-Undang ini mengatur kebijakan strategis Cipta Kerja yang meliputi:\na. peningkatan ekosistem investasi dan kegiatan berusaha,\nb. ketenagakerjaan,\nc. kemudahan, pelindungan, serta pemberdayaan koperasi dan UMK-M,\nd. kemudahan berusaha:\ne. dukungan riset dan inovasi,\nf. pengadaan tanah,\ng. kawasan ekonomi:\nh. investasi Pemerintah Pusat dan percepatan proyek strategis nasional, IX R Ii. pelaksanaan administrasi pemerintahan: dan J. pengenaan sanksi.\n|
 
 # Query_004_latest
 
@@ -205,24 +217,26 @@ SELECT ?pasal ?text WHERE {
     } GROUP BY ?pasal
   }
   ?latestPasalVersion legal:teks ?text
-} LIMIT 3
+} 
+ORDER BY ?pasal ?text
+LIMIT 3
 ```
 
 result:
 |0||
 |-|-|
-|pasal|http://example.org/legal/peraturan/uu/2020/11/pasal/0171|
-|text|(1). Lembaga Pengelola Investasi yang dibentuk dengan Undang-Undang ini hanya dapat dibubarkan dengan Undang-Undang. @\n(2). Pembinaan Lembaga Pengelola Investasi dilaksanakan oleh Menteri Keuangan.\n(3). Ketentuan lebih lanjut mengenai Lembaga Pengelola Investasi diatur dalam Peraturan Pemerintah.|
+|pasal|http://example.org/legal/peraturan/uu/2020/11/pasal/0002|
+|text|(1). Undang-Undang ini diselenggarakan berdasarkan asas:\na. pemerataan hak,\nb. kepastian hukum:\nc. kemudahan berusaha:\nd. kebersamaan: dan\ne. kemandirian.\n\n(2). Selain berdasarkan asas sebagaimana dimaksud pada ayat (1), penyelenggaraan Cipta Kerja dilaksanakan berdasarkan asas lain sesuai dengan bidang hukum yang diatur dalam undang-undang yang bersangkutan. . R|
 
 |1||
 |-|-|
-|pasal|http://example.org/legal/peraturan/uu/2020/11/pasal/0175|
-|text|Pasal 175 Beberapa ketentuan dalam Undang-Undang Nomor 30 Tahun 2014 tentang Administrasi Pemerintahan (Lembaran Negara Republik Indonesia Tahun 2014 Nomor 292, Tambahan Lembaran Negara Republik Indonesia Nomor 5601) diubah menjadi sebagai berikut:\n1. Di antara Pasal 1 angka 19 dan Pasal 1 angka 20 disisipkan 1 (satu) angka baru, yakni angka 19a sehingga berbunyi:\n\n1. Administrasi Pemerintahan adalah tata laksana dalam pengambilan keputusan dan/atau tindakan oleh badan dan/atau pejabat pemerintahan.\n2. Fungsi Pemerintahan adalah fungsi dalam melaksanakan Administrasi Pemerintahan yang meliputi fungsi pengaturan, pelayanan, pembangunan, pemberdayaan, dan pelindungan.\n3. Badan dan/atau Pejabat Pemerintahan adalah unsur yang melaksanakan Fungsi Pemerintahan, baik di lingkungan pemerintah maupun penyelenggara negara lainnya.\n4. Atasan Pejabat adalah atasan pejabat langsung yang mempunyai kedudukan dalam organisasi atau strata pemerintahan yang lebih tinggi.\n5. Wewenang adalah hak yang dimiliki oleh Badan dan/atau Pejabat Pemerintahan atau penyelenggara negara lainnya untuk mengambil keputusan dan/atau tindakan dalam penyelenggaraan pemerintahan.\n6. Kewenangan Pemerintahan yang selanjutnya disebut Kewenangan adalah kekuasaan Badan dan/atau Pejabat Pemerintahan atau penyelenggara negara lainnya untuk bertindak dalam ranah hukum publik.\n7. Keputusan Administrasi Pemerintahan yang juga disebut Keputusan Tata Usaha Negara atau Keputusan Administrasi Negara yang selanjutnya disebut Keputusan adalah ketetapan tertulis yang dikeluarkan oleh Badan dan/atau Pejabat Pemerintahan dalam penyelenggaraan pemerintahan. | 3 — PRESIDEN\n8. Tindakan Administrasi Pemerintahan yang selanjutnya disebut Tindakan adalah perbuatan Pejabat Pemerintahan atau penyelenggara negara lannya untuk melakukan dan/atau tidak melakukan perbuatan konkret dalam rangka penyelenggaraan pemerintahan.\n9. Diskresi adalah Keputusan dan/atau Tindakan yang ditetapkan dan/atau dilakukan oleh Pejabat Pemerintahan untuk mengatasi persoalan konkret yang dihadapi dalam penyelenggaraan pemerintahan dalam hal peraturan perundang-undangan yang memberikan pilihan, tidak mengatur, tidak lengkap atau tidak jelas, dan/atau adanya stagnasi pemerintahan.\n10. Bantuan Kedinasan adalah kerja sama antara Badan dan/atau Pejabat Pemerintahan guna kelancaran pelayanan Administrasi Pemerintahan di suatu instansi pemerintahan yang membutuhkan.\n11. Keputusan Berbentuk Elektronis adalah Keputusan yang dibuat atau disampaikan dengan menggunakan atau memanfaatkan media elektronik.\n12. Legalisasi adalah pernyataan Badan dan/atau Pejabat Pemerintahan mengenai keabsahan suatu Salinan surat atau dokumen Administrasi Pemerintahan yang dinyatakan sesuai dengan aslinya.\n13. Sengketa Kewenangan adalah klaim penggunaan Wewenang yang dilakukan oleh 2 (dua) Pejabat Pemerintahan atau lebih yang disebabkan oleh tumpang tindih atau tidak jelasnya Pejabat Pemerintahan yang berwenang menangani suatu urusan pemerintahan.\n14. Konflik Kepentingan adalah kondisi Pejabat Pemerintahan yang memiliki kepentingan pribadi untuk menguntungkan diri sendiri dan/atau orang lain dalam penggunaan Wewenang sehingga dapat mempengaruhi netralitas dan kualitas Keputusan dan/atau Tindakan yang dibuat dan/atau dilakukannya. 5\n15. Warga Masyarakat adalah seseorang atau badan hukum perdata yang terkait dengan Keputusan dan/atau Tindakan.\n16. Upaya Administratif adalah penyelesaian sengketa yang dilakukan dalam lingkungan Administrasi Pemerintahan sebagai akibat dikeluarkannya Keputusan dan/atau Tindakan yang merugikan.\n17. Asas-asas Umum Pemerintahan yang Baik yang selanjutnya disingkat AUPB adalah prinsip yang digunakan sebagai acuan penggunaan Wewenang bagi Pejabat Pemerintahan dalam mengeluarkan Keputusan dan/atau Tindakan dalam penyelenggaraan pemerintahan.\n18. Pengadilan adalah Pengadilan Tata Usaha Negara.\n19. Izin adalah Keputusan Pejabat Pemerintahan yang berwenang sebagai wujud persetujuan atas permohonan Warga Masyarakat sesuai dengan ketentuan peraturan perundang-undangan. 19a. Standar adalah Keputusan Pejabat Pemerintahan yang berwenang atau Lembaga yang diakui oleh Pemerintah Pusat sebagai wujud persetujuan atas pernyataan untuk pemenuhan seluruh persyaratan yang ditetapkan sesuai dengan ketentuan peraturan perundang-undangan.\n20. Konsesi adalah Keputusan Pejabat Pemerintahan yang berwenang sebagai wujud persetujuan dari kesepakatan Badan dan/atau Pejabat Pemerintahan dengan selain Badan dan/atau Pejabat Pemerintahan dalam pengelolaan fasilitas umum dan/atau sumber daya alam dan pengelolaan lainnya sesuai dengan ketentuan peraturan perundang-undangan.\n21. Dispensasi adalah Keputusan Pejabat Pemerintahan yang berwenang sebagai wujud persetujuan atas permohonan Warga Masyarakat yang merupakan pengecualian terhadap suatu larangan atau perintah sesuai dengan ketentuan peraturan perundang- undangan. -\n22. Atribusi adalah pemberian Kewenangan kepada Badan dan/atau Pejabat Pemerintahan oleh Undang-Undang Dasar Negara Republik Indonesia Tahun 1945 atau Undang-Undang.\n23. Delegasi adalah pelimpahan Kewenangan dari Badan dan/atau Pejabat Pemerintahan yang lebih tinggi kepada Badan dan/atau Pejabat Pemerintahan yang lebih rendah dengan tanggung jawab dan tanggung gugat beralih sepenuhnya kepada penerima delegasi.\n24. Mandat adalah pelimpahan Kewenangan dari Badan dan/atau Pejabat Pemerintahan yang lebih tinggi kepada Badan dan/atau Pejabat Pemerintahan yang lebih rendah dengan tanggung jawab dan tanggung gugat tetap berada pada pemberi mandat.\n25. Menteri adalah menteri yang menyelenggarakan urusan pemerintahan di bidang pendayagunaan aparatur negara.\n\n2. Ketentuan Pasal 24 diubah sehingga berbunyi sebagai berikut:\nPejabat Pemerintahan yang menggunakan Diskresi harus memenuhi syarat:\na. sesuai dengan tujuan Diskresi sebagaimana dimaksud dalam Pasal 22 ayat (2):\nb. sesuai dengan AUPB,\nc. berdasarkan alasan-alasan yang objektif:\nd. tidak menimbulkan Konflik Kepentingan: dan\ne. dilakukan dengan iktikad baik.\n\n3. Ketentuan Pasal 38 diubah sehingga berbunyi sebagai berikut: — PRESIDEN\n(1). Pejabat dan/atau Badan Pemerintahan dapat membuat Keputusan Berbentuk Elektronis.\n(2). Keputusan Berbentuk Elektronis wajib dibuat atau disampaikan terhadap Keputusan yang diproses oleh sistem elektronik yang ditetapkan Pemerintah Pusat.\n(3). Keputusan Berbentuk Elektronis berkekuatan hukum sama dengan Keputusan yang tertulis dan berlaku sejak diterimanya Keputusan tersebut oleh pihak yang bersangkutan.\n(4). Dalam hal Keputusan dibuat dalam bentuk elektronis, tidak dibuat Keputusan dalam bentuk tertulis.\n5. Di antara Pasal 39 dan Pasal 40 disisipkan 1 (satu) pasal, yakni Pasal 39A yang berbunyi sebagai berikut:\n(1). Badan dan/atau Pejabat Pemerintahan wajib melakukan pembinaan dan pengawasan atas pelaksanaan Izin, Standar, Dispensasi, dan/atau Konsesi.\n(2). Pembinaan dan pengawasan terhadap Izin, Standar, Dispensasi, dan/atau Konsesi sebagaimana dimaksud pada ayat (1) dapat dikerjasamakan dengan atau dilakukan oleh profesi yang memiliki sertifikat keahlian sesuai dengan bidang pengawasan.\n(3). Ketentuan mengenai jenis, bentuk, dan mekanisme pembinaan dan pengawasan atas Izin, Standar, Dispensasi, dan/atau Konsesi yang dapat dilakukan oleh profesi sebagaimana dimaksud pada ayat (2) diatur dalam Peraturan Presiden.\n6. Ketentuan Pasal 53 diubah sehingga berbunyi sebagai berikut:\n(1). Batas waktu kewajiban untuk menetapkan dan/atau melakukan Keputusan dan/atau Tindakan diberikan sesuai dengan ketentuan peraturan perundang- undangan.\n(2). Jika ketentuan peraturan perundang-undangan tidak menentukan batas waktu kewajiban sebagaimana dimaksud pada ayat (1), Badan dan/atau Pejabat Pemerintahan wajib menetapkan dan/atau melakukan Keputusan dan/atau Tindakan dalam waktu paling lama 5 (lima) hari kerja setelah permohonan diterima secara lengkap oleh Badan dan/atau Pejabat Pemerintahan.\n(3). Dalam hal permohonan diproses melalui sistem elektronik dan seluruh persyaratan dalam sistem elektronik telah terpenuhi, sistem elektronik menetapkan Keputusan dan/atau Tindakan sebagai Keputusan atau Tindakan Badan atau Pejabat Pemerintahan yang berwenang.\n(4). Apabila dalam batas waktu sebagaimana dimaksud pada ayat (2), Badan dan/atau Pejabat Pemerintahan tidak menetapkan dan/atau melakukan Keputusan dan/atau Tindakan, permohonan dianggap dikabulkan secara hukum.\n(5). Ketentuan lebih lanjut mengenai bentuk penetapan Keputusan dan/atau Tindakan yang dianggap dikabulkan secara hukum sebagaimana dimaksud pada ayat (3) diatur dalam Peraturan Presiden.\n|
+|pasal|http://example.org/legal/peraturan/uu/2020/11/pasal/0003|
+|text|Undang-Undang ini dibentuk dengan tujuan untuk:\na. menciptakan dan meningkatkan lapangan kerja dengan memberikan kemudahan, pelindungan, dan pemberdayaan terhadap koperasi dan UMK-M serta industri dan perdagangan nasional sebagai upaya untuk dapat menyerap tenaga kerja Indonesia yang seluas-luasnya dengan tetap memperhatikan keseimbangan dan kemajuan antardaerah dalam kesatuan ekonomi nasional,\nb. menjamin setiap warga negara memperoleh pekerjaan, serta mendapat imbalan dan perlakuan yang adil dan layak dalam hubungan kerja,\nc. melakukan penyesuaian berbagai aspek pengaturan yang berkaitan dengan keberpihakan, penguatan, dan perlindungan bagi koperasi dan UMK-M serta industri nasional: dan\nd. melakukan penyesuaian berbagai aspek pengaturan yang berkaitan dengan peningkatan ekosistem investasi, kemudahan dan percepatan proyek strategis nasional yang berorientasi pada kepentingan nasional yang berlandaskan pada ilmu pengetahuan dan teknologi nasional dengan berpedoman pada haluan ideologi Pancasila.\n|
 
 |2||
 |-|-|
-|pasal|http://example.org/legal/peraturan/uu/2020/11/pasal/0010|
-|text|(1). Perizinan Berusaha untuk kegiatan usaha berisiko tinggi sebagaimana dimaksud dalam Pasal 7 ayat (7) huruf c berupa pemberian:\na. nomor induk berusaha: dan\nb. izin.\n\n(2). Izin sebagaimana dimaksud pada ayat (1) huruf b merupakan persetujuan Pemerintah Pusat atau Pemerintah Daerah untuk pelaksanaan kegiatan usaha yang wajib dipenuhi oleh Pelaku Usaha sebelum melaksanakan kegiatan usahanya.\n(3). Dalam hal kegiatan usaha berisiko tinggi memerlukan pemenuhan standar usaha dan standar produk, Pemerintah Pusat atau Pemerintah Daerah menerbitkan sertifikat standar usaha dan sertifikat standar produk berdasarkan hasil verifikasi pemenuhan standar.|
+|pasal|http://example.org/legal/peraturan/uu/2020/11/pasal/0004|
+|text|Dalam rangka mencapai tujuan sebagaimana dimaksud dalam Pasal 3, ruang lingkup Undang-Undang ini mengatur kebijakan strategis Cipta Kerja yang meliputi:\na. peningkatan ekosistem investasi dan kegiatan berusaha,\nb. ketenagakerjaan,\nc. kemudahan, pelindungan, serta pemberdayaan koperasi dan UMK-M,\nd. kemudahan berusaha:\ne. dukungan riset dan inovasi,\nf. pengadaan tanah,\ng. kawasan ekonomi:\nh. investasi Pemerintah Pusat dan percepatan proyek strategis nasional, IX R Ii. pelaksanaan administrasi pemerintahan: dan J. pengenaan sanksi.\n|
 
 # Query_005
 
@@ -313,6 +327,7 @@ SELECT ?insertingPoint ?insertedPasalVersion ?text WHERE {
   ?insertedPasalVersion legal:bagianDari+ <http://example.org/legal/peraturan/uu/2003/13> .
   ?insertedPasalVersion legal:teks ?text .
 }
+ORDER BY ?insertingPoint ?insertedPasalVersion
 LIMIT 3
 
 ```
@@ -320,21 +335,21 @@ LIMIT 3
 result:
 |0||
 |-|-|
-|insertingPoint|http://example.org/legal/peraturan/uu/2020/11/pasal/0081/versi/20201102/huruf/0068|
-|insertedPasalVersion|http://example.org/legal/peraturan/uu/2003/13/pasal/0191A/versi/20201102|
-|text|\na. untuk pertama kali upah minimum yang berlaku, yaitu upah minimum yang telah ditetapkan berdasarkan peraturan pelaksanaan Undang-Undang Nomor 13 Tahun 2003 tentang Ketenagakerjaan yang mengatur mengenai pengupahan.\nb. bagi perusahaan yang telah memberikan upah lebih tinggi dari upah minimum yang ditetapkan sebelum Undang-Undang ini, pengusaha dilarang mengurangi atau menurunkan upah.\n|
+|insertingPoint|http://example.org/legal/peraturan/uu/2020/11/pasal/0081/versi/20201102/huruf/0017|
+|insertedPasalVersion|http://example.org/legal/peraturan/uu/2003/13/pasal/0061A/versi/20201102|
+|text|(1). Dalam hal perjanjian kerja waktu tertentu berakhir sebagaimana dimaksud dalam Pasal 61 ayat (1) huruf b dan huruf c, pengusaha wajib memberikan uang kompensasi kepada pekerja/ buruh.\n(2). Uang kompensasi sebagaimana dimaksud pada ayat (1) diberikan kepada pekerja/buruh sesuai dengan masa kerja pekerja/buruh di perusahaan yang bersangkutan.\n(3). Ketentuan lebih lanjut mengenai uang kompensasi diatur dalam Peraturan Pemerintah.|
 
 |1||
 |-|-|
-|insertingPoint|http://example.org/legal/peraturan/uu/2020/11/pasal/0081/versi/20201102/huruf/0046|
-|insertedPasalVersion|http://example.org/legal/peraturan/uu/2003/13/pasal/0157A/versi/20201102|
-|text|(1). Selama penyelesaian perselisihan hubungan industrial, pengusaha dan pekerja/ buruh harus tetap melaksanakan kewajibannya.\n(2). Pengusaha dapat melakukan tindakan skorsing kepada pekerja/buruh yang sedang dalam proses pemutusan hubungan kerja dengan tetap membayar upah beserta hak lainnya yang biasa diterima pekerja/ buruh.\n(3). Pelaksanaan kewajiban sebagaimana dimaksud pada ayat (l) dilakukan sampai dengan selesainya proses penyelesaian perselisihan hubungan industrial sesuai tingkatannya. an » 8 RA|
+|insertingPoint|http://example.org/legal/peraturan/uu/2020/11/pasal/0081/versi/20201102/huruf/0025|
+|insertedPasalVersion|http://example.org/legal/peraturan/uu/2003/13/pasal/0088A/versi/20201102|
+|text|(1). Hak pekerja/buruh atas upah timbul pada saat terjadi hubungan kerja antara pekerja/buruh dengan pengusaha dan berakhir pada saat putusnya hubungan kerja.\n(2). — Setiap pekerja/buruh berhak memperoleh upah yang sama untuk pekerjaan yang sama nilainya.\n(3). Pengusaha wajib membayar upah kepada pekerja/buruh sesuai dengan kesepakatan.\n(4). Pengaturan pengupahan yang ditetapkan atas kesepakatan antara pengusaha dan pekerja/buruh atau serikat pekerja/serikat buruh tidak boleh lebih rendah dari ketentuan pengupahan yang ditetapkan dalam peraturan perundang-undangan.\n(5). “Dalam hal kesepakatan sebagaimana dimaksud pada ayat (4) lebih rendah atau bertentangan dengan peraturan perundang-undangan, kesepakatan tersebut batal demi hukum dan pengaturan pengupahan dilaksanakan sesuai dengan ketentuan peraturan perundang-undangan.\n(6). Pengusaha yang karena kesengajaan atau kelalaiannya mengakibatkan keterlambatan pembayaran upah, dikenakan denda sesuai dengan persentase tertentu dari upah pekerja/ buruh.\n(7). Pekerja/buruh yang melakukan pelanggaran karena kesengajaan atau kelalaiannya dapat dikenakan denda. (8 Pemerintah mengatur pengenaan denda kepada pengusaha dan/atau pekerja/ buruh dalam pembayaran upah.|
 
 |2||
 |-|-|
-|insertingPoint|http://example.org/legal/peraturan/uu/2020/11/pasal/0081/versi/20201102/huruf/0042|
-|insertedPasalVersion|http://example.org/legal/peraturan/uu/2003/13/pasal/0154A/versi/20201102|
-|text|(1). Pemutusan hubungan kerja dapat terjadi karena alasan:\na. perusahaan melakukan penggabungan, peleburan, pengambilalihan, atau pemisahan perusahaan dan pekerja/buruh tidak bersedia melanjutkan hubungan kerja atau pengusaha tidak bersedia menerima pekerja/ buruh,\nb. perusahaan melakukan efisiensi diikuti dengan penutupan perusahaan atau tidak diikuti dengan penutupan perusahaan yang disebabkan perusahaan mengalami kerugian,\nc. perusahaan tutup yang disebabkan karena perusahaan mengalami kerugian secara terus menerus selama 2 (dua) tahun,\nd. perusahaan tutup yang disebabkan keadaan memaksa (force majeur).\ne. perusahaan dalam keadaan penundaan kewajiban pembayaran utang,\nf. perusahaan pailit,\ng. adanya permohonan pemutusan hubungan kerja yang diajukan oleh pekerja/buruh dengan alasan pengusaha melakukan perbuatan sebagai berikut:\n1. menganiaya, menghina secara kasar atau mengancam pekerja/ buruh, .554 -\n2. membujuk dan/atau menyuruh pekerja/buruh untuk melakukan perbuatan yang bertentangan dengan peraturan perundang-undangan,\n3. tidak membayar upah tepat pada waktu yang telah ditentukan selama 3 (tiga) bulan berturut-turut atau lebih, meskipun pengusaha membayar upah secara tepat waktu sesudah itu:\n4. tidak melakukan kewajiban yang telah dijanjikan kepada pekerja/ buruh,\n5. memerintahkan pekerja/ buruh untuk melaksanakan pekerjaan di luar yang diperjanjikan, atau\n6. memberikan pekerjaan yang membahayakan jiwa, keselamatan, kesehatan, dan kesusilaan pekerja/buruh sedangkan pekerjaan tersebut tidak dicantumkan pada perjanjian kerja,\n\nh. adanya putusan lembaga penyelesaian perselisihan hubungan industrial yang menyatakan pengusaha tidak melakukan perbuatan sebagaimana dimaksud pada huruf g terhadap permohonan yang diajukan oleh pekerja/buruh dan pengusaha memutuskan untuk melakukan pemutusan hubungan kerja, 1 pekerja/buruh mengundurkan diri atas kemauan sendiri dan harus memenuhi syarat:\n1. mengajukan permohonan pengunduran diri secara tertulis selambat-lambatnya 30 (tiga puluh) hari sebelum tanggal mulai pengunduran diri,\n2. tidak terikat dalam ikatan dinas, dan\n3. tetap melaksanakan kewajibannya sampai tanggal mulai pengunduran diri, » REPUBLIK INDONESIA j. pekerja/buruh mangkir selama 5 (lima) hari kerja atau lebih berturut-turut tanpa keterangan secara tertulis yang dilengkapi dengan bukti yang sah dan telah dipanggil oleh pengusaha 2 (dua) kali secara patut dan tertulis, k. pekerja/buruh melakukan pelanggaran ketentuan yang diatur dalam perjanjian kerja, peraturan perusahaan, atau perjanjian kerja bersama dan sebelumnya telah diberikan surat peringatan pertama, kedua, dan ketiga secara berturut-turut masing-masing berlaku untuk paling lama 6 (enam) bulan kecuali ditetapkan lain dalam perjanjian kerja, peraturan perusahaan, atau perjanjian kerja bersama,\n1. pekerja/buruh tidak dapat melakukan pekerjaan selama 6 (enam) bulan akibat ditahan pihak yang berwajib karena diduga melakukan tindak pidana, m. pekerja/buruh mengalami sakit berkepanjangan atau cacat akibat kecelakaan kerja dan tidak dapat melakukan pekerjaannya setelah melampaui batas 12 (dua belas) bulan, n. pekerja/buruh memasuki usia pensiun, atau Oo. pekerja/buruh meninggal dunia.\n\n\n\n(2). Selain alasan pemutusan hubungan kerja sebagaimana dimaksud pada ayat (1), dapat ditetapkan alasan pemutusan hubungan kerja lainnya dalam perjanjian kerja, peraturan perusahaan, atau perjanjian kerja bersama sebagaimana dimaksud dalam Pasal 61 ayat (1).\n(3). Ketentuan lebih lanjut mengenai tata cara pemutusan hubungan kerja diatur dalam Peraturan Pemerintah.|
+|insertingPoint|http://example.org/legal/peraturan/uu/2020/11/pasal/0081/versi/20201102/huruf/0025|
+|insertedPasalVersion|http://example.org/legal/peraturan/uu/2003/13/pasal/0088B/versi/20201102|
+|text|(1). Upah ditetapkan berdasarkan: a satuan waktu, dan/atau b. satuan hasil.\n(2). — Ketentuan lebih lanjut mengenai upah berdasarkan satuan waktu dan/atau satuan hasil sebagaimana dimaksud pada ayat (1) diatur dalam Peraturan Pemerintah.|
 
 # Query_006_latest
 
@@ -356,6 +371,7 @@ SELECT ?insertingPoint ?insertedPasalVersion ?text WHERE {
   ?insertedPasalVersion legal:bagianDari+ <http://example.org/legal/peraturan/uu/2003/13> .
   ?insertedPasalVersion legal:teks ?text .
 }
+ORDER BY ?insertingPoint ?insertedPasalVersion
 LIMIT 3
 
 ```
@@ -363,21 +379,21 @@ LIMIT 3
 result:
 |0||
 |-|-|
-|insertingPoint|http://example.org/legal/peraturan/uu/2020/11/pasal/0081/versi/20201102/huruf/0068|
-|insertedPasalVersion|http://example.org/legal/peraturan/uu/2003/13/pasal/0191A/versi/20201102|
-|text|\na. untuk pertama kali upah minimum yang berlaku, yaitu upah minimum yang telah ditetapkan berdasarkan peraturan pelaksanaan Undang-Undang Nomor 13 Tahun 2003 tentang Ketenagakerjaan yang mengatur mengenai pengupahan.\nb. bagi perusahaan yang telah memberikan upah lebih tinggi dari upah minimum yang ditetapkan sebelum Undang-Undang ini, pengusaha dilarang mengurangi atau menurunkan upah.\n|
+|insertingPoint|http://example.org/legal/peraturan/uu/2020/11/pasal/0081/versi/20201102/huruf/0017|
+|insertedPasalVersion|http://example.org/legal/peraturan/uu/2003/13/pasal/0061A/versi/20201102|
+|text|(1). Dalam hal perjanjian kerja waktu tertentu berakhir sebagaimana dimaksud dalam Pasal 61 ayat (1) huruf b dan huruf c, pengusaha wajib memberikan uang kompensasi kepada pekerja/ buruh.\n(2). Uang kompensasi sebagaimana dimaksud pada ayat (1) diberikan kepada pekerja/buruh sesuai dengan masa kerja pekerja/buruh di perusahaan yang bersangkutan.\n(3). Ketentuan lebih lanjut mengenai uang kompensasi diatur dalam Peraturan Pemerintah.|
 
 |1||
 |-|-|
-|insertingPoint|http://example.org/legal/peraturan/uu/2020/11/pasal/0081/versi/20201102/huruf/0046|
-|insertedPasalVersion|http://example.org/legal/peraturan/uu/2003/13/pasal/0157A/versi/20201102|
-|text|(1). Selama penyelesaian perselisihan hubungan industrial, pengusaha dan pekerja/ buruh harus tetap melaksanakan kewajibannya.\n(2). Pengusaha dapat melakukan tindakan skorsing kepada pekerja/buruh yang sedang dalam proses pemutusan hubungan kerja dengan tetap membayar upah beserta hak lainnya yang biasa diterima pekerja/ buruh.\n(3). Pelaksanaan kewajiban sebagaimana dimaksud pada ayat (l) dilakukan sampai dengan selesainya proses penyelesaian perselisihan hubungan industrial sesuai tingkatannya. an » 8 RA|
+|insertingPoint|http://example.org/legal/peraturan/uu/2020/11/pasal/0081/versi/20201102/huruf/0025|
+|insertedPasalVersion|http://example.org/legal/peraturan/uu/2003/13/pasal/0088A/versi/20201102|
+|text|(1). Hak pekerja/buruh atas upah timbul pada saat terjadi hubungan kerja antara pekerja/buruh dengan pengusaha dan berakhir pada saat putusnya hubungan kerja.\n(2). — Setiap pekerja/buruh berhak memperoleh upah yang sama untuk pekerjaan yang sama nilainya.\n(3). Pengusaha wajib membayar upah kepada pekerja/buruh sesuai dengan kesepakatan.\n(4). Pengaturan pengupahan yang ditetapkan atas kesepakatan antara pengusaha dan pekerja/buruh atau serikat pekerja/serikat buruh tidak boleh lebih rendah dari ketentuan pengupahan yang ditetapkan dalam peraturan perundang-undangan.\n(5). “Dalam hal kesepakatan sebagaimana dimaksud pada ayat (4) lebih rendah atau bertentangan dengan peraturan perundang-undangan, kesepakatan tersebut batal demi hukum dan pengaturan pengupahan dilaksanakan sesuai dengan ketentuan peraturan perundang-undangan.\n(6). Pengusaha yang karena kesengajaan atau kelalaiannya mengakibatkan keterlambatan pembayaran upah, dikenakan denda sesuai dengan persentase tertentu dari upah pekerja/ buruh.\n(7). Pekerja/buruh yang melakukan pelanggaran karena kesengajaan atau kelalaiannya dapat dikenakan denda. (8 Pemerintah mengatur pengenaan denda kepada pengusaha dan/atau pekerja/ buruh dalam pembayaran upah.|
 
 |2||
 |-|-|
-|insertingPoint|http://example.org/legal/peraturan/uu/2020/11/pasal/0081/versi/20201102/huruf/0042|
-|insertedPasalVersion|http://example.org/legal/peraturan/uu/2003/13/pasal/0154A/versi/20201102|
-|text|(1). Pemutusan hubungan kerja dapat terjadi karena alasan:\na. perusahaan melakukan penggabungan, peleburan, pengambilalihan, atau pemisahan perusahaan dan pekerja/buruh tidak bersedia melanjutkan hubungan kerja atau pengusaha tidak bersedia menerima pekerja/ buruh,\nb. perusahaan melakukan efisiensi diikuti dengan penutupan perusahaan atau tidak diikuti dengan penutupan perusahaan yang disebabkan perusahaan mengalami kerugian,\nc. perusahaan tutup yang disebabkan karena perusahaan mengalami kerugian secara terus menerus selama 2 (dua) tahun,\nd. perusahaan tutup yang disebabkan keadaan memaksa (force majeur).\ne. perusahaan dalam keadaan penundaan kewajiban pembayaran utang,\nf. perusahaan pailit,\ng. adanya permohonan pemutusan hubungan kerja yang diajukan oleh pekerja/buruh dengan alasan pengusaha melakukan perbuatan sebagai berikut:\n1. menganiaya, menghina secara kasar atau mengancam pekerja/ buruh, .554 -\n2. membujuk dan/atau menyuruh pekerja/buruh untuk melakukan perbuatan yang bertentangan dengan peraturan perundang-undangan,\n3. tidak membayar upah tepat pada waktu yang telah ditentukan selama 3 (tiga) bulan berturut-turut atau lebih, meskipun pengusaha membayar upah secara tepat waktu sesudah itu:\n4. tidak melakukan kewajiban yang telah dijanjikan kepada pekerja/ buruh,\n5. memerintahkan pekerja/ buruh untuk melaksanakan pekerjaan di luar yang diperjanjikan, atau\n6. memberikan pekerjaan yang membahayakan jiwa, keselamatan, kesehatan, dan kesusilaan pekerja/buruh sedangkan pekerjaan tersebut tidak dicantumkan pada perjanjian kerja,\n\nh. adanya putusan lembaga penyelesaian perselisihan hubungan industrial yang menyatakan pengusaha tidak melakukan perbuatan sebagaimana dimaksud pada huruf g terhadap permohonan yang diajukan oleh pekerja/buruh dan pengusaha memutuskan untuk melakukan pemutusan hubungan kerja, 1 pekerja/buruh mengundurkan diri atas kemauan sendiri dan harus memenuhi syarat:\n1. mengajukan permohonan pengunduran diri secara tertulis selambat-lambatnya 30 (tiga puluh) hari sebelum tanggal mulai pengunduran diri,\n2. tidak terikat dalam ikatan dinas, dan\n3. tetap melaksanakan kewajibannya sampai tanggal mulai pengunduran diri, » REPUBLIK INDONESIA j. pekerja/buruh mangkir selama 5 (lima) hari kerja atau lebih berturut-turut tanpa keterangan secara tertulis yang dilengkapi dengan bukti yang sah dan telah dipanggil oleh pengusaha 2 (dua) kali secara patut dan tertulis, k. pekerja/buruh melakukan pelanggaran ketentuan yang diatur dalam perjanjian kerja, peraturan perusahaan, atau perjanjian kerja bersama dan sebelumnya telah diberikan surat peringatan pertama, kedua, dan ketiga secara berturut-turut masing-masing berlaku untuk paling lama 6 (enam) bulan kecuali ditetapkan lain dalam perjanjian kerja, peraturan perusahaan, atau perjanjian kerja bersama,\n1. pekerja/buruh tidak dapat melakukan pekerjaan selama 6 (enam) bulan akibat ditahan pihak yang berwajib karena diduga melakukan tindak pidana, m. pekerja/buruh mengalami sakit berkepanjangan atau cacat akibat kecelakaan kerja dan tidak dapat melakukan pekerjaannya setelah melampaui batas 12 (dua belas) bulan, n. pekerja/buruh memasuki usia pensiun, atau Oo. pekerja/buruh meninggal dunia.\n\n\n\n(2). Selain alasan pemutusan hubungan kerja sebagaimana dimaksud pada ayat (1), dapat ditetapkan alasan pemutusan hubungan kerja lainnya dalam perjanjian kerja, peraturan perusahaan, atau perjanjian kerja bersama sebagaimana dimaksud dalam Pasal 61 ayat (1).\n(3). Ketentuan lebih lanjut mengenai tata cara pemutusan hubungan kerja diatur dalam Peraturan Pemerintah.|
+|insertingPoint|http://example.org/legal/peraturan/uu/2020/11/pasal/0081/versi/20201102/huruf/0025|
+|insertedPasalVersion|http://example.org/legal/peraturan/uu/2003/13/pasal/0088B/versi/20201102|
+|text|(1). Upah ditetapkan berdasarkan: a satuan waktu, dan/atau b. satuan hasil.\n(2). — Ketentuan lebih lanjut mengenai upah berdasarkan satuan waktu dan/atau satuan hasil sebagaimana dimaksud pada ayat (1) diatur dalam Peraturan Pemerintah.|
 
 # Query_007
 
@@ -403,6 +419,7 @@ WHERE {
   ?allPasalVersion legal:teks ?text .
   ?allPasalVersion legal:tanggal ?version .
 }
+ORDER BY ?insertingPoint ?insertedPasal ?version ?text
 LIMIT 3
 
 ```
@@ -410,24 +427,24 @@ LIMIT 3
 result:
 |0||
 |-|-|
-|updatingPointt|http://example.org/legal/peraturan/uu/2020/11/pasal/0081/versi/20201102/huruf/0067|
-|updatedPasal|http://example.org/legal/peraturan/uu/2003/13/pasal/0190|
-|text|(1). Pemerintah Pusat atau Pemerintah Daerah sesuai kewenangannya mengenakan sanksi administratif atas pelanggaran ketentuan-ketentuan sebagaimana diatur dalam Pasal 5, Pasal 6, Pasal 14 ayat (1), Pasal 15, Pasal 25, Pasal 37 ayat (2), Pasal 38 ayat (2), Pasal 42 ayat (1), Pasal 47 ayat (1), Pasal 61A, Pasal 66 ayat (4), Pasal 87, Pasal 92, Pasal 106, Pasal 126 ayat (3), atau Pasal 160 ayat (1) atau ayat (2) undang-undang ini serta peraturan pelaksanaannya.\n(2). Ketentuan lebih lanjut mengenai sanksi administratif sebagaimana dimaksud pada ayat (1) diatur dalam Peraturan Pemerintah.|
-|version|2020-11-02|
+|updatingPointt|http://example.org/legal/peraturan/uu/2020/11/pasal/0081/versi/20201102/huruf/0066|
+|updatedPasal|http://example.org/legal/peraturan/uu/2003/13/pasal/0188|
+|text|(1). Barang siapa melanggar ketentuan sebagaimana dimaksud dalam Pasal 14 ayat (2), Pasal 38 ayat (2), Pasal 63 ayat (1), Pasal 78 ayat (1), Pasal 108 ayat (1), Pasal 111 ayat (3), Pasal 114, dan Pasal 148, dikenakan sanksi pidana denda paling sedikit Rp 5.000.000,00 (lima juta rupiah) dan paling banyak Rp 50.000.000,00 (lima puluh juta rupiah).\n(2). Tindak pidana sebagaimana dimaksud dalam ayat (1) merupakan tindak pidana pelanggaran.|
+|version|2003-03-25|
 
 |1||
 |-|-|
-|updatingPointt|http://example.org/legal/peraturan/uu/2020/11/pasal/0081/versi/20201102/huruf/0067|
-|updatedPasal|http://example.org/legal/peraturan/uu/2003/13/pasal/0190|
-|text|(1). Menteri atau pejabat yang ditunjuk mengenakan sanksi administratif atas pelanggaran ketentuan-ketentuan sebagaimana diatur dalam Pasal 5, Pasal 6, Pasal 15, Pasal 25, Pasal 38 ayat (2), Pasal 45 ayat (1), Pasal 47 ayat (1), Pasal 48, Pasal 87, Pasal 106, Pasal 126 ayat (3), dan Pasal 160 ayat (1) dan ayat (2) Undang-undang ini serta peraturan pelaksanaannya.\n(2). Sanksi administratif sebagaimana dimaksud dalam ayat (1) berupa :\na. teguran,\nb. peringatan tertulis,\nc. pembatasan kegiatan usaha,\nd. pembekuan kegiatan usaha,\ne. pembatalan persetujuan:\nf. pembatalan pendaftaran,\ng. penghentian sementara sebagian atau seluruh alat produksi,\nh. pencabutan ijin.\n\n(3). Ketentuan mengenai sanksi administratif sebagaimana dimaksud dalam ayat (1) dan ayat (2) diatur lebih lanjut oleh Menteri.|
+|updatingPointt|http://example.org/legal/peraturan/uu/2020/11/pasal/0081/versi/20201102/huruf/0066|
+|updatedPasal|http://example.org/legal/peraturan/uu/2003/13/pasal/0188|
+|text|(1). Barang siapa melanggar ketentuan sebagaimana dimaksud dalam Pasal 14 ayat (2), Pasal 38 ayat (2), Pasal 63 ayat (1), Pasal 78 ayat (1), Pasal 108 ayat (1), Pasal 111 ayat (3), Pasal 114, dan Pasal 148, dikenakan sanksi pidana denda paling sedikit Rp 5.000.000,00 (lima juta rupiah) dan paling banyak Rp 50.000.000,00 (lima puluh juta rupiah).\n(2). Tindak pidana sebagaimana dimaksud dalam ayat (1) merupakan tindak pidana pelanggaran.|
 |version|2003-03-25|
 
 |2||
 |-|-|
 |updatingPointt|http://example.org/legal/peraturan/uu/2020/11/pasal/0081/versi/20201102/huruf/0066|
 |updatedPasal|http://example.org/legal/peraturan/uu/2003/13/pasal/0188|
-|text|(1). Barang siapa melanggar ketentuan sebagaimana dimaksud dalam Pasal 38 ayat (2), Pasal 63 ayat (1), Pasal 78 ayat (1), Pasal 108 ayat (1), Pasal 111 ayat (3), Pasal 114, atau Pasal 148 dikenai sanksi pidana denda paling sedikit Rp5.000.000,00 (lima juta rupiah) dan paling banyak Rp50.000.000,00 (lima puluh juta rupiah).\n(2). Tindak pidana sebagaimana dimaksud pada ayat (1) merupakan tindak pidana pelanggaran.|
-|version|2020-11-02|
+|text|(1). Barang siapa melanggar ketentuan sebagaimana dimaksud dalam Pasal 14 ayat (2), Pasal 38 ayat (2), Pasal 63 ayat (1), Pasal 78 ayat (1), Pasal 108 ayat (1), Pasal 111 ayat (3), Pasal 114, dan Pasal 148, dikenakan sanksi pidana denda paling sedikit Rp 5.000.000,00 (lima juta rupiah) dan paling banyak Rp 50.000.000,00 (lima puluh juta rupiah).\n(2). Tindak pidana sebagaimana dimaksud dalam ayat (1) merupakan tindak pidana pelanggaran.|
+|version|2003-03-25|
 
 # Query_007_latest
 
@@ -452,6 +469,7 @@ SELECT ?insertingPoint ?insertedPasal ?version ?text WHERE {
   ?allPasalVersion legal:teks ?text .
   ?allPasalVersion legal:tanggal ?version .
 }
+ORDER BY ?insertingPoint ?insertedPasal ?version ?text
 LIMIT 3
 
 ```
@@ -459,24 +477,24 @@ LIMIT 3
 result:
 |0||
 |-|-|
-|insertingPoint|http://example.org/legal/peraturan/uu/2020/11/pasal/0081/versi/20201102/huruf/0068|
-|insertedPasal|http://example.org/legal/peraturan/uu/2003/13/pasal/0191A|
+|insertingPoint|http://example.org/legal/peraturan/uu/2020/11/pasal/0081/versi/20201102/huruf/0017|
+|insertedPasal|http://example.org/legal/peraturan/uu/2003/13/pasal/0061A|
 |version|2020-11-02|
-|text|\na. untuk pertama kali upah minimum yang berlaku, yaitu upah minimum yang telah ditetapkan berdasarkan peraturan pelaksanaan Undang-Undang Nomor 13 Tahun 2003 tentang Ketenagakerjaan yang mengatur mengenai pengupahan.\nb. bagi perusahaan yang telah memberikan upah lebih tinggi dari upah minimum yang ditetapkan sebelum Undang-Undang ini, pengusaha dilarang mengurangi atau menurunkan upah.\n|
+|text|(1). Dalam hal perjanjian kerja waktu tertentu berakhir sebagaimana dimaksud dalam Pasal 61 ayat (1) huruf b dan huruf c, pengusaha wajib memberikan uang kompensasi kepada pekerja/ buruh.\n(2). Uang kompensasi sebagaimana dimaksud pada ayat (1) diberikan kepada pekerja/buruh sesuai dengan masa kerja pekerja/buruh di perusahaan yang bersangkutan.\n(3). Ketentuan lebih lanjut mengenai uang kompensasi diatur dalam Peraturan Pemerintah.|
 
 |1||
 |-|-|
-|insertingPoint|http://example.org/legal/peraturan/uu/2020/11/pasal/0081/versi/20201102/huruf/0046|
-|insertedPasal|http://example.org/legal/peraturan/uu/2003/13/pasal/0157A|
+|insertingPoint|http://example.org/legal/peraturan/uu/2020/11/pasal/0081/versi/20201102/huruf/0025|
+|insertedPasal|http://example.org/legal/peraturan/uu/2003/13/pasal/0088A|
 |version|2020-11-02|
-|text|(1). Selama penyelesaian perselisihan hubungan industrial, pengusaha dan pekerja/ buruh harus tetap melaksanakan kewajibannya.\n(2). Pengusaha dapat melakukan tindakan skorsing kepada pekerja/buruh yang sedang dalam proses pemutusan hubungan kerja dengan tetap membayar upah beserta hak lainnya yang biasa diterima pekerja/ buruh.\n(3). Pelaksanaan kewajiban sebagaimana dimaksud pada ayat (l) dilakukan sampai dengan selesainya proses penyelesaian perselisihan hubungan industrial sesuai tingkatannya. an » 8 RA|
+|text|(1). Hak pekerja/buruh atas upah timbul pada saat terjadi hubungan kerja antara pekerja/buruh dengan pengusaha dan berakhir pada saat putusnya hubungan kerja.\n(2). — Setiap pekerja/buruh berhak memperoleh upah yang sama untuk pekerjaan yang sama nilainya.\n(3). Pengusaha wajib membayar upah kepada pekerja/buruh sesuai dengan kesepakatan.\n(4). Pengaturan pengupahan yang ditetapkan atas kesepakatan antara pengusaha dan pekerja/buruh atau serikat pekerja/serikat buruh tidak boleh lebih rendah dari ketentuan pengupahan yang ditetapkan dalam peraturan perundang-undangan.\n(5). “Dalam hal kesepakatan sebagaimana dimaksud pada ayat (4) lebih rendah atau bertentangan dengan peraturan perundang-undangan, kesepakatan tersebut batal demi hukum dan pengaturan pengupahan dilaksanakan sesuai dengan ketentuan peraturan perundang-undangan.\n(6). Pengusaha yang karena kesengajaan atau kelalaiannya mengakibatkan keterlambatan pembayaran upah, dikenakan denda sesuai dengan persentase tertentu dari upah pekerja/ buruh.\n(7). Pekerja/buruh yang melakukan pelanggaran karena kesengajaan atau kelalaiannya dapat dikenakan denda. (8 Pemerintah mengatur pengenaan denda kepada pengusaha dan/atau pekerja/ buruh dalam pembayaran upah.|
 
 |2||
 |-|-|
-|insertingPoint|http://example.org/legal/peraturan/uu/2020/11/pasal/0081/versi/20201102/huruf/0042|
-|insertedPasal|http://example.org/legal/peraturan/uu/2003/13/pasal/0154A|
+|insertingPoint|http://example.org/legal/peraturan/uu/2020/11/pasal/0081/versi/20201102/huruf/0025|
+|insertedPasal|http://example.org/legal/peraturan/uu/2003/13/pasal/0088B|
 |version|2020-11-02|
-|text|(1). Pemutusan hubungan kerja dapat terjadi karena alasan:\na. perusahaan melakukan penggabungan, peleburan, pengambilalihan, atau pemisahan perusahaan dan pekerja/buruh tidak bersedia melanjutkan hubungan kerja atau pengusaha tidak bersedia menerima pekerja/ buruh,\nb. perusahaan melakukan efisiensi diikuti dengan penutupan perusahaan atau tidak diikuti dengan penutupan perusahaan yang disebabkan perusahaan mengalami kerugian,\nc. perusahaan tutup yang disebabkan karena perusahaan mengalami kerugian secara terus menerus selama 2 (dua) tahun,\nd. perusahaan tutup yang disebabkan keadaan memaksa (force majeur).\ne. perusahaan dalam keadaan penundaan kewajiban pembayaran utang,\nf. perusahaan pailit,\ng. adanya permohonan pemutusan hubungan kerja yang diajukan oleh pekerja/buruh dengan alasan pengusaha melakukan perbuatan sebagai berikut:\n1. menganiaya, menghina secara kasar atau mengancam pekerja/ buruh, .554 -\n2. membujuk dan/atau menyuruh pekerja/buruh untuk melakukan perbuatan yang bertentangan dengan peraturan perundang-undangan,\n3. tidak membayar upah tepat pada waktu yang telah ditentukan selama 3 (tiga) bulan berturut-turut atau lebih, meskipun pengusaha membayar upah secara tepat waktu sesudah itu:\n4. tidak melakukan kewajiban yang telah dijanjikan kepada pekerja/ buruh,\n5. memerintahkan pekerja/ buruh untuk melaksanakan pekerjaan di luar yang diperjanjikan, atau\n6. memberikan pekerjaan yang membahayakan jiwa, keselamatan, kesehatan, dan kesusilaan pekerja/buruh sedangkan pekerjaan tersebut tidak dicantumkan pada perjanjian kerja,\n\nh. adanya putusan lembaga penyelesaian perselisihan hubungan industrial yang menyatakan pengusaha tidak melakukan perbuatan sebagaimana dimaksud pada huruf g terhadap permohonan yang diajukan oleh pekerja/buruh dan pengusaha memutuskan untuk melakukan pemutusan hubungan kerja, 1 pekerja/buruh mengundurkan diri atas kemauan sendiri dan harus memenuhi syarat:\n1. mengajukan permohonan pengunduran diri secara tertulis selambat-lambatnya 30 (tiga puluh) hari sebelum tanggal mulai pengunduran diri,\n2. tidak terikat dalam ikatan dinas, dan\n3. tetap melaksanakan kewajibannya sampai tanggal mulai pengunduran diri, » REPUBLIK INDONESIA j. pekerja/buruh mangkir selama 5 (lima) hari kerja atau lebih berturut-turut tanpa keterangan secara tertulis yang dilengkapi dengan bukti yang sah dan telah dipanggil oleh pengusaha 2 (dua) kali secara patut dan tertulis, k. pekerja/buruh melakukan pelanggaran ketentuan yang diatur dalam perjanjian kerja, peraturan perusahaan, atau perjanjian kerja bersama dan sebelumnya telah diberikan surat peringatan pertama, kedua, dan ketiga secara berturut-turut masing-masing berlaku untuk paling lama 6 (enam) bulan kecuali ditetapkan lain dalam perjanjian kerja, peraturan perusahaan, atau perjanjian kerja bersama,\n1. pekerja/buruh tidak dapat melakukan pekerjaan selama 6 (enam) bulan akibat ditahan pihak yang berwajib karena diduga melakukan tindak pidana, m. pekerja/buruh mengalami sakit berkepanjangan atau cacat akibat kecelakaan kerja dan tidak dapat melakukan pekerjaannya setelah melampaui batas 12 (dua belas) bulan, n. pekerja/buruh memasuki usia pensiun, atau Oo. pekerja/buruh meninggal dunia.\n\n\n\n(2). Selain alasan pemutusan hubungan kerja sebagaimana dimaksud pada ayat (1), dapat ditetapkan alasan pemutusan hubungan kerja lainnya dalam perjanjian kerja, peraturan perusahaan, atau perjanjian kerja bersama sebagaimana dimaksud dalam Pasal 61 ayat (1).\n(3). Ketentuan lebih lanjut mengenai tata cara pemutusan hubungan kerja diatur dalam Peraturan Pemerintah.|
+|text|(1). Upah ditetapkan berdasarkan: a satuan waktu, dan/atau b. satuan hasil.\n(2). — Ketentuan lebih lanjut mengenai upah berdasarkan satuan waktu dan/atau satuan hasil sebagaimana dimaksud pada ayat (1) diatur dalam Peraturan Pemerintah.|
 
 # Query_008
 
@@ -502,22 +520,22 @@ LIMIT 3
 result:
 |0||
 |-|-|
-|deletingPoint|http://example.org/legal/peraturan/uu/2020/11/pasal/0081/versi/20201102/huruf/0062|
-|deletedPasal|http://example.org/legal/peraturan/uu/2003/13/pasal/0184|
+|deletingPoint|http://example.org/legal/peraturan/uu/2020/11/pasal/0081/versi/20201102/huruf/0018|
+|deletedPasal|http://example.org/legal/peraturan/uu/2003/13/pasal/0064|
 |version|2020-11-02|
 |text||
 
 |1||
 |-|-|
-|deletingPoint|http://example.org/legal/peraturan/uu/2020/11/pasal/0081/versi/20201102/huruf/0062|
-|deletedPasal|http://example.org/legal/peraturan/uu/2003/13/pasal/0184|
+|deletingPoint|http://example.org/legal/peraturan/uu/2020/11/pasal/0081/versi/20201102/huruf/0018|
+|deletedPasal|http://example.org/legal/peraturan/uu/2003/13/pasal/0064|
 |version|2003-03-25|
-|text|(1). Barang siapa melanggar ketentuan sebagaimana dimaksud dalam Pasal 167 ayat (5), dikenakan sanksi pidana penjara paling singkat 1 (satu) tahun dan paling lama 5 (lima) tahun dan/atau denda paling sedikit Rp 100.000.000,00 (seratus juta rupiah) dan paling banyak Rp 500.000.000,00 (lima ratus juta rupiah).\n(2). Tindak pidana sebagaimana dimaksud dalam ayat (1) merupakan tindak pidana kejahatan.|
+|text|Perusahaan dapat menyerahkan sebagian pelaksanaan pekerjaan kepada perusahaan lainnya melalui perjanjian pemborongan pekerjaan atau penyediaan jasa pekerja/buruh yang dibuat secara tertulis.|
 
 |2||
 |-|-|
-|deletingPoint|http://example.org/legal/peraturan/uu/2020/11/pasal/0081/versi/20201102/huruf/0061|
-|deletedPasal|http://example.org/legal/peraturan/uu/2003/13/pasal/0172|
+|deletingPoint|http://example.org/legal/peraturan/uu/2020/11/pasal/0081/versi/20201102/huruf/0057|
+|deletedPasal|http://example.org/legal/peraturan/uu/2003/13/pasal/0168|
 |version|2020-11-02|
 |text||
 
@@ -544,6 +562,7 @@ SELECT ?deletingPoint ?deletedPasal ?version ?text WHERE {
   ?allPasalVersion legal:teks ?text .
   ?allPasalVersion legal:tanggal ?version .
 }
+ORDER BY ?deletingPoint ?deletedPasal ?version ?text
 LIMIT 3
 
 ```
@@ -551,24 +570,24 @@ LIMIT 3
 result:
 |0||
 |-|-|
-|deletingPoint|http://example.org/legal/peraturan/uu/2020/11/pasal/0081/versi/20201102/huruf/0062|
-|deletedPasal|http://example.org/legal/peraturan/uu/2003/13/pasal/0184|
-|version|2020-11-02|
-|text||
+|deletingPoint|http://example.org/legal/peraturan/uu/2020/11/pasal/0081/versi/20201102/huruf/0005|
+|deletedPasal|http://example.org/legal/peraturan/uu/2003/13/pasal/0043|
+|version|2003-03-25|
+|text|(1). Pemberi kerja yang menggunakan tenaga kerja asing harus memiliki rencana penggunaan tenaga kerja asing yang disahkan oleh Menteri atau pejabat yang ditunjuk.\n(2). Rencana penggunaan tenaga kerja asing sebagaimana dimaksud dalam ayat (1) sekurang-kurangnya me muat keterangan :\na. alasan penggunaan tenaga kerja asing,\nb. jabatan dan/atau kedudukan tenaga kerja asing dalam struktur organisasi perusahaan yang bersangkutan,\nc. jangka waktu penggunaan tenaga kerja asing, dan\nd. penunjukan tenaga kerja warga negara Indonesia sebagai pendamping tenaga kerja asing yang dipekerjakan.\n\n(3). Ketentuan sebagaimana dimaksud dalam ayat (1) tidak berlaku bagi instansi pemerintah, badan-badan internasional dan perwakilan negara asing.\n(4). Ketentuan mengenai tata cara pengesahan rencana penggunaan tenaga kerja asing diatur dengan Keputu san Menteri.|
 
 |1||
 |-|-|
-|deletingPoint|http://example.org/legal/peraturan/uu/2020/11/pasal/0081/versi/20201102/huruf/0062|
-|deletedPasal|http://example.org/legal/peraturan/uu/2003/13/pasal/0184|
-|version|2003-03-25|
-|text|(1). Barang siapa melanggar ketentuan sebagaimana dimaksud dalam Pasal 167 ayat (5), dikenakan sanksi pidana penjara paling singkat 1 (satu) tahun dan paling lama 5 (lima) tahun dan/atau denda paling sedikit Rp 100.000.000,00 (seratus juta rupiah) dan paling banyak Rp 500.000.000,00 (lima ratus juta rupiah).\n(2). Tindak pidana sebagaimana dimaksud dalam ayat (1) merupakan tindak pidana kejahatan.|
+|deletingPoint|http://example.org/legal/peraturan/uu/2020/11/pasal/0081/versi/20201102/huruf/0005|
+|deletedPasal|http://example.org/legal/peraturan/uu/2003/13/pasal/0043|
+|version|2020-11-02|
+|text||
 
 |2||
 |-|-|
-|deletingPoint|http://example.org/legal/peraturan/uu/2020/11/pasal/0081/versi/20201102/huruf/0061|
-|deletedPasal|http://example.org/legal/peraturan/uu/2003/13/pasal/0172|
-|version|2020-11-02|
-|text||
+|deletingPoint|http://example.org/legal/peraturan/uu/2020/11/pasal/0081/versi/20201102/huruf/0006|
+|deletedPasal|http://example.org/legal/peraturan/uu/2003/13/pasal/0044|
+|version|2003-03-25|
+|text|(1). Pemberi kerja tenaga kerja asing wajib menaati ketentuan mengenai jabatan dan standar kompetensi yang berlaku.\n(2). Ketentuan mengenai jabatan dan standar kompetensi sebagaimana dimaksud dalam ayat (1) diatur dengan Keputusan Menteri.|
 
 # Query_010
 
@@ -691,21 +710,22 @@ SELECT ?latestPasalVersion WHERE {
     } GROUP BY ?pasal
   }
 }
+ORDER BY ?latestPasalVersion
 LIMIT 3
 ```
 
 result:
 |0||
 |-|-|
-|latestPasalVersion|http://example.org/legal/peraturan/uu/2003/13/pasal/0096/versi/20201102|
+|latestPasalVersion|http://example.org/legal/peraturan/uu/2003/13/pasal/0001/versi/20030325|
 
 |1||
 |-|-|
-|latestPasalVersion|http://example.org/legal/peraturan/uu/2003/13/pasal/0004/versi/20030325|
+|latestPasalVersion|http://example.org/legal/peraturan/uu/2003/13/pasal/0002/versi/20030325|
 
 |2||
 |-|-|
-|latestPasalVersion|http://example.org/legal/peraturan/uu/2003/13/pasal/0125/versi/20030325|
+|latestPasalVersion|http://example.org/legal/peraturan/uu/2003/13/pasal/0003/versi/20030325|
 
 # Query_012
 
@@ -726,24 +746,25 @@ SELECT DISTINCT ?pasalVersion ?text WHERE {
     UNION { ?point legal:menghapus ?amendedPasalVersion }
   }
 }
+ORDER BY ?pasalVersion ?text
 LIMIT 3
 ```
 
 result:
 |0||
 |-|-|
-|pasalVersion|http://example.org/legal/peraturan/uu/2020/11/pasal/0186/versi/20201102|
-|text|Undang-Undang ini mulai berlaku pada tanggal diundangkan. Agar setiap orang mengetahuinya, memerintahkan pengundangan Undang-Undang ini dengan penempatannya dalam Lembaran Negara Republik Indonesia.|
+|pasalVersion|http://example.org/legal/peraturan/uu/2020/11/pasal/0001/versi/20201102|
+|text|Dalam Undang-Undang ini yang dimaksud dengan:\n1. Cipta Kerja adalah upaya penciptaan kerja melalui usaha kemudahan, perlindungan, dan pemberdayaan koperasi dan usaha mikro, kecil, dan menengah, peningkatan ekosistem investasi dan kemudahan berusaha, dan investasi Pemerintah Pusat dan percepatan proyek strategis nasional.\n2. Koperasi adalah koperasi sebagaimana dimaksud dalam Undang-Undang tentang Perkoperasian.\n3. Usaha Mikro, Kecil, dan Menengah yang selanjutnya disingkat UMK-M adalah usaha mikro, usaha kecil, dan usaha menengah sebagaimana dimaksud dalam Undang- Undang tentang Usaha Mikro, Kecil, dan Menengah.\n4. Perizinan Berusaha adalah legalitas yang diberikan kepada Pelaku Usaha untuk memulai dan menjalankan usaha dan/atau kegiatannya.\n5. Pemerintah Pusat adalah Presiden Republik Indonesia yang memegang kekuasaan pemerintahan negara Republik Indonesia yang dibantu oleh Wakil Presiden dan menteri sebagaimana dimaksud dalam Undang-Undang Dasar Negara Republik Indonesia Tahun 1945.\n6. Pemerintahan Daerah adalah penyelenggaraan urusan pemerintahan oleh Pemerintah Daerah dan dewan perwakilan rakyat daerah menurut asas otonomi dan tugas pembantuan dengan prinsip otonomi seluas-luasnya dalam sistem dan prinsip Negara Kesatuan Republik Indonesia sebagaimana dimaksud dalam Undang-Undang Dasar Negara Republik Indonesia Tahun 1945.\n7. Pemerintah Daerah adalah kepala daerah sebagai unsur penyelenggara Pemerintahan Daerah yang memimpin pelaksanaan urusan pemerintahan yang menjadi kewenangan daerah otonom.\n8. Pelaku Usaha adalah orang perseorangan atau badan usaha yang melakukan usaha dan/atau kegiatan pada bidang tertentu. an\n9. Badan Usaha adalah badan usaha berbentuk badan hukum atau tidak berbentuk badan hukum yang didirikan di wilayah Negara Kesatuan Republik Indonesia dan melakukan usaha dan/atau kegiatan pada bidang tertentu.\n10. Rencana Detail Tata Ruang yang selanjutnya disingkat RDTR adalah rencana secara terperinci tentang tata ruang wilayah kabupaten/kota yang dilengkapi dengan peraturan zonasi kabupaten/kota.\n11. Persetujuan Bangunan Gedung adalah perizinan yang diberikan kepada pemilik bangunan gedung untuk membangun baru, mengubah, memperluas, mengurangi, dan/atau merawat bangunan gedung sesuai dengan standar teknis Bangunan Gedung.\n12. Hari adalah hari kerja sesuai dengan yang ditetapkan oleh Pemerintah Pusat.\n|
 
 |1||
 |-|-|
-|pasalVersion|http://example.org/legal/peraturan/uu/2020/11/pasal/0186/versi/20201102/text|
-|text|Undang-Undang ini mulai berlaku pada tanggal diundangkan. Agar setiap orang mengetahuinya, memerintahkan pengundangan Undang-Undang ini dengan penempatannya dalam Lembaran Negara Republik Indonesia.|
+|pasalVersion|http://example.org/legal/peraturan/uu/2020/11/pasal/0001/versi/20201102/huruf/0001/text|
+|text|Cipta Kerja adalah upaya penciptaan kerja melalui usaha kemudahan, perlindungan, dan pemberdayaan koperasi dan usaha mikro, kecil, dan menengah, peningkatan ekosistem investasi dan kemudahan berusaha, dan investasi Pemerintah Pusat dan percepatan proyek strategis nasional.|
 
 |2||
 |-|-|
-|pasalVersion|http://example.org/legal/peraturan/uu/2020/11/pasal/0185/versi/20201102|
-|text|Pada saat Undang-Undang ini mulai berlaku:\na. Peraturan pelaksanaan dari Undang-Undang ini wajib ditetapkan paling lama 3 (tiga) bulan, dan\nb. Semua peraturan pelaksanaan dari Undang-Undang yang telah diubah oleh Undang-Undang ini dinyatakan tetap berlaku sepanjang tidak bertentangan dengan Undang- Undang ini dan wajib disesuaikan paling lama 3 (tiga) bulan.\n|
+|pasalVersion|http://example.org/legal/peraturan/uu/2020/11/pasal/0001/versi/20201102/huruf/0002/text|
+|text|Koperasi adalah koperasi sebagaimana dimaksud dalam Undang-Undang tentang Perkoperasian.|
 
 # Query_012_latest
 
@@ -764,6 +785,7 @@ SELECT DISTINCT ?pasalVersion ?text WHERE {
     UNION { ?point legal:menghapus ?amendedPasalVersion }
   }
 }
+ORDER BY ?pasalVersion ?text
 LIMIT 3
 
 ```
@@ -771,18 +793,18 @@ LIMIT 3
 result:
 |0||
 |-|-|
-|pasalVersion|http://example.org/legal/peraturan/uu/2020/11/pasal/0186/versi/20201102|
-|text|Undang-Undang ini mulai berlaku pada tanggal diundangkan. Agar setiap orang mengetahuinya, memerintahkan pengundangan Undang-Undang ini dengan penempatannya dalam Lembaran Negara Republik Indonesia.|
+|pasalVersion|http://example.org/legal/peraturan/uu/2020/11/pasal/0001/versi/20201102|
+|text|Dalam Undang-Undang ini yang dimaksud dengan:\n1. Cipta Kerja adalah upaya penciptaan kerja melalui usaha kemudahan, perlindungan, dan pemberdayaan koperasi dan usaha mikro, kecil, dan menengah, peningkatan ekosistem investasi dan kemudahan berusaha, dan investasi Pemerintah Pusat dan percepatan proyek strategis nasional.\n2. Koperasi adalah koperasi sebagaimana dimaksud dalam Undang-Undang tentang Perkoperasian.\n3. Usaha Mikro, Kecil, dan Menengah yang selanjutnya disingkat UMK-M adalah usaha mikro, usaha kecil, dan usaha menengah sebagaimana dimaksud dalam Undang- Undang tentang Usaha Mikro, Kecil, dan Menengah.\n4. Perizinan Berusaha adalah legalitas yang diberikan kepada Pelaku Usaha untuk memulai dan menjalankan usaha dan/atau kegiatannya.\n5. Pemerintah Pusat adalah Presiden Republik Indonesia yang memegang kekuasaan pemerintahan negara Republik Indonesia yang dibantu oleh Wakil Presiden dan menteri sebagaimana dimaksud dalam Undang-Undang Dasar Negara Republik Indonesia Tahun 1945.\n6. Pemerintahan Daerah adalah penyelenggaraan urusan pemerintahan oleh Pemerintah Daerah dan dewan perwakilan rakyat daerah menurut asas otonomi dan tugas pembantuan dengan prinsip otonomi seluas-luasnya dalam sistem dan prinsip Negara Kesatuan Republik Indonesia sebagaimana dimaksud dalam Undang-Undang Dasar Negara Republik Indonesia Tahun 1945.\n7. Pemerintah Daerah adalah kepala daerah sebagai unsur penyelenggara Pemerintahan Daerah yang memimpin pelaksanaan urusan pemerintahan yang menjadi kewenangan daerah otonom.\n8. Pelaku Usaha adalah orang perseorangan atau badan usaha yang melakukan usaha dan/atau kegiatan pada bidang tertentu. an\n9. Badan Usaha adalah badan usaha berbentuk badan hukum atau tidak berbentuk badan hukum yang didirikan di wilayah Negara Kesatuan Republik Indonesia dan melakukan usaha dan/atau kegiatan pada bidang tertentu.\n10. Rencana Detail Tata Ruang yang selanjutnya disingkat RDTR adalah rencana secara terperinci tentang tata ruang wilayah kabupaten/kota yang dilengkapi dengan peraturan zonasi kabupaten/kota.\n11. Persetujuan Bangunan Gedung adalah perizinan yang diberikan kepada pemilik bangunan gedung untuk membangun baru, mengubah, memperluas, mengurangi, dan/atau merawat bangunan gedung sesuai dengan standar teknis Bangunan Gedung.\n12. Hari adalah hari kerja sesuai dengan yang ditetapkan oleh Pemerintah Pusat.\n|
 
 |1||
 |-|-|
-|pasalVersion|http://example.org/legal/peraturan/uu/2020/11/pasal/0186/versi/20201102/text|
-|text|Undang-Undang ini mulai berlaku pada tanggal diundangkan. Agar setiap orang mengetahuinya, memerintahkan pengundangan Undang-Undang ini dengan penempatannya dalam Lembaran Negara Republik Indonesia.|
+|pasalVersion|http://example.org/legal/peraturan/uu/2020/11/pasal/0001/versi/20201102/huruf/0001/text|
+|text|Cipta Kerja adalah upaya penciptaan kerja melalui usaha kemudahan, perlindungan, dan pemberdayaan koperasi dan usaha mikro, kecil, dan menengah, peningkatan ekosistem investasi dan kemudahan berusaha, dan investasi Pemerintah Pusat dan percepatan proyek strategis nasional.|
 
 |2||
 |-|-|
-|pasalVersion|http://example.org/legal/peraturan/uu/2020/11/pasal/0185/versi/20201102|
-|text|Pada saat Undang-Undang ini mulai berlaku:\na. Peraturan pelaksanaan dari Undang-Undang ini wajib ditetapkan paling lama 3 (tiga) bulan, dan\nb. Semua peraturan pelaksanaan dari Undang-Undang yang telah diubah oleh Undang-Undang ini dinyatakan tetap berlaku sepanjang tidak bertentangan dengan Undang- Undang ini dan wajib disesuaikan paling lama 3 (tiga) bulan.\n|
+|pasalVersion|http://example.org/legal/peraturan/uu/2020/11/pasal/0001/versi/20201102/huruf/0002/text|
+|text|Koperasi adalah koperasi sebagaimana dimaksud dalam Undang-Undang tentang Perkoperasian.|
 
 # Query_013
 
@@ -799,21 +821,22 @@ SELECT DISTINCT ?pasalVersion WHERE {
   ?document legal:disahkanPada ?legalizedDate
   FILTER(year(?legalizedDate) > 2001)
 }
+ORDER BY ?pasalVersion
 LIMIT 3
 ```
 
 result:
 |0||
 |-|-|
-|pasalVersion|http://example.org/legal/peraturan/uu/2009/39/pasal/0045/versi/20201102|
+|pasalVersion|http://example.org/legal/peraturan/uu/2002/28/pasal/0008/versi/20201102|
 
 |1||
 |-|-|
-|pasalVersion|http://example.org/legal/peraturan/uu/2009/39/pasal/0044/versi/20201102|
+|pasalVersion|http://example.org/legal/peraturan/uu/2002/28/pasal/0009/versi/20201102|
 
 |2||
 |-|-|
-|pasalVersion|http://example.org/legal/peraturan/uu/2009/39/pasal/0031/versi/20201102|
+|pasalVersion|http://example.org/legal/peraturan/uu/2002/28/pasal/0010/versi/20201102|
 
 # Query_014
 
@@ -831,24 +854,25 @@ SELECT ?ayat ?text ?citation WHERE {
   ?ayat legal:teks ?textRef .
   OPTIONAL {?textRef legal:merujuk ?citation}
 }
+ORDER BY ?ayat ?text ?citation
 LIMIT 3
 ```
 
 result:
 |0||
 |-|-|
-|ayat|http://example.org/legal/peraturan/uu/2015/9/pasal/0402A/versi/20201102/text|
-|text|Pembagian urusan pemerintahan konkuren antara Pemerintah Pusat dan Daerah Provinsi serta Daerah Kabupaten/Kota sebagaimana tercantum dalam Lampiran Undang Nomor 23 Tahun 2014 tentang Pemerintahan Daerah sebagaimana telah diubah terakhir dengan Undang-Undang Nomor 9 Tahun 2015 tentang Perubahan Kedua atas Undang-Undang Nomor 23 Tahun 2014 tentang Pemerintahan Daerah harus dibaca dan dimaknai sesuai dengan ketentuan yang diatur dalam Undang-Undang tentang Cipta Kerja.|
+|ayat|http://example.org/legal/peraturan/uu/1983/6/pasal/0027B/versi/20201102/ayat/0001|
+|text|Wajib Pajak diberikan imbalan bunga dalam hal pengajuan keberatan, permohonan banding, atau permohonan peninjauan kembali yang dikabulkan sebagian atau seluruhnya sehingga menyebabkan kelebihan pembayaran pajak.|
 
 |1||
 |-|-|
-|ayat|http://example.org/legal/peraturan/uu/2015/9/pasal/0292A/versi/20201102/ayat/0002|
-|text|Pemberian anggaran sebagaimana dimaksud pada ayat (1) diatur dalam Peraturan Pemerintah.|
+|ayat|http://example.org/legal/peraturan/uu/1983/6/pasal/0027B/versi/20201102/ayat/0001/text|
+|text|Wajib Pajak diberikan imbalan bunga dalam hal pengajuan keberatan, permohonan banding, atau permohonan peninjauan kembali yang dikabulkan sebagian atau seluruhnya sehingga menyebabkan kelebihan pembayaran pajak.|
 
 |2||
 |-|-|
-|ayat|http://example.org/legal/peraturan/uu/2015/9/pasal/0292A/versi/20201102/ayat/0002/text|
-|text|Pemberian anggaran sebagaimana dimaksud pada ayat (1) diatur dalam Peraturan Pemerintah.|
+|ayat|http://example.org/legal/peraturan/uu/1983/6/pasal/0027B/versi/20201102/ayat/0002|
+|text|Imbalan bunga sebagaimana dimaksud pada ayat (1) diberikan terhadap kelebihan pembayaran pajak paling banyak sebesar jumlah lebih bayar yang disetujui Wajib Pajak dalam pembahasan akhir hasil pemeriksaan atas Surat Pemberitahuan yang menyatakan lebih bayar yang telah diterbitkan:\na. Surat Ketetapan Pajak Kurang Bayar,\nb. Surat Ketetapan Pajak Kurang Bayar Tambahan,\nc. Surat Ketetapan Pajak Lebih Bayar, atau\nd. Surat Ketetapan Pajak Nihil.\n|
 
 # Query_017
 
@@ -1318,58 +1342,59 @@ WHERE {
   ?amender legal:bagianDari* ?amenderDoc .
   ?amenderDoc a legal:Peraturan
 }
+ORDER BY ?doc ?amenderDoc
 LIMIT 10
 ```
 
 result:
 |0||
 |-|-|
-|doc|http://example.org/legal/peraturan/uu/2014/7|
+|doc|http://example.org/legal/peraturan/uu/1981/2|
 |amenderDoc|http://example.org/legal/peraturan/uu/2020/11|
 
 |1||
 |-|-|
-|doc|http://example.org/legal/peraturan/uu/2000/36|
+|doc|http://example.org/legal/peraturan/uu/1983/6|
 |amenderDoc|http://example.org/legal/peraturan/uu/2020/11|
 
 |2||
 |-|-|
-|doc|http://example.org/legal/peraturan/uu/2009/39|
+|doc|http://example.org/legal/peraturan/uu/1983/7|
 |amenderDoc|http://example.org/legal/peraturan/uu/2020/11|
 
 |3||
 |-|-|
-|doc|http://example.org/legal/peraturan/uu/2009/41|
+|doc|http://example.org/legal/peraturan/uu/1983/8|
 |amenderDoc|http://example.org/legal/peraturan/uu/2020/11|
 
 |4||
 |-|-|
-|doc|http://example.org/legal/peraturan/uu/2012/2|
+|doc|http://example.org/legal/peraturan/uu/1992/25|
 |amenderDoc|http://example.org/legal/peraturan/uu/2020/11|
 
 |5||
 |-|-|
-|doc|http://example.org/legal/peraturan/uu/2003/19|
+|doc|http://example.org/legal/peraturan/uu/1997/10|
 |amenderDoc|http://example.org/legal/peraturan/uu/2020/11|
 
 |6||
 |-|-|
-|doc|http://example.org/legal/peraturan/uu/1999/5|
+|doc|http://example.org/legal/peraturan/uu/1997/5|
 |amenderDoc|http://example.org/legal/peraturan/uu/2020/11|
 
 |7||
 |-|-|
-|doc|http://example.org/legal/peraturan/uu/2016/7|
+|doc|http://example.org/legal/peraturan/uu/1999/36|
 |amenderDoc|http://example.org/legal/peraturan/uu/2020/11|
 
 |8||
 |-|-|
-|doc|http://example.org/legal/peraturan/uu/2009/28|
+|doc|http://example.org/legal/peraturan/uu/1999/41|
 |amenderDoc|http://example.org/legal/peraturan/uu/2020/11|
 
 |9||
 |-|-|
-|doc|http://example.org/legal/peraturan/uu/1983/6|
+|doc|http://example.org/legal/peraturan/uu/1999/5|
 |amenderDoc|http://example.org/legal/peraturan/uu/2020/11|
 
 # Query_024
@@ -1549,6 +1574,7 @@ WHERE {
   ?bab legal:judul ?title.
   FILTER REGEX(str(?title), "KERJA")
 }
+ORDER BY ?bab ?title
 LIMIT 10
 
 ```
@@ -1556,53 +1582,53 @@ LIMIT 10
 result:
 |0||
 |-|-|
-|bab|http://example.org/legal/peraturan/uu/2014/7/bab/0012|
-|title|KERJA SAMA PERDAGANGAN INTERNASIONAL|
+|bab|http://example.org/legal/peraturan/uu/1962/12/bab/0005|
+|title|RENCANA KERJA TAHUNAN DAN PENGAWASAN OLEH PEMERINTAH. Pasal 18. (1) Selambat - lambatnya 3 bulan sebelum tahun buku baru mulai berjalan Direksi menyampaikan re ncana kerja tahunan kepada Badan Pengawas untuk disetujui. (2) Rencana kerja tahunan memuat secara terperinci proyek - proyek yang akan dilaksanakan dan untuk tiap proyek disebut anggaran pembiayaannya disertai penjelasan mengenai sumber dan asalnya, baik da ri dalam maupun luar negeri. (3) a. Segala perubahan atas rencana dimaksudkan pada ayat (1) dapat diadakan oleh Badan Pengawas setelah dirundingkan dengan Direksi. b. Badan Pengawas selekas mungkin memberikan persetujuannya atas rencana kerja tahunan deng an ketentuan, bahwa paling lambat sebulan sebelum tahun buku baru mulai berjalan rencana yang disetujuinya itu sudah sampai kepada Pemerintah untuk disahkan. c. Kecuali apabila sebelum menginjak tahun buku baru Pemerintah mengemukakan keberatan atau menol ak proyek yang dimuat dalam rencana kerja tahunan, rencana tersebut berlaku sepenuhnya. d. Pengesahan rencana kerja tahunan yang mengenai proyek - proyek yang akan dibiayai sebagian atau seluruhnya dengan kredit luar negeri dilaksanakan de ngan mengingat ketentuan tersebut dalam pasal 5 ayat (1) sub c. (4) Rencana kerja tahunan tambahan atau perubahan - perubahannya yang terjadi dalam tahun buku yang bersangkutan harus mendapat persetujuan terlebih dahulu dari Badan Pengawas dan baru dapat di jalankan setelah disahkan oleh Pemerintah. (5) Khusus mengenai proyek - proyek yang pembiayaannya direncanakan akan bersumber baik sebagian maupun seluruhnya pada kredit luar negeri dan telah disahkan Pemerintah, Pemerintah memberikan keterangan kepada Dewan Perwakilan Rakyat Gotong Royong. Pasal 19. (1) Untuk menjamin agar supaya tugas Bank dilaksanakan dalam rangka pembangunan semesta, maka Badan Pengawas dalam menentukan dan Melaksanakan kebijaksanaan Bank diawasi oleh Menteri Urusan Bank Sentral. (2) Pengawasan teknis perbankan dan perusahaan dijalankan oleh Bank Indonesia.|
 
 |1||
 |-|-|
-|bab|http://example.org/legal/peraturan/uu/2020/11/bab/0011|
-|title|PELAKSANAAN ADMINISTRASI PEMERINTAHAN UNTUK MENDUKUNG CIPTA KERJA|
+|bab|http://example.org/legal/peraturan/uu/1973/5/bab/0005|
+|title|PEMBAGIAN TUGAS DAN TATA KERJA BADAN PEMERIKSA KEUANGAN|
 
 |2||
 |-|-|
-|bab|http://example.org/legal/peraturan/uu/2020/11/bab/0004|
-|title|KETENAGAKERJAAN|
+|bab|http://example.org/legal/peraturan/uu/1979/5/bab/0004|
+|title|KERJASAMA DAN PENYELESAIAN PERSELISIHAN|
 
 |3||
 |-|-|
-|bab|http://example.org/legal/peraturan/uu/2007/40/bab/0004|
-|title|RENCANA KERJA, LAPORAN TAHUNAN, DAN PENGGUNAAN LABA|
+|bab|http://example.org/legal/peraturan/uu/1992/11/bab/0003|
+|title|DANA PENSIUN PEMBERI KERJA Bagian Pertama Pembentukan dan Tata Cara Pengesahan|
 
 |4||
 |-|-|
-|bab|http://example.org/legal/peraturan/uu/2014/6/bab/0011|
-|title|KERJA SAMA DESA Pasal 91 Desa dapat mengadakan kerja sama dengan Desa lain dan/atau kerja sama dengan pihak ketiga.|
+|bab|http://example.org/legal/peraturan/uu/1997/16/bab/0006|
+|title|KOORDINASI DAN KERJA SAMA Pasal 17 (1) Koordinasi dan kerja sama penyelenggaraan statistik dilakukan oleh Badan dengan instansi pemerintah dan masyarakat, di tingkat pusat dan daerah. (2) Dalam rangka mewujudkan dan mengembangkan Sistem Statistik Nasional, Badan bekerja sama den gan instansi pemerintah dan masyarakat untuk membangun pembakuan konsep, defenisi, klasifikasi dan ukuran - ukuran. (3) Koordinasi dan kerja sama sebagaimana dimaksud dalam ayat (1) dilaksanakan atas dasar kemitraan dan dengan tetap mengantisipasi serta mene rapkan perkembangan ilmu pengetahuan dan tehnologi. (4) Ketentuan mengenai tata cara dan lingkup koordinasi dan kerja sama penyelenggaraan statistik antara Badan, instansi pemerintah, dan masyarakat diatur lebih lanjut dengan Keputusan Presiden. Pasal 18 (1) Kerja sama penyelenggaraan statistik dapat juga dilakukan oleh Badan, instansi pemerintah, dan atau masyarakat dengan lembaga internasional, negara asing, atau lembaga swasta asing sesuai dengan peraturan perundang - undangan yang berlaku. (2) Kerja sama penyelenggara statistik sebagaimana dimaksud dalam ayat (1) didasarkan pada prinsip bahwa penyelenggara utama adalah Badan, instansi pemerintah atau masyarakat Indonesia.|
 
 |5||
 |-|-|
-|bab|http://example.org/legal/peraturan/uu/2017/18/bab/0007|
-|title|PELAKSANA PENEMPATAN PEKERJA MIGRAN INDONESIA|
+|bab|http://example.org/legal/peraturan/uu/1997/25/bab/0004|
+|title|PERENCANAAN TENAGA KERJA DAN INFORMASI KETENAGAKERJAAN|
 
 |6||
 |-|-|
-|bab|http://example.org/legal/peraturan/uu/2017/18/bab/0004|
-|title|LAYANAN TERPADU SATU ATAP PENEMPATAN DAN PELINDUNGAN PEKERJA MIGRAN INDONESIA|
+|bab|http://example.org/legal/peraturan/uu/1997/25/bab/0005|
+|title|HUBUNGAN KERJA|
 
 |7||
 |-|-|
-|bab|http://example.org/legal/peraturan/uu/2017/18/bab/0003|
-|title|PELINDUNGAN PEKERJA MIGRAN INDONESIA|
+|bab|http://example.org/legal/peraturan/uu/1997/25/bab/0008|
+|title|PELATIHAN KERJA Pasal 119 Pelatihan kerja diselenggarakan dan diarahkan untuk membekali dan/atau meningkatkan dan/atau mengembangkan keterampilan atau keahlian kerja guna meningkatkan kemampuan, produktivitas, dan kesejahteraan tenaga kerja. Pasal 120 (Jd) Pelatihan kerja dilaksanakan dengan memperhatikan kebutuhan pasar kerja dan dunia usaha, baik di dalam maupun di luar hubungan kerja. (2) Pelatihan kerja diselenggarakan berdasarkan program pelatihan yang mengacu pada standar kualifikasi keterampilan atau keahlian. (3) Pelatihan kerja dilakukan secara berjenjang. FAX NG 19 W, 17 Ng 07 Kp — 56 — Pasal 121 Setiap tenaga kerja berhak untuk memperoleh dan/atau meningkatkan dan/atau mengembangkan keterampilan dan/atau keahlian kerja sesuai dengan bakat, minat, dan kemampuannya melalui pelatihan kerja. Pasal 122 (Jd) Setiap pekerja memiliki kesempatan yang sama untuk mengikuti pelatihan kerja sesuai dengan bidang tugasnya. (2) Pengusaha bertanggung jawab atas pemberian kesempatan kepada pekerjanya untuk meningkatkan dan/atau mengembangkan keterampilan dan/atau keahlian kerja melalui pelatihan kerja. Pasal 123 Pelatihan kerja diselenggarakan oleh lembaga pelatihan kerja pemerintah, swasta, dan perusahaan yang dilaksanakan di tempat kerja dan tempat pelatihan kerja. Pasal 124 (dl) Pelatihan kerja yang diselenggarakan oleh lembaga pelatihan kerja swasta wajib memperoleh izin Menteri. (2) Untuk memperoleh izin sebagaimana dimaksud pada ayat (1), lembaga pelatihan kerja swasta harus berbentuk badan hukum Indonesia dan mengikuti tata cara perizinan sesuai dengan ketentuan peraturan perundang-undangan yang berlaku. GP . AF S 9 7 W Y, V7 Ni 77 TN Nay, Mn '£ Lapol — 57 — (3) Tata cara perizinan penyelenggaraan pelatihan kerja oleh lembaga pelatihan kerja swasta ditetapkan oleh Menteri. Pasal 125 Penyelenggara pelatihan kerja wajib memenuhi persyaratan: a. tersedianya tenaga kepelatihan, b. tersedianya dana bagi kelangsungan kegiatan penyelenggaraan pelatihan kerja, Cc. kurikulum: d. akreditasi: e. sarana dan prasarana pelatihan kerja. Pasal 126 (d) Pemerintah dapat menghentikan pelaksanaan penyelenggaraan pelatihan kerja, apabila di dalam pelaksanaannya ternyata: a. tidak sesuai dengan arah pelatihan kerja sebagaimana dimaksud dalam Pasal 119: b. tidak memenuhi persyaratan sebagaimana dimaksud dalam Pasal 125. (2) Penghentian pelaksanaan penyelenggaraan pelatihan kerja sebagaimana dimaksud pada ayat (1), dapat mengakibatkan dicabutnya izin penyelenggaraan pelatihan kerja. FAX NG 19 W, 17 Ng 07 Kp — 58 — Pasal 127 (l) Tenaga kerja berhak memperoleh pengakuan kualifikasi keterampilan dan/atau keahlian kerja setelah mengikuti pelatihan kerja yang diselenggarakan Pemerintah, atau swasta, atau perusahaan. (2) Pengakuan kualifikasi keterampilan atau keahlian kerja sebagaimana dimaksud pada ayat (1), dilakukan melalui sertifikasi keterampilan atau keahlian kerja. (3) Sertifikasi keterampilan atau keahlian kerja sebagaimana dimaksud pada ayat (2), dapat diikuti oleh tenaga kerja yang berpengalaman kerja. (4) Untuk melaksanakan sertifikasi keterampilan atau keahlian kerja dibentuk lembaga sertifikasi berdasarkan profesi yang unsurnya terdiri dari Pemerintah, asosiasi profesi, asosiasi perusahaan, serikat pekerja, dan pakar di bidangnya. Pasal 128 Pelatihan kerja yang pesertanya terdapat tenaga kerja penyandang cacat dilaksanakan dengan memperhatikan jenis, derajat kecacatan, dan kemampuan tenaga kerja penyandang cacat yang bersangkutan. Pasal 129 Untuk mendukung peningkatan pelatihan kerja dalam rangka pembangunan ketenagakerjaan, dikembangkan sistem pelatihan kerja nasional. FAX NG 19 W, 17 Ng 07 Kp — 5 9 — Pasal 130 Pemerintah melakukan pembinaan program dan informasi pelatihan kerja, baik yang diselenggarakan oleh Pemerintah, swasta, maupun perusahaan. Pasal 131 (d) Untuk memenuhi kebutuhan tenaga kerja pada pasar kerja dan dunia usaha, pelatihan kerja dapat diselenggarakan dengan sistem pemagangan. (2) Pemagangan dimaksudkan untuk meningkatkan dan/atau mengembangkan keterampilan atau keahlian kerja dengan bekerja secara langsung dalam proses produksi barang atau jasa di perusahaan. Pasal 132 (d) Pemagangan wajib diselenggarakan berdasarkan program pemagangan yang disusun berdasarkan persyaratan dan kualifikasi jabatan. (2) Program pemagangan sebagaimana dimaksud pada ayat (1), dapat dilaksanakan secara berjenjang sesuai dengan jenjang jabatan dalam perusahaan. FAX NG 19 W, 17 Ng 07 Kp — 60 — Pasal 133 (d) Pemagangan dilaksanakan atas dasar perjanjian pemagangan antara peserta dan pengusaha. (2) Perjanjian pemagangan sebagaimana dimaksud pada ayat (1), sekurang-kurangnya memuat ketentuan hak serta kewajiban peserta dan pengusaha serta jangka waktu pemagangan. (3) Pemagangan yang diselenggarakan tidak melalui perjanjian pemagangan sebagaimana dimaksud pada ayat (2), dianggap tidak sah dan status peserta dianggap sebagai pekerja perusahaan. Pasal 134 Tenaga kerja yang telah mengikuti program pemagangan berhak atas pengakuan kualifikasi keterampilan atau keahlian kerja dari perusahaan atau Pemerintah. Pasal 135 Pemagangan dapat dilaksanakan di perusahaan sendiri maupun bekerjasama dengan tempat penyelenggarakan pelatihan kerja atau perusahaan lain, baik di dalam maupun di luar wilayah Indonesia. Pasal 136 (l) Pemagangan yang dilaksanakan di luar wilayah Indonesia harus mendapat izin dari Menteri. — el — (2) Untuk memperoleh izin sebagaimana dimaksud pada ayat (1), penyelenggara pemagangan harus berbentuk badan hukum Indonesia sesuai dengan ketentuan peraturan perundang-undangan yang berlaku. (3) Tata cara perizinan pemagangan di luar wilayah Indonesia sebagaimana dimaksud pada ayat (1) dan ayat (2), diatur lebih lanjut oleh Menteri. Pasal 137 (l) Penyelenggaraan pemagangan ke luar wilayah Indonesia wajib memperhatikan: a. harkat dan martabat bangsa Indonesia, b. penguasaan keterampilan dan keahlian yang lebih tinggi, c. perlindungan dan kesejahteraan peserta pemagangan. (2) Pemerintah dapat menghentikan pelaksanaan pemagangan ke luar wilayah Indonesia apabila di dalam pelaksanaannya ternyata tidak sesuai dengan ketentuan tersebut pada ayat (1). Pasal 138 (d) Pemerintah dapat mewajibkan kepada perusahaan yang memenuhi persyaratan yang ditetapkan oleh Pemerintah untuk melaksanakan pelatihan kerja pemagangan. (2) Dalam menetapkan persyaratan sebagaimana dimaksud pada ayat (Jd), Pemerintah harus memperhatikan kepentingan perusahaan. FAX NG 19 W, 17 Ng 07 Kp — 62 — Pasal 139 (d) Untuk memberikan saran dan pertimbangan dalam penetapan kebijakan pelatihan kerja dan pemagangan dibentuk Dewan Pelatihan Kerja Nasional yang terdiri dari unsur Tripartit yang diperluas. (2) Anggota Dewan Pelatihan Kerja Nasional sebagaimana dimaksud pada ayat (1), diangkat dan diberhentikan oleh Presiden. Pasal 140 (d) Pembinaan pelatihan kerja dan pemagangan ditujukan ke arah peningkatan relevansi, kualitas, dan efisiensi penyelenggaraan pelatihan kerja dan pemagangan dalam rangka meningkatkan produktivitas. (2) Peningkatan produktivitas sebagaimana dimaksud pada ayat (1), dilakukan melalui pengembangan budaya produktif, etos kerja, teknologi, dan efisiensi kegiatan ekonomi, menuju terwujudnya produktivitas nasional. Pasal 141 (d) Untuk memberikan saran dan pertimbangan dalam penetapan kebijakan peningkatan produktivitas nasional, dibentuk lembaga produktivitas nasional. (2) Anggota lembaga produktivitas nasional sebagaimana dimaksud pada ayat (1), diangkat dan diberhentikan oleh Presiden. — 63 — Pasal 142 Ketentuan mengenai: a. tata cara penetapan standar kualifikasi keterampilan atau keahlian kerja, b. organisasi, tata kerja, dan akreditasi lembaga sertifikasi keterampilan atau keahlian kerja, c. bentuk, mekanisme, dan kelembagaan sistem pelatihan kerja nasional: d. persyaratan — perusahaan yang diwajibkan melaksanakan pemagangan, e. organisasi dan tata kerja Dewan Pelatihan Kerja Nasional, f. organisasi dan tata kerja lembaga produktivitas nasional, diatur lebih lanjut dengan Peraturan Pemerintah.|
 
 |8||
 |-|-|
-|bab|http://example.org/legal/peraturan/uu/2017/18/bab/0002|
-|title|PEKERJA MIGRAN INDONESIA|
+|bab|http://example.org/legal/peraturan/uu/1997/25/bab/0009|
+|title|PELAYANAN PENEMPATAN TENAGA KERJA Pasal 143 (l) Pelayanan penempatan tenaga kerja diarahkan untuk menempatkan tenaga kerja yang tepat pada pekerjaan yang tepat sesuai dengan keterampilan, keahlian, dan kemampuan. (2) Pelayanan penempatan tenaga kerja dilaksanakan dengan memperhatikan kodrat, harkat, martabat, perlindungan, dan kesejahteraan tenaga kerja tanpa diskriminasi. — 64 — Pasal 144 Setiap tenaga kerja mempunyai hak dan kesempatan yang sama untuk memperoleh pelayanan penempatan tenaga kerja di dalam dan/atau di luar wilayah Indonesia. Pasal 145 Pelayanan penempatan tenaga kerja dapat diselenggarakan oleh Pemerintah dan/atau masyarakat. Pasal 146 (d) Pelayanan penempatan tenaga kerja yang diselenggarakan oleh masyarakat hanya dapat dilakukan atas dasar izin Menteri. (2) Untuk memperoleh izin sebagaimana dimaksud pada ayat (1), penyelenggara pelayanan penempatan tenaga kerja oleh masyarakat harus dibentuk badan hukum Indonesia sesuai dengan ketentuan peraturan perundang-undangan yang berlaku. (3) Tata cara perizinan penyelenggaraan pelayanan penempatan tenaga kerja oleh masyarakat ditetapkan oleh Menteri. Pasal 147 (l) Penyelenggara pelayanan penempatan tenaga kerja oleh masyarakat wajib memenuhi persyaratan: a. adanya tenaga kerja yang akan ditempatkan, — 6 5 — b. tersedianya dana bagi kelangsungan kegiatan penyelenggaraan pelayanan penempatan tenaga kerja, c. jaminan perlindungan bagi tenaga kerja yang ditempatkan, d. informasi pasar kerja bagi tenaga kerja yang akan ditempatkan, e. tersedianya sarana dan prasarana pendidikan dan pelatihan kerja bagi tenaga kerja yang akan ditempatkan. (2) Jaminan perlindungan sebagaimana dimaksud pada ayat (1) huruf c, meliputi: a. perjanjian penempatan secara tertulis antara penyelenggara dan pengguna tenaga kerja, b. perjanjian penempatan secara tertulis antara penyelenggara dan tenaga kerja, c. perjanjian kerja secara tertulis antara pengguna dan tenaga kerja, d. perlindungan keselamatan dan kesehatan kerja serta kesejahteraan tenaga kerja mulai keberangkatan dari daerah asal, selama bekerja, sampai dengan kembali ke daerah asal. Pasal 148 (d) Pemerintah dapat menghentikan pelaksanaan penyelenggaraan pelayanan penempatan tenaga kerja apabila di dalam pelaksanaannya ternyata: a. tidak sesuai dengan ketentuan sebagaimana dimaksud dalam Pasal 143: b. tidak sesuai dengan ketentuan sebagaimana dimaksud dalam Pasal 147. — 66 — (2) Penghentian pelaksanaan penyelenggaraan pelayanan penempatan tenaga kerja sebagaimana dimaksud pada ayat (1), dapat mengakibatkan dicabutnya izin penyelenggara pelayanan penempatan tenaga kerja. Pasal 149 Penyelenggara pelayanan penempatan tenaga kerja dapat menetapkan standar dan/atau persyaratan kualifikasi bagi tenaga kerja yang akan ditempatkan sesuai dengan persyaratan jabatan yang akan ditempati. Pasal 150 (l) Penyelenggara pelayanan penempatan tenaga kerja ke luar wilayah Indonesia harus memiliki rencana penempatan tenaga kerja yang disahkan oleh Menteri. (2) Rencana penempatan tenaga kerja sebagaimana dimaksud pada ayat (1), sekurang-kurangnya memuat keterangan tentang: a. negara tujuan, b. jumlah tenaga kerja yang akan ditempatkan, c. jenis jabatan, d. kualifikasi keterampilan dan keahlian. Pasal 151 Ketentuan mengenai persyaratan, tata cara perizinan, hak, kewajiban, dan pelaporan penyelenggara oleh masyarakat serta persyaratan tenaga kerja dalam pelayanan penempatan tenaga kerja di dalam dan/atau di luar wilayah Indonesia, diatur lebih lanjut dengan Peraturan Pemerintah. — 67 —|
 
 |9||
 |-|-|
-|bab|http://example.org/legal/peraturan/uu/2003/13/bab/0012|
-|title|PEMUTUSAN HUBUNGAN KERJA|
+|bab|http://example.org/legal/peraturan/uu/1997/25/bab/0010|
+|title|TENAGA KERJA WARGA NEGARA ASING Pasal 152 (d) Tenaga kerja warga negara asing hanya dapat bekerja di wilayah Indonesia atas dasar izin Menteri. (2) Penggunaan tenaga kerja warga negara asing dilaksanakan secara selektif dalam rangka pendayagunaan tenaga kerja Indonesia secara optimal dan alih teknologi. (3) Perusahaan yang menggunakan tenaga kerja warga negara asing wajib memiliki izin Menteri. Pasal 153 (l) Perusahaan yang mempekerjakan tenaga kerja warga negara asing wajib memiliki rencana penggunaan tenaga kerja warga negara asing yang disahkan oleh Menteri. (2) Rencana penggunaan tenaga kerja warga negara asing sebagaimana dimaksud pada ayat (1), sekurang-kurangnya memuat keterangan: a. alasan penggunaan tenaga kerja warga negara asing, b. jabatan dan/atau kedudukan tenaga kerja warga negara asing dalam struktur organisasi perusahaan yang bersangkutan, c. jangka waktu penggunaan tenaga kerja warga negara asing, d. penunjukan tenaga kerja warga negara Indonesia sebagai pendamping tenaga kerja warga negara asing yang dipekerjakan. — 68 — (3) Tata cara pengesahan rencana penggunaan tenaga kerja warga negara asing ditetapkan oleh Menteri. Pasal 154 Dalam rangka pendayagunaan dan penyediaan tenaga kerja yang sesuai dengan pembangunan nasional, Menteri menetapkan jabatan dan standar kompetensi bagi setiap tenaga kerja warga negara asing yang bekerja di perusahaan. Pasal 155 Perusahaan yang mempekerjakan tenaga kerja warga negara asing wajib: a. menunjuk tenaga kerja warga negara Indonesia sebagai tenaga pendamping tenaga kerja warga negara asing yang dipekerjakan, b. melaksanakan pendidikan dan pelatihan kerja bagi tenaga kerja warga Negara Indonesia sebagaimana dimaksud pada huruf a, yang sesuai dengan jabatan yang diduduki oleh tenaga kerja warga negara asing. Pasal 156 (Jd) Setiap perusahaan yang mempekerjakan tenaga kerja warga negara asing dikenakan pungutan untuk setiap tenaga kerja warga negara asing yang dipekerjakan. (2) Besarnya pungutan sebagaimana dimaksud pada ayat (1), ditetapkan dengan Peraturan Pemerintah. FAX NG 19 W, 17 Ng 07 Kp — 6 9 — Pasal 157 Ketentuan mengenai persyaratan, tata cara perizinan, perencanaan, pengendalian dan pengawasan, jenis jabatan, dan pelaporan dalam penggunaan tenaga kerja warga negara asing, diatur lebih lanjut dengan Peraturan Pemerintah.|
 
 # Query_028
 
