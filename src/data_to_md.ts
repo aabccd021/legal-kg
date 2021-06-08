@@ -35,7 +35,13 @@ function handleJson(node: DocumentNode): void {
   }
 
   try {
-    const json = yaml.load(readFileSync(jsonFile.path, 'utf8')) as Document;
+    const documentFile = readFileSync(jsonFile.path, 'utf8');
+    if (documentFile.length === 0) {
+      console.log(`empty ${jsonFile.path}`);
+      return;
+    }
+
+    const json = yaml.load(documentFile) as Document;
     const md = _jsonToMd(json);
 
     writeFileSync(mdFile.path, md);

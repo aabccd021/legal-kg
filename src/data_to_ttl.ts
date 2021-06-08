@@ -9,8 +9,12 @@ getDocumentData('data').forEach((node) => {
   try {
     const dataFile = nodeToFile('data', node);
     const ttlFile = nodeToFile('ttl', node);
-    const document = yaml.load(readFileSync(dataFile.path, 'utf8')) as Document;
-    const triples = triplesToTtl(yamlToTriples(document));
+    const documentFile = readFileSync(dataFile.path, 'utf8');
+    if (documentFile.length === 0) {
+      console.log('empty file');
+      return;
+    }
+    const triples = triplesToTtl(yamlToTriples(yaml.load(documentFile) as Document));
     writeFileSync(ttlFile.path, triples);
   } catch (e) {
     console.log(e);

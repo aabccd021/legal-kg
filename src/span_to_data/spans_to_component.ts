@@ -159,7 +159,10 @@ export function spansToContent(context: Context, spans: Span[]): BabSet | PasalS
       elements: map(keyToSpanMap, spansToBabWith(context, babSetNode)),
     };
   }
-  const daftarPasalNode: PasalSetNode = { nodeType: 'daftarPasal', parentNode: context.documentNode };
+  const daftarPasalNode: PasalSetNode = {
+    nodeType: 'daftarPasal',
+    parentNode: context.documentNode,
+  };
   const { keyToSpanMap } = extractSpans(context.keyIds.spanIdToPasalKeyMap, spans);
   return {
     type: 'daftarPasal',
@@ -185,7 +188,11 @@ function bagianArrToBagianSet(parentBabNode: BabNode, elements: Bagian[]): Bagia
 
 const paragrafArrToParagrafSetWith = curry(paragrafArrToParagrafSet);
 function paragrafArrToParagrafSet(parentBagianNode: BagianNode, elements: Paragraf[]): ParagrafSet {
-  return { type: 'daftarParagraf', node: { nodeType: 'daftarParagraf', parentBagianNode }, elements };
+  return {
+    type: 'daftarParagraf',
+    node: { nodeType: 'daftarParagraf', parentBagianNode },
+    elements,
+  };
 }
 
 const spansToBabWith = curry(spansToBab);
@@ -650,7 +657,11 @@ function spansToAmendedPointSet(
     description: spansToText(daftarHurufNode, 'description', preKeySpans),
     elements: chain(keyToSpanMap)
       .map(
-        spansToAmendedPointWith({ context, amendedDocumentNode, parentPointSetNode: daftarHurufNode })
+        spansToAmendedPointWith({
+          context,
+          amendedDocumentNode,
+          parentPointSetNode: daftarHurufNode,
+        })
       )
       .compact()
       .value(),

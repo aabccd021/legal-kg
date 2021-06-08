@@ -81,6 +81,7 @@ function writeToData(node: DocumentNode): void {
 
   if (!choosen || !choosen.document) {
     console.log(`${node} can't be converted to data`);
+    writeFileSync(dataFile.path, '');
     return;
   }
 
