@@ -3,7 +3,7 @@ PREFIX legal: <http://example.org/legal/ontology/>
 
 SELECT ?location (COUNT(?doc) as ?docCount)
 WHERE {
-  ?doc legal:documentHasDisahkanLocation ?location
+  ?doc legal:disahkanDi ?location
 }
 GROUP BY ?location
 ORDER BY DESC (?docCount)

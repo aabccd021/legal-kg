@@ -92,10 +92,10 @@ function _jsonToMd(doc: Document): string {
     metadataToStr('Dokumen', dokumen),
     metadataToStr('Dengan Persetujuan', denganPersetujuan),
     // ...map(_denganPersetujuan, (d) => metadata('Dengan Persetujuan', d)),
-    // mengimbangToMd('Menimbang', menimbang, 'documentMenimbang', _node),
+    // mengimbangToMd('Menimbang', menimbang, 'menimbang', _node),
     menimbangToMd(menimbang),
     mengingatToMd(mengingat),
-    // mengimbangToMd('Mengingat', mengingat, 'documentMengingat', _node),
+    // mengimbangToMd('Mengingat', mengingat, 'mengingat', _node),
     // ...flatten(babSet?.map((b) => babToMd(b, _node))),
     ...(content.type === 'babSet' ? babSetToMd(content) : content.elements.map(pasalToMd)),
   ];

@@ -1,3 +1,5 @@
+# AUTOMASI PEMBUATAN KNOWLEDGE GRAPH UNTUK PERATURAN PERUNDANG-UNDANGAN DI INDONESIA
+
 # BAB 1 PENDAHULUAN
 
 ## Latar Belakang
@@ -340,30 +342,6 @@ Saran sy: coba baca serta rangkum (di Bab 2) dan terapkan ini:
 www.ksl.stanford.edu/people/dlm/papers/ontology-tutorial-noy-mcguinness-abstract.html
 ???
 
-## Komponen Dokumen Peraturan Perundang-undangan
-
-Dokumen terdiri dari komponen dokumen. Komponen dokumen diantaranya adalah
-`bab`, `bagian`, `paragraf`, `pasal`, `ayat`, dan `point`. Setiap komponen
-dokumen merupakan entitas, dan memiliki URI. URI sebuah komponen didahului oleh
-URI dokumennya. Berikut adalah relasi antara komponen dokumen yang disediakan.
-
-TODO: Relationship antara component
-
-TODO: URI Schema, contoh input text & output URI
-
-## Amendemen
-
-## Konversi Dokumen Peraturan Perundang-undangan ke Knowledge Graph
-
-Konversi dokumen peraturan perundang-undangan dalam bentuk berkas pdf, menjadi
-knowledge graph dalam bentuk berkas turtle, akan melalui struktur data penengah
-yaitu JSON. JSON digunakan sebagai pengengah karena kompatibel dengan bahasa
-pemrograman typescript, sehingga menuliskan data ke dalam json, atau membaca
-berkas json ke dalam program tidak memerlukan suatu serialization atau parsing
-khusus.
-
-### Konversi PDF menjadi
-
 # BAB 4 IMPLEMENTASI
 
 ## OCR Ulang Berkas PDF
@@ -565,6 +543,8 @@ Jika nomor 9 berhasil terpindai:
     dengan jenjang dan kualifikasi jabatan atau pekerjaan.
 ```
 
+## Klasifikasi Dokumen
+
 ## Pengelompokan _span_ menjadi Komponen
 
 Teks yang membentuk suatu komponen terdiri dari satu atau lebih _span_, sehingga
@@ -654,11 +634,11 @@ adalah daftar pola sitasi yang berhasil dideteksi pada penelitian ini.
 | ayat ({x})                                               | ayat (1)                                                 | /uu/2003/13/pasal/169/ayat/1          |
 | Pasal {x}                                                | Pasal 156                                                | /uu/2003/13/pasal/156                 |
 | Pasal {x} ayat ({y})                                     | Pasal 156 ayat (2)                                       | /uu/2003/13/pasal/156/ayat/2          |
-| huruf {x}, {y}, ... dan {z}                              | huruf a, b, c, d, dan e                                  | /uu/2003/13/documentMenimbang/point/a |
-|                                                          |                                                          | /uu/2003/13/documentMenimbang/point/b |
-|                                                          |                                                          | /uu/2003/13/documentMenimbang/point/c |
-|                                                          |                                                          | /uu/2003/13/documentMenimbang/point/d |
-|                                                          |                                                          | /uu/2003/13/documentMenimbang/point/e |
+| huruf {x}, {y}, ... dan {z}                              | huruf a, b, c, d, dan e                                  | /uu/2003/13/menimbang/point/a |
+|                                                          |                                                          | /uu/2003/13/menimbang/point/b |
+|                                                          |                                                          | /uu/2003/13/menimbang/point/c |
+|                                                          |                                                          | /uu/2003/13/menimbang/point/d |
+|                                                          |                                                          | /uu/2003/13/menimbang/point/e |
 | huruf {x} dan {y}                                        | huruf a dan b                                            | /uu/2003/13/pasal/1/point/5/point/a   |
 |                                                          |                                                          | /uu/2003/13/pasal/1/point/5/point/b   |
 
@@ -711,9 +691,24 @@ visualization
 
 ### triple to ttl
 
+### Desain URI Dokumen
+
+### Desain URI Komponen Dokumen
+
+Dokumen terdiri dari komponen dokumen. Komponen dokumen diantaranya adalah
+`bab`, `bagian`, `paragraf`, `pasal`, `ayat`, dan `point`. Setiap komponen
+dokumen merupakan entitas, dan memiliki URI. URI sebuah komponen didahului oleh
+URI dokumennya. Berikut adalah relasi antara komponen dokumen yang disediakan.
+
+TODO: Relationship antara component
+
+TODO: URI Schema, contoh input text & output URI
+
+## Desain URI Amandemen
+
 part of
 
-??? Bab3 atau Bab 4?
+## Query
 
 # BAB 5 EVALUASI DAN ANALISIS HASIL
 

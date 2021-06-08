@@ -10,7 +10,7 @@ SELECT ?type (COUNT(*) AS ?jumlah) WHERE {
       } GROUP BY ?pasal
     }
     ?deletingPoint legal:partOf+ ?latestPasalVersion .
-    ?deletingPoint legal:pointDeletePasalVersion ?deletedPasalVersion .
+    ?deletingPoint legal:menghapus ?deletedPasalVersion .
     BIND("menghapus" AS ?type)
   }
   UNION {
@@ -21,7 +21,7 @@ SELECT ?type (COUNT(*) AS ?jumlah) WHERE {
       } GROUP BY ?pasal
     }
     ?deletingPoint legal:partOf+ ?latestPasalVersion .
-    ?deletingPoint legal:pointInsertPasalVersion ?deletedPasalVersion .
+    ?deletingPoint legal:menyisipkan ?deletedPasalVersion .
     BIND("menyisipkan" AS ?type)
   } UNION {
     {
@@ -31,7 +31,7 @@ SELECT ?type (COUNT(*) AS ?jumlah) WHERE {
       } GROUP BY ?pasal
     }
     ?deletingPoint legal:partOf+ ?latestPasalVersion .
-    ?deletingPoint legal:pointUpdatePasalVersion ?deletedPasalVersion .
+    ?deletingPoint legal:mengubah ?deletedPasalVersion .
     BIND("mengubah" AS ?type)
   }
 } GROUP BY ?type

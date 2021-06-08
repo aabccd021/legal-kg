@@ -262,11 +262,11 @@ function detectHardCoded(text: string): Reference[] {
   const map: [string, DocumentNode][] = [
     [
       'Undang Undang Dasar Negara Republik Indonesia Tahun 1945',
-      { nodeType: 'document', docType: 'uud' },
+      { nodeType: 'peraturan', docType: 'uud' },
     ],
     [
       'Undang-Undang Dasar Negara Republik Indonesia Tahun 1945',
-      { nodeType: 'document', docType: 'uud' },
+      { nodeType: 'peraturan', docType: 'uud' },
     ],
   ];
 
@@ -297,7 +297,7 @@ function detectUU(text: string): Reference[] {
       const start = match.index;
       const end = match.index + len;
       const node: DocumentNode = {
-        nodeType: 'document',
+        nodeType: 'peraturan',
         docType: 'noTahun',
         docCategory: 'uu',
         nomor,
@@ -349,7 +349,7 @@ function detectHurufXYZ(text: string, parentPointSetNode: PointSetNode): Referen
 
     return arr.map((key, idx) => {
       const [hStart, hEnd] = getPosByLenAndIndex(arr.length, idx, start);
-      const pointNode: PointNode = { key, parentPointSetNode, nodeType: 'point' };
+      const pointNode: PointNode = { key, parentPointSetNode, nodeType: 'huruf' };
       const reference: Reference = { start: hStart, end: hEnd, node: pointNode };
 
       return reference;

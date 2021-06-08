@@ -115,14 +115,14 @@ export type PasalNode = {
 };
 
 export type PasalVersionNode = {
-  nodeType: 'pasalVersion';
+  nodeType: 'versiPasal';
   version: DateNode;
-  state: 'exists' | 'deleted';
+  state: 'orisinal' | 'penyisipan' | 'pengubahan' | 'penghapusan';
   parentPasalNode: PasalNode;
 };
 
 export type PointNode = {
-  nodeType: 'point';
+  nodeType: 'huruf';
   key: string | number;
   parentPointSetNode: PointSetNode;
 };

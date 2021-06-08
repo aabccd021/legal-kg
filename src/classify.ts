@@ -55,7 +55,7 @@ async function classify(): Promise<void> {
                 return undefined;
               }
               const node: DocumentNode = {
-                nodeType: 'document',
+                nodeType: 'peraturan',
                 docType: 'noTahun',
                 docCategory: 'uu',
                 nomor,
@@ -73,7 +73,7 @@ async function classify(): Promise<void> {
                 return undefined;
               }
               const node: DocumentNode = {
-                nodeType: 'document',
+                nodeType: 'peraturan',
                 docType: 'noTahun',
                 docCategory: 'perwali_malang',
                 nomor,
@@ -91,7 +91,7 @@ async function classify(): Promise<void> {
                 return undefined;
               }
               const node: DocumentNode = {
-                nodeType: 'document',
+                nodeType: 'peraturan',
                 docType: 'noTahun',
                 docCategory: 'pergub_dki_jakarta',
                 nomor,
@@ -109,7 +109,7 @@ async function classify(): Promise<void> {
                 return undefined;
               }
               const node: DocumentNode = {
-                nodeType: 'document',
+                nodeType: 'peraturan',
                 docType: 'noTahun',
                 docCategory: 'perda_provinsi_dki_jakarta',
                 nomor,
@@ -127,7 +127,7 @@ async function classify(): Promise<void> {
                 return undefined;
               }
               const node: DocumentNode = {
-                nodeType: 'document',
+                nodeType: 'peraturan',
                 docType: 'noTahun',
                 docCategory: 'pp',
                 nomor,

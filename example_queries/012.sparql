@@ -7,9 +7,9 @@ SELECT DISTINCT ?pasalVersion ?text WHERE {
   FILTER NOT EXISTS {
     ?point legal:partOf+ ?pasalVersion . 
     ?point a legal:Point .
-    { ?point legal:pointUpdatePasalVersion ?amendedPasalVersion }
-    UNION { ?point legal:pointInsertPasalVersion ?amendedPasalVersion } 
-    UNION { ?point legal:pointDeletePasalVersion ?amendedPasalVersion }
+    { ?point legal:mengubah ?amendedPasalVersion }
+    UNION { ?point legal:menyisipkan ?amendedPasalVersion } 
+    UNION { ?point legal:menghapus ?amendedPasalVersion }
   }
 }
 LIMIT 3

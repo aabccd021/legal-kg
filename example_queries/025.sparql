@@ -3,7 +3,7 @@ PREFIX legal: <http://example.org/legal/ontology/>
 
 SELECT ?menimbangDoc (COUNT(?doc) as ?penimbangDocCount)
 WHERE {
-  ?doc legal:documentMenimbang ?menimbang .
+  ?doc legal:menimbang ?menimbang .
   ?menimbang legal:menimbangHasPointSet ?menimbangPointSet .
   ?menimbangPointSet legal:pointSetHasPoint ?menimbangPoint .
   ?menimbangPoint legal:pointHasText ?menimbangText .

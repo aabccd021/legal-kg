@@ -6,7 +6,7 @@ WHERE {
   ?doc a legal:Document .
   ?bab legal:partOf* ?doc .
   ?bab a legal:Bab .
-  ?bab legal:babHasTitle ?title.
+  ?bab legal:judul ?title.
   FILTER REGEX(str(?title), "KERJA")
 }
 LIMIT 10

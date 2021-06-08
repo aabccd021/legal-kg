@@ -24,23 +24,23 @@ export function nodeToUri(node: LegalNode): string {
   if (node.nodeType === 'bagian')
     return `${nodeToUri(node.parentBagianSetNode)}/${padStartIfNumber(node.key)}`;
   if (node.nodeType === 'bagianSet') return `${nodeToUri(node.parentBabNode)}/bagian`;
-  if (node.nodeType === 'document')
-    return `${getConfig().uriBase}/document/${getDocumentPath(node)}`;
+  if (node.nodeType === 'peraturan')
+    return `${getConfig().uriBase}/peraturan/${getDocumentPath(node)}`;
   if (node.nodeType === 'paragraf')
     return `${nodeToUri(node.parentParagrafSetNode)}/${padStartIfNumber(node.key)}`;
   if (node.nodeType === 'paragrafSet') return `${nodeToUri(node.parentBagianNode)}/paragraf`;
   if (node.nodeType === 'pasal')
     return `${nodeToUri(node.parentNode)}/pasal/${padPasalIfNumber(node.key)}`;
   if (node.nodeType === 'pasalSet') return `${nodeToUri(node.parentNode)}/pasals`;
-  if (node.nodeType === 'pasalVersion') {
+  if (node.nodeType === 'versiPasal') {
     const yearStr = padStartIfNumber(node.version.year, { pad: 4 });
     const monthStr = padStartIfNumber(node.version.month, { pad: 2 });
     const dateStr = padStartIfNumber(node.version.date, { pad: 2 });
-    return `${nodeToUri(node.parentPasalNode)}/version/${yearStr}${monthStr}${dateStr}`;
+    return `${nodeToUri(node.parentPasalNode)}/versi/${yearStr}${monthStr}${dateStr}`;
   }
-  if (node.nodeType === 'point')
+  if (node.nodeType === 'huruf')
     return `${nodeToUri(node.parentPointSetNode)}/${padStartIfNumber(node.key)}`;
-  if (node.nodeType === 'pointSet') return `${nodeToUri(node.parentNode)}/point`;
+  if (node.nodeType === 'pointSet') return `${nodeToUri(node.parentNode)}/huruf`;
   if (node.nodeType === 'text') return `${nodeToUri(node.parentNode)}/${node.textName}`;
   if (node.nodeType === 'menimbang') return `${nodeToUri(node.parentNode)}/menimbang`;
   if (node.nodeType === 'mengingat') return `${nodeToUri(node.parentNode)}/mengingat`;

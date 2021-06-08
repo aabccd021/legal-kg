@@ -3,7 +3,7 @@ PREFIX legal: <http://example.org/legal/ontology/>
 
 SELECT ?insertingPoint ?insertedPasalVersion ?text WHERE {
   ?insertingPoint legal:partOf+ <http://example.org/legal/document/uu/2020/11>.
-  ?insertingPoint legal:pointInsertPasalVersion ?insertedPasalVersion .
+  ?insertingPoint legal:menyisipkan ?insertedPasalVersion .
   ?insertedPasalVersion legal:partOf+ <http://example.org/legal/document/uu/2003/13> .
   ?insertedPasalVersion legal:pasalVersionHasRawText ?text .
 }

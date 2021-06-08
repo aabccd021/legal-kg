@@ -3,10 +3,10 @@ PREFIX legal: <http://example.org/legal/ontology/>
 
 SELECT ?ayat ?text ?citation WHERE {
   ?insertingPoint legal:partOf+ <http://example.org/legal/document/uu/2020/11>.
-  ?insertingPoint legal:pointInsertPasalVersion ?insertedPasalVersion .
+  ?insertingPoint legal:menyisipkan ?insertedPasalVersion .
   ?ayat legal:partOf+ ?insertedPasalVersion .
   ?ayat legal:ayatHasRawText ?text .
-  ?ayat legal:ayatHasText ?textRef .
+  ?ayat legal:teks ?textRef .
   OPTIONAL {?textRef legal:textReferencesLegal ?citation}
 }
 LIMIT 3

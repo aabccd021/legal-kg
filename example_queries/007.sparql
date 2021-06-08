@@ -10,7 +10,7 @@ WHERE {
     } GROUP BY ?pasal
   }
   ?updatingPointt legal:partOf+ <http://example.org/legal/document/uu/2020/11>.
-  ?updatingPointt legal:pointUpdatePasalVersion ?updatedPasalVersion .
+  ?updatingPointt legal:mengubah ?updatedPasalVersion .
   ?updatedPasal legal:pasalHasPasalVersion ?updatedPasalVersion .
   <http://example.org/legal/document/uu/2003/13> legal:documentHasPasal ?updatedPasal .
   ?updatedPasal legal:pasalHasPasalVersion ?allPasalVersion .

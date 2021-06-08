@@ -9,7 +9,7 @@ SELECT ?ayat ?text WHERE {
     } GROUP BY ?pasal
   }
   ?insertingPoint legal:partOf+ ?latestPasalVersion .
-  ?insertingPoint legal:pointInsertPasalVersion ?insertedPasalVersion .
+  ?insertingPoint legal:menyisipkan ?insertedPasalVersion .
   ?ayat legal:partOf+ ?insertedPasalVersion .
   ?ayat legal:ayatHasRawText ?text
   FILTER REGEX(str(?text), "kompensasi")

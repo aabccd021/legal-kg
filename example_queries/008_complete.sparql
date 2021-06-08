@@ -9,7 +9,7 @@ SELECT ?deletingPoint ?deletedPasal ?version ?text WHERE {
     } GROUP BY ?pasal
   }
   ?deletingPoint legal:partOf+ ?latestPasalVersion .
-  ?deletingPoint legal:pointDeletePasalVersion ?deletedPasalVersion .
+  ?deletingPoint legal:menghapus ?deletedPasalVersion .
   ?deletedPasal legal:pasalHasPasalVersion ?deletedPasalVersion .
   <http://example.org/legal/document/uu/2003/13> legal:documentHasPasal ?deletedPasal .
   ?deletedPasal legal:pasalHasPasalVersion ?allPasalVersion .

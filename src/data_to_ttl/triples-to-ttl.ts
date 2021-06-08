@@ -90,7 +90,7 @@ function getAlternativeVocabQuads(triples: LegalTriple[]): n3.Quad[] {
       if (isNil(o) || isString(o) || isNumber(o) || o.nodeType === 'date') return undefined;
       if (
         p === 'ayatHasPointSet' ||
-        p === 'ayatHasText' ||
+        p === 'teks' ||
         p === 'ayatSetHasAyat' ||
         p === 'babHasBagianSet' ||
         p === 'babHasPasalSet' ||
@@ -110,11 +110,9 @@ function getAlternativeVocabQuads(triples: LegalTriple[]): n3.Quad[] {
         p === 'pasalVersionHasAyatSet' ||
         p === 'pointHasText' ||
         p === 'menimbangHasPointSet' ||
-        p === 'menimbangHasText' ||
-        p === 'mengingatHasPointSet' ||
-        p === 'mengingatHasText'
+        p === 'mengingatHasPointSet'
       ) {
-        return triple(legalNodeToN3(o), onto('partOf'), legalNodeToN3(s));
+        return triple(legalNodeToN3(o), onto('bagianDari'), legalNodeToN3(s));
       }
       return undefined;
     })

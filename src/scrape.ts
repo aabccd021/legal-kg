@@ -29,7 +29,7 @@ async function scrape(): Promise<void> {
       const url = `https://www.dpr.go.id${_url}`;
 
       const node: NoTahunNode = {
-        nodeType: 'document',
+        nodeType: 'peraturan',
         docType: 'noTahun',
         docCategory: 'uu',
         tahun,

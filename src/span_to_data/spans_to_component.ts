@@ -290,6 +290,7 @@ function spansToPasal(context: Context, spans: Span[], key: string): Pasal {
         parentDocumentNode: context.documentNode,
         context,
         isAmendedPasal: false,
+        state: 'orisinal',
       },
       spans,
       key
@@ -365,7 +366,7 @@ function spansToPoint(
   keySpans: KeySpans
 ): Point {
   const [key, spans] = keySpans;
-  const pointNode: PointNode = { nodeType: 'point', key, parentPointSetNode };
+  const pointNode: PointNode = { nodeType: 'huruf', key, parentPointSetNode };
   return {
     type: 'point',
     node: pointNode,
@@ -391,7 +392,7 @@ function spansToAmendedDocumentNode(spans: Span[]): DocumentNode | undefined {
   const nomor = safeParseInt(_nomor);
   const tahun = safeParseInt(_tahun);
   if (isUndefined(nomor) || isUndefined(tahun)) return undefined;
-  return { nodeType: 'document', docType: 'noTahun', docCategory: 'uu', nomor, tahun };
+  return { nodeType: 'peraturan', docType: 'noTahun', docCategory: 'uu', nomor, tahun };
 }
 
 type SpansExtractResult = {
@@ -473,13 +474,13 @@ function spansToAmendDeletePasalPoint(
   if (isUndefined(pasalKey)) return undefined;
   return {
     type: 'pasalDeleteAmenderPoint',
-    node: { nodeType: 'point', parentPointSetNode, key: parseInt(pointKeyStr) },
+    node: { nodeType: 'huruf', parentPointSetNode, key: parseInt(pointKeyStr) },
     deletedPasalVersion: {
       type: 'pasalVersion',
       node: {
-        nodeType: 'pasalVersion',
+        nodeType: 'versiPasal',
         version: context.disahkan.date,
-        state: 'deleted',
+        state: 'penghapusan',
         parentPasalNode: {
           nodeType: 'pasal',
           key: pasalKey,
@@ -512,7 +513,7 @@ function spansToAmendUpdatePasalPoint(
   const [descFirst, ...descRest] = _descSpans;
   const descSpans = !isUndefined(descFirst) ? [removeNomorKey(descFirst), ...descRest] : _descSpans;
   const pointNode: PointNode = {
-    nodeType: 'point',
+    nodeType: 'huruf',
     parentPointSetNode,
     key: parseInt(pointKeyStr),
   };
@@ -525,6 +526,7 @@ function spansToAmendUpdatePasalPoint(
         parentDocumentNode: amendedDocumentNode,
         context,
         isAmendedPasal: true,
+        state: 'pengubahan',
       },
       spans.slice(pasalTitleIdx),
       pasalKey
@@ -543,7 +545,7 @@ function spansToAmendInsertPasalPoint(
   const pasalData = context.keyIds.spanIdToInsertPasalKeyMap[firstSpanId];
   if (isUndefined(pasalData)) return undefined;
   const pointNode: PointNode = {
-    nodeType: 'point',
+    nodeType: 'huruf',
     parentPointSetNode,
     key: parseInt(pointKeyStr),
   };
@@ -581,6 +583,7 @@ function spansToAmendInsertPasalPoint(
           parentDocumentNode: amendedDocumentNode,
           context,
           isAmendedPasal: true,
+          state: 'penyisipan',
         })
       )
       .value(),
@@ -593,18 +596,20 @@ function keySpansToPasalVersion(
     parentDocumentNode,
     context,
     isAmendedPasal,
+    state,
   }: {
     parentDocumentNode: DocumentNode;
     context: Context;
     isAmendedPasal: boolean;
+    state: 'orisinal' | 'penyisipan' | 'pengubahan' | 'penghapusan';
   },
   spans: Span[],
   key: string
 ): PasalVersion {
   const pasalVersionNode: PasalVersionNode = {
-    nodeType: 'pasalVersion',
+    nodeType: 'versiPasal',
     version: context.disahkan.date,
-    state: 'exists',
+    state,
     parentPasalNode: { nodeType: 'pasal', key, parentNode: parentDocumentNode },
   };
   const amendedPointSet =

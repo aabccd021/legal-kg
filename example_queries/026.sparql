@@ -5,7 +5,7 @@ SELECT ?doc (COUNT(?point) as ?amendmentCount)
 WHERE {
   ?doc a legal:Document .
   ?point legal:partOf* ?doc .
-  ?point legal:pointUpdatePasalVersion|legal:pointInsertPasalVersion|legal:pointDeletePasalVersion ?pasalVersion .
+  ?point legal:mengubah|legal:menyisipkan|legal:menghapus ?pasalVersion .
 }
 GROUP BY (?doc)
 ORDER BY DESC(?amendmentCount)

@@ -9,7 +9,7 @@ SELECT ?insertingPoint ?insertedPasal ?version ?text WHERE {
     } GROUP BY ?pasal
   }
   ?insertingPoint legal:partOf+ ?latestPasalVersion .
-  ?insertingPoint legal:pointInsertPasalVersion ?insertedPasalVersion .
+  ?insertingPoint legal:menyisipkan ?insertedPasalVersion .
   ?insertedPasalVersion legal:partOf+ <http://example.org/legal/document/uu/2003/13> .
   ?insertedPasal legal:pasalHasPasalVersion ?insertedPasalVersion .
   ?insertedPasal legal:pasalHasPasalVersion ?allPasalVersion .

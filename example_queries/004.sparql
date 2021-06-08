@@ -3,7 +3,7 @@ PREFIX legal: <http://example.org/legal/ontology/>
 
 SELECT ?pasal ?text WHERE {
   ?bab legal:partOf+ <http://example.org/legal/document/uu/2020/11>.
-  ?bab legal:babHasKey 2 .
+  ?bab legal:nomor 2 .
   ?pasal legal:partOf+ ?bab .
   ?pasal legal:pasalHasPasalVersion ?pasalVersion .
   ?pasalVersion legal:pasalVersionHasRawText ?text

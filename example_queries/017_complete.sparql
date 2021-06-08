@@ -12,9 +12,9 @@ SELECT ?law ?numOfUpdates ?pasal (MAX(?pasalVersion) as ?latestPasalVersion) WHE
         } GROUP BY ?pasal
       }
       ?point legal:partOf+ ?latestPasalVersion .
-      { ?point legal:pointUpdatePasalVersion ?amendedPasalVersion }
-      UNION { ?point legal:pointInsertPasalVersion ?amendedPasalVersion }
-      UNION { ?point legal:pointDeletePasalVersion ?amendedPasalVersion }
+      { ?point legal:mengubah ?amendedPasalVersion }
+      UNION { ?point legal:menyisipkan ?amendedPasalVersion }
+      UNION { ?point legal:menghapus ?amendedPasalVersion }
       ?amendedPasalVersion legal:partOf+ ?law .
       ?law a legal:Document .
     } GROUP BY ?law

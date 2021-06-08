@@ -4,7 +4,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 
 SELECT *
 WHERE {
-  ?legalDoc legal:documentHasDisahkanDate ?date .
+  ?legalDoc legal:disahkanPada ?date .
   FILTER ( ?date >= "2019-10-10"^^xsd:date )
 }
 ORDER BY ?legalDoc

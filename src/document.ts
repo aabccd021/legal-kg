@@ -13,7 +13,7 @@ export const NO_TAHUN_DOC_CAT = [
 ] as const;
 export type NoTahunDocCat = typeof NO_TAHUN_DOC_CAT[number];
 export type NoTahunNode = {
-  nodeType: 'document';
+  nodeType: 'peraturan';
   docType: 'noTahun';
   docCategory: NoTahunDocCat;
   tahun: number;
@@ -21,7 +21,7 @@ export type NoTahunNode = {
 };
 
 export type UudNode = {
-  nodeType: 'document';
+  nodeType: 'peraturan';
   docType: 'uud';
 };
 
@@ -72,7 +72,7 @@ export function getDocumentPath(node: DocumentNode): string {
  */
 // export function pathToNode(path: string): DocumentNode {
 //   const [legalDocCategory, ...restDocumentPath] = path.split('/');
-//   if (legalDocCategory === 'uud') return { nodeType: 'document', docType: 'uud' };
+//   if (legalDocCategory === 'uud') return { nodeType: 'peraturan', docType: 'uud' };
 //   if (legalDocCategory === '')
 //   assertNever(legalDocCategory);
 // }
@@ -96,7 +96,7 @@ export function getConvertableDocumentFiles(
           .readdirSync(path.join(catDir, year))
           .map((pdfName) => path.basename(pdfName, getDataTypeExtension(dataType)))
           .map((number) => ({
-            nodeType: 'document',
+            nodeType: 'peraturan',
             docType: 'noTahun',
             docCategory,
             tahun: parseInt(year),

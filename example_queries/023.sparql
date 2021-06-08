@@ -6,7 +6,7 @@ WHERE {
   ?doc a legal:Document .
   ?pasal legal:partOf ?doc .
   ?pasal legal:pasalHasPasalVersion ?pasalVersion .
-  ?amender legal:pointUpdatePasalVersion ?pasalVersion .
+  ?amender legal:mengubah ?pasalVersion .
   ?amender legal:partOf* ?amenderDoc .
   ?amenderDoc a legal:Document
 }
