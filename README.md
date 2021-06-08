@@ -74,8 +74,13 @@ Berikut ini adalah rumusan permasalahan dari penelitian yang dilakukan:
   graph_ dapat dilakukan secara otomatis?
 - Apa saja contoh aplikasi dari knowledge graph peraturan perundang-undangan
   tersebut?
+  
+// TODO: bagaimana melakukan proof of concept untuk yang udah dibuat, detail
+untuk maintain, general large scale, evaluasi konversi
 
 ## Batasan Permasalahan
+
+// TODO: fokus yang mainteined (UU + non UU), dan coba parsing UU hasil scraping
 
 ## Sistematika Penulisan
 
@@ -342,7 +347,93 @@ Saran sy: coba baca serta rangkum (di Bab 2) dan terapkan ini:
 www.ksl.stanford.edu/people/dlm/papers/ontology-tutorial-noy-mcguinness-abstract.html
 ???
 
-# BAB 4 IMPLEMENTASI
+# BAB 4 RANCANGAN
+
+## Perancangan URI
+
+Setiap entitas yang berbeda perlu diberikan URI yang berbeda. Penggabungan KG
+sangat umum dilakukan karena secara struktur dapat dilakukan dengan mudah, dan
+dapat memperkuat data dari masing-masing KG. KG memiliki entitas-entitas dengan
+URI yang unik, oleh karena itu saat menggabungkan sebuah KG A dan sebuah KG B,
+entitas yang berbeda harus memiliki URI yang berbeda. Sebuah masalah dapat
+terjadi apabila URI tidak dirancang dengan benar. Sebagai contoh, apabila
+terdapat entitas dari KG A dengan URI `http://example.org/trump` dengan maksud
+Donald Trump mantan presiden Amerika Serikat, dan entitas dari KG B dengan URI
+yang sama dengan maksud permainan kartu Trump, saat kedua KG ini digabung akan
+menjadi informasi yang berkontradiksi.
+
+Pada penelitian ini, semua URI menggunakan prefix `http://example.org/legal/`
+yang selanjutnya akan disebut _basePrefix_. Prefix ini dapat diganti dalam
+program agar dapat disesuaikan oleh pengguna program. Semua entitas dokumen dan
+komponennya menggunakan prefix URI `http://example.org/legal/peraturan` yang
+selanjutnya disebut _peraturanPrefix_, dan semua resource lainnya menggunakan
+`http://example.org/legal/ontology` yang selanjutnya disebut _ontoPrefix_.
+
+## Perancangan URI Komponen Peraturan Perundang-undangan
+
+URI peraturan perundang-undangan diawali oleh _peraturanPrefix_, kemudian
+diikuti oleh string yang mengidentifikasi peraturan tersebut. URI peraturan ini
+akan digunakan oleh entitas sebagai prefix yang selanjutnya akan disebut
+_docURI_. Berikut adalah jenis peraturan perundang-undangan yang
+diimplementasi pada penelitian ini beserta pola URI nya. Variabel akan dikurung
+dengan kurung kurawal `{}`.
+
+| Jenis Peraturan                       | Pola URI                                                       | Penjelasan variabel      |
+|---------------------------------------|----------------------------------------------------------------|--------------------------|
+| Undang-Undang Dasar 1945              | `{peraturanPrefix}/uud`                                        |                          |
+| Undang-Undang                         | `{peraturanPrefix}/uu/{tahun}/{nomor}`                         | `tahun`: tahun peraturan |
+|                                       |                                                                | `nomor`: nomor peraturan |
+| Peraturan Pemerintah                  | `{peraturanPrefix}/pp/{tahun}/{nomor}`                         | `tahun`: tahun peraturan |
+|                                       |                                                                | `nomor`: nomor peraturan |
+| Peraturan Daerah Provinsi DKI Jakarta | `{peraturanPrefix}/perda_provinsi_dki_jakarta/{tahun}/{nomor}` | `tahun`: tahun peraturan |
+|                                       |                                                                | `nomor`: nomor peraturan |
+| Peraturan Gubernur DKI Jakarta        | `{peraturanPrefix}/pergub_dki_jakarta/{tahun}/{nomor}`         | `tahun`: tahun peraturan |
+|                                       |                                                                | `nomor`: nomor peraturan |
+| Peraturan Walikota Malang             | `{peraturanPrefix}/perwali_malang/{tahun}/{nomor}`             | `tahun`: tahun peraturan |
+|                                       |                                                                | `nomor`: nomor peraturan |
+
+Setiap komponen dokumen merupakan entitas, dan memiliki URI. URI sebuah komponen
+didahului oleh _docURI_ dan semua komponen yang mengatasinya. Berikut adalah
+jenis komponen peraturan perundang-undangan beserta pola URI nya.
+
+| Jenis Komponen   | Pola URI                   | Penjelasan variabel                                                                                     |
+|------------------|----------------------------|---------------------------------------------------------------------------------------------------------|
+| `DaftarBab`      | `{docURI}/bab`             | `docURI`: URI peraturan yang mengatasi                                                                  |
+| `Bab`            | `{daftarBabURI}/{no}`      | `daftarBabURI`: URI `DaftarBab` yang mengatasi                                                          |
+|                  |                            | `no`: Nomor bab                                                                                         |
+| `DaftarBagian`   | `{babURI}/bagian`          | `babURI`: URI `Bab` yang mengatasi                                                                      |
+| `Bagian`         | `{daftarBagianURI}/{no}`   | `daftarBagianURI`: URI `DaftarBagian` yang mengatasi                                                    |
+|                  |                            | `no`: Nomor bagian                                                                                      |
+| `DaftarParagraf` | `{bagianURI}/paragraf`     | `bagianURI`: URI `Bagian` yang mengatasi                                                                |
+| `Paragraf`       | `{daftarParagrafURI}/{no}` | `daftarParagrafURI`: URI `DaftarBagian` yang mengatasi                                                  |
+|                  |                            | `no`: Nomor paragraf                                                                                    |
+| `DaftarPasal`    | `{parentURI}/daftarpasal`  | `parentURI`: URI `Bab`, `Bagian`, `Paragraf` yang mengatasi                                             |
+| `Pasal`          | `{docURI}/pasal/{no}`      | `docURI`: URI peraturan yang mengatasi                                                                  |
+|                  |                            | `no`: Nomor pasal                                                                                       |
+| `VersiPasal`     | `{pasalURI}/versi/{date}`  | `pasalURI`: URI `Pasal` yang mengatasi                                                                  |
+|                  |                            | `date`: Tanggal disahkan                                                                                |
+| `DaftarAyat`     | `{pasalURI}/ayat`          | `pasalURI`: URI `Pasal` yang mengatasi                                                                  |
+| `Ayat`           | `{daftarAyatURI}/{no}`     | `daftarAyatURI`: URI `DaftarAyat` yang mengatasi                                                        |
+|                  |                            | `no`: Nomor ayat                                                                                        |
+| `DaftarHuruf`    | `{parentURI}/huruf`        | `parentURI`: URI `Ayat`, `Huruf`, `VersiPasal`, `Menimbang`, `Mengingat`, yang mengatasi                |
+| `Huruf`          | `{daftarHurufURI}/{id}`    | `daftarHurufURI`: URI `DaftarHuruf` yang mengatasi                                                      |
+|                  |                            | `id`: Nomor atau huruf                                                                                  |
+| `Menimbang`      | `{docURI}/menimbang`       | `docURI`: URI peraturan yang mengatasi                                                                  |
+| `Mengingat`      | `{docURI}/mengingat`       | `docURI`: URI peraturan yang mengatasi                                                                  |
+| `Segmen`         | `{parentURI}/{name}`       | `parentURI`: URI `Ayat`, `Huruf`, `DaftarHuruf`, `VersiPasal`, `Menimbang`, `Mengingat`, yang mengatasi |
+|                  |                            | `name`: Nama teks                                                                                       |
+
+Berikut adalah
+
+TODO: Relationship antara component
+
+TODO: URI Schema, contoh input text & output URI
+
+## Perancangan URI Amandemen
+
+part of
+
+# BAB 5 IMPLEMENTASI
 
 ## OCR Ulang Berkas PDF
 
@@ -545,6 +636,8 @@ Jika nomor 9 berhasil terpindai:
 
 ## Klasifikasi Dokumen
 
+Pa
+
 ## Pengelompokan _span_ menjadi Komponen
 
 Teks yang membentuk suatu komponen terdiri dari satu atau lebih _span_, sehingga
@@ -627,20 +720,20 @@ sitasi pada teks pada setiap komponen untuk mengetahui apakah komponen tersebut
 menyebut komponen atau dokumen peraturan perundang-undangan lainnya. Berikut
 adalah daftar pola sitasi yang berhasil dideteksi pada penelitian ini.
 
-| Pola                                                     | Contoh teks                                              | URI Terdeteksi                        |
-|----------------------------------------------------------|----------------------------------------------------------|---------------------------------------|
-| Undang Undang Dasar Negara Republik Indonesia Tahun 1945 | Undang Undang Dasar Negara Republik Indonesia Tahun 1945 | /uud/                                 |
-| Undang-Undang Nomor {x} Tahun {y}                        | Undang-Undang Nomor 26 Tahun 2007                        | /uu/2007/26                           |
-| ayat ({x})                                               | ayat (1)                                                 | /uu/2003/13/pasal/169/ayat/1          |
-| Pasal {x}                                                | Pasal 156                                                | /uu/2003/13/pasal/156                 |
-| Pasal {x} ayat ({y})                                     | Pasal 156 ayat (2)                                       | /uu/2003/13/pasal/156/ayat/2          |
-| huruf {x}, {y}, ... dan {z}                              | huruf a, b, c, d, dan e                                  | /uu/2003/13/menimbang/point/a |
-|                                                          |                                                          | /uu/2003/13/menimbang/point/b |
-|                                                          |                                                          | /uu/2003/13/menimbang/point/c |
-|                                                          |                                                          | /uu/2003/13/menimbang/point/d |
-|                                                          |                                                          | /uu/2003/13/menimbang/point/e |
-| huruf {x} dan {y}                                        | huruf a dan b                                            | /uu/2003/13/pasal/1/point/5/point/a   |
-|                                                          |                                                          | /uu/2003/13/pasal/1/point/5/point/b   |
+| Pola                                                     | Contoh teks                                              | URI Terdeteksi                      |
+|----------------------------------------------------------|----------------------------------------------------------|-------------------------------------|
+| Undang Undang Dasar Negara Republik Indonesia Tahun 1945 | Undang Undang Dasar Negara Republik Indonesia Tahun 1945 | /uud/                               |
+| Undang-Undang Nomor {x} Tahun {y}                        | Undang-Undang Nomor 26 Tahun 2007                        | /uu/2007/26                         |
+| ayat ({x})                                               | ayat (1)                                                 | /uu/2003/13/pasal/169/ayat/1        |
+| Pasal {x}                                                | Pasal 156                                                | /uu/2003/13/pasal/156               |
+| Pasal {x} ayat ({y})                                     | Pasal 156 ayat (2)                                       | /uu/2003/13/pasal/156/ayat/2        |
+| huruf {x}, {y}, ... dan {z}                              | huruf a, b, c, d, dan e                                  | /uu/2003/13/menimbang/point/a       |
+|                                                          |                                                          | /uu/2003/13/menimbang/point/b       |
+|                                                          |                                                          | /uu/2003/13/menimbang/point/c       |
+|                                                          |                                                          | /uu/2003/13/menimbang/point/d       |
+|                                                          |                                                          | /uu/2003/13/menimbang/point/e       |
+| huruf {x} dan {y}                                        | huruf a dan b                                            | /uu/2003/13/pasal/1/point/5/point/a |
+|                                                          |                                                          | /uu/2003/13/pasal/1/point/5/point/b |
 
 Data sitasi mengandung data sebagai berikut:
 
@@ -690,23 +783,6 @@ visualization
 ### triple definition
 
 ### triple to ttl
-
-### Desain URI Dokumen
-
-### Desain URI Komponen Dokumen
-
-Dokumen terdiri dari komponen dokumen. Komponen dokumen diantaranya adalah
-`bab`, `bagian`, `paragraf`, `pasal`, `ayat`, dan `point`. Setiap komponen
-dokumen merupakan entitas, dan memiliki URI. URI sebuah komponen didahului oleh
-URI dokumennya. Berikut adalah relasi antara komponen dokumen yang disediakan.
-
-TODO: Relationship antara component
-
-TODO: URI Schema, contoh input text & output URI
-
-## Desain URI Amandemen
-
-part of
 
 ## Query
 

@@ -68,16 +68,6 @@ export function getDocumentPath(node: DocumentNode): string {
 }
 
 /**
- * Get Document Path
- */
-// export function pathToNode(path: string): DocumentNode {
-//   const [legalDocCategory, ...restDocumentPath] = path.split('/');
-//   if (legalDocCategory === 'uud') return { nodeType: 'peraturan', docType: 'uud' };
-//   if (legalDocCategory === '')
-//   assertNever(legalDocCategory);
-// }
-
-/**
  * Get Convertable Document File
  */
 export function getConvertableDocumentFiles(
