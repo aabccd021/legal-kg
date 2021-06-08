@@ -5,7 +5,7 @@ SELECT ?doc ?menimbangDoc
 WHERE {
   ?doc legal:menimbang ?menimbang .
   ?menimbangText legal:partOf* ?menimbang .
-  ?menimbangText legal:textReferencesLegal ?menimbangDoc .
+  ?menimbangText legal:merujuk ?menimbangDoc .
   ?menimbangDoc a legal:Document
 }
 ORDER BY ?doc

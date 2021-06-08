@@ -5,7 +5,7 @@ import {
   BagianNode,
   ParagrafNode,
   PointNode,
-  TextNode,
+  SegmentNode,
   PasalVersionNode,
   BagianSetNode,
   PasalSetNode,
@@ -36,61 +36,57 @@ import { DateNode, LegalNode } from '../uri';
  */
 export type LegalTriple = (
   | [AyatNode, 'nomor', number]
-  | [AyatNode, 'ayatHasPointSet', PointSetNode]
+  | [AyatNode, 'daftarHuruf', PointSetNode]
   // raw text?
-  | [AyatNode, 'teks', TextNode]
-  | [AyatNode, 'ayatHasRawText', string]
-  | [AyatSetNode, 'ayatSetHasAyat', AyatNode]
-  | [BabNode, 'babHasBagianSet', BagianSetNode]
+  | [AyatNode, 'segmen', SegmentNode]
+  | [AyatNode, 'teks', string]
+  | [AyatSetNode, 'ayat', AyatNode]
+  | [BabNode, 'daftarBagian', BagianSetNode]
   | [BabNode, 'nomor', number]
-  | [BabNode, 'babHasPasalSet', PasalSetNode]
+  | [BabNode, 'daftarPasal', PasalSetNode]
   | [BabNode, 'judul', string]
-  | [BabSetNode, 'babSetHasBab', BabNode]
+  | [BabSetNode, 'bab', BabNode]
   | [BagianNode, 'nomor', number]
-  | [BagianNode, 'bagianHasParagrafSet', ParagrafSetNode]
-  | [BagianNode, 'bagianHasPasalSet', PasalSetNode]
+  | [BagianNode, 'daftarParagraf', ParagrafSetNode]
+  | [BagianNode, 'daftarPasal', PasalSetNode]
   | [BagianNode, 'judul', string]
-  | [BagianSetNode, 'bagianSetHasBagian', BagianNode]
-  | [DocumentNode, 'documentHasBabSet', BabSetNode]
+  | [BagianSetNode, 'bagian', BagianNode]
+  | [DocumentNode, 'daftarBab', BabSetNode]
   | [DocumentNode, 'disahkanPada', DateNode]
   | [DocumentNode, 'disahkanDi', string]
   | [DocumentNode, 'disahkanOleh', string]
-  | [DocumentNode, 'documentHasDisahkanJabatanPengesah', string]
-  | [DocumentNode, 'documentHasPasal', PasalNode]
-  | [DocumentNode, 'documentHasPasalSet', PasalSetNode]
+  | [DocumentNode, 'jabatanPengesah', string]
+  | [DocumentNode, 'pasal', PasalNode]
+  | [DocumentNode, 'daftarPasal', PasalSetNode]
   | [DocumentNode, 'mengingat', MengingatNode]
   | [DocumentNode, 'menimbang', MenimbangNode]
   | [DocumentNode, 'tentang', string]
-  | [MenimbangNode, 'menimbangHasPointSet', PointSetNode]
-  | [MenimbangNode, 'teks', TextNode]
-  | [MengingatNode, 'mengingatHasPointSet', PointSetNode]
-  | [MengingatNode, 'teks', TextNode]
+  | [MenimbangNode, 'daftarHuruf', PointSetNode]
+  | [MenimbangNode, 'segmen', SegmentNode]
+  | [MengingatNode, 'daftarHuruf', PointSetNode]
+  | [MengingatNode, 'segmen', SegmentNode]
   | [ParagrafNode, 'nomor', number]
-  | [ParagrafNode, 'paragrafHasPasalSet', PasalSetNode]
+  | [ParagrafNode, 'daftarPasal', PasalSetNode]
   | [ParagrafNode, 'judul', string]
-  | [ParagrafSetNode, 'paragrafSetHasParagraf', ParagrafNode]
+  | [ParagrafSetNode, 'paragraf', ParagrafNode]
   | [PasalNode, 'nomor', number | string]
-  | [PasalNode, 'pasalHasPasalVersion', PasalVersionNode]
-  | [PasalSetNode, 'pasalSetHasPasal', PasalNode]
-  | [PasalVersionNode, 'pasalVersionHasAyatSet', AyatSetNode]
-  | [PasalVersionNode, 'pasalVersionHasPointSet', PointSetNode]
-  | [
-      PasalVersionNode,
-      'pasalVersionHasState',
-      'orisinal' | 'penyisipan' | 'pengubahan' | 'penghapusan'
-    ]
-  | [PasalVersionNode, 'pasalVersionHasVersionDate', DateNode]
-  | [PasalVersionNode, 'pasalVersionHasText', TextNode]
-  | [PasalVersionNode, 'pasalVersionHasRawText', string]
+  | [PasalNode, 'versi', PasalVersionNode]
+  | [PasalSetNode, 'pasal', PasalNode]
+  | [PasalVersionNode, 'daftarAyat', AyatSetNode]
+  | [PasalVersionNode, 'daftarHuruf', PointSetNode]
+  | [PasalVersionNode, 'jenisVersi', 'orisinal' | 'penyisipan' | 'pengubahan' | 'penghapusan']
+  | [PasalVersionNode, 'tanggal', DateNode]
+  | [PasalVersionNode, 'segmen', SegmentNode]
+  | [PasalVersionNode, 'teks', string]
   | [PointNode, 'nomor', string | number]
-  | [PointNode, 'pointHasPointSet', PointSetNode]
-  | [PointNode, 'pointHasText', TextNode]
+  | [PointNode, 'daftarHuruf', PointSetNode]
+  | [PointNode, 'segmen', SegmentNode]
   // Represents Amendment
   | [PointNode, 'mengubah' | 'menghapus' | 'menyisipkan', PasalVersionNode]
-  | [PointSetNode, 'pointSetHasDescription', TextNode]
-  | [PointSetNode, 'pointSetHasPoint', PointNode]
-  | [TextNode, 'textHasTextString', string]
-  | [TextNode, 'textReferencesLegal', LegalNode]
+  | [PointSetNode, 'segmen', SegmentNode]
+  | [PointSetNode, 'huruf', PointNode]
+  | [SegmentNode, 'teks', string]
+  | [SegmentNode, 'merujuk', LegalNode]
 ) &
   // Nevermind of this, just to make sure Subject is LegalNode, and Object is as defined below.
   [LegalNode, string, string | number | LegalNode | DateNode];

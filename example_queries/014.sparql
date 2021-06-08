@@ -5,8 +5,8 @@ SELECT ?ayat ?text ?citation WHERE {
   ?insertingPoint legal:partOf+ <http://example.org/legal/document/uu/2020/11>.
   ?insertingPoint legal:menyisipkan ?insertedPasalVersion .
   ?ayat legal:partOf+ ?insertedPasalVersion .
-  ?ayat legal:ayatHasRawText ?text .
+  ?ayat legal:teks ?text .
   ?ayat legal:teks ?textRef .
-  OPTIONAL {?textRef legal:textReferencesLegal ?citation}
+  OPTIONAL {?textRef legal:merujuk ?citation}
 }
 LIMIT 3

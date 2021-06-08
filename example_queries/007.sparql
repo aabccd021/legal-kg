@@ -6,15 +6,15 @@ WHERE {
   {
     SELECT ?pasal (MAX(?pasalVersion) as ?latestPasalVersion) WHERE {
       ?pasal legal:partOf+ <http://example.org/legal/document/uu/2020/11>.
-      ?pasal legal:pasalHasPasalVersion ?pasalVersion .
+      ?pasal legal:versi ?pasalVersion .
     } GROUP BY ?pasal
   }
   ?updatingPointt legal:partOf+ <http://example.org/legal/document/uu/2020/11>.
   ?updatingPointt legal:mengubah ?updatedPasalVersion .
-  ?updatedPasal legal:pasalHasPasalVersion ?updatedPasalVersion .
-  <http://example.org/legal/document/uu/2003/13> legal:documentHasPasal ?updatedPasal .
-  ?updatedPasal legal:pasalHasPasalVersion ?allPasalVersion .
+  ?updatedPasal legal:versi ?updatedPasalVersion .
+  <http://example.org/legal/document/uu/2003/13> legal:pasal ?updatedPasal .
+  ?updatedPasal legal:versi ?allPasalVersion .
   ?allPasalVersion legal:pasalVersionHasRawText ?text .
-  ?allPasalVersion legal:pasalVersionHasVersionDate ?version .
+  ?allPasalVersion legal:tanggal ?version .
 }
 LIMIT 3

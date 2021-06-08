@@ -4,10 +4,10 @@ PREFIX legal: <http://example.org/legal/ontology/>
 SELECT ?menimbangDoc (COUNT(?doc) as ?penimbangDocCount)
 WHERE {
   ?doc legal:menimbang ?menimbang .
-  ?menimbang legal:menimbangHasPointSet ?menimbangPointSet .
-  ?menimbangPointSet legal:pointSetHasPoint ?menimbangPoint .
-  ?menimbangPoint legal:pointHasText ?menimbangText .
-  ?menimbangText legal:textReferencesLegal ?menimbangDoc .
+  ?menimbang legal:daftarHuruf ?menimbangPointSet .
+  ?menimbangPointSet legal:huruf ?menimbangPoint .
+  ?menimbangPoint legal:segmen ?menimbangText .
+  ?menimbangText legal:merujuk ?menimbangDoc .
   ?menimbangDoc a legal:Document
 }
 GROUP BY ?menimbangDoc

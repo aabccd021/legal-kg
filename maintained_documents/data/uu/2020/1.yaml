@@ -11,14 +11,14 @@ metadata:
       nodeType: menimbang
       parentNode: *ref_0
     content:
-      type: pointSet
+      type: daftarHuruf
       node: &ref_2
-        nodeType: pointSet
+        nodeType: daftarHuruf
         parentNode: *ref_1
       description:
         type: text
         node:
-          nodeType: text
+          nodeType: segmen
           textName: description
           parentNode: *ref_2
         textString: ''
@@ -32,7 +32,7 @@ metadata:
           content:
             type: text
             node:
-              nodeType: text
+              nodeType: segmen
               textName: text
               parentNode: *ref_3
             textString: >-
@@ -50,7 +50,7 @@ metadata:
           content:
             type: text
             node:
-              nodeType: text
+              nodeType: segmen
               textName: text
               parentNode: *ref_4
             textString: >-
@@ -68,7 +68,7 @@ metadata:
           content:
             type: text
             node:
-              nodeType: text
+              nodeType: segmen
               textName: text
               parentNode: *ref_5
             textString: >-
@@ -86,7 +86,7 @@ metadata:
           content:
             type: text
             node:
-              nodeType: text
+              nodeType: segmen
               textName: text
               parentNode: *ref_6
             textString: >-
@@ -101,14 +101,14 @@ metadata:
       nodeType: mengingat
       parentNode: *ref_0
     content:
-      type: pointSet
+      type: daftarHuruf
       node: &ref_8
-        nodeType: pointSet
+        nodeType: daftarHuruf
         parentNode: *ref_7
       description:
         type: text
         node:
-          nodeType: text
+          nodeType: segmen
           textName: description
           parentNode: *ref_8
         textString: ''
@@ -122,7 +122,7 @@ metadata:
           content:
             type: text
             node:
-              nodeType: text
+              nodeType: segmen
               textName: text
               parentNode: *ref_9
             textString: >-
@@ -142,7 +142,7 @@ metadata:
           content:
             type: text
             node:
-              nodeType: text
+              nodeType: segmen
               textName: text
               parentNode: *ref_10
             textString: >-
@@ -166,7 +166,7 @@ metadata:
           content:
             type: text
             node:
-              nodeType: text
+              nodeType: segmen
               textName: text
               parentNode: *ref_11
             textString: >-
@@ -189,9 +189,9 @@ metadata:
   denganPersetujuan: ''
   tentang: ' PENGESAHAN PERSETUJUAN KEMITRAAN EKONOMI KOMPREHENSIF INDONESIA-AUSTRALIA (#NDONESIA-AUSTRALIA COMPREHENSIVE ECONOMIC PARTNERSHIP AGREEMENT)'
 content:
-  type: pasalSet
+  type: daftarPasal
   node:
-    nodeType: pasalSet
+    nodeType: daftarPasal
     parentNode: *ref_0
   elements:
     - type: pasal
@@ -216,7 +216,7 @@ content:
         content:
           type: ayatSet
           node: &ref_13
-            nodeType: ayatSet
+            nodeType: daftarAyat
             parentPasalVersionNode: *ref_12
           elements:
             - type: ayat
@@ -227,7 +227,7 @@ content:
               content:
                 type: text
                 node:
-                  nodeType: text
+                  nodeType: segmen
                   textName: text
                   parentNode: *ref_14
                 textString: >-
@@ -243,7 +243,7 @@ content:
               content:
                 type: text
                 node:
-                  nodeType: text
+                  nodeType: segmen
                   textName: text
                   parentNode: *ref_15
                 textString: >-

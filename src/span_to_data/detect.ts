@@ -41,7 +41,7 @@ export function detectInDocument(document: Document): Document {
             elements: content.elements.map((bab) => ({
               ...bab,
               content:
-                bab.content.type === 'pasalSet'
+                bab.content.type === 'daftarPasal'
                   ? detectInPasalSet(bab.content)
                   : {
                       ...bab.content,
@@ -55,7 +55,7 @@ export function detectInDocument(document: Document): Document {
 
 function detectInMenimbang(menimbang: Menimbang | undefined): Menimbang | undefined {
   if (isUndefined(menimbang)) return undefined;
-  if (menimbang.content.type === 'pointSet') {
+  if (menimbang.content.type === 'daftarHuruf') {
     return { ...menimbang, content: detectInPointSetWhichBelowMetadata(menimbang.content) };
   }
   if (menimbang.content.type === 'text') {
@@ -72,7 +72,7 @@ function detectInMenimbang(menimbang: Menimbang | undefined): Menimbang | undefi
 
 function detectInMengingat(mengingat: Mengingat | undefined): Mengingat | undefined {
   if (isUndefined(mengingat)) return undefined;
-  if (mengingat.content.type === 'pointSet') {
+  if (mengingat.content.type === 'daftarHuruf') {
     return { ...mengingat, content: detectInPointSetWhichBelowMetadata(mengingat.content) };
   }
   if (mengingat.content.type === 'text') {
@@ -87,10 +87,10 @@ function detectInMengingat(mengingat: Mengingat | undefined): Mengingat | undefi
   assertNever(mengingat.content);
 }
 
-function detectInPointSetWhichBelowMetadata(pointSet: PointSet): PointSet {
+function detectInPointSetWhichBelowMetadata(daftarHuruf: PointSet): PointSet {
   return {
-    ...pointSet,
-    elements: pointSet.elements.map((point) => {
+    ...daftarHuruf,
+    elements: daftarHuruf.elements.map((point) => {
       if (point.type === 'point') {
         if (point.content.type === 'text') {
           return {
@@ -103,7 +103,7 @@ function detectInPointSetWhichBelowMetadata(pointSet: PointSet): PointSet {
             },
           };
         }
-        if (point.content.type === 'pointSet') {
+        if (point.content.type === 'daftarHuruf') {
           return {
             ...point,
             content: detectInPointSetWhichBelowMetadata(point.content),
@@ -119,10 +119,10 @@ function detectInPointSetWhichBelowMetadata(pointSet: PointSet): PointSet {
   };
 }
 
-function detectInPasalSet(pasalSet: PasalSet): PasalSet {
+function detectInPasalSet(daftarPasal: PasalSet): PasalSet {
   return {
-    ...pasalSet,
-    elements: pasalSet.elements.map((pasal) => ({
+    ...daftarPasal,
+    elements: daftarPasal.elements.map((pasal) => ({
       ...pasal,
       version: {
         ...pasal.version,
@@ -136,13 +136,13 @@ function detectInBagian(bagian: Bagian): Bagian {
   return {
     ...bagian,
     content:
-      bagian.content.type === 'pasalSet'
+      bagian.content.type === 'daftarPasal'
         ? detectInPasalSet(bagian.content)
         : {
             ...bagian.content,
             elements: bagian.content.elements.map((paragraf) => ({
               ...paragraf,
-              pasalSet: detectInPasalSet(paragraf.pasalSet),
+              daftarPasal: detectInPasalSet(paragraf.daftarPasal),
             })),
           },
   };
@@ -157,7 +157,7 @@ function detectInPasalVersionContent(
     return {
       ...pasalVersionContent,
       elements: pasalVersionContent.elements.map((ayat) => {
-        if (ayat.content.type === 'pointSet') {
+        if (ayat.content.type === 'daftarHuruf') {
           const newAyat: Ayat = {
             ...ayat,
             content: detectInPointSetWhichBelowPasalVersoin(ayat.content, pasalVersionNode),
@@ -179,7 +179,7 @@ function detectInPasalVersionContent(
         assertNever(ayat.content);
       }),
     };
-  if (pasalVersionContent.type === 'pointSet')
+  if (pasalVersionContent.type === 'daftarHuruf')
     return detectInPointSetWhichBelowPasalVersoin(pasalVersionContent, pasalVersionNode);
   if (pasalVersionContent.type === 'text') {
     return {
@@ -194,12 +194,12 @@ function detectInPasalVersionContent(
 
 // kalo point set dibawah pasal version, bukan menimbang / mengingat
 function detectInPointSetWhichBelowPasalVersoin(
-  pointSet: PointSet,
+  daftarHuruf: PointSet,
   pasalVersionNode: PasalVersionNode
 ): PointSet {
   return {
-    ...pointSet,
-    elements: pointSet.elements.map((point) => {
+    ...daftarHuruf,
+    elements: daftarHuruf.elements.map((point) => {
       if (point.type === 'point') {
         if (point.content.type === 'text') {
           return {
@@ -212,7 +212,7 @@ function detectInPointSetWhichBelowPasalVersoin(
             },
           };
         }
-        if (point.content.type === 'pointSet') {
+        if (point.content.type === 'daftarHuruf') {
           return {
             ...point,
             content: detectInPointSetWhichBelowPasalVersoin(point.content, pasalVersionNode),
@@ -240,19 +240,19 @@ function detectBelowPasalVersion(
     ...detectBelowDocument(textString),
     ...detectPasalX(textString, pasalVersionNode.parentPasalNode.parentNode),
     ...detectHurufXYZ(textString, {
-      nodeType: 'pointSet',
+      nodeType: 'daftarHuruf',
       parentNode: pasalVersionNode,
     }),
     ...detectAyatNHurufXYZ(textString, {
-      nodeType: 'ayatSet',
+      nodeType: 'daftarAyat',
       parentPasalVersionNode: pasalVersionNode,
     }),
     ...detectAyatX(textString, {
-      nodeType: 'ayatSet',
+      nodeType: 'daftarAyat',
       parentPasalVersionNode: pasalVersionNode,
     }),
     ...detectPasalXAyatX(textString, {
-      nodeType: 'ayatSet',
+      nodeType: 'daftarAyat',
       parentPasalVersionNode: pasalVersionNode,
     }),
   ];
@@ -375,12 +375,12 @@ const detectAyatNHurufXYZ: Detector<AyatSetNode> = (text, parentAyatSetNode) => 
     const start = match.index ?? neverNum();
     const offset = start + `ayat (${ayatKey})`.length;
     const hurufString = arr?.splice(1).join(',') ?? neverString();
-    const pointSetNode: PointSetNode = {
-      nodeType: 'pointSet',
+    const daftarHurufNode: PointSetNode = {
+      nodeType: 'daftarHuruf',
       parentNode: { nodeType: 'ayat', key: ayatKey, parentAyatSetNode },
     };
 
-    const hurufs = detectHurufXYZ(hurufString, pointSetNode).map((r, idx) => ({
+    const hurufs = detectHurufXYZ(hurufString, daftarHurufNode).map((r, idx) => ({
       ...r,
       start: idx === 0 ? start : r.start + offset,
       end: r.end + offset,

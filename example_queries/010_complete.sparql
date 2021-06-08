@@ -6,7 +6,7 @@ SELECT ?type (COUNT(*) AS ?jumlah) WHERE {
     {
       SELECT ?pasal (MAX(?pasalVersion) as ?latestPasalVersion) WHERE {
         ?pasal legal:partOf+ <http://example.org/legal/document/uu/2020/11>.
-        ?pasal legal:pasalHasPasalVersion ?pasalVersion .
+        ?pasal legal:versi ?pasalVersion .
       } GROUP BY ?pasal
     }
     ?deletingPoint legal:partOf+ ?latestPasalVersion .
@@ -17,7 +17,7 @@ SELECT ?type (COUNT(*) AS ?jumlah) WHERE {
     {
       SELECT ?pasal (MAX(?pasalVersion) as ?latestPasalVersion) WHERE {
         ?pasal legal:partOf+ <http://example.org/legal/document/uu/2020/11>.
-        ?pasal legal:pasalHasPasalVersion ?pasalVersion .
+        ?pasal legal:versi ?pasalVersion .
       } GROUP BY ?pasal
     }
     ?deletingPoint legal:partOf+ ?latestPasalVersion .
@@ -27,7 +27,7 @@ SELECT ?type (COUNT(*) AS ?jumlah) WHERE {
     {
       SELECT ?pasal (MAX(?pasalVersion) as ?latestPasalVersion) WHERE {
         ?pasal legal:partOf+ <http://example.org/legal/document/uu/2020/11>.
-        ?pasal legal:pasalHasPasalVersion ?pasalVersion .
+        ?pasal legal:versi ?pasalVersion .
       } GROUP BY ?pasal
     }
     ?deletingPoint legal:partOf+ ?latestPasalVersion .

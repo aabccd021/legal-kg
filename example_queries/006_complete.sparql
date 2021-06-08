@@ -5,7 +5,7 @@ SELECT ?insertingPoint ?insertedPasalVersion ?text WHERE {
   {
     SELECT ?pasal (MAX(?pasalVersion) as ?latestPasalVersion) WHERE {
       ?pasal legal:partOf+ <http://example.org/legal/document/uu/2020/11>.
-      ?pasal legal:pasalHasPasalVersion ?pasalVersion .
+      ?pasal legal:versi ?pasalVersion .
     } GROUP BY ?pasal
   }
   ?insertingPoint legal:partOf+ ?latestPasalVersion .

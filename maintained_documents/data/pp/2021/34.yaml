@@ -13,7 +13,7 @@ metadata:
     content:
       type: text
       node:
-        nodeType: text
+        nodeType: segmen
         textName: text
         parentNode: *ref_1
       textString: >-
@@ -35,14 +35,14 @@ metadata:
       nodeType: mengingat
       parentNode: *ref_0
     content:
-      type: pointSet
+      type: daftarHuruf
       node: &ref_3
-        nodeType: pointSet
+        nodeType: daftarHuruf
         parentNode: *ref_2
       description:
         type: text
         node:
-          nodeType: text
+          nodeType: segmen
           textName: description
           parentNode: *ref_3
         textString: ''
@@ -56,7 +56,7 @@ metadata:
           content:
             type: text
             node:
-              nodeType: text
+              nodeType: segmen
               textName: text
               parentNode: *ref_4
             textString: Pasal 5 ayat (2) Undang-Undang Dasar Negara Republik Indonesia Tahun 1945,
@@ -74,7 +74,7 @@ metadata:
           content:
             type: text
             node:
-              nodeType: text
+              nodeType: segmen
               textName: text
               parentNode: *ref_5
             textString: >-
@@ -98,7 +98,7 @@ metadata:
           content:
             type: text
             node:
-              nodeType: text
+              nodeType: segmen
               textName: text
               parentNode: *ref_6
             textString: >-
@@ -131,9 +131,9 @@ content:
         parentBabSetNode: *ref_7
       title: ''
       content:
-        type: pasalSet
+        type: daftarPasal
         node:
-          nodeType: pasalSet
+          nodeType: daftarPasal
           parentNode: *ref_8
         elements:
           - type: pasal
@@ -156,14 +156,14 @@ content:
                   key: '1'
                   parentNode: *ref_0
               content:
-                type: pointSet
+                type: daftarHuruf
                 node: &ref_10
-                  nodeType: pointSet
+                  nodeType: daftarHuruf
                   parentNode: *ref_9
                 description:
                   type: text
                   node:
-                    nodeType: text
+                    nodeType: segmen
                     textName: description
                     parentNode: *ref_10
                   textString: 'Dalam Peraturan Pemerintah ini yang dimaksud dengan:'
@@ -177,7 +177,7 @@ content:
                     content:
                       type: text
                       node:
-                        nodeType: text
+                        nodeType: segmen
                         textName: text
                         parentNode: *ref_11
                       textString: >-
@@ -192,7 +192,7 @@ content:
                     content:
                       type: text
                       node:
-                        nodeType: text
+                        nodeType: segmen
                         textName: text
                         parentNode: *ref_12
                       textString: >-
@@ -208,7 +208,7 @@ content:
                     content:
                       type: text
                       node:
-                        nodeType: text
+                        nodeType: segmen
                         textName: text
                         parentNode: *ref_13
                       textString: >-
@@ -224,7 +224,7 @@ content:
                     content:
                       type: text
                       node:
-                        nodeType: text
+                        nodeType: segmen
                         textName: text
                         parentNode: *ref_14
                       textString: >-
@@ -240,7 +240,7 @@ content:
                     content:
                       type: text
                       node:
-                        nodeType: text
+                        nodeType: segmen
                         textName: text
                         parentNode: *ref_15
                       textString: >-
@@ -257,7 +257,7 @@ content:
                     content:
                       type: text
                       node:
-                        nodeType: text
+                        nodeType: segmen
                         textName: text
                         parentNode: *ref_16
                       textString: >-
@@ -274,7 +274,7 @@ content:
                     content:
                       type: text
                       node:
-                        nodeType: text
+                        nodeType: segmen
                         textName: text
                         parentNode: *ref_17
                       textString: >-
@@ -290,7 +290,7 @@ content:
                     content:
                       type: text
                       node:
-                        nodeType: text
+                        nodeType: segmen
                         textName: text
                         parentNode: *ref_18
                       textString: >-
@@ -308,7 +308,7 @@ content:
                     content:
                       type: text
                       node:
-                        nodeType: text
+                        nodeType: segmen
                         textName: text
                         parentNode: *ref_19
                       textString: >-
@@ -322,9 +322,9 @@ content:
         parentBabSetNode: *ref_7
       title: KEWAJIBAN DAN LARANGAN BAGI PEMBERI KERJA TENAGA KERJA ASING
       content:
-        type: bagianSet
+        type: daftarBagian
         node:
-          nodeType: bagianSet
+          nodeType: daftarBagian
           parentBabNode: *ref_20
         elements:
           - type: bagian
@@ -332,13 +332,13 @@ content:
               nodeType: bagian
               key: 1
               parentBagianSetNode:
-                nodeType: bagianSet
+                nodeType: daftarBagian
                 parentBabNode: *ref_20
             title: Bagian Kesatu Umum
             content:
-              type: pasalSet
+              type: daftarPasal
               node:
-                nodeType: pasalSet
+                nodeType: daftarPasal
                 parentNode: *ref_21
               elements:
                 - type: pasal
@@ -359,7 +359,7 @@ content:
                     content:
                       type: ayatSet
                       node: &ref_24
-                        nodeType: ayatSet
+                        nodeType: daftarAyat
                         parentPasalVersionNode: *ref_23
                       elements:
                         - type: ayat
@@ -370,7 +370,7 @@ content:
                           content:
                             type: text
                             node:
-                              nodeType: text
+                              nodeType: segmen
                               textName: text
                               parentNode: *ref_25
                             textString: >-
@@ -385,7 +385,7 @@ content:
                           content:
                             type: text
                             node:
-                              nodeType: text
+                              nodeType: segmen
                               textName: text
                               parentNode: *ref_26
                             textString: >-
@@ -398,7 +398,7 @@ content:
                                 node:
                                   key: 1
                                   parentAyatSetNode:
-                                    nodeType: ayatSet
+                                    nodeType: daftarAyat
                                     parentPasalVersionNode: *ref_23
                                   nodeType: ayat
                         - type: ayat
@@ -409,7 +409,7 @@ content:
                           content:
                             type: text
                             node:
-                              nodeType: text
+                              nodeType: segmen
                               textName: text
                               parentNode: *ref_27
                             textString: >-
@@ -421,7 +421,7 @@ content:
                                 node:
                                   key: 2
                                   parentAyatSetNode:
-                                    nodeType: ayatSet
+                                    nodeType: daftarAyat
                                     parentPasalVersionNode: *ref_23
                                   nodeType: ayat
                 - type: pasal
@@ -442,7 +442,7 @@ content:
                     content:
                       type: ayatSet
                       node: &ref_29
-                        nodeType: ayatSet
+                        nodeType: daftarAyat
                         parentPasalVersionNode: *ref_28
                       elements:
                         - type: ayat
@@ -451,14 +451,14 @@ content:
                             key: 1
                             parentAyatSetNode: *ref_29
                           content:
-                            type: pointSet
+                            type: daftarHuruf
                             node: &ref_31
-                              nodeType: pointSet
+                              nodeType: daftarHuruf
                               parentNode: *ref_30
                             description:
                               type: text
                               node:
-                                nodeType: text
+                                nodeType: segmen
                                 textName: description
                                 parentNode: *ref_31
                               textString: 'Pemberi Kerja TKA meliputi:'
@@ -472,7 +472,7 @@ content:
                                 content:
                                   type: text
                                   node:
-                                    nodeType: text
+                                    nodeType: segmen
                                     textName: text
                                     parentNode: *ref_32
                                   textString: >-
@@ -487,7 +487,7 @@ content:
                                 content:
                                   type: text
                                   node:
-                                    nodeType: text
+                                    nodeType: segmen
                                     textName: text
                                     parentNode: *ref_33
                                   textString: >-
@@ -503,7 +503,7 @@ content:
                                 content:
                                   type: text
                                   node:
-                                    nodeType: text
+                                    nodeType: segmen
                                     textName: text
                                     parentNode: *ref_34
                                   textString: perusahaan swasta asing yang berusaha di Indonesia,
@@ -516,7 +516,7 @@ content:
                                 content:
                                   type: text
                                   node:
-                                    nodeType: text
+                                    nodeType: segmen
                                     textName: text
                                     parentNode: *ref_35
                                   textString: >-
@@ -532,7 +532,7 @@ content:
                                 content:
                                   type: text
                                   node:
-                                    nodeType: text
+                                    nodeType: segmen
                                     textName: text
                                     parentNode: *ref_36
                                   textString: lembaga sosial, keagamaan, pendidikan, dan kebudayaan,
@@ -545,7 +545,7 @@ content:
                                 content:
                                   type: text
                                   node:
-                                    nodeType: text
+                                    nodeType: segmen
                                     textName: text
                                     parentNode: *ref_37
                                   textString: usaha jasa impresariat, dan
@@ -558,7 +558,7 @@ content:
                                 content:
                                   type: text
                                   node:
-                                    nodeType: text
+                                    nodeType: segmen
                                     textName: text
                                     parentNode: *ref_38
                                   textString: >-
@@ -573,7 +573,7 @@ content:
                           content:
                             type: text
                             node:
-                              nodeType: text
+                              nodeType: segmen
                               textName: text
                               parentNode: *ref_39
                             textString: >-
@@ -586,7 +586,7 @@ content:
                                 node:
                                   key: 1
                                   parentAyatSetNode:
-                                    nodeType: ayatSet
+                                    nodeType: daftarAyat
                                     parentPasalVersionNode: *ref_28
                                   nodeType: ayat
                               - start: 54
@@ -594,7 +594,7 @@ content:
                                 node:
                                   key: d
                                   parentPointSetNode:
-                                    nodeType: pointSet
+                                    nodeType: daftarHuruf
                                     parentNode: *ref_28
                                   nodeType: huruf
                 - type: pasal
@@ -615,7 +615,7 @@ content:
                     content:
                       type: ayatSet
                       node: &ref_41
-                        nodeType: ayatSet
+                        nodeType: daftarAyat
                         parentPasalVersionNode: *ref_40
                       elements:
                         - type: ayat
@@ -626,7 +626,7 @@ content:
                           content:
                             type: text
                             node:
-                              nodeType: text
+                              nodeType: segmen
                               textName: text
                               parentNode: *ref_42
                             textString: >-
@@ -642,7 +642,7 @@ content:
                           content:
                             type: text
                             node:
-                              nodeType: text
+                              nodeType: segmen
                               textName: text
                               parentNode: *ref_43
                             textString: >-
@@ -655,7 +655,7 @@ content:
                                 node:
                                   key: 1
                                   parentAyatSetNode:
-                                    nodeType: ayatSet
+                                    nodeType: daftarAyat
                                     parentPasalVersionNode: *ref_40
                                   nodeType: ayat
                 - type: pasal
@@ -676,7 +676,7 @@ content:
                     content:
                       type: ayatSet
                       node: &ref_45
-                        nodeType: ayatSet
+                        nodeType: daftarAyat
                         parentPasalVersionNode: *ref_44
                       elements:
                         - type: ayat
@@ -685,14 +685,14 @@ content:
                             key: 1
                             parentAyatSetNode: *ref_45
                           content:
-                            type: pointSet
+                            type: daftarHuruf
                             node: &ref_47
-                              nodeType: pointSet
+                              nodeType: daftarHuruf
                               parentNode: *ref_46
                             description:
                               type: text
                               node:
-                                nodeType: text
+                                nodeType: segmen
                                 textName: description
                                 parentNode: *ref_47
                               textString: >-
@@ -708,7 +708,7 @@ content:
                                 content:
                                   type: text
                                   node:
-                                    nodeType: text
+                                    nodeType: segmen
                                     textName: text
                                     parentNode: *ref_48
                                   textString: 'direksi atau komisaris: atau'
@@ -721,7 +721,7 @@ content:
                                 content:
                                   type: text
                                   node:
-                                    nodeType: text
+                                    nodeType: segmen
                                     textName: text
                                     parentNode: *ref_49
                                   textString: >-
@@ -737,7 +737,7 @@ content:
                           content:
                             type: text
                             node:
-                              nodeType: text
+                              nodeType: segmen
                               textName: text
                               parentNode: *ref_50
                             textString: >-
@@ -750,7 +750,7 @@ content:
                                 node:
                                   key: 1
                                   parentAyatSetNode:
-                                    nodeType: ayatSet
+                                    nodeType: daftarAyat
                                     parentPasalVersionNode: *ref_44
                                   nodeType: ayat
                         - type: ayat
@@ -761,7 +761,7 @@ content:
                           content:
                             type: text
                             node:
-                              nodeType: text
+                              nodeType: segmen
                               textName: text
                               parentNode: *ref_51
                             textString: >-
@@ -774,7 +774,7 @@ content:
                                 node:
                                   key: 1
                                   parentAyatSetNode:
-                                    nodeType: ayatSet
+                                    nodeType: daftarAyat
                                     parentPasalVersionNode: *ref_44
                                   nodeType: ayat
                         - type: ayat
@@ -785,7 +785,7 @@ content:
                           content:
                             type: text
                             node:
-                              nodeType: text
+                              nodeType: segmen
                               textName: text
                               parentNode: *ref_52
                             textString: >-
@@ -800,7 +800,7 @@ content:
                                 node:
                                   key: 1
                                   parentAyatSetNode:
-                                    nodeType: ayatSet
+                                    nodeType: daftarAyat
                                     parentPasalVersionNode: *ref_44
                                   nodeType: ayat
                               - start: 201
@@ -808,7 +808,7 @@ content:
                                 node:
                                   key: b
                                   parentPointSetNode:
-                                    nodeType: pointSet
+                                    nodeType: daftarHuruf
                                     parentNode: *ref_44
                                   nodeType: huruf
           - type: bagian
@@ -816,13 +816,13 @@ content:
               nodeType: bagian
               key: 2
               parentBagianSetNode:
-                nodeType: bagianSet
+                nodeType: daftarBagian
                 parentBabNode: *ref_20
             title: Bagian Kedua Kewajiban
             content:
-              type: pasalSet
+              type: daftarPasal
               node:
-                nodeType: pasalSet
+                nodeType: daftarPasal
                 parentNode: *ref_53
               elements:
                 - type: pasal
@@ -843,7 +843,7 @@ content:
                     content:
                       type: ayatSet
                       node: &ref_55
-                        nodeType: ayatSet
+                        nodeType: daftarAyat
                         parentPasalVersionNode: *ref_54
                       elements:
                         - type: ayat
@@ -854,7 +854,7 @@ content:
                           content:
                             type: text
                             node:
-                              nodeType: text
+                              nodeType: segmen
                               textName: text
                               parentNode: *ref_56
                             textString: >-
@@ -869,7 +869,7 @@ content:
                           content:
                             type: text
                             node:
-                              nodeType: text
+                              nodeType: segmen
                               textName: text
                               parentNode: *ref_57
                             textString: >-
@@ -885,7 +885,7 @@ content:
                           content:
                             type: text
                             node:
-                              nodeType: text
+                              nodeType: segmen
                               textName: text
                               parentNode: *ref_58
                             textString: >-
@@ -897,7 +897,7 @@ content:
                                 node:
                                   key: 2
                                   parentAyatSetNode: &ref_59
-                                    nodeType: ayatSet
+                                    nodeType: daftarAyat
                                     parentPasalVersionNode: *ref_54
                                   nodeType: ayat
                               - start: 44
@@ -924,7 +924,7 @@ content:
                     content:
                       type: ayatSet
                       node: &ref_61
-                        nodeType: ayatSet
+                        nodeType: daftarAyat
                         parentPasalVersionNode: *ref_60
                       elements:
                         - type: ayat
@@ -933,14 +933,14 @@ content:
                             key: 1
                             parentAyatSetNode: *ref_61
                           content:
-                            type: pointSet
+                            type: daftarHuruf
                             node: &ref_63
-                              nodeType: pointSet
+                              nodeType: daftarHuruf
                               parentNode: *ref_62
                             description:
                               type: text
                               node:
-                                nodeType: text
+                                nodeType: segmen
                                 textName: description
                                 parentNode: *ref_63
                               textString: 'Pemberi Kerja TKA wajib:'
@@ -954,7 +954,7 @@ content:
                                 content:
                                   type: text
                                   node:
-                                    nodeType: text
+                                    nodeType: segmen
                                     textName: text
                                     parentNode: *ref_64
                                   textString: >-
@@ -970,7 +970,7 @@ content:
                                 content:
                                   type: text
                                   node:
-                                    nodeType: text
+                                    nodeType: segmen
                                     textName: text
                                     parentNode: *ref_65
                                   textString: >-
@@ -983,7 +983,7 @@ content:
                                       node:
                                         key: a
                                         parentPointSetNode:
-                                          nodeType: pointSet
+                                          nodeType: daftarHuruf
                                           parentNode: *ref_60
                                         nodeType: huruf
                               - type: point
@@ -994,7 +994,7 @@ content:
                                 content:
                                   type: text
                                   node:
-                                    nodeType: text
+                                    nodeType: segmen
                                     textName: text
                                     parentNode: *ref_66
                                   textString: >-
@@ -1009,7 +1009,7 @@ content:
                           content:
                             type: text
                             node:
-                              nodeType: text
+                              nodeType: segmen
                               textName: text
                               parentNode: *ref_67
                             textString: >-
@@ -1022,7 +1022,7 @@ content:
                                 node:
                                   key: 1
                                   parentAyatSetNode:
-                                    nodeType: ayatSet
+                                    nodeType: daftarAyat
                                     parentPasalVersionNode: *ref_60
                                   nodeType: ayat
                         - type: ayat
@@ -1031,14 +1031,14 @@ content:
                             key: 3
                             parentAyatSetNode: *ref_61
                           content:
-                            type: pointSet
+                            type: daftarHuruf
                             node: &ref_69
-                              nodeType: pointSet
+                              nodeType: daftarHuruf
                               parentNode: *ref_68
                             description:
                               type: text
                               node:
-                                nodeType: text
+                                nodeType: segmen
                                 textName: description
                                 parentNode: *ref_69
                               textString: >-
@@ -1054,7 +1054,7 @@ content:
                                 content:
                                   type: text
                                   node:
-                                    nodeType: text
+                                    nodeType: segmen
                                     textName: text
                                     parentNode: *ref_70
                                   textString: direksi dan komisaris,
@@ -1067,7 +1067,7 @@ content:
                                 content:
                                   type: text
                                   node:
-                                    nodeType: text
+                                    nodeType: segmen
                                     textName: text
                                     parentNode: *ref_71
                                   textString: kepala kantor perwakilan,
@@ -1080,7 +1080,7 @@ content:
                                 content:
                                   type: text
                                   node:
-                                    nodeType: text
+                                    nodeType: segmen
                                     textName: text
                                     parentNode: *ref_72
                                   textString: . pembina, pengurus, dan pengawas yayasan, dan
@@ -1093,7 +1093,7 @@ content:
                                 content:
                                   type: text
                                   node:
-                                    nodeType: text
+                                    nodeType: segmen
                                     textName: text
                                     parentNode: *ref_73
                                   textString: TKA yang dipekerjakan untuk pekerjaan bersifat sementara.
@@ -1116,7 +1116,7 @@ content:
                     content:
                       type: ayatSet
                       node: &ref_75
-                        nodeType: ayatSet
+                        nodeType: daftarAyat
                         parentPasalVersionNode: *ref_74
                       elements:
                         - type: ayat
@@ -1127,7 +1127,7 @@ content:
                           content:
                             type: text
                             node:
-                              nodeType: text
+                              nodeType: segmen
                               textName: text
                               parentNode: *ref_76
                             textString: >-
@@ -1144,7 +1144,7 @@ content:
                           content:
                             type: text
                             node:
-                              nodeType: text
+                              nodeType: segmen
                               textName: text
                               parentNode: *ref_77
                             textString: >-
@@ -1157,7 +1157,7 @@ content:
                                 node:
                                   key: 1
                                   parentAyatSetNode:
-                                    nodeType: ayatSet
+                                    nodeType: daftarAyat
                                     parentPasalVersionNode: *ref_74
                                   nodeType: ayat
           - type: bagian
@@ -1165,13 +1165,13 @@ content:
               nodeType: bagian
               key: 3
               parentBagianSetNode:
-                nodeType: bagianSet
+                nodeType: daftarBagian
                 parentBabNode: *ref_20
             title: Bagian Ketiga Larangan
             content:
-              type: pasalSet
+              type: daftarPasal
               node:
-                nodeType: pasalSet
+                nodeType: daftarPasal
                 parentNode: *ref_78
               elements:
                 - type: pasal
@@ -1192,7 +1192,7 @@ content:
                     content:
                       type: text
                       node:
-                        nodeType: text
+                        nodeType: segmen
                         textName: text
                         parentNode: *ref_79
                       textString: Pemberi kerja orang perseorangan dilarang mempekerjakan TKA.
@@ -1215,7 +1215,7 @@ content:
                     content:
                       type: text
                       node:
-                        nodeType: text
+                        nodeType: segmen
                         textName: text
                         parentNode: *ref_80
                       textString: >-
@@ -1240,7 +1240,7 @@ content:
                     content:
                       type: ayatSet
                       node: &ref_82
-                        nodeType: ayatSet
+                        nodeType: daftarAyat
                         parentPasalVersionNode: *ref_81
                       elements:
                         - type: ayat
@@ -1251,7 +1251,7 @@ content:
                           content:
                             type: text
                             node:
-                              nodeType: text
+                              nodeType: segmen
                               textName: text
                               parentNode: *ref_83
                             textString: >-
@@ -1266,7 +1266,7 @@ content:
                           content:
                             type: text
                             node:
-                              nodeType: text
+                              nodeType: segmen
                               textName: text
                               parentNode: *ref_84
                             textString: >-
@@ -1279,7 +1279,7 @@ content:
                                 node:
                                   key: 1
                                   parentAyatSetNode:
-                                    nodeType: ayatSet
+                                    nodeType: daftarAyat
                                     parentPasalVersionNode: *ref_81
                                   nodeType: ayat
     - type: bab
@@ -1289,9 +1289,9 @@ content:
         parentBabSetNode: *ref_7
       title: PENGESAHAN RENCANA PENGGUNAAN TENAGA KERJA ASING
       content:
-        type: bagianSet
+        type: daftarBagian
         node:
-          nodeType: bagianSet
+          nodeType: daftarBagian
           parentBabNode: *ref_85
         elements:
           - type: bagian
@@ -1299,13 +1299,13 @@ content:
               nodeType: bagian
               key: 1
               parentBagianSetNode:
-                nodeType: bagianSet
+                nodeType: daftarBagian
                 parentBabNode: *ref_85
             title: Bagian Kesatu Tata Cara Permohonan Pengesahan Rencana Penggunaan Tenaga Kerja Asing
             content:
-              type: pasalSet
+              type: daftarPasal
               node:
-                nodeType: pasalSet
+                nodeType: daftarPasal
                 parentNode: *ref_86
               elements:
                 - type: pasal
@@ -1326,7 +1326,7 @@ content:
                     content:
                       type: ayatSet
                       node: &ref_88
-                        nodeType: ayatSet
+                        nodeType: daftarAyat
                         parentPasalVersionNode: *ref_87
                       elements:
                         - type: ayat
@@ -1337,7 +1337,7 @@ content:
                           content:
                             type: text
                             node:
-                              nodeType: text
+                              nodeType: segmen
                               textName: text
                               parentNode: *ref_89
                             textString: >-
@@ -1350,14 +1350,14 @@ content:
                             key: 2
                             parentAyatSetNode: *ref_88
                           content:
-                            type: pointSet
+                            type: daftarHuruf
                             node: &ref_91
-                              nodeType: pointSet
+                              nodeType: daftarHuruf
                               parentNode: *ref_90
                             description:
                               type: text
                               node:
-                                nodeType: text
+                                nodeType: segmen
                                 textName: description
                                 parentNode: *ref_91
                               textString: >-
@@ -1373,7 +1373,7 @@ content:
                                 content:
                                   type: text
                                   node:
-                                    nodeType: text
+                                    nodeType: segmen
                                     textName: text
                                     parentNode: *ref_92
                                   textString: identitas Pemberi Kerja TKA,
@@ -1386,7 +1386,7 @@ content:
                                 content:
                                   type: text
                                   node:
-                                    nodeType: text
+                                    nodeType: segmen
                                     textName: text
                                     parentNode: *ref_93
                                   textString: 'alasan penggunaan TKA:'
@@ -1399,7 +1399,7 @@ content:
                                 content:
                                   type: text
                                   node:
-                                    nodeType: text
+                                    nodeType: segmen
                                     textName: text
                                     parentNode: *ref_94
                                   textString: jabatan atau kedudukan TKA dalam struktur organisasi perusahaan,
@@ -1412,7 +1412,7 @@ content:
                                 content:
                                   type: text
                                   node:
-                                    nodeType: text
+                                    nodeType: segmen
                                     textName: text
                                     parentNode: *ref_95
                                   textString: jumlah TKA,
@@ -1425,7 +1425,7 @@ content:
                                 content:
                                   type: text
                                   node:
-                                    nodeType: text
+                                    nodeType: segmen
                                     textName: text
                                     parentNode: *ref_96
                                   textString: jangka waktu penggunaan TKA,
@@ -1438,7 +1438,7 @@ content:
                                 content:
                                   type: text
                                   node:
-                                    nodeType: text
+                                    nodeType: segmen
                                     textName: text
                                     parentNode: *ref_97
                                   textString: lokasi kerja TKA,
@@ -1451,7 +1451,7 @@ content:
                                 content:
                                   type: text
                                   node:
-                                    nodeType: text
+                                    nodeType: segmen
                                     textName: text
                                     parentNode: *ref_98
                                   textString: identitas Tenaga Kerja Pendamping TKA, dan
@@ -1464,7 +1464,7 @@ content:
                                 content:
                                   type: text
                                   node:
-                                    nodeType: text
+                                    nodeType: segmen
                                     textName: text
                                     parentNode: *ref_99
                                   textString: rencana penyerapan tenaga kerja Indonesia setiap tahun.
@@ -1475,14 +1475,14 @@ content:
                             key: 3
                             parentAyatSetNode: *ref_88
                           content:
-                            type: pointSet
+                            type: daftarHuruf
                             node: &ref_101
-                              nodeType: pointSet
+                              nodeType: daftarHuruf
                               parentNode: *ref_100
                             description:
                               type: text
                               node:
-                                nodeType: text
+                                nodeType: segmen
                                 textName: description
                                 parentNode: *ref_101
                               textString: >-
@@ -1499,7 +1499,7 @@ content:
                                 content:
                                   type: text
                                   node:
-                                    nodeType: text
+                                    nodeType: segmen
                                     textName: text
                                     parentNode: *ref_102
                                   textString: surat permohonan,
@@ -1512,7 +1512,7 @@ content:
                                 content:
                                   type: text
                                   node:
-                                    nodeType: text
+                                    nodeType: segmen
                                     textName: text
                                     parentNode: *ref_103
                                   textString: nomor induk berusaha dan/atau izin usaha Pemberi Kerja TKA,
@@ -1525,7 +1525,7 @@ content:
                                 content:
                                   type: text
                                   node:
-                                    nodeType: text
+                                    nodeType: segmen
                                     textName: text
                                     parentNode: *ref_104
                                   textString: >-
@@ -1540,7 +1540,7 @@ content:
                                 content:
                                   type: text
                                   node:
-                                    nodeType: text
+                                    nodeType: segmen
                                     textName: text
                                     parentNode: *ref_105
                                   textString: bukti wajib lapor ketenagakerjaan di perusahaan, |
@@ -1553,7 +1553,7 @@ content:
                                 content:
                                   type: text
                                   node:
-                                    nodeType: text
+                                    nodeType: segmen
                                     textName: text
                                     parentNode: *ref_106
                                   textString: rancangan perjanjian kerja atau perjanjian lain,
@@ -1566,7 +1566,7 @@ content:
                                 content:
                                   type: text
                                   node:
-                                    nodeType: text
+                                    nodeType: segmen
                                     textName: text
                                     parentNode: *ref_107
                                   textString: bagan struktur organisasi perusahaan,
@@ -1579,7 +1579,7 @@ content:
                                 content:
                                   type: text
                                   node:
-                                    nodeType: text
+                                    nodeType: segmen
                                     textName: text
                                     parentNode: *ref_108
                                   textString: surat pernyataan untuk penunjukan Tenaga Kerja Pendamping TKA,
@@ -1592,7 +1592,7 @@ content:
                                 content:
                                   type: text
                                   node:
-                                    nodeType: text
+                                    nodeType: segmen
                                     textName: text
                                     parentNode: *ref_109
                                   textString: >-
@@ -1608,7 +1608,7 @@ content:
                                 content:
                                   type: text
                                   node:
-                                    nodeType: text
+                                    nodeType: segmen
                                     textName: text
                                     parentNode: *ref_110
                                   textString: >-
@@ -1623,7 +1623,7 @@ content:
                           content:
                             type: text
                             node:
-                              nodeType: text
+                              nodeType: segmen
                               textName: text
                               parentNode: *ref_111
                             textString: >-
@@ -1649,7 +1649,7 @@ content:
                     content:
                       type: ayatSet
                       node: &ref_113
-                        nodeType: ayatSet
+                        nodeType: daftarAyat
                         parentPasalVersionNode: *ref_112
                       elements:
                         - type: ayat
@@ -1660,7 +1660,7 @@ content:
                           content:
                             type: text
                             node:
-                              nodeType: text
+                              nodeType: segmen
                               textName: text
                               parentNode: *ref_114
                             textString: >-
@@ -1676,7 +1676,7 @@ content:
                           content:
                             type: text
                             node:
-                              nodeType: text
+                              nodeType: segmen
                               textName: text
                               parentNode: *ref_115
                             textString: >-
@@ -1690,7 +1690,7 @@ content:
                                 node:
                                   key: 1
                                   parentAyatSetNode:
-                                    nodeType: ayatSet
+                                    nodeType: daftarAyat
                                     parentPasalVersionNode: *ref_112
                                   nodeType: ayat
                 - type: pasal
@@ -1711,7 +1711,7 @@ content:
                     content:
                       type: ayatSet
                       node: &ref_117
-                        nodeType: ayatSet
+                        nodeType: daftarAyat
                         parentPasalVersionNode: *ref_116
                       elements:
                         - type: ayat
@@ -1722,7 +1722,7 @@ content:
                           content:
                             type: text
                             node:
-                              nodeType: text
+                              nodeType: segmen
                               textName: text
                               parentNode: *ref_118
                             textString: >-
@@ -1734,7 +1734,7 @@ content:
                                 end: 99
                                 node:
                                   parentAyatSetNode:
-                                    nodeType: ayatSet
+                                    nodeType: daftarAyat
                                     parentPasalVersionNode: *ref_116
                                   key: 2
                                   nodeType: ayat
@@ -1744,14 +1744,14 @@ content:
                             key: 2
                             parentAyatSetNode: *ref_117
                           content:
-                            type: pointSet
+                            type: daftarHuruf
                             node: &ref_120
-                              nodeType: pointSet
+                              nodeType: daftarHuruf
                               parentNode: *ref_119
                             description:
                               type: text
                               node:
-                                nodeType: text
+                                nodeType: segmen
                                 textName: description
                                 parentNode: *ref_120
                               textString: >-
@@ -1767,7 +1767,7 @@ content:
                                 content:
                                   type: text
                                   node:
-                                    nodeType: text
+                                    nodeType: segmen
                                     textName: text
                                     parentNode: *ref_121
                                   textString: identitas TKA,
@@ -1780,7 +1780,7 @@ content:
                                 content:
                                   type: text
                                   node:
-                                    nodeType: text
+                                    nodeType: segmen
                                     textName: text
                                     parentNode: *ref_122
                                   textString: jabatan TKA dan jangka waktu bekerja TKA,
@@ -1793,7 +1793,7 @@ content:
                                 content:
                                   type: text
                                   node:
-                                    nodeType: text
+                                    nodeType: segmen
                                     textName: text
                                     parentNode: *ref_123
                                   textString: lokasi kerja TKA, dan
@@ -1806,7 +1806,7 @@ content:
                                 content:
                                   type: text
                                   node:
-                                    nodeType: text
+                                    nodeType: segmen
                                     textName: text
                                     parentNode: *ref_124
                                   textString: penetapan kode dan lokasi domisili TKA.
@@ -1817,14 +1817,14 @@ content:
                             key: 3
                             parentAyatSetNode: *ref_117
                           content:
-                            type: pointSet
+                            type: daftarHuruf
                             node: &ref_126
-                              nodeType: pointSet
+                              nodeType: daftarHuruf
                               parentNode: *ref_125
                             description:
                               type: text
                               node:
-                                nodeType: text
+                                nodeType: segmen
                                 textName: description
                                 parentNode: *ref_126
                               textString: >-
@@ -1840,7 +1840,7 @@ content:
                                 content:
                                   type: text
                                   node:
-                                    nodeType: text
+                                    nodeType: segmen
                                     textName: text
                                     parentNode: *ref_127
                                   textString: ijazah pendidikan,
@@ -1853,7 +1853,7 @@ content:
                                 content:
                                   type: text
                                   node:
-                                    nodeType: text
+                                    nodeType: segmen
                                     textName: text
                                     parentNode: *ref_128
                                   textString: sertifikat kompetensi atau pengalaman kerja,
@@ -1866,7 +1866,7 @@ content:
                                 content:
                                   type: text
                                   node:
-                                    nodeType: text
+                                    nodeType: segmen
                                     textName: text
                                     parentNode: *ref_129
                                   textString: perjanjian kerja atau perjanjian lain,
@@ -1879,7 +1879,7 @@ content:
                                 content:
                                   type: text
                                   node:
-                                    nodeType: text
+                                    nodeType: segmen
                                     textName: text
                                     parentNode: *ref_130
                                   textString: surat keterangan penunjukan Tenaga Kerja Pendamping TKA,
@@ -1892,7 +1892,7 @@ content:
                                 content:
                                   type: text
                                   node:
-                                    nodeType: text
+                                    nodeType: segmen
                                     textName: text
                                     parentNode: *ref_131
                                   textString: surat pernyataan sebagai penjamin TKA, dan
@@ -1905,7 +1905,7 @@ content:
                                 content:
                                   type: text
                                   node:
-                                    nodeType: text
+                                    nodeType: segmen
                                     textName: text
                                     parentNode: *ref_132
                                   textString: rekening koran/tabungan TKA atau Pemberi Kerja TKA.
@@ -1918,7 +1918,7 @@ content:
                           content:
                             type: text
                             node:
-                              nodeType: text
+                              nodeType: segmen
                               textName: text
                               parentNode: *ref_133
                             textString: >-
@@ -1933,7 +1933,7 @@ content:
                           content:
                             type: text
                             node:
-                              nodeType: text
+                              nodeType: segmen
                               textName: text
                               parentNode: *ref_134
                             textString: >-
@@ -1947,7 +1947,7 @@ content:
                                 node:
                                   key: 4
                                   parentAyatSetNode:
-                                    nodeType: ayatSet
+                                    nodeType: daftarAyat
                                     parentPasalVersionNode: *ref_116
                                   nodeType: ayat
                         - type: ayat
@@ -1958,7 +1958,7 @@ content:
                           content:
                             type: text
                             node:
-                              nodeType: text
+                              nodeType: segmen
                               textName: text
                               parentNode: *ref_135
                             textString: >-
@@ -1973,7 +1973,7 @@ content:
                           content:
                             type: text
                             node:
-                              nodeType: text
+                              nodeType: segmen
                               textName: text
                               parentNode: *ref_136
                             textString: >-
@@ -1989,7 +1989,7 @@ content:
                                 node:
                                   key: 5
                                   parentAyatSetNode:
-                                    nodeType: ayatSet
+                                    nodeType: daftarAyat
                                     parentPasalVersionNode: *ref_116
                                   nodeType: ayat
                 - type: pasal
@@ -2010,7 +2010,7 @@ content:
                     content:
                       type: ayatSet
                       node: &ref_138
-                        nodeType: ayatSet
+                        nodeType: daftarAyat
                         parentPasalVersionNode: *ref_137
                       elements:
                         - type: ayat
@@ -2021,7 +2021,7 @@ content:
                           content:
                             type: text
                             node:
-                              nodeType: text
+                              nodeType: segmen
                               textName: text
                               parentNode: *ref_139
                             textString: >-
@@ -2042,14 +2042,14 @@ content:
                             key: 2
                             parentAyatSetNode: *ref_138
                           content:
-                            type: pointSet
+                            type: daftarHuruf
                             node: &ref_141
-                              nodeType: pointSet
+                              nodeType: daftarHuruf
                               parentNode: *ref_140
                             description:
                               type: text
                               node:
-                                nodeType: text
+                                nodeType: segmen
                                 textName: description
                                 parentNode: *ref_141
                               textString: >-
@@ -2066,7 +2066,7 @@ content:
                                 content:
                                   type: text
                                   node:
-                                    nodeType: text
+                                    nodeType: segmen
                                     textName: text
                                     parentNode: *ref_142
                                   textString: identitas TKA,
@@ -2079,7 +2079,7 @@ content:
                                 content:
                                   type: text
                                   node:
-                                    nodeType: text
+                                    nodeType: segmen
                                     textName: text
                                     parentNode: *ref_143
                                   textString: jabatan TKA dan jangka waktu bekerja TKA,
@@ -2092,7 +2092,7 @@ content:
                                 content:
                                   type: text
                                   node:
-                                    nodeType: text
+                                    nodeType: segmen
                                     textName: text
                                     parentNode: *ref_144
                                   textString: 'lokasi kerja TKA: dan'
@@ -2105,7 +2105,7 @@ content:
                                 content:
                                   type: text
                                   node:
-                                    nodeType: text
+                                    nodeType: segmen
                                     textName: text
                                     parentNode: *ref_145
                                   textString: penetapan kode dan lokasi domisili TKA.
@@ -2116,14 +2116,14 @@ content:
                             key: 3
                             parentAyatSetNode: *ref_138
                           content:
-                            type: pointSet
+                            type: daftarHuruf
                             node: &ref_147
-                              nodeType: pointSet
+                              nodeType: daftarHuruf
                               parentNode: *ref_146
                             description:
                               type: text
                               node:
-                                nodeType: text
+                                nodeType: segmen
                                 textName: description
                                 parentNode: *ref_147
                               textString: >-
@@ -2140,7 +2140,7 @@ content:
                                 content:
                                   type: text
                                   node:
-                                    nodeType: text
+                                    nodeType: segmen
                                     textName: text
                                     parentNode: *ref_148
                                   textString: surat permohonan dan alasan penggunaan TKA,
@@ -2153,7 +2153,7 @@ content:
                                 content:
                                   type: text
                                   node:
-                                    nodeType: text
+                                    nodeType: segmen
                                     textName: text
                                     parentNode: *ref_149
                                   textString: rancangan perjanjian kerja atau perjanjian lain, dan/atau
@@ -2166,7 +2166,7 @@ content:
                                 content:
                                   type: text
                                   node:
-                                    nodeType: text
+                                    nodeType: segmen
                                     textName: text
                                     parentNode: *ref_150
                                   textString: surat persetujuan dari instansi yang berwenang.
@@ -2179,7 +2179,7 @@ content:
                           content:
                             type: text
                             node:
-                              nodeType: text
+                              nodeType: segmen
                               textName: text
                               parentNode: *ref_151
                             textString: >-
@@ -2194,7 +2194,7 @@ content:
                           content:
                             type: text
                             node:
-                              nodeType: text
+                              nodeType: segmen
                               textName: text
                               parentNode: *ref_152
                             textString: >-
@@ -2207,7 +2207,7 @@ content:
                                 node:
                                   key: 4
                                   parentAyatSetNode:
-                                    nodeType: ayatSet
+                                    nodeType: daftarAyat
                                     parentPasalVersionNode: *ref_137
                                   nodeType: ayat
                         - type: ayat
@@ -2218,7 +2218,7 @@ content:
                           content:
                             type: text
                             node:
-                              nodeType: text
+                              nodeType: segmen
                               textName: text
                               parentNode: *ref_153
                             textString: >-
@@ -2233,7 +2233,7 @@ content:
                           content:
                             type: text
                             node:
-                              nodeType: text
+                              nodeType: segmen
                               textName: text
                               parentNode: *ref_154
                             textString: >-
@@ -2249,7 +2249,7 @@ content:
                                 node:
                                   key: 5
                                   parentAyatSetNode:
-                                    nodeType: ayatSet
+                                    nodeType: daftarAyat
                                     parentPasalVersionNode: *ref_137
                                   nodeType: ayat
                 - type: pasal
@@ -2268,14 +2268,14 @@ content:
                         key: '16'
                         parentNode: *ref_0
                     content:
-                      type: pointSet
+                      type: daftarHuruf
                       node: &ref_156
-                        nodeType: pointSet
+                        nodeType: daftarHuruf
                         parentNode: *ref_155
                       description:
                         type: text
                         node:
-                          nodeType: text
+                          nodeType: segmen
                           textName: description
                           parentNode: *ref_156
                         textString: 'Pengesahan RPTKA terdiri atas:'
@@ -2289,7 +2289,7 @@ content:
                           content:
                             type: text
                             node:
-                              nodeType: text
+                              nodeType: segmen
                               textName: text
                               parentNode: *ref_157
                             textString: RPTKA untuk pekerjaan bersifat sementara,
@@ -2302,7 +2302,7 @@ content:
                           content:
                             type: text
                             node:
-                              nodeType: text
+                              nodeType: segmen
                               textName: text
                               parentNode: *ref_158
                             textString: RPTKA untuk pekerjaan lebih dari 6 (enam) bulan,
@@ -2315,7 +2315,7 @@ content:
                           content:
                             type: text
                             node:
-                              nodeType: text
+                              nodeType: segmen
                               textName: text
                               parentNode: *ref_159
                             textString: '. RPTKA non-DKPTKAj: dan'
@@ -2328,7 +2328,7 @@ content:
                           content:
                             type: text
                             node:
-                              nodeType: text
+                              nodeType: segmen
                               textName: text
                               parentNode: *ref_160
                             textString: RPTKA KEK.
@@ -2351,7 +2351,7 @@ content:
                     content:
                       type: ayatSet
                       node: &ref_162
-                        nodeType: ayatSet
+                        nodeType: daftarAyat
                         parentPasalVersionNode: *ref_161
                       elements:
                         - type: ayat
@@ -2362,7 +2362,7 @@ content:
                           content:
                             type: text
                             node:
-                              nodeType: text
+                              nodeType: segmen
                               textName: text
                               parentNode: *ref_163
                             textString: >-
@@ -2377,7 +2377,7 @@ content:
                           content:
                             type: text
                             node:
-                              nodeType: text
+                              nodeType: segmen
                               textName: text
                               parentNode: *ref_164
                             textString: >-
@@ -2393,7 +2393,7 @@ content:
                           content:
                             type: text
                             node:
-                              nodeType: text
+                              nodeType: segmen
                               textName: text
                               parentNode: *ref_165
                             textString: >-
@@ -2408,7 +2408,7 @@ content:
                           content:
                             type: text
                             node:
-                              nodeType: text
+                              nodeType: segmen
                               textName: text
                               parentNode: *ref_166
                             textString: >-
@@ -2434,7 +2434,7 @@ content:
                     content:
                       type: text
                       node:
-                        nodeType: text
+                        nodeType: segmen
                         textName: text
                         parentNode: *ref_167
                       textString: >-
@@ -2460,7 +2460,7 @@ content:
                     content:
                       type: ayatSet
                       node: &ref_169
-                        nodeType: ayatSet
+                        nodeType: daftarAyat
                         parentPasalVersionNode: *ref_168
                       elements:
                         - type: ayat
@@ -2469,14 +2469,14 @@ content:
                             key: 1
                             parentAyatSetNode: *ref_169
                           content:
-                            type: pointSet
+                            type: daftarHuruf
                             node: &ref_171
-                              nodeType: pointSet
+                              nodeType: daftarHuruf
                               parentNode: *ref_170
                             description:
                               type: text
                               node:
-                                nodeType: text
+                                nodeType: segmen
                                 textName: description
                                 parentNode: *ref_171
                               textString: >-
@@ -2492,7 +2492,7 @@ content:
                                 content:
                                   type: text
                                   node:
-                                    nodeType: text
+                                    nodeType: segmen
                                     textName: text
                                     parentNode: *ref_172
                                   textString: >-
@@ -2508,7 +2508,7 @@ content:
                                 content:
                                   type: text
                                   node:
-                                    nodeType: text
+                                    nodeType: segmen
                                     textName: text
                                     parentNode: *ref_173
                                   textString: >-
@@ -2523,7 +2523,7 @@ content:
                                 content:
                                   type: text
                                   node:
-                                    nodeType: text
+                                    nodeType: segmen
                                     textName: text
                                     parentNode: *ref_174
                                   textString: >-
@@ -2540,7 +2540,7 @@ content:
                           content:
                             type: text
                             node:
-                              nodeType: text
+                              nodeType: segmen
                               textName: text
                               parentNode: *ref_175
                             textString: >-
@@ -2555,7 +2555,7 @@ content:
                                 node:
                                   key: 1
                                   parentAyatSetNode:
-                                    nodeType: ayatSet
+                                    nodeType: daftarAyat
                                     parentPasalVersionNode: *ref_168
                                   nodeType: ayat
                               - start: 168
@@ -2563,7 +2563,7 @@ content:
                                 node:
                                   key: c
                                   parentPointSetNode:
-                                    nodeType: pointSet
+                                    nodeType: daftarHuruf
                                     parentNode: *ref_168
                                   nodeType: huruf
                         - type: ayat
@@ -2574,7 +2574,7 @@ content:
                           content:
                             type: text
                             node:
-                              nodeType: text
+                              nodeType: segmen
                               textName: text
                               parentNode: *ref_176
                             textString: >-
@@ -2588,7 +2588,7 @@ content:
                                 node:
                                   key: 2
                                   parentAyatSetNode:
-                                    nodeType: ayatSet
+                                    nodeType: daftarAyat
                                     parentPasalVersionNode: *ref_168
                                   nodeType: ayat
                         - type: ayat
@@ -2599,7 +2599,7 @@ content:
                           content:
                             type: text
                             node:
-                              nodeType: text
+                              nodeType: segmen
                               textName: text
                               parentNode: *ref_177
                             textString: >-
@@ -2614,7 +2614,7 @@ content:
                                 node:
                                   key: 2
                                   parentAyatSetNode:
-                                    nodeType: ayatSet
+                                    nodeType: daftarAyat
                                     parentPasalVersionNode: *ref_168
                                   nodeType: ayat
                         - type: ayat
@@ -2625,7 +2625,7 @@ content:
                           content:
                             type: text
                             node:
-                              nodeType: text
+                              nodeType: segmen
                               textName: text
                               parentNode: *ref_178
                             textString: >-
@@ -2638,7 +2638,7 @@ content:
                                 node:
                                   key: 3
                                   parentAyatSetNode:
-                                    nodeType: ayatSet
+                                    nodeType: daftarAyat
                                     parentPasalVersionNode: *ref_168
                                   nodeType: ayat
                         - type: ayat
@@ -2649,7 +2649,7 @@ content:
                           content:
                             type: text
                             node:
-                              nodeType: text
+                              nodeType: segmen
                               textName: text
                               parentNode: *ref_179
                             textString: >-
@@ -2663,7 +2663,7 @@ content:
                                 node:
                                   key: 5
                                   parentAyatSetNode:
-                                    nodeType: ayatSet
+                                    nodeType: daftarAyat
                                     parentPasalVersionNode: *ref_168
                                   nodeType: ayat
                         - type: ayat
@@ -2674,7 +2674,7 @@ content:
                           content:
                             type: text
                             node:
-                              nodeType: text
+                              nodeType: segmen
                               textName: text
                               parentNode: *ref_180
                             textString: >-
@@ -2687,7 +2687,7 @@ content:
                                 node:
                                   key: 5
                                   parentAyatSetNode:
-                                    nodeType: ayatSet
+                                    nodeType: daftarAyat
                                     parentPasalVersionNode: *ref_168
                                   nodeType: ayat
                         - type: ayat
@@ -2698,7 +2698,7 @@ content:
                           content:
                             type: text
                             node:
-                              nodeType: text
+                              nodeType: segmen
                               textName: text
                               parentNode: *ref_181
                             textString: >-
@@ -2711,7 +2711,7 @@ content:
                                 node:
                                   key: 5
                                   parentAyatSetNode: &ref_182
-                                    nodeType: ayatSet
+                                    nodeType: daftarAyat
                                     parentPasalVersionNode: *ref_168
                                   nodeType: ayat
                               - start: 54
@@ -2738,7 +2738,7 @@ content:
                     content:
                       type: text
                       node:
-                        nodeType: text
+                        nodeType: segmen
                         textName: text
                         parentNode: *ref_183
                       textString: >-
@@ -2752,7 +2752,7 @@ content:
                           end: 187
                           node:
                             parentAyatSetNode:
-                              nodeType: ayatSet
+                              nodeType: daftarAyat
                               parentPasalVersionNode: *ref_183
                             key: 1
                             nodeType: ayat
@@ -2761,7 +2761,7 @@ content:
                           node:
                             key: c
                             parentPointSetNode:
-                              nodeType: pointSet
+                              nodeType: daftarHuruf
                               parentNode: *ref_183
                             nodeType: huruf
           - type: bagian
@@ -2769,15 +2769,15 @@ content:
               nodeType: bagian
               key: 2
               parentBagianSetNode:
-                nodeType: bagianSet
+                nodeType: daftarBagian
                 parentBabNode: *ref_85
             title: >-
               Bagian Kedua Perpanjangan dan Perubahan Pengesahan Rencana Penggunaan Tenaga Kerja
               Asing
             content:
-              type: pasalSet
+              type: daftarPasal
               node:
-                nodeType: pasalSet
+                nodeType: daftarPasal
                 parentNode: *ref_184
               elements:
                 - type: pasal
@@ -2798,7 +2798,7 @@ content:
                     content:
                       type: ayatSet
                       node: &ref_186
-                        nodeType: ayatSet
+                        nodeType: daftarAyat
                         parentPasalVersionNode: *ref_185
                       elements:
                         - type: ayat
@@ -2809,7 +2809,7 @@ content:
                           content:
                             type: text
                             node:
-                              nodeType: text
+                              nodeType: segmen
                               textName: text
                               parentNode: *ref_187
                             textString: >-
@@ -2824,7 +2824,7 @@ content:
                           content:
                             type: text
                             node:
-                              nodeType: text
+                              nodeType: segmen
                               textName: text
                               parentNode: *ref_188
                             textString: >-
@@ -2837,7 +2837,7 @@ content:
                                 node:
                                   key: 1
                                   parentAyatSetNode:
-                                    nodeType: ayatSet
+                                    nodeType: daftarAyat
                                     parentPasalVersionNode: *ref_185
                                   nodeType: ayat
                         - type: ayat
@@ -2846,14 +2846,14 @@ content:
                             key: 3
                             parentAyatSetNode: *ref_186
                           content:
-                            type: pointSet
+                            type: daftarHuruf
                             node: &ref_190
-                              nodeType: pointSet
+                              nodeType: daftarHuruf
                               parentNode: *ref_189
                             description:
                               type: text
                               node:
-                                nodeType: text
+                                nodeType: segmen
                                 textName: description
                                 parentNode: *ref_190
                               textString: >-
@@ -2870,7 +2870,7 @@ content:
                                 content:
                                   type: text
                                   node:
-                                    nodeType: text
+                                    nodeType: segmen
                                     textName: text
                                     parentNode: *ref_191
                                   textString: identitas Pemberi Kerja TKA,
@@ -2883,7 +2883,7 @@ content:
                                 content:
                                   type: text
                                   node:
-                                    nodeType: text
+                                    nodeType: segmen
                                     textName: text
                                     parentNode: *ref_192
                                   textString: alasan... b. alasan perpanjangan Pengesahan RPTKA,
@@ -2896,7 +2896,7 @@ content:
                                 content:
                                   type: text
                                   node:
-                                    nodeType: text
+                                    nodeType: segmen
                                     textName: text
                                     parentNode: *ref_193
                                   textString: jabatan atau kedudukan TKA dalam struktur organisasi perusahaan,
@@ -2909,7 +2909,7 @@ content:
                                 content:
                                   type: text
                                   node:
-                                    nodeType: text
+                                    nodeType: segmen
                                     textName: text
                                     parentNode: *ref_194
                                   textString: jumlah TKA,
@@ -2922,7 +2922,7 @@ content:
                                 content:
                                   type: text
                                   node:
-                                    nodeType: text
+                                    nodeType: segmen
                                     textName: text
                                     parentNode: *ref_195
                                   textString: jangka waktu penggunaan TKA,
@@ -2935,7 +2935,7 @@ content:
                                 content:
                                   type: text
                                   node:
-                                    nodeType: text
+                                    nodeType: segmen
                                     textName: text
                                     parentNode: *ref_196
                                   textString: lokasi kerja TKA,
@@ -2948,7 +2948,7 @@ content:
                                 content:
                                   type: text
                                   node:
-                                    nodeType: text
+                                    nodeType: segmen
                                     textName: text
                                     parentNode: *ref_197
                                   textString: identitas Tenaga Kerja Pendamping TKA, dan
@@ -2961,7 +2961,7 @@ content:
                                 content:
                                   type: text
                                   node:
-                                    nodeType: text
+                                    nodeType: segmen
                                     textName: text
                                     parentNode: *ref_198
                                   textString: realisasi penyerapan tenaga kerja Indonesia.
@@ -2972,14 +2972,14 @@ content:
                             key: 4
                             parentAyatSetNode: *ref_186
                           content:
-                            type: pointSet
+                            type: daftarHuruf
                             node: &ref_200
-                              nodeType: pointSet
+                              nodeType: daftarHuruf
                               parentNode: *ref_199
                             description:
                               type: text
                               node:
-                                nodeType: text
+                                nodeType: segmen
                                 textName: description
                                 parentNode: *ref_200
                               textString: >-
@@ -2996,7 +2996,7 @@ content:
                                 content:
                                   type: text
                                   node:
-                                    nodeType: text
+                                    nodeType: segmen
                                     textName: text
                                     parentNode: *ref_201
                                   textString: surat permohonan perpanjangan RPTKA,
@@ -3009,7 +3009,7 @@ content:
                                 content:
                                   type: text
                                   node:
-                                    nodeType: text
+                                    nodeType: segmen
                                     textName: text
                                     parentNode: *ref_202
                                   textString: Pengesahan RPTKA yang masih berlaku,
@@ -3022,7 +3022,7 @@ content:
                                 content:
                                   type: text
                                   node:
-                                    nodeType: text
+                                    nodeType: segmen
                                     textName: text
                                     parentNode: *ref_203
                                   textString: . perjanjian kerja atau perjanjian lain,
@@ -3035,7 +3035,7 @@ content:
                                 content:
                                   type: text
                                   node:
-                                    nodeType: text
+                                    nodeType: segmen
                                     textName: text
                                     parentNode: *ref_204
                                   textString: 'paspor TKA yang masih berlaku:'
@@ -3048,7 +3048,7 @@ content:
                                 content:
                                   type: text
                                   node:
-                                    nodeType: text
+                                    nodeType: segmen
                                     textName: text
                                     parentNode: *ref_205
                                   textString: kepesertaan program jaminan sosial,
@@ -3061,7 +3061,7 @@ content:
                                 content:
                                   type: text
                                   node:
-                                    nodeType: text
+                                    nodeType: segmen
                                     textName: text
                                     parentNode: *ref_206
                                   textString: nomor pokok wajib pajak TKA dan Pemberi Kerja TKA, dan
@@ -3074,7 +3074,7 @@ content:
                                 content:
                                   type: text
                                   node:
-                                    nodeType: text
+                                    nodeType: segmen
                                     textName: text
                                     parentNode: *ref_207
                                   textString: >-
@@ -3090,7 +3090,7 @@ content:
                           content:
                             type: text
                             node:
-                              nodeType: text
+                              nodeType: segmen
                               textName: text
                               parentNode: *ref_208
                             textString: >-
@@ -3106,7 +3106,7 @@ content:
                           content:
                             type: text
                             node:
-                              nodeType: text
+                              nodeType: segmen
                               textName: text
                               parentNode: *ref_209
                             textString: >-
@@ -3119,7 +3119,7 @@ content:
                                 node:
                                   key: 5
                                   parentAyatSetNode:
-                                    nodeType: ayatSet
+                                    nodeType: daftarAyat
                                     parentPasalVersionNode: *ref_185
                                   nodeType: ayat
                         - type: ayat
@@ -3130,7 +3130,7 @@ content:
                           content:
                             type: text
                             node:
-                              nodeType: text
+                              nodeType: segmen
                               textName: text
                               parentNode: *ref_210
                             textString: >-
@@ -3145,7 +3145,7 @@ content:
                           content:
                             type: text
                             node:
-                              nodeType: text
+                              nodeType: segmen
                               textName: text
                               parentNode: *ref_211
                             textString: >-
@@ -3160,7 +3160,7 @@ content:
                                 node:
                                   key: 5
                                   parentAyatSetNode:
-                                    nodeType: ayatSet
+                                    nodeType: daftarAyat
                                     parentPasalVersionNode: *ref_185
                                   nodeType: ayat
                 - type: pasal
@@ -3181,7 +3181,7 @@ content:
                     content:
                       type: ayatSet
                       node: &ref_213
-                        nodeType: ayatSet
+                        nodeType: daftarAyat
                         parentPasalVersionNode: *ref_212
                       elements:
                         - type: ayat
@@ -3190,14 +3190,14 @@ content:
                             key: 1
                             parentAyatSetNode: *ref_213
                           content:
-                            type: pointSet
+                            type: daftarHuruf
                             node: &ref_215
-                              nodeType: pointSet
+                              nodeType: daftarHuruf
                               parentNode: *ref_214
                             description:
                               type: text
                               node:
-                                nodeType: text
+                                nodeType: segmen
                                 textName: description
                                 parentNode: *ref_215
                               textString: >-
@@ -3214,7 +3214,7 @@ content:
                                 content:
                                   type: text
                                   node:
-                                    nodeType: text
+                                    nodeType: segmen
                                     textName: text
                                     parentNode: *ref_216
                                   textString: alamat Pemberi Kerja TKA,
@@ -3227,7 +3227,7 @@ content:
                                 content:
                                   type: text
                                   node:
-                                    nodeType: text
+                                    nodeType: segmen
                                     textName: text
                                     parentNode: *ref_217
                                   textString: identitas TKA,
@@ -3240,7 +3240,7 @@ content:
                                 content:
                                   type: text
                                   node:
-                                    nodeType: text
+                                    nodeType: segmen
                                     textName: text
                                     parentNode: *ref_218
                                   textString: 'lokasi kerja TKA: dan/atau'
@@ -3253,7 +3253,7 @@ content:
                                 content:
                                   type: text
                                   node:
-                                    nodeType: text
+                                    nodeType: segmen
                                     textName: text
                                     parentNode: *ref_219
                                   textString: nama Tenaga Kerja Pendamping TKA yang dipekerjakan.
@@ -3266,7 +3266,7 @@ content:
                           content:
                             type: text
                             node:
-                              nodeType: text
+                              nodeType: segmen
                               textName: text
                               parentNode: *ref_220
                             textString: >-
@@ -3279,7 +3279,7 @@ content:
                                 node:
                                   key: 1
                                   parentAyatSetNode:
-                                    nodeType: ayatSet
+                                    nodeType: daftarAyat
                                     parentPasalVersionNode: *ref_212
                                   nodeType: ayat
           - type: bagian
@@ -3287,13 +3287,13 @@ content:
               nodeType: bagian
               key: 3
               parentBagianSetNode:
-                nodeType: bagianSet
+                nodeType: daftarBagian
                 parentBabNode: *ref_85
             title: Bagian Ketiga Dana Kompensasi Penggunaan Tenaga Kerja Asing
             content:
-              type: pasalSet
+              type: daftarPasal
               node:
-                nodeType: pasalSet
+                nodeType: daftarPasal
                 parentNode: *ref_221
               elements:
                 - type: pasal
@@ -3314,7 +3314,7 @@ content:
                     content:
                       type: ayatSet
                       node: &ref_223
-                        nodeType: ayatSet
+                        nodeType: daftarAyat
                         parentPasalVersionNode: *ref_222
                       elements:
                         - type: ayat
@@ -3325,7 +3325,7 @@ content:
                           content:
                             type: text
                             node:
-                              nodeType: text
+                              nodeType: segmen
                               textName: text
                               parentNode: *ref_224
                             textString: >-
@@ -3340,7 +3340,7 @@ content:
                           content:
                             type: text
                             node:
-                              nodeType: text
+                              nodeType: segmen
                               textName: text
                               parentNode: *ref_225
                             textString: >-
@@ -3355,7 +3355,7 @@ content:
                           content:
                             type: text
                             node:
-                              nodeType: text
+                              nodeType: segmen
                               textName: text
                               parentNode: *ref_226
                             textString: >-
@@ -3368,7 +3368,7 @@ content:
                                 node:
                                   key: 1
                                   parentAyatSetNode:
-                                    nodeType: ayatSet
+                                    nodeType: daftarAyat
                                     parentPasalVersionNode: *ref_222
                                   nodeType: ayat
                         - type: ayat
@@ -3379,7 +3379,7 @@ content:
                           content:
                             type: text
                             node:
-                              nodeType: text
+                              nodeType: segmen
                               textName: text
                               parentNode: *ref_227
                             textString: >-
@@ -3392,7 +3392,7 @@ content:
                                 node:
                                   key: 3
                                   parentAyatSetNode:
-                                    nodeType: ayatSet
+                                    nodeType: daftarAyat
                                     parentPasalVersionNode: *ref_222
                                   nodeType: ayat
                         - type: ayat
@@ -3403,7 +3403,7 @@ content:
                           content:
                             type: text
                             node:
-                              nodeType: text
+                              nodeType: segmen
                               textName: text
                               parentNode: *ref_228
                             textString: Pembayaran DKPTKA merupakan persyaratan Pengesahan RPTKA.
@@ -3416,7 +3416,7 @@ content:
                           content:
                             type: text
                             node:
-                              nodeType: text
+                              nodeType: segmen
                               textName: text
                               parentNode: *ref_229
                             textString: >-
@@ -3429,7 +3429,7 @@ content:
                                 node:
                                   key: 1
                                   parentAyatSetNode:
-                                    nodeType: ayatSet
+                                    nodeType: daftarAyat
                                     parentPasalVersionNode: *ref_222
                                   nodeType: ayat
                 - type: pasal
@@ -3450,7 +3450,7 @@ content:
                     content:
                       type: ayatSet
                       node: &ref_231
-                        nodeType: ayatSet
+                        nodeType: daftarAyat
                         parentPasalVersionNode: *ref_230
                       elements:
                         - type: ayat
@@ -3461,7 +3461,7 @@ content:
                           content:
                             type: text
                             node:
-                              nodeType: text
+                              nodeType: segmen
                               textName: text
                               parentNode: *ref_232
                             textString: >-
@@ -3474,14 +3474,14 @@ content:
                             key: 2
                             parentAyatSetNode: *ref_231
                           content:
-                            type: pointSet
+                            type: daftarHuruf
                             node: &ref_234
-                              nodeType: pointSet
+                              nodeType: daftarHuruf
                               parentNode: *ref_233
                             description:
                               type: text
                               node:
-                                nodeType: text
+                                nodeType: segmen
                                 textName: description
                                 parentNode: *ref_234
                               textString: 'DKPTKA sebagaimana dimaksud pada ayat (1) menjadi:'
@@ -3495,7 +3495,7 @@ content:
                                 content:
                                   type: text
                                   node:
-                                    nodeType: text
+                                    nodeType: segmen
                                     textName: text
                                     parentNode: *ref_235
                                   textString: >-
@@ -3511,7 +3511,7 @@ content:
                                 content:
                                   type: text
                                   node:
-                                    nodeType: text
+                                    nodeType: segmen
                                     textName: text
                                     parentNode: *ref_236
                                   textString: >-
@@ -3527,7 +3527,7 @@ content:
                                 content:
                                   type: text
                                   node:
-                                    nodeType: text
+                                    nodeType: segmen
                                     textName: text
                                     parentNode: *ref_237
                                   textString: >-
@@ -3543,7 +3543,7 @@ content:
                           content:
                             type: text
                             node:
-                              nodeType: text
+                              nodeType: segmen
                               textName: text
                               parentNode: *ref_238
                             textString: >-
@@ -3557,7 +3557,7 @@ content:
                                 node:
                                   key: 1
                                   parentAyatSetNode:
-                                    nodeType: ayatSet
+                                    nodeType: daftarAyat
                                     parentPasalVersionNode: *ref_230
                                   nodeType: ayat
                 - type: pasal
@@ -3578,7 +3578,7 @@ content:
                     content:
                       type: ayatSet
                       node: &ref_240
-                        nodeType: ayatSet
+                        nodeType: daftarAyat
                         parentPasalVersionNode: *ref_239
                       elements:
                         - type: ayat
@@ -3587,14 +3587,14 @@ content:
                             key: 1
                             parentAyatSetNode: *ref_240
                           content:
-                            type: pointSet
+                            type: daftarHuruf
                             node: &ref_242
-                              nodeType: pointSet
+                              nodeType: daftarHuruf
                               parentNode: *ref_241
                             description:
                               type: text
                               node:
-                                nodeType: text
+                                nodeType: segmen
                                 textName: description
                                 parentNode: *ref_242
                               textString: 'Kewajiban membayar DKPTKA tidak berlaku bagi:'
@@ -3608,7 +3608,7 @@ content:
                                 content:
                                   type: text
                                   node:
-                                    nodeType: text
+                                    nodeType: segmen
                                     textName: text
                                     parentNode: *ref_243
                                   textString: 'instansi Pemerintah:'
@@ -3621,7 +3621,7 @@ content:
                                 content:
                                   type: text
                                   node:
-                                    nodeType: text
+                                    nodeType: segmen
                                     textName: text
                                     parentNode: *ref_244
                                   textString: perwakilan negara asing,
@@ -3634,7 +3634,7 @@ content:
                                 content:
                                   type: text
                                   node:
-                                    nodeType: text
+                                    nodeType: segmen
                                     textName: text
                                     parentNode: *ref_245
                                   textString: 'badan internasional:'
@@ -3647,7 +3647,7 @@ content:
                                 content:
                                   type: text
                                   node:
-                                    nodeType: text
+                                    nodeType: segmen
                                     textName: text
                                     parentNode: *ref_246
                                   textString: lembaga sosial,
@@ -3660,7 +3660,7 @@ content:
                                 content:
                                   type: text
                                   node:
-                                    nodeType: text
+                                    nodeType: segmen
                                     textName: text
                                     parentNode: *ref_247
                                   textString: lembaga keagamaan, dan
@@ -3673,7 +3673,7 @@ content:
                                 content:
                                   type: text
                                   node:
-                                    nodeType: text
+                                    nodeType: segmen
                                     textName: text
                                     parentNode: *ref_248
                                   textString: jabatan tertentu di lembaga pendidikan.
@@ -3686,7 +3686,7 @@ content:
                           content:
                             type: text
                             node:
-                              nodeType: text
+                              nodeType: segmen
                               textName: text
                               parentNode: *ref_249
                             textString: >-
@@ -3700,7 +3700,7 @@ content:
                                 node:
                                   key: 1
                                   parentAyatSetNode:
-                                    nodeType: ayatSet
+                                    nodeType: daftarAyat
                                     parentPasalVersionNode: *ref_239
                                   nodeType: ayat
                               - start: 108
@@ -3708,7 +3708,7 @@ content:
                                 node:
                                   key: f
                                   parentPointSetNode:
-                                    nodeType: pointSet
+                                    nodeType: daftarHuruf
                                     parentNode: *ref_239
                                   nodeType: huruf
                 - type: pasal
@@ -3729,7 +3729,7 @@ content:
                     content:
                       type: text
                       node:
-                        nodeType: text
+                        nodeType: segmen
                         textName: text
                         parentNode: *ref_250
                       textString: >-
@@ -3756,9 +3756,9 @@ content:
         parentBabSetNode: *ref_7
       title: IZIN TINGGAL TENAGA KERJA ASING
       content:
-        type: pasalSet
+        type: daftarPasal
         node:
-          nodeType: pasalSet
+          nodeType: daftarPasal
           parentNode: *ref_251
         elements:
           - type: pasal
@@ -3779,7 +3779,7 @@ content:
               content:
                 type: ayatSet
                 node: &ref_253
-                  nodeType: ayatSet
+                  nodeType: daftarAyat
                   parentPasalVersionNode: *ref_252
                 elements:
                   - type: ayat
@@ -3790,7 +3790,7 @@ content:
                     content:
                       type: text
                       node:
-                        nodeType: text
+                        nodeType: segmen
                         textName: text
                         parentNode: *ref_254
                       textString: >-
@@ -3805,7 +3805,7 @@ content:
                     content:
                       type: text
                       node:
-                        nodeType: text
+                        nodeType: segmen
                         textName: text
                         parentNode: *ref_255
                       textString: >-
@@ -3818,7 +3818,7 @@ content:
                           node:
                             key: 1
                             parentAyatSetNode:
-                              nodeType: ayatSet
+                              nodeType: daftarAyat
                               parentPasalVersionNode: *ref_252
                             nodeType: ayat
     - type: bab
@@ -3828,9 +3828,9 @@ content:
         parentBabSetNode: *ref_7
       title: PENDIDIKAN DAN PELATIHAN KERJA BAGI TENAGA KERJA PENDAMPING DAN TENAGA KERJA ASING
       content:
-        type: pasalSet
+        type: daftarPasal
         node:
-          nodeType: pasalSet
+          nodeType: daftarPasal
           parentNode: *ref_256
         elements:
           - type: pasal
@@ -3851,7 +3851,7 @@ content:
               content:
                 type: ayatSet
                 node: &ref_258
-                  nodeType: ayatSet
+                  nodeType: daftarAyat
                   parentPasalVersionNode: *ref_257
                 elements:
                   - type: ayat
@@ -3862,7 +3862,7 @@ content:
                     content:
                       type: text
                       node:
-                        nodeType: text
+                        nodeType: segmen
                         textName: text
                         parentNode: *ref_259
                       textString: >-
@@ -3877,7 +3877,7 @@ content:
                     content:
                       type: text
                       node:
-                        nodeType: text
+                        nodeType: segmen
                         textName: text
                         parentNode: *ref_260
                       textString: >-
@@ -3891,7 +3891,7 @@ content:
                           node:
                             key: 1
                             parentAyatSetNode:
-                              nodeType: ayatSet
+                              nodeType: daftarAyat
                               parentPasalVersionNode: *ref_257
                             nodeType: ayat
           - type: pasal
@@ -3912,7 +3912,7 @@ content:
               content:
                 type: ayatSet
                 node: &ref_262
-                  nodeType: ayatSet
+                  nodeType: daftarAyat
                   parentPasalVersionNode: *ref_261
                 elements:
                   - type: ayat
@@ -3923,7 +3923,7 @@ content:
                     content:
                       type: text
                       node:
-                        nodeType: text
+                        nodeType: segmen
                         textName: text
                         parentNode: *ref_263
                       textString: >-
@@ -3938,7 +3938,7 @@ content:
                     content:
                       type: text
                       node:
-                        nodeType: text
+                        nodeType: segmen
                         textName: text
                         parentNode: *ref_264
                       textString: >-
@@ -3952,7 +3952,7 @@ content:
                           node:
                             key: 1
                             parentAyatSetNode:
-                              nodeType: ayatSet
+                              nodeType: daftarAyat
                               parentPasalVersionNode: *ref_261
                             nodeType: ayat
                   - type: ayat
@@ -3963,7 +3963,7 @@ content:
                     content:
                       type: text
                       node:
-                        nodeType: text
+                        nodeType: segmen
                         textName: text
                         parentNode: *ref_265
                       textString: >-
@@ -3976,7 +3976,7 @@ content:
                           node:
                             key: 1
                             parentAyatSetNode:
-                              nodeType: ayatSet
+                              nodeType: daftarAyat
                               parentPasalVersionNode: *ref_261
                             nodeType: ayat
           - type: pasal
@@ -3997,7 +3997,7 @@ content:
               content:
                 type: text
                 node:
-                  nodeType: text
+                  nodeType: segmen
                   textName: text
                   parentNode: *ref_266
                 textString: >-
@@ -4023,7 +4023,7 @@ content:
               content:
                 type: text
                 node:
-                  nodeType: text
+                  nodeType: segmen
                   textName: text
                   parentNode: *ref_267
                 textString: >-
@@ -4050,9 +4050,9 @@ content:
         parentBabSetNode: *ref_7
       title: PELAPORAN, PEMBINAAN, DAN PENGAWASAN
       content:
-        type: bagianSet
+        type: daftarBagian
         node:
-          nodeType: bagianSet
+          nodeType: daftarBagian
           parentBabNode: *ref_268
         elements:
           - type: bagian
@@ -4060,13 +4060,13 @@ content:
               nodeType: bagian
               key: 1
               parentBagianSetNode:
-                nodeType: bagianSet
+                nodeType: daftarBagian
                 parentBabNode: *ref_268
             title: Bagian Kesatu Pelaporan
             content:
-              type: pasalSet
+              type: daftarPasal
               node:
-                nodeType: pasalSet
+                nodeType: daftarPasal
                 parentNode: *ref_269
               elements:
                 - type: pasal
@@ -4087,7 +4087,7 @@ content:
                     content:
                       type: ayatSet
                       node: &ref_271
-                        nodeType: ayatSet
+                        nodeType: daftarAyat
                         parentPasalVersionNode: *ref_270
                       elements:
                         - type: ayat
@@ -4096,14 +4096,14 @@ content:
                             key: 1
                             parentAyatSetNode: *ref_271
                           content:
-                            type: pointSet
+                            type: daftarHuruf
                             node: &ref_273
-                              nodeType: pointSet
+                              nodeType: daftarHuruf
                               parentNode: *ref_272
                             description:
                               type: text
                               node:
-                                nodeType: text
+                                nodeType: segmen
                                 textName: description
                                 parentNode: *ref_273
                               textString: >-
@@ -4119,7 +4119,7 @@ content:
                                 content:
                                   type: text
                                   node:
-                                    nodeType: text
+                                    nodeType: segmen
                                     textName: text
                                     parentNode: *ref_274
                                   textString: penggunaan TKA,
@@ -4132,7 +4132,7 @@ content:
                                 content:
                                   type: text
                                   node:
-                                    nodeType: text
+                                    nodeType: segmen
                                     textName: text
                                     parentNode: *ref_275
                                   textString: >-
@@ -4147,7 +4147,7 @@ content:
                                 content:
                                   type: text
                                   node:
-                                    nodeType: text
+                                    nodeType: segmen
                                     textName: text
                                     parentNode: *ref_276
                                   textString: >-
@@ -4162,7 +4162,7 @@ content:
                           content:
                             type: text
                             node:
-                              nodeType: text
+                              nodeType: segmen
                               textName: text
                               parentNode: *ref_277
                             textString: >-
@@ -4176,7 +4176,7 @@ content:
                                 node:
                                   key: 1
                                   parentAyatSetNode:
-                                    nodeType: ayatSet
+                                    nodeType: daftarAyat
                                     parentPasalVersionNode: *ref_270
                                   nodeType: ayat
                               - start: 137
@@ -4184,7 +4184,7 @@ content:
                                 node:
                                   key: a
                                   parentPointSetNode:
-                                    nodeType: pointSet
+                                    nodeType: daftarHuruf
                                     parentNode: *ref_270
                                   nodeType: huruf
                         - type: ayat
@@ -4195,7 +4195,7 @@ content:
                           content:
                             type: text
                             node:
-                              nodeType: text
+                              nodeType: segmen
                               textName: text
                               parentNode: *ref_278
                             textString: >-
@@ -4221,7 +4221,7 @@ content:
                     content:
                       type: text
                       node:
-                        nodeType: text
+                        nodeType: segmen
                         textName: text
                         parentNode: *ref_279
                       textString: >-
@@ -4236,13 +4236,13 @@ content:
               nodeType: bagian
               key: 2
               parentBagianSetNode:
-                nodeType: bagianSet
+                nodeType: daftarBagian
                 parentBabNode: *ref_268
             title: Bagian Kedua Pembinaan
             content:
-              type: pasalSet
+              type: daftarPasal
               node:
-                nodeType: pasalSet
+                nodeType: daftarPasal
                 parentNode: *ref_280
               elements:
                 - type: pasal
@@ -4263,7 +4263,7 @@ content:
                     content:
                       type: text
                       node:
-                        nodeType: text
+                        nodeType: segmen
                         textName: text
                         parentNode: *ref_281
                       textString: >-
@@ -4277,13 +4277,13 @@ content:
               nodeType: bagian
               key: 3
               parentBagianSetNode:
-                nodeType: bagianSet
+                nodeType: daftarBagian
                 parentBabNode: *ref_268
             title: Bagian Ketiga Pengawasan
             content:
-              type: pasalSet
+              type: daftarPasal
               node:
-                nodeType: pasalSet
+                nodeType: daftarPasal
                 parentNode: *ref_282
               elements:
                 - type: pasal
@@ -4304,7 +4304,7 @@ content:
                     content:
                       type: ayatSet
                       node: &ref_284
-                        nodeType: ayatSet
+                        nodeType: daftarAyat
                         parentPasalVersionNode: *ref_283
                       elements:
                         - type: ayat
@@ -4313,14 +4313,14 @@ content:
                             key: 1
                             parentAyatSetNode: *ref_284
                           content:
-                            type: pointSet
+                            type: daftarHuruf
                             node: &ref_286
-                              nodeType: pointSet
+                              nodeType: daftarHuruf
                               parentNode: *ref_285
                             description:
                               type: text
                               node:
-                                nodeType: text
+                                nodeType: segmen
                                 textName: description
                                 parentNode: *ref_286
                               textString: 'Pengawasan penggunaan TKA dilaksanakan oleh:'
@@ -4334,7 +4334,7 @@ content:
                                 content:
                                   type: text
                                   node:
-                                    nodeType: text
+                                    nodeType: segmen
                                     textName: text
                                     parentNode: *ref_287
                                   textString: >-
@@ -4351,7 +4351,7 @@ content:
                                 content:
                                   type: text
                                   node:
-                                    nodeType: text
+                                    nodeType: segmen
                                     textName: text
                                     parentNode: *ref_288
                                   textString: >-
@@ -4367,7 +4367,7 @@ content:
                           content:
                             type: text
                             node:
-                              nodeType: text
+                              nodeType: segmen
                               textName: text
                               parentNode: *ref_289
                             textString: >-
@@ -4380,7 +4380,7 @@ content:
                                 node:
                                   key: 1
                                   parentAyatSetNode:
-                                    nodeType: ayatSet
+                                    nodeType: daftarAyat
                                     parentPasalVersionNode: *ref_283
                                   nodeType: ayat
                               - start: 60
@@ -4388,7 +4388,7 @@ content:
                                 node:
                                   key: a
                                   parentPointSetNode:
-                                    nodeType: pointSet
+                                    nodeType: daftarHuruf
                                     parentNode: *ref_283
                                   nodeType: huruf
     - type: bab
@@ -4398,9 +4398,9 @@ content:
         parentBabSetNode: *ref_7
       title: SANKSI ADMINISTRATIF
       content:
-        type: pasalSet
+        type: daftarPasal
         node:
-          nodeType: pasalSet
+          nodeType: daftarPasal
           parentNode: *ref_290
         elements:
           - type: pasal
@@ -4421,7 +4421,7 @@ content:
               content:
                 type: ayatSet
                 node: &ref_292
-                  nodeType: ayatSet
+                  nodeType: daftarAyat
                   parentPasalVersionNode: *ref_291
                 elements:
                   - type: ayat
@@ -4430,14 +4430,14 @@ content:
                       key: 1
                       parentAyatSetNode: *ref_292
                     content:
-                      type: pointSet
+                      type: daftarHuruf
                       node: &ref_294
-                        nodeType: pointSet
+                        nodeType: daftarHuruf
                         parentNode: *ref_293
                       description:
                         type: text
                         node:
-                          nodeType: text
+                          nodeType: segmen
                           textName: description
                           parentNode: *ref_294
                         textString: >-
@@ -4456,7 +4456,7 @@ content:
                           content:
                             type: text
                             node:
-                              nodeType: text
+                              nodeType: segmen
                               textName: text
                               parentNode: *ref_295
                             textString: denda,
@@ -4469,7 +4469,7 @@ content:
                           content:
                             type: text
                             node:
-                              nodeType: text
+                              nodeType: segmen
                               textName: text
                               parentNode: *ref_296
                             textString: penghentian sementara proses permohonan Pengesahan RPTKA, dan/atau
@@ -4482,7 +4482,7 @@ content:
                           content:
                             type: text
                             node:
-                              nodeType: text
+                              nodeType: segmen
                               textName: text
                               parentNode: *ref_297
                             textString: . pencabutan Pengesahan RPTKA.
@@ -4495,7 +4495,7 @@ content:
                     content:
                       type: text
                       node:
-                        nodeType: text
+                        nodeType: segmen
                         textName: text
                         parentNode: *ref_298
                       textString: >-
@@ -4507,7 +4507,7 @@ content:
                           node:
                             key: 1
                             parentAyatSetNode:
-                              nodeType: ayatSet
+                              nodeType: daftarAyat
                               parentPasalVersionNode: *ref_291
                             nodeType: ayat
                   - type: ayat
@@ -4518,7 +4518,7 @@ content:
                     content:
                       type: text
                       node:
-                        nodeType: text
+                        nodeType: segmen
                         textName: text
                         parentNode: *ref_299
                       textString: >-
@@ -4531,7 +4531,7 @@ content:
                           node:
                             key: 2
                             parentAyatSetNode:
-                              nodeType: ayatSet
+                              nodeType: daftarAyat
                               parentPasalVersionNode: *ref_291
                             nodeType: ayat
           - type: pasal
@@ -4552,7 +4552,7 @@ content:
               content:
                 type: ayatSet
                 node: &ref_301
-                  nodeType: ayatSet
+                  nodeType: daftarAyat
                   parentPasalVersionNode: *ref_300
                 elements:
                   - type: ayat
@@ -4563,7 +4563,7 @@ content:
                     content:
                       type: text
                       node:
-                        nodeType: text
+                        nodeType: segmen
                         textName: text
                         parentNode: *ref_302
                       textString: >-
@@ -4576,7 +4576,7 @@ content:
                           end: 242
                           node:
                             parentAyatSetNode: &ref_303
-                              nodeType: ayatSet
+                              nodeType: daftarAyat
                               parentPasalVersionNode: *ref_300
                             key: 6
                             nodeType: ayat
@@ -4603,7 +4603,7 @@ content:
                           node:
                             key: a
                             parentPointSetNode:
-                              nodeType: pointSet
+                              nodeType: daftarHuruf
                               parentNode: *ref_300
                             nodeType: huruf
                   - type: ayat
@@ -4612,14 +4612,14 @@ content:
                       key: 2
                       parentAyatSetNode: *ref_301
                     content:
-                      type: pointSet
+                      type: daftarHuruf
                       node: &ref_305
-                        nodeType: pointSet
+                        nodeType: daftarHuruf
                         parentNode: *ref_304
                       description:
                         type: text
                         node:
-                          nodeType: text
+                          nodeType: segmen
                           textName: description
                           parentNode: *ref_305
                         textString: >-
@@ -4635,7 +4635,7 @@ content:
                           content:
                             type: text
                             node:
-                              nodeType: text
+                              nodeType: segmen
                               textName: text
                               parentNode: *ref_306
                             textString: >-
@@ -4650,7 +4650,7 @@ content:
                           content:
                             type: text
                             node:
-                              nodeType: text
+                              nodeType: segmen
                               textName: text
                               parentNode: *ref_307
                             textString: >-
@@ -4665,7 +4665,7 @@ content:
                           content:
                             type: text
                             node:
-                              nodeType: text
+                              nodeType: segmen
                               textName: text
                               parentNode: *ref_308
                             textString: >-
@@ -4680,7 +4680,7 @@ content:
                           content:
                             type: text
                             node:
-                              nodeType: text
+                              nodeType: segmen
                               textName: text
                               parentNode: *ref_309
                             textString: >-
@@ -4695,7 +4695,7 @@ content:
                           content:
                             type: text
                             node:
-                              nodeType: text
+                              nodeType: segmen
                               textName: text
                               parentNode: *ref_310
                             textString: >-
@@ -4710,7 +4710,7 @@ content:
                           content:
                             type: text
                             node:
-                              nodeType: text
+                              nodeType: segmen
                               textName: text
                               parentNode: *ref_311
                             textString: >-
@@ -4725,7 +4725,7 @@ content:
                     content:
                       type: text
                       node:
-                        nodeType: text
+                        nodeType: segmen
                         textName: text
                         parentNode: *ref_312
                       textString: >-
@@ -4738,7 +4738,7 @@ content:
                           node:
                             key: 2
                             parentAyatSetNode:
-                              nodeType: ayatSet
+                              nodeType: daftarAyat
                               parentPasalVersionNode: *ref_300
                             nodeType: ayat
                   - type: ayat
@@ -4749,7 +4749,7 @@ content:
                     content:
                       type: text
                       node:
-                        nodeType: text
+                        nodeType: segmen
                         textName: text
                         parentNode: *ref_313
                       textString: Sanksi denda sebagaimana dimaksud pada ayat (2) dibayarkan ke kas negara.
@@ -4759,7 +4759,7 @@ content:
                           node:
                             key: 2
                             parentAyatSetNode:
-                              nodeType: ayatSet
+                              nodeType: daftarAyat
                               parentPasalVersionNode: *ref_300
                             nodeType: ayat
                   - type: ayat
@@ -4770,7 +4770,7 @@ content:
                     content:
                       type: text
                       node:
-                        nodeType: text
+                        nodeType: segmen
                         textName: text
                         parentNode: *ref_314
                       textString: >-
@@ -4783,7 +4783,7 @@ content:
                           node:
                             key: 2
                             parentAyatSetNode:
-                              nodeType: ayatSet
+                              nodeType: daftarAyat
                               parentPasalVersionNode: *ref_300
                             nodeType: ayat
           - type: pasal
@@ -4804,7 +4804,7 @@ content:
               content:
                 type: ayatSet
                 node: &ref_316
-                  nodeType: ayatSet
+                  nodeType: daftarAyat
                   parentPasalVersionNode: *ref_315
                 elements:
                   - type: ayat
@@ -4815,7 +4815,7 @@ content:
                     content:
                       type: text
                       node:
-                        nodeType: text
+                        nodeType: segmen
                         textName: text
                         parentNode: *ref_317
                       textString: >-
@@ -4827,7 +4827,7 @@ content:
                           end: 141
                           node:
                             parentAyatSetNode:
-                              nodeType: ayatSet
+                              nodeType: daftarAyat
                               parentPasalVersionNode: *ref_315
                             key: 5
                             nodeType: ayat
@@ -4839,7 +4839,7 @@ content:
                     content:
                       type: text
                       node:
-                        nodeType: text
+                        nodeType: segmen
                         textName: text
                         parentNode: *ref_318
                       textString: >-
@@ -4852,7 +4852,7 @@ content:
                           node:
                             key: 1
                             parentAyatSetNode:
-                              nodeType: ayatSet
+                              nodeType: daftarAyat
                               parentPasalVersionNode: *ref_315
                             nodeType: ayat
                   - type: ayat
@@ -4863,7 +4863,7 @@ content:
                     content:
                       type: text
                       node:
-                        nodeType: text
+                        nodeType: segmen
                         textName: text
                         parentNode: *ref_319
                       textString: >-
@@ -4875,7 +4875,7 @@ content:
                           node:
                             key: 2
                             parentAyatSetNode:
-                              nodeType: ayatSet
+                              nodeType: daftarAyat
                               parentPasalVersionNode: *ref_315
                             nodeType: ayat
                   - type: ayat
@@ -4886,7 +4886,7 @@ content:
                     content:
                       type: text
                       node:
-                        nodeType: text
+                        nodeType: segmen
                         textName: text
                         parentNode: *ref_320
                       textString: >-
@@ -4913,7 +4913,7 @@ content:
               content:
                 type: ayatSet
                 node: &ref_322
-                  nodeType: ayatSet
+                  nodeType: daftarAyat
                   parentPasalVersionNode: *ref_321
                 elements:
                   - type: ayat
@@ -4922,14 +4922,14 @@ content:
                       key: 1
                       parentAyatSetNode: *ref_322
                     content:
-                      type: pointSet
+                      type: daftarHuruf
                       node: &ref_324
-                        nodeType: pointSet
+                        nodeType: daftarHuruf
                         parentNode: *ref_323
                       description:
                         type: text
                         node:
-                          nodeType: text
+                          nodeType: segmen
                           textName: description
                           parentNode: *ref_324
                         textString: >-
@@ -4946,7 +4946,7 @@ content:
                           content:
                             type: text
                             node:
-                              nodeType: text
+                              nodeType: segmen
                               textName: text
                               parentNode: *ref_325
                             textString: >-
@@ -4957,7 +4957,7 @@ content:
                                 end: 116
                                 node:
                                   parentAyatSetNode:
-                                    nodeType: ayatSet
+                                    nodeType: daftarAyat
                                     parentPasalVersionNode: *ref_321
                                   key: 2
                                   nodeType: ayat
@@ -4969,7 +4969,7 @@ content:
                           content:
                             type: text
                             node:
-                              nodeType: text
+                              nodeType: segmen
                               textName: text
                               parentNode: *ref_326
                             textString: >-
@@ -4982,7 +4982,7 @@ content:
                                 end: 248
                                 node:
                                   parentAyatSetNode:
-                                    nodeType: ayatSet
+                                    nodeType: daftarAyat
                                     parentPasalVersionNode: *ref_321
                                   key: 1
                                   nodeType: ayat
@@ -4994,7 +4994,7 @@ content:
                           content:
                             type: text
                             node:
-                              nodeType: text
+                              nodeType: segmen
                               textName: text
                               parentNode: *ref_327
                             textString: >-
@@ -5008,7 +5008,7 @@ content:
                                 end: 329
                                 node:
                                   parentAyatSetNode:
-                                    nodeType: ayatSet
+                                    nodeType: daftarAyat
                                     parentPasalVersionNode: *ref_321
                                   key: 1
                                   nodeType: ayat
@@ -5020,7 +5020,7 @@ content:
                           content:
                             type: text
                             node:
-                              nodeType: text
+                              nodeType: segmen
                               textName: text
                               parentNode: *ref_328
                             textString: >-
@@ -5033,7 +5033,7 @@ content:
                                 end: 207
                                 node:
                                   parentAyatSetNode:
-                                    nodeType: ayatSet
+                                    nodeType: daftarAyat
                                     parentPasalVersionNode: *ref_321
                                   key: 2
                                   nodeType: ayat
@@ -5045,7 +5045,7 @@ content:
                           content:
                             type: text
                             node:
-                              nodeType: text
+                              nodeType: segmen
                               textName: text
                               parentNode: *ref_329
                             textString: >-
@@ -5058,7 +5058,7 @@ content:
                                 end: 211
                                 node:
                                   parentAyatSetNode:
-                                    nodeType: ayatSet
+                                    nodeType: daftarAyat
                                     parentPasalVersionNode: *ref_321
                                   key: 3
                                   nodeType: ayat
@@ -5070,7 +5070,7 @@ content:
                     content:
                       type: text
                       node:
-                        nodeType: text
+                        nodeType: segmen
                         textName: text
                         parentNode: *ref_330
                       textString: >-
@@ -5083,7 +5083,7 @@ content:
                           node:
                             key: 1
                             parentAyatSetNode:
-                              nodeType: ayatSet
+                              nodeType: daftarAyat
                               parentPasalVersionNode: *ref_321
                             nodeType: ayat
                   - type: ayat
@@ -5094,7 +5094,7 @@ content:
                     content:
                       type: text
                       node:
-                        nodeType: text
+                        nodeType: segmen
                         textName: text
                         parentNode: *ref_331
                       textString: >-
@@ -5107,7 +5107,7 @@ content:
                           node:
                             key: 2
                             parentAyatSetNode:
-                              nodeType: ayatSet
+                              nodeType: daftarAyat
                               parentPasalVersionNode: *ref_321
                             nodeType: ayat
                   - type: ayat
@@ -5118,7 +5118,7 @@ content:
                     content:
                       type: text
                       node:
-                        nodeType: text
+                        nodeType: segmen
                         textName: text
                         parentNode: *ref_332
                       textString: >-
@@ -5130,7 +5130,7 @@ content:
                           node:
                             key: 3
                             parentAyatSetNode:
-                              nodeType: ayatSet
+                              nodeType: daftarAyat
                               parentPasalVersionNode: *ref_321
                             nodeType: ayat
           - type: pasal
@@ -5151,7 +5151,7 @@ content:
               content:
                 type: ayatSet
                 node: &ref_334
-                  nodeType: ayatSet
+                  nodeType: daftarAyat
                   parentPasalVersionNode: *ref_333
                 elements:
                   - type: ayat
@@ -5160,14 +5160,14 @@ content:
                       key: 1
                       parentAyatSetNode: *ref_334
                     content:
-                      type: pointSet
+                      type: daftarHuruf
                       node: &ref_336
-                        nodeType: pointSet
+                        nodeType: daftarHuruf
                         parentNode: *ref_335
                       description:
                         type: text
                         node:
-                          nodeType: text
+                          nodeType: segmen
                           textName: description
                           parentNode: *ref_336
                         textString: >-
@@ -5184,7 +5184,7 @@ content:
                           content:
                             type: text
                             node:
-                              nodeType: text
+                              nodeType: segmen
                               textName: text
                               parentNode: *ref_337
                             textString: >-
@@ -5195,7 +5195,7 @@ content:
                                 end: 98
                                 node:
                                   parentAyatSetNode:
-                                    nodeType: ayatSet
+                                    nodeType: daftarAyat
                                     parentPasalVersionNode: *ref_333
                                   key: 3
                                   nodeType: ayat
@@ -5207,7 +5207,7 @@ content:
                           content:
                             type: text
                             node:
-                              nodeType: text
+                              nodeType: segmen
                               textName: text
                               parentNode: *ref_338
                             textString: >-
@@ -5228,7 +5228,7 @@ content:
                           content:
                             type: text
                             node:
-                              nodeType: text
+                              nodeType: segmen
                               textName: text
                               parentNode: *ref_339
                             textString: >-
@@ -5239,7 +5239,7 @@ content:
                                 end: 101
                                 node:
                                   parentAyatSetNode:
-                                    nodeType: ayatSet
+                                    nodeType: daftarAyat
                                     parentPasalVersionNode: *ref_333
                                   key: 1
                                   nodeType: ayat
@@ -5251,7 +5251,7 @@ content:
                           content:
                             type: text
                             node:
-                              nodeType: text
+                              nodeType: segmen
                               textName: text
                               parentNode: *ref_340
                             textString: >-
@@ -5262,7 +5262,7 @@ content:
                                 end: 100
                                 node:
                                   parentAyatSetNode:
-                                    nodeType: ayatSet
+                                    nodeType: daftarAyat
                                     parentPasalVersionNode: *ref_333
                                   key: 1
                                   nodeType: ayat
@@ -5284,7 +5284,7 @@ content:
               content:
                 type: text
                 node:
-                  nodeType: text
+                  nodeType: segmen
                   textName: text
                   parentNode: *ref_341
                 textString: >-
@@ -5311,7 +5311,7 @@ content:
               content:
                 type: text
                 node:
-                  nodeType: text
+                  nodeType: segmen
                   textName: text
                   parentNode: *ref_342
                 textString: >-
@@ -5349,7 +5349,7 @@ content:
               content:
                 type: text
                 node:
-                  nodeType: text
+                  nodeType: segmen
                   textName: text
                   parentNode: *ref_343
                 textString: >-
@@ -5376,7 +5376,7 @@ content:
               content:
                 type: text
                 node:
-                  nodeType: text
+                  nodeType: segmen
                   textName: text
                   parentNode: *ref_344
                 textString: >-
@@ -5400,14 +5400,14 @@ content:
                   key: '45'
                   parentNode: *ref_0
               content:
-                type: pointSet
+                type: daftarHuruf
                 node: &ref_346
-                  nodeType: pointSet
+                  nodeType: daftarHuruf
                   parentNode: *ref_345
                 description:
                   type: text
                   node:
-                    nodeType: text
+                    nodeType: segmen
                     textName: description
                     parentNode: *ref_346
                   textString: 'Pada saat Peraturan Pemerintah ini mulai berlaku:'
@@ -5421,7 +5421,7 @@ content:
                     content:
                       type: text
                       node:
-                        nodeType: text
+                        nodeType: segmen
                         textName: text
                         parentNode: *ref_347
                       textString: >-
@@ -5436,7 +5436,7 @@ content:
                     content:
                       type: text
                       node:
-                        nodeType: text
+                        nodeType: segmen
                         textName: text
                         parentNode: *ref_348
                       textString: >-
@@ -5461,7 +5461,7 @@ content:
               content:
                 type: text
                 node:
-                  nodeType: text
+                  nodeType: segmen
                   textName: text
                   parentNode: *ref_349
                 textString: >-
@@ -5487,7 +5487,7 @@ content:
               content:
                 type: text
                 node:
-                  nodeType: text
+                  nodeType: segmen
                   textName: text
                   parentNode: *ref_350
                 textString: >-
@@ -5514,7 +5514,7 @@ content:
               content:
                 type: text
                 node:
-                  nodeType: text
+                  nodeType: segmen
                   textName: text
                   parentNode: *ref_351
                 textString: >-

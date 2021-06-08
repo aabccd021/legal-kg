@@ -5,6 +5,6 @@ SELECT ?pasal ?text WHERE {
   ?bab legal:partOf+ <http://example.org/legal/document/uu/2020/11>.
   ?bab legal:nomor 2 .
   ?pasal legal:partOf+ ?bab .
-  ?pasal legal:pasalHasPasalVersion ?pasalVersion .
+  ?pasal legal:versi ?pasalVersion .
   ?pasalVersion legal:pasalVersionHasRawText ?text
 } LIMIT 3

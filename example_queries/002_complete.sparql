@@ -4,8 +4,8 @@ PREFIX legal: <http://example.org/legal/ontology/>
 SELECT ?pasal ?text WHERE {
   { 
     SELECT ?pasal (MAX(?pasalVersion) as ?latestPasalVersion) WHERE {
-      <http://example.org/legal/document/uu/2020/11> legal:documentHasPasal ?pasal .
-      ?pasal legal:pasalHasPasalVersion ?pasalVersion .
+      <http://example.org/legal/document/uu/2020/11> legal:pasal ?pasal .
+      ?pasal legal:versi ?pasalVersion .
     } GROUP BY ?pasal 
   }
   ?latestPasalVersion legal:pasalVersionHasRawText ?text

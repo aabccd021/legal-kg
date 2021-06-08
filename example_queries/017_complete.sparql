@@ -8,7 +8,7 @@ SELECT ?law ?numOfUpdates ?pasal (MAX(?pasalVersion) as ?latestPasalVersion) WHE
       {
         SELECT ?pasal (MAX(?pasalVersion) as ?latestPasalVersion) WHERE {
           ?pasal legal:partOf+ <http://example.org/legal/document/uu/2020/11>.
-          ?pasal legal:pasalHasPasalVersion ?pasalVersion .
+          ?pasal legal:versi ?pasalVersion .
         } GROUP BY ?pasal
       }
       ?point legal:partOf+ ?latestPasalVersion .
@@ -20,7 +20,7 @@ SELECT ?law ?numOfUpdates ?pasal (MAX(?pasalVersion) as ?latestPasalVersion) WHE
     } GROUP BY ?law
   }
   ?pasal legal:partOf+ ?law .
-  ?pasal legal:pasalHasPasalVersion ?pasalVersion .
+  ?pasal legal:versi ?pasalVersion .
 }
 GROUP BY ?law ?numOfUpdates ?pasal
 ORDER BY DESC (?numOfUpdates)

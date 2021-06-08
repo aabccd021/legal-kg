@@ -6,5 +6,5 @@ SELECT ?x ?text WHERE {
   ?pasal legal:nomor 2 .
   ?x legal:partOf* ?pasal .
   ?x legal:nomor 1 .
-  ?x legal:ayatHasRawText ?text .
+  ?x legal:teks ?text .
 } LIMIT 3

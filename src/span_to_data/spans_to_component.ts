@@ -159,11 +159,11 @@ export function spansToContent(context: Context, spans: Span[]): BabSet | PasalS
       elements: map(keyToSpanMap, spansToBabWith(context, babSetNode)),
     };
   }
-  const pasalSetNode: PasalSetNode = { nodeType: 'pasalSet', parentNode: context.documentNode };
+  const daftarPasalNode: PasalSetNode = { nodeType: 'daftarPasal', parentNode: context.documentNode };
   const { keyToSpanMap } = extractSpans(context.keyIds.spanIdToPasalKeyMap, spans);
   return {
-    type: 'pasalSet',
-    node: pasalSetNode,
+    type: 'daftarPasal',
+    node: daftarPasalNode,
     elements: map(keyToSpanMap, spansToPasalWith(context)),
   };
 }
@@ -175,17 +175,17 @@ function pasalArrToPasalSet(
   parentNode: BabNode | BagianNode | ParagrafNode,
   elements: Pasal[]
 ): PasalSet {
-  return { type: 'pasalSet', node: { nodeType: 'pasalSet', parentNode }, elements };
+  return { type: 'daftarPasal', node: { nodeType: 'daftarPasal', parentNode }, elements };
 }
 
 const bagianArrToBagianSetWith = curry(bagianArrToBagianSet);
 function bagianArrToBagianSet(parentBabNode: BabNode, elements: Bagian[]): BagianSet {
-  return { type: 'bagianSet', node: { nodeType: 'bagianSet', parentBabNode }, elements };
+  return { type: 'daftarBagian', node: { nodeType: 'daftarBagian', parentBabNode }, elements };
 }
 
 const paragrafArrToParagrafSetWith = curry(paragrafArrToParagrafSet);
 function paragrafArrToParagrafSet(parentBagianNode: BagianNode, elements: Paragraf[]): ParagrafSet {
-  return { type: 'paragrafSet', node: { nodeType: 'paragrafSet', parentBagianNode }, elements };
+  return { type: 'daftarParagraf', node: { nodeType: 'daftarParagraf', parentBagianNode }, elements };
 }
 
 const spansToBabWith = curry(spansToBab);
@@ -226,7 +226,7 @@ function spansToBagian(
   const bagianNode: BagianNode = {
     nodeType: 'bagian',
     key: parseInt(key),
-    parentBagianSetNode: { nodeType: 'bagianSet', parentBabNode },
+    parentBagianSetNode: { nodeType: 'daftarBagian', parentBabNode },
   };
   const { spanIdMap, keySpansToComponent } = spanIdKeyMapOf<Paragraf, Pasal, ParagrafSet, PasalSet>(
     [
@@ -260,16 +260,16 @@ function spansToParagraf(
   const paragrafNode: ParagrafNode = {
     nodeType: 'paragraf',
     key: parseInt(key),
-    parentParagrafSetNode: { nodeType: 'paragrafSet', parentBagianNode },
+    parentParagrafSetNode: { nodeType: 'daftarParagraf', parentBagianNode },
   };
   const { preKeySpans, keyToSpanMap } = extractSpans(context.keyIds.spanIdToPasalKeyMap, spans);
   return {
     type: 'paragraf',
     node: paragrafNode,
     title: preKeySpans.map(spanToStr).join(' '),
-    pasalSet: {
-      type: 'pasalSet',
-      node: { nodeType: 'pasalSet', parentNode: paragrafNode },
+    daftarPasal: {
+      type: 'daftarPasal',
+      node: { nodeType: 'daftarPasal', parentNode: paragrafNode },
       elements: map(keyToSpanMap, spansToPasalWith(context)),
     },
   };
@@ -315,7 +315,7 @@ function spansToAyatSet(
     spans
   );
   if (isEmpty(keyToSpanMap)) return undefined;
-  const ayatSetNode: AyatSetNode = { nodeType: 'ayatSet', parentPasalVersionNode };
+  const ayatSetNode: AyatSetNode = { nodeType: 'daftarAyat', parentPasalVersionNode };
   const ayats = chain(keyToSpanMap).toPairs().map(spansToAyatWith(ayatSetNode, context)).value();
   return {
     type: 'ayatSet',
@@ -345,16 +345,16 @@ function _spansToPointSet(
   spans: Span[],
   spanIdx: number
 ): PointSet {
-  const pointSetNode: PointSetNode = { nodeType: 'pointSet', parentNode };
+  const daftarHurufNode: PointSetNode = { nodeType: 'daftarHuruf', parentNode };
   return {
-    type: 'pointSet',
-    node: pointSetNode,
-    description: spansToText(pointSetNode, 'description', spans.slice(0, spanIdx)),
+    type: 'daftarHuruf',
+    node: daftarHurufNode,
+    description: spansToText(daftarHurufNode, 'description', spans.slice(0, spanIdx)),
     elements: chain(spans)
       .slice(spanIdx)
       .reduce(toKeySpansWith(context, pointType), { keySpans: [] })
       .thru(({ keySpans }) => keySpans)
-      .map(spansToPointWith(pointSetNode, context))
+      .map(spansToPointWith(daftarHurufNode, context))
       .value(),
   };
 }
@@ -643,14 +643,14 @@ function spansToAmendedPointSet(
   );
   const amendedDocumentNode = spansToAmendedDocumentNode(preKeySpans);
   if (isUndefined(amendedDocumentNode)) return undefined;
-  const pointSetNode: PointSetNode = { nodeType: 'pointSet', parentNode };
+  const daftarHurufNode: PointSetNode = { nodeType: 'daftarHuruf', parentNode };
   return {
-    type: 'pointSet',
-    node: pointSetNode,
-    description: spansToText(pointSetNode, 'description', preKeySpans),
+    type: 'daftarHuruf',
+    node: daftarHurufNode,
+    description: spansToText(daftarHurufNode, 'description', preKeySpans),
     elements: chain(keyToSpanMap)
       .map(
-        spansToAmendedPointWith({ context, amendedDocumentNode, parentPointSetNode: pointSetNode })
+        spansToAmendedPointWith({ context, amendedDocumentNode, parentPointSetNode: daftarHurufNode })
       )
       .compact()
       .value(),
@@ -700,7 +700,7 @@ function spansToText(
 ): Text {
   return {
     type: 'text',
-    node: { nodeType: 'text', textName, parentNode: parent },
+    node: { nodeType: 'segmen', textName, parentNode: parent },
     textString: chain(spans)
       .map(({ str }) => str)
       .join(' ')

@@ -89,28 +89,21 @@ function getAlternativeVocabQuads(triples: LegalTriple[]): n3.Quad[] {
     .map(([s, p, o]) => {
       if (isNil(o) || isString(o) || isNumber(o) || o.nodeType === 'date') return undefined;
       if (
-        p === 'ayatHasPointSet' ||
+        p === 'ayat' ||
+        p === 'bab' ||
+        p === 'bagian' ||
+        p === 'daftarAyat' ||
+        p === 'daftarBab' ||
+        p === 'daftarBagian' ||
+        p === 'daftarHuruf' ||
+        p === 'daftarParagraf' ||
+        p === 'daftarPasal' ||
+        p === 'huruf' ||
+        p === 'paragraf' ||
+        p === 'pasal' ||
+        p === 'segmen' ||
         p === 'teks' ||
-        p === 'ayatSetHasAyat' ||
-        p === 'babHasBagianSet' ||
-        p === 'babHasPasalSet' ||
-        p === 'babSetHasBab' ||
-        p === 'bagianHasParagrafSet' ||
-        p === 'bagianHasPasalSet' ||
-        p === 'bagianSetHasBagian' ||
-        p === 'documentHasBabSet' ||
-        p === 'documentHasPasal' ||
-        p === 'paragrafHasPasalSet' ||
-        p === 'paragrafSetHasParagraf' ||
-        p === 'pasalHasPasalVersion' ||
-        p === 'pointHasPointSet' ||
-        p === 'pasalSetHasPasal' ||
-        p === 'pointSetHasPoint' ||
-        p === 'pasalVersionHasPointSet' ||
-        p === 'pasalVersionHasAyatSet' ||
-        p === 'pointHasText' ||
-        p === 'menimbangHasPointSet' ||
-        p === 'mengingatHasPointSet'
+        p === 'versi'
       ) {
         return triple(legalNodeToN3(o), onto('bagianDari'), legalNodeToN3(s));
       }

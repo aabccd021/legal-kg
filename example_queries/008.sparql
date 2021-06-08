@@ -4,10 +4,10 @@ PREFIX legal: <http://example.org/legal/ontology/>
 SELECT ?deletingPoint ?deletedPasal ?version ?text WHERE {
   ?deletingPoint legal:partOf+ <http://example.org/legal/document/uu/2020/11>.
   ?deletingPoint legal:menghapus ?deletedPasalVersion .
-  ?deletedPasal legal:pasalHasPasalVersion ?deletedPasalVersion .
-  <http://example.org/legal/document/uu/2003/13> legal:documentHasPasal ?deletedPasal .
-  ?deletedPasal legal:pasalHasPasalVersion ?allPasalVersion .
+  ?deletedPasal legal:versi ?deletedPasalVersion .
+  <http://example.org/legal/document/uu/2003/13> legal:pasal ?deletedPasal .
+  ?deletedPasal legal:versi ?allPasalVersion .
   ?allPasalVersion legal:pasalVersionHasRawText ?text .
-  ?allPasalVersion legal:pasalVersionHasVersionDate ?version .
+  ?allPasalVersion legal:tanggal ?version .
 }
 LIMIT 3

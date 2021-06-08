@@ -33,7 +33,7 @@ import {
   PasalSetNode,
   PasalVersionNode,
   AyatNode,
-  TextNode,
+  SegmentNode,
   Document,
 } from '../component';
 
@@ -48,8 +48,8 @@ export function yamlToTriples({
 }: Document): LegalTriple[] {
   const contentTriples: LegalTriple[] =
     content.type === 'babSet'
-      ? [[node, 'documentHasBabSet', content.node], ...flatMap(content.elements, babToTriple)]
-      : pasalSetToTriple(node, content);
+      ? [[node, 'daftarBab', content.node], ...flatMap(content.elements, babToTriple)]
+      : daftarPasalToTriple(node, content);
   return compact([
     ...contentTriples,
     [node, 'disahkanPada', disahkan.date],
@@ -58,9 +58,7 @@ export function yamlToTriples({
     ...menimbangToTriple(menimbang),
     disahkan.pengesah ? [node, 'disahkanOleh', disahkan.pengesah] : undefined,
     disahkan.location ? [node, 'disahkanDi', disahkan.location] : undefined,
-    disahkan.jabatanPengesah
-      ? [node, 'documentHasDisahkanJabatanPengesah', disahkan.jabatanPengesah]
-      : undefined,
+    disahkan.jabatanPengesah ? [node, 'jabatanPengesah', disahkan.jabatanPengesah] : undefined,
   ]);
 }
 
@@ -68,8 +66,8 @@ function mengingatToTriple(mengingat?: Mengingat): LegalTriple[] {
   if (isUndefined(mengingat)) return [];
   return [
     [mengingat.node.parentNode, 'mengingat', mengingat.node],
-    ...(mengingat.content.type === 'pointSet'
-      ? pointSetToTriple(mengingat.content)
+    ...(mengingat.content.type === 'daftarHuruf'
+      ? daftarHurufToTriple(mengingat.content)
       : textToTriple(mengingat.content)),
   ];
 }
@@ -78,99 +76,99 @@ function menimbangToTriple(menimbang?: Menimbang): LegalTriple[] {
   if (isUndefined(menimbang)) return [];
   return [
     [menimbang.node.parentNode, 'menimbang', menimbang.node],
-    ...(menimbang.content.type === 'pointSet'
-      ? pointSetToTriple(menimbang.content)
+    ...(menimbang.content.type === 'daftarHuruf'
+      ? daftarHurufToTriple(menimbang.content)
       : textToTriple(menimbang.content)),
   ];
 }
 
 function babToTriple(bab: Bab): LegalTriple[] {
   return [
-    [bab.node.parentBabSetNode, 'babSetHasBab', bab.node],
+    [bab.node.parentBabSetNode, 'bab', bab.node],
     [bab.node, 'nomor', bab.node.key],
     [bab.node, 'judul', bab.title],
-    ...(bab.content.type === 'bagianSet'
-      ? bagianSetToTriple(bab.node, bab.content)
-      : pasalSetToTriple(bab.node, bab.content)),
+    ...(bab.content.type === 'daftarBagian'
+      ? daftarBagianToTriple(bab.node, bab.content)
+      : daftarPasalToTriple(bab.node, bab.content)),
   ];
 }
 
-function bagianSetToTriple(parentBabNode: BabNode, bagianSet: BagianSet): LegalTriple[] {
+function daftarBagianToTriple(parentBabNode: BabNode, daftarBagian: BagianSet): LegalTriple[] {
   return [
-    [parentBabNode, 'babHasBagianSet', bagianSet.node],
-    ...flatMap(bagianSet.elements, bagianToTriple),
+    [parentBabNode, 'daftarBagian', daftarBagian.node],
+    ...flatMap(daftarBagian.elements, bagianToTriple),
   ];
 }
 
 function bagianToTriple(bagian: Bagian): LegalTriple[] {
   return [
-    [bagian.node.parentBagianSetNode, 'bagianSetHasBagian', bagian.node],
+    [bagian.node.parentBagianSetNode, 'bagian', bagian.node],
     [bagian.node, 'nomor', bagian.node.key],
     [bagian.node, 'judul', bagian.title],
-    ...(bagian.content.type === 'paragrafSet'
-      ? paragrafSetToTriple(bagian.node, bagian.content)
-      : pasalSetToTriple(bagian.node, bagian.content)),
+    ...(bagian.content.type === 'daftarParagraf'
+      ? daftarParagrafToTriple(bagian.node, bagian.content)
+      : daftarPasalToTriple(bagian.node, bagian.content)),
   ];
 }
 
-function paragrafSetToTriple(
+function daftarParagrafToTriple(
   parentBagianNode: BagianNode,
-  paragrafSet: ParagrafSet
+  daftarParagraf: ParagrafSet
 ): LegalTriple[] {
-  const paragrafSetNode: ParagrafSetNode = { nodeType: 'paragrafSet', parentBagianNode };
+  const daftarParagrafNode: ParagrafSetNode = { nodeType: 'daftarParagraf', parentBagianNode };
   return [
-    [parentBagianNode, 'bagianHasParagrafSet', paragrafSetNode],
-    ...flatMap(paragrafSet.elements, paragrafToTriple),
+    [parentBagianNode, 'daftarParagraf', daftarParagrafNode],
+    ...flatMap(daftarParagraf.elements, paragrafToTriple),
   ];
 }
 
 function paragrafToTriple(paragraf: Paragraf): LegalTriple[] {
   return [
-    [paragraf.node.parentParagrafSetNode, 'paragrafSetHasParagraf', paragraf.node],
+    [paragraf.node.parentParagrafSetNode, 'paragraf', paragraf.node],
     [paragraf.node, 'nomor', paragraf.node.key],
     [paragraf.node, 'judul', paragraf.title],
-    ...pasalSetToTriple(paragraf.node, paragraf.pasalSet),
+    ...daftarPasalToTriple(paragraf.node, paragraf.daftarPasal),
   ];
 }
 
-function pasalSetToTriple(
+function daftarPasalToTriple(
   parentNode: DocumentNode | BabNode | BagianNode | ParagrafNode,
-  pasalSet: PasalSet
+  daftarPasal: PasalSet
 ): LegalTriple[] {
-  const pasalSetNode: PasalSetNode = { nodeType: 'pasalSet', parentNode };
+  const daftarPasalNode: PasalSetNode = { nodeType: 'daftarPasal', parentNode };
   return [
-    _pasalSetToTriple(parentNode, pasalSetNode),
-    ...flatMap(pasalSet.elements, pasalToTripleWith(pasalSetNode)),
+    _daftarPasalToTriple(parentNode, daftarPasalNode),
+    ...flatMap(daftarPasal.elements, pasalToTripleWith(daftarPasalNode)),
   ];
 }
 
-function _pasalSetToTriple(
+function _daftarPasalToTriple(
   parentNode: DocumentNode | BabNode | BagianNode | ParagrafNode,
-  pasalSetNode: PasalSetNode
+  daftarPasalNode: PasalSetNode
 ): LegalTriple {
-  if (parentNode.nodeType === 'bab') return [parentNode, 'babHasPasalSet', pasalSetNode];
-  if (parentNode.nodeType === 'bagian') return [parentNode, 'bagianHasPasalSet', pasalSetNode];
-  if (parentNode.nodeType === 'paragraf') return [parentNode, 'paragrafHasPasalSet', pasalSetNode];
-  if (parentNode.nodeType === 'peraturan') return [parentNode, 'documentHasPasalSet', pasalSetNode];
+  if (parentNode.nodeType === 'bab') return [parentNode, 'daftarPasal', daftarPasalNode];
+  if (parentNode.nodeType === 'bagian') return [parentNode, 'daftarPasal', daftarPasalNode];
+  if (parentNode.nodeType === 'paragraf') return [parentNode, 'daftarPasal', daftarPasalNode];
+  if (parentNode.nodeType === 'peraturan') return [parentNode, 'daftarPasal', daftarPasalNode];
   assertNever(parentNode);
 }
 
 const pasalToTripleWith = curry(pasalToTriple);
 function pasalToTriple(parentPasalSetNode: PasalSetNode, pasal: Pasal): LegalTriple[] {
   return [
-    [parentPasalSetNode, 'pasalSetHasPasal', pasal.node],
+    [parentPasalSetNode, 'pasal', pasal.node],
     [pasal.node, 'nomor', pasal.node.key],
-    [pasal.node, 'pasalHasPasalVersion', pasal.version.node],
-    [pasal.node.parentNode, 'documentHasPasal', pasal.node],
+    [pasal.node, 'versi', pasal.version.node],
+    [pasal.node.parentNode, 'pasal', pasal.node],
     ...pasalVersionToTriple(pasal.version),
   ];
 }
 
 function pasalVersionToTriple(pasalVersion: PasalVersion): LegalTriple[] {
   return [
-    [pasalVersion.node, 'pasalVersionHasState', pasalVersion.node.state],
-    [pasalVersion.node, 'pasalVersionHasVersionDate', pasalVersion.node.version],
-    [pasalVersion.node, 'pasalVersionHasRawText', componentToRawText(pasalVersion)],
+    [pasalVersion.node, 'jenisVersi', pasalVersion.node.state],
+    [pasalVersion.node, 'tanggal', pasalVersion.node.version],
+    [pasalVersion.node, 'teks', componentToRawText(pasalVersion)],
     ...pasalVersionContentToTriple(pasalVersion.content),
   ];
 }
@@ -195,7 +193,7 @@ function componentToRawText(
       .map((ayat) => `(${ayat.node.key}). ${componentToRawText(ayat.content)}`)
       .join('\n');
   }
-  if (comp.type === 'pointSet') {
+  if (comp.type === 'daftarHuruf') {
     const content = comp.elements.map((point) => componentToRawText(point)).join('\n');
     return `${componentToRawText(comp.description)}\n${content}\n`;
   }
@@ -221,7 +219,7 @@ function pasalVersionContentToTriple(
   content: PointSet | Text | AyatSet | undefined
 ): LegalTriple[] {
   if (isUndefined(content)) return [];
-  if (content.type === 'pointSet') return pointSetToTriple(content);
+  if (content.type === 'daftarHuruf') return daftarHurufToTriple(content);
   if (content.type === 'ayatSet') return ayatSetToTriple(content);
   if (content.type === 'text') return textToTriple(content);
   assertNever(content);
@@ -229,44 +227,41 @@ function pasalVersionContentToTriple(
 
 function ayatSetToTriple(ayatSet: AyatSet): LegalTriple[] {
   return [
-    [ayatSet.node.parentPasalVersionNode, 'pasalVersionHasAyatSet', ayatSet.node],
+    [ayatSet.node.parentPasalVersionNode, 'daftarAyat', ayatSet.node],
     ...flatMap(ayatSet.elements, ayatToTriple),
   ];
 }
 
 function ayatToTriple(ayat: Ayat): LegalTriple[] {
   return [
-    [ayat.node.parentAyatSetNode, 'ayatSetHasAyat', ayat.node],
+    [ayat.node.parentAyatSetNode, 'ayat', ayat.node],
     [ayat.node, 'nomor', ayat.node.key],
-    [ayat.node, 'ayatHasRawText', componentToRawText(ayat.content)],
-    ...(ayat.content.type === 'pointSet'
-      ? pointSetToTriple(ayat.content)
+    [ayat.node, 'teks', componentToRawText(ayat.content)],
+    ...(ayat.content.type === 'daftarHuruf'
+      ? daftarHurufToTriple(ayat.content)
       : textToTriple(ayat.content)),
   ];
 }
 
 // TODO: make all to triple in one function
 
-function pointSetToTriple(pointSet: PointSet): LegalTriple[] {
+function daftarHurufToTriple(daftarHuruf: PointSet): LegalTriple[] {
   return [
-    _pointSetToTriple(pointSet.node.parentNode, pointSet.node),
-    ...textToTriple(pointSet.description),
-    ...flatMap(pointSet.elements, pointToTriple),
+    _daftarHurufToTriple(daftarHuruf.node.parentNode, daftarHuruf.node),
+    ...textToTriple(daftarHuruf.description),
+    ...flatMap(daftarHuruf.elements, pointToTriple),
   ];
 }
 
-function _pointSetToTriple(
+function _daftarHurufToTriple(
   parentNode: PointNode | AyatNode | PasalVersionNode | MenimbangNode | MengingatNode,
-  pointSetNode: PointSetNode
+  daftarHurufNode: PointSetNode
 ): LegalTriple {
-  if (parentNode.nodeType === 'ayat') return [parentNode, 'ayatHasPointSet', pointSetNode];
-  if (parentNode.nodeType === 'versiPasal')
-    return [parentNode, 'pasalVersionHasPointSet', pointSetNode];
-  if (parentNode.nodeType === 'huruf') return [parentNode, 'pointHasPointSet', pointSetNode];
-  if (parentNode.nodeType === 'menimbang')
-    return [parentNode, 'menimbangHasPointSet', pointSetNode];
-  if (parentNode.nodeType === 'mengingat')
-    return [parentNode, 'mengingatHasPointSet', pointSetNode];
+  if (parentNode.nodeType === 'ayat') return [parentNode, 'daftarHuruf', daftarHurufNode];
+  if (parentNode.nodeType === 'versiPasal') return [parentNode, 'daftarHuruf', daftarHurufNode];
+  if (parentNode.nodeType === 'huruf') return [parentNode, 'daftarHuruf', daftarHurufNode];
+  if (parentNode.nodeType === 'menimbang') return [parentNode, 'daftarHuruf', daftarHurufNode];
+  if (parentNode.nodeType === 'mengingat') return [parentNode, 'daftarHuruf', daftarHurufNode];
   assertNever(parentNode);
 }
 
@@ -274,7 +269,7 @@ function pointToTriple(
   point: Point | PasalDeleteAmenderPoint | PasalUpdateAmenderPoint | PasalInsertAmenderPoint
 ): LegalTriple[] {
   return [
-    [point.node.parentPointSetNode, 'pointSetHasPoint', point.node],
+    [point.node.parentPointSetNode, 'huruf', point.node],
     [point.node, 'nomor', point.node.key],
     ..._pointToTriple(point),
   ];
@@ -288,14 +283,10 @@ function _pointToTriple(
   if (point.type === 'pasalDeleteAmenderPoint')
     return [
       [point.node, 'menghapus', point.deletedPasalVersion.node],
-      [
-        point.deletedPasalVersion.node.parentPasalNode,
-        'pasalHasPasalVersion',
-        point.deletedPasalVersion.node,
-      ],
+      [point.deletedPasalVersion.node.parentPasalNode, 'versi', point.deletedPasalVersion.node],
       [
         point.deletedPasalVersion.node.parentPasalNode.parentNode,
-        'documentHasPasal',
+        'pasal',
         point.deletedPasalVersion.node.parentPasalNode,
       ],
       ...pasalVersionToTriple(point.deletedPasalVersion),
@@ -303,14 +294,10 @@ function _pointToTriple(
   if (point.type === 'pasalUpdateAmenderPoint')
     return [
       [point.node, 'mengubah', point.updatedPasalVersion.node],
-      [
-        point.updatedPasalVersion.node.parentPasalNode,
-        'pasalHasPasalVersion',
-        point.updatedPasalVersion.node,
-      ],
+      [point.updatedPasalVersion.node.parentPasalNode, 'versi', point.updatedPasalVersion.node],
       [
         point.updatedPasalVersion.node.parentPasalNode.parentNode,
-        'documentHasPasal',
+        'pasal',
         point.updatedPasalVersion.node.parentPasalNode,
       ],
       ...pasalVersionToTriple(point.updatedPasalVersion),
@@ -318,8 +305,8 @@ function _pointToTriple(
   if (point.type === 'pasalInsertAmenderPoint')
     return flatMap(point.insertedPasalVersionArr, pointToAmendInsertTripleWith(point));
   if (point.type === 'point')
-    return point.content.type === 'pointSet'
-      ? pointSetToTriple(point.content)
+    return point.content.type === 'daftarHuruf'
+      ? daftarHurufToTriple(point.content)
       : textToTriple(point.content);
   assertNever(point);
 }
@@ -331,12 +318,8 @@ function pointToAmendInsertTriple(
 ): LegalTriple[] {
   return [
     [point.node, 'menyisipkan', pasalVersion.node],
-    [pasalVersion.node.parentPasalNode, 'pasalHasPasalVersion', pasalVersion.node],
-    [
-      pasalVersion.node.parentPasalNode.parentNode,
-      'documentHasPasal',
-      pasalVersion.node.parentPasalNode,
-    ],
+    [pasalVersion.node.parentPasalNode, 'versi', pasalVersion.node],
+    [pasalVersion.node.parentPasalNode.parentNode, 'pasal', pasalVersion.node.parentPasalNode],
     ...pasalVersionToTriple(pasalVersion),
   ];
 }
@@ -345,7 +328,7 @@ function pointToAmendInsertTriple(
 
 function textToTriple(text: Text): LegalTriple[] {
   return [
-    [text.node, 'textHasTextString', text.textString],
+    [text.node, 'teks', text.textString],
     _textToTriple(text.node.parentNode, text.node),
     ...map(text.references, referenceToTripleWith(text.node)),
   ];
@@ -359,18 +342,18 @@ function _textToTriple(
     | AyatNode
     | MenimbangNode
     | MengingatNode,
-  textNode: TextNode
+  textNode: SegmentNode
 ): LegalTriple {
-  if (parentNode.nodeType === 'ayat') return [parentNode, 'teks', textNode];
-  if (parentNode.nodeType === 'versiPasal') return [parentNode, 'pasalVersionHasText', textNode];
-  if (parentNode.nodeType === 'huruf') return [parentNode, 'pointHasText', textNode];
-  if (parentNode.nodeType === 'pointSet') return [parentNode, 'pointSetHasDescription', textNode];
-  if (parentNode.nodeType === 'menimbang') return [parentNode, 'teks', textNode];
-  if (parentNode.nodeType === 'mengingat') return [parentNode, 'teks', textNode];
+  if (parentNode.nodeType === 'ayat') return [parentNode, 'segmen', textNode];
+  if (parentNode.nodeType === 'versiPasal') return [parentNode, 'segmen', textNode];
+  if (parentNode.nodeType === 'huruf') return [parentNode, 'segmen', textNode];
+  if (parentNode.nodeType === 'daftarHuruf') return [parentNode, 'segmen', textNode];
+  if (parentNode.nodeType === 'menimbang') return [parentNode, 'segmen', textNode];
+  if (parentNode.nodeType === 'mengingat') return [parentNode, 'segmen', textNode];
   assertNever(parentNode);
 }
 
 const referenceToTripleWith = curry(referenceToTriple);
-function referenceToTriple(textNode: TextNode, reference: Reference): LegalTriple {
-  return [textNode, 'textReferencesLegal', reference.node];
+function referenceToTriple(textNode: SegmentNode, reference: Reference): LegalTriple {
+  return [textNode, 'merujuk', reference.node];
 }

@@ -5,13 +5,13 @@ SELECT ?ayat ?text WHERE {
   {
     SELECT ?pasal (MAX(?pasalVersion) as ?latestPasalVersion) WHERE {
       ?pasal legal:partOf+ <http://example.org/legal/document/uu/2020/11>.
-      ?pasal legal:pasalHasPasalVersion ?pasalVersion .
+      ?pasal legal:versi ?pasalVersion .
     } GROUP BY ?pasal
   }
   ?insertingPoint legal:partOf+ ?latestPasalVersion .
   ?insertingPoint legal:menyisipkan ?insertedPasalVersion .
   ?ayat legal:partOf+ ?insertedPasalVersion .
-  ?ayat legal:ayatHasRawText ?text
+  ?ayat legal:teks ?text
   FILTER REGEX(str(?text), "kompensasi")
   FILTER REGEX(str(?text), "buruh")
 } LIMIT 3

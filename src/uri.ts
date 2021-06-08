@@ -17,21 +17,21 @@ export type DateNode = {
 export function nodeToUri(node: LegalNode): string {
   if (node.nodeType === 'ayat')
     return `${nodeToUri(node.parentAyatSetNode)}/${padStartIfNumber(node.key)}`;
-  if (node.nodeType === 'ayatSet') return `${nodeToUri(node.parentPasalVersionNode)}/ayat`;
+  if (node.nodeType === 'daftarAyat') return `${nodeToUri(node.parentPasalVersionNode)}/ayat`;
   if (node.nodeType === 'bab')
     return `${nodeToUri(node.parentBabSetNode)}/${padStartIfNumber(node.key)}`;
   if (node.nodeType === 'babSet') return `${nodeToUri(node.parentDocumentNode)}/bab`;
   if (node.nodeType === 'bagian')
     return `${nodeToUri(node.parentBagianSetNode)}/${padStartIfNumber(node.key)}`;
-  if (node.nodeType === 'bagianSet') return `${nodeToUri(node.parentBabNode)}/bagian`;
+  if (node.nodeType === 'daftarBagian') return `${nodeToUri(node.parentBabNode)}/bagian`;
   if (node.nodeType === 'peraturan')
     return `${getConfig().uriBase}/peraturan/${getDocumentPath(node)}`;
   if (node.nodeType === 'paragraf')
     return `${nodeToUri(node.parentParagrafSetNode)}/${padStartIfNumber(node.key)}`;
-  if (node.nodeType === 'paragrafSet') return `${nodeToUri(node.parentBagianNode)}/paragraf`;
+  if (node.nodeType === 'daftarParagraf') return `${nodeToUri(node.parentBagianNode)}/paragraf`;
   if (node.nodeType === 'pasal')
     return `${nodeToUri(node.parentNode)}/pasal/${padPasalIfNumber(node.key)}`;
-  if (node.nodeType === 'pasalSet') return `${nodeToUri(node.parentNode)}/pasals`;
+  if (node.nodeType === 'daftarPasal') return `${nodeToUri(node.parentNode)}/daftarPasal`;
   if (node.nodeType === 'versiPasal') {
     const yearStr = padStartIfNumber(node.version.year, { pad: 4 });
     const monthStr = padStartIfNumber(node.version.month, { pad: 2 });
@@ -40,8 +40,8 @@ export function nodeToUri(node: LegalNode): string {
   }
   if (node.nodeType === 'huruf')
     return `${nodeToUri(node.parentPointSetNode)}/${padStartIfNumber(node.key)}`;
-  if (node.nodeType === 'pointSet') return `${nodeToUri(node.parentNode)}/huruf`;
-  if (node.nodeType === 'text') return `${nodeToUri(node.parentNode)}/${node.textName}`;
+  if (node.nodeType === 'daftarHuruf') return `${nodeToUri(node.parentNode)}/huruf`;
+  if (node.nodeType === 'segmen') return `${nodeToUri(node.parentNode)}/${node.textName}`;
   if (node.nodeType === 'menimbang') return `${nodeToUri(node.parentNode)}/menimbang`;
   if (node.nodeType === 'mengingat') return `${nodeToUri(node.parentNode)}/mengingat`;
   assertNever(node);

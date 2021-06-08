@@ -11,14 +11,14 @@ metadata:
       nodeType: menimbang
       parentNode: *ref_0
     content:
-      type: pointSet
+      type: daftarHuruf
       node: &ref_2
-        nodeType: pointSet
+        nodeType: daftarHuruf
         parentNode: *ref_1
       description:
         type: text
         node:
-          nodeType: text
+          nodeType: segmen
           textName: description
           parentNode: *ref_2
         textString: ''
@@ -32,7 +32,7 @@ metadata:
           content:
             type: text
             node:
-              nodeType: text
+              nodeType: segmen
               textName: text
               parentNode: *ref_3
             textString: >-
@@ -49,7 +49,7 @@ metadata:
           content:
             type: text
             node:
-              nodeType: text
+              nodeType: segmen
               textName: text
               parentNode: *ref_4
             textString: >-
@@ -64,14 +64,14 @@ metadata:
       nodeType: mengingat
       parentNode: *ref_0
     content:
-      type: pointSet
+      type: daftarHuruf
       node: &ref_6
-        nodeType: pointSet
+        nodeType: daftarHuruf
         parentNode: *ref_5
       description:
         type: text
         node:
-          nodeType: text
+          nodeType: segmen
           textName: description
           parentNode: *ref_6
         textString: ''
@@ -85,7 +85,7 @@ metadata:
           content:
             type: text
             node:
-              nodeType: text
+              nodeType: segmen
               textName: text
               parentNode: *ref_7
             textString: >-
@@ -109,7 +109,7 @@ metadata:
           content:
             type: text
             node:
-              nodeType: text
+              nodeType: segmen
               textName: text
               parentNode: *ref_8
             textString: >-
@@ -133,7 +133,7 @@ metadata:
           content:
             type: text
             node:
-              nodeType: text
+              nodeType: segmen
               textName: text
               parentNode: *ref_9
             textString: >-
@@ -176,7 +176,7 @@ metadata:
           content:
             type: text
             node:
-              nodeType: text
+              nodeType: segmen
               textName: text
               parentNode: *ref_10
             textString: >-
@@ -200,7 +200,7 @@ metadata:
           content:
             type: text
             node:
-              nodeType: text
+              nodeType: segmen
               textName: text
               parentNode: *ref_11
             textString: >-
@@ -217,7 +217,7 @@ metadata:
           content:
             type: text
             node:
-              nodeType: text
+              nodeType: segmen
               textName: text
               parentNode: *ref_12
             textString: >-
@@ -244,9 +244,9 @@ content:
         parentBabSetNode: *ref_13
       title: KETENTUAN UMUM
       content:
-        type: pasalSet
+        type: daftarPasal
         node:
-          nodeType: pasalSet
+          nodeType: daftarPasal
           parentNode: *ref_14
         elements:
           - type: pasal
@@ -269,14 +269,14 @@ content:
                   key: '1'
                   parentNode: *ref_0
               content:
-                type: pointSet
+                type: daftarHuruf
                 node: &ref_16
-                  nodeType: pointSet
+                  nodeType: daftarHuruf
                   parentNode: *ref_15
                 description:
                   type: text
                   node:
-                    nodeType: text
+                    nodeType: segmen
                     textName: description
                     parentNode: *ref_16
                   textString: 'Dalam Peraturan Gubernur ini yang dimaksud dengan:'
@@ -290,7 +290,7 @@ content:
                     content:
                       type: text
                       node:
-                        nodeType: text
+                        nodeType: segmen
                         textName: text
                         parentNode: *ref_17
                       textString: >-
@@ -307,7 +307,7 @@ content:
                     content:
                       type: text
                       node:
-                        nodeType: text
+                        nodeType: segmen
                         textName: text
                         parentNode: *ref_18
                       textString: >-
@@ -323,7 +323,7 @@ content:
                     content:
                       type: text
                       node:
-                        nodeType: text
+                        nodeType: segmen
                         textName: text
                         parentNode: *ref_19
                       textString: >-
@@ -338,7 +338,7 @@ content:
                     content:
                       type: text
                       node:
-                        nodeType: text
+                        nodeType: segmen
                         textName: text
                         parentNode: *ref_20
                       textString: >-
@@ -353,7 +353,7 @@ content:
                     content:
                       type: text
                       node:
-                        nodeType: text
+                        nodeType: segmen
                         textName: text
                         parentNode: *ref_21
                       textString: >-
@@ -370,7 +370,7 @@ content:
                     content:
                       type: text
                       node:
-                        nodeType: text
+                        nodeType: segmen
                         textName: text
                         parentNode: *ref_22
                       textString: >-
@@ -387,7 +387,7 @@ content:
                     content:
                       type: text
                       node:
-                        nodeType: text
+                        nodeType: segmen
                         textName: text
                         parentNode: *ref_23
                       textString: >-
@@ -404,7 +404,7 @@ content:
                     content:
                       type: text
                       node:
-                        nodeType: text
+                        nodeType: segmen
                         textName: text
                         parentNode: *ref_24
                       textString: >-
@@ -419,7 +419,7 @@ content:
                     content:
                       type: text
                       node:
-                        nodeType: text
+                        nodeType: segmen
                         textName: text
                         parentNode: *ref_25
                       textString: Sekretaris Daerah adalah Sekretaris Daerah Provinsi DKI Jakarta.
@@ -432,7 +432,7 @@ content:
                     content:
                       type: text
                       node:
-                        nodeType: text
+                        nodeType: segmen
                         textName: text
                         parentNode: *ref_26
                       textString: >-
@@ -448,7 +448,7 @@ content:
                     content:
                       type: text
                       node:
-                        nodeType: text
+                        nodeType: segmen
                         textName: text
                         parentNode: *ref_27
                       textString: >-
@@ -465,7 +465,7 @@ content:
                     content:
                       type: text
                       node:
-                        nodeType: text
+                        nodeType: segmen
                         textName: text
                         parentNode: *ref_28
                       textString: >-
@@ -483,9 +483,9 @@ content:
         parentBabSetNode: *ref_13
       title: MAKSUD DAN TUJUAN
       content:
-        type: pasalSet
+        type: daftarPasal
         node:
-          nodeType: pasalSet
+          nodeType: daftarPasal
           parentNode: *ref_29
         elements:
           - type: pasal
@@ -506,7 +506,7 @@ content:
               content:
                 type: text
                 node:
-                  nodeType: text
+                  nodeType: segmen
                   textName: text
                   parentNode: *ref_31
                 textString: >-
@@ -529,14 +529,14 @@ content:
                   key: '3'
                   parentNode: *ref_0
               content:
-                type: pointSet
+                type: daftarHuruf
                 node: &ref_33
-                  nodeType: pointSet
+                  nodeType: daftarHuruf
                   parentNode: *ref_32
                 description:
                   type: text
                   node:
-                    nodeType: text
+                    nodeType: segmen
                     textName: description
                     parentNode: *ref_33
                   textString: 'Peraturan Gubernur ini bertujuan untuk:'
@@ -550,7 +550,7 @@ content:
                     content:
                       type: text
                       node:
-                        nodeType: text
+                        nodeType: segmen
                         textName: text
                         parentNode: *ref_34
                       textString: >-
@@ -565,7 +565,7 @@ content:
                     content:
                       type: text
                       node:
-                        nodeType: text
+                        nodeType: segmen
                         textName: text
                         parentNode: *ref_35
                       textString: >-
@@ -580,7 +580,7 @@ content:
                     content:
                       type: text
                       node:
-                        nodeType: text
+                        nodeType: segmen
                         textName: text
                         parentNode: *ref_36
                       textString: >-
@@ -595,7 +595,7 @@ content:
                     content:
                       type: text
                       node:
-                        nodeType: text
+                        nodeType: segmen
                         textName: text
                         parentNode: *ref_37
                       textString: >-
@@ -609,9 +609,9 @@ content:
         parentBabSetNode: *ref_13
       title: RUANG LINGKUP
       content:
-        type: pasalSet
+        type: daftarPasal
         node:
-          nodeType: pasalSet
+          nodeType: daftarPasal
           parentNode: *ref_38
         elements:
           - type: pasal
@@ -630,14 +630,14 @@ content:
                   key: '4'
                   parentNode: *ref_0
               content:
-                type: pointSet
+                type: daftarHuruf
                 node: &ref_40
-                  nodeType: pointSet
+                  nodeType: daftarHuruf
                   parentNode: *ref_39
                 description:
                   type: text
                   node:
-                    nodeType: text
+                    nodeType: segmen
                     textName: description
                     parentNode: *ref_40
                   textString: 'Ruang lingkup Peraturan Gubernur ini meliputi:'
@@ -651,7 +651,7 @@ content:
                     content:
                       type: text
                       node:
-                        nodeType: text
+                        nodeType: segmen
                         textName: text
                         parentNode: *ref_41
                       textString: pelaksanaan PSBB;
@@ -664,7 +664,7 @@ content:
                     content:
                       type: text
                       node:
-                        nodeType: text
+                        nodeType: segmen
                         textName: text
                         parentNode: *ref_42
                       textString: hak, kewajiban serta pemenuhan kebutuhan dasar penduduk selama PSBB;
@@ -677,7 +677,7 @@ content:
                     content:
                       type: text
                       node:
-                        nodeType: text
+                        nodeType: segmen
                         textName: text
                         parentNode: *ref_43
                       textString: sumber daya penanganan Corona Virus Disease (COVID-19);
@@ -690,7 +690,7 @@ content:
                     content:
                       type: text
                       node:
-                        nodeType: text
+                        nodeType: segmen
                         textName: text
                         parentNode: *ref_44
                       textString: pemantauan, evaluasi, dan pelaporan; dan
@@ -703,7 +703,7 @@ content:
                     content:
                       type: text
                       node:
-                        nodeType: text
+                        nodeType: segmen
                         textName: text
                         parentNode: *ref_45
                       textString: sanksi.
@@ -715,9 +715,9 @@ content:
         parentBabSetNode: *ref_13
       title: PELAKSANAAN PSBB
       content:
-        type: bagianSet
+        type: daftarBagian
         node:
-          nodeType: bagianSet
+          nodeType: daftarBagian
           parentBabNode: *ref_46
         elements:
           - type: bagian
@@ -725,13 +725,13 @@ content:
               nodeType: bagian
               key: 1
               parentBagianSetNode:
-                nodeType: bagianSet
+                nodeType: daftarBagian
                 parentBabNode: *ref_46
             title: Bagian Kesatu Umum
             content:
-              type: pasalSet
+              type: daftarPasal
               node:
-                nodeType: pasalSet
+                nodeType: daftarPasal
                 parentNode: *ref_47
               elements:
                 - type: pasal
@@ -752,7 +752,7 @@ content:
                     content:
                       type: ayatSet
                       node: &ref_49
-                        nodeType: ayatSet
+                        nodeType: daftarAyat
                         parentPasalVersionNode: *ref_48
                       elements:
                         - type: ayat
@@ -763,7 +763,7 @@ content:
                           content:
                             type: text
                             node:
-                              nodeType: text
+                              nodeType: segmen
                               textName: text
                               parentNode: *ref_50
                             textString: >-
@@ -778,7 +778,7 @@ content:
                           content:
                             type: text
                             node:
-                              nodeType: text
+                              nodeType: segmen
                               textName: text
                               parentNode: *ref_51
                             textString: >-
@@ -791,7 +791,7 @@ content:
                                 node:
                                   key: 1
                                   parentAyatSetNode:
-                                    nodeType: ayatSet
+                                    nodeType: daftarAyat
                                     parentPasalVersionNode: *ref_48
                                   nodeType: ayat
                         - type: ayat
@@ -800,14 +800,14 @@ content:
                             key: 3
                             parentAyatSetNode: *ref_49
                           content:
-                            type: pointSet
+                            type: daftarHuruf
                             node: &ref_53
-                              nodeType: pointSet
+                              nodeType: daftarHuruf
                               parentNode: *ref_52
                             description:
                               type: text
                               node:
-                                nodeType: text
+                                nodeType: segmen
                                 textName: description
                                 parentNode: *ref_53
                               textString: 'Selama pemberlakuan PSBB, setiap orang wajib:'
@@ -821,7 +821,7 @@ content:
                                 content:
                                   type: text
                                   node:
-                                    nodeType: text
+                                    nodeType: segmen
                                     textName: text
                                     parentNode: *ref_54
                                   textString: melaksanakan Perilaku Hidup Bersih dan Sehat (PHBS); dan
@@ -834,7 +834,7 @@ content:
                                 content:
                                   type: text
                                   node:
-                                    nodeType: text
+                                    nodeType: segmen
                                     textName: text
                                     parentNode: *ref_55
                                   textString: menggunakan masker di luar rumah.
@@ -845,14 +845,14 @@ content:
                             key: 4
                             parentAyatSetNode: *ref_49
                           content:
-                            type: pointSet
+                            type: daftarHuruf
                             node: &ref_57
-                              nodeType: pointSet
+                              nodeType: daftarHuruf
                               parentNode: *ref_56
                             description:
                               type: text
                               node:
-                                nodeType: text
+                                nodeType: segmen
                                 textName: description
                                 parentNode: *ref_57
                               textString: >-
@@ -868,7 +868,7 @@ content:
                                 content:
                                   type: text
                                   node:
-                                    nodeType: text
+                                    nodeType: segmen
                                     textName: text
                                     parentNode: *ref_58
                                   textString: >-
@@ -883,7 +883,7 @@ content:
                                 content:
                                   type: text
                                   node:
-                                    nodeType: text
+                                    nodeType: segmen
                                     textName: text
                                     parentNode: *ref_59
                                   textString: aktivitas bekerja di tempat kerja;
@@ -896,7 +896,7 @@ content:
                                 content:
                                   type: text
                                   node:
-                                    nodeType: text
+                                    nodeType: segmen
                                     textName: text
                                     parentNode: *ref_60
                                   textString: kegiatan keagamaan di rumah ibadah;
@@ -909,7 +909,7 @@ content:
                                 content:
                                   type: text
                                   node:
-                                    nodeType: text
+                                    nodeType: segmen
                                     textName: text
                                     parentNode: *ref_61
                                   textString: kegiatan di tempat atau fasilitas umum;
@@ -922,7 +922,7 @@ content:
                                 content:
                                   type: text
                                   node:
-                                    nodeType: text
+                                    nodeType: segmen
                                     textName: text
                                     parentNode: *ref_62
                                   textString: kegiatan sosial dan budaya; dan
@@ -935,7 +935,7 @@ content:
                                 content:
                                   type: text
                                   node:
-                                    nodeType: text
+                                    nodeType: segmen
                                     textName: text
                                     parentNode: *ref_63
                                   textString: pergerakan orang dan barang menggunakan moda transportasi.
@@ -948,7 +948,7 @@ content:
                           content:
                             type: text
                             node:
-                              nodeType: text
+                              nodeType: segmen
                               textName: text
                               parentNode: *ref_64
                             textString: >-
@@ -961,7 +961,7 @@ content:
                                 node:
                                   key: 1
                                   parentAyatSetNode:
-                                    nodeType: ayatSet
+                                    nodeType: daftarAyat
                                     parentPasalVersionNode: *ref_48
                                   nodeType: ayat
                         - type: ayat
@@ -972,7 +972,7 @@ content:
                           content:
                             type: text
                             node:
-                              nodeType: text
+                              nodeType: segmen
                               textName: text
                               parentNode: *ref_65
                             textString: >-
@@ -984,7 +984,7 @@ content:
                                 node:
                                   key: 1
                                   parentAyatSetNode:
-                                    nodeType: ayatSet
+                                    nodeType: daftarAyat
                                     parentPasalVersionNode: *ref_48
                                   nodeType: ayat
           - type: bagian
@@ -992,15 +992,15 @@ content:
               nodeType: bagian
               key: 2
               parentBagianSetNode:
-                nodeType: bagianSet
+                nodeType: daftarBagian
                 parentBabNode: *ref_46
             title: >-
               Bagian Kedua Pembatasan Pelaksanaan Pembelajaran di Sekolah dan/atau Institusi
               Pendidikan
             content:
-              type: pasalSet
+              type: daftarPasal
               node:
-                nodeType: pasalSet
+                nodeType: daftarPasal
                 parentNode: *ref_66
               elements:
                 - type: pasal
@@ -1021,7 +1021,7 @@ content:
                     content:
                       type: ayatSet
                       node: &ref_68
-                        nodeType: ayatSet
+                        nodeType: daftarAyat
                         parentPasalVersionNode: *ref_67
                       elements:
                         - type: ayat
@@ -1032,7 +1032,7 @@ content:
                           content:
                             type: text
                             node:
-                              nodeType: text
+                              nodeType: segmen
                               textName: text
                               parentNode: *ref_69
                             textString: >-
@@ -1047,7 +1047,7 @@ content:
                           content:
                             type: text
                             node:
-                              nodeType: text
+                              nodeType: segmen
                               textName: text
                               parentNode: *ref_70
                             textString: >-
@@ -1061,7 +1061,7 @@ content:
                                 node:
                                   key: 1
                                   parentAyatSetNode:
-                                    nodeType: ayatSet
+                                    nodeType: daftarAyat
                                     parentPasalVersionNode: *ref_67
                                   nodeType: ayat
                         - type: ayat
@@ -1072,7 +1072,7 @@ content:
                           content:
                             type: text
                             node:
-                              nodeType: text
+                              nodeType: segmen
                               textName: text
                               parentNode: *ref_71
                             textString: >-
@@ -1087,7 +1087,7 @@ content:
                           content:
                             type: text
                             node:
-                              nodeType: text
+                              nodeType: segmen
                               textName: text
                               parentNode: *ref_72
                             textString: >-
@@ -1113,7 +1113,7 @@ content:
                     content:
                       type: ayatSet
                       node: &ref_74
-                        nodeType: ayatSet
+                        nodeType: daftarAyat
                         parentPasalVersionNode: *ref_73
                       elements:
                         - type: ayat
@@ -1122,14 +1122,14 @@ content:
                             key: 1
                             parentAyatSetNode: *ref_74
                           content:
-                            type: pointSet
+                            type: daftarHuruf
                             node: &ref_76
-                              nodeType: pointSet
+                              nodeType: daftarHuruf
                               parentNode: *ref_75
                             description:
                               type: text
                               node:
-                                nodeType: text
+                                nodeType: segmen
                                 textName: description
                                 parentNode: *ref_76
                               textString: >-
@@ -1146,7 +1146,7 @@ content:
                                 content:
                                   type: text
                                   node:
-                                    nodeType: text
+                                    nodeType: segmen
                                     textName: text
                                     parentNode: *ref_77
                                   textString: lembaga pendidikan tinggi;
@@ -1159,7 +1159,7 @@ content:
                                 content:
                                   type: text
                                   node:
-                                    nodeType: text
+                                    nodeType: segmen
                                     textName: text
                                     parentNode: *ref_78
                                   textString: lembaga pelatihan;
@@ -1172,7 +1172,7 @@ content:
                                 content:
                                   type: text
                                   node:
-                                    nodeType: text
+                                    nodeType: segmen
                                     textName: text
                                     parentNode: *ref_79
                                   textString: lembaga penelitian,
@@ -1185,7 +1185,7 @@ content:
                                 content:
                                   type: text
                                   node:
-                                    nodeType: text
+                                    nodeType: segmen
                                     textName: text
                                     parentNode: *ref_80
                                   textString: lembaga pembinaan; dan
@@ -1198,7 +1198,7 @@ content:
                                 content:
                                   type: text
                                   node:
-                                    nodeType: text
+                                    nodeType: segmen
                                     textName: text
                                     parentNode: *ref_81
                                   textString: lembaga sejenisnya.
@@ -1211,7 +1211,7 @@ content:
                           content:
                             type: text
                             node:
-                              nodeType: text
+                              nodeType: segmen
                               textName: text
                               parentNode: *ref_82
                             textString: >-
@@ -1225,7 +1225,7 @@ content:
                                 node:
                                   key: 1
                                   parentAyatSetNode:
-                                    nodeType: ayatSet
+                                    nodeType: daftarAyat
                                     parentPasalVersionNode: *ref_73
                                   nodeType: ayat
                         - type: ayat
@@ -1236,7 +1236,7 @@ content:
                           content:
                             type: text
                             node:
-                              nodeType: text
+                              nodeType: segmen
                               textName: text
                               parentNode: *ref_83
                             textString: >-
@@ -1250,7 +1250,7 @@ content:
                                 node:
                                   key: 1
                                   parentAyatSetNode:
-                                    nodeType: ayatSet
+                                    nodeType: daftarAyat
                                     parentPasalVersionNode: *ref_73
                                   nodeType: ayat
                 - type: pasal
@@ -1271,7 +1271,7 @@ content:
                     content:
                       type: ayatSet
                       node: &ref_85
-                        nodeType: ayatSet
+                        nodeType: daftarAyat
                         parentPasalVersionNode: *ref_84
                       elements:
                         - type: ayat
@@ -1280,14 +1280,14 @@ content:
                             key: 1
                             parentAyatSetNode: *ref_85
                           content:
-                            type: pointSet
+                            type: daftarHuruf
                             node: &ref_87
-                              nodeType: pointSet
+                              nodeType: daftarHuruf
                               parentNode: *ref_86
                             description:
                               type: text
                               node:
-                                nodeType: text
+                                nodeType: segmen
                                 textName: description
                                 parentNode: *ref_87
                               textString: >-
@@ -1303,7 +1303,7 @@ content:
                                 content:
                                   type: text
                                   node:
-                                    nodeType: text
+                                    nodeType: segmen
                                     textName: text
                                     parentNode: *ref_88
                                   textString: >-
@@ -1318,7 +1318,7 @@ content:
                                 content:
                                   type: text
                                   node:
-                                    nodeType: text
+                                    nodeType: segmen
                                     textName: text
                                     parentNode: *ref_89
                                   textString: >-
@@ -1334,7 +1334,7 @@ content:
                                 content:
                                   type: text
                                   node:
-                                    nodeType: text
+                                    nodeType: segmen
                                     textName: text
                                     parentNode: *ref_90
                                   textString: menjaga keamanan sekolah dan/atau institusi pendidikan lainnya.
@@ -1345,14 +1345,14 @@ content:
                             key: 2
                             parentAyatSetNode: *ref_85
                           content:
-                            type: pointSet
+                            type: daftarHuruf
                             node: &ref_92
-                              nodeType: pointSet
+                              nodeType: daftarHuruf
                               parentNode: *ref_91
                             description:
                               type: text
                               node:
-                                nodeType: text
+                                nodeType: segmen
                                 textName: description
                                 parentNode: *ref_92
                               textString: >-
@@ -1370,7 +1370,7 @@ content:
                                 content:
                                   type: text
                                   node:
-                                    nodeType: text
+                                    nodeType: segmen
                                     textName: text
                                     parentNode: *ref_93
                                   textString: >-
@@ -1385,7 +1385,7 @@ content:
                                 content:
                                   type: text
                                   node:
-                                    nodeType: text
+                                    nodeType: segmen
                                     textName: text
                                     parentNode: *ref_94
                                   textString: >-
@@ -1397,13 +1397,13 @@ content:
               nodeType: bagian
               key: 3
               parentBagianSetNode:
-                nodeType: bagianSet
+                nodeType: daftarBagian
                 parentBabNode: *ref_46
             title: Bagian Ketiga Pembatasan Aktivitas Bekerja di Tempat Kerja
             content:
-              type: pasalSet
+              type: daftarPasal
               node:
-                nodeType: pasalSet
+                nodeType: daftarPasal
                 parentNode: *ref_95
               elements:
                 - type: pasal
@@ -1424,7 +1424,7 @@ content:
                     content:
                       type: ayatSet
                       node: &ref_97
-                        nodeType: ayatSet
+                        nodeType: daftarAyat
                         parentPasalVersionNode: *ref_96
                       elements:
                         - type: ayat
@@ -1435,7 +1435,7 @@ content:
                           content:
                             type: text
                             node:
-                              nodeType: text
+                              nodeType: segmen
                               textName: text
                               parentNode: *ref_98
                             textString: >-
@@ -1450,7 +1450,7 @@ content:
                           content:
                             type: text
                             node:
-                              nodeType: text
+                              nodeType: segmen
                               textName: text
                               parentNode: *ref_99
                             textString: >-
@@ -1463,7 +1463,7 @@ content:
                                 node:
                                   key: 1
                                   parentAyatSetNode:
-                                    nodeType: ayatSet
+                                    nodeType: daftarAyat
                                     parentPasalVersionNode: *ref_96
                                   nodeType: ayat
                         - type: ayat
@@ -1472,14 +1472,14 @@ content:
                             key: 3
                             parentAyatSetNode: *ref_97
                           content:
-                            type: pointSet
+                            type: daftarHuruf
                             node: &ref_101
-                              nodeType: pointSet
+                              nodeType: daftarHuruf
                               parentNode: *ref_100
                             description:
                               type: text
                               node:
-                                nodeType: text
+                                nodeType: segmen
                                 textName: description
                                 parentNode: *ref_101
                               textString: >-
@@ -1495,7 +1495,7 @@ content:
                                 content:
                                   type: text
                                   node:
-                                    nodeType: text
+                                    nodeType: segmen
                                     textName: text
                                     parentNode: *ref_102
                                   textString: >-
@@ -1510,7 +1510,7 @@ content:
                                 content:
                                   type: text
                                   node:
-                                    nodeType: text
+                                    nodeType: segmen
                                     textName: text
                                     parentNode: *ref_103
                                   textString: menjaga produktivitas/kinerja pekerja;
@@ -1523,7 +1523,7 @@ content:
                                 content:
                                   type: text
                                   node:
-                                    nodeType: text
+                                    nodeType: segmen
                                     textName: text
                                     parentNode: *ref_104
                                   textString: >-
@@ -1538,7 +1538,7 @@ content:
                                 content:
                                   type: text
                                   node:
-                                    nodeType: text
+                                    nodeType: segmen
                                     textName: text
                                     parentNode: *ref_105
                                   textString: menjaga keamanan lokasi dan lingkungan sekitar tempat kerja; dan
@@ -1551,7 +1551,7 @@ content:
                                 content:
                                   type: text
                                   node:
-                                    nodeType: text
+                                    nodeType: segmen
                                     textName: text
                                     parentNode: *ref_106
                                   textString: >-
@@ -1565,14 +1565,14 @@ content:
                             key: 4
                             parentAyatSetNode: *ref_97
                           content:
-                            type: pointSet
+                            type: daftarHuruf
                             node: &ref_108
-                              nodeType: pointSet
+                              nodeType: daftarHuruf
                               parentNode: *ref_107
                             description:
                               type: text
                               node:
-                                nodeType: text
+                                nodeType: segmen
                                 textName: description
                                 parentNode: *ref_108
                               textString: >-
@@ -1589,7 +1589,7 @@ content:
                                 content:
                                   type: text
                                   node:
-                                    nodeType: text
+                                    nodeType: segmen
                                     textName: text
                                     parentNode: *ref_109
                                   textString: membersihkan lingkungan tempat kerja;
@@ -1602,7 +1602,7 @@ content:
                                 content:
                                   type: text
                                   node:
-                                    nodeType: text
+                                    nodeType: segmen
                                     textName: text
                                     parentNode: *ref_110
                                   textString: >-
@@ -1617,7 +1617,7 @@ content:
                                 content:
                                   type: text
                                   node:
-                                    nodeType: text
+                                    nodeType: segmen
                                     textName: text
                                     parentNode: *ref_111
                                   textString: menutup akses masuk bagi pihak-pihak yang tidak berkepentingan.
@@ -1640,7 +1640,7 @@ content:
                     content:
                       type: ayatSet
                       node: &ref_113
-                        nodeType: ayatSet
+                        nodeType: daftarAyat
                         parentPasalVersionNode: *ref_112
                       elements:
                         - type: ayat
@@ -1649,14 +1649,14 @@ content:
                             key: 1
                             parentAyatSetNode: *ref_113
                           content:
-                            type: pointSet
+                            type: daftarHuruf
                             node: &ref_115
-                              nodeType: pointSet
+                              nodeType: daftarHuruf
                               parentNode: *ref_114
                             description:
                               type: text
                               node:
-                                nodeType: text
+                                nodeType: segmen
                                 textName: description
                                 parentNode: *ref_115
                               textString: >-
@@ -1673,7 +1673,7 @@ content:
                                 content:
                                   type: text
                                   node:
-                                    nodeType: text
+                                    nodeType: segmen
                                     textName: text
                                     parentNode: *ref_116
                                   textString: >-
@@ -1688,7 +1688,7 @@ content:
                                 content:
                                   type: text
                                   node:
-                                    nodeType: text
+                                    nodeType: segmen
                                     textName: text
                                     parentNode: *ref_117
                                   textString: >-
@@ -1704,7 +1704,7 @@ content:
                                 content:
                                   type: text
                                   node:
-                                    nodeType: text
+                                    nodeType: segmen
                                     textName: text
                                     parentNode: *ref_118
                                   textString: >-
@@ -1719,14 +1719,14 @@ content:
                                   key: d
                                   parentPointSetNode: *ref_115
                                 content:
-                                  type: pointSet
+                                  type: daftarHuruf
                                   node: &ref_120
-                                    nodeType: pointSet
+                                    nodeType: daftarHuruf
                                     parentNode: *ref_119
                                   description:
                                     type: text
                                     node:
-                                      nodeType: text
+                                      nodeType: segmen
                                       textName: description
                                       parentNode: *ref_120
                                     textString: 'pelaku usaha yang bergerak pada sektor:'
@@ -1740,7 +1740,7 @@ content:
                                       content:
                                         type: text
                                         node:
-                                          nodeType: text
+                                          nodeType: segmen
                                           textName: text
                                           parentNode: *ref_121
                                         textString: kesehatan;
@@ -1753,7 +1753,7 @@ content:
                                       content:
                                         type: text
                                         node:
-                                          nodeType: text
+                                          nodeType: segmen
                                           textName: text
                                           parentNode: *ref_122
                                         textString: bahan pangan/ makanan/ minuman;
@@ -1766,7 +1766,7 @@ content:
                                       content:
                                         type: text
                                         node:
-                                          nodeType: text
+                                          nodeType: segmen
                                           textName: text
                                           parentNode: *ref_123
                                         textString: energi;
@@ -1779,7 +1779,7 @@ content:
                                       content:
                                         type: text
                                         node:
-                                          nodeType: text
+                                          nodeType: segmen
                                           textName: text
                                           parentNode: *ref_124
                                         textString: komunikasi dan teknologi informasi;
@@ -1792,7 +1792,7 @@ content:
                                       content:
                                         type: text
                                         node:
-                                          nodeType: text
+                                          nodeType: segmen
                                           textName: text
                                           parentNode: *ref_125
                                         textString: keuangan;
@@ -1805,7 +1805,7 @@ content:
                                       content:
                                         type: text
                                         node:
-                                          nodeType: text
+                                          nodeType: segmen
                                           textName: text
                                           parentNode: *ref_126
                                         textString: logistik;
@@ -1818,7 +1818,7 @@ content:
                                       content:
                                         type: text
                                         node:
-                                          nodeType: text
+                                          nodeType: segmen
                                           textName: text
                                           parentNode: *ref_127
                                         textString: perhotelan;
@@ -1831,7 +1831,7 @@ content:
                                       content:
                                         type: text
                                         node:
-                                          nodeType: text
+                                          nodeType: segmen
                                           textName: text
                                           parentNode: *ref_128
                                         textString: konstruksi;
@@ -1844,7 +1844,7 @@ content:
                                       content:
                                         type: text
                                         node:
-                                          nodeType: text
+                                          nodeType: segmen
                                           textName: text
                                           parentNode: *ref_129
                                         textString: industri strategis;
@@ -1857,7 +1857,7 @@ content:
                                       content:
                                         type: text
                                         node:
-                                          nodeType: text
+                                          nodeType: segmen
                                           textName: text
                                           parentNode: *ref_130
                                         textString: >-
@@ -1873,7 +1873,7 @@ content:
                                       content:
                                         type: text
                                         node:
-                                          nodeType: text
+                                          nodeType: segmen
                                           textName: text
                                           parentNode: *ref_131
                                         textString: kebutuhan sehari-hari.
@@ -1886,7 +1886,7 @@ content:
                                 content:
                                   type: text
                                   node:
-                                    nodeType: text
+                                    nodeType: segmen
                                     textName: text
                                     parentNode: *ref_132
                                   textString: >-
@@ -1899,14 +1899,14 @@ content:
                             key: 2
                             parentAyatSetNode: *ref_113
                           content:
-                            type: pointSet
+                            type: daftarHuruf
                             node: &ref_134
-                              nodeType: pointSet
+                              nodeType: daftarHuruf
                               parentNode: *ref_133
                             description:
                               type: text
                               node:
-                                nodeType: text
+                                nodeType: segmen
                                 textName: description
                                 parentNode: *ref_134
                               textString: >-
@@ -1923,7 +1923,7 @@ content:
                                 content:
                                   type: text
                                   node:
-                                    nodeType: text
+                                    nodeType: segmen
                                     textName: text
                                     parentNode: *ref_135
                                   textString: pembatasan interaksi dalam aktivitas kerja;
@@ -1934,14 +1934,14 @@ content:
                                   key: b
                                   parentPointSetNode: *ref_134
                                 content:
-                                  type: pointSet
+                                  type: daftarHuruf
                                   node: &ref_137
-                                    nodeType: pointSet
+                                    nodeType: daftarHuruf
                                     parentNode: *ref_136
                                   description:
                                     type: text
                                     node:
-                                      nodeType: text
+                                      nodeType: segmen
                                       textName: description
                                       parentNode: *ref_137
                                     textString: >-
@@ -1959,7 +1959,7 @@ content:
                                       content:
                                         type: text
                                         node:
-                                          nodeType: text
+                                          nodeType: segmen
                                           textName: text
                                           parentNode: *ref_138
                                         textString: penderita tekanan darah tinggi;
@@ -1972,7 +1972,7 @@ content:
                                       content:
                                         type: text
                                         node:
-                                          nodeType: text
+                                          nodeType: segmen
                                           textName: text
                                           parentNode: *ref_139
                                         textString: pengidap penyakit jantung;
@@ -1985,7 +1985,7 @@ content:
                                       content:
                                         type: text
                                         node:
-                                          nodeType: text
+                                          nodeType: segmen
                                           textName: text
                                           parentNode: *ref_140
                                         textString: pengidap diabetes;
@@ -1998,7 +1998,7 @@ content:
                                       content:
                                         type: text
                                         node:
-                                          nodeType: text
+                                          nodeType: segmen
                                           textName: text
                                           parentNode: *ref_141
                                         textString: penderita penyakit paru-paru;
@@ -2011,7 +2011,7 @@ content:
                                       content:
                                         type: text
                                         node:
-                                          nodeType: text
+                                          nodeType: segmen
                                           textName: text
                                           parentNode: *ref_142
                                         textString: penderita kanker;
@@ -2024,7 +2024,7 @@ content:
                                       content:
                                         type: text
                                         node:
-                                          nodeType: text
+                                          nodeType: segmen
                                           textName: text
                                           parentNode: *ref_143
                                         textString: ibu hamil; dan
@@ -2037,7 +2037,7 @@ content:
                                       content:
                                         type: text
                                         node:
-                                          nodeType: text
+                                          nodeType: segmen
                                           textName: text
                                           parentNode: *ref_144
                                         textString: usia lebih dari 60 (enam puluh) tahun.
@@ -2048,14 +2048,14 @@ content:
                                   key: c
                                   parentPointSetNode: *ref_134
                                 content:
-                                  type: pointSet
+                                  type: daftarHuruf
                                   node: &ref_146
-                                    nodeType: pointSet
+                                    nodeType: daftarHuruf
                                     parentNode: *ref_145
                                   description:
                                     type: text
                                     node:
-                                      nodeType: text
+                                      nodeType: segmen
                                       textName: description
                                       parentNode: *ref_146
                                     textString: >-
@@ -2071,7 +2071,7 @@ content:
                                       content:
                                         type: text
                                         node:
-                                          nodeType: text
+                                          nodeType: segmen
                                           textName: text
                                           parentNode: *ref_147
                                         textString: >-
@@ -2086,7 +2086,7 @@ content:
                                       content:
                                         type: text
                                         node:
-                                          nodeType: text
+                                          nodeType: segmen
                                           textName: text
                                           parentNode: *ref_148
                                         textString: >-
@@ -2103,7 +2103,7 @@ content:
                                       content:
                                         type: text
                                         node:
-                                          nodeType: text
+                                          nodeType: segmen
                                           textName: text
                                           parentNode: *ref_149
                                         textString: >-
@@ -2118,7 +2118,7 @@ content:
                                       content:
                                         type: text
                                         node:
-                                          nodeType: text
+                                          nodeType: segmen
                                           textName: text
                                           parentNode: *ref_150
                                         textString: >-
@@ -2133,7 +2133,7 @@ content:
                                       content:
                                         type: text
                                         node:
-                                          nodeType: text
+                                          nodeType: segmen
                                           textName: text
                                           parentNode: *ref_151
                                         textString: >-
@@ -2150,7 +2150,7 @@ content:
                                       content:
                                         type: text
                                         node:
-                                          nodeType: text
+                                          nodeType: segmen
                                           textName: text
                                           parentNode: *ref_152
                                         textString: >-
@@ -2167,7 +2167,7 @@ content:
                                       content:
                                         type: text
                                         node:
-                                          nodeType: text
+                                          nodeType: segmen
                                           textName: text
                                           parentNode: *ref_153
                                         textString: >-
@@ -2182,7 +2182,7 @@ content:
                                       content:
                                         type: text
                                         node:
-                                          nodeType: text
+                                          nodeType: segmen
                                           textName: text
                                           parentNode: *ref_154
                                         textString: >-
@@ -2196,14 +2196,14 @@ content:
                                         key: '9'
                                         parentPointSetNode: *ref_146
                                       content:
-                                        type: pointSet
+                                        type: daftarHuruf
                                         node: &ref_156
-                                          nodeType: pointSet
+                                          nodeType: daftarHuruf
                                           parentNode: *ref_155
                                         description:
                                           type: text
                                           node:
-                                            nodeType: text
+                                            nodeType: segmen
                                             textName: description
                                             parentNode: *ref_156
                                           textString: >-
@@ -2219,7 +2219,7 @@ content:
                                             content:
                                               type: text
                                               node:
-                                                nodeType: text
+                                                nodeType: segmen
                                                 textName: text
                                                 parentNode: *ref_157
                                               textString: >-
@@ -2235,7 +2235,7 @@ content:
                                             content:
                                               type: text
                                               node:
-                                                nodeType: text
+                                                nodeType: segmen
                                                 textName: text
                                                 parentNode: *ref_158
                                               textString: >-
@@ -2249,14 +2249,14 @@ content:
                                               key: c
                                               parentPointSetNode: *ref_156
                                             content:
-                                              type: pointSet
+                                              type: daftarHuruf
                                               node: &ref_160
-                                                nodeType: pointSet
+                                                nodeType: daftarHuruf
                                                 parentNode: *ref_159
                                               description:
                                                 type: text
                                                 node:
-                                                  nodeType: text
+                                                  nodeType: segmen
                                                   textName: description
                                                   parentNode: *ref_160
                                                 textString: >-
@@ -2279,7 +2279,7 @@ content:
                                                   content:
                                                     type: text
                                                     node:
-                                                      nodeType: text
+                                                      nodeType: segmen
                                                       textName: text
                                                       parentNode: *ref_161
                                                     textString: >-
@@ -2296,7 +2296,7 @@ content:
                                                   content:
                                                     type: text
                                                     node:
-                                                      nodeType: text
+                                                      nodeType: segmen
                                                       textName: text
                                                       parentNode: *ref_162
                                                     textString: >-
@@ -2311,7 +2311,7 @@ content:
                                                   content:
                                                     type: text
                                                     node:
-                                                      nodeType: text
+                                                      nodeType: segmen
                                                       textName: text
                                                       parentNode: *ref_163
                                                     textString: >-
@@ -2327,7 +2327,7 @@ content:
                                 content:
                                   type: text
                                   node:
-                                    nodeType: text
+                                    nodeType: segmen
                                     textName: text
                                     parentNode: *ref_164
                                   textString: >-
@@ -2343,7 +2343,7 @@ content:
                                 content:
                                   type: text
                                   node:
-                                    nodeType: text
+                                    nodeType: segmen
                                     textName: text
                                     parentNode: *ref_165
                                   textString: >-
@@ -2358,7 +2358,7 @@ content:
                                 content:
                                   type: text
                                   node:
-                                    nodeType: text
+                                    nodeType: segmen
                                     textName: text
                                     parentNode: *ref_166
                                   textString: >-
@@ -2374,7 +2374,7 @@ content:
                                 content:
                                   type: text
                                   node:
-                                    nodeType: text
+                                    nodeType: segmen
                                     textName: text
                                     parentNode: *ref_167
                                   textString: >-
@@ -2389,7 +2389,7 @@ content:
                                 content:
                                   type: text
                                   node:
-                                    nodeType: text
+                                    nodeType: segmen
                                     textName: text
                                     parentNode: *ref_168
                                   textString: >-
@@ -2402,14 +2402,14 @@ content:
                                   key: i
                                   parentPointSetNode: *ref_134
                                 content:
-                                  type: pointSet
+                                  type: daftarHuruf
                                   node: &ref_170
-                                    nodeType: pointSet
+                                    nodeType: daftarHuruf
                                     parentNode: *ref_169
                                   description:
                                     type: text
                                     node:
-                                      nodeType: text
+                                      nodeType: segmen
                                       textName: description
                                       parentNode: *ref_170
                                     textString: >-
@@ -2427,7 +2427,7 @@ content:
                                       content:
                                         type: text
                                         node:
-                                          nodeType: text
+                                          nodeType: segmen
                                           textName: text
                                           parentNode: *ref_171
                                         textString: >-
@@ -2442,7 +2442,7 @@ content:
                                       content:
                                         type: text
                                         node:
-                                          nodeType: text
+                                          nodeType: segmen
                                           textName: text
                                           parentNode: *ref_172
                                         textString: >-
@@ -2457,7 +2457,7 @@ content:
                                       content:
                                         type: text
                                         node:
-                                          nodeType: text
+                                          nodeType: segmen
                                           textName: text
                                           parentNode: *ref_173
                                         textString: >-
@@ -2473,7 +2473,7 @@ content:
                                       content:
                                         type: text
                                         node:
-                                          nodeType: text
+                                          nodeType: segmen
                                           textName: text
                                           parentNode: *ref_174
                                         textString: >-
@@ -2487,14 +2487,14 @@ content:
                                         key: e
                                         parentPointSetNode: *ref_170
                                       content:
-                                        type: pointSet
+                                        type: daftarHuruf
                                         node: &ref_176
-                                          nodeType: pointSet
+                                          nodeType: daftarHuruf
                                           parentNode: *ref_175
                                         description:
                                           type: text
                                           node:
-                                            nodeType: text
+                                            nodeType: segmen
                                             textName: description
                                             parentNode: *ref_176
                                           textString: >-
@@ -2513,7 +2513,7 @@ content:
                                             content:
                                               type: text
                                               node:
-                                                nodeType: text
+                                                nodeType: segmen
                                                 textName: text
                                                 parentNode: *ref_177
                                               textString: >-
@@ -2527,14 +2527,14 @@ content:
                                               key: b
                                               parentPointSetNode: *ref_176
                                             content:
-                                              type: pointSet
+                                              type: daftarHuruf
                                               node: &ref_179
-                                                nodeType: pointSet
+                                                nodeType: daftarHuruf
                                                 parentNode: *ref_178
                                               description:
                                                 type: text
                                                 node:
-                                                  nodeType: text
+                                                  nodeType: segmen
                                                   textName: description
                                                   parentNode: *ref_179
                                                 textString: >-
@@ -2550,7 +2550,7 @@ content:
                                                   content:
                                                     type: text
                                                     node:
-                                                      nodeType: text
+                                                      nodeType: segmen
                                                       textName: text
                                                       parentNode: *ref_180
                                                     textString: >-
@@ -2566,7 +2566,7 @@ content:
                                                   content:
                                                     type: text
                                                     node:
-                                                      nodeType: text
+                                                      nodeType: segmen
                                                       textName: text
                                                       parentNode: *ref_181
                                                     textString: >-
@@ -2581,7 +2581,7 @@ content:
                                                   content:
                                                     type: text
                                                     node:
-                                                      nodeType: text
+                                                      nodeType: segmen
                                                       textName: text
                                                       parentNode: *ref_182
                                                     textString: >-
@@ -2597,7 +2597,7 @@ content:
                                                   content:
                                                     type: text
                                                     node:
-                                                      nodeType: text
+                                                      nodeType: segmen
                                                       textName: text
                                                       parentNode: *ref_183
                                                     textString: >-
@@ -2613,7 +2613,7 @@ content:
                                                   content:
                                                     type: text
                                                     node:
-                                                      nodeType: text
+                                                      nodeType: segmen
                                                       textName: text
                                                       parentNode: *ref_184
                                                     textString: >-
@@ -2629,7 +2629,7 @@ content:
                                                   content:
                                                     type: text
                                                     node:
-                                                      nodeType: text
+                                                      nodeType: segmen
                                                       textName: text
                                                       parentNode: *ref_185
                                                     textString: >-
@@ -2646,7 +2646,7 @@ content:
                                                   content:
                                                     type: text
                                                     node:
-                                                      nodeType: text
+                                                      nodeType: segmen
                                                       textName: text
                                                       parentNode: *ref_186
                                                     textString: >-
@@ -2663,7 +2663,7 @@ content:
                                                         node:
                                                           key: 1
                                                           parentAyatSetNode:
-                                                            nodeType: ayatSet
+                                                            nodeType: daftarAyat
                                                             parentPasalVersionNode: *ref_112
                                                           nodeType: ayat
           - type: bagian
@@ -2671,13 +2671,13 @@ content:
               nodeType: bagian
               key: 4
               parentBagianSetNode:
-                nodeType: bagianSet
+                nodeType: daftarBagian
                 parentBabNode: *ref_46
             title: Bagian Keempat Pembatasan Kegiatan Keagamaan di Rumah Ibadah
             content:
-              type: pasalSet
+              type: daftarPasal
               node:
-                nodeType: pasalSet
+                nodeType: daftarPasal
                 parentNode: *ref_187
               elements:
                 - type: pasal
@@ -2698,7 +2698,7 @@ content:
                     content:
                       type: ayatSet
                       node: &ref_189
-                        nodeType: ayatSet
+                        nodeType: daftarAyat
                         parentPasalVersionNode: *ref_188
                       elements:
                         - type: ayat
@@ -2709,7 +2709,7 @@ content:
                           content:
                             type: text
                             node:
-                              nodeType: text
+                              nodeType: segmen
                               textName: text
                               parentNode: *ref_190
                             textString: >-
@@ -2724,7 +2724,7 @@ content:
                           content:
                             type: text
                             node:
-                              nodeType: text
+                              nodeType: segmen
                               textName: text
                               parentNode: *ref_191
                             textString: >-
@@ -2737,7 +2737,7 @@ content:
                                 node:
                                   key: 1
                                   parentAyatSetNode:
-                                    nodeType: ayatSet
+                                    nodeType: daftarAyat
                                     parentPasalVersionNode: *ref_188
                                   nodeType: ayat
                         - type: ayat
@@ -2748,7 +2748,7 @@ content:
                           content:
                             type: text
                             node:
-                              nodeType: text
+                              nodeType: segmen
                               textName: text
                               parentNode: *ref_192
                             textString: >-
@@ -2762,7 +2762,7 @@ content:
                                 node:
                                   key: 1
                                   parentAyatSetNode:
-                                    nodeType: ayatSet
+                                    nodeType: daftarAyat
                                     parentPasalVersionNode: *ref_188
                                   nodeType: ayat
                 - type: pasal
@@ -2783,7 +2783,7 @@ content:
                     content:
                       type: ayatSet
                       node: &ref_194
-                        nodeType: ayatSet
+                        nodeType: daftarAyat
                         parentPasalVersionNode: *ref_193
                       elements:
                         - type: ayat
@@ -2792,14 +2792,14 @@ content:
                             key: 1
                             parentAyatSetNode: *ref_194
                           content:
-                            type: pointSet
+                            type: daftarHuruf
                             node: &ref_196
-                              nodeType: pointSet
+                              nodeType: daftarHuruf
                               parentNode: *ref_195
                             description:
                               type: text
                               node:
-                                nodeType: text
+                                nodeType: segmen
                                 textName: description
                                 parentNode: *ref_196
                               textString: 'Selama pemberlakuan PSBB, penanggung jawab rumah ibadah wajib:'
@@ -2813,7 +2813,7 @@ content:
                                 content:
                                   type: text
                                   node:
-                                    nodeType: text
+                                    nodeType: segmen
                                     textName: text
                                     parentNode: *ref_197
                                   textString: >-
@@ -2828,7 +2828,7 @@ content:
                                 content:
                                   type: text
                                   node:
-                                    nodeType: text
+                                    nodeType: segmen
                                     textName: text
                                     parentNode: *ref_198
                                   textString: >-
@@ -2843,7 +2843,7 @@ content:
                                 content:
                                   type: text
                                   node:
-                                    nodeType: text
+                                    nodeType: segmen
                                     textName: text
                                     parentNode: *ref_199
                                   textString: menjaga keamanan rumah ibadah masing-masing.
@@ -2854,14 +2854,14 @@ content:
                             key: 2
                             parentAyatSetNode: *ref_194
                           content:
-                            type: pointSet
+                            type: daftarHuruf
                             node: &ref_201
-                              nodeType: pointSet
+                              nodeType: daftarHuruf
                               parentNode: *ref_200
                             description:
                               type: text
                               node:
-                                nodeType: text
+                                nodeType: segmen
                                 textName: description
                                 parentNode: *ref_201
                               textString: >-
@@ -2878,7 +2878,7 @@ content:
                                 content:
                                   type: text
                                   node:
-                                    nodeType: text
+                                    nodeType: segmen
                                     textName: text
                                     parentNode: *ref_202
                                   textString: membersihkan rumah ibadah dan lingkungan sekitarnya;
@@ -2891,7 +2891,7 @@ content:
                                 content:
                                   type: text
                                   node:
-                                    nodeType: text
+                                    nodeType: segmen
                                     textName: text
                                     parentNode: *ref_203
                                   textString: >-
@@ -2906,7 +2906,7 @@ content:
                                 content:
                                   type: text
                                   node:
-                                    nodeType: text
+                                    nodeType: segmen
                                     textName: text
                                     parentNode: *ref_204
                                   textString: >-
@@ -2918,13 +2918,13 @@ content:
               nodeType: bagian
               key: 5
               parentBagianSetNode:
-                nodeType: bagianSet
+                nodeType: daftarBagian
                 parentBabNode: *ref_46
             title: Bagian Kelima Pembatasan Kegiatan di Tempat atau Fasilitas umum
             content:
-              type: pasalSet
+              type: daftarPasal
               node:
-                nodeType: pasalSet
+                nodeType: daftarPasal
                 parentNode: *ref_205
               elements:
                 - type: pasal
@@ -2945,7 +2945,7 @@ content:
                     content:
                       type: ayatSet
                       node: &ref_207
-                        nodeType: ayatSet
+                        nodeType: daftarAyat
                         parentPasalVersionNode: *ref_206
                       elements:
                         - type: ayat
@@ -2956,7 +2956,7 @@ content:
                           content:
                             type: text
                             node:
-                              nodeType: text
+                              nodeType: segmen
                               textName: text
                               parentNode: *ref_208
                             textString: >-
@@ -2969,14 +2969,14 @@ content:
                             key: 2
                             parentAyatSetNode: *ref_207
                           content:
-                            type: pointSet
+                            type: daftarHuruf
                             node: &ref_210
-                              nodeType: pointSet
+                              nodeType: daftarHuruf
                               parentNode: *ref_209
                             description:
                               type: text
                               node:
-                                nodeType: text
+                                nodeType: segmen
                                 textName: description
                                 parentNode: *ref_210
                               textString: >-
@@ -2995,7 +2995,7 @@ content:
                                 content:
                                   type: text
                                   node:
-                                    nodeType: text
+                                    nodeType: segmen
                                     textName: text
                                     parentNode: *ref_211
                                   textString: memenuhi kebutuhan pokok dan/atau kebutuhan sehari- hari; dan
@@ -3008,7 +3008,7 @@ content:
                                 content:
                                   type: text
                                   node:
-                                    nodeType: text
+                                    nodeType: segmen
                                     textName: text
                                     parentNode: *ref_212
                                   textString: >-
@@ -3023,7 +3023,7 @@ content:
                                       node:
                                         key: 3
                                         parentAyatSetNode:
-                                          nodeType: ayatSet
+                                          nodeType: daftarAyat
                                           parentPasalVersionNode: *ref_206
                                         nodeType: ayat
                 - type: pasal
@@ -3044,7 +3044,7 @@ content:
                     content:
                       type: ayatSet
                       node: &ref_214
-                        nodeType: ayatSet
+                        nodeType: daftarAyat
                         parentPasalVersionNode: *ref_213
                       elements:
                         - type: ayat
@@ -3053,14 +3053,14 @@ content:
                             key: 1
                             parentAyatSetNode: *ref_214
                           content:
-                            type: pointSet
+                            type: daftarHuruf
                             node: &ref_216
-                              nodeType: pointSet
+                              nodeType: daftarHuruf
                               parentNode: *ref_215
                             description:
                               type: text
                               node:
-                                nodeType: text
+                                nodeType: segmen
                                 textName: description
                                 parentNode: *ref_216
                               textString: >-
@@ -3077,7 +3077,7 @@ content:
                                 content:
                                   type: text
                                   node:
-                                    nodeType: text
+                                    nodeType: segmen
                                     textName: text
                                     parentNode: *ref_217
                                   textString: bahan pangan/makanan/minuman;
@@ -3090,7 +3090,7 @@ content:
                                 content:
                                   type: text
                                   node:
-                                    nodeType: text
+                                    nodeType: segmen
                                     textName: text
                                     parentNode: *ref_218
                                   textString: energi;
@@ -3103,7 +3103,7 @@ content:
                                 content:
                                   type: text
                                   node:
-                                    nodeType: text
+                                    nodeType: segmen
                                     textName: text
                                     parentNode: *ref_219
                                   textString: komunikasi dan teknologi informasi;
@@ -3116,7 +3116,7 @@ content:
                                 content:
                                   type: text
                                   node:
-                                    nodeType: text
+                                    nodeType: segmen
                                     textName: text
                                     parentNode: *ref_220
                                   textString: keuangan, perbankan dan sistem pembayaran; dan/atau
@@ -3129,7 +3129,7 @@ content:
                                 content:
                                   type: text
                                   node:
-                                    nodeType: text
+                                    nodeType: segmen
                                     textName: text
                                     parentNode: *ref_221
                                   textString: logistik.
@@ -3140,14 +3140,14 @@ content:
                             key: 2
                             parentAyatSetNode: *ref_214
                           content:
-                            type: pointSet
+                            type: daftarHuruf
                             node: &ref_223
-                              nodeType: pointSet
+                              nodeType: daftarHuruf
                               parentNode: *ref_222
                             description:
                               type: text
                               node:
-                                nodeType: text
+                                nodeType: segmen
                                 textName: description
                                 parentNode: *ref_223
                               textString: >-
@@ -3161,14 +3161,14 @@ content:
                                   key: a
                                   parentPointSetNode: *ref_223
                                 content:
-                                  type: pointSet
+                                  type: daftarHuruf
                                   node: &ref_225
-                                    nodeType: pointSet
+                                    nodeType: daftarHuruf
                                     parentNode: *ref_224
                                   description:
                                     type: text
                                     node:
-                                      nodeType: text
+                                      nodeType: segmen
                                       textName: description
                                       parentNode: *ref_225
                                     textString: 'penyediaan barang retail di:'
@@ -3182,7 +3182,7 @@ content:
                                       content:
                                         type: text
                                         node:
-                                          nodeType: text
+                                          nodeType: segmen
                                           textName: text
                                           parentNode: *ref_226
                                         textString: pasar rakyat;
@@ -3195,7 +3195,7 @@ content:
                                       content:
                                         type: text
                                         node:
-                                          nodeType: text
+                                          nodeType: segmen
                                           textName: text
                                           parentNode: *ref_227
                                         textString: >-
@@ -3211,7 +3211,7 @@ content:
                                       content:
                                         type: text
                                         node:
-                                          nodeType: text
+                                          nodeType: segmen
                                           textName: text
                                           parentNode: *ref_228
                                         textString: toko/warung kelontong.
@@ -3224,7 +3224,7 @@ content:
                                 content:
                                   type: text
                                   node:
-                                    nodeType: text
+                                    nodeType: segmen
                                     textName: text
                                     parentNode: *ref_229
                                   textString: jasa binatu (laundry).
@@ -3235,14 +3235,14 @@ content:
                             key: 3
                             parentAyatSetNode: *ref_214
                           content:
-                            type: pointSet
+                            type: daftarHuruf
                             node: &ref_231
-                              nodeType: pointSet
+                              nodeType: daftarHuruf
                               parentNode: *ref_230
                             description:
                               type: text
                               node:
-                                nodeType: text
+                                nodeType: segmen
                                 textName: description
                                 parentNode: *ref_231
                               textString: >-
@@ -3259,7 +3259,7 @@ content:
                                 content:
                                   type: text
                                   node:
-                                    nodeType: text
+                                    nodeType: segmen
                                     textName: text
                                     parentNode: *ref_232
                                   textString: >-
@@ -3274,7 +3274,7 @@ content:
                                 content:
                                   type: text
                                   node:
-                                    nodeType: text
+                                    nodeType: segmen
                                     textName: text
                                     parentNode: *ref_233
                                   textString: >-
@@ -3289,7 +3289,7 @@ content:
                                 content:
                                   type: text
                                   node:
-                                    nodeType: text
+                                    nodeType: segmen
                                     textName: text
                                     parentNode: *ref_234
                                   textString: melakukan disinfeksi secara berkala pada tempat usaha;
@@ -3302,7 +3302,7 @@ content:
                                 content:
                                   type: text
                                   node:
-                                    nodeType: text
+                                    nodeType: segmen
                                     textName: text
                                     parentNode: *ref_235
                                   textString: >-
@@ -3318,7 +3318,7 @@ content:
                                 content:
                                   type: text
                                   node:
-                                    nodeType: text
+                                    nodeType: segmen
                                     textName: text
                                     parentNode: *ref_236
                                   textString: >-
@@ -3334,7 +3334,7 @@ content:
                                 content:
                                   type: text
                                   node:
-                                    nodeType: text
+                                    nodeType: segmen
                                     textName: text
                                     parentNode: *ref_237
                                   textString: >-
@@ -3349,7 +3349,7 @@ content:
                                 content:
                                   type: text
                                   node:
-                                    nodeType: text
+                                    nodeType: segmen
                                     textName: text
                                     parentNode: *ref_238
                                   textString: >-
@@ -3376,7 +3376,7 @@ content:
                     content:
                       type: ayatSet
                       node: &ref_240
-                        nodeType: ayatSet
+                        nodeType: daftarAyat
                         parentPasalVersionNode: *ref_239
                       elements:
                         - type: ayat
@@ -3387,7 +3387,7 @@ content:
                           content:
                             type: text
                             node:
-                              nodeType: text
+                              nodeType: segmen
                               textName: text
                               parentNode: *ref_241
                             textString: >-
@@ -3399,7 +3399,7 @@ content:
                                 end: 77
                                 node:
                                   parentAyatSetNode:
-                                    nodeType: ayatSet
+                                    nodeType: daftarAyat
                                     parentPasalVersionNode: *ref_239
                                   key: 3
                                   nodeType: ayat
@@ -3408,7 +3408,7 @@ content:
                                 node:
                                   key: b
                                   parentPointSetNode:
-                                    nodeType: pointSet
+                                    nodeType: daftarHuruf
                                     parentNode: *ref_239
                                   nodeType: huruf
                         - type: ayat
@@ -3417,14 +3417,14 @@ content:
                             key: 2
                             parentAyatSetNode: *ref_240
                           content:
-                            type: pointSet
+                            type: daftarHuruf
                             node: &ref_243
-                              nodeType: pointSet
+                              nodeType: daftarHuruf
                               parentNode: *ref_242
                             description:
                               type: text
                               node:
-                                nodeType: text
+                                nodeType: segmen
                                 textName: description
                                 parentNode: *ref_243
                               textString: >-
@@ -3440,7 +3440,7 @@ content:
                                 content:
                                   type: text
                                   node:
-                                    nodeType: text
+                                    nodeType: segmen
                                     textName: text
                                     parentNode: *ref_244
                                   textString: dilakukan secara mandiri dan tidak berkelompok; dan
@@ -3453,7 +3453,7 @@ content:
                                 content:
                                   type: text
                                   node:
-                                    nodeType: text
+                                    nodeType: segmen
                                     textName: text
                                     parentNode: *ref_245
                                   textString: dilaksanakan secara terbatas pada area sekitar rumah tinggal.
@@ -3463,13 +3463,13 @@ content:
               nodeType: bagian
               key: 6
               parentBagianSetNode:
-                nodeType: bagianSet
+                nodeType: daftarBagian
                 parentBabNode: *ref_46
             title: Bagian Keenam Pembatasan Kegiatan Sosial dan Budaya
             content:
-              type: pasalSet
+              type: daftarPasal
               node:
-                nodeType: pasalSet
+                nodeType: daftarPasal
                 parentNode: *ref_246
               elements:
                 - type: pasal
@@ -3490,7 +3490,7 @@ content:
                     content:
                       type: ayatSet
                       node: &ref_248
-                        nodeType: ayatSet
+                        nodeType: daftarAyat
                         parentPasalVersionNode: *ref_247
                       elements:
                         - type: ayat
@@ -3501,7 +3501,7 @@ content:
                           content:
                             type: text
                             node:
-                              nodeType: text
+                              nodeType: segmen
                               textName: text
                               parentNode: *ref_249
                             textString: >-
@@ -3514,14 +3514,14 @@ content:
                             key: 2
                             parentAyatSetNode: *ref_248
                           content:
-                            type: pointSet
+                            type: daftarHuruf
                             node: &ref_251
-                              nodeType: pointSet
+                              nodeType: daftarHuruf
                               parentNode: *ref_250
                             description:
                               type: text
                               node:
-                                nodeType: text
+                                nodeType: segmen
                                 textName: description
                                 parentNode: *ref_251
                               textString: >-
@@ -3537,7 +3537,7 @@ content:
                                 content:
                                   type: text
                                   node:
-                                    nodeType: text
+                                    nodeType: segmen
                                     textName: text
                                     parentNode: *ref_252
                                   textString: politik;
@@ -3550,7 +3550,7 @@ content:
                                 content:
                                   type: text
                                   node:
-                                    nodeType: text
+                                    nodeType: segmen
                                     textName: text
                                     parentNode: *ref_253
                                   textString: olahraga;
@@ -3563,7 +3563,7 @@ content:
                                 content:
                                   type: text
                                   node:
-                                    nodeType: text
+                                    nodeType: segmen
                                     textName: text
                                     parentNode: *ref_254
                                   textString: hiburan;
@@ -3576,7 +3576,7 @@ content:
                                 content:
                                   type: text
                                   node:
-                                    nodeType: text
+                                    nodeType: segmen
                                     textName: text
                                     parentNode: *ref_255
                                   textString: akademik; dan
@@ -3589,7 +3589,7 @@ content:
                                 content:
                                   type: text
                                   node:
-                                    nodeType: text
+                                    nodeType: segmen
                                     textName: text
                                     parentNode: *ref_256
                                   textString: budaya.
@@ -3612,7 +3612,7 @@ content:
                     content:
                       type: ayatSet
                       node: &ref_258
-                        nodeType: ayatSet
+                        nodeType: daftarAyat
                         parentPasalVersionNode: *ref_257
                       elements:
                         - type: ayat
@@ -3621,14 +3621,14 @@ content:
                             key: 1
                             parentAyatSetNode: *ref_258
                           content:
-                            type: pointSet
+                            type: daftarHuruf
                             node: &ref_260
-                              nodeType: pointSet
+                              nodeType: daftarHuruf
                               parentNode: *ref_259
                             description:
                               type: text
                               node:
-                                nodeType: text
+                                nodeType: segmen
                                 textName: description
                                 parentNode: *ref_260
                               textString: >-
@@ -3644,7 +3644,7 @@ content:
                                 content:
                                   type: text
                                   node:
-                                    nodeType: text
+                                    nodeType: segmen
                                     textName: text
                                     parentNode: *ref_261
                                   textString: khitan;
@@ -3657,7 +3657,7 @@ content:
                                 content:
                                   type: text
                                   node:
-                                    nodeType: text
+                                    nodeType: segmen
                                     textName: text
                                     parentNode: *ref_262
                                   textString: pernikahan; dan
@@ -3670,7 +3670,7 @@ content:
                                 content:
                                   type: text
                                   node:
-                                    nodeType: text
+                                    nodeType: segmen
                                     textName: text
                                     parentNode: *ref_263
                                   textString: >-
@@ -3683,14 +3683,14 @@ content:
                             key: 2
                             parentAyatSetNode: *ref_258
                           content:
-                            type: pointSet
+                            type: daftarHuruf
                             node: &ref_265
-                              nodeType: pointSet
+                              nodeType: daftarHuruf
                               parentNode: *ref_264
                             description:
                               type: text
                               node:
-                                nodeType: text
+                                nodeType: segmen
                                 textName: description
                                 parentNode: *ref_265
                               textString: >-
@@ -3706,7 +3706,7 @@ content:
                                 content:
                                   type: text
                                   node:
-                                    nodeType: text
+                                    nodeType: segmen
                                     textName: text
                                     parentNode: *ref_266
                                   textString: dilakukan pada fasilitas pelayanan kesehatan;
@@ -3719,7 +3719,7 @@ content:
                                 content:
                                   type: text
                                   node:
-                                    nodeType: text
+                                    nodeType: segmen
                                     textName: text
                                     parentNode: *ref_267
                                   textString: dihadiri oleh kalangan terbatas;
@@ -3732,7 +3732,7 @@ content:
                                 content:
                                   type: text
                                   node:
-                                    nodeType: text
+                                    nodeType: segmen
                                     textName: text
                                     parentNode: *ref_268
                                   textString: meniadakan acara perayaan yang mengundang keramaian; dan
@@ -3745,7 +3745,7 @@ content:
                                 content:
                                   type: text
                                   node:
-                                    nodeType: text
+                                    nodeType: segmen
                                     textName: text
                                     parentNode: *ref_269
                                   textString: >-
@@ -3758,14 +3758,14 @@ content:
                             key: 3
                             parentAyatSetNode: *ref_258
                           content:
-                            type: pointSet
+                            type: daftarHuruf
                             node: &ref_271
-                              nodeType: pointSet
+                              nodeType: daftarHuruf
                               parentNode: *ref_270
                             description:
                               type: text
                               node:
-                                nodeType: text
+                                nodeType: segmen
                                 textName: description
                                 parentNode: *ref_271
                               textString: >-
@@ -3781,7 +3781,7 @@ content:
                                 content:
                                   type: text
                                   node:
-                                    nodeType: text
+                                    nodeType: segmen
                                     textName: text
                                     parentNode: *ref_272
                                   textString: dilakukan di KUA dan/atau Kantor Catatan Sipil;
@@ -3794,7 +3794,7 @@ content:
                                 content:
                                   type: text
                                   node:
-                                    nodeType: text
+                                    nodeType: segmen
                                     textName: text
                                     parentNode: *ref_273
                                   textString: dihadiri oleh kalangan terbatas;
@@ -3807,7 +3807,7 @@ content:
                                 content:
                                   type: text
                                   node:
-                                    nodeType: text
+                                    nodeType: segmen
                                     textName: text
                                     parentNode: *ref_274
                                   textString: >-
@@ -3822,7 +3822,7 @@ content:
                                 content:
                                   type: text
                                   node:
-                                    nodeType: text
+                                    nodeType: segmen
                                     textName: text
                                     parentNode: *ref_275
                                   textString: >-
@@ -3835,14 +3835,14 @@ content:
                             key: 4
                             parentAyatSetNode: *ref_258
                           content:
-                            type: pointSet
+                            type: daftarHuruf
                             node: &ref_277
-                              nodeType: pointSet
+                              nodeType: daftarHuruf
                               parentNode: *ref_276
                             description:
                               type: text
                               node:
-                                nodeType: text
+                                nodeType: segmen
                                 textName: description
                                 parentNode: *ref_277
                               textString: >-
@@ -3859,7 +3859,7 @@ content:
                                 content:
                                   type: text
                                   node:
-                                    nodeType: text
+                                    nodeType: segmen
                                     textName: text
                                     parentNode: *ref_278
                                   textString: dilakukan di rumah duka;
@@ -3872,7 +3872,7 @@ content:
                                 content:
                                   type: text
                                   node:
-                                    nodeType: text
+                                    nodeType: segmen
                                     textName: text
                                     parentNode: *ref_279
                                   textString: dihadiri oleh kalangan terbatas; dan
@@ -3885,7 +3885,7 @@ content:
                                 content:
                                   type: text
                                   node:
-                                    nodeType: text
+                                    nodeType: segmen
                                     textName: text
                                     parentNode: *ref_280
                                   textString: >-
@@ -3900,7 +3900,7 @@ content:
                           content:
                             type: text
                             node:
-                              nodeType: text
+                              nodeType: segmen
                               textName: text
                               parentNode: *ref_281
                             textString: >-
@@ -3914,7 +3914,7 @@ content:
                                 node:
                                   key: 1
                                   parentAyatSetNode:
-                                    nodeType: ayatSet
+                                    nodeType: daftarAyat
                                     parentPasalVersionNode: *ref_257
                                   nodeType: ayat
           - type: bagian
@@ -3922,15 +3922,15 @@ content:
               nodeType: bagian
               key: 7
               parentBagianSetNode:
-                nodeType: bagianSet
+                nodeType: daftarBagian
                 parentBabNode: *ref_46
             title: >-
               Bagian Ketujuh Pembatasan Penggunakan Moda Transportasi Untuk Pergerakan Orang dan
               Barang
             content:
-              type: pasalSet
+              type: daftarPasal
               node:
-                nodeType: pasalSet
+                nodeType: daftarPasal
                 parentNode: *ref_282
               elements:
                 - type: pasal
@@ -3951,7 +3951,7 @@ content:
                     content:
                       type: ayatSet
                       node: &ref_284
-                        nodeType: ayatSet
+                        nodeType: daftarAyat
                         parentPasalVersionNode: *ref_283
                       elements:
                         - type: ayat
@@ -3960,14 +3960,14 @@ content:
                             key: 1
                             parentAyatSetNode: *ref_284
                           content:
-                            type: pointSet
+                            type: daftarHuruf
                             node: &ref_286
-                              nodeType: pointSet
+                              nodeType: daftarHuruf
                               parentNode: *ref_285
                             description:
                               type: text
                               node:
-                                nodeType: text
+                                nodeType: segmen
                                 textName: description
                                 parentNode: *ref_286
                               textString: >-
@@ -3983,7 +3983,7 @@ content:
                                 content:
                                   type: text
                                   node:
-                                    nodeType: text
+                                    nodeType: segmen
                                     textName: text
                                     parentNode: *ref_287
                                   textString: pemenuhan kebutuhan pokok; dan
@@ -3996,7 +3996,7 @@ content:
                                 content:
                                   type: text
                                   node:
-                                    nodeType: text
+                                    nodeType: segmen
                                     textName: text
                                     parentNode: *ref_288
                                   textString: kegiatan yang diperbolehkan selama pemberlakuan PSBB.
@@ -4007,14 +4007,14 @@ content:
                             key: 2
                             parentAyatSetNode: *ref_284
                           content:
-                            type: pointSet
+                            type: daftarHuruf
                             node: &ref_290
-                              nodeType: pointSet
+                              nodeType: daftarHuruf
                               parentNode: *ref_289
                             description:
                               type: text
                               node:
-                                nodeType: text
+                                nodeType: segmen
                                 textName: description
                                 parentNode: *ref_290
                               textString: >-
@@ -4030,7 +4030,7 @@ content:
                                 content:
                                   type: text
                                   node:
-                                    nodeType: text
+                                    nodeType: segmen
                                     textName: text
                                     parentNode: *ref_291
                                   textString: kendaraan bermotor pribadi;
@@ -4043,7 +4043,7 @@ content:
                                 content:
                                   type: text
                                   node:
-                                    nodeType: text
+                                    nodeType: segmen
                                     textName: text
                                     parentNode: *ref_292
                                   textString: angkutan orang dengan kendaraan bermotor umum; dan
@@ -4056,7 +4056,7 @@ content:
                                 content:
                                   type: text
                                   node:
-                                    nodeType: text
+                                    nodeType: segmen
                                     textName: text
                                     parentNode: *ref_293
                                   textString: angkutan perkeretaapian. 15
@@ -4069,7 +4069,7 @@ content:
                           content:
                             type: text
                             node:
-                              nodeType: text
+                              nodeType: segmen
                               textName: text
                               parentNode: *ref_294
                             textString: >-
@@ -4082,7 +4082,7 @@ content:
                                 node:
                                   key: 1
                                   parentAyatSetNode:
-                                    nodeType: ayatSet
+                                    nodeType: daftarAyat
                                     parentPasalVersionNode: *ref_283
                                   nodeType: ayat
                         - type: ayat
@@ -4091,14 +4091,14 @@ content:
                             key: 4
                             parentAyatSetNode: *ref_284
                           content:
-                            type: pointSet
+                            type: daftarHuruf
                             node: &ref_296
-                              nodeType: pointSet
+                              nodeType: daftarHuruf
                               parentNode: *ref_295
                             description:
                               type: text
                               node:
-                                nodeType: text
+                                nodeType: segmen
                                 textName: description
                                 parentNode: *ref_296
                               textString: >-
@@ -4114,7 +4114,7 @@ content:
                                 content:
                                   type: text
                                   node:
-                                    nodeType: text
+                                    nodeType: segmen
                                     textName: text
                                     parentNode: *ref_297
                                   textString: >-
@@ -4129,7 +4129,7 @@ content:
                                 content:
                                   type: text
                                   node:
-                                    nodeType: text
+                                    nodeType: segmen
                                     textName: text
                                     parentNode: *ref_298
                                   textString: melakukan disinfeksi kendaraan setelah selesai digunakan;
@@ -4142,7 +4142,7 @@ content:
                                 content:
                                   type: text
                                   node:
-                                    nodeType: text
+                                    nodeType: segmen
                                     textName: text
                                     parentNode: *ref_299
                                   textString: menggunakan masker di dalam kendaraan;
@@ -4155,7 +4155,7 @@ content:
                                 content:
                                   type: text
                                   node:
-                                    nodeType: text
+                                    nodeType: segmen
                                     textName: text
                                     parentNode: *ref_300
                                   textString: >-
@@ -4170,7 +4170,7 @@ content:
                                 content:
                                   type: text
                                   node:
-                                    nodeType: text
+                                    nodeType: segmen
                                     textName: text
                                     parentNode: *ref_301
                                   textString: >-
@@ -4183,14 +4183,14 @@ content:
                             key: 5
                             parentAyatSetNode: *ref_284
                           content:
-                            type: pointSet
+                            type: daftarHuruf
                             node: &ref_303
-                              nodeType: pointSet
+                              nodeType: daftarHuruf
                               parentNode: *ref_302
                             description:
                               type: text
                               node:
-                                nodeType: text
+                                nodeType: segmen
                                 textName: description
                                 parentNode: *ref_303
                               textString: >-
@@ -4206,7 +4206,7 @@ content:
                                 content:
                                   type: text
                                   node:
-                                    nodeType: text
+                                    nodeType: segmen
                                     textName: text
                                     parentNode: *ref_304
                                   textString: >-
@@ -4221,7 +4221,7 @@ content:
                                 content:
                                   type: text
                                   node:
-                                    nodeType: text
+                                    nodeType: segmen
                                     textName: text
                                     parentNode: *ref_305
                                   textString: >-
@@ -4236,7 +4236,7 @@ content:
                                 content:
                                   type: text
                                   node:
-                                    nodeType: text
+                                    nodeType: segmen
                                     textName: text
                                     parentNode: *ref_306
                                   textString: menggunakan masker dan sarung tangan; dan
@@ -4249,7 +4249,7 @@ content:
                                 content:
                                   type: text
                                   node:
-                                    nodeType: text
+                                    nodeType: segmen
                                     textName: text
                                     parentNode: *ref_307
                                   textString: >-
@@ -4264,7 +4264,7 @@ content:
                           content:
                             type: text
                             node:
-                              nodeType: text
+                              nodeType: segmen
                               textName: text
                               parentNode: *ref_308
                             textString: >-
@@ -4277,14 +4277,14 @@ content:
                             key: 7
                             parentAyatSetNode: *ref_284
                           content:
-                            type: pointSet
+                            type: daftarHuruf
                             node: &ref_310
-                              nodeType: pointSet
+                              nodeType: daftarHuruf
                               parentNode: *ref_309
                             description:
                               type: text
                               node:
-                                nodeType: text
+                                nodeType: segmen
                                 textName: description
                                 parentNode: *ref_310
                               textString: >-
@@ -4301,7 +4301,7 @@ content:
                                 content:
                                   type: text
                                   node:
-                                    nodeType: text
+                                    nodeType: segmen
                                     textName: text
                                     parentNode: *ref_311
                                   textString: >-
@@ -4316,7 +4316,7 @@ content:
                                 content:
                                   type: text
                                   node:
-                                    nodeType: text
+                                    nodeType: segmen
                                     textName: text
                                     parentNode: *ref_312
                                   textString: >-
@@ -4331,7 +4331,7 @@ content:
                                 content:
                                   type: text
                                   node:
-                                    nodeType: text
+                                    nodeType: segmen
                                     textName: text
                                     parentNode: *ref_313
                                   textString: >-
@@ -4346,7 +4346,7 @@ content:
                                 content:
                                   type: text
                                   node:
-                                    nodeType: text
+                                    nodeType: segmen
                                     textName: text
                                     parentNode: *ref_314
                                   textString: >-
@@ -4361,7 +4361,7 @@ content:
                                 content:
                                   type: text
                                   node:
-                                    nodeType: text
+                                    nodeType: segmen
                                     textName: text
                                     parentNode: *ref_315
                                   textString: >-
@@ -4376,7 +4376,7 @@ content:
                                 content:
                                   type: text
                                   node:
-                                    nodeType: text
+                                    nodeType: segmen
                                     textName: text
                                     parentNode: *ref_316
                                   textString: >-
@@ -4391,7 +4391,7 @@ content:
                           content:
                             type: text
                             node:
-                              nodeType: text
+                              nodeType: segmen
                               textName: text
                               parentNode: *ref_317
                             textString: >-
@@ -4406,7 +4406,7 @@ content:
                                 node:
                                   key: 3
                                   parentAyatSetNode: &ref_318
-                                    nodeType: ayatSet
+                                    nodeType: daftarAyat
                                     parentPasalVersionNode: *ref_283
                                   nodeType: ayat
                               - start: 248
@@ -4422,9 +4422,9 @@ content:
         parentBabSetNode: *ref_13
       title: HAK DAN KEWAJIBAN SERTA PEMENUHAN KEBUTUHAN DASAR PENDUDUK SELAMA PSBB;
       content:
-        type: bagianSet
+        type: daftarBagian
         node:
-          nodeType: bagianSet
+          nodeType: daftarBagian
           parentBabNode: *ref_319
         elements:
           - type: bagian
@@ -4432,13 +4432,13 @@ content:
               nodeType: bagian
               key: 1
               parentBagianSetNode:
-                nodeType: bagianSet
+                nodeType: daftarBagian
                 parentBabNode: *ref_319
             title: Bagian Kesatu Hak dan Kewajiban
             content:
-              type: pasalSet
+              type: daftarPasal
               node:
-                nodeType: pasalSet
+                nodeType: daftarPasal
                 parentNode: *ref_320
               elements:
                 - type: pasal
@@ -4459,7 +4459,7 @@ content:
                     content:
                       type: ayatSet
                       node: &ref_322
-                        nodeType: ayatSet
+                        nodeType: daftarAyat
                         parentPasalVersionNode: *ref_321
                       elements:
                         - type: ayat
@@ -4468,14 +4468,14 @@ content:
                             key: 1
                             parentAyatSetNode: *ref_322
                           content:
-                            type: pointSet
+                            type: daftarHuruf
                             node: &ref_324
-                              nodeType: pointSet
+                              nodeType: daftarHuruf
                               parentNode: *ref_323
                             description:
                               type: text
                               node:
-                                nodeType: text
+                                nodeType: segmen
                                 textName: description
                                 parentNode: *ref_324
                               textString: >-
@@ -4491,7 +4491,7 @@ content:
                                 content:
                                   type: text
                                   node:
-                                    nodeType: text
+                                    nodeType: segmen
                                     textName: text
                                     parentNode: *ref_325
                                   textString: >-
@@ -4506,7 +4506,7 @@ content:
                                 content:
                                   type: text
                                   node:
-                                    nodeType: text
+                                    nodeType: segmen
                                     textName: text
                                     parentNode: *ref_326
                                   textString: mendapatkan pelayanan kesehatan dasar sesuai kebutuhan medis;
@@ -4519,7 +4519,7 @@ content:
                                 content:
                                   type: text
                                   node:
-                                    nodeType: text
+                                    nodeType: segmen
                                     textName: text
                                     parentNode: *ref_327
                                   textString: >-
@@ -4534,7 +4534,7 @@ content:
                                 content:
                                   type: text
                                   node:
-                                    nodeType: text
+                                    nodeType: segmen
                                     textName: text
                                     parentNode: *ref_328
                                   textString: >-
@@ -4549,7 +4549,7 @@ content:
                                 content:
                                   type: text
                                   node:
-                                    nodeType: text
+                                    nodeType: segmen
                                     textName: text
                                     parentNode: *ref_329
                                   textString: >-
@@ -4565,7 +4565,7 @@ content:
                           content:
                             type: text
                             node:
-                              nodeType: text
+                              nodeType: segmen
                               textName: text
                               parentNode: *ref_330
                             textString: >-
@@ -4578,7 +4578,7 @@ content:
                                 node:
                                   key: 1
                                   parentAyatSetNode:
-                                    nodeType: ayatSet
+                                    nodeType: daftarAyat
                                     parentPasalVersionNode: *ref_321
                                   nodeType: ayat
                 - type: pasal
@@ -4599,7 +4599,7 @@ content:
                     content:
                       type: ayatSet
                       node: &ref_332
-                        nodeType: ayatSet
+                        nodeType: daftarAyat
                         parentPasalVersionNode: *ref_331
                       elements:
                         - type: ayat
@@ -4608,14 +4608,14 @@ content:
                             key: 1
                             parentAyatSetNode: *ref_332
                           content:
-                            type: pointSet
+                            type: daftarHuruf
                             node: &ref_334
-                              nodeType: pointSet
+                              nodeType: daftarHuruf
                               parentNode: *ref_333
                             description:
                               type: text
                               node:
-                                nodeType: text
+                                nodeType: segmen
                                 textName: description
                                 parentNode: *ref_334
                               textString: >-
@@ -4631,7 +4631,7 @@ content:
                                 content:
                                   type: text
                                   node:
-                                    nodeType: text
+                                    nodeType: segmen
                                     textName: text
                                     parentNode: *ref_335
                                   textString: mematuhi seluruh ketentuan di dalam pelaksanaan PSBB;
@@ -4644,7 +4644,7 @@ content:
                                 content:
                                   type: text
                                   node:
-                                    nodeType: text
+                                    nodeType: segmen
                                     textName: text
                                     parentNode: *ref_336
                                   textString: ikut serta dalam pelaksanaan PSBB; dan
@@ -4657,7 +4657,7 @@ content:
                                 content:
                                   type: text
                                   node:
-                                    nodeType: text
+                                    nodeType: segmen
                                     textName: text
                                     parentNode: *ref_337
                                   textString: melaksanakan perilaku hidup bersih dan sehat (PHBS).
@@ -4668,14 +4668,14 @@ content:
                             key: 2
                             parentAyatSetNode: *ref_332
                           content:
-                            type: pointSet
+                            type: daftarHuruf
                             node: &ref_339
-                              nodeType: pointSet
+                              nodeType: daftarHuruf
                               parentNode: *ref_338
                             description:
                               type: text
                               node:
-                                nodeType: text
+                                nodeType: segmen
                                 textName: description
                                 parentNode: *ref_339
                               textString: >-
@@ -4691,7 +4691,7 @@ content:
                                 content:
                                   type: text
                                   node:
-                                    nodeType: text
+                                    nodeType: segmen
                                     textName: text
                                     parentNode: *ref_340
                                   textString: >-
@@ -4707,7 +4707,7 @@ content:
                                 content:
                                   type: text
                                   node:
-                                    nodeType: text
+                                    nodeType: segmen
                                     textName: text
                                     parentNode: *ref_341
                                   textString: >-
@@ -4723,7 +4723,7 @@ content:
                                 content:
                                   type: text
                                   node:
-                                    nodeType: text
+                                    nodeType: segmen
                                     textName: text
                                     parentNode: *ref_342
                                   textString: >-
@@ -4738,7 +4738,7 @@ content:
                           content:
                             type: text
                             node:
-                              nodeType: text
+                              nodeType: segmen
                               textName: text
                               parentNode: *ref_343
                             textString: >-
@@ -4751,7 +4751,7 @@ content:
                                 node:
                                   key: 2
                                   parentAyatSetNode:
-                                    nodeType: ayatSet
+                                    nodeType: daftarAyat
                                     parentPasalVersionNode: *ref_331
                                   nodeType: ayat
           - type: bagian
@@ -4759,13 +4759,13 @@ content:
               nodeType: bagian
               key: 2
               parentBagianSetNode:
-                nodeType: bagianSet
+                nodeType: daftarBagian
                 parentBabNode: *ref_319
             title: Bagian Kedua Pemenuhan Kebutuhan Dasar Penduduk Selama PSBB
             content:
-              type: pasalSet
+              type: daftarPasal
               node:
-                nodeType: pasalSet
+                nodeType: daftarPasal
                 parentNode: *ref_344
               elements:
                 - type: pasal
@@ -4786,7 +4786,7 @@ content:
                     content:
                       type: ayatSet
                       node: &ref_346
-                        nodeType: ayatSet
+                        nodeType: daftarAyat
                         parentPasalVersionNode: *ref_345
                       elements:
                         - type: ayat
@@ -4797,7 +4797,7 @@ content:
                           content:
                             type: text
                             node:
-                              nodeType: text
+                              nodeType: segmen
                               textName: text
                               parentNode: *ref_347
                             textString: >-
@@ -4813,7 +4813,7 @@ content:
                           content:
                             type: text
                             node:
-                              nodeType: text
+                              nodeType: segmen
                               textName: text
                               parentNode: *ref_348
                             textString: >-
@@ -4826,7 +4826,7 @@ content:
                                 node:
                                   key: 1
                                   parentAyatSetNode:
-                                    nodeType: ayatSet
+                                    nodeType: daftarAyat
                                     parentPasalVersionNode: *ref_345
                                   nodeType: ayat
                         - type: ayat
@@ -4837,7 +4837,7 @@ content:
                           content:
                             type: text
                             node:
-                              nodeType: text
+                              nodeType: segmen
                               textName: text
                               parentNode: *ref_349
                             textString: >-
@@ -4849,7 +4849,7 @@ content:
                                 node:
                                   key: 2
                                   parentAyatSetNode:
-                                    nodeType: ayatSet
+                                    nodeType: daftarAyat
                                     parentPasalVersionNode: *ref_345
                                   nodeType: ayat
                 - type: pasal
@@ -4870,7 +4870,7 @@ content:
                     content:
                       type: ayatSet
                       node: &ref_351
-                        nodeType: ayatSet
+                        nodeType: daftarAyat
                         parentPasalVersionNode: *ref_350
                       elements:
                         - type: ayat
@@ -4881,7 +4881,7 @@ content:
                           content:
                             type: text
                             node:
-                              nodeType: text
+                              nodeType: segmen
                               textName: text
                               parentNode: *ref_352
                             textString: >-
@@ -4894,14 +4894,14 @@ content:
                             key: 2
                             parentAyatSetNode: *ref_351
                           content:
-                            type: pointSet
+                            type: daftarHuruf
                             node: &ref_354
-                              nodeType: pointSet
+                              nodeType: daftarHuruf
                               parentNode: *ref_353
                             description:
                               type: text
                               node:
-                                nodeType: text
+                                nodeType: segmen
                                 textName: description
                                 parentNode: *ref_354
                               textString: 'Insentif sebagaimana dimaksud pada ayat (1) diberikan dalam bentuk:'
@@ -4915,7 +4915,7 @@ content:
                                 content:
                                   type: text
                                   node:
-                                    nodeType: text
+                                    nodeType: segmen
                                     textName: text
                                     parentNode: *ref_355
                                   textString: pengurangan pajak dan retribusi daerah bagi pelaku usaha;
@@ -4928,7 +4928,7 @@ content:
                                 content:
                                   type: text
                                   node:
-                                    nodeType: text
+                                    nodeType: segmen
                                     textName: text
                                     parentNode: *ref_356
                                   textString: >-
@@ -4943,7 +4943,7 @@ content:
                                 content:
                                   type: text
                                   node:
-                                    nodeType: text
+                                    nodeType: segmen
                                     textName: text
                                     parentNode: *ref_357
                                   textString: >-
@@ -4957,9 +4957,9 @@ content:
         parentBabSetNode: *ref_13
       title: SUMBER DAYA PENANGANAN CORONA VIRUS DISEASE (COVID- 19)
       content:
-        type: pasalSet
+        type: daftarPasal
         node:
-          nodeType: pasalSet
+          nodeType: daftarPasal
           parentNode: *ref_358
         elements:
           - type: pasal
@@ -4980,7 +4980,7 @@ content:
               content:
                 type: ayatSet
                 node: &ref_360
-                  nodeType: ayatSet
+                  nodeType: daftarAyat
                   parentPasalVersionNode: *ref_359
                 elements:
                   - type: ayat
@@ -4991,7 +4991,7 @@ content:
                     content:
                       type: text
                       node:
-                        nodeType: text
+                        nodeType: segmen
                         textName: text
                         parentNode: *ref_361
                       textString: >-
@@ -5007,7 +5007,7 @@ content:
                     content:
                       type: text
                       node:
-                        nodeType: text
+                        nodeType: segmen
                         textName: text
                         parentNode: *ref_362
                       textString: >-
@@ -5020,7 +5020,7 @@ content:
                           node:
                             key: 1
                             parentAyatSetNode:
-                              nodeType: ayatSet
+                              nodeType: daftarAyat
                               parentPasalVersionNode: *ref_359
                             nodeType: ayat
           - type: pasal
@@ -5041,7 +5041,7 @@ content:
               content:
                 type: ayatSet
                 node: &ref_364
-                  nodeType: ayatSet
+                  nodeType: daftarAyat
                   parentPasalVersionNode: *ref_363
                 elements:
                   - type: ayat
@@ -5052,7 +5052,7 @@ content:
                     content:
                       type: text
                       node:
-                        nodeType: text
+                        nodeType: segmen
                         textName: text
                         parentNode: *ref_365
                       textString: >-
@@ -5066,14 +5066,14 @@ content:
                       key: 2
                       parentAyatSetNode: *ref_364
                     content:
-                      type: pointSet
+                      type: daftarHuruf
                       node: &ref_367
-                        nodeType: pointSet
+                        nodeType: daftarHuruf
                         parentNode: *ref_366
                       description:
                         type: text
                         node:
-                          nodeType: text
+                          nodeType: segmen
                           textName: description
                           parentNode: *ref_367
                         textString: >-
@@ -5089,7 +5089,7 @@ content:
                           content:
                             type: text
                             node:
-                              nodeType: text
+                              nodeType: segmen
                               textName: text
                               parentNode: *ref_368
                             textString: dukungan sumber daya manusia;
@@ -5102,7 +5102,7 @@ content:
                           content:
                             type: text
                             node:
-                              nodeType: text
+                              nodeType: segmen
                               textName: text
                               parentNode: *ref_369
                             textString: sarana dan prasarana;
@@ -5115,7 +5115,7 @@ content:
                           content:
                             type: text
                             node:
-                              nodeType: text
+                              nodeType: segmen
                               textName: text
                               parentNode: *ref_370
                             textString: data dan informasi;
@@ -5128,7 +5128,7 @@ content:
                           content:
                             type: text
                             node:
-                              nodeType: text
+                              nodeType: segmen
                               textName: text
                               parentNode: *ref_371
                             textString: jasa dan/atau dukungan lain.
@@ -5140,9 +5140,9 @@ content:
         parentBabSetNode: *ref_13
       title: PEMANTAUAN, EVALUASI, DAN PELAPORAN
       content:
-        type: pasalSet
+        type: daftarPasal
         node:
-          nodeType: pasalSet
+          nodeType: daftarPasal
           parentNode: *ref_372
         elements:
           - type: pasal
@@ -5163,7 +5163,7 @@ content:
               content:
                 type: ayatSet
                 node: &ref_374
-                  nodeType: ayatSet
+                  nodeType: daftarAyat
                   parentPasalVersionNode: *ref_373
                 elements:
                   - type: ayat
@@ -5174,7 +5174,7 @@ content:
                     content:
                       type: text
                       node:
-                        nodeType: text
+                        nodeType: segmen
                         textName: text
                         parentNode: *ref_375
                       textString: >-
@@ -5190,7 +5190,7 @@ content:
                     content:
                       type: text
                       node:
-                        nodeType: text
+                        nodeType: segmen
                         textName: text
                         parentNode: *ref_376
                       textString: >-
@@ -5203,7 +5203,7 @@ content:
                           node:
                             key: 1
                             parentAyatSetNode:
-                              nodeType: ayatSet
+                              nodeType: daftarAyat
                               parentPasalVersionNode: *ref_373
                             nodeType: ayat
                   - type: ayat
@@ -5212,14 +5212,14 @@ content:
                       key: 3
                       parentAyatSetNode: *ref_374
                     content:
-                      type: pointSet
+                      type: daftarHuruf
                       node: &ref_378
-                        nodeType: pointSet
+                        nodeType: daftarHuruf
                         parentNode: *ref_377
                       description:
                         type: text
                         node:
-                          nodeType: text
+                          nodeType: segmen
                           textName: description
                           parentNode: *ref_378
                         textString: >-
@@ -5235,7 +5235,7 @@ content:
                           content:
                             type: text
                             node:
-                              nodeType: text
+                              nodeType: segmen
                               textName: text
                               parentNode: *ref_379
                             textString: pelaksanaan PSBB sesuai dengan Peraturan Gubernur ini;
@@ -5248,7 +5248,7 @@ content:
                           content:
                             type: text
                             node:
-                              nodeType: text
+                              nodeType: segmen
                               textName: text
                               parentNode: *ref_380
                             textString: jumlah kasus; dan
@@ -5261,7 +5261,7 @@ content:
                           content:
                             type: text
                             node:
-                              nodeType: text
+                              nodeType: segmen
                               textName: text
                               parentNode: *ref_381
                             textString: sebaran kasus.
@@ -5284,7 +5284,7 @@ content:
               content:
                 type: ayatSet
                 node: &ref_383
-                  nodeType: ayatSet
+                  nodeType: daftarAyat
                   parentPasalVersionNode: *ref_382
                 elements:
                   - type: ayat
@@ -5295,7 +5295,7 @@ content:
                     content:
                       type: text
                       node:
-                        nodeType: text
+                        nodeType: segmen
                         textName: text
                         parentNode: *ref_384
                       textString: >-
@@ -5310,7 +5310,7 @@ content:
                     content:
                       type: text
                       node:
-                        nodeType: text
+                        nodeType: segmen
                         textName: text
                         parentNode: *ref_385
                       textString: >-
@@ -5323,7 +5323,7 @@ content:
                           node:
                             key: 1
                             parentAyatSetNode:
-                              nodeType: ayatSet
+                              nodeType: daftarAyat
                               parentPasalVersionNode: *ref_382
                             nodeType: ayat
                   - type: ayat
@@ -5334,7 +5334,7 @@ content:
                     content:
                       type: text
                       node:
-                        nodeType: text
+                        nodeType: segmen
                         textName: text
                         parentNode: *ref_386
                       textString: >-
@@ -5347,7 +5347,7 @@ content:
                           node:
                             key: 2
                             parentAyatSetNode:
-                              nodeType: ayatSet
+                              nodeType: daftarAyat
                               parentPasalVersionNode: *ref_382
                             nodeType: ayat
           - type: pasal
@@ -5368,7 +5368,7 @@ content:
               content:
                 type: text
                 node:
-                  nodeType: text
+                  nodeType: segmen
                   textName: text
                   parentNode: *ref_387
                 textString: >-
@@ -5382,9 +5382,9 @@ content:
         parentBabSetNode: *ref_13
       title: KETENTUAN PENUTUP
       content:
-        type: pasalSet
+        type: daftarPasal
         node:
-          nodeType: pasalSet
+          nodeType: daftarPasal
           parentNode: *ref_388
         elements:
           - type: pasal
@@ -5405,7 +5405,7 @@ content:
               content:
                 type: text
                 node:
-                  nodeType: text
+                  nodeType: segmen
                   textName: text
                   parentNode: *ref_389
                 textString: >-

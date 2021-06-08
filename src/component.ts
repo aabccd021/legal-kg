@@ -57,7 +57,7 @@ export type ComponentNode =
   | PasalVersionNode
   | PointNode
   | PointSetNode
-  | TextNode;
+  | SegmentNode;
 
 export type AyatNode = {
   nodeType: 'ayat';
@@ -66,7 +66,7 @@ export type AyatNode = {
 };
 
 export type AyatSetNode = {
-  nodeType: 'ayatSet';
+  nodeType: 'daftarAyat';
   parentPasalVersionNode: PasalVersionNode;
 };
 
@@ -82,7 +82,7 @@ export type BabSetNode = {
 };
 
 export type BagianSetNode = {
-  nodeType: 'bagianSet';
+  nodeType: 'daftarBagian';
   parentBabNode: BabNode;
 };
 
@@ -99,12 +99,12 @@ export type ParagrafNode = {
 };
 
 export type ParagrafSetNode = {
-  nodeType: 'paragrafSet';
+  nodeType: 'daftarParagraf';
   parentBagianNode: BagianNode;
 };
 
 export type PasalSetNode = {
-  nodeType: 'pasalSet';
+  nodeType: 'daftarPasal';
   parentNode: BabNode | BagianNode | ParagrafNode | DocumentNode;
 };
 
@@ -128,12 +128,12 @@ export type PointNode = {
 };
 
 export type PointSetNode = {
-  nodeType: 'pointSet';
+  nodeType: 'daftarHuruf';
   parentNode: PointNode | AyatNode | PasalVersionNode | MenimbangNode | MengingatNode;
 };
 
-export type TextNode = {
-  nodeType: 'text';
+export type SegmentNode = {
+  nodeType: 'segmen';
   textName: string;
   parentNode:
     | PointNode
@@ -219,7 +219,7 @@ export type Bagian = {
 };
 
 export type BagianSet = {
-  type: 'bagianSet';
+  type: 'daftarBagian';
   node: BagianSetNode;
   elements: Bagian[];
 };
@@ -228,11 +228,11 @@ export type Paragraf = {
   type: 'paragraf';
   node: ParagrafNode;
   title: string;
-  pasalSet: PasalSet;
+  daftarPasal: PasalSet;
 };
 
 export type ParagrafSet = {
-  type: 'paragrafSet';
+  type: 'daftarParagraf';
   node: ParagrafSetNode;
   elements: Paragraf[];
 };
@@ -250,7 +250,7 @@ export type PasalVersion = {
 };
 
 export type PasalSet = {
-  type: 'pasalSet';
+  type: 'daftarPasal';
   node: PasalSetNode;
   elements: Pasal[];
 };
@@ -274,7 +274,7 @@ export type Mengingat = {
 };
 
 export type PointSet = {
-  type: 'pointSet';
+  type: 'daftarHuruf';
   node: PointSetNode;
   description: Text;
   elements: (Point | PasalDeleteAmenderPoint | PasalUpdateAmenderPoint | PasalInsertAmenderPoint)[];
@@ -282,7 +282,7 @@ export type PointSet = {
 
 export type Text = {
   type: 'text';
-  node: TextNode;
+  node: SegmentNode;
   references: Reference[];
   textString: string;
 };

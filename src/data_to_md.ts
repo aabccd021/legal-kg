@@ -106,8 +106,8 @@ function _jsonToMd(doc: Document): string {
 function menimbangToMd(menimbang?: Menimbang): string {
   if (isUndefined(menimbang)) return '';
   const content =
-    menimbang.content.type === 'pointSet'
-      ? pointSetToMd(menimbang.content)
+    menimbang.content.type === 'daftarHuruf'
+      ? daftarHurufToMd(menimbang.content)
       : textToMd(menimbang.content);
   return `# [Menimbang](${nodeToUri(menimbang.node)})\n${content}`;
 }
@@ -115,8 +115,8 @@ function menimbangToMd(menimbang?: Menimbang): string {
 function mengingatToMd(mengingat?: Mengingat): string {
   if (isUndefined(mengingat)) return '';
   const content =
-    mengingat.content.type === 'pointSet'
-      ? pointSetToMd(mengingat.content)
+    mengingat.content.type === 'daftarHuruf'
+      ? daftarHurufToMd(mengingat.content)
       : textToMd(mengingat.content);
   return `# [Mengingat](${nodeToUri(mengingat.node)})\n${content}`;
 }
@@ -127,7 +127,7 @@ function babSetToMd(babSet: BabSet): string[] {
 
 function babToMd(bab: Bab): string {
   const contentStr: string =
-    bab.content.type === 'pasalSet'
+    bab.content.type === 'daftarPasal'
       ? bab.content.elements.map(pasalToMd).join('\n')
       : bab.content.elements.map(bagianToMd).join('\n');
   const romanKey = toRoman(bab.node.key);
@@ -138,7 +138,7 @@ function babToMd(bab: Bab): string {
 
 function bagianToMd(bagian: Bagian): string {
   const contentStr =
-    bagian.content.type === 'pasalSet'
+    bagian.content.type === 'daftarPasal'
       ? bagian.content.elements.map(pasalToMd)
       : bagian.content.elements.map(paragrafToMd);
   const uri = nodeToUri(bagian.node);
@@ -146,7 +146,7 @@ function bagianToMd(bagian: Bagian): string {
 }
 
 function paragrafToMd(paragraf: Paragraf): string {
-  const contentStr = paragraf.pasalSet.elements.map(pasalToMd);
+  const contentStr = paragraf.daftarPasal.elements.map(pasalToMd);
   const uri = nodeToUri(paragraf.node);
   return `\n## [${paragraf.title}](${uri})\n${contentStr}\n`;
 }
@@ -160,7 +160,7 @@ function pasalToMd(pasal: Pasal): string {
 function pasalVersionToMd({ content }: PasalVersion): string {
   if (isUndefined(content)) return '';
   if (content.type === 'ayatSet') return content.elements.map(ayatToMd).join('\n');
-  if (content.type === 'pointSet') return pointSetToMd(content);
+  if (content.type === 'daftarHuruf') return daftarHurufToMd(content);
   if (content.type === 'text') return textToMd(content);
   assertNever(content);
 }
@@ -182,11 +182,11 @@ function amendedPasalVersionToMd(pasalVersion: PasalVersion): string {
 function ayatToMd(ayat: Ayat): string {
   const ayatUri = nodeToUri(ayat.node);
   const contentStr =
-    ayat.content.type === 'pointSet' ? pointSetToMd(ayat.content) : textToMd(ayat.content);
+    ayat.content.type === 'daftarHuruf' ? daftarHurufToMd(ayat.content) : textToMd(ayat.content);
   return `\n#### [Ayat (${ayat.node.key})](${ayatUri})\n${contentStr}`;
 }
 
-function pointSetToMd(points: PointSet, depth = 0): string {
+function daftarHurufToMd(points: PointSet, depth = 0): string {
   const contentStr = points.elements.map(pointToMdWith(depth)).join('\n');
   const descriptionStr = textToMd(points.description);
   return `${descriptionStr}\n${contentStr}`;
@@ -225,7 +225,7 @@ function pointToMd(
 }
 
 function pointContentToMd(component: PointSet | Text, depth: number): string {
-  if (component.type === 'pointSet') return pointSetToMd(component, depth);
+  if (component.type === 'daftarHuruf') return daftarHurufToMd(component, depth);
   if (component.type === 'text') return textToMd(component);
   assertNever(component);
 }
