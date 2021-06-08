@@ -1,5 +1,5 @@
 node: &ref_0
-  nodeType: document
+  nodeType: peraturan
   docType: noTahun
   docCategory: uu
   tahun: 2020
@@ -26,7 +26,7 @@ metadata:
       elements:
         - type: point
           node: &ref_3
-            nodeType: point
+            nodeType: huruf
             key: a
             parentPointSetNode: *ref_2
           content:
@@ -44,7 +44,7 @@ metadata:
             references: []
         - type: point
           node: &ref_4
-            nodeType: point
+            nodeType: huruf
             key: b
             parentPointSetNode: *ref_2
           content:
@@ -62,7 +62,7 @@ metadata:
             references: []
         - type: point
           node: &ref_5
-            nodeType: point
+            nodeType: huruf
             key: c
             parentPointSetNode: *ref_2
           content:
@@ -80,7 +80,7 @@ metadata:
             references: []
         - type: point
           node: &ref_6
-            nodeType: point
+            nodeType: huruf
             key: d
             parentPointSetNode: *ref_2
           content:
@@ -116,7 +116,7 @@ metadata:
       elements:
         - type: point
           node: &ref_9
-            nodeType: point
+            nodeType: huruf
             key: '1'
             parentPointSetNode: *ref_8
           content:
@@ -132,11 +132,11 @@ metadata:
               - start: 41
                 end: 97
                 node:
-                  nodeType: document
+                  nodeType: peraturan
                   docType: uud
         - type: point
           node: &ref_10
-            nodeType: point
+            nodeType: huruf
             key: '2'
             parentPointSetNode: *ref_8
           content:
@@ -153,14 +153,14 @@ metadata:
               - start: 0
                 end: 33
                 node:
-                  nodeType: document
+                  nodeType: peraturan
                   docType: noTahun
                   docCategory: uu
                   nomor: 24
                   tahun: 2000
         - type: point
           node: &ref_11
-            nodeType: point
+            nodeType: huruf
             key: '3'
             parentPointSetNode: *ref_8
           content:
@@ -180,7 +180,7 @@ metadata:
               - start: 0
                 end: 32
                 node:
-                  nodeType: document
+                  nodeType: peraturan
                   docType: noTahun
                   docCategory: uu
                   nomor: 7
@@ -202,13 +202,13 @@ content:
       version:
         type: pasalVersion
         node: &ref_12
-          nodeType: pasalVersion
+          nodeType: versiPasal
           version: &ref_16
             nodeType: date
             month: 2
             date: 28
             year: 2020
-          state: exists
+          state: orisinal
           parentPasalNode:
             nodeType: pasal
             key: '1'

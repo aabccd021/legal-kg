@@ -1,5 +1,5 @@
 node: &ref_0
-  nodeType: document
+  nodeType: peraturan
   docType: noTahun
   docCategory: perda_provinsi_dki_jakarta
   tahun: 2020
@@ -26,7 +26,7 @@ metadata:
       elements:
         - type: point
           node: &ref_3
-            nodeType: point
+            nodeType: huruf
             key: a
             parentPointSetNode: *ref_2
           content:
@@ -42,7 +42,7 @@ metadata:
             references: []
         - type: point
           node: &ref_4
-            nodeType: point
+            nodeType: huruf
             key: b
             parentPointSetNode: *ref_2
           content:
@@ -61,7 +61,7 @@ metadata:
             references: []
         - type: point
           node: &ref_5
-            nodeType: point
+            nodeType: huruf
             key: c
             parentPointSetNode: *ref_2
           content:
@@ -79,7 +79,7 @@ metadata:
             references: []
         - type: point
           node: &ref_6
-            nodeType: point
+            nodeType: huruf
             key: d
             parentPointSetNode: *ref_2
           content:
@@ -113,7 +113,7 @@ metadata:
       elements:
         - type: point
           node: &ref_9
-            nodeType: point
+            nodeType: huruf
             key: '1'
             parentPointSetNode: *ref_8
           content:
@@ -127,11 +127,11 @@ metadata:
               - start: 18
                 end: 74
                 node:
-                  nodeType: document
+                  nodeType: peraturan
                   docType: uud
         - type: point
           node: &ref_10
-            nodeType: point
+            nodeType: huruf
             key: '2'
             parentPointSetNode: *ref_8
           content:
@@ -147,14 +147,14 @@ metadata:
               - start: 0
                 end: 32
                 node:
-                  nodeType: document
+                  nodeType: peraturan
                   docType: noTahun
                   docCategory: uu
                   nomor: 1
                   tahun: 1970
         - type: point
           node: &ref_11
-            nodeType: point
+            nodeType: huruf
             key: '3'
             parentPointSetNode: *ref_8
           content:
@@ -171,14 +171,14 @@ metadata:
               - start: 0
                 end: 32
                 node:
-                  nodeType: document
+                  nodeType: peraturan
                   docType: noTahun
                   docCategory: uu
                   nomor: 4
                   tahun: 1984
         - type: point
           node: &ref_12
-            nodeType: point
+            nodeType: huruf
             key: '4'
             parentPointSetNode: *ref_8
           content:
@@ -195,14 +195,14 @@ metadata:
               - start: 0
                 end: 33
                 node:
-                  nodeType: document
+                  nodeType: peraturan
                   docType: noTahun
                   docCategory: uu
                   nomor: 24
                   tahun: 2007
         - type: point
           node: &ref_13
-            nodeType: point
+            nodeType: huruf
             key: '5'
             parentPointSetNode: *ref_8
           content:
@@ -220,14 +220,14 @@ metadata:
               - start: 0
                 end: 33
                 node:
-                  nodeType: document
+                  nodeType: peraturan
                   docType: noTahun
                   docCategory: uu
                   nomor: 29
                   tahun: 2007
         - type: point
           node: &ref_14
-            nodeType: point
+            nodeType: huruf
             key: '6'
             parentPointSetNode: *ref_8
           content:
@@ -244,14 +244,14 @@ metadata:
               - start: 0
                 end: 33
                 node:
-                  nodeType: document
+                  nodeType: peraturan
                   docType: noTahun
                   docCategory: uu
                   nomor: 36
                   tahun: 2009
         - type: point
           node: &ref_15
-            nodeType: point
+            nodeType: huruf
             key: '7'
             parentPointSetNode: *ref_8
           content:
@@ -271,7 +271,7 @@ metadata:
               - start: 228
                 end: 261
                 node:
-                  nodeType: document
+                  nodeType: peraturan
                   docType: noTahun
                   docCategory: uu
                   nomor: 15
@@ -279,14 +279,14 @@ metadata:
               - start: 0
                 end: 33
                 node:
-                  nodeType: document
+                  nodeType: peraturan
                   docType: noTahun
                   docCategory: uu
                   nomor: 12
                   tahun: 2011
         - type: point
           node: &ref_16
-            nodeType: point
+            nodeType: huruf
             key: '8'
             parentPointSetNode: *ref_8
           content:
@@ -306,7 +306,7 @@ metadata:
               - start: 293
                 end: 326
                 node:
-                  nodeType: document
+                  nodeType: peraturan
                   docType: noTahun
                   docCategory: uu
                   nomor: 23
@@ -314,7 +314,7 @@ metadata:
               - start: 231
                 end: 263
                 node:
-                  nodeType: document
+                  nodeType: peraturan
                   docType: noTahun
                   docCategory: uu
                   nomor: 9
@@ -322,14 +322,14 @@ metadata:
               - start: 0
                 end: 33
                 node:
-                  nodeType: document
+                  nodeType: peraturan
                   docType: noTahun
                   docCategory: uu
                   nomor: 23
                   tahun: 2014
         - type: point
           node: &ref_17
-            nodeType: point
+            nodeType: huruf
             key: '9'
             parentPointSetNode: *ref_8
           content:
@@ -346,14 +346,14 @@ metadata:
               - start: 0
                 end: 32
                 node:
-                  nodeType: document
+                  nodeType: peraturan
                   docType: noTahun
                   docCategory: uu
                   nomor: 6
                   tahun: 2018
         - type: point
           node: &ref_18
-            nodeType: point
+            nodeType: huruf
             key: '10'
             parentPointSetNode: *ref_8
           content:
@@ -373,7 +373,7 @@ metadata:
               - start: 82
                 end: 114
                 node:
-                  nodeType: document
+                  nodeType: peraturan
                   docType: noTahun
                   docCategory: uu
                   nomor: 1
@@ -381,14 +381,14 @@ metadata:
               - start: 0
                 end: 32
                 node:
-                  nodeType: document
+                  nodeType: peraturan
                   docType: noTahun
                   docCategory: uu
                   nomor: 2
                   tahun: 2020
         - type: point
           node: &ref_19
-            nodeType: point
+            nodeType: huruf
             key: '11'
             parentPointSetNode: *ref_8
           content:
@@ -404,7 +404,7 @@ metadata:
             references: []
         - type: point
           node: &ref_20
-            nodeType: point
+            nodeType: huruf
             key: '12'
             parentPointSetNode: *ref_8
           content:
@@ -421,7 +421,7 @@ metadata:
             references: []
         - type: point
           node: &ref_21
-            nodeType: point
+            nodeType: huruf
             key: '13'
             parentPointSetNode: *ref_8
           content:
@@ -437,7 +437,7 @@ metadata:
             references: []
         - type: point
           node: &ref_22
-            nodeType: point
+            nodeType: huruf
             key: '14'
             parentPointSetNode: *ref_8
           content:
@@ -455,7 +455,7 @@ metadata:
             references: []
         - type: point
           node: &ref_23
-            nodeType: point
+            nodeType: huruf
             key: '15'
             parentPointSetNode: *ref_8
           content:
@@ -501,13 +501,13 @@ content:
             version:
               type: pasalVersion
               node: &ref_26
-                nodeType: pasalVersion
+                nodeType: versiPasal
                 version: &ref_62
                   nodeType: date
                   month: 11
                   date: 12
                   year: 2020
-                state: exists
+                state: orisinal
                 parentPasalNode:
                   nodeType: pasal
                   key: '1'
@@ -528,7 +528,7 @@ content:
                 elements:
                   - type: point
                     node: &ref_28
-                      nodeType: point
+                      nodeType: huruf
                       key: '1'
                       parentPointSetNode: *ref_27
                     content:
@@ -545,7 +545,7 @@ content:
                       references: []
                   - type: point
                     node: &ref_29
-                      nodeType: point
+                      nodeType: huruf
                       key: '2'
                       parentPointSetNode: *ref_27
                     content:
@@ -565,11 +565,11 @@ content:
                         - start: 344
                           end: 400
                           node:
-                            nodeType: document
+                            nodeType: peraturan
                             docType: uud
                   - type: point
                     node: &ref_30
-                      nodeType: point
+                      nodeType: huruf
                       key: '3'
                       parentPointSetNode: *ref_27
                     content:
@@ -585,7 +585,7 @@ content:
                       references: []
                   - type: point
                     node: &ref_31
-                      nodeType: point
+                      nodeType: huruf
                       key: '4'
                       parentPointSetNode: *ref_27
                     content:
@@ -600,7 +600,7 @@ content:
                       references: []
                   - type: point
                     node: &ref_32
-                      nodeType: point
+                      nodeType: huruf
                       key: '5'
                       parentPointSetNode: *ref_27
                     content:
@@ -616,7 +616,7 @@ content:
                       references: []
                   - type: point
                     node: &ref_33
-                      nodeType: point
+                      nodeType: huruf
                       key: '6'
                       parentPointSetNode: *ref_27
                     content:
@@ -632,7 +632,7 @@ content:
                       references: []
                   - type: point
                     node: &ref_34
-                      nodeType: point
+                      nodeType: huruf
                       key: '7'
                       parentPointSetNode: *ref_27
                     content:
@@ -647,7 +647,7 @@ content:
                       references: []
                   - type: point
                     node: &ref_35
-                      nodeType: point
+                      nodeType: huruf
                       key: '8'
                       parentPointSetNode: *ref_27
                     content:
@@ -660,7 +660,7 @@ content:
                       references: []
                   - type: point
                     node: &ref_36
-                      nodeType: point
+                      nodeType: huruf
                       key: '9'
                       parentPointSetNode: *ref_27
                     content:
@@ -673,7 +673,7 @@ content:
                       references: []
                   - type: point
                     node: &ref_37
-                      nodeType: point
+                      nodeType: huruf
                       key: '10'
                       parentPointSetNode: *ref_27
                     content:
@@ -688,7 +688,7 @@ content:
                       references: []
                   - type: point
                     node: &ref_38
-                      nodeType: point
+                      nodeType: huruf
                       key: '11'
                       parentPointSetNode: *ref_27
                     content:
@@ -704,7 +704,7 @@ content:
                       references: []
                   - type: point
                     node: &ref_39
-                      nodeType: point
+                      nodeType: huruf
                       key: '12'
                       parentPointSetNode: *ref_27
                     content:
@@ -719,7 +719,7 @@ content:
                       references: []
                   - type: point
                     node: &ref_40
-                      nodeType: point
+                      nodeType: huruf
                       key: '13'
                       parentPointSetNode: *ref_27
                     content:
@@ -732,7 +732,7 @@ content:
                       references: []
                   - type: point
                     node: &ref_41
-                      nodeType: point
+                      nodeType: huruf
                       key: '14'
                       parentPointSetNode: *ref_27
                     content:
@@ -747,7 +747,7 @@ content:
                       references: []
                   - type: point
                     node: &ref_42
-                      nodeType: point
+                      nodeType: huruf
                       key: '15'
                       parentPointSetNode: *ref_27
                     content:
@@ -767,7 +767,7 @@ content:
                       references: []
                   - type: point
                     node: &ref_43
-                      nodeType: point
+                      nodeType: huruf
                       key: '16'
                       parentPointSetNode: *ref_27
                     content:
@@ -784,7 +784,7 @@ content:
                       references: []
                   - type: point
                     node: &ref_44
-                      nodeType: point
+                      nodeType: huruf
                       key: '17'
                       parentPointSetNode: *ref_27
                     content:
@@ -800,7 +800,7 @@ content:
                       references: []
                   - type: point
                     node: &ref_45
-                      nodeType: point
+                      nodeType: huruf
                       key: '18'
                       parentPointSetNode: *ref_27
                     content:
@@ -819,7 +819,7 @@ content:
                       references: []
                   - type: point
                     node: &ref_46
-                      nodeType: point
+                      nodeType: huruf
                       key: '19'
                       parentPointSetNode: *ref_27
                     content:
@@ -836,7 +836,7 @@ content:
                       references: []
                   - type: point
                     node: &ref_47
-                      nodeType: point
+                      nodeType: huruf
                       key: '20'
                       parentPointSetNode: *ref_27
                     content:
@@ -851,7 +851,7 @@ content:
                       references: []
                   - type: point
                     node: &ref_48
-                      nodeType: point
+                      nodeType: huruf
                       key: '21'
                       parentPointSetNode: *ref_27
                     content:
@@ -868,7 +868,7 @@ content:
                       references: []
                   - type: point
                     node: &ref_49
-                      nodeType: point
+                      nodeType: huruf
                       key: '22'
                       parentPointSetNode: *ref_27
                     content:
@@ -885,7 +885,7 @@ content:
                       references: []
                   - type: point
                     node: &ref_50
-                      nodeType: point
+                      nodeType: huruf
                       key: '23'
                       parentPointSetNode: *ref_27
                     content:
@@ -902,7 +902,7 @@ content:
                       references: []
                   - type: point
                     node: &ref_51
-                      nodeType: point
+                      nodeType: huruf
                       key: '24'
                       parentPointSetNode: *ref_27
                     content:
@@ -921,7 +921,7 @@ content:
                       elements:
                         - type: point
                           node: &ref_53
-                            nodeType: point
+                            nodeType: huruf
                             key: a
                             parentPointSetNode: *ref_52
                           content:
@@ -937,7 +937,7 @@ content:
                             references: []
                         - type: point
                           node: &ref_54
-                            nodeType: point
+                            nodeType: huruf
                             key: b
                             parentPointSetNode: *ref_52
                           content:
@@ -953,7 +953,7 @@ content:
                             references: []
                         - type: point
                           node: &ref_55
-                            nodeType: point
+                            nodeType: huruf
                             key: c
                             parentPointSetNode: *ref_52
                           content:
@@ -969,7 +969,7 @@ content:
                             references: []
                   - type: point
                     node: &ref_56
-                      nodeType: point
+                      nodeType: huruf
                       key: '25'
                       parentPointSetNode: *ref_27
                     content:
@@ -986,7 +986,7 @@ content:
                       references: []
                   - type: point
                     node: &ref_57
-                      nodeType: point
+                      nodeType: huruf
                       key: '26'
                       parentPointSetNode: *ref_27
                     content:
@@ -1002,7 +1002,7 @@ content:
                       references: []
                   - type: point
                     node: &ref_58
-                      nodeType: point
+                      nodeType: huruf
                       key: '27'
                       parentPointSetNode: *ref_27
                     content:
@@ -1017,7 +1017,7 @@ content:
                       references: []
                   - type: point
                     node: &ref_59
-                      nodeType: point
+                      nodeType: huruf
                       key: '28'
                       parentPointSetNode: *ref_27
                     content:
@@ -1032,7 +1032,7 @@ content:
                       references: []
                   - type: point
                     node: &ref_60
-                      nodeType: point
+                      nodeType: huruf
                       key: '29'
                       parentPointSetNode: *ref_27
                     content:
@@ -1047,7 +1047,7 @@ content:
                       references: []
                   - type: point
                     node: &ref_61
-                      nodeType: point
+                      nodeType: huruf
                       key: '30'
                       parentPointSetNode: *ref_27
                     content:
@@ -1066,9 +1066,9 @@ content:
             version:
               type: pasalVersion
               node: &ref_63
-                nodeType: pasalVersion
+                nodeType: versiPasal
                 version: *ref_62
-                state: exists
+                state: orisinal
                 parentPasalNode:
                   nodeType: pasal
                   key: '2'
@@ -1089,7 +1089,7 @@ content:
                 elements:
                   - type: point
                     node: &ref_65
-                      nodeType: point
+                      nodeType: huruf
                       key: a
                       parentPointSetNode: *ref_64
                     content:
@@ -1102,7 +1102,7 @@ content:
                       references: []
                   - type: point
                     node: &ref_66
-                      nodeType: point
+                      nodeType: huruf
                       key: b
                       parentPointSetNode: *ref_64
                     content:
@@ -1115,7 +1115,7 @@ content:
                       references: []
                   - type: point
                     node: &ref_67
-                      nodeType: point
+                      nodeType: huruf
                       key: c
                       parentPointSetNode: *ref_64
                     content:
@@ -1128,7 +1128,7 @@ content:
                       references: []
                   - type: point
                     node: &ref_68
-                      nodeType: point
+                      nodeType: huruf
                       key: d
                       parentPointSetNode: *ref_64
                     content:
@@ -1141,7 +1141,7 @@ content:
                       references: []
                   - type: point
                     node: &ref_69
-                      nodeType: point
+                      nodeType: huruf
                       key: e
                       parentPointSetNode: *ref_64
                     content:
@@ -1154,7 +1154,7 @@ content:
                       references: []
                   - type: point
                     node: &ref_70
-                      nodeType: point
+                      nodeType: huruf
                       key: f
                       parentPointSetNode: *ref_64
                     content:
@@ -1167,7 +1167,7 @@ content:
                       references: []
                   - type: point
                     node: &ref_71
-                      nodeType: point
+                      nodeType: huruf
                       key: g
                       parentPointSetNode: *ref_64
                     content:
@@ -1180,7 +1180,7 @@ content:
                       references: []
                   - type: point
                     node: &ref_72
-                      nodeType: point
+                      nodeType: huruf
                       key: h
                       parentPointSetNode: *ref_64
                     content:
@@ -1199,9 +1199,9 @@ content:
             version:
               type: pasalVersion
               node: &ref_73
-                nodeType: pasalVersion
+                nodeType: versiPasal
                 version: *ref_62
-                state: exists
+                state: orisinal
                 parentPasalNode:
                   nodeType: pasal
                   key: '3'
@@ -1222,7 +1222,7 @@ content:
                 elements:
                   - type: point
                     node: &ref_75
-                      nodeType: point
+                      nodeType: huruf
                       key: a
                       parentPointSetNode: *ref_74
                     content:
@@ -1237,7 +1237,7 @@ content:
                       references: []
                   - type: point
                     node: &ref_76
-                      nodeType: point
+                      nodeType: huruf
                       key: b
                       parentPointSetNode: *ref_74
                     content:
@@ -1252,7 +1252,7 @@ content:
                       references: []
                   - type: point
                     node: &ref_77
-                      nodeType: point
+                      nodeType: huruf
                       key: c
                       parentPointSetNode: *ref_74
                     content:
@@ -1267,7 +1267,7 @@ content:
                       references: []
                   - type: point
                     node: &ref_78
-                      nodeType: point
+                      nodeType: huruf
                       key: d
                       parentPointSetNode: *ref_74
                     content:
@@ -1282,7 +1282,7 @@ content:
                       references: []
                   - type: point
                     node: &ref_79
-                      nodeType: point
+                      nodeType: huruf
                       key: e
                       parentPointSetNode: *ref_74
                     content:
@@ -1298,7 +1298,7 @@ content:
                       references: []
                   - type: point
                     node: &ref_80
-                      nodeType: point
+                      nodeType: huruf
                       key: f
                       parentPointSetNode: *ref_74
                     content:
@@ -1313,7 +1313,7 @@ content:
                       references: []
                   - type: point
                     node: &ref_81
-                      nodeType: point
+                      nodeType: huruf
                       key: g
                       parentPointSetNode: *ref_74
                     content:
@@ -1334,9 +1334,9 @@ content:
             version:
               type: pasalVersion
               node: &ref_82
-                nodeType: pasalVersion
+                nodeType: versiPasal
                 version: *ref_62
-                state: exists
+                state: orisinal
                 parentPasalNode:
                   nodeType: pasal
                   key: '4'
@@ -1357,7 +1357,7 @@ content:
                 elements:
                   - type: point
                     node: &ref_84
-                      nodeType: point
+                      nodeType: huruf
                       key: a
                       parentPointSetNode: *ref_83
                     content:
@@ -1370,7 +1370,7 @@ content:
                       references: []
                   - type: point
                     node: &ref_85
-                      nodeType: point
+                      nodeType: huruf
                       key: b
                       parentPointSetNode: *ref_83
                     content:
@@ -1383,7 +1383,7 @@ content:
                       references: []
                   - type: point
                     node: &ref_86
-                      nodeType: point
+                      nodeType: huruf
                       key: c
                       parentPointSetNode: *ref_83
                     content:
@@ -1396,7 +1396,7 @@ content:
                       references: []
                   - type: point
                     node: &ref_87
-                      nodeType: point
+                      nodeType: huruf
                       key: d
                       parentPointSetNode: *ref_83
                     content:
@@ -1409,7 +1409,7 @@ content:
                       references: []
                   - type: point
                     node: &ref_88
-                      nodeType: point
+                      nodeType: huruf
                       key: e
                       parentPointSetNode: *ref_83
                     content:
@@ -1422,7 +1422,7 @@ content:
                       references: []
                   - type: point
                     node: &ref_89
-                      nodeType: point
+                      nodeType: huruf
                       key: f
                       parentPointSetNode: *ref_83
                     content:
@@ -1435,7 +1435,7 @@ content:
                       references: []
                   - type: point
                     node: &ref_90
-                      nodeType: point
+                      nodeType: huruf
                       key: g
                       parentPointSetNode: *ref_83
                     content:
@@ -1448,7 +1448,7 @@ content:
                       references: []
                   - type: point
                     node: &ref_91
-                      nodeType: point
+                      nodeType: huruf
                       key: h
                       parentPointSetNode: *ref_83
                     content:
@@ -1461,7 +1461,7 @@ content:
                       references: []
                   - type: point
                     node: &ref_92
-                      nodeType: point
+                      nodeType: huruf
                       key: i
                       parentPointSetNode: *ref_83
                     content:
@@ -1506,9 +1506,9 @@ content:
                   version:
                     type: pasalVersion
                     node: &ref_95
-                      nodeType: pasalVersion
+                      nodeType: versiPasal
                       version: *ref_62
-                      state: exists
+                      state: orisinal
                       parentPasalNode:
                         nodeType: pasal
                         key: '5'
@@ -1531,7 +1531,7 @@ content:
                       elements:
                         - type: point
                           node: &ref_97
-                            nodeType: point
+                            nodeType: huruf
                             key: a
                             parentPointSetNode: *ref_96
                           content:
@@ -1546,7 +1546,7 @@ content:
                             references: []
                         - type: point
                           node: &ref_98
-                            nodeType: point
+                            nodeType: huruf
                             key: b
                             parentPointSetNode: *ref_96
                           content:
@@ -1559,7 +1559,7 @@ content:
                             references: []
                         - type: point
                           node: &ref_99
-                            nodeType: point
+                            nodeType: huruf
                             key: c
                             parentPointSetNode: *ref_96
                           content:
@@ -1574,7 +1574,7 @@ content:
                             references: []
                         - type: point
                           node: &ref_100
-                            nodeType: point
+                            nodeType: huruf
                             key: d
                             parentPointSetNode: *ref_96
                           content:
@@ -1589,7 +1589,7 @@ content:
                             references: []
                         - type: point
                           node: &ref_101
-                            nodeType: point
+                            nodeType: huruf
                             key: e
                             parentPointSetNode: *ref_96
                           content:
@@ -1604,7 +1604,7 @@ content:
                             references: []
                         - type: point
                           node: &ref_102
-                            nodeType: point
+                            nodeType: huruf
                             key: f
                             parentPointSetNode: *ref_96
                           content:
@@ -1619,7 +1619,7 @@ content:
                             references: []
                         - type: point
                           node: &ref_103
-                            nodeType: point
+                            nodeType: huruf
                             key: g
                             parentPointSetNode: *ref_96
                           content:
@@ -1635,7 +1635,7 @@ content:
                             references: []
                         - type: point
                           node: &ref_104
-                            nodeType: point
+                            nodeType: huruf
                             key: h
                             parentPointSetNode: *ref_96
                           content:
@@ -1648,7 +1648,7 @@ content:
                             references: []
                         - type: point
                           node: &ref_105
-                            nodeType: point
+                            nodeType: huruf
                             key: i
                             parentPointSetNode: *ref_96
                           content:
@@ -1673,7 +1673,7 @@ content:
                             elements:
                               - type: point
                                 node: &ref_107
-                                  nodeType: point
+                                  nodeType: huruf
                                   key: '1'
                                   parentPointSetNode: *ref_106
                                 content:
@@ -1708,9 +1708,9 @@ content:
                   version:
                     type: pasalVersion
                     node: &ref_109
-                      nodeType: pasalVersion
+                      nodeType: versiPasal
                       version: *ref_62
-                      state: exists
+                      state: orisinal
                       parentPasalNode:
                         nodeType: pasal
                         key: '6'
@@ -1733,7 +1733,7 @@ content:
                       elements:
                         - type: point
                           node: &ref_111
-                            nodeType: point
+                            nodeType: huruf
                             key: a
                             parentPointSetNode: *ref_110
                           content:
@@ -1746,7 +1746,7 @@ content:
                             references: []
                         - type: point
                           node: &ref_112
-                            nodeType: point
+                            nodeType: huruf
                             key: b
                             parentPointSetNode: *ref_110
                           content:
@@ -1761,7 +1761,7 @@ content:
                             references: []
                         - type: point
                           node: &ref_113
-                            nodeType: point
+                            nodeType: huruf
                             key: c
                             parentPointSetNode: *ref_110
                           content:
@@ -1774,7 +1774,7 @@ content:
                             references: []
                         - type: point
                           node: &ref_114
-                            nodeType: point
+                            nodeType: huruf
                             key: d
                             parentPointSetNode: *ref_110
                           content:
@@ -1787,7 +1787,7 @@ content:
                             references: []
                         - type: point
                           node: &ref_115
-                            nodeType: point
+                            nodeType: huruf
                             key: e
                             parentPointSetNode: *ref_110
                           content:
@@ -1800,7 +1800,7 @@ content:
                             references: []
                         - type: point
                           node: &ref_116
-                            nodeType: point
+                            nodeType: huruf
                             key: f
                             parentPointSetNode: *ref_110
                           content:
@@ -1813,7 +1813,7 @@ content:
                             references: []
                         - type: point
                           node: &ref_117
-                            nodeType: point
+                            nodeType: huruf
                             key: g
                             parentPointSetNode: *ref_110
                           content:
@@ -1828,7 +1828,7 @@ content:
                             references: []
                         - type: point
                           node: &ref_118
-                            nodeType: point
+                            nodeType: huruf
                             key: h
                             parentPointSetNode: *ref_110
                           content:
@@ -1844,7 +1844,7 @@ content:
                             references: []
                         - type: point
                           node: &ref_119
-                            nodeType: point
+                            nodeType: huruf
                             key: i
                             parentPointSetNode: *ref_110
                           content:
@@ -1859,7 +1859,7 @@ content:
                             references: []
                         - type: point
                           node: &ref_120
-                            nodeType: point
+                            nodeType: huruf
                             key: j
                             parentPointSetNode: *ref_110
                           content:
@@ -1906,9 +1906,9 @@ content:
                   version:
                     type: pasalVersion
                     node: &ref_123
-                      nodeType: pasalVersion
+                      nodeType: versiPasal
                       version: *ref_62
-                      state: exists
+                      state: orisinal
                       parentPasalNode:
                         nodeType: pasal
                         key: '7'
@@ -1929,7 +1929,7 @@ content:
                       elements:
                         - type: point
                           node: &ref_125
-                            nodeType: point
+                            nodeType: huruf
                             key: a
                             parentPointSetNode: *ref_124
                           content:
@@ -1944,7 +1944,7 @@ content:
                             references: []
                         - type: point
                           node: &ref_126
-                            nodeType: point
+                            nodeType: huruf
                             key: b
                             parentPointSetNode: *ref_124
                           content:
@@ -1959,7 +1959,7 @@ content:
                             references: []
                         - type: point
                           node: &ref_127
-                            nodeType: point
+                            nodeType: huruf
                             key: c
                             parentPointSetNode: *ref_124
                           content:
@@ -2006,9 +2006,9 @@ content:
                         version:
                           type: pasalVersion
                           node: &ref_130
-                            nodeType: pasalVersion
+                            nodeType: versiPasal
                             version: *ref_62
-                            state: exists
+                            state: orisinal
                             parentPasalNode:
                               nodeType: pasal
                               key: '8'
@@ -2042,7 +2042,7 @@ content:
                                   elements:
                                     - type: point
                                       node: &ref_134
-                                        nodeType: point
+                                        nodeType: huruf
                                         key: a
                                         parentPointSetNode: *ref_133
                                       content:
@@ -2059,7 +2059,7 @@ content:
                                         references: []
                                     - type: point
                                       node: &ref_135
-                                        nodeType: point
+                                        nodeType: huruf
                                         key: b
                                         parentPointSetNode: *ref_133
                                       content:
@@ -2074,7 +2074,7 @@ content:
                                         references: []
                                     - type: point
                                       node: &ref_136
-                                        nodeType: point
+                                        nodeType: huruf
                                         key: c
                                         parentPointSetNode: *ref_133
                                       content:
@@ -2089,7 +2089,7 @@ content:
                                         references: []
                                     - type: point
                                       node: &ref_137
-                                        nodeType: point
+                                        nodeType: huruf
                                         key: d
                                         parentPointSetNode: *ref_133
                                       content:
@@ -2102,7 +2102,7 @@ content:
                                         references: []
                                     - type: point
                                       node: &ref_138
-                                        nodeType: point
+                                        nodeType: huruf
                                         key: e
                                         parentPointSetNode: *ref_133
                                       content:
@@ -2115,7 +2115,7 @@ content:
                                         references: []
                                     - type: point
                                       node: &ref_139
-                                        nodeType: point
+                                        nodeType: huruf
                                         key: f
                                         parentPointSetNode: *ref_133
                                       content:
@@ -2131,7 +2131,7 @@ content:
                                         references: []
                                     - type: point
                                       node: &ref_140
-                                        nodeType: point
+                                        nodeType: huruf
                                         key: g
                                         parentPointSetNode: *ref_133
                                       content:
@@ -2181,13 +2181,13 @@ content:
                                             parentAyatSetNode:
                                               nodeType: ayatSet
                                               parentPasalVersionNode: *ref_130
-                                        nodeType: point
+                                        nodeType: huruf
                                     - start: 153
                                       end: 154
                                       node:
                                         key: d
                                         parentPointSetNode: *ref_142
-                                        nodeType: point
+                                        nodeType: huruf
                                     - start: 144
                                       end: 151
                                       node:
@@ -2195,7 +2195,7 @@ content:
                                         parentPointSetNode:
                                           nodeType: pointSet
                                           parentNode: *ref_130
-                                        nodeType: point
+                                        nodeType: huruf
                       - type: pasal
                         node:
                           nodeType: pasal
@@ -2204,9 +2204,9 @@ content:
                         version:
                           type: pasalVersion
                           node: &ref_143
-                            nodeType: pasalVersion
+                            nodeType: versiPasal
                             version: *ref_62
-                            state: exists
+                            state: orisinal
                             parentPasalNode:
                               nodeType: pasal
                               key: '9'
@@ -2241,7 +2241,7 @@ content:
                                   elements:
                                     - type: point
                                       node: &ref_147
-                                        nodeType: point
+                                        nodeType: huruf
                                         key: a
                                         parentPointSetNode: *ref_146
                                       content:
@@ -2254,7 +2254,7 @@ content:
                                         references: []
                                     - type: point
                                       node: &ref_148
-                                        nodeType: point
+                                        nodeType: huruf
                                         key: b
                                         parentPointSetNode: *ref_146
                                       content:
@@ -2328,7 +2328,7 @@ content:
                                         parentPointSetNode:
                                           nodeType: pointSet
                                           parentNode: *ref_143
-                                        nodeType: point
+                                        nodeType: huruf
                 - type: paragraf
                   node: &ref_151
                     nodeType: paragraf
@@ -2351,9 +2351,9 @@ content:
                         version:
                           type: pasalVersion
                           node: &ref_152
-                            nodeType: pasalVersion
+                            nodeType: versiPasal
                             version: *ref_62
-                            state: exists
+                            state: orisinal
                             parentPasalNode:
                               nodeType: pasal
                               key: '10'
@@ -2376,7 +2376,7 @@ content:
                             elements:
                               - type: point
                                 node: &ref_154
-                                  nodeType: point
+                                  nodeType: huruf
                                   key: a
                                   parentPointSetNode: *ref_153
                                 content:
@@ -2391,7 +2391,7 @@ content:
                                   references: []
                               - type: point
                                 node: &ref_155
-                                  nodeType: point
+                                  nodeType: huruf
                                   key: b
                                   parentPointSetNode: *ref_153
                                 content:
@@ -2404,7 +2404,7 @@ content:
                                   references: []
                               - type: point
                                 node: &ref_156
-                                  nodeType: point
+                                  nodeType: huruf
                                   key: c
                                   parentPointSetNode: *ref_153
                                 content:
@@ -2417,7 +2417,7 @@ content:
                                   references: []
                               - type: point
                                 node: &ref_157
-                                  nodeType: point
+                                  nodeType: huruf
                                   key: d
                                   parentPointSetNode: *ref_153
                                 content:
@@ -2430,7 +2430,7 @@ content:
                                   references: []
                               - type: point
                                 node: &ref_158
-                                  nodeType: point
+                                  nodeType: huruf
                                   key: e
                                   parentPointSetNode: *ref_153
                                 content:
@@ -2443,7 +2443,7 @@ content:
                                   references: []
                               - type: point
                                 node: &ref_159
-                                  nodeType: point
+                                  nodeType: huruf
                                   key: f
                                   parentPointSetNode: *ref_153
                                 content:
@@ -2456,7 +2456,7 @@ content:
                                   references: []
                               - type: point
                                 node: &ref_160
-                                  nodeType: point
+                                  nodeType: huruf
                                   key: g
                                   parentPointSetNode: *ref_153
                                 content:
@@ -2469,7 +2469,7 @@ content:
                                   references: []
                               - type: point
                                 node: &ref_161
-                                  nodeType: point
+                                  nodeType: huruf
                                   key: h
                                   parentPointSetNode: *ref_153
                                 content:
@@ -2490,9 +2490,9 @@ content:
                         version:
                           type: pasalVersion
                           node: &ref_162
-                            nodeType: pasalVersion
+                            nodeType: versiPasal
                             version: *ref_62
-                            state: exists
+                            state: orisinal
                             parentPasalNode:
                               nodeType: pasal
                               key: '11'
@@ -2530,7 +2530,7 @@ content:
                                   elements:
                                     - type: point
                                       node: &ref_166
-                                        nodeType: point
+                                        nodeType: huruf
                                         key: a
                                         parentPointSetNode: *ref_165
                                       content:
@@ -2543,7 +2543,7 @@ content:
                                         references: []
                                     - type: point
                                       node: &ref_167
-                                        nodeType: point
+                                        nodeType: huruf
                                         key: b
                                         parentPointSetNode: *ref_165
                                       content:
@@ -2581,7 +2581,7 @@ content:
                                   elements:
                                     - type: point
                                       node: &ref_170
-                                        nodeType: point
+                                        nodeType: huruf
                                         key: a
                                         parentPointSetNode: *ref_169
                                       content:
@@ -2594,7 +2594,7 @@ content:
                                         references: []
                                     - type: point
                                       node: &ref_171
-                                        nodeType: point
+                                        nodeType: huruf
                                         key: b
                                         parentPointSetNode: *ref_169
                                       content:
@@ -2607,7 +2607,7 @@ content:
                                         references: []
                                     - type: point
                                       node: &ref_172
-                                        nodeType: point
+                                        nodeType: huruf
                                         key: c
                                         parentPointSetNode: *ref_169
                                       content:
@@ -2620,7 +2620,7 @@ content:
                                         references: []
                                     - type: point
                                       node: &ref_173
-                                        nodeType: point
+                                        nodeType: huruf
                                         key: d
                                         parentPointSetNode: *ref_169
                                       content:
@@ -2633,7 +2633,7 @@ content:
                                         references: []
                                     - type: point
                                       node: &ref_174
-                                        nodeType: point
+                                        nodeType: huruf
                                         key: e
                                         parentPointSetNode: *ref_169
                                       content:
@@ -2646,7 +2646,7 @@ content:
                                         references: []
                                     - type: point
                                       node: &ref_175
-                                        nodeType: point
+                                        nodeType: huruf
                                         key: f
                                         parentPointSetNode: *ref_169
                                       content:
@@ -2667,7 +2667,7 @@ content:
                                         elements:
                                           - type: point
                                             node: &ref_177
-                                              nodeType: point
+                                              nodeType: huruf
                                               key: a
                                               parentPointSetNode: *ref_176
                                             content:
@@ -2682,7 +2682,7 @@ content:
                                               references: []
                                           - type: point
                                             node: &ref_178
-                                              nodeType: point
+                                              nodeType: huruf
                                               key: b
                                               parentPointSetNode: *ref_176
                                             content:
@@ -2699,7 +2699,7 @@ content:
                                               references: []
                                           - type: point
                                             node: &ref_179
-                                              nodeType: point
+                                              nodeType: huruf
                                               key: c
                                               parentPointSetNode: *ref_176
                                             content:
@@ -2743,9 +2743,9 @@ content:
                         version:
                           type: pasalVersion
                           node: &ref_181
-                            nodeType: pasalVersion
+                            nodeType: versiPasal
                             version: *ref_62
-                            state: exists
+                            state: orisinal
                             parentPasalNode:
                               nodeType: pasal
                               key: '12'
@@ -2781,7 +2781,7 @@ content:
                                   elements:
                                     - type: point
                                       node: &ref_185
-                                        nodeType: point
+                                        nodeType: huruf
                                         key: a
                                         parentPointSetNode: *ref_184
                                       content:
@@ -2796,7 +2796,7 @@ content:
                                         references: []
                                     - type: point
                                       node: &ref_186
-                                        nodeType: point
+                                        nodeType: huruf
                                         key: b
                                         parentPointSetNode: *ref_184
                                       content:
@@ -2834,7 +2834,7 @@ content:
                                   elements:
                                     - type: point
                                       node: &ref_189
-                                        nodeType: point
+                                        nodeType: huruf
                                         key: a
                                         parentPointSetNode: *ref_188
                                       content:
@@ -2847,7 +2847,7 @@ content:
                                         references: []
                                     - type: point
                                       node: &ref_190
-                                        nodeType: point
+                                        nodeType: huruf
                                         key: b
                                         parentPointSetNode: *ref_188
                                       content:
@@ -2860,7 +2860,7 @@ content:
                                         references: []
                                     - type: point
                                       node: &ref_191
-                                        nodeType: point
+                                        nodeType: huruf
                                         key: c
                                         parentPointSetNode: *ref_188
                                       content:
@@ -2934,9 +2934,9 @@ content:
                         version:
                           type: pasalVersion
                           node: &ref_195
-                            nodeType: pasalVersion
+                            nodeType: versiPasal
                             version: *ref_62
-                            state: exists
+                            state: orisinal
                             parentPasalNode:
                               nodeType: pasal
                               key: '13'
@@ -2972,7 +2972,7 @@ content:
                                   elements:
                                     - type: point
                                       node: &ref_199
-                                        nodeType: point
+                                        nodeType: huruf
                                         key: a
                                         parentPointSetNode: *ref_198
                                       content:
@@ -2987,7 +2987,7 @@ content:
                                         references: []
                                     - type: point
                                       node: &ref_200
-                                        nodeType: point
+                                        nodeType: huruf
                                         key: b
                                         parentPointSetNode: *ref_198
                                       content:
@@ -3002,7 +3002,7 @@ content:
                                         references: []
                                     - type: point
                                       node: &ref_201
-                                        nodeType: point
+                                        nodeType: huruf
                                         key: c
                                         parentPointSetNode: *ref_198
                                       content:
@@ -3073,9 +3073,9 @@ content:
                         version:
                           type: pasalVersion
                           node: &ref_204
-                            nodeType: pasalVersion
+                            nodeType: versiPasal
                             version: *ref_62
-                            state: exists
+                            state: orisinal
                             parentPasalNode:
                               nodeType: pasal
                               key: '14'
@@ -3111,7 +3111,7 @@ content:
                                   elements:
                                     - type: point
                                       node: &ref_208
-                                        nodeType: point
+                                        nodeType: huruf
                                         key: a
                                         parentPointSetNode: *ref_207
                                       content:
@@ -3124,7 +3124,7 @@ content:
                                         references: []
                                     - type: point
                                       node: &ref_209
-                                        nodeType: point
+                                        nodeType: huruf
                                         key: b
                                         parentPointSetNode: *ref_207
                                       content:
@@ -3137,7 +3137,7 @@ content:
                                         references: []
                                     - type: point
                                       node: &ref_210
-                                        nodeType: point
+                                        nodeType: huruf
                                         key: c
                                         parentPointSetNode: *ref_207
                                       content:
@@ -3150,7 +3150,7 @@ content:
                                         references: []
                                     - type: point
                                       node: &ref_211
-                                        nodeType: point
+                                        nodeType: huruf
                                         key: d
                                         parentPointSetNode: *ref_207
                                       content:
@@ -3192,7 +3192,7 @@ content:
                                         parentPointSetNode:
                                           nodeType: pointSet
                                           parentNode: *ref_204
-                                        nodeType: point
+                                        nodeType: huruf
                               - type: ayat
                                 node: &ref_213
                                   nodeType: ayat
@@ -3224,7 +3224,7 @@ content:
                                         parentPointSetNode:
                                           nodeType: pointSet
                                           parentNode: *ref_204
-                                        nodeType: point
+                                        nodeType: huruf
                               - type: ayat
                                 node: &ref_214
                                   nodeType: ayat
@@ -3278,7 +3278,7 @@ content:
                                   elements:
                                     - type: point
                                       node: &ref_217
-                                        nodeType: point
+                                        nodeType: huruf
                                         key: a
                                         parentPointSetNode: *ref_216
                                       content:
@@ -3291,7 +3291,7 @@ content:
                                         references: []
                                     - type: point
                                       node: &ref_218
-                                        nodeType: point
+                                        nodeType: huruf
                                         key: b
                                         parentPointSetNode: *ref_216
                                       content:
@@ -3304,7 +3304,7 @@ content:
                                         references: []
                                     - type: point
                                       node: &ref_219
-                                        nodeType: point
+                                        nodeType: huruf
                                         key: c
                                         parentPointSetNode: *ref_216
                                       content:
@@ -3390,9 +3390,9 @@ content:
                         version:
                           type: pasalVersion
                           node: &ref_224
-                            nodeType: pasalVersion
+                            nodeType: versiPasal
                             version: *ref_62
-                            state: exists
+                            state: orisinal
                             parentPasalNode:
                               nodeType: pasal
                               key: '15'
@@ -3429,7 +3429,7 @@ content:
                                   elements:
                                     - type: point
                                       node: &ref_228
-                                        nodeType: point
+                                        nodeType: huruf
                                         key: a
                                         parentPointSetNode: *ref_227
                                       content:
@@ -3444,7 +3444,7 @@ content:
                                         references: []
                                     - type: point
                                       node: &ref_229
-                                        nodeType: point
+                                        nodeType: huruf
                                         key: b
                                         parentPointSetNode: *ref_227
                                       content:
@@ -3479,7 +3479,7 @@ content:
                                   elements:
                                     - type: point
                                       node: &ref_232
-                                        nodeType: point
+                                        nodeType: huruf
                                         key: a
                                         parentPointSetNode: *ref_231
                                       content:
@@ -3492,7 +3492,7 @@ content:
                                         references: []
                                     - type: point
                                       node: &ref_233
-                                        nodeType: point
+                                        nodeType: huruf
                                         key: b
                                         parentPointSetNode: *ref_231
                                       content:
@@ -3505,7 +3505,7 @@ content:
                                         references: []
                                     - type: point
                                       node: &ref_234
-                                        nodeType: point
+                                        nodeType: huruf
                                         key: c
                                         parentPointSetNode: *ref_231
                                       content:
@@ -3530,7 +3530,7 @@ content:
                                         elements:
                                           - type: point
                                             node: &ref_236
-                                              nodeType: point
+                                              nodeType: huruf
                                               key: a
                                               parentPointSetNode: *ref_235
                                             content:
@@ -3543,7 +3543,7 @@ content:
                                               references: []
                                           - type: point
                                             node: &ref_237
-                                              nodeType: point
+                                              nodeType: huruf
                                               key: b
                                               parentPointSetNode: *ref_235
                                             content:
@@ -3556,7 +3556,7 @@ content:
                                               references: []
                                           - type: point
                                             node: &ref_238
-                                              nodeType: point
+                                              nodeType: huruf
                                               key: c
                                               parentPointSetNode: *ref_235
                                             content:
@@ -3569,7 +3569,7 @@ content:
                                               references: []
                                     - type: point
                                       node: &ref_239
-                                        nodeType: point
+                                        nodeType: huruf
                                         key: d
                                         parentPointSetNode: *ref_231
                                       content:
@@ -3582,7 +3582,7 @@ content:
                                         references: []
                                     - type: point
                                       node: &ref_240
-                                        nodeType: point
+                                        nodeType: huruf
                                         key: e
                                         parentPointSetNode: *ref_231
                                       content:
@@ -3595,7 +3595,7 @@ content:
                                         references: []
                                     - type: point
                                       node: &ref_241
-                                        nodeType: point
+                                        nodeType: huruf
                                         key: f
                                         parentPointSetNode: *ref_231
                                       content:
@@ -3655,9 +3655,9 @@ content:
                         version:
                           type: pasalVersion
                           node: &ref_243
-                            nodeType: pasalVersion
+                            nodeType: versiPasal
                             version: *ref_62
-                            state: exists
+                            state: orisinal
                             parentPasalNode:
                               nodeType: pasal
                               key: '16'
@@ -3693,7 +3693,7 @@ content:
                                   elements:
                                     - type: point
                                       node: &ref_247
-                                        nodeType: point
+                                        nodeType: huruf
                                         key: a
                                         parentPointSetNode: *ref_246
                                       content:
@@ -3706,7 +3706,7 @@ content:
                                         references: []
                                     - type: point
                                       node: &ref_248
-                                        nodeType: point
+                                        nodeType: huruf
                                         key: b
                                         parentPointSetNode: *ref_246
                                       content:
@@ -3766,7 +3766,7 @@ content:
                                   elements:
                                     - type: point
                                       node: &ref_252
-                                        nodeType: point
+                                        nodeType: huruf
                                         key: a
                                         parentPointSetNode: *ref_251
                                       content:
@@ -3783,7 +3783,7 @@ content:
                                         references: []
                                     - type: point
                                       node: &ref_253
-                                        nodeType: point
+                                        nodeType: huruf
                                         key: b
                                         parentPointSetNode: *ref_251
                                       content:
@@ -3836,9 +3836,9 @@ content:
                         version:
                           type: pasalVersion
                           node: &ref_256
-                            nodeType: pasalVersion
+                            nodeType: versiPasal
                             version: *ref_62
-                            state: exists
+                            state: orisinal
                             parentPasalNode:
                               nodeType: pasal
                               key: '17'
@@ -3875,7 +3875,7 @@ content:
                                   elements:
                                     - type: point
                                       node: &ref_260
-                                        nodeType: point
+                                        nodeType: huruf
                                         key: a
                                         parentPointSetNode: *ref_259
                                       content:
@@ -3891,7 +3891,7 @@ content:
                                         references: []
                                     - type: point
                                       node: &ref_261
-                                        nodeType: point
+                                        nodeType: huruf
                                         key: b
                                         parentPointSetNode: *ref_259
                                       content:
@@ -3904,7 +3904,7 @@ content:
                                         references: []
                                     - type: point
                                       node: &ref_262
-                                        nodeType: point
+                                        nodeType: huruf
                                         key: c
                                         parentPointSetNode: *ref_259
                                       content:
@@ -3975,9 +3975,9 @@ content:
                         version:
                           type: pasalVersion
                           node: &ref_265
-                            nodeType: pasalVersion
+                            nodeType: versiPasal
                             version: *ref_62
-                            state: exists
+                            state: orisinal
                             parentPasalNode:
                               nodeType: pasal
                               key: '18'
@@ -4014,7 +4014,7 @@ content:
                                   elements:
                                     - type: point
                                       node: &ref_269
-                                        nodeType: point
+                                        nodeType: huruf
                                         key: a
                                         parentPointSetNode: *ref_268
                                       content:
@@ -4029,7 +4029,7 @@ content:
                                         references: []
                                     - type: point
                                       node: &ref_270
-                                        nodeType: point
+                                        nodeType: huruf
                                         key: b
                                         parentPointSetNode: *ref_268
                                       content:
@@ -4158,9 +4158,9 @@ content:
                   version:
                     type: pasalVersion
                     node: &ref_277
-                      nodeType: pasalVersion
+                      nodeType: versiPasal
                       version: *ref_62
-                      state: exists
+                      state: orisinal
                       parentPasalNode:
                         nodeType: pasal
                         key: '19'
@@ -4288,9 +4288,9 @@ content:
                   version:
                     type: pasalVersion
                     node: &ref_284
-                      nodeType: pasalVersion
+                      nodeType: versiPasal
                       version: *ref_62
-                      state: exists
+                      state: orisinal
                       parentPasalNode:
                         nodeType: pasal
                         key: '20'
@@ -4327,7 +4327,7 @@ content:
                             elements:
                               - type: point
                                 node: &ref_288
-                                  nodeType: point
+                                  nodeType: huruf
                                   key: a
                                   parentPointSetNode: *ref_287
                                 content:
@@ -4342,7 +4342,7 @@ content:
                                   references: []
                               - type: point
                                 node: &ref_289
-                                  nodeType: point
+                                  nodeType: huruf
                                   key: b
                                   parentPointSetNode: *ref_287
                                 content:
@@ -4359,7 +4359,7 @@ content:
                                   references: []
                               - type: point
                                 node: &ref_290
-                                  nodeType: point
+                                  nodeType: huruf
                                   key: c
                                   parentPointSetNode: *ref_287
                                 content:
@@ -4375,7 +4375,7 @@ content:
                                   references: []
                               - type: point
                                 node: &ref_291
-                                  nodeType: point
+                                  nodeType: huruf
                                   key: d
                                   parentPointSetNode: *ref_287
                                 content:
@@ -4391,7 +4391,7 @@ content:
                                   references: []
                               - type: point
                                 node: &ref_292
-                                  nodeType: point
+                                  nodeType: huruf
                                   key: e
                                   parentPointSetNode: *ref_287
                                 content:
@@ -4406,7 +4406,7 @@ content:
                                   references: []
                               - type: point
                                 node: &ref_293
-                                  nodeType: point
+                                  nodeType: huruf
                                   key: f
                                   parentPointSetNode: *ref_287
                                 content:
@@ -4445,7 +4445,7 @@ content:
                             elements:
                               - type: point
                                 node: &ref_296
-                                  nodeType: point
+                                  nodeType: huruf
                                   key: a
                                   parentPointSetNode: *ref_295
                                 content:
@@ -4458,7 +4458,7 @@ content:
                                   references: []
                               - type: point
                                 node: &ref_297
-                                  nodeType: point
+                                  nodeType: huruf
                                   key: b
                                   parentPointSetNode: *ref_295
                                 content:
@@ -4471,7 +4471,7 @@ content:
                                   references: []
                               - type: point
                                 node: &ref_298
-                                  nodeType: point
+                                  nodeType: huruf
                                   key: c
                                   parentPointSetNode: *ref_295
                                 content:
@@ -4484,7 +4484,7 @@ content:
                                   references: []
                               - type: point
                                 node: &ref_299
-                                  nodeType: point
+                                  nodeType: huruf
                                   key: d
                                   parentPointSetNode: *ref_295
                                 content:
@@ -4497,7 +4497,7 @@ content:
                                   references: []
                               - type: point
                                 node: &ref_300
-                                  nodeType: point
+                                  nodeType: huruf
                                   key: e
                                   parentPointSetNode: *ref_295
                                 content:
@@ -4510,7 +4510,7 @@ content:
                                   references: []
                               - type: point
                                 node: &ref_301
-                                  nodeType: point
+                                  nodeType: huruf
                                   key: f
                                   parentPointSetNode: *ref_295
                                 content:
@@ -4571,9 +4571,9 @@ content:
                   version:
                     type: pasalVersion
                     node: &ref_304
-                      nodeType: pasalVersion
+                      nodeType: versiPasal
                       version: *ref_62
-                      state: exists
+                      state: orisinal
                       parentPasalNode:
                         nodeType: pasal
                         key: '21'
@@ -4623,7 +4623,7 @@ content:
                             elements:
                               - type: point
                                 node: &ref_309
-                                  nodeType: point
+                                  nodeType: huruf
                                   key: a
                                   parentPointSetNode: *ref_308
                                 content:
@@ -4639,7 +4639,7 @@ content:
                                   references: []
                               - type: point
                                 node: &ref_310
-                                  nodeType: point
+                                  nodeType: huruf
                                   key: b
                                   parentPointSetNode: *ref_308
                                 content:
@@ -4663,9 +4663,9 @@ content:
                   version:
                     type: pasalVersion
                     node: &ref_311
-                      nodeType: pasalVersion
+                      nodeType: versiPasal
                       version: *ref_62
-                      state: exists
+                      state: orisinal
                       parentPasalNode:
                         nodeType: pasal
                         key: '22'
@@ -4725,7 +4725,7 @@ content:
                             elements:
                               - type: point
                                 node: &ref_316
-                                  nodeType: point
+                                  nodeType: huruf
                                   key: a
                                   parentPointSetNode: *ref_315
                                 content:
@@ -4738,7 +4738,7 @@ content:
                                   references: []
                               - type: point
                                 node: &ref_317
-                                  nodeType: point
+                                  nodeType: huruf
                                   key: b
                                   parentPointSetNode: *ref_315
                                 content:
@@ -4751,7 +4751,7 @@ content:
                                   references: []
                               - type: point
                                 node: &ref_318
-                                  nodeType: point
+                                  nodeType: huruf
                                   key: c
                                   parentPointSetNode: *ref_315
                                 content:
@@ -4764,7 +4764,7 @@ content:
                                   references: []
                               - type: point
                                 node: &ref_319
-                                  nodeType: point
+                                  nodeType: huruf
                                   key: d
                                   parentPointSetNode: *ref_315
                                 content:
@@ -4777,7 +4777,7 @@ content:
                                   references: []
                               - type: point
                                 node: &ref_320
-                                  nodeType: point
+                                  nodeType: huruf
                                   key: e
                                   parentPointSetNode: *ref_315
                                 content:
@@ -4790,7 +4790,7 @@ content:
                                   references: []
                               - type: point
                                 node: &ref_321
-                                  nodeType: point
+                                  nodeType: huruf
                                   key: f
                                   parentPointSetNode: *ref_315
                                 content:
@@ -4840,9 +4840,9 @@ content:
                   version:
                     type: pasalVersion
                     node: &ref_324
-                      nodeType: pasalVersion
+                      nodeType: versiPasal
                       version: *ref_62
-                      state: exists
+                      state: orisinal
                       parentPasalNode:
                         nodeType: pasal
                         key: '23'
@@ -4926,9 +4926,9 @@ content:
             version:
               type: pasalVersion
               node: &ref_330
-                nodeType: pasalVersion
+                nodeType: versiPasal
                 version: *ref_62
-                state: exists
+                state: orisinal
                 parentPasalNode:
                   nodeType: pasal
                   key: '24'
@@ -5016,9 +5016,9 @@ content:
                   version:
                     type: pasalVersion
                     node: &ref_336
-                      nodeType: pasalVersion
+                      nodeType: versiPasal
                       version: *ref_62
-                      state: exists
+                      state: orisinal
                       parentPasalNode:
                         nodeType: pasal
                         key: '25'
@@ -5052,7 +5052,7 @@ content:
                             elements:
                               - type: point
                                 node: &ref_340
-                                  nodeType: point
+                                  nodeType: huruf
                                   key: a
                                   parentPointSetNode: *ref_339
                                 content:
@@ -5067,7 +5067,7 @@ content:
                                   references: []
                               - type: point
                                 node: &ref_341
-                                  nodeType: point
+                                  nodeType: huruf
                                   key: b
                                   parentPointSetNode: *ref_339
                                 content:
@@ -5082,7 +5082,7 @@ content:
                                   references: []
                               - type: point
                                 node: &ref_342
-                                  nodeType: point
+                                  nodeType: huruf
                                   key: c
                                   parentPointSetNode: *ref_339
                                 content:
@@ -5097,7 +5097,7 @@ content:
                                   references: []
                               - type: point
                                 node: &ref_343
-                                  nodeType: point
+                                  nodeType: huruf
                                   key: d
                                   parentPointSetNode: *ref_339
                                 content:
@@ -5112,7 +5112,7 @@ content:
                                   references: []
                               - type: point
                                 node: &ref_344
-                                  nodeType: point
+                                  nodeType: huruf
                                   key: e
                                   parentPointSetNode: *ref_339
                                 content:
@@ -5146,7 +5146,7 @@ content:
                             elements:
                               - type: point
                                 node: &ref_347
-                                  nodeType: point
+                                  nodeType: huruf
                                   key: a
                                   parentPointSetNode: *ref_346
                                 content:
@@ -5161,7 +5161,7 @@ content:
                                   references: []
                               - type: point
                                 node: &ref_348
-                                  nodeType: point
+                                  nodeType: huruf
                                   key: b
                                   parentPointSetNode: *ref_346
                                 content:
@@ -5174,7 +5174,7 @@ content:
                                   references: []
                               - type: point
                                 node: &ref_349
-                                  nodeType: point
+                                  nodeType: huruf
                                   key: c
                                   parentPointSetNode: *ref_346
                                 content:
@@ -5187,7 +5187,7 @@ content:
                                   references: []
                               - type: point
                                 node: &ref_350
-                                  nodeType: point
+                                  nodeType: huruf
                                   key: d
                                   parentPointSetNode: *ref_346
                                 content:
@@ -5202,7 +5202,7 @@ content:
                                   references: []
                               - type: point
                                 node: &ref_351
-                                  nodeType: point
+                                  nodeType: huruf
                                   key: e
                                   parentPointSetNode: *ref_346
                                 content:
@@ -5215,7 +5215,7 @@ content:
                                   references: []
                               - type: point
                                 node: &ref_352
-                                  nodeType: point
+                                  nodeType: huruf
                                   key: f
                                   parentPointSetNode: *ref_346
                                 content:
@@ -5230,7 +5230,7 @@ content:
                                   references: []
                               - type: point
                                 node: &ref_353
-                                  nodeType: point
+                                  nodeType: huruf
                                   key: g
                                   parentPointSetNode: *ref_346
                                 content:
@@ -5280,9 +5280,9 @@ content:
                   version:
                     type: pasalVersion
                     node: &ref_356
-                      nodeType: pasalVersion
+                      nodeType: versiPasal
                       version: *ref_62
-                      state: exists
+                      state: orisinal
                       parentPasalNode:
                         nodeType: pasal
                         key: '26'
@@ -5417,9 +5417,9 @@ content:
             version:
               type: pasalVersion
               node: &ref_364
-                nodeType: pasalVersion
+                nodeType: versiPasal
                 version: *ref_62
-                state: exists
+                state: orisinal
                 parentPasalNode:
                   nodeType: pasal
                   key: '27'
@@ -5505,9 +5505,9 @@ content:
             version:
               type: pasalVersion
               node: &ref_370
-                nodeType: pasalVersion
+                nodeType: versiPasal
                 version: *ref_62
-                state: exists
+                state: orisinal
                 parentPasalNode:
                   nodeType: pasal
                   key: '28'
@@ -5530,7 +5530,7 @@ content:
                 elements:
                   - type: point
                     node: &ref_372
-                      nodeType: point
+                      nodeType: huruf
                       key: a
                       parentPointSetNode: *ref_371
                     content:
@@ -5543,7 +5543,7 @@ content:
                       references: []
                   - type: point
                     node: &ref_373
-                      nodeType: point
+                      nodeType: huruf
                       key: b
                       parentPointSetNode: *ref_371
                     content:
@@ -5576,9 +5576,9 @@ content:
             version:
               type: pasalVersion
               node: &ref_375
-                nodeType: pasalVersion
+                nodeType: versiPasal
                 version: *ref_62
-                state: exists
+                state: orisinal
                 parentPasalNode:
                   nodeType: pasal
                   key: '29'
@@ -5603,9 +5603,9 @@ content:
             version:
               type: pasalVersion
               node: &ref_376
-                nodeType: pasalVersion
+                nodeType: versiPasal
                 version: *ref_62
-                state: exists
+                state: orisinal
                 parentPasalNode:
                   nodeType: pasal
                   key: '30'
@@ -5629,9 +5629,9 @@ content:
             version:
               type: pasalVersion
               node: &ref_377
-                nodeType: pasalVersion
+                nodeType: versiPasal
                 version: *ref_62
-                state: exists
+                state: orisinal
                 parentPasalNode:
                   nodeType: pasal
                   key: '31'
@@ -5690,9 +5690,9 @@ content:
             version:
               type: pasalVersion
               node: &ref_381
-                nodeType: pasalVersion
+                nodeType: versiPasal
                 version: *ref_62
-                state: exists
+                state: orisinal
                 parentPasalNode:
                   nodeType: pasal
                   key: '32'
@@ -5728,9 +5728,9 @@ content:
             version:
               type: pasalVersion
               node: &ref_383
-                nodeType: pasalVersion
+                nodeType: versiPasal
                 version: *ref_62
-                state: exists
+                state: orisinal
                 parentPasalNode:
                   nodeType: pasal
                   key: '33'
@@ -5754,9 +5754,9 @@ content:
             version:
               type: pasalVersion
               node: &ref_384
-                nodeType: pasalVersion
+                nodeType: versiPasal
                 version: *ref_62
-                state: exists
+                state: orisinal
                 parentPasalNode:
                   nodeType: pasal
                   key: '34'
@@ -5779,9 +5779,9 @@ content:
             version:
               type: pasalVersion
               node: &ref_385
-                nodeType: pasalVersion
+                nodeType: versiPasal
                 version: *ref_62
-                state: exists
+                state: orisinal
                 parentPasalNode:
                   nodeType: pasal
                   key: '35'
