@@ -335,6 +335,8 @@ Pergub di ELI :)
 
 # BAB 3 METODOLOGI
 
+// TODO: Maintained docs masukin sini
+
 // TODO: Utk yg metodologi, sbnrnya standar aja, dimulai dari pertanyaan riset,
 lalu pengembangan ontology (URI scheming masuk ke pengembagan ontology),
 pengembangan sistem konversi, baru lalu use case evaluation (ini yg legal KG
@@ -843,9 +845,9 @@ visualization
 
 ## Query
 
-# BAB 5 EVALUASI DAN ANALISIS HASIL
+Fuseki
 
-## Maintained docs masukin mana?
+# BAB 5 EVALUASI DAN ANALISIS HASIL
 
 ## Aplikasi Knowledge Graph Peraturan Perundang-undangan
 
