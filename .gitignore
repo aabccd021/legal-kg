@@ -11,3 +11,16 @@ legal-config.json
 uuri_unsorted.ttl
 uuri.ttl
 fuseki/run
+*.aux
+*.bbl
+*.blg
+*.fdb_latexmk
+*.fls
+*.lof
+*.log
+*.lol
+*.lot
+*.lox
+*.out
+*.toc
+*.gz
