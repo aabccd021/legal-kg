@@ -37,14 +37,14 @@ sebagai \textbf{Creator} dan contoh kesalahan pemindaiannya yang banyak
 terjadi.
 
 \begin{table}
-	\centering
-	\begin{tabular}{|l|l|l|}
-		\hline
-		Dokumen                & \_\_Creator\_\_        & Kesalahan pemindaian        \\ \hline
-		UU Nomor 13 Tahun 2003 & ScanSoft PDF Create! 4 & - (tidak ada)               \\ \hline
-		UU Nomor 6 Tahun 2018  & Canon                  & `(2)` selalu dipindai `(21` \\ \hline
-		PP Nomor 34 Tahun 2021 & Fuji Xerox B9100       & data teks tidak terbaca     \\ \hline
-	\end{tabular}
+  \centering
+  \begin{tabular}{|l|l|l|}
+    \hline
+    Dokumen                & \_\_Creator\_\_        & Kesalahan pemindaian        \\ \hline
+    UU Nomor 13 Tahun 2003 & ScanSoft PDF Create! 4 & - (tidak ada)               \\ \hline
+    UU Nomor 6 Tahun 2018  & Canon                  & `(2)` selalu dipindai `(21` \\ \hline
+    PP Nomor 34 Tahun 2021 & Fuji Xerox B9100       & data teks tidak terbaca     \\ \hline
+  \end{tabular}
 \end{table}
 
 Pemindaian berkas PDF dengan metode yang berbeda-beda memberikan
@@ -107,35 +107,35 @@ berupa daftar teks dan posisinya yang selanjutnya akan disebut
 adalah data yang dimiliki oleh sebuah \emph{span}:
 
 \begin{itemize}
-	\itemsep1pt\parskip0pt\parsep0pt
-	\item
-	      \texttt{str}: teks yand dikandung
-	\item
-	      \texttt{xL}: koordinat titik terkiri dari \emph{span}
-	\item
-	      \texttt{xR}: koordinat titik terkanan dari \emph{span}
-	\item
-	      \texttt{y}: koordinat titik teratas dari \emph{span}
-	\item
-	      \texttt{pageNum}: nomor halaman
-	\item
-	      \texttt{id}: \emph{identifier} unik untuk setiap span
+  \itemsep1pt\parskip0pt\parsep0pt
+  \item
+        \texttt{str}: teks yand dikandung
+  \item
+        \texttt{xL}: koordinat titik terkiri dari \emph{span}
+  \item
+        \texttt{xR}: koordinat titik terkanan dari \emph{span}
+  \item
+        \texttt{y}: koordinat titik teratas dari \emph{span}
+  \item
+        \texttt{pageNum}: nomor halaman
+  \item
+        \texttt{id}: \emph{identifier} unik untuk setiap span
 \end{itemize}
 
 Berikut adalah contoh gambaran berkas PDF dan hasil ekstraksinya menjadi
 daftar \emph{span}.
 
 \begin{figure}[htbp]
-	\centering
-	\includegraphics{pictures/pdf_example.png}
-	\caption{Gambar berkas PDF yang akan diekstraksi}
+  \centering
+  \includegraphics{pictures/pdf_example.png}
+  \caption{Gambar berkas PDF yang akan diekstraksi}
 \end{figure}
 
 akan dipindai menjadi
 
 % \begin{lstlisting}[language=bash]
 % \end{lstlisting}
-\begin{minted}[gobble=4, frame=single, linenos]{yaml}
+\begin{minted}[frame=single, linenos]{yaml}
 - xL: 197.52
   xR: 442.79990000000004
   'y': 234.48000000000002
@@ -172,9 +172,9 @@ sumber yang sama sehingga memiliki format yang sama, dan juga posisi
 \emph{header} dan \emph{footer} yang hampir sama pada setiap dokumen.
 
 \begin{figure}[htbp]
-	\centering
-	\includegraphics{pictures/pdf_header.png}
-	\caption{Contoh Header}
+  \centering
+  \includegraphics{pictures/pdf_header.png}
+  \caption{Contoh Header}
 \end{figure}
 
 Gambar diatas adalah contoh \emph{header} yang terdapat pada setiap
@@ -275,9 +275,9 @@ pasal. Pengelompokan bertingkat ini dilakukan agar fungsi untuk
 mendeteksi batas antara komponen tidak menjadi rumit.
 
 \begin{figure}[htbp]
-	\centering
-	\includegraphics{pictures/pdf_to_component.png}
-	\caption{Ilustrasi Ekstraksi Daftar Span menjadi Data Struktur Komponen}
+  \centering
+  \includegraphics{pictures/pdf_to_component.png}
+  \caption{Ilustrasi Ekstraksi Daftar Span menjadi Data Struktur Komponen}
 \end{figure}
 
 Deteksi batas antara komponen atau \emph{section} dilakukan dengan
@@ -292,19 +292,19 @@ setelah span \textbf{Menimbang} tersebut akan dikelompokkan menjadi
 \emph{section} \texttt{metadata} sampai menemukan section yang diawali
 kata \textbf{BAB I}.
 
-\subsubsection{Pengelompokan \emph{span} pada Komponen
-	Terurut}\label{pengelompokan-span-pada-komponen-terurut}
+\subsection{Pengelompokan \emph{span} pada Komponen
+  Terurut}\label{pengelompokan-span-pada-komponen-terurut}
 
 Beberapa komponen seperti \texttt{bab}, \texttt{bagian},
 \texttt{paragraf}, \texttt{pasal}, \texttt{angka}, dan \texttt{huruf}
 memiliki sifat terurut. Dalam hal ini, yang termasuk terurut adalah:
 
 \begin{itemize}
-	\itemsep1pt\parskip0pt\parsep0pt
-	\item
-	      Komponen yang mengawali suatu komponen terurut akan selalu sama.
-	\item
-	      Hanya terdapat satu komponen yang dapat mengikuti komponen terurut.
+  \itemsep1pt\parskip0pt\parsep0pt
+  \item
+        Komponen yang mengawali suatu komponen terurut akan selalu sama.
+  \item
+        Hanya terdapat satu komponen yang dapat mengikuti komponen terurut.
 \end{itemize}
 
 Contoh dari sifat pertama adalah \texttt{bab}, \texttt{bagian},
@@ -332,9 +332,9 @@ pembedaan antara ``Pasal biasa'' dan ``Pasal peng-amandemen'' menjadi
 sulit dilakukan.
 
 \begin{figure}[htbp]
-	\centering
-	\includegraphics{pictures/pdf_amendment.png}
-	\caption{Contoh Amendemen pada UU Nomor 11 Tahun 2020}
+  \centering
+  \includegraphics{pictures/pdf_amendment.png}
+  \caption{Contoh Amendemen pada UU Nomor 11 Tahun 2020}
 \end{figure}
 
 Untuk menyelesaikan masalah ini, penulis menggunakan koordinat
@@ -348,9 +348,9 @@ Pembedaan pasal biasa dan pasal amandemen hanya dilakukan jika dokumen
 memiliki komponen berupa amandemen.
 
 \begin{figure}[htbp]
-	\centering
-	\includegraphics{pictures/amendment_detection.png}
-	\caption{Deteksi Komponen Amandemen}
+  \centering
+  \includegraphics{pictures/amendment_detection.png}
+  \caption{Deteksi Komponen Amandemen}
 \end{figure}
 
 \section{Deteksi Sitasi}\label{deteksi-sitasi}
@@ -362,52 +362,52 @@ perundang-undangan lainnya. Berikut adalah daftar pola sitasi yang
 berhasil dideteksi pada penelitian ini.
 
 \begin{longtable}[c]{@{}lll@{}}
-	\toprule\addlinespace
-	Pola                                                     & Contoh teks                  & URI Terdeteksi
-	\\\addlinespace
-	\midrule\endhead
-	Undang Undang Dasar Negara Republik Indonesia Tahun 1945 & Undang Undang
-	Dasar Negara Republik Indonesia Tahun 1945               & /uud/
-	\\\addlinespace
-	Undang-Undang Nomor \{x\} Tahun \{y\}                    & Undang-Undang Nomor 26 Tahun
-	2007                                                     & /uu/2007/26
-	\\\addlinespace
-	ayat (\{x\})                                             & ayat (1)                     & /uu/2003/13/pasal/169/ayat/1
-	\\\addlinespace
-	Pasal \{x\}                                              & Pasal 156                    & /uu/2003/13/pasal/156
-	\\\addlinespace
-	Pasal \{x\} ayat (\{y\})                                 & Pasal 156 ayat (2)           &
-	/uu/2003/13/pasal/156/ayat/2
-	\\\addlinespace
-	huruf \{x\}, \{y\}, \ldots{} dan \{z\}                   & huruf a, b, c, d, dan e      &
-	/uu/2003/13/menimbang/point/a
-	\\\addlinespace
-	                                                         &                              & /uu/2003/13/menimbang/point/b
-	\\\addlinespace
-	                                                         &                              & /uu/2003/13/menimbang/point/c
-	\\\addlinespace
-	                                                         &                              & /uu/2003/13/menimbang/point/d
-	\\\addlinespace
-	                                                         &                              & /uu/2003/13/menimbang/point/e
-	\\\addlinespace
-	huruf \{x\} dan \{y\}                                    & huruf a dan b                &
-	/uu/2003/13/pasal/1/point/5/point/a
-	\\\addlinespace
-	                                                         &                              & /uu/2003/13/pasal/1/point/5/point/b
-	\\\addlinespace
-	\bottomrule
+  \toprule\addlinespace
+  Pola                                                     & Contoh teks                  & URI Terdeteksi
+  \\\addlinespace
+  \midrule\endhead
+  Undang Undang Dasar Negara Republik Indonesia Tahun 1945 & Undang Undang
+  Dasar Negara Republik Indonesia Tahun 1945               & /uud/
+  \\\addlinespace
+  Undang-Undang Nomor \{x\} Tahun \{y\}                    & Undang-Undang Nomor 26 Tahun
+  2007                                                     & /uu/2007/26
+  \\\addlinespace
+  ayat (\{x\})                                             & ayat (1)                     & /uu/2003/13/pasal/169/ayat/1
+  \\\addlinespace
+  Pasal \{x\}                                              & Pasal 156                    & /uu/2003/13/pasal/156
+  \\\addlinespace
+  Pasal \{x\} ayat (\{y\})                                 & Pasal 156 ayat (2)           &
+  /uu/2003/13/pasal/156/ayat/2
+  \\\addlinespace
+  huruf \{x\}, \{y\}, \ldots{} dan \{z\}                   & huruf a, b, c, d, dan e      &
+  /uu/2003/13/menimbang/point/a
+  \\\addlinespace
+                                                           &                              & /uu/2003/13/menimbang/point/b
+  \\\addlinespace
+                                                           &                              & /uu/2003/13/menimbang/point/c
+  \\\addlinespace
+                                                           &                              & /uu/2003/13/menimbang/point/d
+  \\\addlinespace
+                                                           &                              & /uu/2003/13/menimbang/point/e
+  \\\addlinespace
+  huruf \{x\} dan \{y\}                                    & huruf a dan b                &
+  /uu/2003/13/pasal/1/point/5/point/a
+  \\\addlinespace
+                                                           &                              & /uu/2003/13/pasal/1/point/5/point/b
+  \\\addlinespace
+  \bottomrule
 \end{longtable}
 
 Data sitasi mengandung data sebagai berikut:
 
 \begin{itemize}
-	\itemsep1pt\parskip0pt\parsep0pt
-	\item
-	      \texttt{start}: \emph{index} karakter awal sitasi
-	\item
-	      \texttt{end}: \emph{index} karakter akhir sitasi
-	\item
-	      \texttt{uri}: URI dokumen dan
+  \itemsep1pt\parskip0pt\parsep0pt
+  \item
+        \texttt{start}: \emph{index} karakter awal sitasi
+  \item
+        \texttt{end}: \emph{index} karakter akhir sitasi
+  \item
+        \texttt{uri}: URI dokumen dan
 \end{itemize}
 
 Berikut adalah contoh teks pada Undang-Undang Nomor 13 Tahun 2003 Pasal
@@ -434,17 +434,17 @@ Tahun 2003 Pasal 158 Ayat (4) akan terdeteksi sebagai 3 URI sitasi
 sebagai berikut.
 
 \begin{longtable}[c]{@{}ll@{}}
-	\toprule\addlinespace
-	Teks               & URI
-	\\\addlinespace
-	\midrule\endhead
-	Pasal 156 Ayat (4) & \texttt{/uu/2003/13/pasal/156/ayat/4}
-	\\\addlinespace
-	Pasal 156          & \texttt{/uu/2003/13/pasal/156}
-	\\\addlinespace
-	Ayat (4)           & \texttt{/uu/2003/13/pasal/158/ayat/4}
-	\\\addlinespace
-	\bottomrule
+  \toprule\addlinespace
+  Teks               & URI
+  \\\addlinespace
+  \midrule\endhead
+  Pasal 156 Ayat (4) & \texttt{/uu/2003/13/pasal/156/ayat/4}
+  \\\addlinespace
+  Pasal 156          & \texttt{/uu/2003/13/pasal/156}
+  \\\addlinespace
+  Ayat (4)           & \texttt{/uu/2003/13/pasal/158/ayat/4}
+  \\\addlinespace
+  \bottomrule
 \end{longtable}
 
 Pada kasus ini, yang akan diambil adalah teks ``Pasal 156 ayat (4)''
@@ -456,9 +456,9 @@ visualization
 
 \section{Data to triple}\label{data-to-triple}
 
-\subsubsection{triple definition}\label{triple-definition}
+\section{triple definition}\label{triple-definition}
 
-\subsubsection{triple to ttl}\label{triple-to-ttl}
+\section{triple to ttl}\label{triple-to-ttl}
 
 \section{Query}\label{query}
 
