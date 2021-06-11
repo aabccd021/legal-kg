@@ -1,15 +1,12 @@
 %
 % Template Laporan Skripsi/Thesis Universitas Indonesia
 %
-% @author  Ichlasul Affan, Azhar Kurnia
-% @version 2.02
+% @author  Ichlasul Affan, Azhar Kurnia @version 2.02
 %
-% Dokumen ini dibuat berdasarkan standar IEEE dalam membuat class untuk
-% LaTeX dan konfigurasi LaTeX yang digunakan Fahrurrozi Rahman ketika
-% membuat laporan skripsi, yang kemudian diadaptasi oleh Andreas Febrian dan
-% Lia Sadita untuk template skripsi tahun 2010.
-% Konfigurasi template sebelumnya telah disesuaikan dengan
-% aturan penulisan thesis yang dikeluarkan UI pada tahun 2017.
+% Dokumen ini dibuat berdasarkan standar IEEE dalam membuat class untuk LaTeX dan konfigurasi LaTeX
+% yang digunakan Fahrurrozi Rahman ketika membuat laporan skripsi, yang kemudian diadaptasi oleh
+% Andreas Febrian dan Lia Sadita untuk template skripsi tahun 2010. Konfigurasi template sebelumnya
+% telah disesuaikan dengan aturan penulisan thesis yang dikeluarkan UI pada tahun 2017.
 %
 
 %
@@ -86,13 +83,12 @@
 %
 \pagestyle{first-pages}
 \fancypagestyle{plain}{
-    \fancyhead[L]{}
-    \fancyhead[C]{}
-    \fancyhead[R]{}
-    \fancyfoot[L]{}
-    \fancyfoot[C]{\thepage}
-    \fancyfoot[R]{\footnotesize \fontfamily{phv} \selectfont \bo{Universitas Indonesia}}
-}
+  \fancyhead[L]{}
+  \fancyhead[C]{}
+  \fancyhead[R]{}
+  \fancyfoot[L]{}
+  \fancyfoot[C]{\thepage}
+  \fancyfoot[R]{\footnotesize \fontfamily{phv} \selectfont \bo{Universitas Indonesia}}}
 
 %
 \addChapter{ABSTRAK}
@@ -126,21 +122,15 @@
 \onehalfspacing
 
 %
-% Daftar Isi yang Didefinisikan Sendiri (Custom)
-% Definisi jenis objek baru dapat dilakukan di uithesis.sty
-% Uncomment to use.
+% Daftar Isi yang Didefinisikan Sendiri (Custom) Definisi jenis objek baru dapat dilakukan di
+% uithesis.sty Uncomment to use.
 %
 
-%\phantomsection %hack to make them clickable
-%\addcontentsline{toc}{chapter}{\listofthingname}
-%\singlespacing
-%\listofthing
-%\onehalfspacing
-%\clearpage
+%\phantomsection %hack to make them clickable \addcontentsline{toc}{chapter}{\listofthingname}
+%\singlespacing \listofthing \onehalfspacing \clearpage
 
 %
-% Daftar Lampiran
-% Comment to disable.
+% Daftar Lampiran Comment to disable.
 %
 \phantomsection %hack to make them clickable
 \addcontentsline{toc}{chapter}{\listofappendixname}
@@ -151,8 +141,7 @@
 
 % Jika penomoran romawi selesai di ganjil
 \naiveoddclearchapter
-% Jika penomoran romawi selesai di genap
-%\naiveevenclearchapter
+% Jika penomoran romawi selesai di genap \naiveevenclearchapter
 
 %
 % Gunakan penomeran Arab (1, 2, 3, ...) setelah bagian ini.
@@ -185,13 +174,13 @@
 % Lampiran
 %
 \begin{appendix}
-    \newcounter{pagetemp}
-    \setcounter{pagetemp}{\thepage}
-    \include{markLampiran}
-    \clearchapter
-    \setcounter{page}{\thepagetemp}
-    \stepcounter{page}
-    \include{lampiran}
+  \newcounter{pagetemp}
+  \setcounter{pagetemp}{\thepage}
+  \include{markLampiran}
+  \clearchapter
+  \setcounter{page}{\thepagetemp}
+  \stepcounter{page}
+  \include{lampiran}
 \end{appendix}
 
 \end{document}

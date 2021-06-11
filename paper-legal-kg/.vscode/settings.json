@@ -1,4 +1,8 @@
 {
+  "[latex]": {
+    "editor.tabSize": 2,
+    "editor.insertSpaces": true
+  },
   "latex-workshop.message.badbox.show": false,
   "latex-workshop.latex.tools": [
     {
@@ -39,8 +43,6 @@
       "tools": [
         "pdflatex",
         "bibtex",
-        "pdflatex",
-        "pdflatex"
       ]
     }
   ]

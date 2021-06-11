@@ -6,84 +6,69 @@
 \section{Latar Belakang}\label{sec:latar-belakang}
 %-----------------------------------------------------------------------------%
 
-Peraturan perundang-undangan adalah peraturan tertulis yang memuat norma hukum
-yang mengikat secara umum dan dibentuk atau ditetapkan oleh lembaga negara atau
-pejabat yang berwenang melalui prosedur yang ditetapkan dalam peraturan
-perundang-undangan, sesuai yang dijelaskan dalam UU Nomor 12 Tahun 2011 Pasal 1
-Ayat 2 \citep{uu-2011-12}. Peraturan perundang-undangan dapat digunakan untuk menjawab pertanyaan
-yang berkaitan dengan hukum, seperti:
+Peraturan perundang-undangan adalah peraturan tertulis yang memuat norma hukum yang mengikat secara
+umum dan dibentuk atau ditetapkan oleh lembaga negara atau pejabat yang berwenang melalui prosedur
+yang ditetapkan dalam peraturan perundang-undangan, sesuai yang dijelaskan dalam UU Nomor 12 Tahun
+2011 Pasal 1 Ayat 2 \citep{uu-2011-12}. Peraturan perundang-undangan dapat digunakan untuk menjawab
+pertanyaan yang berkaitan dengan hukum, seperti:
 
 \begin{itemize}
-      \itemsep1pt\parskip0pt\parsep0pt
-      \item
-            Peraturan apa saja yang berlaku pada suatu daerah?
-      \item
-            Apa hubungan suatu peraturan dengan peraturan lain?
-      \item
-            Apa saja peraturan yang mengatur suatu topik?
+  \item Peraturan apa saja yang berlaku pada suatu daerah?
+  \item Apa hubungan suatu peraturan dengan peraturan lain?
+  \item Apa saja peraturan yang mengatur suatu topik?
 \end{itemize}
 
-Pertanyaan-pertanyaan tersebut umumnya dapat dijawab oleh seorang ahli hukum,
-artinya penerapan peraturan perundang-undangan ini hanya dapat dilakukan dalam
-skala kecil dan biaya relatif mahal. Komputer dapat menjadi alternatif untuk
-aplikasi tersebut dalam skala lebih besar dan biaya lebih murah, jika peraturan
-perundang-undangan berupa data terstruktur yang dapat diolah oleh komputer.
-Sayangnya, data peraturan perundang-undangan umumnya dibuat dalam bentuk data
-semi-terstruktur, yaitu berupa dokumen yang memiliki data terstruktur seperti
-aturan penomoran dan aturan struktur (seperti bab, pasal, dan ayat), tetapi
-penulisan peraturan sendiri dalam bentuk data tidak terstruktur yaitu teks
-bahasa manusia.
+Pertanyaan-pertanyaan tersebut umumnya dapat dijawab oleh seorang ahli hukum, artinya penerapan
+peraturan perundang-undangan ini hanya dapat dilakukan dalam skala kecil dan biaya relatif mahal.
+Komputer dapat menjadi alternatif untuk aplikasi tersebut dalam skala lebih besar dan biaya lebih
+murah, jika peraturan perundang-undangan berupa data terstruktur yang dapat diolah oleh komputer.
+Sayangnya, data peraturan perundang-undangan umumnya dibuat dalam bentuk data semi-terstruktur,
+yaitu berupa dokumen yang memiliki data terstruktur seperti aturan penomoran dan aturan struktur
+(seperti bab, pasal, dan ayat), tetapi penulisan peraturan sendiri dalam bentuk data tidak
+terstruktur yaitu teks bahasa manusia.
 
 \begin{figure}[htbp]
-      \centering
-      \includegraphics[width=\textwidth]{pictures/terstruktur.png}
-      \caption{Data Terstruktur dan Tidak Terstruktur dari Dokumen}
+  \centering
+  \includegraphics[width=\textwidth]{pictures/terstruktur.png}
+  \caption{Data Terstruktur dan Tidak Terstruktur dari Dokumen}
 \end{figure}
 
 \begin{figure}[htbp]
-      \centering
-      \includegraphics{pictures/terstruktur_parsed.png}
-      \caption{Hasil Parsing Data Terstruktur dan Tidak Terstruktur dari
-            Dokumen}
+  \centering
+  \includegraphics{pictures/terstruktur_parsed.png}
+  \caption{Hasil Parsing Data Terstruktur dan Tidak Terstruktur dari Dokumen}
 \end{figure}
 
-Gambar diatas merupakan salah satu contoh ekstraksi informasi dari UU No.11
-Tahun 2020 tentang Ketenagakerjaan. Pada gambar diatas, dapat dilihat bahwa
-sebagian informasi dapat diekstraksi dari sifat terstruktur dokumen peraturan
-perundang-undangan (ditandai dengan warna merah), dan sebagian informasi lainnya
-dapat diekstraksi dari data tidak terstruktur beruba teks (ditandai dengan warna
-biru). Untuk melakukan ekstraksi informasi tidak terstruktur seperti pada gambar
-yaitu ``UU No.11 Tahun 2020 Pasal 6 menyebut UU No.11 Tahun 2020 Pasal 5 ayat
-(1) huruf a'', manusia pertama-tama perlu membaca dari awal kalimat sampai
-menemukan pola \emph{string} yang merujuk kepada suatu komponen dokumen
-peraturan perundang-undangan, kemudian meng-\emph{infer} informasi lengkap dari
-komponen tersebut. Proses konversi \emph{string} ``Pasal 5 ayat (1) huruf a''
-menjadi informasi lengkap ``UU No.11 Tahun 2020 Pasal 5 ayat (1) huruf a'' perlu
-dilakukan secara manual oleh manusia.
+Gambar diatas merupakan salah satu contoh ekstraksi informasi dari UU No.11 Tahun 2020 tentang
+Ketenagakerjaan. Pada gambar diatas, dapat dilihat bahwa sebagian informasi dapat diekstraksi dari
+sifat terstruktur dokumen peraturan perundang-undangan (ditandai dengan warna merah), dan sebagian
+informasi lainnya dapat diekstraksi dari data tidak terstruktur beruba teks (ditandai dengan warna
+biru). Untuk melakukan ekstraksi informasi tidak terstruktur seperti pada gambar yaitu ``UU No.11
+Tahun 2020 Pasal 6 menyebut UU No.11 Tahun 2020 Pasal 5 ayat (1) huruf a'', manusia pertama-tama
+perlu membaca dari awal kalimat sampai menemukan pola \emph{string} yang merujuk kepada suatu
+komponen dokumen peraturan perundang-undangan, kemudian meng-\emph{infer} informasi lengkap dari
+komponen tersebut. Proses konversi \emph{string} ``Pasal 5 ayat (1) huruf a'' menjadi informasi
+lengkap ``UU No.11 Tahun 2020 Pasal 5 ayat (1) huruf a'' perlu dilakukan secara manual oleh manusia.
 
-Dengan melakukan ekstraksi data dari data tidak terstruktur pada dokumen,
-digabung dengan data yang sudah terstruktur, peraturan perundang-undangan dapat
-diubah menjadi dapat diolah oleh komputer. Selain dapat menjawab pertanyaan,
-representasi \emph{knowledge graph} juga dapat digunakan untuk analisis karena
-data sudah terstruktur. Representasi \emph{knowledge graph} juga memungkinkan
-untuk dapat melakukan \emph{reasoning}. Pada skripsi ini, akan dilakukan
-konversi dokumen peraturan perundang-undangan menjadi data terstruktur dalam
-bentuk \emph{knowledge graph}, dan memberikan contoh pengaplikasian dari
-\emph{knowledge graph} peraturan perundang-undangan tersebut.
+Dengan melakukan ekstraksi data dari data tidak terstruktur pada dokumen, digabung dengan data yang
+sudah terstruktur, peraturan perundang-undangan dapat diubah menjadi dapat diolah oleh komputer.
+Selain dapat menjawab pertanyaan, representasi \emph{knowledge graph} juga dapat digunakan untuk
+analisis karena data sudah terstruktur. Representasi \emph{knowledge graph} juga memungkinkan untuk
+dapat melakukan \emph{reasoning}. Pada skripsi ini, akan dilakukan konversi dokumen peraturan
+perundang-undangan menjadi data terstruktur dalam bentuk \emph{knowledge graph}, dan memberikan
+contoh pengaplikasian dari \emph{knowledge graph} peraturan perundang-undangan tersebut.
 
 \begin{figure}[htbp]
-      \centering
-      \includegraphics{pictures/outline.png}
-      \caption{Outline}
+  \centering
+  \includegraphics{pictures/outline.png}
+  \caption{Outline}
 \end{figure}
 
-Beberapa usaha telah dilakukan untuk membuat \emph{vocabulary} untuk
-\emph{knowledge graph} peraturan perundang-undangan seperti
-\emph{European Legislation Identifier} (ELI)
-\href{https://eur-lex.europa.eu/eli-register/about.html}{2}. Tetapi ELI
-belum memiliki \emph{vocabulary} untuk struktur dokumen. Sehingga dengan
-membuat \emph{vocabulary} yang belum tersedia, diharapkan dapat menjadi
-kontribusi dalam mendukung pembuatan \emph{knowledge graph} untuk
+Beberapa usaha telah dilakukan untuk membuat \emph{vocabulary} untuk \emph{knowledge graph}
+peraturan perundang-undangan seperti \emph{European Legislation Identifier} (ELI)
+\href{https://eur-lex.europa.eu/eli-register/about.html}{2}. Tetapi ELI belum memiliki
+\emph{vocabulary} untuk struktur dokumen. Sehingga dengan membuat \emph{vocabulary} yang belum
+tersedia, diharapkan dapat menjadi kontribusi dalam mendukung pembuatan \emph{knowledge graph} untuk
 dokumen peraturan perundan-undangan
 
 
@@ -92,28 +77,22 @@ dokumen peraturan perundan-undangan
 %-----------------------------------------------------------------------------%
 Berikut ini adalah rumusan permasalahan dari penelitian yang dilakukan:
 \begin{itemize}
-      \itemsep1pt\parskip0pt\parsep0pt
-      \item
-            Bagaimana cara membuat \emph{legal ontology} untuk memperjelas
-            \emph{requirement} dan mempermudah konversi dokumen PDF menjadi
-            \emph{knowledge graph}?
-      \item
-            Bagaimana konversi dokumen peraturan perudang-undangan menjadi
-            \emph{knowledge graph} dapat dilakukan secara otomatis?
-      \item
-            Apa saja contoh aplikasi dari knowledge graph peraturan
-            perundang-undangan tersebut?
+  \itemsep1pt\parskip0pt\parsep0pt
+  \item Bagaimana cara membuat \emph{legal ontology} untuk memperjelas \emph{requirement} dan
+        mempermudah konversi dokumen PDF menjadi \emph{knowledge graph}?
+  \item Bagaimana konversi dokumen peraturan perudang-undangan menjadi \emph{knowledge graph} dapat
+        dilakukan secara otomatis?
+  \item Apa saja contoh aplikasi dari knowledge graph peraturan perundang-undangan tersebut?
 \end{itemize}
 
-// TODO\@: bagaimana melakukan proof of concept untuk yang udah dibuat,
-detail untuk maintain, general large scale, evaluasi konversi
+// TODO\@: bagaimana melakukan proof of concept untuk yang udah dibuat, detail untuk maintain,
+general large scale, evaluasi konversi
 
 %-----------------------------------------------------------------------------%
 \section{Batasan Permasalahan}\label{sec:batasan-permasalahan}
 %-----------------------------------------------------------------------------%
 
-// TODO\@: fokus yang mainteined (UU + non UU), dan coba parsing UU hasil
-scraping
+// TODO\@: fokus yang mainteined (UU + non UU), dan coba parsing UU hasil scraping
 
 %-----------------------------------------------------------------------------%
 \section{Sistematika Penulisan}\label{sec:sistematika-penulisan}
