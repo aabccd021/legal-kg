@@ -24,3 +24,5 @@ fuseki/run
 *.out
 *.toc
 *.gz
+*.bcf
+*.run.xml
