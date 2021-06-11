@@ -1,9 +1,9 @@
 %-----------------------------------------------------------------------------%
-\chapter{\babEmpat}
+\chapter{PERANCANGAN}
 \label{bab:4}
 %-----------------------------------------------------------------------------%
 
-\subsection{Perancangan URI}\label{perancangan-uri}
+\section{Perancangan URI}\label{perancangan-uri}
 
 Setiap entitas yang berbeda perlu diberikan URI yang berbeda.
 Penggabungan KG sangat umum dilakukan karena secara struktur dapat
@@ -26,7 +26,7 @@ selanjutnya disebut \emph{peraturanPrefix}, dan semua resource lainnya
 menggunakan \texttt{http://example.org/legal/ontology} yang selanjutnya
 disebut \emph{ontoPrefix}.
 
-\subsection{Perancangan URI Class}\label{perancangan-uri-class}
+\section{Perancangan URI Class}\label{perancangan-uri-class}
 
 URI Class adalah URI yang menjelaskan \emph{class} dari entitas
 tersebut. Semua URI Class mengikuti pola
@@ -35,51 +35,51 @@ nama \emph{class} tersebut. Berikut adalah semua \emph{class} komponen
 beserta URI dan deskripsinya.
 
 \begin{longtable}[c]{@{}ll@{}}
-\toprule\addlinespace
-Nama Class & Deskripsi
-\\\addlinespace
-\midrule\endhead
-\texttt{Peraturan} & Peraturan perundang-undangan
-\\\addlinespace
-\texttt{DaftarBab} & Daftar satu atau lebih bab
-\\\addlinespace
-\texttt{Bab} & Bab
-\\\addlinespace
-\texttt{DaftarBagian} & Daftar satu atau lebih bagian
-\\\addlinespace
-\texttt{Bagian} & Bagian
-\\\addlinespace
-\texttt{DaftarParagraf} & Daftar satu atau lebih paragraf
-\\\addlinespace
-\texttt{Paragraf} & Paragraf
-\\\addlinespace
-\texttt{DaftarPasal} & Daftar satu atau lebih pasal
-\\\addlinespace
-\texttt{Pasal} & Pasal
-\\\addlinespace
-\texttt{VersiPasal} & Versi dari sebuah pasal. Sebuah pasal dapat
-memiliki satu atau lebih versi dari hasil amandemen
-\\\addlinespace
-\texttt{DaftarAyat} & Daftar satu atau lebih ayat
-\\\addlinespace
-\texttt{Ayat} & Ayat
-\\\addlinespace
-\texttt{DaftarHuruf} & Daftar satu atau lebih huruf atau nomor
-\\\addlinespace
-\texttt{Huruf} & Huruf atau nomor
-\\\addlinespace
-\texttt{Menimbang} & Hal yang ditimbang oleh suatu peraturan
-\\\addlinespace
-\texttt{Mengingat} & Hal yang diingat oleh suatu peraturan
-\\\addlinespace
-\texttt{Segmen} & Segmen teks. Dapat memiliki rujukan ke suatu komponen
-peraturan
-\\\addlinespace
-\bottomrule
+	\toprule\addlinespace
+	Nama Class              & Deskripsi
+	\\\addlinespace
+	\midrule\endhead
+	\texttt{Peraturan}      & Peraturan perundang-undangan
+	\\\addlinespace
+	\texttt{DaftarBab}      & Daftar satu atau lebih bab
+	\\\addlinespace
+	\texttt{Bab}            & Bab
+	\\\addlinespace
+	\texttt{DaftarBagian}   & Daftar satu atau lebih bagian
+	\\\addlinespace
+	\texttt{Bagian}         & Bagian
+	\\\addlinespace
+	\texttt{DaftarParagraf} & Daftar satu atau lebih paragraf
+	\\\addlinespace
+	\texttt{Paragraf}       & Paragraf
+	\\\addlinespace
+	\texttt{DaftarPasal}    & Daftar satu atau lebih pasal
+	\\\addlinespace
+	\texttt{Pasal}          & Pasal
+	\\\addlinespace
+	\texttt{VersiPasal}     & Versi dari sebuah pasal. Sebuah pasal dapat
+	memiliki satu atau lebih versi dari hasil amandemen
+	\\\addlinespace
+	\texttt{DaftarAyat}     & Daftar satu atau lebih ayat
+	\\\addlinespace
+	\texttt{Ayat}           & Ayat
+	\\\addlinespace
+	\texttt{DaftarHuruf}    & Daftar satu atau lebih huruf atau nomor
+	\\\addlinespace
+	\texttt{Huruf}          & Huruf atau nomor
+	\\\addlinespace
+	\texttt{Menimbang}      & Hal yang ditimbang oleh suatu peraturan
+	\\\addlinespace
+	\texttt{Mengingat}      & Hal yang diingat oleh suatu peraturan
+	\\\addlinespace
+	\texttt{Segmen}         & Segmen teks. Dapat memiliki rujukan ke suatu komponen
+	peraturan
+	\\\addlinespace
+	\bottomrule
 \end{longtable}
 
-\subsection{Perancangan URI Komponen Peraturan
-Perundang-undangan}\label{perancangan-uri-komponen-peraturan-perundang-undangan}
+\section{Perancangan URI Komponen Peraturan
+  Perundang-undangan}\label{perancangan-uri-komponen-peraturan-perundang-undangan}
 
 URI peraturan perundang-undangan diawali oleh \emph{peraturanPrefix},
 kemudian diikuti oleh string yang mengidentifikasi peraturan tersebut.
@@ -89,42 +89,42 @@ perundang-undangan yang diimplementasi pada penelitian ini beserta pola
 URI nya. Variabel akan dikurung dengan kurung kurawal \texttt{\{\}}.
 
 \begin{longtable}[c]{@{}lll@{}}
-\toprule\addlinespace
-Jenis Peraturan & Pola URI & Penjelasan variabel
-\\\addlinespace
-\midrule\endhead
-Undang-Undang Dasar 1945 & \texttt{\{peraturanPrefix\}/uud} &
-\\\addlinespace
-Undang-Undang & \texttt{\{peraturanPrefix\}/uu/\{tahun\}/\{nomor\}} &
-\texttt{tahun}: tahun peraturan
-\\\addlinespace
-& & \texttt{nomor}: nomor peraturan
-\\\addlinespace
-Peraturan Pemerintah &
-\texttt{\{peraturanPrefix\}/pp/\{tahun\}/\{nomor\}} & \texttt{tahun}:
-tahun peraturan
-\\\addlinespace
-& & \texttt{nomor}: nomor peraturan
-\\\addlinespace
-Peraturan Daerah Provinsi DKI Jakarta &
-\texttt{\{peraturanPrefix\}/perda\_provinsi\_dki\_jakarta/\{tahun\}/\{nomor\}}
-& \texttt{tahun}: tahun peraturan
-\\\addlinespace
-& & \texttt{nomor}: nomor peraturan
-\\\addlinespace
-Peraturan Gubernur DKI Jakarta &
-\texttt{\{peraturanPrefix\}/pergub\_dki\_jakarta/\{tahun\}/\{nomor\}} &
-\texttt{tahun}: tahun peraturan
-\\\addlinespace
-& & \texttt{nomor}: nomor peraturan
-\\\addlinespace
-Peraturan Walikota Malang &
-\texttt{\{peraturanPrefix\}/perwali\_malang/\{tahun\}/\{nomor\}} &
-\texttt{tahun}: tahun peraturan
-\\\addlinespace
-& & \texttt{nomor}: nomor peraturan
-\\\addlinespace
-\bottomrule
+	\toprule\addlinespace
+	Jenis Peraturan                                                       & Pola URI                                            & Penjelasan variabel
+	\\\addlinespace
+	\midrule\endhead
+	Undang-Undang Dasar 1945                                              & \texttt{\{peraturanPrefix\}/uud}                    &
+	\\\addlinespace
+	Undang-Undang                                                         & \texttt{\{peraturanPrefix\}/uu/\{tahun\}/\{nomor\}} &
+	\texttt{tahun}: tahun peraturan
+	\\\addlinespace
+	                                                                      &                                                     & \texttt{nomor}: nomor peraturan
+	\\\addlinespace
+	Peraturan Pemerintah                                                  &
+	\texttt{\{peraturanPrefix\}/pp/\{tahun\}/\{nomor\}}                   & \texttt{tahun}:
+	tahun peraturan
+	\\\addlinespace
+	                                                                      &                                                     & \texttt{nomor}: nomor peraturan
+	\\\addlinespace
+	Peraturan Daerah Provinsi DKI Jakarta                                 &
+	\texttt{\{peraturanPrefix\}/perda\_provinsi\_dki\_jakarta/\{tahun\}/\{nomor\}}
+	                                                                      & \texttt{tahun}: tahun peraturan
+	\\\addlinespace
+	                                                                      &                                                     & \texttt{nomor}: nomor peraturan
+	\\\addlinespace
+	Peraturan Gubernur DKI Jakarta                                        &
+	\texttt{\{peraturanPrefix\}/pergub\_dki\_jakarta/\{tahun\}/\{nomor\}} &
+	\texttt{tahun}: tahun peraturan
+	\\\addlinespace
+	                                                                      &                                                     & \texttt{nomor}: nomor peraturan
+	\\\addlinespace
+	Peraturan Walikota Malang                                             &
+	\texttt{\{peraturanPrefix\}/perwali\_malang/\{tahun\}/\{nomor\}}      &
+	\texttt{tahun}: tahun peraturan
+	\\\addlinespace
+	                                                                      &                                                     & \texttt{nomor}: nomor peraturan
+	\\\addlinespace
+	\bottomrule
 \end{longtable}
 
 Setiap komponen dokumen merupakan entitas, dan memiliki URI. URI sebuah
@@ -133,83 +133,83 @@ mengatasinya. Berikut adalah jenis komponen peraturan perundang-undangan
 beserta pola URI nya.
 
 \begin{longtable}[c]{@{}lll@{}}
-\toprule\addlinespace
-Class Komponen & Pola URI & Penjelasan variabel
-\\\addlinespace
-\midrule\endhead
-\texttt{DaftarBab} & \texttt{\{docURI\}/bab} & \texttt{docURI}: URI
-peraturan yang mengatasi
-\\\addlinespace
-\texttt{Bab} & \texttt{\{daftarBabURI\}/\{no\}} & \texttt{daftarBabURI}:
-URI \texttt{DaftarBab} yang mengatasi
-\\\addlinespace
-& & \texttt{no}: Nomor bab
-\\\addlinespace
-\texttt{DaftarBagian} & \texttt{\{babURI\}/bagian} & \texttt{babURI}:
-URI \texttt{Bab} yang mengatasi
-\\\addlinespace
-\texttt{Bagian} & \texttt{\{daftarBagianURI\}/\{no\}} &
-\texttt{daftarBagianURI}: URI \texttt{DaftarBagian} yang mengatasi
-\\\addlinespace
-& & \texttt{no}: Nomor bagian
-\\\addlinespace
-\texttt{DaftarParagraf} & \texttt{\{bagianURI\}/paragraf} &
-\texttt{bagianURI}: URI \texttt{Bagian} yang mengatasi
-\\\addlinespace
-\texttt{Paragraf} & \texttt{\{daftarParagrafURI\}/\{no\}} &
-\texttt{daftarParagrafURI}: URI \texttt{DaftarBagian} yang mengatasi
-\\\addlinespace
-& & \texttt{no}: Nomor paragraf
-\\\addlinespace
-\texttt{DaftarPasal} & \texttt{\{parentURI\}/daftarpasal} &
-\texttt{parentURI}: URI \texttt{Bab}, \texttt{Bagian}, \texttt{Paragraf}
-yang mengatasi
-\\\addlinespace
-\texttt{Pasal} & \texttt{\{docURI\}/pasal/\{no\}} & \texttt{docURI}: URI
-peraturan yang mengatasi
-\\\addlinespace
-& & \texttt{no}: Nomor pasal
-\\\addlinespace
-\texttt{VersiPasal} & \texttt{\{pasalURI\}/versi/\{date\}} &
-\texttt{pasalURI}: URI \texttt{Pasal} yang mengatasi
-\\\addlinespace
-& & \texttt{date}: Tanggal disahkan
-\\\addlinespace
-\texttt{DaftarAyat} & \texttt{\{pasalURI\}/ayat} & \texttt{pasalURI}:
-URI \texttt{Pasal} yang mengatasi
-\\\addlinespace
-\texttt{Ayat} & \texttt{\{daftarAyatURI\}/\{no\}} &
-\texttt{daftarAyatURI}: URI \texttt{DaftarAyat} yang mengatasi
-\\\addlinespace
-& & \texttt{no}: Nomor ayat
-\\\addlinespace
-\texttt{DaftarHuruf} & \texttt{\{parentURI\}/huruf} &
-\texttt{parentURI}: URI \texttt{Ayat}, \texttt{Huruf},
-\texttt{VersiPasal}, \texttt{Menimbang}, \texttt{Mengingat}, yang
-mengatasi
-\\\addlinespace
-\texttt{Huruf} & \texttt{\{daftarHurufURI\}/\{id\}} &
-\texttt{daftarHurufURI}: URI \texttt{DaftarHuruf} yang mengatasi
-\\\addlinespace
-& & \texttt{id}: Nomor atau huruf
-\\\addlinespace
-\texttt{Menimbang} & \texttt{\{docURI\}/menimbang} & \texttt{docURI}:
-URI peraturan yang mengatasi
-\\\addlinespace
-\texttt{Mengingat} & \texttt{\{docURI\}/mengingat} & \texttt{docURI}:
-URI peraturan yang mengatasi
-\\\addlinespace
-\texttt{Segmen} & \texttt{\{parentURI\}/\{name\}} & \texttt{parentURI}:
-URI \texttt{Ayat}, \texttt{Huruf}, \texttt{DaftarHuruf},
-\texttt{VersiPasal}, \texttt{Menimbang}, \texttt{Mengingat}, yang
-mengatasi
-\\\addlinespace
-& & \texttt{name}: Nama teks
-\\\addlinespace
-\bottomrule
+	\toprule\addlinespace
+	Class Komponen          & Pola URI                              & Penjelasan variabel
+	\\\addlinespace
+	\midrule\endhead
+	\texttt{DaftarBab}      & \texttt{\{docURI\}/bab}               & \texttt{docURI}: URI
+	peraturan yang mengatasi
+	\\\addlinespace
+	\texttt{Bab}            & \texttt{\{daftarBabURI\}/\{no\}}      & \texttt{daftarBabURI}:
+	URI \texttt{DaftarBab} yang mengatasi
+	\\\addlinespace
+	                        &                                       & \texttt{no}: Nomor bab
+	\\\addlinespace
+	\texttt{DaftarBagian}   & \texttt{\{babURI\}/bagian}            & \texttt{babURI}:
+	URI \texttt{Bab} yang mengatasi
+	\\\addlinespace
+	\texttt{Bagian}         & \texttt{\{daftarBagianURI\}/\{no\}}   &
+	\texttt{daftarBagianURI}: URI \texttt{DaftarBagian} yang mengatasi
+	\\\addlinespace
+	                        &                                       & \texttt{no}: Nomor bagian
+	\\\addlinespace
+	\texttt{DaftarParagraf} & \texttt{\{bagianURI\}/paragraf}       &
+	\texttt{bagianURI}: URI \texttt{Bagian} yang mengatasi
+	\\\addlinespace
+	\texttt{Paragraf}       & \texttt{\{daftarParagrafURI\}/\{no\}} &
+	\texttt{daftarParagrafURI}: URI \texttt{DaftarBagian} yang mengatasi
+	\\\addlinespace
+	                        &                                       & \texttt{no}: Nomor paragraf
+	\\\addlinespace
+	\texttt{DaftarPasal}    & \texttt{\{parentURI\}/daftarpasal}    &
+	\texttt{parentURI}: URI \texttt{Bab}, \texttt{Bagian}, \texttt{Paragraf}
+	yang mengatasi
+	\\\addlinespace
+	\texttt{Pasal}          & \texttt{\{docURI\}/pasal/\{no\}}      & \texttt{docURI}: URI
+	peraturan yang mengatasi
+	\\\addlinespace
+	                        &                                       & \texttt{no}: Nomor pasal
+	\\\addlinespace
+	\texttt{VersiPasal}     & \texttt{\{pasalURI\}/versi/\{date\}}  &
+	\texttt{pasalURI}: URI \texttt{Pasal} yang mengatasi
+	\\\addlinespace
+	                        &                                       & \texttt{date}: Tanggal disahkan
+	\\\addlinespace
+	\texttt{DaftarAyat}     & \texttt{\{pasalURI\}/ayat}            & \texttt{pasalURI}:
+	URI \texttt{Pasal} yang mengatasi
+	\\\addlinespace
+	\texttt{Ayat}           & \texttt{\{daftarAyatURI\}/\{no\}}     &
+	\texttt{daftarAyatURI}: URI \texttt{DaftarAyat} yang mengatasi
+	\\\addlinespace
+	                        &                                       & \texttt{no}: Nomor ayat
+	\\\addlinespace
+	\texttt{DaftarHuruf}    & \texttt{\{parentURI\}/huruf}          &
+	\texttt{parentURI}: URI \texttt{Ayat}, \texttt{Huruf},
+	\texttt{VersiPasal}, \texttt{Menimbang}, \texttt{Mengingat}, yang
+	mengatasi
+	\\\addlinespace
+	\texttt{Huruf}          & \texttt{\{daftarHurufURI\}/\{id\}}    &
+	\texttt{daftarHurufURI}: URI \texttt{DaftarHuruf} yang mengatasi
+	\\\addlinespace
+	                        &                                       & \texttt{id}: Nomor atau huruf
+	\\\addlinespace
+	\texttt{Menimbang}      & \texttt{\{docURI\}/menimbang}         & \texttt{docURI}:
+	URI peraturan yang mengatasi
+	\\\addlinespace
+	\texttt{Mengingat}      & \texttt{\{docURI\}/mengingat}         & \texttt{docURI}:
+	URI peraturan yang mengatasi
+	\\\addlinespace
+	\texttt{Segmen}         & \texttt{\{parentURI\}/\{name\}}       & \texttt{parentURI}:
+	URI \texttt{Ayat}, \texttt{Huruf}, \texttt{DaftarHuruf},
+	\texttt{VersiPasal}, \texttt{Menimbang}, \texttt{Mengingat}, yang
+	mengatasi
+	\\\addlinespace
+	                        &                                       & \texttt{name}: Nama teks
+	\\\addlinespace
+	\bottomrule
 \end{longtable}
 
-\subsection{Perancangan URI Properti}\label{perancangan-uri-properti}
+\section{Perancangan URI Properti}\label{perancangan-uri-properti}
 
 Properti ditandai dengan URI yang memiliki pola
 \texttt{\{ontoPrefix\}/\{name\}} dimana \texttt{name} adalah nama dari
@@ -218,95 +218,95 @@ adalah berupa URI komponen, sedangkan objek dapat berupa URI komponen,
 string, \emph{number} (bilangan), atau \emph{date} (tanggal).
 
 \begin{longtable}[c]{@{}llll@{}}
-\toprule\addlinespace
-Nama Properti & Subjek & Objek & Deskripsi
-\\\addlinespace
-\midrule\endhead
-\texttt{nomor} & \texttt{Bab}, \texttt{Bagian}, \texttt{Paragraf},
-\texttt{Pasal}, \texttt{Ayat}, \texttt{Huruf} & string, number & Nomor
-atau huruf \emph{identifier} dari komponen
-\\\addlinespace
-\texttt{teks} & \texttt{Ayat}, \texttt{VersiPasal}, \texttt{Segmen} &
-string & teks dari komponen
-\\\addlinespace
-\texttt{bab} & \texttt{DaftarBab} & \texttt{Bab} & Bab
-\\\addlinespace
-\texttt{bagian} & \texttt{DaftarBagian} & \texttt{Bagian} & Bagian
-\\\addlinespace
-\texttt{paragraf} & \texttt{DaftarParagraf} & \texttt{Paragraf} &
-Paragraf
-\\\addlinespace
-\texttt{pasal} & \texttt{DaftarPasal} & \texttt{Pasal} & Pasal
-\\\addlinespace
-\texttt{ayat} & \texttt{DaftarAyat} & \texttt{Ayat} & Ayat
-\\\addlinespace
-\texttt{huruf} & \texttt{DaftarHuruf} & \texttt{Huruf} & Huruf
-\\\addlinespace
-\texttt{segmen} & \texttt{Mengigat},\texttt{Menimbang},
-\texttt{Paragraf}, \texttt{VersiPasal}, \texttt{Huruf},
-\texttt{DaftarHuruf} & \texttt{Segmen} & Segmen
-\\\addlinespace
-\texttt{daftarBab} & \texttt{Peraturan} & \texttt{DaftarBab} & DaftarBab
-\\\addlinespace
-\texttt{daftarBagian} & \texttt{Bab} & \texttt{Daftarbagian} &
-DaftarBagian
-\\\addlinespace
-\texttt{daftarParagraf} & \texttt{Bagian} & \texttt{DaftarParagraf} &
-DaftarParagraf
-\\\addlinespace
-\texttt{daftarPasal} & \texttt{Peraturan},\texttt{Bab},
-\texttt{Paragraf}, \texttt{Bagian} & \texttt{DaftarPasal} & DaftarPasal
-\\\addlinespace
-\texttt{daftarAyat} & \texttt{Pasal} & \texttt{DaftarAyat} & DaftarAyat
-\\\addlinespace
-\texttt{daftarHuruf} &
-\texttt{VersiPasal},\texttt{Ayat},\texttt{Huruf},\texttt{Menimbang},\texttt{Mengingat}
-& \texttt{DaftarHuruf} & DaftarHuruf
-\\\addlinespace
-\texttt{merujuk} & \texttt{Segmen} & entitas apapun & Teks merujuk suatu
-entitas
-\\\addlinespace
-\texttt{mengubah} & \texttt{Huruf} & \texttt{VersiPasal} & Pengubahan
-pasal
-\\\addlinespace
-\texttt{menghapus} & \texttt{Huruf} & \texttt{VersiPasal} & Penghapusan
-pasal
-\\\addlinespace
-\texttt{menyisipkan} & \texttt{Huruf} & \texttt{VersiPasal} & Penyisipan
-pasal
-\\\addlinespace
-\texttt{tanggal} & \texttt{VersiPasal} & date & Tanggal
-\\\addlinespace
-\texttt{jenisVersi} & \texttt{VersiPasal} & `orisinal', `penyisipan',
-`pengubahan', `penghapusan' & Jenis versi
-\\\addlinespace
-\texttt{versi} & \texttt{Pasal} & \texttt{VersiPasal} & Versi suatu
-komponen
-\\\addlinespace
-\texttt{tentang} & \texttt{Peraturan} & string & Peraturan tentang
-\\\addlinespace
-\texttt{menimbang} & \texttt{Peraturan} & \texttt{Menimbang} & Peraturan
-menimbang
-\\\addlinespace
-\texttt{mengingat} & \texttt{Peraturan} & \texttt{Mengingat} & Peraturan
-mengingat
-\\\addlinespace
-\texttt{disahkanPada} & \texttt{Peraturan} & date & Peraturan disahkan
-pada tanggal
-\\\addlinespace
-\texttt{disahkanDi} & \texttt{Peraturan} & string & Peraturan disahkan
-di lokasi
-\\\addlinespace
-\texttt{disahkanOleh} & \texttt{Peraturan} & string & Peraturan disahkan
-oleh
-\\\addlinespace
-\texttt{jabatanPengesah} & \texttt{Peraturan} & string & Jabatan
-pengesah peraturan
-\\\addlinespace
-\texttt{bagianDari} & komponen apapun & komponen apapun & Komponen
-subjek adalah bagian dari komponen objek
-\\\addlinespace
-\bottomrule
+	\toprule\addlinespace
+	Nama Properti                                 & Subjek                                              & Objek                     & Deskripsi
+	\\\addlinespace
+	\midrule\endhead
+	\texttt{nomor}                                & \texttt{Bab}, \texttt{Bagian}, \texttt{Paragraf},
+	\texttt{Pasal}, \texttt{Ayat}, \texttt{Huruf} & string, number                                      & Nomor
+	atau huruf \emph{identifier} dari komponen
+	\\\addlinespace
+	\texttt{teks}                                 & \texttt{Ayat}, \texttt{VersiPasal}, \texttt{Segmen} &
+	string                                        & teks dari komponen
+	\\\addlinespace
+	\texttt{bab}                                  & \texttt{DaftarBab}                                  & \texttt{Bab}              & Bab
+	\\\addlinespace
+	\texttt{bagian}                               & \texttt{DaftarBagian}                               & \texttt{Bagian}           & Bagian
+	\\\addlinespace
+	\texttt{paragraf}                             & \texttt{DaftarParagraf}                             & \texttt{Paragraf}         &
+	Paragraf
+	\\\addlinespace
+	\texttt{pasal}                                & \texttt{DaftarPasal}                                & \texttt{Pasal}            & Pasal
+	\\\addlinespace
+	\texttt{ayat}                                 & \texttt{DaftarAyat}                                 & \texttt{Ayat}             & Ayat
+	\\\addlinespace
+	\texttt{huruf}                                & \texttt{DaftarHuruf}                                & \texttt{Huruf}            & Huruf
+	\\\addlinespace
+	\texttt{segmen}                               & \texttt{Mengigat},\texttt{Menimbang},
+	\texttt{Paragraf}, \texttt{VersiPasal}, \texttt{Huruf},
+	\texttt{DaftarHuruf}                          & \texttt{Segmen}                                     & Segmen
+	\\\addlinespace
+	\texttt{daftarBab}                            & \texttt{Peraturan}                                  & \texttt{DaftarBab}        & DaftarBab
+	\\\addlinespace
+	\texttt{daftarBagian}                         & \texttt{Bab}                                        & \texttt{Daftarbagian}     &
+	DaftarBagian
+	\\\addlinespace
+	\texttt{daftarParagraf}                       & \texttt{Bagian}                                     & \texttt{DaftarParagraf}   &
+	DaftarParagraf
+	\\\addlinespace
+	\texttt{daftarPasal}                          & \texttt{Peraturan},\texttt{Bab},
+	\texttt{Paragraf}, \texttt{Bagian}            & \texttt{DaftarPasal}                                & DaftarPasal
+	\\\addlinespace
+	\texttt{daftarAyat}                           & \texttt{Pasal}                                      & \texttt{DaftarAyat}       & DaftarAyat
+	\\\addlinespace
+	\texttt{daftarHuruf}                          &
+	\texttt{VersiPasal},\texttt{Ayat},\texttt{Huruf},\texttt{Menimbang},\texttt{Mengingat}
+	                                              & \texttt{DaftarHuruf}                                & DaftarHuruf
+	\\\addlinespace
+	\texttt{merujuk}                              & \texttt{Segmen}                                     & entitas apapun            & Teks merujuk suatu
+	entitas
+	\\\addlinespace
+	\texttt{mengubah}                             & \texttt{Huruf}                                      & \texttt{VersiPasal}       & Pengubahan
+	pasal
+	\\\addlinespace
+	\texttt{menghapus}                            & \texttt{Huruf}                                      & \texttt{VersiPasal}       & Penghapusan
+	pasal
+	\\\addlinespace
+	\texttt{menyisipkan}                          & \texttt{Huruf}                                      & \texttt{VersiPasal}       & Penyisipan
+	pasal
+	\\\addlinespace
+	\texttt{tanggal}                              & \texttt{VersiPasal}                                 & date                      & Tanggal
+	\\\addlinespace
+	\texttt{jenisVersi}                           & \texttt{VersiPasal}                                 & `orisinal', `penyisipan',
+	`pengubahan', `penghapusan'                   & Jenis versi
+	\\\addlinespace
+	\texttt{versi}                                & \texttt{Pasal}                                      & \texttt{VersiPasal}       & Versi suatu
+	komponen
+	\\\addlinespace
+	\texttt{tentang}                              & \texttt{Peraturan}                                  & string                    & Peraturan tentang
+	\\\addlinespace
+	\texttt{menimbang}                            & \texttt{Peraturan}                                  & \texttt{Menimbang}        & Peraturan
+	menimbang
+	\\\addlinespace
+	\texttt{mengingat}                            & \texttt{Peraturan}                                  & \texttt{Mengingat}        & Peraturan
+	mengingat
+	\\\addlinespace
+	\texttt{disahkanPada}                         & \texttt{Peraturan}                                  & date                      & Peraturan disahkan
+	pada tanggal
+	\\\addlinespace
+	\texttt{disahkanDi}                           & \texttt{Peraturan}                                  & string                    & Peraturan disahkan
+	di lokasi
+	\\\addlinespace
+	\texttt{disahkanOleh}                         & \texttt{Peraturan}                                  & string                    & Peraturan disahkan
+	oleh
+	\\\addlinespace
+	\texttt{jabatanPengesah}                      & \texttt{Peraturan}                                  & string                    & Jabatan
+	pengesah peraturan
+	\\\addlinespace
+	\texttt{bagianDari}                           & komponen apapun                                     & komponen apapun           & Komponen
+	subjek adalah bagian dari komponen objek
+	\\\addlinespace
+	\bottomrule
 \end{longtable}
 
 
