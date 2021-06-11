@@ -3,112 +3,20 @@
 \label{bab:3}
 %-----------------------------------------------------------------------------%
 
-%-----------------------------------------------------------------------------%
-\section{Konversi Dokumen Peraturan Perundang-undangan ke Knowledge Graph}
-\label{sec:latex}
-%-----------------------------------------------------------------------------%
-Konversi dokumen peraturan perundang-undangan dalam bentuk berkas pdf, menjadi \textit{knowledge graph} dalam bentuk berkas turtle, akan melalui struktur data penengah yaitu JSON. 
-JSON digunakan sebagai pengengah karena kompatibel dengan bahasa pemrograman typescript, sehingga menuliskan data ke dalam json, atau membaca file json ke dalam program tidak memerlukan suatu serialization atau parsing khusus.
+// TODO: Maintained docs masukin sini
+
+// TODO: Utk yg metodologi, sbnrnya standar aja, dimulai dari pertanyaan
+riset, lalu pengembangan ontology (URI scheming masuk ke pengembagan
+ontology), pengembangan sistem konversi, baru lalu use case evaluation
+(ini yg legal KG advanced querying, legal KG chatbot, legal KG
+visualization) baru large scale eval (ini yg coba konversi peraturan dlm
+jumlah besar dan kita sampling utk evaluasi correctnessnya)
+
+TODO: suatu KG construction dimulai dengan competency questions
+(requirements). Saran sy: coba baca serta rangkum (di Bab 2) dan
+terapkan ini:
+www.ksl.stanford.edu/people/dlm/papers/ontology-tutorial-noy-mcguinness-abstract.html
+???
 
 
-\begin{figure}
-\centering
-\begin{tikzpicture}[node distance=1.5cm]
-    \node (start) [startstop] {Start};
-    \node (pdf) [io, below of=start] {PDF};
-    \node (pdf-to-json) [process, below of=pdf] {PDF to JSON};
-    \node (json) [io, below of=pdf-to-json] {JSON};
-    \node (json-to-md) [process, right of=json, xshift=3cm] {JSON to Markdown};
-    \node (md) [io, below of=json-to-md] {Markdown};
-    \node (json-to-ttl) [process, below of=json] {JSON to Turtle};
-    \node (ttl) [io, below of=json-to-ttl] {Turtle};
-    \node (stop) [startstop, below of=ttl] {Stop};
-    \draw [arrow] (start) -- (pdf);
-    \draw [arrow] (pdf) -- (pdf-to-json);
-    \draw [arrow] (pdf-to-json) -- (json);
-    \draw [arrow] (json) -- (json-to-md);
-    \draw [arrow] (json-to-md) -- (md);
-    \draw [arrow] (json) -- (json-to-ttl);
-    \draw [arrow] (json-to-ttl) -- (ttl);
-    \draw [arrow] (ttl) -- (stop);
-\end{tikzpicture}
-\caption{Konversi dokumen ke knowledge graph}
-\end{figure}
 
-
-%-----------------------------------------------------------------------------%
-\subsection{Konversi PDF menjadi teks}
-\label{sec:latex}
-%-----------------------------------------------------------------------------%
-PDF terlebih dahulu akan dikonversi menjadi bentuk \textit{plain text} agar lebih mudah diparse ke dalam bentuk JSON.
-Konversi dilakukan menggunakan library python PyMuPDF.
-
-%-----------------------------------------------------------------------------%
-\subsection{Konversi teks menjadi JSON}
-\label{sec:latex}
-%-----------------------------------------------------------------------------%
-Berkas \textit{Plain text} mengandung baris-baris yang memiliki teks.
-Konversi menjadi JSON dilakukan dengan membagi baris-baris menjadi beberapa blok, dimana masing-masing blok memiliki \textit{regular expression} yang bersesuaian.
-Iterasi dilakukan pada setiap baris, dan apabila terdapat \textit{matching} suatu regex pada baris tersebut, maka baris tersebut akan dimasukkan ke dalam blok yang bersesuaian dengan regex tersebut.
-
-\begin{figure}
-\centering
-\begin{tikzpicture}[
-  node distance=0mm,
-  title/.style={anchor=west},
-  typetag/.style={rectangle, draw=black!50, anchor=north west, align=left},
-]
-  \node (decomp) [title] { Teks };
-
-  \node (di) [below=of decomp.south west, typetag] 
-  {Lorem\\ipsum\\dolor\\sit amet\\foo\\consectetur adipiscing\\elit\\bar\\sed do eiusmod\\tempor incididunt\\ut labore et dolore\\magna aliqua};
-
-  \node (decompEnd) [draw=black!50, fit={(decomp) (di)}] {};
-
-  % regex
-  \node (regexs) [title] [right=of decompEnd.east, xshift=3cm] { Regex };
-
-  \node (regex1) [below=of regexs.south west, typetag] {key: foo\_block\\regex:\verb/^foo/};
-  \node (regex2) [below=of regex1.south west, typetag] {key: bar\_block\\regex:\verb/^bar/};
-
-  \node (regexsEnd) [draw=black!50, fit={(regexs) (regex1) (regex2)}] {};
-  
-  % blocks
-  \node (blocks) [title] [right=of regexsEnd.east, xshift=3cm] { Regex };
-
-  \node (block1) [below=of blocks.south west, typetag] { \verb/^foo/ };
-  \node (block2) [below=of block1.south west, typetag] { \verb/^bar/ };
-
-  \node [draw=black!50, fit={(blocks) (block1) (block2)}] {};
-\end{tikzpicture}
-\caption{Pembagian teks menjadi blok berdasarkan \textit{regex}}
-\end{figure}
-
-%-----------------------------------------------------------------------------%
-\subsection{Konversi JSON menjadi turtle}
-\label{sec:latex}
-%-----------------------------------------------------------------------------%
-Konversi dari JSON menjadi turtle dilakukan langsung, dengan membentuk triple dari semua data yang terdapat pada JSON.
-Selain triple yang didapatkan dari JSON, akan diberikan beberapa triple tambahan untuk memberikan data \textit{semantic} yang berguna dalam penggunaan \textit{knowledge graph}.
-Triple tambahan dapat berupa \textit{helper vocabulary}, seperti pemberian \predicate{partOf} sebagai \predicate{inverseOf} dari \predicate{hasPasal}.
-Triple tambahan lainnya adalah berupa pendefinisian class dari setiap resource dengan predicate \predicate{rdf:type}.
-
-%-----------------------------------------------------------------------------%
-\subsection{Konversi JSON menjadi Markdown}
-\label{sec:latex}
-%-----------------------------------------------------------------------------%
-
-%-----------------------------------------------------------------------------%
-\section{Ekstraksi Data Semantik dari Teks}
-\label{sec:latex}
-%-----------------------------------------------------------------------------%
-
-%-----------------------------------------------------------------------------%
-\subsection{Deteksi Komponen Dokumen}
-\label{sec:latex}
-%-----------------------------------------------------------------------------%
-
-%-----------------------------------------------------------------------------%
-\subsection{Deteksi Sitasi Terhadap Suatu \textit{Resource}}
-\label{sec:latex}
-%-----------------------------------------------------------------------------%

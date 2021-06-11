@@ -16,7 +16,7 @@
 % Tipe dokumen adalah report dengan satu kolom.
 %
 \documentclass[12pt, a4paper, onecolumn, twoside, final]{report}
-\raggedbottom
+\raggedbottom{}
 
 % Load konfigurasi LaTeX untuk tipe laporan thesis
 \usepackage{uithesis}
@@ -75,7 +75,7 @@
 %
 % Sampul Laporan
 \include{sampul}
-\forceclearchapter
+\forceclearchapter{}
 
 %
 % Gunakan penomeran romawi
@@ -85,7 +85,7 @@
 % load halaman judul dalam
 \addChapter{HALAMAN JUDUL}
 \include{judul_dalam}
-\forceclearchapter
+\forceclearchapter{}
 
 %
 % setelah bagian ini, halaman dihitung sebagai halaman ke 2
@@ -95,22 +95,22 @@
 % load halaman pengesahan
 \addChapter{LEMBAR PERSETUJUAN}
 \include{pengesahan}
-\forceclearchapter
+\forceclearchapter{}
 %
 % load halaman orisinalitas
 \addChapter{LEMBAR PERNYATAAN ORISINALITAS}
 \include{orisinal}
-\forceclearchapter
+\forceclearchapter{}
 %
 %
 \addChapter{LEMBAR PENGESAHAN}
 \include{pengesahan_sidang}
-\forceclearchapter
+\forceclearchapter{}
 %
 %
 \addChapter{LEMBAR PERSETUJUAN PUBLIKASI ILMIAH}
 \include{persetujuan_publikasi}
-\forceclearchapter
+\forceclearchapter{}
 %
 %
 \addChapter{\kataPengantar}
@@ -122,12 +122,12 @@
 %
 \pagestyle{first-pages}
 \fancypagestyle{plain}{
-	\fancyhead[L]{}
-	\fancyhead[C]{}
-	\fancyhead[R]{}
-	\fancyfoot[L]{}
-	\fancyfoot[C]{\thepage}
-	\fancyfoot[R]{\footnotesize \fontfamily{phv} \selectfont \bo{Universitas Indonesia}}
+    \fancyhead[L]{}
+    \fancyhead[C]{}
+    \fancyhead[R]{}
+    \fancyfoot[L]{}
+    \fancyfoot[C]{\thepage}
+    \fancyfoot[R]{\footnotesize \fontfamily{phv} \selectfont \bo{Universitas Indonesia}}
 }
 
 %
@@ -140,26 +140,26 @@
 %
 % Daftar isi, gambar, tabel, dan kode
 %
-\phantomsection %hack to make them clickable
-\singlespacing
+\phantomsection{} %hack to make them clickable
+\singlespacing{}
 \tableofcontents
-\onehalfspacing
+\onehalfspacing{}
 \clearpage
-\phantomsection %hack to make them clickable
-\singlespacing
+\phantomsection{} %hack to make them clickable
+\singlespacing{}
 \listoffigures
-\onehalfspacing
+\onehalfspacing{}
 \clearpage
-\phantomsection %hack to make them clickable
-\singlespacing
+\phantomsection{} %hack to make them clickable
+\singlespacing{}
 \listoftables
-\onehalfspacing
+\onehalfspacing{}
 \clearpage
-\phantomsection %hack to make them clickable
+\phantomsection{} %hack to make them clickable
 \addcontentsline{toc}{chapter}{\lstlistlistingname}
-\singlespacing
-\lstlistoflistings
-\onehalfspacing
+\singlespacing{}
+\lstlistoflistings{}
+\onehalfspacing{}
 
 %
 % Daftar Isi yang Didefinisikan Sendiri (Custom)
@@ -178,15 +178,15 @@
 % Daftar Lampiran
 % Comment to disable.
 %
-\phantomsection %hack to make them clickable
+\phantomsection{} %hack to make them clickable
 \addcontentsline{toc}{chapter}{\listofappendixname}
-\singlespacing
-\listofappendix
-\onehalfspacing
+\singlespacing{}
+\listofappendix{}
+\onehalfspacing{}
 \clearpage
 
 % Jika penomoran romawi selesai di ganjil
-\naiveoddclearchapter
+\naiveoddclearchapter{}
 % Jika penomoran romawi selesai di genap
 %\naiveevenclearchapter
 
@@ -198,36 +198,36 @@
 % \setlength{\belowcaptionskip}{+2pt}
 
 
-\setoddevenheader
+\setoddevenheader{}
 \include{bab1}
-\clearchapter
+\clearchapter{}
 \include{bab2}
-\clearchapter
+\clearchapter{}
 \include{bab3}
-\clearchapter
+\clearchapter{}
 \include{bab4}
-\clearchapter
+\clearchapter{}
 \include{bab5}
-\clearchapter
+\clearchapter{}
 \include{penutup}
-\clearchapter
+\clearchapter{}
 
 %
 % Daftar Pustaka
 \include{pustaka}
-\clearchapter
+\clearchapter{}
 
 %
 % Lampiran
 %
 \begin{appendix}
-	\newcounter{pagetemp}
-	\setcounter{pagetemp}{\thepage}
-	\include{markLampiran}
-	\clearchapter
-	\setcounter{page}{\thepagetemp}
-	\stepcounter{page}
-	\include{lampiran}
+    \newcounter{pagetemp}
+    \setcounter{pagetemp}{\thepage}
+    \include{markLampiran}
+    \clearchapter{}
+    \setcounter{page}{\thepagetemp}
+    \stepcounter{page}
+    \include{lampiran}
 \end{appendix}
 
 \end{document}

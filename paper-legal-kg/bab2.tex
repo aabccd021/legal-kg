@@ -1,228 +1,328 @@
 %-----------------------------------------------------------------------------%
-\chapter{\babDua}
-\label{bab:2}
+\chapter{\babDua}\label{bab:2}
 %-----------------------------------------------------------------------------%
 
-%-----------------------------------------------------------------------------%
-\section{Knowledge Graph}
-\label{sec:knowledgeGraph}
-%-----------------------------------------------------------------------------%
+\section{Knowledge Graph}\label{knowledge-graph}
 
-%-----------------------------------------------------------------------------%
-\subsection{Triple}
-\label{sec:triple}
-%-----------------------------------------------------------------------------%
-\textit{Triple} merupakan tuple dengan yang terdiri dari tiga elemen yaitu subject, object, dan predikat. 
-Terdapat dua representasi elemen dari \textit{triple}, yaitu URI dan literal. 
-Resource merupakan URI yang dapat digunakan sebagai subject dan object. Property merupakan URI yang dapat digunakan sebagai predikat. 
-Dan literal hanya dapat digunakan sebagai object. 
-\textit{Knowledge graph} dibangun dari himpunan \textit{triple}.
-Selanjutnya \textit{resource} akan dinotasikan dalam \resource{teks monospace berwarna biru} dan \textit{predicate} akan dinotasikan dalam \predicate{teks monospace berwarna merah}.
+\emph{Knowledge graph} merupakan model data berbasis \emph{graph} yang
+menggambarkan entitas dunia nyata dan hubungan antara entitas-entitas
+tersebut
+\href{https://yashuseth.blog/2019/10/08/introduction-question-answering-knowledge-graphs-kgqa/}{5}.
+Sebagai contoh, pada gambar dibawah dapat dilihat terpadat
+entitas-entitas yang ditandai dengan bentuk lingkaran, dan hubungan
+antara entitas-entitas ditandai dengan bentuk anak panah. Dapat dilihat
+pada gambar dibawah bahwa terdapat entitas ``James'' dan ``Louvre'' dan
+properti ``has visited'' yang mengarah dari ``James'' ke ``Louvre''.
+Relasi tersebut dapat kita anggap sebagai sebuah pengetahuan yang dalam
+bahasa manusia dapat dituliskan sebagai ``James pernah mengunjungi
+Louvre''. Model data seperti ini cocok untuk menyimpan data dengan
+banyak jenis relasi antara entitas seperti pengetahuan umum,
+dibandingkan dengan \emph{relational database} yang cocok untuk
+menyimpan data dengan relasi antar entitas yang sudah diketahui dan
+terbatas.
 
-\begin{figure}
-\centering
-    \begin{tikzpicture}[node distance={15mm}, thick, main/.style = {draw, rectangle}] 
-        \node[main] (subject) {\resource{subject}};
-        \node[main] (object) [below of=subject] {\resource{object}};
-        \draw[->] (subject) -- node[midway, right] {\predicate{predicate}} (object);
-    \end{tikzpicture} 
-\caption{Ilustrasi \textit{triple}}
-\end{figure} 
+\includegraphics{pictures/knowledge_graph.jpg}
+\emph{source}:\url{https://yashuseth.files.wordpress.com/2019/10/knowledge-graph.jpg}
 
+\section{Resource Description
+  Framework}\label{resource-description-framework}
 
-%-----------------------------------------------------------------------------%
-\section{Jenis Peraturan Perundang-undangan}
-\label{sec:jenisPeraturanPerundangUndangan}
-%-----------------------------------------------------------------------------%
-Terdapat beberapa jenis peraturan perundang-undangan.
-Setiap dokumen peraturan perundang-undangan adalah resource, dan memiliki susunan URI yang berbeda.
-Berikut adalah jenis peraturan perundang-undangan:
+Resource Description Framework (RDF) merupkan model data yang memberikan
+pernyataan tentang suatu \emph{resource} dalam bentuk
+subjek-properti-objek, atau sering disebut \emph{triple}. Sebuah
+\emph{knowledge graph} dapat direpresentasikan sebagai kumpulan
+\emph{triple}. Subyek dan properti dalam \emph{triple} direpresentasikan
+sebagai Uniform Resource Identifier (URI), sedangkan objek dapat
+direpresentasikan dengan URI atau \emph{string literal}. Pada gambar
+dibawah, dapat dilihat terdapat \emph{knowledge graph} dengan dua
+\emph{triple}. Pada triple 1 subjek, properti, dan objek berturut-turut
+adalah
+\texttt{https://example.org/james},\texttt{https://example.org/has\_visited},\texttt{https://example.org/louvre}
+yang mana semuanya berbentuk URI. Sedangkan pada triple 2 subjek,
+properti, dan objek berturut-turut adalah
+\texttt{https://example.org/james},\texttt{https://example.org/has\_name},
+``james'' . \texttt{https://example.org/james},
+\texttt{https://example.org/louvre} berturut-turut merupakan notasi
+untuk \emph{resource} entitas James dan Louvre,
+\texttt{https://example.org/has\_visited} dan
+\texttt{https://example.org/has\_name} merupakan properti yang
+menjelaskan hubungan antara subjek dan objek, dan ``james'' adalah
+\emph{string literal} yang menunjukan nilai dari nama James.
+
+\begin{figure}[htbp]
+    \centering
+    \includegraphics{pictures/triple.png}
+    \caption{Triple}
+\end{figure}
+
+Terdapat beberapa format berkas dan sintaks untuk mengekspresikan RDF.
+Pada penelitian ini, penulis menggunakan format Terse RDF Triple
+Language (Turtle). Sebagai contoh, \emph{knowledge graph} diatas dapat
+dituliskan dalam format Turtle sebagai berikut.
+
+\begin{verbatim}
+<https://example.org/james> <https://example.org/has_visited> <https://example.org/louvre> .
+<https://example.org/james> <https://example.org/has_name> "james" .
+\end{verbatim}
+
+Dengan fitur format Turtle, dua \emph{triple} diatas dapat ditulis lebih
+singkat dengan mengganti prefix URI yang sama menjadi teks yang lebih
+singkat, dan menggabungkan penulisan beberapa \emph{triple} dengan
+subjek yang sama sehingga subjek hanya perlu dituliskan sekali saja.
+Sebagai contoh, karena sebagaian besar URI memiliki prefix
+\texttt{https://example.org/}, kita dapat menggantinya dengan
+\emph{string} \texttt{ex} dengan mendeklarasikan
+\texttt{@prefix ex: \textless{}https://example.org/\textgreater{} .}.
+Kedua \emph{triple} juga memiliki subjek yang sama yaitu
+\texttt{https://example.org/james}, oleh karena itu, penulisan kedua
+turtle bisa digabung dengan hanya menuliskan subjek sebanyak satu kali,
+kemudian menuliskan properti dan objek dipisah dengan tanda titik koma .
+Berikut adalah contoh penulisan dua \emph{triple} diatas dalam bentuk
+yang lebih singkat dan lebih mudah dibaca oleh manusia.
+
+\begin{verbatim}
+@prefix ex: <https://example.org/> .
+
+ex:james 
+  ex:has_visited ex:louvre ;
+  ex:has_name "james" .
+\end{verbatim}
+
+\section{SPARQL}\label{sparql}
+
+SPARQL merupakan salahsatu RDF \emph{query language} yaitu bahasa yang
+mampu mengambil atau mengubah data yang disimpan dalam format RDF.
+Sintaks SPARQL memiliki beberapa kesamaan dengan SQL, contohnya sebuah
+variabel diawali dengan tanda tanya seperti \texttt{?name}. Berikut
+adalah penjelasan sintaks SPARQL.
+
 \begin{itemize}
-    \item Undang-Undang
-    \item Peraturan Pemerintah Pengganti Undang-Undang
-    \item Peraturan Pemerintah
-    \item Peraturan Presiden
-    \item Peraturan Menteri
-    \item Peraturan Lembaga
-    \item Peraturan Daerah
+    \itemsep1pt\parskip0pt\parsep0pt
+    \item
+          \texttt{PREFIX}: Mendeklarasikan pemetaan prefix URI menjadi
+          \emph{string} yang lebih singkat. Hal ini dilakukan agar \emph{query}
+          lebih mudah dibaca oleh manusia seperti sintaks \texttt{@prefix} pada
+          Turtle.
+    \item
+          \texttt{SELECT}: Menyatakan variabel yang akan ditampilkan sebagai
+          output dari \emph{query}.
+    \item
+          \texttt{WHERE}: Menyatakan kondisi \emph{triple} yang akan ditampilkan
+          pada output.
 \end{itemize}
 
-%-----------------------------------------------------------------------------%
-\subsection{Undang-Undang}
-\label{sec:undangUndang}
-%-----------------------------------------------------------------------------%
-\begin{figure}
-\[
-    \defbox{ex.org/dokumen/uu/}{prefix}{gray}
-    \defbox{2003/}{tahun}{blue}
-    \defbox{13/}{nomor}{red}
-\]
-\caption{Contoh URI untuk undang-undang nomor 13 tahun 2003}
-\end{figure}
+Berikut adalah contoh-contoh \emph{query} SPARQL yang dilakukan pada
+contoh \emph{knowledge graph} pada subbab sebelumnya.
 
-%-----------------------------------------------------------------------------%
-\subsection{Peraturan Daerah}
-\label{sec:peraturanDaerah}
-%-----------------------------------------------------------------------------%
-\begin{figure}
-\[
-    \defbox{ex.org/dokumen/perda/}{prefix}{gray}
-    \defbox{provinsi\_dki\_jakarta/}{kode daerah}{brown}
-    \defbox{2020/}{tahun}{blue}
-    \defbox{33/}{nomor}{red}
-\]
-\caption{Contoh URI untuk peraturan gubernur DKI Jakarta nomor 33 tahun 2020}
-\end{figure}
+\subsection{Contoh Query 1}\label{contoh-query-1}
 
-%-----------------------------------------------------------------------------%
-\section{Komponen Dokumen Peraturan Perundang-undangan}
-\label{sec:komponenDokumenPeraturanPerundangUndangan}
-%-----------------------------------------------------------------------------%
-Dokumen terdiri dari komponen dokumen. Komponen dokumen diantaranya adalah \resource{bab}, \resource{bagian}, \resource{paragraf}, \resource{pasal}, \resource{ayat}, dan \resource{point}. Setiap komponen dokumen merupakan resource, dan memiliki URI. URI sebuah komponen didahului oleh URI dokumennya. Berikut adalah relasi antara komponen dokumen yang disediakan.
+\emph{Query} ini bertujuan untuk menampilkan semua \emph{triple} yang
+terdapat pada \emph{knowledge graph}.
 
-\begin{figure}
-\centering
-\begin{tikzpicture}[node distance={15mm}, main/.style = {draw, rectangle}] 
-    \node[main] (doc) {\resource{dokumen}}; 
-    \node[main] (bab) [below of=doc] {\resource{bab}};
-    \node[main] (bagian) [below of=bab] {\resource{bagian}};
-    \node[main] (paragraf) [below of=bagian] {\resource{paragraf}};
-    \node[main] (pasal) [below of=paragraf] {\resource{pasal}};
-    \node[main] (ayat) [below of=pasal] {\resource{ayat}};
-    \node[main] (point) [below of=ayat] {\resource{point}};
-    \draw[->] (doc) -- node[midway, right] {\predicate{hasBab}} (bab);
-    \draw[->] (bab) -- node[midway, right] {\predicate{hasBagian}} (bagian);
-    \draw[->] (bagian) -- node[midway, right] {\predicate{hasParagraf}} (paragraf);
-    \draw[->] (paragraf) -- node[midway, right] {\predicate{hasPasal}} (pasal);
-    \draw[->] (doc) to [in=0, out=0, looseness=1.2] node[midway, right] {\predicate{hasPasal}} (pasal);
-    \draw[->] (bab) to [in=180, out=180] node[midway, left] {\predicate{hasPasal}} (pasal);
-    \draw[->] (pasal) -- node[midway, right] {\predicate{hasAyat}} (ayat);
-    \draw[->] (pasal) to [in=180, out=180] node[midway, left] {\predicate{hasPoint} } (point);
-    \draw[->] (ayat) -- node[midway, right] {\predicate{hasPoint}} (point);
-    \draw[->] (point) to [in=0, out=270, looseness=6] node[midway, below right]  {\predicate{hasPoint}} (point);
-\end{tikzpicture} 
-\caption{\textit{Resource} komponen dokumen dan \textit{property} antar komponen}
-\end{figure} 
+\begin{verbatim}
+PREFIX ex: <https://example.org/>
+SELECT ?s 
+       ?p
+       ?o
+WHERE
+  {
+    ?s ?p ?o
+  }
+\end{verbatim}
 
-%-----------------------------------------------------------------------------%
-\subsection{Bab}
-\label{sec:bab}
-%-----------------------------------------------------------------------------%
-\begin{figure}
-\centering
-\[
-    \defbox{ex.org/dokumen/uu/2003/13/}{URI dokumen}{gray}
-    bab/
-    \defbox{2/}{no. bab}{blue}
-\]
-\caption{Contoh URI untuk bab 2}
-\end{figure}
+Output dari \emph{query} tersebut adalah sebagai berikut.
 
-%-----------------------------------------------------------------------------%
-\subsection{Bagian}
-\label{sec:bagian}
-%-----------------------------------------------------------------------------%
-\begin{figure}
-\[
-    \defbox{ex.org/dokumen/uu/2003/13/}{URI dokumen}{gray}
-    bab/
-    \defbox{10/}{no. bab}{blue}
-    bagian/
-    \defbox{3/}{no. bagian}{brown}
-\]
-\caption{Contoh URI untuk bab 10 bagian 3}
-\end{figure}
+\begin{longtable}[c]{@{}lll@{}}
+    \toprule\addlinespace
+    ?s       & ?p              & ?o
+    \\\addlinespace
+    \midrule\endhead
+    ex:james & ex:has\_visited & ex:louvre
+    \\\addlinespace
+    ex:james & ex:has\_name    & ``james''
+    \\\addlinespace
+    \bottomrule
+\end{longtable}
 
-%-----------------------------------------------------------------------------%
-\subsection{Paragraf}
-\label{sec:paragraf}
-%-----------------------------------------------------------------------------%
-\begin{figure}
-\[
-    \defbox{ex.org/dokumen/uu/2003/13/}{URI dokumen}{gray}
-    bab/
-    \defbox{7/}{no. bab}{blue}
-    bagian/
-    \defbox{4/}{no. bagian}{brown}
-    paragraf/
-    \defbox{5/}{no. pasal}{red}
-\]
-\caption{Contoh URI untuk bab 10 bagian 4 paragraf 5}
-\end{figure}
+\subsection{Contoh Query 2}\label{contoh-query-2}
 
-%-----------------------------------------------------------------------------%
-\subsection{Pasal}
-\label{sec:pasal}
-%-----------------------------------------------------------------------------%
-\begin{figure}
-\[
-    \defbox{ex.org/dokumen/uu/2003/13/}{URI dokumen}{gray}
-    pasal/
-    \defbox{1/}{no. pasal}{purple}
-\]
-\caption{Contoh URI untuk pasal 1}
-\end{figure}
+\emph{Query} ini bertujuan untuk menampilkan semua properti dan objek
+pada \emph{triple} dengan subjek \texttt{https://example.org/james}.
 
-%-----------------------------------------------------------------------------%
-\subsection{Ayat}
-\label{sec:ayat}
-%-----------------------------------------------------------------------------%
-\begin{figure}
-\[
-    \defbox{ex.org/dokumen/uu/2003/13/}{URI dokumen}{gray}
-    pasal/
-    \defbox{1/}{no. pasal}{purple}
-    ayat/
-    \defbox{8/}{no. ayat}{blue}
-\]
-\caption{Contoh URI untuk pasal 1 ayat 8}
-\end{figure}
+\begin{verbatim}
+PREFIX ex: <https://example.org/>
+SELECT ?p
+       ?o
+WHERE
+  {
+    ex:james ?p ?o
+  }
+\end{verbatim}
 
-%-----------------------------------------------------------------------------%
-\subsection{Huruf}
-\label{sec:huruf}
-%-----------------------------------------------------------------------------%
-\begin{figure}
-\[
-    \defbox{ex.org/dokumen/uu/2003/13/}{URI dokumen}{gray}
-    pasal/
-    \defbox{1/}{no. pasal}{purple}
-    ayat/
-    \defbox{8/}{no. ayat}{blue}
-    point/
-    \defbox{g/}{huruf}{brown}
-\]
-\caption{Contoh URI untuk pasal 1 ayat 8 huruf g}
-\end{figure}
+Output dari \emph{query} tersebut adalah sebagai berikut.
 
-\begin{figure}
-\[
-    \defbox{ex.org/dokumen/uu/2003/13/}{URI dokumen}{gray}
-    pasal/
-    \defbox{1/}{no. pasal}{purple}
-    ayat/
-    \defbox{8/}{no. ayat}{blue}
-    point/
-    \defbox{g/}{huruf 1}{brown}
-    point/
-    \defbox{3/}{huruf 2}{brown}
-\]
-\caption{Contoh URI untuk pasal 1 ayat 8 huruf g-3}
-\end{figure}
+\begin{longtable}[c]{@{}ll@{}}
+    \toprule\addlinespace
+    ?p              & ?o
+    \\\addlinespace
+    \midrule\endhead
+    ex:has\_visited & ex:louvre
+    \\\addlinespace
+    ex:has\_name    & ``james''
+    \\\addlinespace
+    \bottomrule
+\end{longtable}
 
+\subsection{Contoh Query 3}\label{contoh-query-3}
 
-%-----------------------------------------------------------------------------%
-\section{Pekerjaan Terkait}
-\label{sec:pekerjaanTerkait}
-%-----------------------------------------------------------------------------%
+\emph{Query} ini bertujuan untuk menampilkan semua objek pada
+\emph{triple} dengan subjek \texttt{https://example.org/james} dan
+properti \texttt{https://example.org/has\_visited}. Artinya,
+\emph{query} ini menampilkan semua tempat yang pernah dikunjungi james.
 
+\begin{verbatim}
+PREFIX ex: <https://example.org/>
+SELECT ?visited_place
+WHERE
+  {
+    ex:james ex:has_visited ?visited_place
+  }
+\end{verbatim}
 
-%-----------------------------------------------------------------------------%
-\subsection{European Legislation Identifier (ELI)}
-\label{sec:eli}
-%-----------------------------------------------------------------------------%
-ELI merupakan sistem untuk membuat peraturan perundang-undangan tersedia secara daring dalam format terstandardisasi, sehingga dapat diakses dan digunakan oleh berbagai instansi. ELI dibangun berdasarkan persetujuan antara negara-negara EU. ELI memberikan spesifikasi untuk hal-hal berikut:
+Output dari \emph{query} tersebut adalah sebagai berikut.
+
+\textbar{} ?visited\_place \textbar{}
+\textbar{}----------------\textbar{} \textbar{} ex:louvre \textbar{}
+
+\section{Peraturan
+  Perundang-undangan}\label{peraturan-perundang-undangan}
+
+??? boleh ngequote sebanyak apa?
+
+Menurut Undang-Undang Nomor 10 Tahun 2004 Pasal 7 Ayat 1, peraturan
+perundang-undangan adalah peraturan tertulis yang dibentuk oleh lembaga
+negara atau pejabat yang berwenang dan mengikat secara umum. Jenis dan
+hierarki peraturan perundang-undangan terdiri atas:
+
 \begin{itemize}
-    \item URI untuk informasi peraturan perundang-undangan.
-    \item Metadata yang mendeskripsikan informasi peraturan perundang-undangan.
+    \itemsep1pt\parskip0pt\parsep0pt
+    \item
+          Undang-Undang Dasar Negara Republik Indonesia Tahun 1945
+    \item
+          Undang-Undang/Peraturan Pemerintah Pengganti Undang-Undang
+    \item
+          Peraturan Pemerintah
+    \item
+          Peraturan Presiden
+    \item
+          Peraturan Daerah
 \end{itemize}
+
+Berikut adalah beberapa peranan perundang-undangan untuk Indonesia
+\href{https://www.pustaka.ut.ac.id/lib/wp-content/uploads/pdfmk/HKUM4403-M1.pdf}{1}:
+
+\begin{itemize}
+    \itemsep1pt\parskip0pt\parsep0pt
+    \item
+          Peraturan perundang-undangan merupakan kaidah hukum yang mudah dikenal
+          (diidentifikasi), mudah diketemukan kembali, dan mudah ditelusuri.
+          Sebagai kaidah hukum tertulis, bentuk, jenis,dan tempatnya jelas.
+          Begitu pula pembuatnya.
+    \item
+          Peraturan perundang-undangan memberikan kepastian hukum yang lebih
+          nyata karena kaidah-kaidahnya mudah diidentifikasi dan mudah
+          diketemukan kembali.
+    \item
+          Struktur dan sistematika peraturan perundang-undangan lebih jelas
+          sehingga memungkinkan untuk diperiksa kembali dan diuji baik segi-segi
+          formal maupun materi muatannya.
+    \item
+          Pembentukan dan pengembangan peraturan perundang-undangan dapat
+          direncanakan. Faktor ini sangat penting bagi negara-negara yang sedang
+          membangun termasuk membangun sistem hukum baru yang sesuai dengan
+          kebutuhan dan perkembangan masyarakat.
+\end{itemize}
+
+Menurut lampiran Undang-Undang Nomor 10 Tahun 2004, struktur peraturan
+perundang--undangan terdiri atas:
+
+\begin{itemize}
+    \itemsep1pt\parskip0pt\parsep0pt
+    \item
+          Judul
+    \item
+          Pembukaan
+    \item
+          Batang Tubuh
+    \item
+          Penutup
+    \item
+          Penjelasan (jika diperlukan)
+    \item
+          Lampiran (jika diperlukan)
+\end{itemize}
+
+Bagian judul, pembukaan, dan penutup memuat metadata dari peraturan
+perundang-undangan tersebut seperti jenis, nomor, tahun pengundangan
+atau penetapan, nama, jabatan pembentuk, konsiderans, kasar Hukum,
+peraturan perundang-undangan. Konsiderans memuat uraian singkat mengenai
+pokok--pokok pikiran yang menjadi latar belakang dan alasan pembuatan
+peraturan perundang--undangan. Dasar Hukum memuat dasar kewenangan
+pembuatan peraturan perundang-undangan dan peraturan perundang--undangan
+yang memerintahkan pembuatan peraturan perundang--undangan tersebut.
+Oleh karena itu, kita dapat melihat keterkaitan antara peraturan
+perundang-undangan dengan melihat konsiderans dan dasar hukum dari
+peraturan tersebut.
+
+Batang tubuh peraturan perundang-undangan memuat semua substansi
+peraturan perundang-undangan yang dirumuskan dalam pasal. Pengelompokkan
+materi peraturan perundang-undangan dapat disusun secara sistematis
+dalam buku, bab, bagian, dan paragraf atas dasar kesamaan materi. Pasal
+dapat dirinci ke dalam beberapa ayat. Pasal dan ayat dapat dibuat dalam
+bentuk kalimat maupun tabulasi rincian. Dalam bentuk tabulasi rincian,
+setiap rincian harus dapat dibaca sebagai satu rangkaian kesatuan dengan
+frase pembuka dan setiap rincian diawali dengan huruf (abjad) kecil dan
+diberi tanda baca titik. Suatu rincian dapat dibagi lagi ke unsur
+rincian yang lebih kecil.
+
+Saat ini pembuatan dan pemanfaatan peraturan perundang-undangan masih
+dilakukan secara manual oleh manusia. Pembuatan peraturan
+perundang-undangan dilakukan dengan mengetikkan konten peraturan
+tersebut dengan format yang telah ditentukan. Metode pembuatan tersebut
+tidak masalah jika hanya akan dibaca oleh manusia karena manusia secara
+tidak sadar dapat melihat hirarki visual dari dokumen tersebut dan
+membuat data yang dilihatnya terstruktur di dalam otak. Metode ini
+membuat pemanfaatan peraturan perundang-undangan oleh mesin menjadi
+kurang efisien karena mesin perlu melakukan proses tambahan yaitu
+mengkonversi gambar menjadi data terstruktur.
+
+\section{Pemodelan European Legislation Identifier
+  (ELI)}\label{pemodelan-european-legislation-identifier-eli}
+
+ELI merupakan sistem untuk membuat peraturan perundang-undangan tersedia
+secara daring dalam format terstandardisasi, sehingga dapat diakses dan
+digunakan oleh berbagai instansi. ELI bertujuan untuk untuk
+memfasilitasi akses, berbagi dan interkoneksi informasi hukum yang
+diterbitkan melalui nasional, Eropa dan sistem informasi hukum global
+{[}6{]}. ELI dibangun berdasarkan persetujuan antara negara-negara EU.
+Spesifikasi yang terdapat pada ELI antara lain:
+
+\begin{itemize}
+    \itemsep1pt\parskip0pt\parsep0pt
+    \item
+          URI untuk informasi peraturan perundang-undangan.
+    \item
+          Metadata yang mendeskripsikan informasi peraturan perundang-undangan.
+\end{itemize}
+
+// TODO: terlalu singkat, ksh konsepnya gmn dan contoh pemodelan ELI utk
+suatu peraturan
+
+// TODO: ELI jg msh simpel. Bs dijelaskan motivasi ELI, serta apa contoh
+konsep2 yg sdh ada di ELI ontology, serta yg belum ada.
+
+// TODO: - ELI kekurangan lainnya ya lbh condong ke pemodelan peraturan
+di Eropa, bukan di Indonesia. Misal, gak ada namanya Peraturan
+Pemerintah, atau Pergub di ELI :)
+
+
