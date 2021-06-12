@@ -35,9 +35,9 @@ berturut-turut adalah \texttt{https://example.org/james},\texttt{https://example
 merupakan notasi untuk \emph{resource} entitas James dan Louvre,
 \texttt{https://example.org/has\_visited} dan \texttt{https://example.org/has\_name} merupakan
 properti yang menjelaskan hubungan antara subjek dan objek, dan ``james'' adalah \emph{string
-literal} yang menunjukan nilai dari nama James.
+  literal} yang menunjukan nilai dari nama James.
 
-\begin{figure}[htbp]
+\begin{figure}[H]
   \centering
   \includegraphics[scale=0.7]{pictures/triple.png}
   \caption{Triple}
@@ -47,10 +47,10 @@ Terdapat beberapa format berkas dan sintaks untuk mengekspresikan RDF. Pada pene
 menggunakan format Terse RDF Triple Language (Turtle). Sebagai contoh, \emph{knowledge graph} diatas
 dapat dituliskan dalam format Turtle sebagai berikut.
 
-\begin{verbatim}
+\begin{minted}[frame=single, breaklines, fontsize=\footnotesize]{turtle}
 <https://example.org/james> <https://example.org/has_visited> <https://example.org/louvre> .
 <https://example.org/james> <https://example.org/has_name> "james" .
-\end{verbatim}
+\end{minted}
 
 Dengan fitur format Turtle, dua \emph{triple} diatas dapat ditulis lebih singkat dengan mengganti
 prefix URI yang sama menjadi teks yang lebih singkat, dan menggabungkan penulisan beberapa
@@ -63,13 +63,13 @@ turtle bisa digabung dengan hanya menuliskan subjek sebanyak satu kali, kemudian
 dan objek dipisah dengan tanda titik koma . Berikut adalah contoh penulisan dua \emph{triple} diatas
 dalam bentuk yang lebih singkat dan lebih mudah dibaca oleh manusia.
 
-\begin{verbatim}
+\begin{minted}[frame=single, fontsize=\footnotesize]{turtle}
 @prefix ex: <https://example.org/> .
 
 ex:james 
   ex:has_visited ex:louvre ;
   ex:has_name "james" .
-\end{verbatim}
+\end{minted}
 
 \section{SPARQL}\label{sparql}
 
@@ -81,8 +81,8 @@ SPARQL.
 \begin{itemize}
   \itemsep1pt\parskip0pt\parsep0pt
   \item \texttt{PREFIX}: Mendeklarasikan pemetaan prefix URI menjadi \emph{string} yang lebih
-  singkat. Hal ini dilakukan agar \emph{query} lebih mudah dibaca oleh manusia seperti sintaks
-  \texttt{@prefix} pada Turtle.
+        singkat. Hal ini dilakukan agar \emph{query} lebih mudah dibaca oleh manusia seperti sintaks
+        \texttt{@prefix} pada Turtle.
   \item \texttt{SELECT}: Menyatakan variabel yang akan ditampilkan sebagai output dari \emph{query}.
   \item \texttt{WHERE}: Menyatakan kondisi \emph{triple} yang akan ditampilkan pada output.
 \end{itemize}
@@ -95,7 +95,8 @@ pada subbab sebelumnya.
 \emph{Query} ini bertujuan untuk menampilkan semua \emph{triple} yang terdapat pada \emph{knowledge
   graph}.
 
-\begin{verbatim}
+\begin{listing}
+  \begin{minted}[frame=single, fontsize=\footnotesize]{sparql}
 PREFIX ex: <https://example.org/>
 SELECT ?s 
        ?p
@@ -104,14 +105,17 @@ WHERE
   {
     ?s ?p ?o
   }
-\end{verbatim}
+  \end{minted}
+  \caption{Example from external file}
+  \label{listing:3}
+\end{listing}
 
-Output dari \emph{query} tersebut adalah sebagai berikut.
+Output dari \emph{query} diatas adalah sebagai berikut.
 
-\begin{longtable}[c]{@{}lll@{}} \toprule\addlinespace?s & ?p              & ?o
-  \\\addlinespace \midrule\endhead ex:james              & ex:has\_visited & ex:louvre
-  \\\addlinespace ex:james & ex:has\_name                           & ``james''
-  \\\addlinespace
+\begin{longtable}{|l|l|l|} \toprule\addlinespace
+  ?s       & ?p              & ?o        \\\addlinespace \midrule\endhead
+  ex:james & ex:has\_visited & ex:louvre \\\addlinespace
+  ex:james & ex:has\_name    & ``james'' \\\addlinespace
   \bottomrule
 \end{longtable}
 
@@ -120,7 +124,7 @@ Output dari \emph{query} tersebut adalah sebagai berikut.
 \emph{Query} ini bertujuan untuk menampilkan semua properti dan objek pada \emph{triple} dengan
 subjek \texttt{https://example.org/james}.
 
-\begin{verbatim}
+\begin{minted}[frame=single, fontsize=\footnotesize]{sparql}
 PREFIX ex: <https://example.org/>
 SELECT ?p
        ?o
@@ -128,12 +132,14 @@ WHERE
   {
     ex:james ?p ?o
   }
-\end{verbatim}
+  \end{minted}
 
 Output dari \emph{query} tersebut adalah sebagai berikut.
 
-\begin{longtable}[c]{@{}ll@{}} \toprule\addlinespace?p & ?o        \\\addlinespace \midrule\endhead
-  ex:has\_visited      & ex:louvre \\\addlinespace ex:has\_name    & ``james'' \\\addlinespace
+\begin{longtable}[c]{@{}ll@{}} \toprule\addlinespace
+  ?p              & ?o        \\\addlinespace \midrule\endhead
+  ex:has\_visited & ex:louvre \\\addlinespace
+  ex:has\_name    & ``james'' \\\addlinespace
   \bottomrule
 \end{longtable}
 
@@ -143,19 +149,22 @@ Output dari \emph{query} tersebut adalah sebagai berikut.
 \texttt{https://example.org/james} dan properti \texttt{https://example.org/has\_visited}. Artinya,
 \emph{query} ini menampilkan semua tempat yang pernah dikunjungi james.
 
-\begin{verbatim}
+\begin{minted}[frame=single, fontsize=\footnotesize]{sparql}
 PREFIX ex: <https://example.org/>
 SELECT ?visited_place
 WHERE
   {
     ex:james ex:has_visited ?visited_place
   }
-\end{verbatim}
+\end{minted}
 
 Output dari \emph{query} tersebut adalah sebagai berikut.
 
-\textbar{} ?visited\_place \textbar{} \textbar{}----------------\textbar{} \textbar{} ex:louvre
-\textbar{}
+\begin{longtable}[c]{@{}l@{}} \toprule\addlinespace
+  ?visited\_place \\ \addlinespace \midrule\endhead
+  ex:louvre       \\ \addlinespace
+  \bottomrule
+\end{longtable}
 
 \section{Peraturan Perundang-undangan}\label{peraturan-perundang-undangan}
 
@@ -180,15 +189,15 @@ Berikut adalah beberapa peranan perundang-undangan untuk Indonesia
 \begin{itemize}
   \itemsep1pt\parskip0pt\parsep0pt
   \item Peraturan perundang-undangan merupakan kaidah hukum yang mudah dikenal (diidentifikasi),
-  mudah diketemukan kembali, dan mudah ditelusuri. Sebagai kaidah hukum tertulis, bentuk, jenis,dan
-  tempatnya jelas. Begitu pula pembuatnya.
+        mudah diketemukan kembali, dan mudah ditelusuri. Sebagai kaidah hukum tertulis, bentuk, jenis,dan
+        tempatnya jelas. Begitu pula pembuatnya.
   \item Peraturan perundang-undangan memberikan kepastian hukum yang lebih nyata karena
-  kaidah-kaidahnya mudah diidentifikasi dan mudah diketemukan kembali.
+        kaidah-kaidahnya mudah diidentifikasi dan mudah diketemukan kembali.
   \item Struktur dan sistematika peraturan perundang-undangan lebih jelas sehingga memungkinkan
-  untuk diperiksa kembali dan diuji baik segi-segi formal maupun materi muatannya.
+        untuk diperiksa kembali dan diuji baik segi-segi formal maupun materi muatannya.
   \item Pembentukan dan pengembangan peraturan perundang-undangan dapat direncanakan. Faktor ini
-  sangat penting bagi negara-negara yang sedang membangun termasuk membangun sistem hukum baru yang
-  sesuai dengan kebutuhan dan perkembangan masyarakat.
+        sangat penting bagi negara-negara yang sedang membangun termasuk membangun sistem hukum baru yang
+        sesuai dengan kebutuhan dan perkembangan masyarakat.
 \end{itemize}
 
 Menurut lampiran Undang-Undang Nomor 10 Tahun 2004, struktur peraturan perundang--undangan terdiri

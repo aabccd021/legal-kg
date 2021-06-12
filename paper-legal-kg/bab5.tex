@@ -98,7 +98,7 @@ Berikut adalah data yang dimiliki oleh sebuah \emph{span}:
 
 Berikut adalah contoh gambaran berkas PDF dan hasil ekstraksinya menjadi daftar \emph{span}.
 
-\begin{figure}[htbp]
+\begin{figure}[H]
   \centering
   \includegraphics[scale=0.7]{pictures/pdf_example.png}
   \caption{Gambar berkas PDF yang akan diekstraksi}
@@ -140,7 +140,7 @@ ekstraksi seperti \emph{header} dan \emph{footer}. Pada penelitian ini, penulis 
 dari sumber yang sama sehingga memiliki format yang sama, dan juga posisi \emph{header} dan
 \emph{footer} yang hampir sama pada setiap dokumen.
 
-\begin{figure}[htbp]
+\begin{figure}[H]
   \centering
   \includegraphics[scale=0.7]{pictures/pdf_header.png}
   \caption{Contoh Header}
@@ -231,7 +231,7 @@ section \texttt{babset} dikelompokkan menjadi komponen bab yaitu \texttt{Bab 1},
 Pengelompokan bertingkat ini dilakukan agar fungsi untuk mendeteksi batas antara komponen tidak
 menjadi rumit.
 
-\begin{figure}[htbp]
+\begin{figure}[H]
   \centering
   \includegraphics[width=\textwidth]{pictures/pdf_to_component.png}
   \caption{Ilustrasi Ekstraksi Daftar Span menjadi Data Struktur Komponen}
@@ -307,25 +307,24 @@ pada setiap komponen untuk mengetahui apakah komponen tersebut menyebut komponen
 peraturan perundang-undangan lainnya. Berikut adalah daftar pola sitasi yang berhasil dideteksi pada
 penelitian ini.
 
-\begin{table}[ht]
-  \centering
-  \begin{tabular}{p{0.2\textwidth} | p{0.4\textwidth}| p{0.4\textwidth}}
-    Pola                                  & Contoh teks                                              & URI Terdeteksi                      \\ \hline \hline
-    UUD 1945                              & Undang Undang Dasar Negara Republik Indonesia Tahun 1945 & /uud/                               \\ \hline
-    Undang-Undang Nomor \{x\} Tahun \{y\} & Undang-Undang Nomor 26 Tahun 2007                        & /uu/2007/26                         \\ \hline
-    ayat (\{x\})                          & ayat (1)                                                 & /uu/2003/13/pasal/169/ayat/1        \\ \hline
-    Pasal \{x\}                           & Pasal 156                                                & /uu/2003/13/pasal/156               \\ \hline
-    Pasal \{x\} ayat (\{y\})              & Pasal 156 ayat (2)                                       & /uu/2003/13/pasal/156/ayat/2        \\ \hline
-    huruf \{x\}, \{y\}, ... dan \{z\}     & huruf a, b, c, d, dan e                                  & /uu/2003/13/menimbang/point/a       \\
-                                          &                                                          & /uu/2003/13/menimbang/point/b       \\
-                                          &                                                          & /uu/2003/13/menimbang/point/c       \\
-                                          &                                                          & /uu/2003/13/menimbang/point/d       \\
-                                          &                                                          & /uu/2003/13/menimbang/point/e       \\ \hline
-    huruf \{x\} dan \{y\}                 & huruf a dan b                                            & /uu/2003/13/pasal/1/point/5/point/a \\
-                                          &                                                          & /uu/2003/13/pasal/1/point/5/point/b \\
-  \end{tabular}
-  \caption{Summary Table}
-\end{table}
+\begin{longtable}[l]{|p{0.2\textwidth} | p{0.3\textwidth}| p{0.5\textwidth}|}
+  \hline
+  Pola                                  & Contoh teks                                              & URI Terdeteksi                              \\ \hline \endhead
+  UUD 1945                              & Undang Undang Dasar Negara Republik Indonesia Tahun 1945 & \texttt{uud/}                               \\ \hline
+  Undang-Undang Nomor \{x\} Tahun \{y\} & Undang-Undang Nomor 26 Tahun 2007                        & \texttt{uu/2007/26}                         \\ \hline
+  ayat (\{x\})                          & ayat (1)                                                 & \texttt{uu/2003/13/pasal/169/ayat/1}        \\ \hline
+  Pasal \{x\}                           & Pasal 156                                                & \texttt{uu/2003/13/pasal/156}               \\ \hline
+  Pasal \{x\} ayat (\{y\})              & Pasal 156 ayat (2)                                       & \texttt{uu/2003/13/pasal/156/ayat/2}        \\ \hline
+  huruf \{x\}, \{y\}, ... dan \{z\}     & huruf a, b, c, d, dan e                                  & \texttt{uu/2003/13/menimbang/point/a}       \\
+                                        &                                                          & \texttt{uu/2003/13/menimbang/point/b}       \\
+                                        &                                                          & \texttt{uu/2003/13/menimbang/point/c}       \\
+                                        &                                                          & \texttt{uu/2003/13/menimbang/point/d}       \\
+                                        &                                                          & \texttt{uu/2003/13/menimbang/point/e}       \\ \hline
+  huruf \{x\} dan \{y\}                 & huruf a dan b                                            & \texttt{uu/2003/13/pasal/1/point/5/point/a} \\
+                                        &                                                          & \texttt{uu/2003/13/pasal/1/point/5/point/b} \\
+  \bottomrule
+  \caption{Long table caption.\label{longszz}}                                                                                                   \\
+\end{longtable}
 
 Data sitasi mengandung data sebagai berikut:
 
