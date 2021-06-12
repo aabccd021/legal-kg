@@ -26,6 +26,10 @@
 \usepackage[indonesian]{babel}
 \usepackage{lscape}
 \usepackage{float}
+\usepackage{makecell}
+
+\newcommand{\specialcell}[2][c]{%
+  \begin{tabular}[#1]{@{}c@{}}#2\end{tabular}}
 
 % Load konfigurasi khusus untuk laporan yang sedang dibuat
 \input{laporan_setting}
