@@ -29,24 +29,25 @@ tersebut. Berikut adalah semua \emph{class} komponen beserta URI dan deskripsiny
 
 \begin{longtable}[l]{|p{0.2\textwidth}|p{0.8\textwidth}|}
   \hline
-  Nama Class       & Deskripsi                                                                                       \\ \hline \endhead
-  `Peraturan`      & Peraturan perundang-undangan                                                                    \\ \hline
-  `DaftarBab`      & Daftar satu atau lebih bab                                                                      \\ \hline
-  `Bab`            & Bab                                                                                             \\ \hline
-  `DaftarBagian`   & Daftar satu atau lebih bagian                                                                   \\ \hline
-  `Bagian`         & Bagian                                                                                          \\ \hline
-  `DaftarParagraf` & Daftar satu atau lebih paragraf                                                                 \\ \hline
-  `Paragraf`       & Paragraf                                                                                        \\ \hline
-  `DaftarPasal`    & Daftar satu atau lebih pasal                                                                    \\ \hline
-  `Pasal`          & Pasal                                                                                           \\ \hline
-  `VersiPasal`     & Versi dari sebuah pasal. Sebuah pasal dapat memiliki satu atau lebih versi dari hasil amandemen \\ \hline
-  `DaftarAyat`     & Daftar satu atau lebih ayat                                                                     \\ \hline
-  `Ayat`           & Ayat                                                                                            \\ \hline
-  `DaftarHuruf`    & Daftar satu atau lebih huruf atau nomor                                                         \\ \hline
-  `Huruf`          & Huruf atau nomor                                                                                \\ \hline
-  `Menimbang`      & Hal yang ditimbang oleh suatu peraturan                                                         \\ \hline
-  `Mengingat`      & Hal yang diingat oleh suatu peraturan                                                           \\ \hline
-  `Segmen`         & Segmen teks. Dapat memiliki rujukan ke suatu komponen peraturan                                 \\ \hline
+  Nama Class              & Deskripsi                                                                                       \\ \hline \endhead
+  \texttt{Peraturan}      & Peraturan perundang-undangan                                                                    \\ \hline
+  \texttt{DaftarBab}      & Daftar satu atau lebih bab                                                                      \\ \hline
+  \texttt{Bab}            & Bab                                                                                             \\ \hline
+  \texttt{DaftarBagian}   & Daftar satu atau lebih bagian                                                                   \\ \hline
+  \texttt{Bagian}         & Bagian                                                                                          \\ \hline
+  \texttt{DaftarParagraf} & Daftar satu atau lebih paragraf                                                                 \\ \hline
+  \texttt{Paragraf}       & Paragraf                                                                                        \\ \hline
+  \texttt{DaftarPasal}    & Daftar satu atau lebih pasal                                                                    \\ \hline
+  \texttt{Pasal}          & Pasal                                                                                           \\ \hline
+  \texttt{VersiPasal}     & Versi dari sebuah pasal. Sebuah pasal dapat memiliki satu atau lebih versi dari hasil amandemen \\ \hline
+  \texttt{DaftarAyat}     & Daftar satu atau lebih ayat                                                                     \\ \hline
+  \texttt{Ayat}           & Ayat                                                                                            \\ \hline
+  \texttt{DaftarHuruf}    & Daftar satu atau lebih huruf atau nomor                                                         \\ \hline
+  \texttt{Huruf}          & Huruf atau nomor                                                                                \\ \hline
+  \texttt{Menimbang}      & Hal yang ditimbang oleh suatu peraturan                                                         \\ \hline
+  \texttt{Mengingat}      & Hal yang diingat oleh suatu peraturan                                                           \\ \hline
+  \texttt{Segmen}         & Segmen teks. Dapat memiliki rujukan ke suatu komponen peraturan                                 \\ \hline
+  \caption{Long table caption.\label{longsz}}                                                                                                  \\
 \end{longtable}
 
 \section{Perancangan URI Komponen Peraturan
@@ -60,16 +61,16 @@ dikurung dengan kurung kurawal \texttt{\{\}}.
 
 
 
-\begin{longtable}[l]{|p{0.2\textwidth}|p{0.5\textwidth}|p{0.3\textwidth}|}
+\begin{longtable}[l]{|p{0.2\textwidth}|p{0.55\textwidth}|p{0.25\textwidth}|}
   \hline
-  Jenis Peraturan                       & Pola URI                                         & Penjelasan variabel                 \\ \hline \endhead
-  Undang-Undang Dasar 1945              & `/uud`                                           &                                     \\ \hline
-  Undang-Undang                         & `/uu/\{thn\}/\{nmr\}`                            & \makecell[l]{`thn`: tahun peraturan \\`nmr`: nomor peraturan} \\ \hline
-  Peraturan Pemerintah                  & `/pp/\{thn\}/\{nmr\}`                            & \makecell[l]{`thn`: tahun peraturan \\`nmr`: nomor peraturan} \\\hline
-  Peraturan Daerah Provinsi DKI Jakarta & `/perda\_provinsi\_dki\_jakarta/\{thn\}/\{nmr\}` & \makecell[l]{`thn`: tahun peraturan \\`nmr`: nomor peraturan} \\\hline
-  Peraturan Gubernur DKI Jakarta        & `/pergub\_dki\_jakarta/\{thn\}/\{nmr\}`          & \makecell[l]{`thn`: tahun peraturan \\`nmr`: nomor peraturan} \\\hline
-  Peraturan Walikota Malang             & `/perwali\_malang/\{thn\}/\{nmr\}`               & \makecell[l]{`thn`: tahun peraturan \\`nmr`: nomor peraturan} \\\hline
-  \caption{Long table caption.\label{longs2}}                                                                                    \\
+  Jenis Peraturan                       & Pola URI                                                & Penjelasan variabel                        \\ \hline \endhead
+  Undang-Undang Dasar 1945              & \texttt{/uud}                                           &                                            \\ \hline
+  Undang-Undang                         & \texttt{/uu/\{thn\}/\{nmr\}}                            & \makecell[l]{\texttt{thn}: tahun peraturan \\\texttt{nmr}: nomor peraturan} \\ \hline
+  Peraturan Pemerintah                  & \texttt{/pp/\{thn\}/\{nmr\}}                            & \makecell[l]{\texttt{thn}: tahun peraturan \\\texttt{nmr}: nomor peraturan} \\\hline
+  Peraturan Daerah Provinsi DKI Jakarta & \texttt{/perda\_provinsi\_dki\_jakarta/\{thn\}/\{nmr\}} & \makecell[l]{\texttt{thn}: tahun peraturan \\\texttt{nmr}: nomor peraturan} \\\hline
+  Peraturan Gubernur DKI Jakarta        & \texttt{/pergub\_dki\_jakarta/\{thn\}/\{nmr\}}          & \makecell[l]{\texttt{thn}: tahun peraturan \\\texttt{nmr}: nomor peraturan} \\\hline
+  Peraturan Walikota Malang             & \texttt{/perwali\_malang/\{thn\}/\{nmr\}}               & \makecell[l]{\texttt{thn}: tahun peraturan \\\texttt{nmr}: nomor peraturan} \\\hline
+  \caption{Long table caption.\label{longs2}}                                                                                                  \\
 \end{longtable}
 
 Setiap komponen dokumen merupakan entitas, dan memiliki URI. URI sebuah komponen didahului oleh
@@ -78,32 +79,32 @@ perundang-undangan beserta pola URI nya.
 
 \begin{longtable}{|p{0.2\textwidth}|p{0.35\textwidth}|p{0.45\textwidth}|}
   \hline
-  Class Komponen   & Pola URI                       & Penjelasan variabel                                                                                     \\ \hline \endhead
-  `DaftarBab`      & `\{docURI\}/bab`               & `docURI`: URI peraturan yang mengatasi                                                                  \\ \hline
-  `Bab`            & `\{daftarBabURI\}/\{no\}`      & `daftarBabURI`: URI `DaftarBab` yang mengatasi                                                          \\
-                   &                                & `no`: Nomor bab                                                                                         \\ \hline
-  `DaftarBagian`   & `\{babURI\}/bagian`            & `babURI`: URI `Bab` yang mengatasi                                                                      \\ \hline
-  `Bagian`         & `\{daftarBagianURI\}/\{no\}`   & `daftarBagianURI`: URI `DaftarBagian` yang mengatasi                                                    \\
-                   &                                & `no`: Nomor bagian                                                                                      \\ \hline
-  `DaftarParagraf` & `\{bagianURI\}/paragraf`       & `bagianURI`: URI `Bagian` yang mengatasi                                                                \\ \hline
-  `Paragraf`       & `\{daftarParagrafURI\}/\{no\}` & `daftarParagrafURI`: URI `DaftarBagian` yang mengatasi                                                  \\
-                   &                                & `no`: Nomor paragraf                                                                                    \\ \hline
-  `DaftarPasal`    & `\{parentURI\}/daftarpasal`    & `parentURI`: URI `Bab`, `Bagian`, `Paragraf` yang mengatasi                                             \\ \hline
-  `Pasal`          & `\{docURI\}/pasal/\{no\}`      & `docURI`: URI peraturan yang mengatasi                                                                  \\
-                   &                                & `no`: Nomor pasal                                                                                       \\ \hline
-  `VersiPasal`     & `\{pasalURI\}/versi/\{date\}`  & `pasalURI`: URI `Pasal` yang mengatasi                                                                  \\
-                   &                                & `date`: Tanggal disahkan                                                                                \\ \hline
-  `DaftarAyat`     & `\{pasalURI\}/ayat`            & `pasalURI`: URI `Pasal` yang mengatasi                                                                  \\ \hline
-  `Ayat`           & `\{daftarAyatURI\}/\{no\}`     & `daftarAyatURI`: URI `DaftarAyat` yang mengatasi                                                        \\
-                   &                                & `no`: Nomor ayat                                                                                        \\ \hline
-  `DaftarHuruf`    & `\{parentURI\}/huruf`          & `parentURI`: URI `Ayat`, `Huruf`, `VersiPasal`, `Menimbang`, `Mengingat`, yang mengatasi                \\ \hline
-  `Huruf`          & `\{daftarHurufURI\}/\{id\}`    & `daftarHurufURI`: URI `DaftarHuruf` yang mengatasi                                                      \\
-                   &                                & `id`: Nomor atau huruf                                                                                  \\ \hline
-  `Menimbang`      & `\{docURI\}/menimbang`         & `docURI`: URI peraturan yang mengatasi                                                                  \\ \hline
-  `Mengingat`      & `\{docURI\}/mengingat`         & `docURI`: URI peraturan yang mengatasi                                                                  \\ \hline
-  `Segmen`         & `\{parentURI\}/\{name\}`       & `parentURI`: URI `Ayat`, `Huruf`, `DaftarHuruf`, `VersiPasal`, `Menimbang`, `Mengingat`, yang mengatasi \\
-                   &                                & `name`: Nama teks                                                                                       \\ \hline
-  \caption{Long table caption.\label{longs}}                                                                                                                  \\
+  Class Komponen          & Pola URI                              & Penjelasan variabel                                                                                                                                      \\ \hline \endhead
+  \texttt{DaftarBab}      & \texttt{\{docURI\}/bab}               & \texttt{docURI}: URI peraturan yang mengatasi                                                                                                            \\ \hline
+  \texttt{Bab}            & \texttt{\{daftarBabURI\}/\{no\}}      & \texttt{daftarBabURI}: URI \texttt{DaftarBab} yang mengatasi                                                                                             \\
+                          &                                       & \texttt{no}: Nomor bab                                                                                                                                   \\ \hline
+  \texttt{DaftarBagian}   & \texttt{\{babURI\}/bagian}            & \texttt{babURI}: URI \texttt{Bab} yang mengatasi                                                                                                         \\ \hline
+  \texttt{Bagian}         & \texttt{\{daftarBagianURI\}/\{no\}}   & \texttt{daftarBagianURI}: URI \texttt{DaftarBagian} yang mengatasi                                                                                       \\
+                          &                                       & \texttt{no}: Nomor bagian                                                                                                                                \\ \hline
+  \texttt{DaftarParagraf} & \texttt{\{bagianURI\}/paragraf}       & \texttt{bagianURI}: URI \texttt{Bagian} yang mengatasi                                                                                                   \\ \hline
+  \texttt{Paragraf}       & \texttt{\{daftarParagrafURI\}/\{no\}} & \texttt{daftarParagrafURI}: URI \texttt{DaftarBagian} yang mengatasi                                                                                     \\
+                          &                                       & \texttt{no}: Nomor paragraf                                                                                                                              \\ \hline
+  \texttt{DaftarPasal}    & \texttt{\{parentURI\}/daftarpasal}    & \texttt{parentURI}: URI \texttt{Bab}, \texttt{Bagian}, \texttt{Paragraf} yang mengatasi                                                                  \\ \hline
+  \texttt{Pasal}          & \texttt{\{docURI\}/pasal/\{no\}}      & \texttt{docURI}: URI peraturan yang mengatasi                                                                                                            \\
+                          &                                       & \texttt{no}: Nomor pasal                                                                                                                                 \\ \hline
+  \texttt{VersiPasal}     & \texttt{\{pasalURI\}/versi/\{date\}}  & \texttt{pasalURI}: URI \texttt{Pasal} yang mengatasi                                                                                                     \\
+                          &                                       & \texttt{date}: Tanggal disahkan                                                                                                                          \\ \hline
+  \texttt{DaftarAyat}     & \texttt{\{pasalURI\}/ayat}            & \texttt{pasalURI}: URI \texttt{Pasal} yang mengatasi                                                                                                     \\ \hline
+  \texttt{Ayat}           & \texttt{\{daftarAyatURI\}/\{no\}}     & \texttt{daftarAyatURI}: URI \texttt{DaftarAyat} yang mengatasi                                                                                           \\
+                          &                                       & \texttt{no}: Nomor ayat                                                                                                                                  \\ \hline
+  \texttt{DaftarHuruf}    & \texttt{\{parentURI\}/huruf}          & \texttt{parentURI}: URI \texttt{Ayat}, \texttt{Huruf}, \texttt{VersiPasal}, \texttt{Menimbang}, \texttt{Mengingat}, yang mengatasi                       \\ \hline
+  \texttt{Huruf}          & \texttt{\{daftarHurufURI\}/\{id\}}    & \texttt{daftarHurufURI}: URI \texttt{DaftarHuruf} yang mengatasi                                                                                         \\
+                          &                                       & \texttt{id}: Nomor atau huruf                                                                                                                            \\ \hline
+  \texttt{Menimbang}      & \texttt{\{docURI\}/menimbang}         & \texttt{docURI}: URI peraturan yang mengatasi                                                                                                            \\ \hline
+  \texttt{Mengingat}      & \texttt{\{docURI\}/mengingat}         & \texttt{docURI}: URI peraturan yang mengatasi                                                                                                            \\ \hline
+  \texttt{Segmen}         & \texttt{\{parentURI\}/\{name\}}       & \texttt{parentURI}: URI \texttt{Ayat}, \texttt{Huruf}, \texttt{DaftarHuruf}, \texttt{VersiPasal}, \texttt{Menimbang}, \texttt{Mengingat}, yang mengatasi \\
+                          &                                       & \texttt{name}: Nama teks                                                                                                                                 \\ \hline
+  \caption{Long table caption.\label{longs}}                                                                                                                                                                                 \\
 \end{longtable}
 
 \section{Perancangan URI Properti}\label{perancangan-uri-properti}
