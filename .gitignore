@@ -26,4 +26,5 @@ fuseki/run
 *.gz
 *.bcf
 *.run.xml
+*.pygtex
 paper-legal-kg/thesis.pdf

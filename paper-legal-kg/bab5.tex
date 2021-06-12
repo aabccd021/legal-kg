@@ -52,9 +52,9 @@ dengan \emph{command} berikut pada sistem operasi Ubuntu 20.04. \texttt{ocrmypdf
 \emph{wrapper} untuk Tesseract OCR dan \texttt{tesseract-ocr-ind} adalah program tambahan untuk
 dapat melakukan OCR menjadi teks Bahasa Indonesia.
 
-\begin{lstlisting}[language=bash]
+\begin{minted}[frame=single, fontsize=\footnotesize]{bash}
 apt update apt install ocrmypdf tesseract-ocr-ind -y
-\end{lstlisting}
+\end{minted}
 
 Setelah program diinstall, OCR dapat dilakukan dengan menjalankan \emph{command} dibawah. Pada
 contoh dibawah dilakukan konversi \texttt{UU-2021-34.pdf} yang sudah ada menjadi
@@ -64,19 +64,18 @@ ulang pada berkas PDF yang sudah memiliki teks hasil OCR untuk di \emph{overwrit
 diganti sesuai kebutuhan. Opsi \texttt{-{}-tesseract-config tesseract-config.cfg} menjalankan
 \emph{command} dengan konfigurasi yang diberikan.
 
-\begin{lstlisting}[language=bash]
-ocrmypdf -l ind --force-ocr --jobs 4 --tesseract-config tesseract-config.cfg UU-2021-34.pdf
-UU-2021-34_OCR.pdf
-\end{lstlisting}
+\begin{minted}[frame=single, breaklines, fontsize=\footnotesize]{bash}
+ocrmypdf -l ind --force-ocr --jobs 4 --tesseract-config tesseract-config.cfg UU-2021-34.pdf UU-2021-34_OCR.pdf
+\end{minted}
 
 Konfigurasi Tesseract OCR yang digunakan adalah \texttt{tessedit\_pageseg\_mode 4} seperti yang
 terlihat pada isi file konfigurasi dibawah. \texttt{tessedit\_pageseg\_mode 4} digunakan agar
 Tesseract OCR mendeteksi teks sebagai \emph{block}, bukan \emph{word} atau \emph{character}.
 
-\begin{verbatim}
+\begin{minted}[frame=single, fontsize=\footnotesize]{text}
 # tesseract-config.cfg
 tessedit_pageseg_mode 4
-\end{verbatim}
+\end{minted}
 
 \section{Ekstraksi Berkas PDF menjadi Data
   \emph{Span}}\label{ekstraksi-berkas-pdf-menjadi-data-span}
@@ -101,18 +100,37 @@ Berikut adalah contoh gambaran berkas PDF dan hasil ekstraksinya menjadi daftar 
 
 \begin{figure}[htbp]
   \centering
-  \includegraphics{pictures/pdf_example.png}
+  \includegraphics[scale=0.7]{pictures/pdf_example.png}
   \caption{Gambar berkas PDF yang akan diekstraksi}
 \end{figure}
 
 akan dipindai menjadi
 
-% \begin{lstlisting}[language=bash] \end{lstlisting}
-\begin{minted}[frame=single, linenos]{yaml}
-- xL: 197.52 xR: 442.79990000000004 'y': 234.48000000000002 str: UNDANG-UNDANG REPUBLIK INDONESIA
-  pageNum: 1 id: 0 - xL: 252.72 xR: 387.6002 'y': 255.12 str: NOMOR 13 TAHUN 2003 pageNum: 1 id: 1 -
-  xL: 291.12 xR: 349.68048 'y': 275.76 str: TENTANG pageNum: 1 id: 2 - xL: 257.28 xR:
-  383.28015999999997 'y': 296.4 str: KETENAGAKERJAAN pageNum: 1 id: 3
+\begin{minted}[frame=single, fontsize=\footnotesize]{yaml}
+- xL: 197.52
+  xR: 442.79990000000004
+  'y': 234.48000000000002
+  str: UNDANG-UNDANG REPUBLIK INDONESIA
+  pageNum: 1
+  id: 0
+- xL: 252.72
+  xR: 387.6002
+  'y': 255.12
+  str: NOMOR 13 TAHUN 2003
+  pageNum: 1
+  id: 1
+- xL: 291.12
+  xR: 349.68048
+  'y': 275.76
+  str: TENTANG
+  pageNum: 1
+  id: 2
+- xL: 257.28
+  xR: 383.28015999999997
+  'y': 296.4
+  str: KETENAGAKERJAAN
+  pageNum: 1
+  id: 3
 \end{minted}
 
 \section{Membersihkan \emph{Noise} dari Halaman}\label{membersihkan-noise-dari-halaman}
@@ -124,7 +142,7 @@ dari sumber yang sama sehingga memiliki format yang sama, dan juga posisi \emph{
 
 \begin{figure}[htbp]
   \centering
-  \includegraphics{pictures/pdf_header.png}
+  \includegraphics[scale=0.7]{pictures/pdf_header.png}
   \caption{Contoh Header}
 \end{figure}
 
@@ -144,7 +162,7 @@ terpindai pada hasil OCR ulang, tetapi terpindai dengan benar pada berkas PDF as
 menyelesaikan masalah tersebut, penulis melakukan ekstraksi data pada berkas PDF aslinya, kemudian
 menggabungkannya dengan data hasil pemindaian untuk melengkapi bagian yang tidak terpindai.
 
-\includegraphics{pictures/pdf_unscanned_number.png}
+\includegraphics[scale=0.7]{pictures/pdf_unscanned_number.png}
 
 Penulis hanya menggabungkan data dua berkas PDF untuk kasus angka seperti yang disebutkan diatas.
 Hal tersebut dikarenakan pada umumnya kita dapat mentolerir kesalahan pemindaian pada teks, tetapi
@@ -155,23 +173,37 @@ seharusnya adalah nomor yang terpisah. Berikut berturut-turut adalah contoh data
 jika nomor 9 tidak berhasil terpindai dan jika berhasil terpindai.
 
 Jika nomor 9 tidak berhasil terpindai:
-
-- type: point key: 8 text: >- Informasi ketenagakerjaan adalah gabungan, rangkaian, dan analisis
-data yang berbentuk angka yang telah diolah, naskah dan dokumen yang mempunyai arti, nilai dan makna
-tertentu mengenai ketenagakerjaan. 9. Pelatihan kerja adalah keseluruhan kegiatan untuk memberi,
-memperoleh, meningkatkan, serta mengembangkan kompetensi kerja, produktivitas, disiplin, sikap, dan
-etos kerja pada tingkat keterampilan dan keahlian tertentu sesuai dengan jenjang dan kualifikasi
-jabatan atau pekerjaan.
-
+\begin{minted}[frame=single, fontsize=\footnotesize]{yaml}
+- type: point
+  key: 8
+  text: >-
+    Informasi ketenagakerjaan adalah gabungan, rangkaian, dan analisis data yang
+    berbentuk angka yang telah diolah, naskah dan dokumen yang mempunyai arti,
+    nilai dan makna tertentu mengenai ketenagakerjaan.
+    9. Pelatihan kerja adalah keseluruhan kegiatan untuk memberi, memperoleh,
+    meningkatkan, serta mengembangkan kompetensi kerja, produktivitas, disiplin,
+    sikap, dan etos kerja pada tingkat keterampilan dan keahlian tertentu sesuai
+    dengan jenjang dan kualifikasi jabatan atau pekerjaan.
+\end{minted}
 
 Jika nomor 9 berhasil terpindai:
 
-- type: point key: 8 text: >- Informasi ketenagakerjaan adalah gabungan, rangkaian, dan analisis
-data yang berbentuk angka yang telah diolah, naskah dan dokumen yang mempunyai arti, nilai dan makna
-tertentu mengenai ketenagakerjaan. - type: point key: 9 text: >- Pelatihan kerja adalah keseluruhan
-kegiatan untuk memberi, memperoleh, meningkatkan, serta mengembangkan kompetensi kerja,
-produktivitas, disiplin, sikap, dan etos kerja pada tingkat keterampilan dan keahlian tertentu
-sesuai dengan jenjang dan kualifikasi jabatan atau pekerjaan.
+\begin{minted}[frame=single, fontsize=\footnotesize]{yaml}
+- type: point
+  key: 8
+  text: >-
+    Informasi ketenagakerjaan adalah gabungan, rangkaian, dan analisis data yang
+    berbentuk angka yang telah diolah, naskah dan dokumen yang mempunyai arti,
+    nilai dan makna tertentu mengenai ketenagakerjaan.
+- type: point
+  key: 9
+  text: >-
+    Pelatihan kerja adalah keseluruhan kegiatan untuk memberi, memperoleh,
+    meningkatkan, serta mengembangkan kompetensi kerja, produktivitas, disiplin,
+    sikap, dan etos kerja pada tingkat keterampilan dan keahlian tertentu sesuai
+    dengan jenjang dan kualifikasi jabatan atau pekerjaan.
+  
+\end{minted}
 
 \section{Klasifikasi Dokumen}\label{klasifikasi-dokumen}
 
@@ -201,7 +233,7 @@ menjadi rumit.
 
 \begin{figure}[htbp]
   \centering
-  \includegraphics{pictures/pdf_to_component.png}
+  \includegraphics[width=\textwidth]{pictures/pdf_to_component.png}
   \caption{Ilustrasi Ekstraksi Daftar Span menjadi Data Struktur Komponen}
 \end{figure}
 
@@ -247,9 +279,9 @@ UU Nomor 26 Tahun 2007. Dapat dilihat bahwa kata \texttt{Pasal 17} dan \texttt{P
 digunakan sebagai pembatas antara komponen memiliki pola teks dan posisi yang hampir sama. Hal ini
 membuat pembedaan antara ``Pasal biasa'' dan ``Pasal peng-amandemen'' menjadi sulit dilakukan.
 
-\begin{figure}[htbp]
+\begin{figure}[H]
   \centering
-  \includegraphics{pictures/pdf_amendment.png}
+  \includegraphics[width=0.8\textwidth]{pictures/pdf_amendment.png}
   \caption{Contoh Amendemen pada UU Nomor 11 Tahun 2020}
 \end{figure}
 
@@ -260,71 +292,66 @@ Untuk menyelesaikan masalah ini, penulis menggunakan koordinat \texttt{xL} \emph
 merepresentasikan batas pemeda \texttt{xL} antara pasal biasa dan pasal yang diamandemen. Pembedaan
 pasal biasa dan pasal amandemen hanya dilakukan jika dokumen memiliki komponen berupa amandemen.
 
-\begin{figure}[htbp]
+\begin{figure}[H]
   \centering
-  \includegraphics{pictures/amendment_detection.png}
+  \includegraphics[width=0.8\textwidth]{pictures/amendment_detection.png}
   \caption{Deteksi Komponen Amandemen}
 \end{figure}
 
+%-----------------------------------------------------------------------------%
 \section{Deteksi Sitasi}\label{deteksi-sitasi}
+%-----------------------------------------------------------------------------%
 
 Setelah semua \emph{span} dikelompokan menjadi suatu komponen, dilakukan deteksi sitasi pada teks
 pada setiap komponen untuk mengetahui apakah komponen tersebut menyebut komponen atau dokumen
 peraturan perundang-undangan lainnya. Berikut adalah daftar pola sitasi yang berhasil dideteksi pada
 penelitian ini.
 
-\begin{longtable}[c]{@{}lll@{}} \toprule\addlinespace Pola & Contoh teks
-                                            & URI Terdeteksi                                                     \\\addlinespace
-  \midrule\endhead Undang Undang Dasar Negara Republik
-  Indonesia Tahun 1945                      & Undang Undang Dasar Negara
-  Republik Indonesia Tahun 1945
-                                            & /uud/
-  \\\addlinespace Undang-Undang Nomor \{x\} Tahun \{y\} &
-  Undang-Undang Nomor 26 Tahun 2007         &
-  /uu/2007/26
-  \\\addlinespace ayat (\{x\})
-                                            & ayat (1)                            & /uu/2003/13/pasal/169/ayat/1
-  \\\addlinespace Pasal \{x\} & Pasal 156
-                                            & /uu/2003/13/pasal/156                                              \\\addlinespace
-  Pasal \{x\} ayat (\{y\})                  & Pasal 156 ayat (2)
-                                            & /uu/2003/13/pasal/156/ayat/2                                       \\\addlinespace
-  huruf \{x\}, \{y\}, \ldots{} dan \{z\}
-                                            & huruf a, b, c, d, dan e             &
-  /uu/2003/13/menimbang/point/a
-  \\\addlinespace &                              &
-  /uu/2003/13/menimbang/point/b
-  \\\addlinespace &                              &
-  /uu/2003/13/menimbang/point/c
-  \\\addlinespace &                              &
-  /uu/2003/13/menimbang/point/d
-  \\\addlinespace &                              &
-  /uu/2003/13/menimbang/point/e
-  \\\addlinespace huruf \{x\} dan \{y\} & huruf a dan b
-                                            & /uu/2003/13/pasal/1/point/5/point/a                                \\\addlinespace &
-                                            & /uu/2003/13/pasal/1/point/5/point/b
-  \\\addlinespace
-  \bottomrule
-\end{longtable}
+\begin{table}[ht]
+  \centering
+  \begin{tabular}{p{0.2\textwidth} | p{0.4\textwidth}| p{0.4\textwidth}}
+    Pola                                  & Contoh teks                                              & URI Terdeteksi                      \\ \hline \hline
+    UUD 1945                              & Undang Undang Dasar Negara Republik Indonesia Tahun 1945 & /uud/                               \\ \hline
+    Undang-Undang Nomor \{x\} Tahun \{y\} & Undang-Undang Nomor 26 Tahun 2007                        & /uu/2007/26                         \\ \hline
+    ayat (\{x\})                          & ayat (1)                                                 & /uu/2003/13/pasal/169/ayat/1        \\ \hline
+    Pasal \{x\}                           & Pasal 156                                                & /uu/2003/13/pasal/156               \\ \hline
+    Pasal \{x\} ayat (\{y\})              & Pasal 156 ayat (2)                                       & /uu/2003/13/pasal/156/ayat/2        \\ \hline
+    huruf \{x\}, \{y\}, ... dan \{z\}     & huruf a, b, c, d, dan e                                  & /uu/2003/13/menimbang/point/a       \\
+                                          &                                                          & /uu/2003/13/menimbang/point/b       \\
+                                          &                                                          & /uu/2003/13/menimbang/point/c       \\
+                                          &                                                          & /uu/2003/13/menimbang/point/d       \\
+                                          &                                                          & /uu/2003/13/menimbang/point/e       \\ \hline
+    huruf \{x\} dan \{y\}                 & huruf a dan b                                            & /uu/2003/13/pasal/1/point/5/point/a \\
+                                          &                                                          & /uu/2003/13/pasal/1/point/5/point/b \\
+  \end{tabular}
+  \caption{Summary Table}
+\end{table}
 
 Data sitasi mengandung data sebagai berikut:
 
 \begin{itemize}
   \itemsep1pt\parskip0pt\parsep0pt
-  \item
-        \texttt{start}: \emph{index} karakter awal sitasi
-  \item
-        \texttt{end}: \emph{index} karakter akhir sitasi
-  \item
-        \texttt{uri}: URI dokumen dan
+  \item \texttt{start}: \emph{index} karakter awal sitasi
+  \item \texttt{end}: \emph{index} karakter akhir sitasi
+  \item \texttt{uri}: URI dokumen dan
 \end{itemize}
 
 Berikut adalah contoh teks pada Undang-Undang Nomor 13 Tahun 2003 Pasal 158 Ayat (4) beserta sitasi
 yang terdeteksi.
 
-textString: >- Pekerja/buruh yang diputus hubungan kerjanya berdasarkan alasan sebagaimana dimaksud
-dalam ayat (1), dapat memperoleh uang penggantian hak sebagaimana dimaksud dalam Pasal 156 ayat (4).
-references: - start: 91 end: 99 uri: /uu/2003/13/pasal/158/ayat/1 - start: 166 end: 184 uri:
-/uu/2003/13/pasal/156/ayat/4
+\begin{minted}[frame=single, fontsize=\footnotesize]{yaml}
+textString: >-
+  Pekerja/buruh yang diputus hubungan kerjanya berdasarkan alasan sebagaimana
+  dimaksud dalam ayat (1), dapat memperoleh uang penggantian hak sebagaimana
+  dimaksud dalam Pasal 156 ayat (4).
+references:
+  - start: 91
+    end: 99
+    uri: /uu/2003/13/pasal/158/ayat/1
+  - start: 166
+    end: 184
+    uri: /uu/2003/13/pasal/156/ayat/4
+\end{minted}
 
 Untuk melakukan deteksi, teks akan melalui fungsi yang masing-masing memiliki pola untuk dideteksi.
 Oleh karena itu, untuk \emph{substring} yang beririsan dapat memiliki lebih dari dua sitasi yang
@@ -343,42 +370,62 @@ sebagai 3 URI sitasi sebagai berikut.
 Pada kasus ini, yang akan diambil adalah teks ``Pasal 156 ayat (4)'' karena merupakan teks
 terpanjang.
 
+%-----------------------------------------------------------------------------%
 \section{Data To MD}\label{data-to-md}
+%-----------------------------------------------------------------------------%
 
 visualization
 
+%-----------------------------------------------------------------------------%
 \section{Data to triple}\label{data-to-triple}
+%-----------------------------------------------------------------------------%
 
+%-----------------------------------------------------------------------------%
 \section{triple definition}\label{triple-definition}
+%-----------------------------------------------------------------------------%
 
+%-----------------------------------------------------------------------------%
 \section{triple to ttl}\label{triple-to-ttl}
+%-----------------------------------------------------------------------------%
 
+%-----------------------------------------------------------------------------%
 \section{Query}\label{query}
+%-----------------------------------------------------------------------------%
 
 Fuseki
 
+%-----------------------------------------------------------------------------%
 \section{BAB 5 EVALUASI DAN ANALISIS HASIL}\label{bab-5-evaluasi-dan-analisis-hasil}
+%-----------------------------------------------------------------------------%
 
+%-----------------------------------------------------------------------------%
 \section{Aplikasi Knowledge Graph Peraturan
   Perundang-undangan}\label{aplikasi-knowledge-graph-peraturan-perundang-undangan}
+%-----------------------------------------------------------------------------%
 
 Dibuat \emph{chatbot} untuk mensimulasikan pengaplikasian KG\@. \emph{Chatbot} akan memproses input
 yand diberikan oleh user, kemudian meng-\emph{generate} SPARQL \emph{query}. Chatbot akan
 menampilkan hasil dari \emph{query} tersebut.
 
+%-----------------------------------------------------------------------------%
 \section{Evaluasi Hasil Konversi}\label{evaluasi-hasil-konversi}
+%-----------------------------------------------------------------------------%
 
 Evaluasi akan dilakukan terhadap semua dokumen yang terdapat pada peraturan.go.id. Selanjutnya
 dokumen-dokumen ini akan disebut dokument tes.
 
+%-----------------------------------------------------------------------------%
 \section{Evaluasi Manual}\label{evaluasi-manual}
+%-----------------------------------------------------------------------------%
 
 Evaluasi kualitatif dilakukan terhadap sebagian dokumen yang didapatkan dari hasil sam- pling dari
 dokumen tes. Seorang penilai akan melihat markdown dari setiap dokumen hasil sampling, masing-masing
 dokumen akan diberikan skor 0 sampai 100. Kualitas konversi dapat dilihat dari rata-rata skor
 tersebut.
 
+%-----------------------------------------------------------------------------%
 \section{Evaluasi Otomatis}\label{evaluasi-otomatis}
+%-----------------------------------------------------------------------------%
 
 Evaluasi dilakukan dengan terlebih dahulu mendefinisikan metadata yang pasti terdapat pada sebuah
 dokumen (misal, tempat dokumen disahkan), kemudian menghitung sebera pa banyak metadata yang
