@@ -2,7 +2,9 @@
 \chapter{IMPLEMENTASI}\label{bab:5}
 %-----------------------------------------------------------------------------%
 
+%-----------------------------------------------------------------------------%
 \section{OCR Ulang Berkas PDF}\label{ocr-ulang-berkas-pdf}
+%-----------------------------------------------------------------------------%
 
 Dokumen peraturan perundang-undangan yang digunakan pada penelitian didapatkan dalam format berkas
 PDF. Penulis pada awalnya mencoba langsung mengekstraksi data dari PDF, tetapi penulis menemukan
@@ -77,10 +79,10 @@ Tesseract OCR mendeteksi teks sebagai \emph{block}, bukan \emph{word} atau \emph
 tessedit_pageseg_mode 4
 \end{minted}
 
+%-----------------------------------------------------------------------------%
 \section{Ekstraksi Berkas PDF menjadi Data
   \emph{Span}}\label{ekstraksi-berkas-pdf-menjadi-data-span}
-
-\subsection{Data \emph{Span}}\label{data-span}
+%-----------------------------------------------------------------------------%
 
 Agar dapat diproses oleh program, berkas PDF perlu diolah menjadi data berupa daftar teks dan
 posisinya yang selanjutnya akan disebut \emph{span}. Sebuah \emph{span} mengandung satu baris teks.
@@ -133,7 +135,9 @@ akan dipindai menjadi
   id: 3
 \end{minted}
 
+%-----------------------------------------------------------------------------%
 \section{Membersihkan \emph{Noise} dari Halaman}\label{membersihkan-noise-dari-halaman}
+%-----------------------------------------------------------------------------%
 
 Tidak jarang dokumen peraturan Perudang-undangan mengandung data \emph{noise} yang tidak ingin kita
 ekstraksi seperti \emph{header} dan \emph{footer}. Pada penelitian ini, penulis menggunakan dokumen
@@ -152,8 +156,10 @@ halaman, dan selalu terletak di posisi yang hampir sama. Oleh karena itu, penuli
 menggunakan \emph{regex} dan posisi dari setiap \emph{span}, kemudian menghapus \emph{span} tersebut
 jika terdeteksi sebagai header.
 
+%-----------------------------------------------------------------------------%
 \section{Penggabungan Data Berkas PDF Asli dan Hasil OCR
   Ulang}\label{penggabungan-data-berkas-pdf-asli-dan-hasil-ocr-ulang}
+%-----------------------------------------------------------------------------%
 
 Pada proses ekstraksi berkas PDF menjadi daftar \emph{span}, penulis menemukan satu masalah yaitu
 data hasil OCR tidak konsisten dalam memindai angka. Seperti yang dapat dilihat pada gambar dibawah,
@@ -205,11 +211,15 @@ Jika nomor 9 berhasil terpindai:
   
 \end{minted}
 
+%-----------------------------------------------------------------------------%
 \section{Klasifikasi Dokumen}\label{klasifikasi-dokumen}
+%-----------------------------------------------------------------------------%
 
 Pa
 
+%-----------------------------------------------------------------------------%
 \section{Pengelompokan \emph{span} menjadi Komponen}\label{pengelompokan-span-menjadi-komponen}
+%-----------------------------------------------------------------------------%
 
 Teks yang membentuk suatu komponen terdiri dari satu atau lebih \emph{span}, sehingga daftar
 \emph{span} yang didapatkan dari hasil ekstraksi berkas PDF harus dikelompokkan sehingga setiap
@@ -246,8 +256,9 @@ dengan kata \textbf{Menimbang}. Kemudian setiap \emph{span} setelah span \textbf
 akan dikelompokkan menjadi \emph{section} \texttt{metadata} sampai menemukan section yang diawali
 kata \textbf{BAB I}.
 
-\subsection{Pengelompokan \emph{span} pada Komponen
-  Terurut}\label{pengelompokan-span-pada-komponen-terurut}
+%-----------------------------------------------------------------------------%
+\subsection{Komponen Terurut}\label{pengelompokan-span-pada-komponen-terurut}
+%-----------------------------------------------------------------------------%
 
 Beberapa komponen seperti \texttt{bab}, \texttt{bagian}, \texttt{paragraf}, \texttt{pasal},
 \texttt{angka}, dan \texttt{huruf} memiliki sifat terurut. Dalam hal ini, yang termasuk terurut
@@ -271,7 +282,9 @@ dijamin mengandung semua \texttt{bab 1} sampai \texttt{bab 11} dan apabila terde
 \texttt{pasal 196} maka akan dijamin mengandung semua pasal dari \texttt{pasal 1} sampai
 \texttt{pasal 195}.
 
-\subsubsection{Komponen Amandemen}\label{komponen-amandemen}
+%-----------------------------------------------------------------------------%
+\subsection{Komponen Amandemen}\label{komponen-amandemen}
+%-----------------------------------------------------------------------------%
 
 Mengekstraksi \emph{span} pada bagian amandemen merupakan salahsatu tantangan pada penelitian ini.
 Dibawah adalah gambar amandemen pada Pasal 17 UU Nomor 11 Tahun 2020 yang dilakukan terhadap Pasal 1
@@ -392,42 +405,3 @@ visualization
 %-----------------------------------------------------------------------------%
 
 Fuseki
-
-%-----------------------------------------------------------------------------%
-\section{BAB 5 EVALUASI DAN ANALISIS HASIL}\label{bab-5-evaluasi-dan-analisis-hasil}
-%-----------------------------------------------------------------------------%
-
-%-----------------------------------------------------------------------------%
-\section{Aplikasi Knowledge Graph Peraturan
-  Perundang-undangan}\label{aplikasi-knowledge-graph-peraturan-perundang-undangan}
-%-----------------------------------------------------------------------------%
-
-Dibuat \emph{chatbot} untuk mensimulasikan pengaplikasian KG\@. \emph{Chatbot} akan memproses input
-yand diberikan oleh user, kemudian meng-\emph{generate} SPARQL \emph{query}. Chatbot akan
-menampilkan hasil dari \emph{query} tersebut.
-
-%-----------------------------------------------------------------------------%
-\section{Evaluasi Hasil Konversi}\label{evaluasi-hasil-konversi}
-%-----------------------------------------------------------------------------%
-
-Evaluasi akan dilakukan terhadap semua dokumen yang terdapat pada peraturan.go.id. Selanjutnya
-dokumen-dokumen ini akan disebut dokument tes.
-
-%-----------------------------------------------------------------------------%
-\section{Evaluasi Manual}\label{evaluasi-manual}
-%-----------------------------------------------------------------------------%
-
-Evaluasi kualitatif dilakukan terhadap sebagian dokumen yang didapatkan dari hasil sam- pling dari
-dokumen tes. Seorang penilai akan melihat markdown dari setiap dokumen hasil sampling, masing-masing
-dokumen akan diberikan skor 0 sampai 100. Kualitas konversi dapat dilihat dari rata-rata skor
-tersebut.
-
-%-----------------------------------------------------------------------------%
-\section{Evaluasi Otomatis}\label{evaluasi-otomatis}
-%-----------------------------------------------------------------------------%
-
-Evaluasi dilakukan dengan terlebih dahulu mendefinisikan metadata yang pasti terdapat pada sebuah
-dokumen (misal, tempat dokumen disahkan), kemudian menghitung sebera pa banyak metadata yang
-berhasil diekstrak. Metadata hasil ekstraksi yang akan dihitung tidak perlu sesuai dengan yang
-terdapat di dalam dokumen.
-

@@ -2,7 +2,9 @@
 \chapter{TINJAUAN PUSTAKA}\label{bab:2}
 %-----------------------------------------------------------------------------%
 
+%-----------------------------------------------------------------------------%
 \section{Knowledge Graph}\label{knowledge-graph}
+%-----------------------------------------------------------------------------%
 
 \emph{Knowledge graph} merupakan model data berbasis \emph{graph} yang menggambarkan entitas dunia
 nyata dan hubungan antara entitas-entitas tersebut
@@ -19,7 +21,9 @@ menyimpan data dengan relasi antar entitas yang sudah diketahui dan terbatas.
 \includegraphics[width=\textwidth]{pictures/knowledge_graph.jpg}
 \emph{source}:\url{https://yashuseth.files.wordpress.com/2019/10/knowledge-graph.jpg}
 
+%-----------------------------------------------------------------------------%
 \section{Resource Description Framework}\label{resource-description-framework}
+%-----------------------------------------------------------------------------%
 
 Resource Description Framework (RDF) merupkan model data yang memberikan pernyataan tentang suatu
 \emph{resource} dalam bentuk subjek-properti-objek, atau sering disebut \emph{triple}. Sebuah
@@ -71,7 +75,9 @@ ex:james
   ex:has_name "james" .
 \end{minted}
 
+%-----------------------------------------------------------------------------%
 \section{SPARQL}\label{sparql}
+%-----------------------------------------------------------------------------%
 
 SPARQL merupakan salahsatu RDF \emph{query language} yaitu bahasa yang mampu mengambil atau mengubah
 data yang disimpan dalam format RDF. Sintaks SPARQL memiliki beberapa kesamaan dengan SQL, contohnya
@@ -90,7 +96,9 @@ SPARQL.
 Berikut adalah contoh-contoh \emph{query} SPARQL yang dilakukan pada contoh \emph{knowledge graph}
 pada subbab sebelumnya.
 
+%-----------------------------------------------------------------------------%
 \subsection{Contoh Query 1}\label{contoh-query-1}
+%-----------------------------------------------------------------------------%
 
 \emph{Query} ini bertujuan untuk menampilkan semua \emph{triple} yang terdapat pada \emph{knowledge
   graph}.
@@ -112,14 +120,15 @@ WHERE
 
 Output dari \emph{query} diatas adalah sebagai berikut.
 
-\begin{longtable}{|l|l|l|} \toprule\addlinespace
-  ?s       & ?p              & ?o        \\\addlinespace \midrule\endhead
-  ex:james & ex:has\_visited & ex:louvre \\\addlinespace
-  ex:james & ex:has\_name    & ``james'' \\\addlinespace
-  \bottomrule
+\begin{longtable}{|l|l|l|} \hline
+  ?s       & ?p              & ?o        \\\hline \endhead
+  ex:james & ex:has\_visited & ex:louvre \\\hline
+  ex:james & ex:has\_name    & ``james'' \\\hline
 \end{longtable}
 
+%-----------------------------------------------------------------------------%
 \subsection{Contoh Query 2}\label{contoh-query-2}
+%-----------------------------------------------------------------------------%
 
 \emph{Query} ini bertujuan untuk menampilkan semua properti dan objek pada \emph{triple} dengan
 subjek \texttt{https://example.org/james}.
@@ -136,14 +145,15 @@ WHERE
 
 Output dari \emph{query} tersebut adalah sebagai berikut.
 
-\begin{longtable}[c]{@{}ll@{}} \toprule\addlinespace
-  ?p              & ?o        \\\addlinespace \midrule\endhead
-  ex:has\_visited & ex:louvre \\\addlinespace
-  ex:has\_name    & ``james'' \\\addlinespace
-  \bottomrule
+\begin{longtable}{|l|l|l|} \hline
+  ?p              & ?o        \\\hline \endhead
+  ex:has\_visited & ex:louvre \\\hline
+  ex:has\_name    & ``james'' \\\hline
 \end{longtable}
 
+%-----------------------------------------------------------------------------%
 \subsection{Contoh Query 3}\label{contoh-query-3}
+%-----------------------------------------------------------------------------%
 
 \emph{Query} ini bertujuan untuk menampilkan semua objek pada \emph{triple} dengan subjek
 \texttt{https://example.org/james} dan properti \texttt{https://example.org/has\_visited}. Artinya,
@@ -160,13 +170,14 @@ WHERE
 
 Output dari \emph{query} tersebut adalah sebagai berikut.
 
-\begin{longtable}[c]{@{}l@{}} \toprule\addlinespace
-  ?visited\_place \\ \addlinespace \midrule\endhead
-  ex:louvre       \\ \addlinespace
-  \bottomrule
+\begin{longtable}{|l|l|l|} \hline
+  ?visited\_place \\ \hline \endhead
+  ex:louvre       \\ \hline
 \end{longtable}
 
+%-----------------------------------------------------------------------------%
 \section{Peraturan Perundang-undangan}\label{peraturan-perundang-undangan}
+%-----------------------------------------------------------------------------%
 
 ??? boleh ngequote sebanyak apa?
 
@@ -238,8 +249,10 @@ tersebut dan membuat data yang dilihatnya terstruktur di dalam otak. Metode ini 
 peraturan perundang-undangan oleh mesin menjadi kurang efisien karena mesin perlu melakukan proses
 tambahan yaitu mengkonversi gambar menjadi data terstruktur.
 
+%-----------------------------------------------------------------------------%
 \section{Pemodelan European Legislation Identifier
   (ELI)}\label{pemodelan-european-legislation-identifier-eli}
+%-----------------------------------------------------------------------------%
 
 ELI merupakan sistem untuk membuat peraturan perundang-undangan tersedia secara daring dalam format
 terstandardisasi, sehingga dapat diakses dan digunakan oleh berbagai instansi. ELI bertujuan untuk
