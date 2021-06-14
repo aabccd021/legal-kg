@@ -22,9 +22,9 @@ Pertanyaan-pertanyaan tersebut umumnya dapat dijawab oleh seorang ahli hukum, ar
 peraturan perundang-undangan ini hanya dapat dilakukan dalam skala kecil dan biaya relatif mahal.
 Komputer dapat menjadi alternatif untuk aplikasi tersebut dalam skala lebih besar dan biaya lebih
 murah, jika peraturan perundang-undangan berupa data terstruktur yang dapat diolah oleh komputer.
-Sayangnya, data peraturan perundang-undangan umumnya dibuat dalam bentuk data semi-terstruktur,
-yaitu berupa dokumen yang memiliki data terstruktur seperti aturan penomoran dan aturan struktur
-(seperti bab, pasal, dan ayat), tetapi penulisan peraturan sendiri dalam bentuk data tidak
+Sayangnya data peraturan perundang-undangan umumnya dibuat dalam bentuk data semi-terstruktur, yaitu
+berupa dokumen PDF dengan struktur konten seperti aturan penomoran dan aturan pembagian
+(\textit{sectioning}) dokumen, sementara penulisan peraturan sendiri dalam bentuk data tidak
 terstruktur yaitu teks bahasa manusia.
 
 \begin{figure}[H]
@@ -72,6 +72,12 @@ peraturan perundang-undangan seperti \textit{European Legislation Identifier} (E
 tersedia, diharapkan dapat menjadi kontribusi dalam mendukung pembuatan \textit{knowledge graph} untuk
 dokumen peraturan perundan-undangan
 
+% // TODO: Beberapa usaha telah dilakukan -> ga cuma ELI tapi schema.org/Legislation, (penting ngatain
+% schema.org karena dipake google dan microsoft, ini udah dipikirin orang tapi KG nya belum ada,
+% vocabnya belum sesuai dengan indonesia, dan baru metadata). wikidata.org legal
+
+% // TODO: Kasih contoh legal kg dari schema.org
+
 
 %-----------------------------------------------------------------------------%
 \section{Permasalahan}\label{sec:permasalahan}
@@ -82,19 +88,27 @@ Berikut ini adalah rumusan permasalahan dari penelitian yang dilakukan:
   \itemsep1pt\parskip0pt\parsep0pt
   \item Bagaimana cara membuat \textit{legal ontology} untuk memperjelas \textit{requirement} dan
         mempermudah konversi dokumen PDF menjadi \textit{knowledge graph}?
-  \item Bagaimana konversi dokumen peraturan perudang-undangan menjadi \textit{knowledge graph} dapat
+  \item Bagaimana konversi dokumen peraturan perundang-undangan menjadi \textit{knowledge graph} dapat
         dilakukan secara otomatis?
   \item Apa saja contoh aplikasi dari knowledge graph peraturan perundang-undangan tersebut?
 \end{itemize}
 
-// TODO\@: bagaimana melakukan proof of concept untuk yang udah dibuat, detail untuk maintain,
-general large scale, evaluasi konversi
+% // TODO: bagaimana melakukan proof of concept untuk yang udah dibuat, detail untuk maintain, general
+% large scale, evaluasi konversi
+
+% // TODO: bolongnya State of the art adalah ...
+
+% // TODO: 1. Bagaimana merancang suatu sistem untuk melakukan automated population? 
+% 2. memperjelas requirement dan menangkap informasi yang terkandung di dalam dokumen legal yang ada, sehingga mendukung konversi pdf menjadi knowledge graph.
+% 3. bagaimana evaluasi use case terhadap kg peraturan perundang-undangan tersebut serta evaluasi konversi / populasi dalam skala besar
 
 %-----------------------------------------------------------------------------%
 \section{Batasan Permasalahan}\label{sec:batasan-permasalahan}
 %-----------------------------------------------------------------------------%
 
-// TODO\@: fokus yang mainteined (UU + non UU), dan coba parsing UU hasil scraping
+% // TODO: fokus yang mainteined (UU + non UU), dan coba parsing UU hasil scraping
+
+% // TODO: batasan: tipe query/question nya belum yang super complex (contoh: jika saya usia 12 tahun, apakah boleh kerja menurut UU ketenaga kerjaan?)
 
 %-----------------------------------------------------------------------------%
 \section{Sistematika Penulisan}\label{sec:sistematika-penulisan}
