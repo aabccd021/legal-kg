@@ -31,34 +31,39 @@ terstruktur yaitu teks bahasa manusia.
   \centering
   \includegraphics[width=\textwidth]{pictures/terstruktur.png}
   \caption{Cuplikan ekstraksi data terstruktur dan data tidak terstruktur dari dokumen PDF UU No.11 Tahun 2020}
+  \label{fig:ekstraksi-dokumen}
 \end{figure}
 
-Gambar 1.1 merupakan salah satu contoh ekstraksi informasi dari UU No.11 Tahun 2020 tentang
-Cipta Kerja. Pada gambar tersebut dapat dilihat bahwa sebagian informasi dapat diekstraksi dari
-sifat terstruktur dokumen peraturan perundang-undangan (ditandai dengan warna merah), dan sebagian
-informasi lainnya dapat diekstraksi dari data tidak terstruktur beruba teks (ditandai dengan warna
-biru). Untuk melakukan ekstraksi informasi tidak terstruktur seperti pada gambar yaitu ``UU No.11
-Tahun 2020 Pasal 6 menyebut UU No.11 Tahun 2020 Pasal 5 ayat (1) huruf a'', manusia pertama-tama
-perlu membaca dari awal kalimat sampai menemukan pola \textit{string} yang merujuk kepada suatu
-komponen dokumen peraturan perundang-undangan, kemudian meng-\textit{infer} informasi lengkap dari
-komponen tersebut. Proses konversi \textit{string} ``Pasal 5 ayat (1) huruf a'' menjadi informasi
-lengkap ``UU No.11 Tahun 2020 Pasal 5 ayat (1) huruf a'' perlu dilakukan secara manual oleh manusia.
-
-\textit{Knowledge graph} adalah struktur data yang dapat diolah oleh komputer yang dapat
-merepresentasikan data dan memproses data dengan relasi kompleks. Dengan melakukan ekstraksi data
-dari data tidak terstruktur pada dokumen, digabung dengan data yang sudah terstruktur, peraturan
-perundang-undangan dapat diubah menjadi \textit{knowledge graph}. Selain dapat menjawab pertanyaan,
-representasi \textit{knowledge graph} juga dapat digunakan untuk analisis karena data sudah
-terstruktur. Representasi \textit{knowledge graph} juga memungkinkan untuk dapat melakukan
-\textit{reasoning}. Pada skripsi ini, akan dilakukan konversi dokumen peraturan perundang-undangan
-menjadi data terstruktur dalam bentuk \textit{knowledge graph}, dan memberikan contoh pengaplikasian
-dari \textit{knowledge graph} peraturan perundang-undangan tersebut.
+\pic~\ref{fig:ekstraksi-dokumen} merupakan salah satu contoh ekstraksi informasi dari UU No.11 Tahun
+2020 tentang Cipta Kerja. Pada gambar tersebut dapat dilihat bahwa sebagian informasi dapat
+diekstraksi dari sifat terstruktur dokumen peraturan perundang-undangan (ditandai dengan warna
+merah), dan sebagian informasi lainnya dapat diekstraksi dari data tidak terstruktur beruba teks
+(ditandai dengan warna biru). Untuk melakukan ekstraksi informasi tidak terstruktur seperti pada
+gambar yaitu ``UU No.11 Tahun 2020 Pasal 6 menyebut UU No.11 Tahun 2020 Pasal 5 ayat (1) huruf a'',
+manusia pertama-tama perlu membaca dari awal kalimat sampai menemukan pola \textit{string} yang
+merujuk kepada suatu komponen dokumen peraturan perundang-undangan, kemudian meng-\textit{infer}
+informasi lengkap dari komponen tersebut. Proses konversi \textit{string} ``Pasal 5 ayat (1) huruf
+a'' menjadi informasi lengkap ``UU No.11 Tahun 2020 Pasal 5 ayat (1) huruf a'' perlu dilakukan
+secara manual oleh manusia.
 
 \begin{figure}[H]
   \centering
-  \includegraphics[scale=0.5]{pictures/outline.png}
-  \caption{Outline}
+  \includegraphics{pictures/outline.png}
+  \caption{Pembuatan dan Query KG Peraturan Perundang-undangan}
+  \label{fig:konstruksi-dan-query}
 \end{figure}
+
+\textit{Knowledge graph} adalah struktur data yang dapat diolah oleh komputer yang dapat
+merepresentasikan data dan memproses data dengan relasi kompleks. Dengan melakukan ekstraksi data
+dari data terstruktur dan tidak terstruktur dari dokumen, peraturan perundang-undangan dapat diubah
+menjadi \textit{knowledge graph}. Data peraturan perundang-undangan yang sudah dikonvesi menjadi
+\textit{knowledge graph} kemudian dapat dilakukan \textit{query} seperti \textit{question
+answering}, \textit{reasoning} dan analisis. \pic~\ref{fig:konstruksi-dan-query} merupakan ilustrasi
+konstruksi \textit{knowledge graph} dari beberapa berkas PDF peraturan perundang-undangan dan
+\textit{query} yang dilakukan pada KG tersebut. Pada skripsi ini, akan dilakukan konversi dokumen
+peraturan perundang-undangan menjadi data terstruktur dalam bentuk \textit{knowledge graph}, dan
+memberikan contoh pengaplikasian dari \textit{knowledge graph} peraturan perundang-undangan
+tersebut.
 
 Beberapa usaha telah dilakukan untuk membuat \textit{vocabulary} untuk \textit{knowledge graph}
 peraturan perundang-undangan seperti \textit{European Legislation Identifier} (ELI)

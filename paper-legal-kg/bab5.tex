@@ -102,8 +102,8 @@ Berikut adalah contoh gambaran berkas PDF dan hasil ekstraksinya menjadi daftar 
 
 \begin{figure}[H]
   \centering
-  \includegraphics[scale=0.7]{pictures/pdf_example.png}
-  \caption{Gambar berkas PDF yang akan diekstraksi}
+  \includegraphics{pictures/pdf_example.png}
+  \caption{Gambar dokumen PDF yang akan diekstraksi}
 \end{figure}
 
 akan dipindai menjadi
@@ -146,8 +146,8 @@ dari sumber yang sama sehingga memiliki format yang sama, dan juga posisi \texti
 
 \begin{figure}[H]
   \centering
-  \includegraphics[scale=0.7]{pictures/pdf_header.png}
-  \caption{Contoh Header}
+  \includegraphics{pictures/pdf_header.png}
+  \caption{Contoh header}
 \end{figure}
 
 Gambar diatas adalah contoh \textit{header} yang terdapat pada setiap halaman. Dapat dilihat bahwa
@@ -168,7 +168,11 @@ terpindai pada hasil OCR ulang, tetapi terpindai dengan benar pada berkas PDF as
 menyelesaikan masalah tersebut, penulis melakukan ekstraksi data pada berkas PDF aslinya, kemudian
 menggabungkannya dengan data hasil pemindaian untuk melengkapi bagian yang tidak terpindai.
 
-\includegraphics[scale=0.7]{pictures/pdf_unscanned_number.png}
+\begin{figure}[H]
+  \centering
+  \includegraphics{pictures/pdf_unscanned_number.png}
+  \caption{Contoh nomor tidak terpindai}
+\end{figure}
 
 Penulis hanya menggabungkan data dua berkas PDF untuk kasus angka seperti yang disebutkan diatas.
 Hal tersebut dikarenakan pada umumnya kita dapat mentolerir kesalahan pemindaian pada teks, tetapi
@@ -294,7 +298,7 @@ membuat pembedaan antara ``Pasal biasa'' dan ``Pasal peng-amandemen'' menjadi su
 
 \begin{figure}[H]
   \centering
-  \includegraphics[width=0.8\textwidth]{pictures/pdf_amendment.png}
+  \includegraphics{pictures/pdf_amendment.png}
   \caption{Contoh Amendemen pada UU Nomor 11 Tahun 2020}
 \end{figure}
 
@@ -307,7 +311,7 @@ pasal biasa dan pasal amandemen hanya dilakukan jika dokumen memiliki komponen b
 
 \begin{figure}[H]
   \centering
-  \includegraphics[width=0.8\textwidth]{pictures/amendment_detection.png}
+  \includegraphics{pictures/amendment_detection.png}
   \caption{Deteksi Komponen Amandemen}
 \end{figure}
 
