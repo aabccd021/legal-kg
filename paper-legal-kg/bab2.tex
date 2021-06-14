@@ -6,7 +6,7 @@
 \section{Knowledge Graph}\label{knowledge-graph}
 %-----------------------------------------------------------------------------%
 
-\emph{Knowledge graph} merupakan model data berbasis \emph{graph} yang menggambarkan entitas dunia
+\textit{Knowledge graph} merupakan model data berbasis \textit{graph} yang menggambarkan entitas dunia
 nyata dan hubungan antara entitas-entitas tersebut
 \href{https://yashuseth.blog/2019/10/08/introduction-question-answering-knowledge-graphs-kgqa/}{5}.
 Sebagai contoh, pada gambar dibawah dapat dilihat terpadat entitas-entitas yang ditandai dengan
@@ -15,30 +15,30 @@ dilihat pada gambar dibawah bahwa terdapat entitas ``James'' dan ``Louvre'' dan 
 visited'' yang mengarah dari ``James'' ke ``Louvre''. Relasi tersebut dapat kita anggap sebagai
 sebuah pengetahuan yang dalam bahasa manusia dapat dituliskan sebagai ``James pernah mengunjungi
 Louvre''. Model data seperti ini cocok untuk menyimpan data dengan banyak jenis relasi antara
-entitas seperti pengetahuan umum, dibandingkan dengan \emph{relational database} yang cocok untuk
+entitas seperti pengetahuan umum, dibandingkan dengan \textit{relational database} yang cocok untuk
 menyimpan data dengan relasi antar entitas yang sudah diketahui dan terbatas.
 
 \includegraphics[width=\textwidth]{pictures/knowledge_graph.jpg}
-\emph{source}:\url{https://yashuseth.files.wordpress.com/2019/10/knowledge-graph.jpg}
+\textit{source}:\url{https://yashuseth.files.wordpress.com/2019/10/knowledge-graph.jpg}
 
 %-----------------------------------------------------------------------------%
 \section{Resource Description Framework}\label{resource-description-framework}
 %-----------------------------------------------------------------------------%
 
 Resource Description Framework (RDF) merupkan model data yang memberikan pernyataan tentang suatu
-\emph{resource} dalam bentuk subjek-properti-objek, atau sering disebut \emph{triple}. Sebuah
-\emph{knowledge graph} dapat direpresentasikan sebagai kumpulan \emph{triple}. Subyek dan properti
-dalam \emph{triple} direpresentasikan sebagai Uniform Resource Identifier (URI), sedangkan objek
-dapat direpresentasikan dengan URI atau \emph{string literal}. Pada gambar dibawah, dapat dilihat
-terdapat \emph{knowledge graph} dengan dua \emph{triple}. Pada triple 1 subjek, properti, dan objek
+\textit{resource} dalam bentuk subjek-properti-objek, atau sering disebut \textit{triple}. Sebuah
+\textit{knowledge graph} dapat direpresentasikan sebagai kumpulan \textit{triple}. Subyek dan properti
+dalam \textit{triple} direpresentasikan sebagai Uniform Resource Identifier (URI), sedangkan objek
+dapat direpresentasikan dengan URI atau \textit{string literal}. Pada gambar dibawah, dapat dilihat
+terdapat \textit{knowledge graph} dengan dua \textit{triple}. Pada triple 1 subjek, properti, dan objek
 berturut-turut adalah
 \texttt{https://example.org/james},\texttt{https://example.org/has\_visited},\texttt{https://example.org/louvre}
 yang mana semuanya berbentuk URI\@. Sedangkan pada triple 2 subjek, properti, dan objek
 berturut-turut adalah \texttt{https://example.org/james},\texttt{https://example.org/has\_name},
 ``james'' . \texttt{https://example.org/james}, \texttt{https://example.org/louvre} berturut-turut
-merupakan notasi untuk \emph{resource} entitas James dan Louvre,
+merupakan notasi untuk \textit{resource} entitas James dan Louvre,
 \texttt{https://example.org/has\_visited} dan \texttt{https://example.org/has\_name} merupakan
-properti yang menjelaskan hubungan antara subjek dan objek, dan ``james'' adalah \emph{string
+properti yang menjelaskan hubungan antara subjek dan objek, dan ``james'' adalah \textit{string
   literal} yang menunjukan nilai dari nama James.
 
 \begin{figure}[H]
@@ -48,7 +48,7 @@ properti yang menjelaskan hubungan antara subjek dan objek, dan ``james'' adalah
 \end{figure}
 
 Terdapat beberapa format berkas dan sintaks untuk mengekspresikan RDF. Pada penelitian ini, penulis
-menggunakan format Terse RDF Triple Language (Turtle). Sebagai contoh, \emph{knowledge graph} diatas
+menggunakan format Terse RDF Triple Language (Turtle). Sebagai contoh, \textit{knowledge graph} diatas
 dapat dituliskan dalam format Turtle sebagai berikut.
 
 \begin{minted}[frame=single, breaklines, fontsize=\footnotesize]{turtle}
@@ -56,15 +56,15 @@ dapat dituliskan dalam format Turtle sebagai berikut.
 <https://example.org/james> <https://example.org/has_name> "james" .
 \end{minted}
 
-Dengan fitur format Turtle, dua \emph{triple} diatas dapat ditulis lebih singkat dengan mengganti
+Dengan fitur format Turtle, dua \textit{triple} diatas dapat ditulis lebih singkat dengan mengganti
 prefix URI yang sama menjadi teks yang lebih singkat, dan menggabungkan penulisan beberapa
-\emph{triple} dengan subjek yang sama sehingga subjek hanya perlu dituliskan sekali saja. Sebagai
+\textit{triple} dengan subjek yang sama sehingga subjek hanya perlu dituliskan sekali saja. Sebagai
 contoh, karena sebagaian besar URI memiliki prefix \texttt{https://example.org/}, kita dapat
-menggantinya dengan \emph{string} \texttt{ex} dengan mendeklarasikan
-\texttt{@prefix ex: \textless{}https://example.org/\textgreater{} .}. Kedua \emph{triple} juga
+menggantinya dengan \textit{string} \texttt{ex} dengan mendeklarasikan
+\texttt{@prefix ex: \textless{}https://example.org/\textgreater{} .}. Kedua \textit{triple} juga
 memiliki subjek yang sama yaitu \texttt{https://example.org/james}, oleh karena itu, penulisan kedua
 turtle bisa digabung dengan hanya menuliskan subjek sebanyak satu kali, kemudian menuliskan properti
-dan objek dipisah dengan tanda titik koma . Berikut adalah contoh penulisan dua \emph{triple} diatas
+dan objek dipisah dengan tanda titik koma . Berikut adalah contoh penulisan dua \textit{triple} diatas
 dalam bentuk yang lebih singkat dan lebih mudah dibaca oleh manusia.
 
 \begin{minted}[frame=single, fontsize=\footnotesize]{turtle}
@@ -79,28 +79,28 @@ ex:james
 \section{SPARQL}\label{sparql}
 %-----------------------------------------------------------------------------%
 
-SPARQL merupakan salahsatu RDF \emph{query language} yaitu bahasa yang mampu mengambil atau mengubah
+SPARQL merupakan salahsatu RDF \textit{query language} yaitu bahasa yang mampu mengambil atau mengubah
 data yang disimpan dalam format RDF. Sintaks SPARQL memiliki beberapa kesamaan dengan SQL, contohnya
 sebuah variabel diawali dengan tanda tanya seperti \texttt{?name}. Berikut adalah penjelasan sintaks
 SPARQL.
 
 \begin{itemize}
   \itemsep1pt\parskip0pt\parsep0pt
-  \item \texttt{PREFIX}: Mendeklarasikan pemetaan prefix URI menjadi \emph{string} yang lebih
-        singkat. Hal ini dilakukan agar \emph{query} lebih mudah dibaca oleh manusia seperti sintaks
+  \item \texttt{PREFIX}: Mendeklarasikan pemetaan prefix URI menjadi \textit{string} yang lebih
+        singkat. Hal ini dilakukan agar \textit{query} lebih mudah dibaca oleh manusia seperti sintaks
         \texttt{@prefix} pada Turtle.
-  \item \texttt{SELECT}: Menyatakan variabel yang akan ditampilkan sebagai output dari \emph{query}.
-  \item \texttt{WHERE}: Menyatakan kondisi \emph{triple} yang akan ditampilkan pada output.
+  \item \texttt{SELECT}: Menyatakan variabel yang akan ditampilkan sebagai output dari \textit{query}.
+  \item \texttt{WHERE}: Menyatakan kondisi \textit{triple} yang akan ditampilkan pada output.
 \end{itemize}
 
-Berikut adalah contoh-contoh \emph{query} SPARQL yang dilakukan pada contoh \emph{knowledge graph}
+Berikut adalah contoh-contoh \textit{query} SPARQL yang dilakukan pada contoh \textit{knowledge graph}
 pada subbab sebelumnya.
 
 %-----------------------------------------------------------------------------%
 \subsection{Contoh Query 1}\label{contoh-query-1}
 %-----------------------------------------------------------------------------%
 
-\emph{Query} ini bertujuan untuk menampilkan semua \emph{triple} yang terdapat pada \emph{knowledge
+\textit{Query} ini bertujuan untuk menampilkan semua \textit{triple} yang terdapat pada \textit{knowledge
   graph}.
 
 \begin{listing}
@@ -118,7 +118,7 @@ WHERE
   \label{listing:3}
 \end{listing}
 
-Output dari \emph{query} diatas adalah sebagai berikut.
+Output dari \textit{query} diatas adalah sebagai berikut.
 
 \begin{longtable}{|l|l|l|} \hline
   ?s       & ?p              & ?o        \\\hline \endhead
@@ -130,7 +130,7 @@ Output dari \emph{query} diatas adalah sebagai berikut.
 \subsection{Contoh Query 2}\label{contoh-query-2}
 %-----------------------------------------------------------------------------%
 
-\emph{Query} ini bertujuan untuk menampilkan semua properti dan objek pada \emph{triple} dengan
+\textit{Query} ini bertujuan untuk menampilkan semua properti dan objek pada \textit{triple} dengan
 subjek \texttt{https://example.org/james}.
 
 \begin{minted}[frame=single, fontsize=\footnotesize]{sparql}
@@ -143,7 +143,7 @@ WHERE
   }
   \end{minted}
 
-Output dari \emph{query} tersebut adalah sebagai berikut.
+Output dari \textit{query} tersebut adalah sebagai berikut.
 
 \begin{longtable}{|l|l|l|} \hline
   ?p              & ?o        \\\hline \endhead
@@ -155,9 +155,9 @@ Output dari \emph{query} tersebut adalah sebagai berikut.
 \subsection{Contoh Query 3}\label{contoh-query-3}
 %-----------------------------------------------------------------------------%
 
-\emph{Query} ini bertujuan untuk menampilkan semua objek pada \emph{triple} dengan subjek
+\textit{Query} ini bertujuan untuk menampilkan semua objek pada \textit{triple} dengan subjek
 \texttt{https://example.org/james} dan properti \texttt{https://example.org/has\_visited}. Artinya,
-\emph{query} ini menampilkan semua tempat yang pernah dikunjungi james.
+\textit{query} ini menampilkan semua tempat yang pernah dikunjungi james.
 
 \begin{minted}[frame=single, fontsize=\footnotesize]{sparql}
 PREFIX ex: <https://example.org/>
@@ -168,7 +168,7 @@ WHERE
   }
 \end{minted}
 
-Output dari \emph{query} tersebut adalah sebagai berikut.
+Output dari \textit{query} tersebut adalah sebagai berikut.
 
 \begin{longtable}{|l|l|l|} \hline
   ?visited\_place \\ \hline \endhead

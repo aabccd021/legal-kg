@@ -30,27 +30,29 @@ terstruktur yaitu teks bahasa manusia.
 \begin{figure}[H]
   \centering
   \includegraphics[width=\textwidth]{pictures/terstruktur.png}
-  \caption{Data Terstruktur dan Tidak Terstruktur dari Dokumen}
+  \caption{Cuplikan ekstraksi data terstruktur dan data tidak terstruktur dari dokumen PDF UU No.11 Tahun 2020}
 \end{figure}
 
-Gambar diatas merupakan salah satu contoh ekstraksi informasi dari UU No.11 Tahun 2020 tentang
-Ketenagakerjaan. Pada gambar diatas, dapat dilihat bahwa sebagian informasi dapat diekstraksi dari
+Gambar 1.1 merupakan salah satu contoh ekstraksi informasi dari UU No.11 Tahun 2020 tentang
+Cipta Kerja. Pada gambar tersebut dapat dilihat bahwa sebagian informasi dapat diekstraksi dari
 sifat terstruktur dokumen peraturan perundang-undangan (ditandai dengan warna merah), dan sebagian
 informasi lainnya dapat diekstraksi dari data tidak terstruktur beruba teks (ditandai dengan warna
 biru). Untuk melakukan ekstraksi informasi tidak terstruktur seperti pada gambar yaitu ``UU No.11
 Tahun 2020 Pasal 6 menyebut UU No.11 Tahun 2020 Pasal 5 ayat (1) huruf a'', manusia pertama-tama
-perlu membaca dari awal kalimat sampai menemukan pola \emph{string} yang merujuk kepada suatu
-komponen dokumen peraturan perundang-undangan, kemudian meng-\emph{infer} informasi lengkap dari
-komponen tersebut. Proses konversi \emph{string} ``Pasal 5 ayat (1) huruf a'' menjadi informasi
+perlu membaca dari awal kalimat sampai menemukan pola \textit{string} yang merujuk kepada suatu
+komponen dokumen peraturan perundang-undangan, kemudian meng-\textit{infer} informasi lengkap dari
+komponen tersebut. Proses konversi \textit{string} ``Pasal 5 ayat (1) huruf a'' menjadi informasi
 lengkap ``UU No.11 Tahun 2020 Pasal 5 ayat (1) huruf a'' perlu dilakukan secara manual oleh manusia.
 
-Dengan melakukan ekstraksi data dari data tidak terstruktur pada dokumen, digabung dengan data yang
-sudah terstruktur, peraturan perundang-undangan dapat diubah menjadi dapat diolah oleh komputer.
-Selain dapat menjawab pertanyaan, representasi \emph{knowledge graph} juga dapat digunakan untuk
-analisis karena data sudah terstruktur. Representasi \emph{knowledge graph} juga memungkinkan untuk
-dapat melakukan \emph{reasoning}. Pada skripsi ini, akan dilakukan konversi dokumen peraturan
-perundang-undangan menjadi data terstruktur dalam bentuk \emph{knowledge graph}, dan memberikan
-contoh pengaplikasian dari \emph{knowledge graph} peraturan perundang-undangan tersebut.
+\textit{Knowledge graph} adalah struktur data yang dapat diolah oleh komputer yang dapat
+merepresentasikan data dan memproses data dengan relasi kompleks. Dengan melakukan ekstraksi data
+dari data tidak terstruktur pada dokumen, digabung dengan data yang sudah terstruktur, peraturan
+perundang-undangan dapat diubah menjadi \textit{knowledge graph}. Selain dapat menjawab pertanyaan,
+representasi \textit{knowledge graph} juga dapat digunakan untuk analisis karena data sudah
+terstruktur. Representasi \textit{knowledge graph} juga memungkinkan untuk dapat melakukan
+\textit{reasoning}. Pada skripsi ini, akan dilakukan konversi dokumen peraturan perundang-undangan
+menjadi data terstruktur dalam bentuk \textit{knowledge graph}, dan memberikan contoh pengaplikasian
+dari \textit{knowledge graph} peraturan perundang-undangan tersebut.
 
 \begin{figure}[H]
   \centering
@@ -58,11 +60,11 @@ contoh pengaplikasian dari \emph{knowledge graph} peraturan perundang-undangan t
   \caption{Outline}
 \end{figure}
 
-Beberapa usaha telah dilakukan untuk membuat \emph{vocabulary} untuk \emph{knowledge graph}
-peraturan perundang-undangan seperti \emph{European Legislation Identifier} (ELI)
+Beberapa usaha telah dilakukan untuk membuat \textit{vocabulary} untuk \textit{knowledge graph}
+peraturan perundang-undangan seperti \textit{European Legislation Identifier} (ELI)
 \href{https://eur-lex.europa.eu/eli-register/about.html}{2}. Tetapi ELI belum memiliki
-\emph{vocabulary} untuk struktur dokumen. Sehingga dengan membuat \emph{vocabulary} yang belum
-tersedia, diharapkan dapat menjadi kontribusi dalam mendukung pembuatan \emph{knowledge graph} untuk
+\textit{vocabulary} untuk struktur dokumen. Sehingga dengan membuat \textit{vocabulary} yang belum
+tersedia, diharapkan dapat menjadi kontribusi dalam mendukung pembuatan \textit{knowledge graph} untuk
 dokumen peraturan perundan-undangan
 
 
@@ -73,9 +75,9 @@ dokumen peraturan perundan-undangan
 Berikut ini adalah rumusan permasalahan dari penelitian yang dilakukan:
 \begin{itemize}
   \itemsep1pt\parskip0pt\parsep0pt
-  \item Bagaimana cara membuat \emph{legal ontology} untuk memperjelas \emph{requirement} dan
-        mempermudah konversi dokumen PDF menjadi \emph{knowledge graph}?
-  \item Bagaimana konversi dokumen peraturan perudang-undangan menjadi \emph{knowledge graph} dapat
+  \item Bagaimana cara membuat \textit{legal ontology} untuk memperjelas \textit{requirement} dan
+        mempermudah konversi dokumen PDF menjadi \textit{knowledge graph}?
+  \item Bagaimana konversi dokumen peraturan perudang-undangan menjadi \textit{knowledge graph} dapat
         dilakukan secara otomatis?
   \item Apa saja contoh aplikasi dari knowledge graph peraturan perundang-undangan tersebut?
 \end{itemize}

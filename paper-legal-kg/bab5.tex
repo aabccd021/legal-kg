@@ -24,9 +24,9 @@ dugaan. Pada berkas PDF, terdapat metadata dengan nama \textbf{Creator}, dimana 
 peraturan Perudang-udangan yang didapatkan, tercantum nama-nama alat pencetak atau merk dari
 pencetak tersebut. Dari informasi tersebut penulis menduga bahwa terdapat sebagian peraturan
 perundang-undangan yang dibuat menjadi PDF dengan mencetaknya menjadi kertas terlebih dahulu
-kemudian di pindai oleh pemindai dan sebagian lainnya dikonversi langsung dari berkas \emph{.docx}.
+kemudian di pindai oleh pemindai dan sebagian lainnya dikonversi langsung dari berkas \textit{.docx}.
 Data yang dipindai adalah berupa gambar, artinya teks yang terdapat pada berkas PDF adalah hasil OCR
-(\emph{optical character recognition}) oleh pemindai tersebut. Berikut adalah salahsatu contoh
+(\textit{optical character recognition}) oleh pemindai tersebut. Berikut adalah salahsatu contoh
 dokumen beserta data yang tercantum sebagai \textbf{Creator} dan contoh kesalahan pemindaiannya yang
 banyak terjadi.
 
@@ -47,24 +47,24 @@ melakukan OCR ulang terhadap semua dokumen yang akan di konversi. Dengan melakuk
 menggunakan satu metode yang sama, penulis tidak hanya berhasil mendapatkan data hasil pemindaian
 berkas PDF dengan kualitas pemindaian yang konsisten untuk semua dokumen. Penulis memilih
 menggunakan Tesseract OCR \href{https://github.com/tesseract-ocr/tesseract}{4} sebagai metode OCR
-karena sifatnya \emph{open source} dan mendukung Bahasa Indonesia sebagai bahasa yang dipindai.
+karena sifatnya \textit{open source} dan mendukung Bahasa Indonesia sebagai bahasa yang dipindai.
 
 Untuk melakukan OCR ulang perlu dilakukan instalasi program yang dibutuhkan yang dapat dilakukan
-dengan \emph{command} berikut pada sistem operasi Ubuntu 20.04. \texttt{ocrmypdf} merupakan
-\emph{wrapper} untuk Tesseract OCR dan \texttt{tesseract-ocr-ind} adalah program tambahan untuk
+dengan \textit{command} berikut pada sistem operasi Ubuntu 20.04. \texttt{ocrmypdf} merupakan
+\textit{wrapper} untuk Tesseract OCR dan \texttt{tesseract-ocr-ind} adalah program tambahan untuk
 dapat melakukan OCR menjadi teks Bahasa Indonesia.
 
 \begin{minted}[frame=single, fontsize=\footnotesize]{bash}
 apt update apt install ocrmypdf tesseract-ocr-ind -y
 \end{minted}
 
-Setelah program diinstall, OCR dapat dilakukan dengan menjalankan \emph{command} dibawah. Pada
+Setelah program diinstall, OCR dapat dilakukan dengan menjalankan \textit{command} dibawah. Pada
 contoh dibawah dilakukan konversi \texttt{UU-2021-34.pdf} yang sudah ada menjadi
 \texttt{UU-2021-34\_OCR.pdf} hasil OCR. Opsi \texttt{--force-ocr} diperlukan untuk melakukan OCR
-ulang pada berkas PDF yang sudah memiliki teks hasil OCR untuk di \emph{overwrite}. Opsi
-\texttt{--jobs 4} menjalankan \emph{command} dengan 4 \emph{core} CPU, bilangan pada opsi ini dapat
+ulang pada berkas PDF yang sudah memiliki teks hasil OCR untuk di \textit{overwrite}. Opsi
+\texttt{--jobs 4} menjalankan \textit{command} dengan 4 \textit{core} CPU, bilangan pada opsi ini dapat
 diganti sesuai kebutuhan. Opsi \texttt{-{}-tesseract-config tesseract-config.cfg} menjalankan
-\emph{command} dengan konfigurasi yang diberikan.
+\textit{command} dengan konfigurasi yang diberikan.
 
 \begin{minted}[frame=single, breaklines, fontsize=\footnotesize]{bash}
 ocrmypdf -l ind --force-ocr --jobs 4 --tesseract-config tesseract-config.cfg UU-2021-34.pdf UU-2021-34_OCR.pdf
@@ -72,7 +72,7 @@ ocrmypdf -l ind --force-ocr --jobs 4 --tesseract-config tesseract-config.cfg UU-
 
 Konfigurasi Tesseract OCR yang digunakan adalah \texttt{tessedit\_pageseg\_mode 4} seperti yang
 terlihat pada isi file konfigurasi dibawah. \texttt{tessedit\_pageseg\_mode 4} digunakan agar
-Tesseract OCR mendeteksi teks sebagai \emph{block}, bukan \emph{word} atau \emph{character}.
+Tesseract OCR mendeteksi teks sebagai \textit{block}, bukan \textit{word} atau \textit{character}.
 
 \begin{minted}[frame=single, fontsize=\footnotesize]{text}
 # tesseract-config.cfg
@@ -81,24 +81,24 @@ tessedit_pageseg_mode 4
 
 %-----------------------------------------------------------------------------%
 \section{Ekstraksi Berkas PDF menjadi Data
-  \emph{Span}}\label{ekstraksi-berkas-pdf-menjadi-data-span}
+  \textit{Span}}\label{ekstraksi-berkas-pdf-menjadi-data-span}
 %-----------------------------------------------------------------------------%
 
 Agar dapat diproses oleh program, berkas PDF perlu diolah menjadi data berupa daftar teks dan
-posisinya yang selanjutnya akan disebut \emph{span}. Sebuah \emph{span} mengandung satu baris teks.
-Berikut adalah data yang dimiliki oleh sebuah \emph{span}:
+posisinya yang selanjutnya akan disebut \textit{span}. Sebuah \textit{span} mengandung satu baris teks.
+Berikut adalah data yang dimiliki oleh sebuah \textit{span}:
 
 \begin{itemize}
   \itemsep1pt\parskip0pt\parsep0pt
   \item \texttt{str}: teks yand dikandung
-  \item \texttt{xL}: koordinat titik terkiri dari \emph{span}
-  \item \texttt{xR}: koordinat titik terkanan dari \emph{span}
-  \item \texttt{y}: koordinat titik teratas dari \emph{span}
+  \item \texttt{xL}: koordinat titik terkiri dari \textit{span}
+  \item \texttt{xR}: koordinat titik terkanan dari \textit{span}
+  \item \texttt{y}: koordinat titik teratas dari \textit{span}
   \item \texttt{pageNum}: nomor halaman
-  \item \texttt{id}: \emph{identifier} unik untuk setiap span
+  \item \texttt{id}: \textit{identifier} unik untuk setiap span
 \end{itemize}
 
-Berikut adalah contoh gambaran berkas PDF dan hasil ekstraksinya menjadi daftar \emph{span}.
+Berikut adalah contoh gambaran berkas PDF dan hasil ekstraksinya menjadi daftar \textit{span}.
 
 \begin{figure}[H]
   \centering
@@ -136,13 +136,13 @@ akan dipindai menjadi
 \end{minted}
 
 %-----------------------------------------------------------------------------%
-\section{Membersihkan \emph{Noise} dari Halaman}\label{membersihkan-noise-dari-halaman}
+\section{Membersihkan \textit{Noise} dari Halaman}\label{membersihkan-noise-dari-halaman}
 %-----------------------------------------------------------------------------%
 
-Tidak jarang dokumen peraturan Perudang-undangan mengandung data \emph{noise} yang tidak ingin kita
-ekstraksi seperti \emph{header} dan \emph{footer}. Pada penelitian ini, penulis menggunakan dokumen
-dari sumber yang sama sehingga memiliki format yang sama, dan juga posisi \emph{header} dan
-\emph{footer} yang hampir sama pada setiap dokumen.
+Tidak jarang dokumen peraturan Perudang-undangan mengandung data \textit{noise} yang tidak ingin kita
+ekstraksi seperti \textit{header} dan \textit{footer}. Pada penelitian ini, penulis menggunakan dokumen
+dari sumber yang sama sehingga memiliki format yang sama, dan juga posisi \textit{header} dan
+\textit{footer} yang hampir sama pada setiap dokumen.
 
 \begin{figure}[H]
   \centering
@@ -150,10 +150,10 @@ dari sumber yang sama sehingga memiliki format yang sama, dan juga posisi \emph{
   \caption{Contoh Header}
 \end{figure}
 
-Gambar diatas adalah contoh \emph{header} yang terdapat pada setiap halaman. Dapat dilihat bahwa
-\emph{header} selalu terdiri dari teks ``PRESIDEN REPUBLIK INDONESIA'' dan diikuti oleh nomor
+Gambar diatas adalah contoh \textit{header} yang terdapat pada setiap halaman. Dapat dilihat bahwa
+\textit{header} selalu terdiri dari teks ``PRESIDEN REPUBLIK INDONESIA'' dan diikuti oleh nomor
 halaman, dan selalu terletak di posisi yang hampir sama. Oleh karena itu, penulis memeriksa teks
-menggunakan \emph{regex} dan posisi dari setiap \emph{span}, kemudian menghapus \emph{span} tersebut
+menggunakan \textit{regex} dan posisi dari setiap \textit{span}, kemudian menghapus \textit{span} tersebut
 jika terdeteksi sebagai header.
 
 %-----------------------------------------------------------------------------%
@@ -161,7 +161,7 @@ jika terdeteksi sebagai header.
   Ulang}\label{penggabungan-data-berkas-pdf-asli-dan-hasil-ocr-ulang}
 %-----------------------------------------------------------------------------%
 
-Pada proses ekstraksi berkas PDF menjadi daftar \emph{span}, penulis menemukan satu masalah yaitu
+Pada proses ekstraksi berkas PDF menjadi daftar \textit{span}, penulis menemukan satu masalah yaitu
 data hasil OCR tidak konsisten dalam memindai angka. Seperti yang dapat dilihat pada gambar dibawah,
 angka 10 berhasil dipindai tetapi angka 9 tidak berhasil. Untuk kasus dibawah, angka hanya tidak
 terpindai pada hasil OCR ulang, tetapi terpindai dengan benar pada berkas PDF aslinya. Untuk
@@ -218,26 +218,26 @@ Jika nomor 9 berhasil terpindai:
 Pa
 
 %-----------------------------------------------------------------------------%
-\section{Pengelompokan \emph{span} menjadi Komponen}\label{pengelompokan-span-menjadi-komponen}
+\section{Pengelompokan \textit{span} menjadi Komponen}\label{pengelompokan-span-menjadi-komponen}
 %-----------------------------------------------------------------------------%
 
-Teks yang membentuk suatu komponen terdiri dari satu atau lebih \emph{span}, sehingga daftar
-\emph{span} yang didapatkan dari hasil ekstraksi berkas PDF harus dikelompokkan sehingga setiap
-kelompok merepresentasikan \emph{span} yang terdapat pada suatu komponen. Pengelompokan dilakukan
-dengan mendeteksi \emph{span} awal dan \emph{span} akhir dari sebuah komponen. Karena daftar
-\emph{span} hasil ekstraksi bersifat 1 dimensi, hal ini bisa dilakukan dengan melakukan iterasi pada
-setiap \emph{span}, kemudian menandai awal atau akhir dari sebuah kelompok apabila memenuhi suatu
-pola. Setelah ditandai, \emph{span} akan dikelompokkan sebagai daftar \emph{span} dari suatu
+Teks yang membentuk suatu komponen terdiri dari satu atau lebih \textit{span}, sehingga daftar
+\textit{span} yang didapatkan dari hasil ekstraksi berkas PDF harus dikelompokkan sehingga setiap
+kelompok merepresentasikan \textit{span} yang terdapat pada suatu komponen. Pengelompokan dilakukan
+dengan mendeteksi \textit{span} awal dan \textit{span} akhir dari sebuah komponen. Karena daftar
+\textit{span} hasil ekstraksi bersifat 1 dimensi, hal ini bisa dilakukan dengan melakukan iterasi pada
+setiap \textit{span}, kemudian menandai awal atau akhir dari sebuah kelompok apabila memenuhi suatu
+pola. Setelah ditandai, \textit{span} akan dikelompokkan sebagai daftar \textit{span} dari suatu
 komponen.
 
-Pengelompokan tidak langsund dilakukan dari daftar \emph{list} menjadi daftar komponen, melainkan
-dibuat pengelompokan \emph{section} untuk pembagian dokumen secara garis besar, kemudian baru
-dikelompokkan sebagai komponen dari masing-masing \emph{section} tersebut. Pada gambar dibawah
-\emph{section} ditandai dengan warna biru dan komponen ditandai dengan warna merah. Dapat dilihat
-bahwa daftar \emph{span} data awal dikelompokkan menjadi beberapa \emph{section} yaitu
-\texttt{judul}, \texttt{metadata}, \texttt{babset}, dan \texttt{disahkan}. Kemudian \emph{span} pada
+Pengelompokan tidak langsund dilakukan dari daftar \textit{list} menjadi daftar komponen, melainkan
+dibuat pengelompokan \textit{section} untuk pembagian dokumen secara garis besar, kemudian baru
+dikelompokkan sebagai komponen dari masing-masing \textit{section} tersebut. Pada gambar dibawah
+\textit{section} ditandai dengan warna biru dan komponen ditandai dengan warna merah. Dapat dilihat
+bahwa daftar \textit{span} data awal dikelompokkan menjadi beberapa \textit{section} yaitu
+\texttt{judul}, \texttt{metadata}, \texttt{babset}, dan \texttt{disahkan}. Kemudian \textit{span} pada
 section \texttt{babset} dikelompokkan menjadi komponen bab yaitu \texttt{Bab 1}, \texttt{Bab 2}, dan
-\texttt{Bab 3}. Kemudian \emph{span} pada setiap komponen bab dikelompokkan menjadi komponen pasal.
+\texttt{Bab 3}. Kemudian \textit{span} pada setiap komponen bab dikelompokkan menjadi komponen pasal.
 Pengelompokan bertingkat ini dilakukan agar fungsi untuk mendeteksi batas antara komponen tidak
 menjadi rumit.
 
@@ -247,13 +247,13 @@ menjadi rumit.
   \caption{Ilustrasi Ekstraksi Daftar Span menjadi Data Struktur Komponen}
 \end{figure}
 
-Deteksi batas antara komponen atau \emph{section} dilakukan dengan melihat data pada \emph{span}
+Deteksi batas antara komponen atau \textit{section} dilakukan dengan melihat data pada \textit{span}
 seperti \texttt{str}, \texttt{xL}, \texttt{xR}, dan \texttt{y}. Pada gambar diatas, pola yang
 terdeteksi sebagai batas ditandai dengan huruf merah. Sebagai contoh, pada ekstraki paling kiri,
-dari daftar \emph{span} asli menjadi \emph{section}, dilakukan iterasi \emph{span} dari atas dan
-akan dimasukkan ke dalam \emph{section} \texttt{judul} sampai menemukan \emph{section} yang diawali
-dengan kata \textbf{Menimbang}. Kemudian setiap \emph{span} setelah span \textbf{Menimbang} tersebut
-akan dikelompokkan menjadi \emph{section} \texttt{metadata} sampai menemukan section yang diawali
+dari daftar \textit{span} asli menjadi \textit{section}, dilakukan iterasi \textit{span} dari atas dan
+akan dimasukkan ke dalam \textit{section} \texttt{judul} sampai menemukan \textit{section} yang diawali
+dengan kata \textbf{Menimbang}. Kemudian setiap \textit{span} setelah span \textbf{Menimbang} tersebut
+akan dikelompokkan menjadi \textit{section} \texttt{metadata} sampai menemukan section yang diawali
 kata \textbf{BAB I}.
 
 %-----------------------------------------------------------------------------%
@@ -286,7 +286,7 @@ dijamin mengandung semua \texttt{bab 1} sampai \texttt{bab 11} dan apabila terde
 \subsection{Komponen Amandemen}\label{komponen-amandemen}
 %-----------------------------------------------------------------------------%
 
-Mengekstraksi \emph{span} pada bagian amandemen merupakan salahsatu tantangan pada penelitian ini.
+Mengekstraksi \textit{span} pada bagian amandemen merupakan salahsatu tantangan pada penelitian ini.
 Dibawah adalah gambar amandemen pada Pasal 17 UU Nomor 11 Tahun 2020 yang dilakukan terhadap Pasal 1
 UU Nomor 26 Tahun 2007. Dapat dilihat bahwa kata \texttt{Pasal 17} dan \texttt{Pasal 1} yang
 digunakan sebagai pembatas antara komponen memiliki pola teks dan posisi yang hampir sama. Hal ini
@@ -298,8 +298,8 @@ membuat pembedaan antara ``Pasal biasa'' dan ``Pasal peng-amandemen'' menjadi su
   \caption{Contoh Amendemen pada UU Nomor 11 Tahun 2020}
 \end{figure}
 
-Untuk menyelesaikan masalah ini, penulis menggunakan koordinat \texttt{xL} \emph{span} tepat setelah
-\emph{span} yang bertuliskan ``Pasal X''. Pada contoh deteksi kompoonen amandemen di bawah,
+Untuk menyelesaikan masalah ini, penulis menggunakan koordinat \texttt{xL} \textit{span} tepat setelah
+\textit{span} yang bertuliskan ``Pasal X''. Pada contoh deteksi kompoonen amandemen di bawah,
 \texttt{xL} dari teks setelah pasal peng-amandemen (pasal biasa) ditandai dengan lingkaran merah,
 \texttt{xL} dari pasal yang diamandemen ditandai dengan lingkaran biru, dan garis hijau
 merepresentasikan batas pemeda \texttt{xL} antara pasal biasa dan pasal yang diamandemen. Pembedaan
@@ -315,7 +315,7 @@ pasal biasa dan pasal amandemen hanya dilakukan jika dokumen memiliki komponen b
 \section{Deteksi Sitasi}\label{deteksi-sitasi}
 %-----------------------------------------------------------------------------%
 
-Setelah semua \emph{span} dikelompokan menjadi suatu komponen, dilakukan deteksi sitasi pada teks
+Setelah semua \textit{span} dikelompokan menjadi suatu komponen, dilakukan deteksi sitasi pada teks
 pada setiap komponen untuk mengetahui apakah komponen tersebut menyebut komponen atau dokumen
 peraturan perundang-undangan lainnya. Berikut adalah daftar pola sitasi yang berhasil dideteksi pada
 penelitian ini.
@@ -343,8 +343,8 @@ Data sitasi mengandung data sebagai berikut:
 
 \begin{itemize}
   \itemsep1pt\parskip0pt\parsep0pt
-  \item \texttt{start}: \emph{index} karakter awal sitasi
-  \item \texttt{end}: \emph{index} karakter akhir sitasi
+  \item \texttt{start}: \textit{index} karakter awal sitasi
+  \item \texttt{end}: \textit{index} karakter akhir sitasi
   \item \texttt{uri}: URI dokumen dan
 \end{itemize}
 
@@ -366,8 +366,8 @@ references:
 \end{minted}
 
 Untuk melakukan deteksi, teks akan melalui fungsi yang masing-masing memiliki pola untuk dideteksi.
-Oleh karena itu, untuk \emph{substring} yang beririsan dapat memiliki lebih dari dua sitasi yang
-terdeteksi. Pada kasus tersebut akan diambil sitasi dengan \emph{substring} terpanjang. Sebagai
+Oleh karena itu, untuk \textit{substring} yang beririsan dapat memiliki lebih dari dua sitasi yang
+terdeteksi. Pada kasus tersebut akan diambil sitasi dengan \textit{substring} terpanjang. Sebagai
 contoh, teks ``Pasal 156 Ayat (4)'' pada UU No.13 Tahun 2003 Pasal 158 Ayat (4) akan terdeteksi
 sebagai 3 URI sitasi sebagai berikut.
 

@@ -17,19 +17,19 @@ dan entitas dari KG B dengan URI yang sama dengan maksud permainan kartu Trump, 
 digabung akan menjadi informasi yang berkontradiksi.
 
 Pada penelitian ini, semua URI menggunakan prefix \texttt{http://example.org/legal/} yang
-selanjutnya akan disebut \emph{basePrefix}. Prefix ini dapat diganti dalam program agar dapat
+selanjutnya akan disebut \textit{basePrefix}. Prefix ini dapat diganti dalam program agar dapat
 disesuaikan oleh pengguna program. Semua entitas dokumen dan komponennya menggunakan prefix URI
-\texttt{http://example.org/legal/peraturan} yang selanjutnya disebut \emph{peraturanPrefix}, dan
+\texttt{http://example.org/legal/peraturan} yang selanjutnya disebut \textit{peraturanPrefix}, dan
 semua resource lainnya menggunakan \texttt{http://example.org/legal/ontology} yang selanjutnya
-disebut \emph{ontoPrefix}.
+disebut \textit{ontoPrefix}.
 
 %-----------------------------------------------------------------------------%
 \section{Perancangan URI Class}\label{perancangan-uri-class}
 %-----------------------------------------------------------------------------%
 
-URI Class adalah URI yang menjelaskan \emph{class} dari entitas tersebut. Semua URI Class mengikuti
-pola \texttt{\{ontoPrefix\}/\{className\}} dimana \texttt{className} adalah nama \emph{class}
-tersebut. Berikut adalah semua \emph{class} komponen beserta URI dan deskripsinya.
+URI Class adalah URI yang menjelaskan \textit{class} dari entitas tersebut. Semua URI Class mengikuti
+pola \texttt{\{ontoPrefix\}/\{className\}} dimana \texttt{className} adalah nama \textit{class}
+tersebut. Berikut adalah semua \textit{class} komponen beserta URI dan deskripsinya.
 
 \begin{longtable}[l]{|p{0.2\textwidth}|p{0.8\textwidth}|}
   \hline
@@ -59,9 +59,9 @@ tersebut. Berikut adalah semua \emph{class} komponen beserta URI dan deskripsiny
   Perundang-undangan}\label{perancangan-uri-komponen-peraturan-perundang-undangan}
 %-----------------------------------------------------------------------------%
 
-URI peraturan perundang-undangan diawali oleh \emph{peraturanPrefix}, kemudian diikuti oleh string
+URI peraturan perundang-undangan diawali oleh \textit{peraturanPrefix}, kemudian diikuti oleh string
 yang mengidentifikasi peraturan tersebut. URI peraturan ini akan digunakan oleh entitas sebagai
-prefix yang selanjutnya akan disebut \emph{docURI}. Berikut adalah jenis peraturan
+prefix yang selanjutnya akan disebut \textit{docURI}. Berikut adalah jenis peraturan
 perundang-undangan yang diimplementasi pada penelitian ini beserta pola URI nya. Variabel akan
 dikurung dengan kurung kurawal \texttt{\{\}}.
 
@@ -80,7 +80,7 @@ dikurung dengan kurung kurawal \texttt{\{\}}.
 \end{longtable}
 
 Setiap komponen dokumen merupakan entitas, dan memiliki URI. URI sebuah komponen didahului oleh
-\emph{docURI} dan semua komponen yang mengatasinya. Berikut adalah jenis komponen peraturan
+\textit{docURI} dan semua komponen yang mengatasinya. Berikut adalah jenis komponen peraturan
 perundang-undangan beserta pola URI nya.
 
 \begin{longtable}{|p{0.2\textwidth}|p{0.35\textwidth}|p{0.45\textwidth}|}
@@ -119,8 +119,8 @@ perundang-undangan beserta pola URI nya.
 
 Properti ditandai dengan URI yang memiliki pola \texttt{\{ontoPrefix\}/\{name\}} dimana
 \texttt{name} adalah nama dari properti tersebut. Properti menghubungkan subjek dan objek. Subjek
-adalah berupa URI komponen, sedangkan objek dapat berupa URI komponen, string, \emph{number}
-(bilangan), atau \emph{date} (tanggal).
+adalah berupa URI komponen, sedangkan objek dapat berupa URI komponen, string, \textit{number}
+(bilangan), atau \textit{date} (tanggal).
 
 
 \begin{longtable}{|p{0.25\textwidth}|p{0.25\textwidth}|p{0.25\textwidth}|p{0.25\textwidth}|}
