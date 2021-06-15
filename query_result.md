@@ -1460,9 +1460,7 @@ PREFIX legal: <http://example.org/legal/ontology/>
 SELECT ?menimbangDoc (COUNT(?doc) as ?penimbangDocCount)
 WHERE {
   ?doc legal:menimbang ?menimbang .
-  ?menimbang legal:daftarHuruf ?menimbangPointSet .
-  ?menimbangPointSet legal:huruf ?menimbangPoint .
-  ?menimbangPoint legal:segmen ?menimbangText .
+  ?menimbangText legal:bagianDari* ?menimbang .
   ?menimbangText legal:merujuk ?menimbangDoc .
   ?menimbangDoc a legal:Peraturan
 }
@@ -1481,7 +1479,7 @@ result:
 |1||
 |-|-|
 |menimbangDoc|http://example.org/legal/peraturan/uu/2000/24|
-|penimbangDocCount|9|
+|penimbangDocCount|10|
 
 |2||
 |-|-|
