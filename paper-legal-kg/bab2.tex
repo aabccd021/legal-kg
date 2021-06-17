@@ -33,19 +33,19 @@ entitas yang sudah diketahui dan terbatas.
 
 Resource Description Framework (RDF) merupkan model data yang memberikan pernyataan tentang suatu
 \textit{resource} dalam bentuk subjek-properti-objek, atau sering disebut \textit{triple}. Sebuah
-\textit{knowledge graph} dapat direpresentasikan sebagai kumpulan \textit{triple}. Subyek dan properti
-dalam \textit{triple} direpresentasikan sebagai Uniform Resource Identifier (URI), sedangkan objek
-dapat direpresentasikan dengan URI atau \textit{string literal}. Pada gambar dibawah, dapat dilihat
-terdapat \textit{knowledge graph} dengan dua \textit{triple}. Pada triple 1 subjek, properti, dan objek
-berturut-turut adalah
-\texttt{https://example.org/james},\texttt{https://example.org/has\_visited},\texttt{https://example.org/louvre}
-yang mana semuanya berbentuk URI\@. Sedangkan pada triple 2 subjek, properti, dan objek
-berturut-turut adalah \texttt{https://example.org/james},\texttt{https://example.org/has\_name},
-``james'' . \texttt{https://example.org/james}, \texttt{https://example.org/louvre} berturut-turut
-merupakan notasi untuk \textit{resource} entitas James dan Louvre,
-\texttt{https://example.org/has\_visited} dan \texttt{https://example.org/has\_name} merupakan
-properti yang menjelaskan hubungan antara subjek dan objek, dan ``james'' adalah \textit{string
-  literal} yang menunjukan nilai dari nama James.
+\textit{knowledge graph} dapat direpresentasikan sebagai kumpulan \textit{triple}. Subyek dan
+properti dalam \textit{triple} direpresentasikan sebagai Uniform Resource Identifier (URI),
+sedangkan objek dapat direpresentasikan dengan URI atau \textit{string literal}. Pada gambar
+dibawah, dapat dilihat terdapat \textit{knowledge graph} dengan dua \textit{triple}. Pada triple 1
+subjek, properti, dan objek berturut-turut adalah \texttt{https://example.org/james},
+\texttt{https://example.org/has\_visited}, \texttt{https://example.org/louvre} yang mana semuanya
+berbentuk URI\@. Sedangkan pada triple 2 subjek, properti, dan objek berturut-turut adalah
+\texttt{https://example.org/james}, \texttt{https://example.org/has\_name}, ``james'' .
+\texttt{https://example.org/james}, \texttt{https://example.org/louvre} berturut-turut merupakan
+notasi untuk \textit{resource} entitas James dan Louvre, \texttt{https://example.org/has\_visited}
+dan \texttt{https://example.org/has\_name} merupakan properti yang menjelaskan hubungan antara
+subjek dan objek, dan ``james'' adalah \textit{string literal} yang menunjukan nilai dari nama
+James.
 
 \begin{figure}[H]
   \centering
@@ -68,7 +68,7 @@ prefix URI yang sama menjadi teks yang lebih singkat, dan menggabungkan penulisa
 \textit{triple} dengan subjek yang sama sehingga subjek hanya perlu dituliskan sekali saja. Sebagai
 contoh, karena sebagaian besar URI memiliki prefix \texttt{https://example.org/}, kita dapat
 menggantinya dengan \textit{string} \texttt{ex} dengan mendeklarasikan
-\texttt{@prefix ex: \textless{}https://example.org/\textgreater{} .}. Kedua \textit{triple} juga
+\texttt{@prefix ex: https://example.org/ .}. Kedua \textit{triple} juga
 memiliki subjek yang sama yaitu \texttt{https://example.org/james}, oleh karena itu, penulisan kedua
 turtle bisa digabung dengan hanya menuliskan subjek sebanyak satu kali, kemudian menuliskan properti
 dan objek dipisah dengan tanda titik koma . Berikut adalah contoh penulisan dua \textit{triple} diatas
