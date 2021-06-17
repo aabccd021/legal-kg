@@ -69,22 +69,37 @@ ini, akan dilakukan konversi dokumen peraturan perundang-undangan menjadi data t
 bentuk \textit{knowledge graph}, dan memberikan contoh pengaplikasian dari \textit{knowledge graph}
 peraturan perundang-undangan tersebut.
 
-% // TODO Sebutin juga ya yg pernah kita diskusikan, yakni https://schema.org/Legislation serta
-% https://www.wikidata.org/wiki/Wikidata:WikiProject_Law
-
 Beberapa usaha telah dilakukan untuk membuat \textit{vocabulary} untuk \textit{knowledge graph}
-peraturan perundang-undangan seperti \textit{European Legislation Identifier} (ELI)
-\href{https://eur-lex.europa.eu/eli-register/about.html}{2}. Akan tetapi ELI belum memiliki
-\textit{vocabulary} untuk struktur dokumen. Sehingga dengan membuat \textit{vocabulary} yang belum
-tersedia, diharapkan dapat menjadi kontribusi dalam mendukung pembuatan \textit{knowledge graph} untuk
-dokumen peraturan perundang-undangan.
+peraturan perundang-undangan seperti ELI (\url{https://eur-lex.europa.eu/eli-register/about.html}),
+Schema.org (\url{https://schema.org/Legislation}), dan Wikidata
+(\url{https://www.wikidata.org/wiki/Wikidata:WikiProject_Law}). 
 
-% // TODO: Beberapa usaha telah dilakukan -> ga cuma ELI tapi schema.org/Legislation, (penting ngatain
-% schema.org karena dipake google dan microsoft, ini udah dipikirin orang tapi KG nya belum ada,
-% vocabnya belum sesuai dengan indonesia, dan baru metadata). wikidata.org legal
 
-% // TODO: Kasih contoh legal kg dari schema.org
+\begin{minted}[frame=single, breaklines, fontsize=\footnotesize]{turtle}
+@prefix schema: <http://schema.org/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
+<http://data.europa.eu/eli/dir/1980/181/oj>
+  a schema:Legislation ;
+  schema:about <http://eurovoc.europa.eu/1896> ;
+  schema:isBasedOn <http://njh.me/11957E100.html> ;
+  schema:legislationDate "1979-12-20"^^schema:Date ;
+  schema:legislationPassedBy "Council of the European Union"^^xsd:string ;
+  schema:name "Council Directive 80/181/EEC of 20 December 1979 on the approximation of the laws of the Member States relating to units of measurement and on the repeal of Directive 71/354/EEC"^^xsd:string ;
+
+<http://eurovoc.europa.eu/1896>
+  a schema:Thing ;
+  schema:name "Metrology"^^xsd:string .
+
+<http://njh.me/11957E100.html> a schema:Legislation .
+\end{minted}
+
+Akan tetapi \textit{vocabulary} yang disebutkan tidak dapat merepresentasikan struktur peraturan.
+\textit{Vocabulary} yang disebutkan juga dirancang untuk digunakan secara internasional atau khusus
+\textit{European Union} seperti ELI, sehingga tidak dapat merepresentasikan data yang hanya terdapat
+pada peraturan perundang-undangan di Indonesia. Sehingga dengan membuat \textit{vocabulary} untuk
+struktur data dan peraturan perundang-undangan di Indonesia, diharapkan dapat menjadi kontribusi
+dalam mendukung pembuatan \textit{knowledge graph} untuk dokumen peraturan perundang-undangan.
 
 %-----------------------------------------------------------------------------%
 \section{Permasalahan}\label{sec:permasalahan}
