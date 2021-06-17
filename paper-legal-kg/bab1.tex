@@ -1,5 +1,5 @@
 %-----------------------------------------------------------------------------%
-\chapter{PENDAHLUAN}\label{bab:1}
+\chapter{PENDAHULUAN}\label{bab:1}
 %-----------------------------------------------------------------------------%
 
 %-----------------------------------------------------------------------------%
@@ -8,69 +8,76 @@
 
 Peraturan perundang-undangan adalah peraturan tertulis yang memuat norma hukum yang mengikat secara
 umum dan dibentuk atau ditetapkan oleh lembaga negara atau pejabat yang berwenang melalui prosedur
-yang ditetapkan dalam peraturan perundang-undangan, sesuai yang dijelaskan dalam UU Nomor 12 Tahun
-2011 Pasal 1 Ayat 2 \citep{uu-2011-12}. Peraturan perundang-undangan dapat digunakan untuk menjawab
-pertanyaan yang berkaitan dengan hukum, seperti:
+yang ditetapkan dalam peraturan perundang-undangan, sesuai yang dijelaskan dalam Undang-Undang
+Republik Indonesia Nomor 12 Tahun 2011 (selanjutnya disebut dengan UU 12/2011). Peraturan
+perundang-undangan dapat digunakan untuk menjawab pertanyaan-pertanyaan yang berkaitan dengan hukum,
+seperti:
 
 \begin{itemize}
   \item Peraturan apa saja yang berlaku pada suatu daerah?
   \item Apa hubungan suatu peraturan dengan peraturan lain?
   \item Apa saja peraturan yang mengatur suatu topik?
+  \item Apa isi dari Pasal X ayat (Y) dari suatu peraturan perundang-undangan?
 \end{itemize}
 
-Pertanyaan-pertanyaan tersebut umumnya dapat dijawab oleh seorang ahli hukum, artinya penerapan
-peraturan perundang-undangan ini hanya dapat dilakukan dalam skala kecil dan biaya relatif mahal.
-Komputer dapat menjadi alternatif untuk aplikasi tersebut dalam skala lebih besar dan biaya lebih
-murah, jika peraturan perundang-undangan berupa data terstruktur yang dapat diolah oleh komputer.
-Sayangnya data peraturan perundang-undangan umumnya dibuat dalam bentuk data semi-terstruktur, yaitu
-berupa dokumen PDF dengan struktur konten seperti aturan penomoran dan aturan pembagian
-(\textit{sectioning}) dokumen, sementara penulisan peraturan sendiri dalam bentuk data tidak
-terstruktur yaitu teks bahasa manusia.
+Pertanyaan-pertanyaan tersebut umumnya biasa dijawab oleh seorang ahli hukum, yang artinya,
+penerapan peraturan perundang-undangan ini hanya dapat dilakukan dalam skala kecil dan biaya relatif
+mahal. Komputer dapat menjadi alternatif untuk aplikasi tersebut dalam skala lebih besar dan biaya
+lebih murah, jika peraturan perundang-undangan berupa data terstruktur yang dapat diolah oleh
+komputer. Akan tetapi, data peraturan perundang-undangan umumnya dibuat dalam bentuk data
+semi-terstruktur, yaitu berupa dokumen PDF dengan struktur konten seperti aturan penomoran dan
+aturan pembagian (\textit{sectioning}), sementara penulisan isi peraturannya sendiri dalam bentuk
+data tidak terstruktur yaitu teks bahasa manusia.
 
 \begin{figure}[H]
   \centering
   \includegraphics[width=\textwidth]{pictures/terstruktur.png}
-  \caption{Cuplikan ekstraksi data terstruktur dan data tidak terstruktur dari dokumen PDF UU No.11 Tahun 2020}
+  \caption{Cuplikan ekstraksi data terstruktur dan data tidak terstruktur dari dokumen PDF UU 11/2020}
   \label{fig:ekstraksi-dokumen}
 \end{figure}
 
-\pic~\ref{fig:ekstraksi-dokumen} merupakan salah satu contoh ekstraksi informasi dari UU No.11 Tahun
-2020 tentang Cipta Kerja. Pada gambar tersebut dapat dilihat bahwa sebagian informasi dapat
-diekstraksi dari sifat terstruktur dokumen peraturan perundang-undangan (ditandai dengan warna
-merah), dan sebagian informasi lainnya dapat diekstraksi dari data tidak terstruktur beruba teks
-(ditandai dengan warna biru). Untuk melakukan ekstraksi informasi tidak terstruktur seperti pada
-gambar yaitu ``UU No.11 Tahun 2020 Pasal 6 menyebut UU No.11 Tahun 2020 Pasal 5 ayat (1) huruf a'',
-manusia pertama-tama perlu membaca dari awal kalimat sampai menemukan pola \textit{string} yang
-merujuk kepada suatu komponen dokumen peraturan perundang-undangan, kemudian meng-\textit{infer}
-informasi lengkap dari komponen tersebut. Proses konversi \textit{string} ``Pasal 5 ayat (1) huruf
-a'' menjadi informasi lengkap ``UU No.11 Tahun 2020 Pasal 5 ayat (1) huruf a'' perlu dilakukan
-secara manual oleh manusia.
+\pic~\ref{fig:ekstraksi-dokumen} merupakan salah satu contoh ekstraksi informasi dari UU 11/2020
+tentang Cipta Kerja. Pada gambar tersebut dapat dilihat bahwa sebagian informasi dapat diekstraksi
+dari struktur dokumen peraturan perundang-undangan tak terstruktur yang berupa teks mentah (ditandai
+dengan warna merah), dan sebagian informasi lainnya dapat diekstraksi dari data  (ditandai dengan
+warna biru). Pada gambar tersebut, dalam mengekstraksi informasi ``UU 11/2020 Pasal 6 merujuk kepada
+UU 11/2020 Pasal 5 ayat (1) huruf a'', manusia pertama-tama perlu membaca dari awal teks UU serta
+pasal tersebut sampai menemukan pola \textit{string} terkait yang merujuk kepada suatu komponen
+dokumen peraturan perundang-undangan, dan kemudian meng-\textit{infer} informasi lengkap berdasarkan
+konteks komponen tersebut. Dengan kata lain, proses pencarian dan konversi \textit{string} ``Pasal 5
+ayat (1) huruf a'' menjadi informasi lengkap ``UU No.11 Tahun 2020 Pasal 5 ayat (1) huruf a'' perlu
+dilakukan secara manual oleh manusia.
 
 \begin{figure}[H]
   \centering
   \includegraphics{pictures/outline.png}
-  \caption{Pembuatan dan Query KG Peraturan Perundang-undangan}
+  \caption{Bagan Alir Pembuatan dan Query KG Peraturan Perundang-undangan}
   \label{fig:konstruksi-dan-query}
 \end{figure}
 
+% // TODO
 \textit{Knowledge graph} adalah struktur data yang dapat diolah oleh komputer yang dapat
 merepresentasikan data dan memproses data dengan relasi kompleks. Dengan melakukan ekstraksi data
 dari data terstruktur dan tidak terstruktur dari dokumen, peraturan perundang-undangan dapat diubah
-menjadi \textit{knowledge graph}. Data peraturan perundang-undangan yang sudah dikonvesi menjadi
-\textit{knowledge graph} kemudian dapat dilakukan \textit{query} seperti \textit{question
-answering}, \textit{reasoning} dan analisis. \pic~\ref{fig:konstruksi-dan-query} merupakan ilustrasi
-konstruksi \textit{knowledge graph} dari beberapa berkas PDF peraturan perundang-undangan dan
-\textit{query} yang dilakukan pada KG tersebut. Pada skripsi ini, akan dilakukan konversi dokumen
-peraturan perundang-undangan menjadi data terstruktur dalam bentuk \textit{knowledge graph}, dan
-memberikan contoh pengaplikasian dari \textit{knowledge graph} peraturan perundang-undangan
-tersebut.
+menjadi \textit{knowledge graph}.
+
+Sebagai manfaatnya, data peraturan perundang-undangan yang sudah dikonvesi menjadi \textit{knowledge
+graph} kemudian dapat dilakukan fitur-fitur berbasis \textit{query} seperti \textit{question
+answering}, \textit{reasoning} dan visualisasi data. \pic~\ref{fig:konstruksi-dan-query} menampilkan
+proses konstruksi \textit{knowledge graph} dari beberapa berkas PDF peraturan perundang-undangan dan
+\textit{query} pada KG tersebut. Pada skripsi ini, akan dilakukan konversi dokumen peraturan
+perundang-undangan menjadi data terstruktur dalam bentuk \textit{knowledge graph}, dan memberikan
+contoh pengaplikasian dari \textit{knowledge graph} peraturan perundang-undangan tersebut.
+
+% // TODO Sebutin juga ya yg pernah kita diskusikan, yakni https://schema.org/Legislation serta
+% https://www.wikidata.org/wiki/Wikidata:WikiProject_Law
 
 Beberapa usaha telah dilakukan untuk membuat \textit{vocabulary} untuk \textit{knowledge graph}
 peraturan perundang-undangan seperti \textit{European Legislation Identifier} (ELI)
-\href{https://eur-lex.europa.eu/eli-register/about.html}{2}. Tetapi ELI belum memiliki
+\href{https://eur-lex.europa.eu/eli-register/about.html}{2}. Akan tetapi ELI belum memiliki
 \textit{vocabulary} untuk struktur dokumen. Sehingga dengan membuat \textit{vocabulary} yang belum
 tersedia, diharapkan dapat menjadi kontribusi dalam mendukung pembuatan \textit{knowledge graph} untuk
-dokumen peraturan perundan-undangan
+dokumen peraturan perundang-undangan.
 
 % // TODO: Beberapa usaha telah dilakukan -> ga cuma ELI tapi schema.org/Legislation, (penting ngatain
 % schema.org karena dipake google dan microsoft, ini udah dipikirin orang tapi KG nya belum ada,
