@@ -72,10 +72,11 @@ peraturan perundang-undangan tersebut.
 Beberapa usaha telah dilakukan untuk membuat \textit{vocabulary} untuk \textit{knowledge graph}
 peraturan perundang-undangan seperti ELI (\url{https://eur-lex.europa.eu/eli-register/about.html}),
 Schema.org (\url{https://schema.org/Legislation}), dan Wikidata
-(\url{https://www.wikidata.org/wiki/Wikidata:WikiProject_Law}). 
+(\url{https://www.wikidata.org/wiki/Wikidata:WikiProject_Law}).
 
 
-\begin{minted}[frame=single, breaklines, fontsize=\footnotesize]{turtle}
+\begin{listing}[H]
+  \begin{minted}[frame=single, breaklines, fontsize=\footnotesize]{turtle}
 @prefix schema: <http://schema.org/> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
@@ -92,14 +93,22 @@ Schema.org (\url{https://schema.org/Legislation}), dan Wikidata
   schema:name "Metrology"^^xsd:string .
 
 <http://njh.me/11957E100.html> a schema:Legislation .
-\end{minted}
+  \end{minted}
+  \caption{Contoh \textit{legal knowledge graph} dengan \textit{vocabulary} Schema.org}
+  \label{listing:schema-org-example}
+\end{listing}
 
-Akan tetapi \textit{vocabulary} yang disebutkan tidak dapat merepresentasikan struktur peraturan.
-\textit{Vocabulary} yang disebutkan juga dirancang untuk digunakan secara internasional atau khusus
-\textit{European Union} seperti ELI, sehingga tidak dapat merepresentasikan data yang hanya terdapat
-pada peraturan perundang-undangan di Indonesia. Sehingga dengan membuat \textit{vocabulary} untuk
-struktur data dan peraturan perundang-undangan di Indonesia, diharapkan dapat menjadi kontribusi
-dalam mendukung pembuatan \textit{knowledge graph} untuk dokumen peraturan perundang-undangan.
+Pada \lst~\ref{listing:schema-org-example} diberikan contoh \textit{knowledge graph} yang dibuat
+dengan \textit{vocabulary} Schema.org. \textit{Knowledge graph} memuat metadata peraturan seperti
+tentang apa peraturan tersebut (\code{schema:about}), apa dasar dari peraturan tersebut
+(\code{schema:isBasedOn}), dan nama dari peraturan tersebut (\code{schema:name}).  Akan tetapi
+\textit{vocabulary-vocabulary} yang disebutkan diatas tidak dapat merepresentasikan struktur
+peraturan. Selain itu, \textit{Vocabulary} yang disebutkan diatas dirancang untuk digunakan secara
+internasional atau khusus \textit{European Union} seperti ELI, sehingga tidak dapat
+merepresentasikan data yang hanya terdapat pada peraturan perundang-undangan di Indonesia. Sehingga
+dengan membuat \textit{vocabulary} untuk struktur data dan peraturan perundang-undangan di
+Indonesia, diharapkan dapat menjadi kontribusi dalam mendukung pembuatan \textit{knowledge graph}
+untuk dokumen peraturan perundang-undangan.
 
 %-----------------------------------------------------------------------------%
 \section{Permasalahan}\label{sec:permasalahan}
