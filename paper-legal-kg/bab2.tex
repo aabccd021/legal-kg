@@ -1,10 +1,10 @@
-%-----------------------------------------------------------------------------%
+%-------------------------------------------------------------------------------------------------%
 \chapter{TINJAUAN PUSTAKA}\label{bab:2}
-%-----------------------------------------------------------------------------%
+%-------------------------------------------------------------------------------------------------%
 
-%-----------------------------------------------------------------------------%
+%-------------------------------------------------------------------------------------------------%
 \section{Knowledge Graph}\label{knowledge-graph}
-%-----------------------------------------------------------------------------%
+%-------------------------------------------------------------------------------------------------%
 
 \textit{Knowledge graph} merupakan model data berbasis \textit{graph} yang menggambarkan entitas
 dunia nyata dan hubungan antara entitas-entitas tersebut \citep{seth_2019}. Sebagai contoh, pada
@@ -27,9 +27,9 @@ entitas yang sudah diketahui dan terbatas.
 \end{figure}
 
 
-%-----------------------------------------------------------------------------%
+%-------------------------------------------------------------------------------------------------%
 \section{Resource Description Framework}\label{resource-description-framework}
-%-----------------------------------------------------------------------------%
+%-------------------------------------------------------------------------------------------------%
 
 Resource Description Framework (RDF) merupkan model data yang memberikan pernyataan tentang suatu
 \textit{resource} dalam bentuk subjek-properti-objek, atau sering disebut \textit{triple}. Sebuah
@@ -82,9 +82,9 @@ ex:james
   ex:has_name "james" .
 \end{minted}
 
-%-----------------------------------------------------------------------------%
+%-------------------------------------------------------------------------------------------------%
 \section{SPARQL}\label{sparql}
-%-----------------------------------------------------------------------------%
+%-------------------------------------------------------------------------------------------------%
 
 SPARQL merupakan salahsatu RDF \textit{query language} yaitu bahasa yang mampu mengambil atau mengubah
 data yang disimpan dalam format RDF. Sintaks SPARQL memiliki beberapa kesamaan dengan SQL, contohnya
@@ -103,9 +103,9 @@ SPARQL.
 Berikut adalah contoh-contoh \textit{query} SPARQL yang dilakukan pada contoh \textit{knowledge graph}
 pada subbab sebelumnya.
 
-%-----------------------------------------------------------------------------%
+%-------------------------------------------------------------------------------------------------%
 \subsection{Contoh Query 1}\label{contoh-query-1}
-%-----------------------------------------------------------------------------%
+%-------------------------------------------------------------------------------------------------%
 
 \textit{Query} ini bertujuan untuk menampilkan semua \textit{triple} yang terdapat pada \textit{knowledge
   graph}.
@@ -133,9 +133,9 @@ Output dari \textit{query} diatas adalah sebagai berikut.
   ex:james & ex:has\_name    & ``james'' \\\hline
 \end{longtable}
 
-%-----------------------------------------------------------------------------%
+%-------------------------------------------------------------------------------------------------%
 \subsection{Contoh Query 2}\label{contoh-query-2}
-%-----------------------------------------------------------------------------%
+%-------------------------------------------------------------------------------------------------%
 
 \textit{Query} ini bertujuan untuk menampilkan semua properti dan objek pada \textit{triple} dengan
 subjek \texttt{https://example.org/james}.
@@ -158,9 +158,9 @@ Output dari \textit{query} tersebut adalah sebagai berikut.
   ex:has\_name    & ``james'' \\\hline
 \end{longtable}
 
-%-----------------------------------------------------------------------------%
+%-------------------------------------------------------------------------------------------------%
 \subsection{Contoh Query 3}\label{contoh-query-3}
-%-----------------------------------------------------------------------------%
+%-------------------------------------------------------------------------------------------------%
 
 \textit{Query} ini bertujuan untuk menampilkan semua objek pada \textit{triple} dengan subjek
 \texttt{https://example.org/james} dan properti \texttt{https://example.org/has\_visited}. Artinya,
@@ -182,9 +182,9 @@ Output dari \textit{query} tersebut adalah sebagai berikut.
   ex:louvre       \\ \hline
 \end{longtable}
 
-%-----------------------------------------------------------------------------%
+%-------------------------------------------------------------------------------------------------%
 \section{Peraturan Perundang-undangan}\label{peraturan-perundang-undangan}
-%-----------------------------------------------------------------------------%
+%-------------------------------------------------------------------------------------------------%
 
 ??? boleh ngequote sebanyak apa?
 
@@ -256,10 +256,10 @@ tersebut dan membuat data yang dilihatnya terstruktur di dalam otak. Metode ini 
 peraturan perundang-undangan oleh mesin menjadi kurang efisien karena mesin perlu melakukan proses
 tambahan yaitu mengkonversi gambar menjadi data terstruktur.
 
-%-----------------------------------------------------------------------------%
+%-------------------------------------------------------------------------------------------------%
 \section{Pemodelan European Legislation Identifier
   (ELI)}\label{pemodelan-european-legislation-identifier-eli}
-%-----------------------------------------------------------------------------%
+%-------------------------------------------------------------------------------------------------%
 
 ELI merupakan sistem untuk membuat peraturan perundang-undangan tersedia secara daring dalam format
 terstandardisasi, sehingga dapat diakses dan digunakan oleh berbagai instansi. ELI bertujuan untuk
