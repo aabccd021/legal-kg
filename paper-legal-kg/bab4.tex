@@ -1,160 +1,406 @@
 %-----------------------------------------------------------------------------%
-\chapter{PERANCANGAN}
-\label{bab:4}
+\chapter{IMPLEMENTASI}\label{bab:5}
 %-----------------------------------------------------------------------------%
 
 %-----------------------------------------------------------------------------%
-\section{Perancangan URI}\label{perancangan-uri}
+\section{OCR Ulang Berkas PDF}\label{ocr-ulang-berkas-pdf}
 %-----------------------------------------------------------------------------%
 
-Setiap entitas yang berbeda perlu diberikan URI yang berbeda. Penggabungan KG sangat umum dilakukan
-karena secara struktur dapat dilakukan dengan mudah, dan dapat memperkuat data dari masing-masing
-KG. KG memiliki entitas-entitas dengan URI yang unik, oleh karena itu saat menggabungkan sebuah KG A
-dan sebuah KG B, entitas yang berbeda harus memiliki URI yang berbeda. Sebuah masalah dapat terjadi
-apabila URI tidak dirancang dengan benar. Sebagai contoh, apabila terdapat entitas dari KG A dengan
-URI \texttt{http://example.org/trump} dengan maksud Donald Trump mantan presiden Amerika Serikat,
-dan entitas dari KG B dengan URI yang sama dengan maksud permainan kartu Trump, saat kedua KG ini
-digabung akan menjadi informasi yang berkontradiksi.
+Dokumen peraturan perundang-undangan yang digunakan pada penelitian didapatkan dalam format berkas
+PDF. Penulis pada awalnya mencoba langsung mengekstraksi data dari PDF, tetapi penulis menemukan
+kesulitan. Salahsatu kesulitan yang penulis temui adalah terdapatnya salah pemindaian pada berkas
+PDF. Sebagai contoh, terdapat teks yang tertulis \texttt{Pasal} tetapi mengandung data
+\texttt{Pasai}. Selain itu, penulis juga menemukan bahwa setiap dokumen mengandung keslahan
+pemindaian yang bervariasi. Untuk suatu kasus, teks \texttt{(2)} selalu terdeteksi sebagai
+\texttt{(21} pada suatu dokumen, tetapi tidak pada dokumen lainnya. Pada kasus lainnya terdapat
+dokumen yang hampir tidak memiliki kesalahan pemindaian dan juga terdapat dokumen yang teksnya tidak
+dapat dibaca samasekali.
 
-Pada penelitian ini, semua URI menggunakan prefix \texttt{http://example.org/legal/} yang
-selanjutnya akan disebut \textit{basePrefix}. Prefix ini dapat diganti dalam program agar dapat
-disesuaikan oleh pengguna program. Semua entitas dokumen dan komponennya menggunakan prefix URI
-\texttt{http://example.org/legal/peraturan} yang selanjutnya disebut \textit{peraturanPrefix}, dan
-semua resource lainnya menggunakan \texttt{http://example.org/legal/ontology} yang selanjutnya
-disebut \textit{ontoPrefix}.
+Walaupun dokumen-dokumen tersebut dipelihara oleh satu lembaga pada satu situs web, yaitu oleh Dewan
+Perwakilan Rakyat pada situs web dpr.go.id/jdih, masing-masing dokumen dibuat kedalam berkas PDF
+dengan cara yang berbeda-beda. Penulis tidak dapat mengetahui secara pasti metode apa yang
+digunakan, tetapi dari metadata yang didapatkan dari berkas PDF, penulis dapat membuat beberapa
+dugaan. Pada berkas PDF, terdapat metadata dengan nama \textbf{Creator}, dimana pada dokumen-dokumen
+peraturan Perudang-udangan yang didapatkan, tercantum nama-nama alat pencetak atau merk dari
+pencetak tersebut. Dari informasi tersebut penulis menduga bahwa terdapat sebagian peraturan
+perundang-undangan yang dibuat menjadi PDF dengan mencetaknya menjadi kertas terlebih dahulu
+kemudian di pindai oleh pemindai dan sebagian lainnya dikonversi langsung dari berkas \textit{.docx}.
+Data yang dipindai adalah berupa gambar, artinya teks yang terdapat pada berkas PDF adalah hasil OCR
+(\textit{optical character recognition}) oleh pemindai tersebut. Berikut adalah salahsatu contoh
+dokumen beserta data yang tercantum sebagai \textbf{Creator} dan contoh kesalahan pemindaiannya yang
+banyak terjadi.
+
+\begin{table}
+  \centering
+  \begin{tabular}{|l|l|l|}
+    \hline
+    Dokumen                & \_\_Creator\_\_        & Kesalahan pemindaian        \\ \hline
+    UU Nomor 13 Tahun 2003 & ScanSoft PDF Create! 4 & - (tidak ada)               \\ \hline
+    UU Nomor 6 Tahun 2018  & Canon                  & `(2)` selalu dipindai `(21` \\ \hline
+    PP Nomor 34 Tahun 2021 & Fuji Xerox B9100       & data teks tidak terbaca     \\ \hline
+  \end{tabular}
+\end{table}
+
+Pemindaian berkas PDF dengan metode yang berbeda-beda memberikan kualitas hasil pemindaian yang
+berbeda-beda dan kesalahan pemindaian yang tidak konsisten. Untuk menyelesaikan masalah ini, penulis
+melakukan OCR ulang terhadap semua dokumen yang akan di konversi. Dengan melakukan OCR ulang
+menggunakan satu metode yang sama, penulis tidak hanya berhasil mendapatkan data hasil pemindaian
+berkas PDF dengan kualitas pemindaian yang konsisten untuk semua dokumen. Penulis memilih
+menggunakan Tesseract OCR \href{https://github.com/tesseract-ocr/tesseract}{4} sebagai metode OCR
+karena sifatnya \textit{open source} dan mendukung Bahasa Indonesia sebagai bahasa yang dipindai.
+
+Untuk melakukan OCR ulang perlu dilakukan instalasi program yang dibutuhkan yang dapat dilakukan
+dengan \textit{command} berikut pada sistem operasi Ubuntu 20.04. \texttt{ocrmypdf} merupakan
+\textit{wrapper} untuk Tesseract OCR dan \texttt{tesseract-ocr-ind} adalah program tambahan untuk
+dapat melakukan OCR menjadi teks Bahasa Indonesia.
+
+\begin{minted}[frame=single, fontsize=\footnotesize]{bash}
+apt update apt install ocrmypdf tesseract-ocr-ind -y
+\end{minted}
+
+Setelah program diinstall, OCR dapat dilakukan dengan menjalankan \textit{command} dibawah. Pada
+contoh dibawah dilakukan konversi \texttt{UU-2021-34.pdf} yang sudah ada menjadi
+\texttt{UU-2021-34\_OCR.pdf} hasil OCR. Opsi \texttt{--force-ocr} diperlukan untuk melakukan OCR
+ulang pada berkas PDF yang sudah memiliki teks hasil OCR untuk di \textit{overwrite}. Opsi
+\texttt{--jobs 4} menjalankan \textit{command} dengan 4 \textit{core} CPU, bilangan pada opsi ini dapat
+diganti sesuai kebutuhan. Opsi \texttt{--tesseract-config tesseract-config.cfg} menjalankan
+\textit{command} dengan konfigurasi yang diberikan.
+
+\begin{minted}[frame=single, breaklines, fontsize=\footnotesize]{bash}
+ocrmypdf -l ind --force-ocr --jobs 4 --tesseract-config tesseract-config.cfg UU-2021-34.pdf UU-2021-34_OCR.pdf
+\end{minted}
+
+Konfigurasi Tesseract OCR yang digunakan adalah \texttt{tessedit\_pageseg\_mode 4} seperti yang
+terlihat pada isi file konfigurasi dibawah. \texttt{tessedit\_pageseg\_mode 4} digunakan agar
+Tesseract OCR mendeteksi teks sebagai \textit{block}, bukan \textit{word} atau \textit{character}.
+
+\begin{minted}[frame=single, fontsize=\footnotesize]{text}
+# tesseract-config.cfg
+tessedit_pageseg_mode 4
+\end{minted}
 
 %-----------------------------------------------------------------------------%
-\section{Perancangan URI Class}\label{perancangan-uri-class}
+\section{Ekstraksi Berkas PDF menjadi Data
+  \textit{Span}}\label{ekstraksi-berkas-pdf-menjadi-data-span}
 %-----------------------------------------------------------------------------%
 
-URI Class adalah URI yang menjelaskan \textit{class} dari entitas tersebut. Semua URI Class mengikuti
-pola \texttt{\{ontoPrefix\}/\{className\}} dimana \texttt{className} adalah nama \textit{class}
-tersebut. Berikut adalah semua \textit{class} komponen beserta URI dan deskripsinya.
+Agar dapat diproses oleh program, berkas PDF perlu diolah menjadi data berupa daftar teks dan
+posisinya yang selanjutnya akan disebut \textit{span}. Sebuah \textit{span} mengandung satu baris teks.
+Berikut adalah data yang dimiliki oleh sebuah \textit{span}:
 
-\begin{longtable}[l]{|p{0.2\textwidth}|p{0.8\textwidth}|}
+\begin{itemize}
+  \itemsep1pt\parskip0pt\parsep0pt
+  \item \texttt{str}: teks yand dikandung
+  \item \texttt{xL}: koordinat titik terkiri dari \textit{span}
+  \item \texttt{xR}: koordinat titik terkanan dari \textit{span}
+  \item \texttt{y}: koordinat titik teratas dari \textit{span}
+  \item \texttt{pageNum}: nomor halaman
+  \item \texttt{id}: \textit{identifier} unik untuk setiap span
+\end{itemize}
+
+Berikut adalah contoh gambaran berkas PDF dan hasil ekstraksinya menjadi daftar \textit{span}.
+
+\begin{figure}[H]
+  \centering
+  \includegraphics{pictures/pdf_example.png}
+  \caption{Gambar dokumen PDF yang akan diekstraksi}
+\end{figure}
+
+akan dipindai menjadi
+
+\begin{minted}[frame=single, fontsize=\footnotesize]{yaml}
+- xL: 197.52
+  xR: 442.79990000000004
+  'y': 234.48000000000002
+  str: UNDANG-UNDANG REPUBLIK INDONESIA
+  pageNum: 1
+  id: 0
+- xL: 252.72
+  xR: 387.6002
+  'y': 255.12
+  str: NOMOR 13 TAHUN 2003
+  pageNum: 1
+  id: 1
+- xL: 291.12
+  xR: 349.68048
+  'y': 275.76
+  str: TENTANG
+  pageNum: 1
+  id: 2
+- xL: 257.28
+  xR: 383.28015999999997
+  'y': 296.4
+  str: KETENAGAKERJAAN
+  pageNum: 1
+  id: 3
+\end{minted}
+
+%-----------------------------------------------------------------------------%
+\section{Membersihkan \textit{Noise} dari Halaman}\label{membersihkan-noise-dari-halaman}
+%-----------------------------------------------------------------------------%
+
+Tidak jarang dokumen peraturan Perudang-undangan mengandung data \textit{noise} yang tidak ingin kita
+ekstraksi seperti \textit{header} dan \textit{footer}. Pada penelitian ini, penulis menggunakan dokumen
+dari sumber yang sama sehingga memiliki format yang sama, dan juga posisi \textit{header} dan
+\textit{footer} yang hampir sama pada setiap dokumen.
+
+\begin{figure}[H]
+  \centering
+  \includegraphics{pictures/pdf_header.png}
+  \caption{Contoh header}
+\end{figure}
+
+Gambar diatas adalah contoh \textit{header} yang terdapat pada setiap halaman. Dapat dilihat bahwa
+\textit{header} selalu terdiri dari teks ``PRESIDEN REPUBLIK INDONESIA'' dan diikuti oleh nomor
+halaman, dan selalu terletak di posisi yang hampir sama. Oleh karena itu, penulis memeriksa teks
+menggunakan \textit{regex} dan posisi dari setiap \textit{span}, kemudian menghapus \textit{span} tersebut
+jika terdeteksi sebagai header.
+
+%-----------------------------------------------------------------------------%
+\section{Penggabungan Data Berkas PDF Asli dan Hasil OCR
+  Ulang}\label{penggabungan-data-berkas-pdf-asli-dan-hasil-ocr-ulang}
+%-----------------------------------------------------------------------------%
+
+Pada proses ekstraksi berkas PDF menjadi daftar \textit{span}, penulis menemukan satu masalah yaitu
+data hasil OCR tidak konsisten dalam memindai angka. Seperti yang dapat dilihat pada gambar dibawah,
+angka 10 berhasil dipindai tetapi angka 9 tidak berhasil. Untuk kasus dibawah, angka hanya tidak
+terpindai pada hasil OCR ulang, tetapi terpindai dengan benar pada berkas PDF aslinya. Untuk
+menyelesaikan masalah tersebut, penulis melakukan ekstraksi data pada berkas PDF aslinya, kemudian
+menggabungkannya dengan data hasil pemindaian untuk melengkapi bagian yang tidak terpindai.
+
+\begin{figure}[H]
+  \centering
+  \includegraphics{pictures/pdf_unscanned_number.png}
+  \caption{Contoh nomor tidak terpindai}
+\end{figure}
+
+Penulis hanya menggabungkan data dua berkas PDF untuk kasus angka seperti yang disebutkan diatas.
+Hal tersebut dikarenakan pada umumnya kita dapat mentolerir kesalahan pemindaian pada teks, tetapi
+karena kegagalan pemindaian pada angka tersebut akan mempengaruhi struktur dokumen, penulis
+memutuskan solusi diatas. Sebagai contoh, jika nomor 8 berhasil dipindai dan nomor 9 tidak berhasil,
+maka struktur akhir yang dihasilkan akan mengandung semua isi nomor 9 didalam nomor 8, yang mana
+seharusnya adalah nomor yang terpisah. Berikut berturut-turut adalah contoh data yang dihasilkan
+jika nomor 9 tidak berhasil terpindai dan jika berhasil terpindai.
+
+Jika nomor 9 tidak berhasil terpindai:
+\begin{minted}[frame=single, fontsize=\footnotesize]{yaml}
+- type: point
+  key: 8
+  text: >-
+    Informasi ketenagakerjaan adalah gabungan, rangkaian, dan analisis data yang
+    berbentuk angka yang telah diolah, naskah dan dokumen yang mempunyai arti,
+    nilai dan makna tertentu mengenai ketenagakerjaan.
+    9. Pelatihan kerja adalah keseluruhan kegiatan untuk memberi, memperoleh,
+    meningkatkan, serta mengembangkan kompetensi kerja, produktivitas, disiplin,
+    sikap, dan etos kerja pada tingkat keterampilan dan keahlian tertentu sesuai
+    dengan jenjang dan kualifikasi jabatan atau pekerjaan.
+\end{minted}
+
+Jika nomor 9 berhasil terpindai:
+
+\begin{minted}[frame=single, fontsize=\footnotesize]{yaml}
+- type: point
+  key: 8
+  text: >-
+    Informasi ketenagakerjaan adalah gabungan, rangkaian, dan analisis data yang
+    berbentuk angka yang telah diolah, naskah dan dokumen yang mempunyai arti,
+    nilai dan makna tertentu mengenai ketenagakerjaan.
+- type: point
+  key: 9
+  text: >-
+    Pelatihan kerja adalah keseluruhan kegiatan untuk memberi, memperoleh,
+    meningkatkan, serta mengembangkan kompetensi kerja, produktivitas, disiplin,
+    sikap, dan etos kerja pada tingkat keterampilan dan keahlian tertentu sesuai
+    dengan jenjang dan kualifikasi jabatan atau pekerjaan.
+  
+\end{minted}
+
+%-----------------------------------------------------------------------------%
+\section{Klasifikasi Dokumen}\label{klasifikasi-dokumen}
+%-----------------------------------------------------------------------------%
+
+Pa
+
+%-----------------------------------------------------------------------------%
+\section{Pengelompokan \textit{span} menjadi Komponen}\label{pengelompokan-span-menjadi-komponen}
+%-----------------------------------------------------------------------------%
+
+Teks yang membentuk suatu komponen terdiri dari satu atau lebih \textit{span}, sehingga daftar
+\textit{span} yang didapatkan dari hasil ekstraksi berkas PDF harus dikelompokkan sehingga setiap
+kelompok merepresentasikan \textit{span} yang terdapat pada suatu komponen. Pengelompokan dilakukan
+dengan mendeteksi \textit{span} awal dan \textit{span} akhir dari sebuah komponen. Karena daftar
+\textit{span} hasil ekstraksi bersifat 1 dimensi, hal ini bisa dilakukan dengan melakukan iterasi pada
+setiap \textit{span}, kemudian menandai awal atau akhir dari sebuah kelompok apabila memenuhi suatu
+pola. Setelah ditandai, \textit{span} akan dikelompokkan sebagai daftar \textit{span} dari suatu
+komponen.
+
+Pengelompokan tidak langsund dilakukan dari daftar \textit{list} menjadi daftar komponen, melainkan
+dibuat pengelompokan \textit{section} untuk pembagian dokumen secara garis besar, kemudian baru
+dikelompokkan sebagai komponen dari masing-masing \textit{section} tersebut. Pada gambar dibawah
+\textit{section} ditandai dengan warna biru dan komponen ditandai dengan warna merah. Dapat dilihat
+bahwa daftar \textit{span} data awal dikelompokkan menjadi beberapa \textit{section} yaitu
+\texttt{judul}, \texttt{metadata}, \texttt{babset}, dan \texttt{disahkan}. Kemudian \textit{span} pada
+section \texttt{babset} dikelompokkan menjadi komponen bab yaitu \texttt{Bab 1}, \texttt{Bab 2}, dan
+\texttt{Bab 3}. Kemudian \textit{span} pada setiap komponen bab dikelompokkan menjadi komponen pasal.
+Pengelompokan bertingkat ini dilakukan agar fungsi untuk mendeteksi batas antara komponen tidak
+menjadi rumit.
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=\textwidth]{pictures/pdf_to_component.png}
+  \caption{Ilustrasi Ekstraksi Daftar Span menjadi Data Struktur Komponen}
+\end{figure}
+
+Deteksi batas antara komponen atau \textit{section} dilakukan dengan melihat data pada \textit{span}
+seperti \texttt{str}, \texttt{xL}, \texttt{xR}, dan \texttt{y}. Pada gambar diatas, pola yang
+terdeteksi sebagai batas ditandai dengan huruf merah. Sebagai contoh, pada ekstraki paling kiri,
+dari daftar \textit{span} asli menjadi \textit{section}, dilakukan iterasi \textit{span} dari atas dan
+akan dimasukkan ke dalam \textit{section} \texttt{judul} sampai menemukan \textit{section} yang diawali
+dengan kata \textbf{Menimbang}. Kemudian setiap \textit{span} setelah span \textbf{Menimbang} tersebut
+akan dikelompokkan menjadi \textit{section} \texttt{metadata} sampai menemukan section yang diawali
+kata \textbf{BAB I}.
+
+%-----------------------------------------------------------------------------%
+\subsection{Komponen Terurut}\label{pengelompokan-span-pada-komponen-terurut}
+%-----------------------------------------------------------------------------%
+
+Beberapa komponen seperti \texttt{bab}, \texttt{bagian}, \texttt{paragraf}, \texttt{pasal},
+\texttt{angka}, dan \texttt{huruf} memiliki sifat terurut. Dalam hal ini, yang termasuk terurut
+adalah:
+
+\begin{itemize}
+  \itemsep1pt\parskip0pt\parsep0pt
+  \item
+        Komponen yang mengawali suatu komponen terurut akan selalu sama.
+  \item
+        Hanya terdapat satu komponen yang dapat mengikuti komponen terurut.
+\end{itemize}
+
+Contoh dari sifat pertama adalah \texttt{bab}, \texttt{bagian}, \texttt{paragraf}, \texttt{pasal},
+\texttt{angka} pasti dimulai dari komponen nomor 1 seperti \texttt{bab 1} dan \texttt{pasal 1}, dan
+\texttt{huruf} pasti dimulai dari komponen \texttt{huruf a}. Contoh dari sifat kedua adalah hanya
+\texttt{pasal 2} yang dapat mengikuti \texttt{pasal 1} dan hanya \texttt{huruf b} yang dapat
+mengikuti \texttt{huruf a}. Dalam implementasi, penulis memastikan sifat-sifat ini dipatuhi,
+sehingga sebagai contoh apabila sebuah dokumen terdeteksi mengandung \texttt{bab 12} maka akan
+dijamin mengandung semua \texttt{bab 1} sampai \texttt{bab 11} dan apabila terdeteksi mengandung
+\texttt{pasal 196} maka akan dijamin mengandung semua pasal dari \texttt{pasal 1} sampai
+\texttt{pasal 195}.
+
+%-----------------------------------------------------------------------------%
+\subsection{Komponen Amandemen}\label{komponen-amandemen}
+%-----------------------------------------------------------------------------%
+
+Mengekstraksi \textit{span} pada bagian amandemen merupakan salahsatu tantangan pada penelitian ini.
+Dibawah adalah gambar amandemen pada Pasal 17 UU Nomor 11 Tahun 2020 yang dilakukan terhadap Pasal 1
+UU Nomor 26 Tahun 2007. Dapat dilihat bahwa kata \texttt{Pasal 17} dan \texttt{Pasal 1} yang
+digunakan sebagai pembatas antara komponen memiliki pola teks dan posisi yang hampir sama. Hal ini
+membuat pembedaan antara ``Pasal biasa'' dan ``Pasal peng-amandemen'' menjadi sulit dilakukan.
+
+\begin{figure}[H]
+  \centering
+  \includegraphics{pictures/pdf_amendment.png}
+  \caption{Contoh Amendemen pada UU Nomor 11 Tahun 2020}
+\end{figure}
+
+Untuk menyelesaikan masalah ini, penulis menggunakan koordinat \texttt{xL} \textit{span} tepat setelah
+\textit{span} yang bertuliskan ``Pasal X''. Pada contoh deteksi kompoonen amandemen di bawah,
+\texttt{xL} dari teks setelah pasal peng-amandemen (pasal biasa) ditandai dengan lingkaran merah,
+\texttt{xL} dari pasal yang diamandemen ditandai dengan lingkaran biru, dan garis hijau
+merepresentasikan batas pemeda \texttt{xL} antara pasal biasa dan pasal yang diamandemen. Pembedaan
+pasal biasa dan pasal amandemen hanya dilakukan jika dokumen memiliki komponen berupa amandemen.
+
+\begin{figure}[H]
+  \centering
+  \includegraphics{pictures/amendment_detection.png}
+  \caption{Deteksi Komponen Amandemen}
+\end{figure}
+
+%-----------------------------------------------------------------------------%
+\section{Deteksi Sitasi}\label{deteksi-sitasi}
+%-----------------------------------------------------------------------------%
+
+Setelah semua \textit{span} dikelompokan menjadi suatu komponen, dilakukan deteksi sitasi pada teks
+pada setiap komponen untuk mengetahui apakah komponen tersebut menyebut komponen atau dokumen
+peraturan perundang-undangan lainnya. Berikut adalah daftar pola sitasi yang berhasil dideteksi pada
+penelitian ini.
+
+\begin{longtable}[l]{|p{0.2\textwidth} | p{0.3\textwidth}| p{0.5\textwidth}|}
   \hline
-  Nama Class              & Deskripsi                                                                                       \\ \hline \endhead
-  \texttt{Peraturan}      & Peraturan perundang-undangan                                                                    \\ \hline
-  \texttt{DaftarBab}      & Daftar satu atau lebih bab                                                                      \\ \hline
-  \texttt{Bab}            & Bab                                                                                             \\ \hline
-  \texttt{DaftarBagian}   & Daftar satu atau lebih bagian                                                                   \\ \hline
-  \texttt{Bagian}         & Bagian                                                                                          \\ \hline
-  \texttt{DaftarParagraf} & Daftar satu atau lebih paragraf                                                                 \\ \hline
-  \texttt{Paragraf}       & Paragraf                                                                                        \\ \hline
-  \texttt{DaftarPasal}    & Daftar satu atau lebih pasal                                                                    \\ \hline
-  \texttt{Pasal}          & Pasal                                                                                           \\ \hline
-  \texttt{VersiPasal}     & Versi dari sebuah pasal. Sebuah pasal dapat memiliki satu atau lebih versi dari hasil amandemen \\ \hline
-  \texttt{DaftarAyat}     & Daftar satu atau lebih ayat                                                                     \\ \hline
-  \texttt{Ayat}           & Ayat                                                                                            \\ \hline
-  \texttt{DaftarHuruf}    & Daftar satu atau lebih huruf atau nomor                                                         \\ \hline
-  \texttt{Huruf}          & Huruf atau nomor                                                                                \\ \hline
-  \texttt{Menimbang}      & Hal yang ditimbang oleh suatu peraturan                                                         \\ \hline
-  \texttt{Mengingat}      & Hal yang diingat oleh suatu peraturan                                                           \\ \hline
-  \texttt{Segmen}         & Segmen teks. Dapat memiliki rujukan ke suatu komponen peraturan                                 \\ \hline
-  \caption{Long table caption.\label{longsz}}                                                                                                  \\
+  Pola                                  & Contoh teks                                              & URI Terdeteksi                                                                                         \\ \hline \endhead
+  UUD 1945                              & Undang Undang Dasar Negara Republik Indonesia Tahun 1945 & \texttt{uud}                                                                                          \\ \hline
+  Undang-Undang Nomor \{x\} Tahun \{y\} & Undang-Undang Nomor 26 Tahun 2007                        & \texttt{uu/2007/26}                                                                                    \\ \hline
+  ayat (\{x\})                          & ayat (1)                                                 & \texttt{uu/2003/13/pasal/169/ayat/1}                                                                   \\ \hline
+  Pasal \{x\}                           & Pasal 156                                                & \texttt{uu/2003/13/pasal/156}                                                                          \\ \hline
+  Pasal \{x\} ayat (\{y\})              & Pasal 156 ayat (2)                                       & \texttt{uu/2003/13/pasal/156/ayat/2}                                                                   \\ \hline
+  huruf \{x\}, \{y\}, ... dan \{z\}     & huruf a, b, c, d, dan e                                  &
+  \makecell[l]{\texttt{uu/2003/13/menimbang/point/a}                                                                                                                                                        \\\texttt{uu/2003/13/menimbang/point/b}\\\texttt{uu/2003/13/menimbang/point/c}\\\texttt{uu/2003/13/menimbang/point/d}\\\texttt{uu/2003/13/menimbang/point/e}}\\ \hline
+  huruf \{x\} dan \{y\}                 & huruf a dan b                                            & \makecell[l]{\texttt{uu/2003/13/pasal/1/point/5/point/a}\\\texttt{uu/2003/13/pasal/1/point/5/point/b} } \\ \hline
+  \caption{Long table caption.\label{longszz}}                                                                                                                                                              \\
 \end{longtable}
 
-%-----------------------------------------------------------------------------%
-\section{Perancangan URI Komponen Peraturan
-  Perundang-undangan}\label{perancangan-uri-komponen-peraturan-perundang-undangan}
-%-----------------------------------------------------------------------------%
+Data sitasi mengandung data sebagai berikut:
 
-URI peraturan perundang-undangan diawali oleh \textit{peraturanPrefix}, kemudian diikuti oleh string
-yang mengidentifikasi peraturan tersebut. URI peraturan ini akan digunakan oleh entitas sebagai
-prefix yang selanjutnya akan disebut \textit{docURI}. Berikut adalah jenis peraturan
-perundang-undangan yang diimplementasi pada penelitian ini beserta pola URI nya. Variabel akan
-dikurung dengan kurung kurawal \texttt{\{\}}.
+\begin{itemize}
+  \itemsep1pt\parskip0pt\parsep0pt
+  \item \texttt{start}: \textit{index} karakter awal sitasi
+  \item \texttt{end}: \textit{index} karakter akhir sitasi
+  \item \texttt{uri}: URI dokumen dan
+\end{itemize}
 
+Berikut adalah contoh teks pada Undang-Undang Nomor 13 Tahun 2003 Pasal 158 Ayat (4) beserta sitasi
+yang terdeteksi.
 
+\begin{minted}[frame=single, fontsize=\footnotesize]{yaml}
+textString: >-
+  Pekerja/buruh yang diputus hubungan kerjanya berdasarkan alasan sebagaimana
+  dimaksud dalam ayat (1), dapat memperoleh uang penggantian hak sebagaimana
+  dimaksud dalam Pasal 156 ayat (4).
+references:
+  - start: 91
+    end: 99
+    uri: /uu/2003/13/pasal/158/ayat/1
+  - start: 166
+    end: 184
+    uri: /uu/2003/13/pasal/156/ayat/4
+\end{minted}
 
-\begin{longtable}[l]{|p{0.2\textwidth}|p{0.55\textwidth}|p{0.25\textwidth}|}
-  \hline
-  Jenis Peraturan                       & Pola URI                                                & Penjelasan variabel                        \\ \hline \endhead
-  Undang-Undang Dasar 1945              & \texttt{/uud}                                           &                                            \\ \hline
-  Undang-Undang                         & \texttt{/uu/\{thn\}/\{nmr\}}                            & \makecell[l]{\texttt{thn}: tahun peraturan \\\texttt{nmr}: nomor peraturan} \\ \hline
-  Peraturan Pemerintah                  & \texttt{/pp/\{thn\}/\{nmr\}}                            & \makecell[l]{\texttt{thn}: tahun peraturan \\\texttt{nmr}: nomor peraturan} \\\hline
-  Peraturan Daerah Provinsi DKI Jakarta & \texttt{/perda\_provinsi\_dki\_jakarta/\{thn\}/\{nmr\}} & \makecell[l]{\texttt{thn}: tahun peraturan \\\texttt{nmr}: nomor peraturan} \\\hline
-  Peraturan Gubernur DKI Jakarta        & \texttt{/pergub\_dki\_jakarta/\{thn\}/\{nmr\}}          & \makecell[l]{\texttt{thn}: tahun peraturan \\\texttt{nmr}: nomor peraturan} \\\hline
-  Peraturan Walikota Malang             & \texttt{/perwali\_malang/\{thn\}/\{nmr\}}               & \makecell[l]{\texttt{thn}: tahun peraturan \\\texttt{nmr}: nomor peraturan} \\\hline
-  \caption{Long table caption.\label{longs2}}                                                                                                  \\
+Untuk melakukan deteksi, teks akan melalui fungsi yang masing-masing memiliki pola untuk dideteksi.
+Oleh karena itu, untuk \textit{substring} yang beririsan dapat memiliki lebih dari dua sitasi yang
+terdeteksi. Pada kasus tersebut akan diambil sitasi dengan \textit{substring} terpanjang. Sebagai
+contoh, teks ``Pasal 156 Ayat (4)'' pada UU No.13 Tahun 2003 Pasal 158 Ayat (4) akan terdeteksi
+sebagai 3 URI sitasi sebagai berikut.
+
+\begin{longtable}[c]{@{}ll@{}} \toprule\addlinespace Teks & URI
+  \\\addlinespace \midrule\endhead Pasal 156 Ayat (4)      & \texttt{/uu/2003/13/pasal/156/ayat/4}
+  \\\addlinespace Pasal 156                                      & \texttt{/uu/2003/13/pasal/156}
+  \\\addlinespace Ayat (4)           & \texttt{/uu/2003/13/pasal/158/ayat/4}
+  \\\addlinespace
+  \bottomrule
 \end{longtable}
 
-Setiap komponen dokumen merupakan entitas, dan memiliki URI. URI sebuah komponen didahului oleh
-\textit{docURI} dan semua komponen yang mengatasinya. Berikut adalah jenis komponen peraturan
-perundang-undangan beserta pola URI nya.
-
-\begin{longtable}{|p{0.2\textwidth}|p{0.35\textwidth}|p{0.45\textwidth}|}
-  \hline
-  Class Komponen          & Pola URI                              & Penjelasan variabel                                                                                                                                      \\ \hline \endhead
-  \texttt{DaftarBab}      & \texttt{\{docURI\}/bab}               & \texttt{docURI}: URI peraturan yang mengatasi                                                                                                            \\ \hline
-  \texttt{Bab}            & \texttt{\{daftarBabURI\}/\{no\}}      & \texttt{daftarBabURI}: URI \texttt{DaftarBab} yang mengatasi                                                                                             \\
-                          &                                       & \texttt{no}: Nomor bab                                                                                                                                   \\ \hline
-  \texttt{DaftarBagian}   & \texttt{\{babURI\}/bagian}            & \texttt{babURI}: URI \texttt{Bab} yang mengatasi                                                                                                         \\ \hline
-  \texttt{Bagian}         & \texttt{\{daftarBagianURI\}/\{no\}}   & \texttt{daftarBagianURI}: URI \texttt{DaftarBagian} yang mengatasi                                                                                       \\
-                          &                                       & \texttt{no}: Nomor bagian                                                                                                                                \\ \hline
-  \texttt{DaftarParagraf} & \texttt{\{bagianURI\}/paragraf}       & \texttt{bagianURI}: URI \texttt{Bagian} yang mengatasi                                                                                                   \\ \hline
-  \texttt{Paragraf}       & \texttt{\{daftarParagrafURI\}/\{no\}} & \texttt{daftarParagrafURI}: URI \texttt{DaftarBagian} yang mengatasi                                                                                     \\
-                          &                                       & \texttt{no}: Nomor paragraf                                                                                                                              \\ \hline
-  \texttt{DaftarPasal}    & \texttt{\{parentURI\}/daftarpasal}    & \texttt{parentURI}: URI \texttt{Bab}, \texttt{Bagian}, \texttt{Paragraf} yang mengatasi                                                                  \\ \hline
-  \texttt{Pasal}          & \texttt{\{docURI\}/pasal/\{no\}}      & \texttt{docURI}: URI peraturan yang mengatasi                                                                                                            \\
-                          &                                       & \texttt{no}: Nomor pasal                                                                                                                                 \\ \hline
-  \texttt{VersiPasal}     & \texttt{\{pasalURI\}/versi/\{date\}}  & \texttt{pasalURI}: URI \texttt{Pasal} yang mengatasi                                                                                                     \\
-                          &                                       & \texttt{date}: Tanggal disahkan                                                                                                                          \\ \hline
-  \texttt{DaftarAyat}     & \texttt{\{pasalURI\}/ayat}            & \texttt{pasalURI}: URI \texttt{Pasal} yang mengatasi                                                                                                     \\ \hline
-  \texttt{Ayat}           & \texttt{\{daftarAyatURI\}/\{no\}}     & \texttt{daftarAyatURI}: URI \texttt{DaftarAyat} yang mengatasi                                                                                           \\
-                          &                                       & \texttt{no}: Nomor ayat                                                                                                                                  \\ \hline
-  \texttt{DaftarHuruf}    & \texttt{\{parentURI\}/huruf}          & \texttt{parentURI}: URI \texttt{Ayat}, \texttt{Huruf}, \texttt{VersiPasal}, \texttt{Menimbang}, \texttt{Mengingat}, yang mengatasi                       \\ \hline
-  \texttt{Huruf}          & \texttt{\{daftarHurufURI\}/\{id\}}    & \texttt{daftarHurufURI}: URI \texttt{DaftarHuruf} yang mengatasi                                                                                         \\
-                          &                                       & \texttt{id}: Nomor atau huruf                                                                                                                            \\ \hline
-  \texttt{Menimbang}      & \texttt{\{docURI\}/menimbang}         & \texttt{docURI}: URI peraturan yang mengatasi                                                                                                            \\ \hline
-  \texttt{Mengingat}      & \texttt{\{docURI\}/mengingat}         & \texttt{docURI}: URI peraturan yang mengatasi                                                                                                            \\ \hline
-  \texttt{Segmen}         & \texttt{\{parentURI\}/\{name\}}       & \texttt{parentURI}: URI \texttt{Ayat}, \texttt{Huruf}, \texttt{DaftarHuruf}, \texttt{VersiPasal}, \texttt{Menimbang}, \texttt{Mengingat}, yang mengatasi \\
-                          &                                       & \texttt{name}: Nama teks                                                                                                                                 \\ \hline
-  \caption{Long table caption.\label{longs}}                                                                                                                                                                                 \\
-\end{longtable}
+Pada kasus ini, yang akan diambil adalah teks ``Pasal 156 ayat (4)'' karena merupakan teks
+terpanjang.
 
 %-----------------------------------------------------------------------------%
-\section{Perancangan URI Properti}\label{perancangan-uri-properti}
+\section{Visualisasi dengan Markdown}\label{data-to-md}
 %-----------------------------------------------------------------------------%
 
-Properti ditandai dengan URI yang memiliki pola \texttt{\{ontoPrefix\}/\{name\}} dimana
-\texttt{name} adalah nama dari properti tersebut. Properti menghubungkan subjek dan objek. Subjek
-adalah berupa URI komponen, sedangkan objek dapat berupa URI komponen, string, \textit{number}
-(bilangan), atau \textit{date} (tanggal).
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=\textwidth]{pictures/yaml-vs-md.png}
+  \caption{Perbandingan visualisasi dengan yaml (kiri) dan markdown (kanan)}
+\end{figure}
 
+%-----------------------------------------------------------------------------%
+\section{Data to triple}\label{data-to-triple}
+%-----------------------------------------------------------------------------%
 
-\begin{longtable}{|p{0.25\textwidth}|p{0.25\textwidth}|p{0.25\textwidth}|p{0.25\textwidth}|}
-  \hline
-  Nama                     & Subjek                                                                                                              & Objek                                                 & Deskripsi                                         \\ \hline \endhead
-  \texttt{nomor}           & \texttt{Bab}, \texttt{Bagian}, \texttt{Paragraf}, \texttt{Pasal}, \texttt{Ayat}, \texttt{Huruf}                     & string, number                                        & Nomor atau huruf \_identifier\_ dari komponen     \\ \hline
-  \texttt{teks}            & \texttt{Ayat}, \texttt{VersiPasal}, \texttt{Segmen}                                                                 & string                                                & teks dari komponen                                \\ \hline
-  \texttt{bab}             & \texttt{DaftarBab}                                                                                                  & \texttt{Bab}                                          & Bab                                               \\ \hline
-  \texttt{bagian}          & \texttt{DaftarBagian}                                                                                               & \texttt{Bagian}                                       & Bagian                                            \\ \hline
-  \texttt{paragraf}        & \texttt{DaftarParagraf}                                                                                             & \texttt{Paragraf}                                     & Paragraf                                          \\ \hline
-  \texttt{pasal}           & \texttt{DaftarPasal}                                                                                                & \texttt{Pasal}                                        & Pasal                                             \\ \hline
-  \texttt{ayat}            & \texttt{DaftarAyat}                                                                                                 & \texttt{Ayat}                                         & Ayat                                              \\ \hline
-  \texttt{huruf}           & \texttt{DaftarHuruf}                                                                                                & \texttt{Huruf}                                        & Huruf                                             \\ \hline
-  \texttt{segmen}          & \texttt{Mengigat}, \texttt{Menimbang}, \texttt{Paragraf}, \texttt{VersiPasal}, \texttt{Huruf}, \texttt{DaftarHuruf} & \texttt{Segmen}                                       & Segmen                                            \\ \hline
-  \texttt{daftarBab}       & \texttt{Peraturan}                                                                                                  & \texttt{DaftarBab}                                    & DaftarBab                                         \\ \hline
-  \texttt{daftarBagian}    & \texttt{Bab}                                                                                                        & \texttt{Daftarbagian}                                 & DaftarBagian                                      \\ \hline
-  \texttt{daftarParagraf}  & \texttt{Bagian}                                                                                                     & \texttt{DaftarParagraf}                               & DaftarParagraf                                    \\ \hline
-  \texttt{daftarPasal}     & \texttt{Peraturan},\texttt{Bab}, \texttt{Paragraf}, \texttt{Bagian}                                                 & \texttt{DaftarPasal}                                  & DaftarPasal                                       \\ \hline
-  \texttt{daftarAyat}      & \texttt{Pasal}                                                                                                      & \texttt{DaftarAyat}                                   & DaftarAyat                                        \\ \hline
-  \texttt{daftarHuruf}     & \texttt{VersiPasal}, \texttt{Ayat}, \texttt{Huruf}, \texttt{Menimbang}, \texttt{Mengingat}                          & \texttt{DaftarHuruf}                                  & DaftarHuruf                                       \\ \hline
-  \texttt{merujuk}         & \texttt{Segmen}                                                                                                     & entitas apapun                                        & Teks merujuk suatu entitas                        \\ \hline
-  \texttt{mengubah}        & \texttt{Huruf}                                                                                                      & \texttt{VersiPasal}                                   & Pengubahan pasal                                  \\ \hline
-  \texttt{menghapus}       & \texttt{Huruf}                                                                                                      & \texttt{VersiPasal}                                   & Penghapusan pasal                                 \\ \hline
-  \texttt{menyisipkan}     & \texttt{Huruf}                                                                                                      & \texttt{VersiPasal}                                   & Penyisipan pasal                                  \\ \hline
-  \texttt{tanggal}         & \texttt{VersiPasal}                                                                                                 & date                                                  & Tanggal                                           \\ \hline
-  \texttt{jenisVersi}      & \texttt{VersiPasal}                                                                                                 & 'orisinal', 'penyisipan', 'pengubahan', 'penghapusan' & Jenis versi                                       \\ \hline
-  \texttt{versi}           & \texttt{Pasal}                                                                                                      & \texttt{VersiPasal}                                   & Versi suatu komponen                              \\ \hline
-  \texttt{tentang}         & \texttt{Peraturan}                                                                                                  & string                                                & Peraturan tentang                                 \\ \hline
-  \texttt{menimbang}       & \texttt{Peraturan}                                                                                                  & \texttt{Menimbang}                                    & Peraturan menimbang                               \\ \hline
-  \texttt{mengingat}       & \texttt{Peraturan}                                                                                                  & \texttt{Mengingat}                                    & Peraturan mengingat                               \\ \hline
-  \texttt{disahkanPada}    & \texttt{Peraturan}                                                                                                  & date                                                  & Peraturan disahkan pada tanggal                   \\ \hline
-  \texttt{disahkanDi}      & \texttt{Peraturan}                                                                                                  & string                                                & Peraturan disahkan di lokasi                      \\ \hline
-  \texttt{disahkanOleh}    & \texttt{Peraturan}                                                                                                  & string                                                & Peraturan disahkan oleh                           \\ \hline
-  \texttt{jabatanPengesah} & \texttt{Peraturan}                                                                                                  & string                                                & Jabatan pengesah peraturan                        \\ \hline
-  \texttt{bagianDari}      & komponen apapun                                                                                                     & komponen apapun                                       & Komponen subjek adalah bagian dari komponen objek \\ \hline
-  \caption{Long table caption.\label{long}}                                                                                                                                                                                                                  \\
-\end{longtable}
+%-----------------------------------------------------------------------------%
+\section{triple to ttl}\label{triple-to-ttl}
+%-----------------------------------------------------------------------------%
+
+%-----------------------------------------------------------------------------%
+\section{Query}\label{query}
+%-----------------------------------------------------------------------------%
+
+Fuseki

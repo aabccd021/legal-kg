@@ -1,18 +1,160 @@
 %-----------------------------------------------------------------------------%
-\chapter{METODOLOGI}\label{bab:3}
+\chapter{PERANCANGAN}
+\label{bab:4}
 %-----------------------------------------------------------------------------%
 
-% // TODO: Maintained docs masukin sini
+%-----------------------------------------------------------------------------%
+\section{Perancangan URI}\label{perancangan-uri}
+%-----------------------------------------------------------------------------%
 
-% // TODO: Utk yg metodologi, sbnrnya standar aja, dimulai dari pertanyaan riset, lalu pengembangan
-% ontology (URI scheming masuk ke pengembagan ontology), pengembangan sistem konversi, baru lalu use
-% case evaluation (ini yg legal KG advanced querying, legal KG chatbot, legal KG visualization) baru
-% large scale eval (ini yg coba konversi peraturan dlm jumlah besar dan kita sampling utk evaluasi
-% correctnessnya)
+Setiap entitas yang berbeda perlu diberikan URI yang berbeda. Penggabungan KG sangat umum dilakukan
+karena secara struktur dapat dilakukan dengan mudah, dan dapat memperkuat data dari masing-masing
+KG. KG memiliki entitas-entitas dengan URI yang unik, oleh karena itu saat menggabungkan sebuah KG A
+dan sebuah KG B, entitas yang berbeda harus memiliki URI yang berbeda. Sebuah masalah dapat terjadi
+apabila URI tidak dirancang dengan benar. Sebagai contoh, apabila terdapat entitas dari KG A dengan
+URI \texttt{http://example.org/trump} dengan maksud Donald Trump mantan presiden Amerika Serikat,
+dan entitas dari KG B dengan URI yang sama dengan maksud permainan kartu Trump, saat kedua KG ini
+digabung akan menjadi informasi yang berkontradiksi.
 
-% // TODO: suatu KG construction dimulai dengan competency questions (requirements). Saran sy: coba baca
-% serta rangkum (di Bab 2) dan terapkan ini:
-% www.ksl.stanford.edu/people/dlm/papers/ontology-tutorial-noy-mcguinness-abstract.html???
+Pada penelitian ini, semua URI menggunakan prefix \texttt{http://example.org/legal/} yang
+selanjutnya akan disebut \textit{basePrefix}. Prefix ini dapat diganti dalam program agar dapat
+disesuaikan oleh pengguna program. Semua entitas dokumen dan komponennya menggunakan prefix URI
+\texttt{http://example.org/legal/peraturan} yang selanjutnya disebut \textit{peraturanPrefix}, dan
+semua resource lainnya menggunakan \texttt{http://example.org/legal/ontology} yang selanjutnya
+disebut \textit{ontoPrefix}.
+
+%-----------------------------------------------------------------------------%
+\section{Perancangan URI Class}\label{perancangan-uri-class}
+%-----------------------------------------------------------------------------%
+
+URI Class adalah URI yang menjelaskan \textit{class} dari entitas tersebut. Semua URI Class mengikuti
+pola \texttt{\{ontoPrefix\}/\{className\}} dimana \texttt{className} adalah nama \textit{class}
+tersebut. Berikut adalah semua \textit{class} komponen beserta URI dan deskripsinya.
+
+\begin{longtable}[l]{|p{0.2\textwidth}|p{0.8\textwidth}|}
+  \hline
+  Nama Class              & Deskripsi                                                                                       \\ \hline \endhead
+  \texttt{Peraturan}      & Peraturan perundang-undangan                                                                    \\ \hline
+  \texttt{DaftarBab}      & Daftar satu atau lebih bab                                                                      \\ \hline
+  \texttt{Bab}            & Bab                                                                                             \\ \hline
+  \texttt{DaftarBagian}   & Daftar satu atau lebih bagian                                                                   \\ \hline
+  \texttt{Bagian}         & Bagian                                                                                          \\ \hline
+  \texttt{DaftarParagraf} & Daftar satu atau lebih paragraf                                                                 \\ \hline
+  \texttt{Paragraf}       & Paragraf                                                                                        \\ \hline
+  \texttt{DaftarPasal}    & Daftar satu atau lebih pasal                                                                    \\ \hline
+  \texttt{Pasal}          & Pasal                                                                                           \\ \hline
+  \texttt{VersiPasal}     & Versi dari sebuah pasal. Sebuah pasal dapat memiliki satu atau lebih versi dari hasil amandemen \\ \hline
+  \texttt{DaftarAyat}     & Daftar satu atau lebih ayat                                                                     \\ \hline
+  \texttt{Ayat}           & Ayat                                                                                            \\ \hline
+  \texttt{DaftarHuruf}    & Daftar satu atau lebih huruf atau nomor                                                         \\ \hline
+  \texttt{Huruf}          & Huruf atau nomor                                                                                \\ \hline
+  \texttt{Menimbang}      & Hal yang ditimbang oleh suatu peraturan                                                         \\ \hline
+  \texttt{Mengingat}      & Hal yang diingat oleh suatu peraturan                                                           \\ \hline
+  \texttt{Segmen}         & Segmen teks. Dapat memiliki rujukan ke suatu komponen peraturan                                 \\ \hline
+  \caption{Long table caption.\label{longsz}}                                                                                                  \\
+\end{longtable}
+
+%-----------------------------------------------------------------------------%
+\section{Perancangan URI Komponen Peraturan
+  Perundang-undangan}\label{perancangan-uri-komponen-peraturan-perundang-undangan}
+%-----------------------------------------------------------------------------%
+
+URI peraturan perundang-undangan diawali oleh \textit{peraturanPrefix}, kemudian diikuti oleh string
+yang mengidentifikasi peraturan tersebut. URI peraturan ini akan digunakan oleh entitas sebagai
+prefix yang selanjutnya akan disebut \textit{docURI}. Berikut adalah jenis peraturan
+perundang-undangan yang diimplementasi pada penelitian ini beserta pola URI nya. Variabel akan
+dikurung dengan kurung kurawal \texttt{\{\}}.
 
 
 
+\begin{longtable}[l]{|p{0.2\textwidth}|p{0.55\textwidth}|p{0.25\textwidth}|}
+  \hline
+  Jenis Peraturan                       & Pola URI                                                & Penjelasan variabel                        \\ \hline \endhead
+  Undang-Undang Dasar 1945              & \texttt{/uud}                                           &                                            \\ \hline
+  Undang-Undang                         & \texttt{/uu/\{thn\}/\{nmr\}}                            & \makecell[l]{\texttt{thn}: tahun peraturan \\\texttt{nmr}: nomor peraturan} \\ \hline
+  Peraturan Pemerintah                  & \texttt{/pp/\{thn\}/\{nmr\}}                            & \makecell[l]{\texttt{thn}: tahun peraturan \\\texttt{nmr}: nomor peraturan} \\\hline
+  Peraturan Daerah Provinsi DKI Jakarta & \texttt{/perda\_provinsi\_dki\_jakarta/\{thn\}/\{nmr\}} & \makecell[l]{\texttt{thn}: tahun peraturan \\\texttt{nmr}: nomor peraturan} \\\hline
+  Peraturan Gubernur DKI Jakarta        & \texttt{/pergub\_dki\_jakarta/\{thn\}/\{nmr\}}          & \makecell[l]{\texttt{thn}: tahun peraturan \\\texttt{nmr}: nomor peraturan} \\\hline
+  Peraturan Walikota Malang             & \texttt{/perwali\_malang/\{thn\}/\{nmr\}}               & \makecell[l]{\texttt{thn}: tahun peraturan \\\texttt{nmr}: nomor peraturan} \\\hline
+  \caption{Long table caption.\label{longs2}}                                                                                                  \\
+\end{longtable}
+
+Setiap komponen dokumen merupakan entitas, dan memiliki URI. URI sebuah komponen didahului oleh
+\textit{docURI} dan semua komponen yang mengatasinya. Berikut adalah jenis komponen peraturan
+perundang-undangan beserta pola URI nya.
+
+\begin{longtable}{|p{0.2\textwidth}|p{0.35\textwidth}|p{0.45\textwidth}|}
+  \hline
+  Class Komponen          & Pola URI                              & Penjelasan variabel                                                                                                                                      \\ \hline \endhead
+  \texttt{DaftarBab}      & \texttt{\{docURI\}/bab}               & \texttt{docURI}: URI peraturan yang mengatasi                                                                                                            \\ \hline
+  \texttt{Bab}            & \texttt{\{daftarBabURI\}/\{no\}}      & \texttt{daftarBabURI}: URI \texttt{DaftarBab} yang mengatasi                                                                                             \\
+                          &                                       & \texttt{no}: Nomor bab                                                                                                                                   \\ \hline
+  \texttt{DaftarBagian}   & \texttt{\{babURI\}/bagian}            & \texttt{babURI}: URI \texttt{Bab} yang mengatasi                                                                                                         \\ \hline
+  \texttt{Bagian}         & \texttt{\{daftarBagianURI\}/\{no\}}   & \texttt{daftarBagianURI}: URI \texttt{DaftarBagian} yang mengatasi                                                                                       \\
+                          &                                       & \texttt{no}: Nomor bagian                                                                                                                                \\ \hline
+  \texttt{DaftarParagraf} & \texttt{\{bagianURI\}/paragraf}       & \texttt{bagianURI}: URI \texttt{Bagian} yang mengatasi                                                                                                   \\ \hline
+  \texttt{Paragraf}       & \texttt{\{daftarParagrafURI\}/\{no\}} & \texttt{daftarParagrafURI}: URI \texttt{DaftarBagian} yang mengatasi                                                                                     \\
+                          &                                       & \texttt{no}: Nomor paragraf                                                                                                                              \\ \hline
+  \texttt{DaftarPasal}    & \texttt{\{parentURI\}/daftarpasal}    & \texttt{parentURI}: URI \texttt{Bab}, \texttt{Bagian}, \texttt{Paragraf} yang mengatasi                                                                  \\ \hline
+  \texttt{Pasal}          & \texttt{\{docURI\}/pasal/\{no\}}      & \texttt{docURI}: URI peraturan yang mengatasi                                                                                                            \\
+                          &                                       & \texttt{no}: Nomor pasal                                                                                                                                 \\ \hline
+  \texttt{VersiPasal}     & \texttt{\{pasalURI\}/versi/\{date\}}  & \texttt{pasalURI}: URI \texttt{Pasal} yang mengatasi                                                                                                     \\
+                          &                                       & \texttt{date}: Tanggal disahkan                                                                                                                          \\ \hline
+  \texttt{DaftarAyat}     & \texttt{\{pasalURI\}/ayat}            & \texttt{pasalURI}: URI \texttt{Pasal} yang mengatasi                                                                                                     \\ \hline
+  \texttt{Ayat}           & \texttt{\{daftarAyatURI\}/\{no\}}     & \texttt{daftarAyatURI}: URI \texttt{DaftarAyat} yang mengatasi                                                                                           \\
+                          &                                       & \texttt{no}: Nomor ayat                                                                                                                                  \\ \hline
+  \texttt{DaftarHuruf}    & \texttt{\{parentURI\}/huruf}          & \texttt{parentURI}: URI \texttt{Ayat}, \texttt{Huruf}, \texttt{VersiPasal}, \texttt{Menimbang}, \texttt{Mengingat}, yang mengatasi                       \\ \hline
+  \texttt{Huruf}          & \texttt{\{daftarHurufURI\}/\{id\}}    & \texttt{daftarHurufURI}: URI \texttt{DaftarHuruf} yang mengatasi                                                                                         \\
+                          &                                       & \texttt{id}: Nomor atau huruf                                                                                                                            \\ \hline
+  \texttt{Menimbang}      & \texttt{\{docURI\}/menimbang}         & \texttt{docURI}: URI peraturan yang mengatasi                                                                                                            \\ \hline
+  \texttt{Mengingat}      & \texttt{\{docURI\}/mengingat}         & \texttt{docURI}: URI peraturan yang mengatasi                                                                                                            \\ \hline
+  \texttt{Segmen}         & \texttt{\{parentURI\}/\{name\}}       & \texttt{parentURI}: URI \texttt{Ayat}, \texttt{Huruf}, \texttt{DaftarHuruf}, \texttt{VersiPasal}, \texttt{Menimbang}, \texttt{Mengingat}, yang mengatasi \\
+                          &                                       & \texttt{name}: Nama teks                                                                                                                                 \\ \hline
+  \caption{Long table caption.\label{longs}}                                                                                                                                                                                 \\
+\end{longtable}
+
+%-----------------------------------------------------------------------------%
+\section{Perancangan URI Properti}\label{perancangan-uri-properti}
+%-----------------------------------------------------------------------------%
+
+Properti ditandai dengan URI yang memiliki pola \texttt{\{ontoPrefix\}/\{name\}} dimana
+\texttt{name} adalah nama dari properti tersebut. Properti menghubungkan subjek dan objek. Subjek
+adalah berupa URI komponen, sedangkan objek dapat berupa URI komponen, string, \textit{number}
+(bilangan), atau \textit{date} (tanggal).
+
+
+\begin{longtable}{|p{0.25\textwidth}|p{0.25\textwidth}|p{0.25\textwidth}|p{0.25\textwidth}|}
+  \hline
+  Nama                     & Subjek                                                                                                              & Objek                                                 & Deskripsi                                         \\ \hline \endhead
+  \texttt{nomor}           & \texttt{Bab}, \texttt{Bagian}, \texttt{Paragraf}, \texttt{Pasal}, \texttt{Ayat}, \texttt{Huruf}                     & string, number                                        & Nomor atau huruf \_identifier\_ dari komponen     \\ \hline
+  \texttt{teks}            & \texttt{Ayat}, \texttt{VersiPasal}, \texttt{Segmen}                                                                 & string                                                & teks dari komponen                                \\ \hline
+  \texttt{bab}             & \texttt{DaftarBab}                                                                                                  & \texttt{Bab}                                          & Bab                                               \\ \hline
+  \texttt{bagian}          & \texttt{DaftarBagian}                                                                                               & \texttt{Bagian}                                       & Bagian                                            \\ \hline
+  \texttt{paragraf}        & \texttt{DaftarParagraf}                                                                                             & \texttt{Paragraf}                                     & Paragraf                                          \\ \hline
+  \texttt{pasal}           & \texttt{DaftarPasal}                                                                                                & \texttt{Pasal}                                        & Pasal                                             \\ \hline
+  \texttt{ayat}            & \texttt{DaftarAyat}                                                                                                 & \texttt{Ayat}                                         & Ayat                                              \\ \hline
+  \texttt{huruf}           & \texttt{DaftarHuruf}                                                                                                & \texttt{Huruf}                                        & Huruf                                             \\ \hline
+  \texttt{segmen}          & \texttt{Mengigat}, \texttt{Menimbang}, \texttt{Paragraf}, \texttt{VersiPasal}, \texttt{Huruf}, \texttt{DaftarHuruf} & \texttt{Segmen}                                       & Segmen                                            \\ \hline
+  \texttt{daftarBab}       & \texttt{Peraturan}                                                                                                  & \texttt{DaftarBab}                                    & DaftarBab                                         \\ \hline
+  \texttt{daftarBagian}    & \texttt{Bab}                                                                                                        & \texttt{Daftarbagian}                                 & DaftarBagian                                      \\ \hline
+  \texttt{daftarParagraf}  & \texttt{Bagian}                                                                                                     & \texttt{DaftarParagraf}                               & DaftarParagraf                                    \\ \hline
+  \texttt{daftarPasal}     & \texttt{Peraturan},\texttt{Bab}, \texttt{Paragraf}, \texttt{Bagian}                                                 & \texttt{DaftarPasal}                                  & DaftarPasal                                       \\ \hline
+  \texttt{daftarAyat}      & \texttt{Pasal}                                                                                                      & \texttt{DaftarAyat}                                   & DaftarAyat                                        \\ \hline
+  \texttt{daftarHuruf}     & \texttt{VersiPasal}, \texttt{Ayat}, \texttt{Huruf}, \texttt{Menimbang}, \texttt{Mengingat}                          & \texttt{DaftarHuruf}                                  & DaftarHuruf                                       \\ \hline
+  \texttt{merujuk}         & \texttt{Segmen}                                                                                                     & entitas apapun                                        & Teks merujuk suatu entitas                        \\ \hline
+  \texttt{mengubah}        & \texttt{Huruf}                                                                                                      & \texttt{VersiPasal}                                   & Pengubahan pasal                                  \\ \hline
+  \texttt{menghapus}       & \texttt{Huruf}                                                                                                      & \texttt{VersiPasal}                                   & Penghapusan pasal                                 \\ \hline
+  \texttt{menyisipkan}     & \texttt{Huruf}                                                                                                      & \texttt{VersiPasal}                                   & Penyisipan pasal                                  \\ \hline
+  \texttt{tanggal}         & \texttt{VersiPasal}                                                                                                 & date                                                  & Tanggal                                           \\ \hline
+  \texttt{jenisVersi}      & \texttt{VersiPasal}                                                                                                 & 'orisinal', 'penyisipan', 'pengubahan', 'penghapusan' & Jenis versi                                       \\ \hline
+  \texttt{versi}           & \texttt{Pasal}                                                                                                      & \texttt{VersiPasal}                                   & Versi suatu komponen                              \\ \hline
+  \texttt{tentang}         & \texttt{Peraturan}                                                                                                  & string                                                & Peraturan tentang                                 \\ \hline
+  \texttt{menimbang}       & \texttt{Peraturan}                                                                                                  & \texttt{Menimbang}                                    & Peraturan menimbang                               \\ \hline
+  \texttt{mengingat}       & \texttt{Peraturan}                                                                                                  & \texttt{Mengingat}                                    & Peraturan mengingat                               \\ \hline
+  \texttt{disahkanPada}    & \texttt{Peraturan}                                                                                                  & date                                                  & Peraturan disahkan pada tanggal                   \\ \hline
+  \texttt{disahkanDi}      & \texttt{Peraturan}                                                                                                  & string                                                & Peraturan disahkan di lokasi                      \\ \hline
+  \texttt{disahkanOleh}    & \texttt{Peraturan}                                                                                                  & string                                                & Peraturan disahkan oleh                           \\ \hline
+  \texttt{jabatanPengesah} & \texttt{Peraturan}                                                                                                  & string                                                & Jabatan pengesah peraturan                        \\ \hline
+  \texttt{bagianDari}      & komponen apapun                                                                                                     & komponen apapun                                       & Komponen subjek adalah bagian dari komponen objek \\ \hline
+  \caption{Long table caption.\label{long}}                                                                                                                                                                                                                  \\
+\end{longtable}
