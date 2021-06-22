@@ -33,21 +33,27 @@ terstruktur (unstructured).
 \begin{figure}[H]
   \centering
   \includegraphics[width=\textwidth]{pictures/terstruktur.png}
-  \caption{Cuplikan ekstraksi data terstruktur dan data tidak terstruktur dari dokumen PDF UU 11/2020}
+  \caption{Cuplikan ekstraksi data terstruktur dan data tidak terstruktur dari dokumen PDF UU 11/2020 tentang Cipta Kerja}
   \label{fig:ekstraksi-dokumen}
 \end{figure}
 
-\pic~\ref{fig:ekstraksi-dokumen} merupakan salah satu contoh ekstraksi informasi dari UU 11/2020
-tentang Cipta Kerja. Pada gambar tersebut dapat dilihat bahwa sebagian informasi dapat diekstraksi
-dari struktur dokumen peraturan perundang-undangan tak terstruktur yang berupa teks mentah (ditandai
-dengan warna merah), dan sebagian informasi lainnya dapat diekstraksi dari data  (ditandai dengan
-warna biru). Pada gambar tersebut, dalam mengekstraksi informasi ``UU 11/2020 Pasal 6 merujuk kepada
-UU 11/2020 Pasal 5 ayat (1) huruf a'', manusia pertama-tama perlu membaca dari awal teks UU serta
-pasal tersebut sampai menemukan pola \textit{string} terkait yang merujuk kepada suatu komponen
-dokumen peraturan perundang-undangan, dan kemudian meng-\textit{infer} informasi lengkap berdasarkan
-konteks komponen tersebut. Dengan kata lain, proses pencarian dan konversi \textit{string} ``Pasal 5
-ayat (1) huruf a'' menjadi informasi lengkap ``UU No.11 Tahun 2020 Pasal 5 ayat (1) huruf a'' perlu
-dilakukan secara manual oleh manusia.
+\pic~\ref{fig:ekstraksi-dokumen} menampilkan contoh ekstraksi informasi dari UU 11/2020 tentang
+Cipta Kerja. Pada gambar tersebut terlihat bahwa sebagian informasi dapat diekstraksi dari struktur
+
+// TODO: permudah
+
+dokumen peraturan perundang-undangan tak terstruktur yang berupa teks mentah (ditandai dengan warna
+merah), dan sebagian informasi lainnya dapat diekstraksi dari data  (ditandai dengan warna biru).
+Pada gambar tersebut, dalam mengekstraksi informasi ``UU 11/2020 Pasal 6 merujuk kepada Pasal 5 ayat
+(1) huruf a'', manusia pertama-tama perlu membaca dari awal teks pasal-pasal pada UU perujukan
+
+// TODO: Sblm kalimat yg dimulai "Pada gambar tersebut, dalam.." kyknya perlu dijelasin bahwa
+intinya manusia perlu membaca manual buat tau nih di UU 11/2020, Bab III itu mengandung Bagian
+Kesatu, yang mengandung Pasal 6, dan Pasal 6 itu sendiri mengandung huruf a-d.
+ini penjelasan terkait ekstraksi strukturnya, perlu ditambhkan ya
+
+(citation), dan kemudian meng-\textit{infer} informasi lengkap berdasarkan konteks peraturan
+perundang-undangan.
 
 \begin{figure}[H]
   \centering
@@ -56,19 +62,23 @@ dilakukan secara manual oleh manusia.
   \label{fig:konstruksi-dan-query}
 \end{figure}
 
-\textit{Knowledge graph} adalah struktur data yang (i) menggambarkan entitas dunia nyata dan
-keterkaitannya, terorganisir dalam grafik, (ii) mendefinisikan kemungkinan kelas dan hubungan
-entitas dalam skema, (iii) memungkinkan entitas memiliki keterkaitan satu sama lain dan (iv)
-mencakup berbagai topik domain \citep{paulheim_2016}. Dengan melakukan ekstraksi data dari data
-terstruktur dan tidak terstruktur dari dokumen, peraturan perundang-undangan dapat diubah menjadi
-\textit{knowledge graph}.  Sebagai manfaatnya, data peraturan perundang-undangan yang sudah
-dikonvesi menjadi \textit{knowledge graph} kemudian dapat dilakukan fitur-fitur berbasis
-\textit{query} seperti \textit{question answering}, \textit{reasoning} dan visualisasi data.
-\pic~\ref{fig:konstruksi-dan-query} menampilkan proses konstruksi \textit{knowledge graph} dari
-beberapa berkas PDF peraturan perundang-undangan dan \textit{query} pada KG tersebut. Pada skripsi
-ini, akan dilakukan konversi dokumen peraturan perundang-undangan menjadi data terstruktur dalam
-bentuk \textit{knowledge graph}, dan memberikan contoh pengaplikasian dari \textit{knowledge graph}
-peraturan perundang-undangan tersebut.
+\textit{Knowledge graph} (KG) adalah struktur data yang (i) menggambarkan entitas dunia nyata dan
+keterkaitannya, tersusun dalam bentuk \textit{graph}, (ii) mendefinisikan kemungkinan kelas dan
+hubungan entitas dalam skema, (iii) memungkinkan entitas memiliki keterkaitan satu sama lain dan
+(iv) mencakup berbagai topik domain \citep{paulheim_2016}. 
+
+// TODO: wordingnya dipermudah
+
+Dengan melakukan ekstraksi data dari dokumen yang bersifat semi-terstruktur, peraturan
+perundang-undangan dapat diubah menjadi \textit{knowledge graph}. Sebagai manfaatnya, dapat
+fitur-fitur berbasis \textit{query} seperti \textit{question answering}, \textit{reasoning} dan
+visualisasi data. \pic~\ref{fig:konstruksi-dan-query} menampilkan proses konstruksi
+\textit{knowledge graph} dari beberapa berkas PDF peraturan perundang-undangan dan \textit{query}
+pada KG tersebut. Pada skripsi ini, akan dilakukan konversi dokumen peraturan perundang-undangan
+menjadi data terstruktur dalam bentuk \textit{knowledge graph}, dan memberikan contoh aplikasi dari
+\textit{knowledge graph} peraturan perundang-undangan tersebut.
+
+// TODO: footnotes
 
 Beberapa usaha telah dilakukan untuk membuat \textit{vocabulary} untuk \textit{knowledge graph}
 peraturan perundang-undangan seperti ELI (\url{https://eur-lex.europa.eu/eli-register/about.html}),
@@ -95,21 +105,23 @@ Schema.org (\url{https://schema.org/Legislation}), dan Wikidata
 
 <http://njh.me/11957E100.html> a schema:Legislation .
   \end{minted}
-  \caption{Contoh \textit{legal knowledge graph} dengan \textit{vocabulary} Schema.org}
+  \caption{Contoh KG tentang metadata untuk suatu dokumen legal dengan \textit{vocabulary}
+  Schema.org}
   \label{listing:schema-org-example}
 \end{listing}
 
 Pada \lst~\ref{listing:schema-org-example} diberikan contoh \textit{knowledge graph} yang dibuat
-dengan \textit{vocabulary} Schema.org. \textit{Knowledge graph} memuat metadata peraturan seperti
-tentang apa peraturan tersebut (\code{schema:about}), apa dasar dari peraturan tersebut
-(\code{schema:isBasedOn}), dan nama dari peraturan tersebut (\code{schema:name}).  Akan tetapi
-\textit{vocabulary-vocabulary} yang disebutkan diatas tidak dapat merepresentasikan struktur
-peraturan. Selain itu, \textit{Vocabulary} yang disebutkan diatas dirancang untuk digunakan secara
-internasional atau khusus \textit{European Union} seperti ELI, sehingga tidak dapat
-merepresentasikan data yang hanya terdapat pada peraturan perundang-undangan di Indonesia. Sehingga
-dengan membuat \textit{vocabulary} untuk struktur data dan peraturan perundang-undangan di
-Indonesia, diharapkan dapat menjadi kontribusi dalam mendukung pembuatan \textit{knowledge graph}
-untuk dokumen peraturan perundang-undangan.
+dengan \textit{vocabulary} Schema.org. Contoh KG tersebut memuat metadata peraturan seperti tentang
+apa peraturan tersebut (\code{schema:about}), apa dasar dari peraturan tersebut
+(\code{schema:isBasedOn}), dan nama dari peraturan tersebut (\code{schema:name}). Akan tetapi, baik
+Schema.org maupun vocabulary-vocabulary lainnya seperti pada ELI dan Wikidata, tidak dapat
+merepresentasikan struktur beserta isi peraturan. Selain itu, \textit{vocabulary} tersebut dirancang
+secara generik, sehingga tidak dapat merepresentasikan data yang secara spesifik terdapat pada
+peraturan perundang-undangan di Indonesia. Sehingga dengan membuat \textit{vocabulary} untuk
+struktur data dan peraturan perundang-undangan di Indonesia, diharapkan dapat menjadi kontribusi
+dalam mendukung pembuatan \textit{knowledge graph} untuk dokumen peraturan perundang-undangan.
+
+// TODO: dijelasin jg klo sejauh ini belum ada automasi konversi
 
 %-------------------------------------------------------------------------------------------------%
 \section{Permasalahan}\label{sec:permasalahan}
