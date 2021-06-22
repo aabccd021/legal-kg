@@ -65,7 +65,7 @@ perundang-undangan.
 \textit{Knowledge graph} (KG) adalah struktur data yang (i) menggambarkan entitas dunia nyata dan
 keterkaitannya, tersusun dalam bentuk \textit{graph}, (ii) mendefinisikan kemungkinan kelas dan
 hubungan entitas dalam skema, (iii) memungkinkan entitas memiliki keterkaitan satu sama lain dan
-(iv) mencakup berbagai topik domain \citep{paulheim_2016}. 
+(iv) mencakup berbagai topik domain \citep{paulheim_2016}.
 
 // TODO: wordingnya dipermudah
 
@@ -76,14 +76,11 @@ visualisasi data. \pic~\ref{fig:konstruksi-dan-query} menampilkan proses konstru
 \textit{knowledge graph} dari beberapa berkas PDF peraturan perundang-undangan dan \textit{query}
 pada KG tersebut. Pada skripsi ini, akan dilakukan konversi dokumen peraturan perundang-undangan
 menjadi data terstruktur dalam bentuk \textit{knowledge graph}, dan memberikan contoh aplikasi dari
-\textit{knowledge graph} peraturan perundang-undangan tersebut.
-
-// TODO: footnotes
-
-Beberapa usaha telah dilakukan untuk membuat \textit{vocabulary} untuk \textit{knowledge graph}
-peraturan perundang-undangan seperti ELI (\url{https://eur-lex.europa.eu/eli-register/about.html}),
-Schema.org (\url{https://schema.org/Legislation}), dan Wikidata
-(\url{https://www.wikidata.org/wiki/Wikidata:WikiProject_Law}).
+\textit{knowledge graph} peraturan perundang-undangan tersebut. Beberapa usaha telah dilakukan
+untuk membuat \textit{vocabulary} untuk \textit{knowledge graph} peraturan perundang-undangan
+seperti ELI \footnote{\url{https://eur-lex.europa.eu/eli-register/about.html} }, Schema.org
+\footnote{\url{https://schema.org/Legislation} }, dan Wikidata
+\footnote{\url{https://www.wikidata.org/wiki/Wikidata:WikiProject_Law} }.
 
 
 \begin{listing}[H]
@@ -106,7 +103,7 @@ Schema.org (\url{https://schema.org/Legislation}), dan Wikidata
 <http://njh.me/11957E100.html> a schema:Legislation .
   \end{minted}
   \caption{Contoh KG tentang metadata untuk suatu dokumen legal dengan \textit{vocabulary}
-  Schema.org}
+    Schema.org}
   \label{listing:schema-org-example}
 \end{listing}
 
