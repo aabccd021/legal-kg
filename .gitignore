@@ -25,6 +25,7 @@ fuseki/run
 *.toc
 *.gz
 *.bcf
+*.pyg
 *.run.xml
 *.pygtex
-paper-legal-kg/thesis.pdf
+paper/thesis.pdf
