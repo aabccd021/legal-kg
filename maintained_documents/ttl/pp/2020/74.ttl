@@ -2831,6 +2831,7 @@
 <http://example.org/legal/peraturan/pp/2020/74/pasal/0075/versi/20201214/text> legal:teks "Peraturan Pemerintah ini mulai berlaku pada tanggal diundangkan. 59 Agar setiap orang mengetahuinya, memerintahkan pengundangan Peraturan Pemerintah ini dengan penempatannya dalam Lembaran Negara Republik Indonesia." .
 <http://example.org/legal/peraturan/pp/2020/74/pasal/0075/versi/20201214> legal:segmen <http://example.org/legal/peraturan/pp/2020/74/pasal/0075/versi/20201214/text> .
 <http://example.org/legal/peraturan/pp/2020/74> legal:disahkanPada "2020-12-14"^^xsd:date .
+<http://example.org/legal/peraturan/pp/2020/74> legal:jenisPeraturan <http://example.org/legal/ontology/jenisPeraturan/PP> .
 <http://example.org/legal/peraturan/pp/2020/74> legal:tentang " LEMBAGA PENGELOLA INVESTASI" .
 <http://example.org/legal/peraturan/pp/2020/74> legal:mengingat <http://example.org/legal/peraturan/pp/2020/74/mengingat> .
 <http://example.org/legal/peraturan/pp/2020/74/mengingat> legal:daftarHuruf <http://example.org/legal/peraturan/pp/2020/74/mengingat/huruf> .
@@ -2853,6 +2854,10 @@
 <http://example.org/legal/peraturan/pp/2020/74> legal:disahkanOleh "JOKO WIDODO" .
 <http://example.org/legal/peraturan/pp/2020/74> legal:disahkanDi "Jakarta" .
 <http://example.org/legal/peraturan/pp/2020/74> legal:jabatanPengesah "PRESIDEN REPUBLIK INDONESIA," .
+<http://example.org/legal/peraturan/pp/2020/74> legal:tahun 2020 .
+<http://example.org/legal/peraturan/pp/2020/74> legal:nomor 74 .
+<http://example.org/legal/peraturan/pp/2020/74> legal:bahasa "id" .
+<http://example.org/legal/peraturan/pp/2020/74> legal:yurisdiksi "Indonesia" .
 <http://example.org/legal/peraturan/pp/2020/74> a legal:Peraturan .
 <http://example.org/legal/peraturan/pp/2020/74/bab> a legal:BabSet .
 <http://example.org/legal/peraturan/pp/2020/74/bab/0001> a legal:Bab .

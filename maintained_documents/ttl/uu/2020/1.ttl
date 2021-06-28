@@ -22,6 +22,7 @@
 <http://example.org/legal/peraturan/uu/2020/1/pasal/0001/versi/20200228/ayat/0002> legal:segmen <http://example.org/legal/peraturan/uu/2020/1/pasal/0001/versi/20200228/ayat/0002/text> .
 <http://example.org/legal/peraturan/uu/2020/1/pasal/0001/versi/20200228/ayat/0002/text> legal:merujuk <http://example.org/legal/peraturan/uu/2020/1/pasal/0002> .
 <http://example.org/legal/peraturan/uu/2020/1> legal:disahkanPada "2020-02-28"^^xsd:date .
+<http://example.org/legal/peraturan/uu/2020/1> legal:jenisPeraturan <http://example.org/legal/ontology/jenisPeraturan/UU> .
 <http://example.org/legal/peraturan/uu/2020/1> legal:tentang " PENGESAHAN PERSETUJUAN KEMITRAAN EKONOMI KOMPREHENSIF INDONESIA-AUSTRALIA (#NDONESIA-AUSTRALIA COMPREHENSIVE ECONOMIC PARTNERSHIP AGREEMENT)" .
 <http://example.org/legal/peraturan/uu/2020/1> legal:mengingat <http://example.org/legal/peraturan/uu/2020/1/mengingat> .
 <http://example.org/legal/peraturan/uu/2020/1/mengingat> legal:daftarHuruf <http://example.org/legal/peraturan/uu/2020/1/mengingat/huruf> .
@@ -65,6 +66,10 @@
 <http://example.org/legal/peraturan/uu/2020/1> legal:disahkanOleh "JOKO WIDODO" .
 <http://example.org/legal/peraturan/uu/2020/1> legal:disahkanDi "Jakarta" .
 <http://example.org/legal/peraturan/uu/2020/1> legal:jabatanPengesah "PRESIDEN REPUBLIK INDONESIA," .
+<http://example.org/legal/peraturan/uu/2020/1> legal:tahun 2020 .
+<http://example.org/legal/peraturan/uu/2020/1> legal:nomor 1 .
+<http://example.org/legal/peraturan/uu/2020/1> legal:bahasa "id" .
+<http://example.org/legal/peraturan/uu/2020/1> legal:yurisdiksi "Indonesia" .
 <http://example.org/legal/peraturan/uu/2020/1> a legal:Peraturan .
 <http://example.org/legal/peraturan/uu/2020/1/daftarPasal> a legal:DaftarPasal .
 <http://example.org/legal/peraturan/uu/2020/1/pasal/0001> a legal:Pasal .

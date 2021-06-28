@@ -127,6 +127,7 @@
 <http://example.org/legal/peraturan/uu/1997/12/pasal/0002/versi/19970507/ayat/0004/huruf/c/text> legal:teks "Bukan warga negara Indonesia, bukan penduduk Indonesia dan bukan badan hukum Indonesia, dengan ketentuan: 1) Negaranya mempunyai perjanjian bilateral mengenai perlindungan Hak Cipta dan Hak - hak Yang Berkaitan dengan Hak Cipta dengan Negara Republik Indonesia; 2) Negaranya dan Negara Republik Indonesia merupakan pihak atau peserta dalam suatu pe rjanjian multilateral yang sama mengenai perlindungan Hak Cipta dan Hak - hak Yang Berkaitan degan Hak Cipta. Pasal II Undang - undang ini mulai berlaku pada tanggal diundangkan. Agar setiap orang mengetahuinya, memerintahkan pengundangan Undang - undang ini dengan penempatannya dalam Lembaran Negara Republik Indonesia." .
 <http://example.org/legal/peraturan/uu/1997/12/pasal/0002/versi/19970507/ayat/0004/huruf/c> legal:segmen <http://example.org/legal/peraturan/uu/1997/12/pasal/0002/versi/19970507/ayat/0004/huruf/c/text> .
 <http://example.org/legal/peraturan/uu/1997/12> legal:disahkanPada "1997-05-07"^^xsd:date .
+<http://example.org/legal/peraturan/uu/1997/12> legal:jenisPeraturan <http://example.org/legal/ontology/jenisPeraturan/UU> .
 <http://example.org/legal/peraturan/uu/1997/12> legal:tentang " PERUBAHAN ATAS UNDANG - UNDANG NOMOR 6 TAHUN 1982 TENTANG HAK CIPTA SEBAGAIMANA TELAH DIUBAH DENGAN UNDANG - UNDANG NOMOR 7 TAHUN 1987" .
 <http://example.org/legal/peraturan/uu/1997/12> legal:mengingat <http://example.org/legal/peraturan/uu/1997/12/mengingat> .
 <http://example.org/legal/peraturan/uu/1997/12/mengingat> legal:daftarHuruf <http://example.org/legal/peraturan/uu/1997/12/mengingat/huruf> .
@@ -163,6 +164,10 @@
 <http://example.org/legal/peraturan/uu/1997/12> legal:disahkanOleh "SOEHARTO" .
 <http://example.org/legal/peraturan/uu/1997/12> legal:disahkanDi "Jakarta" .
 <http://example.org/legal/peraturan/uu/1997/12> legal:jabatanPengesah "PRESIDEN REPUBLIK INDONESIA" .
+<http://example.org/legal/peraturan/uu/1997/12> legal:tahun 1997 .
+<http://example.org/legal/peraturan/uu/1997/12> legal:nomor 12 .
+<http://example.org/legal/peraturan/uu/1997/12> legal:bahasa "id" .
+<http://example.org/legal/peraturan/uu/1997/12> legal:yurisdiksi "Indonesia" .
 <http://example.org/legal/peraturan/uu/1997/12> a legal:Peraturan .
 <http://example.org/legal/peraturan/uu/1997/12/daftarPasal> a legal:DaftarPasal .
 <http://example.org/legal/peraturan/uu/1997/12/pasal/0001> a legal:Pasal .

@@ -39,6 +39,7 @@ import {
 
 import { LegalTriple } from './triple';
 import { DocumentNode } from '../document';
+import { LegislationTypeNode } from '../legislation_type';
 
 export function yamlToTriples({
   node,
@@ -53,13 +54,47 @@ export function yamlToTriples({
   return compact([
     ...contentTriples,
     [node, 'disahkanPada', disahkan.date],
+    [node, 'jenisPeraturan', getLegislationTypeNode({ node })],
     tentang ? [node, 'tentang', tentang] : undefined,
     ...mengingatToTriple(mengingat),
     ...menimbangToTriple(menimbang),
     disahkan.pengesah ? [node, 'disahkanOleh', disahkan.pengesah] : undefined,
     disahkan.location ? [node, 'disahkanDi', disahkan.location] : undefined,
     disahkan.jabatanPengesah ? [node, 'jabatanPengesah', disahkan.jabatanPengesah] : undefined,
+    node.docType === 'noTahun' ? [node, 'tahun', node.tahun] : undefined,
+    node.docType === 'noTahun' ? [node, 'nomor', node.nomor] : undefined,
+    [node, 'bahasa', 'id'],
+    [node, 'yurisdiksi', getLegislationJurisdiction({ node })],
   ]);
+}
+
+function getLegislationJurisdiction({ node }: { node: DocumentNode }): string {
+  if (node.docType === 'uud') return 'Indonesia';
+  if (node.docType === 'noTahun') {
+    if (node.docCategory === 'perda_provinsi_dki_jakarta') return 'DKI Jakarta';
+    if (node.docCategory === 'pergub_dki_jakarta') return 'DKI Jakarta';
+    if (node.docCategory === 'perwali_malang') return 'Kota Malang';
+    if (node.docCategory === 'uu') return 'Indonesia';
+    if (node.docCategory === 'pp') return 'Indonesia';
+    assertNever(node.docCategory);
+  }
+  assertNever(node);
+}
+
+function getLegislationTypeNode({ node }: { node: DocumentNode }): LegislationTypeNode {
+  if (node.docType === 'uud') return { nodeType: 'legislationType', legislationType: 'UUD' };
+  if (node.docType === 'noTahun') {
+    if (node.docCategory === 'perda_provinsi_dki_jakarta')
+      return { nodeType: 'legislationType', legislationType: 'PerdaProvinsi' };
+    if (node.docCategory === 'pergub_dki_jakarta')
+      return { nodeType: 'legislationType', legislationType: 'PeraturanGubernur' };
+    if (node.docCategory === 'perwali_malang')
+      return { nodeType: 'legislationType', legislationType: 'PeraturanBupatiWalikota' };
+    if (node.docCategory === 'uu') return { nodeType: 'legislationType', legislationType: 'UU' };
+    if (node.docCategory === 'pp') return { nodeType: 'legislationType', legislationType: 'PP' };
+    assertNever(node.docCategory);
+  }
+  assertNever(node);
 }
 
 function mengingatToTriple(mengingat?: Mengingat): LegalTriple[] {

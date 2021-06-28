@@ -2507,6 +2507,7 @@
 <http://example.org/legal/peraturan/uu/2018/6/pasal/0098/versi/20180807/text> legal:teks "Undang-Undang ini mulai berlaku pada tanggal diundangkan. Agar... Aa Fi . s3 “to Agar setiap orang mengetahuinya, memerintahkan pengundangan Undang-Undang ini dengan penempatannya dalam Lembaran Negara Republik Indonesia." .
 <http://example.org/legal/peraturan/uu/2018/6/pasal/0098/versi/20180807> legal:segmen <http://example.org/legal/peraturan/uu/2018/6/pasal/0098/versi/20180807/text> .
 <http://example.org/legal/peraturan/uu/2018/6> legal:disahkanPada "2018-08-07"^^xsd:date .
+<http://example.org/legal/peraturan/uu/2018/6> legal:jenisPeraturan <http://example.org/legal/ontology/jenisPeraturan/UU> .
 <http://example.org/legal/peraturan/uu/2018/6> legal:tentang " KEKARANTINAAN KESEHATAN" .
 <http://example.org/legal/peraturan/uu/2018/6> legal:mengingat <http://example.org/legal/peraturan/uu/2018/6/mengingat> .
 <http://example.org/legal/peraturan/uu/2018/6/mengingat/text> legal:teks "Pasal 5 ayat (1), Pasal 20, Pasal 28 H ayat (1), Pasal 34 ayat (3) Undang-Undang Dasar Negara Republik Indonesia Tahun 1945: Dengan Persetujuan Bersama DEWAN PERWAKILAN RAKYAT INDONESIA dan PRESIDEN REPUBLIK INDONESIA MEMUTUSKAN: Menetapkan : UNDANG-UNDANG TENTANG KEKARANTINAAN KESEHATAN. Ja £ P0 & 3, 29." .
@@ -2541,6 +2542,10 @@
 <http://example.org/legal/peraturan/uu/2018/6> legal:disahkanOleh "JOKO WIDODO" .
 <http://example.org/legal/peraturan/uu/2018/6> legal:disahkanDi "Jakarta" .
 <http://example.org/legal/peraturan/uu/2018/6> legal:jabatanPengesah "PRESIDEN REPUBLIK INDONESIA," .
+<http://example.org/legal/peraturan/uu/2018/6> legal:tahun 2018 .
+<http://example.org/legal/peraturan/uu/2018/6> legal:nomor 6 .
+<http://example.org/legal/peraturan/uu/2018/6> legal:bahasa "id" .
+<http://example.org/legal/peraturan/uu/2018/6> legal:yurisdiksi "Indonesia" .
 <http://example.org/legal/peraturan/uu/2018/6> a legal:Peraturan .
 <http://example.org/legal/peraturan/uu/2018/6/bab> a legal:BabSet .
 <http://example.org/legal/peraturan/uu/2018/6/bab/0001> a legal:Bab .

@@ -1478,6 +1478,7 @@
 <http://example.org/legal/peraturan/perda_provinsi_dki_jakarta/2020/2/pasal/0035/versi/20201112/text> legal:teks "Peraturan Daerah ini mulai berlaku pada tanggal diundangkan. Agar setiap orang mengetahuinya, memerintahkan peng - undangan Peraturan Daerah ini dengan penempatannya dalam Lembaran Daerah Provinsi Daerah Khusus Ibukota Jakarta." .
 <http://example.org/legal/peraturan/perda_provinsi_dki_jakarta/2020/2/pasal/0035/versi/20201112> legal:segmen <http://example.org/legal/peraturan/perda_provinsi_dki_jakarta/2020/2/pasal/0035/versi/20201112/text> .
 <http://example.org/legal/peraturan/perda_provinsi_dki_jakarta/2020/2> legal:disahkanPada "2020-11-12"^^xsd:date .
+<http://example.org/legal/peraturan/perda_provinsi_dki_jakarta/2020/2> legal:jenisPeraturan <http://example.org/legal/ontology/jenisPeraturan/PerdaProvinsi> .
 <http://example.org/legal/peraturan/perda_provinsi_dki_jakarta/2020/2> legal:tentang " PENANGGULANGAN CORONA VIRUS DISEASE 2019" .
 <http://example.org/legal/peraturan/perda_provinsi_dki_jakarta/2020/2> legal:mengingat <http://example.org/legal/peraturan/perda_provinsi_dki_jakarta/2020/2/mengingat> .
 <http://example.org/legal/peraturan/perda_provinsi_dki_jakarta/2020/2/mengingat> legal:daftarHuruf <http://example.org/legal/peraturan/perda_provinsi_dki_jakarta/2020/2/mengingat/huruf> .
@@ -1579,6 +1580,10 @@
 <http://example.org/legal/peraturan/perda_provinsi_dki_jakarta/2020/2> legal:disahkanOleh "ttd" .
 <http://example.org/legal/peraturan/perda_provinsi_dki_jakarta/2020/2> legal:disahkanDi "Jakarta" .
 <http://example.org/legal/peraturan/perda_provinsi_dki_jakarta/2020/2> legal:jabatanPengesah "GUBERNUR DAERAH KHUSUS" .
+<http://example.org/legal/peraturan/perda_provinsi_dki_jakarta/2020/2> legal:tahun 2020 .
+<http://example.org/legal/peraturan/perda_provinsi_dki_jakarta/2020/2> legal:nomor 2 .
+<http://example.org/legal/peraturan/perda_provinsi_dki_jakarta/2020/2> legal:bahasa "id" .
+<http://example.org/legal/peraturan/perda_provinsi_dki_jakarta/2020/2> legal:yurisdiksi "DKI Jakarta" .
 <http://example.org/legal/peraturan/perda_provinsi_dki_jakarta/2020/2> a legal:Peraturan .
 <http://example.org/legal/peraturan/perda_provinsi_dki_jakarta/2020/2/bab> a legal:BabSet .
 <http://example.org/legal/peraturan/perda_provinsi_dki_jakarta/2020/2/bab/0001> a legal:Bab .

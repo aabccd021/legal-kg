@@ -1567,6 +1567,7 @@
 <http://example.org/legal/peraturan/pp/2021/34/pasal/0048/versi/20210202/text> legal:teks "Peraturan Pemerintah ini mulai berlaku pada tanggal 1 April 2021. Agar setiap orang mengetahuinya, memerintahkan pengundangan Peraturan Pemerintah ini dengan penempatannya dalam Lembaran Negara Republik Indonesia." .
 <http://example.org/legal/peraturan/pp/2021/34/pasal/0048/versi/20210202> legal:segmen <http://example.org/legal/peraturan/pp/2021/34/pasal/0048/versi/20210202/text> .
 <http://example.org/legal/peraturan/pp/2021/34> legal:disahkanPada "2021-02-02"^^xsd:date .
+<http://example.org/legal/peraturan/pp/2021/34> legal:jenisPeraturan <http://example.org/legal/ontology/jenisPeraturan/PP> .
 <http://example.org/legal/peraturan/pp/2021/34> legal:tentang " PENGGUNAAN TENAGA KERJA ASING" .
 <http://example.org/legal/peraturan/pp/2021/34> legal:mengingat <http://example.org/legal/peraturan/pp/2021/34/mengingat> .
 <http://example.org/legal/peraturan/pp/2021/34/mengingat> legal:daftarHuruf <http://example.org/legal/peraturan/pp/2021/34/mengingat/huruf> .
@@ -1594,6 +1595,10 @@
 <http://example.org/legal/peraturan/pp/2021/34> legal:disahkanOleh "JOKO WIDODO" .
 <http://example.org/legal/peraturan/pp/2021/34> legal:disahkanDi "Jakarta" .
 <http://example.org/legal/peraturan/pp/2021/34> legal:jabatanPengesah "PRESIDEN REPUBLIK INDONESIA," .
+<http://example.org/legal/peraturan/pp/2021/34> legal:tahun 2021 .
+<http://example.org/legal/peraturan/pp/2021/34> legal:nomor 34 .
+<http://example.org/legal/peraturan/pp/2021/34> legal:bahasa "id" .
+<http://example.org/legal/peraturan/pp/2021/34> legal:yurisdiksi "Indonesia" .
 <http://example.org/legal/peraturan/pp/2021/34> a legal:Peraturan .
 <http://example.org/legal/peraturan/pp/2021/34/bab> a legal:BabSet .
 <http://example.org/legal/peraturan/pp/2021/34/bab/0001> a legal:Bab .

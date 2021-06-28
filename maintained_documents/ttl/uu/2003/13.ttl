@@ -5381,6 +5381,7 @@
 <http://example.org/legal/peraturan/uu/2003/13/pasal/0193/versi/20030325/text> legal:teks "Undang undang ini mulai berlaku pada tanggal diundangkan. Agar setiap orang mengetahuinya, memerintahkan pengundangan undang undang ini dengan penempatannya dalam Lembaran Negara Republik Indonesia." .
 <http://example.org/legal/peraturan/uu/2003/13/pasal/0193/versi/20030325> legal:segmen <http://example.org/legal/peraturan/uu/2003/13/pasal/0193/versi/20030325/text> .
 <http://example.org/legal/peraturan/uu/2003/13> legal:disahkanPada "2003-03-25"^^xsd:date .
+<http://example.org/legal/peraturan/uu/2003/13> legal:jenisPeraturan <http://example.org/legal/ontology/jenisPeraturan/UU> .
 <http://example.org/legal/peraturan/uu/2003/13> legal:tentang " KETENAGAKERJAAN" .
 <http://example.org/legal/peraturan/uu/2003/13> legal:mengingat <http://example.org/legal/peraturan/uu/2003/13/mengingat> .
 <http://example.org/legal/peraturan/uu/2003/13/mengingat/text> legal:teks "Pasal 5 ayat (1), Pasal 20 ayat (2), Pasal 27 ayat (2), Pasal 28, dan Pasal 33 ayat (1) Undang Undang Dasar Negara Republik Indonesia Tahun 1945," .
@@ -5418,6 +5419,10 @@
 <http://example.org/legal/peraturan/uu/2003/13> legal:disahkanOleh "MEGAWATI SOEKARNOPUTRI" .
 <http://example.org/legal/peraturan/uu/2003/13> legal:disahkanDi "Jakarta" .
 <http://example.org/legal/peraturan/uu/2003/13> legal:jabatanPengesah "PRESIDEN REPUBLIK INDONESIA," .
+<http://example.org/legal/peraturan/uu/2003/13> legal:tahun 2003 .
+<http://example.org/legal/peraturan/uu/2003/13> legal:nomor 13 .
+<http://example.org/legal/peraturan/uu/2003/13> legal:bahasa "id" .
+<http://example.org/legal/peraturan/uu/2003/13> legal:yurisdiksi "Indonesia" .
 <http://example.org/legal/peraturan/uu/2003/13> a legal:Peraturan .
 <http://example.org/legal/peraturan/uu/2003/13/bab> a legal:BabSet .
 <http://example.org/legal/peraturan/uu/2003/13/bab/0001> a legal:Bab .

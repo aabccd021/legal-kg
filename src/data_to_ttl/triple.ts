@@ -17,6 +17,7 @@ import {
   MengingatNode,
 } from '../component';
 import { DocumentNode } from '../document';
+import { LegislationTypeNode } from '../legislation_type';
 import { DateNode, LegalNode } from '../uri';
 
 /**
@@ -61,6 +62,11 @@ export type LegalTriple = (
   | [DocumentNode, 'mengingat', MengingatNode]
   | [DocumentNode, 'menimbang', MenimbangNode]
   | [DocumentNode, 'tentang', string]
+  | [DocumentNode, 'jenisPeraturan', LegislationTypeNode]
+  | [DocumentNode, 'yurisdiksi', string]
+  | [DocumentNode, 'nomor', number]
+  | [DocumentNode, 'tahun', number]
+  | [DocumentNode, 'bahasa', string]
   | [MenimbangNode, 'daftarHuruf', PointSetNode]
   | [MenimbangNode, 'segmen', SegmentNode]
   | [MengingatNode, 'daftarHuruf', PointSetNode]
@@ -89,4 +95,4 @@ export type LegalTriple = (
   | [SegmentNode, 'merujuk', LegalNode]
 ) &
   // Nevermind of this, just to make sure Subject is LegalNode, and Object is as defined below.
-  [LegalNode, string, string | number | LegalNode | DateNode];
+  [LegalNode, string, string | number | LegalNode | DateNode | LegislationTypeNode];

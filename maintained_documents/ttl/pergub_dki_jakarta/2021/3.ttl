@@ -3352,6 +3352,7 @@
 <http://example.org/legal/peraturan/pergub_dki_jakarta/2021/3/pasal/0070/versi/20210107/text> legal:teks "Peraturan Gubernur ini mulai berlaku pada tanggal diundangkan Agar setiap orang mengetahuinya, memerintahkan pengundangan Peraturan Gubernur ini dengan penempatannya dalam Berita Daerah Provinsi Daerah Khusus Ibukota Jakarta." .
 <http://example.org/legal/peraturan/pergub_dki_jakarta/2021/3/pasal/0070/versi/20210107> legal:segmen <http://example.org/legal/peraturan/pergub_dki_jakarta/2021/3/pasal/0070/versi/20210107/text> .
 <http://example.org/legal/peraturan/pergub_dki_jakarta/2021/3> legal:disahkanPada "2021-01-07"^^xsd:date .
+<http://example.org/legal/peraturan/pergub_dki_jakarta/2021/3> legal:jenisPeraturan <http://example.org/legal/ontology/jenisPeraturan/PeraturanGubernur> .
 <http://example.org/legal/peraturan/pergub_dki_jakarta/2021/3> legal:tentang " PERATURAN PELAKSANAAN PERATURAN DAERAH NOMOR 2 TAHUN 2020 TENTANG PENANGGULANGAN CORONA VIRUS DISEASE 2019" .
 <http://example.org/legal/peraturan/pergub_dki_jakarta/2021/3> legal:mengingat <http://example.org/legal/peraturan/pergub_dki_jakarta/2021/3/mengingat> .
 <http://example.org/legal/peraturan/pergub_dki_jakarta/2021/3/mengingat> legal:daftarHuruf <http://example.org/legal/peraturan/pergub_dki_jakarta/2021/3/mengingat/huruf> .
@@ -3378,6 +3379,10 @@
 <http://example.org/legal/peraturan/pergub_dki_jakarta/2021/3> legal:disahkanOleh "ttd" .
 <http://example.org/legal/peraturan/pergub_dki_jakarta/2021/3> legal:disahkanDi "Jakarta" .
 <http://example.org/legal/peraturan/pergub_dki_jakarta/2021/3> legal:jabatanPengesah "GUBERNUR DAERAH KHUSUS" .
+<http://example.org/legal/peraturan/pergub_dki_jakarta/2021/3> legal:tahun 2021 .
+<http://example.org/legal/peraturan/pergub_dki_jakarta/2021/3> legal:nomor 3 .
+<http://example.org/legal/peraturan/pergub_dki_jakarta/2021/3> legal:bahasa "id" .
+<http://example.org/legal/peraturan/pergub_dki_jakarta/2021/3> legal:yurisdiksi "DKI Jakarta" .
 <http://example.org/legal/peraturan/pergub_dki_jakarta/2021/3> a legal:Peraturan .
 <http://example.org/legal/peraturan/pergub_dki_jakarta/2021/3/bab> a legal:BabSet .
 <http://example.org/legal/peraturan/pergub_dki_jakarta/2021/3/bab/0001> a legal:Bab .

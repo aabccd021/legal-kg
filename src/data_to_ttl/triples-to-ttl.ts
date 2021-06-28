@@ -3,6 +3,7 @@ import * as n3 from 'n3';
 import { LegalTriple } from './triple';
 import _ from 'lodash';
 import { LegalNode, nodeToUri, getOntologyBaseUri, DateNode, padStartIfNumber } from '../uri';
+import { LegislationTypeNode } from '../legislation_type';
 
 const { triple, namedNode, literal } = n3.DataFactory;
 
@@ -59,13 +60,18 @@ function tripleToQuad([subject, predicate, object]: LegalTriple): n3.Quad | unde
   return triple(_subject, _predicate, _object);
 }
 
-function objectToN3Node(o: string | number | LegalNode | DateNode): n3.Literal | n3.NamedNode {
+function objectToN3Node(
+  o: string | number | LegalNode | DateNode | LegislationTypeNode
+): n3.Literal | n3.NamedNode {
   if (isString(o) || isNumber(o)) return literal(o);
   if (o.nodeType === 'date') {
     const yearStr = padStartIfNumber(o.year, { pad: 4 });
     const monthStr = padStartIfNumber(o.month, { pad: 2 });
     const dateStr = padStartIfNumber(o.date, { pad: 2 });
     return literal(`${yearStr}-${monthStr}-${dateStr}`, 'date');
+  }
+  if (o.nodeType === 'legislationType') {
+    return onto(`jenisPeraturan/${o.legislationType}`);
   }
   return legalNodeToN3(o);
 }
@@ -87,7 +93,14 @@ function getClassTypeQuads(triples: LegalTriple[]): n3.Quad[] {
 function getAlternativeVocabQuads(triples: LegalTriple[]): n3.Quad[] {
   return _(triples)
     .map(([s, p, o]) => {
-      if (isNil(o) || isString(o) || isNumber(o) || o.nodeType === 'date') return undefined;
+      if (
+        isNil(o) ||
+        isString(o) ||
+        isNumber(o) ||
+        o.nodeType === 'date' ||
+        o.nodeType === 'legislationType'
+      )
+        return undefined;
       if (
         p === 'ayat' ||
         p === 'bab' ||
