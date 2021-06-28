@@ -1,323 +1,323 @@
-@prefix legal: <http://example.org/legal/ontology/> .
+@prefix legal: <http://example.org/lex2kg/ontology/> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
-<http://example.org/legal/peraturan/uu/1997/12> legal:daftarPasal <http://example.org/legal/peraturan/uu/1997/12/daftarPasal> .
-<http://example.org/legal/peraturan/uu/1997/12/daftarPasal> legal:pasal <http://example.org/legal/peraturan/uu/1997/12/pasal/0001> .
-<http://example.org/legal/peraturan/uu/1997/12/pasal/0001> legal:nomor 1 .
-<http://example.org/legal/peraturan/uu/1997/12/pasal/0001> legal:versi <http://example.org/legal/peraturan/uu/1997/12/pasal/0001/versi/19970507> .
-<http://example.org/legal/peraturan/uu/1997/12> legal:pasal <http://example.org/legal/peraturan/uu/1997/12/pasal/0001> .
-<http://example.org/legal/peraturan/uu/1997/12/pasal/0001/versi/19970507> legal:jenisVersi "orisinal" .
-<http://example.org/legal/peraturan/uu/1997/12/pasal/0001/versi/19970507> legal:tanggal "1997-05-07"^^xsd:date .
-<http://example.org/legal/peraturan/uu/1997/12/pasal/0001/versi/19970507> legal:teks "\n1. Pencipta adalah seorang atau beberapa orang secara bersama - sama yang atas inspirasinya lahir suatu ciptaan berdasarkan kemampuan pikiran, imajinasi, kecek atan, keterampilan atau keahlian yang dituangkan dalam bentuk yang khas dan bersifat pribadi.\n2. Ciptaan adalah hasil setiap karya Pencipta dalam bentuk khas dan menunjukkan keasliannya dalam lapangan ilmu pengetahuan, seni dan sastra.\n3. Pemegang Hak Cipta adalah Pencipta sebagai Pemilik Hak Cipta, atau orang yang menerima hak tersebut dari Pencipta, atau orang lain yang menerima lebih lanjut hak dari orang tersebut di atas.\n4. Pengumuman adalah pembacaan, penyuaraan, penyiaran atau penye baran sesuatu ciptaan, dengan menggunakan alat apapun dan dengan cara sedemikian rupa sehingga suatu ciptaan dapat dibaca, didengar atau dilihat oleh orang lain.\n5. Perbanyakan adalah menambah jumlah sesuatu ciptaan, dengan pembuatan yang sama, hampir sam a atau menyerupai ciptaan tersebut dengan mempergunakan bahan - bahan yang sama maupun tidak sama, termasuk mengalihwujudkan sesuatu ciptaan.\n6. Potret adalah gambaran dengan cara dan alat apapun dari wajah orang yang digambarkan baik bersama bagian tubuh l ainnya maupun tidak.\n7. Program Komputer adalah program yang diciptakan secara khusus sehingga memungkinkan komputer melakukan fungsi tertentu.\n8. Pelaku adalah aktor, penyanyi, pemusik, penari atau mereka yang menampilkan, memperagakan, mempertunjukkan, menyanyikan, menyampaikan, mendeklamasikan, atau memainkan suatu karya musik, drama, tari, sastra dan karya seni lainnya.\n9. Produser rekaman suara adalah orang atau badan hukum yang pertama kali merekam atau memiliki prakarsa untuk membiayai kegiatan pe rekaman suara atau bunyi baik dari suatu pertunjukan maupun suara atau bunyi lainnya.\n10. Lembaga penyiaran adalah organisasi penyelenggara siaran, baik Lembaga Penyaiaran Pemerintah maupun Lembaga Penyiaran Swasta yang berbentuk badan hukum yang melakuka n penyiaran atas suatu karya siaran dengan menggunakan transmisi dengan atau tanpa kabel atau melalui sistem elektromagnetik lainnya.\n11. Kantor Hak Cipta adalah satuan organisasi di lingkungan departemen yang melaksanakan tugas dan kewenan gan di bidang Hak Cipta. 2. Ketentuan Pasal 2 diubah, dengan menambah dua ketentuan baru yang dijadikan ayat (2) dan ayat (3) sehingga keseluruhan Pasal 2 berbunyi sebagai berikut:\n" .
-<http://example.org/legal/peraturan/uu/1997/12/pasal/0001/versi/19970507> legal:daftarHuruf <http://example.org/legal/peraturan/uu/1997/12/pasal/0001/versi/19970507/huruf> .
-<http://example.org/legal/peraturan/uu/1997/12/pasal/0001/versi/19970507/huruf/description> legal:teks "" .
-<http://example.org/legal/peraturan/uu/1997/12/pasal/0001/versi/19970507/huruf> legal:segmen <http://example.org/legal/peraturan/uu/1997/12/pasal/0001/versi/19970507/huruf/description> .
-<http://example.org/legal/peraturan/uu/1997/12/pasal/0001/versi/19970507/huruf> legal:huruf <http://example.org/legal/peraturan/uu/1997/12/pasal/0001/versi/19970507/huruf/0001> .
-<http://example.org/legal/peraturan/uu/1997/12/pasal/0001/versi/19970507/huruf/0001> legal:nomor "1" .
-<http://example.org/legal/peraturan/uu/1997/12/pasal/0001/versi/19970507/huruf/0001/text> legal:teks "Pencipta adalah seorang atau beberapa orang secara bersama - sama yang atas inspirasinya lahir suatu ciptaan berdasarkan kemampuan pikiran, imajinasi, kecek atan, keterampilan atau keahlian yang dituangkan dalam bentuk yang khas dan bersifat pribadi." .
-<http://example.org/legal/peraturan/uu/1997/12/pasal/0001/versi/19970507/huruf/0001> legal:segmen <http://example.org/legal/peraturan/uu/1997/12/pasal/0001/versi/19970507/huruf/0001/text> .
-<http://example.org/legal/peraturan/uu/1997/12/pasal/0001/versi/19970507/huruf> legal:huruf <http://example.org/legal/peraturan/uu/1997/12/pasal/0001/versi/19970507/huruf/0002> .
-<http://example.org/legal/peraturan/uu/1997/12/pasal/0001/versi/19970507/huruf/0002> legal:nomor "2" .
-<http://example.org/legal/peraturan/uu/1997/12/pasal/0001/versi/19970507/huruf/0002/text> legal:teks "Ciptaan adalah hasil setiap karya Pencipta dalam bentuk khas dan menunjukkan keasliannya dalam lapangan ilmu pengetahuan, seni dan sastra." .
-<http://example.org/legal/peraturan/uu/1997/12/pasal/0001/versi/19970507/huruf/0002> legal:segmen <http://example.org/legal/peraturan/uu/1997/12/pasal/0001/versi/19970507/huruf/0002/text> .
-<http://example.org/legal/peraturan/uu/1997/12/pasal/0001/versi/19970507/huruf> legal:huruf <http://example.org/legal/peraturan/uu/1997/12/pasal/0001/versi/19970507/huruf/0003> .
-<http://example.org/legal/peraturan/uu/1997/12/pasal/0001/versi/19970507/huruf/0003> legal:nomor "3" .
-<http://example.org/legal/peraturan/uu/1997/12/pasal/0001/versi/19970507/huruf/0003/text> legal:teks "Pemegang Hak Cipta adalah Pencipta sebagai Pemilik Hak Cipta, atau orang yang menerima hak tersebut dari Pencipta, atau orang lain yang menerima lebih lanjut hak dari orang tersebut di atas." .
-<http://example.org/legal/peraturan/uu/1997/12/pasal/0001/versi/19970507/huruf/0003> legal:segmen <http://example.org/legal/peraturan/uu/1997/12/pasal/0001/versi/19970507/huruf/0003/text> .
-<http://example.org/legal/peraturan/uu/1997/12/pasal/0001/versi/19970507/huruf> legal:huruf <http://example.org/legal/peraturan/uu/1997/12/pasal/0001/versi/19970507/huruf/0004> .
-<http://example.org/legal/peraturan/uu/1997/12/pasal/0001/versi/19970507/huruf/0004> legal:nomor "4" .
-<http://example.org/legal/peraturan/uu/1997/12/pasal/0001/versi/19970507/huruf/0004/text> legal:teks "Pengumuman adalah pembacaan, penyuaraan, penyiaran atau penye baran sesuatu ciptaan, dengan menggunakan alat apapun dan dengan cara sedemikian rupa sehingga suatu ciptaan dapat dibaca, didengar atau dilihat oleh orang lain." .
-<http://example.org/legal/peraturan/uu/1997/12/pasal/0001/versi/19970507/huruf/0004> legal:segmen <http://example.org/legal/peraturan/uu/1997/12/pasal/0001/versi/19970507/huruf/0004/text> .
-<http://example.org/legal/peraturan/uu/1997/12/pasal/0001/versi/19970507/huruf> legal:huruf <http://example.org/legal/peraturan/uu/1997/12/pasal/0001/versi/19970507/huruf/0005> .
-<http://example.org/legal/peraturan/uu/1997/12/pasal/0001/versi/19970507/huruf/0005> legal:nomor "5" .
-<http://example.org/legal/peraturan/uu/1997/12/pasal/0001/versi/19970507/huruf/0005/text> legal:teks "Perbanyakan adalah menambah jumlah sesuatu ciptaan, dengan pembuatan yang sama, hampir sam a atau menyerupai ciptaan tersebut dengan mempergunakan bahan - bahan yang sama maupun tidak sama, termasuk mengalihwujudkan sesuatu ciptaan." .
-<http://example.org/legal/peraturan/uu/1997/12/pasal/0001/versi/19970507/huruf/0005> legal:segmen <http://example.org/legal/peraturan/uu/1997/12/pasal/0001/versi/19970507/huruf/0005/text> .
-<http://example.org/legal/peraturan/uu/1997/12/pasal/0001/versi/19970507/huruf> legal:huruf <http://example.org/legal/peraturan/uu/1997/12/pasal/0001/versi/19970507/huruf/0006> .
-<http://example.org/legal/peraturan/uu/1997/12/pasal/0001/versi/19970507/huruf/0006> legal:nomor "6" .
-<http://example.org/legal/peraturan/uu/1997/12/pasal/0001/versi/19970507/huruf/0006/text> legal:teks "Potret adalah gambaran dengan cara dan alat apapun dari wajah orang yang digambarkan baik bersama bagian tubuh l ainnya maupun tidak." .
-<http://example.org/legal/peraturan/uu/1997/12/pasal/0001/versi/19970507/huruf/0006> legal:segmen <http://example.org/legal/peraturan/uu/1997/12/pasal/0001/versi/19970507/huruf/0006/text> .
-<http://example.org/legal/peraturan/uu/1997/12/pasal/0001/versi/19970507/huruf> legal:huruf <http://example.org/legal/peraturan/uu/1997/12/pasal/0001/versi/19970507/huruf/0007> .
-<http://example.org/legal/peraturan/uu/1997/12/pasal/0001/versi/19970507/huruf/0007> legal:nomor "7" .
-<http://example.org/legal/peraturan/uu/1997/12/pasal/0001/versi/19970507/huruf/0007/text> legal:teks "Program Komputer adalah program yang diciptakan secara khusus sehingga memungkinkan komputer melakukan fungsi tertentu." .
-<http://example.org/legal/peraturan/uu/1997/12/pasal/0001/versi/19970507/huruf/0007> legal:segmen <http://example.org/legal/peraturan/uu/1997/12/pasal/0001/versi/19970507/huruf/0007/text> .
-<http://example.org/legal/peraturan/uu/1997/12/pasal/0001/versi/19970507/huruf> legal:huruf <http://example.org/legal/peraturan/uu/1997/12/pasal/0001/versi/19970507/huruf/0008> .
-<http://example.org/legal/peraturan/uu/1997/12/pasal/0001/versi/19970507/huruf/0008> legal:nomor "8" .
-<http://example.org/legal/peraturan/uu/1997/12/pasal/0001/versi/19970507/huruf/0008/text> legal:teks "Pelaku adalah aktor, penyanyi, pemusik, penari atau mereka yang menampilkan, memperagakan, mempertunjukkan, menyanyikan, menyampaikan, mendeklamasikan, atau memainkan suatu karya musik, drama, tari, sastra dan karya seni lainnya." .
-<http://example.org/legal/peraturan/uu/1997/12/pasal/0001/versi/19970507/huruf/0008> legal:segmen <http://example.org/legal/peraturan/uu/1997/12/pasal/0001/versi/19970507/huruf/0008/text> .
-<http://example.org/legal/peraturan/uu/1997/12/pasal/0001/versi/19970507/huruf> legal:huruf <http://example.org/legal/peraturan/uu/1997/12/pasal/0001/versi/19970507/huruf/0009> .
-<http://example.org/legal/peraturan/uu/1997/12/pasal/0001/versi/19970507/huruf/0009> legal:nomor "9" .
-<http://example.org/legal/peraturan/uu/1997/12/pasal/0001/versi/19970507/huruf/0009/text> legal:teks "Produser rekaman suara adalah orang atau badan hukum yang pertama kali merekam atau memiliki prakarsa untuk membiayai kegiatan pe rekaman suara atau bunyi baik dari suatu pertunjukan maupun suara atau bunyi lainnya." .
-<http://example.org/legal/peraturan/uu/1997/12/pasal/0001/versi/19970507/huruf/0009> legal:segmen <http://example.org/legal/peraturan/uu/1997/12/pasal/0001/versi/19970507/huruf/0009/text> .
-<http://example.org/legal/peraturan/uu/1997/12/pasal/0001/versi/19970507/huruf> legal:huruf <http://example.org/legal/peraturan/uu/1997/12/pasal/0001/versi/19970507/huruf/0010> .
-<http://example.org/legal/peraturan/uu/1997/12/pasal/0001/versi/19970507/huruf/0010> legal:nomor "10" .
-<http://example.org/legal/peraturan/uu/1997/12/pasal/0001/versi/19970507/huruf/0010/text> legal:teks "Lembaga penyiaran adalah organisasi penyelenggara siaran, baik Lembaga Penyaiaran Pemerintah maupun Lembaga Penyiaran Swasta yang berbentuk badan hukum yang melakuka n penyiaran atas suatu karya siaran dengan menggunakan transmisi dengan atau tanpa kabel atau melalui sistem elektromagnetik lainnya." .
-<http://example.org/legal/peraturan/uu/1997/12/pasal/0001/versi/19970507/huruf/0010> legal:segmen <http://example.org/legal/peraturan/uu/1997/12/pasal/0001/versi/19970507/huruf/0010/text> .
-<http://example.org/legal/peraturan/uu/1997/12/pasal/0001/versi/19970507/huruf> legal:huruf <http://example.org/legal/peraturan/uu/1997/12/pasal/0001/versi/19970507/huruf/0011> .
-<http://example.org/legal/peraturan/uu/1997/12/pasal/0001/versi/19970507/huruf/0011> legal:nomor "11" .
-<http://example.org/legal/peraturan/uu/1997/12/pasal/0001/versi/19970507/huruf/0011/text> legal:teks "Kantor Hak Cipta adalah satuan organisasi di lingkungan departemen yang melaksanakan tugas dan kewenan gan di bidang Hak Cipta. 2. Ketentuan Pasal 2 diubah, dengan menambah dua ketentuan baru yang dijadikan ayat (2) dan ayat (3) sehingga keseluruhan Pasal 2 berbunyi sebagai berikut:" .
-<http://example.org/legal/peraturan/uu/1997/12/pasal/0001/versi/19970507/huruf/0011> legal:segmen <http://example.org/legal/peraturan/uu/1997/12/pasal/0001/versi/19970507/huruf/0011/text> .
-<http://example.org/legal/peraturan/uu/1997/12/pasal/0001/versi/19970507/huruf/0011/text> legal:merujuk <http://example.org/legal/peraturan/uu/1997/12/pasal/0001/versi/19970507/ayat/0003> .
-<http://example.org/legal/peraturan/uu/1997/12/pasal/0001/versi/19970507/huruf/0011/text> legal:merujuk <http://example.org/legal/peraturan/uu/1997/12/pasal/0001/versi/19970507/ayat/0002> .
-<http://example.org/legal/peraturan/uu/1997/12/pasal/0001/versi/19970507/huruf/0011/text> legal:merujuk <http://example.org/legal/peraturan/uu/1997/12/pasal/0002> .
-<http://example.org/legal/peraturan/uu/1997/12/daftarPasal> legal:pasal <http://example.org/legal/peraturan/uu/1997/12/pasal/0002> .
-<http://example.org/legal/peraturan/uu/1997/12/pasal/0002> legal:nomor 2 .
-<http://example.org/legal/peraturan/uu/1997/12/pasal/0002> legal:versi <http://example.org/legal/peraturan/uu/1997/12/pasal/0002/versi/19970507> .
-<http://example.org/legal/peraturan/uu/1997/12> legal:pasal <http://example.org/legal/peraturan/uu/1997/12/pasal/0002> .
-<http://example.org/legal/peraturan/uu/1997/12/pasal/0002/versi/19970507> legal:jenisVersi "orisinal" .
-<http://example.org/legal/peraturan/uu/1997/12/pasal/0002/versi/19970507> legal:tanggal "1997-05-07"^^xsd:date .
-<http://example.org/legal/peraturan/uu/1997/12/pasal/0002/versi/19970507> legal:teks "(1). Selain Penyidik Pejabat Polisi Neg ara Republik Indonesia, juga Pejabat Pegawai Negeri Sipil tertentu di lingkungan departemen yang lingkup tugas dan tanggung jawabnya meliputi pembinaan Hak Cipta, diberi wewenang khusus sebagai Penyidik sebagaimana dimaksud dalam Undang - undang Nomor 8 Tahu n 1981 tentang Hukum Acara Pidana, untuk melakukan penyidikan tindak pidana di bidang Hak Cipta.\n(2). Penyidik Pejabat Pegawai Negeri Sipil sebagaimana dimaksud dalam ayat (1) berwenang:\na. melakukan penelitian atas kebenaran laporan ata u keterangan berkenaan dengan tindak pidana di bidang Hak Cipta.\nb. melakukan penelitian terhadap orang atau badan hukum yang diduga melakukan tindak pidana di bidang Hak Cipta;\nc. meminta keterangan dan bahan bukti dari orang atau badan hukum sehubu ngan dengan tindak pidana di bidang Hak Cipta;\nd. melakukan pemeriksaan atas pembukuan, pencatatan dan dokumen lainnya yang berkenaan dengan tindak pidana di bidang Hak Cipta;\ne. melakukan pemeriksaan di tempat tertentu yang diduga terdapat bahan buk ti pembukuan, pencatatan dan dokumen lain serta melakukan penyitaan terhadap bahan dan barang hasil pelanggaran yang dapat dijadikan bukti dalam perkara tindak pidana di bidang Hak Cipta;\nf. meminta bantuan ahli dalam rangka pelaksanaan tugas penyidikan tindak pidana di bidang Hak Cipta.\n\n(3). Penyidik Pejabat Pegawai Negeri Sipil sebagaimana dimaksud dalam ayat (1) memberitahukan dimulainya penyidikan dan hasil penyidikannya kepada Penyidik Pejabat Polisi Negara Repub lik Indonesia.\n(4). Penyidik Pejabat Pegawai Negeri Sipil sebagaimana dimaksud dalam ayat (1) menyampaikan hasil penyidikannya kepada Penuntut Umum melalui Penyidik Pejabat Polisi Negara Republik Indonesia dengan mengingat ketentuan Pasal 107 Undang - undan g Nomor 8 Tahun 1981 tentang Hukum Acara Pidana.\" 16. Ketentuan Pasal 48 diubah, sehingga Pasal 48 berbunyi sebagai berikut: Pasal 48 Undang - undang ini berlaku terhadap semua ciptaan dan Hak - hak Yang Berkaitan dengan Hak Cip ta:\na. Warga negara, penduduk, dan badan hukum Indonesia;\nb. Bukan warga negara Indonesia, bukan penduduk Indonesia dan bukan badan hukum Indonesia yang untuk pertama kali diumumkan di Indonesia atau diumumkan di Indonesia dalam jangka waktu 30 (tiga puluh) hari sejak ciptaan itu diumumkan untuk pertama kali di luar Indonesia;\nc. Bukan warga negara Indonesia, bukan penduduk Indonesia dan bukan badan hukum Indonesia, dengan ketentuan: 1) Negaranya mempunyai perjanjian bilateral mengenai perlindungan Hak Cipta dan Hak - hak Yang Berkaitan dengan Hak Cipta dengan Negara Republik Indonesia; 2) Negaranya dan Negara Republik Indonesia merupakan pihak atau peserta dalam suatu pe rjanjian multilateral yang sama mengenai perlindungan Hak Cipta dan Hak - hak Yang Berkaitan degan Hak Cipta. Pasal II Undang - undang ini mulai berlaku pada tanggal diundangkan. Agar setiap orang mengetahuinya, memerintahkan pengundangan Undang - undang ini dengan penempatannya dalam Lembaran Negara Republik Indonesia.\n" .
-<http://example.org/legal/peraturan/uu/1997/12/pasal/0002/versi/19970507> legal:daftarAyat <http://example.org/legal/peraturan/uu/1997/12/pasal/0002/versi/19970507/ayat> .
-<http://example.org/legal/peraturan/uu/1997/12/pasal/0002/versi/19970507/ayat> legal:ayat <http://example.org/legal/peraturan/uu/1997/12/pasal/0002/versi/19970507/ayat/0001> .
-<http://example.org/legal/peraturan/uu/1997/12/pasal/0002/versi/19970507/ayat/0001> legal:nomor 1 .
-<http://example.org/legal/peraturan/uu/1997/12/pasal/0002/versi/19970507/ayat/0001> legal:teks "Selain Penyidik Pejabat Polisi Neg ara Republik Indonesia, juga Pejabat Pegawai Negeri Sipil tertentu di lingkungan departemen yang lingkup tugas dan tanggung jawabnya meliputi pembinaan Hak Cipta, diberi wewenang khusus sebagai Penyidik sebagaimana dimaksud dalam Undang - undang Nomor 8 Tahu n 1981 tentang Hukum Acara Pidana, untuk melakukan penyidikan tindak pidana di bidang Hak Cipta." .
-<http://example.org/legal/peraturan/uu/1997/12/pasal/0002/versi/19970507/ayat/0001/text> legal:teks "Selain Penyidik Pejabat Polisi Neg ara Republik Indonesia, juga Pejabat Pegawai Negeri Sipil tertentu di lingkungan departemen yang lingkup tugas dan tanggung jawabnya meliputi pembinaan Hak Cipta, diberi wewenang khusus sebagai Penyidik sebagaimana dimaksud dalam Undang - undang Nomor 8 Tahu n 1981 tentang Hukum Acara Pidana, untuk melakukan penyidikan tindak pidana di bidang Hak Cipta." .
-<http://example.org/legal/peraturan/uu/1997/12/pasal/0002/versi/19970507/ayat/0001> legal:segmen <http://example.org/legal/peraturan/uu/1997/12/pasal/0002/versi/19970507/ayat/0001/text> .
-<http://example.org/legal/peraturan/uu/1997/12/pasal/0002/versi/19970507/ayat> legal:ayat <http://example.org/legal/peraturan/uu/1997/12/pasal/0002/versi/19970507/ayat/0002> .
-<http://example.org/legal/peraturan/uu/1997/12/pasal/0002/versi/19970507/ayat/0002> legal:nomor 2 .
-<http://example.org/legal/peraturan/uu/1997/12/pasal/0002/versi/19970507/ayat/0002> legal:teks "Penyidik Pejabat Pegawai Negeri Sipil sebagaimana dimaksud dalam ayat (1) berwenang:\na. melakukan penelitian atas kebenaran laporan ata u keterangan berkenaan dengan tindak pidana di bidang Hak Cipta.\nb. melakukan penelitian terhadap orang atau badan hukum yang diduga melakukan tindak pidana di bidang Hak Cipta;\nc. meminta keterangan dan bahan bukti dari orang atau badan hukum sehubu ngan dengan tindak pidana di bidang Hak Cipta;\nd. melakukan pemeriksaan atas pembukuan, pencatatan dan dokumen lainnya yang berkenaan dengan tindak pidana di bidang Hak Cipta;\ne. melakukan pemeriksaan di tempat tertentu yang diduga terdapat bahan buk ti pembukuan, pencatatan dan dokumen lain serta melakukan penyitaan terhadap bahan dan barang hasil pelanggaran yang dapat dijadikan bukti dalam perkara tindak pidana di bidang Hak Cipta;\nf. meminta bantuan ahli dalam rangka pelaksanaan tugas penyidikan tindak pidana di bidang Hak Cipta.\n" .
-<http://example.org/legal/peraturan/uu/1997/12/pasal/0002/versi/19970507/ayat/0002> legal:daftarHuruf <http://example.org/legal/peraturan/uu/1997/12/pasal/0002/versi/19970507/ayat/0002/huruf> .
-<http://example.org/legal/peraturan/uu/1997/12/pasal/0002/versi/19970507/ayat/0002/huruf/description> legal:teks "Penyidik Pejabat Pegawai Negeri Sipil sebagaimana dimaksud dalam ayat (1) berwenang:" .
-<http://example.org/legal/peraturan/uu/1997/12/pasal/0002/versi/19970507/ayat/0002/huruf> legal:segmen <http://example.org/legal/peraturan/uu/1997/12/pasal/0002/versi/19970507/ayat/0002/huruf/description> .
-<http://example.org/legal/peraturan/uu/1997/12/pasal/0002/versi/19970507/ayat/0002/huruf> legal:huruf <http://example.org/legal/peraturan/uu/1997/12/pasal/0002/versi/19970507/ayat/0002/huruf/a> .
-<http://example.org/legal/peraturan/uu/1997/12/pasal/0002/versi/19970507/ayat/0002/huruf/a> legal:nomor "a" .
-<http://example.org/legal/peraturan/uu/1997/12/pasal/0002/versi/19970507/ayat/0002/huruf/a/text> legal:teks "melakukan penelitian atas kebenaran laporan ata u keterangan berkenaan dengan tindak pidana di bidang Hak Cipta." .
-<http://example.org/legal/peraturan/uu/1997/12/pasal/0002/versi/19970507/ayat/0002/huruf/a> legal:segmen <http://example.org/legal/peraturan/uu/1997/12/pasal/0002/versi/19970507/ayat/0002/huruf/a/text> .
-<http://example.org/legal/peraturan/uu/1997/12/pasal/0002/versi/19970507/ayat/0002/huruf> legal:huruf <http://example.org/legal/peraturan/uu/1997/12/pasal/0002/versi/19970507/ayat/0002/huruf/b> .
-<http://example.org/legal/peraturan/uu/1997/12/pasal/0002/versi/19970507/ayat/0002/huruf/b> legal:nomor "b" .
-<http://example.org/legal/peraturan/uu/1997/12/pasal/0002/versi/19970507/ayat/0002/huruf/b/text> legal:teks "melakukan penelitian terhadap orang atau badan hukum yang diduga melakukan tindak pidana di bidang Hak Cipta;" .
-<http://example.org/legal/peraturan/uu/1997/12/pasal/0002/versi/19970507/ayat/0002/huruf/b> legal:segmen <http://example.org/legal/peraturan/uu/1997/12/pasal/0002/versi/19970507/ayat/0002/huruf/b/text> .
-<http://example.org/legal/peraturan/uu/1997/12/pasal/0002/versi/19970507/ayat/0002/huruf> legal:huruf <http://example.org/legal/peraturan/uu/1997/12/pasal/0002/versi/19970507/ayat/0002/huruf/c> .
-<http://example.org/legal/peraturan/uu/1997/12/pasal/0002/versi/19970507/ayat/0002/huruf/c> legal:nomor "c" .
-<http://example.org/legal/peraturan/uu/1997/12/pasal/0002/versi/19970507/ayat/0002/huruf/c/text> legal:teks "meminta keterangan dan bahan bukti dari orang atau badan hukum sehubu ngan dengan tindak pidana di bidang Hak Cipta;" .
-<http://example.org/legal/peraturan/uu/1997/12/pasal/0002/versi/19970507/ayat/0002/huruf/c> legal:segmen <http://example.org/legal/peraturan/uu/1997/12/pasal/0002/versi/19970507/ayat/0002/huruf/c/text> .
-<http://example.org/legal/peraturan/uu/1997/12/pasal/0002/versi/19970507/ayat/0002/huruf> legal:huruf <http://example.org/legal/peraturan/uu/1997/12/pasal/0002/versi/19970507/ayat/0002/huruf/d> .
-<http://example.org/legal/peraturan/uu/1997/12/pasal/0002/versi/19970507/ayat/0002/huruf/d> legal:nomor "d" .
-<http://example.org/legal/peraturan/uu/1997/12/pasal/0002/versi/19970507/ayat/0002/huruf/d/text> legal:teks "melakukan pemeriksaan atas pembukuan, pencatatan dan dokumen lainnya yang berkenaan dengan tindak pidana di bidang Hak Cipta;" .
-<http://example.org/legal/peraturan/uu/1997/12/pasal/0002/versi/19970507/ayat/0002/huruf/d> legal:segmen <http://example.org/legal/peraturan/uu/1997/12/pasal/0002/versi/19970507/ayat/0002/huruf/d/text> .
-<http://example.org/legal/peraturan/uu/1997/12/pasal/0002/versi/19970507/ayat/0002/huruf> legal:huruf <http://example.org/legal/peraturan/uu/1997/12/pasal/0002/versi/19970507/ayat/0002/huruf/e> .
-<http://example.org/legal/peraturan/uu/1997/12/pasal/0002/versi/19970507/ayat/0002/huruf/e> legal:nomor "e" .
-<http://example.org/legal/peraturan/uu/1997/12/pasal/0002/versi/19970507/ayat/0002/huruf/e/text> legal:teks "melakukan pemeriksaan di tempat tertentu yang diduga terdapat bahan buk ti pembukuan, pencatatan dan dokumen lain serta melakukan penyitaan terhadap bahan dan barang hasil pelanggaran yang dapat dijadikan bukti dalam perkara tindak pidana di bidang Hak Cipta;" .
-<http://example.org/legal/peraturan/uu/1997/12/pasal/0002/versi/19970507/ayat/0002/huruf/e> legal:segmen <http://example.org/legal/peraturan/uu/1997/12/pasal/0002/versi/19970507/ayat/0002/huruf/e/text> .
-<http://example.org/legal/peraturan/uu/1997/12/pasal/0002/versi/19970507/ayat/0002/huruf> legal:huruf <http://example.org/legal/peraturan/uu/1997/12/pasal/0002/versi/19970507/ayat/0002/huruf/f> .
-<http://example.org/legal/peraturan/uu/1997/12/pasal/0002/versi/19970507/ayat/0002/huruf/f> legal:nomor "f" .
-<http://example.org/legal/peraturan/uu/1997/12/pasal/0002/versi/19970507/ayat/0002/huruf/f/text> legal:teks "meminta bantuan ahli dalam rangka pelaksanaan tugas penyidikan tindak pidana di bidang Hak Cipta." .
-<http://example.org/legal/peraturan/uu/1997/12/pasal/0002/versi/19970507/ayat/0002/huruf/f> legal:segmen <http://example.org/legal/peraturan/uu/1997/12/pasal/0002/versi/19970507/ayat/0002/huruf/f/text> .
-<http://example.org/legal/peraturan/uu/1997/12/pasal/0002/versi/19970507/ayat> legal:ayat <http://example.org/legal/peraturan/uu/1997/12/pasal/0002/versi/19970507/ayat/0003> .
-<http://example.org/legal/peraturan/uu/1997/12/pasal/0002/versi/19970507/ayat/0003> legal:nomor 3 .
-<http://example.org/legal/peraturan/uu/1997/12/pasal/0002/versi/19970507/ayat/0003> legal:teks "Penyidik Pejabat Pegawai Negeri Sipil sebagaimana dimaksud dalam ayat (1) memberitahukan dimulainya penyidikan dan hasil penyidikannya kepada Penyidik Pejabat Polisi Negara Repub lik Indonesia." .
-<http://example.org/legal/peraturan/uu/1997/12/pasal/0002/versi/19970507/ayat/0003/text> legal:teks "Penyidik Pejabat Pegawai Negeri Sipil sebagaimana dimaksud dalam ayat (1) memberitahukan dimulainya penyidikan dan hasil penyidikannya kepada Penyidik Pejabat Polisi Negara Repub lik Indonesia." .
-<http://example.org/legal/peraturan/uu/1997/12/pasal/0002/versi/19970507/ayat/0003> legal:segmen <http://example.org/legal/peraturan/uu/1997/12/pasal/0002/versi/19970507/ayat/0003/text> .
-<http://example.org/legal/peraturan/uu/1997/12/pasal/0002/versi/19970507/ayat/0003/text> legal:merujuk <http://example.org/legal/peraturan/uu/1997/12/pasal/0002/versi/19970507/ayat/0001> .
-<http://example.org/legal/peraturan/uu/1997/12/pasal/0002/versi/19970507/ayat> legal:ayat <http://example.org/legal/peraturan/uu/1997/12/pasal/0002/versi/19970507/ayat/0004> .
-<http://example.org/legal/peraturan/uu/1997/12/pasal/0002/versi/19970507/ayat/0004> legal:nomor 4 .
-<http://example.org/legal/peraturan/uu/1997/12/pasal/0002/versi/19970507/ayat/0004> legal:teks "Penyidik Pejabat Pegawai Negeri Sipil sebagaimana dimaksud dalam ayat (1) menyampaikan hasil penyidikannya kepada Penuntut Umum melalui Penyidik Pejabat Polisi Negara Republik Indonesia dengan mengingat ketentuan Pasal 107 Undang - undan g Nomor 8 Tahun 1981 tentang Hukum Acara Pidana.\" 16. Ketentuan Pasal 48 diubah, sehingga Pasal 48 berbunyi sebagai berikut: Pasal 48 Undang - undang ini berlaku terhadap semua ciptaan dan Hak - hak Yang Berkaitan dengan Hak Cip ta:\na. Warga negara, penduduk, dan badan hukum Indonesia;\nb. Bukan warga negara Indonesia, bukan penduduk Indonesia dan bukan badan hukum Indonesia yang untuk pertama kali diumumkan di Indonesia atau diumumkan di Indonesia dalam jangka waktu 30 (tiga puluh) hari sejak ciptaan itu diumumkan untuk pertama kali di luar Indonesia;\nc. Bukan warga negara Indonesia, bukan penduduk Indonesia dan bukan badan hukum Indonesia, dengan ketentuan: 1) Negaranya mempunyai perjanjian bilateral mengenai perlindungan Hak Cipta dan Hak - hak Yang Berkaitan dengan Hak Cipta dengan Negara Republik Indonesia; 2) Negaranya dan Negara Republik Indonesia merupakan pihak atau peserta dalam suatu pe rjanjian multilateral yang sama mengenai perlindungan Hak Cipta dan Hak - hak Yang Berkaitan degan Hak Cipta. Pasal II Undang - undang ini mulai berlaku pada tanggal diundangkan. Agar setiap orang mengetahuinya, memerintahkan pengundangan Undang - undang ini dengan penempatannya dalam Lembaran Negara Republik Indonesia.\n" .
-<http://example.org/legal/peraturan/uu/1997/12/pasal/0002/versi/19970507/ayat/0004> legal:daftarHuruf <http://example.org/legal/peraturan/uu/1997/12/pasal/0002/versi/19970507/ayat/0004/huruf> .
-<http://example.org/legal/peraturan/uu/1997/12/pasal/0002/versi/19970507/ayat/0004/huruf/description> legal:teks "Penyidik Pejabat Pegawai Negeri Sipil sebagaimana dimaksud dalam ayat (1) menyampaikan hasil penyidikannya kepada Penuntut Umum melalui Penyidik Pejabat Polisi Negara Republik Indonesia dengan mengingat ketentuan Pasal 107 Undang - undan g Nomor 8 Tahun 1981 tentang Hukum Acara Pidana.\" 16. Ketentuan Pasal 48 diubah, sehingga Pasal 48 berbunyi sebagai berikut: Pasal 48 Undang - undang ini berlaku terhadap semua ciptaan dan Hak - hak Yang Berkaitan dengan Hak Cip ta:" .
-<http://example.org/legal/peraturan/uu/1997/12/pasal/0002/versi/19970507/ayat/0004/huruf> legal:segmen <http://example.org/legal/peraturan/uu/1997/12/pasal/0002/versi/19970507/ayat/0004/huruf/description> .
-<http://example.org/legal/peraturan/uu/1997/12/pasal/0002/versi/19970507/ayat/0004/huruf> legal:huruf <http://example.org/legal/peraturan/uu/1997/12/pasal/0002/versi/19970507/ayat/0004/huruf/a> .
-<http://example.org/legal/peraturan/uu/1997/12/pasal/0002/versi/19970507/ayat/0004/huruf/a> legal:nomor "a" .
-<http://example.org/legal/peraturan/uu/1997/12/pasal/0002/versi/19970507/ayat/0004/huruf/a/text> legal:teks "Warga negara, penduduk, dan badan hukum Indonesia;" .
-<http://example.org/legal/peraturan/uu/1997/12/pasal/0002/versi/19970507/ayat/0004/huruf/a> legal:segmen <http://example.org/legal/peraturan/uu/1997/12/pasal/0002/versi/19970507/ayat/0004/huruf/a/text> .
-<http://example.org/legal/peraturan/uu/1997/12/pasal/0002/versi/19970507/ayat/0004/huruf> legal:huruf <http://example.org/legal/peraturan/uu/1997/12/pasal/0002/versi/19970507/ayat/0004/huruf/b> .
-<http://example.org/legal/peraturan/uu/1997/12/pasal/0002/versi/19970507/ayat/0004/huruf/b> legal:nomor "b" .
-<http://example.org/legal/peraturan/uu/1997/12/pasal/0002/versi/19970507/ayat/0004/huruf/b/text> legal:teks "Bukan warga negara Indonesia, bukan penduduk Indonesia dan bukan badan hukum Indonesia yang untuk pertama kali diumumkan di Indonesia atau diumumkan di Indonesia dalam jangka waktu 30 (tiga puluh) hari sejak ciptaan itu diumumkan untuk pertama kali di luar Indonesia;" .
-<http://example.org/legal/peraturan/uu/1997/12/pasal/0002/versi/19970507/ayat/0004/huruf/b> legal:segmen <http://example.org/legal/peraturan/uu/1997/12/pasal/0002/versi/19970507/ayat/0004/huruf/b/text> .
-<http://example.org/legal/peraturan/uu/1997/12/pasal/0002/versi/19970507/ayat/0004/huruf> legal:huruf <http://example.org/legal/peraturan/uu/1997/12/pasal/0002/versi/19970507/ayat/0004/huruf/c> .
-<http://example.org/legal/peraturan/uu/1997/12/pasal/0002/versi/19970507/ayat/0004/huruf/c> legal:nomor "c" .
-<http://example.org/legal/peraturan/uu/1997/12/pasal/0002/versi/19970507/ayat/0004/huruf/c/text> legal:teks "Bukan warga negara Indonesia, bukan penduduk Indonesia dan bukan badan hukum Indonesia, dengan ketentuan: 1) Negaranya mempunyai perjanjian bilateral mengenai perlindungan Hak Cipta dan Hak - hak Yang Berkaitan dengan Hak Cipta dengan Negara Republik Indonesia; 2) Negaranya dan Negara Republik Indonesia merupakan pihak atau peserta dalam suatu pe rjanjian multilateral yang sama mengenai perlindungan Hak Cipta dan Hak - hak Yang Berkaitan degan Hak Cipta. Pasal II Undang - undang ini mulai berlaku pada tanggal diundangkan. Agar setiap orang mengetahuinya, memerintahkan pengundangan Undang - undang ini dengan penempatannya dalam Lembaran Negara Republik Indonesia." .
-<http://example.org/legal/peraturan/uu/1997/12/pasal/0002/versi/19970507/ayat/0004/huruf/c> legal:segmen <http://example.org/legal/peraturan/uu/1997/12/pasal/0002/versi/19970507/ayat/0004/huruf/c/text> .
-<http://example.org/legal/peraturan/uu/1997/12> legal:disahkanPada "1997-05-07"^^xsd:date .
-<http://example.org/legal/peraturan/uu/1997/12> legal:jenisPeraturan <http://example.org/legal/ontology/jenisPeraturan/UU> .
-<http://example.org/legal/peraturan/uu/1997/12> legal:tentang " PERUBAHAN ATAS UNDANG - UNDANG NOMOR 6 TAHUN 1982 TENTANG HAK CIPTA SEBAGAIMANA TELAH DIUBAH DENGAN UNDANG - UNDANG NOMOR 7 TAHUN 1987" .
-<http://example.org/legal/peraturan/uu/1997/12> legal:mengingat <http://example.org/legal/peraturan/uu/1997/12/mengingat> .
-<http://example.org/legal/peraturan/uu/1997/12/mengingat> legal:daftarHuruf <http://example.org/legal/peraturan/uu/1997/12/mengingat/huruf> .
-<http://example.org/legal/peraturan/uu/1997/12/mengingat/huruf/description> legal:teks "" .
-<http://example.org/legal/peraturan/uu/1997/12/mengingat/huruf> legal:segmen <http://example.org/legal/peraturan/uu/1997/12/mengingat/huruf/description> .
-<http://example.org/legal/peraturan/uu/1997/12/mengingat/huruf> legal:huruf <http://example.org/legal/peraturan/uu/1997/12/mengingat/huruf/0001> .
-<http://example.org/legal/peraturan/uu/1997/12/mengingat/huruf/0001> legal:nomor "1" .
-<http://example.org/legal/peraturan/uu/1997/12/mengingat/huruf/0001/text> legal:teks "Pasal 5 ayat (1), Pasal 20 ayat (1), dan Pasal 33 Undang - Undang Dasar 1945." .
-<http://example.org/legal/peraturan/uu/1997/12/mengingat/huruf/0001> legal:segmen <http://example.org/legal/peraturan/uu/1997/12/mengingat/huruf/0001/text> .
-<http://example.org/legal/peraturan/uu/1997/12/mengingat/huruf> legal:huruf <http://example.org/legal/peraturan/uu/1997/12/mengingat/huruf/0002> .
-<http://example.org/legal/peraturan/uu/1997/12/mengingat/huruf/0002> legal:nomor "2" .
-<http://example.org/legal/peraturan/uu/1997/12/mengingat/huruf/0002/text> legal:teks "U ndang - undang Nomor 6 Tahun 1982 tentang Hak Cipta (Lembaran Negara Tahun 1982 Nomor 15, Tambahan Lembaran Negara Nomor 3217) sebagaimana telah diubah dengan Undang - undang Nomor 7 Tahun 1987 (Lembaran Negara Tahun 1987 Nomor 42, Tambahan Lembaran Negara Nom or 3362);" .
-<http://example.org/legal/peraturan/uu/1997/12/mengingat/huruf/0002> legal:segmen <http://example.org/legal/peraturan/uu/1997/12/mengingat/huruf/0002/text> .
-<http://example.org/legal/peraturan/uu/1997/12/mengingat/huruf> legal:huruf <http://example.org/legal/peraturan/uu/1997/12/mengingat/huruf/0003> .
-<http://example.org/legal/peraturan/uu/1997/12/mengingat/huruf/0003> legal:nomor "3" .
-<http://example.org/legal/peraturan/uu/1997/12/mengingat/huruf/0003/text> legal:teks "Undang - undang Nomor 7 Tahun 1994 tentang Pengesahan Agreement Establishing The World Trade Organization (Persetujuan Pembentukan Organisasi Perdagangan Dunia) (Lembaran Negara Tahun 1994 Nomor 57, Tambahan Lembaran Negara Nomor 3564); Denga n persetujuan DEWAN PERWAKILAN RAKYAT REPUBLIK INDONESIA MEMUTUSKAN: MENETAPKAN : UNDANG - UNDANG TENTANG PERUBAHAN ATAS UNDANG - UNDANG NOMOR 6 TAHUN 1982 TENTANG HAK CIPTA SEBAGAIMANA TELAH DIUBAH DENGAN UNDANG - UNDANG NOMOR 7 TAHUN 1987." .
-<http://example.org/legal/peraturan/uu/1997/12/mengingat/huruf/0003> legal:segmen <http://example.org/legal/peraturan/uu/1997/12/mengingat/huruf/0003/text> .
-<http://example.org/legal/peraturan/uu/1997/12> legal:menimbang <http://example.org/legal/peraturan/uu/1997/12/menimbang> .
-<http://example.org/legal/peraturan/uu/1997/12/menimbang> legal:daftarHuruf <http://example.org/legal/peraturan/uu/1997/12/menimbang/huruf> .
-<http://example.org/legal/peraturan/uu/1997/12/menimbang/huruf/description> legal:teks "" .
-<http://example.org/legal/peraturan/uu/1997/12/menimbang/huruf> legal:segmen <http://example.org/legal/peraturan/uu/1997/12/menimbang/huruf/description> .
-<http://example.org/legal/peraturan/uu/1997/12/menimbang/huruf> legal:huruf <http://example.org/legal/peraturan/uu/1997/12/menimbang/huruf/a> .
-<http://example.org/legal/peraturan/uu/1997/12/menimbang/huruf/a> legal:nomor "a" .
-<http://example.org/legal/peraturan/uu/1997/12/menimbang/huruf/a/text> legal:teks "bahwa dengan adanya perkembangan kehidupan yang berlangsung cepat, terutama di bidang perekonomian baik di tingkat nasional maupun internasional, pemberian perlindungan hukum yang semakin efektif terhadap Hak Atas Kekayaan Intelektual, khususnya di bidang Hak Cipta perlu lebih ditingkatkan dalam rangka mewujudkan iklim yang lebih baik bagi tumbuh dan berkembangnya semangat mencipta di bidang ilmu pengetahuan, seni dan sastra, yang sangat diperlukan dalam pelaksanaan pembangunan nasional yang bertujuan terc iptanya masyarakat Indonesia yang adil dan makmur, maju, dan mandiri berdasarkan Pancasila dan Undang - Undang Dasar 1945;" .
-<http://example.org/legal/peraturan/uu/1997/12/menimbang/huruf/a> legal:segmen <http://example.org/legal/peraturan/uu/1997/12/menimbang/huruf/a/text> .
-<http://example.org/legal/peraturan/uu/1997/12/menimbang/huruf> legal:huruf <http://example.org/legal/peraturan/uu/1997/12/menimbang/huruf/b> .
-<http://example.org/legal/peraturan/uu/1997/12/menimbang/huruf/b> legal:nomor "b" .
-<http://example.org/legal/peraturan/uu/1997/12/menimbang/huruf/b/text> legal:teks "bahwa dengan penerimaan dan keikutsertaan Indonesia dalam Persetujuan tentang Aspek - aspek Dagang Hak Atas Kekayaan Intelektual (Ag reement on Trade Related Aspects of Intellectual Property Rights, Including Trade in Counterfeit Goods/TRIPs) yang merupakan bagian dari Persetujuan Pembentukan Organisasi Perdagangan Dunia (Agreement Establishing the World Trade Organization) sebagaimana telah disahkan dengan Undang - undang, berlanjut dengan melaksanakan kewajiban untuk menyesuaikan peraturan perundang - undangan nasional di bidang Hak Atas Kekayaan Intelektual termasuk Hak Cipta terhadap persetujuan internasional tersebut;" .
-<http://example.org/legal/peraturan/uu/1997/12/menimbang/huruf/b> legal:segmen <http://example.org/legal/peraturan/uu/1997/12/menimbang/huruf/b/text> .
-<http://example.org/legal/peraturan/uu/1997/12/menimbang/huruf> legal:huruf <http://example.org/legal/peraturan/uu/1997/12/menimbang/huruf/c> .
-<http://example.org/legal/peraturan/uu/1997/12/menimbang/huruf/c> legal:nomor "c" .
-<http://example.org/legal/peraturan/uu/1997/12/menimbang/huruf/c/text> legal:teks "bahwa berdasarkan pertimbangan sebagaimana tersebut dalam huruf a dan b, serta memperhatikan penilaian terhadap segala pengalaman, khususnya kekurangan selama pelaksanaan Undang - undang tentang Hak Cipta, dipandang perlu untuk mengubah dan menyempurnakan beberapa ketentuan Undang - undang Nomor 6 Tahun 1982 tentang Hak Cipta sebagaimana telah diubah dengan Undang - undang Nomor 7 Tahun 1987 dengan Undang - undang;" .
-<http://example.org/legal/peraturan/uu/1997/12/menimbang/huruf/c> legal:segmen <http://example.org/legal/peraturan/uu/1997/12/menimbang/huruf/c/text> .
-<http://example.org/legal/peraturan/uu/1997/12> legal:disahkanOleh "SOEHARTO" .
-<http://example.org/legal/peraturan/uu/1997/12> legal:disahkanDi "Jakarta" .
-<http://example.org/legal/peraturan/uu/1997/12> legal:jabatanPengesah "PRESIDEN REPUBLIK INDONESIA" .
-<http://example.org/legal/peraturan/uu/1997/12> legal:tahun 1997 .
-<http://example.org/legal/peraturan/uu/1997/12> legal:nomor 12 .
-<http://example.org/legal/peraturan/uu/1997/12> legal:bahasa "id" .
-<http://example.org/legal/peraturan/uu/1997/12> legal:yurisdiksi "Indonesia" .
-<http://example.org/legal/peraturan/uu/1997/12> a legal:Peraturan .
-<http://example.org/legal/peraturan/uu/1997/12/daftarPasal> a legal:DaftarPasal .
-<http://example.org/legal/peraturan/uu/1997/12/pasal/0001> a legal:Pasal .
-<http://example.org/legal/peraturan/uu/1997/12/pasal/0001/versi/19970507> a legal:VersiPasal .
-<http://example.org/legal/peraturan/uu/1997/12/pasal/0001/versi/19970507/huruf/description> a legal:Segmen .
-<http://example.org/legal/peraturan/uu/1997/12/pasal/0001/versi/19970507/huruf> a legal:DaftarHuruf .
-<http://example.org/legal/peraturan/uu/1997/12/pasal/0001/versi/19970507/huruf/0001> a legal:Huruf .
-<http://example.org/legal/peraturan/uu/1997/12/pasal/0001/versi/19970507/huruf/0001/text> a legal:Segmen .
-<http://example.org/legal/peraturan/uu/1997/12/pasal/0001/versi/19970507/huruf/0002> a legal:Huruf .
-<http://example.org/legal/peraturan/uu/1997/12/pasal/0001/versi/19970507/huruf/0002/text> a legal:Segmen .
-<http://example.org/legal/peraturan/uu/1997/12/pasal/0001/versi/19970507/huruf/0003> a legal:Huruf .
-<http://example.org/legal/peraturan/uu/1997/12/pasal/0001/versi/19970507/huruf/0003/text> a legal:Segmen .
-<http://example.org/legal/peraturan/uu/1997/12/pasal/0001/versi/19970507/huruf/0004> a legal:Huruf .
-<http://example.org/legal/peraturan/uu/1997/12/pasal/0001/versi/19970507/huruf/0004/text> a legal:Segmen .
-<http://example.org/legal/peraturan/uu/1997/12/pasal/0001/versi/19970507/huruf/0005> a legal:Huruf .
-<http://example.org/legal/peraturan/uu/1997/12/pasal/0001/versi/19970507/huruf/0005/text> a legal:Segmen .
-<http://example.org/legal/peraturan/uu/1997/12/pasal/0001/versi/19970507/huruf/0006> a legal:Huruf .
-<http://example.org/legal/peraturan/uu/1997/12/pasal/0001/versi/19970507/huruf/0006/text> a legal:Segmen .
-<http://example.org/legal/peraturan/uu/1997/12/pasal/0001/versi/19970507/huruf/0007> a legal:Huruf .
-<http://example.org/legal/peraturan/uu/1997/12/pasal/0001/versi/19970507/huruf/0007/text> a legal:Segmen .
-<http://example.org/legal/peraturan/uu/1997/12/pasal/0001/versi/19970507/huruf/0008> a legal:Huruf .
-<http://example.org/legal/peraturan/uu/1997/12/pasal/0001/versi/19970507/huruf/0008/text> a legal:Segmen .
-<http://example.org/legal/peraturan/uu/1997/12/pasal/0001/versi/19970507/huruf/0009> a legal:Huruf .
-<http://example.org/legal/peraturan/uu/1997/12/pasal/0001/versi/19970507/huruf/0009/text> a legal:Segmen .
-<http://example.org/legal/peraturan/uu/1997/12/pasal/0001/versi/19970507/huruf/0010> a legal:Huruf .
-<http://example.org/legal/peraturan/uu/1997/12/pasal/0001/versi/19970507/huruf/0010/text> a legal:Segmen .
-<http://example.org/legal/peraturan/uu/1997/12/pasal/0001/versi/19970507/huruf/0011> a legal:Huruf .
-<http://example.org/legal/peraturan/uu/1997/12/pasal/0001/versi/19970507/huruf/0011/text> a legal:Segmen .
-<http://example.org/legal/peraturan/uu/1997/12/pasal/0002> a legal:Pasal .
-<http://example.org/legal/peraturan/uu/1997/12/pasal/0002/versi/19970507> a legal:VersiPasal .
-<http://example.org/legal/peraturan/uu/1997/12/pasal/0002/versi/19970507/ayat> a legal:DaftarAyat .
-<http://example.org/legal/peraturan/uu/1997/12/pasal/0002/versi/19970507/ayat/0001> a legal:Ayat .
-<http://example.org/legal/peraturan/uu/1997/12/pasal/0002/versi/19970507/ayat/0001/text> a legal:Segmen .
-<http://example.org/legal/peraturan/uu/1997/12/pasal/0002/versi/19970507/ayat/0002> a legal:Ayat .
-<http://example.org/legal/peraturan/uu/1997/12/pasal/0002/versi/19970507/ayat/0002/huruf/description> a legal:Segmen .
-<http://example.org/legal/peraturan/uu/1997/12/pasal/0002/versi/19970507/ayat/0002/huruf> a legal:DaftarHuruf .
-<http://example.org/legal/peraturan/uu/1997/12/pasal/0002/versi/19970507/ayat/0002/huruf/a> a legal:Huruf .
-<http://example.org/legal/peraturan/uu/1997/12/pasal/0002/versi/19970507/ayat/0002/huruf/a/text> a legal:Segmen .
-<http://example.org/legal/peraturan/uu/1997/12/pasal/0002/versi/19970507/ayat/0002/huruf/b> a legal:Huruf .
-<http://example.org/legal/peraturan/uu/1997/12/pasal/0002/versi/19970507/ayat/0002/huruf/b/text> a legal:Segmen .
-<http://example.org/legal/peraturan/uu/1997/12/pasal/0002/versi/19970507/ayat/0002/huruf/c> a legal:Huruf .
-<http://example.org/legal/peraturan/uu/1997/12/pasal/0002/versi/19970507/ayat/0002/huruf/c/text> a legal:Segmen .
-<http://example.org/legal/peraturan/uu/1997/12/pasal/0002/versi/19970507/ayat/0002/huruf/d> a legal:Huruf .
-<http://example.org/legal/peraturan/uu/1997/12/pasal/0002/versi/19970507/ayat/0002/huruf/d/text> a legal:Segmen .
-<http://example.org/legal/peraturan/uu/1997/12/pasal/0002/versi/19970507/ayat/0002/huruf/e> a legal:Huruf .
-<http://example.org/legal/peraturan/uu/1997/12/pasal/0002/versi/19970507/ayat/0002/huruf/e/text> a legal:Segmen .
-<http://example.org/legal/peraturan/uu/1997/12/pasal/0002/versi/19970507/ayat/0002/huruf/f> a legal:Huruf .
-<http://example.org/legal/peraturan/uu/1997/12/pasal/0002/versi/19970507/ayat/0002/huruf/f/text> a legal:Segmen .
-<http://example.org/legal/peraturan/uu/1997/12/pasal/0002/versi/19970507/ayat/0003> a legal:Ayat .
-<http://example.org/legal/peraturan/uu/1997/12/pasal/0002/versi/19970507/ayat/0003/text> a legal:Segmen .
-<http://example.org/legal/peraturan/uu/1997/12/pasal/0002/versi/19970507/ayat/0004> a legal:Ayat .
-<http://example.org/legal/peraturan/uu/1997/12/pasal/0002/versi/19970507/ayat/0004/huruf/description> a legal:Segmen .
-<http://example.org/legal/peraturan/uu/1997/12/pasal/0002/versi/19970507/ayat/0004/huruf> a legal:DaftarHuruf .
-<http://example.org/legal/peraturan/uu/1997/12/pasal/0002/versi/19970507/ayat/0004/huruf/a> a legal:Huruf .
-<http://example.org/legal/peraturan/uu/1997/12/pasal/0002/versi/19970507/ayat/0004/huruf/a/text> a legal:Segmen .
-<http://example.org/legal/peraturan/uu/1997/12/pasal/0002/versi/19970507/ayat/0004/huruf/b> a legal:Huruf .
-<http://example.org/legal/peraturan/uu/1997/12/pasal/0002/versi/19970507/ayat/0004/huruf/b/text> a legal:Segmen .
-<http://example.org/legal/peraturan/uu/1997/12/pasal/0002/versi/19970507/ayat/0004/huruf/c> a legal:Huruf .
-<http://example.org/legal/peraturan/uu/1997/12/pasal/0002/versi/19970507/ayat/0004/huruf/c/text> a legal:Segmen .
-<http://example.org/legal/peraturan/uu/1997/12/mengingat> a legal:Mengingat .
-<http://example.org/legal/peraturan/uu/1997/12/mengingat/huruf/description> a legal:Segmen .
-<http://example.org/legal/peraturan/uu/1997/12/mengingat/huruf> a legal:DaftarHuruf .
-<http://example.org/legal/peraturan/uu/1997/12/mengingat/huruf/0001> a legal:Huruf .
-<http://example.org/legal/peraturan/uu/1997/12/mengingat/huruf/0001/text> a legal:Segmen .
-<http://example.org/legal/peraturan/uu/1997/12/mengingat/huruf/0002> a legal:Huruf .
-<http://example.org/legal/peraturan/uu/1997/12/mengingat/huruf/0002/text> a legal:Segmen .
-<http://example.org/legal/peraturan/uu/1997/12/mengingat/huruf/0003> a legal:Huruf .
-<http://example.org/legal/peraturan/uu/1997/12/mengingat/huruf/0003/text> a legal:Segmen .
-<http://example.org/legal/peraturan/uu/1997/12/menimbang> a legal:Menimbang .
-<http://example.org/legal/peraturan/uu/1997/12/menimbang/huruf/description> a legal:Segmen .
-<http://example.org/legal/peraturan/uu/1997/12/menimbang/huruf> a legal:DaftarHuruf .
-<http://example.org/legal/peraturan/uu/1997/12/menimbang/huruf/a> a legal:Huruf .
-<http://example.org/legal/peraturan/uu/1997/12/menimbang/huruf/a/text> a legal:Segmen .
-<http://example.org/legal/peraturan/uu/1997/12/menimbang/huruf/b> a legal:Huruf .
-<http://example.org/legal/peraturan/uu/1997/12/menimbang/huruf/b/text> a legal:Segmen .
-<http://example.org/legal/peraturan/uu/1997/12/menimbang/huruf/c> a legal:Huruf .
-<http://example.org/legal/peraturan/uu/1997/12/menimbang/huruf/c/text> a legal:Segmen .
-<http://example.org/legal/peraturan/uu/1997/12/daftarPasal> legal:bagianDari <http://example.org/legal/peraturan/uu/1997/12> .
-<http://example.org/legal/peraturan/uu/1997/12/pasal/0001> legal:bagianDari <http://example.org/legal/peraturan/uu/1997/12/daftarPasal> .
-<http://example.org/legal/peraturan/uu/1997/12/pasal/0001/versi/19970507> legal:bagianDari <http://example.org/legal/peraturan/uu/1997/12/pasal/0001> .
-<http://example.org/legal/peraturan/uu/1997/12/pasal/0001> legal:bagianDari <http://example.org/legal/peraturan/uu/1997/12> .
-<http://example.org/legal/peraturan/uu/1997/12/pasal/0001/versi/19970507/huruf> legal:bagianDari <http://example.org/legal/peraturan/uu/1997/12/pasal/0001/versi/19970507> .
-<http://example.org/legal/peraturan/uu/1997/12/pasal/0001/versi/19970507/huruf/description> legal:bagianDari <http://example.org/legal/peraturan/uu/1997/12/pasal/0001/versi/19970507/huruf> .
-<http://example.org/legal/peraturan/uu/1997/12/pasal/0001/versi/19970507/huruf/0001> legal:bagianDari <http://example.org/legal/peraturan/uu/1997/12/pasal/0001/versi/19970507/huruf> .
-<http://example.org/legal/peraturan/uu/1997/12/pasal/0001/versi/19970507/huruf/0001/text> legal:bagianDari <http://example.org/legal/peraturan/uu/1997/12/pasal/0001/versi/19970507/huruf/0001> .
-<http://example.org/legal/peraturan/uu/1997/12/pasal/0001/versi/19970507/huruf/0002> legal:bagianDari <http://example.org/legal/peraturan/uu/1997/12/pasal/0001/versi/19970507/huruf> .
-<http://example.org/legal/peraturan/uu/1997/12/pasal/0001/versi/19970507/huruf/0002/text> legal:bagianDari <http://example.org/legal/peraturan/uu/1997/12/pasal/0001/versi/19970507/huruf/0002> .
-<http://example.org/legal/peraturan/uu/1997/12/pasal/0001/versi/19970507/huruf/0003> legal:bagianDari <http://example.org/legal/peraturan/uu/1997/12/pasal/0001/versi/19970507/huruf> .
-<http://example.org/legal/peraturan/uu/1997/12/pasal/0001/versi/19970507/huruf/0003/text> legal:bagianDari <http://example.org/legal/peraturan/uu/1997/12/pasal/0001/versi/19970507/huruf/0003> .
-<http://example.org/legal/peraturan/uu/1997/12/pasal/0001/versi/19970507/huruf/0004> legal:bagianDari <http://example.org/legal/peraturan/uu/1997/12/pasal/0001/versi/19970507/huruf> .
-<http://example.org/legal/peraturan/uu/1997/12/pasal/0001/versi/19970507/huruf/0004/text> legal:bagianDari <http://example.org/legal/peraturan/uu/1997/12/pasal/0001/versi/19970507/huruf/0004> .
-<http://example.org/legal/peraturan/uu/1997/12/pasal/0001/versi/19970507/huruf/0005> legal:bagianDari <http://example.org/legal/peraturan/uu/1997/12/pasal/0001/versi/19970507/huruf> .
-<http://example.org/legal/peraturan/uu/1997/12/pasal/0001/versi/19970507/huruf/0005/text> legal:bagianDari <http://example.org/legal/peraturan/uu/1997/12/pasal/0001/versi/19970507/huruf/0005> .
-<http://example.org/legal/peraturan/uu/1997/12/pasal/0001/versi/19970507/huruf/0006> legal:bagianDari <http://example.org/legal/peraturan/uu/1997/12/pasal/0001/versi/19970507/huruf> .
-<http://example.org/legal/peraturan/uu/1997/12/pasal/0001/versi/19970507/huruf/0006/text> legal:bagianDari <http://example.org/legal/peraturan/uu/1997/12/pasal/0001/versi/19970507/huruf/0006> .
-<http://example.org/legal/peraturan/uu/1997/12/pasal/0001/versi/19970507/huruf/0007> legal:bagianDari <http://example.org/legal/peraturan/uu/1997/12/pasal/0001/versi/19970507/huruf> .
-<http://example.org/legal/peraturan/uu/1997/12/pasal/0001/versi/19970507/huruf/0007/text> legal:bagianDari <http://example.org/legal/peraturan/uu/1997/12/pasal/0001/versi/19970507/huruf/0007> .
-<http://example.org/legal/peraturan/uu/1997/12/pasal/0001/versi/19970507/huruf/0008> legal:bagianDari <http://example.org/legal/peraturan/uu/1997/12/pasal/0001/versi/19970507/huruf> .
-<http://example.org/legal/peraturan/uu/1997/12/pasal/0001/versi/19970507/huruf/0008/text> legal:bagianDari <http://example.org/legal/peraturan/uu/1997/12/pasal/0001/versi/19970507/huruf/0008> .
-<http://example.org/legal/peraturan/uu/1997/12/pasal/0001/versi/19970507/huruf/0009> legal:bagianDari <http://example.org/legal/peraturan/uu/1997/12/pasal/0001/versi/19970507/huruf> .
-<http://example.org/legal/peraturan/uu/1997/12/pasal/0001/versi/19970507/huruf/0009/text> legal:bagianDari <http://example.org/legal/peraturan/uu/1997/12/pasal/0001/versi/19970507/huruf/0009> .
-<http://example.org/legal/peraturan/uu/1997/12/pasal/0001/versi/19970507/huruf/0010> legal:bagianDari <http://example.org/legal/peraturan/uu/1997/12/pasal/0001/versi/19970507/huruf> .
-<http://example.org/legal/peraturan/uu/1997/12/pasal/0001/versi/19970507/huruf/0010/text> legal:bagianDari <http://example.org/legal/peraturan/uu/1997/12/pasal/0001/versi/19970507/huruf/0010> .
-<http://example.org/legal/peraturan/uu/1997/12/pasal/0001/versi/19970507/huruf/0011> legal:bagianDari <http://example.org/legal/peraturan/uu/1997/12/pasal/0001/versi/19970507/huruf> .
-<http://example.org/legal/peraturan/uu/1997/12/pasal/0001/versi/19970507/huruf/0011/text> legal:bagianDari <http://example.org/legal/peraturan/uu/1997/12/pasal/0001/versi/19970507/huruf/0011> .
-<http://example.org/legal/peraturan/uu/1997/12/pasal/0002> legal:bagianDari <http://example.org/legal/peraturan/uu/1997/12/daftarPasal> .
-<http://example.org/legal/peraturan/uu/1997/12/pasal/0002/versi/19970507> legal:bagianDari <http://example.org/legal/peraturan/uu/1997/12/pasal/0002> .
-<http://example.org/legal/peraturan/uu/1997/12/pasal/0002> legal:bagianDari <http://example.org/legal/peraturan/uu/1997/12> .
-<http://example.org/legal/peraturan/uu/1997/12/pasal/0002/versi/19970507/ayat> legal:bagianDari <http://example.org/legal/peraturan/uu/1997/12/pasal/0002/versi/19970507> .
-<http://example.org/legal/peraturan/uu/1997/12/pasal/0002/versi/19970507/ayat/0001> legal:bagianDari <http://example.org/legal/peraturan/uu/1997/12/pasal/0002/versi/19970507/ayat> .
-<http://example.org/legal/peraturan/uu/1997/12/pasal/0002/versi/19970507/ayat/0001/text> legal:bagianDari <http://example.org/legal/peraturan/uu/1997/12/pasal/0002/versi/19970507/ayat/0001> .
-<http://example.org/legal/peraturan/uu/1997/12/pasal/0002/versi/19970507/ayat/0002> legal:bagianDari <http://example.org/legal/peraturan/uu/1997/12/pasal/0002/versi/19970507/ayat> .
-<http://example.org/legal/peraturan/uu/1997/12/pasal/0002/versi/19970507/ayat/0002/huruf> legal:bagianDari <http://example.org/legal/peraturan/uu/1997/12/pasal/0002/versi/19970507/ayat/0002> .
-<http://example.org/legal/peraturan/uu/1997/12/pasal/0002/versi/19970507/ayat/0002/huruf/description> legal:bagianDari <http://example.org/legal/peraturan/uu/1997/12/pasal/0002/versi/19970507/ayat/0002/huruf> .
-<http://example.org/legal/peraturan/uu/1997/12/pasal/0002/versi/19970507/ayat/0002/huruf/a> legal:bagianDari <http://example.org/legal/peraturan/uu/1997/12/pasal/0002/versi/19970507/ayat/0002/huruf> .
-<http://example.org/legal/peraturan/uu/1997/12/pasal/0002/versi/19970507/ayat/0002/huruf/a/text> legal:bagianDari <http://example.org/legal/peraturan/uu/1997/12/pasal/0002/versi/19970507/ayat/0002/huruf/a> .
-<http://example.org/legal/peraturan/uu/1997/12/pasal/0002/versi/19970507/ayat/0002/huruf/b> legal:bagianDari <http://example.org/legal/peraturan/uu/1997/12/pasal/0002/versi/19970507/ayat/0002/huruf> .
-<http://example.org/legal/peraturan/uu/1997/12/pasal/0002/versi/19970507/ayat/0002/huruf/b/text> legal:bagianDari <http://example.org/legal/peraturan/uu/1997/12/pasal/0002/versi/19970507/ayat/0002/huruf/b> .
-<http://example.org/legal/peraturan/uu/1997/12/pasal/0002/versi/19970507/ayat/0002/huruf/c> legal:bagianDari <http://example.org/legal/peraturan/uu/1997/12/pasal/0002/versi/19970507/ayat/0002/huruf> .
-<http://example.org/legal/peraturan/uu/1997/12/pasal/0002/versi/19970507/ayat/0002/huruf/c/text> legal:bagianDari <http://example.org/legal/peraturan/uu/1997/12/pasal/0002/versi/19970507/ayat/0002/huruf/c> .
-<http://example.org/legal/peraturan/uu/1997/12/pasal/0002/versi/19970507/ayat/0002/huruf/d> legal:bagianDari <http://example.org/legal/peraturan/uu/1997/12/pasal/0002/versi/19970507/ayat/0002/huruf> .
-<http://example.org/legal/peraturan/uu/1997/12/pasal/0002/versi/19970507/ayat/0002/huruf/d/text> legal:bagianDari <http://example.org/legal/peraturan/uu/1997/12/pasal/0002/versi/19970507/ayat/0002/huruf/d> .
-<http://example.org/legal/peraturan/uu/1997/12/pasal/0002/versi/19970507/ayat/0002/huruf/e> legal:bagianDari <http://example.org/legal/peraturan/uu/1997/12/pasal/0002/versi/19970507/ayat/0002/huruf> .
-<http://example.org/legal/peraturan/uu/1997/12/pasal/0002/versi/19970507/ayat/0002/huruf/e/text> legal:bagianDari <http://example.org/legal/peraturan/uu/1997/12/pasal/0002/versi/19970507/ayat/0002/huruf/e> .
-<http://example.org/legal/peraturan/uu/1997/12/pasal/0002/versi/19970507/ayat/0002/huruf/f> legal:bagianDari <http://example.org/legal/peraturan/uu/1997/12/pasal/0002/versi/19970507/ayat/0002/huruf> .
-<http://example.org/legal/peraturan/uu/1997/12/pasal/0002/versi/19970507/ayat/0002/huruf/f/text> legal:bagianDari <http://example.org/legal/peraturan/uu/1997/12/pasal/0002/versi/19970507/ayat/0002/huruf/f> .
-<http://example.org/legal/peraturan/uu/1997/12/pasal/0002/versi/19970507/ayat/0003> legal:bagianDari <http://example.org/legal/peraturan/uu/1997/12/pasal/0002/versi/19970507/ayat> .
-<http://example.org/legal/peraturan/uu/1997/12/pasal/0002/versi/19970507/ayat/0003/text> legal:bagianDari <http://example.org/legal/peraturan/uu/1997/12/pasal/0002/versi/19970507/ayat/0003> .
-<http://example.org/legal/peraturan/uu/1997/12/pasal/0002/versi/19970507/ayat/0004> legal:bagianDari <http://example.org/legal/peraturan/uu/1997/12/pasal/0002/versi/19970507/ayat> .
-<http://example.org/legal/peraturan/uu/1997/12/pasal/0002/versi/19970507/ayat/0004/huruf> legal:bagianDari <http://example.org/legal/peraturan/uu/1997/12/pasal/0002/versi/19970507/ayat/0004> .
-<http://example.org/legal/peraturan/uu/1997/12/pasal/0002/versi/19970507/ayat/0004/huruf/description> legal:bagianDari <http://example.org/legal/peraturan/uu/1997/12/pasal/0002/versi/19970507/ayat/0004/huruf> .
-<http://example.org/legal/peraturan/uu/1997/12/pasal/0002/versi/19970507/ayat/0004/huruf/a> legal:bagianDari <http://example.org/legal/peraturan/uu/1997/12/pasal/0002/versi/19970507/ayat/0004/huruf> .
-<http://example.org/legal/peraturan/uu/1997/12/pasal/0002/versi/19970507/ayat/0004/huruf/a/text> legal:bagianDari <http://example.org/legal/peraturan/uu/1997/12/pasal/0002/versi/19970507/ayat/0004/huruf/a> .
-<http://example.org/legal/peraturan/uu/1997/12/pasal/0002/versi/19970507/ayat/0004/huruf/b> legal:bagianDari <http://example.org/legal/peraturan/uu/1997/12/pasal/0002/versi/19970507/ayat/0004/huruf> .
-<http://example.org/legal/peraturan/uu/1997/12/pasal/0002/versi/19970507/ayat/0004/huruf/b/text> legal:bagianDari <http://example.org/legal/peraturan/uu/1997/12/pasal/0002/versi/19970507/ayat/0004/huruf/b> .
-<http://example.org/legal/peraturan/uu/1997/12/pasal/0002/versi/19970507/ayat/0004/huruf/c> legal:bagianDari <http://example.org/legal/peraturan/uu/1997/12/pasal/0002/versi/19970507/ayat/0004/huruf> .
-<http://example.org/legal/peraturan/uu/1997/12/pasal/0002/versi/19970507/ayat/0004/huruf/c/text> legal:bagianDari <http://example.org/legal/peraturan/uu/1997/12/pasal/0002/versi/19970507/ayat/0004/huruf/c> .
-<http://example.org/legal/peraturan/uu/1997/12/mengingat/huruf> legal:bagianDari <http://example.org/legal/peraturan/uu/1997/12/mengingat> .
-<http://example.org/legal/peraturan/uu/1997/12/mengingat/huruf/description> legal:bagianDari <http://example.org/legal/peraturan/uu/1997/12/mengingat/huruf> .
-<http://example.org/legal/peraturan/uu/1997/12/mengingat/huruf/0001> legal:bagianDari <http://example.org/legal/peraturan/uu/1997/12/mengingat/huruf> .
-<http://example.org/legal/peraturan/uu/1997/12/mengingat/huruf/0001/text> legal:bagianDari <http://example.org/legal/peraturan/uu/1997/12/mengingat/huruf/0001> .
-<http://example.org/legal/peraturan/uu/1997/12/mengingat/huruf/0002> legal:bagianDari <http://example.org/legal/peraturan/uu/1997/12/mengingat/huruf> .
-<http://example.org/legal/peraturan/uu/1997/12/mengingat/huruf/0002/text> legal:bagianDari <http://example.org/legal/peraturan/uu/1997/12/mengingat/huruf/0002> .
-<http://example.org/legal/peraturan/uu/1997/12/mengingat/huruf/0003> legal:bagianDari <http://example.org/legal/peraturan/uu/1997/12/mengingat/huruf> .
-<http://example.org/legal/peraturan/uu/1997/12/mengingat/huruf/0003/text> legal:bagianDari <http://example.org/legal/peraturan/uu/1997/12/mengingat/huruf/0003> .
-<http://example.org/legal/peraturan/uu/1997/12/menimbang/huruf> legal:bagianDari <http://example.org/legal/peraturan/uu/1997/12/menimbang> .
-<http://example.org/legal/peraturan/uu/1997/12/menimbang/huruf/description> legal:bagianDari <http://example.org/legal/peraturan/uu/1997/12/menimbang/huruf> .
-<http://example.org/legal/peraturan/uu/1997/12/menimbang/huruf/a> legal:bagianDari <http://example.org/legal/peraturan/uu/1997/12/menimbang/huruf> .
-<http://example.org/legal/peraturan/uu/1997/12/menimbang/huruf/a/text> legal:bagianDari <http://example.org/legal/peraturan/uu/1997/12/menimbang/huruf/a> .
-<http://example.org/legal/peraturan/uu/1997/12/menimbang/huruf/b> legal:bagianDari <http://example.org/legal/peraturan/uu/1997/12/menimbang/huruf> .
-<http://example.org/legal/peraturan/uu/1997/12/menimbang/huruf/b/text> legal:bagianDari <http://example.org/legal/peraturan/uu/1997/12/menimbang/huruf/b> .
-<http://example.org/legal/peraturan/uu/1997/12/menimbang/huruf/c> legal:bagianDari <http://example.org/legal/peraturan/uu/1997/12/menimbang/huruf> .
-<http://example.org/legal/peraturan/uu/1997/12/menimbang/huruf/c/text> legal:bagianDari <http://example.org/legal/peraturan/uu/1997/12/menimbang/huruf/c> .
+<http://example.org/lex2kg/uu/1997/12> legal:daftarPasal <http://example.org/lex2kg/uu/1997/12/daftarPasal> .
+<http://example.org/lex2kg/uu/1997/12/daftarPasal> legal:pasal <http://example.org/lex2kg/uu/1997/12/pasal/0001> .
+<http://example.org/lex2kg/uu/1997/12/pasal/0001> legal:nomor 1 .
+<http://example.org/lex2kg/uu/1997/12/pasal/0001> legal:versi <http://example.org/lex2kg/uu/1997/12/pasal/0001/versi/19970507> .
+<http://example.org/lex2kg/uu/1997/12> legal:pasal <http://example.org/lex2kg/uu/1997/12/pasal/0001> .
+<http://example.org/lex2kg/uu/1997/12/pasal/0001/versi/19970507> legal:jenisVersi "orisinal" .
+<http://example.org/lex2kg/uu/1997/12/pasal/0001/versi/19970507> legal:tanggal "1997-05-07"^^xsd:date .
+<http://example.org/lex2kg/uu/1997/12/pasal/0001/versi/19970507> legal:teks "\n1. Pencipta adalah seorang atau beberapa orang secara bersama - sama yang atas inspirasinya lahir suatu ciptaan berdasarkan kemampuan pikiran, imajinasi, kecek atan, keterampilan atau keahlian yang dituangkan dalam bentuk yang khas dan bersifat pribadi.\n2. Ciptaan adalah hasil setiap karya Pencipta dalam bentuk khas dan menunjukkan keasliannya dalam lapangan ilmu pengetahuan, seni dan sastra.\n3. Pemegang Hak Cipta adalah Pencipta sebagai Pemilik Hak Cipta, atau orang yang menerima hak tersebut dari Pencipta, atau orang lain yang menerima lebih lanjut hak dari orang tersebut di atas.\n4. Pengumuman adalah pembacaan, penyuaraan, penyiaran atau penye baran sesuatu ciptaan, dengan menggunakan alat apapun dan dengan cara sedemikian rupa sehingga suatu ciptaan dapat dibaca, didengar atau dilihat oleh orang lain.\n5. Perbanyakan adalah menambah jumlah sesuatu ciptaan, dengan pembuatan yang sama, hampir sam a atau menyerupai ciptaan tersebut dengan mempergunakan bahan - bahan yang sama maupun tidak sama, termasuk mengalihwujudkan sesuatu ciptaan.\n6. Potret adalah gambaran dengan cara dan alat apapun dari wajah orang yang digambarkan baik bersama bagian tubuh l ainnya maupun tidak.\n7. Program Komputer adalah program yang diciptakan secara khusus sehingga memungkinkan komputer melakukan fungsi tertentu.\n8. Pelaku adalah aktor, penyanyi, pemusik, penari atau mereka yang menampilkan, memperagakan, mempertunjukkan, menyanyikan, menyampaikan, mendeklamasikan, atau memainkan suatu karya musik, drama, tari, sastra dan karya seni lainnya.\n9. Produser rekaman suara adalah orang atau badan hukum yang pertama kali merekam atau memiliki prakarsa untuk membiayai kegiatan pe rekaman suara atau bunyi baik dari suatu pertunjukan maupun suara atau bunyi lainnya.\n10. Lembaga penyiaran adalah organisasi penyelenggara siaran, baik Lembaga Penyaiaran Pemerintah maupun Lembaga Penyiaran Swasta yang berbentuk badan hukum yang melakuka n penyiaran atas suatu karya siaran dengan menggunakan transmisi dengan atau tanpa kabel atau melalui sistem elektromagnetik lainnya.\n11. Kantor Hak Cipta adalah satuan organisasi di lingkungan departemen yang melaksanakan tugas dan kewenan gan di bidang Hak Cipta. 2. Ketentuan Pasal 2 diubah, dengan menambah dua ketentuan baru yang dijadikan ayat (2) dan ayat (3) sehingga keseluruhan Pasal 2 berbunyi sebagai berikut:\n" .
+<http://example.org/lex2kg/uu/1997/12/pasal/0001/versi/19970507> legal:daftarHuruf <http://example.org/lex2kg/uu/1997/12/pasal/0001/versi/19970507/huruf> .
+<http://example.org/lex2kg/uu/1997/12/pasal/0001/versi/19970507/huruf/description> legal:teks "" .
+<http://example.org/lex2kg/uu/1997/12/pasal/0001/versi/19970507/huruf> legal:segmen <http://example.org/lex2kg/uu/1997/12/pasal/0001/versi/19970507/huruf/description> .
+<http://example.org/lex2kg/uu/1997/12/pasal/0001/versi/19970507/huruf> legal:huruf <http://example.org/lex2kg/uu/1997/12/pasal/0001/versi/19970507/huruf/0001> .
+<http://example.org/lex2kg/uu/1997/12/pasal/0001/versi/19970507/huruf/0001> legal:nomor "1" .
+<http://example.org/lex2kg/uu/1997/12/pasal/0001/versi/19970507/huruf/0001/text> legal:teks "Pencipta adalah seorang atau beberapa orang secara bersama - sama yang atas inspirasinya lahir suatu ciptaan berdasarkan kemampuan pikiran, imajinasi, kecek atan, keterampilan atau keahlian yang dituangkan dalam bentuk yang khas dan bersifat pribadi." .
+<http://example.org/lex2kg/uu/1997/12/pasal/0001/versi/19970507/huruf/0001> legal:segmen <http://example.org/lex2kg/uu/1997/12/pasal/0001/versi/19970507/huruf/0001/text> .
+<http://example.org/lex2kg/uu/1997/12/pasal/0001/versi/19970507/huruf> legal:huruf <http://example.org/lex2kg/uu/1997/12/pasal/0001/versi/19970507/huruf/0002> .
+<http://example.org/lex2kg/uu/1997/12/pasal/0001/versi/19970507/huruf/0002> legal:nomor "2" .
+<http://example.org/lex2kg/uu/1997/12/pasal/0001/versi/19970507/huruf/0002/text> legal:teks "Ciptaan adalah hasil setiap karya Pencipta dalam bentuk khas dan menunjukkan keasliannya dalam lapangan ilmu pengetahuan, seni dan sastra." .
+<http://example.org/lex2kg/uu/1997/12/pasal/0001/versi/19970507/huruf/0002> legal:segmen <http://example.org/lex2kg/uu/1997/12/pasal/0001/versi/19970507/huruf/0002/text> .
+<http://example.org/lex2kg/uu/1997/12/pasal/0001/versi/19970507/huruf> legal:huruf <http://example.org/lex2kg/uu/1997/12/pasal/0001/versi/19970507/huruf/0003> .
+<http://example.org/lex2kg/uu/1997/12/pasal/0001/versi/19970507/huruf/0003> legal:nomor "3" .
+<http://example.org/lex2kg/uu/1997/12/pasal/0001/versi/19970507/huruf/0003/text> legal:teks "Pemegang Hak Cipta adalah Pencipta sebagai Pemilik Hak Cipta, atau orang yang menerima hak tersebut dari Pencipta, atau orang lain yang menerima lebih lanjut hak dari orang tersebut di atas." .
+<http://example.org/lex2kg/uu/1997/12/pasal/0001/versi/19970507/huruf/0003> legal:segmen <http://example.org/lex2kg/uu/1997/12/pasal/0001/versi/19970507/huruf/0003/text> .
+<http://example.org/lex2kg/uu/1997/12/pasal/0001/versi/19970507/huruf> legal:huruf <http://example.org/lex2kg/uu/1997/12/pasal/0001/versi/19970507/huruf/0004> .
+<http://example.org/lex2kg/uu/1997/12/pasal/0001/versi/19970507/huruf/0004> legal:nomor "4" .
+<http://example.org/lex2kg/uu/1997/12/pasal/0001/versi/19970507/huruf/0004/text> legal:teks "Pengumuman adalah pembacaan, penyuaraan, penyiaran atau penye baran sesuatu ciptaan, dengan menggunakan alat apapun dan dengan cara sedemikian rupa sehingga suatu ciptaan dapat dibaca, didengar atau dilihat oleh orang lain." .
+<http://example.org/lex2kg/uu/1997/12/pasal/0001/versi/19970507/huruf/0004> legal:segmen <http://example.org/lex2kg/uu/1997/12/pasal/0001/versi/19970507/huruf/0004/text> .
+<http://example.org/lex2kg/uu/1997/12/pasal/0001/versi/19970507/huruf> legal:huruf <http://example.org/lex2kg/uu/1997/12/pasal/0001/versi/19970507/huruf/0005> .
+<http://example.org/lex2kg/uu/1997/12/pasal/0001/versi/19970507/huruf/0005> legal:nomor "5" .
+<http://example.org/lex2kg/uu/1997/12/pasal/0001/versi/19970507/huruf/0005/text> legal:teks "Perbanyakan adalah menambah jumlah sesuatu ciptaan, dengan pembuatan yang sama, hampir sam a atau menyerupai ciptaan tersebut dengan mempergunakan bahan - bahan yang sama maupun tidak sama, termasuk mengalihwujudkan sesuatu ciptaan." .
+<http://example.org/lex2kg/uu/1997/12/pasal/0001/versi/19970507/huruf/0005> legal:segmen <http://example.org/lex2kg/uu/1997/12/pasal/0001/versi/19970507/huruf/0005/text> .
+<http://example.org/lex2kg/uu/1997/12/pasal/0001/versi/19970507/huruf> legal:huruf <http://example.org/lex2kg/uu/1997/12/pasal/0001/versi/19970507/huruf/0006> .
+<http://example.org/lex2kg/uu/1997/12/pasal/0001/versi/19970507/huruf/0006> legal:nomor "6" .
+<http://example.org/lex2kg/uu/1997/12/pasal/0001/versi/19970507/huruf/0006/text> legal:teks "Potret adalah gambaran dengan cara dan alat apapun dari wajah orang yang digambarkan baik bersama bagian tubuh l ainnya maupun tidak." .
+<http://example.org/lex2kg/uu/1997/12/pasal/0001/versi/19970507/huruf/0006> legal:segmen <http://example.org/lex2kg/uu/1997/12/pasal/0001/versi/19970507/huruf/0006/text> .
+<http://example.org/lex2kg/uu/1997/12/pasal/0001/versi/19970507/huruf> legal:huruf <http://example.org/lex2kg/uu/1997/12/pasal/0001/versi/19970507/huruf/0007> .
+<http://example.org/lex2kg/uu/1997/12/pasal/0001/versi/19970507/huruf/0007> legal:nomor "7" .
+<http://example.org/lex2kg/uu/1997/12/pasal/0001/versi/19970507/huruf/0007/text> legal:teks "Program Komputer adalah program yang diciptakan secara khusus sehingga memungkinkan komputer melakukan fungsi tertentu." .
+<http://example.org/lex2kg/uu/1997/12/pasal/0001/versi/19970507/huruf/0007> legal:segmen <http://example.org/lex2kg/uu/1997/12/pasal/0001/versi/19970507/huruf/0007/text> .
+<http://example.org/lex2kg/uu/1997/12/pasal/0001/versi/19970507/huruf> legal:huruf <http://example.org/lex2kg/uu/1997/12/pasal/0001/versi/19970507/huruf/0008> .
+<http://example.org/lex2kg/uu/1997/12/pasal/0001/versi/19970507/huruf/0008> legal:nomor "8" .
+<http://example.org/lex2kg/uu/1997/12/pasal/0001/versi/19970507/huruf/0008/text> legal:teks "Pelaku adalah aktor, penyanyi, pemusik, penari atau mereka yang menampilkan, memperagakan, mempertunjukkan, menyanyikan, menyampaikan, mendeklamasikan, atau memainkan suatu karya musik, drama, tari, sastra dan karya seni lainnya." .
+<http://example.org/lex2kg/uu/1997/12/pasal/0001/versi/19970507/huruf/0008> legal:segmen <http://example.org/lex2kg/uu/1997/12/pasal/0001/versi/19970507/huruf/0008/text> .
+<http://example.org/lex2kg/uu/1997/12/pasal/0001/versi/19970507/huruf> legal:huruf <http://example.org/lex2kg/uu/1997/12/pasal/0001/versi/19970507/huruf/0009> .
+<http://example.org/lex2kg/uu/1997/12/pasal/0001/versi/19970507/huruf/0009> legal:nomor "9" .
+<http://example.org/lex2kg/uu/1997/12/pasal/0001/versi/19970507/huruf/0009/text> legal:teks "Produser rekaman suara adalah orang atau badan hukum yang pertama kali merekam atau memiliki prakarsa untuk membiayai kegiatan pe rekaman suara atau bunyi baik dari suatu pertunjukan maupun suara atau bunyi lainnya." .
+<http://example.org/lex2kg/uu/1997/12/pasal/0001/versi/19970507/huruf/0009> legal:segmen <http://example.org/lex2kg/uu/1997/12/pasal/0001/versi/19970507/huruf/0009/text> .
+<http://example.org/lex2kg/uu/1997/12/pasal/0001/versi/19970507/huruf> legal:huruf <http://example.org/lex2kg/uu/1997/12/pasal/0001/versi/19970507/huruf/0010> .
+<http://example.org/lex2kg/uu/1997/12/pasal/0001/versi/19970507/huruf/0010> legal:nomor "10" .
+<http://example.org/lex2kg/uu/1997/12/pasal/0001/versi/19970507/huruf/0010/text> legal:teks "Lembaga penyiaran adalah organisasi penyelenggara siaran, baik Lembaga Penyaiaran Pemerintah maupun Lembaga Penyiaran Swasta yang berbentuk badan hukum yang melakuka n penyiaran atas suatu karya siaran dengan menggunakan transmisi dengan atau tanpa kabel atau melalui sistem elektromagnetik lainnya." .
+<http://example.org/lex2kg/uu/1997/12/pasal/0001/versi/19970507/huruf/0010> legal:segmen <http://example.org/lex2kg/uu/1997/12/pasal/0001/versi/19970507/huruf/0010/text> .
+<http://example.org/lex2kg/uu/1997/12/pasal/0001/versi/19970507/huruf> legal:huruf <http://example.org/lex2kg/uu/1997/12/pasal/0001/versi/19970507/huruf/0011> .
+<http://example.org/lex2kg/uu/1997/12/pasal/0001/versi/19970507/huruf/0011> legal:nomor "11" .
+<http://example.org/lex2kg/uu/1997/12/pasal/0001/versi/19970507/huruf/0011/text> legal:teks "Kantor Hak Cipta adalah satuan organisasi di lingkungan departemen yang melaksanakan tugas dan kewenan gan di bidang Hak Cipta. 2. Ketentuan Pasal 2 diubah, dengan menambah dua ketentuan baru yang dijadikan ayat (2) dan ayat (3) sehingga keseluruhan Pasal 2 berbunyi sebagai berikut:" .
+<http://example.org/lex2kg/uu/1997/12/pasal/0001/versi/19970507/huruf/0011> legal:segmen <http://example.org/lex2kg/uu/1997/12/pasal/0001/versi/19970507/huruf/0011/text> .
+<http://example.org/lex2kg/uu/1997/12/pasal/0001/versi/19970507/huruf/0011/text> legal:merujuk <http://example.org/lex2kg/uu/1997/12/pasal/0001/versi/19970507/ayat/0003> .
+<http://example.org/lex2kg/uu/1997/12/pasal/0001/versi/19970507/huruf/0011/text> legal:merujuk <http://example.org/lex2kg/uu/1997/12/pasal/0001/versi/19970507/ayat/0002> .
+<http://example.org/lex2kg/uu/1997/12/pasal/0001/versi/19970507/huruf/0011/text> legal:merujuk <http://example.org/lex2kg/uu/1997/12/pasal/0002> .
+<http://example.org/lex2kg/uu/1997/12/daftarPasal> legal:pasal <http://example.org/lex2kg/uu/1997/12/pasal/0002> .
+<http://example.org/lex2kg/uu/1997/12/pasal/0002> legal:nomor 2 .
+<http://example.org/lex2kg/uu/1997/12/pasal/0002> legal:versi <http://example.org/lex2kg/uu/1997/12/pasal/0002/versi/19970507> .
+<http://example.org/lex2kg/uu/1997/12> legal:pasal <http://example.org/lex2kg/uu/1997/12/pasal/0002> .
+<http://example.org/lex2kg/uu/1997/12/pasal/0002/versi/19970507> legal:jenisVersi "orisinal" .
+<http://example.org/lex2kg/uu/1997/12/pasal/0002/versi/19970507> legal:tanggal "1997-05-07"^^xsd:date .
+<http://example.org/lex2kg/uu/1997/12/pasal/0002/versi/19970507> legal:teks "(1). Selain Penyidik Pejabat Polisi Neg ara Republik Indonesia, juga Pejabat Pegawai Negeri Sipil tertentu di lingkungan departemen yang lingkup tugas dan tanggung jawabnya meliputi pembinaan Hak Cipta, diberi wewenang khusus sebagai Penyidik sebagaimana dimaksud dalam Undang - undang Nomor 8 Tahu n 1981 tentang Hukum Acara Pidana, untuk melakukan penyidikan tindak pidana di bidang Hak Cipta.\n(2). Penyidik Pejabat Pegawai Negeri Sipil sebagaimana dimaksud dalam ayat (1) berwenang:\na. melakukan penelitian atas kebenaran laporan ata u keterangan berkenaan dengan tindak pidana di bidang Hak Cipta.\nb. melakukan penelitian terhadap orang atau badan hukum yang diduga melakukan tindak pidana di bidang Hak Cipta;\nc. meminta keterangan dan bahan bukti dari orang atau badan hukum sehubu ngan dengan tindak pidana di bidang Hak Cipta;\nd. melakukan pemeriksaan atas pembukuan, pencatatan dan dokumen lainnya yang berkenaan dengan tindak pidana di bidang Hak Cipta;\ne. melakukan pemeriksaan di tempat tertentu yang diduga terdapat bahan buk ti pembukuan, pencatatan dan dokumen lain serta melakukan penyitaan terhadap bahan dan barang hasil pelanggaran yang dapat dijadikan bukti dalam perkara tindak pidana di bidang Hak Cipta;\nf. meminta bantuan ahli dalam rangka pelaksanaan tugas penyidikan tindak pidana di bidang Hak Cipta.\n\n(3). Penyidik Pejabat Pegawai Negeri Sipil sebagaimana dimaksud dalam ayat (1) memberitahukan dimulainya penyidikan dan hasil penyidikannya kepada Penyidik Pejabat Polisi Negara Repub lik Indonesia.\n(4). Penyidik Pejabat Pegawai Negeri Sipil sebagaimana dimaksud dalam ayat (1) menyampaikan hasil penyidikannya kepada Penuntut Umum melalui Penyidik Pejabat Polisi Negara Republik Indonesia dengan mengingat ketentuan Pasal 107 Undang - undan g Nomor 8 Tahun 1981 tentang Hukum Acara Pidana.\" 16. Ketentuan Pasal 48 diubah, sehingga Pasal 48 berbunyi sebagai berikut: Pasal 48 Undang - undang ini berlaku terhadap semua ciptaan dan Hak - hak Yang Berkaitan dengan Hak Cip ta:\na. Warga negara, penduduk, dan badan hukum Indonesia;\nb. Bukan warga negara Indonesia, bukan penduduk Indonesia dan bukan badan hukum Indonesia yang untuk pertama kali diumumkan di Indonesia atau diumumkan di Indonesia dalam jangka waktu 30 (tiga puluh) hari sejak ciptaan itu diumumkan untuk pertama kali di luar Indonesia;\nc. Bukan warga negara Indonesia, bukan penduduk Indonesia dan bukan badan hukum Indonesia, dengan ketentuan: 1) Negaranya mempunyai perjanjian bilateral mengenai perlindungan Hak Cipta dan Hak - hak Yang Berkaitan dengan Hak Cipta dengan Negara Republik Indonesia; 2) Negaranya dan Negara Republik Indonesia merupakan pihak atau peserta dalam suatu pe rjanjian multilateral yang sama mengenai perlindungan Hak Cipta dan Hak - hak Yang Berkaitan degan Hak Cipta. Pasal II Undang - undang ini mulai berlaku pada tanggal diundangkan. Agar setiap orang mengetahuinya, memerintahkan pengundangan Undang - undang ini dengan penempatannya dalam Lembaran Negara Republik Indonesia.\n" .
+<http://example.org/lex2kg/uu/1997/12/pasal/0002/versi/19970507> legal:daftarAyat <http://example.org/lex2kg/uu/1997/12/pasal/0002/versi/19970507/ayat> .
+<http://example.org/lex2kg/uu/1997/12/pasal/0002/versi/19970507/ayat> legal:ayat <http://example.org/lex2kg/uu/1997/12/pasal/0002/versi/19970507/ayat/0001> .
+<http://example.org/lex2kg/uu/1997/12/pasal/0002/versi/19970507/ayat/0001> legal:nomor 1 .
+<http://example.org/lex2kg/uu/1997/12/pasal/0002/versi/19970507/ayat/0001> legal:teks "Selain Penyidik Pejabat Polisi Neg ara Republik Indonesia, juga Pejabat Pegawai Negeri Sipil tertentu di lingkungan departemen yang lingkup tugas dan tanggung jawabnya meliputi pembinaan Hak Cipta, diberi wewenang khusus sebagai Penyidik sebagaimana dimaksud dalam Undang - undang Nomor 8 Tahu n 1981 tentang Hukum Acara Pidana, untuk melakukan penyidikan tindak pidana di bidang Hak Cipta." .
+<http://example.org/lex2kg/uu/1997/12/pasal/0002/versi/19970507/ayat/0001/text> legal:teks "Selain Penyidik Pejabat Polisi Neg ara Republik Indonesia, juga Pejabat Pegawai Negeri Sipil tertentu di lingkungan departemen yang lingkup tugas dan tanggung jawabnya meliputi pembinaan Hak Cipta, diberi wewenang khusus sebagai Penyidik sebagaimana dimaksud dalam Undang - undang Nomor 8 Tahu n 1981 tentang Hukum Acara Pidana, untuk melakukan penyidikan tindak pidana di bidang Hak Cipta." .
+<http://example.org/lex2kg/uu/1997/12/pasal/0002/versi/19970507/ayat/0001> legal:segmen <http://example.org/lex2kg/uu/1997/12/pasal/0002/versi/19970507/ayat/0001/text> .
+<http://example.org/lex2kg/uu/1997/12/pasal/0002/versi/19970507/ayat> legal:ayat <http://example.org/lex2kg/uu/1997/12/pasal/0002/versi/19970507/ayat/0002> .
+<http://example.org/lex2kg/uu/1997/12/pasal/0002/versi/19970507/ayat/0002> legal:nomor 2 .
+<http://example.org/lex2kg/uu/1997/12/pasal/0002/versi/19970507/ayat/0002> legal:teks "Penyidik Pejabat Pegawai Negeri Sipil sebagaimana dimaksud dalam ayat (1) berwenang:\na. melakukan penelitian atas kebenaran laporan ata u keterangan berkenaan dengan tindak pidana di bidang Hak Cipta.\nb. melakukan penelitian terhadap orang atau badan hukum yang diduga melakukan tindak pidana di bidang Hak Cipta;\nc. meminta keterangan dan bahan bukti dari orang atau badan hukum sehubu ngan dengan tindak pidana di bidang Hak Cipta;\nd. melakukan pemeriksaan atas pembukuan, pencatatan dan dokumen lainnya yang berkenaan dengan tindak pidana di bidang Hak Cipta;\ne. melakukan pemeriksaan di tempat tertentu yang diduga terdapat bahan buk ti pembukuan, pencatatan dan dokumen lain serta melakukan penyitaan terhadap bahan dan barang hasil pelanggaran yang dapat dijadikan bukti dalam perkara tindak pidana di bidang Hak Cipta;\nf. meminta bantuan ahli dalam rangka pelaksanaan tugas penyidikan tindak pidana di bidang Hak Cipta.\n" .
+<http://example.org/lex2kg/uu/1997/12/pasal/0002/versi/19970507/ayat/0002> legal:daftarHuruf <http://example.org/lex2kg/uu/1997/12/pasal/0002/versi/19970507/ayat/0002/huruf> .
+<http://example.org/lex2kg/uu/1997/12/pasal/0002/versi/19970507/ayat/0002/huruf/description> legal:teks "Penyidik Pejabat Pegawai Negeri Sipil sebagaimana dimaksud dalam ayat (1) berwenang:" .
+<http://example.org/lex2kg/uu/1997/12/pasal/0002/versi/19970507/ayat/0002/huruf> legal:segmen <http://example.org/lex2kg/uu/1997/12/pasal/0002/versi/19970507/ayat/0002/huruf/description> .
+<http://example.org/lex2kg/uu/1997/12/pasal/0002/versi/19970507/ayat/0002/huruf> legal:huruf <http://example.org/lex2kg/uu/1997/12/pasal/0002/versi/19970507/ayat/0002/huruf/a> .
+<http://example.org/lex2kg/uu/1997/12/pasal/0002/versi/19970507/ayat/0002/huruf/a> legal:nomor "a" .
+<http://example.org/lex2kg/uu/1997/12/pasal/0002/versi/19970507/ayat/0002/huruf/a/text> legal:teks "melakukan penelitian atas kebenaran laporan ata u keterangan berkenaan dengan tindak pidana di bidang Hak Cipta." .
+<http://example.org/lex2kg/uu/1997/12/pasal/0002/versi/19970507/ayat/0002/huruf/a> legal:segmen <http://example.org/lex2kg/uu/1997/12/pasal/0002/versi/19970507/ayat/0002/huruf/a/text> .
+<http://example.org/lex2kg/uu/1997/12/pasal/0002/versi/19970507/ayat/0002/huruf> legal:huruf <http://example.org/lex2kg/uu/1997/12/pasal/0002/versi/19970507/ayat/0002/huruf/b> .
+<http://example.org/lex2kg/uu/1997/12/pasal/0002/versi/19970507/ayat/0002/huruf/b> legal:nomor "b" .
+<http://example.org/lex2kg/uu/1997/12/pasal/0002/versi/19970507/ayat/0002/huruf/b/text> legal:teks "melakukan penelitian terhadap orang atau badan hukum yang diduga melakukan tindak pidana di bidang Hak Cipta;" .
+<http://example.org/lex2kg/uu/1997/12/pasal/0002/versi/19970507/ayat/0002/huruf/b> legal:segmen <http://example.org/lex2kg/uu/1997/12/pasal/0002/versi/19970507/ayat/0002/huruf/b/text> .
+<http://example.org/lex2kg/uu/1997/12/pasal/0002/versi/19970507/ayat/0002/huruf> legal:huruf <http://example.org/lex2kg/uu/1997/12/pasal/0002/versi/19970507/ayat/0002/huruf/c> .
+<http://example.org/lex2kg/uu/1997/12/pasal/0002/versi/19970507/ayat/0002/huruf/c> legal:nomor "c" .
+<http://example.org/lex2kg/uu/1997/12/pasal/0002/versi/19970507/ayat/0002/huruf/c/text> legal:teks "meminta keterangan dan bahan bukti dari orang atau badan hukum sehubu ngan dengan tindak pidana di bidang Hak Cipta;" .
+<http://example.org/lex2kg/uu/1997/12/pasal/0002/versi/19970507/ayat/0002/huruf/c> legal:segmen <http://example.org/lex2kg/uu/1997/12/pasal/0002/versi/19970507/ayat/0002/huruf/c/text> .
+<http://example.org/lex2kg/uu/1997/12/pasal/0002/versi/19970507/ayat/0002/huruf> legal:huruf <http://example.org/lex2kg/uu/1997/12/pasal/0002/versi/19970507/ayat/0002/huruf/d> .
+<http://example.org/lex2kg/uu/1997/12/pasal/0002/versi/19970507/ayat/0002/huruf/d> legal:nomor "d" .
+<http://example.org/lex2kg/uu/1997/12/pasal/0002/versi/19970507/ayat/0002/huruf/d/text> legal:teks "melakukan pemeriksaan atas pembukuan, pencatatan dan dokumen lainnya yang berkenaan dengan tindak pidana di bidang Hak Cipta;" .
+<http://example.org/lex2kg/uu/1997/12/pasal/0002/versi/19970507/ayat/0002/huruf/d> legal:segmen <http://example.org/lex2kg/uu/1997/12/pasal/0002/versi/19970507/ayat/0002/huruf/d/text> .
+<http://example.org/lex2kg/uu/1997/12/pasal/0002/versi/19970507/ayat/0002/huruf> legal:huruf <http://example.org/lex2kg/uu/1997/12/pasal/0002/versi/19970507/ayat/0002/huruf/e> .
+<http://example.org/lex2kg/uu/1997/12/pasal/0002/versi/19970507/ayat/0002/huruf/e> legal:nomor "e" .
+<http://example.org/lex2kg/uu/1997/12/pasal/0002/versi/19970507/ayat/0002/huruf/e/text> legal:teks "melakukan pemeriksaan di tempat tertentu yang diduga terdapat bahan buk ti pembukuan, pencatatan dan dokumen lain serta melakukan penyitaan terhadap bahan dan barang hasil pelanggaran yang dapat dijadikan bukti dalam perkara tindak pidana di bidang Hak Cipta;" .
+<http://example.org/lex2kg/uu/1997/12/pasal/0002/versi/19970507/ayat/0002/huruf/e> legal:segmen <http://example.org/lex2kg/uu/1997/12/pasal/0002/versi/19970507/ayat/0002/huruf/e/text> .
+<http://example.org/lex2kg/uu/1997/12/pasal/0002/versi/19970507/ayat/0002/huruf> legal:huruf <http://example.org/lex2kg/uu/1997/12/pasal/0002/versi/19970507/ayat/0002/huruf/f> .
+<http://example.org/lex2kg/uu/1997/12/pasal/0002/versi/19970507/ayat/0002/huruf/f> legal:nomor "f" .
+<http://example.org/lex2kg/uu/1997/12/pasal/0002/versi/19970507/ayat/0002/huruf/f/text> legal:teks "meminta bantuan ahli dalam rangka pelaksanaan tugas penyidikan tindak pidana di bidang Hak Cipta." .
+<http://example.org/lex2kg/uu/1997/12/pasal/0002/versi/19970507/ayat/0002/huruf/f> legal:segmen <http://example.org/lex2kg/uu/1997/12/pasal/0002/versi/19970507/ayat/0002/huruf/f/text> .
+<http://example.org/lex2kg/uu/1997/12/pasal/0002/versi/19970507/ayat> legal:ayat <http://example.org/lex2kg/uu/1997/12/pasal/0002/versi/19970507/ayat/0003> .
+<http://example.org/lex2kg/uu/1997/12/pasal/0002/versi/19970507/ayat/0003> legal:nomor 3 .
+<http://example.org/lex2kg/uu/1997/12/pasal/0002/versi/19970507/ayat/0003> legal:teks "Penyidik Pejabat Pegawai Negeri Sipil sebagaimana dimaksud dalam ayat (1) memberitahukan dimulainya penyidikan dan hasil penyidikannya kepada Penyidik Pejabat Polisi Negara Repub lik Indonesia." .
+<http://example.org/lex2kg/uu/1997/12/pasal/0002/versi/19970507/ayat/0003/text> legal:teks "Penyidik Pejabat Pegawai Negeri Sipil sebagaimana dimaksud dalam ayat (1) memberitahukan dimulainya penyidikan dan hasil penyidikannya kepada Penyidik Pejabat Polisi Negara Repub lik Indonesia." .
+<http://example.org/lex2kg/uu/1997/12/pasal/0002/versi/19970507/ayat/0003> legal:segmen <http://example.org/lex2kg/uu/1997/12/pasal/0002/versi/19970507/ayat/0003/text> .
+<http://example.org/lex2kg/uu/1997/12/pasal/0002/versi/19970507/ayat/0003/text> legal:merujuk <http://example.org/lex2kg/uu/1997/12/pasal/0002/versi/19970507/ayat/0001> .
+<http://example.org/lex2kg/uu/1997/12/pasal/0002/versi/19970507/ayat> legal:ayat <http://example.org/lex2kg/uu/1997/12/pasal/0002/versi/19970507/ayat/0004> .
+<http://example.org/lex2kg/uu/1997/12/pasal/0002/versi/19970507/ayat/0004> legal:nomor 4 .
+<http://example.org/lex2kg/uu/1997/12/pasal/0002/versi/19970507/ayat/0004> legal:teks "Penyidik Pejabat Pegawai Negeri Sipil sebagaimana dimaksud dalam ayat (1) menyampaikan hasil penyidikannya kepada Penuntut Umum melalui Penyidik Pejabat Polisi Negara Republik Indonesia dengan mengingat ketentuan Pasal 107 Undang - undan g Nomor 8 Tahun 1981 tentang Hukum Acara Pidana.\" 16. Ketentuan Pasal 48 diubah, sehingga Pasal 48 berbunyi sebagai berikut: Pasal 48 Undang - undang ini berlaku terhadap semua ciptaan dan Hak - hak Yang Berkaitan dengan Hak Cip ta:\na. Warga negara, penduduk, dan badan hukum Indonesia;\nb. Bukan warga negara Indonesia, bukan penduduk Indonesia dan bukan badan hukum Indonesia yang untuk pertama kali diumumkan di Indonesia atau diumumkan di Indonesia dalam jangka waktu 30 (tiga puluh) hari sejak ciptaan itu diumumkan untuk pertama kali di luar Indonesia;\nc. Bukan warga negara Indonesia, bukan penduduk Indonesia dan bukan badan hukum Indonesia, dengan ketentuan: 1) Negaranya mempunyai perjanjian bilateral mengenai perlindungan Hak Cipta dan Hak - hak Yang Berkaitan dengan Hak Cipta dengan Negara Republik Indonesia; 2) Negaranya dan Negara Republik Indonesia merupakan pihak atau peserta dalam suatu pe rjanjian multilateral yang sama mengenai perlindungan Hak Cipta dan Hak - hak Yang Berkaitan degan Hak Cipta. Pasal II Undang - undang ini mulai berlaku pada tanggal diundangkan. Agar setiap orang mengetahuinya, memerintahkan pengundangan Undang - undang ini dengan penempatannya dalam Lembaran Negara Republik Indonesia.\n" .
+<http://example.org/lex2kg/uu/1997/12/pasal/0002/versi/19970507/ayat/0004> legal:daftarHuruf <http://example.org/lex2kg/uu/1997/12/pasal/0002/versi/19970507/ayat/0004/huruf> .
+<http://example.org/lex2kg/uu/1997/12/pasal/0002/versi/19970507/ayat/0004/huruf/description> legal:teks "Penyidik Pejabat Pegawai Negeri Sipil sebagaimana dimaksud dalam ayat (1) menyampaikan hasil penyidikannya kepada Penuntut Umum melalui Penyidik Pejabat Polisi Negara Republik Indonesia dengan mengingat ketentuan Pasal 107 Undang - undan g Nomor 8 Tahun 1981 tentang Hukum Acara Pidana.\" 16. Ketentuan Pasal 48 diubah, sehingga Pasal 48 berbunyi sebagai berikut: Pasal 48 Undang - undang ini berlaku terhadap semua ciptaan dan Hak - hak Yang Berkaitan dengan Hak Cip ta:" .
+<http://example.org/lex2kg/uu/1997/12/pasal/0002/versi/19970507/ayat/0004/huruf> legal:segmen <http://example.org/lex2kg/uu/1997/12/pasal/0002/versi/19970507/ayat/0004/huruf/description> .
+<http://example.org/lex2kg/uu/1997/12/pasal/0002/versi/19970507/ayat/0004/huruf> legal:huruf <http://example.org/lex2kg/uu/1997/12/pasal/0002/versi/19970507/ayat/0004/huruf/a> .
+<http://example.org/lex2kg/uu/1997/12/pasal/0002/versi/19970507/ayat/0004/huruf/a> legal:nomor "a" .
+<http://example.org/lex2kg/uu/1997/12/pasal/0002/versi/19970507/ayat/0004/huruf/a/text> legal:teks "Warga negara, penduduk, dan badan hukum Indonesia;" .
+<http://example.org/lex2kg/uu/1997/12/pasal/0002/versi/19970507/ayat/0004/huruf/a> legal:segmen <http://example.org/lex2kg/uu/1997/12/pasal/0002/versi/19970507/ayat/0004/huruf/a/text> .
+<http://example.org/lex2kg/uu/1997/12/pasal/0002/versi/19970507/ayat/0004/huruf> legal:huruf <http://example.org/lex2kg/uu/1997/12/pasal/0002/versi/19970507/ayat/0004/huruf/b> .
+<http://example.org/lex2kg/uu/1997/12/pasal/0002/versi/19970507/ayat/0004/huruf/b> legal:nomor "b" .
+<http://example.org/lex2kg/uu/1997/12/pasal/0002/versi/19970507/ayat/0004/huruf/b/text> legal:teks "Bukan warga negara Indonesia, bukan penduduk Indonesia dan bukan badan hukum Indonesia yang untuk pertama kali diumumkan di Indonesia atau diumumkan di Indonesia dalam jangka waktu 30 (tiga puluh) hari sejak ciptaan itu diumumkan untuk pertama kali di luar Indonesia;" .
+<http://example.org/lex2kg/uu/1997/12/pasal/0002/versi/19970507/ayat/0004/huruf/b> legal:segmen <http://example.org/lex2kg/uu/1997/12/pasal/0002/versi/19970507/ayat/0004/huruf/b/text> .
+<http://example.org/lex2kg/uu/1997/12/pasal/0002/versi/19970507/ayat/0004/huruf> legal:huruf <http://example.org/lex2kg/uu/1997/12/pasal/0002/versi/19970507/ayat/0004/huruf/c> .
+<http://example.org/lex2kg/uu/1997/12/pasal/0002/versi/19970507/ayat/0004/huruf/c> legal:nomor "c" .
+<http://example.org/lex2kg/uu/1997/12/pasal/0002/versi/19970507/ayat/0004/huruf/c/text> legal:teks "Bukan warga negara Indonesia, bukan penduduk Indonesia dan bukan badan hukum Indonesia, dengan ketentuan: 1) Negaranya mempunyai perjanjian bilateral mengenai perlindungan Hak Cipta dan Hak - hak Yang Berkaitan dengan Hak Cipta dengan Negara Republik Indonesia; 2) Negaranya dan Negara Republik Indonesia merupakan pihak atau peserta dalam suatu pe rjanjian multilateral yang sama mengenai perlindungan Hak Cipta dan Hak - hak Yang Berkaitan degan Hak Cipta. Pasal II Undang - undang ini mulai berlaku pada tanggal diundangkan. Agar setiap orang mengetahuinya, memerintahkan pengundangan Undang - undang ini dengan penempatannya dalam Lembaran Negara Republik Indonesia." .
+<http://example.org/lex2kg/uu/1997/12/pasal/0002/versi/19970507/ayat/0004/huruf/c> legal:segmen <http://example.org/lex2kg/uu/1997/12/pasal/0002/versi/19970507/ayat/0004/huruf/c/text> .
+<http://example.org/lex2kg/uu/1997/12> legal:disahkanPada "1997-05-07"^^xsd:date .
+<http://example.org/lex2kg/uu/1997/12> legal:jenisPeraturan <http://example.org/lex2kg/ontology/jenisPeraturan/UU> .
+<http://example.org/lex2kg/uu/1997/12> legal:tentang " PERUBAHAN ATAS UNDANG - UNDANG NOMOR 6 TAHUN 1982 TENTANG HAK CIPTA SEBAGAIMANA TELAH DIUBAH DENGAN UNDANG - UNDANG NOMOR 7 TAHUN 1987" .
+<http://example.org/lex2kg/uu/1997/12> legal:mengingat <http://example.org/lex2kg/uu/1997/12/mengingat> .
+<http://example.org/lex2kg/uu/1997/12/mengingat> legal:daftarHuruf <http://example.org/lex2kg/uu/1997/12/mengingat/huruf> .
+<http://example.org/lex2kg/uu/1997/12/mengingat/huruf/description> legal:teks "" .
+<http://example.org/lex2kg/uu/1997/12/mengingat/huruf> legal:segmen <http://example.org/lex2kg/uu/1997/12/mengingat/huruf/description> .
+<http://example.org/lex2kg/uu/1997/12/mengingat/huruf> legal:huruf <http://example.org/lex2kg/uu/1997/12/mengingat/huruf/0001> .
+<http://example.org/lex2kg/uu/1997/12/mengingat/huruf/0001> legal:nomor "1" .
+<http://example.org/lex2kg/uu/1997/12/mengingat/huruf/0001/text> legal:teks "Pasal 5 ayat (1), Pasal 20 ayat (1), dan Pasal 33 Undang - Undang Dasar 1945." .
+<http://example.org/lex2kg/uu/1997/12/mengingat/huruf/0001> legal:segmen <http://example.org/lex2kg/uu/1997/12/mengingat/huruf/0001/text> .
+<http://example.org/lex2kg/uu/1997/12/mengingat/huruf> legal:huruf <http://example.org/lex2kg/uu/1997/12/mengingat/huruf/0002> .
+<http://example.org/lex2kg/uu/1997/12/mengingat/huruf/0002> legal:nomor "2" .
+<http://example.org/lex2kg/uu/1997/12/mengingat/huruf/0002/text> legal:teks "U ndang - undang Nomor 6 Tahun 1982 tentang Hak Cipta (Lembaran Negara Tahun 1982 Nomor 15, Tambahan Lembaran Negara Nomor 3217) sebagaimana telah diubah dengan Undang - undang Nomor 7 Tahun 1987 (Lembaran Negara Tahun 1987 Nomor 42, Tambahan Lembaran Negara Nom or 3362);" .
+<http://example.org/lex2kg/uu/1997/12/mengingat/huruf/0002> legal:segmen <http://example.org/lex2kg/uu/1997/12/mengingat/huruf/0002/text> .
+<http://example.org/lex2kg/uu/1997/12/mengingat/huruf> legal:huruf <http://example.org/lex2kg/uu/1997/12/mengingat/huruf/0003> .
+<http://example.org/lex2kg/uu/1997/12/mengingat/huruf/0003> legal:nomor "3" .
+<http://example.org/lex2kg/uu/1997/12/mengingat/huruf/0003/text> legal:teks "Undang - undang Nomor 7 Tahun 1994 tentang Pengesahan Agreement Establishing The World Trade Organization (Persetujuan Pembentukan Organisasi Perdagangan Dunia) (Lembaran Negara Tahun 1994 Nomor 57, Tambahan Lembaran Negara Nomor 3564); Denga n persetujuan DEWAN PERWAKILAN RAKYAT REPUBLIK INDONESIA MEMUTUSKAN: MENETAPKAN : UNDANG - UNDANG TENTANG PERUBAHAN ATAS UNDANG - UNDANG NOMOR 6 TAHUN 1982 TENTANG HAK CIPTA SEBAGAIMANA TELAH DIUBAH DENGAN UNDANG - UNDANG NOMOR 7 TAHUN 1987." .
+<http://example.org/lex2kg/uu/1997/12/mengingat/huruf/0003> legal:segmen <http://example.org/lex2kg/uu/1997/12/mengingat/huruf/0003/text> .
+<http://example.org/lex2kg/uu/1997/12> legal:menimbang <http://example.org/lex2kg/uu/1997/12/menimbang> .
+<http://example.org/lex2kg/uu/1997/12/menimbang> legal:daftarHuruf <http://example.org/lex2kg/uu/1997/12/menimbang/huruf> .
+<http://example.org/lex2kg/uu/1997/12/menimbang/huruf/description> legal:teks "" .
+<http://example.org/lex2kg/uu/1997/12/menimbang/huruf> legal:segmen <http://example.org/lex2kg/uu/1997/12/menimbang/huruf/description> .
+<http://example.org/lex2kg/uu/1997/12/menimbang/huruf> legal:huruf <http://example.org/lex2kg/uu/1997/12/menimbang/huruf/a> .
+<http://example.org/lex2kg/uu/1997/12/menimbang/huruf/a> legal:nomor "a" .
+<http://example.org/lex2kg/uu/1997/12/menimbang/huruf/a/text> legal:teks "bahwa dengan adanya perkembangan kehidupan yang berlangsung cepat, terutama di bidang perekonomian baik di tingkat nasional maupun internasional, pemberian perlindungan hukum yang semakin efektif terhadap Hak Atas Kekayaan Intelektual, khususnya di bidang Hak Cipta perlu lebih ditingkatkan dalam rangka mewujudkan iklim yang lebih baik bagi tumbuh dan berkembangnya semangat mencipta di bidang ilmu pengetahuan, seni dan sastra, yang sangat diperlukan dalam pelaksanaan pembangunan nasional yang bertujuan terc iptanya masyarakat Indonesia yang adil dan makmur, maju, dan mandiri berdasarkan Pancasila dan Undang - Undang Dasar 1945;" .
+<http://example.org/lex2kg/uu/1997/12/menimbang/huruf/a> legal:segmen <http://example.org/lex2kg/uu/1997/12/menimbang/huruf/a/text> .
+<http://example.org/lex2kg/uu/1997/12/menimbang/huruf> legal:huruf <http://example.org/lex2kg/uu/1997/12/menimbang/huruf/b> .
+<http://example.org/lex2kg/uu/1997/12/menimbang/huruf/b> legal:nomor "b" .
+<http://example.org/lex2kg/uu/1997/12/menimbang/huruf/b/text> legal:teks "bahwa dengan penerimaan dan keikutsertaan Indonesia dalam Persetujuan tentang Aspek - aspek Dagang Hak Atas Kekayaan Intelektual (Ag reement on Trade Related Aspects of Intellectual Property Rights, Including Trade in Counterfeit Goods/TRIPs) yang merupakan bagian dari Persetujuan Pembentukan Organisasi Perdagangan Dunia (Agreement Establishing the World Trade Organization) sebagaimana telah disahkan dengan Undang - undang, berlanjut dengan melaksanakan kewajiban untuk menyesuaikan peraturan perundang - undangan nasional di bidang Hak Atas Kekayaan Intelektual termasuk Hak Cipta terhadap persetujuan internasional tersebut;" .
+<http://example.org/lex2kg/uu/1997/12/menimbang/huruf/b> legal:segmen <http://example.org/lex2kg/uu/1997/12/menimbang/huruf/b/text> .
+<http://example.org/lex2kg/uu/1997/12/menimbang/huruf> legal:huruf <http://example.org/lex2kg/uu/1997/12/menimbang/huruf/c> .
+<http://example.org/lex2kg/uu/1997/12/menimbang/huruf/c> legal:nomor "c" .
+<http://example.org/lex2kg/uu/1997/12/menimbang/huruf/c/text> legal:teks "bahwa berdasarkan pertimbangan sebagaimana tersebut dalam huruf a dan b, serta memperhatikan penilaian terhadap segala pengalaman, khususnya kekurangan selama pelaksanaan Undang - undang tentang Hak Cipta, dipandang perlu untuk mengubah dan menyempurnakan beberapa ketentuan Undang - undang Nomor 6 Tahun 1982 tentang Hak Cipta sebagaimana telah diubah dengan Undang - undang Nomor 7 Tahun 1987 dengan Undang - undang;" .
+<http://example.org/lex2kg/uu/1997/12/menimbang/huruf/c> legal:segmen <http://example.org/lex2kg/uu/1997/12/menimbang/huruf/c/text> .
+<http://example.org/lex2kg/uu/1997/12> legal:disahkanOleh "SOEHARTO" .
+<http://example.org/lex2kg/uu/1997/12> legal:disahkanDi "Jakarta" .
+<http://example.org/lex2kg/uu/1997/12> legal:jabatanPengesah "PRESIDEN REPUBLIK INDONESIA" .
+<http://example.org/lex2kg/uu/1997/12> legal:tahun 1997 .
+<http://example.org/lex2kg/uu/1997/12> legal:nomor 12 .
+<http://example.org/lex2kg/uu/1997/12> legal:bahasa "id" .
+<http://example.org/lex2kg/uu/1997/12> legal:yurisdiksi "Indonesia" .
+<http://example.org/lex2kg/uu/1997/12> a legal:Peraturan .
+<http://example.org/lex2kg/uu/1997/12/daftarPasal> a legal:DaftarPasal .
+<http://example.org/lex2kg/uu/1997/12/pasal/0001> a legal:Pasal .
+<http://example.org/lex2kg/uu/1997/12/pasal/0001/versi/19970507> a legal:VersiPasal .
+<http://example.org/lex2kg/uu/1997/12/pasal/0001/versi/19970507/huruf/description> a legal:Segmen .
+<http://example.org/lex2kg/uu/1997/12/pasal/0001/versi/19970507/huruf> a legal:DaftarHuruf .
+<http://example.org/lex2kg/uu/1997/12/pasal/0001/versi/19970507/huruf/0001> a legal:Huruf .
+<http://example.org/lex2kg/uu/1997/12/pasal/0001/versi/19970507/huruf/0001/text> a legal:Segmen .
+<http://example.org/lex2kg/uu/1997/12/pasal/0001/versi/19970507/huruf/0002> a legal:Huruf .
+<http://example.org/lex2kg/uu/1997/12/pasal/0001/versi/19970507/huruf/0002/text> a legal:Segmen .
+<http://example.org/lex2kg/uu/1997/12/pasal/0001/versi/19970507/huruf/0003> a legal:Huruf .
+<http://example.org/lex2kg/uu/1997/12/pasal/0001/versi/19970507/huruf/0003/text> a legal:Segmen .
+<http://example.org/lex2kg/uu/1997/12/pasal/0001/versi/19970507/huruf/0004> a legal:Huruf .
+<http://example.org/lex2kg/uu/1997/12/pasal/0001/versi/19970507/huruf/0004/text> a legal:Segmen .
+<http://example.org/lex2kg/uu/1997/12/pasal/0001/versi/19970507/huruf/0005> a legal:Huruf .
+<http://example.org/lex2kg/uu/1997/12/pasal/0001/versi/19970507/huruf/0005/text> a legal:Segmen .
+<http://example.org/lex2kg/uu/1997/12/pasal/0001/versi/19970507/huruf/0006> a legal:Huruf .
+<http://example.org/lex2kg/uu/1997/12/pasal/0001/versi/19970507/huruf/0006/text> a legal:Segmen .
+<http://example.org/lex2kg/uu/1997/12/pasal/0001/versi/19970507/huruf/0007> a legal:Huruf .
+<http://example.org/lex2kg/uu/1997/12/pasal/0001/versi/19970507/huruf/0007/text> a legal:Segmen .
+<http://example.org/lex2kg/uu/1997/12/pasal/0001/versi/19970507/huruf/0008> a legal:Huruf .
+<http://example.org/lex2kg/uu/1997/12/pasal/0001/versi/19970507/huruf/0008/text> a legal:Segmen .
+<http://example.org/lex2kg/uu/1997/12/pasal/0001/versi/19970507/huruf/0009> a legal:Huruf .
+<http://example.org/lex2kg/uu/1997/12/pasal/0001/versi/19970507/huruf/0009/text> a legal:Segmen .
+<http://example.org/lex2kg/uu/1997/12/pasal/0001/versi/19970507/huruf/0010> a legal:Huruf .
+<http://example.org/lex2kg/uu/1997/12/pasal/0001/versi/19970507/huruf/0010/text> a legal:Segmen .
+<http://example.org/lex2kg/uu/1997/12/pasal/0001/versi/19970507/huruf/0011> a legal:Huruf .
+<http://example.org/lex2kg/uu/1997/12/pasal/0001/versi/19970507/huruf/0011/text> a legal:Segmen .
+<http://example.org/lex2kg/uu/1997/12/pasal/0002> a legal:Pasal .
+<http://example.org/lex2kg/uu/1997/12/pasal/0002/versi/19970507> a legal:VersiPasal .
+<http://example.org/lex2kg/uu/1997/12/pasal/0002/versi/19970507/ayat> a legal:DaftarAyat .
+<http://example.org/lex2kg/uu/1997/12/pasal/0002/versi/19970507/ayat/0001> a legal:Ayat .
+<http://example.org/lex2kg/uu/1997/12/pasal/0002/versi/19970507/ayat/0001/text> a legal:Segmen .
+<http://example.org/lex2kg/uu/1997/12/pasal/0002/versi/19970507/ayat/0002> a legal:Ayat .
+<http://example.org/lex2kg/uu/1997/12/pasal/0002/versi/19970507/ayat/0002/huruf/description> a legal:Segmen .
+<http://example.org/lex2kg/uu/1997/12/pasal/0002/versi/19970507/ayat/0002/huruf> a legal:DaftarHuruf .
+<http://example.org/lex2kg/uu/1997/12/pasal/0002/versi/19970507/ayat/0002/huruf/a> a legal:Huruf .
+<http://example.org/lex2kg/uu/1997/12/pasal/0002/versi/19970507/ayat/0002/huruf/a/text> a legal:Segmen .
+<http://example.org/lex2kg/uu/1997/12/pasal/0002/versi/19970507/ayat/0002/huruf/b> a legal:Huruf .
+<http://example.org/lex2kg/uu/1997/12/pasal/0002/versi/19970507/ayat/0002/huruf/b/text> a legal:Segmen .
+<http://example.org/lex2kg/uu/1997/12/pasal/0002/versi/19970507/ayat/0002/huruf/c> a legal:Huruf .
+<http://example.org/lex2kg/uu/1997/12/pasal/0002/versi/19970507/ayat/0002/huruf/c/text> a legal:Segmen .
+<http://example.org/lex2kg/uu/1997/12/pasal/0002/versi/19970507/ayat/0002/huruf/d> a legal:Huruf .
+<http://example.org/lex2kg/uu/1997/12/pasal/0002/versi/19970507/ayat/0002/huruf/d/text> a legal:Segmen .
+<http://example.org/lex2kg/uu/1997/12/pasal/0002/versi/19970507/ayat/0002/huruf/e> a legal:Huruf .
+<http://example.org/lex2kg/uu/1997/12/pasal/0002/versi/19970507/ayat/0002/huruf/e/text> a legal:Segmen .
+<http://example.org/lex2kg/uu/1997/12/pasal/0002/versi/19970507/ayat/0002/huruf/f> a legal:Huruf .
+<http://example.org/lex2kg/uu/1997/12/pasal/0002/versi/19970507/ayat/0002/huruf/f/text> a legal:Segmen .
+<http://example.org/lex2kg/uu/1997/12/pasal/0002/versi/19970507/ayat/0003> a legal:Ayat .
+<http://example.org/lex2kg/uu/1997/12/pasal/0002/versi/19970507/ayat/0003/text> a legal:Segmen .
+<http://example.org/lex2kg/uu/1997/12/pasal/0002/versi/19970507/ayat/0004> a legal:Ayat .
+<http://example.org/lex2kg/uu/1997/12/pasal/0002/versi/19970507/ayat/0004/huruf/description> a legal:Segmen .
+<http://example.org/lex2kg/uu/1997/12/pasal/0002/versi/19970507/ayat/0004/huruf> a legal:DaftarHuruf .
+<http://example.org/lex2kg/uu/1997/12/pasal/0002/versi/19970507/ayat/0004/huruf/a> a legal:Huruf .
+<http://example.org/lex2kg/uu/1997/12/pasal/0002/versi/19970507/ayat/0004/huruf/a/text> a legal:Segmen .
+<http://example.org/lex2kg/uu/1997/12/pasal/0002/versi/19970507/ayat/0004/huruf/b> a legal:Huruf .
+<http://example.org/lex2kg/uu/1997/12/pasal/0002/versi/19970507/ayat/0004/huruf/b/text> a legal:Segmen .
+<http://example.org/lex2kg/uu/1997/12/pasal/0002/versi/19970507/ayat/0004/huruf/c> a legal:Huruf .
+<http://example.org/lex2kg/uu/1997/12/pasal/0002/versi/19970507/ayat/0004/huruf/c/text> a legal:Segmen .
+<http://example.org/lex2kg/uu/1997/12/mengingat> a legal:Mengingat .
+<http://example.org/lex2kg/uu/1997/12/mengingat/huruf/description> a legal:Segmen .
+<http://example.org/lex2kg/uu/1997/12/mengingat/huruf> a legal:DaftarHuruf .
+<http://example.org/lex2kg/uu/1997/12/mengingat/huruf/0001> a legal:Huruf .
+<http://example.org/lex2kg/uu/1997/12/mengingat/huruf/0001/text> a legal:Segmen .
+<http://example.org/lex2kg/uu/1997/12/mengingat/huruf/0002> a legal:Huruf .
+<http://example.org/lex2kg/uu/1997/12/mengingat/huruf/0002/text> a legal:Segmen .
+<http://example.org/lex2kg/uu/1997/12/mengingat/huruf/0003> a legal:Huruf .
+<http://example.org/lex2kg/uu/1997/12/mengingat/huruf/0003/text> a legal:Segmen .
+<http://example.org/lex2kg/uu/1997/12/menimbang> a legal:Menimbang .
+<http://example.org/lex2kg/uu/1997/12/menimbang/huruf/description> a legal:Segmen .
+<http://example.org/lex2kg/uu/1997/12/menimbang/huruf> a legal:DaftarHuruf .
+<http://example.org/lex2kg/uu/1997/12/menimbang/huruf/a> a legal:Huruf .
+<http://example.org/lex2kg/uu/1997/12/menimbang/huruf/a/text> a legal:Segmen .
+<http://example.org/lex2kg/uu/1997/12/menimbang/huruf/b> a legal:Huruf .
+<http://example.org/lex2kg/uu/1997/12/menimbang/huruf/b/text> a legal:Segmen .
+<http://example.org/lex2kg/uu/1997/12/menimbang/huruf/c> a legal:Huruf .
+<http://example.org/lex2kg/uu/1997/12/menimbang/huruf/c/text> a legal:Segmen .
+<http://example.org/lex2kg/uu/1997/12/daftarPasal> legal:bagianDari <http://example.org/lex2kg/uu/1997/12> .
+<http://example.org/lex2kg/uu/1997/12/pasal/0001> legal:bagianDari <http://example.org/lex2kg/uu/1997/12/daftarPasal> .
+<http://example.org/lex2kg/uu/1997/12/pasal/0001/versi/19970507> legal:bagianDari <http://example.org/lex2kg/uu/1997/12/pasal/0001> .
+<http://example.org/lex2kg/uu/1997/12/pasal/0001> legal:bagianDari <http://example.org/lex2kg/uu/1997/12> .
+<http://example.org/lex2kg/uu/1997/12/pasal/0001/versi/19970507/huruf> legal:bagianDari <http://example.org/lex2kg/uu/1997/12/pasal/0001/versi/19970507> .
+<http://example.org/lex2kg/uu/1997/12/pasal/0001/versi/19970507/huruf/description> legal:bagianDari <http://example.org/lex2kg/uu/1997/12/pasal/0001/versi/19970507/huruf> .
+<http://example.org/lex2kg/uu/1997/12/pasal/0001/versi/19970507/huruf/0001> legal:bagianDari <http://example.org/lex2kg/uu/1997/12/pasal/0001/versi/19970507/huruf> .
+<http://example.org/lex2kg/uu/1997/12/pasal/0001/versi/19970507/huruf/0001/text> legal:bagianDari <http://example.org/lex2kg/uu/1997/12/pasal/0001/versi/19970507/huruf/0001> .
+<http://example.org/lex2kg/uu/1997/12/pasal/0001/versi/19970507/huruf/0002> legal:bagianDari <http://example.org/lex2kg/uu/1997/12/pasal/0001/versi/19970507/huruf> .
+<http://example.org/lex2kg/uu/1997/12/pasal/0001/versi/19970507/huruf/0002/text> legal:bagianDari <http://example.org/lex2kg/uu/1997/12/pasal/0001/versi/19970507/huruf/0002> .
+<http://example.org/lex2kg/uu/1997/12/pasal/0001/versi/19970507/huruf/0003> legal:bagianDari <http://example.org/lex2kg/uu/1997/12/pasal/0001/versi/19970507/huruf> .
+<http://example.org/lex2kg/uu/1997/12/pasal/0001/versi/19970507/huruf/0003/text> legal:bagianDari <http://example.org/lex2kg/uu/1997/12/pasal/0001/versi/19970507/huruf/0003> .
+<http://example.org/lex2kg/uu/1997/12/pasal/0001/versi/19970507/huruf/0004> legal:bagianDari <http://example.org/lex2kg/uu/1997/12/pasal/0001/versi/19970507/huruf> .
+<http://example.org/lex2kg/uu/1997/12/pasal/0001/versi/19970507/huruf/0004/text> legal:bagianDari <http://example.org/lex2kg/uu/1997/12/pasal/0001/versi/19970507/huruf/0004> .
+<http://example.org/lex2kg/uu/1997/12/pasal/0001/versi/19970507/huruf/0005> legal:bagianDari <http://example.org/lex2kg/uu/1997/12/pasal/0001/versi/19970507/huruf> .
+<http://example.org/lex2kg/uu/1997/12/pasal/0001/versi/19970507/huruf/0005/text> legal:bagianDari <http://example.org/lex2kg/uu/1997/12/pasal/0001/versi/19970507/huruf/0005> .
+<http://example.org/lex2kg/uu/1997/12/pasal/0001/versi/19970507/huruf/0006> legal:bagianDari <http://example.org/lex2kg/uu/1997/12/pasal/0001/versi/19970507/huruf> .
+<http://example.org/lex2kg/uu/1997/12/pasal/0001/versi/19970507/huruf/0006/text> legal:bagianDari <http://example.org/lex2kg/uu/1997/12/pasal/0001/versi/19970507/huruf/0006> .
+<http://example.org/lex2kg/uu/1997/12/pasal/0001/versi/19970507/huruf/0007> legal:bagianDari <http://example.org/lex2kg/uu/1997/12/pasal/0001/versi/19970507/huruf> .
+<http://example.org/lex2kg/uu/1997/12/pasal/0001/versi/19970507/huruf/0007/text> legal:bagianDari <http://example.org/lex2kg/uu/1997/12/pasal/0001/versi/19970507/huruf/0007> .
+<http://example.org/lex2kg/uu/1997/12/pasal/0001/versi/19970507/huruf/0008> legal:bagianDari <http://example.org/lex2kg/uu/1997/12/pasal/0001/versi/19970507/huruf> .
+<http://example.org/lex2kg/uu/1997/12/pasal/0001/versi/19970507/huruf/0008/text> legal:bagianDari <http://example.org/lex2kg/uu/1997/12/pasal/0001/versi/19970507/huruf/0008> .
+<http://example.org/lex2kg/uu/1997/12/pasal/0001/versi/19970507/huruf/0009> legal:bagianDari <http://example.org/lex2kg/uu/1997/12/pasal/0001/versi/19970507/huruf> .
+<http://example.org/lex2kg/uu/1997/12/pasal/0001/versi/19970507/huruf/0009/text> legal:bagianDari <http://example.org/lex2kg/uu/1997/12/pasal/0001/versi/19970507/huruf/0009> .
+<http://example.org/lex2kg/uu/1997/12/pasal/0001/versi/19970507/huruf/0010> legal:bagianDari <http://example.org/lex2kg/uu/1997/12/pasal/0001/versi/19970507/huruf> .
+<http://example.org/lex2kg/uu/1997/12/pasal/0001/versi/19970507/huruf/0010/text> legal:bagianDari <http://example.org/lex2kg/uu/1997/12/pasal/0001/versi/19970507/huruf/0010> .
+<http://example.org/lex2kg/uu/1997/12/pasal/0001/versi/19970507/huruf/0011> legal:bagianDari <http://example.org/lex2kg/uu/1997/12/pasal/0001/versi/19970507/huruf> .
+<http://example.org/lex2kg/uu/1997/12/pasal/0001/versi/19970507/huruf/0011/text> legal:bagianDari <http://example.org/lex2kg/uu/1997/12/pasal/0001/versi/19970507/huruf/0011> .
+<http://example.org/lex2kg/uu/1997/12/pasal/0002> legal:bagianDari <http://example.org/lex2kg/uu/1997/12/daftarPasal> .
+<http://example.org/lex2kg/uu/1997/12/pasal/0002/versi/19970507> legal:bagianDari <http://example.org/lex2kg/uu/1997/12/pasal/0002> .
+<http://example.org/lex2kg/uu/1997/12/pasal/0002> legal:bagianDari <http://example.org/lex2kg/uu/1997/12> .
+<http://example.org/lex2kg/uu/1997/12/pasal/0002/versi/19970507/ayat> legal:bagianDari <http://example.org/lex2kg/uu/1997/12/pasal/0002/versi/19970507> .
+<http://example.org/lex2kg/uu/1997/12/pasal/0002/versi/19970507/ayat/0001> legal:bagianDari <http://example.org/lex2kg/uu/1997/12/pasal/0002/versi/19970507/ayat> .
+<http://example.org/lex2kg/uu/1997/12/pasal/0002/versi/19970507/ayat/0001/text> legal:bagianDari <http://example.org/lex2kg/uu/1997/12/pasal/0002/versi/19970507/ayat/0001> .
+<http://example.org/lex2kg/uu/1997/12/pasal/0002/versi/19970507/ayat/0002> legal:bagianDari <http://example.org/lex2kg/uu/1997/12/pasal/0002/versi/19970507/ayat> .
+<http://example.org/lex2kg/uu/1997/12/pasal/0002/versi/19970507/ayat/0002/huruf> legal:bagianDari <http://example.org/lex2kg/uu/1997/12/pasal/0002/versi/19970507/ayat/0002> .
+<http://example.org/lex2kg/uu/1997/12/pasal/0002/versi/19970507/ayat/0002/huruf/description> legal:bagianDari <http://example.org/lex2kg/uu/1997/12/pasal/0002/versi/19970507/ayat/0002/huruf> .
+<http://example.org/lex2kg/uu/1997/12/pasal/0002/versi/19970507/ayat/0002/huruf/a> legal:bagianDari <http://example.org/lex2kg/uu/1997/12/pasal/0002/versi/19970507/ayat/0002/huruf> .
+<http://example.org/lex2kg/uu/1997/12/pasal/0002/versi/19970507/ayat/0002/huruf/a/text> legal:bagianDari <http://example.org/lex2kg/uu/1997/12/pasal/0002/versi/19970507/ayat/0002/huruf/a> .
+<http://example.org/lex2kg/uu/1997/12/pasal/0002/versi/19970507/ayat/0002/huruf/b> legal:bagianDari <http://example.org/lex2kg/uu/1997/12/pasal/0002/versi/19970507/ayat/0002/huruf> .
+<http://example.org/lex2kg/uu/1997/12/pasal/0002/versi/19970507/ayat/0002/huruf/b/text> legal:bagianDari <http://example.org/lex2kg/uu/1997/12/pasal/0002/versi/19970507/ayat/0002/huruf/b> .
+<http://example.org/lex2kg/uu/1997/12/pasal/0002/versi/19970507/ayat/0002/huruf/c> legal:bagianDari <http://example.org/lex2kg/uu/1997/12/pasal/0002/versi/19970507/ayat/0002/huruf> .
+<http://example.org/lex2kg/uu/1997/12/pasal/0002/versi/19970507/ayat/0002/huruf/c/text> legal:bagianDari <http://example.org/lex2kg/uu/1997/12/pasal/0002/versi/19970507/ayat/0002/huruf/c> .
+<http://example.org/lex2kg/uu/1997/12/pasal/0002/versi/19970507/ayat/0002/huruf/d> legal:bagianDari <http://example.org/lex2kg/uu/1997/12/pasal/0002/versi/19970507/ayat/0002/huruf> .
+<http://example.org/lex2kg/uu/1997/12/pasal/0002/versi/19970507/ayat/0002/huruf/d/text> legal:bagianDari <http://example.org/lex2kg/uu/1997/12/pasal/0002/versi/19970507/ayat/0002/huruf/d> .
+<http://example.org/lex2kg/uu/1997/12/pasal/0002/versi/19970507/ayat/0002/huruf/e> legal:bagianDari <http://example.org/lex2kg/uu/1997/12/pasal/0002/versi/19970507/ayat/0002/huruf> .
+<http://example.org/lex2kg/uu/1997/12/pasal/0002/versi/19970507/ayat/0002/huruf/e/text> legal:bagianDari <http://example.org/lex2kg/uu/1997/12/pasal/0002/versi/19970507/ayat/0002/huruf/e> .
+<http://example.org/lex2kg/uu/1997/12/pasal/0002/versi/19970507/ayat/0002/huruf/f> legal:bagianDari <http://example.org/lex2kg/uu/1997/12/pasal/0002/versi/19970507/ayat/0002/huruf> .
+<http://example.org/lex2kg/uu/1997/12/pasal/0002/versi/19970507/ayat/0002/huruf/f/text> legal:bagianDari <http://example.org/lex2kg/uu/1997/12/pasal/0002/versi/19970507/ayat/0002/huruf/f> .
+<http://example.org/lex2kg/uu/1997/12/pasal/0002/versi/19970507/ayat/0003> legal:bagianDari <http://example.org/lex2kg/uu/1997/12/pasal/0002/versi/19970507/ayat> .
+<http://example.org/lex2kg/uu/1997/12/pasal/0002/versi/19970507/ayat/0003/text> legal:bagianDari <http://example.org/lex2kg/uu/1997/12/pasal/0002/versi/19970507/ayat/0003> .
+<http://example.org/lex2kg/uu/1997/12/pasal/0002/versi/19970507/ayat/0004> legal:bagianDari <http://example.org/lex2kg/uu/1997/12/pasal/0002/versi/19970507/ayat> .
+<http://example.org/lex2kg/uu/1997/12/pasal/0002/versi/19970507/ayat/0004/huruf> legal:bagianDari <http://example.org/lex2kg/uu/1997/12/pasal/0002/versi/19970507/ayat/0004> .
+<http://example.org/lex2kg/uu/1997/12/pasal/0002/versi/19970507/ayat/0004/huruf/description> legal:bagianDari <http://example.org/lex2kg/uu/1997/12/pasal/0002/versi/19970507/ayat/0004/huruf> .
+<http://example.org/lex2kg/uu/1997/12/pasal/0002/versi/19970507/ayat/0004/huruf/a> legal:bagianDari <http://example.org/lex2kg/uu/1997/12/pasal/0002/versi/19970507/ayat/0004/huruf> .
+<http://example.org/lex2kg/uu/1997/12/pasal/0002/versi/19970507/ayat/0004/huruf/a/text> legal:bagianDari <http://example.org/lex2kg/uu/1997/12/pasal/0002/versi/19970507/ayat/0004/huruf/a> .
+<http://example.org/lex2kg/uu/1997/12/pasal/0002/versi/19970507/ayat/0004/huruf/b> legal:bagianDari <http://example.org/lex2kg/uu/1997/12/pasal/0002/versi/19970507/ayat/0004/huruf> .
+<http://example.org/lex2kg/uu/1997/12/pasal/0002/versi/19970507/ayat/0004/huruf/b/text> legal:bagianDari <http://example.org/lex2kg/uu/1997/12/pasal/0002/versi/19970507/ayat/0004/huruf/b> .
+<http://example.org/lex2kg/uu/1997/12/pasal/0002/versi/19970507/ayat/0004/huruf/c> legal:bagianDari <http://example.org/lex2kg/uu/1997/12/pasal/0002/versi/19970507/ayat/0004/huruf> .
+<http://example.org/lex2kg/uu/1997/12/pasal/0002/versi/19970507/ayat/0004/huruf/c/text> legal:bagianDari <http://example.org/lex2kg/uu/1997/12/pasal/0002/versi/19970507/ayat/0004/huruf/c> .
+<http://example.org/lex2kg/uu/1997/12/mengingat/huruf> legal:bagianDari <http://example.org/lex2kg/uu/1997/12/mengingat> .
+<http://example.org/lex2kg/uu/1997/12/mengingat/huruf/description> legal:bagianDari <http://example.org/lex2kg/uu/1997/12/mengingat/huruf> .
+<http://example.org/lex2kg/uu/1997/12/mengingat/huruf/0001> legal:bagianDari <http://example.org/lex2kg/uu/1997/12/mengingat/huruf> .
+<http://example.org/lex2kg/uu/1997/12/mengingat/huruf/0001/text> legal:bagianDari <http://example.org/lex2kg/uu/1997/12/mengingat/huruf/0001> .
+<http://example.org/lex2kg/uu/1997/12/mengingat/huruf/0002> legal:bagianDari <http://example.org/lex2kg/uu/1997/12/mengingat/huruf> .
+<http://example.org/lex2kg/uu/1997/12/mengingat/huruf/0002/text> legal:bagianDari <http://example.org/lex2kg/uu/1997/12/mengingat/huruf/0002> .
+<http://example.org/lex2kg/uu/1997/12/mengingat/huruf/0003> legal:bagianDari <http://example.org/lex2kg/uu/1997/12/mengingat/huruf> .
+<http://example.org/lex2kg/uu/1997/12/mengingat/huruf/0003/text> legal:bagianDari <http://example.org/lex2kg/uu/1997/12/mengingat/huruf/0003> .
+<http://example.org/lex2kg/uu/1997/12/menimbang/huruf> legal:bagianDari <http://example.org/lex2kg/uu/1997/12/menimbang> .
+<http://example.org/lex2kg/uu/1997/12/menimbang/huruf/description> legal:bagianDari <http://example.org/lex2kg/uu/1997/12/menimbang/huruf> .
+<http://example.org/lex2kg/uu/1997/12/menimbang/huruf/a> legal:bagianDari <http://example.org/lex2kg/uu/1997/12/menimbang/huruf> .
+<http://example.org/lex2kg/uu/1997/12/menimbang/huruf/a/text> legal:bagianDari <http://example.org/lex2kg/uu/1997/12/menimbang/huruf/a> .
+<http://example.org/lex2kg/uu/1997/12/menimbang/huruf/b> legal:bagianDari <http://example.org/lex2kg/uu/1997/12/menimbang/huruf> .
+<http://example.org/lex2kg/uu/1997/12/menimbang/huruf/b/text> legal:bagianDari <http://example.org/lex2kg/uu/1997/12/menimbang/huruf/b> .
+<http://example.org/lex2kg/uu/1997/12/menimbang/huruf/c> legal:bagianDari <http://example.org/lex2kg/uu/1997/12/menimbang/huruf> .
+<http://example.org/lex2kg/uu/1997/12/menimbang/huruf/c/text> legal:bagianDari <http://example.org/lex2kg/uu/1997/12/menimbang/huruf/c> .

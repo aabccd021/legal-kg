@@ -24,8 +24,7 @@ export function nodeToUri(node: LegalNode): string {
   if (node.nodeType === 'bagian')
     return `${nodeToUri(node.parentBagianSetNode)}/${padStartIfNumber(node.key)}`;
   if (node.nodeType === 'daftarBagian') return `${nodeToUri(node.parentBabNode)}/bagian`;
-  if (node.nodeType === 'peraturan')
-    return `${getConfig().uriBase}/peraturan/${getDocumentPath(node)}`;
+  if (node.nodeType === 'peraturan') return `${getConfig().uriBase}/${getDocumentPath(node)}`;
   if (node.nodeType === 'paragraf')
     return `${nodeToUri(node.parentParagrafSetNode)}/${padStartIfNumber(node.key)}`;
   if (node.nodeType === 'daftarParagraf') return `${nodeToUri(node.parentBagianNode)}/paragraf`;
