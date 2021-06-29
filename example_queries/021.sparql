@@ -1,5 +1,5 @@
 # tampilkan legal document beserta yang ditimbangnya (menimbang)
-PREFIX legal: <http://example.org/legal/ontology/>
+PREFIX legal: <http://example.org/lex2kg/ontology/>
 
 SELECT ?doc ?menimbangDoc
 WHERE {

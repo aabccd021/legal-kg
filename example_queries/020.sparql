@@ -1,5 +1,5 @@
 # tampilkan semua UU yang disahkan setelah 10 Oktober 2019
-PREFIX legal: <http://example.org/legal/ontology/>
+PREFIX legal: <http://example.org/lex2kg/ontology/>
 PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 
 SELECT *

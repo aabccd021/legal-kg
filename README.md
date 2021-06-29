@@ -364,12 +364,12 @@ Donald Trump mantan presiden Amerika Serikat, dan entitas dari KG B dengan URI
 yang sama dengan maksud permainan kartu Trump, saat kedua KG ini digabung akan
 menjadi informasi yang berkontradiksi.
 
-Pada penelitian ini, semua URI menggunakan prefix `http://example.org/legal/`
+Pada penelitian ini, semua URI menggunakan prefix `http://example.org/lex2kg/`
 yang selanjutnya akan disebut _basePrefix_. Prefix ini dapat diganti dalam
 program agar dapat disesuaikan oleh pengguna program. Semua entitas dokumen dan
-komponennya menggunakan prefix URI `http://example.org/legal/peraturan` yang
+komponennya menggunakan prefix URI `http://example.org/lex2kg/peraturan` yang
 selanjutnya disebut _peraturanPrefix_, dan semua resource lainnya menggunakan
-`http://example.org/legal/ontology` yang selanjutnya disebut _ontoPrefix_.
+`http://example.org/lex2kg/ontology` yang selanjutnya disebut _ontoPrefix_.
 
 ## Perancangan URI Class
 

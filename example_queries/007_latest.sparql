@@ -1,16 +1,16 @@
 # Get components of Omnibus Law that amend (= mengubah) articles in Labor Law and compare the textual content of the old vs. new articles
-PREFIX legal: <http://example.org/legal/ontology/>
+PREFIX legal: <http://example.org/lex2kg/ontology/>
 
 SELECT ?insertingPoint ?insertedPasal ?version ?text WHERE {
   {
     SELECT ?pasal (MAX(?pasalVersion) as ?latestPasalVersion) WHERE {
-      ?pasal legal:bagianDari+ <http://example.org/legal/peraturan/uu/2020/11>.
+      ?pasal legal:bagianDari+ <http://example.org/lex2kg/uu/2020/11>.
       ?pasal legal:versi ?pasalVersion .
     } GROUP BY ?pasal
   }
   ?insertingPoint legal:bagianDari+ ?latestPasalVersion .
   ?insertingPoint legal:menyisipkan ?insertedPasalVersion .
-  ?insertedPasalVersion legal:bagianDari+ <http://example.org/legal/peraturan/uu/2003/13> .
+  ?insertedPasalVersion legal:bagianDari+ <http://example.org/lex2kg/uu/2003/13> .
   ?insertedPasal legal:versi ?insertedPasalVersion .
   ?insertedPasal legal:versi ?allPasalVersion .
   ?allPasalVersion legal:teks ?text .

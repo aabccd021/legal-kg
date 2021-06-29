@@ -1,8 +1,8 @@
 # Get articles of Omnibus Law that are not about updating (= insertions/amendments/removals) other laws
-PREFIX legal: <http://example.org/legal/ontology/>
+PREFIX legal: <http://example.org/lex2kg/ontology/>
 
 SELECT DISTINCT ?pasalVersion ?text WHERE {
-  ?pasalVersion legal:bagianDari+ <http://example.org/legal/peraturan/uu/2020/11>.
+  ?pasalVersion legal:bagianDari+ <http://example.org/lex2kg/uu/2020/11>.
   ?pasalVersion legal:teks ?text .
   FILTER NOT EXISTS {
     ?point legal:bagianDari+ ?pasalVersion . 

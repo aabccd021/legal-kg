@@ -1,5 +1,5 @@
 # Which law has the most number of updates (= insertions/amendments/removals) by Omnibus Law? For that law, show the most recent version taking into account the updates by Omnibus Law!
-PREFIX legal: <http://example.org/legal/ontology/>
+PREFIX legal: <http://example.org/lex2kg/ontology/>
 PREFIX owl: <http://www.w3.org/2002/07/owl#>
 
 SELECT ?law ?numOfUpdates ?pasal (MAX(?pasalVersion) as ?latestPasalVersion) WHERE {
@@ -7,7 +7,7 @@ SELECT ?law ?numOfUpdates ?pasal (MAX(?pasalVersion) as ?latestPasalVersion) WHE
     SELECT ?law (COUNT(*) AS ?numOfUpdates) WHERE {
       {
         SELECT ?pasal (MAX(?pasalVersion) as ?latestPasalVersion) WHERE {
-          ?pasal legal:bagianDari+ <http://example.org/legal/peraturan/uu/2020/11>.
+          ?pasal legal:bagianDari+ <http://example.org/lex2kg/uu/2020/11>.
           ?pasal legal:versi ?pasalVersion .
         } GROUP BY ?pasal
       }

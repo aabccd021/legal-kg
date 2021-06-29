@@ -136,4 +136,4 @@ function clean(str: string): string {
   return str.trim();
 }
 
-// TODO: http://example.org/legal/peraturan/uu/2020/11/pasal/0081/version/0000000000/point/0038
+// TODO: http://example.org/lex2kg/uu/2020/11/pasal/0081/version/0000000000/point/0038

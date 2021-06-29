@@ -1,10 +1,10 @@
 # What is the textual content of Article (or Pasal) 2 Subsection (or Ayat) 1 of Omnibus Law?
-PREFIX legal: <http://example.org/legal/ontology/>
+PREFIX legal: <http://example.org/lex2kg/ontology/>
 
 SELECT ?x ?text WHERE {
   {
     SELECT ?pasal (MAX(?pasalVersion) as ?latestPasalVersion) WHERE {
-      <http://example.org/legal/peraturan/uu/2020/11> legal:pasal ?pasal .
+      <http://example.org/lex2kg/uu/2020/11> legal:pasal ?pasal .
       ?pasal legal:nomor 2 .
       ?pasal legal:versi ?pasalVersion .
     } GROUP BY ?pasal

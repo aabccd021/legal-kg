@@ -1,8 +1,8 @@
 # Retrieve all subsections inserted by Omnibus Law into other laws and *optionally* the citations occurring in those subsections
-PREFIX legal: <http://example.org/legal/ontology/>
+PREFIX legal: <http://example.org/lex2kg/ontology/>
 
 SELECT ?ayat ?text ?citation WHERE {
-  ?insertingPoint legal:bagianDari+ <http://example.org/legal/peraturan/uu/2020/11>.
+  ?insertingPoint legal:bagianDari+ <http://example.org/lex2kg/uu/2020/11>.
   ?insertingPoint legal:menyisipkan ?insertedPasalVersion .
   ?ayat legal:bagianDari+ ?insertedPasalVersion .
   ?ayat legal:teks ?text .

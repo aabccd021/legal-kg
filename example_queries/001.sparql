@@ -1,8 +1,8 @@
 # Describe Omnibus Law (UU Cipta Kerja)
-PREFIX legal: <http://example.org/legal/ontology/>
+PREFIX legal: <http://example.org/lex2kg/ontology/>
 
 SELECT * WHERE {
-  <http://example.org/legal/peraturan/uu/2020/11> ?p ?o .
+  <http://example.org/lex2kg/uu/2020/11> ?p ?o .
 } 
 ORDER BY ?p ?o
 LIMIT 3
