@@ -16,6 +16,5 @@ ORDER BY DESC(?pasalCount)
 LIMIT 25
 """
 
-url = "http://127.0.0.1:3030/legal/sparql"
-bubble = VKG(sparql_query=sparql_query, sparql_service_url=url, chart='BubbleChart')
-bubble.plot()
+url = "http://127.0.0.1:3030/lex2kg/sparql"
+bubble = VKG(sparql_query=sparql_query, sparql_service_url=url, chart='PieChart')

@@ -1,10 +1,10 @@
 # Get subsections (= ayat) containing "kompensasi" and "buruh" that are added by Omnibus Law into other laws
-PREFIX legal: <http://example.org/legal/ontology/>
+PREFIX legal: <http://example.org/lex2kg/ontology/>
 
 SELECT ?ayat ?text WHERE {
   {
     SELECT ?pasal (MAX(?pasalVersion) as ?latestPasalVersion) WHERE {
-      ?pasal legal:bagianDari+ <http://example.org/legal/peraturan/uu/2020/11>.
+      ?pasal legal:bagianDari+ <http://example.org/lex2kg/uu/2020/11>.
       ?pasal legal:versi ?pasalVersion .
     } GROUP BY ?pasal
   }

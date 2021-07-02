@@ -1,5 +1,5 @@
 # tampilkan semua triple
-PREFIX legal: <http://example.org/legal/ontology/>
+PREFIX legal: <http://example.org/lex2kg/ontology/>
 
 SELECT * 
 WHERE {

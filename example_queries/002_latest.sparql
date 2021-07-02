@@ -1,10 +1,10 @@
 # Retrieve all articles (= pasal) of Omnibus Law
-PREFIX legal: <http://example.org/legal/ontology/>
+PREFIX legal: <http://example.org/lex2kg/ontology/>
 
 SELECT ?pasal ?text WHERE {
   { 
     SELECT ?pasal (MAX(?pasalVersion) as ?latestPasalVersion) WHERE {
-      <http://example.org/legal/peraturan/uu/2020/11> legal:pasal ?pasal .
+      <http://example.org/lex2kg/uu/2020/11> legal:pasal ?pasal .
       ?pasal legal:versi ?pasalVersion .
     } GROUP BY ?pasal 
   }

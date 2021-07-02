@@ -1,5 +1,5 @@
 # tampilkan 10 dokumen yang pernah diamandemen
-PREFIX legal: <http://example.org/legal/ontology/>
+PREFIX legal: <http://example.org/lex2kg/ontology/>
 
 SELECT DISTINCT ?doc ?amenderDoc
 WHERE {

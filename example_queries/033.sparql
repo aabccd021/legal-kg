@@ -1,0 +1,6 @@
+# Count triples about document change
+PREFIX legal: <http://example.org/lex2kg/ontology/>
+
+SELECT (COUNT (*) as ?countResult) WHERE {
+  ?s legal:mengubah|legal:menghapus|legal:menyisipkan ?o
+} 

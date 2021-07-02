@@ -1,0 +1,10 @@
+# Count triples with citation inside document
+PREFIX legal: <http://example.org/lex2kg/ontology/>
+
+SELECT (COUNT (*) as ?countResult) WHERE {
+  ?s legal:merujuk ?o .
+  ?s legal:bagianDari* ?doc .
+  ?o legal:bagianDari* ?doc .
+  ?doc a legal:Peraturan .
+} 
+
