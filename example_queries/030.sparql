@@ -1,0 +1,24 @@
+# Count triples about document metadata
+PREFIX legal: <http://example.org/lex2kg/ontology/>
+
+SELECT (COUNT (*) as ?countResult) WHERE {
+  ?s
+    legal:yurisdiksi|
+    legal:jenisPeraturan|
+    legal:tahun|
+    legal:bahasa|
+    legal:tentang|
+    legal:disahkanPada|
+    legal:disahkanDi|
+    legal:disahkanOleh|
+    legal:jabatanPengesah
+  ?o
+} 
+
+
+#  teks
+# merujuk
+# mengubah
+# menghapus
+# menyisipkan
+

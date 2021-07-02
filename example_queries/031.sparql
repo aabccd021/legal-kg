@@ -1,0 +1,14 @@
+# Count triples about document text
+PREFIX legal: <http://example.org/lex2kg/ontology/>
+
+SELECT (COUNT (*) as ?countResult) WHERE {
+  ?s
+    legal:teks
+  ?o
+} 
+
+# merujuk
+# mengubah
+# menghapus
+# menyisipkan
+

@@ -1645,3 +1645,274 @@ result:
 |0||
 |-|-|
 |o|Dalam Undang-Undang ini yang dimaksud dengan:\n1. Ruang adalah wadah yang meliputi ruang darat, ruang laut, dan ruang udara, termasuk ruang di dalam bumi sebagai satu kesatuan wilayah, tempat manusia dan makhluk lain hidup, melakukan kegiatan, dan memelihara kelangsungan hidupnya.\n2. Tata ruang adalah wujud struktur ruang dan pola ruang.\n3. Struktur ruang adalah susunan pusat-pusat permukiman dan sistem jaringan prasarana dan sarana yang berfungsi sebagai pendukung kegiatan sosial ekonomi masyarakat yang secara hierarki memiliki hubungan fungsional.\n4. Pola ruang adalah distribusi peruntukan ruang dalam suatu wilayah yang meliputi peruntukan ruang untuk fungsi lindung dan peruntukan ruang untuk fungsi budi daya. an\n5. Penataan ruang adalah suatu sistem perencanaan tata ruang, pemanfaatan ruang, dan pengendalian pemanfaatan ruang.\n6. Penyelenggaraan penataan ruang adalah kegiatan yang meliputi pengaturan, pembinaan, pelaksanaan, dan pengawasan penataan ruang.\n7. Pemerintah Pusat adalah Presiden Republik Indonesia yang memegang kekuasaan pemerintahan negara Republik Indonesia yang dibantu oleh Wakil Presiden dan menteri sebagaimana dimaksud dalam Undang- Undang Dasar Negara Republik Indonesia Tahun 1945.\n8. Pemerintah Daerah adalah kepala daerah sebagai unsur penyelenggara Pemerintahan Daerah yang memimpin pelaksanaan urusan pemerintahan yang menjadi kewenangan daerah otonom.\n9. Pengaturan penataan ruang adalah upaya pembentukan landasan hukum bagi Pemerintah Pusat, Pemerintah Daerah, dan masyarakat dalam penataan ruang.\n10. Pembinaan penataan ruang adalah upaya untuk meningkatkan kinerja penataan ruang yang diselenggarakan oleh Pemerintah Pusat, Pemerintah Daerah, dan masyarakat.\n11. Pelaksanaan penataan ruang adalah upaya pencapaian tujuan penataan ruang melalui pelaksanaan perencanaan tata ruang, pemanfaatan ruang, dan pengendalian pemanfaatan ruang.\n12. Pengawasan penataan ruang adalah upaya agar penyelenggaraan penataan ruang dapat diwujudkan sesuai dengan ketentuan peraturan perundang- undangan.\n13. Perencanaan tata ruang adalah suatu proses untuk menentukan struktur ruang dan pola ruang yang meliputi penyusunan dan penetapan rencana tata ruang.\n14. Pemanfaatan ruang adalah upaya untuk mewujudkan struktur ruang dan pola ruang sesuai dengan rencana tata ruang melalui penyusunan dan pelaksanaan program beserta pembiayaannya.\n15. Pengendalian pemanfaatan ruang adalah upaya untuk mewujudkan tertib tata ruang.\n16. Rencana tata ruang adalah hasil perencanaan tata ruang.\n17. Wilayah adalah ruang yang merupakan kesatuan geografis beserta segenap unsur terkait yang batas dan sistemnya ditentukan berdasarkan aspek administratif dan/atau aspek fungsional.\n18. Sistem wilayah adalah struktur ruang dan pola ruang yang mempunyai jangkauan pelayanan pada tingkat wilayah.\n19. Sistem internal perkotaan adalah struktur ruang dan pola ruang yang mempunyai jangkauan pelayanan pada tingkat internal perkotaan.\n20. Kawasan adalah wilayah yang memiliki fungsi utama lindung atau budi daya.\n21. Kawasan lindung adalah wilayah yang ditetapkan dengan fungsi utama melindungi kelestarian lingkungan hidup yang mencakup sumber daya alam dan sumber daya buatan.\n22. Kawasan budi daya adalah wilayah yang ditetapkan dengan fungsi utama untuk dibudidayakan atas dasar kondisi dan potensi sumber daya alam, sumber daya manusia, dan sumber daya buatan.\n23. Kawasan perdesaan adalah wilayah yang mempunyai kegiatan utama pertanian, termasuk pengelolaan sumber daya alam dengan susunan fungsi kawasan sebagai tempat permukiman perdesaan, pelayanan jasa pemerintahan, pelayanan sosial, dan kegiatan ekonomi.\n24. Kawasan agropolitan adalah kawasan yang terdiri atas satu atau lebih pusat kegiatan pada wilayah perdesaan sebagai sistem produksi pertanian dan pengelolaan sumber daya alam tertentu yang ditunjukkan oleh adanya keterkaitan fungsional dan hierarki keruangan satuan sistem permukiman dan sistem agrobisnis.\n25. Kawasan perkotaan adalah wilayah yang mempunyai kegiatan utama bukan pertanian dengan susunan fungsi kawasan sebagai tempat permukiman perkotaan, pemusatan dan distribusi pelayanan jasa pemerintahan, pelayanan sosial, dan kegiatan ekonomi.\n26. Kawasan metropolitan adalah kawasan perkotaan yang terdiri atas sebuah kawasan perkotaan yang berdiri sendiri atau kawasan perkotaan inti dengan kawasan perkotaan di sekitarnya yang saling memiliki keterkaitan fungsional yang dihubungkan dengan sistem jaringan prasarana wilayah yang terintegrasi dengan jumlah penduduk secara keseluruhan sekurang-kurangnya 1.000.000 (satu juta) jiwa.\n27. Kawasan megapolitan adalah kawasan yang terbentuk dari 2 (dua) atau lebih kawasan metropolitan yang memiliki hubungan fungsional dan membentuk sebuah sistem.\n28. Kawasan strategis nasional adalah wilayah yang penataan ruangnya diprioritaskan karena mempunyai pengaruh sangat penting secara nasional terhadap kedaulatan negara, pertahanan, dan keamanan negara, ekonomi, sosial, budaya, dan/atau lingkungan, termasuk wilayah yang telah ditetapkan sebagai warisan dunia.\n29. Kawasan strategis provinsi adalah wilayah yang penataan ruangnya diprioritaskan karena mempunyai pengaruh sangat penting dalam lingkup provinsi terhadap ekonomi, sosial, budaya, dan/atau lingkungan.\n30. Kawasan strategis kabupaten/kota adalah wilayah yang penataan ruangnya diprioritaskan karena mempunyai pengaruh sangat penting dalam lingkup kabupaten/kota terhadap ekonomi, sosial, budaya, dan/atau lingkungan. aa\n31. Ruang terbuka hijau adalah area memanjang/jalur dan/atau mengelompok yang penggunaannya lebih bersifat terbuka, tempat tumbuh tanaman, baik yang tumbuh secara alamiah maupun yang sengaja ditanam, dengan mempertimbangkan aspek fungsi ekologis, resapan air, ekonomi, sosial budaya, dan estetika.\n32. Kesesuaian Kegiatan Pemanfaatan Ruang adalah kesesuaian antara rencana kegiatan pemanfaatan ruang dengan rencana tata ruang.\n33. Orang adalah orang perseorangan dan/atau korporasi.\n34. Menteri adalah menteri yang menyelenggarakan urusan pemerintahan dalam bidang penataan ruang.\n|
+
+{}
+
+# Query_030
+
+query:
+
+```sparql
+# Count triples about document metadata
+PREFIX legal: <http://example.org/lex2kg/ontology/>
+
+SELECT (COUNT (*) as ?countResult) WHERE {
+  ?s
+    legal:yurisdiksi|
+    legal:jenisPeraturan|
+    legal:tahun|
+    legal:bahasa|
+    legal:tentang|
+    legal:disahkanPada|
+    legal:disahkanDi|
+    legal:disahkanOleh|
+    legal:jabatanPengesah
+  ?o
+} 
+
+
+#  teks
+# merujuk
+# mengubah
+# menghapus
+# menyisipkan
+
+
+```
+
+result:
+|0||
+|-|-|
+|countResult|6869|
+
+# Query_031
+
+query:
+
+```sparql
+# Count triples about document text
+PREFIX legal: <http://example.org/lex2kg/ontology/>
+
+SELECT (COUNT (*) as ?countResult) WHERE {
+  ?s
+    legal:teks
+  ?o
+} 
+
+# merujuk
+# mengubah
+# menghapus
+# menyisipkan
+
+
+```
+
+result:
+|0||
+|-|-|
+|countResult|152301|
+
+# Query_032
+
+query:
+
+```sparql
+# Count triples about document citation
+PREFIX legal: <http://example.org/lex2kg/ontology/>
+
+SELECT (COUNT (*) as ?countResult) WHERE {
+  ?s legal:merujuk ?o
+} 
+
+# mengubah
+# menghapus
+# menyisipkan
+
+
+```
+
+result:
+|0||
+|-|-|
+|countResult|31325|
+
+# Query_033
+
+query:
+
+```sparql
+# Count triples about document change
+PREFIX legal: <http://example.org/lex2kg/ontology/>
+
+SELECT (COUNT (*) as ?countResult) WHERE {
+  ?s legal:mengubah|legal:menghapus|legal:menyisipkan ?o
+} 
+
+```
+
+result:
+|0||
+|-|-|
+|countResult|1252|
+
+# Query_034
+
+query:
+
+```sparql
+# Count triples about class assignment
+PREFIX legal: <http://example.org/lex2kg/ontology/>
+
+SELECT (COUNT (*) as ?countResult) WHERE {
+  ?s a ?o
+} 
+
+```
+
+result:
+|0||
+|-|-|
+|countResult|256416|
+
+# Query_035
+
+query:
+
+```sparql
+# Count triples about document structure
+PREFIX legal: <http://example.org/lex2kg/ontology/>
+
+SELECT (COUNT (*) as ?countResult) WHERE {
+  ?s
+    legal:nomor|
+    legal:judul|
+    legal:bab|
+    legal:bagian|
+    legal:paragraf|
+    legal:pasal|
+    legal:ayat|
+    legal:huruf|
+    legal:segmen|
+    legal:daftarBab|
+    legal:daftarBagian|
+    legal:daftarParagraf|
+    legal:daftarPasal|
+    legal:daftarAyat|
+    legal:daftarHuruf|
+    legal:tanggal|
+    legal:jenisVersi|
+    legal:versi|
+    legal:menimbang|
+    legal:mengingat|
+    legal:bagianDari|
+    legal:yurisdiksi|
+    legal:jenisPeraturan|
+    legal:tahun|
+    legal:bahasa|
+    legal:teks|
+    legal:merujuk|
+    legal:mengubah|
+    legal:menghapus|
+    legal:menyisipkan|
+    legal:tentang|
+    legal:disahkanPada|
+    legal:disahkanDi|
+    legal:disahkanOleh|
+    legal:jabatanPengesah|
+    a
+  ?o
+} 
+
+
+```
+
+result:
+|0||
+|-|-|
+|countResult|1163051|
+
+# Query_036
+
+query:
+
+```sparql
+# Count triples with citation inside document
+PREFIX legal: <http://example.org/lex2kg/ontology/>
+
+SELECT (COUNT (*) as ?countResult) WHERE {
+  ?s legal:merujuk ?o .
+  ?s legal:bagianDari* ?doc .
+  ?o legal:bagianDari* ?doc .
+  ?doc a legal:Peraturan .
+} 
+
+
+```
+
+result:
+|0||
+|-|-|
+|countResult|22829|
+
+# Query_037
+
+query:
+
+```sparql
+# Count triples with citation between document
+PREFIX legal: <http://example.org/lex2kg/ontology/>
+
+SELECT (COUNT (*) as ?countResult) WHERE {
+  ?s legal:merujuk ?o .
+  ?s (legal:bagianDari|^legal:mengingat|^legal:menimbang)* ?sdoc .
+  ?o legal:bagianDari* ?odoc .
+  ?sdoc a legal:Peraturan .
+  ?odoc a legal:Peraturan .
+  FILTER (?sdoc != ?odoc)
+} 
+
+```
+
+result:
+|0||
+|-|-|
+|countResult|1401|
+
+# Query_038
+
+query:
+
+```sparql
+# Count triples with citation to non existing law
+PREFIX legal: <http://example.org/lex2kg/ontology/>
+
+SELECT (COUNT(*) as ?countResult) WHERE {
+  {
+    SELECT ?s ?o WHERE {
+      ?s legal:merujuk ?o .
+    }
+  } MINUS {
+    SELECT ?s ?o WHERE {
+      ?s legal:merujuk ?o .
+      ?s legal:bagianDari* ?doc .
+      ?o legal:bagianDari* ?doc .
+      ?doc a legal:Peraturan .
+    }
+  } MINUS {
+    SELECT ?s ?o WHERE {
+      ?s legal:merujuk ?o .
+      ?s (legal:bagianDari|^legal:mengingat|^legal:menimbang)* ?sdoc .
+      ?o legal:bagianDari* ?odoc .
+      ?sdoc a legal:Peraturan .
+      ?odoc a legal:Peraturan .
+      FILTER (?sdoc != ?odoc)
+    }
+  }
+} 
+
+```
+
+result:
+|0||
+|-|-|
+|countResult|7095|
