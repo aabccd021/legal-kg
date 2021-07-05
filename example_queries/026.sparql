@@ -1,11 +1,11 @@
 # tampilkan semua document yang melakukan amendment, dan banyaknya pasal yang diamendment oleh dokumen tersebut.
-PREFIX legal: <http://example.org/lex2kg/ontology/>
+PREFIX lex2kg-o: <https://example.org/lex2kg/ontology/>
 
 SELECT ?doc (COUNT(?point) as ?amendmentCount)
 WHERE {
-  ?doc a legal:Peraturan .
-  ?point legal:bagianDari* ?doc .
-  ?point legal:mengubah|legal:menyisipkan|legal:menghapus ?pasalVersion .
+  ?doc a lex2kg-o:Peraturan .
+  ?point lex2kg-o:bagianDari* ?doc .
+  ?point lex2kg-o:mengubah|lex2kg-o:menyisipkan|lex2kg-o:menghapus ?pasalVersion .
 }
 GROUP BY (?doc)
 ORDER BY DESC(?amendmentCount)

@@ -1,14 +1,14 @@
 # tampilkan 10 dokumen yang pernah diamandemen
-PREFIX legal: <http://example.org/lex2kg/ontology/>
+PREFIX lex2kg-o: <https://example.org/lex2kg/ontology/>
 
 SELECT DISTINCT ?doc ?amenderDoc
 WHERE {
-  ?doc a legal:Peraturan .
-  ?pasal legal:bagianDari ?doc .
-  ?pasal legal:versi ?pasalVersion .
-  ?amender legal:mengubah ?pasalVersion .
-  ?amender legal:bagianDari* ?amenderDoc .
-  ?amenderDoc a legal:Peraturan
+  ?doc a lex2kg-o:Peraturan .
+  ?pasal lex2kg-o:bagianDari ?doc .
+  ?pasal lex2kg-o:versi ?pasalVersion .
+  ?amender lex2kg-o:mengubah ?pasalVersion .
+  ?amender lex2kg-o:bagianDari* ?amenderDoc .
+  ?amenderDoc a lex2kg-o:Peraturan
 }
 ORDER BY ?doc ?amenderDoc
 LIMIT 10

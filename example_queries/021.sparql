@@ -1,12 +1,12 @@
 # tampilkan legal document beserta yang ditimbangnya (menimbang)
-PREFIX legal: <http://example.org/lex2kg/ontology/>
+PREFIX lex2kg-o: <https://example.org/lex2kg/ontology/>
 
 SELECT ?doc ?menimbangDoc
 WHERE {
-  ?doc legal:menimbang ?menimbang .
-  ?menimbangText legal:bagianDari* ?menimbang .
-  ?menimbangText legal:merujuk ?menimbangDoc .
-  ?menimbangDoc a legal:Peraturan
+  ?doc lex2kg-o:menimbang ?menimbang .
+  ?menimbangText lex2kg-o:bagianDari* ?menimbang .
+  ?menimbangText lex2kg-o:merujuk ?menimbangDoc .
+  ?menimbangDoc a lex2kg-o:Peraturan
 }
 ORDER BY ?doc
 LIMIT 10

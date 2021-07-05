@@ -1,11 +1,11 @@
 # Get subsections (= ayat) containing "kompensasi" and "buruh" that are added by Omnibus Law into other laws
-PREFIX legal: <http://example.org/lex2kg/ontology/>
+PREFIX lex2kg-o: <https://example.org/lex2kg/ontology/>
 
 SELECT ?ayat ?text WHERE {
-  ?insertingPoint legal:bagianDari+ <http://example.org/lex2kg/uu/2020/11> .
-  ?insertingPoint legal:menyisipkan ?insertedPasalVersion .
-  ?ayat legal:bagianDari+ ?insertedPasalVersion .
-  ?ayat legal:teks ?text
+  ?insertingPoint lex2kg-o:bagianDari+ <https://example.org/lex2kg/uu/2020/11> .
+  ?insertingPoint lex2kg-o:menyisipkan ?insertedPasalVersion .
+  ?ayat lex2kg-o:bagianDari+ ?insertedPasalVersion .
+  ?ayat lex2kg-o:teks ?text
   FILTER REGEX(str(?text), "kompensasi")
   FILTER REGEX(str(?text), "buruh")
 } LIMIT 3

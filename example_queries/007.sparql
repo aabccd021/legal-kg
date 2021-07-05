@@ -1,21 +1,21 @@
 # Get components of Omnibus Law that amend (= mengubah) articles in Labor Law and compare the textual content of the old vs. new articles
-PREFIX legal: <http://example.org/lex2kg/ontology/>
+PREFIX lex2kg-o: <https://example.org/lex2kg/ontology/>
 
 SELECT ?updatingPointt ?updatedPasal ?text ?version
 WHERE {
   {
     SELECT ?pasal (MAX(?pasalVersion) as ?latestPasalVersion) WHERE {
-      ?pasal legal:bagianDari+ <http://example.org/lex2kg/uu/2020/11>.
-      ?pasal legal:versi ?pasalVersion .
+      ?pasal lex2kg-o:bagianDari+ <https://example.org/lex2kg/uu/2020/11>.
+      ?pasal lex2kg-o:versi ?pasalVersion .
     } GROUP BY ?pasal
   }
-  ?updatingPointt legal:bagianDari+ <http://example.org/lex2kg/uu/2020/11>.
-  ?updatingPointt legal:mengubah ?updatedPasalVersion .
-  ?updatedPasal legal:versi ?updatedPasalVersion .
-  <http://example.org/lex2kg/uu/2003/13> legal:pasal ?updatedPasal .
-  ?updatedPasal legal:versi ?allPasalVersion .
-  ?allPasalVersion legal:teks ?text .
-  ?allPasalVersion legal:tanggal ?version .
+  ?updatingPointt lex2kg-o:bagianDari+ <https://example.org/lex2kg/uu/2020/11>.
+  ?updatingPointt lex2kg-o:mengubah ?updatedPasalVersion .
+  ?updatedPasal lex2kg-o:versi ?updatedPasalVersion .
+  <https://example.org/lex2kg/uu/2003/13> lex2kg-o:pasal ?updatedPasal .
+  ?updatedPasal lex2kg-o:versi ?allPasalVersion .
+  ?allPasalVersion lex2kg-o:teks ?text .
+  ?allPasalVersion lex2kg-o:tanggal ?version .
 }
 ORDER BY ?insertingPoint ?insertedPasal ?version ?text
 LIMIT 3

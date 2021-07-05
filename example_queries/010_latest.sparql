@@ -1,37 +1,37 @@
 # How many are insertions, amendments, and removals of other laws in Omnibus Law?
-PREFIX legal: <http://example.org/lex2kg/ontology/>
+PREFIX lex2kg-o: <https://example.org/lex2kg/ontology/>
 
 SELECT ?type (COUNT(*) AS ?jumlah) WHERE {
   {
     {
       SELECT ?pasal (MAX(?pasalVersion) as ?latestPasalVersion) WHERE {
-        ?pasal legal:bagianDari+ <http://example.org/lex2kg/uu/2020/11>.
-        ?pasal legal:versi ?pasalVersion .
+        ?pasal lex2kg-o:bagianDari+ <https://example.org/lex2kg/uu/2020/11>.
+        ?pasal lex2kg-o:versi ?pasalVersion .
       } GROUP BY ?pasal
     }
-    ?deletingPoint legal:bagianDari+ ?latestPasalVersion .
-    ?deletingPoint legal:menghapus ?deletedPasalVersion .
+    ?deletingPoint lex2kg-o:bagianDari+ ?latestPasalVersion .
+    ?deletingPoint lex2kg-o:menghapus ?deletedPasalVersion .
     BIND("menghapus" AS ?type)
   }
   UNION {
     {
       SELECT ?pasal (MAX(?pasalVersion) as ?latestPasalVersion) WHERE {
-        ?pasal legal:bagianDari+ <http://example.org/lex2kg/uu/2020/11>.
-        ?pasal legal:versi ?pasalVersion .
+        ?pasal lex2kg-o:bagianDari+ <https://example.org/lex2kg/uu/2020/11>.
+        ?pasal lex2kg-o:versi ?pasalVersion .
       } GROUP BY ?pasal
     }
-    ?deletingPoint legal:bagianDari+ ?latestPasalVersion .
-    ?deletingPoint legal:menyisipkan ?deletedPasalVersion .
+    ?deletingPoint lex2kg-o:bagianDari+ ?latestPasalVersion .
+    ?deletingPoint lex2kg-o:menyisipkan ?deletedPasalVersion .
     BIND("menyisipkan" AS ?type)
   } UNION {
     {
       SELECT ?pasal (MAX(?pasalVersion) as ?latestPasalVersion) WHERE {
-        ?pasal legal:bagianDari+ <http://example.org/lex2kg/uu/2020/11>.
-        ?pasal legal:versi ?pasalVersion .
+        ?pasal lex2kg-o:bagianDari+ <https://example.org/lex2kg/uu/2020/11>.
+        ?pasal lex2kg-o:versi ?pasalVersion .
       } GROUP BY ?pasal
     }
-    ?deletingPoint legal:bagianDari+ ?latestPasalVersion .
-    ?deletingPoint legal:mengubah ?deletedPasalVersion .
+    ?deletingPoint lex2kg-o:bagianDari+ ?latestPasalVersion .
+    ?deletingPoint lex2kg-o:mengubah ?deletedPasalVersion .
     BIND("mengubah" AS ?type)
   }
 } GROUP BY ?type

@@ -1,12 +1,12 @@
 # tampilkan 10 bab dengan substring "Kerja"
-PREFIX legal: <http://example.org/lex2kg/ontology/>
+PREFIX lex2kg-o: <https://example.org/lex2kg/ontology/>
 
 SELECT ?bab ?title
 WHERE {
-  ?doc a legal:Peraturan .
-  ?bab legal:bagianDari* ?doc .
-  ?bab a legal:Bab .
-  ?bab legal:judul ?title.
+  ?doc a lex2kg-o:Peraturan .
+  ?bab lex2kg-o:bagianDari* ?doc .
+  ?bab a lex2kg-o:Bab .
+  ?bab lex2kg-o:judul ?title.
   FILTER REGEX(str(?title), "KERJA")
 }
 ORDER BY ?bab ?title

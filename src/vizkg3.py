@@ -3,13 +3,13 @@ import VizKG.visualize as VKG
 
 sparql_query = """
 # select 10 legal document dengan pasal terbanyak
-PREFIX legal: <http://example.org/lex2kg/ontology/>
+PREFIX lex2kg-o: <https://example.org/lex2kg/ontology/>
 
 SELECT ?docStr (COUNT(?pasal) as ?pasalCount)
 WHERE {
-  ?doc a legal:Peraturan .
-  ?doc legal:pasal ?pasal .
-  BIND(REPLACE(REPLACE(STR(?doc), "http://example.org/lex2kg/", ""), "/", "-") as ?docStr) .
+  ?doc a lex2kg-o:Peraturan .
+  ?doc lex2kg-o:pasal ?pasal .
+  BIND(REPLACE(REPLACE(STR(?doc), "https://example.org/lex2kg/", ""), "/", "-") as ?docStr) .
 }
 GROUP BY ?docStr
 ORDER BY DESC(?pasalCount)

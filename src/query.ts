@@ -1,11 +1,6 @@
 import { readdirSync, readFileSync, unlinkSync, existsSync, writeFileSync } from 'fs';
 import path from 'path';
-
-import { SparqlEndpointFetcher } from 'fetch-sparql-endpoint';
-
-const fetcher = new SparqlEndpointFetcher();
-
-type Row = Record<string, { value: string; termType: 'Literal' | 'NamedNode' }>;
+import { sparqlQuery } from './sparql';
 
 async function query(): Promise<void> {
   const sparqlFileDirPath = 'example_queries';
@@ -18,24 +13,18 @@ async function query(): Promise<void> {
     if (!fileName.endsWith('.sparql')) {
       continue;
     }
+    console.time(fileName);
     try {
       const baseName = path.basename(fileName, '.sparql');
       const queryStr = readFileSync(path.join(sparqlFileDirPath, fileName), 'utf-8');
-      const bindingsStream = await fetcher.fetchBindings(
-        'http://127.0.0.1:3030/legal/sparql',
-        queryStr
-      );
-      let idx = 0;
-      const end = [];
-      for await (const chunk of bindingsStream) {
-        end.push(
+      const res = await sparqlQuery({ queryStr });
+      const end: string[] = res.map(
+        (row, idx) =>
           `|${idx}||\n|-|-|\n` +
-            Object.entries((chunk as unknown) as Row)
-              .map(([key, val]) => `|${key}|${val.value.replaceAll('\n', '\\n')}|`)
-              .join('\n')
-        );
-        idx += 1;
-      }
+          Object.entries(row)
+            .map(([key, val]) => `|${key}|${val.value.replaceAll('\n', '\\n')}|`)
+            .join('\n')
+      );
       results.push(
         `# Query_${baseName}\n\n` +
           `query:\n\n\`\`\`sparql\n${queryStr}\n\`\`\`\n\nresult:\n${end.join('\n\n')}`
@@ -43,7 +32,9 @@ async function query(): Promise<void> {
     } catch (e) {
       results.push(JSON.stringify(e));
     }
+    console.timeEnd(fileName);
   }
   writeFileSync(queryResultFilePath, results.join('\n\n'));
 }
+
 query();

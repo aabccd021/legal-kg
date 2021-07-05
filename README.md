@@ -359,17 +359,17 @@ dapat memperkuat data dari masing-masing KG. KG memiliki entitas-entitas dengan
 URI yang unik, oleh karena itu saat menggabungkan sebuah KG A dan sebuah KG B,
 entitas yang berbeda harus memiliki URI yang berbeda. Sebuah masalah dapat
 terjadi apabila URI tidak dirancang dengan benar. Sebagai contoh, apabila
-terdapat entitas dari KG A dengan URI `http://example.org/trump` dengan maksud
+terdapat entitas dari KG A dengan URI `https://example.org/trump` dengan maksud
 Donald Trump mantan presiden Amerika Serikat, dan entitas dari KG B dengan URI
 yang sama dengan maksud permainan kartu Trump, saat kedua KG ini digabung akan
 menjadi informasi yang berkontradiksi.
 
-Pada penelitian ini, semua URI menggunakan prefix `http://example.org/lex2kg/`
+Pada penelitian ini, semua URI menggunakan prefix `https://example.org/lex2kg/`
 yang selanjutnya akan disebut _basePrefix_. Prefix ini dapat diganti dalam
 program agar dapat disesuaikan oleh pengguna program. Semua entitas dokumen dan
-komponennya menggunakan prefix URI `http://example.org/lex2kg/peraturan` yang
+komponennya menggunakan prefix URI `https://example.org/lex2kg/peraturan` yang
 selanjutnya disebut _peraturanPrefix_, dan semua resource lainnya menggunakan
-`http://example.org/lex2kg/ontology` yang selanjutnya disebut _ontoPrefix_.
+`https://example.org/lex2kg/ontology` yang selanjutnya disebut _ontoPrefix_.
 
 ## Perancangan URI Class
 

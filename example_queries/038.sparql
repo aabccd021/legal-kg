@@ -1,25 +1,25 @@
 # Count triples with citation to non existing law
-PREFIX legal: <http://example.org/lex2kg/ontology/>
+PREFIX lex2kg-o: <https://example.org/lex2kg/ontology/>
 
 SELECT (COUNT(*) as ?countResult) WHERE {
   {
     SELECT ?s ?o WHERE {
-      ?s legal:merujuk ?o .
+      ?s lex2kg-o:merujuk ?o .
     }
   } MINUS {
     SELECT ?s ?o WHERE {
-      ?s legal:merujuk ?o .
-      ?s legal:bagianDari* ?doc .
-      ?o legal:bagianDari* ?doc .
-      ?doc a legal:Peraturan .
+      ?s lex2kg-o:merujuk ?o .
+      ?s lex2kg-o:bagianDari* ?doc .
+      ?o lex2kg-o:bagianDari* ?doc .
+      ?doc a lex2kg-o:Peraturan .
     }
   } MINUS {
     SELECT ?s ?o WHERE {
-      ?s legal:merujuk ?o .
-      ?s (legal:bagianDari|^legal:mengingat|^legal:menimbang)* ?sdoc .
-      ?o legal:bagianDari* ?odoc .
-      ?sdoc a legal:Peraturan .
-      ?odoc a legal:Peraturan .
+      ?s lex2kg-o:merujuk ?o .
+      ?s (lex2kg-o:bagianDari|^lex2kg-o:mengingat|^lex2kg-o:menimbang)* ?sdoc .
+      ?o lex2kg-o:bagianDari* ?odoc .
+      ?sdoc a lex2kg-o:Peraturan .
+      ?odoc a lex2kg-o:Peraturan .
       FILTER (?sdoc != ?odoc)
     }
   }

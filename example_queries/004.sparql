@@ -1,12 +1,12 @@
 # Which are the articles of Chapter 2 (Bab 2) of Omnibus Law?
-PREFIX legal: <http://example.org/lex2kg/ontology/>
+PREFIX lex2kg-o: <https://example.org/lex2kg/ontology/>
 
 SELECT ?pasal ?text WHERE {
-  ?bab legal:bagianDari+ <http://example.org/lex2kg/uu/2020/11>.
-  ?bab legal:nomor 2 .
-  ?pasal legal:bagianDari+ ?bab .
-  ?pasal legal:versi ?pasalVersion .
-  ?pasalVersion legal:teks ?text
+  ?bab lex2kg-o:bagianDari+ <https://example.org/lex2kg/uu/2020/11>.
+  ?bab lex2kg-o:nomor 2 .
+  ?pasal lex2kg-o:bagianDari+ ?bab .
+  ?pasal lex2kg-o:versi ?pasalVersion .
+  ?pasalVersion lex2kg-o:teks ?text
 } 
 ORDER BY ?pasal ?text
 LIMIT 3

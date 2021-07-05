@@ -1,14 +1,8 @@
 # Count triples about document text
-PREFIX legal: <http://example.org/lex2kg/ontology/>
+PREFIX lex2kg-o: <https://example.org/lex2kg/ontology/>
 
 SELECT (COUNT (*) as ?countResult) WHERE {
   ?s
-    legal:teks
+    lex2kg-o:teks
   ?o
 } 
-
-# merujuk
-# mengubah
-# menghapus
-# menyisipkan
-

@@ -1,45 +1,28 @@
 # Count triples about document structure
-PREFIX legal: <http://example.org/lex2kg/ontology/>
+PREFIX lex2kg-o: <https://example.org/lex2kg/ontology/>
 
 SELECT (COUNT (*) as ?countResult) WHERE {
   ?s
-    legal:ayat|
-    legal:bab|
-    legal:bagianDari
-    legal:bagian|
-    legal:daftarAyat|
-    legal:daftarBab|
-    legal:daftarBagian|
-    legal:daftarHuruf|
-    legal:daftarParagraf|
-    legal:daftarPasal|
-    legal:huruf|
-    legal:jenisVersi|
-    legal:judul|
-    legal:mengingat|
-    legal:menimbang|
-    legal:nomor|
-    legal:paragraf|
-    legal:pasal|
-    legal:segmen|
-    legal:tanggal|
-    legal:versi|
+    lex2kg-o:nomor|
+    lex2kg-o:judul|
+    lex2kg-o:bab|
+    lex2kg-o:bagian|
+    lex2kg-o:paragraf|
+    lex2kg-o:pasal|
+    lex2kg-o:ayat|
+    lex2kg-o:huruf|
+    lex2kg-o:segmen|
+    lex2kg-o:daftarBab|
+    lex2kg-o:daftarBagian|
+    lex2kg-o:daftarParagraf|
+    lex2kg-o:daftarPasal|
+    lex2kg-o:daftarAyat|
+    lex2kg-o:daftarHuruf|
+    lex2kg-o:tanggal|
+    lex2kg-o:jenisVersi|
+    lex2kg-o:versi|
+    lex2kg-o:menimbang|
+    lex2kg-o:mengingat|
+    lex2kg-o:bagianDari
   ?o
 } 
-
-# yurisdiksi
-# jenisPeraturan
-# tahun
-# bahasa
-# teks
-
-# merujuk
-# mengubah
-# menghapus
-# menyisipkan
-# tentang
-# disahkanPada
-# disahkanDi
-# disahkanOleh
-# jabatanPengesah
-

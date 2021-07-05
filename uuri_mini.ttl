@@ -1,0 +1,9 @@
+@prefix o: <https://example.org/lex2kg/ontology/> .
+@prefix law: <https://example.org/lex2kg/uu/> .
+law:2010\/1 a o:Peraturan .
+law:2009\/32 a o:Peraturan .
+law:2020\/11 a o:Peraturan .
+law:2020\/11\/pasal\/21 o:bagianDari law:2020\/11  ;
+                        o:merujuk law:2009\/32 ;
+                        o:teks '''...lingkungan
+...Undang-Undang Nomor 32 Tahun 2009...''' .

@@ -1,5 +1,5 @@
 # Which law has the most number of updates (= insertions/amendments/removals) by Omnibus Law? For that law, show the most recent version taking into account the updates by Omnibus Law!
-PREFIX legal: <http://example.org/lex2kg/ontology/>
+PREFIX lex2kg-o: <https://example.org/lex2kg/ontology/>
 PREFIX owl: <http://www.w3.org/2002/07/owl#>
 
 SELECT ?law ?numOfUpdates ?pasal (MAX(?pasalVersion) as ?latestPasalVersion) WHERE {
@@ -7,20 +7,20 @@ SELECT ?law ?numOfUpdates ?pasal (MAX(?pasalVersion) as ?latestPasalVersion) WHE
     SELECT ?law (COUNT(*) AS ?numOfUpdates) WHERE {
       {
         SELECT ?pasal (MAX(?pasalVersion) as ?latestPasalVersion) WHERE {
-          ?pasal legal:bagianDari+ <http://example.org/lex2kg/uu/2020/11>.
-          ?pasal legal:versi ?pasalVersion .
+          ?pasal lex2kg-o:bagianDari+ <https://example.org/lex2kg/uu/2020/11>.
+          ?pasal lex2kg-o:versi ?pasalVersion .
         } GROUP BY ?pasal
       }
-      ?point legal:bagianDari+ ?latestPasalVersion .
-      { ?point legal:mengubah ?amendedPasalVersion }
-      UNION { ?point legal:menyisipkan ?amendedPasalVersion }
-      UNION { ?point legal:menghapus ?amendedPasalVersion }
-      ?amendedPasalVersion legal:bagianDari+ ?law .
-      ?law a legal:Peraturan .
+      ?point lex2kg-o:bagianDari+ ?latestPasalVersion .
+      { ?point lex2kg-o:mengubah ?amendedPasalVersion }
+      UNION { ?point lex2kg-o:menyisipkan ?amendedPasalVersion }
+      UNION { ?point lex2kg-o:menghapus ?amendedPasalVersion }
+      ?amendedPasalVersion lex2kg-o:bagianDari+ ?law .
+      ?law a lex2kg-o:Peraturan .
     } GROUP BY ?law
   }
-  ?pasal legal:bagianDari+ ?law .
-  ?pasal legal:versi ?pasalVersion .
+  ?pasal lex2kg-o:bagianDari+ ?law .
+  ?pasal lex2kg-o:versi ?pasalVersion .
 }
 GROUP BY ?law ?numOfUpdates ?pasal
 ORDER BY DESC (?numOfUpdates)

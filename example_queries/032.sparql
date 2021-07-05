@@ -1,11 +1,6 @@
 # Count triples about document citation
-PREFIX legal: <http://example.org/lex2kg/ontology/>
+PREFIX lex2kg-o: <https://example.org/lex2kg/ontology/>
 
 SELECT (COUNT (*) as ?countResult) WHERE {
-  ?s legal:merujuk ?o
+  ?s lex2kg-o:merujuk ?o
 } 
-
-# mengubah
-# menghapus
-# menyisipkan
-

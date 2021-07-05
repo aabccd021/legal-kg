@@ -5,13 +5,14 @@
   "scripts": {
     "build": "tsc",
     "lint": "eslint '**/*.ts'",
-    "fuseki": "cd fuseki && java -jar fuseki-server.jar --file=../uuri.ttl /legal",
+    "fuseki": "cd fuseki && java -jar fuseki-server.jar --file=../uuri.ttl /lex2kg",
     "query": "ts-node src/query.ts",
     "generate:ocr": "ts-node src/ocr.ts",
     "generate:span": "ts-node src/pdf_to_span.ts",
     "generate:data": "ts-node src/span_to_data.ts",
     "generate:ttl": "ts-node src/data_to_ttl.ts",
     "generate:md": "ts-node src/data_to_md.ts",
+    "bot": "ts-node src/bot.ts",
     "classify": "ts-node src/classify.ts",
     "scrape": "ts-node src/scrape.ts"
   },
@@ -104,6 +105,7 @@
     "io-ts": "^2.2.16",
     "js-yaml": "^4.0.0",
     "p-timeout": "^4.1.0",
+    "readline": "^1.3.0",
     "striptags": "^3.1.1",
     "tabletojson": "^2.0.4",
     "yargs": "^16.2.0",
