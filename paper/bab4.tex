@@ -1,9 +1,9 @@
 %--------------------------------------------------------------------------------------------------%
-\chapter{IMPLEMENTASI}\label{bab:4}
+\chapter{IMPLEMENTASI}\label{chap:4}
 %--------------------------------------------------------------------------------------------------%
 
 %--------------------------------------------------------------------------------------------------%
-\section{OCR Ulang Berkas PDF}\label{ocr-ulang-berkas-pdf}
+\section{OCR Ulang Berkas PDF}\label{sec:ocr-ulang-berkas-pdf}
 %--------------------------------------------------------------------------------------------------%
 
 Dokumen peraturan perundang-undangan yang digunakan pada penelitian didapatkan dalam format berkas
@@ -24,21 +24,23 @@ dugaan. Pada berkas PDF, terdapat metadata dengan nama \textbf{Creator}, dimana 
 peraturan Perudang-udangan yang didapatkan, tercantum nama-nama alat pencetak atau merk dari
 pencetak tersebut. Dari informasi tersebut penulis menduga bahwa terdapat sebagian peraturan
 perundang-undangan yang dibuat menjadi PDF dengan mencetaknya menjadi kertas terlebih dahulu
-kemudian di pindai oleh pemindai dan sebagian lainnya dikonversi langsung dari berkas \textit{.docx}.
-Data yang dipindai adalah berupa gambar, artinya teks yang terdapat pada berkas PDF adalah hasil OCR
-(\textit{optical character recognition}) oleh pemindai tersebut. Berikut adalah salahsatu contoh
-dokumen beserta data yang tercantum sebagai \textbf{Creator} dan contoh kesalahan pemindaiannya yang
-banyak terjadi.
+kemudian di pindai oleh pemindai dan sebagian lainnya dikonversi langsung dari berkas
+\textit{.docx}. Data yang dipindai adalah berupa gambar, artinya teks yang terdapat pada berkas PDF
+adalah hasil OCR (\textit{optical character recognition}) oleh pemindai tersebut.
+\tab~\ref{tab:metadata-pdf} adalah salahsatu contoh dokumen beserta data yang tercantum sebagai
+\textbf{Creator} dan contoh kesalahan pemindaiannya yang banyak terjadi.
 
 \begin{table}
   \centering
   \begin{tabular}{|l|l|l|}
     \hline
-    Dokumen                & \_\_Creator\_\_        & Kesalahan pemindaian        \\ \hline
+    Dokumen                & \_\_Creator\_\_        & Kesalahan pemindaian        \\ \hline \hline
     UU Nomor 13 Tahun 2003 & ScanSoft PDF Create! 4 & - (tidak ada)               \\ \hline
     UU Nomor 6 Tahun 2018  & Canon                  & `(2)` selalu dipindai `(21` \\ \hline
     PP Nomor 34 Tahun 2021 & Fuji Xerox B9100       & data teks tidak terbaca     \\ \hline
   \end{tabular}
+  \caption{Metadata PDF Peraturan Perundang-undangan}
+  \label{tab:metadata-pdf}
 \end{table}
 
 Pemindaian berkas PDF dengan metode yang berbeda-beda memberikan kualitas hasil pemindaian yang
@@ -54,9 +56,13 @@ dengan \textit{command} berikut pada sistem operasi Ubuntu 20.04. \texttt{ocrmyp
 \textit{wrapper} untuk Tesseract OCR dan \texttt{tesseract-ocr-ind} adalah program tambahan untuk
 dapat melakukan OCR menjadi teks Bahasa Indonesia.
 
-\begin{minted}[frame=single, fontsize=\footnotesize]{bash}
+\begin{listing}[H]
+  \begin{minted}[frame=single, fontsize=\footnotesize]{bash}
 apt update apt install ocrmypdf tesseract-ocr-ind -y
-\end{minted}
+  \end{minted}
+  \caption{Command untuk melakukan instalasi program OCR pada Linux OS}
+  \label{lst:install-ocr}
+\end{listing}
 
 Setelah program diinstall, OCR dapat dilakukan dengan menjalankan \textit{command} dibawah. Pada
 contoh dibawah dilakukan konversi \texttt{UU-2021-34.pdf} yang sudah ada menjadi
@@ -66,18 +72,26 @@ ulang pada berkas PDF yang sudah memiliki teks hasil OCR untuk di \textit{overwr
 diganti sesuai kebutuhan. Opsi \texttt{--tesseract-config tesseract-config.cfg} menjalankan
 \textit{command} dengan konfigurasi yang diberikan.
 
-\begin{minted}[frame=single, breaklines, fontsize=\footnotesize]{bash}
+\begin{listing}[H]
+  \begin{minted}[frame=single, breaklines, fontsize=\footnotesize]{bash}
 ocrmypdf -l ind --force-ocr --jobs 4 --tesseract-config tesseract-config.cfg UU-2021-34.pdf UU-2021-34_OCR.pdf
-\end{minted}
+  \end{minted}
+  \caption{Command untuk menjalankan OCR}
+  \label{lst:run-ocr}
+\end{listing}
 
 Konfigurasi Tesseract OCR yang digunakan adalah \texttt{tessedit\_pageseg\_mode 4} seperti yang
 terlihat pada isi file konfigurasi dibawah. \texttt{tessedit\_pageseg\_mode 4} digunakan agar
 Tesseract OCR mendeteksi teks sebagai \textit{block}, bukan \textit{word} atau \textit{character}.
 
-\begin{minted}[frame=single, fontsize=\footnotesize]{text}
+\begin{listing}[H]
+  \begin{minted}[frame=single, fontsize=\footnotesize]{text}
 # tesseract-config.cfg
 tessedit_pageseg_mode 4
-\end{minted}
+  \end{minted}
+  \caption{Konfigurasi Tesseract OCR}
+  \label{lst:konfigurasi-ocr}
+\end{listing}
 
 %--------------------------------------------------------------------------------------------------%
 \section{Ekstraksi Berkas PDF menjadi Data
@@ -98,17 +112,20 @@ Berikut adalah data yang dimiliki oleh sebuah \textit{span}:
   \item \texttt{id}: \textit{identifier} unik untuk setiap span
 \end{itemize}
 
-Berikut adalah contoh gambaran berkas PDF dan hasil ekstraksinya menjadi daftar \textit{span}.
+\pic~\ref{fig:contoh-dokumen} adalah contoh gambaran berkas PDF dan hasil ekstraksinya menjadi
+daftar \textit{span}.
 
 \begin{figure}[H]
   \centering
   \includegraphics{pictures/pdf_example.png}
-  \caption{Gambar dokumen PDF yang akan diekstraksi}
+  \caption{Contoh PDF yang akan diekstraksi}
+  \label{fig:contoh-dokumen}
 \end{figure}
 
 akan dipindai menjadi
 
-\begin{minted}[frame=single, fontsize=\footnotesize]{yaml}
+\begin{listing}[H]
+  \begin{minted}[frame=single, fontsize=\footnotesize]{yaml}
 - xL: 197.52
   xR: 442.79990000000004
   'y': 234.48000000000002
@@ -133,7 +150,10 @@ akan dipindai menjadi
   str: KETENAGAKERJAAN
   pageNum: 1
   id: 3
-\end{minted}
+  \end{minted}
+  \caption{Hasil ekstraksi \pic~\ref{fig:contoh-dokumen}}
+  \label{lst:hasil-ekstraksi}
+\end{listing}
 
 %--------------------------------------------------------------------------------------------------%
 \section{Membersihkan \textit{Noise} dari Halaman}\label{membersihkan-noise-dari-halaman}
@@ -148,6 +168,7 @@ dari sumber yang sama sehingga memiliki format yang sama, dan juga posisi \texti
   \centering
   \includegraphics{pictures/pdf_header.png}
   \caption{Contoh header}
+  \label{fig:contoh-header}
 \end{figure}
 
 Gambar diatas adalah contoh \textit{header} yang terdapat pada setiap halaman. Dapat dilihat bahwa
@@ -172,6 +193,7 @@ menggabungkannya dengan data hasil pemindaian untuk melengkapi bagian yang tidak
   \centering
   \includegraphics{pictures/pdf_unscanned_number.png}
   \caption{Contoh nomor tidak terpindai}
+  \label{fig:contoh-nomor-tidak-terpindai}
 \end{figure}
 
 Penulis hanya menggabungkan data dua berkas PDF untuk kasus angka seperti yang disebutkan diatas.
@@ -182,8 +204,8 @@ maka struktur akhir yang dihasilkan akan mengandung semua isi nomor 9 didalam no
 seharusnya adalah nomor yang terpisah. Berikut berturut-turut adalah contoh data yang dihasilkan
 jika nomor 9 tidak berhasil terpindai dan jika berhasil terpindai.
 
-Jika nomor 9 tidak berhasil terpindai:
-\begin{minted}[frame=single, fontsize=\footnotesize]{yaml}
+\begin{listing}[H]
+  \begin{minted}[frame=single, fontsize=\footnotesize]{yaml}
 - type: point
   key: 8
   text: >-
@@ -195,10 +217,13 @@ Jika nomor 9 tidak berhasil terpindai:
     sikap, dan etos kerja pada tingkat keterampilan dan keahlian tertentu sesuai
     dengan jenjang dan kualifikasi jabatan atau pekerjaan.
 \end{minted}
+  \caption{Data jika nomor 9 tidak berhasil terpindai}
+  \label{lst:no-9-tidak-terpindai}
+\end{listing}
 
-Jika nomor 9 berhasil terpindai:
 
-\begin{minted}[frame=single, fontsize=\footnotesize]{yaml}
+\begin{listing}[H]
+  \begin{minted}[frame=single, fontsize=\footnotesize]{yaml}
 - type: point
   key: 8
   text: >-
@@ -214,6 +239,9 @@ Jika nomor 9 berhasil terpindai:
     dengan jenjang dan kualifikasi jabatan atau pekerjaan.
   
 \end{minted}
+  \caption{Data jika nomor 9 terpindai}
+  \label{lst:no-9-terpindai}
+\end{listing}
 
 %--------------------------------------------------------------------------------------------------%
 \section{Klasifikasi Dokumen}\label{klasifikasi-dokumen}
@@ -249,6 +277,7 @@ menjadi rumit.
   \centering
   \includegraphics[width=\textwidth]{pictures/pdf_to_component.png}
   \caption{Ilustrasi Ekstraksi Daftar Span menjadi Data Struktur Komponen}
+  \label{fig:ilustrasi-ekstraksi}
 \end{figure}
 
 Deteksi batas antara komponen atau \textit{section} dilakukan dengan melihat data pada \textit{span}
@@ -300,6 +329,7 @@ membuat pembedaan antara ``Pasal biasa'' dan ``Pasal peng-amandemen'' menjadi su
   \centering
   \includegraphics{pictures/pdf_amendment.png}
   \caption{Contoh Amendemen pada UU Nomor 11 Tahun 2020}
+  \label{fig:contoh-amandemen}
 \end{figure}
 
 Untuk menyelesaikan masalah ini, penulis menggunakan koordinat \texttt{xL} \textit{span} tepat setelah
@@ -313,6 +343,7 @@ pasal biasa dan pasal amandemen hanya dilakukan jika dokumen memiliki komponen b
   \centering
   \includegraphics{pictures/amendment_detection.png}
   \caption{Deteksi Komponen Amandemen}
+  \label{fig:deteksi-amandemen}
 \end{figure}
 
 %--------------------------------------------------------------------------------------------------%
@@ -326,16 +357,17 @@ penelitian ini.
 
 \begin{longtable}[l]{|p{0.2\textwidth} | p{0.3\textwidth}| p{0.5\textwidth}|}
   \hline
-  Pola                                  & Contoh teks                                              & URI Terdeteksi                                                                                         \\ \hline \endhead
-  UUD 1945                              & Undang Undang Dasar Negara Republik Indonesia Tahun 1945 & \texttt{uud}                                                                                          \\ \hline
-  Undang-Undang Nomor \{x\} Tahun \{y\} & Undang-Undang Nomor 26 Tahun 2007                        & \texttt{uu/2007/26}                                                                                    \\ \hline
-  ayat (\{x\})                          & ayat (1)                                                 & \texttt{uu/2003/13/pasal/169/ayat/1}                                                                   \\ \hline
-  Pasal \{x\}                           & Pasal 156                                                & \texttt{uu/2003/13/pasal/156}                                                                          \\ \hline
-  Pasal \{x\} ayat (\{y\})              & Pasal 156 ayat (2)                                       & \texttt{uu/2003/13/pasal/156/ayat/2}                                                                   \\ \hline
+  \textbf{Pola}                         & \textbf{Contoh teks}                                     & \textbf{URI Terdeteksi}                                  \\ \hline \endhead
+  UUD 1945                              & Undang Undang Dasar Negara Republik Indonesia Tahun 1945 & \texttt{uud}                                             \\ \hline
+  Undang-Undang Nomor \{x\} Tahun \{y\} & Undang-Undang Nomor 26 Tahun 2007                        & \texttt{uu/2007/26}                                      \\ \hline
+  ayat (\{x\})                          & ayat (1)                                                 & \texttt{uu/2003/13/pasal/169/ayat/1}                     \\ \hline
+  Pasal \{x\}                           & Pasal 156                                                & \texttt{uu/2003/13/pasal/156}                            \\ \hline
+  Pasal \{x\} ayat (\{y\})              & Pasal 156 ayat (2)                                       & \texttt{uu/2003/13/pasal/156/ayat/2}                     \\ \hline
   huruf \{x\}, \{y\}, ... dan \{z\}     & huruf a, b, c, d, dan e                                  &
-  \makecell[l]{\texttt{uu/2003/13/menimbang/point/a}                                                                                                                                                        \\\texttt{uu/2003/13/menimbang/point/b}\\\texttt{uu/2003/13/menimbang/point/c}\\\texttt{uu/2003/13/menimbang/point/d}\\\texttt{uu/2003/13/menimbang/point/e}}\\ \hline
-  huruf \{x\} dan \{y\}                 & huruf a dan b                                            & \makecell[l]{\texttt{uu/2003/13/pasal/1/point/5/point/a}\\\texttt{uu/2003/13/pasal/1/point/5/point/b} } \\ \hline
-  \caption{Long table caption.\label{longszz}}                                                                                                                                                              \\
+  \makecell[l]{\texttt{uu/2003/13/menimbang/point/a}                                                                                                          \\\texttt{uu/2003/13/menimbang/point/b}\\\texttt{uu/2003/13/menimbang/point/c}\\\texttt{uu/2003/13/menimbang/point/d}\\\texttt{uu/2003/13/menimbang/point/e}}\\ \hline
+  huruf \{x\} dan \{y\}                 & huruf a dan b                                            & \makecell[l]{\texttt{uu/2003/13/pasal/1/point/5/point/a} \\\texttt{uu/2003/13/pasal/1/point/5/point/b} } \\ \hline
+  \caption{Long table caption.}
+  \label{longszz}
 \end{longtable}
 
 Data sitasi mengandung data sebagai berikut:
@@ -347,10 +379,10 @@ Data sitasi mengandung data sebagai berikut:
   \item \texttt{uri}: URI dokumen dan
 \end{itemize}
 
-Berikut adalah contoh teks pada Undang-Undang Nomor 13 Tahun 2003 Pasal 158 Ayat (4) beserta sitasi
-yang terdeteksi.
+Berikut adalah .
 
-\begin{minted}[frame=single, fontsize=\footnotesize]{yaml}
+\begin{listing}[H]
+  \begin{minted}[frame=single, fontsize=\footnotesize]{yaml}
 textString: >-
   Pekerja/buruh yang diputus hubungan kerjanya berdasarkan alasan sebagaimana
   dimaksud dalam ayat (1), dapat memperoleh uang penggantian hak sebagaimana
@@ -362,7 +394,10 @@ references:
   - start: 166
     end: 184
     uri: /uu/2003/13/pasal/156/ayat/4
-\end{minted}
+  \end{minted}
+  \caption{Contoh teks pada Undang-Undang Nomor 13 Tahun 2003 Pasal 158 Ayat (4) beserta sitasi yang terdeteksi}
+  \label{lst:uu-13-2003-detect}
+\end{listing}
 
 Untuk melakukan deteksi, teks akan melalui fungsi yang masing-masing memiliki pola untuk dideteksi.
 Oleh karena itu, untuk \textit{substring} yang beririsan dapat memiliki lebih dari dua sitasi yang
@@ -370,13 +405,17 @@ terdeteksi. Pada kasus tersebut akan diambil sitasi dengan \textit{substring} te
 contoh, teks ``Pasal 156 Ayat (4)'' pada UU No.13 Tahun 2003 Pasal 158 Ayat (4) akan terdeteksi
 sebagai 3 URI sitasi sebagai berikut.
 
-\begin{longtable}[c]{@{}ll@{}} \toprule\addlinespace Teks & URI
-  \\\addlinespace \midrule\endhead Pasal 156 Ayat (4)      & \texttt{/uu/2003/13/pasal/156/ayat/4}
-  \\\addlinespace Pasal 156                                      & \texttt{/uu/2003/13/pasal/156}
-  \\\addlinespace Ayat (4)           & \texttt{/uu/2003/13/pasal/158/ayat/4}
-  \\\addlinespace
-  \bottomrule
-\end{longtable}
+\begin{table}
+  \centering
+  \begin{tabular}{|l|l|} \hline
+    Teks               & URI                                   \\\hline \hline
+    Pasal 156 Ayat (4) & \texttt{/uu/2003/13/pasal/156/ayat/4} \\\hline
+    Pasal 156          & \texttt{/uu/2003/13/pasal/156}        \\\hline
+    Ayat (4)           & \texttt{/uu/2003/13/pasal/158/ayat/4} \\\hline
+  \end{tabular}
+  \caption{Contoh teks dan URI yang terdeteksi dari teks tersebut}
+  \label{tab:contoh-teks-uri}
+\end{table}
 
 Pada kasus ini, yang akan diambil adalah teks ``Pasal 156 ayat (4)'' karena merupakan teks
 terpanjang.
@@ -389,6 +428,7 @@ terpanjang.
   \centering
   \includegraphics[width=\textwidth]{pictures/yaml-vs-md.png}
   \caption{Perbandingan visualisasi dengan yaml (kiri) dan markdown (kanan)}
+  \label{fig:yaml-vs-md}
 \end{figure}
 
 %--------------------------------------------------------------------------------------------------%

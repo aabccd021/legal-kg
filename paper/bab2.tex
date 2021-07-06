@@ -1,9 +1,9 @@
 %--------------------------------------------------------------------------------------------------%
-\chapter{TINJAUAN PUSTAKA}\label{bab:2}
+\chapter{TINJAUAN PUSTAKA}\label{chap:2}
 %--------------------------------------------------------------------------------------------------%
 
 %--------------------------------------------------------------------------------------------------%
-\section{Knowledge Graph}\label{knowledge-graph}
+\section{Knowledge Graph}\label{sec:knowledge-graph}
 %--------------------------------------------------------------------------------------------------%
 
 \textit{Knowledge graph} merupakan model data berbasis \textit{graph} yang menggambarkan entitas
@@ -20,15 +20,15 @@ entitas yang sudah diketahui dan terbatas.
 \begin{figure}[H]
   \centering
   \includegraphics[width=\textwidth]{pictures/knowledge_graph.jpg}
-  \caption{Contoh \textit{Knowledge Graph}}
+  \caption{Contoh \textit{Knowledge Graph}. Sumber: \url{https://yashuseth.files.wordpress.com/2019/10/knowledge-graph.jpg}}
   \label{fig:kg-description}
-  % \textit{source}:\url{https://yashuseth.files.wordpress.com/2019/10/knowledge-graph.jpg}
-  % // TODO: source?
 \end{figure}
+
+TODO: domain and range
 
 
 %--------------------------------------------------------------------------------------------------%
-\section{Resource Description Framework}\label{resource-description-framework}
+\section{Resource Description Framework}\label{sec:resource-description-framework}
 %--------------------------------------------------------------------------------------------------%
 
 Resource Description Framework (RDF) merupkan model data yang memberikan pernyataan tentang suatu
@@ -83,7 +83,7 @@ ex:james
 \end{minted}
 
 %--------------------------------------------------------------------------------------------------%
-\section{SPARQL}\label{sparql}
+\section{SPARQL}\label{sec:sparql}
 %--------------------------------------------------------------------------------------------------%
 
 SPARQL merupakan salahsatu RDF \textit{query language} yaitu bahasa yang mampu mengambil atau
@@ -104,77 +104,98 @@ Berikut adalah contoh-contoh \textit{query} SPARQL yang dilakukan pada contoh KG
 pada subbab sebelumnya.
 
 %--------------------------------------------------------------------------------------------------%
-\subsection{Contoh Query 1}\label{contoh-query-1}
+\subsection{Contoh Query 1}\label{sec:contoh-query-1}
 %--------------------------------------------------------------------------------------------------%
 
-\textit{Query} ini bertujuan untuk menampilkan semua \textit{triple} yang terdapat pada
-KG.
+\lst~\ref{lst:query-1} merupakan SPARQL query untuk menampilkan semua \textit{triple} yang terdapat
+pada KG, akan memberikan output \tab~\ref{tab:output-query-1}. Setiap baris yang terdapat pada
+output merupakan \textit{triple} yang tedapat pada KG.
 
-\begin{listing}[ht]
+\begin{listing}[H]
   \begin{minted}[frame=single, fontsize=\footnotesize]{sparql}
 PREFIX ex: <https://example.org/>
 SELECT ?s ?p ?o
 WHERE { ?s ?p ?o }
   \end{minted}
-  \caption{Example from external file}
-  \label{listing:3}
+  \caption{Query 1}
+  \label{lst:query-1}
 \end{listing}
 
-Output dari \textit{query} diatas adalah sebagai berikut.
 
-\begin{longtable}{|l|l|l|} \hline
-  ?s       & ?p              & ?o        \\\hline \endhead
-  ex:james & ex:has\_visited & ex:louvre \\\hline
-  ex:james & ex:has\_name    & ``james'' \\\hline
-\end{longtable}
+\begin{table}
+  \centering
+  \begin{tabular}{|l|l|l|} \hline
+    ?s       & ?p              & ?o        \\\hline \hline
+    ex:james & ex:has\_visited & ex:louvre \\\hline
+    ex:james & ex:has\_name    & ``james'' \\\hline
+  \end{tabular}
+  \caption{Output Query 1}
+  \label{tab:output-query-1}
+\end{table}
+
+
 
 %--------------------------------------------------------------------------------------------------%
-\subsection{Contoh Query 2}\label{contoh-query-2}
+\subsection{Contoh Query 2}\label{sec:contoh-query-2}
 %--------------------------------------------------------------------------------------------------%
 
-\textit{Query} ini bertujuan untuk menampilkan semua properti dan objek pada \textit{triple} dengan
-subjek \texttt{https://example.org/james}.
+\lst~\ref{lst:query-2} merupakan SPARQL query untuk menampilkan semua properti dan objek pada
+\textit{triple} dengan subjek \texttt{https://example.org/james}. pada KG, akan memberikan output
+\tab~\ref{tab:output-query-2}.
 
-\begin{minted}[frame=single, fontsize=\footnotesize]{sparql}
+\begin{listing}[H]
+  \begin{minted}[frame=single, fontsize=\footnotesize]{sparql}
 PREFIX ex: <https://example.org/>
-SELECT ?p ?o
-WHERE { ex:james ?p ?o }
+SELECT ?predikat ?objek
+WHERE { ex:james ?predikat ?objek }
   \end{minted}
+  \caption{Query 2}
+  \label{lst:query-2}
+\end{listing}
 
-Output dari \textit{query} tersebut adalah sebagai berikut.
-
-\begin{longtable}{|l|l|l|} \hline
-  ?p              & ?o        \\\hline \endhead
-  ex:has\_visited & ex:louvre \\\hline
-  ex:has\_name    & ``james'' \\\hline
-\end{longtable}
+\begin{table}
+  \centering
+  \begin{tabular}{|l|l|} \hline
+    ?predikat       & ?objek    \\\hline \hline
+    ex:has\_visited & ex:louvre \\\hline
+    ex:has\_name    & ``james'' \\\hline
+  \end{tabular}
+  \caption{Output Query 1}
+  \label{tab:output-query-2}
+\end{table}
 
 %--------------------------------------------------------------------------------------------------%
-\subsection{Contoh Query 3}\label{contoh-query-3}
+\subsection{Contoh Query 3}\label{sec:contoh-query-3}
 %--------------------------------------------------------------------------------------------------%
 
-\textit{Query} ini bertujuan untuk menampilkan semua objek pada \textit{triple} dengan subjek
-\texttt{https://example.org/james} dan properti \texttt{https://example.org/has\_visited}. Artinya,
-\textit{query} ini menampilkan semua tempat yang pernah dikunjungi james.
+\lst~\ref{lst:query-2} merupakan SPARQL query untuk menampilkan semua objek pada \textit{triple} dengan subjek
+\texttt{https://example.org/james} dan properti \texttt{https://example.org/has\_visited}, dengan
+output \tab~\ref{tab:output-query-3}. Artinya,
+\textit{query} ini menampilkan semua tempat yang pernah dikunjungi james, yaitu louvre.
 
-\begin{minted}[frame=single, fontsize=\footnotesize]{sparql}
+\begin{listing}[H]
+  \begin{minted}[frame=single, fontsize=\footnotesize]{sparql}
 PREFIX ex: <https://example.org/>
 SELECT ?visited_place
 WHERE { ex:james ex:has_visited ?visited_place }
-\end{minted}
+  \end{minted}
+  \caption{Query 3}
+  \label{lst:query-3}
+\end{listing}
 
-Output dari \textit{query} tersebut adalah sebagai berikut.
-
-\begin{longtable}{|l|l|l|} \hline
-  ?visited\_place \\ \hline \endhead
-  ex:louvre       \\ \hline
-\end{longtable}
+\begin{table}
+  \centering
+  \begin{tabular}{|l|l|l|} \hline
+    ?visited\_place \\ \hline \hline
+    ex:louvre       \\ \hline
+  \end{tabular}
+  \caption{Output Query 1}
+  \label{tab:output-query-3}
+\end{table}
 
 %--------------------------------------------------------------------------------------------------%
-\section{Peraturan Perundang-undangan}\label{peraturan-perundang-undangan}
+\section{Peraturan Perundang-undangan}\label{sec:peraturan-perundang-undangan}
 %--------------------------------------------------------------------------------------------------%
-
-??? boleh ngequote sebanyak apa?
 
 Menurut Undang-Undang Nomor 10 Tahun 2004 Pasal 7 Ayat 1, peraturan perundang-undangan adalah
 peraturan tertulis yang dibentuk oleh lembaga negara atau pejabat yang berwenang dan mengikat secara
@@ -246,7 +267,7 @@ tambahan yaitu mengkonversi gambar menjadi data terstruktur.
 
 %--------------------------------------------------------------------------------------------------%
 \section{Pemodelan European Legislation Identifier
-  (ELI)}\label{pemodelan-european-legislation-identifier-eli}
+  (ELI)}\label{sec:pemodelan-european-legislation-identifier-eli}
 %--------------------------------------------------------------------------------------------------%
 
 ELI merupakan sistem untuk membuat peraturan perundang-undangan tersedia secara daring dalam format
