@@ -1,9 +1,11 @@
 %--------------------------------------------------------------------------------------------------%
-\chapter{TINJAUAN PUSTAKA}\label{chap:2}
+\chapter{TINJAUAN PUSTAKA}
+\label{chap:2}
 %--------------------------------------------------------------------------------------------------%
 
 %--------------------------------------------------------------------------------------------------%
-\section{Knowledge Graph}\label{sec:knowledge-graph}
+\section{Knowledge Graph}
+\label{sec:knowledge-graph}
 %--------------------------------------------------------------------------------------------------%
 
 \textit{Knowledge graph} merupakan model data berbasis \textit{graph} yang menggambarkan entitas
@@ -24,28 +26,25 @@ entitas yang sudah diketahui dan terbatas.
   \label{fig:kg-description}
 \end{figure}
 
-TODO: domain and range
-
-
 %--------------------------------------------------------------------------------------------------%
-\section{Resource Description Framework}\label{sec:resource-description-framework}
+\section{Resource Description Framework}
+\label{sec:resource-description-framework}
 %--------------------------------------------------------------------------------------------------%
 
 Resource Description Framework (RDF) merupkan model data yang memberikan pernyataan tentang suatu
-\textit{resource} dalam bentuk subjek-properti-objek, atau sering disebut \textit{triple}. Sebuah
-KG dapat direpresentasikan sebagai kumpulan \textit{triple}. Subyek dan
-properti dalam \textit{triple} direpresentasikan sebagai Uniform Resource Identifier (URI),
-sedangkan objek dapat direpresentasikan dengan URI atau \textit{string literal}. Pada gambar
-dibawah, dapat dilihat terdapat KG dengan dua \textit{triple}. Pada triple 1
+\textit{resource} dalam bentuk subjek-properti-objek, atau sering disebut \textit{triple}. Sebuah KG
+dapat direpresentasikan sebagai kumpulan \textit{triple}. Subyek dan properti dalam \textit{triple}
+direpresentasikan sebagai Uniform Resource Identifier (URI), sedangkan objek dapat direpresentasikan
+dengan URI atau \textit{string literal}. Pada gambar dibawah, dapat dilihat terdapat KG dengan dua
+\textit{triple}. Pada triple 1, subjek, properti, dan objek berturut-turut adalah
+\texttt{https://example.org/james}, \texttt{https://example.org/has\_visited},
+\texttt{https://example.org/louvre} yang mana semuanya berbentuk URI\@. Sedangkan pada triple 2,
 subjek, properti, dan objek berturut-turut adalah \texttt{https://example.org/james},
-\texttt{https://example.org/has\_visited}, \texttt{https://example.org/louvre} yang mana semuanya
-berbentuk URI\@. Sedangkan pada triple 2 subjek, properti, dan objek berturut-turut adalah
-\texttt{https://example.org/james}, \texttt{https://example.org/has\_name}, ``james'' .
-\texttt{https://example.org/james}, \texttt{https://example.org/louvre} berturut-turut merupakan
-notasi untuk \textit{resource} entitas James dan Louvre, \texttt{https://example.org/has\_visited}
-dan \texttt{https://example.org/has\_name} merupakan properti yang menjelaskan hubungan antara
-subjek dan objek, dan ``james'' adalah \textit{string literal} yang menunjukan nilai dari nama
-James.
+\texttt{https://example.org/has\_name}, ``james''. \texttt{https://example.org/james},
+\texttt{https://example.org/louvre} berturut-turut merupakan notasi untuk \textit{resource} entitas
+James dan Louvre,e\texttt{https://example.org/has\_visited} dan
+\texttt{https://example.org/has\_name} merupakan properti yang menjelaskan hubungan antara subjek
+dan objek, dan ``james'' adalah \textit{string literal} yang menunjukan nilai dari nama James.
 
 \begin{figure}[H]
   \centering
@@ -56,12 +55,16 @@ James.
 
 Terdapat beberapa format berkas dan sintaks untuk mengekspresikan RDF. Pada penelitian ini, penulis
 menggunakan format Terse RDF Triple Language (Turtle). Sebagai contoh, KG diatas
-dapat dituliskan dalam format Turtle sebagai berikut.
+dapat dituliskan dalam format Turtle seperti \lst~\ref{lst:contoh-ttl}.
 
-\begin{minted}[frame=single, breaklines, fontsize=\footnotesize]{turtle}
+\begin{listing}[H]
+  \begin{minted}[frame=single, breaklines, fontsize=\footnotesize]{turtle}
 <https://example.org/james> <https://example.org/has_visited> <https://example.org/louvre> .
 <https://example.org/james> <https://example.org/has_name> "james" .
 \end{minted}
+  \caption{Contoh penulisan sebuah \textit{triple} dalam turtle}
+  \label{lst:contoh-ttl}
+\end{listing}
 
 Dengan fitur format Turtle, dua \textit{triple} diatas dapat ditulis lebih singkat dengan mengganti
 prefix URI yang sama menjadi teks yang lebih singkat, dan menggabungkan penulisan beberapa
@@ -71,19 +74,25 @@ menggantinya dengan \textit{string} \texttt{ex} dengan mendeklarasikan
 \texttt{@prefix ex: https://example.org/ .}. Kedua \textit{triple} juga memiliki subjek yang sama
 yaitu \texttt{https://example.org/james}, oleh karena itu, penulisan kedua turtle bisa digabung
 dengan hanya menuliskan subjek sebanyak satu kali, kemudian menuliskan properti dan objek dipisah
-dengan tanda titik koma . Berikut adalah contoh penulisan dua \textit{triple} diatas dalam bentuk
-yang lebih singkat dan lebih mudah dibaca oleh manusia.
+dengan tanda titik koma. \lst~\ref{lst:contoh-singkat-ttl} adalah contoh penulisan dua \textit{triple}
+diatas dalam bentuk yang lebih singkat dan lebih mudah dibaca oleh manusia.
 
-\begin{minted}[frame=single, fontsize=\footnotesize]{turtle}
+\begin{listing}[H]
+  \begin{minted}[frame=single, fontsize=\footnotesize]{turtle}
 @prefix ex: <https://example.org/> .
 
 ex:james 
   ex:has_visited ex:louvre ;
   ex:has_name "james" .
 \end{minted}
+  \caption{Contoh penulisan lebih singkat sebuah \textit{triple} dalam turtle}
+  \label{lst:contoh-singkat-ttl}
+\end{listing}
+
 
 %--------------------------------------------------------------------------------------------------%
-\section{SPARQL}\label{sec:sparql}
+\section{SPARQL}
+\label{sec:sparql}
 %--------------------------------------------------------------------------------------------------%
 
 SPARQL merupakan salahsatu RDF \textit{query language} yaitu bahasa yang mampu mengambil atau
@@ -104,7 +113,8 @@ Berikut adalah contoh-contoh \textit{query} SPARQL yang dilakukan pada contoh KG
 pada subbab sebelumnya.
 
 %--------------------------------------------------------------------------------------------------%
-\subsection{Contoh Query 1}\label{sec:contoh-query-1}
+\subsection{Contoh Query 1}
+\label{sec:contoh-query-1}
 %--------------------------------------------------------------------------------------------------%
 
 \lst~\ref{lst:query-1} merupakan SPARQL query untuk menampilkan semua \textit{triple} yang terdapat
@@ -133,10 +143,9 @@ WHERE { ?s ?p ?o }
   \label{tab:output-query-1}
 \end{table}
 
-
-
 %--------------------------------------------------------------------------------------------------%
-\subsection{Contoh Query 2}\label{sec:contoh-query-2}
+\subsection{Contoh Query 2}
+\label{sec:contoh-query-2}
 %--------------------------------------------------------------------------------------------------%
 
 \lst~\ref{lst:query-2} merupakan SPARQL query untuk menampilkan semua properti dan objek pada
@@ -146,8 +155,8 @@ WHERE { ?s ?p ?o }
 \begin{listing}[H]
   \begin{minted}[frame=single, fontsize=\footnotesize]{sparql}
 PREFIX ex: <https://example.org/>
-SELECT ?predikat ?objek
-WHERE { ex:james ?predikat ?objek }
+SELECT ?properti ?objek
+WHERE { ex:james ?properti ?objek }
   \end{minted}
   \caption{Query 2}
   \label{lst:query-2}
@@ -156,16 +165,17 @@ WHERE { ex:james ?predikat ?objek }
 \begin{table}
   \centering
   \begin{tabular}{|l|l|} \hline
-    ?predikat       & ?objek    \\\hline \hline
+    ?properti       & ?objek    \\\hline \hline
     ex:has\_visited & ex:louvre \\\hline
     ex:has\_name    & ``james'' \\\hline
   \end{tabular}
-  \caption{Output Query 1}
+  \caption{Output Query 3}
   \label{tab:output-query-2}
 \end{table}
 
 %--------------------------------------------------------------------------------------------------%
-\subsection{Contoh Query 3}\label{sec:contoh-query-3}
+\subsection{Contoh Query 3}
+\label{sec:contoh-query-3}
 %--------------------------------------------------------------------------------------------------%
 
 \lst~\ref{lst:query-2} merupakan SPARQL query untuk menampilkan semua objek pada \textit{triple} dengan subjek
@@ -189,12 +199,13 @@ WHERE { ex:james ex:has_visited ?visited_place }
     ?visited\_place \\ \hline \hline
     ex:louvre       \\ \hline
   \end{tabular}
-  \caption{Output Query 1}
+  \caption{Output Query 3}
   \label{tab:output-query-3}
 \end{table}
 
 %--------------------------------------------------------------------------------------------------%
-\section{Peraturan Perundang-undangan}\label{sec:peraturan-perundang-undangan}
+\section{Peraturan Perundang-undangan}
+\label{sec:peraturan-perundang-undangan}
 %--------------------------------------------------------------------------------------------------%
 
 Menurut Undang-Undang Nomor 10 Tahun 2004 Pasal 7 Ayat 1, peraturan perundang-undangan adalah
@@ -242,10 +253,10 @@ atas:
 
 Bagian judul, pembukaan, dan penutup memuat metadata dari peraturan perundang-undangan tersebut
 seperti jenis, nomor, tahun pengundangan atau penetapan, nama, jabatan pembentuk, konsiderans, kasar
-Hukum, peraturan perundang-undangan. Konsiderans memuat uraian singkat mengenai pokok--pokok pikiran
-yang menjadi latar belakang dan alasan pembuatan peraturan perundang--undangan. Dasar Hukum memuat
-dasar kewenangan pembuatan peraturan perundang-undangan dan peraturan perundang--undangan yang
-memerintahkan pembuatan peraturan perundang--undangan tersebut. Oleh karena itu, kita dapat melihat
+Hukum, peraturan perundang-undangan. Konsiderans memuat uraian singkat mengenai pokok-pokok pikiran
+yang menjadi latar belakang dan alasan pembuatan peraturan perundang-undangan. Dasar Hukum memuat
+dasar kewenangan pembuatan peraturan perundang-undangan dan peraturan perundang-undangan yang
+memerintahkan pembuatan peraturan perundang-undangan tersebut. Oleh karena itu, kita dapat melihat
 keterkaitan antara peraturan perundang-undangan dengan melihat konsiderans dan dasar hukum dari
 peraturan tersebut.
 
@@ -266,29 +277,54 @@ peraturan perundang-undangan oleh mesin menjadi kurang efisien karena mesin perl
 tambahan yaitu mengkonversi gambar menjadi data terstruktur.
 
 %--------------------------------------------------------------------------------------------------%
-\section{Pemodelan European Legislation Identifier
-  (ELI)}\label{sec:pemodelan-european-legislation-identifier-eli}
+\section{\textit{European Legislation Identifier} (ELI)}
+\label{sec:eli}
 %--------------------------------------------------------------------------------------------------%
 
-ELI merupakan sistem untuk membuat peraturan perundang-undangan tersedia secara daring dalam format
+Negara-negara anggota EU memiliki cara mengatur informasi hukum yang berbeda-beda, sehingga
+cenderung menghalangi penemuan, pertukaran, dan penggunaan kembali informasi. European Legislation
+Identifier (ELI) adalah solusi yang bertujuan untuk mengatasi masalah-masalah tersebut. ELI
+merupakan sistem untuk membuat peraturan perundang-undangan tersedia secara daring dalam format
 terstandardisasi, sehingga dapat diakses dan digunakan oleh berbagai instansi. ELI bertujuan untuk
 untuk memfasilitasi akses, berbagi dan interkoneksi informasi hukum yang diterbitkan melalui
 nasional, Eropa dan sistem informasi hukum global. ELI dibangun berdasarkan persetujuan antara
-negara-negara EU. Spesifikasi yang terdapat pada ELI antara lain:
+negara-negara EU.
 
-\begin{itemize}
-  \itemsep1pt\parskip0pt\parsep0pt
-  \item URI untuk informasi peraturan perundang-undangan.
-  \item Metadata yang mendeskripsikan informasi peraturan perundang-undangan.
-\end{itemize}
+ELI juga memiliki \textit{technical implementation guide}
+\footnote{\url{https://publications.europa.eu/en/publication-detail/-/publication/8159b75d-5efc-11e8-ab9c-01aa75ed71a1}}
+yang menjelaskan implementasi ELI dan spesifikasi yang tedapat pada ELI. Spesifikasi ELI antara lain
+adalah cara membuat URI suatu \textit{resource}, \textit{class}, dan properti. Ontologi yang
+digunakan pada ELI cenderung untuk menjelaskan metadata dari peraturan, dan tidak memiliki pemodelan
+khusus untuk menjelaskan \textit{subdivision} dari peraturan. Nyatanya, ELI menggunakan class
+\textit{eli:LegalResourceSubdivision} untuk mendefinisikan semua \textit{subdivision}, tidak
+terdapat kelas khusus untuk variasi \textit{subdivision} seperti bab, pasal, dan ayat. Selain itu,
+ELI dirancang untuk digunakan pada peraturan di Eropa, sehingga tidak memiliki ontologi untuk jenis
+peraturan di indonesia seperti ``Peraturan Pemerintah''.
 
-% // TODO: terlalu singkat, ksh konsepnya gmn dan contoh pemodelan ELI utk suatu peraturan
+%--------------------------------------------------------------------------------------------------%
+\section{Schema.org}
+\label{sec:schema-org}
+%--------------------------------------------------------------------------------------------------%
 
-% // TODO: ELI jg msh simpel. Bs dijelaskan motivasi ELI, serta apa contoh konsep2 yg sdh ada di ELI
-% ontology, serta yg belum ada.
+Schema.org adalah aktivitas komunitas kolaboratif dengan misi untuk membuat, memelihara, dan
+mempromosikan skema untuk data terstruktur di Internet, di halaman web, dalam pesan email, dan lebih
+dari itu. \textit{Vocabulary} Schema.org dapat digunakan dengan \textit{encoding} yang berbeda,
+termasuk RDFa, Microdata dan JSON-LD. Banyak aplikasi dari Google, Microsoft, Pinterest, Yandex, dan
+lainnya sudah menggunakan \textit{vocabulary} ini untuk memperkuat pengalaman yang kaya dan dapat
+diperluas. Schema.org memiliki \textit{vocabulary} tersendiri untuk peraturan perundang-undangan
+\footnote{\url{https://schema.org/Legislation}}. Salah satu \textit{vocabulary} nya adalah properti
+yang menjelaskan metadata suatu peraturan perundang-undangan seperti \texttt{legislationDate} dan
+\texttt{jurisdiction}.
 
-% // TODO: ELI kekurangan lainnya ya lbh condong ke pemodelan peraturan di Eropa, bukan di Indonesia.
-% Misal, gak ada namanya Peraturan Pemerintah, atau Pergub di ELI
+%--------------------------------------------------------------------------------------------------%
+\section{Wikidata}
+\label{sec:wikidata}
+%--------------------------------------------------------------------------------------------------%
 
-% // TODO: 7 Related Works
-
+Wikidata adalah basis pengetahuan \textit{free} dan terbuka yang dapat dibaca dan diedit oleh
+manusia dan mesin. Wikidata berperan sebagai penyimpanan pusat untuk data terstruktur dari proyek
+saudara Wikimedia termasuk Wikipedia, Wikivoyage, Wiktionary, Wikisource, dan lainnya. WikiProject
+adalah organisasi yang didirikan untuk mencapai tujuan penyuntingan tertentu, atau untuk mencapai
+tujuan yang berkaitan dengan bidang pengetahuan tertentu. Terdapat WikiProject tersendiri untuk
+bidang hukum dan peraturan perundang-undangan yaitu WikiProject Law
+\footnote{\url{https://www.wikidata.org/wiki/Wikidata:WikiProject_Law}}.

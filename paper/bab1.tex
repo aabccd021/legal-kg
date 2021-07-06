@@ -72,8 +72,8 @@ bentuk KG, dan memberikan contoh aplikasi dari KG
 peraturan perundang-undangan tersebut. Beberapa usaha telah dilakukan untuk membuat
 \textit{vocabulary} untuk KG peraturan perundang-undangan seperti ELI
 \footnote{\url{https://eur-lex.europa.eu/eli-register/about.html} }, Schema.org
-\footnote{\url{https://schema.org/Legislation} }, dan Wikidata
-\footnote{\url{https://www.wikidata.org/wiki/Wikidata:WikiProject_Law} }.
+\footnote{\url{https://schema.org} }, dan Wikidata
+\footnote{\url{https://www.wikidata.org} }.
 
 
 \begin{listing}[H]
@@ -125,8 +125,8 @@ Berikut ini adalah rumusan permasalahan dari penelitian yang dilakukan:
 \begin{itemize}
   \item Bagaimana merancang suatu sistem untuk melakukan konversi otomatis PDF peraturan
         perundang-undangan menjadi KG?
-  \item Bagaimana membuat \textit{legal ontology} untuk memperjelas \textit{requirement} dan
-        mempermudah konversi dokumen PDF menjadi KG?
+  \item Bagaimana membuat ontologi untuk memperjelas \textit{requirement} dan mempermudah konversi
+        dokumen PDF menjadi KG?
   \item Bagaimana evaluasi use case terhadap kg peraturan perundang-undangan tersebut serta evaluasi
         konversi / populasi dalam skala besar?
   \item Bagaimana pemeliharaan KG dapat dilakukan apabila terdapat peraturan perundang-undangan
@@ -153,8 +153,8 @@ Perancangan sebuah KG dimulai dengan memahami \textit{competency questions} (\te
 \textit{Competency questions} mencakup semua pertanyaan yang harus terdapat jawabannya didalam KG
 agar dapat digunakan pada \textit{use case} yang akan disebutkan pada subbab selanjutnya. Setelah
 perntanyaan-pertanyaan sudah jelas, pertanyaan-pertanyaan tersebut dapat dikonversi menjadi SPARQL
-query untuk diperiksa apakah KG mengembalikan jawaban yang sesuai. Kemudian, dirancang ontology
-(desain KG) yang dapat menjawab pertanyaan-pertanyaan tersebut. Perancangan ontology ini mempermudah
+query untuk diperiksa apakah KG mengembalikan jawaban yang sesuai. Kemudian, dirancang ontologi
+(desain KG) yang dapat menjawab pertanyaan-pertanyaan tersebut. Perancangan ontologi ini mempermudah
 konstruksi KG.
 
 \begin{figure}
@@ -165,14 +165,14 @@ konstruksi KG.
     
     %Nodes
     \node[r] (pertanyaan)                           {Pertanyaan Riset};
-    \node[r] (ontology)     [below=of pertanyaan]   {Pengembangan Ontology};
-    \node[r] (pengembangan) [below=of ontology]     {Pengembangan Sistem Konversi};
+    \node[r] (ontologi)     [below=of pertanyaan]   {Pengembangan Ontologi};
+    \node[r] (pengembangan) [below=of ontologi]     {Pengembangan Sistem Konversi};
     \node[r] (usecase)      [below=of pengembangan] {\textit{Use Case Evaluation}};
     \node[r] (eval)         [below=of usecase]      {\textit{Large Scale Evaluation}};
     
     %Lines
-    \draw[->] (pertanyaan.south)   -- (ontology.north);
-    \draw[->] (ontology.south)     -- (pengembangan.north);
+    \draw[->] (pertanyaan.south)   -- (ontologi.north);
+    \draw[->] (ontologi.south)     -- (pengembangan.north);
     \draw[->] (pengembangan.south) -- (usecase.north);
     \draw[->] (usecase.south)      -- (eval.north);
     
@@ -186,7 +186,7 @@ terdapat beberapa PDF yang akan dijamin konversinya benar yang selanjutnya akan 
 \textit{maintained PDFs}. Pengembangan sistem konversi dilakukan secara iteratif. Setiap terdapat
 perubahan pada sistem, akan dicek apakah untuk semua \textit{maintained PDFs} memberikan hasil
 konversi yang benar. Sistem konversi akan menerima input berupa PDF dan mengeluarkan output berupa
-KG dengan ontology yang sudah dirancang pada tahap sebelumnya.
+KG dengan ontologi yang sudah dirancang pada tahap sebelumnya.
 
 Untuk menjamin KG yang dibuat dapat menjawab \textit{competency questions}, dalam penelitian ini
 dilakukan \textit{use case evaluation} yaitu berupa demonstrasi contoh penerapan dari KG berdasarkan
