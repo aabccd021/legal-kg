@@ -1,11 +1,11 @@
-%-------------------------------------------------------------------------------------------------%
+%--------------------------------------------------------------------------------------------------%
 \chapter{PERANCANGAN}
 \label{bab:4}
-%-------------------------------------------------------------------------------------------------%
+%--------------------------------------------------------------------------------------------------%
 
-%-------------------------------------------------------------------------------------------------%
+%--------------------------------------------------------------------------------------------------%
 \section{Perancangan URI}\label{perancangan-uri}
-%-------------------------------------------------------------------------------------------------%
+%--------------------------------------------------------------------------------------------------%
 
 Setiap entitas yang berbeda perlu diberikan URI yang berbeda. Penggabungan KG sangat umum dilakukan
 karena secara struktur dapat dilakukan dengan mudah, dan dapat memperkuat data dari masing-masing
@@ -23,9 +23,9 @@ disesuaikan oleh pengguna program. Semua entitas dokumen dan komponennya menggun
 semua resource lainnya menggunakan \texttt{https://example.org/lex2kg/ontology} yang selanjutnya
 disebut \textit{ontoPrefix}.
 
-%-------------------------------------------------------------------------------------------------%
+%--------------------------------------------------------------------------------------------------%
 \section{Perancangan URI Class}\label{perancangan-uri-class}
-%-------------------------------------------------------------------------------------------------%
+%--------------------------------------------------------------------------------------------------%
 
 URI Class adalah URI yang menjelaskan \textit{class} dari entitas tersebut. Semua URI Class mengikuti
 pola \texttt{\{ontoPrefix\}/\{className\}} dimana \texttt{className} adalah nama \textit{class}
@@ -54,10 +54,10 @@ tersebut. Berikut adalah semua \textit{class} komponen beserta URI dan deskripsi
   \caption{Long table caption.\label{longsz}}                                                                                                  \\
 \end{longtable}
 
-%-------------------------------------------------------------------------------------------------%
+%--------------------------------------------------------------------------------------------------%
 \section{Perancangan URI Komponen Peraturan
   Perundang-undangan}\label{perancangan-uri-komponen-peraturan-perundang-undangan}
-%-------------------------------------------------------------------------------------------------%
+%--------------------------------------------------------------------------------------------------%
 
 URI peraturan perundang-undangan diawali oleh \textit{peraturanPrefix}, kemudian diikuti oleh string
 yang mengidentifikasi peraturan tersebut. URI peraturan ini akan digunakan oleh entitas sebagai
@@ -113,9 +113,9 @@ perundang-undangan beserta pola URI nya.
   \caption{Long table caption.\label{longs}}                                                                                                                                                                                 \\
 \end{longtable}
 
-%-------------------------------------------------------------------------------------------------%
+%--------------------------------------------------------------------------------------------------%
 \section{Perancangan URI Properti}\label{perancangan-uri-properti}
-%-------------------------------------------------------------------------------------------------%
+%--------------------------------------------------------------------------------------------------%
 
 Properti ditandai dengan URI yang memiliki pola \texttt{\{ontoPrefix\}/\{name\}} dimana
 \texttt{name} adalah nama dari properti tersebut. Properti menghubungkan subjek dan objek. Subjek

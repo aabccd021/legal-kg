@@ -1,10 +1,10 @@
-%-------------------------------------------------------------------------------------------------%
+%--------------------------------------------------------------------------------------------------%
 \chapter{TINJAUAN PUSTAKA}\label{bab:2}
-%-------------------------------------------------------------------------------------------------%
+%--------------------------------------------------------------------------------------------------%
 
-%-------------------------------------------------------------------------------------------------%
+%--------------------------------------------------------------------------------------------------%
 \section{Knowledge Graph}\label{knowledge-graph}
-%-------------------------------------------------------------------------------------------------%
+%--------------------------------------------------------------------------------------------------%
 
 \textit{Knowledge graph} merupakan model data berbasis \textit{graph} yang menggambarkan entitas
 dunia nyata dan hubungan antara entitas-entitas tersebut \citep{seth_2019}. Sebagai contoh, pada
@@ -27,9 +27,9 @@ entitas yang sudah diketahui dan terbatas.
 \end{figure}
 
 
-%-------------------------------------------------------------------------------------------------%
+%--------------------------------------------------------------------------------------------------%
 \section{Resource Description Framework}\label{resource-description-framework}
-%-------------------------------------------------------------------------------------------------%
+%--------------------------------------------------------------------------------------------------%
 
 Resource Description Framework (RDF) merupkan model data yang memberikan pernyataan tentang suatu
 \textit{resource} dalam bentuk subjek-properti-objek, atau sering disebut \textit{triple}. Sebuah
@@ -68,11 +68,11 @@ prefix URI yang sama menjadi teks yang lebih singkat, dan menggabungkan penulisa
 \textit{triple} dengan subjek yang sama sehingga subjek hanya perlu dituliskan sekali saja. Sebagai
 contoh, karena sebagaian besar URI memiliki prefix \texttt{https://example.org/}, kita dapat
 menggantinya dengan \textit{string} \texttt{ex} dengan mendeklarasikan
-\texttt{@prefix ex: https://example.org/ .}. Kedua \textit{triple} juga
-memiliki subjek yang sama yaitu \texttt{https://example.org/james}, oleh karena itu, penulisan kedua
-turtle bisa digabung dengan hanya menuliskan subjek sebanyak satu kali, kemudian menuliskan properti
-dan objek dipisah dengan tanda titik koma . Berikut adalah contoh penulisan dua \textit{triple} diatas
-dalam bentuk yang lebih singkat dan lebih mudah dibaca oleh manusia.
+\texttt{@prefix ex: https://example.org/ .}. Kedua \textit{triple} juga memiliki subjek yang sama
+yaitu \texttt{https://example.org/james}, oleh karena itu, penulisan kedua turtle bisa digabung
+dengan hanya menuliskan subjek sebanyak satu kali, kemudian menuliskan properti dan objek dipisah
+dengan tanda titik koma . Berikut adalah contoh penulisan dua \textit{triple} diatas dalam bentuk
+yang lebih singkat dan lebih mudah dibaca oleh manusia.
 
 \begin{minted}[frame=single, fontsize=\footnotesize]{turtle}
 @prefix ex: <https://example.org/> .
@@ -82,14 +82,14 @@ ex:james
   ex:has_name "james" .
 \end{minted}
 
-%-------------------------------------------------------------------------------------------------%
+%--------------------------------------------------------------------------------------------------%
 \section{SPARQL}\label{sparql}
-%-------------------------------------------------------------------------------------------------%
+%--------------------------------------------------------------------------------------------------%
 
-SPARQL merupakan salahsatu RDF \textit{query language} yaitu bahasa yang mampu mengambil atau mengubah
-data yang disimpan dalam format RDF. Sintaks SPARQL memiliki beberapa kesamaan dengan SQL, contohnya
-sebuah variabel diawali dengan tanda tanya seperti \texttt{?name}. Berikut adalah penjelasan sintaks
-SPARQL.
+SPARQL merupakan salahsatu RDF \textit{query language} yaitu bahasa yang mampu mengambil atau
+mengubah data yang disimpan dalam format RDF. Sintaks SPARQL memiliki beberapa kesamaan dengan SQL,
+contohnya sebuah variabel diawali dengan tanda tanya seperti \texttt{?name}. Berikut adalah
+penjelasan sintaks SPARQL.
 
 \begin{itemize}
   \itemsep1pt\parskip0pt\parsep0pt
@@ -103,12 +103,12 @@ SPARQL.
 Berikut adalah contoh-contoh \textit{query} SPARQL yang dilakukan pada contoh \textit{knowledge graph}
 pada subbab sebelumnya.
 
-%-------------------------------------------------------------------------------------------------%
+%--------------------------------------------------------------------------------------------------%
 \subsection{Contoh Query 1}\label{contoh-query-1}
-%-------------------------------------------------------------------------------------------------%
+%--------------------------------------------------------------------------------------------------%
 
-\textit{Query} ini bertujuan untuk menampilkan semua \textit{triple} yang terdapat pada \textit{knowledge
-  graph}.
+\textit{Query} ini bertujuan untuk menampilkan semua \textit{triple} yang terdapat pada
+  \textit{knowledge graph}.
 
 \begin{listing}[ht]
   \begin{minted}[frame=single, fontsize=\footnotesize]{sparql}
@@ -133,9 +133,9 @@ Output dari \textit{query} diatas adalah sebagai berikut.
   ex:james & ex:has\_name    & ``james'' \\\hline
 \end{longtable}
 
-%-------------------------------------------------------------------------------------------------%
+%--------------------------------------------------------------------------------------------------%
 \subsection{Contoh Query 2}\label{contoh-query-2}
-%-------------------------------------------------------------------------------------------------%
+%--------------------------------------------------------------------------------------------------%
 
 \textit{Query} ini bertujuan untuk menampilkan semua properti dan objek pada \textit{triple} dengan
 subjek \texttt{https://example.org/james}.
@@ -158,9 +158,9 @@ Output dari \textit{query} tersebut adalah sebagai berikut.
   ex:has\_name    & ``james'' \\\hline
 \end{longtable}
 
-%-------------------------------------------------------------------------------------------------%
+%--------------------------------------------------------------------------------------------------%
 \subsection{Contoh Query 3}\label{contoh-query-3}
-%-------------------------------------------------------------------------------------------------%
+%--------------------------------------------------------------------------------------------------%
 
 \textit{Query} ini bertujuan untuk menampilkan semua objek pada \textit{triple} dengan subjek
 \texttt{https://example.org/james} dan properti \texttt{https://example.org/has\_visited}. Artinya,
@@ -182,9 +182,9 @@ Output dari \textit{query} tersebut adalah sebagai berikut.
   ex:louvre       \\ \hline
 \end{longtable}
 
-%-------------------------------------------------------------------------------------------------%
+%--------------------------------------------------------------------------------------------------%
 \section{Peraturan Perundang-undangan}\label{peraturan-perundang-undangan}
-%-------------------------------------------------------------------------------------------------%
+%--------------------------------------------------------------------------------------------------%
 
 ??? boleh ngequote sebanyak apa?
 
@@ -207,15 +207,15 @@ Berikut adalah beberapa peranan perundang-undangan untuk Indonesia
 \begin{itemize}
   \itemsep1pt\parskip0pt\parsep0pt
   \item Peraturan perundang-undangan merupakan kaidah hukum yang mudah dikenal (diidentifikasi),
-        mudah diketemukan kembali, dan mudah ditelusuri. Sebagai kaidah hukum tertulis, bentuk, jenis,dan
-        tempatnya jelas. Begitu pula pembuatnya.
+        mudah diketemukan kembali, dan mudah ditelusuri. Sebagai kaidah hukum tertulis, bentuk,
+        jenis,dan tempatnya jelas. Begitu pula pembuatnya.
   \item Peraturan perundang-undangan memberikan kepastian hukum yang lebih nyata karena
         kaidah-kaidahnya mudah diidentifikasi dan mudah diketemukan kembali.
   \item Struktur dan sistematika peraturan perundang-undangan lebih jelas sehingga memungkinkan
         untuk diperiksa kembali dan diuji baik segi-segi formal maupun materi muatannya.
   \item Pembentukan dan pengembangan peraturan perundang-undangan dapat direncanakan. Faktor ini
-        sangat penting bagi negara-negara yang sedang membangun termasuk membangun sistem hukum baru yang
-        sesuai dengan kebutuhan dan perkembangan masyarakat.
+        sangat penting bagi negara-negara yang sedang membangun termasuk membangun sistem hukum baru
+        yang sesuai dengan kebutuhan dan perkembangan masyarakat.
 \end{itemize}
 
 Menurut lampiran Undang-Undang Nomor 10 Tahun 2004, struktur peraturan perundang--undangan terdiri
@@ -256,10 +256,10 @@ tersebut dan membuat data yang dilihatnya terstruktur di dalam otak. Metode ini 
 peraturan perundang-undangan oleh mesin menjadi kurang efisien karena mesin perlu melakukan proses
 tambahan yaitu mengkonversi gambar menjadi data terstruktur.
 
-%-------------------------------------------------------------------------------------------------%
+%--------------------------------------------------------------------------------------------------%
 \section{Pemodelan European Legislation Identifier
   (ELI)}\label{pemodelan-european-legislation-identifier-eli}
-%-------------------------------------------------------------------------------------------------%
+%--------------------------------------------------------------------------------------------------%
 
 ELI merupakan sistem untuk membuat peraturan perundang-undangan tersedia secara daring dalam format
 terstandardisasi, sehingga dapat diakses dan digunakan oleh berbagai instansi. ELI bertujuan untuk
@@ -269,10 +269,8 @@ negara-negara EU. Spesifikasi yang terdapat pada ELI antara lain:
 
 \begin{itemize}
   \itemsep1pt\parskip0pt\parsep0pt
-  \item
-        URI untuk informasi peraturan perundang-undangan.
-  \item
-        Metadata yang mendeskripsikan informasi peraturan perundang-undangan.
+  \item URI untuk informasi peraturan perundang-undangan.
+  \item Metadata yang mendeskripsikan informasi peraturan perundang-undangan.
 \end{itemize}
 
 % // TODO: terlalu singkat, ksh konsepnya gmn dan contoh pemodelan ELI utk suatu peraturan

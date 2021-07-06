@@ -1,10 +1,10 @@
-%-------------------------------------------------------------------------------------------------%
+%--------------------------------------------------------------------------------------------------%
 \chapter{IMPLEMENTASI}\label{bab:5}
-%-------------------------------------------------------------------------------------------------%
+%--------------------------------------------------------------------------------------------------%
 
-%-------------------------------------------------------------------------------------------------%
+%--------------------------------------------------------------------------------------------------%
 \section{OCR Ulang Berkas PDF}\label{ocr-ulang-berkas-pdf}
-%-------------------------------------------------------------------------------------------------%
+%--------------------------------------------------------------------------------------------------%
 
 Dokumen peraturan perundang-undangan yang digunakan pada penelitian didapatkan dalam format berkas
 PDF. Penulis pada awalnya mencoba langsung mengekstraksi data dari PDF, tetapi penulis menemukan
@@ -79,10 +79,10 @@ Tesseract OCR mendeteksi teks sebagai \textit{block}, bukan \textit{word} atau \
 tessedit_pageseg_mode 4
 \end{minted}
 
-%-------------------------------------------------------------------------------------------------%
+%--------------------------------------------------------------------------------------------------%
 \section{Ekstraksi Berkas PDF menjadi Data
   \textit{Span}}\label{ekstraksi-berkas-pdf-menjadi-data-span}
-%-------------------------------------------------------------------------------------------------%
+%--------------------------------------------------------------------------------------------------%
 
 Agar dapat diproses oleh program, berkas PDF perlu diolah menjadi data berupa daftar teks dan
 posisinya yang selanjutnya akan disebut \textit{span}. Sebuah \textit{span} mengandung satu baris teks.
@@ -135,9 +135,9 @@ akan dipindai menjadi
   id: 3
 \end{minted}
 
-%-------------------------------------------------------------------------------------------------%
+%--------------------------------------------------------------------------------------------------%
 \section{Membersihkan \textit{Noise} dari Halaman}\label{membersihkan-noise-dari-halaman}
-%-------------------------------------------------------------------------------------------------%
+%--------------------------------------------------------------------------------------------------%
 
 Tidak jarang dokumen peraturan Perudang-undangan mengandung data \textit{noise} yang tidak ingin kita
 ekstraksi seperti \textit{header} dan \textit{footer}. Pada penelitian ini, penulis menggunakan dokumen
@@ -156,10 +156,10 @@ halaman, dan selalu terletak di posisi yang hampir sama. Oleh karena itu, penuli
 menggunakan \textit{regex} dan posisi dari setiap \textit{span}, kemudian menghapus \textit{span} tersebut
 jika terdeteksi sebagai header.
 
-%-------------------------------------------------------------------------------------------------%
+%--------------------------------------------------------------------------------------------------%
 \section{Penggabungan Data Berkas PDF Asli dan Hasil OCR
   Ulang}\label{penggabungan-data-berkas-pdf-asli-dan-hasil-ocr-ulang}
-%-------------------------------------------------------------------------------------------------%
+%--------------------------------------------------------------------------------------------------%
 
 Pada proses ekstraksi berkas PDF menjadi daftar \textit{span}, penulis menemukan satu masalah yaitu
 data hasil OCR tidak konsisten dalam memindai angka. Seperti yang dapat dilihat pada gambar dibawah,
@@ -215,15 +215,15 @@ Jika nomor 9 berhasil terpindai:
   
 \end{minted}
 
-%-------------------------------------------------------------------------------------------------%
+%--------------------------------------------------------------------------------------------------%
 \section{Klasifikasi Dokumen}\label{klasifikasi-dokumen}
-%-------------------------------------------------------------------------------------------------%
+%--------------------------------------------------------------------------------------------------%
 
 Pa
 
-%-------------------------------------------------------------------------------------------------%
+%--------------------------------------------------------------------------------------------------%
 \section{Pengelompokan \textit{span} menjadi Komponen}\label{pengelompokan-span-menjadi-komponen}
-%-------------------------------------------------------------------------------------------------%
+%--------------------------------------------------------------------------------------------------%
 
 Teks yang membentuk suatu komponen terdiri dari satu atau lebih \textit{span}, sehingga daftar
 \textit{span} yang didapatkan dari hasil ekstraksi berkas PDF harus dikelompokkan sehingga setiap
@@ -260,9 +260,9 @@ dengan kata \textbf{Menimbang}. Kemudian setiap \textit{span} setelah span \text
 akan dikelompokkan menjadi \textit{section} \texttt{metadata} sampai menemukan section yang diawali
 kata \textbf{BAB I}.
 
-%-------------------------------------------------------------------------------------------------%
+%--------------------------------------------------------------------------------------------------%
 \subsection{Komponen Terurut}\label{pengelompokan-span-pada-komponen-terurut}
-%-------------------------------------------------------------------------------------------------%
+%--------------------------------------------------------------------------------------------------%
 
 Beberapa komponen seperti \texttt{bab}, \texttt{bagian}, \texttt{paragraf}, \texttt{pasal},
 \texttt{angka}, dan \texttt{huruf} memiliki sifat terurut. Dalam hal ini, yang termasuk terurut
@@ -286,9 +286,9 @@ dijamin mengandung semua \texttt{bab 1} sampai \texttt{bab 11} dan apabila terde
 \texttt{pasal 196} maka akan dijamin mengandung semua pasal dari \texttt{pasal 1} sampai
 \texttt{pasal 195}.
 
-%-------------------------------------------------------------------------------------------------%
+%--------------------------------------------------------------------------------------------------%
 \subsection{Komponen Amandemen}\label{komponen-amandemen}
-%-------------------------------------------------------------------------------------------------%
+%--------------------------------------------------------------------------------------------------%
 
 Mengekstraksi \textit{span} pada bagian amandemen merupakan salahsatu tantangan pada penelitian ini.
 Dibawah adalah gambar amandemen pada Pasal 17 UU Nomor 11 Tahun 2020 yang dilakukan terhadap Pasal 1
@@ -315,9 +315,9 @@ pasal biasa dan pasal amandemen hanya dilakukan jika dokumen memiliki komponen b
   \caption{Deteksi Komponen Amandemen}
 \end{figure}
 
-%-------------------------------------------------------------------------------------------------%
+%--------------------------------------------------------------------------------------------------%
 \section{Deteksi Sitasi}\label{deteksi-sitasi}
-%-------------------------------------------------------------------------------------------------%
+%--------------------------------------------------------------------------------------------------%
 
 Setelah semua \textit{span} dikelompokan menjadi suatu komponen, dilakukan deteksi sitasi pada teks
 pada setiap komponen untuk mengetahui apakah komponen tersebut menyebut komponen atau dokumen
@@ -381,9 +381,9 @@ sebagai 3 URI sitasi sebagai berikut.
 Pada kasus ini, yang akan diambil adalah teks ``Pasal 156 ayat (4)'' karena merupakan teks
 terpanjang.
 
-%-------------------------------------------------------------------------------------------------%
+%--------------------------------------------------------------------------------------------------%
 \section{Visualisasi dengan Markdown}\label{data-to-md}
-%-------------------------------------------------------------------------------------------------%
+%--------------------------------------------------------------------------------------------------%
 
 \begin{figure}[H]
   \centering
@@ -391,16 +391,16 @@ terpanjang.
   \caption{Perbandingan visualisasi dengan yaml (kiri) dan markdown (kanan)}
 \end{figure}
 
-%-------------------------------------------------------------------------------------------------%
+%--------------------------------------------------------------------------------------------------%
 \section{Data to triple}\label{data-to-triple}
-%-------------------------------------------------------------------------------------------------%
+%--------------------------------------------------------------------------------------------------%
 
-%-------------------------------------------------------------------------------------------------%
+%--------------------------------------------------------------------------------------------------%
 \section{triple to ttl}\label{triple-to-ttl}
-%-------------------------------------------------------------------------------------------------%
+%--------------------------------------------------------------------------------------------------%
 
-%-------------------------------------------------------------------------------------------------%
+%--------------------------------------------------------------------------------------------------%
 \section{Query}\label{query}
-%-------------------------------------------------------------------------------------------------%
+%--------------------------------------------------------------------------------------------------%
 
 Fuseki
