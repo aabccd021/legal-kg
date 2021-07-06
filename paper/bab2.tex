@@ -33,10 +33,10 @@ entitas yang sudah diketahui dan terbatas.
 
 Resource Description Framework (RDF) merupkan model data yang memberikan pernyataan tentang suatu
 \textit{resource} dalam bentuk subjek-properti-objek, atau sering disebut \textit{triple}. Sebuah
-\textit{knowledge graph} dapat direpresentasikan sebagai kumpulan \textit{triple}. Subyek dan
+KG dapat direpresentasikan sebagai kumpulan \textit{triple}. Subyek dan
 properti dalam \textit{triple} direpresentasikan sebagai Uniform Resource Identifier (URI),
 sedangkan objek dapat direpresentasikan dengan URI atau \textit{string literal}. Pada gambar
-dibawah, dapat dilihat terdapat \textit{knowledge graph} dengan dua \textit{triple}. Pada triple 1
+dibawah, dapat dilihat terdapat KG dengan dua \textit{triple}. Pada triple 1
 subjek, properti, dan objek berturut-turut adalah \texttt{https://example.org/james},
 \texttt{https://example.org/has\_visited}, \texttt{https://example.org/louvre} yang mana semuanya
 berbentuk URI\@. Sedangkan pada triple 2 subjek, properti, dan objek berturut-turut adalah
@@ -55,7 +55,7 @@ James.
 \end{figure}
 
 Terdapat beberapa format berkas dan sintaks untuk mengekspresikan RDF. Pada penelitian ini, penulis
-menggunakan format Terse RDF Triple Language (Turtle). Sebagai contoh, \textit{knowledge graph} diatas
+menggunakan format Terse RDF Triple Language (Turtle). Sebagai contoh, KG diatas
 dapat dituliskan dalam format Turtle sebagai berikut.
 
 \begin{minted}[frame=single, breaklines, fontsize=\footnotesize]{turtle}
@@ -100,7 +100,7 @@ penjelasan sintaks SPARQL.
   \item \texttt{WHERE}: Menyatakan kondisi \textit{triple} yang akan ditampilkan pada output.
 \end{itemize}
 
-Berikut adalah contoh-contoh \textit{query} SPARQL yang dilakukan pada contoh \textit{knowledge graph}
+Berikut adalah contoh-contoh \textit{query} SPARQL yang dilakukan pada contoh KG
 pada subbab sebelumnya.
 
 %--------------------------------------------------------------------------------------------------%
@@ -108,18 +108,13 @@ pada subbab sebelumnya.
 %--------------------------------------------------------------------------------------------------%
 
 \textit{Query} ini bertujuan untuk menampilkan semua \textit{triple} yang terdapat pada
-  \textit{knowledge graph}.
+  KG.
 
 \begin{listing}[ht]
   \begin{minted}[frame=single, fontsize=\footnotesize]{sparql}
 PREFIX ex: <https://example.org/>
-SELECT ?s 
-       ?p
-       ?o
-WHERE
-  {
-    ?s ?p ?o
-  }
+SELECT ?s ?p ?o
+WHERE { ?s ?p ?o }
   \end{minted}
   \caption{Example from external file}
   \label{listing:3}
@@ -142,12 +137,8 @@ subjek \texttt{https://example.org/james}.
 
 \begin{minted}[frame=single, fontsize=\footnotesize]{sparql}
 PREFIX ex: <https://example.org/>
-SELECT ?p
-       ?o
-WHERE
-  {
-    ex:james ?p ?o
-  }
+SELECT ?p ?o
+WHERE { ex:james ?p ?o }
   \end{minted}
 
 Output dari \textit{query} tersebut adalah sebagai berikut.
@@ -169,10 +160,7 @@ Output dari \textit{query} tersebut adalah sebagai berikut.
 \begin{minted}[frame=single, fontsize=\footnotesize]{sparql}
 PREFIX ex: <https://example.org/>
 SELECT ?visited_place
-WHERE
-  {
-    ex:james ex:has_visited ?visited_place
-  }
+WHERE { ex:james ex:has_visited ?visited_place }
 \end{minted}
 
 Output dari \textit{query} tersebut adalah sebagai berikut.
