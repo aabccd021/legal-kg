@@ -147,17 +147,52 @@ Berikut ini adalah batasan dari penelitian yang dilakukan:
 %--------------------------------------------------------------------------------------------------%
 \section{Metodologi Penelitian}\label{sec:metodologi-penelitian}
 %--------------------------------------------------------------------------------------------------%
-// TODO: Maintained docs masukin sini
 
-// TODO: Utk yg metodologi, sbnrnya standar aja, dimulai dari pertanyaan riset, lalu pengembangan
-ontology (URI scheming masuk ke pengembagan ontology), pengembangan sistem konversi, baru lalu use
-case evaluation (ini yg legal KG advanced querying, legal KG chatbot, legal KG visualization) baru
-large scale eval (ini yg coba konversi peraturan dlm jumlah besar dan kita sampling utk evaluasi
-correctnessnya)
+Metodologi penelitian dilakukan sesuai dengan yang diilustrasikan pada \pic~\ref{fig:metodologi}.
+Perancangan sebuah KG dimulai dengan memahami \textit{competency questions} (\textit{requirements}).
+\textit{Competency questions} mencakup semua pertanyaan yang harus terdapat jawabannya didalam KG
+agar dapat digunakan pada \textit{use case} yang akan disebutkan pada subbab selanjutnya. Setelah
+perntanyaan-pertanyaan sudah jelas, pertanyaan-pertanyaan tersebut dapat dikonversi menjadi SPARQL
+query untuk diperiksa apakah KG mengembalikan jawaban yang sesuai. Kemudian, dirancang ontology
+(desain KG) yang dapat menjawab pertanyaan-pertanyaan tersebut. Perancangan ontology ini mempermudah
+konstruksi KG.
 
-// TODO: suatu KG construction dimulai dengan competency questions (requirements). Saran sy: coba
-baca serta rangkum dan terapkan ini:
-www.ksl.stanford.edu/people/dlm/papers/ontology-tutorial-noy-mcguinness-abstract.html???
+\begin{figure}
+  \centering
+  \begin{tikzpicture}[node distance=0.5cm]
+    %Styles   
+    \tikzstyle{r} = [rectangle, minimum width=7cm, minimum height=0.5cm, draw, text centered]
+    
+    %Nodes
+    \node[r] (pertanyaan)                           {Pertanyaan Riset};
+    \node[r] (ontology)     [below=of pertanyaan]   {Pengembangan Ontology};
+    \node[r] (pengembangan) [below=of ontology]     {Pengembangan Sistem Konversi};
+    \node[r] (usecase)      [below=of pengembangan] {\textit{Use Case Evaluation}};
+    \node[r] (eval)         [below=of usecase]      {\textit{Large Scale Evaluation}};
+    
+    %Lines
+    \draw[->] (pertanyaan.south)   -- (ontology.north);
+    \draw[->] (ontology.south)     -- (pengembangan.north);
+    \draw[->] (pengembangan.south) -- (usecase.north);
+    \draw[->] (usecase.south)      -- (eval.north);
+    
+  \end{tikzpicture}
+  \caption{Metodologi Penelitian}
+  \label{fig:metodologi}
+\end{figure}
+
+Karena sulit untuk menjamin hasil konversi untuk semua PDF peraturan perundang-undangan, akan
+terdapat beberapa PDF yang akan dijamin konversinya benar yang selanjutnya akan disebut
+\textit{maintained PDFs}. Pengembangan sistem konversi dilakukan secara iteratif. Setiap terdapat
+perubahan pada sistem, akan dicek apakah untuk semua \textit{maintained PDFs} memberikan hasil
+konversi yang benar. Sistem konversi akan menerima input berupa PDF dan mengeluarkan output berupa
+KG dengan ontology yang sudah dirancang pada tahap sebelumnya.
+
+Untuk menjamin KG yang dibuat dapat menjawab \textit{competency questions}, dalam penelitian ini
+dilakukan \textit{use case evaluation} yaitu berupa demonstrasi contoh penerapan dari KG berdasarkan
+\textit{competency questions}. Setelah semua \textit{competency questions} terpenuhi, dilakukan
+\textit{large scale evaluation} dimana PDF diluar \textit{maintained PDFs} akan dikonversi kemudian
+dilakukan sampling pada hasil konversinya untuk dievaluasi.
 
 %--------------------------------------------------------------------------------------------------%
 \section{Sistematika Penulisan}\label{sec:sistematika-penulisan}
