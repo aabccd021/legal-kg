@@ -13,7 +13,7 @@
 \label{sec:ocr-ulang-berkas-pdf}
 %--------------------------------------------------------------------------------------------------%
 
-Dokumen peraturan perundang-undangan yang digunakan pada penelitian didapatkan dalam format berkas
+Dokumen \legal yang digunakan pada penelitian didapatkan dalam format berkas
 PDF. Penulis pada awalnya mencoba langsung mengekstraksi data dari PDF, tetapi penulis menemukan
 kesulitan. Salahsatu kesulitan yang penulis temui adalah terdapatnya salah pemindaian pada berkas
 PDF. Sebagai contoh, terdapat teks yang tertulis \texttt{Pasal} tetapi mengandung data
@@ -28,7 +28,7 @@ Perwakilan Rakyat pada situs web dpr.go.id/jdih, masing-masing dokumen dibuat ke
 dengan cara yang berbeda-beda. Penulis tidak dapat mengetahui secara pasti metode apa yang
 digunakan, tetapi dari metadata yang didapatkan dari berkas PDF, penulis dapat membuat beberapa
 dugaan. Pada berkas PDF, terdapat metadata dengan nama \textbf{Creator}, dimana pada dokumen-dokumen
-peraturan Perudang-udangan yang didapatkan, tercantum nama-nama alat pencetak atau merk dari
+peraturan perudang-undangan yang didapatkan, tercantum nama-nama alat pencetak atau merk dari
 pencetak tersebut. Dari informasi tersebut penulis menduga bahwa terdapat sebagian peraturan
 perundang-undangan yang dibuat menjadi PDF dengan mencetaknya menjadi kertas terlebih dahulu
 kemudian di pindai oleh pemindai dan sebagian lainnya dikonversi langsung dari berkas
@@ -46,7 +46,7 @@ adalah hasil OCR (\textit{optical character recognition}) oleh pemindai tersebut
     UU Nomor 6 Tahun 2018  & Canon                  & `(2)` selalu dipindai `(21` \\ \hline
     PP Nomor 34 Tahun 2021 & Fuji Xerox B9100       & data teks tidak terbaca     \\ \hline
   \end{tabular}
-  \caption{Metadata PDF Peraturan Perundang-undangan}
+  \caption{Metadata PDF \legal}
   \label{tab:metadata-pdf}
 \end{table}
 
@@ -169,7 +169,7 @@ akan dipindai menjadi
 \label{membersihkan-noise-dari-halaman}
 %--------------------------------------------------------------------------------------------------%
 
-Tidak jarang dokumen peraturan Perudang-undangan mengandung data \textit{noise} yang tidak ingin kita
+Tidak jarang dokumen \legal mengandung data \textit{noise} yang tidak ingin kita
 ekstraksi seperti \textit{header} dan \textit{footer}. Pada penelitian ini, penulis menggunakan dokumen
 dari sumber yang sama sehingga memiliki format yang sama, dan juga posisi \textit{header} dan
 \textit{footer} yang hampir sama pada setiap dokumen.
@@ -370,7 +370,7 @@ dilakukan jika dokumen memiliki komponen berupa amandemen.
 
 Setelah semua \textit{span} dikelompokan menjadi suatu komponen, dilakukan deteksi sitasi pada teks
 pada setiap komponen untuk mengetahui apakah komponen tersebut menyebut komponen atau dokumen
-peraturan perundang-undangan lainnya. \tab~\ref{tab:rujukan} adalah daftar pola sitasi yang berhasil
+\legal lainnya. \tab~\ref{tab:rujukan} adalah daftar pola sitasi yang berhasil
 dideteksi pada penelitian ini.
 
 \begin{longtable}[l]{|p{0.2\textwidth} | p{0.3\textwidth}| p{0.5\textwidth}|}
@@ -473,7 +473,7 @@ terpanjang.
   \label{fig:konstruksi-kg}
 \end{figure}
 
-KG dikonstruksi dari data peraturan perundang-undangan yang sudah terdapat sebagai data terstruktur
+KG dikonstruksi dari data \legal yang sudah terdapat sebagai data terstruktur
 dalam memori. Setiap objek seperti peraturan dan komponen akan dibangun menjadi URI berdasarkan
 \tab~\ref{tab:uri-peraturan} dan \tab~\ref{tab:uri-peraturan}. Literal seperti bilangan,
 \textit{string}, dan tanggal juga dikonversi sesuai spesifikasi \textit{literal type} pada Turtle.
@@ -488,11 +488,11 @@ dengan properti, domain, dan range sesuai spesifikasi pada \tab~\ref{tab:propert
 \label{sec:query}
 %--------------------------------------------------------------------------------------------------%
 
-Query dilakukan terhadap KG untuk evaluasi \textit{competency question} dan membuat demonstrasi
-untuk \textit{use case evaluation}. Apache Jena
+\textit{Query} dilakukan terhadap KG untuk evaluasi \textit{competency question} dan membuat
+demonstrasi untuk \textit{use case evaluation}. Apache Jena
 Fuseki\footnote{\url{https://jena.apache.org/documentation/fuseki2/}} digunakan sebagai SPARQL
-server yang menyimpan KG dan melakukan query terhadap KG. Instalasi Fuseki dapat dilakukan dengan
-\lst~\ref{lst:install-fuseki}.
+server yang menyimpan KG dan melakukan \textit{query} terhadap KG. Instalasi Fuseki dapat dilakukan
+dengan \lst~\ref{lst:install-fuseki}.
 
 \begin{listing}[H]
   \begin{minted}[frame=single, breaklines, fontsize=\footnotesize]{bash}
@@ -506,13 +506,14 @@ cd apache-jena-fuseki-4.1.0
 
 Setelah instalasi Fuseki selesai dan berhasil masuk ke dalam folder Fuseki, Fuseki dapat dijalankan
 dengan KG dalam bentuk berkas Turtle dengan \lst~\ref{lst:run-fuseki}. Setelah command tersebut
-dijalankan, SPARQL query dapat dilakukan. Pada \lst~\ref{lst:run-fuseki}, Fuseki dijalankan dengan
-endpoint \textit{/lex2kg}, sehingga SPARQL query dapat dilakukan menggunakan \textit{client library}
-dengan endpoint \url{http://127.0.0.1:3030/lex2kg/sparql}, atau pada antarmuka yang tersedia pada
-\url{http://127.0.0.1:3030/dataset.html?tab=query&ds=/lex2kg}. Pada penelitian ini digunakan
+dijalankan, SPARQL \textit{query} dapat dilakukan. Pada \lst~\ref{lst:run-fuseki}, Fuseki dijalankan
+dengan endpoint \textit{/lex2kg}, sehingga SPARQL \textit{query} dapat dilakukan menggunakan
+\textit{client library} dengan endpoint \url{http://127.0.0.1:3030/lex2kg/sparql}, atau pada
+antarmuka yang tersedia pada \url{http://127.0.0.1:3030/dataset.html?tab=query&ds=/lex2kg}. Pada
+penelitian ini digunakan
 \textit{client library}
 \texttt{fetch-sparql-endpoint}\footnote{\url{https://www.npmjs.com/package/fetch-sparql-endpoint}}
-untuk melakukan query dari bahasa pemrograman typescript.
+untuk melakukan \textit{query} dari bahasa pemrograman typescript.
 
 
 \begin{listing}[H]

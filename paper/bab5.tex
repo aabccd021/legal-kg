@@ -24,12 +24,13 @@
 %--------------------------------------------------------------------------------------------------%
 
 Dengan menggunakan SPARQL server seperi Apache Jena Fuseki, KG yang dibuat dengan Lex2KG dapat
-dianalisis dengan menjalankan SPARQL query. SPARQL query memiliki fitur operasi \textit{join},
-\textit{union}, \textit{optional}, dan \textit{negation pattern}. SPARQL juga menyediakan query
-analisis yang lengkap seperti \textit{filter}, \textit{aggregate}, dan \textit{property path}.
-Dengan menggunakan SPARQL query, salah satu \textit{competency question} ``Tampilkan semua peraturan
-serta peraturan yang ditimbangnya.'' dapat dijawab dengan melakukan query \lst~\ref{lst:query-menimbang}
-yang akan memberikan output \tab~\ref{tab:output-query-menimbang}.
+dianalisis dengan menjalankan SPARQL \textit{query}. SPARQL \textit{query} memiliki fitur operasi
+\textit{join}, \textit{union}, \textit{optional}, dan \textit{negation pattern}. SPARQL juga
+menyediakan \textit{query} analisis yang lengkap seperti \textit{filter}, \textit{aggregate}, dan
+\textit{property path}. Dengan menggunakan SPARQL \textit{query}, salah satu \textit{competency
+question} ``Tampilkan semua peraturan serta peraturan yang ditimbangnya.'' dapat dijawab dengan
+melakukan \textit{query} \lst~\ref{lst:query-menimbang} yang akan memberikan output
+\tab~\ref{tab:output-query-menimbang}.
 
 \begin{listing}[H]
   \begin{minted}[frame=single, fontsize=\footnotesize]{sparql}
@@ -46,7 +47,8 @@ WHERE {
 ORDER BY DESC(?penimbang) DESC(?ditimbang)
 LIMIT 10
   \end{minted}
-  \caption{SPARQL query untuk ``Tampilkan semua peraturan serta peraturan yang ditimbangnya.''}
+  \caption{SPARQL \textit{query} untuk ``Tampilkan semua peraturan serta peraturan yang
+  ditimbangnya.''}
   \label{lst:query-menimbang}
 \end{listing}
 
@@ -60,7 +62,7 @@ LIMIT 10
     uu:2020/6  & uu:2014/1  \\\hline
     uu:2020/2  & uu:2020/1  \\\hline
   \end{tabular}
-  \caption{Output Query \lst~\ref{lst:query-menimbang} }
+  \caption{Output \textit{query} \lst~\ref{lst:query-menimbang} }
   \label{tab:output-query-menimbang}
 \end{table}
 
@@ -75,9 +77,10 @@ LIMIT 10
 
 Visualisasi meningkatkan visibilitas dan \textit{explainability} KG. Pada KG dapat dilakukan
 visualisasi \textit{node} dan \textit{relation} antara \textit{node}, atau visualisasi statistik
-dari KG tersebut. \lst~\ref{lst:vizkg} merupakan kode untuk melakukan visualisasi ``Tampilkan 5 peraturan
-dengan komponen terbanyak beserta jumlah komponennya'' menggunakan \textit{visualization library}
-VizKG\footnote{\url{https://pypi.org/project/VizKG/}} dengan output \pic~\ref{fig:vizkg}.
+dari KG tersebut. \lst~\ref{lst:vizkg} merupakan kode untuk melakukan visualisasi ``Tampilkan 5
+peraturan dengan komponen terbanyak beserta jumlah komponennya'' menggunakan \textit{library}
+visualisasi VizKG\footnote{\url{https://pypi.org/project/VizKG/}} dengan output
+\pic~\ref{fig:vizkg}.
 
 \begin{listing}[H]
   \begin{minted}[frame=single, breaklines, fontsize=\footnotesize]{python}
@@ -130,21 +133,21 @@ bubble.plot()
       \hline
 
       \makecell[l]{
-      \texttt{Ada yang bisa dibantu?}\\
-      \texttt{1. Mencari Peraturan Perundang-undangan}\\
-      \texttt{\textcolor{red}{1}}\\ \\
-      \texttt{Masukkan Keyword Peraturan: \textcolor{red}{kerja}}\\ \\
-      \texttt{Berikut adalah peraturan yang judulnya mengandung kerja}\\
-      \texttt{/uu/2004/17}\\
-      \texttt{/uu/2016/3}\\
-      \texttt{/uu/1997/25}\\
-      \texttt{/uu/2016/15}\\
-      \texttt{/uu/2007/47}\\
-      \texttt{/uu/1991/1}\\
-      \texttt{/uu/2019/3}\\
-      } \\
+        \texttt{Ada yang bisa dibantu?}                                  \\
+        \texttt{1. Mencari Peraturan Perundang-undangan}                 \\
+        \texttt{\textcolor{red}{1}}                                      \\ \\
+        \texttt{Masukkan Keyword Peraturan: \textcolor{red}{kerja}}      \\ \\
+        \texttt{Berikut adalah peraturan yang judulnya mengandung kerja} \\
+        \texttt{/uu/2004/17}                                             \\
+        \texttt{/uu/2016/3}                                              \\
+        \texttt{/uu/1997/25}                                             \\
+        \texttt{/uu/2016/15}                                             \\
+        \texttt{/uu/2007/47}                                             \\
+        \texttt{/uu/1991/1}                                              \\
+        \texttt{/uu/2019/3}                                              \\
+      }                                                                  \\
       \hline
-    \end{tabular} 
+    \end{tabular}
   \end{center}
 
   \caption{Skenario 1 Chatbot}

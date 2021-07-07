@@ -54,7 +54,7 @@
   \item Peraturan apa yang berlaku pada daerah X yang disahkan di tahun Y?
   \item Apa relasi suatu peraturan dengan peraturan lain?
   \item Mana saja peraturan yang membahas tentang topik W atau X tapi bukan topik Y dan bukan Z?
-  \item Apa isi dari Pasal X ayat (Y) huruf Z dari suatu peraturan perundang-undangan?
+  \item Apa isi dari Pasal X ayat (Y) huruf Z dari suatu \legal?
   \item Apa saja bab-bab yang terdapat pada peraturan X?
 \end{itemize}
 
@@ -119,10 +119,10 @@ deskripsinya.
 \label{sec:perancangan-uri-komponen-peraturan-perundang-undangan}
 %--------------------------------------------------------------------------------------------------%
 
-URI peraturan perundang-undangan diawali oleh \textit{peraturanPrefix}, kemudian diikuti oleh string
+URI \legal diawali oleh \textit{peraturanPrefix}, kemudian diikuti oleh string
 yang mengidentifikasi peraturan tersebut. URI peraturan ini akan digunakan oleh entitas sebagai
 prefix yang selanjutnya akan disebut \textit{docURI}. \tab~\ref{tab:uri-peraturan} adalah jenis
-peraturan perundang-undangan yang diimplementasi pada penelitian ini beserta pola URI nya. Variabel
+\legal yang diimplementasi pada penelitian ini beserta pola URI nya. Variabel
 akan dikurung dengan kurung kurawal \texttt{\{\}}.
 
 \begin{longtable}[l]{|p{0.2\textwidth}|p{0.55\textwidth}|p{0.25\textwidth}|}
@@ -169,7 +169,7 @@ perundang-undangan beserta pola URI nya.
   \texttt{Mengingat}               & \texttt{\{docURI\}/mengingat}         & \texttt{docURI}: URI peraturan yang mengatasi                                                                                                            \\ \hline
   \texttt{Segmen}                  & \texttt{\{parentURI\}/\{name\}}       & \texttt{parentURI}: URI \texttt{Ayat}, \texttt{Huruf}, \texttt{DaftarHuruf}, \texttt{VersiPasal}, \texttt{Menimbang}, \texttt{Mengingat}, yang mengatasi \\
                                    &                                       & \texttt{name}: Nama teks                                                                                                                                 \\ \hline
-  \caption{Konstruksi URI untuk komponen Peraturan Perundang-undangan}
+  \caption{Konstruksi URI untuk komponen \legal}
   \label{tab:uri-komponen}
 \end{longtable}
 
