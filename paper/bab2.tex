@@ -13,7 +13,7 @@ dunia nyata dan hubungan antara entitas-entitas tersebut \citep{seth_2019}. Seba
 \pic~\ref{fig:kg-description} dapat dilihat terpadat entitas-entitas yang ditandai dengan bentuk
 lingkaran, dan hubungan antara entitas-entitas ditandai dengan bentuk anak panah. Pada gambar dapat
 dilihat bahwa terdapat entitas \texttt{"James"} dan \texttt{"Louvre"} dan properti \texttt{"has
-visited"} yang mengarah dari \texttt{"James"} ke \texttt{"Louvre"}. Relasi tersebut dapat kita
+  visited"} yang mengarah dari \texttt{"James"} ke \texttt{"Louvre"}. Relasi tersebut dapat kita
 anggap sebagai sebuah pengetahuan yang dalam bahasa manusia dapat dituliskan sebagai ``James pernah
 mengunjungi Louvre''. Model data seperti ini cocok untuk menyimpan data dengan banyak jenis relasi
 antara entitas seperti pengetahuan umum, dibandingkan dengan \textit{relational database} yang cocok
@@ -145,9 +145,9 @@ WHERE { ?s ?p ?o }
 \begin{table}
   \centering
   \begin{tabular}{|l|l|l|} \hline
-    ?s       & ?p              & ?o        \\\hline \hline
-    ex:james & ex:has\_visited & ex:louvre \\\hline
-    ex:james & ex:has\_name    & "James" \\\hline
+    ?s                & ?p                       & ?o                 \\\hline \hline
+    \texttt{ex:james} & \texttt{ex:has\_visited} & \texttt{ex:louvre} \\\hline
+    \texttt{ex:james} & \texttt{ex:has\_name}    & \texttt{"James"}   \\\hline
   \end{tabular}
   \caption{Output Query 1}
   \label{tab:output-query-1}
@@ -175,10 +175,9 @@ WHERE { ex:james ?properti ?objek }
 \begin{table}
   \centering
   \begin{tabular}{|l|l|} \hline
-    ?properti       & ?objek    \\\hline \hline
-% // TODO: texttt
-    ex:has\_visited & ex:louvre \\\hline
-    ex:has\_name    & "James" \\\hline
+    ?properti                & ?objek             \\\hline \hline
+    \texttt{ex:has\_visited} & \texttt{ex:louvre} \\\hline
+    \texttt{ex:has\_name}    & "James"            \\\hline
   \end{tabular}
   \caption{Output Query 3}
   \label{tab:output-query-2}
@@ -207,8 +206,8 @@ WHERE { ex:james ex:has_visited ?visited_place }
 \begin{table}
   \centering
   \begin{tabular}{|l|l|l|} \hline
-    ?visited\_place \\ \hline \hline
-    ex:louvre       \\ \hline
+    \texttt{?visited\_place} \\ \hline \hline
+    \texttt{ex:louvre}       \\ \hline
   \end{tabular}
   \caption{Output Query 3}
   \label{tab:output-query-3}
@@ -219,11 +218,9 @@ WHERE { ex:james ex:has_visited ?visited_place }
 \label{sec:peraturan-perundang-undangan}
 %--------------------------------------------------------------------------------------------------%
 
-Menurut Undang-Undang Nomor 10 Tahun 2004 Pasal 7 Ayat 1, 
-% // TODO: tentang apa?
-\legal adalah
-peraturan tertulis yang dibentuk oleh lembaga negara atau pejabat yang berwenang dan mengikat secara
-umum. Jenis dan hierarki \legal terdiri atas:
+Menurut Pasal 7 Ayat 1 UU 10/2004 tentang pembentukan \legal, \legal adalah peraturan tertulis yang
+dibentuk oleh lembaga negara atau pejabat yang berwenang dan mengikat secara umum. Jenis dan
+hierarki \legal terdiri atas:
 
 \begin{enumerate}
   \item Undang-Undang Dasar Negara Republik Indonesia Tahun 1945
@@ -233,15 +230,13 @@ umum. Jenis dan hierarki \legal terdiri atas:
   \item Peraturan Daerah
 \end{enumerate}
 
-Berikut adalah beberapa peranan perundang-undangan untuk Indonesia
-\href{https://www.pustaka.ut.ac.id/lib/wp-content/uploads/pdfmk/HKUM4403-M1.pdf}{1}:
-% // TODO: fix this
+Berikut adalah beberapa peranan perundang-undangan untuk Indonesia \citep{ilmu_perundang_undangan}:
 
 \begin{itemize}
-  \item Peraturan perundang-undangan merupakan kaidah hukum yang mudah dikenal (diidentifikasi),
+  \item \Legal merupakan kaidah hukum yang mudah dikenal (diidentifikasi),
         mudah diketemukan kembali, dan mudah ditelusuri. Sebagai kaidah hukum tertulis, bentuk,
         jenis,dan tempatnya jelas. Begitu pula pembuatnya.
-  \item Peraturan perundang-undangan memberikan kepastian hukum yang lebih nyata karena
+  \item \Legal memberikan kepastian hukum yang lebih nyata karena
         kaidah-kaidahnya mudah diidentifikasi dan mudah diketemukan kembali.
   \item Struktur dan sistematika \legal lebih jelas sehingga memungkinkan
         untuk diperiksa kembali dan diuji baik segi-segi formal maupun materi muatannya.
@@ -250,8 +245,7 @@ Berikut adalah beberapa peranan perundang-undangan untuk Indonesia
         sesuai dengan kebutuhan dan perkembangan masyarakat.
 \end{itemize}
 
-Menurut lampiran Undang-Undang Nomor 10 Tahun 2004, struktur \legal terdiri
-atas:
+Menurut lampiran UU 10/2004, struktur \legal terdiri atas:
 
 \begin{itemize}
   \item Judul
@@ -302,7 +296,7 @@ nasional, Eropa dan sistem informasi hukum global. ELI dibangun berdasarkan pers
 negara-negara EU.
 
 ELI juga memiliki \textit{technical implementation
-guide}\footnote{\url{https://publications.europa.eu/en/publication-detail/-/publication/8159b75d-5efc-11e8-ab9c-01aa75ed71a1}}
+  guide}\footnote{\url{https://publications.europa.eu/en/publication-detail/-/publication/8159b75d-5efc-11e8-ab9c-01aa75ed71a1}}
 yang menjelaskan implementasi ELI dan spesifikasi yang tedapat pada ELI. Spesifikasi ELI antara lain
 adalah cara membuat URI suatu \textit{resource}, \textit{class}, dan properti. Ontologi yang
 digunakan pada ELI cenderung untuk menjelaskan metadata dari peraturan, dan tidak memiliki pemodelan

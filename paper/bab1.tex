@@ -24,12 +24,11 @@
 \label{sec:latar-belakang}
 %--------------------------------------------------------------------------------------------------%
 
-\Legal adalah peraturan tertulis yang memuat norma hukum yang mengikat secara
-umum dan dibentuk atau ditetapkan oleh lembaga negara atau pejabat yang berwenang melalui prosedur
-yang ditetapkan dalam \legal, sesuai yang dijelaskan dalam Undang-Undang
-Republik Indonesia Nomor 12 Tahun 2011 (selanjutnya disebut dengan UU 12/2011). Peraturan
-perundang-undangan dapat digunakan untuk menjawab pertanyaan-pertanyaan yang berkaitan dengan hukum,
-seperti:
+\Legal adalah peraturan tertulis yang memuat norma hukum yang mengikat secara umum dan dibentuk atau
+ditetapkan oleh lembaga negara atau pejabat yang berwenang melalui prosedur yang ditetapkan dalam
+\legal, sesuai yang dijelaskan dalam Undang-Undang Republik Indonesia Nomor 12 Tahun 2011
+(selanjutnya disebut dengan UU 12/2011). \Legal dapat digunakan untuk menjawab pertanyaan-pertanyaan
+yang berkaitan dengan hukum, seperti:
 
 \begin{itemize}
   \item Peraturan apa yang berlaku pada daerah X yang disahkan di tahun Y?
@@ -41,12 +40,11 @@ seperti:
 
 Pertanyaan-pertanyaan tersebut umumnya biasa dijawab oleh seorang ahli hukum, yang hanya dapat
 dilakukan dalam skala kecil dan biaya relatif mahal. Komputer dapat menjadi alternatif untuk
-aplikasi tersebut dalam skala lebih besar dan biaya lebih murah, jika \legal
-berupa data terstruktur yang dapat diolah oleh komputer. Akan tetapi, data peraturan
-perundang-undangan umumnya dibuat dalam bentuk semi-terstruktur, yaitu berupa dokumen PDF dengan
-struktur konten seperti aturan penomoran dan aturan pembagian (\textit{sectioning}), sementara
-penulisan isi peraturannya sendiri dalam bentuk teks bahasa manusia (natural language) yang tak
-terstruktur (unstructured).
+aplikasi tersebut dalam skala lebih besar dan biaya lebih murah, jika \legal berupa data terstruktur
+yang dapat diolah oleh komputer. Akan tetapi, data \legal umumnya dibuat dalam bentuk
+semi-terstruktur, yaitu berupa dokumen PDF dengan struktur konten seperti aturan penomoran dan
+aturan pembagian (\textit{sectioning}), sementara penulisan isi peraturannya sendiri dalam bentuk
+teks bahasa manusia (natural language) yang tak terstruktur (unstructured).
 
 \begin{figure}[H]
   \centering
@@ -80,15 +78,13 @@ informasi lengkap berdasarkan konteks \legal.
 keterkaitannya, tersusun dalam bentuk \textit{graph}, (ii) mendefinisikan kelas entitas dan relasi
 antar entitas dalam bentuk skema, (iii) membolehkan sembarang entitas memiliki relasi satu sama lain
 dan (iv) mencakup berbagai topik domain \citep{paulheim_2016}. Dengan melakukan ekstraksi data dari
-dokumen yang bersifat semi-terstruktur, \legal dapat diubah menjadi KG.
-Sebagai manfaatnya, dapat fitur-fitur berbasis \textit{query} seperti \textit{question answering},
-\textit{reasoning} dan visualisasi data. \pic~\ref{fig:konstruksi-dan-query} menampilkan proses
-konstruksi KG dari beberapa berkas PDF \legal dan \textit{query} pada KG
-tersebut. Pada skripsi ini, akan dilakukan konversi dokumen \legal menjadi
-data terstruktur dalam bentuk KG, dan memberikan contoh aplikasi dari KG peraturan
-perundang-undangan tersebut. Beberapa usaha telah dilakukan untuk membuat \textit{vocabulary} untuk
-KG \legal seperti
-ELI,\footnote{\url{https://eur-lex.europa.eu/eli-register/about.html}}
+dokumen yang bersifat semi-terstruktur, \legal dapat diubah menjadi KG. Sebagai manfaatnya, dapat
+fitur-fitur berbasis \textit{query} seperti \textit{question answering}, \textit{reasoning} dan
+visualisasi data. \pic~\ref{fig:konstruksi-dan-query} menampilkan proses konstruksi KG dari beberapa
+berkas PDF \legal dan \textit{query} pada KG tersebut. Pada skripsi ini, akan dilakukan konversi
+dokumen \legal menjadi data terstruktur dalam bentuk KG, dan memberikan contoh aplikasi dari KG
+\legal tersebut. Beberapa usaha telah dilakukan untuk membuat \textit{vocabulary} untuk KG \legal
+seperti ELI,\footnote{\url{https://eur-lex.europa.eu/eli-register/about.html}}
 Schema.org,\footnote{\url{https://schema.org}} dan
 Wikidata.\footnote{\url{https://www.wikidata.org}}
 
@@ -143,8 +139,7 @@ penggunaan KG.
 
 Berikut adalah rumusan permasalahan dari penelitian yang dilakukan:
 \begin{itemize}
-  \item Bagaimana merancang suatu sistem untuk melakukan konversi otomatis PDF peraturan
-        perundang-undangan menjadi KG?
+  \item Bagaimana merancang suatu sistem untuk melakukan konversi otomatis PDF \legal menjadi KG?
   \item Bagaimana membuat ontologi untuk memperjelas \textit{requirement} dan mempermudah konversi
         dokumen PDF menjadi KG?
   \item Bagaimana evaluasi use case terhadap kg \legal tersebut serta evaluasi
