@@ -4,7 +4,7 @@ query:
 
 ```sparql
 # Describe Omnibus Law (UU Cipta Kerja)
-PREFIX lex2kg-o: <https://example.org/lex2kg/ontology/>
+PREFIX o: <https://example.org/lex2kg/ontology/>
 
 SELECT * WHERE {
   <https://example.org/lex2kg/uu/2020/11> ?p ?o .
@@ -35,12 +35,12 @@ query:
 
 ```sparql
 # Retrieve all articles (= pasal) of Omnibus Law
-PREFIX lex2kg-o: <https://example.org/lex2kg/ontology/>
+PREFIX o: <https://example.org/lex2kg/ontology/>
 
 SELECT ?pasalVersion ?text WHERE {
-  <https://example.org/lex2kg/uu/2020/11> lex2kg-o:pasal ?pasal .
-  ?pasal lex2kg-o:versi ?pasalVersion .
-  ?pasalVersion lex2kg-o:teks ?text .
+  <https://example.org/lex2kg/uu/2020/11> o:pasal ?pasal .
+  ?pasal o:versi ?pasalVersion .
+  ?pasalVersion o:teks ?text .
 } 
 ORDER BY ?pasal ?text
 LIMIT 3
@@ -68,16 +68,16 @@ query:
 
 ```sparql
 # Retrieve all articles (= pasal) of Omnibus Law
-PREFIX lex2kg-o: <https://example.org/lex2kg/ontology/>
+PREFIX o: <https://example.org/lex2kg/ontology/>
 
 SELECT ?pasal ?text WHERE {
   { 
     SELECT ?pasal (MAX(?pasalVersion) as ?latestPasalVersion) WHERE {
-      <https://example.org/lex2kg/uu/2020/11> lex2kg-o:pasal ?pasal .
-      ?pasal lex2kg-o:versi ?pasalVersion .
+      <https://example.org/lex2kg/uu/2020/11> o:pasal ?pasal .
+      ?pasal o:versi ?pasalVersion .
     } GROUP BY ?pasal 
   }
-  ?latestPasalVersion lex2kg-o:teks ?text
+  ?latestPasalVersion o:teks ?text
 } 
 ORDER BY ?pasal ?text
 LIMIT 3
@@ -105,14 +105,14 @@ query:
 
 ```sparql
 # What is the textual content of Article (or Pasal) 2 Subsection (or Ayat) 1 of Omnibus Law?
-PREFIX lex2kg-o: <https://example.org/lex2kg/ontology/>
+PREFIX o: <https://example.org/lex2kg/ontology/>
 
 SELECT ?x ?text WHERE {
-  ?pasal lex2kg-o:bagianDari+ <https://example.org/lex2kg/uu/2020/11>.
-  ?pasal lex2kg-o:nomor 2 .
-  ?x lex2kg-o:bagianDari* ?pasal .
-  ?x lex2kg-o:nomor 1 .
-  ?x lex2kg-o:teks ?text .
+  ?pasal o:bagianDari+ <https://example.org/lex2kg/uu/2020/11>.
+  ?pasal o:nomor 2 .
+  ?x o:bagianDari* ?pasal .
+  ?x o:nomor 1 .
+  ?x o:teks ?text .
 }
 ORDER BY ?x ?text
 LIMIT 3
@@ -140,19 +140,19 @@ query:
 
 ```sparql
 # What is the textual content of Article (or Pasal) 2 Subsection (or Ayat) 1 of Omnibus Law?
-PREFIX lex2kg-o: <https://example.org/lex2kg/ontology/>
+PREFIX o: <https://example.org/lex2kg/ontology/>
 
 SELECT ?x ?text WHERE {
   {
     SELECT ?pasal (MAX(?pasalVersion) as ?latestPasalVersion) WHERE {
-      <https://example.org/lex2kg/uu/2020/11> lex2kg-o:pasal ?pasal .
-      ?pasal lex2kg-o:nomor 2 .
-      ?pasal lex2kg-o:versi ?pasalVersion .
+      <https://example.org/lex2kg/uu/2020/11> o:pasal ?pasal .
+      ?pasal o:nomor 2 .
+      ?pasal o:versi ?pasalVersion .
     } GROUP BY ?pasal
   }
-  ?x lex2kg-o:bagianDari* ?latestPasalVersion .
-  ?x lex2kg-o:nomor 1 .
-  ?x lex2kg-o:teks ?text .
+  ?x o:bagianDari* ?latestPasalVersion .
+  ?x o:nomor 1 .
+  ?x o:teks ?text .
 } 
 ORDER BY ?x ?text
 LIMIT 3
@@ -170,14 +170,14 @@ query:
 
 ```sparql
 # Which are the articles of Chapter 2 (Bab 2) of Omnibus Law?
-PREFIX lex2kg-o: <https://example.org/lex2kg/ontology/>
+PREFIX o: <https://example.org/lex2kg/ontology/>
 
 SELECT ?pasal ?text WHERE {
-  ?bab lex2kg-o:bagianDari+ <https://example.org/lex2kg/uu/2020/11>.
-  ?bab lex2kg-o:nomor 2 .
-  ?pasal lex2kg-o:bagianDari+ ?bab .
-  ?pasal lex2kg-o:versi ?pasalVersion .
-  ?pasalVersion lex2kg-o:teks ?text
+  ?bab o:bagianDari+ <https://example.org/lex2kg/uu/2020/11>.
+  ?bab o:nomor 2 .
+  ?pasal o:bagianDari+ ?bab .
+  ?pasal o:versi ?pasalVersion .
+  ?pasalVersion o:teks ?text
 } 
 ORDER BY ?pasal ?text
 LIMIT 3
@@ -205,18 +205,18 @@ query:
 
 ```sparql
 # Which are the articles of Chapter 2 (Bab 2) of Omnibus Law?
-PREFIX lex2kg-o: <https://example.org/lex2kg/ontology/>
+PREFIX o: <https://example.org/lex2kg/ontology/>
 
 SELECT ?pasal ?text WHERE {
   {
     SELECT ?pasal (MAX(?pasalVersion) as ?latestPasalVersion) WHERE {
-      ?bab lex2kg-o:bagianDari+ <https://example.org/lex2kg/uu/2020/11>.
-      ?bab lex2kg-o:nomor 2 .
-      ?pasal lex2kg-o:bagianDari+ ?bab .
-      ?pasal lex2kg-o:versi ?pasalVersion .
+      ?bab o:bagianDari+ <https://example.org/lex2kg/uu/2020/11>.
+      ?bab o:nomor 2 .
+      ?pasal o:bagianDari+ ?bab .
+      ?pasal o:versi ?pasalVersion .
     } GROUP BY ?pasal
   }
-  ?latestPasalVersion lex2kg-o:teks ?text
+  ?latestPasalVersion o:teks ?text
 } 
 ORDER BY ?pasal ?text
 LIMIT 3
@@ -244,13 +244,13 @@ query:
 
 ```sparql
 # Get subsections (= ayat) containing "kompensasi" and "buruh" that are added by Omnibus Law into other laws
-PREFIX lex2kg-o: <https://example.org/lex2kg/ontology/>
+PREFIX o: <https://example.org/lex2kg/ontology/>
 
 SELECT ?ayat ?text WHERE {
-  ?insertingPoint lex2kg-o:bagianDari+ <https://example.org/lex2kg/uu/2020/11> .
-  ?insertingPoint lex2kg-o:menyisipkan ?insertedPasalVersion .
-  ?ayat lex2kg-o:bagianDari+ ?insertedPasalVersion .
-  ?ayat lex2kg-o:teks ?text
+  ?insertingPoint o:bagianDari+ <https://example.org/lex2kg/uu/2020/11> .
+  ?insertingPoint o:menyisipkan ?insertedPasalVersion .
+  ?ayat o:bagianDari+ ?insertedPasalVersion .
+  ?ayat o:teks ?text
   FILTER REGEX(str(?text), "kompensasi")
   FILTER REGEX(str(?text), "buruh")
 } LIMIT 3
@@ -278,19 +278,19 @@ query:
 
 ```sparql
 # Get subsections (= ayat) containing "kompensasi" and "buruh" that are added by Omnibus Law into other laws
-PREFIX lex2kg-o: <https://example.org/lex2kg/ontology/>
+PREFIX o: <https://example.org/lex2kg/ontology/>
 
 SELECT ?ayat ?text WHERE {
   {
     SELECT ?pasal (MAX(?pasalVersion) as ?latestPasalVersion) WHERE {
-      ?pasal lex2kg-o:bagianDari+ <https://example.org/lex2kg/uu/2020/11>.
-      ?pasal lex2kg-o:versi ?pasalVersion .
+      ?pasal o:bagianDari+ <https://example.org/lex2kg/uu/2020/11>.
+      ?pasal o:versi ?pasalVersion .
     } GROUP BY ?pasal
   }
-  ?insertingPoint lex2kg-o:bagianDari+ ?latestPasalVersion .
-  ?insertingPoint lex2kg-o:menyisipkan ?insertedPasalVersion .
-  ?ayat lex2kg-o:bagianDari+ ?insertedPasalVersion .
-  ?ayat lex2kg-o:teks ?text
+  ?insertingPoint o:bagianDari+ ?latestPasalVersion .
+  ?insertingPoint o:menyisipkan ?insertedPasalVersion .
+  ?ayat o:bagianDari+ ?insertedPasalVersion .
+  ?ayat o:teks ?text
   FILTER REGEX(str(?text), "kompensasi")
   FILTER REGEX(str(?text), "buruh")
 } LIMIT 3
@@ -319,13 +319,13 @@ query:
 
 ```sparql
 # Retrieve components of Omnibus Law that insert (= menyisipkan) articles (= pasal) into Labor Law (UU Ketenagakerjaan) and show the textual content of the articles
-PREFIX lex2kg-o: <https://example.org/lex2kg/ontology/>
+PREFIX o: <https://example.org/lex2kg/ontology/>
 
 SELECT ?insertingPoint ?insertedPasalVersion ?text WHERE {
-  ?insertingPoint lex2kg-o:bagianDari+ <https://example.org/lex2kg/uu/2020/11>.
-  ?insertingPoint lex2kg-o:menyisipkan ?insertedPasalVersion .
-  ?insertedPasalVersion lex2kg-o:bagianDari+ <https://example.org/lex2kg/uu/2003/13> .
-  ?insertedPasalVersion lex2kg-o:teks ?text .
+  ?insertingPoint o:bagianDari+ <https://example.org/lex2kg/uu/2020/11>.
+  ?insertingPoint o:menyisipkan ?insertedPasalVersion .
+  ?insertedPasalVersion o:bagianDari+ <https://example.org/lex2kg/uu/2003/13> .
+  ?insertedPasalVersion o:teks ?text .
 }
 ORDER BY ?insertingPoint ?insertedPasalVersion
 LIMIT 3
@@ -357,19 +357,19 @@ query:
 
 ```sparql
 # Retrieve components of Omnibus Law that insert (= menyisipkan) articles (= pasal) into Labor Law (UU Ketenagakerjaan) and show the textual content of the articles
-PREFIX lex2kg-o: <https://example.org/lex2kg/ontology/>
+PREFIX o: <https://example.org/lex2kg/ontology/>
 
 SELECT ?insertingPoint ?insertedPasalVersion ?text WHERE {
   {
     SELECT ?pasal (MAX(?pasalVersion) as ?latestPasalVersion) WHERE {
-      ?pasal lex2kg-o:bagianDari+ <https://example.org/lex2kg/uu/2020/11>.
-      ?pasal lex2kg-o:versi ?pasalVersion .
+      ?pasal o:bagianDari+ <https://example.org/lex2kg/uu/2020/11>.
+      ?pasal o:versi ?pasalVersion .
     } GROUP BY ?pasal
   }
-  ?insertingPoint lex2kg-o:bagianDari+ ?latestPasalVersion .
-  ?insertingPoint lex2kg-o:menyisipkan ?insertedPasalVersion .
-  ?insertedPasalVersion lex2kg-o:bagianDari+ <https://example.org/lex2kg/uu/2003/13> .
-  ?insertedPasalVersion lex2kg-o:teks ?text .
+  ?insertingPoint o:bagianDari+ ?latestPasalVersion .
+  ?insertingPoint o:menyisipkan ?insertedPasalVersion .
+  ?insertedPasalVersion o:bagianDari+ <https://example.org/lex2kg/uu/2003/13> .
+  ?insertedPasalVersion o:teks ?text .
 }
 ORDER BY ?insertingPoint ?insertedPasalVersion
 LIMIT 3
@@ -401,23 +401,23 @@ query:
 
 ```sparql
 # Get components of Omnibus Law that amend (= mengubah) articles in Labor Law and compare the textual content of the old vs. new articles
-PREFIX lex2kg-o: <https://example.org/lex2kg/ontology/>
+PREFIX o: <https://example.org/lex2kg/ontology/>
 
 SELECT ?updatingPointt ?updatedPasal ?text ?version
 WHERE {
   {
     SELECT ?pasal (MAX(?pasalVersion) as ?latestPasalVersion) WHERE {
-      ?pasal lex2kg-o:bagianDari+ <https://example.org/lex2kg/uu/2020/11>.
-      ?pasal lex2kg-o:versi ?pasalVersion .
+      ?pasal o:bagianDari+ <https://example.org/lex2kg/uu/2020/11>.
+      ?pasal o:versi ?pasalVersion .
     } GROUP BY ?pasal
   }
-  ?updatingPointt lex2kg-o:bagianDari+ <https://example.org/lex2kg/uu/2020/11>.
-  ?updatingPointt lex2kg-o:mengubah ?updatedPasalVersion .
-  ?updatedPasal lex2kg-o:versi ?updatedPasalVersion .
-  <https://example.org/lex2kg/uu/2003/13> lex2kg-o:pasal ?updatedPasal .
-  ?updatedPasal lex2kg-o:versi ?allPasalVersion .
-  ?allPasalVersion lex2kg-o:teks ?text .
-  ?allPasalVersion lex2kg-o:tanggal ?version .
+  ?updatingPointt o:bagianDari+ <https://example.org/lex2kg/uu/2020/11>.
+  ?updatingPointt o:mengubah ?updatedPasalVersion .
+  ?updatedPasal o:versi ?updatedPasalVersion .
+  <https://example.org/lex2kg/uu/2003/13> o:pasal ?updatedPasal .
+  ?updatedPasal o:versi ?allPasalVersion .
+  ?allPasalVersion o:teks ?text .
+  ?allPasalVersion o:tanggal ?version .
 }
 ORDER BY ?insertingPoint ?insertedPasal ?version ?text
 LIMIT 3
@@ -452,22 +452,22 @@ query:
 
 ```sparql
 # Get components of Omnibus Law that amend (= mengubah) articles in Labor Law and compare the textual content of the old vs. new articles
-PREFIX lex2kg-o: <https://example.org/lex2kg/ontology/>
+PREFIX o: <https://example.org/lex2kg/ontology/>
 
 SELECT ?insertingPoint ?insertedPasal ?version ?text WHERE {
   {
     SELECT ?pasal (MAX(?pasalVersion) as ?latestPasalVersion) WHERE {
-      ?pasal lex2kg-o:bagianDari+ <https://example.org/lex2kg/uu/2020/11>.
-      ?pasal lex2kg-o:versi ?pasalVersion .
+      ?pasal o:bagianDari+ <https://example.org/lex2kg/uu/2020/11>.
+      ?pasal o:versi ?pasalVersion .
     } GROUP BY ?pasal
   }
-  ?insertingPoint lex2kg-o:bagianDari+ ?latestPasalVersion .
-  ?insertingPoint lex2kg-o:menyisipkan ?insertedPasalVersion .
-  ?insertedPasalVersion lex2kg-o:bagianDari+ <https://example.org/lex2kg/uu/2003/13> .
-  ?insertedPasal lex2kg-o:versi ?insertedPasalVersion .
-  ?insertedPasal lex2kg-o:versi ?allPasalVersion .
-  ?allPasalVersion lex2kg-o:teks ?text .
-  ?allPasalVersion lex2kg-o:tanggal ?version .
+  ?insertingPoint o:bagianDari+ ?latestPasalVersion .
+  ?insertingPoint o:menyisipkan ?insertedPasalVersion .
+  ?insertedPasalVersion o:bagianDari+ <https://example.org/lex2kg/uu/2003/13> .
+  ?insertedPasal o:versi ?insertedPasalVersion .
+  ?insertedPasal o:versi ?allPasalVersion .
+  ?allPasalVersion o:teks ?text .
+  ?allPasalVersion o:tanggal ?version .
 }
 ORDER BY ?insertingPoint ?insertedPasal ?version ?text
 LIMIT 3
@@ -502,16 +502,16 @@ query:
 
 ```sparql
 # Give me components of Omnibus Law that remove (= menghapus) articles in Labor Law and show the textual content of the removed articles
-PREFIX lex2kg-o: <https://example.org/lex2kg/ontology/>
+PREFIX o: <https://example.org/lex2kg/ontology/>
 
 SELECT ?deletingPoint ?deletedPasal ?version ?text WHERE {
-  ?deletingPoint lex2kg-o:bagianDari+ <https://example.org/lex2kg/uu/2020/11>.
-  ?deletingPoint lex2kg-o:menghapus ?deletedPasalVersion .
-  ?deletedPasal lex2kg-o:versi ?deletedPasalVersion .
-  <https://example.org/lex2kg/uu/2003/13> lex2kg-o:pasal ?deletedPasal .
-  ?deletedPasal lex2kg-o:versi ?allPasalVersion .
-  ?allPasalVersion lex2kg-o:teks ?text .
-  ?allPasalVersion lex2kg-o:tanggal ?version .
+  ?deletingPoint o:bagianDari+ <https://example.org/lex2kg/uu/2020/11>.
+  ?deletingPoint o:menghapus ?deletedPasalVersion .
+  ?deletedPasal o:versi ?deletedPasalVersion .
+  <https://example.org/lex2kg/uu/2003/13> o:pasal ?deletedPasal .
+  ?deletedPasal o:versi ?allPasalVersion .
+  ?allPasalVersion o:teks ?text .
+  ?allPasalVersion o:tanggal ?version .
 }
 LIMIT 3
 
@@ -545,22 +545,22 @@ query:
 
 ```sparql
 # Give me components of Omnibus Law that remove (= menghapus) articles in Labor Law and show the textual content of the removed articles
-PREFIX lex2kg-o: <https://example.org/lex2kg/ontology/>
+PREFIX o: <https://example.org/lex2kg/ontology/>
 
 SELECT ?deletingPoint ?deletedPasal ?version ?text WHERE {
   {
     SELECT ?pasal (MAX(?pasalVersion) as ?latestPasalVersion) WHERE {
-      ?pasal lex2kg-o:bagianDari+ <https://example.org/lex2kg/uu/2020/11>.
-      ?pasal lex2kg-o:versi ?pasalVersion .
+      ?pasal o:bagianDari+ <https://example.org/lex2kg/uu/2020/11>.
+      ?pasal o:versi ?pasalVersion .
     } GROUP BY ?pasal
   }
-  ?deletingPoint lex2kg-o:bagianDari+ ?latestPasalVersion .
-  ?deletingPoint lex2kg-o:menghapus ?deletedPasalVersion .
-  ?deletedPasal lex2kg-o:versi ?deletedPasalVersion .
-  <https://example.org/lex2kg/uu/2003/13> lex2kg-o:pasal ?deletedPasal .
-  ?deletedPasal lex2kg-o:versi ?allPasalVersion .
-  ?allPasalVersion lex2kg-o:teks ?text .
-  ?allPasalVersion lex2kg-o:tanggal ?version .
+  ?deletingPoint o:bagianDari+ ?latestPasalVersion .
+  ?deletingPoint o:menghapus ?deletedPasalVersion .
+  ?deletedPasal o:versi ?deletedPasalVersion .
+  <https://example.org/lex2kg/uu/2003/13> o:pasal ?deletedPasal .
+  ?deletedPasal o:versi ?allPasalVersion .
+  ?allPasalVersion o:teks ?text .
+  ?allPasalVersion o:tanggal ?version .
 }
 ORDER BY ?deletingPoint ?deletedPasal ?version ?text
 LIMIT 3
@@ -595,20 +595,20 @@ query:
 
 ```sparql
 # How many are insertions, amendments, and removals of other laws in Omnibus Law?
-PREFIX lex2kg-o: <https://example.org/lex2kg/ontology/>
+PREFIX o: <https://example.org/lex2kg/ontology/>
 
 SELECT ?type (COUNT(*) AS ?jumlah) WHERE {
   {
-    ?point lex2kg-o:bagianDari+ <https://example.org/lex2kg/uu/2020/11> .
-    ?point lex2kg-o:menghapus ?pasal .
+    ?point o:bagianDari+ <https://example.org/lex2kg/uu/2020/11> .
+    ?point o:menghapus ?pasal .
     BIND("menghapus" AS ?type)
   } UNION {
-    ?point lex2kg-o:bagianDari+ <https://example.org/lex2kg/uu/2020/11> .
-    ?point lex2kg-o:menyisipkan ?pasal .
+    ?point o:bagianDari+ <https://example.org/lex2kg/uu/2020/11> .
+    ?point o:menyisipkan ?pasal .
     BIND("menyisipkan" AS ?type)
   } UNION {
-    ?point lex2kg-o:bagianDari+ <https://example.org/lex2kg/uu/2020/11> .
-    ?point lex2kg-o:mengubah ?pasal .
+    ?point o:bagianDari+ <https://example.org/lex2kg/uu/2020/11> .
+    ?point o:mengubah ?pasal .
     BIND("mengubah" AS ?type)
   }
 } GROUP BY ?type
@@ -638,39 +638,39 @@ query:
 
 ```sparql
 # How many are insertions, amendments, and removals of other laws in Omnibus Law?
-PREFIX lex2kg-o: <https://example.org/lex2kg/ontology/>
+PREFIX o: <https://example.org/lex2kg/ontology/>
 
 SELECT ?type (COUNT(*) AS ?jumlah) WHERE {
   {
     {
       SELECT ?pasal (MAX(?pasalVersion) as ?latestPasalVersion) WHERE {
-        ?pasal lex2kg-o:bagianDari+ <https://example.org/lex2kg/uu/2020/11>.
-        ?pasal lex2kg-o:versi ?pasalVersion .
+        ?pasal o:bagianDari+ <https://example.org/lex2kg/uu/2020/11>.
+        ?pasal o:versi ?pasalVersion .
       } GROUP BY ?pasal
     }
-    ?deletingPoint lex2kg-o:bagianDari+ ?latestPasalVersion .
-    ?deletingPoint lex2kg-o:menghapus ?deletedPasalVersion .
+    ?deletingPoint o:bagianDari+ ?latestPasalVersion .
+    ?deletingPoint o:menghapus ?deletedPasalVersion .
     BIND("menghapus" AS ?type)
   }
   UNION {
     {
       SELECT ?pasal (MAX(?pasalVersion) as ?latestPasalVersion) WHERE {
-        ?pasal lex2kg-o:bagianDari+ <https://example.org/lex2kg/uu/2020/11>.
-        ?pasal lex2kg-o:versi ?pasalVersion .
+        ?pasal o:bagianDari+ <https://example.org/lex2kg/uu/2020/11>.
+        ?pasal o:versi ?pasalVersion .
       } GROUP BY ?pasal
     }
-    ?deletingPoint lex2kg-o:bagianDari+ ?latestPasalVersion .
-    ?deletingPoint lex2kg-o:menyisipkan ?deletedPasalVersion .
+    ?deletingPoint o:bagianDari+ ?latestPasalVersion .
+    ?deletingPoint o:menyisipkan ?deletedPasalVersion .
     BIND("menyisipkan" AS ?type)
   } UNION {
     {
       SELECT ?pasal (MAX(?pasalVersion) as ?latestPasalVersion) WHERE {
-        ?pasal lex2kg-o:bagianDari+ <https://example.org/lex2kg/uu/2020/11>.
-        ?pasal lex2kg-o:versi ?pasalVersion .
+        ?pasal o:bagianDari+ <https://example.org/lex2kg/uu/2020/11>.
+        ?pasal o:versi ?pasalVersion .
       } GROUP BY ?pasal
     }
-    ?deletingPoint lex2kg-o:bagianDari+ ?latestPasalVersion .
-    ?deletingPoint lex2kg-o:mengubah ?deletedPasalVersion .
+    ?deletingPoint o:bagianDari+ ?latestPasalVersion .
+    ?deletingPoint o:mengubah ?deletedPasalVersion .
     BIND("mengubah" AS ?type)
   }
 } GROUP BY ?type
@@ -700,13 +700,13 @@ query:
 
 ```sparql
 # Get articles of Labor Law (UU Ketenagakerjaan) taking into account updates (= insertions/amendments/removals) from Omnibus Law (UU Cipta Kerja)
-PREFIX lex2kg-o: <https://example.org/lex2kg/ontology/>
+PREFIX o: <https://example.org/lex2kg/ontology/>
 
 SELECT ?latestPasalVersion WHERE {
   {
     SELECT ?pasal (MAX(?pasalVersion) as ?latestPasalVersion) WHERE {
-      ?pasal lex2kg-o:bagianDari+ <https://example.org/lex2kg/uu/2003/13>.
-      ?pasal lex2kg-o:versi ?pasalVersion .
+      ?pasal o:bagianDari+ <https://example.org/lex2kg/uu/2003/13>.
+      ?pasal o:versi ?pasalVersion .
     } GROUP BY ?pasal
   }
 }
@@ -733,17 +733,17 @@ query:
 
 ```sparql
 # Get articles of Omnibus Law that are not about updating (= insertions/amendments/removals) other laws
-PREFIX lex2kg-o: <https://example.org/lex2kg/ontology/>
+PREFIX o: <https://example.org/lex2kg/ontology/>
 
 SELECT DISTINCT ?pasalVersion ?text WHERE {
-  ?pasalVersion lex2kg-o:bagianDari+ <https://example.org/lex2kg/uu/2020/11>.
-  ?pasalVersion lex2kg-o:teks ?text .
+  ?pasalVersion o:bagianDari+ <https://example.org/lex2kg/uu/2020/11>.
+  ?pasalVersion o:teks ?text .
   FILTER NOT EXISTS {
-    ?point lex2kg-o:bagianDari+ ?pasalVersion . 
-    ?point a lex2kg-o:Point .
-    { ?point lex2kg-o:mengubah ?amendedPasalVersion }
-    UNION { ?point lex2kg-o:menyisipkan ?amendedPasalVersion } 
-    UNION { ?point lex2kg-o:menghapus ?amendedPasalVersion }
+    ?point o:bagianDari+ ?pasalVersion . 
+    ?point a o:Point .
+    { ?point o:mengubah ?amendedPasalVersion }
+    UNION { ?point o:menyisipkan ?amendedPasalVersion } 
+    UNION { ?point o:menghapus ?amendedPasalVersion }
   }
 }
 ORDER BY ?pasalVersion ?text
@@ -772,17 +772,17 @@ query:
 
 ```sparql
 # Get articles of Omnibus Law that are not about updating (= insertions/amendments/removals) other laws
-PREFIX lex2kg-o: <https://example.org/lex2kg/ontology/>
+PREFIX o: <https://example.org/lex2kg/ontology/>
 
 SELECT DISTINCT ?pasalVersion ?text WHERE {
-  ?pasalVersion lex2kg-o:bagianDari+ <https://example.org/lex2kg/uu/2020/11>.
-  ?pasalVersion lex2kg-o:teks ?text .
+  ?pasalVersion o:bagianDari+ <https://example.org/lex2kg/uu/2020/11>.
+  ?pasalVersion o:teks ?text .
   FILTER NOT EXISTS {
-    ?point lex2kg-o:bagianDari+ ?pasalVersion . 
-    ?point a lex2kg-o:Point .
-    { ?point lex2kg-o:mengubah ?amendedPasalVersion }
-    UNION { ?point lex2kg-o:menyisipkan ?amendedPasalVersion } 
-    UNION { ?point lex2kg-o:menghapus ?amendedPasalVersion }
+    ?point o:bagianDari+ ?pasalVersion . 
+    ?point a o:Point .
+    { ?point o:mengubah ?amendedPasalVersion }
+    UNION { ?point o:menyisipkan ?amendedPasalVersion } 
+    UNION { ?point o:menghapus ?amendedPasalVersion }
   }
 }
 ORDER BY ?pasalVersion ?text
@@ -812,13 +812,13 @@ query:
 
 ```sparql
 # Give me articles (= pasal) of Omnibus Law removing articles of laws legalized later than the year 2001
-PREFIX lex2kg-o: <https://example.org/lex2kg/ontology/>
+PREFIX o: <https://example.org/lex2kg/ontology/>
 
 SELECT DISTINCT ?pasalVersion WHERE {
-  ?point lex2kg-o:bagianDari+ <https://example.org/lex2kg/uu/2020/11>.
-  ?point lex2kg-o:menghapus ?pasalVersion .
-  ?pasalVersion lex2kg-o:bagianDari+ ?document .
-  ?document lex2kg-o:disahkanPada ?legalizedDate
+  ?point o:bagianDari+ <https://example.org/lex2kg/uu/2020/11>.
+  ?point o:menghapus ?pasalVersion .
+  ?pasalVersion o:bagianDari+ ?document .
+  ?document o:disahkanPada ?legalizedDate
   FILTER(year(?legalizedDate) > 2001)
 }
 ORDER BY ?pasalVersion
@@ -844,15 +844,15 @@ query:
 
 ```sparql
 # Retrieve all subsections inserted by Omnibus Law into other laws and *optionally* the citations occurring in those subsections
-PREFIX lex2kg-o: <https://example.org/lex2kg/ontology/>
+PREFIX o: <https://example.org/lex2kg/ontology/>
 
 SELECT ?ayat ?text ?citation WHERE {
-  ?insertingPoint lex2kg-o:bagianDari+ <https://example.org/lex2kg/uu/2020/11>.
-  ?insertingPoint lex2kg-o:menyisipkan ?insertedPasalVersion .
-  ?ayat lex2kg-o:bagianDari+ ?insertedPasalVersion .
-  ?ayat lex2kg-o:teks ?text .
-  ?ayat lex2kg-o:teks ?textRef .
-  OPTIONAL {?textRef lex2kg-o:merujuk ?citation}
+  ?insertingPoint o:bagianDari+ <https://example.org/lex2kg/uu/2020/11>.
+  ?insertingPoint o:menyisipkan ?insertedPasalVersion .
+  ?ayat o:bagianDari+ ?insertedPasalVersion .
+  ?ayat o:teks ?text .
+  ?ayat o:teks ?textRef .
+  OPTIONAL {?textRef o:merujuk ?citation}
 }
 ORDER BY ?ayat ?text ?citation
 LIMIT 3
@@ -880,22 +880,22 @@ query:
 
 ```sparql
 # Which law has the most number of updates (= insertions/amendments/removals) by Omnibus Law? For that law, show the most recent version taking into account the updates by Omnibus Law!
-PREFIX lex2kg-o: <https://example.org/lex2kg/ontology/>
+PREFIX o: <https://example.org/lex2kg/ontology/>
 PREFIX owl: <http://www.w3.org/2002/07/owl#>
 
 SELECT ?law ?numOfUpdates ?pasal (MAX(?pasalVersion) as ?latestPasalVersion) WHERE {
   {
     SELECT ?law (COUNT(*) AS ?numOfUpdates) WHERE {
-      ?point lex2kg-o:bagianDari+ <https://example.org/lex2kg/uu/2020/11> .
-      { ?point lex2kg-o:mengubah ?amendedPasalVersion }
-      UNION { ?point lex2kg-o:menyisipkan ?amendedPasalVersion }
-      UNION { ?point lex2kg-o:menghapus ?amendedPasalVersion }
-      ?amendedPasalVersion lex2kg-o:bagianDari+ ?law .
-      ?law a lex2kg-o:Peraturan .
+      ?point o:bagianDari+ <https://example.org/lex2kg/uu/2020/11> .
+      { ?point o:mengubah ?amendedPasalVersion }
+      UNION { ?point o:menyisipkan ?amendedPasalVersion }
+      UNION { ?point o:menghapus ?amendedPasalVersion }
+      ?amendedPasalVersion o:bagianDari+ ?law .
+      ?law a o:Peraturan .
     } GROUP BY ?law
   }
-  ?pasal lex2kg-o:bagianDari+ ?law .
-  ?pasal lex2kg-o:versi ?pasalVersion .
+  ?pasal o:bagianDari+ ?law .
+  ?pasal o:versi ?pasalVersion .
 }
 GROUP BY ?law ?numOfUpdates ?pasal
 ORDER BY DESC (?numOfUpdates)
@@ -931,7 +931,7 @@ query:
 
 ```sparql
 # Which law has the most number of updates (= insertions/amendments/removals) by Omnibus Law? For that law, show the most recent version taking into account the updates by Omnibus Law!
-PREFIX lex2kg-o: <https://example.org/lex2kg/ontology/>
+PREFIX o: <https://example.org/lex2kg/ontology/>
 PREFIX owl: <http://www.w3.org/2002/07/owl#>
 
 SELECT ?law ?numOfUpdates ?pasal (MAX(?pasalVersion) as ?latestPasalVersion) WHERE {
@@ -939,20 +939,20 @@ SELECT ?law ?numOfUpdates ?pasal (MAX(?pasalVersion) as ?latestPasalVersion) WHE
     SELECT ?law (COUNT(*) AS ?numOfUpdates) WHERE {
       {
         SELECT ?pasal (MAX(?pasalVersion) as ?latestPasalVersion) WHERE {
-          ?pasal lex2kg-o:bagianDari+ <https://example.org/lex2kg/uu/2020/11>.
-          ?pasal lex2kg-o:versi ?pasalVersion .
+          ?pasal o:bagianDari+ <https://example.org/lex2kg/uu/2020/11>.
+          ?pasal o:versi ?pasalVersion .
         } GROUP BY ?pasal
       }
-      ?point lex2kg-o:bagianDari+ ?latestPasalVersion .
-      { ?point lex2kg-o:mengubah ?amendedPasalVersion }
-      UNION { ?point lex2kg-o:menyisipkan ?amendedPasalVersion }
-      UNION { ?point lex2kg-o:menghapus ?amendedPasalVersion }
-      ?amendedPasalVersion lex2kg-o:bagianDari+ ?law .
-      ?law a lex2kg-o:Peraturan .
+      ?point o:bagianDari+ ?latestPasalVersion .
+      { ?point o:mengubah ?amendedPasalVersion }
+      UNION { ?point o:menyisipkan ?amendedPasalVersion }
+      UNION { ?point o:menghapus ?amendedPasalVersion }
+      ?amendedPasalVersion o:bagianDari+ ?law .
+      ?law a o:Peraturan .
     } GROUP BY ?law
   }
-  ?pasal lex2kg-o:bagianDari+ ?law .
-  ?pasal lex2kg-o:versi ?pasalVersion .
+  ?pasal o:bagianDari+ ?law .
+  ?pasal o:versi ?pasalVersion .
 }
 GROUP BY ?law ?numOfUpdates ?pasal
 ORDER BY DESC (?numOfUpdates)
@@ -988,7 +988,7 @@ query:
 
 ```sparql
 # tampilkan semua triple
-PREFIX lex2kg-o: <https://example.org/lex2kg/ontology/>
+PREFIX o: <https://example.org/lex2kg/ontology/>
 
 SELECT * 
 WHERE {
@@ -1023,11 +1023,11 @@ query:
 
 ```sparql
 # tampilkan 10 legal doc pertama
-PREFIX lex2kg-o: <https://example.org/lex2kg/ontology/>
+PREFIX o: <https://example.org/lex2kg/ontology/>
 
 SELECT * 
 WHERE {
-  ?legalDoc a lex2kg-o:Peraturan
+  ?legalDoc a o:Peraturan
 } 
 ORDER BY ?legalDoc
 LIMIT 10
@@ -1080,12 +1080,12 @@ query:
 
 ```sparql
 # tampilkan semua UU yang disahkan setelah 10 Oktober 2019
-PREFIX lex2kg-o: <https://example.org/lex2kg/ontology/>
+PREFIX o: <https://example.org/lex2kg/ontology/>
 PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 
 SELECT *
 WHERE {
-  ?legalDoc lex2kg-o:disahkanPada ?date .
+  ?legalDoc o:disahkanPada ?date .
   FILTER ( ?date >= "2019-10-10"^^xsd:date )
 }
 ORDER BY ?legalDoc
@@ -1189,16 +1189,17 @@ query:
 
 ```sparql
 # tampilkan legal document beserta yang ditimbangnya (menimbang)
-PREFIX lex2kg-o: <https://example.org/lex2kg/ontology/>
+PREFIX o: <https://example.org/lex2kg/ontology/>
+PREFIX uu: <https://example.org/lex2kg/uu/>
 
-SELECT ?doc ?menimbangDoc
+SELECT ?penimbang ?ditimbang
 WHERE {
-  ?doc lex2kg-o:menimbang ?menimbang .
-  ?menimbangText lex2kg-o:bagianDari* ?menimbang .
-  ?menimbangText lex2kg-o:merujuk ?menimbangDoc .
-  ?menimbangDoc a lex2kg-o:Peraturan
+  ?penimbang o:menimbang ?menimbang .
+  ?menimbangText o:bagianDari* ?menimbang .
+  ?menimbangText o:merujuk ?ditimbang .
+  ?ditimbang a o:Peraturan
 }
-ORDER BY ?doc
+ORDER BY DESC(?penimbang) DESC(?ditimbang)
 LIMIT 10
 
 ```
@@ -1206,53 +1207,53 @@ LIMIT 10
 result:
 |0||
 |-|-|
-|doc|https://example.org/lex2kg/uu/2004/11|
-|menimbangDoc|https://example.org/lex2kg/uu/1986/2|
+|penimbang|https://example.org/lex2kg/uu/2020/8|
+|ditimbang|https://example.org/lex2kg/uu/2018/12|
 
 |1||
 |-|-|
-|doc|https://example.org/lex2kg/uu/2004/12|
-|menimbangDoc|https://example.org/lex2kg/uu/1986/2|
+|penimbang|https://example.org/lex2kg/uu/2020/8|
+|ditimbang|https://example.org/lex2kg/uu/2018/12|
 
 |2||
 |-|-|
-|doc|https://example.org/lex2kg/uu/2004/13|
-|menimbangDoc|https://example.org/lex2kg/uu/1986/2|
+|penimbang|https://example.org/lex2kg/uu/2020/6|
+|ditimbang|https://example.org/lex2kg/uu/2020/2|
 
 |3||
 |-|-|
-|doc|https://example.org/lex2kg/uu/2004/14|
-|menimbangDoc|https://example.org/lex2kg/uu/1986/2|
+|penimbang|https://example.org/lex2kg/uu/2020/6|
+|ditimbang|https://example.org/lex2kg/uu/2015/1|
 
 |4||
 |-|-|
-|doc|https://example.org/lex2kg/uu/2004/16|
-|menimbangDoc|https://example.org/lex2kg/uu/1991/5|
+|penimbang|https://example.org/lex2kg/uu/2020/6|
+|ditimbang|https://example.org/lex2kg/uu/2015/1|
 
 |5||
 |-|-|
-|doc|https://example.org/lex2kg/uu/2004/21|
-|menimbangDoc|https://example.org/lex2kg/uu/1994/5|
+|penimbang|https://example.org/lex2kg/uu/2020/6|
+|ditimbang|https://example.org/lex2kg/uu/2014/1|
 
 |6||
 |-|-|
-|doc|https://example.org/lex2kg/uu/2004/5|
-|menimbangDoc|https://example.org/lex2kg/uu/1985/14|
+|penimbang|https://example.org/lex2kg/uu/2020/6|
+|ditimbang|https://example.org/lex2kg/uu/2014/1|
 
 |7||
 |-|-|
-|doc|https://example.org/lex2kg/uu/2005/10|
-|menimbangDoc|https://example.org/lex2kg/uu/2005/2|
+|penimbang|https://example.org/lex2kg/uu/2020/2|
+|ditimbang|https://example.org/lex2kg/uu/2020/1|
 
 |8||
 |-|-|
-|doc|https://example.org/lex2kg/uu/2005/10|
-|menimbangDoc|https://example.org/lex2kg/uu/2005/2|
+|penimbang|https://example.org/lex2kg/uu/2020/2|
+|ditimbang|https://example.org/lex2kg/uu/2020/1|
 
 |9||
 |-|-|
-|doc|https://example.org/lex2kg/uu/2005/2|
-|menimbangDoc|https://example.org/lex2kg/uu/2004/2|
+|penimbang|https://example.org/lex2kg/uu/2020/12|
+|ditimbang|https://example.org/lex2kg/uu/2000/24|
 
 # Query_022
 
@@ -1260,12 +1261,12 @@ query:
 
 ```sparql
 # select 10 legal document dengan pasal terbanyak
-PREFIX lex2kg-o: <https://example.org/lex2kg/ontology/>
+PREFIX o: <https://example.org/lex2kg/ontology/>
 
 SELECT ?doc (COUNT(?pasal) as ?pasalCount)
 WHERE {
-  ?doc a lex2kg-o:Peraturan .
-  ?doc lex2kg-o:pasal ?pasal .
+  ?doc a o:Peraturan .
+  ?doc o:pasal ?pasal .
 }
 GROUP BY ?doc
 ORDER BY DESC(?pasalCount)
@@ -1330,16 +1331,16 @@ query:
 
 ```sparql
 # tampilkan 10 dokumen yang pernah diamandemen
-PREFIX lex2kg-o: <https://example.org/lex2kg/ontology/>
+PREFIX o: <https://example.org/lex2kg/ontology/>
 
 SELECT DISTINCT ?doc ?amenderDoc
 WHERE {
-  ?doc a lex2kg-o:Peraturan .
-  ?pasal lex2kg-o:bagianDari ?doc .
-  ?pasal lex2kg-o:versi ?pasalVersion .
-  ?amender lex2kg-o:mengubah ?pasalVersion .
-  ?amender lex2kg-o:bagianDari* ?amenderDoc .
-  ?amenderDoc a lex2kg-o:Peraturan
+  ?doc a o:Peraturan .
+  ?pasal o:bagianDari ?doc .
+  ?pasal o:versi ?pasalVersion .
+  ?amender o:mengubah ?pasalVersion .
+  ?amender o:bagianDari* ?amenderDoc .
+  ?amenderDoc a o:Peraturan
 }
 ORDER BY ?doc ?amenderDoc
 LIMIT 10
@@ -1402,11 +1403,11 @@ query:
 
 ```sparql
 # tampilkan 10 tempat disahkan paling banyak
-PREFIX lex2kg-o: <https://example.org/lex2kg/ontology/>
+PREFIX o: <https://example.org/lex2kg/ontology/>
 
 SELECT ?location (COUNT(?doc) as ?docCount)
 WHERE {
-  ?doc lex2kg-o:disahkanDi ?location
+  ?doc o:disahkanDi ?location
 }
 GROUP BY ?location
 ORDER BY DESC (?docCount)
@@ -1454,14 +1455,14 @@ query:
 
 ```sparql
 # tampilkan 10 dokumen paling banyak ditimbang
-PREFIX lex2kg-o: <https://example.org/lex2kg/ontology/>
+PREFIX o: <https://example.org/lex2kg/ontology/>
 
 SELECT ?menimbangDoc (COUNT(?doc) as ?penimbangDocCount)
 WHERE {
-  ?doc lex2kg-o:menimbang ?menimbang .
-  ?menimbangText lex2kg-o:bagianDari* ?menimbang .
-  ?menimbangText lex2kg-o:merujuk ?menimbangDoc .
-  ?menimbangDoc a lex2kg-o:Peraturan
+  ?doc o:menimbang ?menimbang .
+  ?menimbangText o:bagianDari* ?menimbang .
+  ?menimbangText o:merujuk ?menimbangDoc .
+  ?menimbangDoc a o:Peraturan
 }
 GROUP BY ?menimbangDoc
 ORDER BY DESC (?penimbangDocCount)
@@ -1526,13 +1527,13 @@ query:
 
 ```sparql
 # tampilkan semua document yang melakukan amendment, dan banyaknya pasal yang diamendment oleh dokumen tersebut.
-PREFIX lex2kg-o: <https://example.org/lex2kg/ontology/>
+PREFIX o: <https://example.org/lex2kg/ontology/>
 
 SELECT ?doc (COUNT(?point) as ?amendmentCount)
 WHERE {
-  ?doc a lex2kg-o:Peraturan .
-  ?point lex2kg-o:bagianDari* ?doc .
-  ?point lex2kg-o:mengubah|lex2kg-o:menyisipkan|lex2kg-o:menghapus ?pasalVersion .
+  ?doc a o:Peraturan .
+  ?point o:bagianDari* ?doc .
+  ?point o:mengubah|o:menyisipkan|o:menghapus ?pasalVersion .
 }
 GROUP BY (?doc)
 ORDER BY DESC(?amendmentCount)
@@ -1561,14 +1562,14 @@ query:
 
 ```sparql
 # tampilkan 10 bab dengan substring "Kerja"
-PREFIX lex2kg-o: <https://example.org/lex2kg/ontology/>
+PREFIX o: <https://example.org/lex2kg/ontology/>
 
 SELECT ?bab ?title
 WHERE {
-  ?doc a lex2kg-o:Peraturan .
-  ?bab lex2kg-o:bagianDari* ?doc .
-  ?bab a lex2kg-o:Bab .
-  ?bab lex2kg-o:judul ?title.
+  ?doc a o:Peraturan .
+  ?bab o:bagianDari* ?doc .
+  ?bab a o:Bab .
+  ?bab o:judul ?title.
   FILTER REGEX(str(?title), "KERJA")
 }
 ORDER BY ?bab ?title
@@ -1633,11 +1634,11 @@ query:
 
 ```sparql
 # show raw text of UU 2007 No.26 Pasal 1 version 20201102
-PREFIX lex2kg-o: <https://example.org/lex2kg/ontology/>
+PREFIX o: <https://example.org/lex2kg/ontology/>
 
 SELECT *
 WHERE {
-  <https://example.org/lex2kg/uu/2007/26/pasal/0001/versi/20201102> lex2kg-o:teks ?o
+  <https://example.org/lex2kg/uu/2007/26/pasal/0001/versi/20201102> o:teks ?o
 }
 ```
 
@@ -1652,31 +1653,31 @@ query:
 
 ```sparql
 # Count triples about document structure
-PREFIX lex2kg-o: <https://example.org/lex2kg/ontology/>
+PREFIX o: <https://example.org/lex2kg/ontology/>
 
 SELECT (COUNT (*) as ?countResult) WHERE {
   ?s
-    lex2kg-o:nomor|
-    lex2kg-o:judul|
-    lex2kg-o:bab|
-    lex2kg-o:bagian|
-    lex2kg-o:paragraf|
-    lex2kg-o:pasal|
-    lex2kg-o:ayat|
-    lex2kg-o:huruf|
-    lex2kg-o:segmen|
-    lex2kg-o:daftarBab|
-    lex2kg-o:daftarBagian|
-    lex2kg-o:daftarParagraf|
-    lex2kg-o:daftarPasal|
-    lex2kg-o:daftarAyat|
-    lex2kg-o:daftarHuruf|
-    lex2kg-o:tanggal|
-    lex2kg-o:jenisVersi|
-    lex2kg-o:versi|
-    lex2kg-o:menimbang|
-    lex2kg-o:mengingat|
-    lex2kg-o:bagianDari
+    o:nomor|
+    o:judul|
+    o:bab|
+    o:bagian|
+    o:paragraf|
+    o:pasal|
+    o:ayat|
+    o:huruf|
+    o:segmen|
+    o:daftarBab|
+    o:daftarBagian|
+    o:daftarParagraf|
+    o:daftarPasal|
+    o:daftarAyat|
+    o:daftarHuruf|
+    o:tanggal|
+    o:jenisVersi|
+    o:versi|
+    o:menimbang|
+    o:mengingat|
+    o:bagianDari
   ?o
 } 
 ```
@@ -1692,19 +1693,19 @@ query:
 
 ```sparql
 # Count triples about document metadata
-PREFIX lex2kg-o: <https://example.org/lex2kg/ontology/>
+PREFIX o: <https://example.org/lex2kg/ontology/>
 
 SELECT (COUNT (*) as ?countResult) WHERE {
   ?s
-    lex2kg-o:yurisdiksi|
-    lex2kg-o:jenisPeraturan|
-    lex2kg-o:tahun|
-    lex2kg-o:bahasa|
-    lex2kg-o:tentang|
-    lex2kg-o:disahkanPada|
-    lex2kg-o:disahkanDi|
-    lex2kg-o:disahkanOleh|
-    lex2kg-o:jabatanPengesah
+    o:yurisdiksi|
+    o:jenisPeraturan|
+    o:tahun|
+    o:bahasa|
+    o:tentang|
+    o:disahkanPada|
+    o:disahkanDi|
+    o:disahkanOleh|
+    o:jabatanPengesah
   ?o
 } 
 ```
@@ -1720,11 +1721,11 @@ query:
 
 ```sparql
 # Count triples about document text
-PREFIX lex2kg-o: <https://example.org/lex2kg/ontology/>
+PREFIX o: <https://example.org/lex2kg/ontology/>
 
 SELECT (COUNT (*) as ?countResult) WHERE {
   ?s
-    lex2kg-o:teks
+    o:teks
   ?o
 } 
 ```
@@ -1740,10 +1741,10 @@ query:
 
 ```sparql
 # Count triples about document citation
-PREFIX lex2kg-o: <https://example.org/lex2kg/ontology/>
+PREFIX o: <https://example.org/lex2kg/ontology/>
 
 SELECT (COUNT (*) as ?countResult) WHERE {
-  ?s lex2kg-o:merujuk ?o
+  ?s o:merujuk ?o
 } 
 
 ```
@@ -1759,10 +1760,10 @@ query:
 
 ```sparql
 # Count triples about document change
-PREFIX lex2kg-o: <https://example.org/lex2kg/ontology/>
+PREFIX o: <https://example.org/lex2kg/ontology/>
 
 SELECT (COUNT (*) as ?countResult) WHERE {
-  ?s lex2kg-o:mengubah|lex2kg-o:menghapus|lex2kg-o:menyisipkan ?o
+  ?s o:mengubah|o:menghapus|o:menyisipkan ?o
 } 
 
 ```
@@ -1778,7 +1779,7 @@ query:
 
 ```sparql
 # Count triples about class assignment
-PREFIX lex2kg-o: <https://example.org/lex2kg/ontology/>
+PREFIX o: <https://example.org/lex2kg/ontology/>
 
 SELECT (COUNT (*) as ?countResult) WHERE {
   ?s a ?o
@@ -1797,13 +1798,13 @@ query:
 
 ```sparql
 # Count triples with citation inside document
-PREFIX lex2kg-o: <https://example.org/lex2kg/ontology/>
+PREFIX o: <https://example.org/lex2kg/ontology/>
 
 SELECT (COUNT (*) as ?countResult) WHERE {
-  ?s lex2kg-o:merujuk ?o .
-  ?s lex2kg-o:bagianDari* ?doc .
-  ?o lex2kg-o:bagianDari* ?doc .
-  ?doc a lex2kg-o:Peraturan .
+  ?s o:merujuk ?o .
+  ?s o:bagianDari* ?doc .
+  ?o o:bagianDari* ?doc .
+  ?doc a o:Peraturan .
 } 
 
 
@@ -1820,14 +1821,14 @@ query:
 
 ```sparql
 # Count triples with citation between document
-PREFIX lex2kg-o: <https://example.org/lex2kg/ontology/>
+PREFIX o: <https://example.org/lex2kg/ontology/>
 
 SELECT (COUNT (*) as ?countResult) WHERE {
-  ?s lex2kg-o:merujuk ?o .
-  ?s (lex2kg-o:bagianDari|^lex2kg-o:mengingat|^lex2kg-o:menimbang)* ?sdoc .
-  ?o lex2kg-o:bagianDari* ?odoc .
-  ?sdoc a lex2kg-o:Peraturan .
-  ?odoc a lex2kg-o:Peraturan .
+  ?s o:merujuk ?o .
+  ?s (o:bagianDari|^o:mengingat|^o:menimbang)* ?sdoc .
+  ?o o:bagianDari* ?odoc .
+  ?sdoc a o:Peraturan .
+  ?odoc a o:Peraturan .
   FILTER (?sdoc != ?odoc)
 } 
 
@@ -1844,27 +1845,27 @@ query:
 
 ```sparql
 # Count triples with citation to non existing law
-PREFIX lex2kg-o: <https://example.org/lex2kg/ontology/>
+PREFIX o: <https://example.org/lex2kg/ontology/>
 
 SELECT (COUNT(*) as ?countResult) WHERE {
   {
     SELECT ?s ?o WHERE {
-      ?s lex2kg-o:merujuk ?o .
+      ?s o:merujuk ?o .
     }
   } MINUS {
     SELECT ?s ?o WHERE {
-      ?s lex2kg-o:merujuk ?o .
-      ?s lex2kg-o:bagianDari* ?doc .
-      ?o lex2kg-o:bagianDari* ?doc .
-      ?doc a lex2kg-o:Peraturan .
+      ?s o:merujuk ?o .
+      ?s o:bagianDari* ?doc .
+      ?o o:bagianDari* ?doc .
+      ?doc a o:Peraturan .
     }
   } MINUS {
     SELECT ?s ?o WHERE {
-      ?s lex2kg-o:merujuk ?o .
-      ?s (lex2kg-o:bagianDari|^lex2kg-o:mengingat|^lex2kg-o:menimbang)* ?sdoc .
-      ?o lex2kg-o:bagianDari* ?odoc .
-      ?sdoc a lex2kg-o:Peraturan .
-      ?odoc a lex2kg-o:Peraturan .
+      ?s o:merujuk ?o .
+      ?s (o:bagianDari|^o:mengingat|^o:menimbang)* ?sdoc .
+      ?o o:bagianDari* ?odoc .
+      ?sdoc a o:Peraturan .
+      ?odoc a o:Peraturan .
       FILTER (?sdoc != ?odoc)
     }
   }

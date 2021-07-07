@@ -12,23 +12,6 @@
   \item Visualisasi
   \item Question Answering Chatbot
 \end{itemize}
-\textit{Use case evaluation} akan dilakukan pada contoh KG pada \lst~\ref{lst:use-case-ttl}
-
-\begin{listing}[H]
-  \begin{minted}[frame=single, fontsize=\footnotesize]{turtle}
-@prefix o: <https://example.org/lex2kg/ontology/> .
-@prefix uu: <https://example.org/lex2kg/uu/> .
-
-uu:2010\/1  a o:Peraturan . # UU APBN
-uu:2003\/13 a o:Peraturan . # UU Ketenagakerjaan
-uu:2020\/11 a o:Peraturan . # UU Cipta Kerja
-uu:2020\/11\/pasal\/81 o:bagianDari uu:2020\/11 ;
-                       o:merujuk uu:2003\/13 ;
-                       o:teks "...penempatan tenaga kerja..."
-\end{minted}
-  \caption{KG untuk \textit{use case evaluation}}
-  \label{lst:use-case-ttl}
-\end{listing}
 
 %--------------------------------------------------------------------------------------------------%
 \subsection{SPARQL Query}
@@ -40,44 +23,89 @@ dianalisis dengan menjalankan SPARQL query. SPARQL query memiliki fitur operasi 
 \textit{union}, \textit{optional}, dan \textit{negation pattern}. SPARQL juga menyediakan query
 analisis yang lengkap seperti \textit{filter}, \textit{aggregate}, dan \textit{property path}.
 Dengan menggunakan SPARQL query, salah satu \textit{competency question} ``Tampilkan semua peraturan
-melakukan rujukan serta tampilkan peraturan yang dirujuknya.'' dapat dijawab dengan melakukan query
-\lst~\ref{lst:query-rujuk} yang akan memberikan output \tab~\ref{tab:output-query-rujuk}.
+serta peraturan yang ditimbangnya.'' dapat dijawab dengan melakukan query \lst~\ref{lst:query-menimbang}
+yang akan memberikan output \tab~\ref{tab:output-query-menimbang}.
 
 \begin{listing}[H]
   \begin{minted}[frame=single, fontsize=\footnotesize]{sparql}
 PREFIX o: <https://example.org/lex2kg/ontology/>
+PREFIX uu: <https://example.org/lex2kg/uu/>
 
-SELECT ?perujuk ?terrujuk
+SELECT ?penimbang ?ditimbang
 WHERE {
-  ?komponen o:bagianDari* ?perujuk ;
-            o:merujuk ?terrujuk .
-  ?terrujuk a o:Peraturan .
-  ?perujuk a o:Peraturan .
-  FILTER (?perujuk != ?terujuk) .
+  ?penimbang o:menimbang ?menimbang .
+  ?menimbangText o:bagianDari* ?menimbang .
+  ?menimbangText o:merujuk ?ditimbang .
+  ?ditimbang a o:Peraturan
 }
+ORDER BY DESC(?penimbang) DESC(?ditimbang)
+LIMIT 10
   \end{minted}
-  \caption{Query 1}
-  \label{lst:query-rujuk}
+  \caption{SPARQL query untuk ``Tampilkan semua peraturan serta peraturan yang ditimbangnya.''}
+  \label{lst:query-menimbang}
 \end{listing}
 
 \begin{table}
   \centering
   \begin{tabular}{|l|l|} \hline
-    ?perujuk   & ?terrujuk  \\\hline \hline
-    uu:2020/11 & uu:2003/13 \\\hline
+    ?penimbang & ?ditimbang \\\hline \hline
+    uu:2020/8  & uu:2018/12 \\\hline
+    uu:2020/6  & uu:2020/2  \\\hline
+    uu:2020/6  & uu:2015/1  \\\hline
+    uu:2020/6  & uu:2014/1  \\\hline
+    uu:2020/2  & uu:2020/1  \\\hline
   \end{tabular}
-  \caption{Output Query \lst~\ref{lst:query-rujuk} }
-  \label{tab:output-query-rujuk}
+  \caption{Output Query \lst~\ref{lst:query-menimbang} }
+  \label{tab:output-query-menimbang}
 \end{table}
-
-
-
 
 
 %--------------------------------------------------------------------------------------------------%
 \subsection{Visualisasi KG}
 \label{subsec:visualisasi-kg}
 %--------------------------------------------------------------------------------------------------%
+
+Visualisasi meningkatkan visibilitas dan \textit{explainability} KG. Pada KG dapat dilakukan
+visualisasi \textit{node} dan \textit{relation} antara \textit{node}, atau visualisasi statistik
+dari KG tersebut. \lst~\ref{lst:vizkg} merupakan kode untuk melakukan visualisasi ``Tampilkan 5 peraturan
+dengan komponen terbanyak beserta jumlah komponennya'' menggunakan \textit{visualization library}
+VizKG\footnote{\url{https://pypi.org/project/VizKG/}} dengan output \pic~\ref{fig:vizkg}.
+
+\begin{listing}[H]
+  \begin{minted}[frame=single, breaklines, fontsize=\footnotesize]{python}
+import VizKG.visualize as VKG
+
+sparql_query = """
+PREFIX o: <https://example.org/lex2kg/ontology/>
+
+SELECT ?docName (COUNT(?component) as ?componentCount)
+WHERE {
+  ?doc a o:Peraturan .
+  ?component o:bagianDari* ?doc .
+  BIND(REPLACE(REPLACE(STR(?doc), "https://example.org/lex2kg/", ""), "/", "-") as ?docName) .
+}
+GROUP BY ?docName
+ORDER BY DESC(?componentCount)
+LIMIT 5
+"""
+
+url = "http://127.0.0.1:3030/lex2kg/sparql"
+bubble = VKG(sparql_query=sparql_query, sparql_service_url=url, chart='BarChart')
+bubble.plot()
+  \end{minted}
+  \caption{Visualisasi ``Tampilkan 5 peraturan dengan komponen terbanyak beserta jumlah komponennya'' menggunakan VizKG}
+  \label{lst:vizkg}
+\end{listing}
+
+
+
+\begin{figure}[H]
+  \centering
+  \includegraphics{pictures/vizkg4.png}
+  \caption{Output VizKG untuk \lst~\ref{lst:vizkg}}
+  \label{fig:vizkg}
+\end{figure}
+
 
 %--------------------------------------------------------------------------------------------------%
 \subsection{\textit{Question Answering Chatbot}}
