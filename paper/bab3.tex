@@ -93,7 +93,7 @@ deskripsinya.
 \begin{longtable}[l]{|p{0.2\textwidth}|p{0.8\textwidth}|}
   \hline
   \textbf{Nama Class}     & \textbf{Deskripsi}                                                                              \\ \hline \endhead
-  \texttt{Peraturan}      & Peraturan perundang-undangan                                                                    \\ \hline
+  \texttt{Peraturan}      & \Legal                                                                    \\ \hline
   \texttt{DaftarBab}      & Daftar satu atau lebih bab                                                                      \\ \hline
   \texttt{Bab}            & Bab                                                                                             \\ \hline
   \texttt{DaftarBagian}   & Daftar satu atau lebih bagian                                                                   \\ \hline
@@ -115,8 +115,8 @@ deskripsinya.
 \end{longtable}
 
 %--------------------------------------------------------------------------------------------------%
-\section{Perancangan URI Komponen Peraturan Perundang-undangan}
-\label{sec:perancangan-uri-komponen-peraturan-perundang-undangan}
+\section{Perancangan URI Komponen \Legal}
+\label{sec:perancangan-uri-komponen-legal}
 %--------------------------------------------------------------------------------------------------%
 
 URI \legal diawali oleh \textit{peraturanPrefix}, kemudian diikuti oleh string
@@ -134,13 +134,13 @@ akan dikurung dengan kurung kurawal \texttt{\{\}}.
   Peraturan Daerah Provinsi DKI Jakarta & \texttt{/perda\_provinsi\_dki\_jakarta/\{thn\}/\{nmr\}} & \makecell[l]{\texttt{thn}: tahun peraturan \\\texttt{nmr}: nomor peraturan} \\\hline
   Peraturan Gubernur DKI Jakarta        & \texttt{/pergub\_dki\_jakarta/\{thn\}/\{nmr\}}          & \makecell[l]{\texttt{thn}: tahun peraturan \\\texttt{nmr}: nomor peraturan} \\\hline
   Peraturan Walikota Malang             & \texttt{/perwali\_malang/\{thn\}/\{nmr\}}               & \makecell[l]{\texttt{thn}: tahun peraturan \\\texttt{nmr}: nomor peraturan} \\\hline
-  \caption{Konstruksi URI untuk Peraturan Perundang-undangan}
+  \caption{Konstruksi URI untuk \legal}
   \label{tab:uri-peraturan}
 \end{longtable}
 
 Setiap komponen dokumen merupakan entitas, dan memiliki URI. URI sebuah komponen didahului oleh
-\textit{docURI} dan semua komponen yang mengatasinya. \tab~\ref{tab:uri-komponen} adalah jenis komponen peraturan
-perundang-undangan beserta pola URI nya.
+\textit{docURI} dan semua komponen yang mengatasinya. \tab~\ref{tab:uri-komponen} adalah jenis
+komponen \legal beserta pola URI nya.
 
 \begin{longtable}{|p{0.2\textwidth}|p{0.35\textwidth}|p{0.45\textwidth}|}
   \hline
