@@ -361,16 +361,15 @@ dilakukan jika dokumen memiliki komponen berupa amendemen.
 \end{figure}
 
 %--------------------------------------------------------------------------------------------------%
-\section{Deteksi Sitasi}
-\label{sec:deteksi-sitasi}
+\section{Deteksi Rujukan}
+\label{sec:deteksi-rujukan}
 %--------------------------------------------------------------------------------------------------%
 
-% // TODO: regexny tmbhn jg utk yg deteksi sitasi
-% // TODO: sitasi -> rujukan
+% // TODO: regexny tmbhn jg utk yg deteksi rujukan
 
-Setelah semua \textit{span} dikelompokan menjadi suatu komponen, dilakukan deteksi sitasi pada teks
+Setelah semua \textit{span} dikelompokan menjadi suatu komponen, dilakukan deteksi rujukan pada teks
 pada setiap komponen untuk mengetahui apakah komponen tersebut menyebut komponen atau dokumen
-\legal lainnya. \tab~\ref{tab:rujukan} adalah daftar pola sitasi yang berhasil
+\legal lainnya. \tab~\ref{tab:rujukan} adalah daftar pola rujukan yang berhasil
 dideteksi pada penelitian ini.
 
 \begin{longtable}[l]{|p{0.2\textwidth} | p{0.3\textwidth}| p{0.5\textwidth}|}
@@ -384,17 +383,17 @@ dideteksi pada penelitian ini.
   huruf \{x\}, \{y\}, ... dan \{z\}     & huruf a, b, c, d, dan e                                  &
   \makecell[l]{\texttt{uu/2003/13/menimbang/point/a}                                                                                                          \\\texttt{uu/2003/13/menimbang/point/b}\\\texttt{uu/2003/13/menimbang/point/c}\\\texttt{uu/2003/13/menimbang/point/d}\\\texttt{uu/2003/13/menimbang/point/e}}\\ \hline
   huruf \{x\} dan \{y\}                 & huruf a dan b                                            & \makecell[l]{\texttt{uu/2003/13/pasal/1/point/5/point/a} \\\texttt{uu/2003/13/pasal/1/point/5/point/b} } \\ \hline
-  \caption{Pola, contoh teks, dan contoh URI deteksi sitasi}
+  \caption{Pola, contoh teks, dan contoh URI deteksi rujukan}
   \label{tab:rujukan}
 \end{longtable}
 
-Data sitasi mengandung data sebagai berikut:
+Data rujukan mengandung data sebagai berikut:
 % // TODO: contoh nya adalah \lst~\ref{lst:uu-13-2003-detect}
 
 \begin{itemize}
   \itemsep1pt\parskip0pt\parsep0pt
-  \item \texttt{start}: \textit{index} karakter awal sitasi
-  \item \texttt{end}: \textit{index} karakter akhir sitasi
+  \item \texttt{start}: \textit{index} karakter awal rujukan
+  \item \texttt{end}: \textit{index} karakter akhir rujukan
   \item \texttt{uri}: URI dokumen dan
 \end{itemize}
 
@@ -412,15 +411,15 @@ references:
     end: 184
     uri: /uu/2003/13/pasal/156/ayat/4
   \end{minted}
-  \caption{Contoh teks pada Pasal 158 Ayat (4) UU 13/2003 beserta sitasi yang terdeteksi}
+  \caption{Contoh teks pada Pasal 158 Ayat (4) UU 13/2003 beserta rujukan yang terdeteksi}
   \label{lst:uu-13-2003-detect}
 \end{listing}
 
 Untuk melakukan deteksi, teks akan melalui fungsi yang masing-masing memiliki pola untuk dideteksi.
-Oleh karena itu, untuk \textit{substring} yang beririsan dapat memiliki lebih dari dua sitasi yang
-terdeteksi. Pada kasus tersebut akan diambil sitasi dengan \textit{substring} terpanjang. Sebagai
+Oleh karena itu, untuk \textit{substring} yang beririsan dapat memiliki lebih dari dua rujukan yang
+terdeteksi. Pada kasus tersebut akan diambil rujukan dengan \textit{substring} terpanjang. Sebagai
 contoh, teks ``Pasal 156 Ayat (4)'' pada UU No.13 Tahun 2003 Pasal 158 Ayat (4) akan terdeteksi
-sebagai 3 URI sitasi seperti yang terlihat pada \tab~\ref{tab:contoh-teks-uri}.
+sebagai 3 URI rujukan seperti yang terlihat pada \tab~\ref{tab:contoh-teks-uri}.
 
 \begin{table}
   \centering
