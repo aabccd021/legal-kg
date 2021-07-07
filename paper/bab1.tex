@@ -3,7 +3,6 @@
 \label{chap:1}
 %--------------------------------------------------------------------------------------------------%
 
-% //TODO: maintained docs jelasin di bab 4
 % //TODO: Jelasin amendemen
 % //TODO: URI namespace
 % //TODO: pake o:
@@ -75,7 +74,7 @@ informasi lengkap berdasarkan konteks \legal.
 keterkaitannya, tersusun dalam bentuk \textit{graph}, (ii) mendefinisikan kelas entitas dan relasi
 antar entitas dalam bentuk skema, (iii) membolehkan sembarang entitas memiliki relasi satu sama lain
 dan (iv) mencakup berbagai topik domain \citep{paulheim_2016}. Dengan melakukan ekstraksi data dari
-dokumen yang bersifat semi-terstruktur, \legal dapat diubah menjadi KG. Sebagai manfaatnya, dapat
+dokumen yang bersifat semi-terstruktur, \legal dapat dikonversi menjadi KG. Sebagai manfaatnya, dapat
 fitur-fitur berbasis \textit{query} seperti \textit{question answering}, \textit{reasoning} dan
 visualisasi data. \pic~\ref{fig:konstruksi-dan-query} menampilkan proses konstruksi KG dari beberapa
 berkas PDF \legal dan \textit{query} pada KG tersebut. Pada skripsi ini, akan dilakukan konversi
@@ -195,11 +194,11 @@ mempermudah konstruksi KG.
 \end{figure}
 
 Karena sulit untuk menjamin hasil konversi untuk semua PDF \legal, akan terdapat beberapa PDF yang
-akan dijamin konversinya benar yang selanjutnya akan disebut \textit{maintained PDFs}. Pengembangan
-sistem konversi dilakukan secara iteratif. Setiap terdapat perubahan pada sistem, akan dicek apakah
-untuk semua \textit{maintained PDFs} memberikan hasil konversi yang benar. Sistem konversi akan
-menerima input berupa PDF dan mengeluarkan output berupa KG dengan ontologi yang sudah dirancang
-pada tahap sebelumnya.
+akan dipelihara kualitas konversinya yang selanjutnya akan disebut \textit{maintained PDFs}.
+Pengembangan sistem konversi dilakukan secara iteratif. Setiap terjadi perubahan pada sistem
+konversi, akan diperiksa apakah untuk semua \textit{maintained PDFs} memberikan hasil konversi
+dengan kualitas yang tinggi. Sistem konversi akan menerima input berupa PDF dan mengeluarkan output
+berupa KG dengan ontologi yang sudah dirancang pada tahap sebelumnya.
 
 Untuk menjamin KG yang dibuat dapat menjawab \textit{competency questions}, dalam penelitian ini
 dilakukan \textit{use case evaluation} yaitu berupa demonstrasi contoh penerapan dari KG berdasarkan
