@@ -4,7 +4,51 @@
 %--------------------------------------------------------------------------------------------------%
 
 %--------------------------------------------------------------------------------------------------%
-\section{Perancangan URI}\label{perancangan-uri}
+\section{\textit{Competency Questions}}
+\label{sec:competency-questions}
+%--------------------------------------------------------------------------------------------------%
+\begin{itemize}
+  \item Deskripsikan UU Cipta Kerja.
+  \item Dapatkan semua pasal dari UU Cipta Kerja.
+  \item Tampilkan teks dari UU Cipta Kerja Pasal 2 Ayat.
+  \item Tampilkan semua pasal yang terdapat pada UU Cipta Kerja Bab 2.
+  \item Dapatkan ayat yang mengandung teks "kompensasi" dan "buruh" yang
+        disisipkan(\textit{inserted}) oleh  UU Cipta Kerja.
+  \item Dapatkan komponen dari UU Cipta Kerja yang menyisipkan pasal ke UU Ketenagakerjaan dan
+        tampilkan pula teks dari pasal tersebut.
+  \item Dapatkan komponen dari UU Cipta Kerja yang mengubah pasal UU Ketenagakerjaan dan tambilkan
+        teks sebelum dan setelah pengubahan.
+  \item Dapatkan komponen dari UU Cipta Kerja yang menghapus pasal UU Ketenagakerjaan dan
+        tampilkan pula teks dari pasal tersebut.
+  \item Dapatkan komponen dari UU Cipta Kerja yang menghapus pasal UU Ketenagakerjaan dan
+        tampilkan pula teks dari pasal tersebut.
+  \item Tampilkan banyaknya penyisipan, pengubahan, dan penghapusan pasal yang dilakukan UU Cipta
+        Kerja terhadap UU lain.
+  \item Tujukan pasal pada UU Ketenagakerjaan setelah dilakukan \textit{update} oleh UU Cipta Kerja.
+  \item Tujukan pasal pada UU Cipta Kerja yang tidak melakukan \textit{update}.
+  \item Tujukan pasal pada UU Cipta Kerja yang menghapus pasal yang disahkan setelah tahun 2001.
+  \item Tujukan pasal yang disisipkan oleh UU Cipta Kerja dan rujukan yang terdapat pada pasal
+        tersebut jika ada.
+  \item Tampilkan peraturan yang paling banyak di-\textit{update} oleh UU Cipta Kerja.
+  \item Tampilkan semua peraturan serta peraturan yang ditimbangnya.
+  \item Tampilkan 10 peraturan dengan pasal terbanyak.
+  \item Tampilkan peraturan yang pernah di-\textit{update}.
+  \item Tampilkan 10 tempat terbanyak peraturan disahkan.
+  \item Tampilkan 10 peraturan paling banyak ditimbang.
+  \item Tampilkan semua peraturan yang melakukan \textit{update} dan banyaknya pasal yang
+  di-\textit{update} oleh pasal tersebut.
+  \item Tampilkan jumlah triple tentang struktur peraturan.
+  \item Tampilkan jumlah triple tentang metadata peraturan.
+  \item Tampilkan jumlah triple tentang teks peraturan.
+  \item Tampilkan jumlah triple tentang rujukan peraturan.
+  \item Tampilkan jumlah triple tentang \textit{update} peraturan.
+  \item Tampilkan jumlah triple tentang \textit{class assignment}.
+\end{itemize}
+
+
+%--------------------------------------------------------------------------------------------------%
+\section{Perancangan URI}
+\label{sec:perancangan-uri}
 %--------------------------------------------------------------------------------------------------%
 
 Setiap entitas yang berbeda perlu diberikan URI yang berbeda. Penggabungan KG sangat umum dilakukan
@@ -24,7 +68,8 @@ semua resource lainnya menggunakan \texttt{https://example.org/lex2kg/ontology} 
 disebut \textit{ontoPrefix}.
 
 %--------------------------------------------------------------------------------------------------%
-\section{Perancangan URI Class}\label{perancangan-uri-class}
+\section{Perancangan URI Class}
+\label{sec:perancangan-uri-class}
 %--------------------------------------------------------------------------------------------------%
 
 URI Class adalah URI yang menjelaskan \textit{class} dari entitas tersebut. Semua URI Class mengikuti
@@ -56,8 +101,8 @@ tersebut. Berikut adalah semua \textit{class} komponen beserta URI dan deskripsi
 \end{longtable}
 
 %--------------------------------------------------------------------------------------------------%
-\section{Perancangan URI Komponen Peraturan
-  Perundang-undangan}\label{perancangan-uri-komponen-peraturan-perundang-undangan}
+\section{Perancangan URI Komponen Peraturan Perundang-undangan}
+\label{sec:perancangan-uri-komponen-peraturan-perundang-undangan}
 %--------------------------------------------------------------------------------------------------%
 
 URI peraturan perundang-undangan diawali oleh \textit{peraturanPrefix}, kemudian diikuti oleh string
@@ -115,7 +160,8 @@ perundang-undangan beserta pola URI nya.
 \end{longtable}
 
 %--------------------------------------------------------------------------------------------------%
-\section{Perancangan URI Properti}\label{perancangan-uri-properti}
+\section{Perancangan URI Properti}
+\label{sec:perancangan-uri-properti}
 %--------------------------------------------------------------------------------------------------%
 
 Properti ditandai dengan URI yang memiliki pola \texttt{\{ontoPrefix\}/\{name\}} dimana

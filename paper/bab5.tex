@@ -1,44 +1,40 @@
 %--------------------------------------------------------------------------------------------------%
-\chapter{EVALUASI DAN ANALISIS HASIL}\label{chap:5}
+\chapter{EVALUASI}\label{chap:5}
 %--------------------------------------------------------------------------------------------------%
 
 %--------------------------------------------------------------------------------------------------%
-\section{Aplikasi KG Peraturan Perundang-undangan}
-\label{aplikasi-kg-peraturan-perundang-undangan}
+\section{\textit{Use Case Evaluation}}
+\label{sec:use-case-evaluation}
 %--------------------------------------------------------------------------------------------------%
-Dibuat chatbot untuk mensimulasikan pengaplikasian KG. Chatbot akan memproses input yand diberikan
-oleh user, kemudian meng-generate SPARQL query. Chatbot akan menampilkan hasil dari query tersebut.
 
 %--------------------------------------------------------------------------------------------------%
-\section{Evaluasi Hasil Konversi}
-\label{evaluasi-hasil-konversi}
+\subsection{\textit{Online Analytical Processing}(OLAP)}
+\label{subsec:olap}
 %--------------------------------------------------------------------------------------------------%
-Evaluasi akan dilakukan terhadap semua dokumen yang terdapat pada peraturan.go.id. Selanjutnya
-dokumen-dokumen ini akan disebut dokument tes.
+
+Online Analytical Processing (OLAP) mengacu pada aktivitas umum query dan penyajian data teks dan
+angka dari \textit{data warehouse} untuk tujuan analisis \citep{olap}. OLAP pada KG dapat dilakukan
+dengan melakukan query analisis terhadap KG tersebut.
 
 %--------------------------------------------------------------------------------------------------%
-\section{Evaluasi Manual}
-\label{evaluasi-manual}
+\subsection{Visualisasi KG}
+\label{subsec:visualisasi-kg}
 %--------------------------------------------------------------------------------------------------%
-Evaluasi kualitatif dilakukan terhadap sebagian dokumen yang didapatkan dari hasil sampling dari
-dokumen tes. Seorang penilai akan melihat markdown dari setiap dokumen hasil \textit{sampling},
-masing-masing dokumen akan diberikan skor 0 sampai 100. Kualitas konversi dapat dilihat dari
-rata-rata skor tersebut.
+
+%--------------------------------------------------------------------------------------------------%
+\subsection{\textit{Question Answering Chatbot}}
+\label{subsec:question-answering-chatbot}
+%--------------------------------------------------------------------------------------------------%
 
 % // TODO: chatbot mencakup apa aja
 % - isi undang-udangn
 % - metadata
 % - sistem pencarian (apakah ada yang ngomong kewajiban tentang ini?)
 
-
 %--------------------------------------------------------------------------------------------------%
-\section{Evaluasi Otomatis}
-\label{evaluasi-otomatis}
+\section{\textit{Large Scale Evaluation}}
+\label{sec:large-scale-evaluation}
 %--------------------------------------------------------------------------------------------------%
-Evaluasi dilakukan dengan terlebih dahulu mendefinisikan metadata yang pasti terdapat pada sebuah
-dokumen (misal, tempat dokumen disahkan), kemudian menghitung seberapa banyak metadata yang berhasil
-diekstrak. Metadata hasil ekstraksi yang akan dihitung tidak perlu sesuai dengan yang terdapat di
-dalam dokumen.
 
 % // TODO: jelasin dokumen kayak gimana yang belum bisa di parse, jelasin 3 yang ga bisa dihandle
 % // TODO: kualitas seberapa parah yang bisa dihandle compare word accuracy, select 50 pasal random
