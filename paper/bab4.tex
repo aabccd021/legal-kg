@@ -60,9 +60,9 @@ OCR karena sifatnya \textit{open source} dan mendukung Bahasa Indonesia sebagai 
 dipindai.
 
 Untuk melakukan OCR ulang perlu dilakukan instalasi program yang dibutuhkan yang dapat dilakukan
-dengan \textit{command} berikut pada sistem operasi Ubuntu 20.04. \texttt{ocrmypdf} merupakan
-\textit{wrapper} untuk Tesseract OCR dan \texttt{tesseract-ocr-ind} adalah program tambahan untuk
-dapat melakukan OCR menjadi teks Bahasa Indonesia.
+dengan \textit{command} \lst~\ref{lst:install-ocr} pada sistem operasi Ubuntu 20.04.
+\texttt{ocrmypdf} merupakan \textit{wrapper} untuk Tesseract OCR dan \texttt{tesseract-ocr-ind}
+adalah program tambahan untuk dapat melakukan OCR menjadi teks Bahasa Indonesia.
 
 \begin{listing}[H]
   \begin{minted}[frame=single, fontsize=\footnotesize]{bash}
@@ -213,8 +213,9 @@ Hal tersebut dikarenakan pada umumnya kita dapat mentolerir kesalahan pemindaian
 karena kegagalan pemindaian pada angka tersebut akan mempengaruhi struktur dokumen, penulis
 memutuskan solusi diatas. Sebagai contoh, jika nomor 8 berhasil dipindai dan nomor 9 tidak berhasil,
 maka struktur akhir yang dihasilkan akan mengandung semua isi nomor 9 didalam nomor 8, yang mana
-seharusnya adalah nomor yang terpisah. Berikut berturut-turut adalah contoh data yang dihasilkan
-jika nomor 9 tidak berhasil terpindai dan jika berhasil terpindai.
+seharusnya adalah nomor yang terpisah. \lst~\ref{lst:no-9-tidak-terpindai} dan
+\lst~\ref{lst:no-9-terpindai} berturut-turut adalah contoh data yang dihasilkan jika nomor 9 tidak
+berhasil terpindai dan jika berhasil terpindai.
 
 \begin{listing}[H]
   \begin{minted}[frame=single, fontsize=\footnotesize]{yaml}
@@ -344,12 +345,13 @@ membuat pembedaan antara ``Pasal biasa'' dan ``Pasal peng-amandemen'' menjadi su
   \label{fig:contoh-amandemen}
 \end{figure}
 
-Untuk menyelesaikan masalah ini, penulis menggunakan koordinat \texttt{xL} \textit{span} tepat setelah
-\textit{span} yang bertuliskan ``Pasal X''. Pada contoh deteksi kompoonen amandemen di bawah,
-\texttt{xL} dari teks setelah pasal peng-amandemen (pasal biasa) ditandai dengan \textcolor{red}{lingkaran merah},
-\texttt{xL} dari pasal yang diamandemen ditandai dengan \textcolor{blue}{lingkaran biru}, dan garis hijau
-merepresentasikan batas pemeda \texttt{xL} antara pasal biasa dan pasal yang diamandemen. Pembedaan
-pasal biasa dan pasal amandemen hanya dilakukan jika dokumen memiliki komponen berupa amandemen.
+Untuk menyelesaikan masalah ini, penulis menggunakan koordinat \texttt{xL} \textit{span} tepat
+setelah \textit{span} yang bertuliskan ``Pasal X''. Pada contoh deteksi kompoonen amandemen
+\pic~\ref{fig:deteksi-amandemen}, \texttt{xL} dari teks setelah pasal peng-amandemen (pasal biasa)
+ditandai dengan \textcolor{red}{lingkaran merah}, \texttt{xL} dari pasal yang diamandemen ditandai
+dengan \textcolor{blue}{lingkaran biru}, dan garis hijau merepresentasikan batas pemeda \texttt{xL}
+antara pasal biasa dan pasal yang diamandemen. Pembedaan pasal biasa dan pasal amandemen hanya
+dilakukan jika dokumen memiliki komponen berupa amandemen.
 
 \begin{figure}[H]
   \centering
@@ -360,15 +362,16 @@ pasal biasa dan pasal amandemen hanya dilakukan jika dokumen memiliki komponen b
 
 %--------------------------------------------------------------------------------------------------%
 \section{Deteksi Sitasi}
-\label{deteksi-sitasi}
+\label{sec:deteksi-sitasi}
 %--------------------------------------------------------------------------------------------------%
 
 % // TODO: regexny tmbhn jg utk yg deteksi sitasi
+% // TODO: sitasi -> rujukan
 
 Setelah semua \textit{span} dikelompokan menjadi suatu komponen, dilakukan deteksi sitasi pada teks
 pada setiap komponen untuk mengetahui apakah komponen tersebut menyebut komponen atau dokumen
-peraturan perundang-undangan lainnya. Berikut adalah daftar pola sitasi yang berhasil dideteksi pada
-penelitian ini.
+peraturan perundang-undangan lainnya. \tab~\ref{tab:rujukan} adalah daftar pola sitasi yang berhasil
+dideteksi pada penelitian ini.
 
 \begin{longtable}[l]{|p{0.2\textwidth} | p{0.3\textwidth}| p{0.5\textwidth}|}
   \hline
@@ -381,11 +384,12 @@ penelitian ini.
   huruf \{x\}, \{y\}, ... dan \{z\}     & huruf a, b, c, d, dan e                                  &
   \makecell[l]{\texttt{uu/2003/13/menimbang/point/a}                                                                                                          \\\texttt{uu/2003/13/menimbang/point/b}\\\texttt{uu/2003/13/menimbang/point/c}\\\texttt{uu/2003/13/menimbang/point/d}\\\texttt{uu/2003/13/menimbang/point/e}}\\ \hline
   huruf \{x\} dan \{y\}                 & huruf a dan b                                            & \makecell[l]{\texttt{uu/2003/13/pasal/1/point/5/point/a} \\\texttt{uu/2003/13/pasal/1/point/5/point/b} } \\ \hline
-  \caption{Long table caption.}
-  \label{longszz}
+  \caption{Pola, contoh teks, dan contoh URI deteksi sitasi}
+  \label{tab:rujukan}
 \end{longtable}
 
 Data sitasi mengandung data sebagai berikut:
+% // TODO: contoh nya adalah \lst~\ref{lst:uu-13-2003-detect}
 
 \begin{itemize}
   \itemsep1pt\parskip0pt\parsep0pt
@@ -416,7 +420,7 @@ Untuk melakukan deteksi, teks akan melalui fungsi yang masing-masing memiliki po
 Oleh karena itu, untuk \textit{substring} yang beririsan dapat memiliki lebih dari dua sitasi yang
 terdeteksi. Pada kasus tersebut akan diambil sitasi dengan \textit{substring} terpanjang. Sebagai
 contoh, teks ``Pasal 156 Ayat (4)'' pada UU No.13 Tahun 2003 Pasal 158 Ayat (4) akan terdeteksi
-sebagai 3 URI sitasi sebagai berikut.
+sebagai 3 URI sitasi seperti yang terlihat pada \tab~\ref{tab:contoh-teks-uri}.
 
 \begin{table}
   \centering

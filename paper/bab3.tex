@@ -85,9 +85,10 @@ disebut \textit{ontoPrefix}.
 \label{sec:perancangan-uri-class}
 %--------------------------------------------------------------------------------------------------%
 
-URI Class adalah URI yang menjelaskan \textit{class} dari entitas tersebut. Semua URI Class mengikuti
-pola \texttt{\{ontoPrefix\}/\{className\}} dimana \texttt{className} adalah nama \textit{class}
-tersebut. Berikut adalah semua \textit{class} komponen beserta URI dan deskripsinya.
+URI Class adalah URI yang menjelaskan \textit{class} dari entitas tersebut. Semua URI Class
+mengikuti pola \texttt{\{ontoPrefix\}/\{className\}} dimana \texttt{className} adalah nama
+\textit{class} tersebut. \tab~\ref{tab:class} adalah semua \textit{class} komponen beserta URI dan
+deskripsinya.
 
 \begin{longtable}[l]{|p{0.2\textwidth}|p{0.8\textwidth}|}
   \hline
@@ -120,9 +121,9 @@ tersebut. Berikut adalah semua \textit{class} komponen beserta URI dan deskripsi
 
 URI peraturan perundang-undangan diawali oleh \textit{peraturanPrefix}, kemudian diikuti oleh string
 yang mengidentifikasi peraturan tersebut. URI peraturan ini akan digunakan oleh entitas sebagai
-prefix yang selanjutnya akan disebut \textit{docURI}. Berikut adalah jenis peraturan
-perundang-undangan yang diimplementasi pada penelitian ini beserta pola URI nya. Variabel akan
-dikurung dengan kurung kurawal \texttt{\{\}}.
+prefix yang selanjutnya akan disebut \textit{docURI}. \tab~\ref{tab:uri-peraturan} adalah jenis
+peraturan perundang-undangan yang diimplementasi pada penelitian ini beserta pola URI nya. Variabel
+akan dikurung dengan kurung kurawal \texttt{\{\}}.
 
 \begin{longtable}[l]{|p{0.2\textwidth}|p{0.55\textwidth}|p{0.25\textwidth}|}
   \hline
@@ -138,7 +139,7 @@ dikurung dengan kurung kurawal \texttt{\{\}}.
 \end{longtable}
 
 Setiap komponen dokumen merupakan entitas, dan memiliki URI. URI sebuah komponen didahului oleh
-\textit{docURI} dan semua komponen yang mengatasinya. Berikut adalah jenis komponen peraturan
+\textit{docURI} dan semua komponen yang mengatasinya. \tab~\ref{tab:uri-komponen} adalah jenis komponen peraturan
 perundang-undangan beserta pola URI nya.
 
 \begin{longtable}{|p{0.2\textwidth}|p{0.35\textwidth}|p{0.45\textwidth}|}
@@ -180,7 +181,8 @@ perundang-undangan beserta pola URI nya.
 Properti ditandai dengan URI yang memiliki pola \texttt{\{ontoPrefix\}/\{name\}} dimana
 \texttt{name} adalah nama dari properti tersebut. Properti menghubungkan subjek dan objek. Subjek
 adalah berupa URI komponen, sedangkan objek dapat berupa URI komponen, string, \textit{number}
-(bilangan), atau \textit{date} (tanggal).
+(bilangan), atau \textit{date} (tanggal). \tab~\ref{tab:properti} adalah spesifikasi properti Lex2KG
+berupa nama, domain, range, dan deskripsinya.
 
 
 \begin{longtable}{|p{0.25\textwidth}|p{0.25\textwidth}|p{0.25\textwidth}|p{0.25\textwidth}|}
@@ -216,7 +218,7 @@ adalah berupa URI komponen, sedangkan objek dapat berupa URI komponen, string, \
   \texttt{disahkanOleh}    & \texttt{Peraturan}                                                                                                   & string                                                & Peraturan disahkan oleh                           \\ \hline
   \texttt{jabatanPengesah} & \texttt{Peraturan}                                                                                                   & string                                                & Jabatan pengesah peraturan                        \\ \hline
   \texttt{bagianDari}      & komponen apapun                                                                                                      & komponen apapun                                       & Komponen subjek adalah bagian dari komponen objek \\ \hline
-  \caption{Nama, domain, dan range properti Lex2KG}
+  \caption{Nama, domain, range, dan deskripsi properti Lex2KG}
   \label{tab:properti}
 \end{longtable}
 

@@ -38,16 +38,17 @@ Resource Description Framework (RDF) merupkan model data yang memberikan pernyat
 \textit{resource} dalam bentuk subjek-properti-objek, atau sering disebut \textit{triple}. Sebuah KG
 dapat direpresentasikan sebagai kumpulan \textit{triple}. Subyek dan properti dalam \textit{triple}
 direpresentasikan sebagai Uniform Resource Identifier (URI), sedangkan objek dapat direpresentasikan
-dengan URI atau \textit{string literal}. Pada gambar di bawah, dapat dilihat terdapat KG dengan dua
-\textit{triple}. Pada\textit{triple}1, subjek, properti, dan objek berturut-turut adalah
-\texttt{https://example.org/james}, \texttt{https://example.org/has\_visited},
-\texttt{https://example.org/louvre} yang mana semuanya berbentuk URI. Sedangkan pada\textit{triple}2,
-subjek, properti, dan objek berturut-turut adalah \texttt{https://example.org/james},
-\texttt{https://example.org/has\_name}, \texttt{"james"}. \texttt{https://example.org/james},
-\texttt{https://example.org/louvre} berturut-turut merupakan notasi untuk \textit{resource} entitas
-James dan Louvre, \texttt{https://example.org/has\_visited} dan
-\texttt{https://example.org/has\_name} merupakan properti yang menjelaskan hubungan antara subjek
-dan objek, dan \texttt{"James"} adalah \textit{string literal} yang menunjukan nilai dari nama James.
+dengan URI atau \textit{string literal}. Pada \pic~\ref{fig:triple-example}, dapat dilihat terdapat
+KG dengan dua \textit{triple}. Pada\textit{triple}1, subjek, properti, dan objek berturut-turut
+adalah \texttt{https://example.org/james}, \texttt{https://example.org/has\_visited},
+\texttt{https://example.org/louvre} yang mana semuanya berbentuk URI. Sedangkan
+pada\textit{triple}2, subjek, properti, dan objek berturut-turut adalah
+\texttt{https://example.org/james}, \texttt{https://example.org/has\_name}, \texttt{"james"}.
+\texttt{https://example.org/james}, \texttt{https://example.org/louvre} berturut-turut merupakan
+notasi untuk \textit{resource} entitas James dan Louvre, \texttt{https://example.org/has\_visited}
+dan \texttt{https://example.org/has\_name} merupakan properti yang menjelaskan hubungan antara
+subjek dan objek, dan \texttt{"James"} adalah \textit{string literal} yang menunjukan nilai dari
+nama James.
 
 \begin{figure}[H]
   \centering
@@ -57,8 +58,9 @@ dan objek, dan \texttt{"James"} adalah \textit{string literal} yang menunjukan n
 \end{figure}
 
 Terdapat beberapa format berkas dan sintaks untuk mengekspresikan RDF. Pada penelitian ini, penulis
-menggunakan format Terse RDF Triple Language (Turtle). Sebagai contoh, KG di atas
-dapat dituliskan dalam format Turtle seperti \lst~\ref{lst:contoh-ttl}.
+menggunakan format Terse RDF Triple Language (Turtle). Sebagai contoh, KG pada
+\pic~\ref{fig:triple-example} dapat dituliskan dalam format Turtle seperti
+\lst~\ref{lst:contoh-ttl}.
 
 \begin{listing}[H]
   \begin{minted}[frame=single, breaklines, fontsize=\footnotesize]{turtle}
@@ -69,16 +71,16 @@ dapat dituliskan dalam format Turtle seperti \lst~\ref{lst:contoh-ttl}.
   \label{lst:contoh-ttl}
 \end{listing}
 
-Dengan fitur format Turtle, dua \textit{triple} di atas dapat ditulis lebih singkat dengan mengganti
-prefix URI yang sama menjadi teks yang lebih singkat, dan menggabungkan penulisan beberapa
-\textit{triple} dengan subjek yang sama sehingga subjek hanya perlu dituliskan sekali saja. Sebagai
-contoh, karena sebagaian besar URI memiliki prefix \texttt{https://example.org/}, kita dapat
-menggantinya dengan \textit{string} \texttt{ex} dengan mendeklarasikan
-\mono{@prefix ex: https://example.org/ .}. Kedua \textit{triple} juga memiliki subjek yang sama
-yaitu \texttt{https://example.org/james}, oleh karena itu, penulisan kedua Turtle bisa digabung
-dengan hanya menuliskan subjek sebanyak satu kali, kemudian menuliskan properti dan objek dipisah
-dengan tanda titik koma. \lst~\ref{lst:contoh-singkat-ttl} adalah contoh penulisan dua \textit{triple}
-diatas dalam bentuk yang lebih singkat dan lebih mudah dibaca oleh manusia.
+Dengan fitur format Turtle, dua \textit{triple} pada \lst~\ref{lst:contoh-ttl} dapat ditulis lebih
+singkat dengan mengganti prefix URI yang sama menjadi teks yang lebih singkat, dan menggabungkan
+penulisan beberapa \textit{triple} dengan subjek yang sama sehingga subjek hanya perlu dituliskan
+sekali saja. Sebagai contoh, karena sebagaian besar URI memiliki prefix
+\texttt{https://example.org/}, kita dapat menggantinya dengan \textit{string} \texttt{ex} dengan
+mendeklarasikan \mono{@prefix ex: https://example.org/ .}. Kedua \textit{triple} juga memiliki
+subjek yang sama yaitu \texttt{https://example.org/james}, oleh karena itu, penulisan kedua Turtle
+bisa digabung dengan hanya menuliskan subjek sebanyak satu kali, kemudian menuliskan properti dan
+objek dipisah dengan tanda titik koma. \lst~\ref{lst:contoh-singkat-ttl} adalah contoh penulisan dua
+\textit{triple} diatas dalam bentuk yang lebih singkat dan lebih mudah dibaca oleh manusia.
 
 \begin{listing}[H]
   \begin{minted}[frame=single, fontsize=\footnotesize]{turtle}
