@@ -9,14 +9,12 @@
 % //TODO: pake o:
 % //TODO: Kami menggunakan ontology ini buat dikonversi
 % //TODO: Kasih cerita regex
-% //TODO: amendemen instead of update,
 % //TODO: sisip, hapus, ubah
 % //TODO: istilah resoure dibenerin
 % //TODO: url buat ontology.ttl (dari paper)
 % //TODO: mono
 % //TODO: Yg di paper bs dimasukkan skripsi
 % //TODO: Sama paper disebut di skripsi, klo udah submit iswc 2021 utk posters and demos
-% //TODO: amendemen -> amendemen
 
 %--------------------------------------------------------------------------------------------------%
 \section{Latar Belakang}
@@ -122,13 +120,10 @@ merepresentasikan data yang secara spesifik terdapat pada \legal di Indonesia. S
 membuat \textit{vocabulary} untuk struktur data dan \legal di Indonesia, diharapkan dapat menjadi
 kontribusi dalam mendukung pembuatan KG untuk dokumen \legal.
 
-% // TODO: disebutin aja klo sblmnya gak ada otomasi
-
 Lex2KG merupakan \textit{framework} yang dikembangkan pada penelitian ini, dapat mengonversi dokumen
-menjadi KG secara otomatis. Belum ada pekerjaan terkait yang melakukan
-automasi konversi dokumen \legal menjadi KG secara
-otomatis. Oleh karena itu Lex2KG diharapkan dapat menjadi kontribusi yang mendukung pembuatan dan
-penggunaan KG.
+menjadi KG secara otomatis. Belum ada pekerjaan terkait yang melakukan automasi konversi dokumen
+\legal menjadi KG secara otomatis. Oleh karena itu Lex2KG diharapkan dapat menjadi kontribusi yang
+mendukung pembuatan dan penggunaan KG.
 
 %--------------------------------------------------------------------------------------------------%
 \section{Permasalahan}
@@ -151,10 +146,10 @@ Berikut adalah rumusan permasalahan dari penelitian yang dilakukan:
 
 Berikut adalah batasan dari penelitian yang dilakukan:
 \begin{itemize}
-% // TODO: yg prturan negara lain jg nggak jd fokus di sini
-% // TODO: agak imbalanced utk yg jlmh UU vs peraturan jenis lainnya
+  % // TODO: yg prturan negara lain jg nggak jd fokus di sini
+  % // TODO: agak imbalanced utk yg jlmh UU vs peraturan jenis lainnya
   \item Peraturan yang dipelihara kualitas konversinya dibatasi beberapa peraturan UU dan non-UU.
-% // TODO: karena hrs cek manual
+        % // TODO: karena hrs cek manual
   \item Tidak dapat melakukan \textit{query} terhadap KG yang kompleks (contoh: ``Jika saya berusia 12 tahun,
         apakah saya boleh bekerja menurut UU Ketenagakerjaan'')
 
@@ -170,9 +165,9 @@ Perancangan sebuah KG dimulai dengan memahami \textit{competency questions} (\te
 \textit{Competency questions} mencakup semua pertanyaan yang harus terdapat jawabannya di dalam KG
 agar dapat digunakan pada \textit{use case} yang akan disebutkan pada subbab selanjutnya. Setelah
 perntanyaan-pertanyaan sudah jelas, pertanyaan-pertanyaan tersebut dapat dikonversi menjadi SPARQL
-\textit{query} untuk diperiksa apakah KG mengembalikan jawaban yang sesuai. Kemudian, dirancang ontologi
-(desain KG) yang dapat menjawab pertanyaan-pertanyaan tersebut. Perancangan ontologi ini mempermudah
-konstruksi KG.
+\textit{query} untuk diperiksa apakah KG mengembalikan jawaban yang sesuai. Kemudian, dirancang
+ontologi (desain KG) yang dapat menjawab pertanyaan-pertanyaan tersebut. Perancangan ontologi ini
+mempermudah konstruksi KG.
 
 \begin{figure}
   \centering
@@ -182,7 +177,7 @@ konstruksi KG.
 
     %Nodes
     \node[r] (pertanyaan)                           {Pertanyaan Riset};
-    \node[r] (ontologi)     [below=of pertanyaan]   {Pengembangan Ontologi};
+    \node[r] (ontologi)     [below=of pertanyaan]   {Perancangan Ontologi};
     \node[r] (pengembangan) [below=of ontologi]     {Pengembangan Sistem Konversi};
     \node[r] (usecase)      [below=of pengembangan] {\textit{Use Case Evaluation}};
     \node[r] (eval)         [below=of usecase]      {\textit{Large Scale Evaluation}};
@@ -198,12 +193,12 @@ konstruksi KG.
   \label{fig:metodologi}
 \end{figure}
 
-Karena sulit untuk menjamin hasil konversi untuk semua PDF \legal, akan
-terdapat beberapa PDF yang akan dijamin konversinya benar yang selanjutnya akan disebut
-\textit{maintained PDFs}. Pengembangan sistem konversi dilakukan secara iteratif. Setiap terdapat
-perubahan pada sistem, akan dicek apakah untuk semua \textit{maintained PDFs} memberikan hasil
-konversi yang benar. Sistem konversi akan menerima input berupa PDF dan mengeluarkan output berupa
-KG dengan ontologi yang sudah dirancang pada tahap sebelumnya.
+Karena sulit untuk menjamin hasil konversi untuk semua PDF \legal, akan terdapat beberapa PDF yang
+akan dijamin konversinya benar yang selanjutnya akan disebut \textit{maintained PDFs}. Pengembangan
+sistem konversi dilakukan secara iteratif. Setiap terdapat perubahan pada sistem, akan dicek apakah
+untuk semua \textit{maintained PDFs} memberikan hasil konversi yang benar. Sistem konversi akan
+menerima input berupa PDF dan mengeluarkan output berupa KG dengan ontologi yang sudah dirancang
+pada tahap sebelumnya.
 
 Untuk menjamin KG yang dibuat dapat menjawab \textit{competency questions}, dalam penelitian ini
 dilakukan \textit{use case evaluation} yaitu berupa demonstrasi contoh penerapan dari KG berdasarkan
