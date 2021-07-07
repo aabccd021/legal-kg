@@ -51,7 +51,8 @@ tersebut. Berikut adalah semua \textit{class} komponen beserta URI dan deskripsi
   \texttt{Menimbang}      & Hal yang ditimbang oleh suatu peraturan                                                         \\ \hline
   \texttt{Mengingat}      & Hal yang diingat oleh suatu peraturan                                                           \\ \hline
   \texttt{Segmen}         & Segmen teks. Dapat memiliki rujukan ke suatu komponen peraturan                                 \\ \hline
-  \caption{Long table caption.\label{longsz}}                                                                               \\
+  \caption{Deskripsi Class Lex2KG}
+  \label{tab:class}
 \end{longtable}
 
 %--------------------------------------------------------------------------------------------------%
@@ -74,7 +75,8 @@ dikurung dengan kurung kurawal \texttt{\{\}}.
   Peraturan Daerah Provinsi DKI Jakarta & \texttt{/perda\_provinsi\_dki\_jakarta/\{thn\}/\{nmr\}} & \makecell[l]{\texttt{thn}: tahun peraturan \\\texttt{nmr}: nomor peraturan} \\\hline
   Peraturan Gubernur DKI Jakarta        & \texttt{/pergub\_dki\_jakarta/\{thn\}/\{nmr\}}          & \makecell[l]{\texttt{thn}: tahun peraturan \\\texttt{nmr}: nomor peraturan} \\\hline
   Peraturan Walikota Malang             & \texttt{/perwali\_malang/\{thn\}/\{nmr\}}               & \makecell[l]{\texttt{thn}: tahun peraturan \\\texttt{nmr}: nomor peraturan} \\\hline
-  \caption{Long table caption.\label{longs2}}                                                                                                  \\
+  \caption{Konstruksi URI untuk Peraturan Perundang-undangan}
+  \label{tab:uri-peraturan}
 \end{longtable}
 
 Setiap komponen dokumen merupakan entitas, dan memiliki URI. URI sebuah komponen didahului oleh
@@ -108,7 +110,8 @@ perundang-undangan beserta pola URI nya.
   \texttt{Mengingat}               & \texttt{\{docURI\}/mengingat}         & \texttt{docURI}: URI peraturan yang mengatasi                                                                                                            \\ \hline
   \texttt{Segmen}                  & \texttt{\{parentURI\}/\{name\}}       & \texttt{parentURI}: URI \texttt{Ayat}, \texttt{Huruf}, \texttt{DaftarHuruf}, \texttt{VersiPasal}, \texttt{Menimbang}, \texttt{Mengingat}, yang mengatasi \\
                                    &                                       & \texttt{name}: Nama teks                                                                                                                                 \\ \hline
-  \caption{Long table caption.\label{longs}}                                                                                                                                                                                          \\
+  \caption{Konstruksi URI untuk komponen Peraturan Perundang-undangan}
+  \label{tab:uri-komponen}
 \end{longtable}
 
 %--------------------------------------------------------------------------------------------------%
@@ -154,5 +157,6 @@ adalah berupa URI komponen, sedangkan objek dapat berupa URI komponen, string, \
   \texttt{disahkanOleh}    & \texttt{Peraturan}                                                                                                  & string                                                & Peraturan disahkan oleh                           \\ \hline
   \texttt{jabatanPengesah} & \texttt{Peraturan}                                                                                                  & string                                                & Jabatan pengesah peraturan                        \\ \hline
   \texttt{bagianDari}      & komponen apapun                                                                                                     & komponen apapun                                       & Komponen subjek adalah bagian dari komponen objek \\ \hline
-  \caption{Long table caption.\label{long}}                                                                                                                                                                                                                  \\
+  \caption{Nama, domain, dan range properti Lex2KG}
+  \label{tab:properti}
 \end{longtable}

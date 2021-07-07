@@ -243,11 +243,11 @@ jika nomor 9 tidak berhasil terpindai dan jika berhasil terpindai.
   \label{lst:no-9-terpindai}
 \end{listing}
 
-%--------------------------------------------------------------------------------------------------%
-\section{Klasifikasi Dokumen}\label{klasifikasi-dokumen}
-%--------------------------------------------------------------------------------------------------%
+% // TODO: %--------------------------------------------------------------------------------------------------%
+% \section{Klasifikasi Dokumen}\label{klasifikasi-dokumen}
+% %--------------------------------------------------------------------------------------------------%
 
-Pa
+% Pa
 
 %--------------------------------------------------------------------------------------------------%
 \section{Pengelompokan \textit{span} menjadi Komponen}\label{pengelompokan-span-menjadi-komponen}
@@ -379,8 +379,6 @@ Data sitasi mengandung data sebagai berikut:
   \item \texttt{uri}: URI dokumen dan
 \end{itemize}
 
-Berikut adalah .
-
 \begin{listing}[H]
   \begin{minted}[frame=single, fontsize=\footnotesize]{yaml}
 textString: >-
@@ -420,27 +418,91 @@ sebagai 3 URI sitasi sebagai berikut.
 Pada kasus ini, yang akan diambil adalah teks ``Pasal 156 ayat (4)'' karena merupakan teks
 terpanjang.
 
+% // TODO: %--------------------------------------------------------------------------------------------------%
+% \section{Visualisasi dengan Markdown}\label{data-to-md}
+% %--------------------------------------------------------------------------------------------------%
+
+% \begin{figure}[H]
+%   \centering
+%   \includegraphics[width=\textwidth]{pictures/yaml-vs-md.png}
+%   \caption{Perbandingan visualisasi dengan yaml (kiri) dan markdown (kanan)}
+%   \label{fig:yaml-vs-md}
+% \end{figure}
+
 %--------------------------------------------------------------------------------------------------%
-\section{Visualisasi dengan Markdown}\label{data-to-md}
+\section{Konstruksi KG}\label{data-to-triple}
 %--------------------------------------------------------------------------------------------------%
 
-\begin{figure}[H]
+\begin{figure}
   \centering
-  \includegraphics[width=\textwidth]{pictures/yaml-vs-md.png}
-  \caption{Perbandingan visualisasi dengan yaml (kiri) dan markdown (kanan)}
-  \label{fig:yaml-vs-md}
+  \begin{tikzpicture}[node distance=0.5cm]
+    %Styles   
+    \tikzstyle{r} = [rectangle, minimum width=7cm, minimum height=0.5cm, draw, text centered]
+
+    %Nodes
+    \node[r] (data)                       {Data};
+    \node[r] (uri)     [below=of data]    {Konstruksi URI dan Literal};
+    \node[r] (class)   [below=of uri]     {\textit{Class Assignment}};
+    \node[r] (triple)  [below=of class]   {Konstruksi Triple};
+    \node[r] (reverse) [below=of triple]  {Konstruksi \textit{reverse property}};
+    \node[r] (kg)      [below=of reverse] {KG};
+
+    %Lines
+    \draw[->] (data.south)    -- (uri.north);
+    \draw[->] (uri.south)     -- (class.north);
+    \draw[->] (class.south)   -- (triple.north);
+    \draw[->] (triple.south)  -- (reverse.north);
+    \draw[->] (reverse.south) -- (kg.north);
+
+  \end{tikzpicture}
+  \caption{Konstruksi KG}
+  \label{fig:konstruksi-kg}
 \end{figure}
 
-%--------------------------------------------------------------------------------------------------%
-\section{Data to triple}\label{data-to-triple}
-%--------------------------------------------------------------------------------------------------%
-
-%--------------------------------------------------------------------------------------------------%
-\section{triple to ttl}\label{triple-to-ttl}
-%--------------------------------------------------------------------------------------------------%
+KG dikonstruksi dari data peraturan perundang-undangan yang sudah terdapat sebagai data terstruktur
+dalam memori. Setiap objek seperti peraturan dan komponen akan dibangun menjadi URI berdasarkan
+\tab~\ref{tab:uri-peraturan} dan \tab~\ref{tab:uri-peraturan}. Literal seperti bilangan,
+\textit{string}, dan tanggal juga dikonversi sesuai spesifikasi \textit{literal type} pada turtle.
+Setiap objek juga akan di-\textit{assign} ke masing-masing \textit{class} sesuai yang terdapat pada
+\tab~\ref{tab:class}. Kemudian triple dibangun berdasarkan relasi antara peraturan atau komponen
+dengan properti, domain, dan range sesuai spesifikasi pada \tab~\ref{tab:properti}.
 
 %--------------------------------------------------------------------------------------------------%
 \section{Query}\label{query}
 %--------------------------------------------------------------------------------------------------%
 
-% // TODO: jelasin fuseki + tdb di implementasi (command2), harus reproducable
+Query dilakukan terhadap KG untuk evaluasi \textit{competency question} dan membuat demonstrasi
+untuk \textit{use case evaluation}. Apache Jena Fuseki
+\footnote{\url{https://jena.apache.org/documentation/fuseki2/}} digunakan sebagai SPARQL server yang
+menyimpan KG dan melakukan query terhadap KG. Instalasi Fuseki dapat dilakukan dengan
+\lst~\ref{lst:install-fuseki}.
+
+\begin{listing}[H]
+  \begin{minted}[frame=single, breaklines, fontsize=\footnotesize]{bash}
+wget https://downloads.apache.org/jena/binaries/apache-jena-fuseki-4.1.0.tar.gz
+tar xvzf apache-jena-fuseki-4.1.0.tar.gz
+cd apache-jena-fuseki-4.1.0
+  \end{minted}
+  \caption{Command untuk melakukan instalasi Fuseki}
+  \label{lst:install-fuseki}
+\end{listing}
+
+Setelah instalasi Fuseki selesai dan berhasil masuk ke dalam folder Fuseki, Fuseki dapat dijalankan
+dengan KG dalam bentuk berkas turtle dengan \lst~\ref{lst:run-fuseki}. Setelah command tersebut
+dijalankan, SPARQL query dapat dilakukan. Pada \lst~\ref{lst:run-fuseki}, Fuseki dijalankan dengan
+endpoint \textit{/lex2kg}, sehingga SPARQL query dapat dilakukan menggunakan \textit{client library}
+dengan endpoint \url{http://127.0.0.1:3030/lex2kg/sparql}, atau pada antarmuka yang tersedia pada
+\url{http://127.0.0.1:3030/dataset.html?tab=query&ds=/lex2kg}. Pada penelitian ini digunakan
+\textit{client library} \texttt{fetch-sparql-endpoint}
+\footnote{\url{https://www.npmjs.com/package/fetch-sparql-endpoint}} untuk melakukan query dari
+bahasa pemrograman typescript.
+
+
+\begin{listing}[H]
+  \begin{minted}[frame=single, breaklines, fontsize=\footnotesize]{bash}
+java -jar fuseki-server.jar --file=lex2kg.ttl /lex2kg
+  \end{minted}
+  \caption{Command untuk menjalankan Fuseki dengan berkas KG lex2kg.ttl}
+  \label{lst:run-fuseki}
+\end{listing}
+
