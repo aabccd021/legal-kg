@@ -1,8 +1,8 @@
 # Count triples about document text
-PREFIX lex2kg-o: <https://example.org/lex2kg/ontology/>
+PREFIX o: <https://example.org/lex2kg/ontology/>
 
 SELECT (COUNT (*) as ?countResult) WHERE {
   ?s
-    lex2kg-o:teks
+    o:teks
   ?o
 } 

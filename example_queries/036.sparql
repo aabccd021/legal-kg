@@ -1,10 +1,10 @@
 # Count triples with citation inside document
-PREFIX lex2kg-o: <https://example.org/lex2kg/ontology/>
+PREFIX o: <https://example.org/lex2kg/ontology/>
 
 SELECT (COUNT (*) as ?countResult) WHERE {
-  ?s lex2kg-o:merujuk ?o .
-  ?s lex2kg-o:bagianDari* ?doc .
-  ?o lex2kg-o:bagianDari* ?doc .
-  ?doc a lex2kg-o:Peraturan .
+  ?s o:merujuk ?o .
+  ?s o:bagianDari* ?doc .
+  ?o o:bagianDari* ?doc .
+  ?doc a o:Peraturan .
 } 
 

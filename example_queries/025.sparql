@@ -1,12 +1,12 @@
 # tampilkan 10 dokumen paling banyak ditimbang
-PREFIX lex2kg-o: <https://example.org/lex2kg/ontology/>
+PREFIX o: <https://example.org/lex2kg/ontology/>
 
 SELECT ?menimbangDoc (COUNT(?doc) as ?penimbangDocCount)
 WHERE {
-  ?doc lex2kg-o:menimbang ?menimbang .
-  ?menimbangText lex2kg-o:bagianDari* ?menimbang .
-  ?menimbangText lex2kg-o:merujuk ?menimbangDoc .
-  ?menimbangDoc a lex2kg-o:Peraturan
+  ?doc o:menimbang ?menimbang .
+  ?menimbangText o:bagianDari* ?menimbang .
+  ?menimbangText o:merujuk ?menimbangDoc .
+  ?menimbangDoc a o:Peraturan
 }
 GROUP BY ?menimbangDoc
 ORDER BY DESC (?penimbangDocCount)

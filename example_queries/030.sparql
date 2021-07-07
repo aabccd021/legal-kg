@@ -1,16 +1,16 @@
 # Count triples about document metadata
-PREFIX lex2kg-o: <https://example.org/lex2kg/ontology/>
+PREFIX o: <https://example.org/lex2kg/ontology/>
 
 SELECT (COUNT (*) as ?countResult) WHERE {
   ?s
-    lex2kg-o:yurisdiksi|
-    lex2kg-o:jenisPeraturan|
-    lex2kg-o:tahun|
-    lex2kg-o:bahasa|
-    lex2kg-o:tentang|
-    lex2kg-o:disahkanPada|
-    lex2kg-o:disahkanDi|
-    lex2kg-o:disahkanOleh|
-    lex2kg-o:jabatanPengesah
+    o:yurisdiksi|
+    o:jenisPeraturan|
+    o:tahun|
+    o:bahasa|
+    o:tentang|
+    o:disahkanPada|
+    o:disahkanDi|
+    o:disahkanOleh|
+    o:jabatanPengesah
   ?o
 } 

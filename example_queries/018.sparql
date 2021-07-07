@@ -1,5 +1,5 @@
 # tampilkan semua triple
-PREFIX lex2kg-o: <https://example.org/lex2kg/ontology/>
+PREFIX o: <https://example.org/lex2kg/ontology/>
 
 SELECT * 
 WHERE {

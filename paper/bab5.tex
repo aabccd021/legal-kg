@@ -6,15 +6,73 @@
 \section{\textit{Use Case Evaluation}}
 \label{sec:use-case-evaluation}
 %--------------------------------------------------------------------------------------------------%
+\textit{Use case} dari KG yang dihasilkan dari Lex2KG dapat berupa 3 macam yaitu:
+\begin{itemize}
+  \item SPARQL Query
+  \item Visualisasi
+  \item Question Answering Chatbot
+\end{itemize}
+\textit{Use case evaluation} akan dilakukan pada contoh KG pada \lst~\ref{lst:use-case-ttl}
+
+\begin{listing}[H]
+  \begin{minted}[frame=single, fontsize=\footnotesize]{turtle}
+@prefix o: <https://example.org/lex2kg/ontology/> .
+@prefix uu: <https://example.org/lex2kg/uu/> .
+
+uu:2010\/1  a o:Peraturan . # UU APBN
+uu:2003\/13 a o:Peraturan . # UU Ketenagakerjaan
+uu:2020\/11 a o:Peraturan . # UU Cipta Kerja
+uu:2020\/11\/pasal\/81 o:bagianDari uu:2020\/11 ;
+                       o:merujuk uu:2003\/13 ;
+                       o:teks "...penempatan tenaga kerja..."
+\end{minted}
+  \caption{KG untuk \textit{use case evaluation}}
+  \label{lst:use-case-ttl}
+\end{listing}
 
 %--------------------------------------------------------------------------------------------------%
-\subsection{\textit{Online Analytical Processing}(OLAP)}
-\label{subsec:olap}
+\subsection{SPARQL Query}
+\label{subsec:sparq-query}
 %--------------------------------------------------------------------------------------------------%
 
-Online Analytical Processing (OLAP) mengacu pada aktivitas umum query dan penyajian data teks dan
-angka dari \textit{data warehouse} untuk tujuan analisis \citep{olap}. OLAP pada KG dapat dilakukan
-dengan melakukan query analisis terhadap KG tersebut.
+Dengan menggunakan SPARQL server seperi Apache Jena Fuseki, KG yang dibuat dengan Lex2KG dapat
+dianalisis dengan menjalankan SPARQL query. SPARQL query memiliki fitur operasi \textit{join},
+\textit{union}, \textit{optional}, dan \textit{negation pattern}. SPARQL juga menyediakan query
+analisis yang lengkap seperti \textit{filter}, \textit{aggregate}, dan \textit{property path}.
+Dengan menggunakan SPARQL query, salah satu \textit{competency question} ``Tampilkan semua peraturan
+melakukan rujukan serta tampilkan peraturan yang dirujuknya.'' dapat dijawab dengan melakukan query
+\lst~\ref{lst:query-rujuk} yang akan memberikan output \tab~\ref{tab:output-query-rujuk}.
+
+\begin{listing}[H]
+  \begin{minted}[frame=single, fontsize=\footnotesize]{sparql}
+PREFIX o: <https://example.org/lex2kg/ontology/>
+
+SELECT ?perujuk ?terrujuk
+WHERE {
+  ?komponen o:bagianDari* ?perujuk ;
+            o:merujuk ?terrujuk .
+  ?terrujuk a o:Peraturan .
+  ?perujuk a o:Peraturan .
+  FILTER (?perujuk != ?terujuk) .
+}
+  \end{minted}
+  \caption{Query 1}
+  \label{lst:query-rujuk}
+\end{listing}
+
+\begin{table}
+  \centering
+  \begin{tabular}{|l|l|} \hline
+    ?perujuk   & ?terrujuk  \\\hline \hline
+    uu:2020/11 & uu:2003/13 \\\hline
+  \end{tabular}
+  \caption{Output Query \lst~\ref{lst:query-rujuk} }
+  \label{tab:output-query-rujuk}
+\end{table}
+
+
+
+
 
 %--------------------------------------------------------------------------------------------------%
 \subsection{Visualisasi KG}

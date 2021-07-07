@@ -1,9 +1,9 @@
 # tampilkan 10 tempat disahkan paling banyak
-PREFIX lex2kg-o: <https://example.org/lex2kg/ontology/>
+PREFIX o: <https://example.org/lex2kg/ontology/>
 
 SELECT ?location (COUNT(?doc) as ?docCount)
 WHERE {
-  ?doc lex2kg-o:disahkanDi ?location
+  ?doc o:disahkanDi ?location
 }
 GROUP BY ?location
 ORDER BY DESC (?docCount)

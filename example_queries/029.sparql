@@ -1,28 +1,28 @@
 # Count triples about document structure
-PREFIX lex2kg-o: <https://example.org/lex2kg/ontology/>
+PREFIX o: <https://example.org/lex2kg/ontology/>
 
 SELECT (COUNT (*) as ?countResult) WHERE {
   ?s
-    lex2kg-o:nomor|
-    lex2kg-o:judul|
-    lex2kg-o:bab|
-    lex2kg-o:bagian|
-    lex2kg-o:paragraf|
-    lex2kg-o:pasal|
-    lex2kg-o:ayat|
-    lex2kg-o:huruf|
-    lex2kg-o:segmen|
-    lex2kg-o:daftarBab|
-    lex2kg-o:daftarBagian|
-    lex2kg-o:daftarParagraf|
-    lex2kg-o:daftarPasal|
-    lex2kg-o:daftarAyat|
-    lex2kg-o:daftarHuruf|
-    lex2kg-o:tanggal|
-    lex2kg-o:jenisVersi|
-    lex2kg-o:versi|
-    lex2kg-o:menimbang|
-    lex2kg-o:mengingat|
-    lex2kg-o:bagianDari
+    o:nomor|
+    o:judul|
+    o:bab|
+    o:bagian|
+    o:paragraf|
+    o:pasal|
+    o:ayat|
+    o:huruf|
+    o:segmen|
+    o:daftarBab|
+    o:daftarBagian|
+    o:daftarParagraf|
+    o:daftarPasal|
+    o:daftarAyat|
+    o:daftarHuruf|
+    o:tanggal|
+    o:jenisVersi|
+    o:versi|
+    o:menimbang|
+    o:mengingat|
+    o:bagianDari
   ?o
 } 

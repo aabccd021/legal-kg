@@ -1,20 +1,20 @@
 # Give me components of Omnibus Law that remove (= menghapus) articles in Labor Law and show the textual content of the removed articles
-PREFIX lex2kg-o: <https://example.org/lex2kg/ontology/>
+PREFIX o: <https://example.org/lex2kg/ontology/>
 
 SELECT ?deletingPoint ?deletedPasal ?version ?text WHERE {
   {
     SELECT ?pasal (MAX(?pasalVersion) as ?latestPasalVersion) WHERE {
-      ?pasal lex2kg-o:bagianDari+ <https://example.org/lex2kg/uu/2020/11>.
-      ?pasal lex2kg-o:versi ?pasalVersion .
+      ?pasal o:bagianDari+ <https://example.org/lex2kg/uu/2020/11>.
+      ?pasal o:versi ?pasalVersion .
     } GROUP BY ?pasal
   }
-  ?deletingPoint lex2kg-o:bagianDari+ ?latestPasalVersion .
-  ?deletingPoint lex2kg-o:menghapus ?deletedPasalVersion .
-  ?deletedPasal lex2kg-o:versi ?deletedPasalVersion .
-  <https://example.org/lex2kg/uu/2003/13> lex2kg-o:pasal ?deletedPasal .
-  ?deletedPasal lex2kg-o:versi ?allPasalVersion .
-  ?allPasalVersion lex2kg-o:teks ?text .
-  ?allPasalVersion lex2kg-o:tanggal ?version .
+  ?deletingPoint o:bagianDari+ ?latestPasalVersion .
+  ?deletingPoint o:menghapus ?deletedPasalVersion .
+  ?deletedPasal o:versi ?deletedPasalVersion .
+  <https://example.org/lex2kg/uu/2003/13> o:pasal ?deletedPasal .
+  ?deletedPasal o:versi ?allPasalVersion .
+  ?allPasalVersion o:teks ?text .
+  ?allPasalVersion o:tanggal ?version .
 }
 ORDER BY ?deletingPoint ?deletedPasal ?version ?text
 LIMIT 3

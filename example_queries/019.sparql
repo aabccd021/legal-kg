@@ -1,9 +1,9 @@
 # tampilkan 10 legal doc pertama
-PREFIX lex2kg-o: <https://example.org/lex2kg/ontology/>
+PREFIX o: <https://example.org/lex2kg/ontology/>
 
 SELECT * 
 WHERE {
-  ?legalDoc a lex2kg-o:Peraturan
+  ?legalDoc a o:Peraturan
 } 
 ORDER BY ?legalDoc
 LIMIT 10

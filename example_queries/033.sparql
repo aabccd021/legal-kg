@@ -1,6 +1,6 @@
 # Count triples about document change
-PREFIX lex2kg-o: <https://example.org/lex2kg/ontology/>
+PREFIX o: <https://example.org/lex2kg/ontology/>
 
 SELECT (COUNT (*) as ?countResult) WHERE {
-  ?s lex2kg-o:mengubah|lex2kg-o:menghapus|lex2kg-o:menyisipkan ?o
+  ?s o:mengubah|o:menghapus|o:menyisipkan ?o
 } 
