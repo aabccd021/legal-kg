@@ -328,36 +328,36 @@ dijamin mengandung semua \texttt{bab 1} sampai \texttt{bab 11} dan apabila terde
 \texttt{pasal 195}.
 
 %--------------------------------------------------------------------------------------------------%
-\subsection{Komponen Amandemen}
-\label{komponen-amandemen}
+\subsection{Komponen amendemen}
+\label{komponen-amendemen}
 %--------------------------------------------------------------------------------------------------%
 
-Mengekstraksi \textit{span} pada bagian amandemen merupakan salahsatu tantangan pada penelitian ini.
-Dibawah adalah gambar amandemen pada Pasal 17 UU Nomor 11 Tahun 2020 yang dilakukan terhadap Pasal 1
+Mengekstraksi \textit{span} pada bagian amendemen merupakan salahsatu tantangan pada penelitian ini.
+Dibawah adalah gambar amendemen pada Pasal 17 UU Nomor 11 Tahun 2020 yang dilakukan terhadap Pasal 1
 UU Nomor 26 Tahun 2007. Dapat dilihat bahwa kata \texttt{Pasal 17} dan \texttt{Pasal 1} yang
 digunakan sebagai pembatas antara komponen memiliki pola teks dan posisi yang hampir sama. Hal ini
-membuat pembedaan antara ``Pasal biasa'' dan ``Pasal peng-amandemen'' menjadi sulit dilakukan.
+membuat pembedaan antara ``Pasal biasa'' dan ``Pasal peng-amendemen'' menjadi sulit dilakukan.
 
 \begin{figure}[H]
   \centering
   \includegraphics{pictures/pdf_amendment.png}
   \caption{Contoh Amendemen pada UU Nomor 11 Tahun 2020}
-  \label{fig:contoh-amandemen}
+  \label{fig:contoh-amendemen}
 \end{figure}
 
 Untuk menyelesaikan masalah ini, penulis menggunakan koordinat \texttt{xL} \textit{span} tepat
-setelah \textit{span} yang bertuliskan ``Pasal X''. Pada contoh deteksi kompoonen amandemen
-\pic~\ref{fig:deteksi-amandemen}, \texttt{xL} dari teks setelah pasal peng-amandemen (pasal biasa)
-ditandai dengan \textcolor{red}{lingkaran merah}, \texttt{xL} dari pasal yang diamandemen ditandai
+setelah \textit{span} yang bertuliskan ``Pasal X''. Pada contoh deteksi kompoonen amendemen
+\pic~\ref{fig:deteksi-amendemen}, \texttt{xL} dari teks setelah pasal peng-amendemen (pasal biasa)
+ditandai dengan \textcolor{red}{lingkaran merah}, \texttt{xL} dari pasal yang diamendemen ditandai
 dengan \textcolor{blue}{lingkaran biru}, dan garis hijau merepresentasikan batas pemeda \texttt{xL}
-antara pasal biasa dan pasal yang diamandemen. Pembedaan pasal biasa dan pasal amandemen hanya
-dilakukan jika dokumen memiliki komponen berupa amandemen.
+antara pasal biasa dan pasal yang diamendemen. Pembedaan pasal biasa dan pasal amendemen hanya
+dilakukan jika dokumen memiliki komponen berupa amendemen.
 
 \begin{figure}[H]
   \centering
   \includegraphics{pictures/amendment_detection.png}
-  \caption{Deteksi Komponen Amandemen}
-  \label{fig:deteksi-amandemen}
+  \caption{Deteksi Komponen amendemen}
+  \label{fig:deteksi-amendemen}
 \end{figure}
 
 %--------------------------------------------------------------------------------------------------%
@@ -478,7 +478,7 @@ dalam memori. Setiap objek seperti peraturan dan komponen akan dibangun menjadi 
 \tab~\ref{tab:uri-peraturan} dan \tab~\ref{tab:uri-peraturan}. Literal seperti bilangan,
 \textit{string}, dan tanggal juga dikonversi sesuai spesifikasi \textit{literal type} pada Turtle.
 Setiap objek juga akan di-\textit{assign} ke masing-masing \textit{class} sesuai yang terdapat pada
-\tab~\ref{tab:class}. Kemudian\textit{triple}dibangun berdasarkan relasi antara peraturan atau komponen
+\tab~\ref{tab:class}. Kemudian \textit{triple} dibangun berdasarkan relasi antara peraturan atau komponen
 dengan properti, domain, dan range sesuai spesifikasi pada \tab~\ref{tab:properti}.
 
 % // TODO: Merge TTL
