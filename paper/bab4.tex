@@ -1,9 +1,16 @@
 %--------------------------------------------------------------------------------------------------%
-\chapter{IMPLEMENTASI}\label{chap:4}
+\chapter{IMPLEMENTASI}
+\label{chap:4}
 %--------------------------------------------------------------------------------------------------%
 
+% // TODO: pengatar bab
+% // TODO: jelasin aja yg tiga versi pdf utk nanti dikonstruk yg dipilih yg terbaik
+% // TODO: gambar2 yg dipresentsiin gdp labs bs dimasukkin
+% // TODO: regex2nya bs dtmbhin
+
 %--------------------------------------------------------------------------------------------------%
-\section{OCR Ulang Berkas PDF}\label{sec:ocr-ulang-berkas-pdf}
+\section{OCR Ulang Berkas PDF}
+\label{sec:ocr-ulang-berkas-pdf}
 %--------------------------------------------------------------------------------------------------%
 
 Dokumen peraturan perundang-undangan yang digunakan pada penelitian didapatkan dalam format berkas
@@ -48,8 +55,9 @@ berbeda-beda dan kesalahan pemindaian yang tidak konsisten. Untuk menyelesaikan 
 melakukan OCR ulang terhadap semua dokumen yang akan di konversi. Dengan melakukan OCR ulang
 menggunakan satu metode yang sama, penulis tidak hanya berhasil mendapatkan data hasil pemindaian
 berkas PDF dengan kualitas pemindaian yang konsisten untuk semua dokumen. Penulis memilih
-menggunakan Tesseract OCR \href{https://github.com/tesseract-ocr/tesseract}{4} sebagai metode OCR
-karena sifatnya \textit{open source} dan mendukung Bahasa Indonesia sebagai bahasa yang dipindai.
+menggunakan Tesseract OCR\footnote{\url{https://github.com/tesseract-ocr/tesseract}} sebagai metode
+OCR karena sifatnya \textit{open source} dan mendukung Bahasa Indonesia sebagai bahasa yang
+dipindai.
 
 Untuk melakukan OCR ulang perlu dilakukan instalasi program yang dibutuhkan yang dapat dilakukan
 dengan \textit{command} berikut pada sistem operasi Ubuntu 20.04. \texttt{ocrmypdf} merupakan
@@ -94,8 +102,8 @@ tessedit_pageseg_mode 4
 \end{listing}
 
 %--------------------------------------------------------------------------------------------------%
-\section{Ekstraksi Berkas PDF menjadi Data
-  \textit{Span}}\label{ekstraksi-berkas-pdf-menjadi-data-span}
+\section{Ekstraksi Berkas PDF menjadi Data \textit{Span}}
+\label{ekstraksi-berkas-pdf-menjadi-data-span}
 %--------------------------------------------------------------------------------------------------%
 
 Agar dapat diproses oleh program, berkas PDF perlu diolah menjadi data berupa daftar teks dan
@@ -121,6 +129,7 @@ daftar \textit{span}.
   \caption{Contoh PDF yang akan diekstraksi}
   \label{fig:contoh-dokumen}
 \end{figure}
+% // TODO: ksh border
 
 akan dipindai menjadi
 
@@ -156,7 +165,8 @@ akan dipindai menjadi
 \end{listing}
 
 %--------------------------------------------------------------------------------------------------%
-\section{Membersihkan \textit{Noise} dari Halaman}\label{membersihkan-noise-dari-halaman}
+\section{Membersihkan \textit{Noise} dari Halaman}
+\label{membersihkan-noise-dari-halaman}
 %--------------------------------------------------------------------------------------------------%
 
 Tidak jarang dokumen peraturan Perudang-undangan mengandung data \textit{noise} yang tidak ingin kita
@@ -178,9 +188,11 @@ menggunakan \textit{regex} dan posisi dari setiap \textit{span}, kemudian mengha
 jika terdeteksi sebagai header.
 
 %--------------------------------------------------------------------------------------------------%
-\section{Penggabungan Data Berkas PDF Asli dan Hasil OCR
-  Ulang}\label{penggabungan-data-berkas-pdf-asli-dan-hasil-ocr-ulang}
+\section{Penggabungan Data Berkas PDF Asli dan Hasil OCR Ulang}
+\label{penggabungan-data-berkas-pdf-asli-dan-hasil-ocr-ulang}
 %--------------------------------------------------------------------------------------------------%
+
+% // TODO: Bs lbh dieksplisitkan penjelasan trkait versi OCR yg beda, yg ada 3 jenis
 
 Pada proses ekstraksi berkas PDF menjadi daftar \textit{span}, penulis menemukan satu masalah yaitu
 data hasil OCR tidak konsisten dalam memindai angka. Seperti yang dapat dilihat pada gambar dibawah,
@@ -243,14 +255,9 @@ jika nomor 9 tidak berhasil terpindai dan jika berhasil terpindai.
   \label{lst:no-9-terpindai}
 \end{listing}
 
-% // TODO: %--------------------------------------------------------------------------------------------------%
-% \section{Klasifikasi Dokumen}\label{klasifikasi-dokumen}
-% %--------------------------------------------------------------------------------------------------%
-
-% Pa
-
 %--------------------------------------------------------------------------------------------------%
-\section{Pengelompokan \textit{span} menjadi Komponen}\label{pengelompokan-span-menjadi-komponen}
+\section{Pengelompokan \textit{span} menjadi Komponen}
+\label{pengelompokan-span-menjadi-komponen}
 %--------------------------------------------------------------------------------------------------%
 
 % // TODO: repeat until no new component
@@ -267,7 +274,7 @@ komponen.
 Pengelompokan tidak langsund dilakukan dari daftar \textit{list} menjadi daftar komponen, melainkan
 dibuat pengelompokan \textit{section} untuk pembagian dokumen secara garis besar, kemudian baru
 dikelompokkan sebagai komponen dari masing-masing \textit{section} tersebut. Pada gambar dibawah
-\textit{section} ditandai dengan warna biru dan komponen ditandai dengan warna merah. Dapat dilihat
+\textit{section} ditandai dengan warna \textcolor{blue}{biru} dan komponen ditandai dengan \textcolor{red}{warna merah}. Dapat dilihat
 bahwa daftar \textit{span} data awal dikelompokkan menjadi beberapa \textit{section} yaitu
 \texttt{judul}, \texttt{metadata}, \texttt{babset}, dan \texttt{disahkan}. Kemudian \textit{span} pada
 section \texttt{babset} dikelompokkan menjadi komponen bab yaitu \texttt{Bab 1}, \texttt{Bab 2}, dan
@@ -281,10 +288,11 @@ menjadi rumit.
   \caption{Ilustrasi Ekstraksi Daftar Span menjadi Data Struktur Komponen}
   \label{fig:ilustrasi-ekstraksi}
 \end{figure}
+% // TODO: Section -> Component
 
 Deteksi batas antara komponen atau \textit{section} dilakukan dengan melihat data pada \textit{span}
 seperti \texttt{str}, \texttt{xL}, \texttt{xR}, dan \texttt{y}. Pada gambar diatas, pola yang
-terdeteksi sebagai batas ditandai dengan huruf merah. Sebagai contoh, pada ekstraki paling kiri,
+terdeteksi sebagai batas ditandai dengan \textcolor{red}{teks merah}. Sebagai contoh, pada ekstraki paling kiri,
 dari daftar \textit{span} asli menjadi \textit{section}, dilakukan iterasi \textit{span} dari atas dan
 akan dimasukkan ke dalam \textit{section} \texttt{judul} sampai menemukan \textit{section} yang diawali
 dengan kata \textbf{Menimbang}. Kemudian setiap \textit{span} setelah span \textbf{Menimbang} tersebut
@@ -292,7 +300,8 @@ akan dikelompokkan menjadi \textit{section} \texttt{metadata} sampai menemukan s
 kata \textbf{BAB I}.
 
 %--------------------------------------------------------------------------------------------------%
-\subsection{Komponen Terurut}\label{pengelompokan-span-pada-komponen-terurut}
+\subsection{Komponen Terurut}
+\label{pengelompokan-span-pada-komponen-terurut}
 %--------------------------------------------------------------------------------------------------%
 
 Beberapa komponen seperti \texttt{bab}, \texttt{bagian}, \texttt{paragraf}, \texttt{pasal},
@@ -318,7 +327,8 @@ dijamin mengandung semua \texttt{bab 1} sampai \texttt{bab 11} dan apabila terde
 \texttt{pasal 195}.
 
 %--------------------------------------------------------------------------------------------------%
-\subsection{Komponen Amandemen}\label{komponen-amandemen}
+\subsection{Komponen Amandemen}
+\label{komponen-amandemen}
 %--------------------------------------------------------------------------------------------------%
 
 Mengekstraksi \textit{span} pada bagian amandemen merupakan salahsatu tantangan pada penelitian ini.
@@ -336,8 +346,8 @@ membuat pembedaan antara ``Pasal biasa'' dan ``Pasal peng-amandemen'' menjadi su
 
 Untuk menyelesaikan masalah ini, penulis menggunakan koordinat \texttt{xL} \textit{span} tepat setelah
 \textit{span} yang bertuliskan ``Pasal X''. Pada contoh deteksi kompoonen amandemen di bawah,
-\texttt{xL} dari teks setelah pasal peng-amandemen (pasal biasa) ditandai dengan lingkaran merah,
-\texttt{xL} dari pasal yang diamandemen ditandai dengan lingkaran biru, dan garis hijau
+\texttt{xL} dari teks setelah pasal peng-amandemen (pasal biasa) ditandai dengan \textcolor{red}{lingkaran merah},
+\texttt{xL} dari pasal yang diamandemen ditandai dengan \textcolor{blue}{lingkaran biru}, dan garis hijau
 merepresentasikan batas pemeda \texttt{xL} antara pasal biasa dan pasal yang diamandemen. Pembedaan
 pasal biasa dan pasal amandemen hanya dilakukan jika dokumen memiliki komponen berupa amandemen.
 
@@ -349,8 +359,11 @@ pasal biasa dan pasal amandemen hanya dilakukan jika dokumen memiliki komponen b
 \end{figure}
 
 %--------------------------------------------------------------------------------------------------%
-\section{Deteksi Sitasi}\label{deteksi-sitasi}
+\section{Deteksi Sitasi}
+\label{deteksi-sitasi}
 %--------------------------------------------------------------------------------------------------%
+
+% // TODO: regexny tmbhn jg utk yg deteksi sitasi
 
 Setelah semua \textit{span} dikelompokan menjadi suatu komponen, dilakukan deteksi sitasi pada teks
 pada setiap komponen untuk mengetahui apakah komponen tersebut menyebut komponen atau dokumen
@@ -420,20 +433,15 @@ sebagai 3 URI sitasi sebagai berikut.
 Pada kasus ini, yang akan diambil adalah teks ``Pasal 156 ayat (4)'' karena merupakan teks
 terpanjang.
 
-% // TODO: %--------------------------------------------------------------------------------------------------%
-% \section{Visualisasi dengan Markdown}\label{data-to-md}
-% %--------------------------------------------------------------------------------------------------%
-
-% \begin{figure}[H]
-%   \centering
-%   \includegraphics[width=\textwidth]{pictures/yaml-vs-md.png}
-%   \caption{Perbandingan visualisasi dengan yaml (kiri) dan markdown (kanan)}
-%   \label{fig:yaml-vs-md}
-% \end{figure}
+% // TODO: Visualisasi dengan Markdown
 
 %--------------------------------------------------------------------------------------------------%
-\section{Konstruksi KG}\label{data-to-triple}
+\section{Konstruksi KG}
+\label{data-to-triple}
 %--------------------------------------------------------------------------------------------------%
+
+% // TODO: ontologynya mana?
+% // TODO: perlu dijelasin jg yg reverse property
 
 \begin{figure}
   \centering
@@ -464,24 +472,22 @@ terpanjang.
 KG dikonstruksi dari data peraturan perundang-undangan yang sudah terdapat sebagai data terstruktur
 dalam memori. Setiap objek seperti peraturan dan komponen akan dibangun menjadi URI berdasarkan
 \tab~\ref{tab:uri-peraturan} dan \tab~\ref{tab:uri-peraturan}. Literal seperti bilangan,
-\textit{string}, dan tanggal juga dikonversi sesuai spesifikasi \textit{literal type} pada turtle.
+\textit{string}, dan tanggal juga dikonversi sesuai spesifikasi \textit{literal type} pada Turtle.
 Setiap objek juga akan di-\textit{assign} ke masing-masing \textit{class} sesuai yang terdapat pada
 \tab~\ref{tab:class}. Kemudian triple dibangun berdasarkan relasi antara peraturan atau komponen
 dengan properti, domain, dan range sesuai spesifikasi pada \tab~\ref{tab:properti}.
 
-
-% // TODO: %--------------------------------------------------------------------------------------------------%
-% \section{Merge TTL}\label{data-to-md}
-% %--------------------------------------------------------------------------------------------------%
+% // TODO: Merge TTL
 
 %--------------------------------------------------------------------------------------------------%
-\section{Query}\label{query}
+\section{Query}
+\label{sec:query}
 %--------------------------------------------------------------------------------------------------%
 
 Query dilakukan terhadap KG untuk evaluasi \textit{competency question} dan membuat demonstrasi
-untuk \textit{use case evaluation}. Apache Jena Fuseki
-\footnote{\url{https://jena.apache.org/documentation/fuseki2/}} digunakan sebagai SPARQL server yang
-menyimpan KG dan melakukan query terhadap KG. Instalasi Fuseki dapat dilakukan dengan
+untuk \textit{use case evaluation}. Apache Jena
+Fuseki\footnote{\url{https://jena.apache.org/documentation/fuseki2/}} digunakan sebagai SPARQL
+server yang menyimpan KG dan melakukan query terhadap KG. Instalasi Fuseki dapat dilakukan dengan
 \lst~\ref{lst:install-fuseki}.
 
 \begin{listing}[H]
@@ -495,14 +501,14 @@ cd apache-jena-fuseki-4.1.0
 \end{listing}
 
 Setelah instalasi Fuseki selesai dan berhasil masuk ke dalam folder Fuseki, Fuseki dapat dijalankan
-dengan KG dalam bentuk berkas turtle dengan \lst~\ref{lst:run-fuseki}. Setelah command tersebut
+dengan KG dalam bentuk berkas Turtle dengan \lst~\ref{lst:run-fuseki}. Setelah command tersebut
 dijalankan, SPARQL query dapat dilakukan. Pada \lst~\ref{lst:run-fuseki}, Fuseki dijalankan dengan
 endpoint \textit{/lex2kg}, sehingga SPARQL query dapat dilakukan menggunakan \textit{client library}
 dengan endpoint \url{http://127.0.0.1:3030/lex2kg/sparql}, atau pada antarmuka yang tersedia pada
 \url{http://127.0.0.1:3030/dataset.html?tab=query&ds=/lex2kg}. Pada penelitian ini digunakan
-\textit{client library} \texttt{fetch-sparql-endpoint}
-\footnote{\url{https://www.npmjs.com/package/fetch-sparql-endpoint}} untuk melakukan query dari
-bahasa pemrograman typescript.
+\textit{client library}
+\texttt{fetch-sparql-endpoint}\footnote{\url{https://www.npmjs.com/package/fetch-sparql-endpoint}}
+untuk melakukan query dari bahasa pemrograman typescript.
 
 
 \begin{listing}[H]
@@ -513,3 +519,11 @@ java -jar fuseki-server.jar --file=lex2kg.ttl /lex2kg
   \label{lst:run-fuseki}
 \end{listing}
 
+
+% // TODO: bs ditampakkan turtle hasil akhr utk snippet KG dari suatu UU, dan dijelasin. tunjukkin
+% kyk fitur2 utama dari pengubahan ke RDFnya, kyk metadata, struktur, citation/amendment, dsb lalu
+% tunjukkin jg contoh yg utk nonUU
+
+% // TODO: analisis jmlh tripel yg dihasilkan, lalu brp yg metadata dsb.
+
+% // TODO: jelasin dokumen kayak gimana yang belum bisa di parse, jelasin 3 yang ga bisa dihandle

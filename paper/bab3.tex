@@ -3,6 +3,13 @@
 \label{chap:3}
 %--------------------------------------------------------------------------------------------------%
 
+% // TODO: Sekilas aja dikasih+bahas singkat yg Arsitektur di paper (pindah sini)
+% // TODO: ksh pengantar bab,
+% // TODO: kasih pengantar section
+% // TODO: buat table
+% // TODO: Perancangan Class dan URI untuk Class (general)
+% // TODO: Msh belum: Perancangan Resource dan URI untuk Resource
+
 %--------------------------------------------------------------------------------------------------%
 \section{\textit{Competency Questions}}
 \label{sec:competency-questions}
@@ -13,7 +20,7 @@
   \item Tampilkan teks dari UU Cipta Kerja Pasal 2 Ayat.
   \item Tampilkan semua pasal yang terdapat pada UU Cipta Kerja Bab 2.
   \item Dapatkan ayat yang mengandung teks "kompensasi" dan "buruh" yang
-        disisipkan(\textit{inserted}) oleh  UU Cipta Kerja.
+        disisipkan (\textit{inserted}) oleh  UU Cipta Kerja.
   \item Dapatkan komponen dari UU Cipta Kerja yang menyisipkan pasal ke UU Ketenagakerjaan dan
         tampilkan pula teks dari pasal tersebut.
   \item Dapatkan komponen dari UU Cipta Kerja yang mengubah pasal UU Ketenagakerjaan dan tambilkan
@@ -44,6 +51,11 @@
   \item Tampilkan jumlah triple tentang \textit{update} peraturan.
   \item Tampilkan jumlah triple tentang \textit{class assignment}.
   \item Tampilkan 5 peraturan dengan komponen terbanyak beserta jumlah komponennya.
+  \item Peraturan apa yang berlaku pada daerah X yang disahkan di tahun Y?
+  \item Apa relasi suatu peraturan dengan peraturan lain?
+  \item Mana saja peraturan yang membahas tentang topik W atau X tapi bukan topik Y dan bukan Z?
+  \item Apa isi dari Pasal X ayat (Y) huruf Z dari suatu peraturan perundang-undangan?
+  \item Apa saja bab-bab yang terdapat pada peraturan X?
 \end{itemize}
 
 
@@ -182,7 +194,7 @@ adalah berupa URI komponen, sedangkan objek dapat berupa URI komponen, string, \
   \texttt{pasal}           & \texttt{DaftarPasal}                                                                                                & \texttt{Pasal}                                        & Pasal                                             \\ \hline
   \texttt{ayat}            & \texttt{DaftarAyat}                                                                                                 & \texttt{Ayat}                                         & Ayat                                              \\ \hline
   \texttt{huruf}           & \texttt{DaftarHuruf}                                                                                                & \texttt{Huruf}                                        & Huruf                                             \\ \hline
-  \texttt{segmen}          & \texttt{Mengigat}, \texttt{Menimbang}, \texttt{Paragraf}, \texttt{VersiPasal}, \texttt{Huruf}, \texttt{DaftarHuruf} & \texttt{Segmen}                                       & Segmen                                            \\ \hline
+  \texttt{segmen}          & \texttt{Mengingat}, \texttt{Menimbang}, \texttt{Paragraf}, \texttt{VersiPasal}, \texttt{Huruf}, \texttt{DaftarHuruf} & \texttt{Segmen}                                       & Segmen                                            \\ \hline
   \texttt{daftarBab}       & \texttt{Peraturan}                                                                                                  & \texttt{DaftarBab}                                    & DaftarBab                                         \\ \hline
   \texttt{daftarBagian}    & \texttt{Bab}                                                                                                        & \texttt{Daftarbagian}                                 & DaftarBagian                                      \\ \hline
   \texttt{daftarParagraf}  & \texttt{Bagian}                                                                                                     & \texttt{DaftarParagraf}                               & DaftarParagraf                                    \\ \hline
@@ -207,3 +219,9 @@ adalah berupa URI komponen, sedangkan objek dapat berupa URI komponen, string, \
   \caption{Nama, domain, dan range properti Lex2KG}
   \label{tab:properti}
 \end{longtable}
+
+% // TODO: perlu ada section ttg Pemodelan KG Isinya gambar/ilustrasi konseptual yg menggabungkan
+% class/property utk legal kg.  Bs menggunakan http://www.visualdataweb.de/webvowl/
+
+% // TODO: Ontologynya, yg bnr2 diimplementasikan di RDF Turtle bs masuk sini. Jd di bawah yg pas
+% Aab njelasin yg gambar konsep itu.

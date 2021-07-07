@@ -10,21 +10,24 @@
 
 \textit{Knowledge graph} merupakan model data berbasis \textit{graph} yang menggambarkan entitas
 dunia nyata dan hubungan antara entitas-entitas tersebut \citep{seth_2019}. Sebagai contoh, pada
-gambar dibawah dapat dilihat terpadat entitas-entitas yang ditandai dengan bentuk lingkaran, dan
-hubungan antara entitas-entitas ditandai dengan bentuk anak panah. Dapat dilihat pada gambar dibawah
-bahwa terdapat entitas ``James'' dan ``Louvre'' dan properti ``has visited'' yang mengarah dari
-``James'' ke ``Louvre''. Relasi tersebut dapat kita anggap sebagai sebuah pengetahuan yang dalam
-bahasa manusia dapat dituliskan sebagai ``James pernah mengunjungi Louvre''. Model data seperti ini
-cocok untuk menyimpan data dengan banyak jenis relasi antara entitas seperti pengetahuan umum,
-dibandingkan dengan \textit{relational database} yang cocok untuk menyimpan data dengan relasi antar
-entitas yang sudah diketahui dan terbatas.
+\pic~\ref{fig:kg-description} dapat dilihat terpadat entitas-entitas yang ditandai dengan bentuk
+lingkaran, dan hubungan antara entitas-entitas ditandai dengan bentuk anak panah. Pada gambar dapat
+dilihat bahwa terdapat entitas \texttt{"James"} dan \texttt{"Louvre"} dan properti \texttt{"has
+visited"} yang mengarah dari \texttt{"James"} ke \texttt{"Louvre"}. Relasi tersebut dapat kita
+anggap sebagai sebuah pengetahuan yang dalam bahasa manusia dapat dituliskan sebagai ``James pernah
+mengunjungi Louvre''. Model data seperti ini cocok untuk menyimpan data dengan banyak jenis relasi
+antara entitas seperti pengetahuan umum, dibandingkan dengan \textit{relational database} yang cocok
+untuk menyimpan data dengan relasi antar entitas yang sudah diketahui dan terbatas.
 
 \begin{figure}[H]
   \centering
   \includegraphics[width=\textwidth]{pictures/knowledge_graph.jpg}
-  \caption{Contoh \textit{Knowledge Graph}. Sumber: \url{https://yashuseth.files.wordpress.com/2019/10/knowledge-graph.jpg}}
+  \caption[Contoh \textit{Knowledge Graph}]{Contoh \textit{Knowledge Graph}\footnotemark}
+  \small{}
   \label{fig:kg-description}
 \end{figure}
+
+\footnotetext{\url{https://yashuseth.files.wordpress.com/2019/10/knowledge-graph.jpg}}
 
 %--------------------------------------------------------------------------------------------------%
 \section{Resource Description Framework}
@@ -35,16 +38,16 @@ Resource Description Framework (RDF) merupkan model data yang memberikan pernyat
 \textit{resource} dalam bentuk subjek-properti-objek, atau sering disebut \textit{triple}. Sebuah KG
 dapat direpresentasikan sebagai kumpulan \textit{triple}. Subyek dan properti dalam \textit{triple}
 direpresentasikan sebagai Uniform Resource Identifier (URI), sedangkan objek dapat direpresentasikan
-dengan URI atau \textit{string literal}. Pada gambar dibawah, dapat dilihat terdapat KG dengan dua
+dengan URI atau \textit{string literal}. Pada gambar di bawah, dapat dilihat terdapat KG dengan dua
 \textit{triple}. Pada triple 1, subjek, properti, dan objek berturut-turut adalah
 \texttt{https://example.org/james}, \texttt{https://example.org/has\_visited},
-\texttt{https://example.org/louvre} yang mana semuanya berbentuk URI\@. Sedangkan pada triple 2,
+\texttt{https://example.org/louvre} yang mana semuanya berbentuk URI. Sedangkan pada triple 2,
 subjek, properti, dan objek berturut-turut adalah \texttt{https://example.org/james},
-\texttt{https://example.org/has\_name}, ``james''. \texttt{https://example.org/james},
+\texttt{https://example.org/has\_name}, \texttt{"james"}. \texttt{https://example.org/james},
 \texttt{https://example.org/louvre} berturut-turut merupakan notasi untuk \textit{resource} entitas
-James dan Louvre,e\texttt{https://example.org/has\_visited} dan
+James dan Louvre, \texttt{https://example.org/has\_visited} dan
 \texttt{https://example.org/has\_name} merupakan properti yang menjelaskan hubungan antara subjek
-dan objek, dan ``james'' adalah \textit{string literal} yang menunjukan nilai dari nama James.
+dan objek, dan \texttt{"James"} adalah \textit{string literal} yang menunjukan nilai dari nama James.
 
 \begin{figure}[H]
   \centering
@@ -54,7 +57,7 @@ dan objek, dan ``james'' adalah \textit{string literal} yang menunjukan nilai da
 \end{figure}
 
 Terdapat beberapa format berkas dan sintaks untuk mengekspresikan RDF. Pada penelitian ini, penulis
-menggunakan format Terse RDF Triple Language (Turtle). Sebagai contoh, KG diatas
+menggunakan format Terse RDF Triple Language (Turtle). Sebagai contoh, KG di atas
 dapat dituliskan dalam format Turtle seperti \lst~\ref{lst:contoh-ttl}.
 
 \begin{listing}[H]
@@ -62,17 +65,17 @@ dapat dituliskan dalam format Turtle seperti \lst~\ref{lst:contoh-ttl}.
 <https://example.org/james> <https://example.org/has_visited> <https://example.org/louvre> .
 <https://example.org/james> <https://example.org/has_name> "james" .
 \end{minted}
-  \caption{Contoh penulisan sebuah \textit{triple} dalam turtle}
+  \caption{Contoh penulisan sebuah \textit{triple} dalam Turtle}
   \label{lst:contoh-ttl}
 \end{listing}
 
-Dengan fitur format Turtle, dua \textit{triple} diatas dapat ditulis lebih singkat dengan mengganti
+Dengan fitur format Turtle, dua \textit{triple} di atas dapat ditulis lebih singkat dengan mengganti
 prefix URI yang sama menjadi teks yang lebih singkat, dan menggabungkan penulisan beberapa
 \textit{triple} dengan subjek yang sama sehingga subjek hanya perlu dituliskan sekali saja. Sebagai
 contoh, karena sebagaian besar URI memiliki prefix \texttt{https://example.org/}, kita dapat
 menggantinya dengan \textit{string} \texttt{ex} dengan mendeklarasikan
-\texttt{@prefix ex: https://example.org/ .}. Kedua \textit{triple} juga memiliki subjek yang sama
-yaitu \texttt{https://example.org/james}, oleh karena itu, penulisan kedua turtle bisa digabung
+\mono{@prefix ex: https://example.org/ .}. Kedua \textit{triple} juga memiliki subjek yang sama
+yaitu \texttt{https://example.org/james}, oleh karena itu, penulisan kedua Turtle bisa digabung
 dengan hanya menuliskan subjek sebanyak satu kali, kemudian menuliskan properti dan objek dipisah
 dengan tanda titik koma. \lst~\ref{lst:contoh-singkat-ttl} adalah contoh penulisan dua \textit{triple}
 diatas dalam bentuk yang lebih singkat dan lebih mudah dibaca oleh manusia.
@@ -85,7 +88,7 @@ ex:james
   ex:has_visited ex:louvre ;
   ex:has_name "james" .
 \end{minted}
-  \caption{Contoh penulisan lebih singkat sebuah \textit{triple} dalam turtle}
+  \caption{Contoh penulisan lebih singkat sebuah \textit{triple} dalam Turtle}
   \label{lst:contoh-singkat-ttl}
 \end{listing}
 
@@ -94,6 +97,11 @@ ex:james
 \section{SPARQL}
 \label{sec:sparql}
 %--------------------------------------------------------------------------------------------------%
+
+% //TODO: bs dilengkapin lg, fitur2nya sparql apa aja
+% //TODO: query 1 simpel gpp
+% //TODO: query 2 yg bbrp triple patterns
+% //TODO: query 3 yg agak kompleks, msl pke aggregates, atau negation dsb
 
 SPARQL merupakan salahsatu RDF \textit{query language} yaitu bahasa yang mampu mengambil atau
 mengubah data yang disimpan dalam format RDF. Sintaks SPARQL memiliki beberapa kesamaan dengan SQL,
@@ -137,7 +145,7 @@ WHERE { ?s ?p ?o }
   \begin{tabular}{|l|l|l|} \hline
     ?s       & ?p              & ?o        \\\hline \hline
     ex:james & ex:has\_visited & ex:louvre \\\hline
-    ex:james & ex:has\_name    & ``james'' \\\hline
+    ex:james & ex:has\_name    & "James" \\\hline
   \end{tabular}
   \caption{Output Query 1}
   \label{tab:output-query-1}
@@ -166,8 +174,9 @@ WHERE { ex:james ?properti ?objek }
   \centering
   \begin{tabular}{|l|l|} \hline
     ?properti       & ?objek    \\\hline \hline
+% // TODO: texttt
     ex:has\_visited & ex:louvre \\\hline
-    ex:has\_name    & ``james'' \\\hline
+    ex:has\_name    & "James" \\\hline
   \end{tabular}
   \caption{Output Query 3}
   \label{tab:output-query-2}
@@ -208,26 +217,25 @@ WHERE { ex:james ex:has_visited ?visited_place }
 \label{sec:peraturan-perundang-undangan}
 %--------------------------------------------------------------------------------------------------%
 
-% // Ditimbang
-
-Menurut Undang-Undang Nomor 10 Tahun 2004 Pasal 7 Ayat 1, peraturan perundang-undangan adalah
+Menurut Undang-Undang Nomor 10 Tahun 2004 Pasal 7 Ayat 1, 
+% // TODO: tentang apa?
+peraturan perundang-undangan adalah
 peraturan tertulis yang dibentuk oleh lembaga negara atau pejabat yang berwenang dan mengikat secara
 umum. Jenis dan hierarki peraturan perundang-undangan terdiri atas:
 
-\begin{itemize}
-  \itemsep1pt\parskip0pt\parsep0pt
+\begin{enumerate}
   \item Undang-Undang Dasar Negara Republik Indonesia Tahun 1945
   \item Undang-Undang/Peraturan Pemerintah Pengganti Undang-Undang
   \item Peraturan Pemerintah
   \item Peraturan Presiden
   \item Peraturan Daerah
-\end{itemize}
+\end{enumerate}
 
 Berikut adalah beberapa peranan perundang-undangan untuk Indonesia
 \href{https://www.pustaka.ut.ac.id/lib/wp-content/uploads/pdfmk/HKUM4403-M1.pdf}{1}:
+% // TODO: fix this
 
 \begin{itemize}
-  \itemsep1pt\parskip0pt\parsep0pt
   \item Peraturan perundang-undangan merupakan kaidah hukum yang mudah dikenal (diidentifikasi),
         mudah diketemukan kembali, dan mudah ditelusuri. Sebagai kaidah hukum tertulis, bentuk,
         jenis,dan tempatnya jelas. Begitu pula pembuatnya.
@@ -244,7 +252,6 @@ Menurut lampiran Undang-Undang Nomor 10 Tahun 2004, struktur peraturan perundang
 atas:
 
 \begin{itemize}
-  \itemsep1pt\parskip0pt\parsep0pt
   \item Judul
   \item Pembukaan
   \item Batang Tubuh
@@ -292,8 +299,8 @@ untuk memfasilitasi akses, berbagi dan interkoneksi informasi hukum yang diterbi
 nasional, Eropa dan sistem informasi hukum global. ELI dibangun berdasarkan persetujuan antara
 negara-negara EU.
 
-ELI juga memiliki \textit{technical implementation guide}
-\footnote{\url{https://publications.europa.eu/en/publication-detail/-/publication/8159b75d-5efc-11e8-ab9c-01aa75ed71a1}}
+ELI juga memiliki \textit{technical implementation
+guide}\footnote{\url{https://publications.europa.eu/en/publication-detail/-/publication/8159b75d-5efc-11e8-ab9c-01aa75ed71a1}}
 yang menjelaskan implementasi ELI dan spesifikasi yang tedapat pada ELI. Spesifikasi ELI antara lain
 adalah cara membuat URI suatu \textit{resource}, \textit{class}, dan properti. Ontologi yang
 digunakan pada ELI cenderung untuk menjelaskan metadata dari peraturan, dan tidak memiliki pemodelan
@@ -301,7 +308,7 @@ khusus untuk menjelaskan \textit{subdivision} dari peraturan. Nyatanya, ELI meng
 \textit{eli:LegalResourceSubdivision} untuk mendefinisikan semua \textit{subdivision}, tidak
 terdapat kelas khusus untuk variasi \textit{subdivision} seperti bab, pasal, dan ayat. Selain itu,
 ELI dirancang untuk digunakan pada peraturan di Eropa, sehingga tidak memiliki ontologi untuk jenis
-peraturan di indonesia seperti ``Peraturan Pemerintah''.
+peraturan di Indonesia seperti ``Peraturan Pemerintah''.
 
 %--------------------------------------------------------------------------------------------------%
 \section{Schema.org}
@@ -309,14 +316,14 @@ peraturan di indonesia seperti ``Peraturan Pemerintah''.
 %--------------------------------------------------------------------------------------------------%
 
 Schema.org adalah aktivitas komunitas kolaboratif dengan misi untuk membuat, memelihara, dan
-mempromosikan skema untuk data terstruktur di Internet, di halaman web, dalam pesan email, dan lebih
+mempromosikan skema untuk data terstruktur di internet, di halaman web, dalam pesan email, dan lebih
 dari itu. \textit{Vocabulary} Schema.org dapat digunakan dengan \textit{encoding} yang berbeda,
 termasuk RDFa, Microdata dan JSON-LD. Banyak aplikasi dari Google, Microsoft, Pinterest, Yandex, dan
 lainnya sudah menggunakan \textit{vocabulary} ini untuk memperkuat pengalaman yang kaya dan dapat
-diperluas. Schema.org memiliki \textit{vocabulary} tersendiri untuk peraturan perundang-undangan
-\footnote{\url{https://schema.org/Legislation}}. Salah satu \textit{vocabulary} nya adalah properti
-yang menjelaskan metadata suatu peraturan perundang-undangan seperti \texttt{legislationDate} dan
-\texttt{jurisdiction}.
+diperluas. Schema.org memiliki \textit{vocabulary} tersendiri untuk peraturan
+perundang-undangan\footnote{\url{https://schema.org/Legislation}}. Salah satu \textit{vocabulary}
+nya adalah properti yang menjelaskan metadata suatu peraturan perundang-undangan seperti
+\texttt{legislationDate} dan \texttt{jurisdiction}.
 
 %--------------------------------------------------------------------------------------------------%
 \section{Wikidata}
@@ -328,5 +335,6 @@ manusia dan mesin. Wikidata berperan sebagai penyimpanan pusat untuk data terstr
 saudara Wikimedia termasuk Wikipedia, Wikivoyage, Wiktionary, Wikisource, dan lainnya. WikiProject
 adalah organisasi yang didirikan untuk mencapai tujuan penyuntingan tertentu, atau untuk mencapai
 tujuan yang berkaitan dengan bidang pengetahuan tertentu. Terdapat WikiProject tersendiri untuk
-bidang hukum dan peraturan perundang-undangan yaitu WikiProject Law
-\footnote{\url{https://www.wikidata.org/wiki/Wikidata:WikiProject_Law}}.
+bidang hukum dan peraturan perundang-undangan yaitu WikiProject
+Law\footnote{\url{https://www.wikidata.org/wiki/Wikidata:WikiProject_Law}}.
+% // TODO: jelasin ya, bs pke screenshot
