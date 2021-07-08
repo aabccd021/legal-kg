@@ -3,10 +3,7 @@
 \label{chap:4}
 %--------------------------------------------------------------------------------------------------%
 
-% // TODO: jelasin aja yg tiga versi pdf utk nanti dikonstruk yg dipilih yg terbaik
 % // TODO: gambar2 yg dipresentsiin gdp labs bs dimasukkin
-% // TODO: regex2nya bs dtmbhin dan ceritain
-% // TODO: extract to span -> pemindaian menjadi span
 
 Bab ini berisi penjelasan spesifik proses implementasi pada setiap tahap. Secara garis besar
 implementasi Lex2KG terdiri dari OCR, pemindaian menjadi \textit{span}, membersihkan \textit{span},
@@ -57,9 +54,9 @@ dokumen yang hampir tidak memiliki kesalahan pemindaian dan juga terdapat dokume
 dapat dibaca samasekali.
 
 Walaupun dokumen-dokumen tersebut dipelihara oleh satu lembaga pada satu situs web, yaitu oleh Dewan
-Perwakilan Rakyat pada situs web dpr.go.id/jdih, masing-masing dokumen dibuat kedalam berkas PDF
-dengan cara yang berbeda-beda. Penulis tidak dapat mengetahui secara pasti metode apa yang
-digunakan, tetapi dari metadata yang didapatkan dari berkas PDF, penulis dapat membuat beberapa
+Perwakilan Rakyat pada situs web \url{https://dpr.go.id/jdih}, masing-masing dokumen dibuat kedalam
+berkas PDF dengan cara yang berbeda-beda. Penulis tidak dapat mengetahui secara pasti metode apa
+yang digunakan, tetapi dari metadata yang didapatkan dari berkas PDF, penulis dapat membuat beberapa
 dugaan. Pada berkas PDF, terdapat metadata dengan nama \textbf{Creator}, dimana pada dokumen-dokumen
 peraturan perudang-undangan yang didapatkan, tercantum nama-nama alat pencetak atau merk dari
 pencetak tersebut. Dari informasi tersebut penulis menduga bahwa terdapat sebagian peraturan
@@ -136,31 +133,35 @@ tessedit_pageseg_mode 4
 \end{listing}
 
 %--------------------------------------------------------------------------------------------------%
-\section{Ekstraksi Berkas PDF menjadi Data \textit{Span}}
-\label{ekstraksi-berkas-pdf-menjadi-data-span}
+\section{Pemindaian Berkas PDF menjadi Data \textit{Span}}
+\label{pemindaian-berkas-pdf-menjadi-data-span}
 %--------------------------------------------------------------------------------------------------%
 
 Agar dapat diproses oleh program, berkas PDF perlu diolah menjadi data berupa daftar teks dan
-posisinya yang selanjutnya akan disebut \textit{span}. Sebuah \textit{span} mengandung satu baris teks.
-Berikut adalah data yang dimiliki oleh sebuah \textit{span}:
+posisinya yang selanjutnya akan disebut \textit{span}. Sebuah \textit{span} mengandung satu baris
+teks. \tab~\ref{tab:data-span} adalah data yang dimiliki oleh sebuah \textit{span}.
+\pic~\ref{fig:contoh-dokumen} dan \lst~\ref{lst:hasil-pemindaian} berturut-turut adalah contoh
+gambaran berkas PDF dan hasil pemindaiannya menjadi daftar \textit{span}.
 
-\begin{itemize}
-  \itemsep1pt\parskip0pt\parsep0pt
-  \item \texttt{str}: teks yand dikandung
-  \item \texttt{xL}: koordinat titik terkiri dari \textit{span}
-  \item \texttt{xR}: koordinat titik terkanan dari \textit{span}
-  \item \texttt{y}: koordinat titik teratas dari \textit{span}
-  \item \texttt{pageNum}: nomor halaman
-  \item \texttt{id}: \textit{identifier} unik untuk setiap span
-\end{itemize}
-
-\pic~\ref{fig:contoh-dokumen} dan \lst~\ref{lst:hasil-ekstraksi} berturut-turut adalah contoh
-gambaran berkas PDF dan hasil ekstraksinya menjadi daftar \textit{span}.
+\begin{table}
+  \centering
+  \begin{tabular}{|l|l|} \hline
+    Nama             & Deskripsi                                   \\\hline \hline
+    \texttt{str}     & teks yand dikandung                         \\\hline
+    \texttt{xL}      & koordinat titik terkiri dari \textit{span}  \\\hline
+    \texttt{xR}      & koordinat titik terkanan dari \textit{span} \\\hline
+    \texttt{y}       & koordinat titik teratas dari \textit{span}  \\\hline
+    \texttt{pageNum} & nomor halaman                               \\\hline
+    \texttt{id}      & \textit{identifier} unik untuk setiap span  \\\hline
+  \end{tabular}
+  \caption{Data \textit{span}}
+  \label{tab:data-span}
+\end{table}
 
 \begin{figure}[H]
   \centering
   \fbox{\includegraphics{pictures/pdf_example.png}}
-  \caption{Contoh PDF yang akan diekstraksi}
+  \caption{Contoh PDF yang akan dipindai}
   \label{fig:contoh-dokumen}
 \end{figure}
 
@@ -191,8 +192,8 @@ gambaran berkas PDF dan hasil ekstraksinya menjadi daftar \textit{span}.
   pageNum: 1
   id: 3
   \end{minted}
-  \caption{Hasil ekstraksi \pic~\ref{fig:contoh-dokumen}}
-  \label{lst:hasil-ekstraksi}
+  \caption{Hasil pemindaian \pic~\ref{fig:contoh-dokumen}}
+  \label{lst:hasil-pemindaian}
 \end{listing}
 
 %--------------------------------------------------------------------------------------------------%
@@ -223,15 +224,16 @@ memeriksa teks menggunakan \textit{regex} dan posisi dari setiap \textit{span}, 
 \label{penggabungan-data-berkas-pdf-asli-dan-hasil-ocr-ulang}
 %--------------------------------------------------------------------------------------------------%
 
-% // TODO: Bs lbh dieksplisitkan penjelasan trkait versi OCR yg beda, yg ada 3 jenis
+% // TODO: Bs lbh dieksplisitkan penjelasan trkait versi OCR yg beda, yg ada 3 jenis. jelasin aja yg
+% tiga versi pdf utk nanti dikonstruk yg dipilih yg terbaik
 
-Pada proses ekstraksi berkas PDF menjadi daftar \textit{span}, penulis menemukan satu masalah yaitu
+Pada proses pemindaian berkas PDF menjadi daftar \textit{span}, penulis menemukan satu masalah yaitu
 data hasil OCR tidak konsisten dalam memindai angka. Seperti yang dapat dilihat pada
 \pic~\ref{fig:contoh-nomor-tidak-terpindai}, angka 10 berhasil dipindai tetapi angka 9 tidak
 berhasil. Untuk kasus tersebut, angka hanya tidak terpindai pada hasil OCR ulang, tetapi terpindai
 dengan benar pada berkas PDF aslinya. Untuk menyelesaikan masalah tersebut, penulis melakukan
-ekstraksi data pada berkas PDF aslinya, kemudian menggabungkannya dengan data hasil pemindaian untuk
-melengkapi bagian yang tidak terpindai.
+pemindaian data pada berkas PDF aslinya, kemudian menggabungkannya dengan data hasil pemindaian PDF
+hasil OCR untuk melengkapi bagian yang tidak terpindai.
 
 \begin{figure}[H]
   \centering
@@ -295,6 +297,7 @@ berhasil terpindai dan jika berhasil terpindai.
 
 % // TODO: repeat until no new component
 % // TODO: Benerin istilah section nya
+% // TODO: regex2nya bs dtmbhin dan ceritain
 
 Teks yang membentuk suatu komponen terdiri dari satu atau lebih \textit{span}, sehingga daftar
 \textit{span} yang didapatkan dari hasil ekstraksi berkas PDF harus dikelompokkan sehingga setiap
@@ -557,8 +560,37 @@ java -jar fuseki-server.jar --file=lex2kg.ttl /lex2kg
 \end{listing}
 
 
+
+%--------------------------------------------------------------------------------------------------%
+\section{Konversi Skala Besar}
+\label{sec:konversi-skala-besar}
+%--------------------------------------------------------------------------------------------------%
+
+Penulis melakukan konversi skala besar pada PDF UU yang terdapat pada Laman Undang-Undang Jaringan
+Dokumentasi dan Informasi Hukum DPR RI\footnote{\url{https://www.dpr.go.id/jdih/uu}}. Dari 1669
+berkas PDF yang diunduh, 784 diantaranya berhasil dikonversi menjadi KG dengan total 1.163.051
+triple. Jumlah tripel dikelompokan berdasarkan jenis informasi dapat dilihat pada
+\tab~\ref{tab:analisis-triple}. Semua berkas PDF, berkas Turtle hasil konversi, dan berkas
+\textit{artifact} seperti PDF hasil OCR, dan \textit{span} dari konversi skala besar dapat diakses
+pada repositori \url{https://github.com/aabccd021/uuri}.
+
+\begin{table}
+  \centering
+  \begin{tabular}{|l|l|} \hline
+    Jenis Informasi           & Jumlah Triple \\\hline \hline
+    metadata peraturan        & 6.689         \\\hline
+    struktur peraturan        & 714.888       \\\hline
+    teks                      & 152.301       \\\hline
+    rujukan dan amendemen     & 32.577        \\\hline
+    \textit{class assignment} & 256.416       \\\hline
+  \end{tabular}
+  \caption{Analisis triple KG hasil konversi skala besar}
+  \label{tab:analisis-triple}
+\end{table}
+
 % // TODO: bs ditampakkan turtle hasil akhr utk snippet KG dari suatu UU, dan dijelasin. tunjukkin
 % kyk fitur2 utama dari pengubahan ke RDFnya, kyk metadata, struktur, citation/amendment, dsb lalu
 % tunjukkin jg contoh yg utk nonUU
 
-% // TODO: analisis jmlh tripel yg dihasilkan, lalu brp yg metadata dsb.
+
+
