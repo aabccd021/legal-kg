@@ -13,24 +13,23 @@ dirancang harus dapat menjawab semua pertanyaan pada \textit{competency question
 \label{sec:arsitektur-sistem-konversi}
 %--------------------------------------------------------------------------------------------------%
 
-% // TODO: belum tepat
 Proses konversi dokumen PDF ke KG mengikuti arsitektur seperti yang ditunjukkan pada
-\pic~\ref{fig:pdf2kg}. Bagian \textit{Optical Character Recognition} (OCR) bertanggung jawab
-untuk mengubah \textit{image-only} PDF menjadi \textit{text-scannable} PDF dan menstandardisasi
-pemformatan semua PDF. Selanjutnya, penulis melakukan pemindaian file PDF untuk mengekstrak teks
-beserta posisinya. Selanjutnya, setiap baris teks yang dipindai sebagai \textit{span}. Setelah itu,
-\textit{span} yang terdeteksi sebagai konten yang tidak relevan, seperti \textit{header} dan
-\textit{footer} yang berulang, akan disaring. \textit{Clean span} yang dihasilkan, kemudian
-diuraikan menjadi data \legal yang bermakna dan terstruktur. Pada tahap akhir, sistem konversi
-membangun KG \legal dari hasil \textit{parsing}. Setiap KG \legal dihasilkan dari PDF akan digabung
-menjadi satu KG global.
+\pic~\ref{fig:pdf2kg} dan \pic~\ref{fig:span2kg}. Bagian \textit{Optical Character Recognition}
+(OCR) bertanggung jawab untuk mengubah \textit{image-only} PDF menjadi \textit{text-scannable} PDF
+dan menstandardisasi pemformatan semua PDF. Selanjutnya, penulis melakukan pemindaian file PDF untuk
+mengekstrak teks beserta posisinya. Selanjutnya, setiap baris teks yang dipindai sebagai
+\textit{span}. Setelah itu, \textit{span} yang terdeteksi sebagai konten yang tidak relevan, seperti
+\textit{header} dan \textit{footer} yang berulang, akan disaring. \textit{Clean span} yang
+dihasilkan, kemudian diuraikan menjadi data \legal yang bermakna dan terstruktur. Pada tahap akhir,
+sistem konversi membangun KG \legal dari hasil \textit{parsing}. Setiap KG \legal dihasilkan dari
+PDF akan digabung menjadi satu KG global.
 
-\begin{figure}
-  \centering
-  \includegraphics[scale=0.35]{pictures/lex2kg.png}
-  \caption{Arsitektur Lex2KG}
-  \label{fig:lex2kg}
-\end{figure}
+% \begin{figure}
+%   \centering
+%   \includegraphics[scale=0.35]{pictures/lex2kg.png}
+%   \caption{Arsitektur Lex2KG}
+%   \label{fig:lex2kg}
+% \end{figure}
 
 \begin{figure}
   \centering
