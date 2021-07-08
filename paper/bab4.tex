@@ -3,10 +3,17 @@
 \label{chap:4}
 %--------------------------------------------------------------------------------------------------%
 
-% // TODO: pengatar bab
 % // TODO: jelasin aja yg tiga versi pdf utk nanti dikonstruk yg dipilih yg terbaik
 % // TODO: gambar2 yg dipresentsiin gdp labs bs dimasukkin
 % // TODO: regex2nya bs dtmbhin dan ceritain
+% // TODO: extract to span -> pemindaian menjadi span
+
+Bab ini berisi penjelasan spesifik proses implementasi pada setiap tahap. Secara garis besar
+implementasi Lex2KG terdiri dari OCR, pemindaian menjadi \textit{span}, membersihkan \textit{span},
+\textit{parsing span} menjadi komponen, deteksi rujukan, dan konstruksi. Selain itu dibahas juga
+mengenai bagaimana kualitas konversi dipertahankan dan bagaimana melakukan SPARQL \textit{query}
+untuk melakukan evaluasi. Seluruh algoritma dan program yang digunakan dijelaskan secara rinci dalam
+bab ini.
 
 %--------------------------------------------------------------------------------------------------%
 \section{\textit{Maintained PDFs}}
@@ -67,7 +74,7 @@ adalah hasil OCR (\textit{optical character recognition}) oleh pemindai tersebut
   \centering
   \begin{tabular}{|l|l|l|}
     \hline
-    Dokumen                & \_\_Creator\_\_        & Kesalahan pemindaian        \\ \hline \hline
+    Dokumen    & \_\_Creator\_\_        & Kesalahan pemindaian        \\ \hline \hline
     UU 13/2003 & ScanSoft PDF Create! 4 & - (tidak ada)               \\ \hline
     UU 6/2018  & Canon                  & `(2)` selalu dipindai `(21` \\ \hline
     PP 34/2021 & Fuji Xerox B9100       & data teks tidak terbaca     \\ \hline
@@ -392,9 +399,11 @@ dilakukan jika dokumen memiliki komponen berupa amendemen.
 % // TODO: regexny tmbhn jg utk yg deteksi rujukan
 
 Setelah semua \textit{span} dikelompokan menjadi suatu komponen, dilakukan deteksi rujukan pada teks
-pada setiap komponen untuk mengetahui apakah komponen tersebut menyebut komponen atau dokumen
-\legal lainnya. \tab~\ref{tab:rujukan} adalah daftar pola rujukan yang berhasil
-dideteksi pada penelitian ini.
+pada setiap komponen untuk mengetahui apakah komponen tersebut menyebut komponen atau dokumen \legal
+lainnya. \tab~\ref{tab:rujukan} adalah daftar pola rujukan yang berhasil dideteksi pada penelitian
+ini. Selain URI, data rujukan juga mengandung informasi seperti yang dijelaskan pada
+\tab~\ref{tab:info-rujukan}. Contoh teks dan data rujukan yang terdeteksi dari teks tersebut dapat
+dilihat pada \lst~\ref{lst:uu-13-2003-detect}.
 
 \begin{longtable}[l]{|p{0.2\textwidth} | p{0.3\textwidth}| p{0.5\textwidth}|}
   \hline
@@ -411,15 +420,17 @@ dideteksi pada penelitian ini.
   \label{tab:rujukan}
 \end{longtable}
 
-Data rujukan mengandung informasi sebagai berikut:
-% // TODO: contoh nya adalah \lst~\ref{lst:uu-13-2003-detect}
-
-\begin{itemize}
-  \itemsep1pt\parskip0pt\parsep0pt
-  \item \texttt{start}: \textit{index} karakter awal rujukan
-  \item \texttt{end}: \textit{index} karakter akhir rujukan
-  \item \texttt{uri}: URI dokumen dan
-\end{itemize}
+\begin{table}
+  \centering
+  \begin{tabular}{|l|l|} \hline
+    Nama           & Deskripsi                             \\\hline \hline
+    \texttt{start} & \textit{index} karakter awal rujukan  \\\hline
+    \texttt{end}   & \textit{index} karakter akhir rujukan \\\hline
+    \texttt{uri}   & URI dokumen dan                       \\\hline
+  \end{tabular}
+  \caption{Data rujukan}
+  \label{tab:info-rujukan}
+\end{table}
 
 \begin{listing}[H]
   \begin{minted}[frame=single, fontsize=\footnotesize]{yaml}
