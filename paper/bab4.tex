@@ -3,8 +3,6 @@
 \label{chap:4}
 %--------------------------------------------------------------------------------------------------%
 
-% // TODO: gambar2 yg dipresentsiin gdp labs bs dimasukkin
-
 Bab ini berisi penjelasan spesifik proses implementasi pada setiap tahap. Secara garis besar
 implementasi Lex2KG terdiri dari OCR, pemindaian menjadi \textit{span}, membersihkan \textit{span},
 \textit{parsing span} menjadi komponen, deteksi rujukan, dan konstruksi. Selain itu dibahas juga
@@ -362,8 +360,8 @@ dijamin mengandung semua \texttt{bab 1} sampai \texttt{bab 11} dan apabila terde
 \texttt{pasal 195}.
 
 %--------------------------------------------------------------------------------------------------%
-\subsection{Komponen amendemen}
-\label{komponen-amendemen}
+\subsection{Ekstraksi Komponen amendemen}
+\label{ekstraksi-komponen-amendemen}
 %--------------------------------------------------------------------------------------------------%
 
 Mengekstraksi \textit{span} pada bagian amendemen merupakan salahsatu tantangan pada penelitian ini.
@@ -393,6 +391,8 @@ dilakukan jika dokumen memiliki komponen berupa amendemen.
   \caption{Deteksi Komponen amendemen}
   \label{fig:deteksi-amendemen}
 \end{figure}
+
+
 
 %--------------------------------------------------------------------------------------------------%
 \section{Deteksi Rujukan}
@@ -502,6 +502,19 @@ triple} nya adalah \mono{uu:2020/11/bab/1 o:bab uu:2020/11/bab}. Properti strukt
 \mono{o:huruf}, \mono{o:paragraf}, \mono{o:pasal}, \mono{o:segmen}, \mono{o:teks}, dan
 \mono{o:versi}.
 
+% %--------------------------------------------------------------------------------------------------%
+% \section{Komponen Amendemen}
+% \label{komponen-amendemen}
+% %--------------------------------------------------------------------------------------------------%
+
+% Komponen amandemen adalah salah satu 
+
+% \begin{figure}[H]
+%   \centering
+%   \includegraphics[scale=0.25]{pictures/insert.png}
+%   \caption{Penyisipan Pasal}
+%   \label{fig:penyisipan}
+% \end{figure}
 
 % // HACK: Merge TTL
 
@@ -545,8 +558,6 @@ java -jar fuseki-server.jar --file=lex2kg.ttl /lex2kg
   \caption{Command untuk menjalankan Fuseki dengan berkas KG lex2kg.ttl}
   \label{lst:run-fuseki}
 \end{listing}
-
-
 
 %--------------------------------------------------------------------------------------------------%
 \section{Konversi Skala Besar}

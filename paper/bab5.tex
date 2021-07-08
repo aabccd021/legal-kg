@@ -22,7 +22,7 @@ menyediakan \textit{query} analisis yang lengkap seperti \textit{filter}, \texti
 \textit{query} untuk menjawab pertanyaan tersebut.
 
 %--------------------------------------------------------------------------------------------------%
-\section{\textit{Competency question} No. 10}
+\subsection{\textit{Competency question} No. 10}
 \label{subsec:cq8}
 %--------------------------------------------------------------------------------------------------%
 
@@ -68,7 +68,7 @@ LIMIT 3
 \end{table}
 
 %--------------------------------------------------------------------------------------------------%
-\section{\textit{Competency question} No. 15}
+\subsection{\textit{Competency question} No. 15}
 \label{subsec:cq15}
 %--------------------------------------------------------------------------------------------------%
 
@@ -110,7 +110,7 @@ LIMIT 10
 \end{table}
 
 %--------------------------------------------------------------------------------------------------%
-\section{\textit{Competency question} No. 20}
+\subsection{\textit{Competency question} No. 20}
 \label{subsec:cq20}
 %--------------------------------------------------------------------------------------------------%
 
@@ -157,7 +157,7 @@ LIMIT 10
 % // TODO: Ksh 3 yg jenisnya beda2
 % // TODO: analisis insight yg didapat apa?
 
-Visualisasi meningkatkan visibilitas dan \textit{explainability} KG. Pada KG dapat dilakukan
+Visualisasi data dapat meningkatkan visibilitas dan \textit{explainability} KG. Pada KG dapat dilakukan
 visualisasi \textit{node} dan \textit{relation} antara \textit{node}, atau visualisasi statistik
 dari KG tersebut. \lst~\ref{lst:vizkg} merupakan kode untuk melakukan visualisasi ``Tampilkan 5
 peraturan dengan komponen terbanyak beserta jumlah komponennya'' menggunakan \textit{library}
@@ -199,41 +199,132 @@ bubble.plot()
 
 
 %--------------------------------------------------------------------------------------------------%
-\section{\textit{Question Answering Chatbot}}
-\label{sec:question-answering-chatbot}
+\section{\textit{Chat bot} sederhana}
+\label{sec:chatbot-sederhana}
 %--------------------------------------------------------------------------------------------------%
 
-% // TODO: bs dilengkapin, ada bbrp skenario. pemetaan template dsb, penjelasan2
-% // TODO: chatbot mencakup apa aja
-% - isi undang-udangn
-% - metadata
-% - sistem pencarian (apakah ada yang ngomong kewajiban tentang ini?)
+KG \legal dapat digunakan pada \textit{chat bot}. \textit{Chat bot} sederhana memberikan pertanyaan
+yang sudah disediakan dan mengembalikan jawaban berdasarkan input pengguna sesuai program
+deterministik yang diimplementasi. Pada bab ini akan diperlihatkan bagaimana pengguna melalui
+beberapa skenario dan bagaimana \textit{chat bot} nya bekerja. Skenario \textit{chatbot} adalah
+sekuensial, artinya skenario 2 adalah lanjutan dari skenario 1, dan skenario 3 adalah lanjutan dari
+skenario 1. Input pengguna akan digunakan sebagai input dari template SPARQL \textit{query} yang
+sudah tersedia. Teks yang ditampilkan \textit{chat bot} ditandai dengan warna hitam, dan teks input
+pengguna ditandai dengan \textcolor{red}{warna merah}.
+
+%--------------------------------------------------------------------------------------------------%
+\subsection{Skenario 1}
+\label{subsec:skenario-1}
+%--------------------------------------------------------------------------------------------------%
+
+\lst~\ref{lst:chatbot-1} merupakan tampilan chatbot pada skenario 1 dimana pengguna dapat mencari
+\legal dengan kata kunci tertentu. Pada contoh ini pengguna mencari peraturan dengan kata kunci
+``kerja'', kemudian \textit{chat bot} melakukan \textit{query} terhadap KG menggunakan template
+\lst~\ref{lst:chatbot-1-query}, dimana \mono{inputStr} memiliki nilai ``kerja''. Kemudian
+\textit{chat bot} mengembalikan hasil \textit{query} berupa nama \legal yang pada judulnya terdapa
+\textit{substring} kerja.
 
 \begin{listing}[H]
   \begin{center}
     \begin{tabular}{|p{0.9\textwidth}|}
       \hline
-
       \makecell[l]{
-        \texttt{Ada yang bisa dibantu?}                                  \\
-        \texttt{1. Mencari Peraturan Perundang-undangan}                 \\
-        \texttt{\textcolor{red}{1}}                                      \\ \\
-        \texttt{Masukkan Keyword Peraturan: \textcolor{red}{kerja}}      \\ \\
-        \texttt{Berikut adalah peraturan yang judulnya mengandung kerja} \\
-        \texttt{/uu/2004/17}                                             \\
-        \texttt{/uu/2016/3}                                              \\
-        \texttt{/uu/1997/25}                                             \\
-        \texttt{/uu/2016/15}                                             \\
-        \texttt{/uu/2007/47}                                             \\
-        \texttt{/uu/1991/1}                                              \\
-        \texttt{/uu/2019/3}                                              \\
-      }                                                                  \\
+        \texttt{Masukkan Kata Kunci Peraturan: \textcolor{red}{kerja}}    \\ \\
+        \texttt{Berikut adalah peraturan yang judulnya mengandung kerja.} \\
+        \texttt{Pilih salah satu untuk melihat lebih lanjut.}             \\
+        \texttt{uu/2004/17}                                               \\
+        \texttt{uu/2016/3}                                                \\
+        \texttt{uu/1997/25}                                               \\
+        \texttt{uu/2016/15}                                               \\
+        \texttt{uu/2007/47}                                               \\
+        \texttt{uu/1991/1}                                                \\
+        \texttt{uu/2019/3}                                                \\ \\
+        \texttt{Pilih salah satu untuk melihat lebih lanjut: }
+      }                                                                   \\
       \hline
     \end{tabular}
   \end{center}
-
-  \caption{Skenario 1 Chatbot}
-  \label{lst:chatbot}
+  \caption{Tampilan \textit{chat bot} untuk skenario 1}
+  \label{lst:chatbot-1}
 \end{listing}
 
+\begin{listing}[H]
+  \begin{minted}[frame=single, fontsize=\footnotesize]{typescript}
+    const res = await sparqlQuery({
+      queryStr: `
+PREFIX o: <https://example.org/lex2kg/ontology/>
+SELECT ?doc ?title
+WHERE {
+  ?doc a o:Peraturan .
+  ?doc o:tentang ?title.
+  FILTER REGEX(STR(?title), "${inputStr.toUpperCase()}")
+}
+`,
+    });
+  \end{minted}
+  \caption{\textit{Query} template untuk skenario 1}
+  \label{lst:chatbot-1-query}
+\end{listing}
+
+%--------------------------------------------------------------------------------------------------%
+\subsection{Skenario 2}
+\label{subsec:skenario-2}
+%--------------------------------------------------------------------------------------------------%
+
+\lst~\ref{lst:chatbot-2} merupakan tampilan chatbot pada skenario 2 dimana pengguna memilih
+peraturan berdasarkan pilihan yang diberikan sebelumnya, kemudian menampilkan metadatanya. Pada
+contoh ini pengguna memilih \mono{uu/2004/17}, kemudian \textit{chat bot} melakukan \textit{query}
+terhadap KG menggunakan template \lst~\ref{lst:chatbot-2-query}, dimana \mono{legalURI} memiliki
+nilai \mono{uu/2004/17}. Kemudian \textit{chat bot} mengembalikan hasil \textit{query} berupa
+metadata UU 17/2004.
+
+\begin{listing}[H]
+  \begin{center}
+    \begin{tabular}{|p{0.9\textwidth}|}
+      \hline
+      \makecell[l]{
+        \texttt{Pilih salah satu untuk melihat lebih lanjut: \textcolor{red}{uu/2004/17}} \\
+        \\
+        \texttt{Data uu/2004/17 :}                                                         \\
+        \texttt{-metadata}                                                                 \\
+        \texttt{-menimbang}                                                                \\
+        \\
+        \texttt{Pilih data yang ingin anda lihat: \textcolor{red}{metadata}}               \\
+        \\
+        \texttt{yurisdiksi: Indonesia}                                                     \\
+        \texttt{jenisPeraturan: UU}                                                        \\
+        \texttt{tahun: 2004}                                                               \\
+        \texttt{bahasa: id}                                                                \\
+        \texttt{tentang:  PENGESAHAN KYOTO PROTOCOL TO THE UNITED NATIONS...}              \\
+        \texttt{disahkanPada: 2004-07-28}                                                  \\
+        \texttt{disahkanDi: Jakarta}                                                       \\
+        \texttt{disahkanOleh: MEGAWATI SOEKARNOPUTRI}                                      \\
+        \texttt{jabatanPengesah: PRESIDEN REPUBLIK INDONESIA,}                             \\
+      }                                                                                    \\
+      \hline
+    \end{tabular}
+  \end{center}
+  \caption{Tampilan \textit{chat bot} untuk skenario 2}
+  \label{lst:chatbot-2}
+\end{listing}
+
+
+
+\begin{listing}[H]
+  \begin{minted}[frame=single, breaklines, fontsize=\footnotesize]{typescript}
+    const res = await sparqlQuery({
+      queryStr: `
+PREFIX o: <https://example.org/lex2kg/ontology/>
+SELECT ?label ?data
+WHERE {
+<https://example.org/lex2kg/${legalURI}> o:yurisdiksi| o:jenisPeraturan| o:tahun| o:bahasa| o:tentang| o:disahkanPada| o:disahkanDi| o:disahkanOleh| o:jabatanPengesah ?data ;
+    ?label ?data .
+}
+PREFIX o: <https://example.org/lex2kg/ontology/>
+`,
+    });
+  \end{minted}
+  \caption{\textit{Query} template untuk skenario 2}
+  \label{lst:chatbot-2-query}
+\end{listing}
 
