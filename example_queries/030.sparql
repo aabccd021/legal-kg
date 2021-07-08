@@ -1,0 +1,15 @@
+# Mana saja peraturan yang membahas tentang topik "Kerja" atau "Ketenagakerjaan" tapi bukan topik "Kerjasama" dan bukan "Pekerjaan"?
+PREFIX o: <https://example.org/lex2kg/ontology/>
+
+SELECT ?bab ?title
+WHERE {
+  ?doc a o:Peraturan .
+  ?bab o:bagianDari* ?doc .
+  ?bab a o:Bab .
+  ?bab o:judul ?title.
+  FILTER (CONTAINS(?title, "KERJA") || CONTAINS(?title, "KETENAGAKERJAAN"))
+  FILTER (!CONTAINS(?title, "KERJASAMA"))
+  FILTER (!CONTAINS(?title, "PEKERJAAN"))
+}
+ORDER BY ?bab ?title
+LIMIT 10

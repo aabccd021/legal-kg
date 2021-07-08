@@ -1,0 +1,11 @@
+# Tampilkan 5 peraturan dengan komponen terbanyak beserta jumlah komponennya.
+PREFIX o: <https://example.org/lex2kg/ontology/>
+
+SELECT ?peraturan (COUNT(?komponen) as ?komponenCount)
+WHERE {
+  ?peraturan a o:Peraturan .
+  ?komponen o:bagianDari* ?peraturan .
+}
+GROUP BY ?peraturan
+ORDER BY DESC (?komponenCount)
+LIMIT 5
