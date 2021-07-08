@@ -46,9 +46,9 @@ async function query(): Promise<void> {
       // });
       results.push(
         `\\noindent No.${baseName}:
-\\begin{minted}[frame=single, breaklines, fontsize=\\footnotesize]{text}
+\\begin{lstlisting}
 ${queryStr}
-\\end{minted}
+\\end{lstlisting}
 `
 
         // \\noindent Hasil Query:
