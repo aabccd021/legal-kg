@@ -96,7 +96,7 @@ bilangan pada opsi ini dapat diganti sesuai kebutuhan. Opsi \mono{--tesseract-co
   tesseract-config.cfg} menjalankan \textit{command} dengan konfigurasi yang diberikan.
 
 \begin{listing}[H]
-  \begin{minted}[frame=single, breaklines]{bash}
+  \begin{minted}[fontsize=\scriptsize, frame=single, breaklines]{bash}
 ocrmypdf -l ind --force-ocr --jobs 4 --tesseract-config tesseract-config.cfg UU-2021-34.pdf UU-2021-34_OCR.pdf
   \end{minted}
   \caption{Command untuk menjalankan OCR}
@@ -108,7 +108,7 @@ terlihat pada isi file konfigurasi pada \lst~\ref{lst:konfigurasi-ocr}. \mono{te
 Tesseract OCR mendeteksi teks sebagai \textit{block}, bukan \textit{word} atau \textit{character}.
 
 \begin{listing}[H]
-  \begin{minted}[frame=single]{text}
+  \begin{minted}[fontsize=\scriptsize, frame=single]{text}
 # tesseract-config.cfg
 tessedit_pageseg_mode 4
   \end{minted}
@@ -150,7 +150,7 @@ gambaran berkas PDF dan hasil pemindaiannya menjadi daftar \textit{span}.
 \end{figure}
 
 \begin{listing}[H]
-  \begin{minted}[frame=single]{yaml}
+  \begin{minted}[fontsize=\scriptsize, frame=single]{yaml}
 - xL: 197.52
   xR: 442.79990000000004
   'y': 234.48000000000002
@@ -237,7 +237,7 @@ yang mana seharusnya adalah nomor yang terpisah. \lst~\ref{lst:no-9-tidak-terpin
 berhasil terpindai dan jika berhasil terpindai.
 
 \begin{listing}[H]
-  \begin{minted}[frame=single, fontsize=\footnotesize]{yaml}
+  \begin{minted}[fontsize=\scriptsize, fontsize=\scriptsize, frame=single]{yaml}
 - type: point
   key: 8
   text: >-
@@ -255,7 +255,7 @@ berhasil terpindai dan jika berhasil terpindai.
 
 
 \begin{listing}[H]
-  \begin{minted}[frame=single, fontsize=\footnotesize]{yaml}
+  \begin{minted}[fontsize=\scriptsize, frame=single]{yaml}
 - type: point
   key: 8
   text: >-
@@ -452,7 +452,7 @@ dilihat pada \lst~\ref{lst:uu-13-2003-detect}.
 \end{table}
 
 \begin{listing}[H]
-  \begin{minted}[frame=single]{yaml}
+  \begin{minted}[fontsize=\scriptsize, frame=single]{yaml}
 textString: >-
   Pekerja/buruh yang diputus hubungan kerjanya berdasarkan alasan
   sebagaimana dimaksud dalam ayat (1), dapat memperoleh uang
@@ -554,7 +554,7 @@ untuk melakukan \textit{query} dari bahasa pemrograman typescript.
 
 
 \begin{listing}[H]
-  \begin{minted}[frame=single, breaklines]{bash}
+  \begin{minted}[fontsize=\scriptsize, frame=single, breaklines]{bash}
 java -jar fuseki-server.jar --file=lex2kg.ttl /lex2kg
   \end{minted}
   \caption{Command untuk menjalankan Fuseki}

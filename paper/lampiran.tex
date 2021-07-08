@@ -260,3 +260,13 @@ lex2kg-o:nomor  rdf:type  rdf:Property ;
 % // TODO: masukin semua query
 % // TODO: bikin querynya
 % // TODO: masukin ontology
+\begin{lstlisting}
+  # Describe Omnibus Law (UU Cipta Kerja)
+PREFIX o: <https://example.org/lex2kg/ontology/>
+
+SELECT * WHERE {
+  <https://example.org/lex2kg/uu/2020/11> ?p ?o .
+} 
+ORDER BY ?p ?o
+LIMIT 3
+\end{lstlisting}

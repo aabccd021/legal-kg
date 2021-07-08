@@ -33,7 +33,7 @@ digunakan properti \mono{o:menghapus}, \mono{o:menyisipkan}, dan \mono{o:menguba
 \textit{triple} yang melakukan amendemen.
 
 \begin{listing}[H]
-  \begin{minted}[frame=single]{sparql}
+  \begin{minted}[fontsize=\scriptsize, frame=single]{sparql}
 PREFIX o: <https://example.org/lex2kg/ontology/>
 
 SELECT ?type (COUNT(*) AS ?jumlah) WHERE {
@@ -80,7 +80,7 @@ dapat dijawab dengan melakukan \textit{query} \lst~\ref{lst:q-15} yang akan memb
 ``menimbang'', \mono{o:bagianDari*} untuk mendapatkan komponen dari entitas ``menimbang''.
 
 \begin{listing}[H]
-  \begin{minted}[frame=single]{sparql}
+  \begin{minted}[fontsize=\scriptsize, frame=single]{sparql}
 PREFIX o: <https://example.org/lex2kg/ontology/>
 PREFIX uu: <https://example.org/lex2kg/uu/>
 
@@ -123,7 +123,7 @@ banyaknya pasal yang amendemen oleh pasal tersebut.'' dapat dijawab dengan melak
 \lst~\ref{lst:q-20} yang akan memberikan output \tab~\ref{tab:output-q-20}.
 
 \begin{listing}[H]
-  \begin{minted}[frame=single]{sparql}
+  \begin{minted}[fontsize=\scriptsize, frame=single]{sparql}
 PREFIX o: <https://example.org/lex2kg/ontology/>
 PREFIX uu: <https://example.org/lex2kg/uu/>
 
@@ -174,7 +174,7 @@ terdapat pada UU 13/2003. Hasil visualisasi pada \pic~\ref{fig:vizkg1} menunjuka
 paling banyak membicarakan tentang pekerja buruh dan perjanjian kerja.
 
 \begin{listing}[H]
-  \begin{minted}[frame=single, breaklines]{python}
+  \begin{minted}[fontsize=\scriptsize, frame=single, breaklines]{python}
 sparql_query = """
 PREFIX o: <https://example.org/lex2kg/ontology/>
 SELECT* WHERE { 
@@ -209,7 +209,7 @@ dikonversi oleh Lex2KG, oleh sebab itu kecenderungan penambahan jumlah UU bisa j
 kualitas PDF yang makin baik setiap tahunnya.
 
 \begin{listing}[H]
-  \begin{minted}[frame=single, breaklines]{python}
+  \begin{minted}[fontsize=\scriptsize, frame=single, breaklines]{python}
 sparql_query = """
 PREFIX o: <https://example.org/lex2kg/ontology/>
 SELECT ?tahun (COUNT(?peraturan) as ?peraturanCount)
@@ -243,7 +243,7 @@ oleh atau menimbang lebih dari satu peraturan. Peraturan yang paling banyak diti
 setelah tahun 2017 adalah UU 24/2000 tentang Perjanjian Internasional.
 
 \begin{listing}[H]
-  \begin{minted}[frame=single, breaklines]{python}
+  \begin{minted}[fontsize=\scriptsize, frame=single, breaklines]{python}
 sparql_query = """
 PREFIX o: <https://example.org/lex2kg/ontology/>
 PREFIX uu: <https://example.org/lex2kg/uu/>
@@ -328,7 +328,7 @@ pengguna ditandai dengan \textcolor{red}{warna merah}.
 \end{listing}
 
 \begin{listing}[H]
-  \begin{minted}[frame=single]{typescript}
+  \begin{minted}[fontsize=\scriptsize, frame=single]{typescript}
     const res = await sparqlQuery({
       queryStr: `
 PREFIX o: <https://example.org/lex2kg/ontology/>
@@ -392,7 +392,7 @@ metadata UU 3/2019.
 
 
 \begin{listing}[H]
-  \begin{minted}[frame=single, breaklines]{typescript}
+  \begin{minted}[fontsize=\scriptsize, frame=single, breaklines]{typescript}
     const res = await sparqlQuery({
       queryStr: `
 PREFIX o: <https://example.org/lex2kg/ontology/>
@@ -444,7 +444,7 @@ melakukan \textit{query} terhadap KG menggunakan template \lst~\ref{lst:chatbot-
 \end{listing}
 
 \begin{listing}[H]
-  \begin{minted}[frame=single, breaklines]{typescript}
+  \begin{minted}[fontsize=\scriptsize, frame=single, breaklines]{typescript}
     const res = await sparqlQuery({
       queryStr: `
 PREFIX o: <https://example.org/lex2kg/ontology/>
