@@ -88,20 +88,6 @@ menggunakan Tesseract OCR\footnote{\url{https://github.com/tesseract-ocr/tessera
 OCR karena sifatnya \textit{open source} dan mendukung Bahasa Indonesia sebagai bahasa yang
 dipindai.
 
-Untuk melakukan OCR ulang perlu dilakukan instalasi program yang dibutuhkan yang dapat dilakukan
-dengan \textit{command} \lst~\ref{lst:install-ocr} pada sistem operasi Ubuntu 20.04.
-\mono{ocrmypdf} merupakan \textit{wrapper} untuk Tesseract OCR dan \mono{tesseract-ocr-ind}
-adalah program tambahan untuk dapat melakukan OCR menjadi teks Bahasa Indonesia.
-
-\begin{listing}[H]
-  \begin{minted}[frame=single]{bash}
-sudo apt update
-sudo apt install ocrmypdf tesseract-ocr-ind -y
-  \end{minted}
-  \caption{Command untuk melakukan instalasi program OCR pada Linux OS}
-  \label{lst:install-ocr}
-\end{listing}
-
 \lst~\ref{lst:run-ocr} merupakan \textit{command} untuk melakukan konversi \mono{UU-2021-34.pdf}
 yang sudah ada menjadi \mono{UU-2021-34\_OCR.pdf} hasil OCR. Opsi \mono{--force-ocr} diperlukan
 untuk melakukan OCR ulang pada berkas PDF yang sudah memiliki teks hasil OCR untuk di
@@ -529,26 +515,12 @@ antaralain adalah \mono{o:ayat}, \mono{o:bab}, \mono{o:bagian}, \mono{o:daftarAy
 \textit{Query} dilakukan terhadap KG untuk evaluasi \textit{competency question} dan membuat
 demonstrasi untuk \textit{use case evaluation}. Apache Jena
 Fuseki\footnote{\url{https://jena.apache.org/documentation/fuseki2/}} digunakan sebagai SPARQL
-server yang menyimpan KG dan melakukan \textit{query} terhadap KG. Instalasi Fuseki dapat dilakukan
-dengan \lst~\ref{lst:install-fuseki}.
-
-\begin{listing}[H]
-  \begin{minted}[frame=single, breaklines, fontsize=\footnotesize]{bash}
-wget https://downloads.apache.org/jena/binaries/apache-jena-fuseki-4.1.0.tar.gz
-tar xvzf apache-jena-fuseki-4.1.0.tar.gz
-cd apache-jena-fuseki-4.1.0
-  \end{minted}
-  \caption{Command untuk melakukan instalasi Fuseki}
-  \label{lst:install-fuseki}
-\end{listing}
-
-Setelah instalasi Fuseki selesai dan berhasil masuk ke dalam folder Fuseki, Fuseki dapat dijalankan
-dengan KG dalam bentuk berkas Turtle dengan \lst~\ref{lst:run-fuseki}. Setelah command tersebut
-dijalankan, SPARQL \textit{query} dapat dilakukan. Pada \lst~\ref{lst:run-fuseki}, Fuseki dijalankan
-dengan endpoint \textit{/lex2kg}, sehingga SPARQL \textit{query} dapat dilakukan menggunakan
-\textit{client library} dengan endpoint \url{http://127.0.0.1:3030/lex2kg/sparql}, atau pada
-antarmuka yang tersedia pada \url{http://127.0.0.1:3030/dataset.html?tab=query&ds=/lex2kg}. Pada
-penelitian ini digunakan
+server yang menyimpan KG dan melakukan \textit{query} terhadap KG. Di dalam folder Fuseki, Fuseki
+dapat dijalankan dengan KG yang memuat berkas Turtle \mono{lex2kg.ttl} dan memiliki endpoint SPARQL
+\textit{/lex2kg} dengan \lst~\ref{lst:run-fuseki}. Setelah command tersebut dijalankan, SPARQL
+\textit{query} dapat dilakukan menggunakan \textit{client library} dengan endpoint
+\url{http://127.0.0.1:3030/lex2kg/sparql}, atau pada antarmuka yang tersedia pada
+\url{http://127.0.0.1:3030/dataset.html?tab=query&ds=/lex2kg}. Pada penelitian ini digunakan
 \textit{client library}
 \texttt{fetch-sparql-endpoint}\footnote{\url{https://www.npmjs.com/package/fetch-sparql-endpoint}}
 untuk melakukan \textit{query} dari bahasa pemrograman typescript.
@@ -558,7 +530,7 @@ untuk melakukan \textit{query} dari bahasa pemrograman typescript.
   \begin{minted}[frame=single, breaklines]{bash}
 java -jar fuseki-server.jar --file=lex2kg.ttl /lex2kg
   \end{minted}
-  \caption{Command untuk menjalankan Fuseki dengan berkas KG lex2kg.ttl}
+  \caption{Command untuk menjalankan Fuseki}
   \label{lst:run-fuseki}
 \end{listing}
 
