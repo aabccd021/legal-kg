@@ -10,11 +10,11 @@
 
 \textit{Knowledge graph} merupakan model data berbasis \textit{graph} yang menggambarkan entitas
 dunia nyata dan hubungan antara entitas-entitas tersebut \citep{seth_2019}. Sebagai contoh, pada
-\pic~\ref{fig:kg-description} dapat dilihat terpadat entitas-entitas yang ditandai dengan bentuk
+\pic~\ref{fig:kg-description} dapat dilihat terdapat entitas-entitas yang ditandai dengan bentuk
 lingkaran, dan hubungan antara entitas-entitas ditandai dengan bentuk anak panah. Pada gambar dapat
-dilihat bahwa terdapat entitas "james" dan "Louvre" dan properti "has visited" yang mengarah dari
-"james" ke "Louvre". Relasi tersebut dapat kita anggap sebagai sebuah pengetahuan yang dalam bahasa
-manusia dapat dituliskan sebagai ``james pernah mengunjungi Louvre''. Model data seperti ini cocok
+dilihat bahwa terdapat entitas "James" dan "Louvre" dan properti "has visited" yang mengarah dari
+"James" ke "Louvre". Relasi tersebut dapat kita anggap sebagai sebuah pengetahuan yang dalam bahasa
+manusia dapat dituliskan sebagai ``James pernah mengunjungi Louvre''. Model data seperti ini cocok
 untuk menyimpan data dengan banyak jenis relasi antara entitas seperti pengetahuan umum,
 dibandingkan dengan \textit{relational database} yang cocok untuk menyimpan data dengan relasi antar
 entitas yang sudah diketahui dan terbatas.
@@ -41,21 +41,40 @@ dapat direpresentasikan sebagai kumpulan \textit{triple}. Subyek dan properti da
 direpresentasikan sebagai Uniform Resource Identifier (URI), sedangkan objek dapat direpresentasikan
 dengan URI atau \textit{string literal}. Pada \pic~\ref{fig:triple-example}, dapat dilihat terdapat
 KG dengan dua \textit{triple}. Pada \textit{triple} 1, subjek, properti, dan objek berturut-turut
-adalah \mono{https://example.org/james}, \mono{https://example.org/has\_visited},
-\mono{https://example.org/louvre} yang mana semuanya berbentuk URI. Sedangkan pada \textit{triple}
-2, subjek, properti, dan objek berturut-turut adalah \mono{https://example.org/james},
-\mono{https://example.org/has\_name}, "james". \mono{https://example.org/james},
-\mono{https://example.org/louvre} berturut-turut merupakan notasi untuk \textit{resource} entitas
-james dan Louvre, \mono{https://example.org/has\_visited} dan \mono{https://example.org/has\_name}
-merupakan properti yang menjelaskan hubungan antara subjek dan objek, dan "james" adalah
-\textit{string literal} yang menunjukan nilai dari nama james.
+adalah \mono{https://example.org/James}, \mono{https://example.org/hasVisited},
+\mono{https://example.org/Louvre} yang mana semuanya berbentuk URI. Sedangkan pada \textit{triple}
+2, subjek, properti, dan objek berturut-turut adalah \mono{https://example.org/James},
+\mono{https://example.org/hasName}, "James". \mono{https://example.org/James},
+\mono{https://example.org/Louvre} berturut-turut merupakan notasi untuk \textit{resource} entitas
+James dan Louvre, \mono{https://example.org/hasVisited} dan \mono{https://example.org/hasName}
+merupakan properti yang menjelaskan hubungan antara subjek dan objek, dan "James" adalah
+\textit{string literal} yang menunjukan nilai dari nama James.
 
-\begin{figure}[H]
+\begin{figure}
   \centering
-  \includegraphics{pictures/triple.png}
+  \begin{tikzpicture}[node distance=2cm and 1cm]
+    %Styles   
+    \tikzstyle{r} = [rectangle, minimum width=6cm, minimum height=0.5cm, draw, text centered]
+
+    %Nodes
+    \node[r] (james1)                      {\texttt{https://example.org/James}};
+    \node[r] (louvre)    [below=of james1] {\texttt{https://example.org/Louvre}};
+    \node[r] (james2)    [right=of james1] {\texttt{https://example.org/James}};
+    \node[r] (james-str) [below=of james2] {"James"};
+
+    %Lines
+    \draw[->] (james1.south)   -- node {\colorbox{white}{\texttt{https://example.org/hasVisited}}} (louvre.north);
+    \draw[->] (james2.south)   -- node {\colorbox{white}{\texttt{https://example.org/hasName}}} (james-str.north);
+
+    %Boxes
+    \node[draw, dashed, inner sep=10pt, label={Triple 1}, fit=(james1) (louvre)] {};
+    \node[draw, dashed, inner sep=10pt, label={Triple 2}, fit=(james2) (james-str)] {};
+  \end{tikzpicture}
   \caption{Contoh \textit{triple}}
   \label{fig:triple-example}
 \end{figure}
+
+
 
 Terdapat beberapa format berkas dan sintaks untuk mengekspresikan RDF. Pada penelitian ini, penulis
 menggunakan format Terse RDF Triple Language (Turtle) \citep{turtle}. Sebagai contoh, KG pada
@@ -64,8 +83,8 @@ menggunakan format Terse RDF Triple Language (Turtle) \citep{turtle}. Sebagai co
 
 \begin{listing}[H]
   \begin{minted}[frame=single, breaklines]{turtle}
-<https://example.org/james> <https://example.org/has_visited> <https://example.org/louvre> .
-<https://example.org/james> <https://example.org/has_name> "james" .
+<https://example.org/James> <https://example.org/hasVisited> <https://example.org/Louvre> .
+<https://example.org/James> <https://example.org/hasName> "James" .
 \end{minted}
   \caption{Contoh penulisan sebuah \textit{triple} dalam Turtle}
   \label{lst:contoh-ttl}
@@ -78,7 +97,7 @@ sekali saja. Sebagai contoh, karena sebagaian besar URI memiliki prefix \mono{ht
 kita dapat menggantinya dengan \textit{string} \mono{ex:} dengan mendeklarasikan
 \mono{@prefix ex: https://example.org/ .}. Selanjutnya \mono{ex:} digunakan sebagai notasi singkat
 \mono{https://example.org/} untuk mempermudah pembacaan. Kedua \textit{triple} juga memiliki subjek
-yang sama yaitu \mono{ex:james}, oleh karena itu, penulisan kedua Turtle bisa digabung dengan hanya
+yang sama yaitu \mono{ex:James}, oleh karena itu, penulisan kedua Turtle bisa digabung dengan hanya
 menuliskan subjek sebanyak satu kali, kemudian menuliskan properti dan objek dipisah dengan tanda
 titik koma. \lst~\ref{lst:contoh-singkat-ttl} adalah contoh penulisan dua \textit{triple} diatas
 dalam bentuk yang lebih singkat dan lebih mudah dibaca oleh manusia.
@@ -87,9 +106,9 @@ dalam bentuk yang lebih singkat dan lebih mudah dibaca oleh manusia.
   \begin{minted}[frame=single]{turtle}
 @prefix ex: <https://example.org/> .
 
-ex:james 
-  ex:has_visited ex:louvre ;
-  ex:has_name "james" .
+ex:James 
+  ex:hasVisited ex:Louvre ;
+  ex:hasName "James" .
 \end{minted}
   \caption{Contoh penulisan lebih singkat sebuah \textit{triple} dalam Turtle}
   \label{lst:contoh-singkat-ttl}
@@ -152,8 +171,8 @@ WHERE { ?subjek ?predikat ?objek }
   \centering
   \begin{tabular}{|l|l|l|} \hline
     ?subjek           & ?predikat                & ?objek             \\\hline \hline
-    \texttt{ex:james} & \texttt{ex:has\_visited} & \texttt{ex:louvre} \\\hline
-    \texttt{ex:james} & \texttt{ex:has\_name}    & "james"            \\\hline
+    \texttt{ex:James} & \texttt{ex:hasVisited} & \texttt{ex:Louvre} \\\hline
+    \texttt{ex:James} & \texttt{ex:hasName}    & "James"            \\\hline
   \end{tabular}
   \caption{Output Query 1}
   \label{tab:output-query-1}
@@ -165,14 +184,14 @@ WHERE { ?subjek ?predikat ?objek }
 %--------------------------------------------------------------------------------------------------%
 
 \lst~\ref{lst:query-2} merupakan SPARQL \textit{query} untuk menampilkan semua properti dan objek
-pada \textit{triple} dengan subjek \mono{ex:james}. pada KG, akan memberikan output
+pada \textit{triple} dengan subjek \mono{ex:James}. pada KG, akan memberikan output
 \tab~\ref{tab:output-query-2}.
 
 \begin{listing}[H]
   \begin{minted}[frame=single]{sparql}
 PREFIX ex: <https://example.org/>
 SELECT ?properti ?objek
-WHERE { ex:james ?properti ?objek }
+WHERE { ex:James ?properti ?objek }
   \end{minted}
   \caption{Query 2}
   \label{lst:query-2}
@@ -182,8 +201,8 @@ WHERE { ex:james ?properti ?objek }
   \centering
   \begin{tabular}{|l|l|} \hline
     ?properti                & ?objek             \\\hline \hline
-    \texttt{ex:has\_visited} & \texttt{ex:louvre} \\\hline
-    \texttt{ex:has\_name}    & "james"            \\\hline
+    \texttt{ex:hasVisited} & \texttt{ex:Louvre} \\\hline
+    \texttt{ex:hasName}    & "James"            \\\hline
   \end{tabular}
   \caption{Output Query 3}
   \label{tab:output-query-2}
@@ -195,15 +214,15 @@ WHERE { ex:james ?properti ?objek }
 %--------------------------------------------------------------------------------------------------%
 
 \lst~\ref{lst:query-2} merupakan SPARQL \textit{query} untuk menampilkan semua objek pada
-\textit{triple} dengan subjek \mono{ex:james} dan properti \mono{ex:has\_visited}, dengan output
+\textit{triple} dengan subjek \mono{ex:James} dan properti \mono{ex:hasVisited}, dengan output
 \tab~\ref{tab:output-query-3}. Artinya, \textit{query} ini menampilkan semua tempat yang pernah
-dikunjungi james, yaitu louvre.
+dikunjungi James, yaitu Louvre.
 
 \begin{listing}[H]
   \begin{minted}[frame=single]{sparql}
 PREFIX ex: <https://example.org/>
 SELECT ?visited_place
-WHERE { ex:james ex:has_visited ?visited_place }
+WHERE { ex:James ex:hasVisited ?visited_place }
   \end{minted}
   \caption{Query 3}
   \label{lst:query-3}
@@ -213,7 +232,7 @@ WHERE { ex:james ex:has_visited ?visited_place }
   \centering
   \begin{tabular}{|l|l|l|} \hline
     \texttt{?visited\_place} \\ \hline \hline
-    \texttt{ex:louvre}       \\ \hline
+    \texttt{ex:Louvre}       \\ \hline
   \end{tabular}
   \caption{Output Query 3}
   \label{tab:output-query-3}

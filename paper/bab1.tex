@@ -84,22 +84,19 @@ Wikidata.\footnote{\url{https://www.wikidata.org}}
 @prefix schema: <http://schema.org/> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
-<http://data.europa.eu/eli/dir/1980/181/oj>
-  a schema:Legislation ;
+<http://data.europa.eu/eli/dir/1980/181/oj> a schema:Legislation ;
   schema:about <http://eurovoc.europa.eu/1896> ;
   schema:isBasedOn <http://njh.me/11957E100.html> ;
   schema:legislationDate "1979-12-20"^^schema:Date ;
   schema:legislationPassedBy "Council of the European Union"^^xsd:string ;
   schema:name "Council Directive 80/181/EEC of 20 December 1979 on the approximation of the laws of the Member States relating to units of measurement and on the repeal of Directive 71/354/EEC"^^xsd:string ;
 
-<http://eurovoc.europa.eu/1896>
-  a schema:Thing ;
+<http://eurovoc.europa.eu/1896> a schema:Thing ;
   schema:name "Metrology"^^xsd:string .
 
 <http://njh.me/11957E100.html> a schema:Legislation .
   \end{minted}
-  \caption{Contoh KG tentang metadata untuk suatu dokumen legal dengan \textit{vocabulary}
-    Schema.org}
+  \caption{Contoh KG metadata dokumen legal menggunakan \textit{vocabulary} Schema.org}
   \label{lst:schema-org-example}
 \end{listing}
 
@@ -174,13 +171,11 @@ mempermudah konstruksi KG.
     \node[r] (ontologi)     [below=of pertanyaan]   {Perancangan Ontologi};
     \node[r] (pengembangan) [below=of ontologi]     {Pengembangan Sistem Konversi};
     \node[r] (usecase)      [below=of pengembangan] {\textit{Use Case Evaluation}};
-    \node[r] (eval)         [below=of usecase]      {\textit{Large Scale Evaluation}};
 
     %Lines
     \draw[->] (pertanyaan.south)   -- (ontologi.north);
     \draw[->] (ontologi.south)     -- (pengembangan.north);
     \draw[->] (pengembangan.south) -- (usecase.north);
-    \draw[->] (usecase.south)      -- (eval.north);
 
   \end{tikzpicture}
   \caption{Metodologi Penelitian}
