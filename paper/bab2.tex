@@ -12,9 +12,9 @@
 dunia nyata dan hubungan antara entitas-entitas tersebut \citep{seth_2019}. Sebagai contoh, pada
 \pic~\ref{fig:kg-description} dapat dilihat terpadat entitas-entitas yang ditandai dengan bentuk
 lingkaran, dan hubungan antara entitas-entitas ditandai dengan bentuk anak panah. Pada gambar dapat
-dilihat bahwa terdapat entitas "James" dan "Louvre" dan properti "has visited" yang mengarah dari
-"James" ke "Louvre". Relasi tersebut dapat kita anggap sebagai sebuah pengetahuan yang dalam bahasa
-manusia dapat dituliskan sebagai ``James pernah mengunjungi Louvre''. Model data seperti ini cocok
+dilihat bahwa terdapat entitas "james" dan "Louvre" dan properti "has visited" yang mengarah dari
+"james" ke "Louvre". Relasi tersebut dapat kita anggap sebagai sebuah pengetahuan yang dalam bahasa
+manusia dapat dituliskan sebagai ``james pernah mengunjungi Louvre''. Model data seperti ini cocok
 untuk menyimpan data dengan banyak jenis relasi antara entitas seperti pengetahuan umum,
 dibandingkan dengan \textit{relational database} yang cocok untuk menyimpan data dengan relasi antar
 entitas yang sudah diketahui dan terbatas.
@@ -40,15 +40,14 @@ dapat direpresentasikan sebagai kumpulan \textit{triple}. Subyek dan properti da
 direpresentasikan sebagai Uniform Resource Identifier (URI), sedangkan objek dapat direpresentasikan
 dengan URI atau \textit{string literal}. Pada \pic~\ref{fig:triple-example}, dapat dilihat terdapat
 KG dengan dua \textit{triple}. Pada \textit{triple} 1, subjek, properti, dan objek berturut-turut
-adalah \texttt{https://example.org/james}, \texttt{https://example.org/has\_visited},
-\texttt{https://example.org/louvre} yang mana semuanya berbentuk URI. Sedangkan pada
-\textit{triple}2 , subjek, properti, dan objek berturut-turut adalah
-\texttt{https://example.org/james}, \texttt{https://example.org/has\_name}, \texttt{"james"}.
-\texttt{https://example.org/james}, \texttt{https://example.org/louvre} berturut-turut merupakan
-notasi untuk \textit{resource} entitas James dan Louvre, \texttt{https://example.org/has\_visited}
-dan \texttt{https://example.org/has\_name} merupakan properti yang menjelaskan hubungan antara
-subjek dan objek, dan \texttt{"James"} adalah \textit{string literal} yang menunjukan nilai dari
-nama James.
+adalah \mono{https://example.org/james}, \mono{https://example.org/has\_visited},
+\mono{https://example.org/louvre} yang mana semuanya berbentuk URI. Sedangkan pada \textit{triple}
+2, subjek, properti, dan objek berturut-turut adalah \mono{https://example.org/james},
+\mono{https://example.org/has\_name}, "james". \mono{https://example.org/james},
+\mono{https://example.org/louvre} berturut-turut merupakan notasi untuk \textit{resource} entitas
+james dan Louvre, \mono{https://example.org/has\_visited} dan \mono{https://example.org/has\_name}
+merupakan properti yang menjelaskan hubungan antara subjek dan objek, dan "james" adalah
+\textit{string literal} yang menunjukan nilai dari nama james.
 
 \begin{figure}[H]
   \centering
@@ -74,14 +73,14 @@ menggunakan format Terse RDF Triple Language (Turtle). Sebagai contoh, KG pada
 Dengan fitur format Turtle, dua \textit{triple} pada \lst~\ref{lst:contoh-ttl} dapat ditulis lebih
 singkat dengan mengganti prefix URI yang sama menjadi teks yang lebih singkat, dan menggabungkan
 penulisan beberapa \textit{triple} dengan subjek yang sama sehingga subjek hanya perlu dituliskan
-sekali saja. Sebagai contoh, karena sebagaian besar URI memiliki prefix
-\texttt{https://example.org/}, kita dapat menggantinya dengan \textit{string} \texttt{ex} dengan
-mendeklarasikan \mono{@prefix ex: https://example.org/ .}. Selanjutnya \mono{ex:} digunakan sebagai
-notasi singkat \mono{https://example.org/} untuk mempermudah pembacaan. Kedua \textit{triple} juga
-memiliki subjek yang sama yaitu \mono{ex:james}, oleh karena itu, penulisan kedua Turtle bisa
-digabung dengan hanya menuliskan subjek sebanyak satu kali, kemudian menuliskan properti dan objek
-dipisah dengan tanda titik koma. \lst~\ref{lst:contoh-singkat-ttl} adalah contoh penulisan dua
-\textit{triple} diatas dalam bentuk yang lebih singkat dan lebih mudah dibaca oleh manusia.
+sekali saja. Sebagai contoh, karena sebagaian besar URI memiliki prefix \mono{https://example.org/},
+kita dapat menggantinya dengan \textit{string} \mono{ex:} dengan mendeklarasikan
+\mono{@prefix ex: https://example.org/ .}. Selanjutnya \mono{ex:} digunakan sebagai notasi singkat
+\mono{https://example.org/} untuk mempermudah pembacaan. Kedua \textit{triple} juga memiliki subjek
+yang sama yaitu \mono{ex:james}, oleh karena itu, penulisan kedua Turtle bisa digabung dengan hanya
+menuliskan subjek sebanyak satu kali, kemudian menuliskan properti dan objek dipisah dengan tanda
+titik koma. \lst~\ref{lst:contoh-singkat-ttl} adalah contoh penulisan dua \textit{triple} diatas
+dalam bentuk yang lebih singkat dan lebih mudah dibaca oleh manusia.
 
 \begin{listing}[H]
   \begin{minted}[frame=single, fontsize=\footnotesize]{turtle}
@@ -108,7 +107,7 @@ ex:james
 
 SPARQL merupakan salahsatu RDF \textit{query language} yaitu bahasa yang mampu mengambil atau
 mengubah data yang disimpan dalam format RDF. Sintaks SPARQL memiliki beberapa kesamaan dengan SQL,
-contohnya sebuah variabel diawali dengan tanda tanya seperti \texttt{?name}. Berikut adalah
+contohnya sebuah variabel diawali dengan tanda tanya seperti \mono{?name}. Berikut adalah
 penjelasan sintaks SPARQL.
 
 \begin{itemize}
@@ -148,7 +147,7 @@ WHERE { ?s ?p ?o }
   \begin{tabular}{|l|l|l|} \hline
     ?s                & ?p                       & ?o                 \\\hline \hline
     \texttt{ex:james} & \texttt{ex:has\_visited} & \texttt{ex:louvre} \\\hline
-    \texttt{ex:james} & \texttt{ex:has\_name}    & \texttt{"James"}   \\\hline
+    \texttt{ex:james} & \texttt{ex:has\_name}    & "james"            \\\hline
   \end{tabular}
   \caption{Output Query 1}
   \label{tab:output-query-1}
@@ -178,7 +177,7 @@ WHERE { ex:james ?properti ?objek }
   \begin{tabular}{|l|l|} \hline
     ?properti                & ?objek             \\\hline \hline
     \texttt{ex:has\_visited} & \texttt{ex:louvre} \\\hline
-    \texttt{ex:has\_name}    & "James"            \\\hline
+    \texttt{ex:has\_name}    & "james"            \\\hline
   \end{tabular}
   \caption{Output Query 3}
   \label{tab:output-query-2}
