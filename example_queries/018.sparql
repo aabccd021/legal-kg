@@ -1,9 +1,9 @@
-# tampilkan semua triple
+# tampilkan 10 tempat disahkan paling banyak
 PREFIX o: <https://example.org/lex2kg/ontology/>
 
-SELECT * 
+SELECT ?location (COUNT(?doc) as ?docCount)
 WHERE {
-  ?s ?p ?o .
-} 
-ORDER BY ?s ?p ?o
-LIMIT 3
+  ?doc o:disahkanDi ?location
+}
+GROUP BY ?location
+ORDER BY DESC (?docCount)

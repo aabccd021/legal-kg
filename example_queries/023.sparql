@@ -1,14 +1,8 @@
-# tampilkan 10 dokumen yang pernah diamandemen
+# Count triples about document text
 PREFIX o: <https://example.org/lex2kg/ontology/>
 
-SELECT DISTINCT ?doc ?amenderDoc
-WHERE {
-  ?doc a o:Peraturan .
-  ?pasal o:bagianDari ?doc .
-  ?pasal o:versi ?pasalVersion .
-  ?amender o:mengubah ?pasalVersion .
-  ?amender o:bagianDari* ?amenderDoc .
-  ?amenderDoc a o:Peraturan
-}
-ORDER BY ?doc ?amenderDoc
-LIMIT 10
+SELECT (COUNT (*) as ?countResult) WHERE {
+  ?s
+    o:teks
+  ?o
+} 

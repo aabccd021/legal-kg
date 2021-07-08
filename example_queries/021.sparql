@@ -1,13 +1,28 @@
-# tampilkan legal document beserta yang ditimbangnya (menimbang)
+# Count triples about document structure
 PREFIX o: <https://example.org/lex2kg/ontology/>
-PREFIX uu: <https://example.org/lex2kg/uu/>
 
-SELECT DISTINCT ?penimbang ?ditimbang
-WHERE {
-  ?penimbang o:menimbang ?menimbang .
-  ?menimbangText o:bagianDari* ?menimbang .
-  ?menimbangText o:merujuk ?ditimbang .
-  ?ditimbang a o:Peraturan
-}
-ORDER BY DESC(?penimbang) DESC(?ditimbang)
-LIMIT 5
+SELECT (COUNT (*) as ?countResult) WHERE {
+  ?s
+    o:nomor|
+    o:judul|
+    o:bab|
+    o:bagian|
+    o:paragraf|
+    o:pasal|
+    o:ayat|
+    o:huruf|
+    o:segmen|
+    o:daftarBab|
+    o:daftarBagian|
+    o:daftarParagraf|
+    o:daftarPasal|
+    o:daftarAyat|
+    o:daftarHuruf|
+    o:tanggal|
+    o:jenisVersi|
+    o:versi|
+    o:menimbang|
+    o:mengingat|
+    o:bagianDari
+  ?o
+} 

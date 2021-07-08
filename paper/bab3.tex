@@ -77,12 +77,12 @@ yang didefinisikan pada penelitian ini.
   6            & Tampilkan komponen dari UU Cipta Kerja yang menyisipkan pasal ke UU Ketenagakerjaan dan pula teks dari pasal tersebut.      \\ \hline
   7            & Tampilkan komponen dari UU Cipta Kerja yang mengubah pasal UU Ketenagakerjaan dan tambilkan sebelum dan setelah pengubahan. \\ \hline
   8            & Tampilkan komponen dari UU Cipta Kerja yang menghapus pasal UU Ketenagakerjaan dan pula teks dari pasal tersebut.           \\ \hline
-  9            & Tampilkan banyaknya penyisipan, pengubahan, dan penghapusan pasal yang dilakukan UU Cipta terhadap UU lain.                 \\ \hline
-  10           & Tampilkan pasal pada UU Ketenagakerjaan setelah dilakukan oleh UU Cipta Kerja.                                              \\ \hline
-  11           & Tampilkan pasal pada UU Cipta Kerja yang tidak melakukan amendemen.                                                         \\ \hline
-  12           & Tampilkan pasal pada UU Cipta Kerja yang menghapus pasal yang disahkan setelah tahun 2001.                                  \\ \hline
-  13           & Tampilkan pasal yang disisipkan oleh UU Cipta Kerja dan rujukan yang terdapat pada pasal jika ada.                          \\ \hline
-  14           & Tampilkan peraturan yang paling banyak diamendemen oleh UU Cipta Kerja.                                                     \\ \hline
+  9            & Tampilkan peraturan yang paling banyak diamendemen oleh UU Cipta Kerja.                                                     \\ \hline
+  10           & Tampilkan banyaknya penyisipan, pengubahan, dan penghapusan pasal yang dilakukan UU Cipta terhadap UU lain.                 \\ \hline
+  11           & Tampilkan pasal pada UU Ketenagakerjaan setelah dilakukan oleh UU Cipta Kerja.                                              \\ \hline
+  12           & Tampilkan pasal pada UU Cipta Kerja yang tidak melakukan amendemen.                                                         \\ \hline
+  13           & Tampilkan pasal pada UU Cipta Kerja yang menghapus pasal yang disahkan setelah tahun 2001.                                  \\ \hline
+  14           & Tampilkan pasal yang disisipkan oleh UU Cipta Kerja dan rujukan yang terdapat pada pasal jika ada.                          \\ \hline
   15           & Tampilkan semua peraturan serta peraturan yang ditimbangnya.                                                                \\ \hline
   16           & Tampilkan 10 peraturan dengan pasal terbanyak.                                                                              \\ \hline
   17           & Tampilkan peraturan yang pernah diamendemen.                                                                                \\ \hline
@@ -202,7 +202,7 @@ dari \legal terdaftar pada \tab~\ref{tab:uri-jenis-peraturan}.
 \begin{longtable}[l]{|p{0.5\textwidth}|p{0.5\textwidth}|}
   \hline
   \textbf{Jenis Peraturan}                     & \textbf{URI}                        \\ \hline \endhead
-  Undang-Undang Dasar 1945                     & \texttt{jp:UUD}                        \\ \hline
+  Undang-Undang Dasar 1945                     & \texttt{jp:UUD}                     \\ \hline
   Ketetapan MPR                                & \texttt{jp:TapMPR}                  \\ \hline
   Undang-Undang                                & \texttt{jp:UU}                      \\ \hline
   Peraturan Pemerintah Pengganti Undang-Undang & \texttt{jp:Perpu}                   \\ \hline
@@ -288,7 +288,7 @@ untuk objek disebut \textit{range}. \tab~\ref{tab:properti} adalah properti Lex2
   \texttt{o:daftarBagian}    & \texttt{o:Bab}                                                                                                                   & \texttt{o:Daftarbagian}                               & DaftarBagian                                      \\ \hline
   \texttt{o:daftarParagraf}  & \texttt{o:Bagian}                                                                                                                & \texttt{o:DaftarParagraf}                             & DaftarParagraf                                    \\ \hline
   \texttt{o:daftarPasal}     & \texttt{o:Peraturan},\texttt{o:Bab}, \texttt{o:Paragraf}, \texttt{o:Bagian}                                                      & \texttt{o:DaftarPasal}                                & DaftarPasal                                       \\ \hline
-  \texttt{o:daftarAyat}      & \texttt{o:VersiPasal}                                                                                                                 & \texttt{o:DaftarAyat}                                 & DaftarAyat                                        \\ \hline
+  \texttt{o:daftarAyat}      & \texttt{o:VersiPasal}                                                                                                            & \texttt{o:DaftarAyat}                                 & DaftarAyat                                        \\ \hline
   \texttt{o:daftarHuruf}     & \texttt{o:VersiPasal}, \texttt{o:Ayat}, \texttt{o:Huruf}, \texttt{o:Menimbang}, \texttt{o:Mengingat}                             & \texttt{o:DaftarHuruf}                                & DaftarHuruf                                       \\ \hline
   \texttt{o:merujuk}         & \texttt{o:Segmen}                                                                                                                & entitas apapun                                        & Teks merujuk suatu entitas                        \\ \hline
   \texttt{o:mengubah}        & \texttt{o:Huruf}                                                                                                                 & \texttt{o:VersiPasal}                                 & Pengubahan pasal                                  \\ \hline

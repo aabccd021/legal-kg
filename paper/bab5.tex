@@ -6,31 +6,75 @@
 % //TODO: Intro bab dan subbab
 % //TODO: Jgn cm satu query, minimal 4 dgn ulasan singkat query apa, hasilnya diulas jg trkait
 % dengan dokumenny gmn, lalu KGnya property/fitur apa yg dipakai
+Bab ini berisi evaluasi \textit{use case} KG yang dihasilkan oleh Lex2KG. Evaluasi yang akan
+dilakukan adalah berupa SPARQL \textit{query} \textit{chat bot} sederhana, dan visualisasi \legal.
 
 %--------------------------------------------------------------------------------------------------%
-\section{\textit{Use Case Evaluation}}
-\label{sec:use-case-evaluation}
-%--------------------------------------------------------------------------------------------------%
-\textit{Use case} dari KG yang dihasilkan dari Lex2KG dapat berupa 3 macam yaitu:
-\begin{itemize}
-  \item SPARQL Query
-  \item Visualisasi
-  \item Question Answering Chatbot
-\end{itemize}
-
-%--------------------------------------------------------------------------------------------------%
-\subsection{SPARQL Query}
-\label{subsec:sparq-query}
+\section{SPARQL Query}
+\label{sec:sparq-query}
 %--------------------------------------------------------------------------------------------------%
 
 Dengan menggunakan SPARQL server seperi Apache Jena Fuseki, KG yang dibuat dengan Lex2KG dapat
 dianalisis dengan menjalankan SPARQL \textit{query}. SPARQL \textit{query} memiliki fitur operasi
 \textit{join}, \textit{union}, \textit{optional}, dan \textit{negation pattern}. SPARQL juga
 menyediakan \textit{query} analisis yang lengkap seperti \textit{filter}, \textit{aggregate}, dan
-\textit{property path}. Dengan menggunakan SPARQL \textit{query}, salah satu \textit{competency
-question} ``Tampilkan semua peraturan serta peraturan yang ditimbangnya.'' dapat dijawab dengan
-melakukan \textit{query} \lst~\ref{lst:query-menimbang} yang akan memberikan output
-\tab~\ref{tab:output-query-menimbang}.
+\textit{property path}. Pada subbab ini akan ditujukan \textit{competency question} beserta SPARQL
+\textit{query} untuk menjawab pertanyaan tersebut.
+
+%--------------------------------------------------------------------------------------------------%
+\section{\textit{Competency question} No. 10}
+\label{subsec:cq8}
+%--------------------------------------------------------------------------------------------------%
+
+\textit{Competency question} No. 10 ``Tampilkan banyaknya penyisipan, pengubahan, dan penghapusan
+pasal yang dilakukan UU Cipta terhadap UU lain.'' dapat dijawab dengan melakukan \textit{query}
+\lst~\ref{lst:q-10} yang akan memberikan output \tab~\ref{tab:output-q-10}.
+
+\begin{listing}[H]
+  \begin{minted}[frame=single, fontsize=\footnotesize]{sparql}
+PREFIX o: <https://example.org/lex2kg/ontology/>
+
+SELECT ?type (COUNT(*) AS ?jumlah) WHERE {
+  {
+    ?point o:bagianDari+ <https://example.org/lex2kg/uu/2020/11> .
+    ?point o:menghapus ?pasal .
+    BIND("menghapus" AS ?type)
+  } UNION {
+    ?point o:bagianDari+ <https://example.org/lex2kg/uu/2020/11> .
+    ?point o:menyisipkan ?pasal .
+    BIND("menyisipkan" AS ?type)
+  } UNION {
+    ?point o:bagianDari+ <https://example.org/lex2kg/uu/2020/11> .
+    ?point o:mengubah ?pasal .
+    BIND("mengubah" AS ?type)
+  }
+} GROUP BY ?type
+LIMIT 3
+  \end{minted}
+  \caption{SPARQL \textit{query} untuk \textit{competency question} No. 10}
+  \label{lst:q-10}
+\end{listing}
+
+\begin{table}
+  \centering
+  \begin{tabular}{|l|r|} \hline
+    \texttt{?type} & \texttt{?jumlah} \\\hline \hline
+    "menyisipkan"  & 107              \\\hline
+    "menghapus"    & 184              \\\hline
+    "mengubah"     & 930              \\\hline
+  \end{tabular}
+  \caption{Output \textit{query} \lst~\ref{lst:q-10} }
+  \label{tab:output-q-10}
+\end{table}
+
+%--------------------------------------------------------------------------------------------------%
+\section{\textit{Competency question} No. 15}
+\label{subsec:cq15}
+%--------------------------------------------------------------------------------------------------%
+
+\textit{Competency question} No. 15 ``Tampilkan semua peraturan serta peraturan yang ditimbangnya.''
+dapat dijawab dengan melakukan \textit{query} \lst~\ref{lst:q-15} yang akan memberikan output
+\tab~\ref{tab:output-q-15}.
 
 \begin{listing}[H]
   \begin{minted}[frame=single, fontsize=\footnotesize]{sparql}
@@ -47,29 +91,67 @@ WHERE {
 ORDER BY DESC(?penimbang) DESC(?ditimbang)
 LIMIT 10
   \end{minted}
-  \caption{SPARQL \textit{query} untuk ``Tampilkan semua peraturan serta peraturan yang
-  ditimbangnya.''}
-  \label{lst:query-menimbang}
+  \caption{SPARQL \textit{query} untuk \textit{competency question} No. 15}
+  \label{lst:q-15}
 \end{listing}
 
 \begin{table}
   \centering
   \begin{tabular}{|l|l|} \hline
-    ?penimbang & ?ditimbang \\\hline \hline
-    uu:2020/8  & uu:2018/12 \\\hline
-    uu:2020/6  & uu:2020/2  \\\hline
-    uu:2020/6  & uu:2015/1  \\\hline
-    uu:2020/6  & uu:2014/1  \\\hline
-    uu:2020/2  & uu:2020/1  \\\hline
+    \texttt{?penimbang} & \texttt{?ditimbang} \\\hline \hline
+    \texttt{uu:2020/8}  & \texttt{uu:2018/12} \\\hline
+    \texttt{uu:2020/6}  & \texttt{uu:2020/2}  \\\hline
+    \texttt{uu:2020/6}  & \texttt{uu:2015/1}  \\\hline
+    \texttt{uu:2020/6}  & \texttt{uu:2014/1}  \\\hline
+    \texttt{uu:2020/2}  & \texttt{uu:2020/1}  \\\hline
   \end{tabular}
-  \caption{Output \textit{query} \lst~\ref{lst:query-menimbang} }
-  \label{tab:output-query-menimbang}
+  \caption{Output \textit{query} \lst~\ref{lst:q-15} }
+  \label{tab:output-q-15}
 \end{table}
 
+%--------------------------------------------------------------------------------------------------%
+\section{\textit{Competency question} No. 20}
+\label{subsec:cq20}
+%--------------------------------------------------------------------------------------------------%
+
+\textit{Competency question} No. 20 ``Tampilkan semua peraturan yang melakukan amendemen dan
+banyaknya pasal yang amendemen oleh pasal tersebut.'' dapat dijawab dengan melakukan \textit{query}
+\lst~\ref{lst:q-20} yang akan memberikan output \tab~\ref{tab:output-q-20}.
+
+\begin{listing}[H]
+  \begin{minted}[frame=single, fontsize=\footnotesize]{sparql}
+PREFIX o: <https://example.org/lex2kg/ontology/>
+PREFIX uu: <https://example.org/lex2kg/uu/>
+
+SELECT ?doc (COUNT(?point) as ?amendmentCount)
+WHERE {
+  ?doc a o:Peraturan .
+  ?point o:bagianDari* ?doc .
+  ?point o:mengubah|o:menyisipkan|o:menghapus ?pasalVersion .
+}
+GROUP BY (?doc)
+ORDER BY DESC(?amendmentCount)
+LIMIT 10
+  \end{minted}
+  \caption{SPARQL \textit{query} untuk \textit{competency question} No. 20}
+  \label{lst:q-20}
+\end{listing}
+
+\begin{table}
+  \centering
+  \begin{tabular}{|l|r|} \hline
+    \texttt{?doc}       & \texttt{?amandementCount} \\\hline \hline
+    \texttt{uu:2020/11} & 1221                      \\\hline
+    \texttt{uu:2011/8}  & 20                        \\\hline
+    \texttt{uu:2009/26} & 11                        \\\hline
+  \end{tabular}
+  \caption{Output \textit{query} \lst~\ref{lst:q-20} }
+  \label{tab:output-q-20}
+\end{table}
 
 %--------------------------------------------------------------------------------------------------%
-\subsection{Visualisasi KG}
-\label{subsec:visualisasi-kg}
+\section{Visualisasi KG}
+\label{sec:visualisasi-kg}
 %--------------------------------------------------------------------------------------------------%
 
 % // TODO: Ksh 3 yg jenisnya beda2
@@ -117,8 +199,8 @@ bubble.plot()
 
 
 %--------------------------------------------------------------------------------------------------%
-\subsection{\textit{Question Answering Chatbot}}
-\label{subsec:question-answering-chatbot}
+\section{\textit{Question Answering Chatbot}}
+\label{sec:question-answering-chatbot}
 %--------------------------------------------------------------------------------------------------%
 
 % // TODO: bs dilengkapin, ada bbrp skenario. pemetaan template dsb, penjelasan2

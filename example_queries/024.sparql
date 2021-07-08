@@ -1,9 +1,6 @@
-# tampilkan 10 tempat disahkan paling banyak
+# Count triples about document citation
 PREFIX o: <https://example.org/lex2kg/ontology/>
 
-SELECT ?location (COUNT(?doc) as ?docCount)
-WHERE {
-  ?doc o:disahkanDi ?location
-}
-GROUP BY ?location
-ORDER BY DESC (?docCount)
+SELECT (COUNT (*) as ?countResult) WHERE {
+  ?s o:merujuk ?o
+} 

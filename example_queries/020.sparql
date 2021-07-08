@@ -1,10 +1,13 @@
-# tampilkan semua UU yang disahkan setelah 10 Oktober 2019
+# tampilkan semua document yang melakukan amendment, dan banyaknya pasal yang diamendment oleh dokumen tersebut.
 PREFIX o: <https://example.org/lex2kg/ontology/>
-PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX uu: <https://example.org/lex2kg/uu/>
 
-SELECT *
+SELECT ?doc (COUNT(?point) as ?amendmentCount)
 WHERE {
-  ?legalDoc o:disahkanPada ?date .
-  FILTER ( ?date >= "2019-10-10"^^xsd:date )
+  ?doc a o:Peraturan .
+  ?point o:bagianDari* ?doc .
+  ?point o:mengubah|o:menyisipkan|o:menghapus ?pasalVersion .
 }
-ORDER BY ?legalDoc
+GROUP BY (?doc)
+ORDER BY DESC(?amendmentCount)
+LIMIT 10
