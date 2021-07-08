@@ -479,44 +479,31 @@ terpanjang.
 \label{data-to-triple}
 %--------------------------------------------------------------------------------------------------%
 
-% // TODO: ontologynya mana? kami menggunakan ontologi ini buat konversi, gambarnya ini
-% // TODO: perlu dijelasin jg yg reverse property
-
 \begin{figure}
   \centering
-  \begin{tikzpicture}[node distance=0.5cm]
-    %Styles   
-    \tikzstyle{r} = [rectangle, minimum width=7cm, minimum height=0.5cm, draw, text centered]
-
-    %Nodes
-    \node[r] (data)                       {Data};
-    \node[r] (uri)     [below=of data]    {Konstruksi URI dan literal};
-    \node[r] (class)   [below=of uri]     {\textit{Class assignment}};
-    \node[r] (triple)  [below=of class]   {Konstruksi \textit{triple}};
-    \node[r] (reverse) [below=of triple]  {Konstruksi \textit{reverse property}};
-    \node[r] (kg)      [below=of reverse] {KG};
-
-    %Lines
-    \draw[->] (data.south)    -- (uri.north);
-    \draw[->] (uri.south)     -- (class.north);
-    \draw[->] (class.south)   -- (triple.north);
-    \draw[->] (triple.south)  -- (reverse.north);
-    \draw[->] (reverse.south) -- (kg.north);
-
-  \end{tikzpicture}
+  \includegraphics[scale=0.4]{pictures/konstruksi_kg.png}
   \caption{Konstruksi KG}
   \label{fig:konstruksi-kg}
 \end{figure}
 
-KG dikonstruksi dari data \legal yang sudah terdapat sebagai data terstruktur
-dalam memori. Setiap objek seperti peraturan dan komponen akan dibangun menjadi URI berdasarkan
+Seluruh proses konstruksi KG didasari dengan ontologi yang sudah dirancang pada bab sebelumnya. KG
+dikonstruksi dari data \legal yang sudah terdapat sebagai data terstruktur dalam memori. Setiap
+objek seperti peraturan dan komponen akan dibangun menjadi URI berdasarkan
 \tab~\ref{tab:uri-peraturan} dan \tab~\ref{tab:uri-peraturan}. Literal seperti bilangan,
 \textit{string}, dan tanggal juga dikonversi sesuai spesifikasi \textit{literal type} pada Turtle.
 Setiap objek juga akan di-\textit{assign} ke masing-masing \textit{class} sesuai yang terdapat pada
-\tab~\ref{tab:class}. Kemudian \textit{triple} dibangun berdasarkan relasi antara peraturan atau komponen
-dengan properti, domain, dan range sesuai spesifikasi pada \tab~\ref{tab:properti}.
+\tab~\ref{tab:class}. Kemudian \textit{triple} dibangun berdasarkan relasi antara peraturan atau
+komponen dengan properti, domain, dan range sesuai spesifikasi pada \tab~\ref{tab:properti}. Untuk
+setiap properti struktur, akan dibuat \textit{reverse property} nya yaitu \mono{o:bagianDari}.
+Sebagai contoh, jika terdapat triple \mono{uu:2020/11/bab o:bab uu:2020/11/bab/1}, \textit{reverse
+triple} nya adalah \mono{uu:2020/11/bab/1 o:bab uu:2020/11/bab}. Properti struktur antaralain adalah
+\mono{o:ayat}, \mono{o:bab}, \mono{o:bagian}, \mono{o:daftarAyat}, \mono{o:daftarBab},
+\mono{o:daftarBagian}, \mono{o:daftarHuruf}, \mono{o:daftarParagraf}, \mono{o:daftarPasal},
+\mono{o:huruf}, \mono{o:paragraf}, \mono{o:pasal}, \mono{o:segmen}, \mono{o:teks}, dan
+\mono{o:versi}.
 
-% // TODO: Merge TTL
+
+% // HACK: Merge TTL
 
 %--------------------------------------------------------------------------------------------------%
 \section{Query}
