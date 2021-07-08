@@ -13,6 +13,7 @@ dirancang harus dapat menjawab semua pertanyaan pada \textit{competency question
 \label{sec:arsitektur-sistem-konversi}
 %--------------------------------------------------------------------------------------------------%
 
+% // TODO: belum tepat
 Proses konversi dokumen PDF ke KG mengikuti arsitektur seperti yang ditunjukkan pada
 \pic~\ref{fig:architecture}. Bagian \textit{Optical Character Recognition} (OCR) bertanggung jawab
 untuk mengubah \textit{image-only} PDF menjadi \textit{text-scannable} PDF dan menstandardisasi
@@ -25,32 +26,8 @@ membangun KG \legal dari hasil \textit{parsing}. Setiap KG \legal dihasilkan dar
 menjadi satu KG global.
 
 \begin{figure}
-  % // TODO: belum tepat
   \centering
-  \begin{tikzpicture}[node distance=0.5cm]
-    %Styles   
-    \tikzstyle{r} = [rectangle, minimum width=1.5cm, minimum height=0.5cm, draw, text centered]
-
-    %Nodes
-    \node[r] (pdf)                            {PDF};
-    \node[r] (ocr)       [below=of pdf]       {OCR};
-    \node[r] (scan)      [right=of ocr]       {pindai};
-    \node[r] (noise)     [right=of scan]      {\textit{cleaning}};
-    \node[r] (parse)     [right=of noise]     {\textit{parsing}};
-    \node[r] (construct) [right=of parse]     {konstruksi};
-    \node[r] (kg)        [above=of construct] {KG};
-
-    %Lines
-    \draw[->] (pdf.south)       -- (ocr.north);
-    \draw[->] (ocr.east)        -- (scan.west);
-    \draw[->] (scan.east)       -- (noise.west);
-    \draw[->] (noise.east)      -- (parse.west);
-    \draw[->] (parse.east)      -- (construct.west);
-    \draw[->] (construct.north) -- (kg.south);
-
-    %Boxes
-    \node[draw, dashed, label={Sistem Konversi}, fit=(ocr) (scan) (noise) (parse) (construct)] {};
-  \end{tikzpicture}
+  \includegraphics[scale=0.25]{pictures/arsitektur.png}
   \caption{Arsitektur sistem konversi}
   \label{fig:architecture}
 \end{figure}
