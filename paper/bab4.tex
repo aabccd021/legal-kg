@@ -201,6 +201,7 @@ dari sumber yang sama sehingga memiliki format yang sama, dan juga posisi \texti
 dilihat bahwa \textit{header} selalu terdiri dari teks ``PRESIDEN REPUBLIK INDONESIA'' dan diikuti
 oleh nomor halaman, dan selalu terletak di posisi yang hampir sama. Oleh karena itu, penulis
 memeriksa teks menggunakan \textit{regex} dan posisi dari setiap \textit{span}, kemudian menghapus
+% // TODO: yg regex jgn lp ditambahin ya di Bab ini
 \textit{span} tersebut jika terdeteksi sebagai header.
 
 %--------------------------------------------------------------------------------------------------%
@@ -280,7 +281,7 @@ berhasil terpindai dan jika berhasil terpindai.
 %--------------------------------------------------------------------------------------------------%
 
 % // HACK: repeat until no new component
-% // HACK: Benerin istilah section nya
+% // TODO: Benerin istilah section nya Group
 % // TODO: regex2nya bs dtmbhin dan ceritain
 
 Teks yang membentuk suatu komponen terdiri dari satu atau lebih \textit{span}, sehingga daftar
@@ -379,16 +380,14 @@ dilakukan jika dokumen memiliki komponen berupa amendemen.
 \end{figure}
 
 
-% // TODO: uu cipta kerj
 % // TODO: competency question: dilampiran, ditangani, dikasih disini representatif, kasih judul gan
 % // TODO: panah menimbang
-% // TODO: penulis membuat versi poster paper, status menunggu review. versi paper.
 %--------------------------------------------------------------------------------------------------%
 \section{Deteksi Rujukan}
 \label{sec:deteksi-rujukan}
 %--------------------------------------------------------------------------------------------------%
 
-% // TODO: regexny tmbhn jg utk yg deteksi rujukan
+% // TODO: regexny tmbhn jg utk yg deteksi rujukan, horizontal
 
 Setelah semua \textit{span} dikelompokan menjadi suatu komponen, dilakukan deteksi rujukan pada teks
 pada setiap komponen untuk mengetahui apakah komponen tersebut menyebut komponen atau dokumen \legal

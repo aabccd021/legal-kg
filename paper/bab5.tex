@@ -23,8 +23,11 @@ menyediakan \textit{query} analisis yang lengkap seperti \textit{filter}, \texti
 \label{subsec:cq8}
 %--------------------------------------------------------------------------------------------------%
 
+% // TODO: Kasih judul ``Query tentang Amendemen UU Cipta Kerja''
+% // TODO: Dijelasin jg fitur querynya
+
 \textit{Competency question} No. 10 ``Tampilkan banyaknya penyisipan, pengubahan, dan penghapusan
-pasal yang dilakukan UU Cipta terhadap UU lain.'' dapat dijawab dengan melakukan \textit{query}
+pasal yang dilakukan UU Cipta Kerja terhadap UU lain.'' dapat dijawab dengan melakukan \textit{query}
 \lst~\ref{lst:q-10} yang akan memberikan output \tab~\ref{tab:output-q-10}. Pada \textit{query}
 digunakan properti \mono{o:menghapus}, \mono{o:menyisipkan}, dan \mono{o:mengubah} untuk mencari
 \textit{triple} yang melakukan amendemen.
@@ -276,12 +279,14 @@ graph.plot()
 \label{sec:chatbot-sederhana}
 %--------------------------------------------------------------------------------------------------%
 
+% // TODO: tmbhkn satu skenario yg smpai liat konten
+
 KG \legal dapat digunakan pada \textit{chat bot}. \textit{Chat bot} sederhana memberikan pertanyaan
 yang sudah disediakan dan mengembalikan jawaban berdasarkan input pengguna sesuai program
 deterministik yang diimplementasi. Pada bab ini akan diperlihatkan bagaimana pengguna melalui
 beberapa skenario dan bagaimana \textit{chat bot} nya bekerja. Skenario \textit{chatbot} adalah
-sekuensial, artinya skenario 2 adalah lanjutan dari skenario 1, dan skenario 3 adalah lanjutan dari
-skenario 1. Input pengguna akan digunakan sebagai input dari template SPARQL \textit{query} yang
+sekuensial, artinya Skenario 2 adalah lanjutan dari Skenario 1, dan Skenario 3 adalah lanjutan dari
+Skenario 2. Input pengguna akan digunakan sebagai input dari template SPARQL \textit{query} yang
 sudah tersedia. Teks yang ditampilkan \textit{chat bot} ditandai dengan warna hitam, dan teks input
 pengguna ditandai dengan \textcolor{red}{warna merah}.
 
@@ -290,7 +295,7 @@ pengguna ditandai dengan \textcolor{red}{warna merah}.
 \label{subsec:skenario-1}
 %--------------------------------------------------------------------------------------------------%
 
-\lst~\ref{lst:chatbot-1} merupakan tampilan chatbot pada skenario 1 di mana pengguna dapat mencari
+\lst~\ref{lst:chatbot-1} merupakan tampilan chatbot pada Skenario 1 di mana pengguna dapat mencari
 \legal dengan kata kunci tertentu. Pada contoh ini pengguna mencari peraturan dengan kata kunci
 ``kerja'', kemudian \textit{chat bot} melakukan \textit{query} terhadap KG menggunakan template
 \lst~\ref{lst:chatbot-1-query}, di mana \mono{inputStr} memiliki nilai ``kerja''. Kemudian
@@ -317,7 +322,7 @@ pengguna ditandai dengan \textcolor{red}{warna merah}.
       \hline
     \end{tabular}
   \end{center}
-  \caption{Tampilan \textit{chat bot} untuk skenario 1}
+  \caption{Tampilan \textit{chat bot} untuk Skenario 1}
   \label{lst:chatbot-1}
 \end{listing}
 
@@ -335,7 +340,7 @@ WHERE {
 `,
     });
   \end{minted}
-  \caption{\textit{Query} template untuk skenario 1}
+  \caption{\textit{Query} template untuk Skenario 1}
   \label{lst:chatbot-1-query}
 \end{listing}
 
@@ -344,7 +349,7 @@ WHERE {
 \label{subsec:skenario-2}
 %--------------------------------------------------------------------------------------------------%
 
-\lst~\ref{lst:chatbot-2} merupakan tampilan chatbot pada skenario 2 di mana pengguna memilih
+\lst~\ref{lst:chatbot-2} merupakan tampilan chatbot pada Skenario 2 di mana pengguna memilih
 peraturan berdasarkan pilihan yang diberikan sebelumnya, kemudian menampilkan metadatanya. Pada
 contoh ini pengguna memilih \mono{uu/2019/3}, kemudian \textit{chat bot} melakukan \textit{query}
 terhadap KG menggunakan template \lst~\ref{lst:chatbot-2-query}, di mana \mono{legalURI} memiliki
@@ -379,7 +384,7 @@ metadata UU 3/2019.
       \hline
     \end{tabular}
   \end{center}
-  \caption{Tampilan \textit{chat bot} untuk skenario 2}
+  \caption{Tampilan \textit{chat bot} untuk Skenario 2}
   \label{lst:chatbot-2}
 \end{listing}
 
@@ -399,7 +404,7 @@ PREFIX o: <https://example.org/lex2kg/ontology/>
 `,
     });
   \end{minted}
-  \caption{\textit{Query} template untuk skenario 2}
+  \caption{\textit{Query} template untuk Skenario 2}
   \label{lst:chatbot-2-query}
 \end{listing}
 
@@ -408,7 +413,7 @@ PREFIX o: <https://example.org/lex2kg/ontology/>
 \label{subsec:skenario-3}
 %--------------------------------------------------------------------------------------------------%
 
-\lst~\ref{lst:chatbot-3} merupakan tampilan chatbot pada skenario 3 di mana pengguna memilih
+\lst~\ref{lst:chatbot-3} merupakan tampilan chatbot pada Skenario 3 di mana pengguna memilih
 peraturan berdasarkan pilihan yang diberikan sebelumnya, kemudian menampilkan peraturan yang
 ditimbangnya. Pada contoh ini pengguna memilih \mono{uu/2019/3}, kemudian \textit{chat bot}
 melakukan \textit{query} terhadap KG menggunakan template \lst~\ref{lst:chatbot-3-query}, di mana
@@ -433,7 +438,7 @@ melakukan \textit{query} terhadap KG menggunakan template \lst~\ref{lst:chatbot-
       \hline
     \end{tabular}
   \end{center}
-  \caption{Tampilan \textit{chat bot} untuk skenario 3}
+  \caption{Tampilan \textit{chat bot} untuk Skenario 3}
   \label{lst:chatbot-3}
 \end{listing}
 
@@ -451,7 +456,7 @@ WHERE {
 `,
     });
   \end{minted}
-  \caption{\textit{Query} template untuk skenario 3}
+  \caption{\textit{Query} template untuk Skenario 3}
   \label{lst:chatbot-3-query}
 \end{listing}
 
