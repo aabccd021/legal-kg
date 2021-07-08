@@ -1,9 +1,261 @@
 %--------------------------------------------------------------------------------------------------%
-\addappendix{CHANGELOG}
-\chapter*{Lampiran 1: CHANGELOG}
-\label{appendix:changelog}
+\addappendix{Ontologi Lex2KG}
+\chapter*{Lampiran 1: Ontologi Lex2KG}
+\label{appendix:ontologi}
 %--------------------------------------------------------------------------------------------------%
-lorem ipsum
+
+\begin{lstlisting}
+@prefix dct:      <http://purl.org/dc/terms/> .
+@prefix lex2kg-o: <https://example.org/lex2kg/ontology/> .
+@prefix owl:      <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:      <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:     <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema:   <https://schema.org/> .
+
+<https://example.org/lex2kg/ontology>
+        rdf:type         owl:Ontology ;
+        dct:creator      "Muhamad Abdurahman" , "Fariz Darari" , "Hans Lesmana" , "Muhtar Hartopo" , "Immanuel Rhesa" , "Berty Chrismartin Lumban Tobing" ;
+        dct:description  "An ontology for Lex2KG, a framework for automated conversion of legal documents to knowledge graph" ;
+        dct:title        "Lex2KG Ontology" .
+
+lex2kg-o:ayat  rdf:type  rdf:Property ;
+        rdfs:label  "section"@en , "ayat"@id .
+
+lex2kg-o:DaftarBagian
+        rdf:type    rdfs:Class ;
+        rdfs:label  "PartList"@en , "DaftarBagian"@id .
+
+lex2kg-o:Ayat  rdf:type  rdfs:Class ;
+        rdfs:label  "Section"@en , "Ayat"@id .
+
+lex2kg-o:KeputusanBupatiWalikota
+        rdf:type    rdfs:Resource ;
+        rdfs:label  "RegentMayorDecree"@en , "KeputusanBupatiWalikota"@id .
+
+lex2kg-o:UU  rdf:type  rdfs:Resource ;
+        rdfs:label  "Law"@en , "UU"@id .
+
+lex2kg-o:yurisdiksi  rdf:type  rdf:Property ;
+        rdfs:label          "jurisdiction"@en , "yurisdiksi"@id ;
+        rdfs:subPropertyOf  schema:jurisdiction .
+
+lex2kg-o:VersiPasal  rdf:type  rdfs:Class ;
+        rdfs:label  "ArticleVersion"@en , "VersiPasal"@id .
+
+lex2kg-o:Peraturan  rdf:type  rdfs:Class ;
+        rdfs:label       "Legislation"@en , "Peraturan"@id ;
+        rdfs:subClassOf  schema:Legislation .
+
+lex2kg-o:bagianDari  rdf:type  rdf:Property ;
+        rdfs:label          "partOf"@en , "bagianDari"@id ;
+        rdfs:subPropertyOf  schema:isPartOf .
+
+lex2kg-o:Paragraf  rdf:type  rdfs:Class ;
+        rdfs:label  "Paragraph"@en , "Paragraf"@id .
+
+lex2kg-o:bagian  rdf:type  rdf:Property ;
+        rdfs:label  "part"@en , "bagian"@id .
+
+lex2kg-o:paragraf  rdf:type  rdf:Property ;
+        rdfs:label  "paragraph"@en , "paragraf"@id .
+
+lex2kg-o:PP  rdf:type  rdfs:Resource ;
+        rdfs:label  "GovernmentRegulation"@en , "PP"@id .
+
+lex2kg-o:KeputusanMenteri
+        rdf:type    rdfs:Resource ;
+        rdfs:label  "MinisterialDecree"@en , "KeputusanMenteri"@id .
+
+lex2kg-o:Segmen  rdf:type  rdfs:Class ;
+        rdfs:label  "Segment"@en , "Segmen"@id .
+
+lex2kg-o:Menimbang  rdf:type  rdfs:Class ;
+        rdfs:label  "Consideration"@en , "Menimbang"@id .
+
+lex2kg-o:KeputusanGubernur
+        rdf:type    rdfs:Resource ;
+        rdfs:label  "GovernorDecree"@en , "KeputusanGubernur"@id .
+
+lex2kg-o:PeraturanBupatiWalikota
+        rdf:type    rdfs:Resource ;
+        rdfs:label  "RegentMayorRegulation"@en , "PeraturanBupatiWalikota"@id .
+
+lex2kg-o:merujuk  rdf:type  rdf:Property ;
+        rdfs:label          "cites"@en , "merujuk"@id ;
+        rdfs:subPropertyOf  schema:citation .
+
+lex2kg-o:daftarAyat  rdf:type  rdf:Property ;
+        rdfs:label  "sectionList"@en , "daftarAyat"@id .
+
+lex2kg-o:Mengingat  rdf:type  rdfs:Class ;
+        rdfs:label  "View"@en , "Mengingat"@id .
+
+lex2kg-o:DaftarPasal  rdf:type  rdfs:Class ;
+        rdfs:label  "ArticleList"@en , "DaftarPasal"@id .
+
+lex2kg-o:daftarParagraf
+        rdf:type    rdf:Property ;
+        rdfs:label  "paragraphList"@en , "daftarParagraf"@id .
+
+lex2kg-o:daftarBagian
+        rdf:type    rdf:Property ;
+        rdfs:label  "partList"@en , "daftarBagian"@id .
+
+lex2kg-o:menghapus  rdf:type  rdf:Property ;
+        rdfs:label          "deletes"@en , "menghapus"@id ;
+        rdfs:subPropertyOf  schema:legislationChanges .
+
+lex2kg-o:Huruf  rdf:type  rdfs:Class ;
+        rdfs:label  "Point"@en , "Huruf"@id .
+
+lex2kg-o:bahasa  rdf:type   rdf:Property ;
+        rdfs:label          "language"@en , "bahasa"@id ;
+        rdfs:subPropertyOf  schema:inLanguage .
+
+lex2kg-o:mengubah  rdf:type  rdf:Property ;
+        rdfs:label          "amends"@en , "mengubah"@id ;
+        rdfs:subPropertyOf  schema:legislationChanges .
+
+lex2kg-o:PeraturanMenteri
+        rdf:type    rdfs:Resource ;
+        rdfs:label  "MinisterialRegulation"@en , "PeraturanMenteri"@id .
+
+lex2kg-o:menimbang  rdf:type  rdf:Property ;
+        rdfs:label  "inConsiderationOf"@en , "menimbang"@id .
+
+lex2kg-o:teks  rdf:type     rdf:Property ;
+        rdfs:label          "text"@en , "teks"@id ;
+        rdfs:subPropertyOf  schema:text .
+
+lex2kg-o:segmen  rdf:type  rdf:Property ;
+        rdfs:label  "segment"@en , "segmen"@id .
+
+lex2kg-o:versi  rdf:type    rdf:Property ;
+        rdfs:label          "version"@en , "versi"@id ;
+        rdfs:subPropertyOf  schema:version .
+
+lex2kg-o:PerdaKabKota
+        rdf:type    rdfs:Resource ;
+        rdfs:label  "RegencyCityRegulation"@en , "PerdaKabKota"@id .
+
+lex2kg-o:bab  rdf:type  rdf:Property ;
+        rdfs:label  "chapter"@en , "bab"@id .
+
+lex2kg-o:jabatanPengesah
+        rdf:type            rdf:Property ;
+        rdfs:label          "enactorTitle"@en , "jabatanPengesah"@id ;
+        rdfs:subPropertyOf  schema:title .
+
+lex2kg-o:Pasal  rdf:type  rdfs:Class ;
+        rdfs:label  "Article"@en , "Pasal"@id .
+
+lex2kg-o:DaftarHuruf  rdf:type  rdfs:Class ;
+        rdfs:label  "PointSet"@en , "DaftarHuruf"@id .
+
+lex2kg-o:pasal  rdf:type  rdf:Property ;
+        rdfs:label  "article"@en , "pasal"@id .
+
+lex2kg-o:mengingat  rdf:type  rdf:Property ;
+        rdfs:label  "inViewOf"@en , "mengingat"@id .
+
+lex2kg-o:DaftarAyat  rdf:type  rdfs:Class ;
+        rdfs:label  "SectionList"@en , "DaftarAyat"@id .
+
+lex2kg-o:DaftarBab  rdf:type  rdfs:Class ;
+        rdfs:label  "ChapterList"@en , "DaftarBab"@id .
+
+lex2kg-o:tahun  rdf:type  rdf:Property ;
+        rdfs:label  "year"@en , "tahun"@id .
+
+lex2kg-o:Bab  rdf:type  rdfs:Class ;
+        rdfs:label  "Chapter"@en , "Bab"@id .
+
+lex2kg-o:disahkanDi  rdf:type  rdf:Property ;
+        rdfs:label          "enactedIn"@en , "disahkanDi"@id ;
+        rdfs:subPropertyOf  schema:legislationJurisdiction .
+
+lex2kg-o:UUD  rdf:type  rdfs:Resource ;
+        rdfs:label  "Constitution"@en , "UUD"@id .
+
+lex2kg-o:KeputusanPresiden
+        rdf:type    rdfs:Resource ;
+        rdfs:label  "PresidentialDecree"@en , "KeputusanPresiden"@id .
+
+lex2kg-o:DaftarParagraf
+        rdf:type    rdfs:Class ;
+        rdfs:label  "ParagraphList"@en , "DaftarParagraf"@id .
+
+lex2kg-o:jenisPeraturan
+        rdf:type            rdf:Property ;
+        rdfs:label          "legislationType"@en , "jenisPeraturan"@id ;
+        rdfs:subPropertyOf  schema:legislationType .
+
+lex2kg-o:Perpu  rdf:type  rdfs:Resource ;
+        rdfs:label  "GovernmentRegulationInLieuOfLaw"@en , "Perpu"@id .
+
+lex2kg-o:huruf  rdf:type  rdf:Property ;
+        rdfs:label  "point"@en , "huruf"@id .
+
+lex2kg-o:daftarHuruf  rdf:type  rdf:Property ;
+        rdfs:label  "pointList"@en , "daftarHuruf"@id .
+
+lex2kg-o:tanggal  rdf:type  rdf:Property ;
+        rdfs:label  "date"@en , "tanggal"@id .
+
+lex2kg-o:daftarPasal  rdf:type  rdf:Property ;
+        rdfs:label  "articleList"@en , "daftarPasal"@id .
+
+lex2kg-o:Perpres  rdf:type  rdfs:Resource ;
+        rdfs:label  "PresidentialRegulation"@en , "Perpres"@id .
+
+lex2kg-o:PerdaProvinsi
+        rdf:type    rdfs:Resource ;
+        rdfs:label  "ProvincialRegulation"@en , "PerdaProvinsi"@id .
+
+lex2kg-o:Bagian  rdf:type  rdfs:Class ;
+        rdfs:label  "Part"@en , "Bagian"@id .
+
+lex2kg-o:disahkanPada
+        rdf:type            rdf:Property ;
+        rdfs:label          "enactedOn"@en , "disahkanPada"@id ;
+        rdfs:subPropertyOf  schema:legislationDate .
+
+lex2kg-o:jenisVersi  rdf:type  rdf:Property ;
+        rdfs:label  "versionType"@en , "jenisVersi"@id .
+
+lex2kg-o:daftarBab  rdf:type  rdf:Property ;
+        rdfs:label  "chapterList"@en , "daftarBab"@id .
+
+lex2kg-o:tentang  rdf:type  rdf:Property ;
+        rdfs:label          "about"@en , "tentang"@id ;
+        rdfs:subPropertyOf  schema:about .
+
+lex2kg-o:disahkanOleh
+        rdf:type            rdf:Property ;
+        rdfs:label          "enactedBy"@en , "disahkanOleh"@id ;
+        rdfs:subPropertyOf  schema:legislationPassedBy .
+
+lex2kg-o:PeraturanGubernur
+        rdf:type    rdfs:Resource ;
+        rdfs:label  "GovernorRegulation"@en , "PeraturanGubernur"@id .
+
+lex2kg-o:TapMPR  rdf:type  rdfs:Resource ;
+        rdfs:label  "PeopleConsultativeAssemblyDecree"@en , "TapMPR"@id .
+
+lex2kg-o:menyisipkan  rdf:type  rdf:Property ;
+        rdfs:label          "inserts"@en , "menyisipkan"@id ;
+        rdfs:subPropertyOf  schema:legislationChanges .
+
+lex2kg-o:nomor  rdf:type  rdf:Property ;
+        rdfs:label  "number"@en , "nomor"@id .
+\end{lstlisting}
+
+%--------------------------------------------------------------------------------------------------%
+\addappendix{\textit{Query} dan Hasil \textit{Query} untuk \textit{Competency Questions}}
+\chapter*{Lampiran 2: \textit{Query} dan Hasil \textit{Query} untuk \textit{Competency Questions} }
+\label{appendix:query}
+%--------------------------------------------------------------------------------------------------%
+
 
 % // TODO: masukin semua query
 % // TODO: bikin querynya
