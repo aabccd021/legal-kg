@@ -64,15 +64,15 @@ karena secara struktur dapat dilakukan dengan mudah, dan dapat memperkuat data d
 KG. KG memiliki entitas-entitas dengan URI yang unik, oleh karena itu saat menggabungkan sebuah KG A
 dan sebuah KG B, entitas yang berbeda harus memiliki URI yang berbeda. Sebuah masalah dapat terjadi
 apabila URI tidak dirancang dengan benar. Sebagai contoh, apabila terdapat entitas dari KG A dengan
-URI \texttt{https://example.org/trump} dengan maksud Donald Trump mantan presiden Amerika Serikat,
+URI \mono{https://example.org/trump} dengan maksud Donald Trump mantan presiden Amerika Serikat,
 dan entitas dari KG B dengan URI yang sama dengan maksud permainan kartu Trump, saat kedua KG ini
 digabung akan menjadi informasi yang berkontradiksi. Oleh karena itu, pada umumnya digunakan
 \textit{namespace} yang berbeda untuk masing-masing KG. Sebagai contoh, dengan KG A menggunakan
-\textit{namespace} \texttt{https://kga.org} dan KG B menggunakan \textit{namespace}
-\texttt{https://kgb.org}, dua entitas yang sebelumnya berkontradiksi akan memiliki URI yang berbeda
-yaitu \texttt{https://kga.org/trump} dan \texttt{https://kgb.org/trump}.
+\textit{namespace} \mono{https://kga.org} dan KG B menggunakan \textit{namespace}
+\mono{https://kgb.org}, dua entitas yang sebelumnya berkontradiksi akan memiliki URI yang berbeda
+yaitu \mono{https://kga.org/trump} dan \mono{https://kgb.org/trump}.
 
-Pada penelitian ini digunakan \textit{namespace} \texttt{https://example.org/lex2kg/}.
+Pada penelitian ini digunakan \textit{namespace} \mono{https://example.org/lex2kg/}.
 \textit{Namespace} yang digunakan oleh Lex2KG dapat dikonfigurasi. \tab~\ref{tab:prefixes} adalah
 daftar \textit{prefix} dan notasi singkatnya pada yang akan digunakan pada selanjutnya.
 
@@ -127,7 +127,7 @@ adalah semua \textit{class} komponen beserta URI dan deskripsinya.
 
 URI peraturan ini akan digunakan oleh entitas sebagai prefix yang selanjutnya akan disebut
 \textit{docURI}. \tab~\ref{tab:uri-peraturan} adalah jenis \legal yang diimplementasi pada
-penelitian ini beserta pola URI nya. Variabel akan dikurung dengan kurung kurawal \texttt{\{\}}.
+penelitian ini beserta pola URI nya. Variabel akan dikurung dengan kurung kurawal \mono{\{\}}.
 
 \begin{longtable}[l]{|p{0.2\textwidth}|p{0.55\textwidth}|p{0.25\textwidth}|}
   \hline
@@ -150,28 +150,28 @@ komponen \legal beserta pola URI nya.
   \hline
   \textbf{\textit{Class} Komponen} & \textbf{Pola URI}                     & \textbf{Penjelasan variabel}                                                                                                                             \\ \hline \endhead
   \texttt{o:DaftarBab}             & \texttt{\{docURI\}/bab}               & \texttt{docURI}: URI peraturan yang mengatasi                                                                                                            \\ \hline
-  \texttt{o:Bab}                   & \texttt{\{daftarBabURI\}/\{no\}}      & \texttt{daftarBabURI}: URI \texttt{DaftarBab} yang mengatasi                                                                                             \\
+  \texttt{o:Bab}                   & \texttt{\{daftarBabURI\}/\{no\}}      & \texttt{daftarBabURI}: URI \mono{o:DaftarBab} yang mengatasi                                                                                             \\
                                    &                                       & \texttt{no}: Nomor bab                                                                                                                                   \\ \hline
-  \texttt{o:DaftarBagian}          & \texttt{\{babURI\}/bagian}            & \texttt{babURI}: URI \texttt{Bab} yang mengatasi                                                                                                         \\ \hline
-  \texttt{o:Bagian}                & \texttt{\{daftarBagianURI\}/\{no\}}   & \texttt{daftarBagianURI}: URI \texttt{DaftarBagian} yang mengatasi                                                                                       \\
+  \texttt{o:DaftarBagian}          & \texttt{\{babURI\}/bagian}            & \texttt{babURI}: URI \mono{o:Bab} yang mengatasi                                                                                                         \\ \hline
+  \texttt{o:Bagian}                & \texttt{\{daftarBagianURI\}/\{no\}}   & \texttt{daftarBagianURI}: URI \mono{o:DaftarBagian} yang mengatasi                                                                                       \\
                                    &                                       & \texttt{no}: Nomor bagian                                                                                                                                \\ \hline
-  \texttt{o:DaftarParagraf}        & \texttt{\{bagianURI\}/paragraf}       & \texttt{bagianURI}: URI \texttt{Bagian} yang mengatasi                                                                                                   \\ \hline
-  \texttt{o:Paragraf}              & \texttt{\{daftarParagrafURI\}/\{no\}} & \texttt{daftarParagrafURI}: URI \texttt{DaftarBagian} yang mengatasi                                                                                     \\
+  \texttt{o:DaftarParagraf}        & \texttt{\{bagianURI\}/paragraf}       & \texttt{bagianURI}: URI \mono{o:Bagian} yang mengatasi                                                                                                   \\ \hline
+  \texttt{o:Paragraf}              & \texttt{\{daftarParagrafURI\}/\{no\}} & \texttt{daftarParagrafURI}: URI \mono{o:DaftarBagian} yang mengatasi                                                                                     \\
                                    &                                       & \texttt{no}: Nomor paragraf                                                                                                                              \\ \hline
-  \texttt{o:DaftarPasal}           & \texttt{\{parentURI\}/daftarpasal}    & \texttt{parentURI}: URI \texttt{Bab}, \texttt{Bagian}, \texttt{Paragraf} yang mengatasi                                                                  \\ \hline
+  \texttt{o:DaftarPasal}           & \texttt{\{parentURI\}/daftarpasal}    & \texttt{parentURI}: URI \mono{o:Bab}, \mono{o:Bagian}, \mono{o:Paragraf} yang mengatasi                                                                  \\ \hline
   \texttt{o:Pasal}                 & \texttt{\{docURI\}/pasal/\{no\}}      & \texttt{docURI}: URI peraturan yang mengatasi                                                                                                            \\
                                    &                                       & \texttt{no}: Nomor pasal                                                                                                                                 \\ \hline
-  \texttt{o:VersiPasal}            & \texttt{\{pasalURI\}/versi/\{date\}}  & \texttt{pasalURI}: URI \texttt{Pasal} yang mengatasi                                                                                                     \\
+  \texttt{o:VersiPasal}            & \texttt{\{pasalURI\}/versi/\{date\}}  & \texttt{pasalURI}: URI \mono{o:Pasal} yang mengatasi                                                                                                     \\
                                    &                                       & \texttt{date}: Tanggal disahkan                                                                                                                          \\ \hline
-  \texttt{o:DaftarAyat}            & \texttt{\{pasalURI\}/ayat}            & \texttt{pasalURI}: URI \texttt{Pasal} yang mengatasi                                                                                                     \\ \hline
-  \texttt{o:Ayat}                  & \texttt{\{daftarAyatURI\}/\{no\}}     & \texttt{daftarAyatURI}: URI \texttt{DaftarAyat} yang mengatasi                                                                                           \\
+  \texttt{o:DaftarAyat}            & \texttt{\{pasalURI\}/ayat}            & \texttt{pasalURI}: URI \mono{o:Pasal} yang mengatasi                                                                                                     \\ \hline
+  \texttt{o:Ayat}                  & \texttt{\{daftarAyatURI\}/\{no\}}     & \texttt{daftarAyatURI}: URI \mono{o:DaftarAyat} yang mengatasi                                                                                           \\
                                    &                                       & \texttt{no}: Nomor ayat                                                                                                                                  \\ \hline
-  \texttt{o:DaftarHuruf}           & \texttt{\{parentURI\}/huruf}          & \texttt{parentURI}: URI \texttt{Ayat}, \texttt{Huruf}, \texttt{VersiPasal}, \texttt{Menimbang}, \texttt{Mengingat}, yang mengatasi                       \\ \hline
-  \texttt{o:Huruf}                 & \texttt{\{daftarHurufURI\}/\{id\}}    & \texttt{daftarHurufURI}: URI \texttt{DaftarHuruf} yang mengatasi                                                                                         \\
+  \texttt{o:DaftarHuruf}           & \texttt{\{parentURI\}/huruf}          & \texttt{parentURI}: URI \mono{o:Ayat}, \mono{o:Huruf}, \mono{o:VersiPasal}, \mono{o:Menimbang}, \mono{o:Mengingat}, yang mengatasi                       \\ \hline
+  \texttt{o:Huruf}                 & \texttt{\{daftarHurufURI\}/\{id\}}    & \texttt{daftarHurufURI}: URI \mono{o:DaftarHuruf} yang mengatasi                                                                                         \\
                                    &                                       & \texttt{id}: Nomor atau huruf                                                                                                                            \\ \hline
   \texttt{o:Menimbang}             & \texttt{\{docURI\}/menimbang}         & \texttt{docURI}: URI peraturan yang mengatasi                                                                                                            \\ \hline
   \texttt{o:Mengingat}             & \texttt{\{docURI\}/mengingat}         & \texttt{docURI}: URI peraturan yang mengatasi                                                                                                            \\ \hline
-  \texttt{o:Segmen}                & \texttt{\{parentURI\}/\{name\}}       & \texttt{parentURI}: URI \texttt{Ayat}, \texttt{Huruf}, \texttt{DaftarHuruf}, \texttt{VersiPasal}, \texttt{Menimbang}, \texttt{Mengingat}, yang mengatasi \\
+  \texttt{o:Segmen}                & \texttt{\{parentURI\}/\{name\}}       & \texttt{parentURI}: URI \mono{o:Ayat}, \mono{o:Huruf}, \mono{o:DaftarHuruf}, \mono{o:VersiPasal}, \mono{o:Menimbang}, \texttt{Mengingat}, yang mengatasi \\
                                    &                                       & \texttt{name}: Nama teks                                                                                                                                 \\ \hline
   \caption{Konstruksi URI untuk komponen \legal}
   \label{tab:uri-komponen}
@@ -190,7 +190,7 @@ deskripsinya.
 
 \begin{longtable}{|p{0.22\textwidth}|p{0.22\textwidth}|p{0.22\textwidth}|p{0.34\textwidth}|}
   \hline
-  \textbf{Nama}            & \textbf{Domain}                                                                                                                  & \textbf{Range}                                        & \textbf{Deskripsi}                                \\ \hline \endhead
+  \textbf{Nama}              & \textbf{Domain}                                                                                                                  & \textbf{Range}                                        & \textbf{Deskripsi}                                \\ \hline \endhead
   \texttt{o:nomor}           & \texttt{o:Bab}, \texttt{o:Bagian}, \texttt{o:Paragraf}, \texttt{o:Pasal}, \texttt{o:Ayat}, \texttt{o:Huruf}                      & string, number                                        & Nomor atau huruf \_identifier\_ dari komponen     \\ \hline
   \texttt{o:teks}            & \texttt{o:Ayat}, \texttt{o:VersiPasal}, \texttt{o:Segmen}                                                                        & string                                                & teks dari komponen                                \\ \hline
   \texttt{o:bab}             & \texttt{o:DaftarBab}                                                                                                             & \texttt{o:Bab}                                        & Bab                                               \\ \hline

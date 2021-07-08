@@ -42,10 +42,10 @@ melihat satu per satu \textit{diff} dari hasil konversi. Berikut adalah daftar p
 Dokumen \legal yang digunakan pada penelitian didapatkan dalam format berkas
 PDF. Penulis pada awalnya mencoba langsung mengekstraksi data dari PDF, tetapi penulis menemukan
 kesulitan. Salahsatu kesulitan yang penulis temui adalah terdapatnya salah pemindaian pada berkas
-PDF. Sebagai contoh, terdapat teks yang tertulis \texttt{Pasal} tetapi mengandung data
-\texttt{Pasai}. Selain itu, penulis juga menemukan bahwa setiap dokumen mengandung keslahan
-pemindaian yang bervariasi. Untuk suatu kasus, teks \texttt{(2)} selalu terdeteksi sebagai
-\texttt{(21} pada suatu dokumen, tetapi tidak pada dokumen lainnya. Pada kasus lainnya terdapat
+PDF. Sebagai contoh, terdapat teks yang tertulis \mono{Pasal} tetapi mengandung data
+\mono{Pasai}. Selain itu, penulis juga menemukan bahwa setiap dokumen mengandung keslahan
+pemindaian yang bervariasi. Untuk suatu kasus, teks \mono{(2)} selalu terdeteksi sebagai
+\mono{(21} pada suatu dokumen, tetapi tidak pada dokumen lainnya. Pada kasus lainnya terdapat
 dokumen yang hampir tidak memiliki kesalahan pemindaian dan juga terdapat dokumen yang teksnya tidak
 dapat dibaca samasekali.
 
@@ -68,9 +68,9 @@ adalah hasil OCR (\textit{optical character recognition}) oleh pemindai tersebut
   \begin{tabular}{|l|l|l|}
     \hline
     Dokumen                & \_\_Creator\_\_        & Kesalahan pemindaian        \\ \hline \hline
-    UU Nomor 13 Tahun 2003 & ScanSoft PDF Create! 4 & - (tidak ada)               \\ \hline
-    UU Nomor 6 Tahun 2018  & Canon                  & `(2)` selalu dipindai `(21` \\ \hline
-    PP Nomor 34 Tahun 2021 & Fuji Xerox B9100       & data teks tidak terbaca     \\ \hline
+    UU 13/2003 & ScanSoft PDF Create! 4 & - (tidak ada)               \\ \hline
+    UU 6/2018  & Canon                  & `(2)` selalu dipindai `(21` \\ \hline
+    PP 34/2021 & Fuji Xerox B9100       & data teks tidak terbaca     \\ \hline
   \end{tabular}
   \caption{Metadata PDF \legal}
   \label{tab:metadata-pdf}
@@ -87,7 +87,7 @@ dipindai.
 
 Untuk melakukan OCR ulang perlu dilakukan instalasi program yang dibutuhkan yang dapat dilakukan
 dengan \textit{command} \lst~\ref{lst:install-ocr} pada sistem operasi Ubuntu 20.04.
-\texttt{ocrmypdf} merupakan \textit{wrapper} untuk Tesseract OCR dan \texttt{tesseract-ocr-ind}
+\mono{ocrmypdf} merupakan \textit{wrapper} untuk Tesseract OCR dan \mono{tesseract-ocr-ind}
 adalah program tambahan untuk dapat melakukan OCR menjadi teks Bahasa Indonesia.
 
 \begin{listing}[H]
@@ -100,11 +100,11 @@ sudo apt install ocrmypdf tesseract-ocr-ind -y
 \end{listing}
 
 Setelah program diinstall, OCR dapat dilakukan dengan menjalankan \textit{command} dibawah. Pada
-contoh dibawah dilakukan konversi \texttt{UU-2021-34.pdf} yang sudah ada menjadi
-\texttt{UU-2021-34\_OCR.pdf} hasil OCR. Opsi \texttt{--force-ocr} diperlukan untuk melakukan OCR
+contoh dibawah dilakukan konversi \mono{UU-2021-34.pdf} yang sudah ada menjadi
+\mono{UU-2021-34\_OCR.pdf} hasil OCR. Opsi \mono{--force-ocr} diperlukan untuk melakukan OCR
 ulang pada berkas PDF yang sudah memiliki teks hasil OCR untuk di \textit{overwrite}. Opsi
-\texttt{--jobs 4} menjalankan \textit{command} dengan 4 \textit{core} CPU, bilangan pada opsi ini dapat
-diganti sesuai kebutuhan. Opsi \texttt{--tesseract-config tesseract-config.cfg} menjalankan
+\mono{--jobs 4} menjalankan \textit{command} dengan 4 \textit{core} CPU, bilangan pada opsi ini dapat
+diganti sesuai kebutuhan. Opsi \mono{--tesseract-config tesseract-config.cfg} menjalankan
 \textit{command} dengan konfigurasi yang diberikan.
 
 \begin{listing}[H]
@@ -115,8 +115,8 @@ ocrmypdf -l ind --force-ocr --jobs 4 --tesseract-config tesseract-config.cfg UU-
   \label{lst:run-ocr}
 \end{listing}
 
-Konfigurasi Tesseract OCR yang digunakan adalah \texttt{tessedit\_pageseg\_mode 4} seperti yang
-terlihat pada isi file konfigurasi dibawah. \texttt{tessedit\_pageseg\_mode 4} digunakan agar
+Konfigurasi Tesseract OCR yang digunakan adalah \mono{tessedit\_pageseg\_mode 4} seperti yang
+terlihat pada isi file konfigurasi dibawah. \mono{tessedit\_pageseg\_mode 4} digunakan agar
 Tesseract OCR mendeteksi teks sebagai \textit{block}, bukan \textit{word} atau \textit{character}.
 
 \begin{listing}[H]
@@ -294,21 +294,21 @@ Teks yang membentuk suatu komponen terdiri dari satu atau lebih \textit{span}, s
 \textit{span} yang didapatkan dari hasil ekstraksi berkas PDF harus dikelompokkan sehingga setiap
 kelompok merepresentasikan \textit{span} yang terdapat pada suatu komponen. Pengelompokan dilakukan
 dengan mendeteksi \textit{span} awal dan \textit{span} akhir dari sebuah komponen. Karena daftar
-\textit{span} hasil ekstraksi bersifat 1 dimensi, hal ini bisa dilakukan dengan melakukan iterasi pada
-setiap \textit{span}, kemudian menandai awal atau akhir dari sebuah kelompok apabila memenuhi suatu
-pola. Setelah ditandai, \textit{span} akan dikelompokkan sebagai daftar \textit{span} dari suatu
-komponen.
+\textit{span} hasil ekstraksi bersifat 1 dimensi, hal ini bisa dilakukan dengan melakukan iterasi
+pada setiap \textit{span}, kemudian menandai awal atau akhir dari sebuah kelompok apabila memenuhi
+suatu pola. Setelah ditandai, \textit{span} akan dikelompokkan sebagai daftar \textit{span} dari
+suatu komponen.
 
-Pengelompokan tidak langsund dilakukan dari daftar \textit{list} menjadi daftar komponen, melainkan
+Pengelompokan tidak langsung dilakukan dari daftar \textit{list} menjadi daftar komponen, melainkan
 dibuat pengelompokan \textit{section} untuk pembagian dokumen secara garis besar, kemudian baru
 dikelompokkan sebagai komponen dari masing-masing \textit{section} tersebut. Pada gambar dibawah
-\textit{section} ditandai dengan warna \textcolor{blue}{biru} dan komponen ditandai dengan \textcolor{red}{warna merah}. Dapat dilihat
-bahwa daftar \textit{span} data awal dikelompokkan menjadi beberapa \textit{section} yaitu
-\texttt{judul}, \texttt{metadata}, \texttt{babset}, dan \texttt{disahkan}. Kemudian \textit{span} pada
-section \texttt{babset} dikelompokkan menjadi komponen bab yaitu \texttt{Bab 1}, \texttt{Bab 2}, dan
-\texttt{Bab 3}. Kemudian \textit{span} pada setiap komponen bab dikelompokkan menjadi komponen pasal.
-Pengelompokan bertingkat ini dilakukan agar fungsi untuk mendeteksi batas antara komponen tidak
-menjadi rumit.
+\textit{section} ditandai dengan warna \textcolor{blue}{biru} dan komponen ditandai dengan
+\textcolor{red}{warna merah}. Dapat dilihat bahwa daftar \textit{span} data awal dikelompokkan
+menjadi beberapa \textit{section} yaitu \mono{judul}, \mono{metadata}, \mono{babset}, dan
+\mono{disahkan}. Kemudian \textit{span} pada section \mono{babset} dikelompokkan menjadi komponen
+bab yaitu \mono{Bab 1}, \mono{Bab 2}, dan \mono{Bab 3}. Kemudian \textit{span} pada setiap komponen
+bab dikelompokkan menjadi komponen pasal. Pengelompokan bertingkat ini dilakukan agar fungsi untuk
+mendeteksi batas antara komponen tidak menjadi rumit.
 
 \begin{figure}[H]
   \centering
@@ -319,22 +319,21 @@ menjadi rumit.
 % // TODO: Section -> Component
 
 Deteksi batas antara komponen atau \textit{section} dilakukan dengan melihat data pada \textit{span}
-seperti \texttt{str}, \texttt{xL}, \texttt{xR}, dan \texttt{y}. Pada gambar diatas, pola yang
-terdeteksi sebagai batas ditandai dengan \textcolor{red}{teks merah}. Sebagai contoh, pada ekstraki paling kiri,
-dari daftar \textit{span} asli menjadi \textit{section}, dilakukan iterasi \textit{span} dari atas dan
-akan dimasukkan ke dalam \textit{section} \texttt{judul} sampai menemukan \textit{section} yang diawali
-dengan kata \textbf{Menimbang}. Kemudian setiap \textit{span} setelah span \textbf{Menimbang} tersebut
-akan dikelompokkan menjadi \textit{section} \texttt{metadata} sampai menemukan section yang diawali
-kata \textbf{BAB I}.
+seperti \mono{str}, \mono{xL}, \mono{xR}, dan \mono{y}. Pada gambar diatas, pola yang terdeteksi
+sebagai batas ditandai dengan \textcolor{red}{teks merah}. Sebagai contoh, pada ekstraki paling
+kiri, dari daftar \textit{span} asli menjadi \textit{section}, dilakukan iterasi \textit{span} dari
+atas dan akan dimasukkan ke dalam \textit{section} \mono{judul} sampai menemukan \textit{section}
+yang diawali dengan kata \textbf{Menimbang}. Kemudian setiap \textit{span} setelah span
+\textbf{Menimbang} tersebut akan dikelompokkan menjadi \textit{section} \mono{metadata} sampai
+menemukan section yang diawali kata \textbf{BAB I}.
 
 %--------------------------------------------------------------------------------------------------%
 \subsection{Komponen Terurut}
 \label{pengelompokan-span-pada-komponen-terurut}
 %--------------------------------------------------------------------------------------------------%
 
-Beberapa komponen seperti \texttt{bab}, \texttt{bagian}, \texttt{paragraf}, \texttt{pasal},
-\texttt{angka}, dan \texttt{huruf} memiliki sifat terurut. Dalam hal ini, yang termasuk terurut
-adalah:
+Beberapa komponen seperti \mono{bab}, \mono{bagian}, \mono{paragraf}, \mono{pasal}, \mono{angka},
+dan \mono{huruf} memiliki sifat terurut. Dalam hal ini, yang termasuk terurut adalah:
 
 \begin{itemize}
   \itemsep1pt\parskip0pt\parsep0pt
@@ -360,15 +359,15 @@ dijamin mengandung semua \texttt{bab 1} sampai \texttt{bab 11} dan apabila terde
 %--------------------------------------------------------------------------------------------------%
 
 Mengekstraksi \textit{span} pada bagian amendemen merupakan salahsatu tantangan pada penelitian ini.
-Dibawah adalah gambar amendemen pada Pasal 17 UU Nomor 11 Tahun 2020 yang dilakukan terhadap Pasal 1
-UU Nomor 26 Tahun 2007. Dapat dilihat bahwa kata \texttt{Pasal 17} dan \texttt{Pasal 1} yang
-digunakan sebagai pembatas antara komponen memiliki pola teks dan posisi yang hampir sama. Hal ini
-membuat pembedaan antara ``Pasal biasa'' dan ``Pasal peng-amendemen'' menjadi sulit dilakukan.
+Dibawah adalah gambar amendemen pada Pasal 17 UU 11/2020 yang dilakukan terhadap Pasal 1 UU 26/2007.
+Dapat dilihat bahwa kata \texttt{Pasal 17} dan \texttt{Pasal 1} yang digunakan sebagai pembatas
+antara komponen memiliki pola teks dan posisi yang hampir sama. Hal ini membuat pembedaan antara
+``Pasal biasa'' dan ``Pasal peng-amendemen'' menjadi sulit dilakukan.
 
 \begin{figure}[H]
   \centering
   \includegraphics{pictures/pdf_amendment.png}
-  \caption{Contoh Amendemen pada UU Nomor 11 Tahun 2020}
+  \caption{Contoh Amendemen pada UU 11/2020}
   \label{fig:contoh-amendemen}
 \end{figure}
 
