@@ -93,7 +93,7 @@ dengan \textit{command} \lst~\ref{lst:install-ocr} pada sistem operasi Ubuntu 20
 adalah program tambahan untuk dapat melakukan OCR menjadi teks Bahasa Indonesia.
 
 \begin{listing}[H]
-  \begin{minted}[frame=single, fontsize=\footnotesize]{bash}
+  \begin{minted}[frame=single]{bash}
 sudo apt update
 sudo apt install ocrmypdf tesseract-ocr-ind -y
   \end{minted}
@@ -110,7 +110,7 @@ diganti sesuai kebutuhan. Opsi \mono{--tesseract-config tesseract-config.cfg} me
 \textit{command} dengan konfigurasi yang diberikan.
 
 \begin{listing}[H]
-  \begin{minted}[frame=single, breaklines, fontsize=\footnotesize]{bash}
+  \begin{minted}[frame=single, breaklines]{bash}
 ocrmypdf -l ind --force-ocr --jobs 4 --tesseract-config tesseract-config.cfg UU-2021-34.pdf UU-2021-34_OCR.pdf
   \end{minted}
   \caption{Command untuk menjalankan OCR}
@@ -122,7 +122,7 @@ terlihat pada isi file konfigurasi dibawah. \mono{tessedit\_pageseg\_mode 4} dig
 Tesseract OCR mendeteksi teks sebagai \textit{block}, bukan \textit{word} atau \textit{character}.
 
 \begin{listing}[H]
-  \begin{minted}[frame=single, fontsize=\footnotesize]{text}
+  \begin{minted}[frame=single]{text}
 # tesseract-config.cfg
 tessedit_pageseg_mode 4
   \end{minted}
@@ -164,7 +164,7 @@ gambaran berkas PDF dan hasil pemindaiannya menjadi daftar \textit{span}.
 \end{figure}
 
 \begin{listing}[H]
-  \begin{minted}[frame=single, fontsize=\footnotesize]{yaml}
+  \begin{minted}[frame=single]{yaml}
 - xL: 197.52
   xR: 442.79990000000004
   'y': 234.48000000000002
@@ -436,11 +436,11 @@ dilihat pada \lst~\ref{lst:uu-13-2003-detect}.
 \end{table}
 
 \begin{listing}[H]
-  \begin{minted}[frame=single, fontsize=\footnotesize]{yaml}
+  \begin{minted}[frame=single]{yaml}
 textString: >-
-  Pekerja/buruh yang diputus hubungan kerjanya berdasarkan alasan sebagaimana
-  dimaksud dalam ayat (1), dapat memperoleh uang penggantian hak sebagaimana
-  dimaksud dalam Pasal 156 ayat (4).
+  Pekerja/buruh yang diputus hubungan kerjanya berdasarkan alasan
+  sebagaimana dimaksud dalam ayat (1), dapat memperoleh uang
+  penggantian hak sebagaimana dimaksud dalam Pasal 156 ayat (4).
 references:
   - start: 91
     end: 99
@@ -552,7 +552,7 @@ untuk melakukan \textit{query} dari bahasa pemrograman typescript.
 
 
 \begin{listing}[H]
-  \begin{minted}[frame=single, breaklines, fontsize=\footnotesize]{bash}
+  \begin{minted}[frame=single, breaklines]{bash}
 java -jar fuseki-server.jar --file=lex2kg.ttl /lex2kg
   \end{minted}
   \caption{Command untuk menjalankan Fuseki dengan berkas KG lex2kg.ttl}

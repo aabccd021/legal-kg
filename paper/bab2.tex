@@ -63,7 +63,7 @@ menggunakan format Terse RDF Triple Language (Turtle) \citep{turtle}. Sebagai co
 \lst~\ref{lst:contoh-ttl}.
 
 \begin{listing}[H]
-  \begin{minted}[frame=single, breaklines, fontsize=\footnotesize]{turtle}
+  \begin{minted}[frame=single, breaklines]{turtle}
 <https://example.org/james> <https://example.org/has_visited> <https://example.org/louvre> .
 <https://example.org/james> <https://example.org/has_name> "james" .
 \end{minted}
@@ -84,7 +84,7 @@ titik koma. \lst~\ref{lst:contoh-singkat-ttl} adalah contoh penulisan dua \texti
 dalam bentuk yang lebih singkat dan lebih mudah dibaca oleh manusia.
 
 \begin{listing}[H]
-  \begin{minted}[frame=single, fontsize=\footnotesize]{turtle}
+  \begin{minted}[frame=single]{turtle}
 @prefix ex: <https://example.org/> .
 
 ex:james 
@@ -138,7 +138,7 @@ pada KG, akan memberikan output \tab~\ref{tab:output-query-1}. Setiap baris yang
 output merupakan \textit{triple} yang tedapat pada KG.
 
 \begin{listing}[H]
-  \begin{minted}[frame=single, fontsize=\footnotesize]{sparql}
+  \begin{minted}[frame=single]{sparql}
 PREFIX ex: <https://example.org/>
 SELECT ?subjek ?predikat ?objek
 WHERE { ?subjek ?predikat ?objek }
@@ -169,7 +169,7 @@ pada \textit{triple} dengan subjek \mono{ex:james}. pada KG, akan memberikan out
 \tab~\ref{tab:output-query-2}.
 
 \begin{listing}[H]
-  \begin{minted}[frame=single, fontsize=\footnotesize]{sparql}
+  \begin{minted}[frame=single]{sparql}
 PREFIX ex: <https://example.org/>
 SELECT ?properti ?objek
 WHERE { ex:james ?properti ?objek }
@@ -200,7 +200,7 @@ WHERE { ex:james ?properti ?objek }
 dikunjungi james, yaitu louvre.
 
 \begin{listing}[H]
-  \begin{minted}[frame=single, fontsize=\footnotesize]{sparql}
+  \begin{minted}[frame=single]{sparql}
 PREFIX ex: <https://example.org/>
 SELECT ?visited_place
 WHERE { ex:james ex:has_visited ?visited_place }
