@@ -273,34 +273,36 @@ WHERE {
 
 \lst~\ref{lst:chatbot-2} merupakan tampilan chatbot pada skenario 2 dimana pengguna memilih
 peraturan berdasarkan pilihan yang diberikan sebelumnya, kemudian menampilkan metadatanya. Pada
-contoh ini pengguna memilih \mono{uu/2004/17}, kemudian \textit{chat bot} melakukan \textit{query}
+contoh ini pengguna memilih \mono{uu/2019/3}, kemudian \textit{chat bot} melakukan \textit{query}
 terhadap KG menggunakan template \lst~\ref{lst:chatbot-2-query}, dimana \mono{legalURI} memiliki
-nilai \mono{uu/2004/17}. Kemudian \textit{chat bot} mengembalikan hasil \textit{query} berupa
-metadata UU 17/2004.
+nilai \mono{uu/2019/3}. Kemudian \textit{chat bot} mengembalikan hasil \textit{query} berupa
+metadata UU 3/2019.
 
 \begin{listing}[H]
   \begin{center}
     \begin{tabular}{|p{0.9\textwidth}|}
       \hline
       \makecell[l]{
-        \texttt{Pilih salah satu untuk melihat lebih lanjut: \textcolor{red}{uu/2004/17}} \\
+        \texttt{Pilih salah satu untuk melihat lebih lanjut: \textcolor{red}{uu/2019/3}} \\
         \\
-        \texttt{Data uu/2004/17 :}                                                         \\
-        \texttt{-metadata}                                                                 \\
-        \texttt{-menimbang}                                                                \\
+        \texttt{Data uu/2019/3 :}                                                        \\
+        \texttt{-metadata}                                                               \\
+        \texttt{-menimbang}                                                              \\
         \\
-        \texttt{Pilih data yang ingin anda lihat: \textcolor{red}{metadata}}               \\
+        \texttt{Pilih data yang ingin anda lihat: \textcolor{red}{metadata}}             \\
         \\
-        \texttt{yurisdiksi: Indonesia}                                                     \\
-        \texttt{jenisPeraturan: UU}                                                        \\
-        \texttt{tahun: 2004}                                                               \\
-        \texttt{bahasa: id}                                                                \\
-        \texttt{tentang:  PENGESAHAN KYOTO PROTOCOL TO THE UNITED NATIONS...}              \\
-        \texttt{disahkanPada: 2004-07-28}                                                  \\
-        \texttt{disahkanDi: Jakarta}                                                       \\
-        \texttt{disahkanOleh: MEGAWATI SOEKARNOPUTRI}                                      \\
-        \texttt{jabatanPengesah: PRESIDEN REPUBLIK INDONESIA,}                             \\
-      }                                                                                    \\
+        \texttt{yurisdiksi: Indonesia}                                                   \\
+        \texttt{jenisPeraturan: UU}                                                      \\
+        \texttt{tahun: 2019}                                                             \\
+        \texttt{bahasa: id}                                                              \\
+        \texttt{tentang:  PENGESAHAN NOTA KESEPAHAMAN ANTARA PEMERINTAH REPUBLIK...}     \\
+        \texttt{disahkanPada: 2009-01-10}                                                \\
+        \texttt{disahkanDi: Jakarta}                                                     \\
+        \texttt{disahkanOleh: JOKO WIDODO}                                               \\
+        \texttt{jabatanPengesah: PRESIDEN REPUBLIK INDONESIA,}                           \\
+        \\
+        \texttt{Pilih data yang ingin anda lihat:}
+      }                                                                                  \\
       \hline
     \end{tabular}
   \end{center}
@@ -326,5 +328,57 @@ PREFIX o: <https://example.org/lex2kg/ontology/>
   \end{minted}
   \caption{\textit{Query} template untuk skenario 2}
   \label{lst:chatbot-2-query}
+\end{listing}
+
+%--------------------------------------------------------------------------------------------------%
+\subsection{Skenario 3}
+\label{subsec:skenario-3}
+%--------------------------------------------------------------------------------------------------%
+
+\lst~\ref{lst:chatbot-3} merupakan tampilan chatbot pada skenario 3 dimana pengguna memilih
+peraturan berdasarkan pilihan yang diberikan sebelumnya, kemudian menampilkan peraturan yang
+ditimbangnya. Pada contoh ini pengguna memilih \mono{uu/2019/3}, kemudian \textit{chat bot}
+melakukan \textit{query} terhadap KG menggunakan template \lst~\ref{lst:chatbot-3-query}, dimana
+\mono{legalURI} memiliki nilai \mono{uu/2019/3}. Kemudian \textit{chat bot} mengembalikan hasil
+\textit{query} berupa dokumen yang ditimbang UU 3/2019 yaitu UU 24/2000.
+
+\begin{listing}[H]
+  \begin{center}
+    \begin{tabular}{|p{0.9\textwidth}|}
+      \hline
+      \makecell[l]{
+        \texttt{Pilih salah satu untuk melihat lebih lanjut: \textcolor{red}{uu/2019/3}} \\
+        \\
+        \texttt{Data uu/2019/3 :}                                                        \\
+        \texttt{-metadata}                                                                \\
+        \texttt{-menimbang}                                                               \\
+        \\
+        \texttt{Pilih data yang ingin anda lihat: \textcolor{red}{menimbang}}             \\
+        \\
+        \texttt{uu/2000/24}
+      }                                                                                   \\
+      \hline
+    \end{tabular}
+  \end{center}
+  \caption{Tampilan \textit{chat bot} untuk skenario 3}
+  \label{lst:chatbot-3}
+\end{listing}
+
+\begin{listing}[H]
+  \begin{minted}[frame=single, breaklines]{typescript}
+    const res = await sparqlQuery({
+      queryStr: `
+PREFIX o: <https://example.org/lex2kg/ontology/>
+SELECT DISTINCT ?ditimbang
+WHERE {
+  <https://example.org/lex2kg/${legalURI}> o:menimbang ?menimbang .
+  ?menimbangText o:bagianDari* ?menimbang .
+  ?menimbangText o:merujuk ?ditimbang .
+}
+`,
+    });
+  \end{minted}
+  \caption{\textit{Query} template untuk skenario 3}
+  \label{lst:chatbot-3-query}
 \end{listing}
 
