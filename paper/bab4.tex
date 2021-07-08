@@ -93,7 +93,7 @@ yang sudah ada menjadi \mono{UU-2021-34\_OCR.pdf} hasil OCR. Opsi \mono{--force-
 untuk melakukan OCR ulang pada berkas PDF yang sudah memiliki teks hasil OCR untuk di
 \textit{overwrite}. Opsi \mono{--jobs 4} menjalankan \textit{command} dengan 4 \textit{core} CPU,
 bilangan pada opsi ini dapat diganti sesuai kebutuhan. Opsi \mono{--tesseract-config
-tesseract-config.cfg} menjalankan \textit{command} dengan konfigurasi yang diberikan.
+  tesseract-config.cfg} menjalankan \textit{command} dengan konfigurasi yang diberikan.
 
 \begin{listing}[H]
   \begin{minted}[frame=single, breaklines]{bash}
@@ -410,6 +410,23 @@ dilihat pada \lst~\ref{lst:uu-13-2003-detect}.
   \caption{Pola, contoh teks, dan contoh URI deteksi rujukan}
   \label{tab:rujukan}
 \end{longtable}
+
+\begin{table}
+  \centering
+  \begin{tabular}{|l|l|l|} \hline
+    No.              & \multicolumn{2}{l|}{}                                                            \\ \hline \hline
+    \multirow{4}*{1} & Pola                  & UUD 1945                                                 \\ \cline{2-3}
+                     & Regex                 & \verb/Undang Undang Dasar Negara Republik Indonesia Tahun 1945/                               \\ \cline{2-3}
+                     & Contoh teks           & Undang Undang Dasar Negara Republik Indonesia Tahun 1945 \\ \cline{2-3}
+                     & URI                   & :uud                                                     \\ \hline \hline
+    \multirow{4}*{2} & Pola                  & Undang-Undang Nomor \{x\} Tahun \{y\}                    \\ \cline{2-3}
+                     & Regex                 & \verb/Undang-Undang Nomor [0-9]+ Tahun [0-9]+/                               \\ \cline{2-3}
+                     & Contoh teks           & Undang-Undang Nomor 26 Tahun 2007                        \\ \cline{2-3}
+                     & URI                   & :uu/2007/26                                              \\ \hline \hline
+  \end{tabular}
+  \caption{Pola, contoh teks, dan contoh URI deteksi rujukan}
+  \label{tab:rujukan2}
+\end{table}
 
 \begin{table}
   \centering
