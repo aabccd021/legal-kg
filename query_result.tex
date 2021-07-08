@@ -473,6 +473,112 @@ SELECT (COUNT (*) as ?countResult) WHERE {
 \end{lstlisting}
 
 
+\noindent No.027:
+\begin{lstlisting}
+# Tampilkan 5 peraturan dengan komponen terbanyak beserta jumlah komponennya.
+PREFIX o: <https://example.org/lex2kg/ontology/>
+
+SELECT ?peraturan (COUNT(?komponen) as ?komponenCount)
+WHERE {
+  ?peraturan a o:Peraturan .
+  ?komponen o:bagianDari* ?peraturan .
+}
+GROUP BY ?peraturan
+ORDER BY DESC (?komponenCount)
+LIMIT 5
+
+\end{lstlisting}
+
+
+\noindent No.028:
+\begin{lstlisting}
+# Peraturan apa yang berlaku pada daerah Jakarta yang disahkan di tahun 2019?
+PREFIX o: <https://example.org/lex2kg/ontology/>
+
+SELECT ?peraturan ?yurisdiksi
+WHERE {
+  ?peraturan o:yurisdiksi ?yurisdiksi ;
+             o:tahun 2019;
+   FILTER (CONTAINS(LCASE(?yurisdiksi), 'jakarta')) .
+}
+\end{lstlisting}
+
+
+\noindent No.029:
+\begin{lstlisting}
+# Apa relasi suatu peraturan dengan peraturan lain?
+PREFIX o: <https://example.org/lex2kg/ontology/>
+
+SELECT DISTINCT ?p1 ?relasi ?p2
+WHERE {
+  ?p1 a o:Peraturan .
+  ?p2 a o:Peraturan .
+  FILTER (?p1 != ?p2) .
+  ?komponen o:bagianDari* ?p1 ;
+            ?relasi ?p2 .
+
+}
+LIMIT 10
+\end{lstlisting}
+
+
+\noindent No.030:
+\begin{lstlisting}
+# Mana saja peraturan yang membahas tentang topik "Kerja" atau "Ketenagakerjaan" tapi bukan topik "Kerjasama" dan bukan "Pekerjaan"?
+PREFIX o: <https://example.org/lex2kg/ontology/>
+
+SELECT ?bab ?title
+WHERE {
+  ?doc a o:Peraturan .
+  ?bab o:bagianDari* ?doc .
+  ?bab a o:Bab .
+  ?bab o:judul ?title.
+  FILTER (CONTAINS(?title, "KERJA") || CONTAINS(?title, "KETENAGAKERJAAN"))
+  FILTER (!CONTAINS(?title, "KERJASAMA"))
+  FILTER (!CONTAINS(?title, "PEKERJAAN"))
+}
+ORDER BY ?bab ?title
+LIMIT 10
+\end{lstlisting}
+
+
+\noindent No.031:
+\begin{lstlisting}
+# Apa isi dari Pasal 91 ayat (2) huruf b dari UU Cipta Kerja?
+PREFIX o: <https://example.org/lex2kg/ontology/>
+
+SELECT ?teksStr
+WHERE {
+  ?pasal o:bagianDari* <https://example.org/lex2kg/uu/2020/11> ;
+         a o:Pasal ;
+         o:nomor 91 .
+  ?ayat o:bagianDari* ?pasal ;
+         a o:Ayat ;
+         o:nomor 2 .
+  ?huruf o:bagianDari* ?ayat ;
+         a o:Huruf ;
+         o:nomor "b".
+  ?teks o:bagianDari* ?huruf ;
+        o:teks ?teksStr .
+}
+\end{lstlisting}
+
+
+\noindent No.032:
+\begin{lstlisting}
+# Apa saja bab-bab yang terdapat pada UU Cipta Kerja?
+PREFIX o: <https://example.org/lex2kg/ontology/>
+
+SELECT ?bab ?judulBab
+WHERE {
+  ?bab o:judul ?judulBab;
+       a o:Bab ;
+       o:bagianDari* <https://example.org/lex2kg/uu/2020/11> .
+}
+ORDER BY ?bab
+\end{lstlisting}
+
+
 \noindent No.100:
 \begin{lstlisting}
 # tampilkan semua triple
