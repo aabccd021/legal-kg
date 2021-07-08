@@ -147,18 +147,15 @@ Berikut adalah data yang dimiliki oleh sebuah \textit{span}:
   \item \texttt{id}: \textit{identifier} unik untuk setiap span
 \end{itemize}
 
-\pic~\ref{fig:contoh-dokumen} adalah contoh gambaran berkas PDF dan hasil ekstraksinya menjadi
-daftar \textit{span}.
+\pic~\ref{fig:contoh-dokumen} dan \lst~\ref{lst:hasil-ekstraksi} berturut-turut adalah contoh
+gambaran berkas PDF dan hasil ekstraksinya menjadi daftar \textit{span}.
 
 \begin{figure}[H]
   \centering
-  \includegraphics{pictures/pdf_example.png}
+  \fbox{\includegraphics{pictures/pdf_example.png}}
   \caption{Contoh PDF yang akan diekstraksi}
   \label{fig:contoh-dokumen}
 \end{figure}
-% // TODO: ksh border
-
-akan dipindai menjadi
 
 \begin{listing}[H]
   \begin{minted}[frame=single, fontsize=\footnotesize]{yaml}
@@ -203,16 +200,16 @@ dari sumber yang sama sehingga memiliki format yang sama, dan juga posisi \texti
 
 \begin{figure}[H]
   \centering
-  \includegraphics{pictures/pdf_header.png}
+  \fbox{\includegraphics{pictures/pdf_header.png}}
   \caption{Contoh header}
   \label{fig:contoh-header}
 \end{figure}
 
-Gambar diatas adalah contoh \textit{header} yang terdapat pada setiap halaman. Dapat dilihat bahwa
-\textit{header} selalu terdiri dari teks ``PRESIDEN REPUBLIK INDONESIA'' dan diikuti oleh nomor
-halaman, dan selalu terletak di posisi yang hampir sama. Oleh karena itu, penulis memeriksa teks
-menggunakan \textit{regex} dan posisi dari setiap \textit{span}, kemudian menghapus \textit{span} tersebut
-jika terdeteksi sebagai header.
+\pic~\ref{fig:contoh-header} adalah contoh \textit{header} yang terdapat pada setiap halaman. Dapat
+dilihat bahwa \textit{header} selalu terdiri dari teks ``PRESIDEN REPUBLIK INDONESIA'' dan diikuti
+oleh nomor halaman, dan selalu terletak di posisi yang hampir sama. Oleh karena itu, penulis
+memeriksa teks menggunakan \textit{regex} dan posisi dari setiap \textit{span}, kemudian menghapus
+\textit{span} tersebut jika terdeteksi sebagai header.
 
 %--------------------------------------------------------------------------------------------------%
 \section{Penggabungan Data Berkas PDF Asli dan Hasil OCR Ulang}
@@ -222,15 +219,16 @@ jika terdeteksi sebagai header.
 % // TODO: Bs lbh dieksplisitkan penjelasan trkait versi OCR yg beda, yg ada 3 jenis
 
 Pada proses ekstraksi berkas PDF menjadi daftar \textit{span}, penulis menemukan satu masalah yaitu
-data hasil OCR tidak konsisten dalam memindai angka. Seperti yang dapat dilihat pada gambar dibawah,
-angka 10 berhasil dipindai tetapi angka 9 tidak berhasil. Untuk kasus dibawah, angka hanya tidak
-terpindai pada hasil OCR ulang, tetapi terpindai dengan benar pada berkas PDF aslinya. Untuk
-menyelesaikan masalah tersebut, penulis melakukan ekstraksi data pada berkas PDF aslinya, kemudian
-menggabungkannya dengan data hasil pemindaian untuk melengkapi bagian yang tidak terpindai.
+data hasil OCR tidak konsisten dalam memindai angka. Seperti yang dapat dilihat pada
+\pic~\ref{fig:contoh-nomor-tidak-terpindai}, angka 10 berhasil dipindai tetapi angka 9 tidak
+berhasil. Untuk kasus tersebut, angka hanya tidak terpindai pada hasil OCR ulang, tetapi terpindai
+dengan benar pada berkas PDF aslinya. Untuk menyelesaikan masalah tersebut, penulis melakukan
+ekstraksi data pada berkas PDF aslinya, kemudian menggabungkannya dengan data hasil pemindaian untuk
+melengkapi bagian yang tidak terpindai.
 
 \begin{figure}[H]
   \centering
-  \includegraphics{pictures/pdf_unscanned_number.png}
+  \fbox{\includegraphics{pictures/pdf_unscanned_number.png}}
   \caption{Contoh nomor tidak terpindai}
   \label{fig:contoh-nomor-tidak-terpindai}
 \end{figure}
@@ -289,6 +287,7 @@ berhasil terpindai dan jika berhasil terpindai.
 %--------------------------------------------------------------------------------------------------%
 
 % // TODO: repeat until no new component
+% // TODO: Benerin istilah section nya
 
 Teks yang membentuk suatu komponen terdiri dari satu atau lebih \textit{span}, sehingga daftar
 \textit{span} yang didapatkan dari hasil ekstraksi berkas PDF harus dikelompokkan sehingga setiap
@@ -316,7 +315,6 @@ mendeteksi batas antara komponen tidak menjadi rumit.
   \caption{Ilustrasi Ekstraksi Daftar Span menjadi Data Struktur Komponen}
   \label{fig:ilustrasi-ekstraksi}
 \end{figure}
-% // TODO: Section -> Component
 
 Deteksi batas antara komponen atau \textit{section} dilakukan dengan melihat data pada \textit{span}
 seperti \mono{str}, \mono{xL}, \mono{xR}, dan \mono{y}. Pada gambar diatas, pola yang terdeteksi
@@ -366,7 +364,7 @@ antara komponen memiliki pola teks dan posisi yang hampir sama. Hal ini membuat 
 
 \begin{figure}[H]
   \centering
-  \includegraphics{pictures/pdf_amendment.png}
+  \fbox{\includegraphics{pictures/pdf_amendment.png}}
   \caption{Contoh Amendemen pada UU 11/2020}
   \label{fig:contoh-amendemen}
 \end{figure}
@@ -381,7 +379,7 @@ dilakukan jika dokumen memiliki komponen berupa amendemen.
 
 \begin{figure}[H]
   \centering
-  \includegraphics{pictures/amendment_detection.png}
+  \fbox{\includegraphics{pictures/amendment_detection.png}}
   \caption{Deteksi Komponen amendemen}
   \label{fig:deteksi-amendemen}
 \end{figure}
@@ -413,7 +411,7 @@ dideteksi pada penelitian ini.
   \label{tab:rujukan}
 \end{longtable}
 
-Data rujukan mengandung data sebagai berikut:
+Data rujukan mengandung informasi sebagai berikut:
 % // TODO: contoh nya adalah \lst~\ref{lst:uu-13-2003-detect}
 
 \begin{itemize}
@@ -461,8 +459,6 @@ sebagai 3 URI rujukan seperti yang terlihat pada \tab~\ref{tab:contoh-teks-uri}.
 
 Pada kasus ini, yang akan diambil adalah teks ``Pasal 156 ayat (4)'' karena merupakan teks
 terpanjang.
-
-% // TODO: Visualisasi dengan Markdown
 
 %--------------------------------------------------------------------------------------------------%
 \section{Konstruksi KG}
@@ -555,5 +551,3 @@ java -jar fuseki-server.jar --file=lex2kg.ttl /lex2kg
 % tunjukkin jg contoh yg utk nonUU
 
 % // TODO: analisis jmlh tripel yg dihasilkan, lalu brp yg metadata dsb.
-
-% // TODO: jelasin dokumen kayak gimana yang belum bisa di parse, jelasin 3 yang ga bisa dihandle
