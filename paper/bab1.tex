@@ -3,7 +3,6 @@
 \label{chap:1}
 %--------------------------------------------------------------------------------------------------%
 
-% //TODO: Jelasin amendemen
 % //TODO: URI namespace
 % //TODO: pake o:
 % //TODO: Kami menggunakan ontology ini buat dikonversi
@@ -37,10 +36,13 @@ yang berkaitan dengan hukum, seperti:
 Pertanyaan-pertanyaan tersebut umumnya biasa dijawab oleh seorang ahli hukum, yang hanya dapat
 dilakukan dalam skala kecil dan biaya relatif mahal. Komputer dapat menjadi alternatif untuk
 aplikasi tersebut dalam skala lebih besar dan biaya lebih murah, jika \legal berupa data terstruktur
-yang dapat diolah oleh komputer. Akan tetapi, data \legal umumnya dibuat dalam bentuk
-semi-terstruktur, yaitu berupa dokumen PDF dengan struktur konten seperti aturan penomoran dan
-aturan pembagian (\textit{sectioning}), sementara penulisan isi peraturannya sendiri dalam bentuk
-teks bahasa manusia (natural language) yang tak terstruktur (unstructured).
+yang dapat diolah oleh komputer. Saat ini pembuatan dan pemanfaatan \legal masih dilakukan secara
+manual oleh manusia. Pembuatan \legal dilakukan dengan mengetikkan konten peraturan tersebut dengan
+format yang telah ditentukan. Metode pembuatan tersebut tidak masalah jika hanya akan dibaca oleh
+manusia karena manusia secara tidak sadar dapat melihat hirarki visual dari dokumen tersebut dan
+membuat data yang dilihatnya terstruktur di dalam otak. Metode ini membuat pemanfaatan \legal oleh
+mesin menjadi kurang efisien karena mesin perlu melakukan proses tambahan yaitu mengonversi gambar
+menjadi data terstruktur.
 
 \begin{figure}[H]
   \centering
@@ -74,13 +76,13 @@ informasi lengkap berdasarkan konteks \legal.
 keterkaitannya, tersusun dalam bentuk \textit{graph}, (ii) mendefinisikan kelas entitas dan relasi
 antar entitas dalam bentuk skema, (iii) membolehkan sembarang entitas memiliki relasi satu sama lain
 dan (iv) mencakup berbagai topik domain \citep{paulheim_2016}. Dengan melakukan ekstraksi data dari
-dokumen yang bersifat semi-terstruktur, \legal dapat dikonversi menjadi KG. Sebagai manfaatnya, dapat
-fitur-fitur berbasis \textit{query} seperti \textit{question answering}, \textit{reasoning} dan
-visualisasi data. \pic~\ref{fig:konstruksi-dan-query} menampilkan proses konstruksi KG dari beberapa
-berkas PDF \legal dan \textit{query} pada KG tersebut. Pada skripsi ini, akan dilakukan konversi
-dokumen \legal menjadi data terstruktur dalam bentuk KG, dan memberikan contoh aplikasi dari KG
-\legal tersebut. Beberapa usaha telah dilakukan untuk membuat \textit{vocabulary} untuk KG \legal
-seperti ELI,\footnote{\url{https://eur-lex.europa.eu/eli-register/about.html}}
+dokumen yang bersifat semi-terstruktur, \legal dapat dikonversi menjadi KG. Sebagai manfaatnya,
+dapat fitur-fitur berbasis \textit{query} seperti \textit{question answering}, \textit{reasoning}
+dan visualisasi data. \pic~\ref{fig:konstruksi-dan-query} menampilkan proses konstruksi KG dari
+beberapa berkas PDF \legal dan \textit{query} pada KG tersebut. Pada skripsi ini, akan dilakukan
+konversi dokumen \legal menjadi data terstruktur dalam bentuk KG, dan memberikan contoh aplikasi
+dari KG \legal tersebut. Beberapa usaha telah dilakukan untuk membuat \textit{vocabulary} untuk KG
+\legal seperti ELI,\footnote{\url{https://eur-lex.europa.eu/eli-register/about.html}}
 Schema.org,\footnote{\url{https://schema.org}} dan
 Wikidata.\footnote{\url{https://www.wikidata.org}}
 
