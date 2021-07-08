@@ -40,9 +40,9 @@ Resource Description Framework (RDF) merupkan model data yang memberikan pernyat
 dapat direpresentasikan sebagai kumpulan \textit{triple}. Subyek dan properti dalam \textit{triple}
 direpresentasikan sebagai Uniform Resource Identifier (URI), sedangkan objek dapat direpresentasikan
 dengan URI atau \textit{string literal}. Pada \pic~\ref{fig:triple-example}, dapat dilihat terdapat
-KG dengan dua \textit{triple}. Pada \textit{triple} 1, subjek, properti, dan objek berturut-turut
+KG dengan dua \textit{triple}. Pada \textit{Triple} 1, subjek, properti, dan objek berturut-turut
 adalah \mono{https://example.org/James}, \mono{https://example.org/hasVisited},
-\mono{https://example.org/Louvre} yang mana semuanya berbentuk URI. Sedangkan pada \textit{triple}
+\mono{https://example.org/Louvre} yang mana semuanya berbentuk URI. Sedangkan pada \textit{Triple}
 2, subjek, properti, dan objek berturut-turut adalah \mono{https://example.org/James},
 \mono{https://example.org/hasName}, "James". \mono{https://example.org/James},
 \mono{https://example.org/Louvre} berturut-turut merupakan notasi untuk \textit{resource} entitas
@@ -86,7 +86,7 @@ menggunakan format Terse RDF Triple Language (Turtle) \citep{turtle}. Sebagai co
 <https://example.org/James> <https://example.org/hasVisited> <https://example.org/Louvre> .
 <https://example.org/James> <https://example.org/hasName> "James" .
 \end{minted}
-  \caption{Contoh penulisan sebuah \textit{triple} dalam Turtle}
+  \caption{Contoh penulisan \textit{triple} dalam Turtle}
   \label{lst:contoh-ttl}
 \end{listing}
 
@@ -99,7 +99,7 @@ kita dapat menggantinya dengan \textit{string} \mono{ex:} dengan mendeklarasikan
 \mono{https://example.org/} untuk mempermudah pembacaan. Kedua \textit{triple} juga memiliki subjek
 yang sama yaitu \mono{ex:James}, oleh karena itu, penulisan kedua Turtle bisa digabung dengan hanya
 menuliskan subjek sebanyak satu kali, kemudian menuliskan properti dan objek dipisah dengan tanda
-titik koma. \lst~\ref{lst:contoh-singkat-ttl} adalah contoh penulisan dua \textit{triple} diatas
+titik koma. \lst~\ref{lst:contoh-singkat-ttl} adalah contoh penulisan \lst~\ref{lst:contoh-ttl}
 dalam bentuk yang lebih singkat dan lebih mudah dibaca oleh manusia.
 
 \begin{listing}[H]

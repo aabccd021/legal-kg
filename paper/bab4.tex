@@ -56,7 +56,7 @@ Walaupun dokumen-dokumen tersebut dipelihara oleh satu lembaga pada satu situs w
 Perwakilan Rakyat pada situs web \url{https://dpr.go.id/jdih}, masing-masing dokumen dibuat kedalam
 berkas PDF dengan cara yang berbeda-beda. Penulis tidak dapat mengetahui secara pasti metode apa
 yang digunakan, tetapi dari metadata yang didapatkan dari berkas PDF, penulis dapat membuat beberapa
-dugaan. Pada berkas PDF, terdapat metadata dengan nama \textbf{Creator}, dimana pada dokumen-dokumen
+dugaan. Pada berkas PDF, terdapat metadata dengan nama \textbf{Creator}, di mana pada dokumen-dokumen
 peraturan perudang-undangan yang didapatkan, tercantum nama-nama alat pencetak atau merk dari
 pencetak tersebut. Dari informasi tersebut penulis menduga bahwa terdapat sebagian peraturan
 perundang-undangan yang dibuat menjadi PDF dengan mencetaknya menjadi kertas terlebih dahulu
@@ -102,13 +102,12 @@ sudo apt install ocrmypdf tesseract-ocr-ind -y
   \label{lst:install-ocr}
 \end{listing}
 
-Setelah program diinstall, OCR dapat dilakukan dengan menjalankan \textit{command} dibawah. Pada
-contoh dibawah dilakukan konversi \mono{UU-2021-34.pdf} yang sudah ada menjadi
-\mono{UU-2021-34\_OCR.pdf} hasil OCR. Opsi \mono{--force-ocr} diperlukan untuk melakukan OCR
-ulang pada berkas PDF yang sudah memiliki teks hasil OCR untuk di \textit{overwrite}. Opsi
-\mono{--jobs 4} menjalankan \textit{command} dengan 4 \textit{core} CPU, bilangan pada opsi ini dapat
-diganti sesuai kebutuhan. Opsi \mono{--tesseract-config tesseract-config.cfg} menjalankan
-\textit{command} dengan konfigurasi yang diberikan.
+\lst~\ref{lst:run-ocr} merupakan \textit{command} untuk melakukan konversi \mono{UU-2021-34.pdf}
+yang sudah ada menjadi \mono{UU-2021-34\_OCR.pdf} hasil OCR. Opsi \mono{--force-ocr} diperlukan
+untuk melakukan OCR ulang pada berkas PDF yang sudah memiliki teks hasil OCR untuk di
+\textit{overwrite}. Opsi \mono{--jobs 4} menjalankan \textit{command} dengan 4 \textit{core} CPU,
+bilangan pada opsi ini dapat diganti sesuai kebutuhan. Opsi \mono{--tesseract-config
+tesseract-config.cfg} menjalankan \textit{command} dengan konfigurasi yang diberikan.
 
 \begin{listing}[H]
   \begin{minted}[frame=single, breaklines]{bash}
@@ -119,7 +118,7 @@ ocrmypdf -l ind --force-ocr --jobs 4 --tesseract-config tesseract-config.cfg UU-
 \end{listing}
 
 Konfigurasi Tesseract OCR yang digunakan adalah \mono{tessedit\_pageseg\_mode 4} seperti yang
-terlihat pada isi file konfigurasi dibawah. \mono{tessedit\_pageseg\_mode 4} digunakan agar
+terlihat pada isi file konfigurasi pada \lst~\ref{lst:konfigurasi-ocr}. \mono{tessedit\_pageseg\_mode 4} digunakan agar
 Tesseract OCR mendeteksi teks sebagai \textit{block}, bukan \textit{word} atau \textit{character}.
 
 \begin{listing}[H]
@@ -241,12 +240,12 @@ hasil OCR untuk melengkapi bagian yang tidak terpindai.
   \label{fig:contoh-nomor-tidak-terpindai}
 \end{figure}
 
-Penulis hanya menggabungkan data dua berkas PDF untuk kasus angka seperti yang disebutkan diatas.
+Penulis hanya menggabungkan data dua berkas PDF untuk kasus angka seperti yang disebutkan di atas.
 Hal tersebut dikarenakan pada umumnya kita dapat mentolerir kesalahan pemindaian pada teks, tetapi
 karena kegagalan pemindaian pada angka tersebut akan mempengaruhi struktur dokumen, penulis
-memutuskan solusi diatas. Sebagai contoh, jika nomor 8 berhasil dipindai dan nomor 9 tidak berhasil,
-maka struktur akhir yang dihasilkan akan mengandung semua isi nomor 9 didalam nomor 8, yang mana
-seharusnya adalah nomor yang terpisah. \lst~\ref{lst:no-9-tidak-terpindai} dan
+memutuskan solusi di atas. Sebagai contoh, jika nomor 8 berhasil dipindai dan nomor 9 tidak
+berhasil, maka struktur akhir yang dihasilkan akan mengandung semua isi nomor 9 didalam nomor 8,
+yang mana seharusnya adalah nomor yang terpisah. \lst~\ref{lst:no-9-tidak-terpindai} dan
 \lst~\ref{lst:no-9-terpindai} berturut-turut adalah contoh data yang dihasilkan jika nomor 9 tidak
 berhasil terpindai dan jika berhasil terpindai.
 
@@ -309,14 +308,14 @@ suatu komponen.
 
 Pengelompokan tidak langsung dilakukan dari daftar \textit{list} menjadi daftar komponen, melainkan
 dibuat pengelompokan \textit{section} untuk pembagian dokumen secara garis besar, kemudian baru
-dikelompokkan sebagai komponen dari masing-masing \textit{section} tersebut. Pada gambar dibawah
-\textit{section} ditandai dengan warna \textcolor{blue}{biru} dan komponen ditandai dengan
-\textcolor{red}{warna merah}. Dapat dilihat bahwa daftar \textit{span} data awal dikelompokkan
-menjadi beberapa \textit{section} yaitu \mono{judul}, \mono{metadata}, \mono{babset}, dan
-\mono{disahkan}. Kemudian \textit{span} pada section \mono{babset} dikelompokkan menjadi komponen
-bab yaitu \mono{Bab 1}, \mono{Bab 2}, dan \mono{Bab 3}. Kemudian \textit{span} pada setiap komponen
-bab dikelompokkan menjadi komponen pasal. Pengelompokan bertingkat ini dilakukan agar fungsi untuk
-mendeteksi batas antara komponen tidak menjadi rumit.
+dikelompokkan sebagai komponen dari masing-masing \textit{section} tersebut. Pada
+\pic~\ref{fig:ilustrasi-ekstraksi} \textit{section} ditandai dengan warna \textcolor{blue}{biru} dan
+komponen ditandai dengan \textcolor{red}{warna merah}. Dapat dilihat bahwa daftar \textit{span} data
+awal dikelompokkan menjadi beberapa \textit{section} yaitu \mono{judul}, \mono{metadata},
+\mono{babset}, dan \mono{disahkan}. Kemudian \textit{span} pada section \mono{babset} dikelompokkan
+menjadi komponen bab yaitu \mono{Bab 1}, \mono{Bab 2}, dan \mono{Bab 3}. Kemudian \textit{span} pada
+setiap komponen bab dikelompokkan menjadi komponen pasal. Pengelompokan bertingkat ini dilakukan
+agar fungsi untuk mendeteksi batas antara komponen tidak menjadi rumit.
 
 \begin{figure}[H]
   \centering
@@ -326,12 +325,12 @@ mendeteksi batas antara komponen tidak menjadi rumit.
 \end{figure}
 
 Deteksi batas antara komponen atau \textit{section} dilakukan dengan melihat data pada \textit{span}
-seperti \mono{str}, \mono{xL}, \mono{xR}, dan \mono{y}. Pada gambar diatas, pola yang terdeteksi
-sebagai batas ditandai dengan \textcolor{red}{teks merah}. Sebagai contoh, pada ekstraki paling
-kiri, dari daftar \textit{span} asli menjadi \textit{section}, dilakukan iterasi \textit{span} dari
-atas dan akan dimasukkan ke dalam \textit{section} \mono{judul} sampai menemukan \textit{section}
-yang diawali dengan kata \textbf{Menimbang}. Kemudian setiap \textit{span} setelah span
-\textbf{Menimbang} tersebut akan dikelompokkan menjadi \textit{section} \mono{metadata} sampai
+seperti \mono{str}, \mono{xL}, \mono{xR}, dan \mono{y}. Pada \pic~\ref{fig:ilustrasi-ekstraksi},
+pola yang terdeteksi sebagai batas ditandai dengan \textcolor{red}{teks merah}. Sebagai contoh, pada
+ekstraki paling kiri, dari daftar \textit{span} asli menjadi \textit{section}, dilakukan iterasi
+\textit{span} dari atas dan akan dimasukkan ke dalam \textit{section} \mono{judul} sampai menemukan
+\textit{section} yang diawali dengan kata \textbf{Menimbang}. Kemudian setiap \textit{span} setelah
+span \textbf{Menimbang} tersebut akan dikelompokkan menjadi \textit{section} \mono{metadata} sampai
 menemukan section yang diawali kata \textbf{BAB I}.
 
 %--------------------------------------------------------------------------------------------------%
@@ -499,12 +498,12 @@ Setiap objek juga akan di-\textit{assign} ke masing-masing \textit{class} sesuai
 \tab~\ref{tab:class}. Kemudian \textit{triple} dibangun berdasarkan relasi antara peraturan atau
 komponen dengan properti, domain, dan range sesuai spesifikasi pada \tab~\ref{tab:properti}. Untuk
 setiap properti struktur, akan dibuat \textit{reverse property} nya yaitu \mono{o:bagianDari}.
-Sebagai contoh, jika terdapat triple \mono{uu:2020/11/bab o:bab uu:2020/11/bab/1}, \textit{reverse
-triple} nya adalah \mono{uu:2020/11/bab/1 o:bab uu:2020/11/bab}. Properti struktur antaralain adalah
-\mono{o:ayat}, \mono{o:bab}, \mono{o:bagian}, \mono{o:daftarAyat}, \mono{o:daftarBab},
-\mono{o:daftarBagian}, \mono{o:daftarHuruf}, \mono{o:daftarParagraf}, \mono{o:daftarPasal},
-\mono{o:huruf}, \mono{o:paragraf}, \mono{o:pasal}, \mono{o:segmen}, \mono{o:teks}, dan
-\mono{o:versi}.
+Sebagai contoh, jika terdapat \textit{triple} \mono{uu:2020/11/bab o:bab uu:2020/11/bab/1},
+\textit{reverse triple} nya adalah \mono{uu:2020/11/bab/1 o:bab uu:2020/11/bab}. Properti struktur
+antaralain adalah \mono{o:ayat}, \mono{o:bab}, \mono{o:bagian}, \mono{o:daftarAyat},
+\mono{o:daftarBab}, \mono{o:daftarBagian}, \mono{o:daftarHuruf}, \mono{o:daftarParagraf},
+\mono{o:daftarPasal}, \mono{o:huruf}, \mono{o:paragraf}, \mono{o:pasal}, \mono{o:segmen},
+\mono{o:teks}, dan \mono{o:versi}.
 
 % %--------------------------------------------------------------------------------------------------%
 % \section{Komponen Amendemen}
@@ -571,7 +570,7 @@ java -jar fuseki-server.jar --file=lex2kg.ttl /lex2kg
 Penulis melakukan konversi skala besar pada PDF UU yang terdapat pada Laman Undang-Undang Jaringan
 Dokumentasi dan Informasi Hukum DPR RI\footnote{\url{https://www.dpr.go.id/jdih/uu}}. Dari 1669
 berkas PDF yang diunduh, 784 diantaranya berhasil dikonversi menjadi KG dengan total 1.163.051
-triple. Jumlah tripel dikelompokan berdasarkan jenis informasi dapat dilihat pada
+\textit{triple}. Jumlah tripel dikelompokan berdasarkan jenis informasi dapat dilihat pada
 \tab~\ref{tab:analisis-triple}. Semua berkas PDF, berkas Turtle hasil konversi, dan berkas
 \textit{artifact} seperti PDF hasil OCR, dan \textit{span} dari konversi skala besar dapat diakses
 pada repositori \url{https://github.com/aabccd021/uuri}.
@@ -586,7 +585,7 @@ pada repositori \url{https://github.com/aabccd021/uuri}.
     rujukan dan amendemen     & 32.577        \\\hline
     \textit{class assignment} & 256.416       \\\hline
   \end{tabular}
-  \caption{Analisis triple KG hasil konversi skala besar}
+  \caption{Analisis \textit{triple} KG hasil konversi skala besar}
   \label{tab:analisis-triple}
 \end{table}
 
