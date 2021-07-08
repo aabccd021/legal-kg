@@ -22,17 +22,18 @@ entitas yang sudah diketahui dan terbatas.
 \begin{figure}[H]
   \centering
   \includegraphics[width=\textwidth]{pictures/knowledge_graph.jpg}
-  \caption[Contoh \textit{Knowledge Graph}]{Contoh \textit{Knowledge Graph}\footnotemark}
+  \caption[Contoh \textit{Knowledge Graph}]{Contoh \textit{Knowledge Graph}\\Sumber: \citep{seth_2019}}
   \small{}
   \label{fig:kg-description}
 \end{figure}
 
-\footnotetext{\url{https://yashuseth.files.wordpress.com/2019/10/knowledge-graph.jpg}}
 
 %--------------------------------------------------------------------------------------------------%
 \section{Resource Description Framework}
 \label{sec:resource-description-framework}
 %--------------------------------------------------------------------------------------------------%
+
+% // TODO: biru merah
 
 Resource Description Framework (RDF) merupkan model data yang memberikan pernyataan tentang suatu
 \textit{resource} dalam bentuk subjek-properti-objek, atau sering disebut \textit{triple}. Sebuah KG
@@ -57,7 +58,7 @@ merupakan properti yang menjelaskan hubungan antara subjek dan objek, dan "james
 \end{figure}
 
 Terdapat beberapa format berkas dan sintaks untuk mengekspresikan RDF. Pada penelitian ini, penulis
-menggunakan format Terse RDF Triple Language (Turtle). Sebagai contoh, KG pada
+menggunakan format Terse RDF Triple Language (Turtle) \citep{turtle}. Sebagai contoh, KG pada
 \pic~\ref{fig:triple-example} dapat dituliskan dalam format Turtle seperti
 \lst~\ref{lst:contoh-ttl}.
 
@@ -107,8 +108,10 @@ ex:james
 
 SPARQL merupakan salahsatu RDF \textit{query language} yaitu bahasa yang mampu mengambil atau
 mengubah data yang disimpan dalam format RDF. Sintaks SPARQL memiliki beberapa kesamaan dengan SQL,
-contohnya sebuah variabel diawali dengan tanda tanya seperti \mono{?name}. Berikut adalah
-penjelasan sintaks SPARQL.
+contohnya sebuah variabel diawali dengan tanda tanya seperti \mono{?name}. Query SPARQL sederhana
+dapat dibentuk dengan \mono{SELECT} dan \mono{WHERE} dengan kondisi pola triple ditulis di dalam
+\mono{WHERE} dan variabel yang akan ditampilkan ditulis didalam \mono{SELECT}\citep{owlizr}. Berikut
+adalah penjelasan singkat \textit{clause} SPARQL yang digunakan pada penelitian ini.
 
 \begin{itemize}
   \itemsep1pt\parskip0pt\parsep0pt
@@ -116,11 +119,14 @@ penjelasan sintaks SPARQL.
         singkat. Hal ini dilakukan agar \textit{query} lebih mudah dibaca oleh manusia seperti sintaks
         \texttt{@prefix} pada Turtle.
   \item \texttt{SELECT}: Menyatakan variabel yang akan ditampilkan sebagai output dari \textit{query}.
-  \item \texttt{WHERE}: Menyatakan kondisi \textit{triple} yang akan ditampilkan pada output.
+  \item \texttt{WHERE}: Menyatakan kondisi \textit{triple} yang akan ditampilkan pada output. Elemen
+        dari \textit{triple} yaitu subjek, predikat, dan objek dapat beruba vaiable atau
+        \textit{fixed value} seperti \textit{string} atau bilangan.
+  \item
 \end{itemize}
 
-Berikut adalah contoh-contoh \textit{query} SPARQL yang dilakukan pada contoh KG
-pada subbab sebelumnya.
+Berikut adalah contoh-contoh \textit{query} SPARQL yang dilakukan pada contoh KG pada
+\lst~\ref{lst:contoh-singkat-ttl}.
 
 %--------------------------------------------------------------------------------------------------%
 \subsection{Contoh Query 1}
@@ -134,8 +140,8 @@ output merupakan \textit{triple} yang tedapat pada KG.
 \begin{listing}[H]
   \begin{minted}[frame=single, fontsize=\footnotesize]{sparql}
 PREFIX ex: <https://example.org/>
-SELECT ?s ?p ?o
-WHERE { ?s ?p ?o }
+SELECT ?subjek ?predikat ?objek
+WHERE { ?subjek ?predikat ?objek }
   \end{minted}
   \caption{Query 1}
   \label{lst:query-1}
@@ -145,7 +151,7 @@ WHERE { ?s ?p ?o }
 \begin{table}
   \centering
   \begin{tabular}{|l|l|l|} \hline
-    ?s                & ?p                       & ?o                 \\\hline \hline
+    ?subjek           & ?predikat                & ?objek             \\\hline \hline
     \texttt{ex:james} & \texttt{ex:has\_visited} & \texttt{ex:louvre} \\\hline
     \texttt{ex:james} & \texttt{ex:has\_name}    & "james"            \\\hline
   \end{tabular}
@@ -285,11 +291,11 @@ peraturan seperti pasal dan bab.
 Negara-negara anggota EU memiliki cara mengatur informasi hukum yang berbeda-beda, sehingga
 cenderung menghalangi penemuan, pertukaran, dan penggunaan kembali informasi. European Legislation
 Identifier (ELI) adalah solusi yang bertujuan untuk mengatasi masalah-masalah tersebut. ELI
-merupakan sistem untuk membuat \legal tersedia secara daring dalam format
-terstandardisasi, sehingga dapat diakses dan digunakan oleh berbagai instansi. ELI bertujuan untuk
-untuk memfasilitasi akses, berbagi dan interkoneksi informasi hukum yang diterbitkan melalui
-nasional, Eropa dan sistem informasi hukum global. ELI dibangun berdasarkan persetujuan antara
-negara-negara EU.
+merupakan sistem untuk membuat \legal tersedia secara daring dalam format terstandardisasi, sehingga
+dapat diakses dan digunakan oleh berbagai instansi \citep{eli}. ELI bertujuan untuk untuk
+memfasilitasi akses, berbagi dan interkoneksi informasi hukum yang diterbitkan melalui nasional,
+Eropa dan sistem informasi hukum global. ELI dibangun berdasarkan persetujuan antara negara-negara
+EU.
 
 ELI juga memiliki \textit{technical implementation
   guide}\footnote{\url{https://publications.europa.eu/en/publication-detail/-/publication/8159b75d-5efc-11e8-ab9c-01aa75ed71a1}}
@@ -309,10 +315,10 @@ peraturan di Indonesia seperti ``Peraturan Pemerintah''.
 
 Schema.org adalah aktivitas komunitas kolaboratif dengan misi untuk membuat, memelihara, dan
 mempromosikan skema untuk data terstruktur di internet, di halaman web, dalam pesan email, dan lebih
-dari itu. \textit{Vocabulary} Schema.org dapat digunakan dengan \textit{encoding} yang berbeda,
-termasuk RDFa, Microdata dan JSON-LD. Banyak aplikasi dari Google, Microsoft, Pinterest, Yandex, dan
-lainnya sudah menggunakan \textit{vocabulary} ini untuk memperkuat pengalaman yang kaya dan dapat
-diperluas. Schema.org memiliki \textit{vocabulary} tersendiri untuk
+dari itu \citep{schema.org}. \textit{Vocabulary} Schema.org dapat digunakan dengan \textit{encoding}
+yang berbeda, termasuk RDFa, Microdata dan JSON-LD. Banyak aplikasi dari Google, Microsoft,
+Pinterest, Yandex, dan lainnya sudah menggunakan \textit{vocabulary} ini untuk memperkuat pengalaman
+yang kaya dan dapat diperluas. Schema.org memiliki \textit{vocabulary} tersendiri untuk
 \legal\footnote{\url{https://schema.org/Legislation}}. Salah satu \textit{vocabulary} nya adalah
 properti yang menjelaskan metadata suatu \legal seperti \mono{legislationDate} dan
 \mono{jurisdiction}.
@@ -323,10 +329,10 @@ properti yang menjelaskan metadata suatu \legal seperti \mono{legislationDate} d
 %--------------------------------------------------------------------------------------------------%
 
 Wikidata adalah basis pengetahuan \textit{free} dan terbuka yang dapat dibaca dan diedit oleh
-manusia dan mesin. Wikidata berperan sebagai penyimpanan pusat untuk data terstruktur dari proyek
-saudara Wikimedia termasuk Wikipedia, Wikivoyage, Wiktionary, Wikisource, dan lainnya. WikiProject
-adalah organisasi yang didirikan untuk mencapai tujuan penyuntingan tertentu, atau untuk mencapai
-tujuan yang berkaitan dengan bidang pengetahuan tertentu. Terdapat WikiProject tersendiri untuk
-bidang hukum dan \legal yaitu WikiProject
+manusia dan mesin \citep{wikidata}. Wikidata berperan sebagai penyimpanan pusat untuk data
+terstruktur dari proyek saudara Wikimedia termasuk Wikipedia, Wikivoyage, Wiktionary, Wikisource,
+dan lainnya. WikiProject adalah organisasi yang didirikan untuk mencapai tujuan penyuntingan
+tertentu, atau untuk mencapai tujuan yang berkaitan dengan bidang pengetahuan tertentu. Terdapat
+WikiProject tersendiri untuk bidang hukum dan \legal yaitu WikiProject
 Law\footnote{\url{https://www.wikidata.org/wiki/Wikidata:WikiProject_Law}}.
 % // TODO: jelasin ya, bs pke screenshot

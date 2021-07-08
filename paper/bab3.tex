@@ -3,16 +3,70 @@
 \label{chap:3}
 %--------------------------------------------------------------------------------------------------%
 
-% // TODO: Sekilas aja dikasih+bahas singkat yg Arsitektur di paper (pindah sini)
-% // TODO: ksh pengantar bab,
-% // TODO: kasih pengantar section
+Bab ini berisi perancangan arsitektur konversi, ontologi KG yang dihasilkan, dikaitkan dengan
+\textit{competency questions}. \textit{Competency questions} harus diperjelas untuk dijadikan
+landasan ontologi KG. KG yang dihasilkan oleh sistem konversi, digabung dengan ontologi yang sudah
+dirancang harus dapat menjawab semua pertanyaan pada \textit{competency questions}. 
+
 % // TODO: Perancangan Class dan URI untuk Class (general)
 % // TODO: Msh belum: Perancangan Resource dan URI untuk Resource
+
+%--------------------------------------------------------------------------------------------------%
+\section{Arsitektur Sistem Konversi}
+\label{sec:arsitektur-sistem-konversi}
+%--------------------------------------------------------------------------------------------------%
+
+Proses konversi dokumen PDF ke KG mengikuti arsitektur seperti yang ditunjukkan pada
+\pic~\ref{fig:architecture}. Bagian \textit{Optical Character Recognition} (OCR) bertanggung jawab
+untuk mengubah \textit{image-only} PDF menjadi \textit{text-scannable} PDF dan menstandardisasi
+pemformatan semua PDF. Selanjutnya, penulis melakukan pemindaian file PDF untuk mengekstrak teks
+beserta posisinya. Selanjutnya, setiap baris teks yang dipindai sebagai \textit{span}. Setelah itu,
+\textit{span} yang terdeteksi sebagai konten yang tidak relevan, seperti \textit{header} dan
+\textit{footer} yang berulang, akan disaring. \textit{Clean span} yang dihasilkan, kemudian
+diuraikan menjadi data \legal yang bermakna dan terstruktur. Pada tahap akhir, sistem konversi
+membangun KG \legal dari hasil \textit{parsing}. Setiap KG \legal dihasilkan dari PDF akan digabung
+menjadi satu KG global.
+
+\begin{figure}
+  \centering
+  \begin{tikzpicture}[node distance=0.5cm]
+    %Styles   
+    \tikzstyle{r} = [rectangle, minimum width=1.5cm, minimum height=0.5cm, draw, text centered]
+    
+    %Nodes
+    \node[r] (pdf)                            {PDF};
+    \node[r] (ocr)       [below=of pdf]       {OCR};
+    \node[r] (scan)      [right=of ocr]       {pindai};
+    \node[r] (noise)     [right=of scan]      {\textit{cleaning}};
+    \node[r] (parse)     [right=of noise]     {\textit{parsing}};
+    \node[r] (construct) [right=of parse]     {konstruksi};
+    \node[r] (kg)        [above=of construct] {KG};
+    
+    %Lines
+    \draw[->] (pdf.south)       -- (ocr.north);
+    \draw[->] (ocr.east)        -- (scan.west);
+    \draw[->] (scan.east)       -- (noise.west);
+    \draw[->] (noise.east)      -- (parse.west);
+    \draw[->] (parse.east)      -- (construct.west);
+    \draw[->] (construct.north) -- (kg.south);
+    
+    %Boxes
+    \node[draw, dashed, label={Sistem Konversi}, fit=(ocr) (scan) (noise) (parse) (construct)] {};
+  \end{tikzpicture}
+  \caption{Arsitektur sistem konversi}
+  \label{fig:architecture}
+\end{figure}
 
 %--------------------------------------------------------------------------------------------------%
 \section{\textit{Competency Questions}}
 \label{sec:competency-questions}
 %--------------------------------------------------------------------------------------------------%
+
+\textit{Competency questions} perlu didefinisikan untuk dijadikan landasan perangancan ontologi KG
+yang dihasilkan. Setiap \textit{competency question} harus dapat dijawab oleh KG yang dihasilkan
+dengan membuktikan SPARQL \textit{query} yang bersesuaian dengan pertanyaan tersebut mengembalikan
+hasil yang benar. \tab~\ref{tab:competency-questions} merupakan daftar \textit{competency questions}
+yang didefinisikan pada penelitian ini.
 
 \begin{longtable}[l]{|p{0.05\textwidth} | p{0.95\textwidth}|}
   \hline
@@ -186,7 +240,6 @@ Properti menghubungkan subjek dan objek. Subjek adalah berupa URI komponen, seda
 berupa URI komponen, string, \textit{number} (bilangan), atau \textit{date} (tanggal).
 \tab~\ref{tab:properti} adalah spesifikasi properti Lex2KG berupa nama, domain, range, dan
 deskripsinya.
-
 
 \begin{longtable}{|p{0.22\textwidth}|p{0.22\textwidth}|p{0.22\textwidth}|p{0.34\textwidth}|}
   \hline
