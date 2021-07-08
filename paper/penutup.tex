@@ -2,26 +2,44 @@
 \chapter{PENUTUP}
 \label{chap:6}
 %---------------------------------------------------------------
-Pada bab ini, Penulis akan memaparkan kesimpulan penelitian dan saran untuk penelitian berikutnya.
-% // TODO: sambungkan ke yg rumusan mslh, gmn Aab handlenya, dan intiny blg sukses
+Pada bab ini, Penulis akan memaparkan kesimpulan penelitian dan saran untuk penelitian berikutnya
+terkait pembuatan sistem konversi Lex2KG.
 
+% // TODO: sambungkan ke yg rumusan mslh, gmn Aab handlenya, dan intiny blg sukses
 
 %---------------------------------------------------------------
 \section{Kesimpulan}
 \label{sec:kesimpulan}
 %---------------------------------------------------------------
-% // TODO: yg di kesimpulan jd mnghubungkan kontrib/yg udah dilakukan dgn rumusan permasalahan ini
-% // TODO: iswc poster paper disebut. penulis membuat versi poster paper, status menunggu review. versi paper.
-Berikut ini adalah kesimpulan terkait pekerjaan yang dilakukan dalam penelitian ini:
-\begin{enumerate}
-	\item \bo{Poin pertama} \\
-	      Penjelasan poin pertama.
-	\item \bo{Poin kedua} \\
-	      Penjelasan poin kedua.
-\end{enumerate}
+Perancangan sistem konversi otomatis PDF \legal menjadi KG dapat dilakukan melalui beberapa tahap,
+yaitu dengan mendefinisikan \textit{competency questions}, merancang ontologi yang dapat menjawab
+\textit{competency questions} tersebut, kemudian mengembangkan sistem konversi yang menghasilkan KG
+yang memenuhi ontologi tersebut. Variasi format PDF yang tidak seragam dapat distandardisasi dengan
+melakukan OCR ulang, kemudian PDF dapat dipindai dan di-\textit{parsing} menjadi data terstruktur,
+dan dikonstruksi menjadi KG.
 
-Tulis kalimat penutup di sini.
+Pembuatan ontologi dilakukan dengan mendefinisikan entitas dengan konsep yang sama untuk
+dikelompokan dalam \textit{class}, kemudian relasi antar \textit{class} tersebut dapat didefinisikan
+menjadi properti. Konsep-konsep yang terdapat pada \legal seperti struktur dokumen, rujukan,
+amendemen, jenis peraturan, dan metadata berhasil didefinisikan dalam \textit{class} dan properti. Setiap definisi
+ontologi seperti \textit{class} dan properti serta \textit{resource} juga diberikan spesifikasi
+konstruksi URI dengan \textit{namespace} yang sudah ditentukan.
 
+Pada penelitian ini penulis berhasil melakukan konversi untuk 784 PDF UU menjadi KG dengan total
+lebih dari 1.1 juta \textit{triple}. Evaluasi \textit{use case} dilakukan dalam bentuk SPARQL
+\textit{query}, visualisasi, dan \textit{chat bot} sederhana pada KG tersebut. Untuk setiap
+\textit{competency question} disediakan SPARQL \textit{query} yang dapat menjawab pertanyaan
+tersebut. Visualisasi \textit{word cloud}, statistik, \textit{graph} (dalam bentuk \textit{node} dan
+\textit{vertex}) dilakukan pada KG untuk memahami KG secara lebih intuitif. Evaluasi \textit{use
+case} dilakukan untuk \textit{chat bot} sederhana dengan memberikan tampilan untuk beberapa skenario
+dan diberi penjelasan bagaimana \textit{chat bot} melakukan SPARQL \textit{query} menggunakan
+\textit{template} sesuai skenario.
+
+Penulis juga melakukan membuat versi
+\textit{paper}\footnote{\url{https://drive.google.com/file/d/11y5ZCe7xbLMGTOpJilZNm8IVMNtF2J_6/view?usp=sharing}}
+dari skripsi ini untuk di-\textit{submit} di International Semantic Web
+Conference\footnote{\url{https://iswc2021.semanticweb.org/}} sebagai \textit{poster paper} dan
+sedang dalam status menunggu \textit{review}.
 
 %---------------------------------------------------------------
 \section{Saran}
