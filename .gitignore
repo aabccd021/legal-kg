@@ -28,4 +28,5 @@ fuseki/run
 *.pyg
 *.run.xml
 *.pygtex
+*.ipynb_checkpoints
 paper/thesis.pdf
