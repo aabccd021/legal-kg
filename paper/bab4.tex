@@ -379,15 +379,10 @@ dilakukan jika dokumen memiliki komponen berupa amendemen.
   \label{fig:deteksi-amendemen}
 \end{figure}
 
-
-% // TODO: competency question: dilampiran, ditangani, dikasih disini representatif, kasih judul gan
-% // TODO: panah menimbang
 %--------------------------------------------------------------------------------------------------%
 \section{Deteksi Rujukan}
 \label{sec:deteksi-rujukan}
 %--------------------------------------------------------------------------------------------------%
-
-% // TODO: regexny tmbhn jg utk yg deteksi rujukan, horizontal
 
 Setelah semua \textit{span} dikelompokan menjadi suatu komponen, dilakukan deteksi rujukan pada teks
 pada setiap komponen untuk mengetahui apakah komponen tersebut menyebut komponen atau dokumen \legal
@@ -396,21 +391,6 @@ ini. Selain URI, data rujukan juga mengandung informasi seperti yang dijelaskan 
 \tab~\ref{tab:info-rujukan}. Contoh teks dan data rujukan yang terdeteksi dari teks tersebut dapat
 dilihat pada \lst~\ref{lst:uu-13-2003-detect}.
 
-\begin{longtable}[l]{|p{0.2\textwidth} | p{0.3\textwidth}| p{0.5\textwidth}|}
-  \hline
-  \textbf{Pola}                         & \textbf{Contoh teks}                                     & \textbf{URI Terdeteksi}                                  \\ \hline \endhead
-  UUD 1945                              & Undang Undang Dasar Negara Republik Indonesia Tahun 1945 & \texttt{uud}                                             \\ \hline
-  Undang-Undang Nomor \{x\} Tahun \{y\} & Undang-Undang Nomor 26 Tahun 2007                        & \texttt{uu/2007/26}                                      \\ \hline
-  ayat (\{x\})                          & ayat (1)                                                 & \texttt{uu/2003/13/pasal/169/ayat/1}                     \\ \hline
-  Pasal \{x\}                           & Pasal 156                                                & \texttt{uu/2003/13/pasal/156}                            \\ \hline
-  Pasal \{x\} ayat (\{y\})              & Pasal 156 ayat (2)                                       & \texttt{uu/2003/13/pasal/156/ayat/2}                     \\ \hline
-  huruf \{x\}, \{y\}, ... dan \{z\}     & huruf a, b, c, d, dan e                                  &
-  \makecell[l]{\texttt{uu/2003/13/menimbang/point/a}                                                                                                          \\\texttt{uu/2003/13/menimbang/point/b}\\\texttt{uu/2003/13/menimbang/point/c}\\\texttt{uu/2003/13/menimbang/point/d}\\\texttt{uu/2003/13/menimbang/point/e}}\\ \hline
-  huruf \{x\} dan \{y\}                 & huruf a dan b                                            & \makecell[l]{\texttt{uu/2003/13/pasal/1/point/5/point/a} \\\texttt{uu/2003/13/pasal/1/point/5/point/b} } \\ \hline
-  \caption{Pola, contoh teks, dan contoh URI deteksi rujukan}
-  \label{tab:rujukan}
-\end{longtable}
-
 \begin{table}
   \centering
   \begin{tabular}{|l|l|l|} \hline
@@ -418,14 +398,45 @@ dilihat pada \lst~\ref{lst:uu-13-2003-detect}.
     \multirow{4}*{1} & Pola                  & UUD 1945                                                 \\ \cline{2-3}
                      & Regex                 & \verb/Undang Undang Dasar Negara Republik Indonesia Tahun 1945/                               \\ \cline{2-3}
                      & Contoh teks           & Undang Undang Dasar Negara Republik Indonesia Tahun 1945 \\ \cline{2-3}
-                     & URI                   & :uud                                                     \\ \hline \hline
+                     & URI                   & \texttt{:uud}                                            \\ \hline
+    \hline
     \multirow{4}*{2} & Pola                  & Undang-Undang Nomor \{x\} Tahun \{y\}                    \\ \cline{2-3}
                      & Regex                 & \verb/Undang-Undang Nomor [0-9]+ Tahun [0-9]+/                               \\ \cline{2-3}
                      & Contoh teks           & Undang-Undang Nomor 26 Tahun 2007                        \\ \cline{2-3}
-                     & URI                   & :uu/2007/26                                              \\ \hline \hline
+                     & URI                   & \texttt{:uu/2007/26}                                     \\ \hline
+    \hline
+    \multirow{4}*{3} & Pola                  & Pasal \{x\}                                              \\ \cline{2-3}
+                     & Regex                 & \verb/Pasal [0-9]+/                               \\ \cline{2-3}
+                     & Contoh teks           & Pasal 156                                                \\ \cline{2-3}
+                     & URI                   & \texttt{:uu/2003/13/pasal/156}                           \\ \hline
+    \hline
+    \multirow{4}*{4} & Pola                  & ayat (\{x\})                                             \\ \cline{2-3}
+                     & Regex                 & \verb/ayat \((l|[0-9]+)\)/                               \\ \cline{2-3}
+                     & Contoh teks           & ayat (1)                                                 \\ \cline{2-3}
+                     & URI                   & \texttt{:uu/2003/13/pasal/169/ayat/1}                    \\ \hline
+    \hline
+    \multirow{4}*{4} & Pola                  & Pasal \{x\} ayat (\{x\})                                 \\ \cline{2-3}
+                     & Regex                 & \verb/Pasal [0-9]+ ayat \((l|[0-9]+)\)/                               \\ \cline{2-3}
+                     & Contoh teks           & Pasal 156 ayat (2)                                       \\ \cline{2-3}
+                     & URI                   & \texttt{:uu/2003/13/pasal/156/ayat/2}                    \\ \hline
+    \hline
+    \multirow{4}*{4} & Pola                  & huruf \{x\} dan huruf \{y\}                              \\ \cline{2-3}
+                     & Regex                 & \verb/huruf ?([a-z]?,? ?)+( [a-z]( |,))/                               \\ \cline{2-3}
+                     & Contoh teks           & huruf a dan b                                            \\ \cline{2-3}
+                     & \multirow{2}*{URI}    & \texttt{uu/2003/13/pasal/1/point/5/point/a}              \\ \cline{3-3}
+                     &                       & \texttt{uu/2003/13/pasal/1/point/5/point/b}              \\ \hline
+    \hline
+    \multirow{4}*{4} & Pola                  & huruf \{x\}, \{y\}, ... dan \{z\}                        \\ \cline{2-3}
+                     & Regex                 & \verb/huruf ?([a-z]?,? ?)+( [a-z]( |,))/                               \\ \cline{2-3}
+                     & Contoh teks           & huruf a, b, c, d, dan e                                  \\ \cline{2-3}
+                     & \multirow{5}*{URI}    & \texttt{uu/2003/13/menimbang/point/a}                    \\ \cline{3-3}
+                     &                       & \texttt{uu/2003/13/menimbang/point/b}                    \\ \cline{3-3}
+                     &                       & \texttt{uu/2003/13/menimbang/point/c}                    \\ \cline{3-3}
+                     &                       & \texttt{uu/2003/13/menimbang/point/d}                    \\ \cline{3-3}
+                     &                       & \texttt{uu/2003/13/menimbang/point/e}                    \\ \hline
   \end{tabular}
   \caption{Pola, contoh teks, dan contoh URI deteksi rujukan}
-  \label{tab:rujukan2}
+  \label{tab:rujukan}
 \end{table}
 
 \begin{table}
