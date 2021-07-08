@@ -154,47 +154,120 @@ LIMIT 10
 \label{sec:visualisasi-kg}
 %--------------------------------------------------------------------------------------------------%
 
-% // TODO: Ksh 3 yg jenisnya beda2
-% // TODO: analisis insight yg didapat apa?
+Visualisasi data dapat meningkatkan visibilitas dan \textit{explainability} KG. Pada KG dapat
+dilakukan visualisasi \textit{node} dan \textit{relation} antara \textit{node}, atau visualisasi
+statistik dari KG tersebut. Pada Subbab ini akan diberikan beberapa contoh visualisasi menggunakan
+\textit{library} visualisasi VizKG\footnote{\url{https://pypi.org/project/VizKG/}}.
 
-Visualisasi data dapat meningkatkan visibilitas dan \textit{explainability} KG. Pada KG dapat dilakukan
-visualisasi \textit{node} dan \textit{relation} antara \textit{node}, atau visualisasi statistik
-dari KG tersebut. \lst~\ref{lst:vizkg} merupakan kode untuk melakukan visualisasi ``Tampilkan 5
-peraturan dengan komponen terbanyak beserta jumlah komponennya'' menggunakan \textit{library}
-visualisasi VizKG\footnote{\url{https://pypi.org/project/VizKG/}} dengan output
-\pic~\ref{fig:vizkg}.
+%--------------------------------------------------------------------------------------------------%
+\subsection{\textit{Word Cloud} UU Ketenagakerjaan}
+\label{subsec:word-cloud}
+%--------------------------------------------------------------------------------------------------%
+
+\lst~\ref{lst:vizkg1} merupakan kode untuk melakukan visualisasi \textit{word cloud} dari UU 13/2003
+tentang Ketenagakerjaan. Teks yang digunakan untuk \textit{word cloud} diambil dari teks-teks yang
+terdapat pada UU 13/2003. Hasil visualisasi pada \pic~\ref{fig:vizkg1} menunjukan bahwa UU ini
+paling banyak membicarakan tentang pekerja buruh dan perjanjian kerja.
 
 \begin{listing}[H]
   \begin{minted}[frame=single, breaklines]{python}
-import VizKG.visualize as VKG
-
 sparql_query = """
 PREFIX o: <https://example.org/lex2kg/ontology/>
-
-SELECT ?docName (COUNT(?component) as ?componentCount)
-WHERE {
-  ?doc a o:Peraturan .
-  ?component o:bagianDari* ?doc .
-  BIND(REPLACE(REPLACE(STR(?doc), "https://example.org/lex2kg/", ""), "/", "-") as ?docName) .
+SELECT* WHERE { 
+?komponen o:bagianDari* <https://example.org/lex2kg/uu/2003/13> ;
+          a o:Segmen ;
+          o:teks ?teks .
 }
-GROUP BY ?docName
-ORDER BY DESC(?componentCount)
-LIMIT 5
 """
-
-url = "http://127.0.0.1:3030/lex2kg/sparql"
-bubble = VKG(sparql_query=sparql_query, sparql_service_url=url, chart='BarChart')
-bubble.plot()
+words = vkg(sparql_query=sparql_query, sparql_service_url=sparql_service_url, chart='WordCloud')
+words.plot()
   \end{minted}
   \caption{Visualisasi ``Tampilkan 5 peraturan dengan komponen terbanyak beserta jumlah komponennya'' menggunakan VizKG}
-  \label{lst:vizkg}
+  \label{lst:vizkg1}
 \end{listing}
 
 \begin{figure}[H]
   \centering
-  \includegraphics{pictures/vizkg4.png}
-  \caption{Output VizKG untuk \lst~\ref{lst:vizkg}}
-  \label{fig:vizkg}
+  \includegraphics[scale=0.5]{pictures/vizkg1.png}
+  \caption{Output VizKG untuk \lst~\ref{lst:vizkg1}}
+  \label{fig:vizkg1}
+\end{figure}
+
+%--------------------------------------------------------------------------------------------------%
+\subsection{Diagram Garis Jumlah UU per Tahun}
+\label{subsec:diagram-garis}
+%--------------------------------------------------------------------------------------------------%
+
+\lst~\ref{lst:vizkg2} merupakan kode untuk melakukan visualisasi diagram garis jumlah undang-undang
+setiap tahunnya. Hasil visualisasi pada \pic~\ref{fig:vizkg2} menunjukan jumlah UU setiap tahunnya
+cenderung bertambah. Perlu diperhatikan bahwa UU yang terdapat pada KG hanya UU yang berhasil
+dikonversi oleh Lex2KG, oleh sebab itu kecenderungan penambahan jumlah UU bisa jadi disebabkan oleh
+kualitas PDF yang makin baik setiap tahunnya.
+
+\begin{listing}[H]
+  \begin{minted}[frame=single, breaklines]{python}
+sparql_query = """
+PREFIX o: <https://example.org/lex2kg/ontology/>
+SELECT ?tahun (COUNT(?peraturan) as ?peraturanCount)
+WHERE { ?peraturan o:tahun ?tahun .}
+GROUP BY ?tahun
+ORDER BY ?tahun
+"""
+words = vkg(sparql_query=sparql_query, sparql_service_url=sparql_service_url, chart='linechart')
+words.plot()
+  \end{minted}
+  \caption{Visualisasi ``Tampilkan 5 peraturan dengan komponen terbanyak beserta jumlah komponennya'' menggunakan VizKG}
+  \label{lst:vizkg2}
+\end{listing}
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=\textwidth]{pictures/vizkg2.png}
+  \caption{Output VizKG untuk \lst~\ref{lst:vizkg2}}
+  \label{fig:vizkg2}
+\end{figure}
+
+%--------------------------------------------------------------------------------------------------%
+\subsection{\textit{Graph} ``menimbang''}
+\label{subsec:graph}
+%--------------------------------------------------------------------------------------------------%
+
+\lst~\ref{lst:vizkg3} merupakan kode untuk melakukan visualisasi \textit{graph} yang menunjukan
+hubungan \mono{o:menimbang} antara peraturan, dimana peraturan penimbang disahkan setelah tahun
+2017. Hasil visualisasi pada \pic~\ref{fig:vizkg3} bahwa tidak jarang sebuah peraturan ditimbang
+oleh atau menimbang lebih dari satu peraturan. Peraturan yang paling banyak ditimbang oleh UU
+setelah tahun 2017 adalah UU 24/2000 tentang Perjanjian Internasional.
+
+\begin{listing}[H]
+  \begin{minted}[frame=single, breaklines]{python}
+sparql_query = """
+PREFIX o: <https://example.org/lex2kg/ontology/>
+PREFIX uu: <https://example.org/lex2kg/uu/>
+
+SELECT DISTINCT ?penimbang ?penimbangStr ?ditimbang ?ditimbangStr
+WHERE {
+  ?penimbang o:menimbang ?menimbang .
+  ?menimbangText o:bagianDari* ?menimbang .
+  ?menimbangText o:merujuk ?ditimbang .
+  ?ditimbang a o:Peraturan .
+  ?penimbang o:tahun ?tahun .
+  BIND(REPLACE(STR(?penimbang),"https://example.org/lex2kg/","") as ?penimbangStr) .
+  BIND(REPLACE(STR(?ditimbang),"https://example.org/lex2kg/","") as ?ditimbangStr) .
+  FILTER(?tahun > 2017)
+}
+"""
+graph = vkg(sparql_query=sparql_query, sparql_service_url=sparql_service_url, chart="graph")
+graph.plot()
+  \end{minted}
+  \caption{Visualisasi ``Tampilkan 5 peraturan dengan komponen terbanyak beserta jumlah komponennya'' menggunakan VizKG}
+  \label{lst:vizkg3}
+\end{listing}
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=\textwidth]{pictures/vizkg3.png}
+  \caption{Output VizKG untuk \lst~\ref{lst:vizkg3}}
+  \label{fig:vizkg3}
 \end{figure}
 
 
@@ -213,7 +286,7 @@ sudah tersedia. Teks yang ditampilkan \textit{chat bot} ditandai dengan warna hi
 pengguna ditandai dengan \textcolor{red}{warna merah}.
 
 %--------------------------------------------------------------------------------------------------%
-\subsection{Skenario 1}
+\subsection{Skenario 1: Mencari Peraturan dengan Kata Kunci}
 \label{subsec:skenario-1}
 %--------------------------------------------------------------------------------------------------%
 
@@ -267,7 +340,7 @@ WHERE {
 \end{listing}
 
 %--------------------------------------------------------------------------------------------------%
-\subsection{Skenario 2}
+\subsection{Skenario 2: Menampilkan Metadata Peraturan}
 \label{subsec:skenario-2}
 %--------------------------------------------------------------------------------------------------%
 
@@ -331,7 +404,7 @@ PREFIX o: <https://example.org/lex2kg/ontology/>
 \end{listing}
 
 %--------------------------------------------------------------------------------------------------%
-\subsection{Skenario 3}
+\subsection{Skenario 3: Melihat Peraturan yang ditimbang oleh Peraturan}
 \label{subsec:skenario-3}
 %--------------------------------------------------------------------------------------------------%
 
