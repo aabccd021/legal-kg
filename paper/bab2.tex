@@ -76,10 +76,11 @@ singkat dengan mengganti prefix URI yang sama menjadi teks yang lebih singkat, d
 penulisan beberapa \textit{triple} dengan subjek yang sama sehingga subjek hanya perlu dituliskan
 sekali saja. Sebagai contoh, karena sebagaian besar URI memiliki prefix
 \texttt{https://example.org/}, kita dapat menggantinya dengan \textit{string} \texttt{ex} dengan
-mendeklarasikan \mono{@prefix ex: https://example.org/ .}. Kedua \textit{triple} juga memiliki
-subjek yang sama yaitu \texttt{https://example.org/james}, oleh karena itu, penulisan kedua Turtle
-bisa digabung dengan hanya menuliskan subjek sebanyak satu kali, kemudian menuliskan properti dan
-objek dipisah dengan tanda titik koma. \lst~\ref{lst:contoh-singkat-ttl} adalah contoh penulisan dua
+mendeklarasikan \mono{@prefix ex: https://example.org/ .}. Selanjutnya \mono{ex:} digunakan sebagai
+notasi singkat \mono{https://example.org/} untuk mempermudah pembacaan. Kedua \textit{triple} juga
+memiliki subjek yang sama yaitu \mono{ex:james}, oleh karena itu, penulisan kedua Turtle bisa
+digabung dengan hanya menuliskan subjek sebanyak satu kali, kemudian menuliskan properti dan objek
+dipisah dengan tanda titik koma. \lst~\ref{lst:contoh-singkat-ttl} adalah contoh penulisan dua
 \textit{triple} diatas dalam bentuk yang lebih singkat dan lebih mudah dibaca oleh manusia.
 
 \begin{listing}[H]
@@ -159,8 +160,8 @@ WHERE { ?s ?p ?o }
 %--------------------------------------------------------------------------------------------------%
 
 \lst~\ref{lst:query-2} merupakan SPARQL \textit{query} untuk menampilkan semua properti dan objek
-pada \textit{triple} dengan subjek \texttt{https://example.org/james}. pada KG, akan memberikan
-output \tab~\ref{tab:output-query-2}.
+pada \textit{triple} dengan subjek \mono{ex:james}. pada KG, akan memberikan output
+\tab~\ref{tab:output-query-2}.
 
 \begin{listing}[H]
   \begin{minted}[frame=single, fontsize=\footnotesize]{sparql}
@@ -189,9 +190,9 @@ WHERE { ex:james ?properti ?objek }
 %--------------------------------------------------------------------------------------------------%
 
 \lst~\ref{lst:query-2} merupakan SPARQL \textit{query} untuk menampilkan semua objek pada
-\textit{triple} dengan subjek \texttt{https://example.org/james} dan properti
-\texttt{https://example.org/has\_visited}, dengan output \tab~\ref{tab:output-query-3}. Artinya,
-\textit{query} ini menampilkan semua tempat yang pernah dikunjungi james, yaitu louvre.
+\textit{triple} dengan subjek \mono{ex:james} dan properti \texttt{ex:has\_visited}, dengan output
+\tab~\ref{tab:output-query-3}. Artinya, \textit{query} ini menampilkan semua tempat yang pernah
+dikunjungi james, yaitu louvre.
 
 \begin{listing}[H]
   \begin{minted}[frame=single, fontsize=\footnotesize]{sparql}
