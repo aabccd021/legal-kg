@@ -181,14 +181,14 @@ gambaran berkas PDF dan hasil pemindaiannya menjadi daftar \textit{span}.
 \end{listing}
 
 %--------------------------------------------------------------------------------------------------%
-\section{Membersihkan \textit{Noise} dari Halaman}
+\section{Membersihkan Data tidak Relevan dari \textit{Span}}
 \label{membersihkan-noise-dari-halaman}
 %--------------------------------------------------------------------------------------------------%
 
-Tidak jarang dokumen \legal mengandung data \textit{noise} yang tidak ingin kita
-ekstraksi seperti \textit{header} dan \textit{footer}. Pada penelitian ini, penulis menggunakan dokumen
-dari sumber yang sama sehingga memiliki format yang sama, dan juga posisi \textit{header} dan
-\textit{footer} yang hampir sama pada setiap dokumen.
+Tidak jarang dokumen \legal mengandung data tidak relevan yang tidak ingin kita ekstraksi seperti
+\textit{header} dan \textit{footer}. Pada penelitian ini, penulis menggunakan dokumen dari sumber
+yang sama sehingga memiliki format yang sama, dan juga posisi \textit{header} dan \textit{footer}
+yang hampir sama pada setiap dokumen.
 
 \begin{figure}[H]
   \centering
@@ -201,8 +201,24 @@ dari sumber yang sama sehingga memiliki format yang sama, dan juga posisi \texti
 dilihat bahwa \textit{header} selalu terdiri dari teks ``PRESIDEN REPUBLIK INDONESIA'' dan diikuti
 oleh nomor halaman, dan selalu terletak di posisi yang hampir sama. Oleh karena itu, penulis
 memeriksa teks menggunakan \textit{regex} dan posisi dari setiap \textit{span}, kemudian menghapus
-% // TODO: yg regex jgn lp ditambahin ya di Bab ini
-\textit{span} tersebut jika terdeteksi sebagai header.
+\textit{span} tersebut jika terdeteksi sebagai header. \lst~\ref{lst:remove-noise} adalah kode yang
+mendeteksi data tidak relevan.
+
+\begin{listing}[H]
+  \begin{minted}[fontsize=\scriptsize, fontsize=\scriptsize, frame=single]{typescript}
+function isNotHeader(span: UnindexedSpan): boolean {
+  const isHeader =
+    y < 220 && (['PRESIDEN', 'REPUBLIK INDONESIA'].includes(str) || /- ?[0-9]+ ?-/.test(str));
+  return !isHeader;
+}
+function isLeftFooter(span: UnindexedSpan): boolean {
+  return span.y > 900 && span.xL < 45;
+}
+
+\end{minted}
+  \caption{Kode untuk mendeteksi \textit{header} dan \textit{footer}}
+  \label{lst:remove-noise}
+\end{listing}
 
 %--------------------------------------------------------------------------------------------------%
 \section{Penggabungan Data Berkas PDF Asli dan Hasil OCR Ulang}
