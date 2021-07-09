@@ -23,12 +23,13 @@ menjawab pertanyaan tersebut terdapat pada lampiran. Pada subbab ini akan dituju
 \subsection{\textit{Query} Amendemen yang Dilakukan UU Cipta Kerja}
 \label{subsec:cq8}
 %--------------------------------------------------------------------------------------------------%
-% // HACK: Dijelasin jg fitur querynya
 \textit{Competency question} No. 10 ``Tampilkan banyaknya penyisipan, pengubahan, dan penghapusan
-pasal yang dilakukan UU Cipta Kerja terhadap UU lain.'' dapat dijawab dengan melakukan \textit{query}
-\lst~\ref{lst:q-10} yang akan memberikan output \tab~\ref{tab:output-q-10}. Pada \textit{query}
-digunakan properti \mono{o:menghapus}, \mono{o:menyisipkan}, dan \mono{o:mengubah} untuk mencari
-\textit{triple} yang melakukan amendemen.
+pasal yang dilakukan UU Cipta Kerja terhadap UU lain.'' dapat dijawab dengan melakukan
+\textit{query} \lst~\ref{lst:q-10} yang akan memberikan output \tab~\ref{tab:output-q-10}. Pada
+\textit{query} digunakan properti \mono{o:menghapus}, \mono{o:menyisipkan}, dan \mono{o:mengubah}
+untuk mencari \textit{triple} yang melakukan amendemen. Selain itu digunakan juga fitur SPARQL
+\mono{UNION} untuk menggabungkan \textit{triple} dan \mono{BIND} untuk melakukan \textit{assignment}
+variabel.
 
 \begin{listing}[H]
   \begin{minted}[fontsize=\scriptsize, frame=single]{sparql}
@@ -75,7 +76,10 @@ LIMIT 3
 \textit{Competency question} No. 15 ``Tampilkan semua peraturan serta peraturan yang ditimbangnya.''
 dapat dijawab dengan melakukan \textit{query} \lst~\ref{lst:q-15} yang akan memberikan output
 \tab~\ref{tab:output-q-15}. Pada \textit{query} digunakan \mono{o:menimbang} untuk mencari entitas
-``menimbang'', \mono{o:bagianDari*} untuk mendapatkan komponen dari entitas ``menimbang''.
+``menimbang'', \mono{o:bagianDari*} untuk mendapatkan komponen dari entitas ``menimbang''. Selain itu
+digunakan juga fitur SPARQL \mono{ORDER BY} yang pada kasus ini dugunakan untuk mengurutkan
+\textit{triple} berdasarkan \mono{?penimbang} dan \mono{?ditimbang} secara \textit{descending}.
+
 
 \begin{listing}[H]
   \begin{minted}[fontsize=\scriptsize, frame=single]{sparql}
@@ -118,7 +122,9 @@ LIMIT 10
 
 \textit{Competency question} No. 20 ``Tampilkan semua peraturan yang melakukan amendemen dan
 banyaknya pasal yang amendemen oleh pasal tersebut.'' dapat dijawab dengan melakukan \textit{query}
-\lst~\ref{lst:q-20} yang akan memberikan output \tab~\ref{tab:output-q-20}.
+\lst~\ref{lst:q-20} yang akan memberikan output \tab~\ref{tab:output-q-20}. Selain itu digunakan
+juga fitur SPARQL \textit{property path} \mono{|} yang pada kasus ini predikat dapat berupa
+\mono{o:mengubah}, \mono{o:menyisipkan}, atau \mono{o:menghapus}
 
 \begin{listing}[H]
   \begin{minted}[fontsize=\scriptsize, frame=single]{sparql}

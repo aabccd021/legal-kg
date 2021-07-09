@@ -171,7 +171,7 @@ WHERE { ?subjek ?predikat ?objek }
 \begin{table}
   \centering
   \begin{tabular}{|l|l|l|} \hline
-    ?subjek           & ?predikat                & ?objek             \\\hline \hline
+    ?subjek           & ?predikat              & ?objek             \\\hline \hline
     \texttt{ex:James} & \texttt{ex:hasVisited} & \texttt{ex:Louvre} \\\hline
     \texttt{ex:James} & \texttt{ex:hasName}    & "James"            \\\hline
   \end{tabular}
@@ -201,7 +201,7 @@ WHERE { ex:James ?properti ?objek }
 \begin{table}
   \centering
   \begin{tabular}{|l|l|} \hline
-    ?properti                & ?objek             \\\hline \hline
+    ?properti              & ?objek             \\\hline \hline
     \texttt{ex:hasVisited} & \texttt{ex:Louvre} \\\hline
     \texttt{ex:hasName}    & "James"            \\\hline
   \end{tabular}
@@ -349,7 +349,6 @@ properti yang menjelaskan metadata suatu \legal seperti \mono{legislationDate} d
 \label{sec:wikidata}
 %--------------------------------------------------------------------------------------------------%
 
-% //TODO: jelasin skilas ya bbrp property yg di WP Law tsb
 Wikidata adalah basis pengetahuan \textit{free} dan terbuka yang dapat dibaca dan diedit oleh
 manusia dan mesin \citep{wikidata}. Wikidata berperan sebagai penyimpanan pusat untuk data
 terstruktur dari proyek saudara Wikimedia termasuk Wikipedia, Wikivoyage, Wiktionary, Wikisource,
@@ -357,7 +356,8 @@ dan lainnya. WikiProject adalah organisasi yang didirikan untuk mencapai tujuan 
 tertentu, atau untuk mencapai tujuan yang berkaitan dengan bidang pengetahuan tertentu. Terdapat
 WikiProject tersendiri untuk bidang hukum dan \legal yaitu WikiProject
 Law.\footnote{\url{https://www.wikidata.org/wiki/Wikidata:WikiProject_Law}} WikiProject Law
-menyediakan properti terkait \legal sebagaimana yang dapat dilihat pada \pic~\ref{fig:wikiproject}.
+menyediakan properti terkait \legal sebagaimana yang dapat dilihat pada \pic~\ref{fig:wikiproject}
+dan beberapa deskripsinya pada \tab~\ref{tab:wp-desc}.
 
 \begin{figure}[H]
   \centering
@@ -366,3 +366,16 @@ menyediakan properti terkait \legal sebagaimana yang dapat dilihat pada \pic~\re
   \small{}
   \label{fig:wikiproject}
 \end{figure}
+
+\begin{table}
+  \centering
+  \begin{tabular}{|p{0.2\textwidth}|p{0.8\textwidth}|} \hline
+    label                   & deskripsi                                                                                                                                                                                          \\\hline \hline
+    amended by              & document is amended by specified other document                                                                                                                                                    \\\hline
+    legislated by           & indicates that an act or bill was passed by a legislature. The value can be a particular session of the legislature                                                                                \\\hline
+    applies to jurisdiction & the item (institution, law, public office, public register...) or statement belongs to or has power over or applies to the value (a territorial jurisdiction: a country, state, municipality, ...) \\\hline
+  \end{tabular}
+  \caption{Deskripsi beberapa Properti WikiProject Law}
+  \label{tab:wp-desc}
+\end{table}
+
