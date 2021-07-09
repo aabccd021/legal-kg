@@ -1,6 +1,6 @@
-<mxfile>
+<mxfile host="65bd71144e" scale="4" border="0">
     <diagram id="yczZ5k3r3iEyvaCJdAh7" name="Page-1">
-        <mxGraphModel dx="775" dy="823" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" background="#FFFFFF" math="0" shadow="0">
+        <mxGraphModel dx="491" dy="633" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" background="#FFFFFF" math="0" shadow="0">
             <root>
                 <mxCell id="0"/>
                 <mxCell id="1" parent="0"/>
@@ -62,19 +62,19 @@
                 <mxCell id="89" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontColor=#0080F0;" parent="1" source="80" target="73" edge="1">
                     <mxGeometry relative="1" as="geometry"/>
                 </mxCell>
-                <mxCell id="80" value="PDF to KG" style="shape=offPageConnector;whiteSpace=wrap;html=1;labelBackgroundColor=white;sketch=0;strokeWidth=2;size=0.2;" parent="1" vertex="1">
+                <mxCell id="80" value="PDF2KG" style="shape=offPageConnector;whiteSpace=wrap;html=1;labelBackgroundColor=white;sketch=0;strokeWidth=2;size=0.2;" parent="1" vertex="1">
                     <mxGeometry x="334" y="410" width="80" height="30" as="geometry"/>
                 </mxCell>
                 <mxCell id="87" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontColor=#0080F0;" parent="1" source="82" target="72" edge="1">
                     <mxGeometry relative="1" as="geometry"/>
                 </mxCell>
-                <mxCell id="82" value="PDF to KG" style="shape=offPageConnector;whiteSpace=wrap;html=1;labelBackgroundColor=white;sketch=0;strokeWidth=2;size=0.2;" parent="1" vertex="1">
+                <mxCell id="82" value="PDF2KG" style="shape=offPageConnector;whiteSpace=wrap;html=1;labelBackgroundColor=white;sketch=0;strokeWidth=2;size=0.2;" parent="1" vertex="1">
                     <mxGeometry x="214" y="410" width="80" height="30" as="geometry"/>
                 </mxCell>
                 <mxCell id="85" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontColor=#0080F0;" parent="1" source="83" target="71" edge="1">
                     <mxGeometry relative="1" as="geometry"/>
                 </mxCell>
-                <mxCell id="83" value="PDF to KG" style="shape=offPageConnector;whiteSpace=wrap;html=1;labelBackgroundColor=white;sketch=0;strokeWidth=2;size=0.2;" parent="1" vertex="1">
+                <mxCell id="83" value="PDF2KG" style="shape=offPageConnector;whiteSpace=wrap;html=1;labelBackgroundColor=white;sketch=0;strokeWidth=2;size=0.2;" parent="1" vertex="1">
                     <mxGeometry x="94" y="410" width="80" height="30" as="geometry"/>
                 </mxCell>
                 <mxCell id="99" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontColor=#0080F0;" parent="1" source="91" target="98" edge="1">
@@ -86,8 +86,8 @@
                 <mxCell id="98" value="KG Peraturan Perundang-undangan" style="aspect=fixed;html=1;points=[];align=center;image;fontSize=12;image=img/lib/mscae/Resource_Graph_Explorer.svg;strokeColor=#000000;strokeWidth=2;fillColor=#ffffff;sketch=0;" parent="1" vertex="1">
                     <mxGeometry x="234.39999999999998" y="690" width="39.2" height="40" as="geometry"/>
                 </mxCell>
-                <mxCell id="101" value="Konstruksi" style="text;html=1;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;labelBackgroundColor=white;sketch=0;fontColor=#9673A6;fontSize=14;fontStyle=1" parent="1" vertex="1">
-                    <mxGeometry x="76.5" y="290" width="40" height="20" as="geometry"/>
+                <mxCell id="101" value="Konstruksi (Lex2KG)" style="text;html=1;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;labelBackgroundColor=white;sketch=0;fontColor=#9673A6;fontSize=14;fontStyle=1" parent="1" vertex="1">
+                    <mxGeometry x="76.5" y="290" width="143.5" height="20" as="geometry"/>
                 </mxCell>
                 <mxCell id="115" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.985;entryY=0.475;entryDx=0;entryDy=0;entryPerimeter=0;fontSize=12;fontColor=#000000;" parent="1" source="105" target="98" edge="1">
                     <mxGeometry relative="1" as="geometry">

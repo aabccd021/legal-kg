@@ -344,12 +344,13 @@ Beberapa komponen seperti \mono{o:Bab}, \mono{o:Bagian}, \mono{o:Paragraf}, \mon
 
 Contoh dari sifat pertama adalah \mono{o:Bab}, \mono{o:Bagian}, \mono{o:Paragraf}, dan
 \mono{o:Pasal} pasti dimulai dari komponen nomor 1 seperti \mono{Bab 1} dan \mono{Pasal 1}, dan
-\mono{o:Huruf} pasti dimulai dari komponen \mono{a.} atau \mono{1.}. Contoh dari sifat kedua adalah
-hanya \mono{pasal 2} yang dapat mengikuti \mono{Pasal 1} dan hanya \mono{b.} yang dapat mengikuti
-\mono{a.}. Dalam implementasi, penulis memastikan sifat-sifat ini dipatuhi, sehingga sebagai contoh
-apabila sebuah dokumen terdeteksi mengandung \mono{Bab 12} maka akan dijamin mengandung semua
-\mono{Bab 1} sampai \mono{Bab 11} dan apabila terdeteksi mengandung \mono{Pasal 196} maka akan
-dijamin mengandung semua pasal dari \mono{Pasal 1} sampai \mono{Pasal 195}.
+\mono{o:Huruf} pasti dimulai dari komponen \mono{a.} atau \mono{1.}. Contoh dari sifat kedua
+adalah hanya \mono{pasal 2} yang dapat mengikuti \mono{Pasal 1} dan hanya \mono{b.} yang dapat
+mengikuti \mono{a.}. Dalam implementasi, penulis memastikan sifat-sifat ini dipatuhi, sehingga
+sebagai contoh apabila sebuah dokumen terdeteksi mengandung \mono{Bab 12} maka akan dijamin
+mengandung semua \mono{Bab 1} sampai \mono{Bab 11} dan apabila terdeteksi mengandung
+\mono{Pasal 196} maka akan dijamin mengandung semua pasal dari \mono{Pasal 1} sampai
+\mono{Pasal 195}.
 
 %--------------------------------------------------------------------------------------------------%
 \subsection{Komponen Amendemen}
@@ -478,7 +479,8 @@ Untuk melakukan deteksi, teks akan melalui fungsi yang masing-masing memiliki po
 Oleh karena itu, untuk \textit{substring} yang beririsan dapat memiliki lebih dari dua rujukan yang
 terdeteksi. Pada kasus tersebut akan diambil rujukan dengan \textit{substring} terpanjang. Sebagai
 contoh, teks ``Pasal 156 Ayat (4)'' pada UU No.13 Tahun 2003 Pasal 158 Ayat (4) akan terdeteksi
-sebagai 3 URI rujukan seperti yang terlihat pada \tab~\ref{tab:contoh-teks-uri}.
+sebagai 3 URI rujukan seperti yang terlihat pada \tab~\ref{tab:contoh-teks-uri}. Pada kasus ini,
+yang akan diambil adalah teks ``Pasal 156 ayat (4)'' karena merupakan teks terpanjang.
 
 \begin{table}
   \centering
@@ -492,8 +494,6 @@ sebagai 3 URI rujukan seperti yang terlihat pada \tab~\ref{tab:contoh-teks-uri}.
   \label{tab:contoh-teks-uri}
 \end{table}
 
-Pada kasus ini, yang akan diambil adalah teks ``Pasal 156 ayat (4)'' karena merupakan teks
-terpanjang.
 
 %--------------------------------------------------------------------------------------------------%
 \section{Konstruksi KG}
