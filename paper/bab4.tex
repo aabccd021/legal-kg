@@ -334,37 +334,33 @@ menemukan grup yang diawali kata \mono{BAB I}.
 \label{subsec:komponen-terurut}
 %--------------------------------------------------------------------------------------------------%
 
-Beberapa komponen seperti \mono{bab}, \mono{bagian}, \mono{paragraf}, \mono{pasal}, \mono{angka},
-dan \mono{huruf} memiliki sifat terurut. Dalam hal ini, yang termasuk terurut adalah:
+Beberapa komponen seperti \mono{o:Bab}, \mono{o:Bagian}, \mono{o:Paragraf}, \mono{o:Pasal}, dan
+\mono{o:Huruf} memiliki sifat terurut. Dalam hal ini, yang dimaksud terurut adalah:
 
 \begin{itemize}
-  \itemsep1pt\parskip0pt\parsep0pt
-  \item
-        Komponen yang mengawali suatu komponen terurut akan selalu sama.
-  \item
-        Hanya terdapat satu komponen yang dapat mengikuti komponen terurut.
+  \item Komponen yang mengawali suatu komponen terurut akan selalu sama.
+  \item Hanya terdapat satu komponen yang dapat mengikuti komponen terurut.
 \end{itemize}
 
-Contoh dari sifat pertama adalah \texttt{bab}, \texttt{bagian}, \texttt{paragraf}, \texttt{pasal},
-\texttt{angka} pasti dimulai dari komponen nomor 1 seperti \texttt{bab 1} dan \texttt{pasal 1}, dan
-\texttt{huruf} pasti dimulai dari komponen \texttt{huruf a}. Contoh dari sifat kedua adalah hanya
-\texttt{pasal 2} yang dapat mengikuti \texttt{pasal 1} dan hanya \texttt{huruf b} yang dapat
-mengikuti \texttt{huruf a}. Dalam implementasi, penulis memastikan sifat-sifat ini dipatuhi,
-sehingga sebagai contoh apabila sebuah dokumen terdeteksi mengandung \texttt{bab 12} maka akan
-dijamin mengandung semua \texttt{bab 1} sampai \texttt{bab 11} dan apabila terdeteksi mengandung
-\texttt{pasal 196} maka akan dijamin mengandung semua pasal dari \texttt{pasal 1} sampai
-\texttt{pasal 195}.
+Contoh dari sifat pertama adalah \mono{o:Bab}, \mono{o:Bagian}, \mono{o:Paragraf}, dan
+\mono{o:Pasal} pasti dimulai dari komponen nomor 1 seperti \mono{Bab 1} dan \mono{Pasal 1}, dan
+\mono{o:Huruf} pasti dimulai dari komponen \mono{a.} atau \mono{1.}. Contoh dari sifat kedua adalah
+hanya \mono{pasal 2} yang dapat mengikuti \mono{Pasal 1} dan hanya \mono{b.} yang dapat mengikuti
+\mono{a.}. Dalam implementasi, penulis memastikan sifat-sifat ini dipatuhi, sehingga sebagai contoh
+apabila sebuah dokumen terdeteksi mengandung \mono{Bab 12} maka akan dijamin mengandung semua
+\mono{Bab 1} sampai \mono{Bab 11} dan apabila terdeteksi mengandung \mono{Pasal 196} maka akan
+dijamin mengandung semua pasal dari \mono{Pasal 1} sampai \mono{Pasal 195}.
 
 %--------------------------------------------------------------------------------------------------%
 \subsection{Komponen Amendemen}
 \label{subsec:komponen-amendemen}
 %--------------------------------------------------------------------------------------------------%
 
-Mengekstraksi \textit{span} pada bagian amendemen merupakan salah satu tantangan pada penelitian ini.
-Dibawah adalah gambar amendemen pada Pasal 17 UU 11/2020 yang dilakukan terhadap Pasal 1 UU 26/2007.
-Dapat dilihat bahwa kata \texttt{Pasal 17} dan \texttt{Pasal 1} yang digunakan sebagai pembatas
-antara komponen memiliki pola teks dan posisi yang hampir sama. Hal ini membuat pembedaan antara
-``Pasal biasa'' dan ``Pasal peng-amendemen'' menjadi sulit dilakukan.
+Melakukan \textit{parsing span} pada bagian amendemen merupakan salah satu tantangan pada penelitian
+ini. \pic~\ref{fig:contoh-amendemen} adalah amendemen pada Pasal 17 UU 11/2020 yang dilakukan
+terhadap Pasal 1 UU 26/2007. Dapat dilihat bahwa kata \mono{Pasal 17} dan \mono{Pasal 1} yang
+digunakan sebagai pembatas antara komponen memiliki pola teks dan posisi yang hampir sama. Hal ini
+membuat pembedaan antara ``Pasal biasa'' dan ``Pasal peng-amendemen'' menjadi sulit dilakukan.
 
 \begin{figure}[H]
   \centering
@@ -373,11 +369,11 @@ antara komponen memiliki pola teks dan posisi yang hampir sama. Hal ini membuat 
   \label{fig:contoh-amendemen}
 \end{figure}
 
-Untuk menyelesaikan masalah ini, penulis menggunakan koordinat \texttt{xL} \textit{span} tepat
+Untuk menyelesaikan masalah ini, penulis menggunakan koordinat \mono{xL} \textit{span} tepat
 setelah \textit{span} yang bertuliskan ``Pasal X''. Pada contoh deteksi kompoonen amendemen
-\pic~\ref{fig:deteksi-amendemen}, \texttt{xL} dari teks setelah pasal peng-amendemen (pasal biasa)
-ditandai dengan \textcolor{red}{lingkaran merah}, \texttt{xL} dari pasal yang diamendemen ditandai
-dengan \textcolor{blue}{lingkaran biru}, dan garis hijau merepresentasikan batas pemeda \texttt{xL}
+\pic~\ref{fig:deteksi-amendemen}, \mono{xL} dari teks setelah pasal peng-amendemen (pasal biasa)
+ditandai dengan \textcolor{red}{lingkaran merah}, \mono{xL} dari pasal yang diamendemen ditandai
+dengan \textcolor{blue}{lingkaran biru}, dan garis hijau merepresentasikan batas pemeda \mono{xL}
 antara pasal biasa dan pasal yang diamendemen. Pembedaan pasal biasa dan pasal amendemen hanya
 dilakukan jika dokumen memiliki komponen berupa amendemen.
 
