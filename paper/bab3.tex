@@ -13,19 +13,15 @@ dirancang harus dapat menjawab semua pertanyaan pada \textit{competency question
 \label{sec:arsitektur-sistem-konversi}
 %--------------------------------------------------------------------------------------------------%
 
-% // TODO: Perlu dijelasin Lex2KG mengandung PDF2KG dan PDF2KG mengandung Span2KG.
-
-Jgn lp jg dijelasin step2nya yg ada di arsitektur/diagram tsb
-Proses konversi dokumen PDF ke KG mengikuti arsitektur seperti yang ditunjukkan pada
-\pic~\ref{fig:pdf2kg} dan \pic~\ref{fig:span2kg}. Bagian \textit{Optical Character Recognition}
-(OCR) bertanggung jawab untuk mengubah \textit{image-only} PDF menjadi \textit{text-scannable} PDF
-dan menstandardisasi pemformatan semua PDF. Selanjutnya, penulis melakukan pemindaian file PDF untuk
-mengekstrak teks beserta posisinya. Selanjutnya, setiap baris teks yang dipindai sebagai
-\textit{span}. Setelah itu, \textit{span} yang terdeteksi sebagai konten yang tidak relevan, seperti
-\textit{header} dan \textit{footer} yang berulang, akan disaring. \textit{Clean span} yang
-dihasilkan, kemudian diuraikan menjadi data \legal yang bermakna dan terstruktur. Pada tahap akhir,
-sistem konversi membangun KG \legal dari hasil \textit{parsing}. Setiap KG \legal dihasilkan dari
-PDF akan digabung menjadi satu KG global.
+Lex2KG melakukan konversi PDF menjadi KG menggunakan modul PDF2KG dengan arsitektur yang ditunjukan
+pada \pic~\ref{fig:pdf2kg}, kemudian KG dari masing-masing PDF digabung dan dikeluarkan sebagai satu
+KG.  Bagian \textit{Optical Character Recognition} (OCR) bertanggung jawab untuk mengubah
+\textit{image-only} PDF ("Asli) menjadi \textit{text-scannable} PDF ("OCR") dan menstandardisasi
+pemformatan semua PDF. Selanjutnya kedua file PDF "Asli" dan "OCR" dipindai untuk mengekstrak teks
+beserta posisinya, yang selanjutnya disebut \textit{span}. Kemudian \textit{span} "Asli" dan
+\textit{span} "OCR" digabung untuk dibuat \textit{span} "Hybrid". Kemudian PDF2KG membuat tiga versi
+KG dari masing-masing \textit{span} "Asli", "OCR", dan "Hybrid" menggunakan Span2KG untuk dipilih
+satu KG terbaik yang akan dikeluarkan, dimana KG terbaik adalah KG dengan \textit{triple} terbanyak.
 
 % \begin{figure}
 %   \centering
@@ -40,6 +36,17 @@ PDF akan digabung menjadi satu KG global.
   \caption{Arsitektur PDF2KG}
   \label{fig:pdf2kg}
 \end{figure}
+
+Pada PDF2KG terdapat modul Span2KG yang melakukan konversi \textit{span} menjadi KG dengan
+arsitektur seperti yang dijelaskan pada \pic~\ref{fig:span2kg}. Pada Span2KG \textit{span} input
+yang terdeteksi sebagai konten yang tidak relevan, seperti \textit{header} dan \textit{footer} yang
+berulang, akan disaring. \textit{Clean span} yang dihasilkan, kemudian dilakukan \textit{parsing}
+sehingga menjadi data struktur peraturan. Kemudian data tersebut dibuat menjadi \textit{triple}
+struktur, \textit{class assignment}, dan \textit{reverse property} sesuai yang didefinisikan pada
+ontologi. \textit{Reverse property} merupakan properti yang memiliki sifat kebalikan dari suatu
+properti lain, untuk mempermudah \textit{query}. Selain itu, pada data struktur juga dilakukan
+deteksi rujukan yang kemudian menghasilkan \textit{triple} rujukan. Pada tahap akhir, Span2KG
+menggabungkan semua \textit{triple} tersebut dan dikeluarkan sebagai KG.
 
 \begin{figure}
   \centering
@@ -311,13 +318,14 @@ untuk objek disebut \textit{range}. \tab~\ref{tab:properti} adalah properti Lex2
 \label{sec:ilustrasi-ontologi}
 %--------------------------------------------------------------------------------------------------%
 
-% // TODO:Mesti dikasih kyk konteksnya itu yg tabel2 di atas.
-% // TODO:Nanti jk ditambah gambar lg, perlu dikasih pengantar
-% // TODO: Yg amendemen dan segmen bs dikasih, cm gak hrs lgkap bgt bs kyk subset/snippet
+% // HACK:Nanti jk ditambah gambar lg, perlu dikasih pengantar
+% // HACK: Yg amendemen dan segmen bs dikasih, cm gak hrs lgkap bgt bs kyk subset/snippet
 
-Untuk memahami ontologi secara intuitif, ontologi dapat divisualisasikan.
-\pic~\ref{fig:ontologi-struktur} adalah ontologi struktur data peraturan yaitu komponen-komponen
-peraturan serta properti yang menghubungkannya dan metadata yang terdapat pada peraturan.
+Untuk memahami ontologi secara intuitif, spesifikasi ontologi pada tabel-tabel diatas dapat
+divisualisasikan. \pic~\ref{fig:ontologi-struktur} memuat ontologi struktur dan metadata suatu
+\legal. Ontologi struktur adalah berupa komponen-komponen peraturan serta properti yang
+menghubungkannya. Ontologi metadata menjelaskan jenis-jenis metadata yang terdapat pada suatu \legal
+dan tipe datanya.
 
 \begin{figure}[H]
   \centering
