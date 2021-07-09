@@ -288,12 +288,10 @@ berhasil terpindai dan jika berhasil terpindai.
 \end{listing}
 
 %--------------------------------------------------------------------------------------------------%
-\section{Pengelompokan \textit{span} menjadi Komponen}
+\section{\textit{Parsing span} menjadi Komponen}
 \label{pengelompokan-span-menjadi-komponen}
 %--------------------------------------------------------------------------------------------------%
 
-% // HACK: repeat until no new component
-% // TODO: Benerin istilah section nya Group
 % // TODO: regex2nya bs dtmbhin dan ceritain
 
 Teks yang membentuk suatu komponen terdiri dari satu atau lebih \textit{span}, sehingga daftar
@@ -305,16 +303,15 @@ pada setiap \textit{span}, kemudian menandai awal atau akhir dari sebuah kelompo
 suatu pola. Setelah ditandai, \textit{span} akan dikelompokkan sebagai daftar \textit{span} dari
 suatu komponen.
 
-Pengelompokan tidak langsung dilakukan dari daftar \textit{list} menjadi daftar komponen, melainkan
-dibuat pengelompokan \textit{section} untuk pembagian dokumen secara garis besar, kemudian baru
-dikelompokkan sebagai komponen dari masing-masing \textit{section} tersebut. Pada
-\pic~\ref{fig:ilustrasi-ekstraksi} \textit{section} ditandai dengan warna \textcolor{blue}{biru} dan
-komponen ditandai dengan \textcolor{red}{warna merah}. Dapat dilihat bahwa daftar \textit{span} data
-awal dikelompokkan menjadi beberapa \textit{section} yaitu \mono{judul}, \mono{metadata},
-\mono{babset}, dan \mono{disahkan}. Kemudian \textit{span} pada section \mono{babset} dikelompokkan
-menjadi komponen bab yaitu \mono{Bab 1}, \mono{Bab 2}, dan \mono{Bab 3}. Kemudian \textit{span} pada
-setiap komponen bab dikelompokkan menjadi komponen pasal. Pengelompokan bertingkat ini dilakukan
-agar fungsi untuk mendeteksi batas antara komponen tidak menjadi rumit.
+Pengelompokan tidak selalu langsung dilakukan dari daftar \textit{span} menjadi komponen. Daftar
+\textit{span} dapat dikelompokkan menjadi grup untuk pembagian dokumen secara garis besar, kemudian
+baru dikelompokkan sebagai komponen dari masing-masing grup tersebut. Pada
+\pic~\ref{fig:ilustrasi-ekstraksi} grup ditandai dengan \textcolor{blue}{warna biru} dan komponen
+ditandai dengan \textcolor{red}{warna merah}. Dapat dilihat bahwa daftar \textit{span} data awal
+dikelompokkan menjadi komponen \textbf{DaftarBab} dan beberapa grup yaitu \textbf{Judul},
+\textbf{Metadata}, dan \textbf{Disahkan}. Kemudian \textit{span} pada grup \textbf{Metadata} dikelompokkan
+menjadi komponen \textbf{Menimbang}. Pengelompokan bertingkat ini dilakukan agar fungsi untuk
+mendeteksi batas antara komponen tidak menjadi rumit.
 
 \begin{figure}[H]
   \centering
@@ -323,14 +320,14 @@ agar fungsi untuk mendeteksi batas antara komponen tidak menjadi rumit.
   \label{fig:ilustrasi-ekstraksi}
 \end{figure}
 
-Deteksi batas antara komponen atau \textit{section} dilakukan dengan melihat data pada \textit{span}
+Deteksi batas antara komponen atau grup dilakukan dengan melihat data pada \textit{span}
 seperti \mono{str}, \mono{xL}, \mono{xR}, dan \mono{y}. Pada \pic~\ref{fig:ilustrasi-ekstraksi},
 pola yang terdeteksi sebagai batas ditandai dengan \textcolor{red}{teks merah}. Sebagai contoh, pada
-ekstraki paling kiri, dari daftar \textit{span} asli menjadi \textit{section}, dilakukan iterasi
-\textit{span} dari atas dan akan dimasukkan ke dalam \textit{section} \mono{judul} sampai menemukan
-\textit{section} yang diawali dengan kata \textbf{Menimbang}. Kemudian setiap \textit{span} setelah
-span \textbf{Menimbang} tersebut akan dikelompokkan menjadi \textit{section} \mono{metadata} sampai
-menemukan section yang diawali kata \textbf{BAB I}.
+ekstraki paling kiri, dari daftar \textit{span} asli menjadi grup, dilakukan iterasi
+\textit{span} dari atas dan akan dimasukkan ke dalam grup \textbf{Judul} sampai menemukan
+grup yang diawali dengan kata \mono{Menimbang}. Kemudian setiap \textit{span} setelah
+span \textbf{Menimbang} tersebut akan dikelompokkan menjadi grup \textbf{Metadata} sampai
+menemukan grup yang diawali kata \mono{BAB I}.
 
 %--------------------------------------------------------------------------------------------------%
 \subsection{Komponen Terurut}

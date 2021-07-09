@@ -1,10 +1,10 @@
-<mxfile>
+<mxfile host="65bd71144e" scale="4" border="0">
     <diagram id="bmnVY2jh7ur1HRDvhdAv" name="Page-1">
-        <mxGraphModel dx="608" dy="823" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" background="#FFFFFF" math="0" shadow="0">
+        <mxGraphModel dx="491" dy="633" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" background="#FFFFFF" math="0" shadow="0">
             <root>
                 <mxCell id="0"/>
                 <mxCell id="1" parent="0"/>
-                <mxCell id="22" value="Judul &lt;i&gt;Section&lt;/i&gt;" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;align=center;" parent="1" vertex="1">
+                <mxCell id="22" value="Grup Judul" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;align=center;" parent="1" vertex="1">
                     <mxGeometry x="840" y="220" width="160" height="20" as="geometry"/>
                 </mxCell>
                 <mxCell id="53" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" parent="1" source="2" target="22" edge="1">
@@ -93,10 +93,10 @@
                 <mxCell id="25" value="Mengingat: Pasal 5 ayat (1)..." style="rounded=0;whiteSpace=wrap;html=1;align=left;" parent="1" vertex="1">
                     <mxGeometry x="840" y="360" width="160" height="20" as="geometry"/>
                 </mxCell>
-                <mxCell id="26" value="Metadata&amp;nbsp;&lt;i&gt;Section&lt;/i&gt;" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;align=center;" parent="1" vertex="1">
+                <mxCell id="26" value="Grup Metadata" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;align=center;" parent="1" vertex="1">
                     <mxGeometry x="840" y="300" width="160" height="20" as="geometry"/>
                 </mxCell>
-                <mxCell id="30" value="Babset &lt;i&gt;Section&lt;/i&gt;" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;align=center;" parent="1" vertex="1">
+                <mxCell id="30" value="DaftarBab" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;align=center;" parent="1" vertex="1">
                     <mxGeometry x="840" y="400" width="160" height="20" as="geometry"/>
                 </mxCell>
                 <mxCell id="82" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" parent="1" source="31" target="65" edge="1">
@@ -129,7 +129,7 @@
                 <mxCell id="38" value="Pembangunan diselenggara.." style="rounded=0;whiteSpace=wrap;html=1;align=left;" parent="1" vertex="1">
                     <mxGeometry x="840" y="560" width="160" height="20" as="geometry"/>
                 </mxCell>
-                <mxCell id="50" value="Disahkan&amp;nbsp;&lt;i&gt;Section&lt;/i&gt;" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;align=center;" parent="1" vertex="1">
+                <mxCell id="50" value="Grup Disahkan" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;align=center;" parent="1" vertex="1">
                     <mxGeometry x="840" y="680" width="160" height="20" as="geometry"/>
                 </mxCell>
                 <mxCell id="51" value="Disahkan di jakarta" style="rounded=0;whiteSpace=wrap;html=1;align=left;" parent="1" vertex="1">
