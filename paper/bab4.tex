@@ -117,7 +117,7 @@ tessedit_pageseg_mode 4
 \end{listing}
 
 %--------------------------------------------------------------------------------------------------%
-\section{Pemindaian Berkas PDF menjadi Data \textit{Span}}
+\section{Pemindaian Berkas PDF menjadi \textit{Span}}
 \label{pemindaian-berkas-pdf-menjadi-data-span}
 %--------------------------------------------------------------------------------------------------%
 
@@ -221,20 +221,16 @@ function isLeftFooter(span: UnindexedSpan): boolean {
 \end{listing}
 
 %--------------------------------------------------------------------------------------------------%
-\section{Penggabungan Data Berkas PDF Asli dan Hasil OCR Ulang}
+\section{Pembuatan \textit{Span} "Hybrid"}
 \label{penggabungan-data-berkas-pdf-asli-dan-hasil-ocr-ulang}
 %--------------------------------------------------------------------------------------------------%
 
-% // TODO: Bs lbh dieksplisitkan penjelasan trkait versi OCR yg beda, yg ada 3 jenis. jelasin aja yg
-% tiga versi pdf utk nanti dikonstruk yg dipilih yg terbaik
-
-Pada proses pemindaian berkas PDF menjadi daftar \textit{span}, penulis menemukan satu masalah yaitu
-data hasil OCR tidak konsisten dalam memindai angka. Seperti yang dapat dilihat pada
+Pada proses pemindaian berkas PDF menjadi \textit{span}, penulis menemukan satu masalah yaitu data
+hasil OCR tidak konsisten dalam memindai angka. Seperti yang dapat dilihat pada
 \pic~\ref{fig:contoh-nomor-tidak-terpindai}, angka 10 berhasil dipindai tetapi angka 9 tidak
-berhasil. Untuk kasus tersebut, angka hanya tidak terpindai pada hasil OCR ulang, tetapi terpindai
-dengan benar pada berkas PDF aslinya. Untuk menyelesaikan masalah tersebut, penulis melakukan
-pemindaian data pada berkas PDF aslinya, kemudian menggabungkannya dengan data hasil pemindaian PDF
-hasil OCR untuk melengkapi bagian yang tidak terpindai.
+berhasil. Untuk kasus tersebut, angka hanya tidak terpindai pada hasil OCR, tetapi terpindai dengan
+benar pada berkas PDF aslinya. Penulis menggabungkan \textit{span} "Asli" dan \textit{span} "OCR"
+untuk membuat \textit{span} "Hybrid" yang melengkapi bagian yang tidak terpindai.
 
 \begin{figure}[H]
   \centering
@@ -243,9 +239,9 @@ hasil OCR untuk melengkapi bagian yang tidak terpindai.
   \label{fig:contoh-nomor-tidak-terpindai}
 \end{figure}
 
-Penulis hanya menggabungkan data dua berkas PDF untuk kasus angka seperti yang disebutkan di atas.
-Hal tersebut dikarenakan pada umumnya kita dapat mentolerir kesalahan pemindaian pada teks, tetapi
-karena kegagalan pemindaian pada angka tersebut akan mempengaruhi struktur dokumen, penulis
+Penulis hanya melakukan penggabungan \textit{span} untuk kasus angka seperti yang disebutkan di
+atas. Hal tersebut dikarenakan pada umumnya kita dapat mentolerir kesalahan pemindaian pada teks,
+tetapi karena kegagalan pemindaian pada angka tersebut akan mempengaruhi struktur dokumen, penulis
 memutuskan solusi di atas. Sebagai contoh, jika nomor 8 berhasil dipindai dan nomor 9 tidak
 berhasil, maka struktur akhir yang dihasilkan akan mengandung semua isi nomor 9 didalam nomor 8,
 yang mana seharusnya adalah nomor yang terpisah. \lst~\ref{lst:no-9-tidak-terpindai} dan
