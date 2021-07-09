@@ -356,10 +356,10 @@ WHERE {
 
 \lst~\ref{lst:chatbot-2} merupakan tampilan chatbot pada Skenario 2 di mana pengguna memilih
 peraturan berdasarkan pilihan yang diberikan sebelumnya, kemudian menampilkan metadatanya. Pada
-contoh ini pengguna memilih \mono{uu/2019/3}, kemudian \textit{chat bot} melakukan \textit{query}
-terhadap KG menggunakan template \lst~\ref{lst:chatbot-2-query}, di mana \mono{legalURI} memiliki
-nilai \mono{uu/2019/3}. Kemudian \textit{chat bot} mengembalikan hasil \textit{query} berupa
-metadata UU 3/2019.
+contoh ini pengguna memilih peraturan \mono{uu/2019/3} dan data\mono{metadata}, kemudian
+\textit{chat bot} melakukan \textit{query} terhadap KG menggunakan template
+\lst~\ref{lst:chatbot-2-query}, di mana \mono{legalURI} memiliki nilai \mono{uu/2019/3}. Kemudian
+\textit{chat bot} mengembalikan hasil \textit{query} berupa metadata UU 3/2019.
 
 \begin{listing}[H]
   \begin{center}
@@ -371,6 +371,7 @@ metadata UU 3/2019.
         \texttt{Data uu/2019/3 :}                                                        \\
         \texttt{-metadata}                                                               \\
         \texttt{-menimbang}                                                              \\
+        \texttt{-konten}                                                                 \\
         \\
         \texttt{Pilih data yang ingin anda lihat: \textcolor{red}{metadata}}             \\
         \\
@@ -419,26 +420,26 @@ WHERE {
 
 \lst~\ref{lst:chatbot-3} merupakan tampilan chatbot pada Skenario 3 di mana pengguna memilih
 peraturan berdasarkan pilihan yang diberikan sebelumnya, kemudian menampilkan peraturan yang
-ditimbangnya. Pada contoh ini pengguna memilih \mono{uu/2019/3}, kemudian \textit{chat bot}
-melakukan \textit{query} terhadap KG menggunakan template \lst~\ref{lst:chatbot-3-query}, di mana
-\mono{legalURI} memiliki nilai \mono{uu/2019/3}. Kemudian \textit{chat bot} mengembalikan hasil
-\textit{query} berupa dokumen yang ditimbang UU 3/2019 yaitu UU 24/2000.
+ditimbangnya. Pada contoh ini pengguna memilih \mono{menimbang} untuk informasi yang ingin
+ditampilkan, kemudian \textit{chat bot} melakukan \textit{query} terhadap KG menggunakan template
+\lst~\ref{lst:chatbot-3-query}, di mana \mono{legalURI} memiliki nilai \mono{uu/2019/3}. Kemudian
+\textit{chat bot} mengembalikan hasil \textit{query} berupa dokumen yang ditimbang UU 3/2019 yaitu
+UU 24/2000.
 
 \begin{listing}[H]
   \begin{center}
     \begin{tabular}{|p{0.9\textwidth}|}
       \hline
       \makecell[l]{
-        \texttt{Pilih salah satu untuk melihat lebih lanjut: \textcolor{red}{uu/2019/3}} \\
+        \texttt{Data uu/2019/3 :}                                             \\
+        \texttt{-metadata}                                                    \\
+        \texttt{-menimbang}                                                   \\
+        \texttt{-konten}                                                      \\
         \\
-        \texttt{Data uu/2019/3 :}                                                        \\
-        \texttt{-metadata}                                                                \\
-        \texttt{-menimbang}                                                               \\
-        \\
-        \texttt{Pilih data yang ingin anda lihat: \textcolor{red}{menimbang}}             \\
+        \texttt{Pilih data yang ingin anda lihat: \textcolor{red}{menimbang}} \\
         \\
         \texttt{uu/2000/24}
-      }                                                                                   \\
+      }                                                                       \\
       \hline
     \end{tabular}
   \end{center}
@@ -462,5 +463,85 @@ WHERE {
   \end{minted}
   \caption{\textit{Query} template untuk Skenario 3}
   \label{lst:chatbot-3-query}
+\end{listing}
+
+%--------------------------------------------------------------------------------------------------%
+\subsection{Skenario 4: Melihat Konten Peraturan}
+\label{subsec:skenario-4}
+%--------------------------------------------------------------------------------------------------%
+
+\lst~\ref{lst:chatbot-4} merupakan tampilan chatbot pada Skenario 4 di mana pengguna memilih
+peraturan berdasarkan pilihan yang diberikan sebelumnya, kemudian menampilkan konten teks dari
+peraturan tersebut. Pada contoh ini pengguna memilih \mono{konten} untuk informasi yang ingin
+ditampilkan. \textit{Chat bot} melakukan \textit{query} terhadap KG menggunakan template
+\lst~\ref{lst:chatbot-4-1-query} untuk mengetahui banyaknya pasal pada UU 3/2019. Setelah mengetahui
+banyaknya pasal, pengguna meilih untuk menampilkan pasal 2. Kemudian \textit{Chat bot} melakukan query
+menggunakan template \lst~\ref{lst:chatbot-4-2-query} untuk mendapatkan teks dari pasal 2, dimana
+\mono{noPasal} pada template diisi nilai "2".
+
+\begin{listing}[H]
+  \begin{center}
+    \begin{tabular}{|p{0.9\textwidth}|}
+      \hline
+      \makecell[l]{
+        \texttt{Data uu/2019/3 :}                                          \\
+        \texttt{-metadata}                                                 \\
+        \texttt{-menimbang}                                                \\
+        \texttt{-konten}                                                   \\
+        \\
+        \texttt{Pilih data yang ingin anda lihat: \textcolor{red}{konten}} \\
+        \\
+        \texttt{Pilih nomor pasal [1-2]: \textcolor{red}{2}}               \\
+        \\
+        \texttt{Konten Pasal 2 UU 3/2019:}                                 \\
+        \texttt{(1). Mengesahkan Nota Kesepahaman antara }                 \\
+        \texttt{Pemerintah Republik Indonesia dan Pemerintah}              \\
+        \texttt{Republik Serbia tentang Kerja Sama di Bidang...}           \\
+      }                                                                    \\
+      \hline
+    \end{tabular}
+  \end{center}
+  \caption{Tampilan \textit{chat bot} untuk Skenario 4}
+  \label{lst:chatbot-4}
+\end{listing}
+
+\begin{listing}[H]
+  \begin{minted}[fontsize=\scriptsize, frame=single, breaklines]{typescript}
+    const res = await sparqlQuery({
+      queryStr: `
+PREFIX o: <https://example.org/lex2kg/ontology/>
+
+SELECT (COUNT(?pasal) as ?pasalCount)
+WHERE {
+  ?pasal o:bagianDari+ <https://example.org/lex2kg/${legalURI}>;
+         a o:Pasal.
+}
+`,
+    });
+  \end{minted}
+  \caption{\textit{Query} template pada Skenario 4 untuk menghitung jumlah pasal pada UU 3/2019}
+  \label{lst:chatbot-4-1-query}
+\end{listing}
+
+\begin{listing}[H]
+  \begin{minted}[fontsize=\scriptsize, frame=single, breaklines]{typescript}
+    const res = await sparqlQuery({
+      queryStr: `
+PREFIX o: <https://example.org/lex2kg/ontology/>
+
+SELECT DISTINCT ?teks
+WHERE {
+  ?pasal o:bagianDari+ <https://example.org/lex2kg/${legalURI}>;
+            a o:Pasal;
+            o:nomor ${noPasal} .
+  ?komponen o:bagianDari* ?pasal;
+            o:teks ?teks.
+}
+ORDER BY ?komponen
+`,
+    });
+  \end{minted}
+  \caption{\textit{Query} template pada Skenario 4 untuk menampilkan teks pasal 2 UU 3/2019}
+  \label{lst:chatbot-4-2-query}
 \end{listing}
 
