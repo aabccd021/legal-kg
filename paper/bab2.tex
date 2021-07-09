@@ -23,7 +23,6 @@ entitas yang sudah diketahui dan terbatas.
   \centering
   \includegraphics[width=\textwidth]{pictures/knowledge_graph.jpg}
   \caption[Contoh \textit{Knowledge Graph}]{Contoh \textit{Knowledge Graph}\\Sumber: \citep{seth_2019}}
-  \small{}
   \label{fig:kg-description}
 \end{figure}
 
@@ -120,12 +119,6 @@ ex:James
 \label{sec:sparql}
 %--------------------------------------------------------------------------------------------------%
 
-% //TODO: bs dilengkapin lg, fitur2nya sparql apa aja
-% //TODO: query 1 simpel gpp
-% //TODO: query 2 yg bbrp triple patterns
-% //TODO: query 3 yg agak kompleks, msl pke aggregates, atau negation dsb
-% //TODO: dari wikidata
-
 SPARQL merupakan salah satu RDF \textit{query language} yaitu bahasa yang mampu mengambil atau
 mengubah data yang disimpan dalam format RDF. Sintaks SPARQL memiliki beberapa kesamaan dengan SQL,
 contohnya sebuah variabel diawali dengan tanda tanya seperti \mono{?name}. Query SPARQL sederhana
@@ -135,15 +128,31 @@ adalah penjelasan singkat \textit{clause} SPARQL yang digunakan pada penelitian 
 
 \begin{itemize}
   \itemsep1pt\parskip0pt\parsep0pt
-  \item \texttt{PREFIX}: Mendeklarasikan pemetaan prefix URI menjadi \textit{string} yang lebih
+  \item \mono{PREFIX}: Mendeklarasikan pemetaan prefix URI menjadi \textit{string} yang lebih
         singkat. Hal ini dilakukan agar \textit{query} lebih mudah dibaca oleh manusia seperti sintaks
-        \texttt{@prefix} pada Turtle.
-  \item \texttt{SELECT}: Menyatakan variabel yang akan ditampilkan sebagai output dari \textit{query}.
-  \item \texttt{WHERE}: Menyatakan kondisi \textit{triple} yang akan ditampilkan pada output. Elemen
+        \mono{@prefix} pada Turtle.
+  \item \mono{SELECT}: Menyatakan variabel yang akan ditampilkan sebagai output dari \textit{query}.
+  \item \mono{WHERE}: Menyatakan kondisi \textit{triple} yang akan ditampilkan pada output. Elemen
         dari \textit{triple} yaitu subjek, predikat, dan objek dapat beruba vaiable atau
         \textit{fixed value} seperti \textit{string} atau bilangan.
-  \item
+  \item \mono{FILTER}: Mengeliminasi solusi yang tidak membuat \textit{expression} bernilai
+        \textit{true}.
+  \item \mono{UNION}: \mono{{A} UNION {B}} menggabungkan \textit{triple} dari A dan B.
+  \item \mono{MINUS}: \mono{A MINUS {B}} hanya memuat \textit{triple} pada A yang tidak
+        \textit{non compatible} dengan B.
 \end{itemize}
+
+SPARQL juga memiliki fitur \textit{property path} yang mempermudah penulisan query. Jenis-jenis
+\textit{property path} dapat dilihat pada \pic~\ref{fig:pp}.
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=0.8\textwidth]{pictures/pp.png}
+  \caption{Property path SPARQL}
+  \label{fig:pp}
+\end{figure}
+
+
 
 Berikut adalah contoh-contoh \textit{query} SPARQL yang dilakukan pada contoh KG pada
 \lst~\ref{lst:contoh-singkat-ttl}.
@@ -214,7 +223,7 @@ WHERE { ex:James ?properti ?objek }
 \label{sec:contoh-query-3}
 %--------------------------------------------------------------------------------------------------%
 
-\lst~\ref{lst:query-2} merupakan SPARQL \textit{query} untuk menampilkan semua objek pada
+\lst~\ref{lst:query-3} merupakan SPARQL \textit{query} untuk menampilkan semua objek pada
 \textit{triple} dengan subjek \mono{ex:James} dan properti \mono{ex:hasVisited}, dengan output
 \tab~\ref{tab:output-query-3}. Artinya, \textit{query} ini menampilkan semua tempat yang pernah
 dikunjungi James, yaitu Louvre.
@@ -237,6 +246,39 @@ WHERE { ex:James ex:hasVisited ?visited_place }
   \end{tabular}
   \caption{Output Query 3}
   \label{tab:output-query-3}
+\end{table}
+
+%--------------------------------------------------------------------------------------------------%
+\subsection{Contoh Query 4}
+\label{sec:contoh-query-4}
+%--------------------------------------------------------------------------------------------------%
+
+\textit{Query} ini merupakan \textit{query} yang relatif kompleks yang akan dilakukan terhadap
+\textit{server} SPARQL wikidata. Pada \textit{query} ini dilakukan pencarian artikel wikipedia dalam
+dua bahasa yaitu ``en'' dan ``uz'', dimana artikelnya adalah tentang \mono{wd:Q5} yaitu manusia.
+
+\begin{listing}[H]
+  \begin{minted}[fontsize=\scriptsize, frame=single]{sparql}
+SELECT DISTINCT ?lang ?name WHERE {
+  ?article schema:about wd:Q5 ;
+              schema:inLanguage ?lang ;
+              schema:name ?name ;
+              schema:isPartOf [ wikibase:wikiGroup "wikipedia" ] .
+  FILTER(?lang in ('en', 'uz')) .
+  \end{minted}
+  \caption{Query 4}
+  \label{lst:query-4}
+\end{listing}
+
+\begin{table}
+  \centering
+  \begin{tabular}{|l|l|} \hline
+    lang & name \\ \hline \hline
+    uz & Odam \\ \hline
+    en & Human \\ \hline
+  \end{tabular}
+  \caption{Output Query 4}
+  \label{tab:output-query-4}
 \end{table}
 
 %--------------------------------------------------------------------------------------------------%
@@ -333,7 +375,6 @@ peraturan di Indonesia seperti ``Peraturan Pemerintah''.
 \label{sec:schema-org}
 %--------------------------------------------------------------------------------------------------%
 
-% //HACK: more
 Schema.org adalah aktivitas komunitas kolaboratif dengan misi untuk membuat, memelihara, dan
 mempromosikan skema untuk data terstruktur di internet, di halaman web, dalam pesan email, dan lebih
 dari itu \citep{schema.org}. \textit{Vocabulary} Schema.org dapat digunakan dengan \textit{encoding}
@@ -363,7 +404,6 @@ dan beberapa deskripsinya pada \tab~\ref{tab:wp-desc}.
   \centering
   \includegraphics[width=0.8\textwidth]{pictures/wikiproject.png}
   \caption{Properti WikiProject Law}
-  \small{}
   \label{fig:wikiproject}
 \end{figure}
 
