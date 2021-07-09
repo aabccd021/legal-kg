@@ -176,7 +176,7 @@ gambaran berkas PDF dan hasil pemindaiannya menjadi daftar \textit{span}.
   pageNum: 1
   id: 3
   \end{minted}
-  \caption{Hasil pemindaian \pic~\ref{fig:contoh-dokumen} (format yaml)}
+  \caption{Hasil pemindaian \pic~\ref{fig:contoh-dokumen} dalam format yaml}
   \label{lst:hasil-pemindaian}
 \end{listing}
 
@@ -261,7 +261,7 @@ berhasil terpindai dan jika berhasil terpindai.
     sikap, dan etos kerja pada tingkat keterampilan dan keahlian tertentu sesuai
     dengan jenjang dan kualifikasi jabatan atau pekerjaan.
 \end{minted}
-  \caption{Data jika nomor 9 tidak berhasil terpindai (format yaml)}
+  \caption{Data jika nomor 9 tidak berhasil terpindai dalam format yaml}
   \label{lst:no-9-tidak-terpindai}
 \end{listing}
 
@@ -283,7 +283,7 @@ berhasil terpindai dan jika berhasil terpindai.
     dengan jenjang dan kualifikasi jabatan atau pekerjaan.
   
 \end{minted}
-  \caption{Data jika nomor 9 terpindai (format yaml)}
+  \caption{Data jika nomor 9 terpindai dalam format yaml}
   \label{lst:no-9-terpindai}
 \end{listing}
 
@@ -595,5 +595,52 @@ pada repositori \url{https://github.com/aabccd021/uuri}.
 % kyk fitur2 utama dari pengubahan ke RDFnya, kyk metadata, struktur, citation/amendment, dsb lalu
 % tunjukkin jg contoh yg utk nonUU
 
+%--------------------------------------------------------------------------------------------------%
+\section{Hasil Konversi}
+\label{sec:hasil-konversi}
+%--------------------------------------------------------------------------------------------------%
 
+\lst~\ref{lst:res} merupakan contoh \textit{subset} KG UU 8/2020 tentang Pertanggungjawaban atas
+pelaksanaan APBN yang dihasilkan oleh Lex2KG. Dapat dilihat bahwa UU 8/2020 dilengkapi dengan
+metadata yang diekstraksi dari PDF, dilengkapi dengan \textit{class assignment} \mono{a
+o:Peraturan}, dan diberi jenis peraturan sesuai \textit{resource} pada ontologi yaitu \mono{jp:UU}.
+Struktur peraturan berupa menimbang dan teks juga terdapat dalam KG tersebut. \textit{Teverse
+property} dari \mono{o:teks} juga dikonstruksi yaitu \mono{o:bagianDari}. \textit{Reverse property}
+dari \mono{o:teks} dan \mono{o:huruf} juga dikonstruksi yaitu \mono{o:bagianDari}. Pertimbangan UU
+8/2020 terhadap UU 12/2018 juga berhasil diekspresikan daadaplam bentuk rujukan pada komponen
+\mono{o:Menimbang}.
+
+\begin{listing}[H]
+  \begin{minted}[fontsize=\scriptsize, frame=single, breaklines]{turtle}
+@prefix o: <https://example.org/lex2kg/ontology/> .
+@prefix jp: <https://example.org/lex2kg/jenisPeraturan/> .
+
+<https://example.org/lex2kg/uu/2020/8>
+    a o:Peraturan ;
+    o:yurisdiksi "Indonesia";
+    o:jenisPeraturan jp:UU;
+    o:tahun 2020;
+    o:bahasa "id";
+    o:tentang " CIPTA KERJA";
+    o:disahkanPada "2020-11-02"^^xsd:date;
+    o:disahkanDi "Jakarta";
+    o:disahkanOleh "JOKO WIDODO";
+    o:jabatanPengesah "PRESIDEN REPUBLIK INDONESIA,";
+    o:menimbang <https://example.org/lex2kg/uu/2020/8/menimbang> .
+
+<https://example.org/lex2kg/uu/2020/8/menimbang> 
+    o:huruf <https://example.org/lex2kg/uu/2020/8/menimbang/huruf/b> .
+
+<https://example.org/lex2kg/uu/2020/8/menimbang/huruf/b> 
+    o:bagianDari <https://example.org/lex2kg/uu/2020/8/menimbang> ;
+    o:teks <https://example.org/lex2kg/uu/2020/8/menimbang/huruf/b/text> .
+
+<https://example.org/lex2kg/uu/2020/8/menimbang/huruf/b/text> 
+    o:bagianDari <https://example.org/lex2kg/uu/2020/8/menimbang/huruf/b> ;
+    o:merujuk <https://example.org/lex2kg/uu/2018/12> .
+
+  \end{minted}
+  \caption{Contoh KG UU Cipta Kerja}
+  \label{lst:res}
+\end{listing}
 

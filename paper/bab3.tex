@@ -318,9 +318,6 @@ untuk objek disebut \textit{range}. \tab~\ref{tab:properti} adalah properti Lex2
 \label{sec:ilustrasi-ontologi}
 %--------------------------------------------------------------------------------------------------%
 
-% // HACK:Nanti jk ditambah gambar lg, perlu dikasih pengantar
-% // HACK: Yg amendemen dan segmen bs dikasih, cm gak hrs lgkap bgt bs kyk subset/snippet
-
 Untuk memahami ontologi secara intuitif, spesifikasi ontologi pada tabel-tabel diatas dapat
 divisualisasikan. \pic~\ref{fig:ontologi-struktur} memuat ontologi struktur dan metadata suatu
 \legal. Ontologi struktur adalah berupa komponen-komponen peraturan serta properti yang
@@ -332,4 +329,30 @@ dan tipe datanya.
   \includegraphics[width=\textwidth]{pictures/ontologi-stuktur.png}
   \caption{Ontology dari metadata dan struktur peraturan}
   \label{fig:ontologi-struktur}
+\end{figure}
+
+\pic~\ref{fig:insert}, \pic~\ref{fig:insert}, dan \pic~\ref{fig:insert} memuat ontologi untuk
+amendemen peraturan. Setiap terjadi perubahan, akan ditambahkan \mono{VersiPasal} baru. Dengan
+ontologi ini, dapat dilakukan \textit{query} untuk mengambil versi terakhir dari pasal untuk dilihat
+statusnya apakah orisinal, telah dihapus, hasil pengubahan, atau hasil penyisipan.
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=\textwidth]{pictures/insert.png}
+  \caption{Ontology penyisipan peraturan}
+  \label{fig:insert}
+\end{figure}
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=\textwidth]{pictures/update.png}
+  \caption{Ontology pengubahan peraturan}
+  \label{fig:update}
+\end{figure}
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=\textwidth]{pictures/delete.png}
+  \caption{Ontology penghapusan peraturan}
+  \label{fig:delete}
 \end{figure}
