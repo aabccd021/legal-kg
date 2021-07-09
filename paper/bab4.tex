@@ -421,18 +421,18 @@ dilihat pada \lst~\ref{lst:uu-13-2003-detect}.
                      & Contoh teks           & ayat (1)                                                 \\ \cline{2-3}
                      & URI                   & \texttt{:uu/2003/13/pasal/169/ayat/1}                    \\ \hline
     \hline
-    \multirow{4}*{4} & Pola                  & Pasal \{x\} ayat (\{x\})                                 \\ \cline{2-3}
+    \multirow{4}*{5} & Pola                  & Pasal \{x\} ayat (\{x\})                                 \\ \cline{2-3}
                      & Regex                 & \verb/Pasal [0-9]+ ayat \((l|[0-9]+)\)/                               \\ \cline{2-3}
                      & Contoh teks           & Pasal 156 ayat (2)                                       \\ \cline{2-3}
                      & URI                   & \texttt{:uu/2003/13/pasal/156/ayat/2}                    \\ \hline
     \hline
-    \multirow{4}*{4} & Pola                  & huruf \{x\} dan huruf \{y\}                              \\ \cline{2-3}
+    \multirow{4}*{6} & Pola                  & huruf \{x\} dan huruf \{y\}                              \\ \cline{2-3}
                      & Regex                 & \verb/huruf ?([a-z]?,? ?)+( [a-z]( |,))/                               \\ \cline{2-3}
                      & Contoh teks           & huruf a dan b                                            \\ \cline{2-3}
                      & \multirow{2}*{URI}    & \texttt{uu/2003/13/pasal/1/point/5/point/a}              \\ \cline{3-3}
                      &                       & \texttt{uu/2003/13/pasal/1/point/5/point/b}              \\ \hline
     \hline
-    \multirow{4}*{4} & Pola                  & huruf \{x\}, \{y\}, ... dan \{z\}                        \\ \cline{2-3}
+    \multirow{4}*{7} & Pola                  & huruf \{x\}, \{y\}, ... dan \{z\}                        \\ \cline{2-3}
                      & Regex                 & \verb/huruf ?([a-z]?,? ?)+( [a-z]( |,))/                               \\ \cline{2-3}
                      & Contoh teks           & huruf a, b, c, d, dan e                                  \\ \cline{2-3}
                      & \multirow{5}*{URI}    & \texttt{uu/2003/13/menimbang/point/a}                    \\ \cline{3-3}
@@ -590,10 +590,6 @@ pada repositori \url{https://github.com/aabccd021/uuri}.
   \caption{Analisis \textit{triple} KG hasil konversi skala besar}
   \label{tab:analisis-triple}
 \end{table}
-
-% // TODO: bs ditampakkan turtle hasil akhr utk snippet KG dari suatu UU, dan dijelasin. tunjukkin
-% kyk fitur2 utama dari pengubahan ke RDFnya, kyk metadata, struktur, citation/amendment, dsb lalu
-% tunjukkin jg contoh yg utk nonUU
 
 %--------------------------------------------------------------------------------------------------%
 \section{Hasil Konversi}
