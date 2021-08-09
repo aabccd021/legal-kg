@@ -1,0 +1,10 @@
+# tampilkan semua UU yang disahkan setelah 10 Oktober 2019
+PREFIX o: <https://example.org/lex2kg/ontology/>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+
+SELECT *
+WHERE {
+  ?legalDoc o:disahkanPada ?date .
+  FILTER ( ?date >= "2019-10-10"^^xsd:date )
+}
+ORDER BY ?legalDoc

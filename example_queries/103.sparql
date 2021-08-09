@@ -1,0 +1,13 @@
+# tampilkan 10 bab dengan substring "Kerja"
+PREFIX o: <https://example.org/lex2kg/ontology/>
+
+SELECT ?bab ?title
+WHERE {
+  ?doc a o:Peraturan .
+  ?bab o:bagianDari* ?doc .
+  ?bab a o:Bab .
+  ?bab o:judul ?title.
+  FILTER REGEX(str(?title), "KERJA")
+}
+ORDER BY ?bab ?title
+LIMIT 10

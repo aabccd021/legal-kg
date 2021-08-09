@@ -1,0 +1,838 @@
+%--------------------------------------------------------------------------------------------------%
+\addappendix{Ontologi Lex2KG}
+\chapter*{Lampiran 1: Ontologi Lex2KG}
+\label{appendix:ontologi}
+%--------------------------------------------------------------------------------------------------%
+
+\begin{lstlisting}
+@prefix dct:      <http://purl.org/dc/terms/> .
+@prefix lex2kg-o: <https://example.org/lex2kg/ontology/> .
+@prefix owl:      <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:      <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:     <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema:   <https://schema.org/> .
+
+<https://example.org/lex2kg/ontology>
+        rdf:type         owl:Ontology ;
+        dct:creator      "Muhamad Abdurahman" , "Fariz Darari" , "Hans Lesmana" , "Muhtar Hartopo" , "Immanuel Rhesa" , "Berty Chrismartin Lumban Tobing" ;
+        dct:description  "An ontology for Lex2KG, a framework for automated conversion of legal documents to knowledge graph" ;
+        dct:title        "Lex2KG Ontology" .
+
+lex2kg-o:ayat  rdf:type  rdf:Property ;
+        rdfs:label  "section"@en , "ayat"@id .
+
+lex2kg-o:DaftarBagian
+        rdf:type    rdfs:Class ;
+        rdfs:label  "PartList"@en , "DaftarBagian"@id .
+
+lex2kg-o:Ayat  rdf:type  rdfs:Class ;
+        rdfs:label  "Section"@en , "Ayat"@id .
+
+lex2kg-o:KeputusanBupatiWalikota
+        rdf:type    rdfs:Resource ;
+        rdfs:label  "RegentMayorDecree"@en , "KeputusanBupatiWalikota"@id .
+
+lex2kg-o:UU  rdf:type  rdfs:Resource ;
+        rdfs:label  "Law"@en , "UU"@id .
+
+lex2kg-o:yurisdiksi  rdf:type  rdf:Property ;
+        rdfs:label          "jurisdiction"@en , "yurisdiksi"@id ;
+        rdfs:subPropertyOf  schema:jurisdiction .
+
+lex2kg-o:VersiPasal  rdf:type  rdfs:Class ;
+        rdfs:label  "ArticleVersion"@en , "VersiPasal"@id .
+
+lex2kg-o:Peraturan  rdf:type  rdfs:Class ;
+        rdfs:label       "Legislation"@en , "Peraturan"@id ;
+        rdfs:subClassOf  schema:Legislation .
+
+lex2kg-o:bagianDari  rdf:type  rdf:Property ;
+        rdfs:label          "partOf"@en , "bagianDari"@id ;
+        rdfs:subPropertyOf  schema:isPartOf .
+
+lex2kg-o:Paragraf  rdf:type  rdfs:Class ;
+        rdfs:label  "Paragraph"@en , "Paragraf"@id .
+
+lex2kg-o:bagian  rdf:type  rdf:Property ;
+        rdfs:label  "part"@en , "bagian"@id .
+
+lex2kg-o:paragraf  rdf:type  rdf:Property ;
+        rdfs:label  "paragraph"@en , "paragraf"@id .
+
+lex2kg-o:PP  rdf:type  rdfs:Resource ;
+        rdfs:label  "GovernmentRegulation"@en , "PP"@id .
+
+lex2kg-o:KeputusanMenteri
+        rdf:type    rdfs:Resource ;
+        rdfs:label  "MinisterialDecree"@en , "KeputusanMenteri"@id .
+
+lex2kg-o:Segmen  rdf:type  rdfs:Class ;
+        rdfs:label  "Segment"@en , "Segmen"@id .
+
+lex2kg-o:Menimbang  rdf:type  rdfs:Class ;
+        rdfs:label  "Consideration"@en , "Menimbang"@id .
+
+lex2kg-o:KeputusanGubernur
+        rdf:type    rdfs:Resource ;
+        rdfs:label  "GovernorDecree"@en , "KeputusanGubernur"@id .
+
+lex2kg-o:PeraturanBupatiWalikota
+        rdf:type    rdfs:Resource ;
+        rdfs:label  "RegentMayorRegulation"@en , "PeraturanBupatiWalikota"@id .
+
+lex2kg-o:merujuk  rdf:type  rdf:Property ;
+        rdfs:label          "cites"@en , "merujuk"@id ;
+        rdfs:subPropertyOf  schema:citation .
+
+lex2kg-o:daftarAyat  rdf:type  rdf:Property ;
+        rdfs:label  "sectionList"@en , "daftarAyat"@id .
+
+lex2kg-o:Mengingat  rdf:type  rdfs:Class ;
+        rdfs:label  "View"@en , "Mengingat"@id .
+
+lex2kg-o:DaftarPasal  rdf:type  rdfs:Class ;
+        rdfs:label  "ArticleList"@en , "DaftarPasal"@id .
+
+lex2kg-o:daftarParagraf
+        rdf:type    rdf:Property ;
+        rdfs:label  "paragraphList"@en , "daftarParagraf"@id .
+
+lex2kg-o:daftarBagian
+        rdf:type    rdf:Property ;
+        rdfs:label  "partList"@en , "daftarBagian"@id .
+
+lex2kg-o:menghapus  rdf:type  rdf:Property ;
+        rdfs:label          "deletes"@en , "menghapus"@id ;
+        rdfs:subPropertyOf  schema:legislationChanges .
+
+lex2kg-o:Huruf  rdf:type  rdfs:Class ;
+        rdfs:label  "Point"@en , "Huruf"@id .
+
+lex2kg-o:bahasa  rdf:type   rdf:Property ;
+        rdfs:label          "language"@en , "bahasa"@id ;
+        rdfs:subPropertyOf  schema:inLanguage .
+
+lex2kg-o:mengubah  rdf:type  rdf:Property ;
+        rdfs:label          "amends"@en , "mengubah"@id ;
+        rdfs:subPropertyOf  schema:legislationChanges .
+
+lex2kg-o:PeraturanMenteri
+        rdf:type    rdfs:Resource ;
+        rdfs:label  "MinisterialRegulation"@en , "PeraturanMenteri"@id .
+
+lex2kg-o:menimbang  rdf:type  rdf:Property ;
+        rdfs:label  "inConsiderationOf"@en , "menimbang"@id .
+
+lex2kg-o:teks  rdf:type     rdf:Property ;
+        rdfs:label          "text"@en , "teks"@id ;
+        rdfs:subPropertyOf  schema:text .
+
+lex2kg-o:segmen  rdf:type  rdf:Property ;
+        rdfs:label  "segment"@en , "segmen"@id .
+
+lex2kg-o:versi  rdf:type    rdf:Property ;
+        rdfs:label          "version"@en , "versi"@id ;
+        rdfs:subPropertyOf  schema:version .
+
+lex2kg-o:PerdaKabKota
+        rdf:type    rdfs:Resource ;
+        rdfs:label  "RegencyCityRegulation"@en , "PerdaKabKota"@id .
+
+lex2kg-o:bab  rdf:type  rdf:Property ;
+        rdfs:label  "chapter"@en , "bab"@id .
+
+lex2kg-o:jabatanPengesah
+        rdf:type            rdf:Property ;
+        rdfs:label          "enactorTitle"@en , "jabatanPengesah"@id ;
+        rdfs:subPropertyOf  schema:title .
+
+lex2kg-o:Pasal  rdf:type  rdfs:Class ;
+        rdfs:label  "Article"@en , "Pasal"@id .
+
+lex2kg-o:DaftarHuruf  rdf:type  rdfs:Class ;
+        rdfs:label  "PointSet"@en , "DaftarHuruf"@id .
+
+lex2kg-o:pasal  rdf:type  rdf:Property ;
+        rdfs:label  "article"@en , "pasal"@id .
+
+lex2kg-o:mengingat  rdf:type  rdf:Property ;
+        rdfs:label  "inViewOf"@en , "mengingat"@id .
+
+lex2kg-o:DaftarAyat  rdf:type  rdfs:Class ;
+        rdfs:label  "SectionList"@en , "DaftarAyat"@id .
+
+lex2kg-o:DaftarBab  rdf:type  rdfs:Class ;
+        rdfs:label  "ChapterList"@en , "DaftarBab"@id .
+
+lex2kg-o:tahun  rdf:type  rdf:Property ;
+        rdfs:label  "year"@en , "tahun"@id .
+
+lex2kg-o:Bab  rdf:type  rdfs:Class ;
+        rdfs:label  "Chapter"@en , "Bab"@id .
+
+lex2kg-o:disahkanDi  rdf:type  rdf:Property ;
+        rdfs:label          "enactedIn"@en , "disahkanDi"@id ;
+        rdfs:subPropertyOf  schema:legislationJurisdiction .
+
+lex2kg-o:UUD  rdf:type  rdfs:Resource ;
+        rdfs:label  "Constitution"@en , "UUD"@id .
+
+lex2kg-o:KeputusanPresiden
+        rdf:type    rdfs:Resource ;
+        rdfs:label  "PresidentialDecree"@en , "KeputusanPresiden"@id .
+
+lex2kg-o:DaftarParagraf
+        rdf:type    rdfs:Class ;
+        rdfs:label  "ParagraphList"@en , "DaftarParagraf"@id .
+
+lex2kg-o:jenisPeraturan
+        rdf:type            rdf:Property ;
+        rdfs:label          "legislationType"@en , "jenisPeraturan"@id ;
+        rdfs:subPropertyOf  schema:legislationType .
+
+lex2kg-o:Perpu  rdf:type  rdfs:Resource ;
+        rdfs:label  "GovernmentRegulationInLieuOfLaw"@en , "Perpu"@id .
+
+lex2kg-o:huruf  rdf:type  rdf:Property ;
+        rdfs:label  "point"@en , "huruf"@id .
+
+lex2kg-o:daftarHuruf  rdf:type  rdf:Property ;
+        rdfs:label  "pointList"@en , "daftarHuruf"@id .
+
+lex2kg-o:tanggal  rdf:type  rdf:Property ;
+        rdfs:label  "date"@en , "tanggal"@id .
+
+lex2kg-o:daftarPasal  rdf:type  rdf:Property ;
+        rdfs:label  "articleList"@en , "daftarPasal"@id .
+
+lex2kg-o:Perpres  rdf:type  rdfs:Resource ;
+        rdfs:label  "PresidentialRegulation"@en , "Perpres"@id .
+
+lex2kg-o:PerdaProvinsi
+        rdf:type    rdfs:Resource ;
+        rdfs:label  "ProvincialRegulation"@en , "PerdaProvinsi"@id .
+
+lex2kg-o:Bagian  rdf:type  rdfs:Class ;
+        rdfs:label  "Part"@en , "Bagian"@id .
+
+lex2kg-o:disahkanPada
+        rdf:type            rdf:Property ;
+        rdfs:label          "enactedOn"@en , "disahkanPada"@id ;
+        rdfs:subPropertyOf  schema:legislationDate .
+
+lex2kg-o:jenisVersi  rdf:type  rdf:Property ;
+        rdfs:label  "versionType"@en , "jenisVersi"@id .
+
+lex2kg-o:daftarBab  rdf:type  rdf:Property ;
+        rdfs:label  "chapterList"@en , "daftarBab"@id .
+
+lex2kg-o:tentang  rdf:type  rdf:Property ;
+        rdfs:label          "about"@en , "tentang"@id ;
+        rdfs:subPropertyOf  schema:about .
+
+lex2kg-o:disahkanOleh
+        rdf:type            rdf:Property ;
+        rdfs:label          "enactedBy"@en , "disahkanOleh"@id ;
+        rdfs:subPropertyOf  schema:legislationPassedBy .
+
+lex2kg-o:PeraturanGubernur
+        rdf:type    rdfs:Resource ;
+        rdfs:label  "GovernorRegulation"@en , "PeraturanGubernur"@id .
+
+lex2kg-o:TapMPR  rdf:type  rdfs:Resource ;
+        rdfs:label  "PeopleConsultativeAssemblyDecree"@en , "TapMPR"@id .
+
+lex2kg-o:menyisipkan  rdf:type  rdf:Property ;
+        rdfs:label          "inserts"@en , "menyisipkan"@id ;
+        rdfs:subPropertyOf  schema:legislationChanges .
+
+lex2kg-o:nomor  rdf:type  rdf:Property ;
+        rdfs:label  "number"@en , "nomor"@id .  
+\end{lstlisting}
+
+%--------------------------------------------------------------------------------------------------%
+\addappendix{\textit{Query Competency Questions}}
+\chapter*{Lampiran 2: \textit{Query Competency Questions}}
+\label{appendix:query}
+%--------------------------------------------------------------------------------------------------%
+
+\noindent No.001:
+\begin{lstlisting}
+# Describe Omnibus Law (UU Cipta Kerja)
+PREFIX o: <https://example.org/lex2kg/ontology/>
+
+SELECT * WHERE {
+  <https://example.org/lex2kg/uu/2020/11> ?p ?o .
+} 
+ORDER BY ?p ?o
+LIMIT 3
+\end{lstlisting}
+
+
+\noindent No.002:
+\begin{lstlisting}
+# Retrieve all articles (= pasal) of Omnibus Law
+PREFIX o: <https://example.org/lex2kg/ontology/>
+
+SELECT ?pasalVersion ?text WHERE {
+  <https://example.org/lex2kg/uu/2020/11> o:pasal ?pasal .
+  ?pasal o:versi ?pasalVersion .
+  ?pasalVersion o:teks ?text .
+} 
+ORDER BY ?pasal ?text
+LIMIT 3
+\end{lstlisting}
+
+
+\noindent No.003:
+\begin{lstlisting}
+# What is the textual content of Article (or Pasal) 2 Subsection (or Ayat) 1 of Omnibus Law?
+PREFIX o: <https://example.org/lex2kg/ontology/>
+
+SELECT ?x ?text WHERE {
+  ?pasal o:bagianDari+ <https://example.org/lex2kg/uu/2020/11>.
+  ?pasal o:nomor 2 .
+  ?x o:bagianDari* ?pasal .
+  ?x o:nomor 1 .
+  ?x o:teks ?text .
+}
+ORDER BY ?x ?text
+LIMIT 3
+\end{lstlisting}
+
+
+\noindent No.004:
+\begin{lstlisting}
+# Which are the articles of Chapter 2 (Bab 2) of Omnibus Law?
+PREFIX o: <https://example.org/lex2kg/ontology/>
+
+SELECT ?pasal ?text WHERE {
+  ?bab o:bagianDari+ <https://example.org/lex2kg/uu/2020/11>.
+  ?bab o:nomor 2 .
+  ?pasal o:bagianDari+ ?bab .
+  ?pasal o:versi ?pasalVersion .
+  ?pasalVersion o:teks ?text
+} 
+ORDER BY ?pasal ?text
+LIMIT 3
+\end{lstlisting}
+
+
+\noindent No.005:
+\begin{lstlisting}
+# Get subsections (= ayat) containing "kompensasi" and "buruh" that are added by Omnibus Law into other laws
+PREFIX o: <https://example.org/lex2kg/ontology/>
+PREFIX uu: <https://example.org/lex2kg/uu/>
+
+SELECT ?ayat ?text WHERE {
+  ?insertingPoint o:bagianDari+ <https://example.org/lex2kg/uu/2020/11> .
+  ?insertingPoint o:menyisipkan ?insertedPasalVersion .
+  ?ayat o:bagianDari+ ?insertedPasalVersion .
+  ?ayat o:teks ?text
+  FILTER REGEX(str(?text), "kompensasi")
+  FILTER REGEX(str(?text), "buruh")
+} LIMIT 3
+\end{lstlisting}
+
+
+\noindent No.006:
+\begin{lstlisting}
+# Retrieve components of Omnibus Law that insert (= menyisipkan) articles (= pasal) into Labor Law (UU Ketenagakerjaan) and show the textual content of the articles
+PREFIX o: <https://example.org/lex2kg/ontology/>
+
+SELECT ?insertingPoint ?insertedPasalVersion ?text WHERE {
+  ?insertingPoint o:bagianDari+ <https://example.org/lex2kg/uu/2020/11>.
+  ?insertingPoint o:menyisipkan ?insertedPasalVersion .
+  ?insertedPasalVersion o:bagianDari+ <https://example.org/lex2kg/uu/2003/13> .
+  ?insertedPasalVersion o:teks ?text .
+}
+ORDER BY ?insertingPoint ?insertedPasalVersion
+LIMIT 3
+
+\end{lstlisting}
+
+
+\noindent No.007:
+\begin{lstlisting}
+# Get components of Omnibus Law that amend (= mengubah) articles in Labor Law and compare the textual content of the old vs. new articles
+PREFIX o: <https://example.org/lex2kg/ontology/>
+
+SELECT ?updatingPointt ?updatedPasal ?text ?version
+WHERE {
+  {
+    SELECT ?pasal (MAX(?pasalVersion) as ?latestPasalVersion) WHERE {
+      ?pasal o:bagianDari+ <https://example.org/lex2kg/uu/2020/11>.
+      ?pasal o:versi ?pasalVersion .
+    } GROUP BY ?pasal
+  }
+  ?updatingPointt o:bagianDari+ <https://example.org/lex2kg/uu/2020/11>.
+  ?updatingPointt o:mengubah ?updatedPasalVersion .
+  ?updatedPasal o:versi ?updatedPasalVersion .
+  <https://example.org/lex2kg/uu/2003/13> o:pasal ?updatedPasal .
+  ?updatedPasal o:versi ?allPasalVersion .
+  ?allPasalVersion o:teks ?text .
+  ?allPasalVersion o:tanggal ?version .
+}
+ORDER BY ?insertingPoint ?insertedPasal ?version ?text
+LIMIT 3
+
+\end{lstlisting}
+
+
+\noindent No.008:
+\begin{lstlisting}
+# Give me components of Omnibus Law that remove (= menghapus) articles in Labor Law and show the textual content of the removed articles
+PREFIX o: <https://example.org/lex2kg/ontology/>
+
+SELECT ?deletingPoint ?deletedPasal ?version ?text WHERE {
+  ?deletingPoint o:bagianDari+ <https://example.org/lex2kg/uu/2020/11>.
+  ?deletingPoint o:menghapus ?deletedPasalVersion .
+  ?deletedPasal o:versi ?deletedPasalVersion .
+  <https://example.org/lex2kg/uu/2003/13> o:pasal ?deletedPasal .
+  ?deletedPasal o:versi ?allPasalVersion .
+  ?allPasalVersion o:teks ?text .
+  ?allPasalVersion o:tanggal ?version .
+}
+LIMIT 3
+
+\end{lstlisting}
+
+
+\noindent No.009:
+\begin{lstlisting}
+# Which law has the most number of updates (= insertions/amendments/removals) by Omnibus Law? For that law, show the most recent version taking into account the updates by Omnibus Law!
+PREFIX o: <https://example.org/lex2kg/ontology/>
+PREFIX owl: <http://www.w3.org/2002/07/owl#>
+
+SELECT ?law ?numOfUpdates ?pasal (MAX(?pasalVersion) as ?latestPasalVersion) WHERE {
+  {
+    SELECT ?law (COUNT(*) AS ?numOfUpdates) WHERE {
+      ?point o:bagianDari+ <https://example.org/lex2kg/uu/2020/11> .
+      { ?point o:mengubah ?amendedPasalVersion }
+      UNION { ?point o:menyisipkan ?amendedPasalVersion }
+      UNION { ?point o:menghapus ?amendedPasalVersion }
+      ?amendedPasalVersion o:bagianDari+ ?law .
+      ?law a o:Peraturan .
+    } GROUP BY ?law
+  }
+  ?pasal o:bagianDari+ ?law .
+  ?pasal o:versi ?pasalVersion .
+}
+GROUP BY ?law ?numOfUpdates ?pasal
+ORDER BY DESC (?numOfUpdates)
+LIMIT 3
+
+\end{lstlisting}
+
+
+\noindent No.010:
+\begin{lstlisting}
+# How many are insertions, amendments, and removals of other laws in Omnibus Law?
+PREFIX o: <https://example.org/lex2kg/ontology/>
+
+SELECT ?type (COUNT(*) AS ?jumlah) WHERE {
+  {
+    ?point o:bagianDari+ <https://example.org/lex2kg/uu/2020/11> .
+    ?point o:menghapus ?pasal .
+    BIND("menghapus" AS ?type)
+  } UNION {
+    ?point o:bagianDari+ <https://example.org/lex2kg/uu/2020/11> .
+    ?point o:menyisipkan ?pasal .
+    BIND("menyisipkan" AS ?type)
+  } UNION {
+    ?point o:bagianDari+ <https://example.org/lex2kg/uu/2020/11> .
+    ?point o:mengubah ?pasal .
+    BIND("mengubah" AS ?type)
+  }
+} GROUP BY ?type
+LIMIT 3
+
+\end{lstlisting}
+
+
+\noindent No.011:
+\begin{lstlisting}
+# Get articles of Labor Law (UU Ketenagakerjaan) taking into account updates (= insertions/amendments/removals) from Omnibus Law (UU Cipta Kerja)
+PREFIX o: <https://example.org/lex2kg/ontology/>
+
+SELECT ?latestPasalVersion WHERE {
+  {
+    SELECT ?pasal (MAX(?pasalVersion) as ?latestPasalVersion) WHERE {
+      ?pasal o:bagianDari+ <https://example.org/lex2kg/uu/2003/13>.
+      ?pasal o:versi ?pasalVersion .
+    } GROUP BY ?pasal
+  }
+}
+ORDER BY ?latestPasalVersion
+LIMIT 3
+\end{lstlisting}
+
+
+\noindent No.012:
+\begin{lstlisting}
+# Get articles of Omnibus Law that are not about updating (= insertions/amendments/removals) other laws
+PREFIX o: <https://example.org/lex2kg/ontology/>
+
+SELECT DISTINCT ?pasalVersion ?text WHERE {
+  ?pasalVersion o:bagianDari+ <https://example.org/lex2kg/uu/2020/11>.
+  ?pasalVersion o:teks ?text .
+  FILTER NOT EXISTS {
+    ?point o:bagianDari+ ?pasalVersion . 
+    ?point a o:Point .
+    { ?point o:mengubah ?amendedPasalVersion }
+    UNION { ?point o:menyisipkan ?amendedPasalVersion } 
+    UNION { ?point o:menghapus ?amendedPasalVersion }
+  }
+}
+ORDER BY ?pasalVersion ?text
+LIMIT 3
+\end{lstlisting}
+
+
+\noindent No.013:
+\begin{lstlisting}
+# Give me articles (= pasal) of Omnibus Law removing articles of laws legalized later than the year 2001
+PREFIX o: <https://example.org/lex2kg/ontology/>
+
+SELECT DISTINCT ?pasalVersion WHERE {
+  ?point o:bagianDari+ <https://example.org/lex2kg/uu/2020/11>.
+  ?point o:menghapus ?pasalVersion .
+  ?pasalVersion o:bagianDari+ ?document .
+  ?document o:disahkanPada ?legalizedDate
+  FILTER(year(?legalizedDate) > 2001)
+}
+ORDER BY ?pasalVersion
+LIMIT 3
+\end{lstlisting}
+
+
+\noindent No.014:
+\begin{lstlisting}
+# Retrieve all subsections inserted by Omnibus Law into other laws and *optionally* the citations occurring in those subsections
+PREFIX o: <https://example.org/lex2kg/ontology/>
+
+SELECT ?ayat ?text ?citation WHERE {
+  ?insertingPoint o:bagianDari+ <https://example.org/lex2kg/uu/2020/11>.
+  ?insertingPoint o:menyisipkan ?insertedPasalVersion .
+  ?ayat o:bagianDari+ ?insertedPasalVersion .
+  ?ayat o:teks ?text .
+  ?ayat o:teks ?textRef .
+  OPTIONAL {?textRef o:merujuk ?citation}
+}
+ORDER BY ?ayat ?text ?citation
+LIMIT 3
+\end{lstlisting}
+
+
+\noindent No.015:
+\begin{lstlisting}
+# tampilkan legal document beserta yang ditimbangnya (menimbang)
+PREFIX o: <https://example.org/lex2kg/ontology/>
+PREFIX uu: <https://example.org/lex2kg/uu/>
+
+SELECT DISTINCT ?penimbang ?ditimbang
+WHERE {
+  ?penimbang o:menimbang ?menimbang .
+  ?menimbangText o:bagianDari* ?menimbang .
+  ?menimbangText o:merujuk ?ditimbang .
+  ?ditimbang a o:Peraturan
+}
+ORDER BY DESC(?penimbang) DESC(?ditimbang)
+LIMIT 5
+\end{lstlisting}
+
+
+\noindent No.016:
+\begin{lstlisting}
+# select 10 legal document dengan pasal terbanyak
+PREFIX o: <https://example.org/lex2kg/ontology/>
+
+SELECT ?doc (COUNT(?pasal) as ?pasalCount)
+WHERE {
+  ?doc a o:Peraturan .
+  ?doc o:pasal ?pasal .
+}
+GROUP BY ?doc
+ORDER BY DESC(?pasalCount)
+LIMIT 10
+
+\end{lstlisting}
+
+
+\noindent No.017:
+\begin{lstlisting}
+# tampilkan 10 dokumen yang pernah diamandemen
+PREFIX o: <https://example.org/lex2kg/ontology/>
+
+SELECT DISTINCT ?doc ?amenderDoc
+WHERE {
+  ?doc a o:Peraturan .
+  ?pasal o:bagianDari ?doc .
+  ?pasal o:versi ?pasalVersion .
+  ?amender o:mengubah ?pasalVersion .
+  ?amender o:bagianDari* ?amenderDoc .
+  ?amenderDoc a o:Peraturan
+}
+ORDER BY ?doc ?amenderDoc
+LIMIT 10
+\end{lstlisting}
+
+
+\noindent No.018:
+\begin{lstlisting}
+# tampilkan 10 tempat disahkan paling banyak
+PREFIX o: <https://example.org/lex2kg/ontology/>
+
+SELECT ?location (COUNT(?doc) as ?docCount)
+WHERE {
+  ?doc o:disahkanDi ?location
+}
+GROUP BY ?location
+ORDER BY DESC (?docCount)
+\end{lstlisting}
+
+
+\noindent No.019:
+\begin{lstlisting}
+# tampilkan 10 dokumen paling banyak ditimbang
+
+SELECT ?menimbangDoc (COUNT(?doc) as ?penimbangDocCount)
+WHERE {
+  ?doc o:menimbang ?menimbang .
+  ?menimbangText o:bagianDari* ?menimbang ;
+                 o:merujuk ?menimbangDoc .
+  ?menimbangDoc a o:Peraturan .
+}
+GROUP BY ?menimbangDoc
+ORDER BY DESC (?penimbangDocCount)
+LIMIT 10
+
+\end{lstlisting}
+
+
+\noindent No.020:
+\begin{lstlisting}
+# tampilkan semua document yang melakukan amendment, dan banyaknya pasal yang diamendment oleh dokumen tersebut.
+PREFIX o: <https://example.org/lex2kg/ontology/>
+PREFIX uu: <https://example.org/lex2kg/uu/>
+
+SELECT ?doc (COUNT(?point) as ?amendmentCount)
+WHERE {
+  ?doc a o:Peraturan .
+  ?point o:bagianDari* ?doc .
+  ?point o:mengubah|o:menyisipkan|o:menghapus ?pasalVersion .
+}
+GROUP BY (?doc)
+ORDER BY DESC(?amendmentCount)
+LIMIT 10
+\end{lstlisting}
+
+
+\noindent No.021:
+\begin{lstlisting}
+# Count triples about document structure
+PREFIX o: <https://example.org/lex2kg/ontology/>
+
+SELECT (COUNT (*) as ?countResult) WHERE {
+  ?s
+    o:nomor|
+    o:judul|
+    o:bab|
+    o:bagian|
+    o:paragraf|
+    o:pasal|
+    o:ayat|
+    o:huruf|
+    o:segmen|
+    o:daftarBab|
+    o:daftarBagian|
+    o:daftarParagraf|
+    o:daftarPasal|
+    o:daftarAyat|
+    o:daftarHuruf|
+    o:tanggal|
+    o:jenisVersi|
+    o:versi|
+    o:menimbang|
+    o:mengingat|
+    o:bagianDari
+  ?o
+} 
+\end{lstlisting}
+
+
+\noindent No.022:
+\begin{lstlisting}
+# Count triples about document metadata
+PREFIX o: <https://example.org/lex2kg/ontology/>
+
+SELECT (COUNT (*) as ?countResult) WHERE {
+  ?s
+    o:yurisdiksi|
+    o:jenisPeraturan|
+    o:tahun|
+    o:bahasa|
+    o:tentang|
+    o:disahkanPada|
+    o:disahkanDi|
+    o:disahkanOleh|
+    o:jabatanPengesah
+  ?o
+} 
+\end{lstlisting}
+
+
+\noindent No.023:
+\begin{lstlisting}
+# Count triples about document text
+PREFIX o: <https://example.org/lex2kg/ontology/>
+
+SELECT (COUNT (*) as ?countResult) WHERE {
+  ?s
+    o:teks
+  ?o
+} 
+\end{lstlisting}
+
+
+\noindent No.024:
+\begin{lstlisting}
+# Count triples about document citation
+PREFIX o: <https://example.org/lex2kg/ontology/>
+
+SELECT (COUNT (*) as ?countResult) WHERE {
+  ?s o:merujuk ?o
+} 
+
+\end{lstlisting}
+
+
+\noindent No.025:
+\begin{lstlisting}
+# Count triples about document change
+PREFIX o: <https://example.org/lex2kg/ontology/>
+
+SELECT (COUNT (*) as ?countResult) WHERE {
+  ?s o:mengubah|o:menghapus|o:menyisipkan ?o
+} 
+
+\end{lstlisting}
+
+
+\noindent No.026:
+\begin{lstlisting}
+# Count triples about class assignment
+PREFIX o: <https://example.org/lex2kg/ontology/>
+
+SELECT (COUNT (*) as ?countResult) WHERE {
+  ?s a ?o
+} 
+
+\end{lstlisting}
+
+
+\noindent No.027:
+\begin{lstlisting}
+# Tampilkan 5 peraturan dengan komponen terbanyak beserta jumlah komponennya.
+PREFIX o: <https://example.org/lex2kg/ontology/>
+
+SELECT ?peraturan (COUNT(?komponen) as ?komponenCount)
+WHERE {
+  ?peraturan a o:Peraturan .
+  ?komponen o:bagianDari* ?peraturan .
+}
+GROUP BY ?peraturan
+ORDER BY DESC (?komponenCount)
+LIMIT 5
+
+\end{lstlisting}
+
+
+\noindent No.028:
+\begin{lstlisting}
+# Peraturan apa yang berlaku pada daerah Jakarta yang disahkan di tahun 2019?
+PREFIX o: <https://example.org/lex2kg/ontology/>
+
+SELECT ?peraturan ?yurisdiksi
+WHERE {
+  ?peraturan o:yurisdiksi ?yurisdiksi ;
+             o:tahun 2019;
+   FILTER (CONTAINS(LCASE(?yurisdiksi), 'jakarta')) .
+}
+\end{lstlisting}
+
+
+\noindent No.029:
+\begin{lstlisting}
+# Apa relasi suatu peraturan dengan peraturan lain?
+PREFIX o: <https://example.org/lex2kg/ontology/>
+
+SELECT DISTINCT ?p1 ?relasi ?p2
+WHERE {
+  ?p1 a o:Peraturan .
+  ?p2 a o:Peraturan .
+  FILTER (?p1 != ?p2) .
+  ?komponen o:bagianDari* ?p1 ;
+            ?relasi ?p2 .
+
+}
+LIMIT 10
+\end{lstlisting}
+
+
+\noindent No.030:
+\begin{lstlisting}
+# Mana saja peraturan yang membahas tentang topik "Kerja" atau "Ketenagakerjaan" tapi bukan topik "Kerjasama" dan bukan "Pekerjaan"?
+PREFIX o: <https://example.org/lex2kg/ontology/>
+
+SELECT ?bab ?title
+WHERE {
+  ?doc a o:Peraturan .
+  ?bab o:bagianDari* ?doc .
+  ?bab a o:Bab .
+  ?bab o:judul ?title.
+  FILTER (CONTAINS(?title, "KERJA") || CONTAINS(?title, "KETENAGAKERJAAN"))
+  FILTER (!CONTAINS(?title, "KERJASAMA"))
+  FILTER (!CONTAINS(?title, "PEKERJAAN"))
+}
+ORDER BY ?bab ?title
+LIMIT 10
+\end{lstlisting}
+
+
+\noindent No.031:
+\begin{lstlisting}
+# Apa isi dari Pasal 91 ayat (2) huruf b dari UU Cipta Kerja?
+PREFIX o: <https://example.org/lex2kg/ontology/>
+
+SELECT ?teksStr
+WHERE {
+  ?pasal o:bagianDari* <https://example.org/lex2kg/uu/2020/11> ;
+         a o:Pasal ;
+         o:nomor 91 .
+  ?ayat o:bagianDari* ?pasal ;
+         a o:Ayat ;
+         o:nomor 2 .
+  ?huruf o:bagianDari* ?ayat ;
+         a o:Huruf ;
+         o:nomor "b".
+  ?teks o:bagianDari* ?huruf ;
+        o:teks ?teksStr .
+}
+\end{lstlisting}
+
+
+\noindent No.032:
+\begin{lstlisting}
+# Apa saja bab-bab yang terdapat pada UU Cipta Kerja?
+PREFIX o: <https://example.org/lex2kg/ontology/>
+
+SELECT ?bab ?judulBab
+WHERE {
+  ?bab o:judul ?judulBab;
+       a o:Bab ;
+       o:bagianDari* <https://example.org/lex2kg/uu/2020/11> .
+}
+ORDER BY ?bab
+\end{lstlisting}
+

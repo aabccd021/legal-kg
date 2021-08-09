@@ -1,0 +1,12 @@
+# tampilkan 10 dokumen paling banyak ditimbang
+
+SELECT ?menimbangDoc (COUNT(?doc) as ?penimbangDocCount)
+WHERE {
+  ?doc o:menimbang ?menimbang .
+  ?menimbangText o:bagianDari* ?menimbang ;
+                 o:merujuk ?menimbangDoc .
+  ?menimbangDoc a o:Peraturan .
+}
+GROUP BY ?menimbangDoc
+ORDER BY DESC (?penimbangDocCount)
+LIMIT 10

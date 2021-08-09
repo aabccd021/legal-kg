@@ -1,0 +1,49 @@
+%
+% Halaman Abstrak
+%
+% @author  Andreas Febrian @version 2.00 @edit by Ichlasul Affan
+%
+
+\chapter*{Abstrak}
+\singlespacing
+
+\vspace*{0.2cm}
+
+\noindent \begin{tabular}{l l p{10cm}} Nama & : & \penulis \\
+	Program Studi      & : & \program \\
+	Judul              & : & \judul   \\
+\end{tabular} \\
+
+\vspace*{0.5cm}
+
+\noindent Dokumen \legal pada umumnya tersedia dalam bentuk PDF yang bersifat tidak
+\textit{machine-readable}, sehingga data tidak dapat diproses secara otomatis dan dalam skala besar
+oleh komputer untuk dimanfaatkan dalam berbagai teknologi digital. Oleh karena itu diperlukan
+struktur data yang dapat memuat informasi \legal, beserta sistem yang melakukan konversi dari PDF
+menjadi struktur data tersebut. Dengan alasan tersebut, pada penelitian ini penulis mengembangkan
+Lex2KG, \textit{framework} untuk mengonversi dokumen PDF peraturan perundang-undangan di Indonesia
+(\textit{Lex} berasal dari Bahasa Latin yang berarti hukum) menjadi \textit{knowledge graph}.
+\textit{Knowledge graph} (KG) adalah \textit{graph} yang menggambarkan entitas dunia nyata beserta
+keterkaitannya dan memberikan informasi terstruktur yang \textit{machine-readable}. Pada penelitian
+ini KG dipilih dari berbagai struktur data yang tersedia karena KG terkategori sebagai
+\textit{5-star data} menurut \textit{5-star deployment scheme for Open Data}, yaitu data dengan
+jenis informasi paling bermanfaat, memberikan data dalam bentuk \textit{open license}, terstruktur,
+tersedia dalam \textit{open format}, menggunakan URI sebagai notasi data, dan dapat dihubungkan
+(\textit{linked}) dengan data lain. KG \legal mengandung berbagai data terstruktur konten tekstual,
+struktur dokumen, seperti metadata, serta relasi antara peraturan seperti amendemen dan rujukan.
+Lex2KG memungkinkan pemanfaatan data \legal secara \textit{advanced}, otomatis, dan dalam skala
+besar pada berbagai lingkup digital terutama pada industrsi hukum dan pengacara. Contoh pemanfaatan
+data dapat berupa \textit{search engine}, sistem \textit{question answering}, dan analisis statistik
+\legal. Menggunakan Lex2KG, penulis berhasil mengonversi 784 undang-undang menjadi KG dengan ukuran
+total lebih dari 1,1 juta \textit{triple}. Salah satu peraturan yang berhasil dikonversi adalah UU
+11/2020 tentang Cipta Kerja yang kontennya bersifat relatif kompleks dan berukuran besar. Penulis
+juga menunjukan \textit{use case} dari KG \legal yaitu \textit{chat bot} sederhana, SPARQL
+\textit{query}, dan visualisasi \legal.
+
+\vspace*{0.2cm}
+
+\noindent \bo{Kata kunci:} \\ \textit{Knowledge Graph}, Peraturan perundang-undangan, SPARQL, RDF,
+Konversi, PDF 
+
+\onehalfspacing
+\newpage

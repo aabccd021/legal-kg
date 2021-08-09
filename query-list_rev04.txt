@@ -1,0 +1,241 @@
+# Describe Omnibus Law (UU Cipta Kerja)
+
+PREFIX catapa: <https://catapa.com/ns#>
+
+SELECT DISTINCT * WHERE {
+  catapa:UUCiptaKerja ?p ?o .
+}
+
+# Retrieve all articles (= pasal) of Omnibus Law
+
+PREFIX catapa: <https://catapa.com/ns#>
+
+SELECT ?pasal ?text WHERE {
+  ?pasal a catapa:Pasal .
+  ?pasal catapa:bagianDari catapa:UUCiptaKerja .
+  ?pasal catapa:text ?text
+}
+
+# What is the textual content of Article (or Pasal) 5 Subsection (or Ayat) 1 of Omnibus Law?
+
+PREFIX catapa: <https://catapa.com/ns#>
+
+SELECT * WHERE {
+  ?x a catapa:Ayat .
+  ?x catapa:noPasal 5 .
+  ?x catapa:noAyat 1 .
+  ?x catapa:bagianDari+ catapa:UUCiptaKerja .
+  ?x catapa:text ?text .
+}
+
+# Which are the articles of Chapter 2 (Bab 2) of Omnibus Law?
+
+PREFIX catapa: <https://catapa.com/ns#>
+
+SELECT ?pasal ?text WHERE {
+  ?bab a catapa:Bab .
+  ?bab catapa:bagianDari catapa:UUCiptaKerja .
+  ?bab catapa:noBab 2 .
+  ?pasal a catapa:Pasal .
+  ?pasal catapa:bagianDari ?bab .
+  ?pasal catapa:text ?text .
+}
+
+# Get subsections (= ayat) containing "kompensasi" and "buruh" that are added by Omnibus Law into other laws
+
+PREFIX catapa: <https://catapa.com/ns#>
+
+SELECT ?ayat ?text WHERE {
+  ?komponenUU catapa:bagianDari+ catapa:UUCiptaKerja .
+  ?komponenUU catapa:hasilPenyisipan ?pasalYangDisisipkan .
+  ?ayat catapa:bagianDari ?pasalYangDisisipkan .
+  ?ayat catapa:text ?text .
+  FILTER REGEX(str(?text), "kompensasi")
+  FILTER REGEX(str(?text), "buruh")
+}
+
+# Retrieve components of Omnibus Law that insert (= menyisipkan) articles (= pasal) into Labor Law (UU Ketenagakerjaan) and show the textual content of the articles
+
+PREFIX catapa: <https://catapa.com/ns#>
+
+SELECT ?x ?pasalYangDisisipkan ?text WHERE {
+  ?x catapa:bagianDari+ catapa:UUCiptaKerja .
+  ?x catapa:menyisipkan catapa:UU-No-13-2003 .
+  ?x catapa:hasilPenyisipan ?pasalYangDisisipkan .
+  ?pasalYangDisisipkan catapa:text ?text .
+}
+
+# Get components of Omnibus Law that amend (= mengubah) articles in Labor Law and compare the textual content of the old vs. new articles
+
+PREFIX catapa: <https://catapa.com/ns#>
+
+SELECT ?x ?oldArticle ?oldText ?newArticle ?newText WHERE {
+  ?x catapa:bagianDari+ catapa:UUCiptaKerja .
+  ?x catapa:mengubah ?oldArticle .
+  ?oldArticle catapa:bagianDari catapa:UU-No-13-2003 .
+  ?oldArticle catapa:text ?oldText .
+  ?x catapa:hasilPengubahan ?newArticle .
+  ?newArticle catapa:text ?newText .
+}
+
+# Give me components of Omnibus Law that remove (= menghapus) articles in Labor Law and show the textual content of the removed articles
+
+PREFIX catapa: <https://catapa.com/ns#>
+
+SELECT * WHERE {
+  ?x catapa:bagianDari+ catapa:UUCiptaKerja .
+  ?x catapa:menghapus ?pasalYgDihapus .
+  ?pasalYgDihapus catapa:bagianDari catapa:UU-No-13-2003 .
+  ?pasalYgDihapus catapa:text ?text .
+}
+
+# Retrieve implementing regulations (= peraturan pelaksana) of subsections (= ayat) in Labor Law that are removed by Omnibus Law
+
+PREFIX catapa: <https://catapa.com/ns#>
+
+SELECT * WHERE {
+  ?x catapa:bagianDari+ catapa:UUCiptaKerja .
+  ?x catapa:menghapus ?pasalYgDihapus .
+  ?pasalYgDihapus catapa:bagianDari catapa:UU-No-13-2003 .
+  ?ayatPasalYgDihapus catapa:bagianDari ?pasalYgDihapus .
+  ?peraturanPelaksana catapa:melaksanakanAyat ?ayatPasalYgDihapus .
+}
+
+# How many are insertions, amendments, and removals of other laws in Omnibus Law?
+
+PREFIX catapa: <https://catapa.com/ns#>
+
+SELECT ?type (COUNT(*) AS ?jumlah) WHERE {
+  {
+    ?x catapa:bagianDari+ catapa:UUCiptaKerja .
+    ?x catapa:menyisipkan ?y .
+    ?x a catapa:Angka .
+    BIND("menyisipkan" AS ?type)
+  }
+  UNION
+  {
+    ?x catapa:bagianDari+ catapa:UUCiptaKerja .
+    ?x catapa:mengubah ?y .
+    ?x a catapa:Angka .
+    BIND("mengubah" AS ?type)
+  }
+  UNION
+  {
+    ?x catapa:bagianDari+ catapa:UUCiptaKerja .
+    ?x catapa:menghapus ?y .
+    ?x a catapa:Angka .
+    BIND("menghapus" AS ?type)
+  }
+} GROUP BY ?type
+
+# Get articles of Labor Law (UU Ketenagakerjaan) taking into account updates (= insertions/amendments/removals) from Omnibus Law (UU Cipta Kerja)
+
+PREFIX catapa: <https://catapa.com/ns#>
+
+SELECT ?pasal WHERE {
+  ?pasal catapa:bagianDari catapa:UU-No-13-2003 .
+  ?pasal a catapa:Pasal .
+  FILTER NOT EXISTS { ?pasalPenghapus catapa:menghapus ?pasal }
+  FILTER NOT EXISTS { ?pasalPengubah catapa:mengubah ?pasal }
+}
+
+# Get articles of Omnibus Law that are not about updating (= insertions/amendments/removals) other laws
+
+PREFIX catapa: <https://catapa.com/ns#>
+
+SELECT ?pasal ?text WHERE {
+  ?pasal a catapa:Pasal .
+  ?pasal catapa:bagianDari catapa:UUCiptaKerja .
+  ?pasal catapa:text ?text .
+  FILTER NOT EXISTS { ?pasal catapa:mengubah ?y }
+  FILTER NOT EXISTS {
+    ?angka catapa:bagianDari ?pasal .
+    { {?angka catapa:menyisipkan ?y} UNION {?angka catapa:mengubah ?y} UNION {?angka catapa:menghapus ?y} }
+  }
+}
+
+# Give me articles (= pasal) of Omnibus Law removing articles of laws legalized later than the year 2001
+
+PREFIX catapa: <https://catapa.com/ns#>
+
+SELECT DISTINCT ?pasal WHERE {
+  ?pasal a catapa:Pasal .
+  ?pasal catapa:bagianDari catapa:UUCiptaKerja .
+  ?angka catapa:bagianDari ?pasal .
+  ?angka catapa:menghapus ?pasalDihapus .
+  ?pasalDihapus catapa:bagianDari+ ?perundangan .
+  ?perundangan a catapa:UndangUndang .
+  ?perundangan catapa:year ?year .
+  FILTER(?year > 2001)
+}
+
+# Retrieve all subsections inserted by Omnibus Law into other laws and *optionally* the citations occurring in those subsections
+
+PREFIX catapa: <https://catapa.com/ns#>
+PREFIX eli: <http://data.europa.eu/eli/ontology#>
+
+SELECT ?ayat ?text ?citation WHERE {
+  ?komponenUU catapa:bagianDari+ catapa:UUCiptaKerja .
+  ?komponenUU catapa:hasilPenyisipan ?pasalYangDisisipkan .
+  ?ayat catapa:bagianDari ?pasalYangDisisipkan .
+  ?ayat catapa:text ?text .
+  OPTIONAL {?ayat eli:cites ?citation}
+}
+
+# Give me Omnibus Law articles amending another law where the amended law has an implementing regulation (= peraturan pelaksana) about Foreign Labors (Tenaga Kerja Asing/TKA)
+
+PREFIX catapa: <https://catapa.com/ns#>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+
+SELECT * WHERE {
+  ?pasal a catapa:Pasal .
+  ?pasal catapa:bagianDari catapa:UUCiptaKerja .
+  ?angka catapa:bagianDari ?pasal .
+  ?angka catapa:mengubah ?pasalDiubah .
+  ?pasalDiubah catapa:bagianDari+ ?perundanganYgPasalnyaDiubah .
+  ?perundanganYgPasalnyaDiubah a catapa:UndangUndang .
+  ?peraturanPelaksana catapa:melaksanakan ?perundanganYgPasalnyaDiubah .
+  ?peraturanPelaksana catapa:subject/(skos:broader|skos:exactMatch)* catapa:TKA .
+}
+
+# Obtain citations from newly inserted articles by Omnibus Law (UU Cipta Kerja) to the original version of Labor Law (UU Ketenagakerjaan)
+
+PREFIX catapa: <https://catapa.com/ns#>
+PREFIX eli: <http://data.europa.eu/eli/ontology#>
+
+SELECT ?ayatPengutip ?yangDikutip WHERE {
+  ?angka catapa:bagianDari+ catapa:UUCiptaKerja .
+  ?angka catapa:hasilPenyisipan ?pasalYangDisisipkan .
+  ?ayatPengutip catapa:bagianDari ?pasalYangDisisipkan .
+  ?ayatPengutip eli:cites ?yangDikutip .
+  ?yangDikutip catapa:bagianDari+ catapa:UU-No-13-2003 .
+  FILTER NOT EXISTS {
+    ?yangDikutip catapa:bagianDari+ ?pasalYangDikutip .
+    ?pasalYangDikutip a catapa:Pasal .
+    ?angka catapa:bagianDari+ catapa:UUCiptaKerja .
+    {{?angka catapa:hasilPenyisipan ?pasalYangDikutip} UNION {?angka catapa:hasilPengubahan ?pasalYangDikutip} UNION {?angka catapa:menghapus ?pasalYangDikutip}}
+  }
+}
+
+# Which law has the most number of updates (= insertions/amendments/removals) by Omnibus Law? For that law, show the most recent version taking into account the updates by Omnibus Law!
+
+PREFIX catapa: <https://catapa.com/ns#>
+
+SELECT ?law ?pasal WHERE {
+
+	{
+		SELECT ?law (COUNT(*) AS ?numOfUpdates) WHERE {
+			?x catapa:bagianDari+ catapa:UUCiptaKerja .
+			{ {?x catapa:hasilPenyisipan ?y} UNION {?x catapa:mengubah ?y} UNION {?x catapa:menghapus ?y} }
+			?x a catapa:Angka .
+			?y a catapa:Pasal .
+			?y catapa:bagianDari ?law .
+		} GROUP BY ?law ORDER BY DESC(?numOfUpdates) LIMIT 1
+	}
+
+	?pasal catapa:bagianDari ?law .
+	?pasal a catapa:Pasal .
+	FILTER NOT EXISTS { ?pasalPenghapus catapa:menghapus ?pasal }
+	FILTER NOT EXISTS { ?pasalPengubah catapa:mengubah ?pasal }
+
+}

@@ -1,0 +1,54 @@
+<mxfile>
+    <diagram id="5RvX-dxRhpXFaJ19wyH0" name="Page-1">
+        <mxGraphModel dx="734" dy="823" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+            <root>
+                <mxCell id="0"/>
+                <mxCell id="1" parent="0"/>
+                <mxCell id="5" style="rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" parent="1" source="2" target="4" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="7" value="menimbang" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" parent="5" vertex="1" connectable="0">
+                    <mxGeometry x="-0.3152" y="2" relative="1" as="geometry">
+                        <mxPoint as="offset"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="13" style="rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fillColor=#f8cecc;strokeColor=#b85450;" parent="1" source="2" target="3" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="14" value="dasarHukum" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontColor=#B85450;" parent="13" vertex="1" connectable="0">
+                    <mxGeometry x="-0.4605" y="2" relative="1" as="geometry">
+                        <mxPoint x="38.28" y="12.48" as="offset"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="2" value="uu/2004/11" style="whiteSpace=wrap;html=1;" parent="1" vertex="1">
+                    <mxGeometry x="80" y="200" width="120" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="3" value="uu/1986/2" style="whiteSpace=wrap;html=1;" parent="1" vertex="1">
+                    <mxGeometry x="390" y="310" width="120" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="9" style="edgeStyle=none;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" parent="1" source="4" target="6" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="10" value="teks" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" parent="9" vertex="1" connectable="0">
+                    <mxGeometry x="-0.3694" relative="1" as="geometry">
+                        <mxPoint as="offset"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="4" value="uu/2004/11/menimbang" style="whiteSpace=wrap;html=1;" parent="1" vertex="1">
+                    <mxGeometry x="80" y="320" width="170" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="11" style="edgeStyle=none;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.575;entryY=1;entryDx=0;entryDy=0;entryPerimeter=0;" parent="1" source="6" target="3" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="12" value="menyebut" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" parent="11" vertex="1" connectable="0">
+                    <mxGeometry x="-0.2427" y="3" relative="1" as="geometry">
+                        <mxPoint as="offset"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="6" value="&lt;div style=&quot;text-align: left&quot;&gt;&lt;span&gt;Menimbang :&amp;nbsp;&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;text-align: left&quot;&gt;&lt;span&gt;a. ...&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;text-align: left&quot;&gt;&lt;span&gt;...&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;text-align: left&quot;&gt;d. bahwa sesuai dengan ketentuan Pasal 9 Undang-Undang Nomor&lt;br&gt;2 Tahun 1986 tentang Peradilan Umum sebagaimana ...&lt;span&gt;&lt;br&gt;&lt;/span&gt;&lt;/div&gt;" style="whiteSpace=wrap;html=1;" parent="1" vertex="1">
+                    <mxGeometry x="80" y="440" width="380" height="90" as="geometry"/>
+                </mxCell>
+            </root>
+        </mxGraphModel>
+    </diagram>
+</mxfile>

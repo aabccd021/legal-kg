@@ -1,0 +1,114 @@
+{
+  "name": "legal-kg",
+  "version": "1.0.0",
+  "license": "MIT",
+  "scripts": {
+    "build": "tsc",
+    "lint": "eslint '**/*.ts'",
+    "fuseki": "cd fuseki && java -jar fuseki-server.jar --file=../uuri.ttl /lex2kg",
+    "query": "ts-node src/query.ts",
+    "generate:ocr": "ts-node src/ocr.ts",
+    "generate:span": "ts-node src/pdf_to_span.ts",
+    "generate:data": "ts-node src/span_to_data.ts",
+    "generate:ttl": "ts-node src/data_to_ttl.ts",
+    "generate:md": "ts-node src/data_to_md.ts",
+    "bot": "ts-node src/bot.ts",
+    "classify": "ts-node src/classify.ts",
+    "scrape": "ts-node src/scrape.ts"
+  },
+  "engines": {
+    "node": "15"
+  },
+  "engineStrict": true,
+  "eslintConfig": {
+    "env": {
+      "es2021": true,
+      "node": true
+    },
+    "parser": "@typescript-eslint/parser",
+    "parserOptions": {
+      "sourceType": "module"
+    },
+    "plugins": [
+      "@typescript-eslint",
+      "unused-imports"
+    ],
+    "extends": [
+      "eslint:recommended",
+      "plugin:@typescript-eslint/eslint-recommended",
+      "plugin:@typescript-eslint/recommended",
+      "plugin:prettier/recommended",
+      "prettier/@typescript-eslint"
+    ],
+    "rules": {
+      "max-len": [
+        "error",
+        {
+          "code": 100,
+          "comments": 200
+        }
+      ],
+      "prettier/prettier": [
+        "warn",
+        {
+          "singleQuote": true,
+          "printWidth": 100
+        }
+      ],
+      "@typescript-eslint/no-unused-vars": "off",
+      "unused-imports/no-unused-imports-ts": "warn",
+      "unused-imports/no-unused-vars-ts": [
+        "warn",
+        {
+          "vars": "all",
+          "varsIgnorePattern": "^_",
+          "args": "after-used",
+          "argsIgnorePattern": "^_"
+        }
+      ]
+    }
+  },
+  "devDependencies": {
+    "@comunica/actor-init-sparql-file": "^1.19.0",
+    "@types/js-yaml": "^4.0.0",
+    "@types/json-stable-stringify": "^1.0.32",
+    "@types/lodash": "^4.14.167",
+    "@types/n3": "^1.4.4",
+    "@types/node": "^14.14.21",
+    "@types/node-fetch": "^2.5.8",
+    "@types/roman-numerals": "^0.3.0",
+    "@types/striptags": "^3.1.1",
+    "@typescript-eslint/eslint-plugin": "^4.22.1",
+    "@typescript-eslint/parser": "^4.22.1",
+    "assert-never": "^1.2.1",
+    "eslint": "^7.25.0",
+    "eslint-config-prettier": "^7.1.0",
+    "eslint-plugin-lodash": "^7.1.0",
+    "eslint-plugin-prettier": "^3.3.1",
+    "eslint-plugin-unused-imports": "^1.0.1",
+    "json-stable-stringify": "^1.0.1",
+    "lodash": "^4.17.20",
+    "n3": "^1.8.0",
+    "node-fetch": "^2.6.1",
+    "pdf.js-extract": "^0.1.5",
+    "prettier": "^2.2.1",
+    "rimraf": "^3.0.2",
+    "roman-numerals": "^0.3.2",
+    "ts-node": "^9.1.1",
+    "typescript": "^4.2.2"
+  },
+  "dependencies": {
+    "@types/p-timeout": "^1.2.2",
+    "@types/yargs": "^16.0.0",
+    "add": "^2.0.6",
+    "fetch-sparql-endpoint": "^2.0.1",
+    "io-ts": "^2.2.16",
+    "js-yaml": "^4.0.0",
+    "p-timeout": "^4.1.0",
+    "readline": "^1.3.0",
+    "striptags": "^3.1.1",
+    "tabletojson": "^2.0.4",
+    "yargs": "^16.2.0",
+    "yarn": "^1.22.10"
+  }
+}

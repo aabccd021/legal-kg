@@ -1,0 +1,13 @@
+# Retrieve all subsections inserted by Omnibus Law into other laws and *optionally* the citations occurring in those subsections
+PREFIX o: <https://example.org/lex2kg/ontology/>
+
+SELECT ?ayat ?text ?citation WHERE {
+  ?insertingPoint o:bagianDari+ <https://example.org/lex2kg/uu/2020/11>.
+  ?insertingPoint o:menyisipkan ?insertedPasalVersion .
+  ?ayat o:bagianDari+ ?insertedPasalVersion .
+  ?ayat o:teks ?text .
+  ?ayat o:teks ?textRef .
+  OPTIONAL {?textRef o:merujuk ?citation}
+}
+ORDER BY ?ayat ?text ?citation
+LIMIT 3

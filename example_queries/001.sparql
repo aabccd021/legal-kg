@@ -1,0 +1,8 @@
+# Describe Omnibus Law (UU Cipta Kerja)
+PREFIX o: <https://example.org/lex2kg/ontology/>
+
+SELECT * WHERE {
+  <https://example.org/lex2kg/uu/2020/11> ?p ?o .
+} 
+ORDER BY ?p ?o
+LIMIT 3

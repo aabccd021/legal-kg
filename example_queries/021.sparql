@@ -1,0 +1,28 @@
+# Count triples about document structure
+PREFIX o: <https://example.org/lex2kg/ontology/>
+
+SELECT (COUNT (*) as ?countResult) WHERE {
+  ?s
+    o:nomor|
+    o:judul|
+    o:bab|
+    o:bagian|
+    o:paragraf|
+    o:pasal|
+    o:ayat|
+    o:huruf|
+    o:segmen|
+    o:daftarBab|
+    o:daftarBagian|
+    o:daftarParagraf|
+    o:daftarPasal|
+    o:daftarAyat|
+    o:daftarHuruf|
+    o:tanggal|
+    o:jenisVersi|
+    o:versi|
+    o:menimbang|
+    o:mengingat|
+    o:bagianDari
+  ?o
+} 

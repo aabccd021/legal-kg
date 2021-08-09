@@ -1,0 +1,9 @@
+# tampilkan semua triple
+PREFIX o: <https://example.org/lex2kg/ontology/>
+
+SELECT * 
+WHERE {
+  ?s ?p ?o .
+} 
+ORDER BY ?s ?p ?o
+LIMIT 3

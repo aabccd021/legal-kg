@@ -1,0 +1,17 @@
+# Retrieve components of Omnibus Law that insert (= menyisipkan) articles (= pasal) into Labor Law (UU Ketenagakerjaan) and show the textual content of the articles
+PREFIX o: <https://example.org/lex2kg/ontology/>
+
+SELECT ?insertingPoint ?insertedPasalVersion ?text WHERE {
+  {
+    SELECT ?pasal (MAX(?pasalVersion) as ?latestPasalVersion) WHERE {
+      ?pasal o:bagianDari+ <https://example.org/lex2kg/uu/2020/11>.
+      ?pasal o:versi ?pasalVersion .
+    } GROUP BY ?pasal
+  }
+  ?insertingPoint o:bagianDari+ ?latestPasalVersion .
+  ?insertingPoint o:menyisipkan ?insertedPasalVersion .
+  ?insertedPasalVersion o:bagianDari+ <https://example.org/lex2kg/uu/2003/13> .
+  ?insertedPasalVersion o:teks ?text .
+}
+ORDER BY ?insertingPoint ?insertedPasalVersion
+LIMIT 3

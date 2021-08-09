@@ -1,0 +1,49 @@
+{
+  "[latex]": {
+    "editor.tabSize": 2,
+    "editor.insertSpaces": true
+  },
+  "latex-workshop.message.badbox.show": false,
+  "latex-workshop.latex.tools": [
+    {
+      "name": "latexmk",
+      "command": "latexmk",
+      "args": [
+        "--shell-escape",
+        "-synctex=1",
+        "-interaction=nonstopmode",
+        "-file-line-error",
+        "-pdf",
+        "-outdir=%OUTDIR%",
+        "%DOC%"
+      ]
+    },
+    {
+      "name": "pdflatex",
+      "command": "pdflatex",
+      "args": [
+        "--shell-escape",
+        "-synctex=1",
+        "-interaction=nonstopmode",
+        "-file-line-error",
+        "%DOC%"
+      ]
+    },
+    {
+      "name": "bibtex",
+      "command": "bibtex",
+      "args": [
+        "%DOCFILE%"
+      ]
+    }
+  ],
+  "latex-workshop.latex.recipes": [
+    {
+      "name": "pdflatex ➞ bibtex ➞ pdflatex`×2",
+      "tools": [
+        "pdflatex",
+        "bibtex",
+      ]
+    }
+  ]
+}

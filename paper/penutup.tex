@@ -1,0 +1,67 @@
+%---------------------------------------------------------------
+\chapter{PENUTUP}
+\label{chap:6}
+%---------------------------------------------------------------
+Pada bab ini, Penulis akan memaparkan kesimpulan penelitian dan saran untuk penelitian berikutnya
+terkait pembuatan sistem konversi Lex2KG.
+
+%---------------------------------------------------------------
+\section{Kesimpulan}
+\label{sec:kesimpulan}
+%---------------------------------------------------------------
+
+Pembuatan ontologi KG \legal diawali dengan mendefinisikan \textit{competency questions}, kemudian
+merancang ontologi yang dapat menjawab \textit{competency questions} tersebut. Setelah itu,
+dilakukan dengan mendefinisikan entitas dengan konsep yang sama untuk dikelompokan dalam
+\textit{class}, kemudian relasi antar \textit{class} tersebut dapat didefinisikan menjadi properti.
+Konsep-konsep yang terdapat pada \legal seperti struktur dokumen, rujukan, amendemen, jenis
+peraturan, dan metadata berhasil didefinisikan dalam \textit{class} dan properti. Setiap definisi
+ontologi seperti \textit{class} dan properti serta \textit{resource} juga diberikan spesifikasi
+konstruksi URI dengan \textit{namespace} yang sudah ditentukan.
+
+Perancangan sistem konversi otomatis PDF \legal menjadi KG dapat dilakukan melalui beberapa tahap.
+Perancangan sistem konversi diawali dengan ontologi KG yang akan dihasilkan untuk mengetahui data
+apa saja yang perlu diekstraksi dari PDF. Kemudian memahami struktur dan konteks dari PDF untuk
+merancang sistem \textit{parsing} agar dapat memperoleh data yang dibutuhkan. Variasi format PDF
+yang tidak seragam dapat distandardisasi dengan melakukan OCR ulang menghasilkan PDF versi "OCR".
+Kemudian PDF dipindai menjadi \textit{span} dan dibuat tiga variasi untuk mengatasi beberapa kasus
+pemindaian PDF. \textit{Span} kemudian di-\textit{parsing} menjadi data terstruktur, dan
+dikonstruksi menjadi KG berdasarkan ontologi yang sudah dirancang. PDF yang dapat dikonversi dengan
+baik oleh Lex2KG adalah PDF yang memiliki format yang sama dengan UU yang diperoleh dari Laman
+Undang-Undang Jaringan Dokumentasi dan Informasi Hukum DPR RI.
+
+Pada penelitian ini penulis berhasil melakukan konversi untuk 784 PDF UU yang diperoleh dari Laman
+Undang-Undang Jaringan Dokumentasi dan Informasi Hukum DPR RI, seperti UU 12/2019 tentang
+Pertanggungjawaban Atas Pelakasanaan Anggaran Pendapatan Dan Belanja Negara Tahun Anggaran 2018,
+menjadi KG dengan total lebih dari 1.1 juta \textit{triple}. Evaluasi \textit{use case} dilakukan
+dalam bentuk SPARQL \textit{query}, visualisasi, dan \textit{chat bot} sederhana pada KG tersebut.
+Untuk setiap \textit{competency question} disediakan SPARQL \textit{query} yang dapat menjawab
+pertanyaan tersebut. Visualisasi \textit{word cloud}, statistik, \textit{graph} (dalam bentuk
+\textit{node} dan \textit{vertex}) dilakukan pada KG untuk memahami KG secara lebih intuitif.
+Evaluasi \textit{use case} dilakukan untuk \textit{chat bot} sederhana dengan memberikan tampilan
+untuk beberapa skenario dan diberi penjelasan bagaimana \textit{chat bot} melakukan SPARQL
+\textit{query} menggunakan \textit{template} sesuai skenario.
+
+Penulis juga melakukan membuat versi
+\textit{paper}\footnote{\url{https://drive.google.com/file/d/11y5ZCe7xbLMGTOpJilZNm8IVMNtF2J_6/view?usp=sharing}}
+dari skripsi ini untuk di-\textit{submit} di International Semantic Web
+Conference\footnote{\url{https://iswc2021.semanticweb.org/}} sebagai \textit{poster paper} dan
+sedang dalam status menunggu \textit{review}.
+
+%---------------------------------------------------------------
+\section{Saran}
+\label{sec:saran}
+%---------------------------------------------------------------
+Berdasarkan hasil penelitian ini, berikut ini adalah saran untuk pengembangan penelitian berikutnya:
+\begin{enumerate}
+	\item Walaupun sebagian PDF dapat di-\textit{parse} menjadi data terstruktur, pasti akan terdapat
+	      kesalahan konversi. Akan lebih baik jika terdapat sistem pembenaran di mana terdapat tenaga
+	      manusia secara manual dapat memberikan data yang benar, kemudian dapat digabung dengan data
+	      hasil \textit{parsing}.
+	\item Saat ini pembuatan KG dalam berkas Turtle dilakukan dengan menulis lengkap URI setiap
+	      entitas. Akan lebih baik jika menggunakan \textit{prefix} untuk meningkatkan \textit{readability}
+	      dan mengurangi ukuran berkas.
+	\item Dapat dilakukan evaluasi dan \textit{feedback} dari seorang ahli hukum atau industri hukum,
+				untuk dilakukan \textit{improvement} sesuai dengan kebutuhan industri yang tidak diketahui
+				penulis.
+\end{enumerate}

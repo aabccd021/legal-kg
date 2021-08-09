@@ -1,0 +1,17 @@
+# Apa isi dari Pasal 91 ayat (2) huruf b dari UU Cipta Kerja?
+PREFIX o: <https://example.org/lex2kg/ontology/>
+
+SELECT ?teksStr
+WHERE {
+  ?pasal o:bagianDari* <https://example.org/lex2kg/uu/2020/11> ;
+         a o:Pasal ;
+         o:nomor 91 .
+  ?ayat o:bagianDari* ?pasal ;
+         a o:Ayat ;
+         o:nomor 2 .
+  ?huruf o:bagianDari* ?ayat ;
+         a o:Huruf ;
+         o:nomor "b".
+  ?teks o:bagianDari* ?huruf ;
+        o:teks ?teksStr .
+}

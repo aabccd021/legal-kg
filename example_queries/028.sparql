@@ -1,0 +1,9 @@
+# Peraturan apa yang berlaku pada daerah Jakarta yang disahkan di tahun 2019?
+PREFIX o: <https://example.org/lex2kg/ontology/>
+
+SELECT ?peraturan ?yurisdiksi
+WHERE {
+  ?peraturan o:yurisdiksi ?yurisdiksi ;
+             o:tahun 2019;
+   FILTER (CONTAINS(LCASE(?yurisdiksi), 'jakarta')) .
+}

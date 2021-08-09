@@ -1,0 +1,6 @@
+# Count triples about class assignment
+PREFIX o: <https://example.org/lex2kg/ontology/>
+
+SELECT (COUNT (*) as ?countResult) WHERE {
+  ?s a ?o
+} 

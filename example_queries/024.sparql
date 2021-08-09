@@ -1,0 +1,6 @@
+# Count triples about document citation
+PREFIX o: <https://example.org/lex2kg/ontology/>
+
+SELECT (COUNT (*) as ?countResult) WHERE {
+  ?s o:merujuk ?o
+} 

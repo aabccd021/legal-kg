@@ -1,0 +1,13 @@
+# Give me components of Omnibus Law that remove (= menghapus) articles in Labor Law and show the textual content of the removed articles
+PREFIX o: <https://example.org/lex2kg/ontology/>
+
+SELECT ?deletingPoint ?deletedPasal ?version ?text WHERE {
+  ?deletingPoint o:bagianDari+ <https://example.org/lex2kg/uu/2020/11>.
+  ?deletingPoint o:menghapus ?deletedPasalVersion .
+  ?deletedPasal o:versi ?deletedPasalVersion .
+  <https://example.org/lex2kg/uu/2003/13> o:pasal ?deletedPasal .
+  ?deletedPasal o:versi ?allPasalVersion .
+  ?allPasalVersion o:teks ?text .
+  ?allPasalVersion o:tanggal ?version .
+}
+LIMIT 3

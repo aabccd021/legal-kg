@@ -1,0 +1,17 @@
+# What is the textual content of Article (or Pasal) 2 Subsection (or Ayat) 1 of Omnibus Law?
+PREFIX o: <https://example.org/lex2kg/ontology/>
+
+SELECT ?x ?text WHERE {
+  {
+    SELECT ?pasal (MAX(?pasalVersion) as ?latestPasalVersion) WHERE {
+      <https://example.org/lex2kg/uu/2020/11> o:pasal ?pasal .
+      ?pasal o:nomor 2 .
+      ?pasal o:versi ?pasalVersion .
+    } GROUP BY ?pasal
+  }
+  ?x o:bagianDari* ?latestPasalVersion .
+  ?x o:nomor 1 .
+  ?x o:teks ?text .
+} 
+ORDER BY ?x ?text
+LIMIT 3

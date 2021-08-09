@@ -1,0 +1,13 @@
+# tampilkan legal document beserta yang ditimbangnya (menimbang)
+PREFIX o: <https://example.org/lex2kg/ontology/>
+PREFIX uu: <https://example.org/lex2kg/uu/>
+
+SELECT DISTINCT ?penimbang ?ditimbang
+WHERE {
+  ?penimbang o:menimbang ?menimbang .
+  ?menimbangText o:bagianDari* ?menimbang .
+  ?menimbangText o:merujuk ?ditimbang .
+  ?ditimbang a o:Peraturan
+}
+ORDER BY DESC(?penimbang) DESC(?ditimbang)
+LIMIT 5

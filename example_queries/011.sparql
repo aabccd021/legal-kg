@@ -1,0 +1,13 @@
+# Get articles of Labor Law (UU Ketenagakerjaan) taking into account updates (= insertions/amendments/removals) from Omnibus Law (UU Cipta Kerja)
+PREFIX o: <https://example.org/lex2kg/ontology/>
+
+SELECT ?latestPasalVersion WHERE {
+  {
+    SELECT ?pasal (MAX(?pasalVersion) as ?latestPasalVersion) WHERE {
+      ?pasal o:bagianDari+ <https://example.org/lex2kg/uu/2003/13>.
+      ?pasal o:versi ?pasalVersion .
+    } GROUP BY ?pasal
+  }
+}
+ORDER BY ?latestPasalVersion
+LIMIT 3

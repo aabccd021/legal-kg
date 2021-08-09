@@ -1,0 +1,10 @@
+# Apa saja bab-bab yang terdapat pada UU Cipta Kerja?
+PREFIX o: <https://example.org/lex2kg/ontology/>
+
+SELECT ?bab ?judulBab
+WHERE {
+  ?bab o:judul ?judulBab;
+       a o:Bab ;
+       o:bagianDari* <https://example.org/lex2kg/uu/2020/11> .
+}
+ORDER BY ?bab

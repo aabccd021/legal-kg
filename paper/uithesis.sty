@@ -1,0 +1,528 @@
+%
+% Konfigurasi LaTeX untuk laporan thesis/ta/skripsi/sp sesuai dengan aturan UI tahun 2017
+%
+% @author  Andreas Febrian
+% @version 2.0.2
+% @edit by Ichlasul Affan
+%
+% Terima kasih untuk:
+% 1. Lia Sadita
+% 2. Andre Tampubolon
+% 3. Erik Dominikus
+%
+
+%
+% Konfigurasi ini dibuat dengan menggunakan:
+% - konfigurasi laporan TA yang digunakan Fahrurrozi Rahman
+% - konfigurasi LaTeX untuk proceeding ICACSIS 2009 yang dibuat oleh Andreas
+%	Febrian dan Andre Tampubolon
+% - Laporan Thesis yang dibuat Andreas Febrian
+% - Laporan Skripsi yang dibuat Ichlasul Affan
+% - Laporan Skripsi yang dibuat Azhar Kurnia
+%
+
+
+%--------------------------------------------------------------------------------------------------%
+% Package
+%--------------------------------------------------------------------------------------------------%
+
+%
+% From The tocbibind package [author: Peter Wilson, Herries Press]:
+% The tocbibind package can be used to add document elements like a
+% bibliography or an index to the Table of Contents. The package is designed
+% to work with the four standard book, report, article and proc classes, and to
+% a limited extent with the ltxdoc class.
+%
+\usepackage{tocbibind}
+
+\usepackage{enumitem}
+\usepackage{booktabs}% http://ctan.org/pkg/booktabs
+\newcommand{\tabitem}{~~\llap{\textbullet}~~}
+
+%
+% From [Wikipedia]:
+% The package hyperref provides LaTeX the ability to create hyperlinks within
+% the document. It works with pdflatex and also with standard "latex" used with
+% dvips and ghostscript or dvipdfm to build a PDF file. For example:
+%	- \hyperref[mainlemma]{lemma \ref{mainlemma}}
+%	- \url{http://www.wikibooks.org}
+%	- \href{http://www.wikibooks.org}{wikibooks home}
+%	- \href{mailto:my_address@wikibooks.org}{
+%		\nolinkurl{my_address@wikibooks.org}}
+%
+\usepackage{hyperref}
+  \hypersetup{
+  	colorlinks=false,
+  	pdfborder=0 0 0,
+  	linkcolor=blue,
+  	citecolor=black,
+  	bookmarksopen=false,
+  	bookmarksnumbered=true,
+  	pdfstartview=FitH,
+  	pdfview=FitH
+	}
+
+%
+% The url package allows spacing and line breaks that result in intelligent
+% printing of email addresses, hypertext links, and path or directory addresses.
+% You must enter package commands in TeX fields. The address, link, path, or
+% directory address specified in the command must not contain unbalanced braces.
+% If it doesn't contain certain other characters (such as % or #) and doesn't
+% end with a backslash, you can use the command in the argument to another
+% command.
+%
+\usepackage{url}
+  \urlstyle{same}
+
+%
+%  Agar tabel bisa menggunakan rowspan atau colspan.
+%
+\usepackage{multirow}
+
+%
+% Digunakan untuk memasukan gambar ke laporan.
+%
+\usepackage{graphicx}
+\usepackage{wrapfig}
+
+%
+% Digunakan untuk mengantur line spacing pada laporan. Umumnya spacing yang
+% digunakan adalah 1.5.
+%
+\usepackage{setspace}
+  \onehalfspacing
+  %\doublespacing
+  %\singlespacing
+
+%
+% From Rforge:
+% The geometry package controls the overall margins and text area of the
+% document. The package must be called in the preamble of the document and
+% specified when called.
+%
+\usepackage[paper=a4paper,headheight=15pt,left=3cm,top=3cm,right=3cm,bottom=3cm]{geometry}
+
+%
+% Digunakan untuk mengatur caption dalam dokumen.
+%
+\usepackage[font=footnotesize,format=plain,labelfont=bf,up,textfont=up]{caption}
+
+%
+% Membantu penulisan notasi matematika terutama untuk dokumen dengan banyak
+% rumus.
+%
+\usepackage{amsmath}
+
+%
+% Membantu penulisan diakhir halaman
+%
+\usepackage{afterpage}
+
+%
+% Membuat multi page table.
+%
+\usepackage{longtable}
+
+%
+% Untuk support landscape beberapa halaman yang diperlukan.
+%
+\usepackage{lscape}
+
+%
+% Membuat seluruh tulisan menjadi Times New Roman.
+%
+\usepackage{pslatex}
+
+%
+% Package untuk membuat header dan footer pada dokumen.
+%
+\usepackage{fancyhdr}
+
+%
+% Package untuk memasukan berkas pdf sebagai bagian dari dokumen.
+%
+\usepackage{pdfpages}
+
+%
+% Membantu dalam mengatur jarak antara tepi kertas dengan posisi header.
+%
+\usepackage[ConnyRevised]{fncychap}
+
+%
+% Digunakan untuk membuat tabel berwarna-warni.
+%
+\usepackage{colortbl}
+
+%
+% Digunakan untuk membuat objek yang menimpa teks di atas.
+%
+\usepackage{float}
+  \floatplacement{figure}{H}
+  \floatplacement{table}{H}
+
+
+%
+% Digunakan untuk penggunaan kolom (terutama pada bagian tanda tangan halaman persetujuan).
+%
+\usepackage{multicol}
+
+%
+% Digunakan untuk memasukkan kode program ke dalam berkas.
+%
+\usepackage{listings, xcolor, xparse}
+	\definecolor{codegreen}{rgb}{0,0.6,0}
+	\definecolor{codegray}{rgb}{0.5,0.5,0.5}
+	\definecolor{codepurple}{rgb}{0.58,0,0.82}
+	\lstdefinestyle{uistyle}{
+		commentstyle=\color{codegreen},
+		keywordstyle=\color{magenta},
+		numberstyle=\tiny\color{codegray},
+		stringstyle=\color{codepurple},
+		basicstyle=\ttfamily\scriptsize,
+		breakatwhitespace=true,
+		breaklines=true,
+		captionpos=b,
+		keepspaces=true,
+		numbers=left,
+		numbersep=5pt,
+		showspaces=false,
+		showstringspaces=false,
+		showtabs=false,
+		tabsize=2
+	}
+    \lstset{style=uistyle}
+
+%
+% Digunakan untuk menambahkan sesuatu di akhir halaman
+%
+\usepackage{afterpage}
+\usepackage{changepage}
+\strictpagecheck
+\usepackage{everyshi}
+
+%
+% Digunakan untuk membedakan sitasi dalam paragraf dan luar paragraf pada format sitasi APA.
+%
+\usepackage{apacite}
+\usepackage{natbib}
+
+%
+% Digunakan untuk hyphenation
+%
+\usepackage[english, indonesian]{babel}
+
+%--------------------------------------------------------------------------------------------------%
+% Konfigurasi
+%--------------------------------------------------------------------------------------------------%
+\sloppy
+
+\newif\ifpdf
+\ifx\pdfoutput\undefined
+   \pdffalse
+\else
+   \pdfoutput=1
+   \pdftrue
+\fi
+
+
+% link page numbers in TOC
+\makeatletter
+\def\contentsline#1#2#3#4{%
+  \ifx\\#4\\%
+    \csname l@#1\endcsname{#2}{#3}%
+  \else
+    \csname l@#1\endcsname{%
+      \hyper@linkstart{link}{#4}{#2}\hyper@linkend
+    }{%
+      % same link destination for the page:
+      \hyper@linkstart{link}{#4}{#3}\hyper@linkend
+      % link destination is the page itself:
+      % \hyperpage{#3}%
+    }%
+  \fi
+}
+\renewcommand\section{\@startsection {section}{1}{\z@}%
+                                  {-3.5ex \@plus -1ex \@minus -.2ex}%
+                                  {2.3ex \@plus.2ex}%
+                                  {\large\bfseries}}
+\makeatother
+
+\setcounter{secnumdepth}{3}
+
+\setcounter{tocdepth}{3}
+
+%
+% Atur header dan footer dalam dokumen.
+%
+\renewcommand{\headrulewidth}{0.0pt}
+\fancyhf{}
+\fancypagestyle{standard}{
+	\fancyhead[L]{}
+	\fancyhead[C]{}
+	\fancyhead[R]{}
+	\fancyfoot[L]{}
+	\fancyfoot[C]{}
+	\renewcommand{\headrulewidth}{0.0pt}
+	\fancyfoot[R]{\footnotesize \fontfamily{phv} \selectfont \bo{Universitas Indonesia}}
+	\renewcommand{\footrulewidth}{0.0pt}
+}
+
+\fancypagestyle{first-pages}{
+	\fancyhead[L]{}
+	\fancyhead[C]{}
+	\fancyhead[R]{}
+	\fancyfoot[L]{}
+	\fancyfoot[C]{\thepage}
+	\fancyfoot[R]{\footnotesize \fontfamily{phv} \selectfont \bo{Universitas Indonesia}}
+}
+
+%
+% Add new chapter page count
+%
+\newcounter{chapterpagecount}[chapter] % Reset with an increment in chapter
+\EveryShipout{\stepcounter{chapterpagecount}} % Step every page
+
+
+%--------------------------------------------------------------------------------------------------%
+% Perintah Baru
+%--------------------------------------------------------------------------------------------------%
+%
+% Perintah untuk membuat huruf tercetak miring. (alias)
+\newcommand{\f}[1]{\textit{#1}}
+%
+% Perintah untuk huruf tercetak tebal dan miring.
+\newcommand{\bi}[1]{\textbf{\textit{#1}}}
+%
+% Perintah untuk huruf tercetak tebal.
+\newcommand{\bo}[1]{\textbf{#1}}
+%
+%
+\newcommand{\m}[1]{\boldmath{ \( #1 \)}}
+%
+%
+\newcommand{\mc}[1]{\boldmath{ \[ #1 \]}}
+%
+%
+\newcommand{\code}[1]{\texttt{#1}}
+%
+% Buat catatan kecil. Catatan akan ditampilkan dalam tabel.
+\newcommand{\todo}[1]{
+    \begin{tabular}{| p{1\textwidth} |}
+		\rowcolor[rgb]{.9,.6,.6}
+		\bo{@todo} \\
+		\rowcolor[gray]{1.}
+		 #1 \\
+		 \\
+		\hline
+	\end{tabular}
+    }
+%
+% Buat catatan untuk menambahkan referensi.
+\newcommand{\todoCite}{
+	\begin{tabular}{| l |}
+		\rowcolor[rgb]{.6,.9,.6}
+		\bo{@todo} \\
+		\rowcolor[gray]{1.}
+		 Referensi \\
+		 \\
+		\hline
+	\end{tabular}
+    }
+%
+% Tambahkan berkas PDF ke dalam laporan dan gunakan style laporan
+% terhadap berkas ini.
+\newcommand{\inpdf}[1]{
+	\includepdf[pages=-,pagecommand={\thispagestyle{fancy}}]{#1.pdf}}
+%
+% Tambahkan berkas PDF ke dalam laporan.
+\newcommand{\putpdf}[1]{\includepdf[pages=-]{#1.pdf}}
+%
+% Perintah untuk membuat variabel baru.
+\newcommand{\var}[2]{\newcommand{#1}{#2}}
+%
+% Perintah untuk membuat variabel baru. Teks yang ditulis dalam
+% perintah ini akan diformat ulang menggunakan huruf kapital.
+\newcommand{\Var}[2]{\newcommand{#1}{\uppercase{#2}}}
+%
+% Tambahkan kata-kata yang dimasukan kedalam Table of Contents.
+\newcommand{\addChapter}[1]{\phantomsection \addcontentsline{toc}{chapter}{#1}}
+%
+% Alias untuk perintah \LaTeX
+\newcommand{\latex}{\LaTeX}
+%
+% Alias untuk menambahkan halaman baru setiap akhir bab
+\newcommand{\clearchapter}{
+	\ifodd\thechapterpagecount
+		\null
+		\thispagestyle{empty}
+		\addtocounter{page}{-1}
+		\newpage
+	\else
+	\fi
+	\setoddevenheader
+}
+\newcommand{\naiveoddclearchapter}{
+	\clearpage
+	\checkoddpage
+	\ifoddpage
+		\null
+		\thispagestyle{empty}
+		\addtocounter{page}{-1}
+		\newpage
+	\else
+	\fi
+}
+\newcommand{\naiveevenclearchapter}{
+	\clearpage
+	\checkoddpage
+	\ifoddpage
+	\else
+		\null
+		\thispagestyle{empty}
+		\addtocounter{page}{-1}
+		\newpage
+	\fi
+}
+\newcommand{\forceclearchapter}{
+	\clearpage
+	\null
+	\thispagestyle{empty}
+	\addtocounter{page}{-1}
+	\newpage
+}
+%
+% Alias untuk mengatur ulang konfigurasi footer setiap awal bab
+\newcommand{\setoddevenheader}{
+	\fancyhead{}
+	\ifodd\thepage
+		\fancyhead[RO,LE]{\thepage}
+	\else
+		\fancyhead[LO,RE]{\thepage}
+	\fi
+}
+%
+% Untuk membuat halaman kosong
+\newcommand\blankpage{
+	\null
+	\thispagestyle{empty}
+	\addtocounter{page}{-1}
+	\newpage
+}
+%
+% Untuk membuat daftar sumber gambar
+\newcommand*{\captionsource}[2]{
+	\caption[{#1}]{#1\par
+	\footnotesize\textbf{Sumber:} #2\par}
+}
+
+
+%--------------------------------------------------------------------------------------------------%
+% Daftar Konten Custom (contoh: Daftar Aturan Transformasi Kode)
+% request by: Hafiyyan Sayyid Fadhlillah
+% based on:
+% - https://tex.stackexchange.com/questions/61086/how-to-create-my-own-list-of-things
+% - https://tex.stackexchange.com/questions/71162/reset-section-numbering-between
+%--------------------------------------------------------------------------------------------------%
+%
+% tocloft: To define your own list of things
+%
+\usepackage[titles]{tocloft}
+
+%
+% Definisi jenis object custom beserta perintahnya.
+% \listof....name = Nama daftar isi untuk jenis objek tersebut
+% \listof.... = Daftar isi untuk jenis objek tersebut
+% \.... = Nama jenis objek tersebut
+% \caption.... = Caption untuk jenis objek tersebut
+% \captionsource.... = Caption dengan sumber untuk jenis objek tersebut
+%
+
+%
+% Sample: Sesuatu (thing)
+% Berkas auxiliary: thesis.loth -> mohon masukkan di gitignore.
+% Uncomment to use this sample.
+% Untuk menggunakan dengan istilah lain, cukup ganti frasa "Sesuatu", "thing", dan "loth".
+% Misal: Aturan Transformasi (transformationrule,thesis.lotr): "Sesuatu" -> "Aturan Transformasi", "thing" -> "transformationrule", "loth" -> "lotr"
+%
+
+%\newcommand{\thing}{Sesuatu}
+%\newcommand{\listofthingname}{Daftar \thing}
+%\newlistof{thing}{loth}{\listofthingname}
+%\newcommand{\captionthing}[1]
+%{%
+%	\refstepcounter{thing}
+%	\caption*{\textbf{\thing~\thechapter.\thething:} #1}
+%	\addcontentsline{loth}{thing}
+%	{\protect\numberline{\thechapter.\thething}{\ignorespaces #1}}\par
+%}
+%\newcommand{\captionsourcething}[2]
+%{%
+%	\refstepcounter{thing}
+%	\caption*{\textbf{\thing~\thechapter.\thething:} #1\par
+%		\footnotesize\textbf{Sumber:} #2\par}
+%	\addcontentsline{loth}{thing}
+%	{\protect\numberline{\thechapter.\thething}{\ignorespaces #1}}\par
+%}
+
+%
+% Daftar Lampiran
+%
+\newcommand{\apdx}{Lampiran}
+\newcommand{\listofappendixname}{Daftar \apdx}
+\newlistof{appendix}{lox}{\listofappendixname}
+\newcommand{\addappendix}[1]
+{%
+\refstepcounter{appendix}
+\addcontentsline{lox}{appendix}
+{\apdx~\protect\numberline{\theappendix.}{\ignorespaces #1}}\par
+}
+
+%--------------------------------------------------------------------------------------------------%
+% Ubah Istilah Penulisan
+%--------------------------------------------------------------------------------------------------%
+%
+% Beberapa istilah yang tepat untuk digunakan dalam laporan.
+\renewcommand{\bibname}{Daftar Referensi}
+\renewcommand{\refname}{Daftar Referensi}
+%
+%
+\renewcommand{\contentsname}{Daftar Isi}
+%
+%
+\renewcommand{\listfigurename}{Daftar Gambar}
+%
+%
+\renewcommand{\listtablename}{Daftar Tabel}
+%
+%
+\renewcommand{\lstlistlistingname}{Daftar Kode Program}
+%
+%
+\renewcommand{\chaptername}{BAB}
+%
+%
+\renewcommand{\figurename}{\bo{Gambar}}
+%
+%
+\renewcommand{\tablename}{\bo{Tabel}}
+%
+%
+\renewcommand{\lstlistingname}{\bo{Kode}}
+%
+%
+\newcommand{\bab}{Bab}
+%
+%
+\newcommand{\sect}{Subbab}
+%
+%
+\newcommand{\pic}{Gambar}
+%
+%
+\newcommand{\tab}{Tabel}
+%
+%
+\newcommand{\equ}{Persamaan}
+%
+%
+\newcommand{\lst}{Kode}

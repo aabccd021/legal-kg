@@ -1,0 +1,9 @@
+# tampilkan 10 tempat disahkan paling banyak
+PREFIX o: <https://example.org/lex2kg/ontology/>
+
+SELECT ?location (COUNT(?doc) as ?docCount)
+WHERE {
+  ?doc o:disahkanDi ?location
+}
+GROUP BY ?location
+ORDER BY DESC (?docCount)

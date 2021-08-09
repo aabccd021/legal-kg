@@ -1,0 +1,89 @@
+<mxfile host="65bd71144e" scale="4" border="0">
+    <diagram id="HbQwXWWXTE_ilcSY9G0p" name="Page-1">
+        <mxGraphModel dx="1422" dy="823" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+            <root>
+                <mxCell id="0"/>
+                <mxCell id="1" parent="0"/>
+                <mxCell id="62" value="" style="whiteSpace=wrap;html=1;dashed=1;fillColor=none;" parent="1" vertex="1">
+                    <mxGeometry x="-80" y="400" width="400" height="150" as="geometry"/>
+                </mxCell>
+                <mxCell id="65" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" parent="1" source="2" target="64" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="2" value="&lt;font&gt;PDF UU A&lt;/font&gt;" style="whiteSpace=wrap;html=1;fontFamily=Times New Roman;" parent="1" vertex="1">
+                    <mxGeometry x="-40" y="360" width="80" height="20" as="geometry"/>
+                </mxCell>
+                <mxCell id="50" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="44" target="49" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="44" value="Gabung" style="shape=parallelogram;perimeter=parallelogramPerimeter;whiteSpace=wrap;html=1;fixedSize=1;fontFamily=Times New Roman;" parent="1" vertex="1">
+                    <mxGeometry x="80" y="520" width="80" height="20" as="geometry"/>
+                </mxCell>
+                <mxCell id="49" value="KG Peraturan Perundang-undangan" style="whiteSpace=wrap;html=1;fontFamily=Times New Roman;" parent="1" vertex="1">
+                    <mxGeometry x="5" y="570" width="230" height="20" as="geometry"/>
+                </mxCell>
+                <mxCell id="63" value="&lt;font face=&quot;Times New Roman&quot;&gt;Lex2KG&lt;/font&gt;" style="text;html=1;align=left;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;" parent="1" vertex="1">
+                    <mxGeometry x="-80" y="380" width="60" height="20" as="geometry"/>
+                </mxCell>
+                <mxCell id="77" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" parent="1" source="64" target="66" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="64" value="PDF2KG" style="shape=parallelogram;perimeter=parallelogramPerimeter;whiteSpace=wrap;html=1;fixedSize=1;fontFamily=Times New Roman;" parent="1" vertex="1">
+                    <mxGeometry x="-40" y="420" width="80" height="20" as="geometry"/>
+                </mxCell>
+                <mxCell id="80" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.25;entryY=0;entryDx=0;entryDy=0;" parent="1" source="66" target="44" edge="1">
+                    <mxGeometry relative="1" as="geometry">
+                        <Array as="points">
+                            <mxPoint y="490"/>
+                            <mxPoint x="100" y="490"/>
+                        </Array>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="66" value="&lt;font&gt;KG UU A&lt;/font&gt;" style="whiteSpace=wrap;html=1;fontFamily=Times New Roman;" parent="1" vertex="1">
+                    <mxGeometry x="-40" y="460" width="80" height="20" as="geometry"/>
+                </mxCell>
+                <mxCell id="67" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" parent="1" source="68" target="69" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="68" value="&lt;font&gt;PDF UU B&lt;/font&gt;" style="whiteSpace=wrap;html=1;fontFamily=Times New Roman;" parent="1" vertex="1">
+                    <mxGeometry x="80" y="360" width="80" height="20" as="geometry"/>
+                </mxCell>
+                <mxCell id="76" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" parent="1" source="69" target="70" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="69" value="PDF2KG" style="shape=parallelogram;perimeter=parallelogramPerimeter;whiteSpace=wrap;html=1;fixedSize=1;fontFamily=Times New Roman;" parent="1" vertex="1">
+                    <mxGeometry x="80" y="420" width="80" height="20" as="geometry"/>
+                </mxCell>
+                <mxCell id="79" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="70" target="44" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="70" value="&lt;font&gt;KG UU B&lt;/font&gt;" style="whiteSpace=wrap;html=1;fontFamily=Times New Roman;" parent="1" vertex="1">
+                    <mxGeometry x="80" y="460" width="80" height="20" as="geometry"/>
+                </mxCell>
+                <mxCell id="71" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" parent="1" source="72" target="73" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="72" value="&lt;font&gt;PDF UU C&lt;/font&gt;" style="whiteSpace=wrap;html=1;fontFamily=Times New Roman;" parent="1" vertex="1">
+                    <mxGeometry x="200" y="360" width="80" height="20" as="geometry"/>
+                </mxCell>
+                <mxCell id="75" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="73" target="74" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="73" value="PDF2KG" style="shape=parallelogram;perimeter=parallelogramPerimeter;whiteSpace=wrap;html=1;fixedSize=1;fontFamily=Times New Roman;" parent="1" vertex="1">
+                    <mxGeometry x="200" y="420" width="80" height="20" as="geometry"/>
+                </mxCell>
+                <mxCell id="78" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.75;entryY=0;entryDx=0;entryDy=0;" parent="1" source="74" target="44" edge="1">
+                    <mxGeometry relative="1" as="geometry">
+                        <Array as="points">
+                            <mxPoint x="240" y="490"/>
+                            <mxPoint x="140" y="490"/>
+                        </Array>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="74" value="&lt;font&gt;KG UU C&lt;/font&gt;" style="whiteSpace=wrap;html=1;fontFamily=Times New Roman;" parent="1" vertex="1">
+                    <mxGeometry x="200" y="460" width="80" height="20" as="geometry"/>
+                </mxCell>
+            </root>
+        </mxGraphModel>
+    </diagram>
+</mxfile>

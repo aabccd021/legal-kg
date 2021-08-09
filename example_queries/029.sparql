@@ -1,0 +1,13 @@
+# Apa relasi suatu peraturan dengan peraturan lain?
+PREFIX o: <https://example.org/lex2kg/ontology/>
+
+SELECT DISTINCT ?p1 ?relasi ?p2
+WHERE {
+  ?p1 a o:Peraturan .
+  ?p2 a o:Peraturan .
+  FILTER (?p1 != ?p2) .
+  ?komponen o:bagianDari* ?p1 ;
+            ?relasi ?p2 .
+
+}
+LIMIT 10

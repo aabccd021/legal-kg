@@ -1,0 +1,7 @@
+# show raw text of UU 2007 No.26 Pasal 1 version 20201102
+PREFIX o: <https://example.org/lex2kg/ontology/>
+
+SELECT *
+WHERE {
+  <https://example.org/lex2kg/uu/2007/26/pasal/0001/versi/20201102> o:teks ?o
+}

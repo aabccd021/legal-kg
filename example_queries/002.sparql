@@ -1,0 +1,10 @@
+# Retrieve all articles (= pasal) of Omnibus Law
+PREFIX o: <https://example.org/lex2kg/ontology/>
+
+SELECT ?pasalVersion ?text WHERE {
+  <https://example.org/lex2kg/uu/2020/11> o:pasal ?pasal .
+  ?pasal o:versi ?pasalVersion .
+  ?pasalVersion o:teks ?text .
+} 
+ORDER BY ?pasal ?text
+LIMIT 3

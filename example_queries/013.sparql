@@ -1,0 +1,12 @@
+# Give me articles (= pasal) of Omnibus Law removing articles of laws legalized later than the year 2001
+PREFIX o: <https://example.org/lex2kg/ontology/>
+
+SELECT DISTINCT ?pasalVersion WHERE {
+  ?point o:bagianDari+ <https://example.org/lex2kg/uu/2020/11>.
+  ?point o:menghapus ?pasalVersion .
+  ?pasalVersion o:bagianDari+ ?document .
+  ?document o:disahkanPada ?legalizedDate
+  FILTER(year(?legalizedDate) > 2001)
+}
+ORDER BY ?pasalVersion
+LIMIT 3

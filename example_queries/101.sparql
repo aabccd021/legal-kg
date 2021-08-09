@@ -1,0 +1,9 @@
+# tampilkan 10 legal doc pertama
+PREFIX o: <https://example.org/lex2kg/ontology/>
+
+SELECT * 
+WHERE {
+  ?legalDoc a o:Peraturan
+} 
+ORDER BY ?legalDoc
+LIMIT 10

@@ -1,0 +1,21 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "type": "pwa-node",
+      "request": "launch",
+      "name": "Debug",
+      "runtimeArgs": [
+        "-r",
+        "ts-node/register"
+      ],
+      "args": [
+        "${workspaceFolder}/src/span_to_data.ts",
+      ],
+      "skipFiles": [
+        "${workspaceFolder}/node_modules/**",
+        "<node_internals>/**"
+      ]
+    },
+  ]
+}

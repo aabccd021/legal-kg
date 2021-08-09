@@ -1,0 +1,208 @@
+%
+% Template Laporan Skripsi/Thesis Universitas Indonesia
+%
+% @author  Ichlasul Affan, Azhar Kurnia @version 2.02
+%
+% Dokumen ini dibuat berdasarkan standar IEEE dalam membuat class untuk LaTeX dan konfigurasi LaTeX
+% yang digunakan Fahrurrozi Rahman ketika membuat laporan skripsi, yang kemudian diadaptasi oleh
+% Andreas Febrian dan Lia Sadita untuk template skripsi tahun 2010. Konfigurasi template sebelumnya
+% telah disesuaikan dengan aturan penulisan thesis yang dikeluarkan UI pada tahun 2017.
+%
+
+%
+% Tipe dokumen adalah report dengan satu kolom.
+%
+\documentclass[12pt, a4paper, onecolumn, twoside, final]{report}
+\raggedbottom
+
+% Load konfigurasi LaTeX untuk tipe laporan thesis
+\usepackage{uithesis}
+%
+
+% aab
+\usepackage[chapter]{minted}
+\renewcommand\listingscaption{\lst}
+\usepackage[T1]{fontenc}
+\usepackage{inconsolata}
+\usepackage[indonesian]{babel}
+\usepackage{lscape}
+\usepackage{float}
+\usepackage{makecell}
+\usepackage{amsmath}
+\usepackage{hhline}
+\usepackage{xspace}
+\usepackage[utf8]{inputenc}
+\usepackage{tikz}
+\usetikzlibrary{positioning, fit}
+\pdfimageresolution=120
+\AtBeginEnvironment{listing}{\setcounter{listing}{\value{lstlisting}}}
+\AtEndEnvironment{listing}{\stepcounter{lstlisting}}
+\definecolor{MonoBGColor}{HTML}{e0e0e0}
+\newcommand{\mono}[1]{\colorbox{MonoBGColor}{\texttt{\footnotesize#1}}}
+\newcommand{\legal}{peraturan perundang-undangan\xspace}
+\newcommand{\Legal}{Peraturan perundang-undangan\xspace}
+%--------------------------------------------------
+
+
+
+% Load konfigurasi khusus untuk laporan yang sedang dibuat
+\input{laporan_setting}
+% Daftar pemenggalan suku kata dan istilah dalam LaTeX
+\include{hype.indonesia}
+% Daftar istilah yang mungkin perlu ditandai
+\input{istilah}
+
+% Awal bagian penulisan laporan
+\begin{document}
+
+%
+% Sampul Laporan
+\include{sampul}
+\forceclearchapter
+
+%
+% Gunakan penomeran romawi
+\pagenumbering{roman}
+
+%
+% load halaman judul dalam
+\addChapter{HALAMAN JUDUL}
+\include{judul_dalam}
+\forceclearchapter
+
+%
+% setelah bagian ini, halaman dihitung sebagai halaman ke 2
+\setcounter{page}{2}
+
+%
+% load halaman pengesahan
+% \addChapter{LEMBAR PERSETUJUAN}
+% \include{pengesahan}
+% \forceclearchapter
+%
+% load halaman orisinalitas
+\addChapter{LEMBAR PERNYATAAN ORISINALITAS}
+\include{orisinal}
+\forceclearchapter
+%
+%
+\addChapter{LEMBAR PENGESAHAN}
+\include{pengesahan_sidang}
+\forceclearchapter
+%
+%
+\addChapter{LEMBAR PERSETUJUAN PUBLIKASI ILMIAH}
+\include{persetujuan_publikasi}
+\forceclearchapter
+%
+%
+\addChapter{KATA PENGANTAR}\include{pengantar}
+%
+
+%
+% Untuk halaman pertama setiap chapter mulai dari abstrak, tetap berikan mark universitas.
+%
+\pagestyle{first-pages}
+\fancypagestyle{plain}{
+  \fancyhead[L]{}
+  \fancyhead[C]{}
+  \fancyhead[R]{}
+  \fancyfoot[L]{}
+  \fancyfoot[C]{\thepage}
+  \fancyfoot[R]{\footnotesize \fontfamily{phv} \selectfont \bo{Universitas Indonesia}}}
+
+%
+\addChapter{ABSTRAK}
+\include{abstrak}
+%
+%
+\include{abstract}
+
+%
+% Daftar isi, gambar, tabel, dan kode
+%
+\phantomsection %hack to make them clickable
+\singlespacing
+\tableofcontents
+\onehalfspacing
+\clearpage
+\phantomsection %hack to make them clickable
+\singlespacing
+\listoffigures
+\onehalfspacing
+\clearpage
+\phantomsection %hack to make them clickable
+\singlespacing
+\listoftables
+\onehalfspacing
+\clearpage
+\phantomsection %hack to make them clickable
+\addcontentsline{toc}{chapter}{\lstlistlistingname}
+\singlespacing
+\renewcommand\listoflistingscaption{Daftar Kode Program}
+\listoflistings
+\onehalfspacing
+
+%
+% Daftar Isi yang Didefinisikan Sendiri (Custom) Definisi jenis objek baru dapat dilakukan di
+% uithesis.sty Uncomment to use.
+%
+
+%\phantomsection %hack to make them clickable \addcontentsline{toc}{chapter}{\listofthingname}
+%\singlespacing \listofthing \onehalfspacing \clearpage
+
+%
+% Daftar Lampiran Comment to disable.
+%
+\phantomsection %hack to make them clickable
+\addcontentsline{toc}{chapter}{\listofappendixname}
+\singlespacing
+\listofappendix
+\onehalfspacing
+\clearpage
+
+% Jika penomoran romawi selesai di ganjil
+\naiveoddclearchapter
+% Jika penomoran romawi selesai di genap \naiveevenclearchapter
+
+%
+% Gunakan penomeran Arab (1, 2, 3, ...) setelah bagian ini.
+%
+\pagenumbering{arabic}
+\pagestyle{standard}
+% \setlength{\belowcaptionskip}{+2pt}
+
+
+\setoddevenheader
+\include{bab1}
+\clearchapter
+\include{bab2}
+\clearchapter
+\include{bab3}
+\clearchapter
+\include{bab4}
+\clearchapter
+\include{bab5}
+\clearchapter
+\include{penutup}
+\clearchapter
+
+%
+% Daftar Pustaka
+\include{pustaka}
+\clearchapter
+
+%
+% Lampiran
+%
+\begin{appendix}
+  \newcounter{pagetemp}
+  \setcounter{pagetemp}{\thepage}
+  \include{markLampiran}
+  \clearchapter
+  \setcounter{page}{\thepagetemp}
+  \stepcounter{page}
+  \include{lampiran}
+\end{appendix}
+
+\end{document}

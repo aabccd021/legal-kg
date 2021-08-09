@@ -1,0 +1,13 @@
+# tampilkan semua document yang melakukan amendment, dan banyaknya pasal yang diamendment oleh dokumen tersebut.
+PREFIX o: <https://example.org/lex2kg/ontology/>
+PREFIX uu: <https://example.org/lex2kg/uu/>
+
+SELECT ?doc (COUNT(?point) as ?amendmentCount)
+WHERE {
+  ?doc a o:Peraturan .
+  ?point o:bagianDari* ?doc .
+  ?point o:mengubah|o:menyisipkan|o:menghapus ?pasalVersion .
+}
+GROUP BY (?doc)
+ORDER BY DESC(?amendmentCount)
+LIMIT 10

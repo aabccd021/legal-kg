@@ -1,0 +1,20 @@
+# Get components of Omnibus Law that amend (= mengubah) articles in Labor Law and compare the textual content of the old vs. new articles
+PREFIX o: <https://example.org/lex2kg/ontology/>
+
+SELECT ?insertingPoint ?insertedPasal ?version ?text WHERE {
+  {
+    SELECT ?pasal (MAX(?pasalVersion) as ?latestPasalVersion) WHERE {
+      ?pasal o:bagianDari+ <https://example.org/lex2kg/uu/2020/11>.
+      ?pasal o:versi ?pasalVersion .
+    } GROUP BY ?pasal
+  }
+  ?insertingPoint o:bagianDari+ ?latestPasalVersion .
+  ?insertingPoint o:menyisipkan ?insertedPasalVersion .
+  ?insertedPasalVersion o:bagianDari+ <https://example.org/lex2kg/uu/2003/13> .
+  ?insertedPasal o:versi ?insertedPasalVersion .
+  ?insertedPasal o:versi ?allPasalVersion .
+  ?allPasalVersion o:teks ?text .
+  ?allPasalVersion o:tanggal ?version .
+}
+ORDER BY ?insertingPoint ?insertedPasal ?version ?text
+LIMIT 3

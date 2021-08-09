@@ -1,0 +1,658 @@
+node: &ref_0
+  nodeType: peraturan
+  docType: noTahun
+  docCategory: uu
+  tahun: 1997
+  nomor: 12
+metadata:
+  menimbang:
+    type: menimbang
+    node: &ref_1
+      nodeType: menimbang
+      parentNode: *ref_0
+    content:
+      type: daftarHuruf
+      node: &ref_2
+        nodeType: daftarHuruf
+        parentNode: *ref_1
+      description:
+        type: text
+        node:
+          nodeType: segmen
+          textName: description
+          parentNode: *ref_2
+        textString: ''
+        references: []
+      elements:
+        - type: point
+          node: &ref_3
+            nodeType: huruf
+            key: a
+            parentPointSetNode: *ref_2
+          content:
+            type: text
+            node:
+              nodeType: segmen
+              textName: text
+              parentNode: *ref_3
+            textString: >-
+              bahwa dengan adanya perkembangan kehidupan yang berlangsung cepat, terutama di bidang
+              perekonomian baik di tingkat nasional maupun internasional, pemberian perlindungan
+              hukum yang semakin efektif terhadap Hak Atas Kekayaan Intelektual, khususnya di bidang
+              Hak Cipta perlu lebih ditingkatkan dalam rangka mewujudkan iklim yang lebih baik bagi
+              tumbuh dan berkembangnya semangat mencipta di bidang ilmu pengetahuan, seni dan
+              sastra, yang sangat diperlukan dalam pelaksanaan pembangunan nasional yang bertujuan
+              terc iptanya masyarakat Indonesia yang adil dan makmur, maju, dan mandiri berdasarkan
+              Pancasila dan Undang - Undang Dasar 1945;
+            references: []
+        - type: point
+          node: &ref_4
+            nodeType: huruf
+            key: b
+            parentPointSetNode: *ref_2
+          content:
+            type: text
+            node:
+              nodeType: segmen
+              textName: text
+              parentNode: *ref_4
+            textString: >-
+              bahwa dengan penerimaan dan keikutsertaan Indonesia dalam Persetujuan tentang Aspek -
+              aspek Dagang Hak Atas Kekayaan Intelektual (Ag reement on Trade Related Aspects of
+              Intellectual Property Rights, Including Trade in Counterfeit Goods/TRIPs) yang
+              merupakan bagian dari Persetujuan Pembentukan Organisasi Perdagangan Dunia (Agreement
+              Establishing the World Trade Organization) sebagaimana telah disahkan dengan Undang -
+              undang, berlanjut dengan melaksanakan kewajiban untuk menyesuaikan peraturan perundang
+              - undangan nasional di bidang Hak Atas Kekayaan Intelektual termasuk Hak Cipta
+              terhadap persetujuan internasional tersebut;
+            references: []
+        - type: point
+          node: &ref_5
+            nodeType: huruf
+            key: c
+            parentPointSetNode: *ref_2
+          content:
+            type: text
+            node:
+              nodeType: segmen
+              textName: text
+              parentNode: *ref_5
+            textString: >-
+              bahwa berdasarkan pertimbangan sebagaimana tersebut dalam huruf a dan b, serta
+              memperhatikan penilaian terhadap segala pengalaman, khususnya kekurangan selama
+              pelaksanaan Undang - undang tentang Hak Cipta, dipandang perlu untuk mengubah dan
+              menyempurnakan beberapa ketentuan Undang - undang Nomor 6 Tahun 1982 tentang Hak Cipta
+              sebagaimana telah diubah dengan Undang - undang Nomor 7 Tahun 1987 dengan Undang -
+              undang;
+            references: []
+  mengingat:
+    type: mengingat
+    node: &ref_6
+      nodeType: mengingat
+      parentNode: *ref_0
+    content:
+      type: daftarHuruf
+      node: &ref_7
+        nodeType: daftarHuruf
+        parentNode: *ref_6
+      description:
+        type: text
+        node:
+          nodeType: segmen
+          textName: description
+          parentNode: *ref_7
+        textString: ''
+        references: []
+      elements:
+        - type: point
+          node: &ref_8
+            nodeType: huruf
+            key: '1'
+            parentPointSetNode: *ref_7
+          content:
+            type: text
+            node:
+              nodeType: segmen
+              textName: text
+              parentNode: *ref_8
+            textString: Pasal 5 ayat (1), Pasal 20 ayat (1), dan Pasal 33 Undang - Undang Dasar 1945.
+            references: []
+        - type: point
+          node: &ref_9
+            nodeType: huruf
+            key: '2'
+            parentPointSetNode: *ref_7
+          content:
+            type: text
+            node:
+              nodeType: segmen
+              textName: text
+              parentNode: *ref_9
+            textString: >-
+              U ndang - undang Nomor 6 Tahun 1982 tentang Hak Cipta (Lembaran Negara Tahun 1982
+              Nomor 15, Tambahan Lembaran Negara Nomor 3217) sebagaimana telah diubah dengan Undang
+              - undang Nomor 7 Tahun 1987 (Lembaran Negara Tahun 1987 Nomor 42, Tambahan Lembaran
+              Negara Nom or 3362);
+            references: []
+        - type: point
+          node: &ref_10
+            nodeType: huruf
+            key: '3'
+            parentPointSetNode: *ref_7
+          content:
+            type: text
+            node:
+              nodeType: segmen
+              textName: text
+              parentNode: *ref_10
+            textString: >-
+              Undang - undang Nomor 7 Tahun 1994 tentang Pengesahan Agreement Establishing The World
+              Trade Organization (Persetujuan Pembentukan Organisasi Perdagangan Dunia) (Lembaran
+              Negara Tahun 1994 Nomor 57, Tambahan Lembaran Negara Nomor 3564); Denga n persetujuan
+              DEWAN PERWAKILAN RAKYAT REPUBLIK INDONESIA MEMUTUSKAN: MENETAPKAN : UNDANG - UNDANG
+              TENTANG PERUBAHAN ATAS UNDANG - UNDANG NOMOR 6 TAHUN 1982 TENTANG HAK CIPTA
+              SEBAGAIMANA TELAH DIUBAH DENGAN UNDANG - UNDANG NOMOR 7 TAHUN 1987.
+            references: []
+  memutuskan: ''
+  denganPersetujuan: ''
+  tentang: ' PERUBAHAN ATAS UNDANG - UNDANG NOMOR 6 TAHUN 1982 TENTANG HAK CIPTA SEBAGAIMANA TELAH DIUBAH DENGAN UNDANG - UNDANG NOMOR 7 TAHUN 1987'
+content:
+  type: daftarPasal
+  node:
+    nodeType: daftarPasal
+    parentNode: *ref_0
+  elements:
+    - type: pasal
+      node:
+        nodeType: pasal
+        key: 1
+        parentNode: *ref_0
+      version:
+        type: pasalVersion
+        node: &ref_11
+          nodeType: versiPasal
+          version: &ref_25
+            nodeType: date
+            month: 5
+            date: 7
+            year: 1997
+          state: orisinal
+          parentPasalNode:
+            nodeType: pasal
+            key: '1'
+            parentNode: *ref_0
+        content:
+          type: daftarHuruf
+          node: &ref_12
+            nodeType: daftarHuruf
+            parentNode: *ref_11
+          description:
+            type: text
+            node:
+              nodeType: segmen
+              textName: description
+              parentNode: *ref_12
+            textString: ''
+            references: []
+          elements:
+            - type: point
+              node: &ref_13
+                nodeType: huruf
+                key: '1'
+                parentPointSetNode: *ref_12
+              content:
+                type: text
+                node:
+                  nodeType: segmen
+                  textName: text
+                  parentNode: *ref_13
+                textString: >-
+                  Pencipta adalah seorang atau beberapa orang secara bersama - sama yang atas
+                  inspirasinya lahir suatu ciptaan berdasarkan kemampuan pikiran, imajinasi, kecek
+                  atan, keterampilan atau keahlian yang dituangkan dalam bentuk yang khas dan
+                  bersifat pribadi.
+                references: []
+            - type: point
+              node: &ref_14
+                nodeType: huruf
+                key: '2'
+                parentPointSetNode: *ref_12
+              content:
+                type: text
+                node:
+                  nodeType: segmen
+                  textName: text
+                  parentNode: *ref_14
+                textString: >-
+                  Ciptaan adalah hasil setiap karya Pencipta dalam bentuk khas dan menunjukkan
+                  keasliannya dalam lapangan ilmu pengetahuan, seni dan sastra.
+                references: []
+            - type: point
+              node: &ref_15
+                nodeType: huruf
+                key: '3'
+                parentPointSetNode: *ref_12
+              content:
+                type: text
+                node:
+                  nodeType: segmen
+                  textName: text
+                  parentNode: *ref_15
+                textString: >-
+                  Pemegang Hak Cipta adalah Pencipta sebagai Pemilik Hak Cipta, atau orang yang
+                  menerima hak tersebut dari Pencipta, atau orang lain yang menerima lebih lanjut
+                  hak dari orang tersebut di atas.
+                references: []
+            - type: point
+              node: &ref_16
+                nodeType: huruf
+                key: '4'
+                parentPointSetNode: *ref_12
+              content:
+                type: text
+                node:
+                  nodeType: segmen
+                  textName: text
+                  parentNode: *ref_16
+                textString: >-
+                  Pengumuman adalah pembacaan, penyuaraan, penyiaran atau penye baran sesuatu
+                  ciptaan, dengan menggunakan alat apapun dan dengan cara sedemikian rupa sehingga
+                  suatu ciptaan dapat dibaca, didengar atau dilihat oleh orang lain.
+                references: []
+            - type: point
+              node: &ref_17
+                nodeType: huruf
+                key: '5'
+                parentPointSetNode: *ref_12
+              content:
+                type: text
+                node:
+                  nodeType: segmen
+                  textName: text
+                  parentNode: *ref_17
+                textString: >-
+                  Perbanyakan adalah menambah jumlah sesuatu ciptaan, dengan pembuatan yang sama,
+                  hampir sam a atau menyerupai ciptaan tersebut dengan mempergunakan bahan - bahan
+                  yang sama maupun tidak sama, termasuk mengalihwujudkan sesuatu ciptaan.
+                references: []
+            - type: point
+              node: &ref_18
+                nodeType: huruf
+                key: '6'
+                parentPointSetNode: *ref_12
+              content:
+                type: text
+                node:
+                  nodeType: segmen
+                  textName: text
+                  parentNode: *ref_18
+                textString: >-
+                  Potret adalah gambaran dengan cara dan alat apapun dari wajah orang yang
+                  digambarkan baik bersama bagian tubuh l ainnya maupun tidak.
+                references: []
+            - type: point
+              node: &ref_19
+                nodeType: huruf
+                key: '7'
+                parentPointSetNode: *ref_12
+              content:
+                type: text
+                node:
+                  nodeType: segmen
+                  textName: text
+                  parentNode: *ref_19
+                textString: >-
+                  Program Komputer adalah program yang diciptakan secara khusus sehingga
+                  memungkinkan komputer melakukan fungsi tertentu.
+                references: []
+            - type: point
+              node: &ref_20
+                nodeType: huruf
+                key: '8'
+                parentPointSetNode: *ref_12
+              content:
+                type: text
+                node:
+                  nodeType: segmen
+                  textName: text
+                  parentNode: *ref_20
+                textString: >-
+                  Pelaku adalah aktor, penyanyi, pemusik, penari atau mereka yang menampilkan,
+                  memperagakan, mempertunjukkan, menyanyikan, menyampaikan, mendeklamasikan, atau
+                  memainkan suatu karya musik, drama, tari, sastra dan karya seni lainnya.
+                references: []
+            - type: point
+              node: &ref_21
+                nodeType: huruf
+                key: '9'
+                parentPointSetNode: *ref_12
+              content:
+                type: text
+                node:
+                  nodeType: segmen
+                  textName: text
+                  parentNode: *ref_21
+                textString: >-
+                  Produser rekaman suara adalah orang atau badan hukum yang pertama kali merekam
+                  atau memiliki prakarsa untuk membiayai kegiatan pe rekaman suara atau bunyi baik
+                  dari suatu pertunjukan maupun suara atau bunyi lainnya.
+                references: []
+            - type: point
+              node: &ref_22
+                nodeType: huruf
+                key: '10'
+                parentPointSetNode: *ref_12
+              content:
+                type: text
+                node:
+                  nodeType: segmen
+                  textName: text
+                  parentNode: *ref_22
+                textString: >-
+                  Lembaga penyiaran adalah organisasi penyelenggara siaran, baik Lembaga Penyaiaran
+                  Pemerintah maupun Lembaga Penyiaran Swasta yang berbentuk badan hukum yang
+                  melakuka n penyiaran atas suatu karya siaran dengan menggunakan transmisi dengan
+                  atau tanpa kabel atau melalui sistem elektromagnetik lainnya.
+                references: []
+            - type: point
+              node: &ref_23
+                nodeType: huruf
+                key: '11'
+                parentPointSetNode: *ref_12
+              content:
+                type: text
+                node:
+                  nodeType: segmen
+                  textName: text
+                  parentNode: *ref_23
+                textString: >-
+                  Kantor Hak Cipta adalah satuan organisasi di lingkungan departemen yang
+                  melaksanakan tugas dan kewenan gan di bidang Hak Cipta. 2. Ketentuan Pasal 2
+                  diubah, dengan menambah dua ketentuan baru yang dijadikan ayat (2) dan ayat (3)
+                  sehingga keseluruhan Pasal 2 berbunyi sebagai berikut:
+                references:
+                  - start: 220
+                    end: 228
+                    node:
+                      key: 3
+                      parentAyatSetNode: &ref_24
+                        nodeType: daftarAyat
+                        parentPasalVersionNode: *ref_11
+                      nodeType: ayat
+                  - start: 207
+                    end: 215
+                    node:
+                      key: 2
+                      parentAyatSetNode: *ref_24
+                      nodeType: ayat
+                  - start: 250
+                    end: 257
+                    node:
+                      key: 2
+                      parentNode: *ref_0
+                      nodeType: pasal
+                  - start: 141
+                    end: 148
+                    node:
+                      key: 2
+                      parentNode: *ref_0
+                      nodeType: pasal
+    - type: pasal
+      node:
+        nodeType: pasal
+        key: 2
+        parentNode: *ref_0
+      version:
+        type: pasalVersion
+        node: &ref_26
+          nodeType: versiPasal
+          version: *ref_25
+          state: orisinal
+          parentPasalNode:
+            nodeType: pasal
+            key: '2'
+            parentNode: *ref_0
+        content:
+          type: ayatSet
+          node: &ref_27
+            nodeType: daftarAyat
+            parentPasalVersionNode: *ref_26
+          elements:
+            - type: ayat
+              node: &ref_28
+                nodeType: ayat
+                key: 1
+                parentAyatSetNode: *ref_27
+              content:
+                type: text
+                node:
+                  nodeType: segmen
+                  textName: text
+                  parentNode: *ref_28
+                textString: >-
+                  Selain Penyidik Pejabat Polisi Neg ara Republik Indonesia, juga Pejabat Pegawai
+                  Negeri Sipil tertentu di lingkungan departemen yang lingkup tugas dan tanggung
+                  jawabnya meliputi pembinaan Hak Cipta, diberi wewenang khusus sebagai Penyidik
+                  sebagaimana dimaksud dalam Undang - undang Nomor 8 Tahu n 1981 tentang Hukum Acara
+                  Pidana, untuk melakukan penyidikan tindak pidana di bidang Hak Cipta.
+                references: []
+            - type: ayat
+              node: &ref_29
+                nodeType: ayat
+                key: 2
+                parentAyatSetNode: *ref_27
+              content:
+                type: daftarHuruf
+                node: &ref_30
+                  nodeType: daftarHuruf
+                  parentNode: *ref_29
+                description:
+                  type: text
+                  node:
+                    nodeType: segmen
+                    textName: description
+                    parentNode: *ref_30
+                  textString: >-
+                    Penyidik Pejabat Pegawai Negeri Sipil sebagaimana dimaksud dalam ayat (1)
+                    berwenang:
+                  references: []
+                elements:
+                  - type: point
+                    node: &ref_31
+                      nodeType: huruf
+                      key: a
+                      parentPointSetNode: *ref_30
+                    content:
+                      type: text
+                      node:
+                        nodeType: segmen
+                        textName: text
+                        parentNode: *ref_31
+                      textString: >-
+                        melakukan penelitian atas kebenaran laporan ata u keterangan berkenaan
+                        dengan tindak pidana di bidang Hak Cipta.
+                      references: []
+                  - type: point
+                    node: &ref_32
+                      nodeType: huruf
+                      key: b
+                      parentPointSetNode: *ref_30
+                    content:
+                      type: text
+                      node:
+                        nodeType: segmen
+                        textName: text
+                        parentNode: *ref_32
+                      textString: >-
+                        melakukan penelitian terhadap orang atau badan hukum yang diduga melakukan
+                        tindak pidana di bidang Hak Cipta;
+                      references: []
+                  - type: point
+                    node: &ref_33
+                      nodeType: huruf
+                      key: c
+                      parentPointSetNode: *ref_30
+                    content:
+                      type: text
+                      node:
+                        nodeType: segmen
+                        textName: text
+                        parentNode: *ref_33
+                      textString: >-
+                        meminta keterangan dan bahan bukti dari orang atau badan hukum sehubu ngan
+                        dengan tindak pidana di bidang Hak Cipta;
+                      references: []
+                  - type: point
+                    node: &ref_34
+                      nodeType: huruf
+                      key: d
+                      parentPointSetNode: *ref_30
+                    content:
+                      type: text
+                      node:
+                        nodeType: segmen
+                        textName: text
+                        parentNode: *ref_34
+                      textString: >-
+                        melakukan pemeriksaan atas pembukuan, pencatatan dan dokumen lainnya yang
+                        berkenaan dengan tindak pidana di bidang Hak Cipta;
+                      references: []
+                  - type: point
+                    node: &ref_35
+                      nodeType: huruf
+                      key: e
+                      parentPointSetNode: *ref_30
+                    content:
+                      type: text
+                      node:
+                        nodeType: segmen
+                        textName: text
+                        parentNode: *ref_35
+                      textString: >-
+                        melakukan pemeriksaan di tempat tertentu yang diduga terdapat bahan buk ti
+                        pembukuan, pencatatan dan dokumen lain serta melakukan penyitaan terhadap
+                        bahan dan barang hasil pelanggaran yang dapat dijadikan bukti dalam perkara
+                        tindak pidana di bidang Hak Cipta;
+                      references: []
+                  - type: point
+                    node: &ref_36
+                      nodeType: huruf
+                      key: f
+                      parentPointSetNode: *ref_30
+                    content:
+                      type: text
+                      node:
+                        nodeType: segmen
+                        textName: text
+                        parentNode: *ref_36
+                      textString: >-
+                        meminta bantuan ahli dalam rangka pelaksanaan tugas penyidikan tindak pidana
+                        di bidang Hak Cipta.
+                      references: []
+            - type: ayat
+              node: &ref_37
+                nodeType: ayat
+                key: 3
+                parentAyatSetNode: *ref_27
+              content:
+                type: text
+                node:
+                  nodeType: segmen
+                  textName: text
+                  parentNode: *ref_37
+                textString: >-
+                  Penyidik Pejabat Pegawai Negeri Sipil sebagaimana dimaksud dalam ayat (1)
+                  memberitahukan dimulainya penyidikan dan hasil penyidikannya kepada Penyidik
+                  Pejabat Polisi Negara Repub lik Indonesia.
+                references:
+                  - start: 65
+                    end: 73
+                    node:
+                      key: 1
+                      parentAyatSetNode:
+                        nodeType: daftarAyat
+                        parentPasalVersionNode: *ref_26
+                      nodeType: ayat
+            - type: ayat
+              node: &ref_38
+                nodeType: ayat
+                key: 4
+                parentAyatSetNode: *ref_27
+              content:
+                type: daftarHuruf
+                node: &ref_39
+                  nodeType: daftarHuruf
+                  parentNode: *ref_38
+                description:
+                  type: text
+                  node:
+                    nodeType: segmen
+                    textName: description
+                    parentNode: *ref_39
+                  textString: >-
+                    Penyidik Pejabat Pegawai Negeri Sipil sebagaimana dimaksud dalam ayat (1)
+                    menyampaikan hasil penyidikannya kepada Penuntut Umum melalui Penyidik Pejabat
+                    Polisi Negara Republik Indonesia dengan mengingat ketentuan Pasal 107 Undang -
+                    undan g Nomor 8 Tahun 1981 tentang Hukum Acara Pidana." 16. Ketentuan Pasal 48
+                    diubah, sehingga Pasal 48 berbunyi sebagai berikut: Pasal 48 Undang - undang ini
+                    berlaku terhadap semua ciptaan dan Hak - hak Yang Berkaitan dengan Hak Cip ta:
+                  references: []
+                elements:
+                  - type: point
+                    node: &ref_40
+                      nodeType: huruf
+                      key: a
+                      parentPointSetNode: *ref_39
+                    content:
+                      type: text
+                      node:
+                        nodeType: segmen
+                        textName: text
+                        parentNode: *ref_40
+                      textString: Warga negara, penduduk, dan badan hukum Indonesia;
+                      references: []
+                  - type: point
+                    node: &ref_41
+                      nodeType: huruf
+                      key: b
+                      parentPointSetNode: *ref_39
+                    content:
+                      type: text
+                      node:
+                        nodeType: segmen
+                        textName: text
+                        parentNode: *ref_41
+                      textString: >-
+                        Bukan warga negara Indonesia, bukan penduduk Indonesia dan bukan badan hukum
+                        Indonesia yang untuk pertama kali diumumkan di Indonesia atau diumumkan di
+                        Indonesia dalam jangka waktu 30 (tiga puluh) hari sejak ciptaan itu
+                        diumumkan untuk pertama kali di luar Indonesia;
+                      references: []
+                  - type: point
+                    node: &ref_42
+                      nodeType: huruf
+                      key: c
+                      parentPointSetNode: *ref_39
+                    content:
+                      type: text
+                      node:
+                        nodeType: segmen
+                        textName: text
+                        parentNode: *ref_42
+                      textString: >-
+                        Bukan warga negara Indonesia, bukan penduduk Indonesia dan bukan badan hukum
+                        Indonesia, dengan ketentuan: 1) Negaranya mempunyai perjanjian bilateral
+                        mengenai perlindungan Hak Cipta dan Hak - hak Yang Berkaitan dengan Hak
+                        Cipta dengan Negara Republik Indonesia; 2) Negaranya dan Negara Republik
+                        Indonesia merupakan pihak atau peserta dalam suatu pe rjanjian multilateral
+                        yang sama mengenai perlindungan Hak Cipta dan Hak - hak Yang Berkaitan degan
+                        Hak Cipta. Pasal II Undang - undang ini mulai berlaku pada tanggal
+                        diundangkan. Agar setiap orang mengetahuinya, memerintahkan pengundangan
+                        Undang - undang ini dengan penempatannya dalam Lembaran Negara Republik
+                        Indonesia.
+                      references: []
+disahkan:
+  date: *ref_25
+  location: Jakarta
+  pengesah: SOEHARTO
+  jabatanPengesah: PRESIDEN REPUBLIK INDONESIA

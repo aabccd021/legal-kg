@@ -1,0 +1,8 @@
+# Count triples about document text
+PREFIX o: <https://example.org/lex2kg/ontology/>
+
+SELECT (COUNT (*) as ?countResult) WHERE {
+  ?s
+    o:teks
+  ?o
+} 

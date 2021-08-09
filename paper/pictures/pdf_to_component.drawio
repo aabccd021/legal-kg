@@ -1,0 +1,273 @@
+<mxfile host="65bd71144e" scale="4" border="0">
+    <diagram id="bmnVY2jh7ur1HRDvhdAv" name="Page-1">
+        <mxGraphModel dx="491" dy="633" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" background="#FFFFFF" math="0" shadow="0">
+            <root>
+                <mxCell id="0"/>
+                <mxCell id="1" parent="0"/>
+                <mxCell id="22" value="Grup Judul" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;align=center;" parent="1" vertex="1">
+                    <mxGeometry x="840" y="220" width="160" height="20" as="geometry"/>
+                </mxCell>
+                <mxCell id="53" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" parent="1" source="2" target="22" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="2" value="UURI No.13 2003" style="rounded=0;whiteSpace=wrap;html=1;align=left;" parent="1" vertex="1">
+                    <mxGeometry x="640" y="280" width="160" height="20" as="geometry"/>
+                </mxCell>
+                <mxCell id="3" value="Tentang Ketenagakerjaan" style="rounded=0;whiteSpace=wrap;html=1;align=left;" parent="1" vertex="1">
+                    <mxGeometry x="640" y="300" width="160" height="20" as="geometry"/>
+                </mxCell>
+                <mxCell id="54" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.75;entryDx=0;entryDy=0;" parent="1" source="4" target="26" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="4" value="&lt;font color=&quot;#ff0000&quot;&gt;&lt;b&gt;Menimbang&lt;/b&gt;&lt;/font&gt;: a. bahwa ..." style="rounded=0;whiteSpace=wrap;html=1;align=left;" parent="1" vertex="1">
+                    <mxGeometry x="640" y="320" width="160" height="20" as="geometry"/>
+                </mxCell>
+                <mxCell id="5" value="&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp;b. bahwa..." style="rounded=0;whiteSpace=wrap;html=1;align=left;" parent="1" vertex="1">
+                    <mxGeometry x="640" y="340" width="160" height="20" as="geometry"/>
+                </mxCell>
+                <mxCell id="7" value="Mengingat: Pasal 5 ayat (1)..." style="rounded=0;whiteSpace=wrap;html=1;align=left;" parent="1" vertex="1">
+                    <mxGeometry x="640" y="360" width="160" height="20" as="geometry"/>
+                </mxCell>
+                <mxCell id="55" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="8" target="30" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="8" value="&lt;font color=&quot;#ff0000&quot;&gt;&lt;b&gt;BAB I&lt;/b&gt;&lt;/font&gt; Ketentuan Umum" style="rounded=0;whiteSpace=wrap;html=1;align=left;" parent="1" vertex="1">
+                    <mxGeometry x="640" y="380" width="160" height="20" as="geometry"/>
+                </mxCell>
+                <mxCell id="9" value="Pasal 1" style="rounded=0;whiteSpace=wrap;html=1;align=left;" parent="1" vertex="1">
+                    <mxGeometry x="640" y="400" width="160" height="20" as="geometry"/>
+                </mxCell>
+                <mxCell id="10" value="Dalam UU ini..." style="rounded=0;whiteSpace=wrap;html=1;align=left;" parent="1" vertex="1">
+                    <mxGeometry x="640" y="420" width="160" height="20" as="geometry"/>
+                </mxCell>
+                <mxCell id="11" value="BAB II Landasan, Asas ..." style="rounded=0;whiteSpace=wrap;html=1;align=left;" parent="1" vertex="1">
+                    <mxGeometry x="640" y="440" width="160" height="20" as="geometry"/>
+                </mxCell>
+                <mxCell id="12" value="Pasal 2" style="rounded=0;whiteSpace=wrap;html=1;align=left;" parent="1" vertex="1">
+                    <mxGeometry x="640" y="460" width="160" height="20" as="geometry"/>
+                </mxCell>
+                <mxCell id="13" value="Pembangunan Ketenaga..." style="rounded=0;whiteSpace=wrap;html=1;align=left;" parent="1" vertex="1">
+                    <mxGeometry x="640" y="480" width="160" height="20" as="geometry"/>
+                </mxCell>
+                <mxCell id="14" value="Pasal 3" style="rounded=0;whiteSpace=wrap;html=1;align=left;" parent="1" vertex="1">
+                    <mxGeometry x="640" y="500" width="160" height="20" as="geometry"/>
+                </mxCell>
+                <mxCell id="15" value="Pembangunan diselenggara.." style="rounded=0;whiteSpace=wrap;html=1;align=left;" parent="1" vertex="1">
+                    <mxGeometry x="640" y="520" width="160" height="20" as="geometry"/>
+                </mxCell>
+                <mxCell id="16" value="..." style="rounded=0;whiteSpace=wrap;html=1;align=left;" parent="1" vertex="1">
+                    <mxGeometry x="640" y="600" width="160" height="20" as="geometry"/>
+                </mxCell>
+                <mxCell id="56" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" parent="1" source="17" target="50" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="17" value="&lt;font color=&quot;#ff0000&quot;&gt;&lt;b&gt;Disahkan di&lt;/b&gt;&lt;/font&gt; jakarta" style="rounded=0;whiteSpace=wrap;html=1;align=left;" parent="1" vertex="1">
+                    <mxGeometry x="640" y="620" width="160" height="20" as="geometry"/>
+                </mxCell>
+                <mxCell id="18" value="&lt;span style=&quot;text-align: center&quot;&gt;pada tanggal 25 Maret 2003&lt;/span&gt;" style="rounded=0;whiteSpace=wrap;html=1;align=left;" parent="1" vertex="1">
+                    <mxGeometry x="640" y="640" width="160" height="20" as="geometry"/>
+                </mxCell>
+                <mxCell id="19" value="UURI No.13 2003" style="rounded=0;whiteSpace=wrap;html=1;align=left;" parent="1" vertex="1">
+                    <mxGeometry x="840" y="240" width="160" height="20" as="geometry"/>
+                </mxCell>
+                <mxCell id="20" value="Tentang Ketenagakerjaan" style="rounded=0;whiteSpace=wrap;html=1;align=left;" parent="1" vertex="1">
+                    <mxGeometry x="840" y="260" width="160" height="20" as="geometry"/>
+                </mxCell>
+                <mxCell id="107" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" parent="1" source="23" target="102" edge="1">
+                    <mxGeometry relative="1" as="geometry">
+                        <Array as="points">
+                            <mxPoint x="1010" y="330"/>
+                            <mxPoint x="1010" y="230"/>
+                        </Array>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="23" value="Menimbang: a. bahwa ..." style="rounded=0;whiteSpace=wrap;html=1;align=left;" parent="1" vertex="1">
+                    <mxGeometry x="840" y="320" width="160" height="20" as="geometry"/>
+                </mxCell>
+                <mxCell id="24" value="&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp;b. bahwa..." style="rounded=0;whiteSpace=wrap;html=1;align=left;" parent="1" vertex="1">
+                    <mxGeometry x="840" y="340" width="160" height="20" as="geometry"/>
+                </mxCell>
+                <mxCell id="108" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" parent="1" source="25" target="103" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="25" value="Mengingat: Pasal 5 ayat (1)..." style="rounded=0;whiteSpace=wrap;html=1;align=left;" parent="1" vertex="1">
+                    <mxGeometry x="840" y="360" width="160" height="20" as="geometry"/>
+                </mxCell>
+                <mxCell id="26" value="Grup Metadata" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;align=center;" parent="1" vertex="1">
+                    <mxGeometry x="840" y="300" width="160" height="20" as="geometry"/>
+                </mxCell>
+                <mxCell id="30" value="DaftarBab" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;align=center;" parent="1" vertex="1">
+                    <mxGeometry x="840" y="400" width="160" height="20" as="geometry"/>
+                </mxCell>
+                <mxCell id="82" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" parent="1" source="31" target="65" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="31" value="BAB I Ketentuan Umum" style="rounded=0;whiteSpace=wrap;html=1;align=left;" parent="1" vertex="1">
+                    <mxGeometry x="840" y="420" width="160" height="20" as="geometry"/>
+                </mxCell>
+                <mxCell id="32" value="Pasal 1" style="rounded=0;whiteSpace=wrap;html=1;align=left;" parent="1" vertex="1">
+                    <mxGeometry x="840" y="440" width="160" height="20" as="geometry"/>
+                </mxCell>
+                <mxCell id="33" value="Dalam UU ini..." style="rounded=0;whiteSpace=wrap;html=1;align=left;" parent="1" vertex="1">
+                    <mxGeometry x="840" y="460" width="160" height="20" as="geometry"/>
+                </mxCell>
+                <mxCell id="83" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.75;entryDx=0;entryDy=0;" parent="1" source="34" target="80" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="34" value="&lt;b&gt;&lt;font color=&quot;#ff0000&quot;&gt;BAB II&amp;nbsp;&lt;/font&gt;&lt;/b&gt;Landasan, Asas ..." style="rounded=0;whiteSpace=wrap;html=1;align=left;" parent="1" vertex="1">
+                    <mxGeometry x="840" y="480" width="160" height="20" as="geometry"/>
+                </mxCell>
+                <mxCell id="35" value="Pasal 2" style="rounded=0;whiteSpace=wrap;html=1;align=left;" parent="1" vertex="1">
+                    <mxGeometry x="840" y="500" width="160" height="20" as="geometry"/>
+                </mxCell>
+                <mxCell id="36" value="Pembangunan Ketenaga..." style="rounded=0;whiteSpace=wrap;html=1;align=left;" parent="1" vertex="1">
+                    <mxGeometry x="840" y="520" width="160" height="20" as="geometry"/>
+                </mxCell>
+                <mxCell id="37" value="Pasal 3" style="rounded=0;whiteSpace=wrap;html=1;align=left;" parent="1" vertex="1">
+                    <mxGeometry x="840" y="540" width="160" height="20" as="geometry"/>
+                </mxCell>
+                <mxCell id="38" value="Pembangunan diselenggara.." style="rounded=0;whiteSpace=wrap;html=1;align=left;" parent="1" vertex="1">
+                    <mxGeometry x="840" y="560" width="160" height="20" as="geometry"/>
+                </mxCell>
+                <mxCell id="50" value="Grup Disahkan" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;align=center;" parent="1" vertex="1">
+                    <mxGeometry x="840" y="680" width="160" height="20" as="geometry"/>
+                </mxCell>
+                <mxCell id="51" value="Disahkan di jakarta" style="rounded=0;whiteSpace=wrap;html=1;align=left;" parent="1" vertex="1">
+                    <mxGeometry x="840" y="700" width="160" height="20" as="geometry"/>
+                </mxCell>
+                <mxCell id="52" value="&lt;span style=&quot;text-align: center&quot;&gt;pada tanggal 25 Maret 2003&lt;/span&gt;" style="rounded=0;whiteSpace=wrap;html=1;align=left;" parent="1" vertex="1">
+                    <mxGeometry x="840" y="720" width="160" height="20" as="geometry"/>
+                </mxCell>
+                <mxCell id="57" value="BAB III KESEMPATAN DAN" style="rounded=0;whiteSpace=wrap;html=1;align=left;" parent="1" vertex="1">
+                    <mxGeometry x="640" y="540" width="160" height="20" as="geometry"/>
+                </mxCell>
+                <mxCell id="58" value="Pasal 4" style="rounded=0;whiteSpace=wrap;html=1;align=left;" parent="1" vertex="1">
+                    <mxGeometry x="640" y="560" width="160" height="20" as="geometry"/>
+                </mxCell>
+                <mxCell id="59" value="Setiap tenaga kerja ..." style="rounded=0;whiteSpace=wrap;html=1;align=left;" parent="1" vertex="1">
+                    <mxGeometry x="640" y="580" width="160" height="20" as="geometry"/>
+                </mxCell>
+                <mxCell id="61" value="..." style="rounded=0;whiteSpace=wrap;html=1;align=left;" parent="1" vertex="1">
+                    <mxGeometry x="840" y="640" width="160" height="20" as="geometry"/>
+                </mxCell>
+                <mxCell id="84" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" parent="1" source="62" target="81" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="62" value="&lt;b&gt;&lt;font color=&quot;#ff0000&quot;&gt;BAB III&amp;nbsp;&lt;/font&gt;&lt;/b&gt;KESEMPATAN DAN" style="rounded=0;whiteSpace=wrap;html=1;align=left;" parent="1" vertex="1">
+                    <mxGeometry x="840" y="580" width="160" height="20" as="geometry"/>
+                </mxCell>
+                <mxCell id="63" value="Pasal 4" style="rounded=0;whiteSpace=wrap;html=1;align=left;" parent="1" vertex="1">
+                    <mxGeometry x="840" y="600" width="160" height="20" as="geometry"/>
+                </mxCell>
+                <mxCell id="64" value="Setiap tenaga kerja ..." style="rounded=0;whiteSpace=wrap;html=1;align=left;" parent="1" vertex="1">
+                    <mxGeometry x="840" y="620" width="160" height="20" as="geometry"/>
+                </mxCell>
+                <mxCell id="65" value="Bab 1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;align=center;" parent="1" vertex="1">
+                    <mxGeometry x="1040" y="370" width="160" height="20" as="geometry"/>
+                </mxCell>
+                <mxCell id="66" value="BAB I Ketentuan Umum" style="rounded=0;whiteSpace=wrap;html=1;align=left;" parent="1" vertex="1">
+                    <mxGeometry x="1040" y="390" width="160" height="20" as="geometry"/>
+                </mxCell>
+                <mxCell id="98" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.75;entryDx=0;entryDy=0;" parent="1" source="67" target="86" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="67" value="&lt;b&gt;&lt;font color=&quot;#ff0000&quot;&gt;Pasal 1&lt;/font&gt;&lt;/b&gt;" style="rounded=0;whiteSpace=wrap;html=1;align=left;" parent="1" vertex="1">
+                    <mxGeometry x="1040" y="410" width="160" height="20" as="geometry"/>
+                </mxCell>
+                <mxCell id="68" value="Dalam UU ini..." style="rounded=0;whiteSpace=wrap;html=1;align=left;" parent="1" vertex="1">
+                    <mxGeometry x="1040" y="430" width="160" height="20" as="geometry"/>
+                </mxCell>
+                <mxCell id="72" value="BAB II Landasan, Asas ..." style="rounded=0;whiteSpace=wrap;html=1;align=left;" parent="1" vertex="1">
+                    <mxGeometry x="1040" y="490" width="160" height="20" as="geometry"/>
+                </mxCell>
+                <mxCell id="99" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" parent="1" source="73" target="89" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="73" value="&lt;font color=&quot;#ff0000&quot;&gt;&lt;b&gt;Pasal 2&lt;/b&gt;&lt;/font&gt;" style="rounded=0;whiteSpace=wrap;html=1;align=left;" parent="1" vertex="1">
+                    <mxGeometry x="1040" y="510" width="160" height="20" as="geometry"/>
+                </mxCell>
+                <mxCell id="74" value="Pembangunan Ketenaga..." style="rounded=0;whiteSpace=wrap;html=1;align=left;" parent="1" vertex="1">
+                    <mxGeometry x="1040" y="530" width="160" height="20" as="geometry"/>
+                </mxCell>
+                <mxCell id="100" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" parent="1" source="75" target="90" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="75" value="&lt;font color=&quot;#ff0000&quot;&gt;&lt;b&gt;Pasal 3&lt;/b&gt;&lt;/font&gt;" style="rounded=0;whiteSpace=wrap;html=1;align=left;" parent="1" vertex="1">
+                    <mxGeometry x="1040" y="550" width="160" height="20" as="geometry"/>
+                </mxCell>
+                <mxCell id="76" value="Pembangunan diselenggara.." style="rounded=0;whiteSpace=wrap;html=1;align=left;" parent="1" vertex="1">
+                    <mxGeometry x="1040" y="570" width="160" height="20" as="geometry"/>
+                </mxCell>
+                <mxCell id="77" value="BAB III KESEMPATAN DAN.." style="rounded=0;whiteSpace=wrap;html=1;align=left;" parent="1" vertex="1">
+                    <mxGeometry x="1040" y="630" width="160" height="20" as="geometry"/>
+                </mxCell>
+                <mxCell id="101" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="78" target="91" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="78" value="&lt;font color=&quot;#ff0000&quot;&gt;&lt;b&gt;Pasal 4&lt;/b&gt;&lt;/font&gt;" style="rounded=0;whiteSpace=wrap;html=1;align=left;" parent="1" vertex="1">
+                    <mxGeometry x="1040" y="650" width="160" height="20" as="geometry"/>
+                </mxCell>
+                <mxCell id="79" value="Setiap tenaga kerja ..." style="rounded=0;whiteSpace=wrap;html=1;align=left;" parent="1" vertex="1">
+                    <mxGeometry x="1040" y="670" width="160" height="20" as="geometry"/>
+                </mxCell>
+                <mxCell id="80" value="Bab 2" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;align=center;" parent="1" vertex="1">
+                    <mxGeometry x="1040" y="470" width="160" height="20" as="geometry"/>
+                </mxCell>
+                <mxCell id="81" value="Bab 3" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;align=center;" parent="1" vertex="1">
+                    <mxGeometry x="1040" y="610" width="160" height="20" as="geometry"/>
+                </mxCell>
+                <mxCell id="86" value="Pasal 1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;align=center;" parent="1" vertex="1">
+                    <mxGeometry x="1240" y="400" width="160" height="20" as="geometry"/>
+                </mxCell>
+                <mxCell id="87" value="Pasal 1" style="rounded=0;whiteSpace=wrap;html=1;align=left;" parent="1" vertex="1">
+                    <mxGeometry x="1240" y="420" width="160" height="20" as="geometry"/>
+                </mxCell>
+                <mxCell id="88" value="Dalam UU ini..." style="rounded=0;whiteSpace=wrap;html=1;align=left;" parent="1" vertex="1">
+                    <mxGeometry x="1240" y="440" width="160" height="20" as="geometry"/>
+                </mxCell>
+                <mxCell id="89" value="Pasal 2" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;align=center;" parent="1" vertex="1">
+                    <mxGeometry x="1240" y="480" width="160" height="20" as="geometry"/>
+                </mxCell>
+                <mxCell id="90" value="Pasal 3" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;align=center;" parent="1" vertex="1">
+                    <mxGeometry x="1240" y="560" width="160" height="20" as="geometry"/>
+                </mxCell>
+                <mxCell id="91" value="Pasal 4" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;align=center;" parent="1" vertex="1">
+                    <mxGeometry x="1240" y="640" width="160" height="20" as="geometry"/>
+                </mxCell>
+                <mxCell id="92" value="Pasal 4" style="rounded=0;whiteSpace=wrap;html=1;align=left;" parent="1" vertex="1">
+                    <mxGeometry x="1240" y="660" width="160" height="20" as="geometry"/>
+                </mxCell>
+                <mxCell id="93" value="Setiap tenaga kerja ..." style="rounded=0;whiteSpace=wrap;html=1;align=left;" parent="1" vertex="1">
+                    <mxGeometry x="1240" y="680" width="160" height="20" as="geometry"/>
+                </mxCell>
+                <mxCell id="94" value="Pasal 3" style="rounded=0;whiteSpace=wrap;html=1;align=left;" parent="1" vertex="1">
+                    <mxGeometry x="1240" y="580" width="160" height="20" as="geometry"/>
+                </mxCell>
+                <mxCell id="95" value="Pembangunan diselenggara.." style="rounded=0;whiteSpace=wrap;html=1;align=left;" parent="1" vertex="1">
+                    <mxGeometry x="1240" y="600" width="160" height="20" as="geometry"/>
+                </mxCell>
+                <mxCell id="96" value="Pasal 2" style="rounded=0;whiteSpace=wrap;html=1;align=left;" parent="1" vertex="1">
+                    <mxGeometry x="1240" y="500" width="160" height="20" as="geometry"/>
+                </mxCell>
+                <mxCell id="97" value="Pembangunan Ketenaga..." style="rounded=0;whiteSpace=wrap;html=1;align=left;" parent="1" vertex="1">
+                    <mxGeometry x="1240" y="520" width="160" height="20" as="geometry"/>
+                </mxCell>
+                <mxCell id="102" value="Menimbang" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;align=center;" parent="1" vertex="1">
+                    <mxGeometry x="1040" y="220" width="160" height="20" as="geometry"/>
+                </mxCell>
+                <mxCell id="103" value="Mengingat" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;align=center;" parent="1" vertex="1">
+                    <mxGeometry x="1040" y="300" width="160" height="20" as="geometry"/>
+                </mxCell>
+                <mxCell id="104" value="Mengingat: Pasal 5 ayat (1)..." style="rounded=0;whiteSpace=wrap;html=1;align=left;" parent="1" vertex="1">
+                    <mxGeometry x="1040" y="320" width="160" height="20" as="geometry"/>
+                </mxCell>
+                <mxCell id="105" value="Menimbang: a. bahwa ..." style="rounded=0;whiteSpace=wrap;html=1;align=left;" parent="1" vertex="1">
+                    <mxGeometry x="1040" y="240" width="160" height="20" as="geometry"/>
+                </mxCell>
+                <mxCell id="106" value="&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp;b. bahwa..." style="rounded=0;whiteSpace=wrap;html=1;align=left;" parent="1" vertex="1">
+                    <mxGeometry x="1040" y="260" width="160" height="20" as="geometry"/>
+                </mxCell>
+            </root>
+        </mxGraphModel>
+    </diagram>
+</mxfile>

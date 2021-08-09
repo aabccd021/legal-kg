@@ -1,0 +1,11 @@
+# Count triples with citation between document
+PREFIX o: <https://example.org/lex2kg/ontology/>
+
+SELECT (COUNT (*) as ?countResult) WHERE {
+  ?s o:merujuk ?o .
+  ?s (o:bagianDari|^o:mengingat|^o:menimbang)* ?sdoc .
+  ?o o:bagianDari* ?odoc .
+  ?sdoc a o:Peraturan .
+  ?odoc a o:Peraturan .
+  FILTER (?sdoc != ?odoc)
+} 

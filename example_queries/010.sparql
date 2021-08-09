@@ -1,0 +1,19 @@
+# How many are insertions, amendments, and removals of other laws in Omnibus Law?
+PREFIX o: <https://example.org/lex2kg/ontology/>
+
+SELECT ?type (COUNT(*) AS ?jumlah) WHERE {
+  {
+    ?point o:bagianDari+ <https://example.org/lex2kg/uu/2020/11> .
+    ?point o:menghapus ?pasal .
+    BIND("menghapus" AS ?type)
+  } UNION {
+    ?point o:bagianDari+ <https://example.org/lex2kg/uu/2020/11> .
+    ?point o:menyisipkan ?pasal .
+    BIND("menyisipkan" AS ?type)
+  } UNION {
+    ?point o:bagianDari+ <https://example.org/lex2kg/uu/2020/11> .
+    ?point o:mengubah ?pasal .
+    BIND("mengubah" AS ?type)
+  }
+} GROUP BY ?type
+LIMIT 3
